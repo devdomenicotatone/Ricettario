@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Linguine tradizionali liguri di semola rimacinata, pasta lunga piatta ideale per pesto genovese e frutti di mare. Idratazione 48%, formato 4x1.80mm.">
+    <title>Linguine di Semola Artigianali — Il Ricettario</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap"
+        rel="stylesheet">
+    <!-- FOUC Prevention: applica tema prima del rendering -->
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = saved || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- Skip to content — Accessibilità -->
+    <a href="#recipe-content" class="skip-link">Vai al contenuto principale</a>
+
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="../index.html" class="navbar__logo">
+                <div class="navbar__logo-icon">🔥</div>
+                <span>Il Ricettario</span>
+            </a>
+
+            <ul class="navbar__links" id="nav-links">
+                <li><a href="../index.html#ricette">Ricette</a></li>
+                <li><a href="../index.html#strumenti">Strumenti</a></li>
+                <li><a href="../index.html#chi-sono">Chi Sono</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+                <span class="theme-toggle__icon theme-toggle__sun">☀️</span>
+                <span class="theme-toggle__icon theme-toggle__moon">🌙</span>
+            </button>
+
+            <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════ RECIPE HERO ═══════════ -->
+    <div class="recipe-hero">
+        <div class="container">
+            <nav class="breadcrumb reveal">
+                <a href="../index.html">Home</a>
+                <span class="breadcrumb__separator">›</span>
+                <a href="../index.html#ricette">Ricette</a>
+                <span class="breadcrumb__separator">›</span>
+                <span>Linguine di Semola Artigianali</span>
+            </nav>
+
+            <div class="recipe-hero__content">
+                <div class="recipe-hero__tags reveal">
+                    <span class="tag tag--tool">🔧 Estrusore con trafila</span>
+                    <span class="tag tag--category">🍝 Pasta</span>
+                </div>
+                <h1 class="recipe-hero__title reveal reveal-delay-1">Linguine di Semola Artigianali</h1>
+                <p class="recipe-hero__subtitle reveal reveal-delay-2">
+                    Pasta lunga piatta di semola rimacinata - Tradizione ligure
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ TECH BADGES ═══════════ -->
+    <div class="container" style="padding-top: 40px;">
+        <div class="tech-badges reveal">
+            <div class="tech-badge">
+                💧 Idratazione: <span class="tech-badge__value">&nbsp;48%</span>
+            </div>
+            <div class="tech-badge">
+                🌡️ Target Temp: <span class="tech-badge__value">&nbsp;22-24°C</span>
+            </div>
+            <div class="tech-badge">
+                ⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;Riposo 30 min</span>
+            </div>
+            <div class="tech-badge">
+                🔧 Setup: <span class="tech-badge__value">&nbsp;Estrusore con trafila</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ RECIPE CONTENT ═══════════ -->
+    <section class="recipe-content">
+        <div class="container">
+            <div class="recipe-layout">
+
+                <!-- COLONNA SINISTRA: Ingredienti -->
+                <div>
+                    <div class="recipe-panel reveal">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">🛒</span>
+                            Ingredienti Base
+                        </h2>
+
+                        <!-- Calcolatore Dosi -->
+                        <div class="dose-calculator" id="dose-calculator">
+                            <div class="dose-calculator__label">
+                                <span class="dose-calculator__label-icon">⚖️</span>
+                                Farina totale
+                            </div>
+                            <div class="dose-calculator__controls">
+                                <button class="dose-calculator__btn" id="dose-decrease"
+                                    aria-label="Diminuisci dosi">−</button>
+                                <div class="dose-calculator__input-wrapper">
+                                    <input type="number" class="dose-calculator__input" id="dose-input" value="1"
+                                        min="0.5" max="5" step="0.5" aria-label="Kg di farina">
+                                    <span class="dose-calculator__unit">kg</span>
+                                </div>
+                                <button class="dose-calculator__btn" id="dose-increase"
+                                    aria-label="Aumenta dosi">+</button>
+                            </div>
+                            <div class="dose-calculator__badge" id="dose-badge">×1</div>
+                        </div>
+
+                        <table class="ingredients-table" id="ingredients-table">
+                            <tr>
+                                <td>Semola Rimacinata <span class="ingredient-note">(Grano Duro tipo 00)</span></td>
+                                <td class="ingredient-qty" data-base="500">500g</td>
+                            </tr>
+                            <tr>
+                                <td>Acqua <span class="ingredient-note">(temperatura ambiente 18-20°C)</span></td>
+                                <td class="ingredient-qty" data-base="240">240g</td>
+                            </tr>
+                            <tr>
+                                <td>Olio Extravergine Oliva <span class="ingredient-note">(DOP Ligure se
+                                        disponibile)</span></td>
+                                <td class="ingredient-qty" data-base="15">15g</td>
+                            </tr>
+                            <tr>
+                                <td>Sale Fino <span class="ingredient-note">(Marino integrale)</span></td>
+                                <td class="ingredient-qty" data-base="5">5g</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!-- COLONNA DESTRA: Procedimento -->
+                <div>
+
+                    <!-- ── Procedimento: Impastatrice a spirale ── -->
+                    <div class="recipe-panel reveal reveal-delay-1">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">⚙️</span>
+                            Procedimento
+                        </h2>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Preparazione Ingredienti</strong>
+                                <p>Pesare tutti gli ingredienti. Sciogliere il sale nell'acqua a temperatura ambiente.
+                                    Montare la trafila in bronzo per linguine (4x1.80mm) sull'estrusore. Pre-riscaldare
+                                    la macchina per 3-4 minuti.</p>
+                            </li>
+                            <li>
+                                <strong>Impasto Base</strong>
+                                <p>Versare la semola rimacinata nella camera di impasto. Avviare la macchina e versare
+                                    lentamente la soluzione acqua-sale attraverso il foro di alimentazione in 2-3
+                                    minuti. Aggiungere l'olio negli ultimi 30 secondi di impasto.</p>
+                            </li>
+                            <li>
+                                <strong>Estrusione Linguine</strong>
+                                <p>Continuare l'impasto per 8-10 minuti totali fino a ottenere un composto omogeneo.
+                                    Avviare l'estrusione: le linguine usciranno dalla trafila con sezione 4x1.80mm.
+                                    Tagliare a lunghezza desiderata (25-30cm) con il cutter automatico.</p>
+                            </li>
+                            <li>
+                                <strong>Asciugatura e Conservazione</strong>
+                                <p>Disporre le linguine su vassoi infarinati o nidi su carta forno. Asciugare per 15-20
+                                    minuti a temperatura ambiente prima della cottura, o fino a 2 ore per conservazione
+                                    a breve termine.</p>
+                            </li>
+                        </ol>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+            <!-- ═══════════ CONSIGLI FARINE & MARCHI ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 40px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">🌾</span>
+                    Consigli Farine & Marchi
+                </h2>
+                <table class="flour-table">
+                    <thead>
+                        <tr>
+                            <th>Tipo Farina</th>
+                            <th>Forza (W)</th>
+                            <th>Marchi Consigliati</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Semola Rimacinata Tipo 00</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">280-320</td>
+                            <td>Molino Grassi, Caputo, Divella</td>
+                        </tr>
+                        <tr>
+                            <td>Semola Rimacinata Biologica</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">260-290</td>
+                            <td>Molino Quaglia, Mulino Marino, Antico Molino Rosso</td>
+                        </tr>
+                        <tr>
+                            <td>Semola Grani Antichi</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">240-280</td>
+                            <td>Molino Spadoni, Mulino a Pietra, Fastuchera</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pro-tip-box" style="margin-top: 16px;">
+                    <p><strong>💡 PRO TIP:</strong> La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti,
+                        cerca qualsiasi farina con il valore W indicato.</p>
+                </div>
+            </div>
+
+            <!-- ═══════════ ALERT ═══════════ -->
+            <div class="alert alert--danger reveal" style="margin-top: 32px;">
+                <span class="alert__icon">🚫</span>
+                <div class="alert__content">
+                    <strong>ALERT PROFESSIONALE</strong>
+                    <p>NON utilizzare farina di grano tenero: le linguine perderebbero la caratteristica tenuta di
+                        cottura e il sapore intenso. NON eccedere con l'acqua: un impasto troppo idratato produrrebbe
+                        pasta collosa e difficile da lavorare. NON saltare il riposo dell'impasto: è essenziale per
+                        rilassare il glutine e facilitare la stesura.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__brand-name">🔥 <span>Il Ricettario</span></div>
+                    <p class="footer__brand-desc">
+                        Ricettario personale. Ricette artigianali documentate con precisione tecnica per
+                        risultati replicabili al 100%.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Navigazione</h4>
+                    <ul class="footer__links">
+                        <li><a href="../index.html">↗ Home</a></li>
+                        <li><a href="../index.html#ricette">↗ Ricette</a></li>
+                        <li><a href="../index.html#strumenti">↗ Strumenti</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Questa Ricetta</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">🍝 Linguine di Semola Artigianali</a></li>
+                        <li><a href="#">💧 Idratazione 48%</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Altre Ricette</h4>
+                    <ul class="footer__links">
+                        <li><a href="../index.html#ricette">↗ Tutte le Ricette</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <span>© <span id="current-year">2026</span> Il Ricettario</span>
+                <div class="footer__social">
+                    <a href="https://github.com/devdomenicotatone" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
+</body>
+
+</html>

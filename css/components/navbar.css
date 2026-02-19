@@ -1,0 +1,170 @@
+/* ============================================
+   NAVBAR — Mobile-First + CSS Nesting
+   ============================================ */
+
+@layer components {
+    .navbar {
+        position: fixed;
+        top: 0;
+        inset-inline: 0;
+        z-index: 1000;
+        padding-block: var(--space-md);
+        transition: all var(--transition-medium);
+        background: transparent;
+
+        &.scrolled {
+            background: var(--color-glass-strong);
+            backdrop-filter: blur(20px) saturate(1.4);
+            -webkit-backdrop-filter: blur(20px) saturate(1.4);
+            border-bottom: 1px solid var(--border-subtle);
+            padding-block: 10px;
+            box-shadow: var(--shadow-md);
+        }
+    }
+
+    .navbar__inner {
+        max-width: var(--container-max);
+        margin-inline: auto;
+        padding-inline: var(--space-md);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar__logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-family: var(--font-display);
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: var(--color-text);
+        text-decoration: none;
+
+        &:hover .navbar__logo-icon {
+            transform: rotate(-10deg) scale(1.1);
+        }
+    }
+
+    .navbar__logo-icon {
+        width: 40px;
+        height: 40px;
+        background: var(--gradient-hero);
+        border-radius: var(--radius-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        transition: transform var(--transition-fast);
+    }
+
+    /* Mobile-first: menu mobile di default */
+    .navbar__links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100dvh;
+        background: var(--color-glass-strong);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        list-style: none;
+        display: flex;
+        transition: right var(--transition-medium);
+        border-left: 1px solid var(--border-subtle);
+
+        &.open {
+            right: 0;
+        }
+
+        & a {
+            color: var(--color-text-secondary);
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: var(--space-md) var(--space-lg);
+            border-radius: var(--radius-sm);
+            transition: all var(--transition-fast);
+            position: relative;
+
+            &:hover,
+            &.active {
+                color: var(--color-text);
+                background: var(--glow-accent);
+            }
+
+            &.active::after {
+                content: '';
+                position: absolute;
+                bottom: 2px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 20px;
+                height: 2px;
+                background: var(--color-accent);
+                border-radius: 2px;
+            }
+        }
+
+        /* Desktop: links orizzontali */
+        @media (min-width: 769px) {
+            position: static;
+            width: auto;
+            max-width: none;
+            height: auto;
+            background: none;
+            backdrop-filter: none;
+            flex-direction: row;
+            gap: var(--space-sm);
+            border-left: none;
+
+            & a {
+                font-size: 0.9rem;
+                padding: var(--space-sm) var(--space-md);
+            }
+        }
+    }
+
+    /* Mobile: hamburger visibile di default */
+    .navbar__hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        padding: var(--space-sm);
+        border: none;
+        background: none;
+        z-index: 1001;
+
+        & span {
+            width: 24px;
+            height: 2px;
+            background: var(--color-text);
+            border-radius: 2px;
+            transition: all var(--transition-fast);
+            transform-origin: center;
+        }
+
+        &.open span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        &.open span:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+
+        &.open span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* Desktop: hamburger nascosto */
+        @media (min-width: 769px) {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+/* ============================================
+   IL RICETTARIO — Design System 2026
+   
+   ⚠️ ARCHITETTURA MODULARE
+   
+   Questo file è stato sostituito da moduli CSS
+   importati tramite js/main.js per Vite HMR.
+   
+   Struttura:
+   css/base/tokens.css      → Design tokens OKLCH
+   css/base/reset.css       → Reset + scrollbar + a11y
+   css/layout/container.css → Container + section
+   css/components/*.css     → Navbar, Hero, Cards, etc.
+   css/pages/*.css          → Recipe detail page
+   css/utilities/*.css      → Animations + transitions
+   
+   Tecniche:
+   ✅ Cascade Layers (@layer)
+   ✅ CSS Nesting nativo
+   ✅ Container Queries
+   ✅ OKLCH + color-mix()
+   ✅ Mobile-First (min-width)
+   ✅ View Transitions API
+   ✅ :has() selectors
+   ✅ prefers-reduced-motion
+   ============================================ */
+
+/* I moduli sono importati da js/main.js */
