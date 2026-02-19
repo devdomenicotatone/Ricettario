@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Il Ricettario — Ricette artigianali ottimizzate per i miei strumenti: Famag Grilletta, Fimar PF25E e Philips Serie 7000. Pane, pasta e lievitati.">
+    <title>Il Ricettario</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap"
+        rel="stylesheet">
+    <!-- FOUC Prevention: applica tema prima del rendering -->
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = saved || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+  <script type="module" crossorigin src="/Ricettario/assets/main-C1NyvXPo.js"></script>
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-HVhRSfzK.css">
+</head>
+
+<body>
+
+    <!-- Skip to content — Accessibilità -->
+    <a href="#ricette" class="skip-link">Vai al contenuto principale</a>
+
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="#" class="navbar__logo">
+                <div class="navbar__logo-icon">🔥</div>
+                <span>Il Ricettario</span>
+            </a>
+
+            <ul class="navbar__links" id="nav-links">
+                <li><a href="#ricette" class="active">Ricette</a></li>
+                <li><a href="#strumenti">Strumenti</a></li>
+                <li><a href="#chi-sono">Chi Sono</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+                <span class="theme-toggle__icon theme-toggle__sun">☀️</span>
+                <span class="theme-toggle__icon theme-toggle__moon">🌙</span>
+            </button>
+
+            <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero" id="home">
+        <div class="hero__content">
+            <div class="hero__badge reveal">
+                🔥 Laboratorio Artigianale
+            </div>
+            <h1 class="hero__title reveal reveal-delay-1">
+                Il mio<br><span>Ricettario</span>
+            </h1>
+            <p class="hero__subtitle reveal reveal-delay-2">
+                Pane, lievitati e pasta — ricette replicabili, parametri reali.
+            </p>
+
+            <!-- Search Bar -->
+            <div class="hero__search reveal reveal-delay-3" id="recipe-search">
+                <svg class="hero__search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+                <input type="text" class="hero__search-input" id="search-input"
+                    placeholder="Cerca ricette, ingredienti, setup..." aria-label="Cerca ricette">
+                <kbd class="hero__search-kbd">/</kbd>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ RICETTE ═══════════ -->
+    <section class="section" id="ricette">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-header__label">Le mie ricette</div>
+                <h2 class="section-header__title">Ricette Testate & Documentate</h2>
+                <p class="section-header__desc">
+                    Ogni ricetta è stata perfezionata con dosi precise, parametri tecnici e note dettagliate per
+                    risultati replicabili al 100%.
+                </p>
+            </div>
+
+            <div class="filter-bar reveal" id="filter-bar">
+                <button class="filter-chip active" data-filter="tutti">🔥 Tutti</button>
+                <button class="filter-chip" data-filter="Pane">🥖 Pane</button>
+                <button class="filter-chip" data-filter="Pizza">🍕 Pizza</button>
+                <button class="filter-chip" data-filter="Pasta">🍝 Pasta</button>
+                <button class="filter-chip" data-filter="Lievitati">🥐 Lievitati</button>
+            </div>
+
+            <div class="recipes-grid">
+
+                <!-- Card 1: Pane Noci & Olive -->
+                <a href="ricette/pane/pane-noci-olive.html" class="recipe-card reveal" data-category="Pane">
+                    <div class="recipe-card__image-wrapper">
+                        <img src="/Ricettario/assets/pane-noci-olive-D2Ic925X.jpg"
+                            alt="Pane artigianale con noci e olive" class="recipe-card__image" loading="lazy">
+                    </div>
+                    <div class="recipe-card__body">
+                        <div class="recipe-card__tags">
+                            <span class="tag tag--tool">🔧 Famag Grilletta</span>
+                            <span class="tag tag--category">🥖 Pane</span>
+                        </div>
+                        <h3 class="recipe-card__title">Pane Noci & Olive</h3>
+                        <p class="recipe-card__desc">
+                            Pane ad alta idratazione con noci tostate e olive nere. Mix tri-farina: tipo 0, manitoba
+                            e semola rimacinata.
+                        </p>
+                        <div class="recipe-card__meta">
+                            <span class="recipe-card__meta-item">⏱️ 24h lievitazione</span>
+                            <span class="recipe-card__meta-item">💧 75% idratazione</span>
+                            <span class="recipe-card__meta-item">🌡️ 24-25°C</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card: Pane Casalingo Misto Farine -->
+                <a href="ricette/pane/pane-casalingo-misto-farine.html" class="recipe-card reveal" data-category="Pane">
+                    <div class="recipe-card__image-wrapper">
+                        <img src="/Ricettario/assets/pane-casalingo-misto-farine-CeHMAJGa.jpg"
+                            alt="Pane Casalingo Misto Farine" class="recipe-card__image" loading="lazy">
+                    </div>
+                    <div class="recipe-card__body">
+                        <div class="recipe-card__tags">
+                            <span class="tag tag--tool">🔧 Famag Grilletta</span>
+                            <span class="tag tag--category">🍞 Lievitati</span>
+                        </div>
+                        <h3 class="recipe-card__title">Pane Casalingo Misto Farine</h3>
+                        <p class="recipe-card__desc">
+                            Pane fatto in casa con mix di farina Manitoba e 00, crosta croccante e mollica morbida,
+                            perfetto per il forno domestico.
+                        </p>
+                        <div class="recipe-card__meta">
+                            <span class="recipe-card__meta-item">⏱️ ~3h</span>
+                            <span class="recipe-card__meta-item">💧 70% idratazione</span>
+                            <span class="recipe-card__meta-item">🌡️ 24-26°C</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- Card: Pane Integrale con Biga Lunga Maturazione -->
+                <a href="ricette/pane/pane-integrale-biga-lunga-maturazione.html" class="recipe-card reveal"
+                    data-category="Pane">
+                    <div class="recipe-card__image-wrapper">
+                        <img src="/Ricettario/assets/pane-integrale-biga-lunga-maturazione-BoGmBm_I.jpg"
+                            alt="Pane Integrale con Biga Lunga Maturazione" class="recipe-card__image" loading="lazy">
+                    </div>
+                    <div class="recipe-card__body">
+                        <div class="recipe-card__tags">
+                            <span class="tag tag--tool">🔧 Famag Grilletta</span>
+                            <span class="tag tag--category">🍞 Lievitati</span>
+                        </div>
+                        <h3 class="recipe-card__title">Pane Integrale con Biga Lunga Maturazione</h3>
+                        <p class="recipe-card__desc">
+                            Pane integrale artigianale con farine miste e biga da 10 ore. Crosta croccante e mollica
+                            alveolata ricca di fibre e sapore
+                        </p>
+                        <div class="recipe-card__meta">
+                            <span class="recipe-card__meta-item">⏱️ ~29h</span>
+                            <span class="recipe-card__meta-item">💧 72% idratazione</span>
+                            <span class="recipe-card__meta-item">🌡️ 24-25°C</span>
+                        </div>
+                    </div>
+                </a>
+
+
+
+                <!-- Card: Orecchiette Pugliesi -->
+                <a href="ricette/pasta/orecchiette-pugliesi.html" class="recipe-card reveal" data-category="Pasta">
+                    <div class="recipe-card__image-wrapper">
+                        <img src="/Ricettario/assets/orecchiette-pugliesi-Da_lpPbp.jpg"
+                            alt="Orecchiette Pugliesi" class="recipe-card__image" loading="lazy">
+                    </div>
+                    <div class="recipe-card__body">
+                        <div class="recipe-card__tags">
+                            <span class="tag tag--tool">🔧 Famag Grilletta</span>
+                            <span class="tag tag--category">🍝 Pasta</span>
+                        </div>
+                        <h3 class="recipe-card__title">Orecchiette Pugliesi</h3>
+                        <p class="recipe-card__desc">
+                            Pasta tradizionale pugliese di semola di grano duro. Tecnica del trascinamento su tavoliere
+                            di legno o macchina Philips con trafila professionale.
+                        </p>
+                        <div class="recipe-card__meta">
+                            <span class="recipe-card__meta-item">⏱️ 30-60 min riposo</span>
+                            <span class="recipe-card__meta-item">💧 48% idratazione</span>
+                            <span class="recipe-card__meta-item">🌡️ 22-24°C</span>
+                        </div>
+                    </div>
+                </a>
+
+
+
+
+
+                <!-- Card: Fusilli al Ferretto Calabresi -->
+                <a href="ricette/pasta/fusilli-al-ferretto-calabresi.html" class="recipe-card reveal"
+                    data-category="Pasta">
+                    <div class="recipe-card__image-wrapper">
+                        <img src="/Ricettario/assets/fusilli-al-ferretto-calabresi-Cvrj1IXc.jpg"
+                            alt="Fusilli al Ferretto Calabresi" class="recipe-card__image" loading="lazy">
+                    </div>
+                    <div class="recipe-card__body">
+                        <div class="recipe-card__tags">
+                            <span class="tag tag--tool">🔧 Famag Grilletta</span>
+                            <span class="tag tag--category">🌀 Pasta</span>
+                        </div>
+                        <h3 class="recipe-card__title">Fusilli al Ferretto Calabresi</h3>
+                        <p class="recipe-card__desc">
+                            Pasta tradizionale calabrese: spirali di semola di grano duro lavorate a mano con ferro da
+                            calza. Idratazione 47%, riposo 30 minuti.
+                        </p>
+                        <div class="recipe-card__meta">
+                            <span class="recipe-card__meta-item">⏱️ 30 min riposo</span>
+                            <span class="recipe-card__meta-item">💧 47% idratazione</span>
+                            <span class="recipe-card__meta-item">🌡️ 22-24°C</span>
+                        </div>
+                    </div>
+                </a>
+
+
+
+
+
+
+
+
+                <!-- Card: Tagliatelle all'Uovo Bolognesi -->
+                <a href="ricette/pasta/tagliatelle-uovo-bolognesi.html" class="recipe-card reveal"
+                    data-category="Pasta">
+                    <div class="recipe-card__image-wrapper">
+                        <img src="/Ricettario/assets/tagliatelle-uovo-bolognesi-BN4YniKQ.jpg"
+                            alt="Tagliatelle all'Uovo Bolognesi" class="recipe-card__image" loading="lazy">
+                    </div>
+                    <div class="recipe-card__body">
+                        <div class="recipe-card__tags">
+                            <span class="tag tag--tool">🔧 Famag Grilletta</span>
+                            <span class="tag tag--category">🍝 Pasta</span>
+                        </div>
+                        <h3 class="recipe-card__title">Tagliatelle all'Uovo Bolognesi</h3>
+                        <p class="recipe-card__desc">
+                            Tagliatelle all'uovo tradizionali emiliane con sfoglia dorata e consistenza perfetta per il
+                            ragù bolognese
+                        </p>
+                        <div class="recipe-card__meta">
+                            <span class="recipe-card__meta-item">⏱️ 30min riposo</span>
+                            <span class="recipe-card__meta-item">💧 52% idratazione</span>
+                            <span class="recipe-card__meta-item">🌡️ 22-24°C</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- Card: Tajarin Piemontesi -->
+                <a href="ricette/pasta/tajarin-piemontesi.html" class="recipe-card reveal" data-category="Pasta">
+                    <div class="recipe-card__image-wrapper">
+                        <img src="/Ricettario/assets/tajarin-piemontesi-DXOE7xbr.jpg"
+                            alt="Tajarin Piemontesi" class="recipe-card__image" loading="lazy">
+                    </div>
+                    <div class="recipe-card__body">
+                        <div class="recipe-card__tags">
+                            <span class="tag tag--tool">🔧 Famag Grilletta</span>
+                            <span class="tag tag--category">🍝 Pasta</span>
+                        </div>
+                        <h3 class="recipe-card__title">Tajarin Piemontesi</h3>
+                        <p class="recipe-card__desc">
+                            Pasta all'uovo finissima delle Langhe con 40 tuorli per kg di farina. Colore dorato intenso,
+                            consistenza setosa, tradizione piemontese autentica.
+                        </p>
+                        <div class="recipe-card__meta">
+                            <span class="recipe-card__meta-item">⏱️ Riposo 30 min</span>
+                            <span class="recipe-card__meta-item">💧 45% idratazione</span>
+                            <span class="recipe-card__meta-item">🌡️ 22-24°C</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- Card: Pappardelle Toscane -->
+                <a href="ricette/pasta/pappardelle-toscane.html" class="recipe-card reveal" data-category="Pasta">
+                    <div class="recipe-card__image-wrapper">
+                        <img src="/Ricettario/assets/pappardelle-toscane-aSRh2Ier.jpg"
+                            alt="Pappardelle Toscane" class="recipe-card__image" loading="lazy">
+                    </div>
+                    <div class="recipe-card__body">
+                        <div class="recipe-card__tags">
+                            <span class="tag tag--tool">🔧 Famag Grilletta</span>
+                            <span class="tag tag--category">🍝 Pasta</span>
+                        </div>
+                        <h3 class="recipe-card__title">Pappardelle Toscane</h3>
+                        <p class="recipe-card__desc">
+                            Pappardelle all'uovo tradizionali toscane: pasta larga e rustica, perfetta con ragù di
+                            cinghiale o lepre. Ricetta artigianale con sfoglia tirata.
+                        </p>
+                        <div class="recipe-card__meta">
+                            <span class="recipe-card__meta-item">⏱️ 30-60 min riposo</span>
+                            <span class="recipe-card__meta-item">💧 52% idratazione</span>
+                            <span class="recipe-card__meta-item">🌡️ 18-20°C</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- Card: Pizzoccheri della Valtellina -->
+                <a href="ricette/pasta/pizzoccheri-valtellina.html" class="recipe-card reveal" data-category="Pasta">
+                    <div class="recipe-card__image-wrapper">
+                        <img src="/Ricettario/assets/pizzoccheri-valtellina-B3ribP4o.jpg"
+                            alt="Pizzoccheri della Valtellina" class="recipe-card__image" loading="lazy">
+                    </div>
+                    <div class="recipe-card__body">
+                        <div class="recipe-card__tags">
+                            <span class="tag tag--tool">🔧 Famag Grilletta</span>
+                            <span class="tag tag--category">🍝 Pasta</span>
+                        </div>
+                        <h3 class="recipe-card__title">Pizzoccheri della Valtellina</h3>
+                        <p class="recipe-card__desc">
+                            Pasta tradizionale valtellinese con grano saraceno, verza, patate e formaggi locali. Ricetta
+                            autentica e tecnica completa.
+                        </p>
+                        <div class="recipe-card__meta">
+                            <span class="recipe-card__meta-item">⏱️ Riposo 30min</span>
+                            <span class="recipe-card__meta-item">💧 52% idratazione</span>
+                            <span class="recipe-card__meta-item">🌡️ 18-20°C</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- Card: Pici Toscani Tradizionali -->
+                <a href="ricette/pasta/pici-toscani-tradizionali.html" class="recipe-card reveal" data-category="Pasta">
+                    <div class="recipe-card__image-wrapper">
+                        <img src="/Ricettario/assets/pici-toscani-tradizionali-C1sNU_bi.jpg"
+                            alt="Pici Toscani Tradizionali" class="recipe-card__image" loading="lazy">
+                    </div>
+                    <div class="recipe-card__body">
+                        <div class="recipe-card__tags">
+                            <span class="tag tag--tool">🔧 Famag Grilletta</span>
+                            <span class="tag tag--category">🍝 Pasta</span>
+                        </div>
+                        <h3 class="recipe-card__title">Pici Toscani Tradizionali</h3>
+                        <p class="recipe-card__desc">
+                            Pasta tradizionale senese senza uova, arrotolata a mano con la tecnica dell'appiciare.
+                            Idratazione 50%, solo farina 00, acqua e olio.
+                        </p>
+                        <div class="recipe-card__meta">
+                            <span class="recipe-card__meta-item">⏱️ Riposo 30-60min</span>
+                            <span class="recipe-card__meta-item">💧 50% idratazione</span>
+                            <span class="recipe-card__meta-item">🌡️ 22-24°C</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- Card: Rigatoni di Semola di Grano Duro -->
+                <a href="ricette/pasta/rigatoni-semola-grano-duro.html" class="recipe-card reveal" data-category="Pasta">
+                    <div class="recipe-card__image-wrapper">
+                        <img src="/Ricettario/assets/rigatoni-semola-grano-duro-xTV2TpsQ.jpg"
+                            alt="Rigatoni di Semola di Grano Duro" class="recipe-card__image" loading="lazy">
+                    </div>
+                    <div class="recipe-card__body">
+                        <div class="recipe-card__tags">
+                            <span class="tag tag--tool">🔧 Famag Grilletta</span>
+                            <span class="tag tag--category">🍝 Pasta</span>
+                        </div>
+                        <h3 class="recipe-card__title">Rigatoni di Semola di Grano Duro</h3>
+                        <p class="recipe-card__desc">
+                            Pasta corta rigata di semola di grano duro, formato classico romano ideale per gricia, cacio e pepe e amatriciana
+                        </p>
+                        <div class="recipe-card__meta">
+                            <span class="recipe-card__meta-item">⏱️ Riposo 30-60 min</span>
+                            <span class="recipe-card__meta-item">💧 49% idratazione</span>
+                            <span class="recipe-card__meta-item">🌡️ 18-20°C</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- Card: Linguine di Semola Artigianali -->
+                <a href="ricette/pasta/linguine-semola-artigianali.html" class="recipe-card reveal" data-category="Pasta">
+                    <div class="recipe-card__image-wrapper">
+                        <img src="/Ricettario/assets/linguine-semola-artigianali-CgCMWYW2.jpg"
+                            alt="Linguine di Semola Artigianali" class="recipe-card__image" loading="lazy">
+                    </div>
+                    <div class="recipe-card__body">
+                        <div class="recipe-card__tags">
+                            <span class="tag tag--tool">🔧 Famag Grilletta</span>
+                            <span class="tag tag--category">🍝 Pasta</span>
+                        </div>
+                        <h3 class="recipe-card__title">Linguine di Semola Artigianali</h3>
+                        <p class="recipe-card__desc">
+                            Linguine tradizionali liguri di semola rimacinata, pasta lunga piatta ideale per pesto genovese e frutti di mare. Idratazione 48%, formato 4x1.80mm.
+                        </p>
+                        <div class="recipe-card__meta">
+                            <span class="recipe-card__meta-item">⏱️ Riposo 30 min</span>
+                            <span class="recipe-card__meta-item">💧 48% idratazione</span>
+                            <span class="recipe-card__meta-item">🌡️ 22-24°C</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- Card: Maccheroni Rigati Tradizionali -->
+                <a href="ricette/pasta/maccheroni-rigati-tradizionali.html" class="recipe-card reveal" data-category="Pasta">
+                    <div class="recipe-card__image-wrapper">
+                        <img src="/Ricettario/assets/maccheroni-rigati-tradizionali-DJtS28jt.jpg"
+                            alt="Maccheroni Rigati Tradizionali" class="recipe-card__image" loading="lazy">
+                    </div>
+                    <div class="recipe-card__body">
+                        <div class="recipe-card__tags">
+                            <span class="tag tag--tool">🔧 Famag Grilletta</span>
+                            <span class="tag tag--category">🍝 Pasta</span>
+                        </div>
+                        <h3 class="recipe-card__title">Maccheroni Rigati Tradizionali</h3>
+                        <p class="recipe-card__desc">
+                            Maccheroni rigati artigianali di semola di grano duro, tradizione campana con trafila in bronzo per rigatura perfetta e tenuta di cottura
+                        </p>
+                        <div class="recipe-card__meta">
+                            <span class="recipe-card__meta-item">⏱️ Riposo 30 min</span>
+                            <span class="recipe-card__meta-item">💧 48% idratazione</span>
+                            <span class="recipe-card__meta-item">🌡️ 22-23°C</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- Card: Spaghetti di Semola -->
+                <a href="ricette/pasta/spaghetti-semola.html" class="recipe-card reveal" data-category="Pasta">
+                    <div class="recipe-card__image-wrapper">
+                        <img src="/Ricettario/assets/spaghetti-semola-BXOZzCwj.jpg"
+                            alt="Spaghetti di Semola" class="recipe-card__image" loading="lazy">
+                    </div>
+                    <div class="recipe-card__body">
+                        <div class="recipe-card__tags">
+                            <span class="tag tag--tool">🔧 Famag Grilletta</span>
+                            <span class="tag tag--category">🍝 Pasta</span>
+                        </div>
+                        <h3 class="recipe-card__title">Spaghetti di Semola</h3>
+                        <p class="recipe-card__desc">
+                            Spaghetti artigianali di semola rimacinata con trafila in bronzo. Sezione circolare 3mm, idratazione 48%, perfetti per condimenti classici italiani.
+                        </p>
+                        <div class="recipe-card__meta">
+                            <span class="recipe-card__meta-item">⏱️ Riposo 30 min</span>
+                            <span class="recipe-card__meta-item">💧 48% idratazione</span>
+                            <span class="recipe-card__meta-item">🌡️ 24-25°C</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- Card: Malloreddus - Gnocchi Sardi -->
+                <a href="ricette/pasta/malloreddus-gnocchi-sardi.html" class="recipe-card reveal" data-category="Pasta">
+                    <div class="recipe-card__image-wrapper">
+                        <img src="/Ricettario/assets/malloreddus-gnocchi-sardi-vrv0XAuV.jpg"
+                            alt="Malloreddus - Gnocchi Sardi" class="recipe-card__image" loading="lazy">
+                    </div>
+                    <div class="recipe-card__body">
+                        <div class="recipe-card__tags">
+                            <span class="tag tag--tool">🔧 Famag Grilletta</span>
+                            <span class="tag tag--category">🍝 Pasta</span>
+                        </div>
+                        <h3 class="recipe-card__title">Malloreddus - Gnocchi Sardi</h3>
+                        <p class="recipe-card__desc">
+                            Pasta tradizionale sarda con semola di grano duro, acqua e zafferano. Idratazione 48%, rigature perfette su ciuliri o forchetta.
+                        </p>
+                        <div class="recipe-card__meta">
+                            <span class="recipe-card__meta-item">⏱️ Riposo 30min</span>
+                            <span class="recipe-card__meta-item">💧 48% idratazione</span>
+                            <span class="recipe-card__meta-item">🌡️ 20-22°C</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- Card: Gnocco Napoletano Rigato -->
+                <a href="ricette/pasta/gnocco-napoletano-rigato.html" class="recipe-card reveal" data-category="Pasta">
+                    <div class="recipe-card__image-wrapper">
+                        <img src="/Ricettario/assets/gnocco-napoletano-rigato-D3kZaNkt.jpg"
+                            alt="Gnocco Napoletano Rigato" class="recipe-card__image" loading="lazy">
+                    </div>
+                    <div class="recipe-card__body">
+                        <div class="recipe-card__tags">
+                            <span class="tag tag--tool">🔧 Famag Grilletta</span>
+                            <span class="tag tag--category">🍝 Pasta</span>
+                        </div>
+                        <h3 class="recipe-card__title">Gnocco Napoletano Rigato</h3>
+                        <p class="recipe-card__desc">
+                            Pasta corta campana di semola di grano duro con rigatura profonda, perfetta per sughi densi e ragù napoletano tradizionale
+                        </p>
+                        <div class="recipe-card__meta">
+                            <span class="recipe-card__meta-item">⏱️ 30min riposo</span>
+                            <span class="recipe-card__meta-item">💧 48% idratazione</span>
+                            <span class="recipe-card__meta-item">🌡️ 22-24°C</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- Card: Fusilli Grandi 3P -->
+                <a href="ricette/pasta/fusilli-grandi-3p.html" class="recipe-card reveal" data-category="Pasta">
+                    <div class="recipe-card__image-wrapper">
+                        <img src="/Ricettario/assets/fusilli-grandi-3p-Bx8DFv-3.jpg"
+                            alt="Fusilli Grandi 3P" class="recipe-card__image" loading="lazy">
+                    </div>
+                    <div class="recipe-card__body">
+                        <div class="recipe-card__tags">
+                            <span class="tag tag--tool">🔧 Famag Grilletta</span>
+                            <span class="tag tag--category">🌀 Pasta</span>
+                        </div>
+                        <h3 class="recipe-card__title">Fusilli Grandi 3P</h3>
+                        <p class="recipe-card__desc">
+                            Fusilli grandi a 3 pale di semola di grano duro, formato meridionale robusto da 10mm. Idratazione 48%, perfetti per sughi corposi e pasta al forno.
+                        </p>
+                        <div class="recipe-card__meta">
+                            <span class="recipe-card__meta-item">⏱️ 30-45 min riposo</span>
+                            <span class="recipe-card__meta-item">💧 48% idratazione</span>
+                            <span class="recipe-card__meta-item">🌡️ 26-28°C</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- Card: Ciabatta Italiana Tradizionale -->
+                <a href="ricette/pane/ciabatta-italiana-tradizionale.html" class="recipe-card reveal" data-category="Pane">
+                    <div class="recipe-card__image-wrapper">
+                        <img src="/Ricettario/assets/ciabatta-italiana-tradizionale-Bx0XEPlr.jpg"
+                            alt="Ciabatta Italiana Tradizionale" class="recipe-card__image" loading="lazy">
+                    </div>
+                    <div class="recipe-card__body">
+                        <div class="recipe-card__tags">
+                            <span class="tag tag--tool">🔧 Famag Grilletta</span>
+                            <span class="tag tag--category">🍞 Pane</span>
+                        </div>
+                        <h3 class="recipe-card__title">Ciabatta Italiana Tradizionale</h3>
+                        <p class="recipe-card__desc">
+                            Ciabatta italiana con poolish, crosta croccante e mollica alveolata. Ricetta professionale con idratazione 80% per risultato artigianale perfetto.
+                        </p>
+                        <div class="recipe-card__meta">
+                            <span class="recipe-card__meta-item">⏱️ ~27h</span>
+                            <span class="recipe-card__meta-item">💧 80% idratazione</span>
+                            <span class="recipe-card__meta-item">🌡️ 24-26°C</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- Card: Pane di Semola tipo Altamura -->
+                <a href="ricette/pane/pane-semola-altamura.html" class="recipe-card reveal" data-category="Pane">
+                    <div class="recipe-card__image-wrapper">
+                        <img src="/Ricettario/assets/pane-semola-altamura-B98mI4JK.jpg"
+                            alt="Pane di Semola tipo Altamura" class="recipe-card__image" loading="lazy">
+                    </div>
+                    <div class="recipe-card__body">
+                        <div class="recipe-card__tags">
+                            <span class="tag tag--tool">🔧 Famag Grilletta</span>
+                            <span class="tag tag--category">🌾 Pane</span>
+                        </div>
+                        <h3 class="recipe-card__title">Pane di Semola tipo Altamura</h3>
+                        <p class="recipe-card__desc">
+                            Il tradizionale pane pugliese con semola rimacinata di grano duro, dalla crosta dorata e mollica compatta. Ricetta tecnica DOP.
+                        </p>
+                        <div class="recipe-card__meta">
+                            <span class="recipe-card__meta-item">⏱️ ~4h totali</span>
+                            <span class="recipe-card__meta-item">💧 55% idratazione</span>
+                            <span class="recipe-card__meta-item">🌡️ 24-26°C</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- Card: Focaccia Genovese -->
+                <a href="ricette/pane/focaccia-genovese.html" class="recipe-card reveal" data-category="Pane">
+                    <div class="recipe-card__image-wrapper">
+                        <img src="/Ricettario/assets/focaccia-genovese-D0WPfDo4.jpg"
+                            alt="Focaccia Genovese" class="recipe-card__image" loading="lazy">
+                    </div>
+                    <div class="recipe-card__body">
+                        <div class="recipe-card__tags">
+                            <span class="tag tag--tool">🔧 Famag Grilletta</span>
+                            <span class="tag tag--category">🫒 Pane</span>
+                        </div>
+                        <h3 class="recipe-card__title">Focaccia Genovese</h3>
+                        <p class="recipe-card__desc">
+                            La vera focaccia genovese con salamoia tradizionale, impasto ad alta idratazione e cottura perfetta per risultati professionali da forno ligure.
+                        </p>
+                        <div class="recipe-card__meta">
+                            <span class="recipe-card__meta-item">⏱️ 4-5h + 1h teglia</span>
+                            <span class="recipe-card__meta-item">💧 75% idratazione</span>
+                            <span class="recipe-card__meta-item">🌡️ 25-26°C</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- Card: Pane al Latte Artigianale -->
+                <a href="ricette/pane/pane-al-latte.html" class="recipe-card reveal" data-category="Pane">
+                    <div class="recipe-card__image-wrapper">
+                        <img src="/Ricettario/assets/pane-al-latte-B2i9IBmc.jpg"
+                            alt="Pane al Latte Artigianale" class="recipe-card__image" loading="lazy">
+                    </div>
+                    <div class="recipe-card__body">
+                        <div class="recipe-card__tags">
+                            <span class="tag tag--tool">🔧 Famag Grilletta</span>
+                            <span class="tag tag--category">🥛 Pane</span>
+                        </div>
+                        <h3 class="recipe-card__title">Pane al Latte Artigianale</h3>
+                        <p class="recipe-card__desc">
+                            Pane al latte soffice e profumato, perfetto per colazione e merenda. Ricetta professionale con idratazione 55% per massima sofficità.
+                        </p>
+                        <div class="recipe-card__meta">
+                            <span class="recipe-card__meta-item">⏱️ ~4h</span>
+                            <span class="recipe-card__meta-item">💧 55% idratazione</span>
+                            <span class="recipe-card__meta-item">🌡️ 24-26°C</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- Card: Filone Classico Italiano -->
+                <a href="ricette/pane/filone-classico-italiano.html" class="recipe-card reveal" data-category="Pane">
+                    <div class="recipe-card__image-wrapper">
+                        <img src="/Ricettario/assets/filone-classico-italiano-ATBnMGd5.jpg"
+                            alt="Filone Classico Italiano" class="recipe-card__image" loading="lazy">
+                    </div>
+                    <div class="recipe-card__body">
+                        <div class="recipe-card__tags">
+                            <span class="tag tag--tool">🔧 Famag Grilletta</span>
+                            <span class="tag tag--category">🍞 Pane</span>
+                        </div>
+                        <h3 class="recipe-card__title">Filone Classico Italiano</h3>
+                        <p class="recipe-card__desc">
+                            Filone italiano tradizionale con crosta dorata e mollica soffice. Idratazione 65%, perfetto per accompagnare i pasti con tecnica classica.
+                        </p>
+                        <div class="recipe-card__meta">
+                            <span class="recipe-card__meta-item">⏱️ 18-24h</span>
+                            <span class="recipe-card__meta-item">💧 65% idratazione</span>
+                            <span class="recipe-card__meta-item">🌡️ 24-26°C</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- Card: Pizza Napoletana -->
+                <a href="ricette/pizza/pizza-napoletana.html" class="recipe-card reveal" data-category="Pizza">
+                    <div class="recipe-card__image-wrapper">
+                        <img src="/Ricettario/assets/pizza-napoletana-DrXOccuh.jpg"
+                            alt="Pizza Napoletana" class="recipe-card__image" loading="lazy">
+                    </div>
+                    <div class="recipe-card__body">
+                        <div class="recipe-card__tags">
+                            <span class="tag tag--tool">🔧 Famag Grilletta</span>
+                            <span class="tag tag--category">🍕 Pizza</span>
+                        </div>
+                        <h3 class="recipe-card__title">Pizza Napoletana</h3>
+                        <p class="recipe-card__desc">
+                            Pizza napoletana tradizionale con cornicione alto, impasto a 65% idratazione, lievitazione 24h e cottura forno casalingo fino 300°C
+                        </p>
+                        <div class="recipe-card__meta">
+                            <span class="recipe-card__meta-item">⏱️ ~24h</span>
+                            <span class="recipe-card__meta-item">💧 65% idratazione</span>
+                            <span class="recipe-card__meta-item">🌡️ 24-25°C</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- Card: Pizza in Teglia alla Romana -->
+                <a href="ricette/pizza/pizza-teglia-romana.html" class="recipe-card reveal" data-category="Pizza">
+                    <div class="recipe-card__image-wrapper">
+                        <img src="/Ricettario/assets/pizza-teglia-romana-CyfBGwfe.jpg"
+                            alt="Pizza in Teglia alla Romana" class="recipe-card__image" loading="lazy">
+                    </div>
+                    <div class="recipe-card__body">
+                        <div class="recipe-card__tags">
+                            <span class="tag tag--tool">🔧 Famag Grilletta</span>
+                            <span class="tag tag--category">🍕 Pizza</span>
+                        </div>
+                        <h3 class="recipe-card__title">Pizza in Teglia alla Romana</h3>
+                        <p class="recipe-card__desc">
+                            Pizza in teglia romana ad alta idratazione, stile Bonci con alveolatura pronunciata e maturazione 24-48h in frigo per massima digeribilità.
+                        </p>
+                        <div class="recipe-card__meta">
+                            <span class="recipe-card__meta-item">⏱️ 24-48h</span>
+                            <span class="recipe-card__meta-item">💧 80% idratazione</span>
+                            <span class="recipe-card__meta-item">🌡️ 22-24°C</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- Card: Pizza Margherita Classica -->
+                <a href="ricette/pizza/pizza-margherita-classica.html" class="recipe-card reveal" data-category="Pizza">
+                    <div class="recipe-card__image-wrapper">
+                        <img src="/Ricettario/assets/pizza-margherita-classica-CEkfD9p2.jpg"
+                            alt="Pizza Margherita Classica" class="recipe-card__image" loading="lazy">
+                    </div>
+                    <div class="recipe-card__body">
+                        <div class="recipe-card__tags">
+                            <span class="tag tag--tool">🔧 Famag Grilletta</span>
+                            <span class="tag tag--category">🍕 Pizza</span>
+                        </div>
+                        <h3 class="recipe-card__title">Pizza Margherita Classica</h3>
+                        <p class="recipe-card__desc">
+                            Pizza Margherita italiana tradizionale con impasto a 60% idratazione, lievitazione 8-12h, perfetta per forno domestico a 250°C
+                        </p>
+                        <div class="recipe-card__meta">
+                            <span class="recipe-card__meta-item">⏱️ 8-12h</span>
+                            <span class="recipe-card__meta-item">💧 60% idratazione</span>
+                            <span class="recipe-card__meta-item">🌡️ 24-25°C</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ STRUMENTI ═══════════ -->
+    <section class="section tools-section" id="strumenti">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-header__label">Il mio setup</div>
+                <h2 class="section-header__title">Strumenti del Mestiere</h2>
+                <p class="section-header__desc">
+                    Ogni ricetta è tarata specificamente per questi strumenti. Hardware serio per risultati seri.
+                </p>
+            </div>
+
+            <!-- STRUMENTO 1: Famag Grilletta IM 5/230 HH -->
+            <div class="tool-spotlight reveal">
+                <div class="tool-spotlight__image-wrapper">
+                    <img src="/Ricettario/assets/famag-grilletta-D8OEb3k8.png"
+                        alt="Famag Grilletta IM 5/230 HH — Impastatrice a spirale" class="tool-spotlight__image"
+                        loading="lazy">
+                    <span class="tool-spotlight__badge">⭐ Impasti</span>
+                </div>
+
+                <div class="tool-spotlight__info">
+                    <h3 class="tool-spotlight__name">
+                        Famag Grilletta <span>IM 5/230 HH</span>
+                    </h3>
+                    <p class="tool-spotlight__desc">
+                        Impastatrice a spirale professionale con motore brushless e tecnologia inverter.
+                        10 velocità selezionabili, capacità 5 kg, vasca da 7 litri.
+                        Progettata specificamente per impasti ad alta idratazione (fino al 95%).
+                        Made in Italy — il cuore di ogni lievitato.
+                    </p>
+
+                    <div class="tool-spotlight__specs">
+                        <div class="spec-card reveal">
+                            <div class="spec-card__icon">⚡</div>
+                            <div class="spec-card__label">Motore</div>
+                            <div class="spec-card__value">Brushless 0.5 HP</div>
+                        </div>
+                        <div class="spec-card reveal reveal-delay-1">
+                            <div class="spec-card__icon">🎯</div>
+                            <div class="spec-card__label">Velocità</div>
+                            <div class="spec-card__value">10 (90–320 RPM)</div>
+                        </div>
+                        <div class="spec-card reveal reveal-delay-2">
+                            <div class="spec-card__icon">📦</div>
+                            <div class="spec-card__label">Capacità</div>
+                            <div class="spec-card__value">5 kg / 7 litri</div>
+                        </div>
+                        <div class="spec-card reveal reveal-delay-3">
+                            <div class="spec-card__icon">💧</div>
+                            <div class="spec-card__label">Idratazione Max</div>
+                            <div class="spec-card__value">Fino al 95%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STRUMENTO 2: Fimar PF25E — NASCOSTO (non ancora acquistato)
+            <div class="tool-spotlight reveal">
+                <div class="tool-spotlight__image-wrapper">
+                    <img src="images/strumenti/fimar-pf25e.jpg"
+                        alt="Fimar PF25E Lilly — Macchina per la pasta professionale" class="tool-spotlight__image"
+                        loading="lazy">
+                    <span class="tool-spotlight__badge">🍝 Pasta</span>
+                </div>
+
+                <div class="tool-spotlight__info">
+                    <h3 class="tool-spotlight__name">
+                        Fimar <span>PF25E Lilly</span>
+                    </h3>
+                    <p class="tool-spotlight__desc">
+                        Macchina per la pasta professionale 2-in-1: impasta ed estrude.
+                        Scocca in acciaio INOX AISI 304, vasca estraibile da 4 litri,
+                        pannello comandi digitale. Produzione 8 kg/h con trafile in bronzo da Ø 57 mm.
+                        Made in Italy — per pasta fresca come in pastificio.
+                    </p>
+
+                    <div class="tool-spotlight__specs">
+                        <div class="spec-card reveal">
+                            <div class="spec-card__icon">⚡</div>
+                            <div class="spec-card__label">Potenza</div>
+                            <div class="spec-card__value">0.37 kW / 0.5 HP</div>
+                        </div>
+                        <div class="spec-card reveal reveal-delay-1">
+                            <div class="spec-card__icon">🏭</div>
+                            <div class="spec-card__label">Produzione</div>
+                            <div class="spec-card__value">8 kg/h</div>
+                        </div>
+                        <div class="spec-card reveal reveal-delay-2">
+                            <div class="spec-card__icon">📦</div>
+                            <div class="spec-card__label">Impasto/Ciclo</div>
+                            <div class="spec-card__value">2 kg</div>
+                        </div>
+                        <div class="spec-card reveal reveal-delay-3">
+                            <div class="spec-card__icon">🔩</div>
+                            <div class="spec-card__label">Materiale</div>
+                            <div class="spec-card__value">INOX AISI 304</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            -->
+
+            <!-- STRUMENTO 3: Philips HR2665/93 -->
+            <div class="tool-spotlight reveal">
+                <div class="tool-spotlight__image-wrapper">
+                    <img src="/Ricettario/assets/philips-serie-7000-BCZaAYLz.jpg"
+                        alt="Philips Serie 7000 HR2665/93 — Macchina per la pasta" class="tool-spotlight__image"
+                        loading="lazy">
+                    <span class="tool-spotlight__badge">🏠 Pasta Home</span>
+                </div>
+
+                <div class="tool-spotlight__info">
+                    <h3 class="tool-spotlight__name">
+                        Philips <span>Serie 7000</span>
+                    </h3>
+                    <p class="tool-spotlight__desc">
+                        Macchina per la pasta automatica con tecnologia ProExtrude.
+                        Pesatura automatica integrata, 8 trafile incluse, fino a 8 porzioni (800g di farina).
+                        Pasta pronta in meno di 10 minuti. App Philips HomeID per ricette guidate.
+                        Ideale per pasta quotidiana veloce e senza glutine.
+                    </p>
+
+                    <div class="tool-spotlight__specs">
+                        <div class="spec-card reveal">
+                            <div class="spec-card__icon">⚡</div>
+                            <div class="spec-card__label">Potenza</div>
+                            <div class="spec-card__value">200 W</div>
+                        </div>
+                        <div class="spec-card reveal reveal-delay-1">
+                            <div class="spec-card__icon">⚖️</div>
+                            <div class="spec-card__label">Capacità</div>
+                            <div class="spec-card__value">800g / 8 porzioni</div>
+                        </div>
+                        <div class="spec-card reveal reveal-delay-2">
+                            <div class="spec-card__icon">🍝</div>
+                            <div class="spec-card__label">Trafile</div>
+                            <div class="spec-card__value">8 incluse</div>
+                        </div>
+                        <div class="spec-card reveal reveal-delay-3">
+                            <div class="spec-card__icon">⏱️</div>
+                            <div class="spec-card__label">Tempo</div>
+                            <div class="spec-card__value">&lt; 10 minuti</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ CHI SONO ═══════════ -->
+    <section class="section" id="chi-sono">
+        <div class="container container--narrow">
+            <div class="section-header reveal">
+                <div class="section-header__label">About</div>
+                <h2 class="section-header__title">Chi Sono</h2>
+                <p class="section-header__desc">
+                    Appassionato di panificazione artigianale, pasta fresca e impasti ad alta idratazione.
+                    Questo ricettario nasce dalla necessità di avere ricette personalizzate e calibrate
+                    esattamente sui miei strumenti: la <strong>Famag Grilletta</strong> per gli impasti,
+                    la <strong>Fimar PF25E</strong> e la <strong>Philips Serie 7000</strong> per la pasta.
+                    Ogni ricetta è documentata con precisione tecnica per risultati replicabili al 100%.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__brand-name">🔥 <span>Il Ricettario</span></div>
+                    <p class="footer__brand-desc">
+                        Ricettario personale. Ricette artigianali documentate con precisione tecnica per
+                        risultati replicabili al 100%.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Navigazione</h4>
+                    <ul class="footer__links">
+                        <li><a href="#home">↗ Home</a></li>
+                        <li><a href="#ricette">↗ Ricette</a></li>
+                        <li><a href="#strumenti">↗ Strumenti</a></li>
+                        <li><a href="#chi-sono">↗ Chi Sono</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Ricette</h4>
+                    <ul class="footer__links">
+                        <li><a href="ricette/pane-noci-olive.html">↗ Pane Noci & Olive</a></li>
+                        <li><a href="#" style="opacity:0.4; pointer-events:none;">↗ Pizza in Teglia</a></li>
+                        <li><a href="#" style="opacity:0.4; pointer-events:none;">↗ Focaccia Genovese</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Stack</h4>
+                    <ul class="footer__links">
+                        <li><a href="#strumenti">🔧 Famag Grilletta</a></li>
+                        <li><a href="#">🌾 Mix Tri-Farina</a></li>
+                        <li><a href="#">🌾 Farine Professionali</a></li>
+                        <li><a href="#">🌡️ Termometro Laser</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <span>© <span id="current-year">2026</span> Il Ricettario</span>
+                <div class="footer__social">
+                    <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
