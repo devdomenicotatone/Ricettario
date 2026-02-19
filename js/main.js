@@ -209,10 +209,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const badgeValue = document.getElementById('setup-badge-value');
     const stepPanels = document.querySelectorAll('.recipe-panel[data-setup]');
 
-    const SETUPS = [
-      { id: 'spirale', icon: '🔧', label: 'Impastatrice a spirale' },
-      { id: 'mano', icon: '🤲', label: 'A mano' }
-    ];
+    // Rileva dinamicamente quali setup sono disponibili nella pagina
+    const SETUP_CONFIG = {
+      spirale: { icon: '🔧', label: 'Impastatrice a spirale' },
+      estrusore: { icon: '🔧', label: 'Estrusore con trafila' },
+      mano: { icon: '🤲', label: 'A mano' },
+    };
+
+    const SETUPS = [];
+    stepPanels.forEach(panel => {
+      const id = panel.getAttribute('data-setup');
+      if (SETUP_CONFIG[id]) {
+        SETUPS.push({ id, ...SETUP_CONFIG[id] });
+      }
+    });
+
+    // Se c'è un solo setup, nascondi il toggle
+    if (SETUPS.length <= 1) {
+      setupBadge.style.cursor = 'default';
+      setupBadge.removeAttribute('role');
+      setupBadge.removeAttribute('tabindex');
+    }
 
     let currentIndex = 0;
 
@@ -235,18 +252,20 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem('recipe-setup', config.id);
     };
 
-    // Click cycles to next setup
-    setupBadge.addEventListener('click', () => {
-      activateSetup((currentIndex + 1) % SETUPS.length);
-    });
-
-    // Keyboard accessibility
-    setupBadge.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
+    // Click cycles to next setup (solo se > 1 setup)
+    if (SETUPS.length > 1) {
+      setupBadge.addEventListener('click', () => {
         activateSetup((currentIndex + 1) % SETUPS.length);
-      }
-    });
+      });
+
+      // Keyboard accessibility
+      setupBadge.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          activateSetup((currentIndex + 1) % SETUPS.length);
+        }
+      });
+    }
 
     // Restore saved choice
     const savedSetup = localStorage.getItem('recipe-setup');
