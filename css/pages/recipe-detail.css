@@ -7,16 +7,37 @@
         padding: 100px var(--space-md) var(--space-2xl);
         position: relative;
         overflow: hidden;
+        background-color: var(--color-surface-1);
+        background-size: cover;
+        background-position: center 30%;
+        background-repeat: no-repeat;
 
         @media (min-width: 769px) {
-            padding: 140px var(--space-lg) var(--space-3xl);
+            padding: 160px var(--space-lg) var(--space-3xl);
+            min-height: 420px;
         }
 
+        /* Gradient overlay — garantisce leggibilità del testo sull'immagine */
         &::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: var(--gradient-hero-soft);
+            background: linear-gradient(to top,
+                    var(--color-surface-0) 0%,
+                    color-mix(in oklch, var(--color-surface-0) 92%, transparent) 25%,
+                    color-mix(in oklch, var(--color-surface-0) 70%, transparent) 50%,
+                    color-mix(in oklch, var(--color-surface-0) 45%, transparent) 75%,
+                    color-mix(in oklch, var(--color-surface-0) 25%, transparent) 100%);
+            z-index: 0;
+        }
+
+        /* Quando ha l'immagine di sfondo, stile premium */
+        &[style*="background-image"] {
+            min-height: 380px;
+
+            @media (min-width: 769px) {
+                min-height: 450px;
+            }
         }
     }
 
@@ -44,36 +65,6 @@
         color: var(--color-text-secondary);
         font-size: 1.1rem;
         max-width: 600px;
-    }
-    /* Hero Image (Wikimedia Commons) */
-    .recipe-hero__image-wrapper {
-        position: relative;
-        margin-top: var(--space-xl);
-        border-radius: var(--radius-lg);
-        overflow: hidden;
-        max-width: 700px;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-        z-index: 1;
-    }
-
-    .recipe-hero__image {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16 / 10;
-        object-fit: cover;
-        display: block;
-    }
-
-    .recipe-hero__attribution {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 6px 12px;
-        background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
-        color: rgba(255, 255, 255, 0.8);
-        font-size: 0.7rem;
-        text-align: right;
     }
 
 
