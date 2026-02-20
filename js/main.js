@@ -124,6 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { key: 'Pane', emoji: '🥖', dir: 'pane' },
       { key: 'Pizza', emoji: '🍕', dir: 'pizza' },
       { key: 'Lievitati', emoji: '🥐', dir: 'lievitati' },
+      { key: 'Dolci', emoji: '🍪', dir: 'dolci' },
       { key: 'Focaccia', emoji: '🫓', dir: 'focaccia' },
     ];
 
