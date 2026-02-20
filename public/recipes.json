@@ -1,14 +1,57 @@
 {
-  "generatedAt": "2026-02-20T17:56:01.668Z",
-  "totalRecipes": 1,
+  "generatedAt": "2026-02-20T18:54:11.392Z",
+  "totalRecipes": 14,
   "categories": [
     {
       "name": "Pane",
-      "count": 1,
+      "count": 3,
       "emoji": "🥖"
+    },
+    {
+      "name": "Pizza",
+      "count": 2,
+      "emoji": "🍕"
+    },
+    {
+      "name": "Lievitati",
+      "count": 7,
+      "emoji": "🥐"
+    },
+    {
+      "name": "Dolci",
+      "count": 2,
+      "emoji": "🍪"
     }
   ],
   "recipes": [
+    {
+      "title": "Ciabatta Italiana Tradizionale",
+      "slug": "ciabatta-italiana-tradizionale",
+      "category": "Pane",
+      "categoryDir": "pane",
+      "emoji": "🥖",
+      "href": "ricette/pane/ciabatta-italiana-tradizionale.html",
+      "image": "images/ricette/pane/ciabatta-italiana-tradizionale.jpg",
+      "description": "Pane bianco italiano ad alta idratazione con alveolatura aperta, crosta croccante e mollica soffice. Ricetta professionale con metodo diretto.",
+      "hydration": "75%",
+      "time": "3-4h puntata + 1h appretto",
+      "temp": "24-26°C",
+      "tool": "🔧 Impastatrice a spirale"
+    },
+    {
+      "title": "Pane alle Noci",
+      "slug": "pane-alle-noci",
+      "category": "Pane",
+      "categoryDir": "pane",
+      "emoji": "🥖",
+      "href": "ricette/pane/pane-alle-noci.html",
+      "image": "images/ricette/pane/pane-alle-noci.jpg",
+      "description": "Pane rustico artigianale arricchito con noci tostate, dalla mollica soffice e alveolatura irregolare. Perfetto per accompagnare formaggi stagionati.",
+      "hydration": "68%",
+      "time": "~18-20h totali (poolish 12-16h + puntata 3-4h + appretto 2-3h)",
+      "temp": "24-26°C",
+      "tool": "🔧 Impastatrice a spirale"
+    },
     {
       "title": "Pane Pugliese con Biga",
       "slug": "pane-pugliese-biga",
@@ -21,6 +64,160 @@
       "hydration": "62.7%",
       "time": "~18h totali (biga 12-14h + puntata 3h + appretto 1h)",
       "temp": "24-26°C",
+      "tool": "🔧 Impastatrice a spirale"
+    },
+    {
+      "title": "Pinsa Romana Classica",
+      "slug": "pinsa-romana-classica",
+      "category": "Pizza",
+      "categoryDir": "pizza",
+      "emoji": "🍕",
+      "href": "ricette/pizza/pinsa-romana-classica.html",
+      "image": "images/ricette/pizza/pinsa-romana-classica.jpg",
+      "description": "Pinsa romana tradizionale con mix di farine (frumento, riso, soia), alta idratazione (80%) e lunga maturazione. Alveolatura perfetta e croccantezza unica.",
+      "hydration": "80%",
+      "time": "24-48h",
+      "temp": "24-26°C",
+      "tool": "🔧 Impastatrice a spirale"
+    },
+    {
+      "title": "Pizza Napoletana STG",
+      "slug": "pizza-napoletana-stg",
+      "category": "Pizza",
+      "categoryDir": "pizza",
+      "emoji": "🍕",
+      "href": "ricette/pizza/pizza-napoletana-stg.html",
+      "image": "images/ricette/pizza/pizza-napoletana-stg.jpg",
+      "description": "La vera pizza napoletana con disciplinare STG: impasto a mano o impastatrice, lievitazione naturale 24h, cottura ad alta temperatura. Ricetta professionale per 8 panetti.",
+      "hydration": "60%",
+      "time": "8-10h puntata + 14-16h appretto (totale ~24h)",
+      "temp": "24-26°C",
+      "tool": "🔧 Impastatrice a spirale"
+    },
+    {
+      "title": "Burger Buns Artigianali",
+      "slug": "burger-buns-artigianali",
+      "category": "Lievitati",
+      "categoryDir": "lievitati",
+      "emoji": "🥐",
+      "href": "ricette/lievitati/burger-buns-artigianali.html",
+      "image": "images/ricette/lievitati/burger-buns-artigianali.jpg",
+      "description": "Panini per hamburger soffici e dorati con crosta croccante, perfetti per burger gourmet. Impasto arricchito a media idratazione con maturazione controllata.",
+      "hydration": "58%",
+      "time": "~4-5h totali",
+      "temp": "26-27°C",
+      "tool": "🔧 Impastatrice a spirale"
+    },
+    {
+      "title": "Cartocci alla Crema",
+      "slug": "cartocci-alla-crema",
+      "category": "Lievitati",
+      "categoryDir": "lievitati",
+      "emoji": "🥐",
+      "href": "ricette/lievitati/cartocci-alla-crema.html",
+      "image": "images/ricette/lievitati/cartocci-alla-crema.jpg",
+      "description": "Brioche veneziane a forma di cartoccio, ripiene di crema pasticcera. Impasto ricco, lievitazione controllata e crema tradizionale.",
+      "hydration": "52%",
+      "time": "~6-8h totali (puntata + appretto)",
+      "temp": "26-27°C",
+      "tool": "🔧 Impastatrice a spirale"
+    },
+    {
+      "title": "Cornetti Classici",
+      "slug": "cornetti-classici",
+      "category": "Lievitati",
+      "categoryDir": "lievitati",
+      "emoji": "🥐",
+      "href": "ricette/lievitati/cornetti-classici.html",
+      "image": "images/ricette/lievitati/cornetti-classici.jpg",
+      "description": "Cornetti sfogliati classici da colazione con burro di tourage e laminazione professionale. Croccanti fuori, soffici dentro.",
+      "hydration": "52%",
+      "time": "~12-14h totali (puntata + laminazione + appretto)",
+      "temp": "24-26°C",
+      "tool": "🔧 Impastatrice a spirale"
+    },
+    {
+      "title": "Impasto per Rosticceria Siciliana",
+      "slug": "impasto-rosticceria-siciliana",
+      "category": "Lievitati",
+      "categoryDir": "lievitati",
+      "emoji": "🥐",
+      "href": "ricette/lievitati/impasto-rosticceria-siciliana.html",
+      "image": "images/ricette/lievitati/impasto-rosticceria-siciliana.jpg",
+      "description": "Impasto versatile per arancini, cartocciata, scaccia e tutta la rosticceria siciliana. Morbido, elastico e perfetto per frittura o forno.",
+      "hydration": "55%",
+      "time": "2-3h puntata + 30min appretto",
+      "temp": "26-28°C",
+      "tool": "🔧 Impastatrice a spirale"
+    },
+    {
+      "title": "Panettone Classico Artigianale",
+      "slug": "panettone-classico-artigianale",
+      "category": "Lievitati",
+      "categoryDir": "lievitati",
+      "emoji": "🥐",
+      "href": "ricette/lievitati/panettone-classico-artigianale.html",
+      "image": "images/ricette/lievitati/panettone-classico-artigianale.jpg",
+      "description": "Panettone classico con triplo rinfresco di lievito madre, uvetta e canditi. Ricetta professionale per un grande lievitato delle feste dalla struttura soffice e alveolatura perfetta.",
+      "hydration": "48%",
+      "time": "~48h (inclusi rinfreschi LM)",
+      "temp": "26-27°C",
+      "tool": "🔧 Impastatrice a spirale"
+    },
+    {
+      "title": "Panettone Pera e Cioccolato",
+      "slug": "panettone-pera-cioccolato",
+      "category": "Lievitati",
+      "categoryDir": "lievitati",
+      "emoji": "🥐",
+      "href": "ricette/lievitati/panettone-pera-cioccolato.html",
+      "image": "images/ricette/lievitati/panettone-pera-cioccolato.jpg",
+      "description": "Panettone artigianale con pere candite e gocce di cioccolato fondente. Lievitazione naturale con lievito madre rinfrescato, tecnica classica a tre impasti.",
+      "hydration": "52%",
+      "time": "~48h (totali con rinfreschi)",
+      "temp": "26-28°C",
+      "tool": "🔧 Impastatrice a spirale"
+    },
+    {
+      "title": "Pasta Brioche Classica",
+      "slug": "pasta-brioche-classica",
+      "category": "Lievitati",
+      "categoryDir": "lievitati",
+      "emoji": "🥐",
+      "href": "ricette/lievitati/pasta-brioche-classica.html",
+      "image": "images/ricette/lievitati/pasta-brioche-classica.jpg",
+      "description": "Pasta brioche artigianale ricca di burro e uova, perfetta per croissant, panini dolci e colombe. Impasto grasso a lunga lievitazione.",
+      "hydration": "52%",
+      "time": "12-16h totali (puntata + frigo)",
+      "temp": "24-26°C",
+      "tool": "🔧 Impastatrice a spirale"
+    },
+    {
+      "title": "Cantuccini Toscani Classici",
+      "slug": "cantuccini-toscani-classici",
+      "category": "Dolci",
+      "categoryDir": "dolci",
+      "emoji": "🍪",
+      "href": "ricette/dolci/cantuccini-toscani-classici.html",
+      "image": "images/ricette/dolci/cantuccini-toscani-classici.jpg",
+      "description": "Biscotti toscani croccanti alle mandorle, perfetti da inzuppare nel Vin Santo. Ricetta tradizionale con doppia cottura per massima croccantezza.",
+      "hydration": "45%",
+      "time": "Nessuna lievitazione",
+      "temp": "20-22°C",
+      "tool": "🔧 Impastatrice a spirale"
+    },
+    {
+      "title": "Pasta Frolla Classica",
+      "slug": "pasta-frolla-classica",
+      "category": "Dolci",
+      "categoryDir": "dolci",
+      "emoji": "🍪",
+      "href": "ricette/dolci/pasta-frolla-classica.html",
+      "image": "images/ricette/dolci/pasta-frolla-classica.jpg",
+      "description": "Pasta frolla tradizionale per crostate e biscotti, friabile e burrosa. Tecnica sabbiatura per struttura perfetta.",
+      "hydration": "33%",
+      "time": "Riposo 2-4h in frigo",
+      "temp": "18-20°C",
       "tool": "🔧 Impastatrice a spirale"
     }
   ]

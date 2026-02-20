@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Biscotti toscani croccanti alle mandorle, perfetti da inzuppare nel Vin Santo. Ricetta tradizionale con doppia cottura per massima croccantezza.">
+    <title>Cantuccini Toscani Classici — Il Ricettario</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap"
+        rel="stylesheet">
+    <!-- FOUC Prevention: applica tema prima del rendering -->
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = saved || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- Skip to content — Accessibilità -->
+    <a href="#recipe-content" class="skip-link">Vai al contenuto principale</a>
+
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="../../index.html" class="navbar__logo">
+                <div class="navbar__logo-icon">🔥</div>
+                <span>Il Ricettario</span>
+            </a>
+
+            <ul class="navbar__links" id="nav-links">
+                <li><a href="../../index.html#ricette">Ricette</a></li>
+                <li><a href="../../index.html#strumenti">Strumenti</a></li>
+                <li><a href="../../index.html#chi-sono">Chi Sono</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+                <span class="theme-toggle__icon theme-toggle__sun">☀️</span>
+                <span class="theme-toggle__icon theme-toggle__moon">🌙</span>
+            </button>
+
+            <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════ RECIPE HERO ═══════════ -->
+    <div class="recipe-hero" style="background-image: url('../../images/ricette/dolci/cantuccini-toscani-classici.jpg')">
+        <div class="container">
+            <nav class="breadcrumb reveal">
+                <a href="../../index.html">Home</a>
+                <span class="breadcrumb__separator">›</span>
+                <a href="../../index.html#ricette">Ricette</a>
+                <span class="breadcrumb__separator">›</span>
+                <a href="./">Dolci</a>
+                <span class="breadcrumb__separator">›</span>
+                <span>Cantuccini Toscani Classici</span>
+            </nav>
+
+            <div class="recipe-hero__content">
+                <div class="recipe-hero__tags reveal">
+                    <span class="tag tag--tool" id="hero-setup-tag">🔧 Impastatrice a spirale</span>
+                    <span class="tag tag--category">🥜 Dolci</span>
+                </div>
+                <h1 class="recipe-hero__title reveal reveal-delay-1">Cantuccini Toscani Classici</h1>
+                <p class="recipe-hero__subtitle reveal reveal-delay-2">
+                    Biscotti toscani tradizionali con doppia cottura e mandorle tostate
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ TECH BADGES ═══════════ -->
+    <div class="container" style="padding-top: 40px;">
+        <div class="tech-badges reveal">
+            <div class="tech-badge">
+                💧 Idratazione: <span class="tech-badge__value">&nbsp;45%</span>
+            </div>
+            <div class="tech-badge">
+                🌡️ Target Temp: <span class="tech-badge__value">&nbsp;20-22°C</span>
+            </div>
+            <div class="tech-badge">
+                ⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;Nessuna lievitazione</span>
+            </div>
+            <div class="tech-badge tech-badge--toggle" id="setup-badge" role="button" tabindex="0"
+                aria-label="Cambia setup">
+                🔧 Setup: <span class="tech-badge__value" id="setup-badge-value">&nbsp;A mano</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ RECIPE CONTENT ═══════════ -->
+    <section class="recipe-content">
+        <div class="container">
+            <div class="recipe-layout">
+
+                <!-- COLONNA SINISTRA: Ingredienti -->
+                <div>
+                    <div class="recipe-panel reveal">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">🛒</span>
+                            Ingredienti Base
+                        </h2>
+
+                        <!-- Calcolatore Dosi -->
+                        <div class="dose-calculator" id="dose-calculator">
+                            <div class="dose-calculator__label">
+                                <span class="dose-calculator__label-icon">⚖️</span>
+                                Farina totale
+                            </div>
+                            <div class="dose-calculator__controls">
+                                <button class="dose-calculator__btn" id="dose-decrease"
+                                    aria-label="Diminuisci dosi">−</button>
+                                <div class="dose-calculator__input-wrapper">
+                                    <input type="number" class="dose-calculator__input" id="dose-input" value="0.5"
+                                        min="0.5" max="5" step="0.5" data-base-total="500" aria-label="Kg di farina">
+                                    <span class="dose-calculator__unit">kg</span>
+                                </div>
+                                <button class="dose-calculator__btn" id="dose-increase"
+                                    aria-label="Aumenta dosi">+</button>
+                            </div>
+                            <div class="dose-calculator__badge" id="dose-badge">×1</div>
+                        </div>
+
+                        <table class="ingredients-table" id="ingredients-table">
+                            <tr>
+                                <td>Farina di Grano Tenero Tipo 00 <span class="ingredient-note">(W 180-200, per dolci)</span></td>
+                                <td class="ingredient-qty" data-base="500">500g</td>
+                            </tr>
+                            <tr>
+                                <td>Zucchero Semolato</td>
+                                <td class="ingredient-qty" data-base="250">250g</td>
+                            </tr>
+                            <tr>
+                                <td>Uova Intere <span class="ingredient-note">(temperatura ambiente, circa 3 medie)</span></td>
+                                <td class="ingredient-qty" data-base="165">165g</td>
+                            </tr>
+                            <tr>
+                                <td>Burro <span class="ingredient-note">(morbido, non fuso)</span></td>
+                                <td class="ingredient-qty" data-base="60">60g</td>
+                            </tr>
+                            <tr>
+                                <td>Lievito Chimico per Dolci <span class="ingredient-note">(1 bustina)</span></td>
+                                <td class="ingredient-qty" data-base="16">16g</td>
+                            </tr>
+                            <tr>
+                                <td>Bicarbonato di Sodio</td>
+                                <td class="ingredient-qty" data-base="3">3g</td>
+                            </tr>
+                            <tr>
+                                <td>Sale Fino</td>
+                                <td class="ingredient-qty" data-base="3">3g</td>
+                            </tr>
+                            <tr>
+                                <td>Scorza di Limone <span class="ingredient-note">(grattugiata fine, di 1 limone bio)</span></td>
+                                <td class="ingredient-qty" data-base="5">5g</td>
+                            </tr>
+                            <tr>
+                                <td>Estratto di Vaniglia <span class="ingredient-note">(o vanillina in polvere)</span></td>
+                                <td class="ingredient-qty" data-base="5">5g</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="recipe-panel reveal" style="margin-top: 28px;">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">🥜</span>
+                            Sospensioni
+                        </h2>
+                        <table class="ingredients-table" id="suspensions-table">
+                            <tr>
+                                <td>Mandorle Sgusciate <span class="ingredient-note">(non pelate, tostate leggermente)</span></td>
+                                <td class="ingredient-qty" data-base="250">250g</td>
+                            </tr>
+                        </table>
+
+                        <div class="pro-tip-box" style="margin-top: 16px;">
+                            <p><strong>💡 PRO TIP:</strong> 🔥 Per cantuccini extra croccanti, abbassare la temperatura della seconda cottura a 150°C e prolungare di 3-4 minuti, controllando che non scuriscano troppo.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COLONNA DESTRA: Procedimento -->
+                <div>
+
+                    <!-- ── Procedimento: Primario (Spirale o Estrusore) ── -->
+                    <div class="recipe-panel reveal reveal-delay-1" data-setup="spirale" id="steps-spirale">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">⚙️</span>
+                            Procedimento
+                            <span class="recipe-panel__title-badge">🔧 Spirale</span>
+                        </h2>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Preparazione Mandorle</strong>
+                                <p>Tostare le mandorle in forno a 160°C per 8-10 minuti fino a quando diventano fragranti ma non scure. Lasciarle raffreddare completamente. Questa tostatura esalta il sapore e migliora la croccantezza finale.</p>
+                            </li>
+                            <li>
+                                <strong>Impasto Base con Impastatrice</strong>
+                                <p>Montare nell'impastatrice a spirale (gancio a foglia o frusta) le uova con lo zucchero a velocità media per 5-6 minuti fino a ottenere un composto spumoso e chiaro. Aggiungere il burro morbido, la scorza di limone grattugiata e l'estratto di vaniglia. Mescolare 1 minuto a bassa velocità.</p>
+                            </li>
+                            <li>
+                                <strong>Incorporamento Secchi</strong>
+                                <p>Setacciare insieme farina, lievito, bicarbonato e sale. Aggiungere gradualmente alla base montata, mescolando a velocità minima per 2-3 minuti fino a completo assorbimento. L'impasto risulterà denso e leggermente appiccicoso.</p>
+                            </li>
+                            <li>
+                                <strong>Aggiunta Mandorle</strong>
+                                <p>Incorporare le mandorle tostate e raffreddate mescolando a mano con una spatola o a velocità minima per 30 secondi, giusto per distribuirle uniformemente senza romperle.</p>
+                            </li>
+                            <li>
+                                <strong>Formatura Filoni</strong>
+                                <p>Dividere l'impasto in 3-4 porzioni (circa 350g ciascuna). Su una superficie leggermente infarinata, formare con le mani dei filoni lunghi circa 25-30cm, larghi 6cm e alti 2cm. Disporre su teglia rivestita di carta forno, lasciando 5cm di spazio tra ogni filone.</p>
+                            </li>
+                            <li>
+                                <strong>Prima Cottura</strong>
+                                <p>Spennellare i filoni con uovo sbattuto (facoltativo, per doratura). Infornare a 180°C in forno statico preriscaldato per 25-28 minuti. I filoni devono risultare dorati in superficie ma ancora morbidi all'interno. Estrarre e lasciar raffreddare su griglia per 10-15 minuti.</p>
+                            </li>
+                            <li>
+                                <strong>Taglio e Seconda Cottura</strong>
+                                <p>Con un coltello seghettato ben affilato, tagliare i filoni ancora tiepidi in fette oblique spesse 1-1.5cm. Disporre i cantuccini tagliati sulla teglia in piedi (non sdraiati). Infornare nuovamente a 160°C per 12-15 minuti, girandoli a metà cottura, fino a doratura uniforme e croccantezza completa. Lasciar raffreddare completamente su griglia.</p>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <!-- ── Procedimento: A mano ── -->
+                    <div class="recipe-panel reveal reveal-delay-1" data-setup="mano" id="steps-mano"
+                        style="display: none;">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">⚙️</span>
+                            Procedimento
+                            <span class="recipe-panel__title-badge">🤲 A mano</span>
+                        </h2>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Preparazione Mandorle</strong>
+                                <p>Tostare le mandorle in forno a 160°C per 8-10 minuti fino a quando diventano fragranti ma non scure. Lasciarle raffreddare completamente.</p>
+                            </li>
+                            <li>
+                                <strong>Montaggio Base a Mano</strong>
+                                <p>In una ciotola capiente, montare le uova con lo zucchero usando una frusta elettrica o a mano per 8-10 minuti con energia, fino a ottenere un composto spumoso, chiaro e che formi il nastro (quando sollevate la frusta, il composto deve cadere formando un nastro che resta visibile 3-4 secondi).</p>
+                            </li>
+                            <li>
+                                <strong>Aggiunta Aromi e Burro</strong>
+                                <p>Incorporare delicatamente il burro morbido a pezzetti, la scorza di limone grattugiata e l'estratto di vaniglia, mescolando con movimenti dal basso verso l'alto per non smontare il composto.</p>
+                            </li>
+                            <li>
+                                <strong>Incorporamento Farina</strong>
+                                <p>Setacciare insieme farina, lievito, bicarbonato e sale. Aggiungere in 3 volte agli ingredienti liquidi, incorporando con una spatola con movimenti delicati dall'alto verso il basso e dal centro verso l'esterno. L'impasto deve risultare omogeneo ma denso.</p>
+                            </li>
+                            <li>
+                                <strong>Aggiunta Mandorle</strong>
+                                <p>Incorporare le mandorle tostate con movimenti delicati, distribuendole uniformemente nell'impasto senza lavorare eccessivamente.</p>
+                            </li>
+                            <li>
+                                <strong>Formatura Filoni</strong>
+                                <p>Dividere l'impasto in 3-4 porzioni. Con le mani leggermente infarinate o unte, formare dei filoni lunghi circa 25-30cm, larghi 6cm e alti 2cm. Disporre su teglia rivestita di carta forno con almeno 5cm di spazio tra loro.</p>
+                            </li>
+                            <li>
+                                <strong>Prima Cottura</strong>
+                                <p>Spennellare i filoni con uovo sbattuto (facoltativo). Infornare a 180°C in forno statico preriscaldato per 25-28 minuti fino a doratura superficiale. I filoni devono essere cotti ma ancora leggermente morbidi al centro. Estrarre e far raffreddare su griglia per 10-15 minuti.</p>
+                            </li>
+                            <li>
+                                <strong>Taglio e Seconda Cottura</strong>
+                                <p>Tagliare i filoni tiepidi con coltello seghettato in fette oblique di 1-1.5cm. Disporre i cantuccini sulla teglia in piedi. Infornare a 160°C per 12-15 minuti, girandoli a metà cottura, fino a completa asciugatura e doratura. Raffreddare completamente su griglia prima di conservare.</p>
+                            </li>
+                        </ol>
+
+                        <div class="pro-tip-box" style="margin-top: 16px;">
+                            <p><strong>💡 PRO TIP:</strong> 🥜 Sostituire metà delle mandorle con nocciole tostate per una variante più ricca e aromatica. Oppure aggiungere 50g di pinoli per una versione più raffinata.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <!-- ═══════════ CONSIGLI FARINE & MARCHI ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 40px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">🌾</span>
+                    Consigli Farine & Marchi
+                </h2>
+                <table class="flour-table">
+                    <thead>
+                        <tr>
+                            <th>Tipo Farina</th>
+                            <th>Forza (W)</th>
+                            <th>Marchi Consigliati</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Farina 00 per Dolci</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">180-200</td>
+                            <td>Molino Caputo Pasticceria, Molino Vigevano 00, Le 5 Stagioni Pasticceria</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pro-tip-box" style="margin-top: 16px;">
+                    <p><strong>💡 PRO TIP:</strong> La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti,
+                        cerca qualsiasi farina con il valore W indicato.</p>
+                </div>
+            </div>
+
+            <!-- ═══════════ ALERT ═══════════ -->
+            <div class="alert alert--danger reveal" style="margin-top: 32px;">
+                <span class="alert__icon">🚫</span>
+                <div class="alert__content">
+                    <strong>ALERT PROFESSIONALE</strong>
+                    <p>❌ NON tagliare i filoni quando sono ancora troppo caldi: si sbriciolerebbero. Attendere che siano tiepidi ma non completamente freddi. NON esagerare con il tempo della seconda cottura: i cantuccini continuano a indurirsi raffreddandosi. NON conservare in contenitori ermetici finché non sono completamente freddi, altrimenti l'umidità residua li rende mollicci invece che croccanti.</p>
+                </div>
+            </div>
+
+            <!-- ═══════════ COTTURA ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 32px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">🔥</span>
+                    Cottura
+                </h2>
+                <div class="tech-badges" style="margin-bottom: 16px;">
+                    <div class="tech-badge">
+                        🌡️ Temperatura: <span class="tech-badge__value">&nbsp;180°C prima cottura, poi 160°C seconda cottura</span>
+                    </div>
+                    <div class="tech-badge">
+                        ⏱️ Tempo: <span class="tech-badge__value">&nbsp;25-28 min prima cottura + 12-15 min seconda cottura</span>
+                    </div>
+                </div>
+                <ul class="baking-tips" style="list-style: none; padding: 0;">
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Forno statico preriscaldato, posizione centrale</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Prima cottura: i filoni devono dorarsi ma restare morbidi all'interno</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Seconda cottura: i cantuccini devono asciugarsi completamente per la croccantezza</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Non aprire il forno durante la prima cottura per evitare sgonfiamenti</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Tagliare sempre con movimento a sega per non sbriciolate i biscotti</li>
+                </ul>
+            </div>
+
+            <!-- ═══════════ GLOSSARIO ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 32px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">📖</span>
+                    Glossario
+                </h2>
+                <dl class="glossary-list" style="margin: 0; padding: 0;">
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Doppia Cottura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica tipica dei cantuccini: prima si cuoce il filone intero, poi si taglia e si cuoce nuovamente per asciugare completamente e ottenere la croccantezza caratteristica.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Montare a Nastro</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica per incorporare aria nel composto di uova e zucchero: il risultato è corretto quando il composto, sollevato con la frusta, cade formando un nastro che resta visibile 3-4 secondi.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Tostatura Mandorle</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Riscaldamento delle mandorle in forno per esaltare il sapore, eliminare l'umidità residua e migliorare la croccantezza finale del biscotto.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Lievito Chimico</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Agente lievitante a base di bicarbonato e acidi che reagisce con l'umidità e il calore, producendo anidride carbonica che fa gonfiare l'impasto.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Bicarbonato di Sodio</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Base alcalina usata in piccole quantità per favorire la doratura e bilanciare l'acidità di alcuni ingredienti. Esalta anche la croccantezza.</dd>
+                </dl>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__brand-name">🔥 <span>Il Ricettario</span></div>
+                    <p class="footer__brand-desc">
+                        Ricettario personale. Ricette artigianali documentate con precisione tecnica per
+                        risultati replicabili al 100%.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Navigazione</h4>
+                    <ul class="footer__links">
+                        <li><a href="../../index.html">↗ Home</a></li>
+                        <li><a href="../../index.html#ricette">↗ Ricette</a></li>
+                        <li><a href="../../index.html#strumenti">↗ Strumenti</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Questa Ricetta</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">🥜 Cantuccini Toscani Classici</a></li>
+                        <li><a href="#">💧 Idratazione 45%</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Altre Ricette</h4>
+                    <ul class="footer__links">
+                        <li><a href="../../index.html#ricette">↗ Tutte le Ricette</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <span>© <span id="current-year">2026</span> Il Ricettario</span>
+                <div class="footer__social">
+                    <a href="https://github.com/devdomenicotatone" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Pinsa romana tradizionale con mix di farine (frumento, riso, soia), alta idratazione (80%) e lunga maturazione. Alveolatura perfetta e croccantezza unica.">
+    <title>Pinsa Romana Classica — Il Ricettario</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap"
+        rel="stylesheet">
+    <!-- FOUC Prevention: applica tema prima del rendering -->
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = saved || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- Skip to content — Accessibilità -->
+    <a href="#recipe-content" class="skip-link">Vai al contenuto principale</a>
+
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="../../index.html" class="navbar__logo">
+                <div class="navbar__logo-icon">🔥</div>
+                <span>Il Ricettario</span>
+            </a>
+
+            <ul class="navbar__links" id="nav-links">
+                <li><a href="../../index.html#ricette">Ricette</a></li>
+                <li><a href="../../index.html#strumenti">Strumenti</a></li>
+                <li><a href="../../index.html#chi-sono">Chi Sono</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+                <span class="theme-toggle__icon theme-toggle__sun">☀️</span>
+                <span class="theme-toggle__icon theme-toggle__moon">🌙</span>
+            </button>
+
+            <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════ RECIPE HERO ═══════════ -->
+    <div class="recipe-hero" style="background-image: url('../../images/ricette/pizza/pinsa-romana-classica.jpg')">
+        <div class="container">
+            <nav class="breadcrumb reveal">
+                <a href="../../index.html">Home</a>
+                <span class="breadcrumb__separator">›</span>
+                <a href="../../index.html#ricette">Ricette</a>
+                <span class="breadcrumb__separator">›</span>
+                <a href="./">Pizza</a>
+                <span class="breadcrumb__separator">›</span>
+                <span>Pinsa Romana Classica</span>
+            </nav>
+
+            <div class="recipe-hero__content">
+                <div class="recipe-hero__tags reveal">
+                    <span class="tag tag--tool" id="hero-setup-tag">🔧 Impastatrice a spirale</span>
+                    <span class="tag tag--category">🍕 Pizza</span>
+                </div>
+                <h1 class="recipe-hero__title reveal reveal-delay-1">Pinsa Romana Classica</h1>
+                <p class="recipe-hero__subtitle reveal reveal-delay-2">
+                    Il capolavoro romano della lievitazione: leggera, digeribile, croccante fuori e morbida dentro
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ TECH BADGES ═══════════ -->
+    <div class="container" style="padding-top: 40px;">
+        <div class="tech-badges reveal">
+            <div class="tech-badge">
+                💧 Idratazione: <span class="tech-badge__value">&nbsp;80%</span>
+            </div>
+            <div class="tech-badge">
+                🌡️ Target Temp: <span class="tech-badge__value">&nbsp;24-26°C</span>
+            </div>
+            <div class="tech-badge">
+                ⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;24-48h</span>
+            </div>
+            <div class="tech-badge tech-badge--toggle" id="setup-badge" role="button" tabindex="0"
+                aria-label="Cambia setup">
+                🔧 Setup: <span class="tech-badge__value" id="setup-badge-value">&nbsp;A mano</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ RECIPE CONTENT ═══════════ -->
+    <section class="recipe-content">
+        <div class="container">
+            <div class="recipe-layout">
+
+                <!-- COLONNA SINISTRA: Ingredienti -->
+                <div>
+                    <div class="recipe-panel reveal">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">🛒</span>
+                            Ingredienti Base
+                        </h2>
+
+                        <!-- Calcolatore Dosi -->
+                        <div class="dose-calculator" id="dose-calculator">
+                            <div class="dose-calculator__label">
+                                <span class="dose-calculator__label-icon">⚖️</span>
+                                Farina totale
+                            </div>
+                            <div class="dose-calculator__controls">
+                                <button class="dose-calculator__btn" id="dose-decrease"
+                                    aria-label="Diminuisci dosi">−</button>
+                                <div class="dose-calculator__input-wrapper">
+                                    <input type="number" class="dose-calculator__input" id="dose-input" value="1"
+                                        min="1" max="5" step="1" data-base-total="1000" aria-label="Kg di farina">
+                                    <span class="dose-calculator__unit">kg</span>
+                                </div>
+                                <button class="dose-calculator__btn" id="dose-increase"
+                                    aria-label="Aumenta dosi">+</button>
+                            </div>
+                            <div class="dose-calculator__badge" id="dose-badge">×1</div>
+                        </div>
+
+                        <table class="ingredients-table" id="ingredients-table">
+                            <tr>
+                                <td>Farina di Frumento Tipo 0 <span class="ingredient-note">(W 280-320, per struttura e tenuta)</span></td>
+                                <td class="ingredient-qty" data-base="700">700g</td>
+                            </tr>
+                            <tr>
+                                <td>Farina di Riso <span class="ingredient-note">(finissima, per croccantezza)</span></td>
+                                <td class="ingredient-qty" data-base="200">200g</td>
+                            </tr>
+                            <tr>
+                                <td>Farina di Soia <span class="ingredient-note">(deamidificata, per elasticità)</span></td>
+                                <td class="ingredient-qty" data-base="100">100g</td>
+                            </tr>
+                            <tr>
+                                <td>Acqua <span class="ingredient-note">(20-22°C, in 3 riprese)</span></td>
+                                <td class="ingredient-qty" data-base="800">800g</td>
+                            </tr>
+                            <tr>
+                                <td>Olio Extravergine d'Oliva <span class="ingredient-note">(delicato, aggiunto a fine impasto)</span></td>
+                                <td class="ingredient-qty" data-base="40">40g</td>
+                            </tr>
+                            <tr>
+                                <td>Sale Marino Fino</td>
+                                <td class="ingredient-qty" data-base="22">22g</td>
+                            </tr>
+                            <tr>
+                                <td>Lievito di Birra Fresco <span class="ingredient-note">(ridotto per lunga maturazione)</span></td>
+                                <td class="ingredient-qty" data-base="3">3g</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!-- COLONNA DESTRA: Procedimento -->
+                <div>
+
+                    <!-- ── Procedimento: Primario (Spirale o Estrusore) ── -->
+                    <div class="recipe-panel reveal reveal-delay-1" data-setup="spirale" id="steps-spirale">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">⚙️</span>
+                            Procedimento
+                            <span class="recipe-panel__title-badge">🔧 Spirale</span>
+                        </h2>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Autolisi delle Farine</strong>
+                                <p>Inserire nel catino le 3 farine (frumento 700g, riso 200g, soia 100g) e 600g di acqua (prima ripresa). Impastare a velocità bassa (V1) per 3-4 minuti fino a idratazione completa. Coprire con pellicola e lasciare riposare 30 minuti a temperatura ambiente. Questo processo di autolisi sviluppa glutine senza stress meccanico e migliora l'estensibilità dell'impasto.</p>
+                            </li>
+                            <li>
+                                <strong>Incorporazione Lievito e Sale</strong>
+                                <p>Sciogliere 3g di lievito fresco in 100g di acqua (seconda ripresa). Aggiungere al catino insieme al sale (22g). Impastare a velocità bassa (V1) per 5 minuti, poi passare a velocità media (V2) per altri 4-5 minuti. L'impasto inizierà a incordarsi. Controllare temperatura: deve mantenersi tra 24-26°C. Se supera 27°C, raffreddare con acqua ghiacciata nella terza ripresa.</p>
+                            </li>
+                            <li>
+                                <strong>Idratazione Finale e Olio</strong>
+                                <p>Aggiungere gli ultimi 100g di acqua (terza ripresa) gradualmente, 20g alla volta, continuando a impastare a V2. Una volta assorbita tutta l'acqua, incorporare 40g di olio EVO a filo. Impastare altri 3-4 minuti fino a completa emulsione. L'impasto deve risultare lucido, liscio, molto estensibile ma con buona tenuta. Temperatura finale: 24-26°C. Tempo totale impasto: 18-20 minuti.</p>
+                            </li>
+                            <li>
+                                <strong>Puntatura in Massa</strong>
+                                <p>Trasferire l'impasto in contenitore oliato con coperchio. Effettuare 3 cicli di stretch & fold ogni 30 minuti (pieghettare l'impasto su se stesso per rinforzare la maglia glutinica). Dopo l'ultimo fold, coprire e lasciare in puntatura a temperatura ambiente (20-22°C) per 2 ore. L'impasto deve crescere del 30-40%.</p>
+                            </li>
+                            <li>
+                                <strong>Staglio e Pirlatura</strong>
+                                <p>Rovesciare delicatamente l'impasto su banco infarinato. Stagliare pezzi da 250-280g (pinse singole). Pirlare ogni pezzo a sfera senza stringere troppo, devono rimanere morbidi. Posizionare in cassette oliata mantenendo distanza di 5cm tra loro. Coprire con pellicola.</p>
+                            </li>
+                            <li>
+                                <strong>Maturazione in Frigo</strong>
+                                <p>Trasferire le cassette in cella frigo a 4°C per 24-48 ore. Questo processo di maturazione a freddo sviluppa aromi complessi, digeribilità e struttura alveolare. Più lunga la maturazione (max 48h), più digeribile e saporita la pinsa.</p>
+                            </li>
+                            <li>
+                                <strong>Temperatura di Servizio</strong>
+                                <p>Estrarre dal frigo 2-3 ore prima dell'uso. Lasciare a temperatura ambiente coperte. I panetti devono rilassarsi completamente, risulteranno molto morbidi e estensibili al tatto.</p>
+                            </li>
+                            <li>
+                                <strong>Stesura della Pinsa</strong>
+                                <p>Rovesciare delicatamente un panetto su banco abbondantemente infarinato. NON usare il mattarello. Stendere SOLO con le dita, dal centro verso l'esterno, creando la caratteristica forma ovale allungata (25-30cm). Lasciare il bordo leggermente più spesso. Trasferire su pala infarinata o teglia con carta forno. Condire con filo d'olio EVO, sale grosso e rosmarino per la versione bianca, oppure con pomodoro pelato schiacciato a mano.</p>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <!-- ── Procedimento: A mano ── -->
+                    <div class="recipe-panel reveal reveal-delay-1" data-setup="mano" id="steps-mano"
+                        style="display: none;">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">⚙️</span>
+                            Procedimento
+                            <span class="recipe-panel__title-badge">🤲 A mano</span>
+                        </h2>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Autolisi Manuale</strong>
+                                <p>In una ciotola capiente unire le 3 farine (frumento 700g, riso 200g, soia 100g) e 600g di acqua. Mescolare con un cucchiaio di legno fino a non vedere più farina asciutta. Coprire con pellicola e lasciare riposare 30 minuti. Questo riposo permette alle farine di idratarsi completamente e facilita la lavorazione successiva.</p>
+                            </li>
+                            <li>
+                                <strong>Incorporazione Ingredienti</strong>
+                                <p>Sciogliere 3g di lievito in 100g di acqua tiepida. Versare nell'impasto insieme al sale (22g). Lavorare con tecnica slap & fold: sollevare l'impasto, sbatterlo energicamente sul piano, ripiegarlo su se stesso. Ripetere per 8-10 minuti. L'impasto sarà molto appiccicoso ma inizierà a sviluppare struttura. Bagnare le mani se necessario.</p>
+                            </li>
+                            <li>
+                                <strong>Idratazione Finale e Olio</strong>
+                                <p>Aggiungere gli ultimi 100g di acqua gradualmente durante lo slap & fold, 20g alla volta. Una volta incorporata, aggiungere 40g di olio EVO e continuare a lavorare per altri 5-6 minuti. L'impasto deve diventare liscio, lucido ed estensibile. Temperatura target: 24-26°C. Tempo totale lavorazione: 25-30 minuti (è faticoso ma fondamentale).</p>
+                            </li>
+                            <li>
+                                <strong>Stretch & Fold Programmati</strong>
+                                <p>Trasferire l'impasto in ciotola oliata. Ogni 30 minuti, per 3 volte, eseguire stretch & fold: bagnare le mani, sollevare un lembo dell'impasto, allungarlo e ripiegarlo al centro. Ruotare la ciotola di 90° e ripetere da tutti i lati (4 pieghe totali per ciclo). Dopo l'ultimo ciclo, coprire e lasciare riposare 2 ore a temperatura ambiente.</p>
+                            </li>
+                            <li>
+                                <strong>Divisione in Panetti</strong>
+                                <p>Rovesciare delicatamente l'impasto su piano infarinato. Dividere in pezzi da 250-280g con tarocco infarinato. Formare sfere morbide senza sgonfiare: raccogliere i lembi verso il centro, capovolgere e far ruotare delicatamente sotto il palmo della mano. Disporre in contenitore oliato distanziati.</p>
+                            </li>
+                            <li>
+                                <strong>Maturazione Lenta</strong>
+                                <p>Coprire i panetti con pellicola a contatto (leggermente oleata) e trasferire in frigorifero a 4°C. Lasciare maturare 24-48 ore. Durante questo periodo la pinsa sviluppa il caratteristico sapore complesso e la leggerezza che la distingue dalla pizza classica.</p>
+                            </li>
+                            <li>
+                                <strong>Preparazione Pre-Cottura</strong>
+                                <p>Estrarre i panetti dal frigo 2-3 ore prima. Coprire con canovaccio umido e lasciarli acclimatare. Devono tornare morbidi e temperatura ambiente. Se ancora freddi, saranno difficili da stendere e si ritireranno dopo la stesura.</p>
+                            </li>
+                            <li>
+                                <strong>Stesura Ovale Tradizionale</strong>
+                                <p>Infarinare abbondantemente il piano. Prelevare un panetto delicatamente e rovesciarlo sulla farina. Infarinare anche sopra. Premere con i polpastrelli dal centro verso l'esterno, creando la tipica forma ovale (25-30cm di lunghezza). NON usare mattarello. Lasciare il cornicione leggermente più alto. Trasferire su pala o teglia. Condire a piacere: versione bianca con olio, sale e rosmarino, oppure con pomodoro pelato schiacciato, mozzarella e basilico fresco.</p>
+                            </li>
+                        </ol>
+
+                        <div class="pro-tip-box" style="margin-top: 16px;">
+                            <p><strong>💡 PRO TIP:</strong> ❄️ Segreto della temperatura: in estate, usa acqua fredda (10-12°C) e, se possibile, farina appena estratta dal frigo. L'alta idratazione genera molto attrito e calore. Superare i 28°C significa rovinare lievito e struttura.</p>
+                        </div>
+                    </div>
+
+                    <!-- ── Procedimento: Condimento ── -->
+                    <div class="recipe-panel reveal reveal-delay-2" data-setup="condimento" id="steps-condimento"
+                        style="margin-top: 32px;">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">🍳</span>
+                            Preparazione Condimento
+                        </h2>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Condimento Bianco Classico</strong>
+                                <p>Per la versione romana originale: spalmare 20g di olio EVO sulla superficie della pinsa stesa, aggiungere un pizzico di sale grosso marino, 3-4 rametti di rosmarino fresco spezzettati. Dopo cottura, completare con una macinata di pepe nero e un altro filo d'olio a crudo.</p>
+                            </li>
+                            <li>
+                                <strong>Condimento Rosso Tradizionale</strong>
+                                <p>Schiacciare a mano 80g di pomodori pelati San Marzano DOP, aggiungere un pizzico di sale, un cucchiaio d'olio EVO e 2 foglie di basilico. Spalmare sulla pinsa stesa lasciando libero il bordo. Dopo cottura (ultimi 3-4 minuti), aggiungere 60g di mozzarella di bufala a pezzetti e completare la cottura. Terminare con basilico fresco e olio EVO a crudo.</p>
+                            </li>
+                        </ol>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ═══════════ CONSIGLI FARINE & MARCHI ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 40px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">🌾</span>
+                    Consigli Farine & Marchi
+                </h2>
+                <table class="flour-table">
+                    <thead>
+                        <tr>
+                            <th>Tipo Farina</th>
+                            <th>Forza (W)</th>
+                            <th>Marchi Consigliati</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Farina Tipo 0 Media-Alta Forza</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">280-320</td>
+                            <td>Molino Dallagiovanna Etna (W300), Molino Grassi Manitoba Equilibrata (W320), Caputo Cuoco (W300)</td>
+                        </tr>
+                        <tr>
+                            <td>Farina di Riso</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">-</td>
+                            <td>Molino Rossetto Superfina, Probios Biologica, Scotti Senza Glutine (macinatura finissima)</td>
+                        </tr>
+                        <tr>
+                            <td>Farina di Soia Deamidificata</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">-</td>
+                            <td>Molino Quaglia Soia Pro, Bongiovanni Soia per Panificazione, ADM Soy Flour</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pro-tip-box" style="margin-top: 16px;">
+                    <p><strong>💡 PRO TIP:</strong> La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti,
+                        cerca qualsiasi farina con il valore W indicato.</p>
+                </div>
+            </div>
+
+            <!-- ═══════════ ALERT ═══════════ -->
+            <div class="alert alert--danger reveal" style="margin-top: 32px;">
+                <span class="alert__icon">🚫</span>
+                <div class="alert__content">
+                    <strong>ALERT PROFESSIONALE</strong>
+                    <p>⚠️ NON aggiungere tutta l'acqua in una volta: con l'80% di idratazione l'impasto diventerebbe ingestibile. Le 3 riprese progressive permettono alle farine (soprattutto riso e soia) di assorbire gradualmente l'acqua. NON usare il mattarello per stendere: la pinsa va stesa SOLO con le dita per preservare l'alveolatura interna. NON dimenticare i 3 cicli di stretch & fold: sono essenziali per dare struttura a un impasto così idratato. NON condire la pinsa prima di metterla in forno se usi ingredienti acquosi (mozzarella fresca, verdure): aggiungerli a metà cottura per evitare che l'impasto si inzuppi. Senza pietra refrattaria, il risultato sarà mediocre: investire in una pietra da forno (30-40€) è fondamentale per replicare la cottura professionale.</p>
+                </div>
+            </div>
+
+            <!-- ═══════════ COTTURA ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 32px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">🔥</span>
+                    Cottura
+                </h2>
+                <div class="tech-badges" style="margin-bottom: 16px;">
+                    <div class="tech-badge">
+                        🌡️ Temperatura: <span class="tech-badge__value">&nbsp;280°C (max forno casalingo) con pietra refrattaria</span>
+                    </div>
+                    <div class="tech-badge">
+                        ⏱️ Tempo: <span class="tech-badge__value">&nbsp;8-10 minuti</span>
+                    </div>
+                </div>
+                <ul class="baking-tips" style="list-style: none; padding: 0;">
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Preriscaldare forno + pietra refrattaria per almeno 60 minuti a temperatura massima</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Posizionare la pietra nel ripiano più basso del forno per massimo calore dal basso</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Infornare la pinsa direttamente sulla pietra rovesciandola dalla pala (tecnica pizzaiolo)</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Nei primi 2 minuti, spruzzare 3-4 volte acqua sulle pareti del forno per creare vapore</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 La pinsa è pronta quando il fondo è dorato-bruno e il bordo presenta leopardature</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Se il forno ha funzione grill, attivarlo negli ultimi 2 minuti per doratura superiore</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Sfornare e far riposare su griglia 1-2 minuti prima di servire per permettere alla crosta di asciugarsi</li>
+                </ul>
+            </div>
+
+            <!-- ═══════════ GLOSSARIO ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 32px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">📖</span>
+                    Glossario
+                </h2>
+                <dl class="glossary-list" style="margin: 0; padding: 0;">
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Autolisi</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Riposo di farina e acqua (senza lievito e sale) per 20-60 minuti. Permette alle proteine di idratarsi e iniziare a formare glutine spontaneamente, riducendo i tempi di impasto e migliorando estensibilità e alveolatura.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Incordatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Momento in cui l'impasto inizia a strutturarsi avvolgendosi attorno al gancio dell'impastatrice o sotto le mani. Indica che la maglia glutinica si sta formando correttamente.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Puntatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prima fase di lievitazione dell'impasto in massa (intero, non ancora diviso). Serve a far fermentare e sviluppare aromi. Nella pinsa dura circa 2 ore a temperatura ambiente.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Staglio</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Divisione dell'impasto in pezzi di peso prestabilito usando tarocco o spatola. Va fatto con movimenti decisi per non strappare la maglia glutinica.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Pirlatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Formazione di sfere regolari dopo lo staglio. Si esegue chiudendo i lembi dell'impasto verso il centro, capovolgendo e facendo ruotare sotto il palmo della mano. Crea tensione superficiale.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Maturazione</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Processo biochimico in cui enzimi e lieviti scompongono amidi e proteine rendendo l'impasto più digeribile. Nella pinsa avviene in frigo per 24-48h a 4°C.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Stretch & Fold</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica di rinforzo dell'impasto: si allunga un lembo e lo si ripiega su se stesso. Si ripete da tutti i lati ogni 30 minuti durante la puntatura. Sviluppa struttura senza stress meccanico.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Slap & Fold</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica manuale per impasti molli: si solleva l'impasto, lo si sbatte energicamente sul piano e lo si ripiega. Sviluppa glutine per frizione e ossigenazione. Richiede forza e tecnica.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Leopardatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Caratteristiche macchie scure sul cornicione della pizza/pinsa ben cotta. Indicano cottura ad alta temperatura con corretta alveolatura. Segno distintivo della pinsa romana di qualità.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Alveolatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Struttura interna dell'impasto lievitato caratterizzata da bolle di varie dimensioni. Nella pinsa romana deve essere aperta e irregolare, segno di corretta fermentazione e idratazione.</dd>
+                </dl>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__brand-name">🔥 <span>Il Ricettario</span></div>
+                    <p class="footer__brand-desc">
+                        Ricettario personale. Ricette artigianali documentate con precisione tecnica per
+                        risultati replicabili al 100%.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Navigazione</h4>
+                    <ul class="footer__links">
+                        <li><a href="../../index.html">↗ Home</a></li>
+                        <li><a href="../../index.html#ricette">↗ Ricette</a></li>
+                        <li><a href="../../index.html#strumenti">↗ Strumenti</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Questa Ricetta</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">🍕 Pinsa Romana Classica</a></li>
+                        <li><a href="#">💧 Idratazione 80%</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Altre Ricette</h4>
+                    <ul class="footer__links">
+                        <li><a href="../../index.html#ricette">↗ Tutte le Ricette</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <span>© <span id="current-year">2026</span> Il Ricettario</span>
+                <div class="footer__social">
+                    <a href="https://github.com/devdomenicotatone" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
+</body>
+
+</html>
