@@ -321,6 +321,11 @@ document.addEventListener('DOMContentLoaded', () => {
       // Update tech badge
       if (badgeValue) badgeValue.textContent = `\u00a0${config.label}`;
 
+      // Update note ingredienti dinamiche per il setup corrente
+      document.querySelectorAll('.ingredient-note[data-setup-note-' + config.id + ']').forEach(el => {
+        el.textContent = el.getAttribute('data-setup-note-' + config.id);
+      });
+
       // Persist
       localStorage.setItem('recipe-setup', config.id);
     };
