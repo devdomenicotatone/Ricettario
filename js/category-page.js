@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         '/ricette/pizza/': 'Pizza',
         '/ricette/lievitati/': 'Lievitati',
         '/ricette/focaccia/': 'Focaccia',
+        '/ricette/dolci/': 'Dolci',
     };
 
     // Find the matching category (handle Vite base path)
