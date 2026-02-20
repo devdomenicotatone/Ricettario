@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-02-19T23:12:53.822Z",
-  "totalRecipes": 154,
+  "generatedAt": "2026-02-20T15:42:51.670Z",
+  "totalRecipes": 26,
   "categories": [
     {
       "name": "Pasta",
-      "count": 143,
+      "count": 14,
       "emoji": "🍝"
     },
     {
       "name": "Pane",
-      "count": 8,
+      "count": 9,
       "emoji": "🥖"
     },
     {
@@ -368,6 +368,20 @@
       "time": null,
       "temp": null,
       "tool": "🔧 Impastatrice a spirale"
+    },
+    {
+      "title": "Pane Pugliese con Biga",
+      "slug": "pane-pugliese-biga",
+      "category": "Pane",
+      "categoryDir": "pane",
+      "emoji": "🍞",
+      "href": "ricette/pane/pane-pugliese-biga.html",
+      "image": "images/ricette/pane/pane-pugliese-biga.jpg",
+      "description": "Pagnotta tradizionale pugliese con biga lunga maturazione: crosta croccante dorata, mollica soffice e alveolata. Perfett",
+      "hydration": "62.7%",
+      "time": "~18h totali (biga 12-14h + puntata 3h + appretto 1h)",
+      "temp": "24-26°C",
+      "tool": ""
     }
   ]
 }
