@@ -13,6 +13,7 @@ import '../css/components/theme-toggle.css';
 import '../css/components/hero.css';
 import '../css/components/recipe-card.css';
 import '../css/components/filter-bar.css';
+import '../css/components/category-carousel.css';
 import '../css/components/tool-spotlight.css';
 import '../css/components/footer.css';
 import '../css/pages/recipe-detail.css';
@@ -115,68 +116,139 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(section => navObserver.observe(section));
   }
 
-  // === 3D TILT su Recipe Cards ===
-  document.querySelectorAll('.recipe-card').forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width - 0.5;
-      const y = (e.clientY - rect.top) / rect.height - 0.5;
-      card.style.transform = `translateY(-8px) perspective(800px) rotateY(${x * 6}deg) rotateX(${-y * 6}deg)`;
-    });
+  // === CATEGORY CAROUSELS — Netflix-style rows ===
+  const carouselsContainer = document.getElementById('recipe-carousels');
+  if (carouselsContainer) {
+    const CATEGORY_ORDER = [
+      { key: 'Pasta', emoji: '🍝', dir: 'pasta' },
+      { key: 'Pane', emoji: '🥖', dir: 'pane' },
+      { key: 'Pizza', emoji: '🍕', dir: 'pizza' },
+      { key: 'Lievitati', emoji: '🥐', dir: 'lievitati' },
+      { key: 'Focaccia', emoji: '🫓', dir: 'focaccia' },
+    ];
 
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = '';
-    });
-  });
+    // Fetch recipes data
+    fetch(`${import.meta.env.BASE_URL}recipes.json`)
+      .then(r => r.json())
+      .then(data => {
+        carouselsContainer.innerHTML = ''; // Remove loading placeholder
 
-  // === FILTRI CATEGORIA ===
-  const filterBar = document.getElementById('filter-bar');
-  let activeFilter = 'tutti';
+        // Group by category
+        const grouped = {};
+        data.recipes.forEach(r => {
+          if (!grouped[r.category]) grouped[r.category] = [];
+          grouped[r.category].push(r);
+        });
 
-  if (filterBar) {
-    const filterChips = filterBar.querySelectorAll('.filter-chip');
-    const allCards = document.querySelectorAll('.recipe-card');
+        // Render each category row
+        CATEGORY_ORDER.forEach(cat => {
+          const recipes = grouped[cat.key];
+          if (!recipes || recipes.length === 0) return;
 
-    const applyFilter = (category) => {
-      activeFilter = category;
+          const row = document.createElement('div');
+          row.className = 'category-row reveal';
+          row.dataset.category = cat.key;
 
-      // Update chip attivo
-      filterChips.forEach(chip => {
-        chip.classList.toggle('active', chip.dataset.filter === category);
+          row.innerHTML = `
+            <div class="category-row__header">
+              <h3 class="category-row__title">
+                ${cat.emoji} ${cat.key}
+                <span class="category-row__count">${recipes.length} ricette</span>
+              </h3>
+              <a href="ricette/${cat.dir}/" class="category-row__link">Vedi tutte</a>
+            </div>
+            <div class="category-row__carousel-wrapper">
+              <button class="carousel-arrow carousel-arrow--prev" aria-label="Precedente">‹</button>
+              <div class="category-row__carousel">
+                ${recipes.map(r => `
+                  <a href="${r.href}" class="recipe-card--compact" data-title="${r.title.toLowerCase()}" data-category="${r.category}">
+                    <div class="recipe-card--compact__image-wrapper">
+                      ${r.image ? `<img src="${r.image}" alt="${r.title}" class="recipe-card--compact__image" loading="lazy">` : ''}
+                    </div>
+                    <div class="recipe-card--compact__body">
+                      <h4 class="recipe-card--compact__title">${r.title}</h4>
+                      <div class="recipe-card--compact__meta">
+                        ${r.hydration ? `<span class="recipe-card--compact__tag">💧 ${r.hydration}</span>` : ''}
+                        ${r.time ? `<span>⏱️ ${r.time}</span>` : ''}
+                      </div>
+                    </div>
+                  </a>
+                `).join('')}
+              </div>
+              <button class="carousel-arrow carousel-arrow--next" aria-label="Successivo">›</button>
+            </div>
+          `;
+
+          carouselsContainer.appendChild(row);
+
+          // Setup carousel scroll logic
+          const carousel = row.querySelector('.category-row__carousel');
+          const wrapper = row.querySelector('.category-row__carousel-wrapper');
+          const prevBtn = row.querySelector('.carousel-arrow--prev');
+          const nextBtn = row.querySelector('.carousel-arrow--next');
+          const cardWidth = 276; // card width + gap
+
+          const updateScrollState = () => {
+            const { scrollLeft, scrollWidth, clientWidth } = carousel;
+            wrapper.classList.toggle('has-scroll-left', scrollLeft > 10);
+            wrapper.classList.toggle('has-scroll-right', scrollLeft < scrollWidth - clientWidth - 10);
+            prevBtn.disabled = scrollLeft <= 10;
+            nextBtn.disabled = scrollLeft >= scrollWidth - clientWidth - 10;
+          };
+
+          carousel.addEventListener('scroll', updateScrollState, { passive: true });
+          requestAnimationFrame(updateScrollState);
+
+          prevBtn.addEventListener('click', () => {
+            carousel.scrollBy({ left: -cardWidth * 3, behavior: 'smooth' });
+          });
+          nextBtn.addEventListener('click', () => {
+            carousel.scrollBy({ left: cardWidth * 3, behavior: 'smooth' });
+          });
+        });
+
+        // Re-observe reveal elements for new dynamic content
+        const newReveals = carouselsContainer.querySelectorAll('.reveal');
+        if (newReveals.length > 0) {
+          const revealObs = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObs.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+          newReveals.forEach(el => revealObs.observe(el));
+        }
+
+        // Setup search after carousels are rendered
+        setupSearch();
+      })
+      .catch(err => {
+        console.error('Errore caricamento recipes.json:', err);
+        carouselsContainer.innerHTML = '<p style="text-align:center; color: var(--color-text-muted);">Errore nel caricamento delle ricette.</p>';
       });
-
-      // Filtra card
-      allCards.forEach(card => {
-        const cardCategory = card.dataset.category || '';
-        const matchesFilter = category === 'tutti' || cardCategory === category;
-        card.classList.toggle('recipe-card--filtered', !matchesFilter);
-      });
-    };
-
-    filterChips.forEach(chip => {
-      chip.addEventListener('click', () => applyFilter(chip.dataset.filter));
-    });
   }
 
   // === SEARCH RICETTE ===
-  const searchInput = document.getElementById('search-input');
-  if (searchInput) {
-    const recipeCards = document.querySelectorAll('.recipe-card');
+  function setupSearch() {
+    const searchInput = document.getElementById('search-input');
+    if (!searchInput) return;
 
     searchInput.addEventListener('input', () => {
       const query = searchInput.value.toLowerCase().trim();
+      const allCards = document.querySelectorAll('.recipe-card--compact');
+      const allRows = document.querySelectorAll('.category-row');
 
-      recipeCards.forEach(card => {
-        if (!query) {
-          card.classList.remove('recipe-card--hidden');
-          return;
-        }
-        const text = card.textContent.toLowerCase();
-        const matchesSearch = text.includes(query);
-        // Rispetta anche il filtro categoria attivo
-        const cardCategory = card.dataset.category || '';
-        const matchesFilter = activeFilter === 'tutti' || cardCategory === activeFilter;
-        card.classList.toggle('recipe-card--hidden', !matchesSearch || !matchesFilter);
+      allCards.forEach(card => {
+        const title = card.dataset.title || card.textContent.toLowerCase();
+        card.style.display = (!query || title.includes(query)) ? '' : 'none';
+      });
+
+      // Hide entire category row if no visible cards
+      allRows.forEach(row => {
+        const visibleCards = row.querySelectorAll('.recipe-card--compact:not([style*="display: none"])');
+        row.style.display = visibleCards.length > 0 ? '' : 'none';
       });
     });
 
@@ -187,7 +259,6 @@ document.addEventListener('DOMContentLoaded', () => {
         searchInput.focus();
         searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
-      // Escape per clear e blur
       if (e.key === 'Escape' && document.activeElement === searchInput) {
         searchInput.value = '';
         searchInput.dispatchEvent(new Event('input'));
@@ -237,8 +308,9 @@ document.addEventListener('DOMContentLoaded', () => {
       currentIndex = index;
       const config = SETUPS[index];
 
-      // Show/hide procedure panels
+      // Show/hide procedure panels (escludendo "condimento" che è sempre visibile)
       stepPanels.forEach(panel => {
+        if (panel.getAttribute('data-setup') === 'condimento') return;
         panel.style.display = panel.getAttribute('data-setup') === config.id ? '' : 'none';
       });
 
@@ -283,10 +355,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (doseInput && doseBadge) {
     const allQtyCells = document.querySelectorAll('.ingredient-qty[data-base]');
+    // Base reale della ricetta (dal data-base-total generato dal template)
+    const baseTotal = parseFloat(doseInput.getAttribute('data-base-total')) || 1000;
+    const baseKg = baseTotal / 1000;
 
     const updateDoses = () => {
-      const kg = parseFloat(doseInput.value) || 1;
-      const multiplier = kg;
+      const kg = parseFloat(doseInput.value) || baseKg;
+      const multiplier = kg / baseKg;
 
       // Update badge
       doseBadge.textContent = multiplier === 1 ? '×1' : `×${multiplier % 1 === 0 ? multiplier : multiplier.toFixed(1)}`;
