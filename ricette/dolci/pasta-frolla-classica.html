@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Pasta frolla tradizionale per crostate e biscotti, friabile e burrosa. Tecnica sabbiatura per struttura perfetta.">
+        content="Pasta frolla tradizionale con metodo sabbiato: friabile, burrosa e perfetta per crostate e biscotti. Ricetta professionale con tecnica manuale e a spirale.">
     <title>Pasta Frolla Classica — Il Ricettario</title>
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
@@ -62,7 +62,7 @@
     </nav>
 
     <!-- ═══════════ RECIPE HERO ═══════════ -->
-    <div class="recipe-hero" style="background-image: url('../../images/ricette/dolci/pasta-frolla-classica.jpg')">
+    <div class="recipe-hero">
         <div class="container">
             <nav class="breadcrumb reveal">
                 <a href="../../index.html">Home</a>
@@ -81,7 +81,7 @@
                 </div>
                 <h1 class="recipe-hero__title reveal reveal-delay-1">Pasta Frolla Classica</h1>
                 <p class="recipe-hero__subtitle reveal reveal-delay-2">
-                    Base essenziale della pasticceria italiana con metodo sabbiatura
+                    La base perfetta per crostate e biscotti — metodo sabbiato professionale
                 </p>
             </div>
         </div>
@@ -91,13 +91,13 @@
     <div class="container" style="padding-top: 40px;">
         <div class="tech-badges reveal">
             <div class="tech-badge">
-                💧 Idratazione: <span class="tech-badge__value">&nbsp;33%</span>
+                💧 Idratazione: <span class="tech-badge__value">&nbsp;20%</span>
             </div>
             <div class="tech-badge">
                 🌡️ Target Temp: <span class="tech-badge__value">&nbsp;18-20°C</span>
             </div>
             <div class="tech-badge">
-                ⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;Riposo 2-4h in frigo</span>
+                ⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;riposo 2h in frigo</span>
             </div>
             <div class="tech-badge tech-badge--toggle" id="setup-badge" role="button" tabindex="0"
                 aria-label="Cambia setup">
@@ -129,8 +129,8 @@
                                 <button class="dose-calculator__btn" id="dose-decrease"
                                     aria-label="Diminuisci dosi">−</button>
                                 <div class="dose-calculator__input-wrapper">
-                                    <input type="number" class="dose-calculator__input" id="dose-input" value="1"
-                                        min="1" max="5" step="1" data-base-total="1000" aria-label="Kg di farina">
+                                    <input type="number" class="dose-calculator__input" id="dose-input" value="0.5"
+                                        min="0.5" max="5" step="0.5" data-base-total="500" aria-label="Kg di farina">
                                     <span class="dose-calculator__unit">kg</span>
                                 </div>
                                 <button class="dose-calculator__btn" id="dose-increase"
@@ -141,31 +141,23 @@
 
                         <table class="ingredients-table" id="ingredients-table">
                             <tr>
-                                <td>Farina Debole Tipo 00 <span class="ingredient-note">(W 90-130, basso contenuto proteico)</span></td>
-                                <td class="ingredient-qty" data-base="1000">1000g</td>
-                            </tr>
-                            <tr>
-                                <td>Burro Freddo <span class="ingredient-note">(82% grassi, da frigo a cubetti)</span></td>
+                                <td>Farina 00 Dolci <span class="ingredient-note">(W 180-220, proteine 10-11%)</span></td>
                                 <td class="ingredient-qty" data-base="500">500g</td>
                             </tr>
                             <tr>
-                                <td>Zucchero Semolato <span class="ingredient-note">(o a velo per impasto più fine)</span></td>
-                                <td class="ingredient-qty" data-base="400">400g</td>
+                                <td>Burro <span class="ingredient-note" data-setup-note-spirale="(freddo di frigo 4°C, a cubetti 1cm)" data-setup-note-mano="(morbido 16-18°C, a pezzetti)">(freddo di frigo 4°C, a cubetti 1cm)</span></td>
+                                <td class="ingredient-qty" data-base="300">300g</td>
                             </tr>
                             <tr>
-                                <td>Tuorli d'Uovo <span class="ingredient-note">(temperatura ambiente, ~20g l'uno)</span></td>
-                                <td class="ingredient-qty" data-base="320">320g</td>
+                                <td>Zucchero a Velo <span class="ingredient-note">(setacciato)</span></td>
+                                <td class="ingredient-qty" data-base="200">200g</td>
                             </tr>
                             <tr>
-                                <td>Sale Fino</td>
-                                <td class="ingredient-qty" data-base="5">5g</td>
+                                <td>Uova Intere <span class="ingredient-note" data-setup-note-spirale="(fredde di frigo 4°C)" data-setup-note-mano="(temperatura ambiente 18-20°C)">(fredde di frigo 4°C)</span></td>
+                                <td class="ingredient-qty" data-base="100">100g</td>
                             </tr>
                             <tr>
-                                <td>Scorza di Limone <span class="ingredient-note">(grattugiata, facoltativa)</span></td>
-                                <td class="ingredient-qty" data-base="5">5g</td>
-                            </tr>
-                            <tr>
-                                <td>Estratto di Vaniglia <span class="ingredient-note">(o vanillina, facoltativo)</span></td>
+                                <td>Sale Fino <span class="ingredient-note">(per esaltare i sapori)</span></td>
                                 <td class="ingredient-qty" data-base="3">3g</td>
                             </tr>
                         </table>
@@ -185,20 +177,20 @@
                         </h2>
                         <ol class="steps-list">
                             <li>
-                                <strong>Sabbiatura (Impastatrice con Foglia)</strong>
-                                <p>Inserire nella vasca: farina, zucchero, sale e scorza di limone. Aggiungere il burro freddo tagliato a cubetti (1-2cm). Azionare l'impastatrice con gancio foglia a velocità 1 per 3-4 minuti. Obiettivo: sabbiare il composto fino a ottenere una consistenza simile a briciole di pane (sabbia grossolana). Il burro deve essere perfettamente incorporato ma NON sciolto. Temperatura impasto: max 18°C.</p>
+                                <strong>Sabbiatura (1a velocità — 2-3 min)</strong>
+                                <p>Inserire farina, zucchero a velo setacciato e sale nella planetaria con gancio a foglia. Aggiungere il burro freddo tagliato a cubetti di 1cm. Azionare a velocità minima per 2-3 minuti fino a ottenere un composto sabbioso (simile a briciole di pane). Il burro deve essere completamente incorporato ma NON deve scaldarsi: la temperatura ideale rimane sotto i 16°C.</p>
                             </li>
                             <li>
-                                <strong>Aggiunta Tuorli</strong>
-                                <p>Fermare l'impastatrice. Aggiungere i tuorli d'uovo e l'estratto di vaniglia. Riprendere l'impastamento a velocità 1 per 1-2 minuti MAX. ATTENZIONE: fermarsi appena l'impasto si amalgama e forma una massa compatta. NON sviluppare glutine, NON incordare. L'impasto deve risultare granuloso, non liscio ed elastico.</p>
+                                <strong>Incorporazione Uova (1a velocità — 30-40 sec)</strong>
+                                <p>Aggiungere le uova intere fredde di frigo (4°C) in un'unica soluzione. Azionare a velocità minima per 30-40 secondi: l'impasto deve appena incordarsi e formare una massa compatta. ATTENZIONE: non lavorare oltre, altrimenti si sviluppa glutine e la frolla diventa elastica invece di friabile.</p>
                             </li>
                             <li>
-                                <strong>Raccolta e Formatura</strong>
-                                <p>Rovesciare l'impasto su un piano. Compattarlo velocemente con le mani (senza impastare) formando un panetto spesso 3-4cm. Avvolgere in pellicola alimentare, schiacciare leggermente per formare un disco uniforme. Riporre in frigorifero a 4°C per minimo 2 ore, ideale 4 ore o overnight. Questo riposo è FONDAMENTALE per il rilassamento del glutine e la solidificazione del burro.</p>
+                                <strong>Formatura e Riposo (2h in frigo a 4°C)</strong>
+                                <p>Rovesciare l'impasto sul banco SENZA farina. Compattare velocemente con le mani (max 10 secondi) formando un panetto spesso 3-4cm. Avvolgere in pellicola trasparente aderente. Riposo in frigorifero a 4°C per almeno 2 ore (ideale 4-6h, max 24h). Questo riposo è FONDAMENTALE per: idratare uniformemente la farina, rilassare il glutine eventualmente sviluppato, solidificare il burro per una stesura ottimale.</p>
                             </li>
                             <li>
                                 <strong>Stesura e Utilizzo</strong>
-                                <p>Estrarre dal frigo 10-15 minuti prima dell'uso. Stendere tra due fogli di carta forno con mattarello, mantenendo spessore 3-4mm per crostate, 2-3mm per biscotti. Lavorare velocemente per evitare che il burro si sciolga. Se l'impasto si ammorbidisce troppo, rimettere in frigo 10-15 minuti prima di proseguire. Temperatura ambiente ideale: 18-20°C.</p>
+                                <p>Estrarre la frolla dal frigo 10 minuti prima della stesura: deve essere fredda ma non durissima. Stendere tra due fogli di carta forno con mattarello, spessore 3-4mm per crostate, 5-6mm per biscotti. Ritagliare la forma desiderata. Se l'impasto si scalda durante la lavorazione, riporlo in frigo 10 minuti. Temperatura frolla durante stesura: 12-14°C (mai oltre 16°C).</p>
                             </li>
                         </ol>
                     </div>
@@ -213,25 +205,25 @@
                         </h2>
                         <ol class="steps-list">
                             <li>
-                                <strong>Sabbiatura Manuale</strong>
-                                <p>Su una spianatoia o in una ciotola capiente, setacciare la farina formando una fontana. Aggiungere zucchero, sale e scorza di limone al centro. Disporre il burro freddo a cubetti (1-2cm) sulla farina. Con la punta delle dita (pollice, indice, medio), sfregare velocemente burro e farina, come se si stesse facendo 'piovere sabbia'. Movimento: prendere piccole quantità di burro e farina, sfregarle tra i polpastrelli sollevando le mani di 10-15cm dalla spianatoia e lasciando cadere il composto. Continuare per 5-7 minuti fino a ottenere un composto sabbioso omogeneo, simile a briciole di pane. FONDAMENTALE: lavorare con mani fredde e velocemente. Se le mani si scaldano, raffreddarle sotto acqua fredda e asciugarle bene prima di proseguire.</p>
+                                <strong>Sabbiatura Manuale su Spianatoia</strong>
+                                <p>Setacciare la farina 00 sulla spianatoia a fontana. Aggiungere al centro zucchero a velo, sale e burro morbido (16-18°C) tagliato a pezzetti. Con la punta delle dita, sfregare velocemente burro, zucchero e farina fino a ottenere un composto sabbioso (briciole irregolari). Tempo: 3-4 minuti. Tenere le mani fresche: ogni 1-2 minuti, sciacquarle sotto acqua fredda e asciugarle bene. Il movimento deve essere veloce e leggero, come 'sbriciolando' il burro nella farina.</p>
                             </li>
                             <li>
-                                <strong>Incorporazione Tuorli</strong>
-                                <p>Formare una nuova fontana con il composto sabbioso. Versare i tuorli e l'estratto di vaniglia al centro. Con le dita o una forchetta, iniziare a incorporare il composto sabbioso nei tuorli, partendo dal centro e allargandosi gradualmente. Quando metà del composto è incorporato, usare una spatola o raschietto per raccogliere il resto e amalgamare velocemente. NON impastare, solo compattare.</p>
+                                <strong>Incorporazione Uova a Temperatura Ambiente</strong>
+                                <p>Formare una fontana con il composto sabbioso. Rompere le uova (temperatura ambiente 18-20°C) al centro. Con una forchetta, sbattere leggermente le uova, poi incorporare la sabbia dall'interno verso l'esterno, amalgamando rapidamente. Quando l'impasto inizia a compattarsi, lavorare con le mani per 20-30 secondi max: deve formare una massa omogenea ma NON liscia (segno di sovralavorazione).</p>
                             </li>
                             <li>
-                                <strong>Compattazione e Riposo</strong>
-                                <p>Con il palmo della mano, dare 4-5 pressioni decise sull'impasto per compattarlo (movimento chiamato 'frasage' nella pasticceria francese). Obiettivo: unire i grumi senza sviluppare glutine. Formare rapidamente un panetto spesso 3-4cm, avvolgerlo in pellicola alimentare schiacciandolo leggermente per formare un disco uniforme. Tempo totale di lavorazione manuale dall'aggiunta dei tuorli: MAX 2 minuti. Riporre in frigorifero a 4°C per minimo 2 ore, ideale 4 ore o overnight.</p>
+                                <strong>Formatura e Riposo in Frigo (2h a 4°C)</strong>
+                                <p>Compattare l'impasto in un panetto spesso 3-4cm senza impastare ulteriormente. Avvolgere in pellicola aderente. Riposo in frigorifero a 4°C per almeno 2 ore (ideale 4-6h). Durante questo riposo: la farina si idrata completamente, il glutine si rilassa, il burro si solidifica permettendo una stesura perfetta senza rotture. La frolla può riposare fino a 24h o essere congelata (scongelarla in frigo 12h prima dell'uso).</p>
                             </li>
                             <li>
-                                <strong>Stesura Finale</strong>
-                                <p>Estrarre dal frigo 10-15 minuti prima dell'uso. Infarinare leggermente la spianatoia (o usare due fogli di carta forno). Battere leggermente il disco con il mattarello per ammorbidirlo. Stendere con movimenti dal centro verso l'esterno, ruotando l'impasto di 90° ogni 2-3 passaggi per mantenere una forma circolare uniforme. Spessore finale: 3-4mm per crostate (più resistente), 2-3mm per biscotti (più friabile). Se l'impasto si attacca o si ammorbidisce troppo, infarinare leggermente o rimettere in frigo 10-15 minuti.</p>
+                                <strong>Stesura tra Carta Forno</strong>
+                                <p>Estrarre la frolla dal frigo 10 minuti prima della stesura. Posizionare il panetto tra due fogli di carta forno. Stendere con mattarello esercitando pressione uniforme, ruotando di 90° ogni 2-3 passaggi. Spessore finale: 3-4mm per crostate, 5-6mm per biscotti. Se durante la stesura la frolla si scalda oltre 16°C e diventa appiccicosa, riporla in frigo 10 minuti. La frolla perfetta si stende senza rompersi e senza attaccarsi al mattarello.</p>
                             </li>
                         </ol>
 
                         <div class="pro-tip-box" style="margin-top: 16px;">
-                            <p><strong>💡 PRO TIP:</strong> Per frolla montata (più burrosa): montare burro e zucchero prima di aggiungere la farina. Risultato: meno friabile ma più biscottosa</p>
+                            <p><strong>💡 PRO TIP:</strong> RIPOSO OBBLIGATORIO: il riposo in frigo non è opzionale. Senza riposo, la frolla si ritira in cottura, si rompe durante la stesura e risulta dura. Il freddo solidifica il burro (stesura perfetta) e rilassa il glutine (massima friabilità). Tempo minimo: 2h. Ideale: 4-6h. Puoi prepararla il giorno prima.</p>
                         </div>
                     </div>
 
@@ -256,14 +248,9 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Farina Debole Tipo 00</td>
-                            <td style="color: var(--color-accent); font-weight: 600;">90-130</td>
-                            <td>Molino Spadoni Pasticceria, Molino Vigevano 00 Dolci, Le 5 Stagioni Supertop</td>
-                        </tr>
-                        <tr>
-                            <td>Farina Tipo 0 Debole</td>
-                            <td style="color: var(--color-accent); font-weight: 600;">100-140</td>
-                            <td>Mulino Marino Tipo 0, Molino Quaglia Tipo 0</td>
+                            <td>Farina 00 Dolci</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">180-220</td>
+                            <td>Molino Spadoni Dolci, Le 5 Stagioni Pasticceria, Caputo Dolci, Molino Grassi Pasticceria</td>
                         </tr>
                     </tbody>
                 </table>
@@ -279,7 +266,7 @@
                 <span class="alert__icon">🚫</span>
                 <div class="alert__content">
                     <strong>ALERT PROFESSIONALE</strong>
-                    <p>NON sovrimpastare dopo l'aggiunta dei tuorli: bastano 1-2 minuti. Un impasto troppo lavorato sviluppa glutine, rendendo la frolla elastica e dura anziché friabile. NON usare burro morbido o sciolto: deve essere freddo da frigo per mantenere la struttura a sabbia. NON saltare il riposo in frigo: senza di esso la frolla si ritira in cottura e diventa dura. NON stendere l'impasto appena uscito dal frigo: si spezza. Aspettare 10-15 minuti.</p>
+                    <p>NON sovrimpastare dopo l'aggiunta delle uova: la frolla deve appena compattarsi, NON diventare liscia ed elastica. Una lavorazione eccessiva sviluppa il glutine, trasformando una frolla friabile in un impasto gommoso e duro dopo la cottura. Tempo massimo di impastamento dopo le uova: 40 secondi a spirale, 30 secondi a mano. Segno di sovralavorazione: impasto lucido, elastico, che si ritrae durante la stesura.</p>
                 </div>
             </div>
 
@@ -291,18 +278,18 @@
                 </h2>
                 <div class="tech-badges" style="margin-bottom: 16px;">
                     <div class="tech-badge">
-                        🌡️ Temperatura: <span class="tech-badge__value">&nbsp;170-180°C (statico) o 160°C (ventilato)</span>
+                        🌡️ Temperatura: <span class="tech-badge__value">&nbsp;170-180°C (forno statico) o 160°C (ventilato)</span>
                     </div>
                     <div class="tech-badge">
-                        ⏱️ Tempo: <span class="tech-badge__value">&nbsp;20-30 minuti per crostate, 12-18 minuti per biscotti</span>
+                        ⏱️ Tempo: <span class="tech-badge__value">&nbsp;20-25 minuti per crostate, 12-15 minuti per biscotti</span>
                     </div>
                 </div>
                 <ul class="baking-tips" style="list-style: none; padding: 0;">
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Preriscaldare il forno per 20 minuti a temperatura costante</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Per crostate: cuocere 10 min in bianco (con carta forno e legumi secchi), poi aggiungere la farcia e completare</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 La frolla è cotta quando i bordi sono leggermente dorati e il centro è asciutto ma ancora pallido</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Evitare temperature superiori a 180°C: il burro brucerebbe prima che la struttura si consolidi</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Far raffreddare completamente sulla teglia prima di sformare (la frolla è fragile da calda)</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Preriscaldare SEMPRE il forno per 20 minuti a temperatura target</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Per crostate: cuocere 10 min in bianco (con carta forno + legumi secchi), poi rimuovere pesi e completare cottura</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 La frolla è cotta quando i bordi sono dorati e il fondo asciutto al tatto</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Se la superficie si colora troppo velocemente, coprire con foglio di alluminio</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Lasciar raffreddare completamente nello stampo prima di sformare</li>
                 </ul>
             </div>
 
@@ -314,17 +301,17 @@
                 </h2>
                 <dl class="glossary-list" style="margin: 0; padding: 0;">
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Sabbiatura</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica di incorporazione del burro nella farina sfregando con i polpastrelli fino a ottenere un composto granuloso simile a sabbia. Fondamentale per la friabilità della frolla.</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Frasage</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica francese di compattazione finale della pasta frolla: si schiaccia l'impasto con il palmo della mano facendolo scivolare sulla spianatoia per unire i grumi senza sviluppare glutine.</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Gancio Foglia</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Accessorio dell'impastatrice a forma di foglia piatta, ideale per impasti grassi e friabili (frolle, sablé) perché mescola senza incordare.</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica per incorporare il burro nella farina sfregando con le dita o con gancio a foglia, fino a ottenere un composto simile a sabbia/briciole. Fondamentale per la friabilità della frolla.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Incordatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Momento in cui l'impasto inizia a compattarsi e formare una massa coesa. Nella frolla va fermata subito per evitare sviluppo eccessivo di glutine.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Glutine</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Rete proteica che si forma lavorando farina e liquidi. Nella frolla va minimizzato (lavorazione breve) per mantenere friabilità; nel pane va sviluppato (lavorazione lunga) per ottenere elasticità.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Gancio a Foglia</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Accessorio della planetaria con forma piatta e larga, ideale per impasti morbidi e burrosi come frolle, creme e biscotti. NON sviluppa glutine come il gancio a spirale.</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Cottura in Bianco</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Pre-cottura della base di frolla vuota (senza farcia) coperta con carta forno e legumi secchi per evitare che si gonfi. Essenziale per crostate con farcitura umida.</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Idratazione</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Percentuale di liquidi (in questo caso tuorli) rispetto al peso della farina. Nella frolla è bassa (30-35%) per garantire friabilità.</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">W della Farina</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Indice di forza della farina che misura la capacità di assorbire liquidi e formare glutine. Per la frolla serve W basso (90-130) per massima friabilità.</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Pre-cottura di una base di frolla vuota (senza ripieno), coperta con carta forno e appesantita con legumi secchi/pesi da forno, per evitare che si gonfi. Essenziale per crostate con ripieni umidi.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Zucchero a Velo</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Zucchero macinato finissimo, spesso con aggiunta di amido (3%) antiagglomerante. Si scioglie istantaneamente negli impasti e rende la frolla più fine e friabile rispetto allo zucchero semolato.</dd>
                 </dl>
             </div>
 
@@ -356,7 +343,7 @@
                     <h4 class="footer__col-title">Questa Ricetta</h4>
                     <ul class="footer__links">
                         <li><a href="#">🥧 Pasta Frolla Classica</a></li>
-                        <li><a href="#">💧 Idratazione 33%</a></li>
+                        <li><a href="#">💧 Idratazione 20%</a></li>
                     </ul>
                 </div>
 

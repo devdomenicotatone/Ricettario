@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Impasto versatile per arancini, cartocciata, scaccia e tutta la rosticceria siciliana. Morbido, elastico e perfetto per frittura o forno.">
+        content="Impasto versatile per arancini, iris, cartocciate e tutta la rosticceria siciliana tradizionale. Tecnica professionale per risultati friabili e dorati.">
     <title>Impasto per Rosticceria Siciliana — Il Ricettario</title>
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
@@ -62,7 +62,7 @@
     </nav>
 
     <!-- ═══════════ RECIPE HERO ═══════════ -->
-    <div class="recipe-hero" style="background-image: url('../../images/ricette/lievitati/impasto-rosticceria-siciliana.jpg')">
+    <div class="recipe-hero">
         <div class="container">
             <nav class="breadcrumb reveal">
                 <a href="../../index.html">Home</a>
@@ -81,7 +81,7 @@
                 </div>
                 <h1 class="recipe-hero__title reveal reveal-delay-1">Impasto per Rosticceria Siciliana</h1>
                 <p class="recipe-hero__subtitle reveal reveal-delay-2">
-                    Base artigianale per arancini, cartocciata e preparazioni tradizionali
+                    Base professionale per arancini, iris e specialità siciliane
                 </p>
             </div>
         </div>
@@ -94,10 +94,10 @@
                 💧 Idratazione: <span class="tech-badge__value">&nbsp;55%</span>
             </div>
             <div class="tech-badge">
-                🌡️ Target Temp: <span class="tech-badge__value">&nbsp;26-28°C</span>
+                🌡️ Target Temp: <span class="tech-badge__value">&nbsp;24-26°C</span>
             </div>
             <div class="tech-badge">
-                ⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;2-3h puntata + 30min appretto</span>
+                ⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;2-3h + 30min appretto</span>
             </div>
             <div class="tech-badge tech-badge--toggle" id="setup-badge" role="button" tabindex="0"
                 aria-label="Cambia setup">
@@ -141,28 +141,36 @@
 
                         <table class="ingredients-table" id="ingredients-table">
                             <tr>
-                                <td>Farina Tipo 0 Media-Alta Forza <span class="ingredient-note">(W 300-320, per struttura e tenuta in frittura)</span></td>
+                                <td>Farina Tipo 0 Media Forza <span class="ingredient-note">(W 280-300, per struttura e friabilità)</span></td>
                                 <td class="ingredient-qty" data-base="1000">1000g</td>
                             </tr>
                             <tr>
-                                <td>Acqua <span class="ingredient-note">(fredda 8-10°C per controllare temperatura finale)</span></td>
+                                <td>Acqua <span class="ingredient-note" data-setup-note-spirale="(ghiacciata 2-4°C)" data-setup-note-mano="(20-22°C, aggiungere in 3 riprese durante impasto)">(ghiacciata 2-4°C)</span></td>
                                 <td class="ingredient-qty" data-base="550">550g</td>
                             </tr>
                             <tr>
-                                <td>Strutto <span class="ingredient-note">(o sugna, per morbidezza e sapore tipico siciliano)</span></td>
-                                <td class="ingredient-qty" data-base="80">80g</td>
+                                <td>Strutto <span class="ingredient-note">(tipico siciliano, sostituibile con burro 70% + olio 30%)</span></td>
+                                <td class="ingredient-qty" data-base="200">200g</td>
                             </tr>
                             <tr>
-                                <td>Lievito di Birra Fresco <span class="ingredient-note">(compresso, da frigo)</span></td>
-                                <td class="ingredient-qty" data-base="25">25g</td>
+                                <td>Tuorli d'Uovo <span class="ingredient-note">(a temperatura ambiente, ~6-7 tuorli medi)</span></td>
+                                <td class="ingredient-qty" data-base="120">120g</td>
                             </tr>
                             <tr>
-                                <td>Sale Fino <span class="ingredient-note">(marino integrale)</span></td>
+                                <td>Zucchero Semolato <span class="ingredient-note">(bilancia grassi e sale)</span></td>
+                                <td class="ingredient-qty" data-base="40">40g</td>
+                            </tr>
+                            <tr>
+                                <td>Sale Fino <span class="ingredient-note">(2% sul peso farina)</span></td>
                                 <td class="ingredient-qty" data-base="20">20g</td>
                             </tr>
                             <tr>
-                                <td>Zucchero Semolato <span class="ingredient-note">(per bilanciare e aiutare colorazione)</span></td>
+                                <td>Lievito di Birra Fresco <span class="ingredient-note" data-setup-note-spirale="(15g)" data-setup-note-mano="(18g (impasto più lento, serve compensazione))">(15g)</span></td>
                                 <td class="ingredient-qty" data-base="15">15g</td>
+                            </tr>
+                            <tr>
+                                <td>Scorza di Limone Grattugiata <span class="ingredient-note">(solo parte gialla, profumo tipico siciliano)</span></td>
+                                <td class="ingredient-qty" data-base="5">5g</td>
                             </tr>
                         </table>
                     </div>
@@ -181,28 +189,36 @@
                         </h2>
                         <ol class="steps-list">
                             <li>
-                                <strong>Preparazione Base (V1 - 3 min)</strong>
-                                <p>Inserire nella vasca farina, acqua fredda (8-10°C) e lievito sbriciolato. Avviare impastatrice a VELOCITÀ 1 per 3 minuti. L'impasto deve iniziare ad amalgamarsi senza formare ancora la maglia glutinica. Monitorare temperatura: non deve superare 22°C in questa fase.</p>
+                                <strong>Preparazione Ingredienti</strong>
+                                <p>Portare strutto e tuorli a temperatura ambiente (18-20°C) almeno 1h prima. Preparare acqua ghiacciata (2-4°C) con cubetti di ghiaccio. Pesare tutti gli ingredienti con precisione al grammo.</p>
                             </li>
                             <li>
-                                <strong>Aggiunta Grassi e Zucchero (V1 - 2 min)</strong>
-                                <p>Aggiungere strutto a pezzetti e zucchero. Continuare a V1 per 2 minuti fino a completo assorbimento dei grassi. L'impasto deve risultare liscio e omogeneo, senza grumi di strutto visibili.</p>
+                                <strong>Impasto Base (V1, 3 min)</strong>
+                                <p>Inserire nella spirale: farina, zucchero, scorza di limone grattugiata. Avviare velocità 1 e unire acqua ghiacciata gradualmente in 1 minuto. Sciogliere il lievito fresco nell'ultima porzione di acqua prima di aggiungerlo. Impastare 3 minuti totali fino a completo assorbimento.</p>
                             </li>
                             <li>
-                                <strong>Incordatura e Sale (V1 → V2 - 6 min)</strong>
-                                <p>Aggiungere il sale e proseguire 2 minuti a V1, poi passare a VELOCITÀ 2 per 4 minuti. L'impasto deve incordarsi completamente: deve staccarsi dalla vasca, avvolgersi sul gancio e produrre un suono di 'schiocco' tipico. Controllare temperatura finale: 26-28°C ideale.</p>
+                                <strong>Incordatura (V1, 4 min)</strong>
+                                <p>Aggiungere il sale e continuare a V1 per 2 minuti. Unire i tuorli uno alla volta, aspettando l'assorbimento completo tra un tuorlo e l'altro (circa 2 minuti totali). L'impasto inizia a incordarsi e sviluppare maglia glutinica.</p>
                             </li>
                             <li>
-                                <strong>Puntata in Massa (2-3h a 26-28°C)</strong>
-                                <p>Trasferire l'impasto su piano infarinato, formare una palla liscia con piega a tre (portare i lembi verso il centro). Porre in contenitore oleato, coprire con pellicola a contatto. Lasciar lievitare 2-3 ore a temperatura ambiente (26-28°C) fino al raddoppio del volume. L'impasto deve risultare soffice, gonfio e leggermente appiccicoso.</p>
+                                <strong>Mantecatura Grasso (V1→V2, 6 min)</strong>
+                                <p>Aggiungere lo strutto a pezzetti (tagliato a cubetti 2x2 cm) gradualmente in 2 minuti a V1. Quando il grasso è completamente assorbito, passare a V2 per 4 minuti fino a impasto liscio, elastico e che si stacca completamente dalla vasca. Temperatura finale: 24-26°C (FONDAMENTALE: se supera 27°C lo strutto fonde e compromette la friabilità).</p>
+                            </li>
+                            <li>
+                                <strong>Puntata in Massa</strong>
+                                <p>Formare una palla liscia, ungere leggermente con olio la superficie. Porre in contenitore coperto a 24-26°C per 2-3h fino al raddoppio. Ogni 60 minuti effettuare 1 piega di rinforzo per sviluppare struttura: stendere leggermente, piegare a libro, ruotare 90°, ripiegare.</p>
                             </li>
                             <li>
                                 <strong>Staglio e Pirlatura</strong>
-                                <p>Rovesciare l'impasto su piano leggermente infarinato senza sgonfiare troppo. Per ARANCINI: stagliare pezzi da 80-100g, pirlarli formando palline regolari. Per CARTOCCIATA/SCACCIA: dividere in panetti da 250-300g. Coprire con telo umido.</p>
+                                <p>Rovesciare l'impasto su piano NON infarinato. Dividere in pezzi da 80-100g per arancini/iris, 60g per cartocciate. Pirlare ogni pezzo con movimento circolare della mano a coppa, tenendo il palmo leggermente concavo. La superficie deve risultare liscia e tesa.</p>
                             </li>
                             <li>
-                                <strong>Appretto e Modellatura Finale (30 min)</strong>
-                                <p>Lasciar riposare i pezzi formati 30 minuti coperti. Per ARANCINI: schiacciare ogni pallina, farcire al centro con ragù + piselli + mozzarella, chiudere sigillando bene e rotolare nel pangrattato. Per CARTOCCIATA: stendere a rettangolo sottile (3-4mm), farcire, arrotolare e chiudere a mezzaluna. A questo punto sono pronti per frittura o forno.</p>
+                                <strong>Appretto Finale</strong>
+                                <p>Disporre le palline su teglie oliate, distanziate 8-10 cm. Coprire con pellicola leggermente unta. Lasciar riposare 30-40 minuti a 26-28°C fino a aumento volume del 50%. Le palline devono essere soffici al tatto ma non appiccicose.</p>
+                            </li>
+                            <li>
+                                <strong>Formatura Finale</strong>
+                                <p>Per ARANCINI: stendere ogni pallina in disco di 12-14 cm, farcire al centro, richiudere a sacchetto sigillando bene. Per IRIS: stendere a mezzaluna, farcire metà superficie, ripiegare e sigillare bordi. Per CARTOCCIATE: stendere rettangolare 8x12 cm, farcire, arrotolare.</p>
                             </li>
                         </ol>
                     </div>
@@ -217,50 +233,44 @@
                         </h2>
                         <ol class="steps-list">
                             <li>
-                                <strong>Autolisi Iniziale (20 min)</strong>
-                                <p>Su spianatoia o in ciotola capiente, versare la farina a fontana. Al centro aggiungere acqua fredda e lievito sbriciolato. Incorporare gradualmente la farina con le dita partendo dal centro. Impastare 3-4 minuti fino a ottenere un composto ruvido e disomogeneo. Coprire con telo e lasciare riposare 20 minuti: questa autolisi renderà l'impasto più estensibile.</p>
+                                <strong>Preparazione Ingredienti</strong>
+                                <p>Portare strutto e tuorli a temperatura ambiente (18-20°C) almeno 1h prima. Preparare acqua a 20-22°C. Dividere l'acqua in 3 porzioni: 300g + 150g + 100g. Sciogliere il lievito nella prima porzione. Pesare tutti gli ingredienti.</p>
                             </li>
                             <li>
-                                <strong>Incorporazione Grassi e Zucchero</strong>
-                                <p>Appiattire leggermente l'impasto, distribuire al centro lo strutto a pezzetti e lo zucchero. Chiudere i lembi verso il centro e iniziare a impastare con il palmo della mano, spingendo via e raccogliendo verso di sé. Lavorare 5-6 minuti fino a completo assorbimento dei grassi. L'impasto sarà morbido e leggermente untuoso.</p>
+                                <strong>Fontana e Amalgama (10 min)</strong>
+                                <p>Versare la farina su spianatoia formando fontana larga. Al centro: zucchero, scorza di limone, lievito sciolto nella prima porzione d'acqua (300g). Iniziare a impastare dall'interno verso l'esterno con le dita, incorporando farina gradualmente. Quando l'acqua è assorbita, aggiungere seconda porzione (150g) e continuare.</p>
                             </li>
                             <li>
-                                <strong>Incordatura Manuale con Slap & Fold (12-15 min)</strong>
-                                <p>Aggiungere il sale e iniziare la fase di incordatura. Tecnica SLAP & FOLD: sollevare l'impasto da un'estremità, sbatterlo con forza sul piano e ripiegarlo su se stesso. Ripetere 50-60 volte (12-15 minuti di lavoro). L'impasto diventerà liscio, elastico e lucido, si staccherà dalle mani senza appiccicosità eccessiva. Temperatura target: 26-28°C.</p>
+                                <strong>Impasto e Incordatura (15 min)</strong>
+                                <p>Aggiungere il sale e impastare con energia: pressare con base palmo, ripiegare, ruotare 90°. Unire i tuorli uno alla volta aspettando assorbimento completo. Aggiungere ultima porzione acqua (100g) solo se necessario. Impastare 15 minuti totali con tecnica slap & fold ogni 5 minuti (sollevare impasto, sbattere su piano, ripiegare).</p>
                             </li>
                             <li>
-                                <strong>Puntata in Massa (2h30-3h a 26-28°C)</strong>
-                                <p>Formare una palla tesa con pieghe a libro: allargare l'impasto, portare un lato verso il centro, poi l'altro, poi alto e basso. Capovolgere con chiusura sotto, porre in ciotola oleata. Coprire con pellicola aderente e lasciare lievitare 2h30-3h a temperatura ambiente fino al raddoppio. Ogni 45 minuti eseguire 1 piega di rinforzo.</p>
+                                <strong>Incorporazione Strutto (12 min)</strong>
+                                <p>Stendere l'impasto a rettangolo, distribuire 1/3 dello strutto a pezzetti. Ripiegare a libro, pressare, ruotare 90°. Ripetere con secondo 1/3 di strutto. Impastare 4 minuti. Ripetere con ultimo 1/3 di strutto. Impastare fino a completa incorporazione: l'impasto deve essere liscio, lucido, morbido ma non appiccicoso. Temperatura: 25-27°C.</p>
                             </li>
                             <li>
-                                <strong>Staglio e Preformatura</strong>
-                                <p>Rovesciare delicatamente l'impasto su piano infarinato. Dividere con tarocco in pezzi: 80-100g per arancini, 250-300g per scacce/cartocciate. Preformare ogni pezzo con piega a tre, coprire con telo leggermente umido e lasciare rilassare 15 minuti.</p>
+                                <strong>Puntata in Massa</strong>
+                                <p>Formare palla liscia con movimento rotatorio sul piano. Ungere superficie con poco olio. Porre in ciotola coperta con pellicola a 24-26°C per 2h30-3h fino al raddoppio. Effettuare 2 pieghe di rinforzo: a 60 min e 120 min. Pieghe: stendere delicatamente, ripiegare a libro in 3, ruotare 90°, ripiegare ancora.</p>
                             </li>
                             <li>
-                                <strong>Pirlatura e Modellatura Finale</strong>
-                                <p>ARANCINI: con movimenti circolari del palmo della mano, pirlare ogni pezzo fino a ottenere sfere perfette e lisce. Appretto 20-30 minuti. Quindi schiacciare, farcire al centro (ragù, piselli, mozzarella), chiudere sigillando bene i bordi, formare palla o cono, passare nel pangrattato. SCACCIA/CARTOCCIATA: stendere con mattarello a rettangolo sottile (3-4mm), farcire a scelta, arrotolare stretto, sigillare i bordi, dare forma a mezzaluna o spirale.</p>
+                                <strong>Staglio e Pirlatura</strong>
+                                <p>Capovolgere impasto su piano NON infarinato. Con tarocco dividere in pezzi: 80-100g per arancini/iris, 60g per cartocciate. Pirlare ogni pezzo: mano a coppa, movimento circolare rapido, pressione leggera. La pallina deve avere superficie tesa e liscia, base sigillata.</p>
+                            </li>
+                            <li>
+                                <strong>Appretto Finale</strong>
+                                <p>Disporre palline su teglie oliate, distanza 8-10 cm. Coprire con canovaccio umido (NON a contatto). Lasciar lievitare 35-45 minuti a 26-28°C. Test appretto: pressare delicatamente con dito, deve tornare lentamente alla forma originale.</p>
+                            </li>
+                            <li>
+                                <strong>Formatura e Farcitura</strong>
+                                <p>Per ARANCINI: stendere disco 12-14 cm con matterello, bordi più sottili del centro. Farcire, richiudere a sacchetto tirando i bordi verso l'alto, sigillare con pizzico e torsione. Per IRIS: stendere ovale, farcire metà, ripiegare a mezzaluna, sigillare premendo bordi. Per CARTOCCIATE: stendere rettangolo, spalmare ripieno, arrotolare stretto, sigillare estremità.</p>
                             </li>
                         </ol>
 
                         <div class="pro-tip-box" style="margin-top: 16px;">
-                            <p><strong>💡 PRO TIP:</strong> La temperatura dell'olio è cruciale: troppo bassa (sotto 160°C) e assorbiranno grasso diventando unti; troppo alta (oltre 180°C) e bruceranno fuori restando crudi dentro. Usa termometro da cucina.</p>
+                            <p><strong>💡 PRO TIP:</strong> TEMPERATURA CRITICA: in estate o con impastatrice che scalda, usa acqua ghiacciata e fai impasto in ambiente fresco (20-22°C). Lo strutto fonde facilmente e l'impasto diventa unto invece che friabile.</p>
                         </div>
                     </div>
 
-                    <!-- ── Procedimento: Condimento ── -->
-                    <div class="recipe-panel reveal reveal-delay-2" data-setup="condimento" id="steps-condimento"
-                        style="margin-top: 32px;">
-                        <h2 class="recipe-panel__title">
-                            <span class="recipe-panel__title-icon">🍳</span>
-                            Preparazione Condimento
-                        </h2>
-                        <ol class="steps-list">
-                            <li>
-                                <strong>Ragù Siciliano per Arancini (Opzionale)</strong>
-                                <p>In casseruola, soffriggere 1 cipolla tritata + 1 costa sedano + 1 carota in 40ml olio EVO. Aggiungere 400g carne macinata (manzo), rosolare 5 min a fuoco vivo. Sfumare con 100ml vino rosso. Aggiungere 500g passata di pomodoro, 50g concentrato, 2 foglie alloro, sale, pepe. Cuocere 1h30 a fuoco dolce mescolando. A fine cottura unire 100g piselli lessati. Lasciare raffreddare completamente prima di farcire.</p>
-                            </li>
-                        </ol>
-                    </div>
 
                 </div>
 
@@ -282,14 +292,14 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Farina Tipo 0 Media-Alta Forza</td>
-                            <td style="color: var(--color-accent); font-weight: 600;">300-320</td>
-                            <td>Molino Caputo Pizzeria, Molino Dallagiovanna Oro, Molino Grassi Petra 3, Le 5 Stagioni Oro</td>
+                            <td>Farina Tipo 0 Media Forza</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">280-300</td>
+                            <td>Molino Caputo Pizzeria, Molino Vigevano Tipo 0, Molino Pasini Nobilgrano Oro</td>
                         </tr>
                         <tr>
-                            <td>Farina Tipo 00 Forte (alternativa)</td>
-                            <td style="color: var(--color-accent); font-weight: 600;">320-350</td>
-                            <td>Molino Caputo Cuoco, Molino Dallagiovanna Chef, Molino Vigevano Superiore</td>
+                            <td>Farina Manitoba (opzionale 20%)</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">350-380</td>
+                            <td>Molino Spadoni Manitoba, Le 5 Stagioni Manitoba, Molino Grassi Manitoba (per rinforzo struttura se clima caldo)</td>
                         </tr>
                     </tbody>
                 </table>
@@ -305,7 +315,7 @@
                 <span class="alert__icon">🚫</span>
                 <div class="alert__content">
                     <strong>ALERT PROFESSIONALE</strong>
-                    <p>⚠️ NON aggiungere il sale insieme al lievito all'inizio: il sale inibisce l'attività del lievito per osmosi. Inserirlo sempre DOPO che l'impasto ha iniziato a formarsi (dopo 5-6 minuti di impastamento). NON friggere a temperatura superiore a 180°C: l'esterno brucerebbe prima che il cuore si scaldi. NON usare margarina al posto dello strutto: non otterrai il sapore autentico e la shelf-life sarà ridotta.</p>
+                    <p>NON superare 26-27°C di temperatura finale impasto: lo strutto fonde oltre 36°C e compromette la friabilità. NON aggiungere tutta l'acqua in una volta (specie a mano): rischio impasto molle. NON saltare le pieghe di rinforzo in puntata: la struttura risulterebbe debole. NON friggere oltre 175°C: lo strutto brucia e l'interno resta crudo. NON conservare in frigo dopo frittura: l'impasto diventa gommoso, servire sempre caldi o a temperatura ambiente.</p>
                 </div>
             </div>
 
@@ -317,17 +327,17 @@
                 </h2>
                 <div class="tech-badges" style="margin-bottom: 16px;">
                     <div class="tech-badge">
-                        🌡️ Temperatura: <span class="tech-badge__value">&nbsp;200°C (forno ventilato) / 180°C (statico)</span>
+                        🌡️ Temperatura: <span class="tech-badge__value">&nbsp;170-180°C</span>
                     </div>
                     <div class="tech-badge">
-                        ⏱️ Tempo: <span class="tech-badge__value">&nbsp;25-30 minuti per scaccia/cartocciata, 12-15 minuti per arancini al forno</span>
+                        ⏱️ Tempo: <span class="tech-badge__value">&nbsp;12-15 minuti (fino a doratura uniforme)</span>
                     </div>
                 </div>
                 <ul class="baking-tips" style="list-style: none; padding: 0;">
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Per FRITTURA arancini: olio di arachidi o girasole alto oleico a 170-175°C, friggere 6-8 min fino a doratura uniforme</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Per COTTURA AL FORNO: spennellare superficie con uovo sbattuto + 10ml latte per doratura lucida</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Usare termometro da cucina per controllare temperatura olio: mai superare 180°C o l'esterno brucia prima che il cuore sia caldo</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Per arancini al forno: disporre su teglia con carta forno, distanziare 3-4cm, cuocere a 200°C ventilato 25 min ruotando a metà cottura</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Friggere in olio di arachidi/girasole a 170-175°C (NON oltre, lo strutto brucia)</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Immergere gli arancini quando l'olio è in temperatura: devono friggere dolcemente senza scurirsi troppo</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Girare a metà cottura per doratura uniforme</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Scolare su carta assorbente e servire caldi o tiepidi (MAI freddi da frigo)</li>
                 </ul>
             </div>
 
@@ -339,21 +349,21 @@
                 </h2>
                 <dl class="glossary-list" style="margin: 0; padding: 0;">
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Incordatura</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Fase in cui la maglia glutinica si sviluppa completamente: l'impasto si avvolge sul gancio/braccio, diventa elastico e 'suona' quando lavora.</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Fase in cui l'impasto sviluppa la maglia glutinica e inizia a 'tirare' formando filamenti elastici visibili quando si solleva dalla vasca</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Mantecatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Incorporazione graduale del grasso (strutto/burro) nell'impasto già incordato, fino a completo assorbimento e impasto liscio</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Puntata</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prima lievitazione in massa, dopo l'impastamento e prima della divisione in pezzi. Fondamentale per sviluppo aromi e struttura.</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Appretto</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Lievitazione finale dopo lo staglio e modellatura, prima della cottura. Permette al glutine di rilassarsi e al prodotto di gonfiarsi.</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prima lievitazione in massa dell'impasto (prima di dividere in pezzi), fondamentale per sviluppo aromi e struttura</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Staglio</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Divisione dell'impasto lievitato in pezzi del peso desiderato, con tarocco o coltello. Si effettua dopo la puntata.</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Divisione dell'impasto in pezzi di peso specifico (pezzatura) con tarocco o spatola</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Pirlatura</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica per formare palline perfettamente rotonde e lisce, con movimenti circolari della mano sul piano. Crea tensione superficiale.</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica di formatura a palla: movimento rotatorio della mano a coppa che crea tensione superficiale e chiude la base</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Appretto</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Lievitazione finale dei pezzi già formati, prima della cottura/frittura. Più breve della puntata</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Slap & Fold</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica manuale di impastamento: sollevare l'impasto, sbatterlo sul piano con forza, ripiegarlo. Sviluppa glutine senza sforzo eccessivo.</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Autolisi</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Riposo di farina e acqua (senza lievito e sale) per 20-60 min. Facilita idratazione e rende l'impasto più estensibile.</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica di impasto manuale: sollevare l'impasto, sbatterlo sul piano, ripiegarlo. Sviluppa glutine senza riscaldare</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Strutto</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Grasso di maiale purificato, ingrediente tradizionale siciliano. Conferisce morbidezza, sapore caratteristico e migliore conservabilità.</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Grasso suino raffinato, tipico della rosticceria siciliana. Dona friabilità e sapore caratteristico. Fonde a 36-40°C</dd>
                 </dl>
             </div>
 

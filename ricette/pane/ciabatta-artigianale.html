@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Pane bianco italiano ad alta idratazione con alveolatura aperta, crosta croccante e mollica soffice. Ricetta professionale con metodo diretto.">
-    <title>Ciabatta Italiana Tradizionale — Il Ricettario</title>
+        content="Ciabatta italiana ad alta idratazione con crosta croccante e alveolatura aperta. Tecnica professionale con biga per massima digeribilità.">
+    <title>Ciabatta Artigianale — Il Ricettario</title>
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,7 +62,7 @@
     </nav>
 
     <!-- ═══════════ RECIPE HERO ═══════════ -->
-    <div class="recipe-hero" style="background-image: url('../../images/ricette/pane/ciabatta-italiana-tradizionale.jpg')">
+    <div class="recipe-hero">
         <div class="container">
             <nav class="breadcrumb reveal">
                 <a href="../../index.html">Home</a>
@@ -71,7 +71,7 @@
                 <span class="breadcrumb__separator">›</span>
                 <a href="./">Pane</a>
                 <span class="breadcrumb__separator">›</span>
-                <span>Ciabatta Italiana Tradizionale</span>
+                <span>Ciabatta Artigianale</span>
             </nav>
 
             <div class="recipe-hero__content">
@@ -79,9 +79,9 @@
                     <span class="tag tag--tool" id="hero-setup-tag">🔧 Impastatrice a spirale</span>
                     <span class="tag tag--category">🥖 Pane</span>
                 </div>
-                <h1 class="recipe-hero__title reveal reveal-delay-1">Ciabatta Italiana Tradizionale</h1>
+                <h1 class="recipe-hero__title reveal reveal-delay-1">Ciabatta Artigianale</h1>
                 <p class="recipe-hero__subtitle reveal reveal-delay-2">
-                    Pane rustico veneto con idratazione 75% e lievitazione controllata
+                    Il classico pane italiano ad alta idratazione con prefermento
                 </p>
             </div>
         </div>
@@ -91,13 +91,13 @@
     <div class="container" style="padding-top: 40px;">
         <div class="tech-badges reveal">
             <div class="tech-badge">
-                💧 Idratazione: <span class="tech-badge__value">&nbsp;75%</span>
+                💧 Idratazione: <span class="tech-badge__value">&nbsp;80%</span>
             </div>
             <div class="tech-badge">
                 🌡️ Target Temp: <span class="tech-badge__value">&nbsp;24-26°C</span>
             </div>
             <div class="tech-badge">
-                ⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;3-4h puntata + 1h appretto</span>
+                ⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;~18-20h (biga) + 3-4h (puntata)</span>
             </div>
             <div class="tech-badge tech-badge--toggle" id="setup-badge" role="button" tabindex="0"
                 aria-label="Cambia setup">
@@ -141,20 +141,24 @@
 
                         <table class="ingredients-table" id="ingredients-table">
                             <tr>
-                                <td>Farina di Grano Tenero Tipo 0 <span class="ingredient-note">(W 280-320, media-alta forza)</span></td>
-                                <td class="ingredient-qty" data-base="1000">1000g</td>
+                                <td>Farina Tipo 0 Media Forza <span class="ingredient-note">(W 260-280, per struttura e alveolatura)</span></td>
+                                <td class="ingredient-qty" data-base="700">700g</td>
                             </tr>
                             <tr>
-                                <td>Acqua <span class="ingredient-note">(temperatura 20-22°C)</span></td>
-                                <td class="ingredient-qty" data-base="750">750g</td>
+                                <td>Farina Manitoba <span class="ingredient-note">(W 350-380, per rinforzo maglia glutinica)</span></td>
+                                <td class="ingredient-qty" data-base="300">300g</td>
                             </tr>
                             <tr>
-                                <td>Lievito di Birra Fresco <span class="ingredient-note">(compresso)</span></td>
-                                <td class="ingredient-qty" data-base="15">15g</td>
+                                <td>Acqua <span class="ingredient-note" data-setup-note-spirale="(ghiacciata 2-4°C, in 2 riprese)" data-setup-note-mano="(20-22°C, in 3-4 riprese per controllare l'idratazione)">(ghiacciata 2-4°C, in 2 riprese)</span></td>
+                                <td class="ingredient-qty" data-base="800">800g</td>
                             </tr>
                             <tr>
-                                <td>Sale Fino</td>
-                                <td class="ingredient-qty" data-base="22">22g</td>
+                                <td>Lievito di Birra Fresco <span class="ingredient-note" data-setup-note-spirale="(6g totali (1g biga + 5g impasto))" data-setup-note-mano="(8g totali (1g biga + 7g impasto, per compensare tempi più lunghi))">(6g totali (1g biga + 5g impasto))</span></td>
+                                <td class="ingredient-qty" data-base="6">6g</td>
+                            </tr>
+                            <tr>
+                                <td>Sale Fino <span class="ingredient-note">(2% su farina totale)</span></td>
+                                <td class="ingredient-qty" data-base="20">20g</td>
                             </tr>
                             <tr>
                                 <td>Olio Extravergine d'Oliva <span class="ingredient-note">(opzionale, per morbidezza)</span></td>
@@ -177,32 +181,32 @@
                         </h2>
                         <ol class="steps-list">
                             <li>
-                                <strong>Autolisi preliminare (Fase 1)</strong>
-                                <p>In vasca, miscelare 900g di farina con 650g di acqua per 3-4 minuti in prima velocità. Ottenere un impasto grezzo omogeneo. Coprire con panno umido e lasciar riposare 20-30 minuti a temperatura ambiente. Questa autolisi sviluppa la maglia glutinica e riduce i tempi di impastamento successivi.</p>
+                                <strong>Preparazione Biga (16-18h prima)</strong>
+                                <p>In una ciotola, mescolare 300g di Farina Tipo 0 + 150g di acqua a 20°C + 1g di lievito fresco. Impastare brevemente fino a ottenere un composto ruvido e asciutto (idratazione 50%). Coprire con pellicola e lasciare maturare a 18-20°C per 16-18 ore. La biga è pronta quando triplica di volume e ha un profumo vinoso.</p>
                             </li>
                             <li>
-                                <strong>Incorporamento lievito (Fase 2)</strong>
-                                <p>Sciogliere il lievito di birra fresco in 50g di acqua tiepida (25°C). Aggiungere alla vasca e impastare 4 minuti in prima velocità fino a completo assorbimento. L'impasto inizierà a incordarsi e staccarsi dalle pareti.</p>
+                                <strong>Impasto in Impastatrice (1° fase - Autolisi)</strong>
+                                <p>Nella vasca dell'impastatrice a spirale, versare 700g di Farina Tipo 0 + 500g di acqua ghiacciata (2-4°C). Impastare in 1ª velocità per 3-4 minuti fino a completa idratazione. Lasciare riposare in vasca per 20 minuti (autolisi) per sviluppare glutine senza stress meccanico.</p>
                             </li>
                             <li>
-                                <strong>Aggiunta sale e completamento (Fase 3)</strong>
-                                <p>Aggiungere il sale sciolto in 50g di acqua rimanente. Impastare 3 minuti in prima velocità, poi passare in seconda velocità per 4-5 minuti. Negli ultimi 2 minuti, incorporare l'olio EVO a filo. Temperatura finale impasto: 24-26°C. L'impasto deve essere molto morbido, estensibile e leggermente appiccicoso.</p>
+                                <strong>Impasto in Impastatrice (2° fase - Incorporazione Biga)</strong>
+                                <p>Aggiungere tutta la biga spezzettata + 5g di lievito fresco. Impastare in 1ª velocità per 5 minuti, poi passare in 2ª velocità per 4-5 minuti. L'impasto deve iniziare a incordarsi e staccarsi dalla vasca. Temperatura impasto: 24-25°C.</p>
                             </li>
                             <li>
-                                <strong>Puntata in massa</strong>
-                                <p>Trasferire l'impasto in contenitore unto d'olio. Coprire con pellicola e lasciare lievitare a 26-28°C per 3-4 ore con 2 pieghe di rinforzo ogni ora (stretch & fold). L'impasto deve triplicare di volume e presentare evidenti segni di fermentazione (bolle superficiali, struttura ariosa).</p>
+                                <strong>Impasto in Impastatrice (3° fase - Sale e Rinforzo)</strong>
+                                <p>Aggiungere 20g di sale + 150g di acqua ghiacciata + 30g di olio EVO. Impastare in 1ª velocità per 2 minuti (il sale inizialmente 'taglia' l'impasto), poi 2ª velocità per 6-8 minuti fino a piena incordatura. L'impasto deve essere liscio, elastico, non appiccicoso. Temperatura finale: 24-26°C.</p>
                             </li>
                             <li>
-                                <strong>Staglio e pre-forma</strong>
-                                <p>Rovesciare delicatamente l'impasto su piano infarinato abbondantemente (usare semola rimacinata o farina di riso per evitare attaccature). NON sgonfiare l'impasto. Dividere con tarocco in pezzi da 300-350g. Stendere ogni pezzo in rettangolo 15x25cm con movimenti delicati, senza pressare.</p>
+                                <strong>Puntata con Pieghe di Rinforzo</strong>
+                                <p>Trasferire l'impasto in una vasca oliata. Coprire con pellicola. Lasciar riposare 30 minuti a 24-26°C. Eseguire una piega di rinforzo (stretch & fold): sollevare un lembo dell'impasto e ripiegarlo al centro, ripetere da 4 lati. Ripetere la piega dopo altri 30 minuti. Poi lasciare in puntata senza toccare per altre 2 ore. Volume finale: +70-80%.</p>
                             </li>
                             <li>
-                                <strong>Appretto finale</strong>
-                                <p>Disporre le ciabatte su teglie forate coperte con telo di lino infarinato, lasciando 8-10cm di distanza tra un pezzo e l'altro. Coprire con panno umido. Lasciar lievitare 45-60 minuti a 28°C. Le ciabatte devono gonfiarsi visibilmente e al tatto risultare morbide e elastiche.</p>
+                                <strong>Staglio e Formatura</strong>
+                                <p>Rovesciare delicatamente l'impasto su un piano MOLTO infarinato (usare semola rimacinata). Dividere con tarocco in pezzi da 250-300g. NON sgasare: maneggiare con estrema delicatezza. Allungare ogni pezzo con le mani (non stendere col mattarello) fino a formare rettangoli di 20x10 cm circa. Disporre su teli infarinati o teglie con carta forno, distanziati.</p>
                             </li>
                             <li>
-                                <strong>Preparazione cottura</strong>
-                                <p>Trasferire delicatamente le ciabatte su carta forno senza girarle o manipolarle eccessivamente. L'obiettivo è preservare tutta l'aria incorporata durante la lievitazione. Spolverare leggermente con farina Tipo 0 la superficie superiore per l'aspetto rustico caratteristico.</p>
+                                <strong>Appretto Finale</strong>
+                                <p>Coprire le ciabatte con un telo leggermente umido. Lasciar lievitare a 26-28°C per 45-60 minuti. Le ciabatte sono pronte quando gonfie e tremolanti al tocco. NON devono raddoppiare, ma gonfiarsi in modo soffice.</p>
                             </li>
                         </ol>
                     </div>
@@ -217,37 +221,37 @@
                         </h2>
                         <ol class="steps-list">
                             <li>
-                                <strong>Autolisi e idratazione</strong>
-                                <p>In ampia ciotola, versare 900g di farina. Creare una fontana e aggiungere 650g di acqua a temperatura ambiente. Mescolare con cucchiaio di legno fino a ottenere un impasto grezzo senza grumi. Coprire con pellicola e lasciar riposare 30 minuti. Questa fase permette all'acqua di idratare completamente le proteine della farina.</p>
+                                <strong>Preparazione Biga (16-18h prima)</strong>
+                                <p>In una ciotola, mescolare 300g di Farina Tipo 0 + 150g di acqua a 20°C + 1g di lievito fresco. Impastare a mano per 3-4 minuti fino a ottenere un composto ruvido e asciutto. Coprire con pellicola e lasciare maturare a 18-20°C per 16-18 ore. La biga è pronta quando triplica di volume e ha un profumo vinoso.</p>
                             </li>
                             <li>
-                                <strong>Incorporamento lievito e sviluppo glutine</strong>
-                                <p>Sciogliere il lievito in 50g di acqua tiepida. Versare sull'impasto e iniziare a lavorare con tecnica slap & fold: sollevare l'impasto, sbatterlo sul piano e ripiegarlo su se stesso. Continuare per 8-10 minuti. L'impasto molto morbido inizierà gradualmente a incordarsi e sviluppare resistenza.</p>
+                                <strong>Autolisi</strong>
+                                <p>In una ciotola capiente, versare 700g di Farina Tipo 0 + 400g di acqua a 20-22°C. Mescolare con un cucchiaio di legno fino a completa idratazione (non impastare). Coprire e lasciare riposare 30 minuti. Questo sviluppa glutine senza sforzo.</p>
                             </li>
                             <li>
-                                <strong>Aggiunta sale e olio</strong>
-                                <p>Sciogliere il sale in 50g di acqua rimanente e incorporare all'impasto con pieghe delicate. Proseguire slap & fold per altri 5 minuti. Aggiungere l'olio EVO e lavorare ancora 3-4 minuti fino a completo assorbimento. L'impasto deve essere lucido, estensibile e molto morbido (quasi colante).</p>
+                                <strong>Incorporazione Biga e Primo Impasto</strong>
+                                <p>Aggiungere all'autolisi: biga spezzettata + 7g di lievito fresco + 100g di acqua. Mescolare energicamente con un cucchiaio per 3-4 minuti. L'impasto sarà molto appiccicoso. Lasciare riposare 10 minuti.</p>
                             </li>
                             <li>
-                                <strong>Puntata con pieghe di rinforzo</strong>
-                                <p>Trasferire in contenitore oliato. Coprire e far lievitare a 26-28°C. Ogni 45-60 minuti, eseguire una piega di rinforzo: inumidire le mani, sollevare un lembo dell'impasto e ripiegarlo verso il centro. Ripetere dai 4 lati. Totale 2-3 pieghe in 3-4 ore di lievitazione. Queste pieghe rafforzano la struttura senza sgonfiare l'impasto.</p>
+                                <strong>Aggiunta Sale e Sviluppo Glutine (Slap & Fold)</strong>
+                                <p>Sciogliere 20g di sale in 100g di acqua. Versare sull'impasto. Bagnare le mani e iniziare la tecnica slap & fold: sollevare l'impasto, sbatterlo sul piano, ripiegarlo su se stesso. Ripetere per 8-10 minuti. L'impasto diventerà più liscio e meno appiccicoso. Dopo 5 minuti, aggiungere 30g di olio EVO e continuare. Aggiungere gli ultimi 200g di acqua in 2 riprese durante gli slap & fold.</p>
                             </li>
                             <li>
-                                <strong>Staglio delicato</strong>
-                                <p>Preparare piano di lavoro con abbondante semola rimacinata o farina di riso (anti-attaccatura). Rovesciare l'impasto delicatamente evitando di sgonfiarlo. Con spatola o tarocco ben infarinato, dividere in rettangoli da 300-350g. Manipolare il minimo indispensabile per preservare l'alveolatura.</p>
+                                <strong>Puntata con Pieghe di Rinforzo</strong>
+                                <p>Trasferire l'impasto in una ciotola oliata. Coprire. Ogni 30 minuti, eseguire una piega di rinforzo (stretch & fold): bagnare le mani, sollevare un lembo dell'impasto e ripiegarlo al centro, ripetere da 4 lati. Totale: 3 pieghe a intervalli di 30 min. Poi lasciare in puntata senza toccare per altre 2 ore a 24-26°C.</p>
                             </li>
                             <li>
-                                <strong>Appretto su telo</strong>
-                                <p>Stendere ogni pezzo delicatamente in forma rettangolare allungata (15x25cm circa) con le mani infarinate. Disporre su telo di lino o cotone pesantemente infarinato, creando pieghe tra una ciabatta e l'altra per mantenere la forma. Coprire con panno umido e lasciar lievitare 45-60 minuti a 28°C.</p>
+                                <strong>Staglio e Formatura</strong>
+                                <p>Rovesciare delicatamente l'impasto su un piano MOLTO infarinato (semola rimacinata). Dividere con spatola in pezzi da 250-300g. NON sgasare. Allungare ogni pezzo delicatamente con le mani fino a formare rettangoli di 20x10 cm. Disporre su teli infarinati, distanziati.</p>
                             </li>
                             <li>
-                                <strong>Trasferimento per cottura</strong>
-                                <p>Trasferire con delicatezza estrema ogni ciabatta su carta forno, rovesciandola se necessario in modo che la parte a contatto con il telo diventi la superficie superiore. Spolverare leggermente con farina. Non incidere: la ciabatta si spacca naturalmente in cottura creando la caratteristica superficie irregolare.</p>
+                                <strong>Appretto Finale</strong>
+                                <p>Coprire con telo umido. Lievitare a 26-28°C per 50-70 minuti. Le ciabatte sono pronte quando gonfie e tremolanti. NON devono raddoppiare completamente.</p>
                             </li>
                         </ol>
 
                         <div class="pro-tip-box" style="margin-top: 16px;">
-                            <p><strong>💡 PRO TIP:</strong> L'uso di semola rimacinata o farina di riso per il piano di lavoro durante lo staglio è fondamentale: hanno minore capacità di assorbimento rispetto alla farina bianca e impediscono all'impasto appiccicoso di attaccarsi, preservando la forma.</p>
+                            <p><strong>💡 PRO TIP:</strong> La temperatura dell'acqua è cruciale: per spirale usa acqua GHIACCIATA (2-4°C) perché l'attrito riscalda l'impasto. Per impasto a mano, usa acqua a 20-22°C.</p>
                         </div>
                     </div>
 
@@ -272,14 +276,14 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Farina Tipo 0 Media-Alta Forza</td>
-                            <td style="color: var(--color-accent); font-weight: 600;">280-320</td>
-                            <td>Molino Vigevano Petra 3, Molino Dallagiovanna Etna, Molino Pasini Oro Tipo 0, Caputo Cuoco</td>
+                            <td>Farina Tipo 0 Media Forza</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">260-280</td>
+                            <td>Molino Spadoni Professionale, Molino Caputo Cuoco, Le 5 Stagioni Oro</td>
                         </tr>
                         <tr>
-                            <td>Farina Manitoba (opzionale, max 20%)</td>
-                            <td style="color: var(--color-accent); font-weight: 600;">350-400</td>
-                            <td>Molino Grassi Manitoba Oro, Le 5 Stagioni Manitoba, Molino Spadoni Forza 10</td>
+                            <td>Farina Manitoba (Tipo 0 Forte)</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">350-380</td>
+                            <td>Molino Dallagiovanna Manitoba Oro, Molino Caputo Manitoba Rossa, Molino Grassi Manitoba</td>
                         </tr>
                     </tbody>
                 </table>
@@ -295,7 +299,7 @@
                 <span class="alert__icon">🚫</span>
                 <div class="alert__content">
                     <strong>ALERT PROFESSIONALE</strong>
-                    <p>⚠️ NON sgonfiare l'impasto durante staglio e formatura: la ciabatta deve la sua caratteristica alveolatura aperta e irregolare proprio all'aria incorporata durante la lievitazione. Manipolazioni brusche distruggerebbero la struttura alveolare faticosamente costruita. Inoltre, NON incidere la superficie: a differenza di altri pani, la ciabatta si spacca naturalmente in cottura creando le caratteristiche crepe irregolari. Un altro errore comune è usare farine troppo deboli (sotto W 260): l'alta idratazione richiede una maglia glutinica forte per sostenere la struttura.</p>
+                    <p>NON sgasare l'impasto durante lo staglio e la formatura: la ciabatta deve mantenere i gas sviluppati nella puntata per ottenere l'alveolatura aperta caratteristica. NON stendere con il mattarello, solo allungare delicatamente con le mani. NON superare i 250°C nei forni casalinghi: temperature superiori non sono gestibili nei forni domestici.</p>
                 </div>
             </div>
 
@@ -307,18 +311,18 @@
                 </h2>
                 <div class="tech-badges" style="margin-bottom: 16px;">
                     <div class="tech-badge">
-                        🌡️ Temperatura: <span class="tech-badge__value">&nbsp;230-240°C</span>
+                        🌡️ Temperatura: <span class="tech-badge__value">&nbsp;230-250°C (MAX per forni casalinghi)</span>
                     </div>
                     <div class="tech-badge">
-                        ⏱️ Tempo: <span class="tech-badge__value">&nbsp;25-30 minuti</span>
+                        ⏱️ Tempo: <span class="tech-badge__value">&nbsp;20-25 minuti</span>
                     </div>
                 </div>
                 <ul class="baking-tips" style="list-style: none; padding: 0;">
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Preriscaldare forno statico con pietra refrattaria per 45-60 minuti alla massima temperatura</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Creare vapore abbondante nei primi 12 minuti: gettare 100ml di acqua sul fondo del forno preriscaldato o usare vaschetta con acqua bollente</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Dopo 12 minuti, aprire leggermente lo sportello per far uscire il vapore e permettere la formazione della crosta</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 La ciabatta è cotta quando la crosta è dorata uniformemente e suona 'vuota' se battuta sul fondo</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Raffreddare su griglia per almeno 1 ora prima di tagliare, per permettere alla mollica di stabilizzarsi</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Preriscaldare forno + pietra refrattaria per 45 minuti a 250°C</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Creare vapore: mettere una teglia con acqua bollente sul fondo nei primi 10 minuti</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Trasferire le ciabatte su pietra o teglia calda con carta forno, senza girarle</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Cottura perfetta: crosta dorata uniforme, suono vuoto se battute sul fondo</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Dopo 15 min abbassare a 230°C e aprire leggermente lo sportello per far uscire vapore</li>
                 </ul>
             </div>
 
@@ -329,24 +333,24 @@
                     Glossario
                 </h2>
                 <dl class="glossary-list" style="margin: 0; padding: 0;">
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Biga</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prefermento italiano a bassa idratazione (45-50%) con lievito ridotto, matura 16-18h per sviluppare aromi complessi e migliorare digeribilità</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Autolisi</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Riposo dell'impasto di sola farina e acqua (senza lievito e sale) per 20-60 minuti. Favorisce lo sviluppo naturale del glutine, riduce i tempi di impastamento e migliora estensibilità e alveolatura.</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Riposo di farina e acqua (senza lievito e sale) per 20-30 minuti. Permette alla farina di idratarsi completamente e sviluppare glutine senza stress meccanico</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Incordatura</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Fase dell'impastamento in cui il glutine inizia a formarsi e l'impasto si avvolge attorno al gancio dell'impastatrice, staccandosi dalle pareti della vasca.</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Fase dell'impasto in cui il glutine si organizza in una rete elastica. L'impasto si avvolge attorno al gancio e si stacca dalle pareti della vasca</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Puntata</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prima lievitazione in massa dell'impasto, prima dello staglio. Fondamentale per sviluppare aromi e struttura.</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Stretch & Fold (piega di rinforzo)</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica di manipolazione delicata dell'impasto durante la puntata: si solleva un lembo e si ripiega verso il centro. Rafforza la maglia glutinica senza sgonfiare l'impasto.</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Staglio</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Divisione dell'impasto lievitato in pezzi della pezzatura desiderata. Per la ciabatta va fatto con delicatezza per preservare l'alveolatura.</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Appretto</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Lievitazione finale dei pezzi già formati, prima della cottura. Permette all'impasto di rilassarsi e gonfiarsi ulteriormente.</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prima lievitazione in massa dopo l'impasto. L'impasto riposa in vasca/ciotola coperto finché non aumenta di volume (60-80%)</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Stretch & Fold (Piega di Rinforzo)</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica delicata per rinforzare il glutine senza sgasare: si solleva un lembo dell'impasto e lo si ripiega al centro, ripetendo da 4 lati</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Slap & Fold</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica di impastamento manuale per impasti molto idratati: si solleva l'impasto, lo si sbatte sul piano e lo si ripiega. Sviluppa il glutine attraverso sollecitazioni meccaniche.</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica di impasto manuale per impasti ad alta idratazione: si solleva l'impasto, lo si sbatte sul piano e lo si ripiega su se stesso, ripetutamente</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Staglio</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Divisione dell'impasto in pezzi del peso desiderato, eseguita con tarocco o spatola. Per ciabatta deve essere delicato per non sgasare</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Appretto</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Lievitazione finale dopo la formatura. I pezzi riposano coperti fino a raggiungere il volume ottimale per la cottura</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Alveolatura</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Struttura interna del pane caratterizzata da alveoli (bolle d'aria) di dimensioni variabili. Una buona alveolatura aperta è segno di corretta fermentazione e tecnica.</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Idratazione</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Rapporto percentuale tra liquidi (acqua, latte, ecc.) e farina nell'impasto. La ciabatta ha idratazione elevata (75%), che crea mollica soffice e alveolatura aperta.</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Struttura interna del pane caratterizzata da alveoli (bolle) irregolari. Nella ciabatta deve essere aperta e irregolare</dd>
                 </dl>
             </div>
 
@@ -377,8 +381,8 @@
                 <div>
                     <h4 class="footer__col-title">Questa Ricetta</h4>
                     <ul class="footer__links">
-                        <li><a href="#">🥖 Ciabatta Italiana Tradizionale</a></li>
-                        <li><a href="#">💧 Idratazione 75%</a></li>
+                        <li><a href="#">🥖 Ciabatta Artigianale</a></li>
+                        <li><a href="#">💧 Idratazione 80%</a></li>
                     </ul>
                 </div>
 
