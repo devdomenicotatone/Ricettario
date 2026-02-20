@@ -389,12 +389,15 @@ document.addEventListener('DOMContentLoaded', () => {
     doseInput.addEventListener('input', updateDoses);
     doseInput.addEventListener('change', updateDoses);
 
+    // Step proporzionale alla ricetta: incremento/decremento = base kg
+    const stepKg = baseKg <= 0.5 ? baseKg : 0.5;
+
     if (doseDecrease) {
       doseDecrease.addEventListener('click', () => {
-        const current = parseFloat(doseInput.value) || 1;
-        const min = parseFloat(doseInput.min) || 0.5;
+        const current = parseFloat(doseInput.value) || baseKg;
+        const min = parseFloat(doseInput.min) || stepKg;
         if (current > min) {
-          doseInput.value = (current - 0.5).toFixed(1);
+          doseInput.value = Math.round((current - stepKg) * 10) / 10;
           updateDoses();
         }
       });
@@ -402,14 +405,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (doseIncrease) {
       doseIncrease.addEventListener('click', () => {
-        const current = parseFloat(doseInput.value) || 1;
+        const current = parseFloat(doseInput.value) || baseKg;
         const max = parseFloat(doseInput.max) || 5;
         if (current < max) {
-          doseInput.value = (current + 0.5).toFixed(1);
+          doseInput.value = Math.round((current + stepKg) * 10) / 10;
           updateDoses();
         }
       });
     }
+
+    // Sincronizza UI all'avvio
+    updateDoses();
   }
 
   // === VIEW TRANSITIONS API — Navigazione Fluida ===
