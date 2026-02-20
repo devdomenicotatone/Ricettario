@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Panini per hamburger soffici con biga di 2 ore, crosta dorata e sesamo. Perfetti per burger gourmet casalinghi. Tecnica professionale con impastatrice o a mano.">
+    <title>Burger Buns con Biga — Il Ricettario</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap"
+        rel="stylesheet">
+    <!-- FOUC Prevention: applica tema prima del rendering -->
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = saved || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+  <script type="module" crossorigin src="/Ricettario/assets/animations-D-SwE_vs.js"></script>
+  <script type="module" crossorigin src="/Ricettario/assets/main-C9XSsPpw.js"></script>
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/animations-DUPNX6Ov.css">
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-Bxetn_nZ.css">
+</head>
+
+<body>
+
+    <!-- Skip to content — Accessibilità -->
+    <a href="#recipe-content" class="skip-link">Vai al contenuto principale</a>
+
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="../../index.html" class="navbar__logo">
+                <div class="navbar__logo-icon">🔥</div>
+                <span>Il Ricettario</span>
+            </a>
+
+            <ul class="navbar__links" id="nav-links">
+                <li><a href="../../index.html#ricette">Ricette</a></li>
+                <li><a href="../../index.html#strumenti">Strumenti</a></li>
+                <li><a href="../../index.html#chi-sono">Chi Sono</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+                <span class="theme-toggle__icon theme-toggle__sun">☀️</span>
+                <span class="theme-toggle__icon theme-toggle__moon">🌙</span>
+            </button>
+
+            <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════ RECIPE HERO ═══════════ -->
+    <div class="recipe-hero" style="background-image: url('../../images/ricette/lievitati/burger-buns-biga.jpg')">
+        <div class="container">
+            <nav class="breadcrumb reveal">
+                <a href="../../index.html">Home</a>
+                <span class="breadcrumb__separator">›</span>
+                <a href="../../index.html#ricette">Ricette</a>
+                <span class="breadcrumb__separator">›</span>
+                <a href="./">Lievitati</a>
+                <span class="breadcrumb__separator">›</span>
+                <span>Burger Buns con Biga</span>
+            </nav>
+
+            <div class="recipe-hero__content">
+                <div class="recipe-hero__tags reveal">
+                    <span class="tag tag--tool" id="hero-setup-tag">🔧 Impastatrice a spirale</span>
+                    <span class="tag tag--category">🍔 Lievitati</span>
+                </div>
+                <h1 class="recipe-hero__title reveal reveal-delay-1">Burger Buns con Biga</h1>
+                <p class="recipe-hero__subtitle reveal reveal-delay-2">
+                    Panini americani con prefermento e doppia lievitazione
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ TECH BADGES ═══════════ -->
+    <div class="container" style="padding-top: 40px;">
+        <div class="tech-badges reveal">
+            <div class="tech-badge">
+                💧 Idratazione: <span class="tech-badge__value">&nbsp;62%</span>
+            </div>
+            <div class="tech-badge">
+                🌡️ Target Temp: <span class="tech-badge__value">&nbsp;26-27°C</span>
+            </div>
+            <div class="tech-badge">
+                ⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;~4h totali (2h biga + 2h impasto finale)</span>
+            </div>
+            <div class="tech-badge tech-badge--toggle" id="setup-badge" role="button" tabindex="0"
+                aria-label="Cambia setup">
+                🔧 Setup: <span class="tech-badge__value" id="setup-badge-value">&nbsp;A mano</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ RECIPE CONTENT ═══════════ -->
+    <section class="recipe-content">
+        <div class="container">
+            <div class="recipe-layout">
+
+                <!-- COLONNA SINISTRA: Ingredienti -->
+                <div>
+                    <div class="recipe-panel reveal">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">🛒</span>
+                            Ingredienti Base
+                        </h2>
+
+                        <!-- Calcolatore Dosi -->
+                        <div class="dose-calculator" id="dose-calculator">
+                            <div class="dose-calculator__label">
+                                <span class="dose-calculator__label-icon">⚖️</span>
+                                Farina totale
+                            </div>
+                            <div class="dose-calculator__controls">
+                                <button class="dose-calculator__btn" id="dose-decrease"
+                                    aria-label="Diminuisci dosi">−</button>
+                                <div class="dose-calculator__input-wrapper">
+                                    <input type="number" class="dose-calculator__input" id="dose-input" value="0.5"
+                                        min="0.5" max="5" step="0.5" data-base-total="500" aria-label="Kg di farina">
+                                    <span class="dose-calculator__unit">kg</span>
+                                </div>
+                                <button class="dose-calculator__btn" id="dose-increase"
+                                    aria-label="Aumenta dosi">+</button>
+                            </div>
+                            <div class="dose-calculator__badge" id="dose-badge">×1</div>
+                        </div>
+
+                        <table class="ingredients-table" id="ingredients-table">
+                            <tr>
+                                <td>Farina Manitoba Forte <span class="ingredient-note">(W 350-380, per struttura e sviluppo)</span></td>
+                                <td class="ingredient-qty" data-base="300">300g</td>
+                            </tr>
+                            <tr>
+                                <td>Farina Tipo 00 Media Forza <span class="ingredient-note">(W 260-280, per equilibrio e friabilità)</span></td>
+                                <td class="ingredient-qty" data-base="200">200g</td>
+                            </tr>
+                            <tr>
+                                <td>Acqua <span class="ingredient-note" data-setup-note-spirale="(ghiacciata 2-4°C, aggiunta in 2 riprese)" data-setup-note-mano="(20-22°C, incorporata gradualmente in 3 riprese)">(ghiacciata 2-4°C, aggiunta in 2 riprese)</span></td>
+                                <td class="ingredient-qty" data-base="250">250g</td>
+                            </tr>
+                            <tr>
+                                <td>Latte Intero <span class="ingredient-note">(temperatura ambiente, per morbidezza)</span></td>
+                                <td class="ingredient-qty" data-base="50">50g</td>
+                            </tr>
+                            <tr>
+                                <td>Lievito di Birra Fresco <span class="ingredient-note" data-setup-note-spirale="(15g totali (5g biga + 10g impasto))" data-setup-note-mano="(18g totali (6g biga + 12g impasto, tempi più lunghi))">(15g totali (5g biga + 10g impasto))</span></td>
+                                <td class="ingredient-qty" data-base="15">15g</td>
+                            </tr>
+                            <tr>
+                                <td>Uova Medie <span class="ingredient-note">(1 intero, circa 55g)</span></td>
+                                <td class="ingredient-qty" data-base="55">55g</td>
+                            </tr>
+                            <tr>
+                                <td>Tuorlo d'Uovo <span class="ingredient-note">(per ricchezza e colore, ~18g)</span></td>
+                                <td class="ingredient-qty" data-base="18">18g</td>
+                            </tr>
+                            <tr>
+                                <td>Zucchero Semolato <span class="ingredient-note">(per doratura e sapore)</span></td>
+                                <td class="ingredient-qty" data-base="30">30g</td>
+                            </tr>
+                            <tr>
+                                <td>Miele di Acacia <span class="ingredient-note">(per morbidezza e shelf life)</span></td>
+                                <td class="ingredient-qty" data-base="15">15g</td>
+                            </tr>
+                            <tr>
+                                <td>Sale Fino <span class="ingredient-note">(aggiunto a metà impastamento)</span></td>
+                                <td class="ingredient-qty" data-base="12">12g</td>
+                            </tr>
+                            <tr>
+                                <td>Burro Morbido <span class="ingredient-note">(temperatura ambiente, 20-22°C)</span></td>
+                                <td class="ingredient-qty" data-base="40">40g</td>
+                            </tr>
+                            <tr>
+                                <td>Olio Extravergine d'Oliva <span class="ingredient-note">(per morbidezza e conservazione)</span></td>
+                                <td class="ingredient-qty" data-base="25">25g</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="recipe-panel reveal" style="margin-top: 28px;">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">🥜</span>
+                            Sospensioni
+                        </h2>
+                        <table class="ingredients-table" id="suspensions-table">
+                            <tr>
+                                <td>Semi di Sesamo <span class="ingredient-note">(per spennellatura finale)</span></td>
+                                <td class="ingredient-qty" data-base="30">30g</td>
+                            </tr>
+                            <tr>
+                                <td>Tuorlo d'Uovo <span class="ingredient-note">(per spennellatura + 20g latte)</span></td>
+                                <td class="ingredient-qty" data-base="18">18g</td>
+                            </tr>
+                            <tr>
+                                <td>Latte Intero <span class="ingredient-note">(per spennellatura con tuorlo)</span></td>
+                                <td class="ingredient-qty" data-base="20">20g</td>
+                            </tr>
+                        </table>
+
+                        <div class="pro-tip-box" style="margin-top: 16px;">
+                            <p><strong>💡 PRO TIP:</strong> 💡 TEMPERATURA ACQUA STRATEGICA: Con impastatrice a spirale usa acqua ghiacciata (2-4°C) per compensare il riscaldamento da attrito. Target impasto finale 26-27°C, mai oltre 28°C altrimenti il burro si scioglie e l'impasto diventa unto. Con impasto manuale usa acqua 20-22°C.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COLONNA DESTRA: Procedimento -->
+                <div>
+
+                    <!-- ── Procedimento: Primario (Spirale o Estrusore) ── -->
+                    <div class="recipe-panel reveal reveal-delay-1" data-setup="spirale" id="steps-spirale">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">⚙️</span>
+                            Procedimento
+                            <span class="recipe-panel__title-badge">🔧 Spirale</span>
+                        </h2>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Preparazione Biga (2 ore prima)</strong>
+                                <p>In una ciotola sciogliere 5g di lievito fresco in 50g di acqua a 20°C. Aggiungere 100g di farina manitoba e mescolare con cucchiaio di legno fino a ottenere un composto ruvido e sbricioloso (non deve essere liscio). Coprire con pellicola a contatto e lasciare maturare 2 ore a 22-24°C fino al raddoppio. La biga sarà gonfia, alveolata e leggermente cupola.</p>
+                            </li>
+                            <li>
+                                <strong>Impasto Base (1° fase - Spirale 1)</strong>
+                                <p>Nella vasca dell'impastatrice inserire 200g farina manitoba, 200g farina 00, la biga maturata spezzettata, 30g zucchero e 15g miele. Aggiungere 150g di acqua ghiacciata (2-4°C) e avviare in 1ª velocità per 3 minuti. Impastare fino a ottenere un composto ruvido ma coeso.</p>
+                            </li>
+                            <li>
+                                <strong>Incorporamento Liquidi (2° fase - Spirale 1→2)</strong>
+                                <p>Aggiungere 50g di latte intero a temperatura ambiente e 1 uovo intero (55g). Impastare in 1ª velocità per 2 minuti, poi passare in 2ª velocità per 4-5 minuti fino a incordatura iniziale. L'impasto deve iniziare a staccarsi dalle pareti. Aggiungere il tuorlo (18g) e continuare in 2ª velocità per altri 3 minuti.</p>
+                            </li>
+                            <li>
+                                <strong>Aggiunta Grassi e Sale (3° fase - Spirale 2)</strong>
+                                <p>Con impasto ben incordato, versare a filo 25g di olio EVO e aggiungere 12g di sale. Continuare in 2ª velocità per 2 minuti fino a completo assorbimento. Aggiungere quindi 40g di burro morbido a pezzetti (5-6 pezzi), uno alla volta, aspettando che ogni pezzo sia completamente incorporato prima di aggiungere il successivo. Impastare fino a ottenere un impasto liscio, elastico e lucido che si stacca completamente dalla vasca. Temperatura finale target: 26-27°C.</p>
+                            </li>
+                            <li>
+                                <strong>Puntata (1ª Lievitazione)</strong>
+                                <p>Formare una palla liscia con l'impasto (tecnica pirlatura: piegare i lembi verso il centro, capovolgere e far ruotare sul banco con movimenti circolari creando tensione superficiale). Trasferire in una ciotola leggermente unta d'olio, coprire con pellicola e far lievitare in forno spento con luce accesa per 90-120 minuti a 24-26°C, fino al raddoppio del volume. Test: premere leggermente con un dito, l'impronta deve rimanere e riassorbirsi lentamente.</p>
+                            </li>
+                            <li>
+                                <strong>Staglio e Formatura</strong>
+                                <p>Capovolgere l'impasto lievitato su un piano leggermente unto. Sgonfiare delicatamente premendo con i palmi per eliminare le bolle grandi. Dividere in 8 pezzi da 100-105g l'uno con tagliapasta o coltello. Formare palline perfettamente lisce: prendere un pezzo, piegare i lembi verso il centro pizzicandoli, capovolgere e far ruotare sul banco con la mano a coppa creando tensione. La chiusura deve risultare sotto, la superficie sopra liscia e tesa.</p>
+                            </li>
+                            <li>
+                                <strong>Appretto (2ª Lievitazione)</strong>
+                                <p>Disporre le palline su teglia con carta forno distanziate 8-10cm. Schiacciare leggermente ogni pallina con il palmo per ottenere dischetti di 8-9cm di diametro e 2cm di altezza. Coprire con strofinaccio umido e far lievitare 60-90 minuti a 24-26°C fino a quando saranno gonfie e soffici al tatto (test del dito: pressione leggera, rimbalzo lento). Ultimi 15 minuti: spennellare delicatamente con mix di 1 tuorlo + 20g latte, cospargere abbondante sesamo.</p>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <!-- ── Procedimento: A mano ── -->
+                    <div class="recipe-panel reveal reveal-delay-1" data-setup="mano" id="steps-mano"
+                        style="display: none;">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">⚙️</span>
+                            Procedimento
+                            <span class="recipe-panel__title-badge">🤲 A mano</span>
+                        </h2>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Preparazione Biga (2 ore prima)</strong>
+                                <p>In una ciotola sciogliere 6g di lievito fresco in 50g di acqua a 22°C. Aggiungere 100g di farina manitoba e mescolare energicamente con cucchiaio di legno per 2-3 minuti fino a ottenere un composto ruvido, appiccicoso ma compatto. Coprire con pellicola a contatto e lasciare maturare 2 ore a 22-24°C. La biga sarà raddoppiata, con superficie screpolata e odore alcolico.</p>
+                            </li>
+                            <li>
+                                <strong>Impasto Base (1° fase - Manuale)</strong>
+                                <p>Su spianatoia o in ciotola capiente unire 200g farina manitoba, 200g farina 00, la biga spezzettata a pezzetti, 30g zucchero, 15g miele. Aggiungere 100g di acqua a 20-22°C e iniziare a impastare con le mani: movimento dall'esterno verso il centro, schiacciare e ripiegare per 5 minuti. Aggiungere altri 50g di acqua in 2 riprese, continuando a impastare per altri 5 minuti. L'impasto sarà appiccicoso e irregolare.</p>
+                            </li>
+                            <li>
+                                <strong>Incorporamento Liquidi (2° fase - Slap & Fold)</strong>
+                                <p>Aggiungere 50g latte, 1 uovo intero (55g) e 1 tuorlo (18g). Iniziare la tecnica slap & fold (sbattimento e piegatura): sollevare l'impasto, sbatterlo sul piano allungandolo, ripiegare su se stesso. Continuare per 10-12 minuti con ritmo costante. L'impasto diventerà progressivamente più liscio ed elastico, iniziando a staccarsi dalle mani.</p>
+                            </li>
+                            <li>
+                                <strong>Aggiunta Grassi e Sale (3° fase - Stretch & Fold)</strong>
+                                <p>Spalmare sul piano 25g di olio EVO, stendere l'impasto sopra, cospargere 12g di sale, ripiegare e impastare con slap & fold per 5 minuti fino a completo assorbimento. Stendere nuovamente l'impasto a rettangolo, distribuire 40g di burro morbido a piccoli fiocchi, ripiegare a libro e impastare con stretch & fold (allungare delicatamente i lembi e ripiegare verso il centro, ruotare di 90°, ripetere) per 8-10 minuti. L'impasto finale deve essere liscio, lucido, elastico e non appiccicoso. Temperatura target: 26-27°C.</p>
+                            </li>
+                            <li>
+                                <strong>Puntata (1ª Lievitazione)</strong>
+                                <p>Formare una palla tesa: piegare i 4 lembi dell'impasto verso il centro pizzicando bene, capovolgere e far ruotare sul piano con entrambe le mani creando tensione superficiale. Trasferire in ciotola unta, coprire con pellicola e far lievitare 2-2,5 ore a 24-26°C fino al raddoppio. L'impasto deve essere gonfio, soffice, con superficie liscia e leggermente cupola. Test: affondare un dito per 1cm, l'impronta deve rimanere.</p>
+                            </li>
+                            <li>
+                                <strong>Staglio e Formatura</strong>
+                                <p>Rovesciare delicatamente l'impasto su piano leggermente unto. Sgonfiare con pressioni delicate dei palmi per eliminare le bolle grosse, mantenendo la struttura alveolare. Con tarocco o coltello dividere in 8 porzioni da 100-105g. Formare palline perfette: per ogni pezzo, tirare i bordi verso il centro pizzicando per sigillare, capovolgere e con mano a coppa far ruotare sul piano con movimento circolare per creare tensione. La superficie superiore deve essere liscia, tesa e senza pieghe.</p>
+                            </li>
+                            <li>
+                                <strong>Appretto (2ª Lievitazione) e Finitura</strong>
+                                <p>Adagiare le palline su teglia con carta forno distanziate 8-10cm. Schiacciare ogni pallina con il palmo per ottenere dischetti di 8-9cm (spessore 2cm). Coprire con canovaccio umido e lievitare 75-90 minuti a 24-26°C. I burger buns devono diventare molto gonfi e soffici (test: pressione leggera, rimbalzo lento). Ultimi 15 minuti: in una ciotolina sbattere 1 tuorlo con 20g latte, spennellare delicatamente la superficie di ogni panino, cospargere abbondante sesamo premendo leggermente perché aderisca.</p>
+                            </li>
+                        </ol>
+
+                        <div class="pro-tip-box" style="margin-top: 16px;">
+                            <p><strong>💡 PRO TIP:</strong> 💡 BURRO A PEZZETTI: Taglia il burro morbido in 5-6 cubetti e aggiungili UNO alla volta solo quando il precedente è completamente assorbito. Se aggiungi tutto insieme, l'impasto si sfalda e non si ricompatta più. Pazienza = successo.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <!-- ═══════════ CONSIGLI FARINE & MARCHI ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 40px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">🌾</span>
+                    Consigli Farine & Marchi
+                </h2>
+                <table class="flour-table">
+                    <thead>
+                        <tr>
+                            <th>Tipo Farina</th>
+                            <th>Forza (W)</th>
+                            <th>Marchi Consigliati</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Manitoba Forte</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">350-380</td>
+                            <td>Molino Dallagiovanna Manitoba Oro, Molino Grassi Manitoba, Le 5 Stagioni Manitoba</td>
+                        </tr>
+                        <tr>
+                            <td>Farina 00 Media Forza</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">260-280</td>
+                            <td>Molino Caputo Cuoco, Molino Dallagiovanna Petra 3, Molino Grassi La Bianca</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pro-tip-box" style="margin-top: 16px;">
+                    <p><strong>💡 PRO TIP:</strong> La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti,
+                        cerca qualsiasi farina con il valore W indicato.</p>
+                </div>
+            </div>
+
+            <!-- ═══════════ ALERT ═══════════ -->
+            <div class="alert alert--danger reveal" style="margin-top: 32px;">
+                <span class="alert__icon">🚫</span>
+                <div class="alert__content">
+                    <strong>ALERT PROFESSIONALE</strong>
+                    <p>❌ NON aggiungere sale e grassi (burro/olio) all'inizio: bloccano lo sviluppo del glutine. Il sale va aggiunto solo a metà impastamento, dopo incordatura iniziale. Il burro SEMPRE per ultimo, a pezzetti, quando l'impasto è già elastico. NON sovralievitare nell'appretto: i burger buns troppo gonfi collassano in cottura. Test del dito: pressione leggera deve lasciare impronta che si riassorbe lentamente. Se non rimbalza affatto = sovralievitato. NON aprire il forno nei primi 10 minuti di cottura per evitare cascatura.</p>
+                </div>
+            </div>
+
+            <!-- ═══════════ COTTURA ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 32px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">🔥</span>
+                    Cottura
+                </h2>
+                <div class="tech-badges" style="margin-bottom: 16px;">
+                    <div class="tech-badge">
+                        🌡️ Temperatura: <span class="tech-badge__value">&nbsp;200°C</span>
+                    </div>
+                    <div class="tech-badge">
+                        ⏱️ Tempo: <span class="tech-badge__value">&nbsp;16-20 minuti</span>
+                    </div>
+                </div>
+                <ul class="baking-tips" style="list-style: none; padding: 0;">
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Preriscaldare forno statico a 200°C per 20 minuti</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Cuocere una teglia per volta in posizione centrale</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Non aprire il forno nei primi 10 minuti per evitare cascatura</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 I burger buns sono pronti quando la superficie è dorata uniforme e il fondo suona vuoto se bussato</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Sfornare e trasferire su griglia per raffreddamento completo (30 min) prima di tagliare</li>
+                </ul>
+            </div>
+
+            <!-- ═══════════ GLOSSARIO ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 32px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">📖</span>
+                    Glossario
+                </h2>
+                <dl class="glossary-list" style="margin: 0; padding: 0;">
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Biga</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prefermento rigido italiano (50% idratazione) con farina forte, acqua e lievito. Maturazione 12-48h per sviluppare aromi complessi e migliorare digeribilità e shelf life.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Incordatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Fase dell'impastamento in cui il glutine si struttura formando una rete elastica. L'impasto diventa liscio, si attorciglia al gancio e si stacca dalle pareti della vasca.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Puntata</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prima lievitazione dell'impasto in massa (non formato) dopo l'impastamento. Fase cruciale per sviluppo aromi e struttura alveolare.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Staglio</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Divisione dell'impasto lievitato in porzioni del peso desiderato. Richiede precisione (bilancia) e tagli netti per non strappare la maglia glutinica.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Pirlatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica per formare palline perfettamente lisce e tese. Si fa ruotare l'impasto sul piano con la mano a coppa creando tensione superficiale, con chiusura sotto.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Appretto</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Seconda lievitazione dopo la formatura. I pezzi già formati lievitano fino a raggiungere volume e morbidezza ottimali per la cottura.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Slap & Fold</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica manuale di impastamento: sollevare l'impasto, sbatterlo sul piano allungandolo, ripiegare su se stesso. Sviluppa glutine con impasti idratati senza aggiungere farina.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Stretch & Fold</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Pieghe di rinforzo: allungare delicatamente l'impasto e ripiegare verso il centro, ruotare 90° e ripetere. Rinforza la maglia glutinica senza stressare l'impasto.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Cascatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Sgonfiamento improvviso di un lievitato durante o dopo la cottura. Causato da sovralievitazione, temperatura sbagliata o apertura prematura del forno.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Shelf Life</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Vita commerciale di un prodotto: tempo in cui mantiene freschezza, morbidezza e qualità organolettiche ottimali. Prefermenti e grassi la allungano.</dd>
+                </dl>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__brand-name">🔥 <span>Il Ricettario</span></div>
+                    <p class="footer__brand-desc">
+                        Ricettario personale. Ricette artigianali documentate con precisione tecnica per
+                        risultati replicabili al 100%.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Navigazione</h4>
+                    <ul class="footer__links">
+                        <li><a href="../../index.html">↗ Home</a></li>
+                        <li><a href="../../index.html#ricette">↗ Ricette</a></li>
+                        <li><a href="../../index.html#strumenti">↗ Strumenti</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Questa Ricetta</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">🍔 Burger Buns con Biga</a></li>
+                        <li><a href="#">💧 Idratazione 62%</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Altre Ricette</h4>
+                    <ul class="footer__links">
+                        <li><a href="../../index.html#ricette">↗ Tutte le Ricette</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <span>© <span id="current-year">2026</span> Il Ricettario</span>
+                <div class="footer__social">
+                    <a href="https://github.com/devdomenicotatone" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

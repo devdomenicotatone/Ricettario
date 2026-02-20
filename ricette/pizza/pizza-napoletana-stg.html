@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Pizza napoletana tradizionale con impasto ad alta idratazione, lievitazione lunga e cottura ad alta temperatura. Ricetta professionale con metodo spirale e manuale.">
+        content="Pizza napoletana tradizionale con cornicione alto, morbida e soffice. Idratazione 70%, lievitazione 24h, cottura alta temperatura.">
     <title>Pizza Napoletana STG — Il Ricettario</title>
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
@@ -62,7 +62,7 @@
     </nav>
 
     <!-- ═══════════ RECIPE HERO ═══════════ -->
-    <div class="recipe-hero">
+    <div class="recipe-hero" style="background-image: url('../../images/ricette/pizza/pizza-napoletana-stg.jpg')">
         <div class="container">
             <nav class="breadcrumb reveal">
                 <a href="../../index.html">Home</a>
@@ -81,7 +81,7 @@
                 </div>
                 <h1 class="recipe-hero__title reveal reveal-delay-1">Pizza Napoletana STG</h1>
                 <p class="recipe-hero__subtitle reveal reveal-delay-2">
-                    L'arte della vera pizza napoletana con lievitazione 24h
+                    La vera pizza napoletana con impasto idratato, lievitazione lunga e cottura ad alta temperatura
                 </p>
             </div>
         </div>
@@ -91,13 +91,13 @@
     <div class="container" style="padding-top: 40px;">
         <div class="tech-badges reveal">
             <div class="tech-badge">
-                💧 Idratazione: <span class="tech-badge__value">&nbsp;65%</span>
+                💧 Idratazione: <span class="tech-badge__value">&nbsp;70%</span>
             </div>
             <div class="tech-badge">
                 🌡️ Target Temp: <span class="tech-badge__value">&nbsp;24-26°C</span>
             </div>
             <div class="tech-badge">
-                ⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;24h totali (puntata + appretto)</span>
+                ⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;8-24h (a seconda del lievito)</span>
             </div>
             <div class="tech-badge tech-badge--toggle" id="setup-badge" role="button" tabindex="0"
                 aria-label="Cambia setup">
@@ -141,20 +141,37 @@
 
                         <table class="ingredients-table" id="ingredients-table">
                             <tr>
-                                <td>Farina Tipo 00 per Pizza <span class="ingredient-note">(W 280-320, proteine 12-13%)</span></td>
+                                <td>Farina Tipo 0 Media-Alta Forza <span class="ingredient-note">(W 280-320, 13g
+                                        proteine su 100g)</span></td>
                                 <td class="ingredient-qty" data-base="1000">1000g</td>
                             </tr>
                             <tr>
-                                <td>Acqua <span class="ingredient-note" data-setup-note-spirale="(ghiacciata 2-4°C)" data-setup-note-mano="(20-22°C, aggiunta in 3 riprese)">(ghiacciata 2-4°C)</span></td>
-                                <td class="ingredient-qty" data-base="650">650g</td>
+                                <td>Acqua <span class="ingredient-note"
+                                        data-setup-note-spirale="(ghiacciata 2-4°C per controllare l'attrito)"
+                                        data-setup-note-mano="(20-22°C, in 3 riprese per favorire l'assorbimento)">(ghiacciata
+                                        2-4°C per controllare l'attrito)</span></td>
+                                <td class="ingredient-qty" data-base="700">700g</td>
                             </tr>
                             <tr>
-                                <td>Sale Marino Fino <span class="ingredient-note">(25-28g/kg farina)</span></td>
+                                <td>Sale Fino <span class="ingredient-note">(2.5% su farina)</span></td>
                                 <td class="ingredient-qty" data-base="25">25g</td>
                             </tr>
                             <tr>
-                                <td>Lievito di Birra Fresco <span class="ingredient-note" data-setup-note-spirale="(1,5g per 24h)" data-setup-note-mano="(2g (impasto più lungo))">(1,5g per 24h)</span></td>
-                                <td class="ingredient-qty" data-base="1.5">1.5g</td>
+                                <td>Lievito di Birra Fresco <span class="ingredient-note"
+                                        data-setup-note-spirale="(1-2g (lievitazione 24h))"
+                                        data-setup-note-mano="(3-5g (lievitazione 8-12h per gestire temperatura ambiente))">(1-2g
+                                        (lievitazione 24h))</span></td>
+                                <td class="ingredient-qty" data-base="2">2g</td>
+                            </tr>
+                            <tr>
+                                <td>Zucchero Semolato <span class="ingredient-note">(facilita lievitazione e
+                                        colorazione)</span></td>
+                                <td class="ingredient-qty" data-base="10">10g</td>
+                            </tr>
+                            <tr>
+                                <td>Olio Extravergine d'Oliva <span class="ingredient-note">(aggiunto a metà
+                                        impastamento)</span></td>
+                                <td class="ingredient-qty" data-base="25">25g</td>
                             </tr>
                         </table>
                     </div>
@@ -173,28 +190,41 @@
                         </h2>
                         <ol class="steps-list">
                             <li>
-                                <strong>Autolisi Iniziale</strong>
-                                <p>In vasca spirale, unire farina e acqua ghiacciata (2-4°C). Impastare 3 minuti a velocità 1 fino a completo assorbimento. Lasciare riposare in vasca coperta per 20 minuti. L'acqua fredda compensa l'attrito della spirale.</p>
+                                <strong>Preparazione Base (5 min)</strong>
+                                <p>Versare in vasca acqua ghiacciata (2-4°C), sale e zucchero. Azionare a velocità 1 per
+                                    30 secondi per sciogliere completamente. Aggiungere 700g di farina e miscelare 2
+                                    minuti velocità 1.</p>
                             </li>
                             <li>
-                                <strong>Incordatura con Sale e Lievito</strong>
-                                <p>Sciogliere il lievito in 50g di acqua dell'impasto. Aggiungere sale e lievito sciolto all'autolisi. Impastare 4-5 minuti a velocità 1, poi 6-8 minuti a velocità 2 fino a completa incordatura. L'impasto deve staccarsi dalle pareti, essere liscio ed elastico. Temperatura finale: 24-26°C (mai oltre 28°C).</p>
+                                <strong>Incorporamento Lievito (3 min)</strong>
+                                <p>Sbricolare 1-2g di lievito fresco sulla farina rimasta (300g) e strofinarlo tra le
+                                    mani. Aggiungere in vasca e impastare velocità 1 per 3 minuti. L'impasto inizierà a
+                                    formare una massa collosa.</p>
                             </li>
                             <li>
-                                <strong>Puntata in Massa</strong>
-                                <p>Estrarre l'impasto, formare una massa compatta con piega a libro. Porre in cassetta da puntata oliata, coprire con pellicola a contatto. Lasciare lievitare 8-10 ore a 18-20°C fino a raddoppio del volume. L'impasto deve risultare gonfio, soffice e non appiccicoso.</p>
+                                <strong>Incordatura (8-10 min)</strong>
+                                <p>Passare a velocità 2 e lavorare per 6-7 minuti. Quando l'impasto inizia a staccarsi
+                                    dalle pareti, aggiungere l'olio a filo. Continuare 2-3 minuti fino a completo
+                                    assorbimento. Temperatura finale: 24-25°C. Controllare sempre con termometro da
+                                    impasto.</p>
                             </li>
                             <li>
-                                <strong>Staglio e Pirlatura</strong>
-                                <p>Capovolgere delicatamente l'impasto su piano infarinato. Con tarocco, dividere in panetti da 250-280g (pizze Ø 30-32cm). Pirlare ogni panetto con movimento rotatorio sotto il palmo, creando tensione superficiale. La chiusura deve restare sotto.</p>
+                                <strong>Puntata in Massa (2-4h a 24°C)</strong>
+                                <p>Trasferire l'impasto in contenitore oleato, coprire con film. Far riposare 2-4 ore a
+                                    temperatura ambiente (24°C) fino a raddoppio. L'impasto deve presentare bolle in
+                                    superficie.</p>
                             </li>
                             <li>
-                                <strong>Appretto Finale</strong>
-                                <p>Disporre i panetti in cassetta da appretto ben distanziati, coprire con pellicola. Far lievitare 12-14 ore a 16-18°C. I panetti devono triplicare di volume, risultare soffici al tatto e con alveolatura sviluppata. Prima dell'uso, portare a temperatura ambiente (20-22°C) per 2 ore.</p>
+                                <strong>Staglio e Pirlatura (10 min)</strong>
+                                <p>Rovesciare su piano leggermente oleato. Dividere con tarocco in panetti da 250-280g
+                                    (per pizza Ø 30-32cm). Ripiegare i lati verso il centro, capovolgere e pirlare sul
+                                    banco con movimento circolare fino a ottenere sfere lisce e tese.</p>
                             </li>
                             <li>
-                                <strong>Stesura e Condimento</strong>
-                                <p>Infarinare abbondantemente il panetto. Con le dita, schiacciare dal centro verso l'esterno lasciando 2cm di cornicione intatto. Sollevare e allargare con movimento rotatorio sulle nocche. Non usare MAI il mattarello. Stendere su pala infarinata, condire velocemente: 80g passata di pomodoro San Marzano, 100g mozzarella di bufala a pezzetti, basilico fresco, filo d'olio EVO.</p>
+                                <strong>Appretto Finale (4-20h a 18-20°C)</strong>
+                                <p>Disporre i panetti in cassette oleate, coprire con coperchio o film. Lievitare in
+                                    frigorifero (18-20°C) per 4-20 ore a seconda del lievito usato. Prima di stendere,
+                                    portare a temperatura ambiente 1-2 ore.</p>
                             </li>
                         </ol>
                     </div>
@@ -209,40 +239,81 @@
                         </h2>
                         <ol class="steps-list">
                             <li>
-                                <strong>Autolisi Manuale</strong>
-                                <p>In ciotola capiente, versare la farina. Aggiungere 500g di acqua a 20-22°C al centro. Con le mani, amalgamare dall'interno verso l'esterno fino a completo assorbimento. L'impasto sarà ruvido. Coprire con panno umido e lasciare riposare 30 minuti in luogo fresco (18-20°C).</p>
+                                <strong>Preparazione in Madia (5 min)</strong>
+                                <p>Versare 700g di acqua a 20-22°C in una madia capiente. Sciogliere sale e zucchero
+                                    mescolando con una mano. Aggiungere metà farina (500g) e mescolare grossolanamente.
+                                </p>
                             </li>
                             <li>
-                                <strong>Incorporazione Sale e Lievito</strong>
-                                <p>Sciogliere il lievito in 50g di acqua. Distribuire il sale sui bordi dell'autolisi. Versare il lievito sciolto al centro. Con tecnica slap & fold, sollevare l'impasto e sbatterlo sul piano piegandolo su se stesso per 10-12 minuti. Aggiungere i restanti 100g di acqua gradualmente durante le prime 5 minuti. L'impasto diventerà liscio, elastico e non appiccicoso.</p>
+                                <strong>Incorporamento Lievito (5 min)</strong>
+                                <p>Sbricolare 3-5g di lievito fresco su un monticello di farina (200g) frizionandolo tra
+                                    le mani. Versare nella madia e iniziare a mescolare con UNA SOLA MANO (tecnica
+                                    napoletana), muovendo in senso circolare.</p>
                             </li>
                             <li>
-                                <strong>Rinforzi con Stretch & Fold</strong>
-                                <p>Lasciare riposare l'impasto in ciotola oliata coperta per 30 minuti. Eseguire 3 serie di pieghe stretch & fold a distanza di 30 minuti l'una: bagnare leggermente le mani, allungare l'impasto da un lato e ripiegarlo al centro, ruotare di 90° e ripetere per 4 volte. Questo sviluppa la maglia glutinica senza lavorazione intensiva.</p>
+                                <strong>Aggiunta Farina Graduale (10 min)</strong>
+                                <p>Continuare ad aggiungere farina poco alla volta (rimanenti 300g), sempre impastando
+                                    con una mano. Quando la massa diventa più consistente, versare l'olio a filo e
+                                    incorporarlo completamente lavorando altri 3-4 minuti.</p>
                             </li>
                             <li>
-                                <strong>Puntata Lunga</strong>
-                                <p>Formare una massa compatta con piega a libro. Porre in contenitore oliato coperto con pellicola. Far lievitare 10-12 ore a 18-20°C fino a raddoppio abbondante. L'impasto deve risultare gonfio, alveolato e con buchi visibili sulla superficie.</p>
+                                <strong>Impastamento Sul Banco (20-25 min)</strong>
+                                <p>Trasferire l'impasto sul piano di lavoro. Impastare energicamente con DUE MANI per
+                                    20-25 minuti: schiacciare, piegare, girare. Usare solo uno spolvero di farina se
+                                    necessario. L'impasto deve diventare liscio, elastico e leggermente incordato.
+                                    Temperatura target: 24-26°C.</p>
                             </li>
                             <li>
-                                <strong>Staglio e Pirlatura Manuale</strong>
-                                <p>Rovesciare delicatamente l'impasto su piano ben infarinato senza sgonfiarlo. Con spatola o tarocco, dividere in porzioni da 250-280g. Pirlare ogni panetto: raccogliere i lembi verso il centro creando tensione, capovolgere e far ruotare sotto il palmo con movimento circolare. La superficie deve essere liscia e tesa.</p>
+                                <strong>Puntata con Pieghe (3-4h)</strong>
+                                <p>Formare una palla, metterla in contenitore oleato e coprire. Dopo 40 minuti: eseguire
+                                    pieghe portando i lembi verso il centro per tutta la circonferenza (6-7 volte).
+                                    Ripetere questa operazione ogni 40 minuti per 3-4 volte totali. Alla fine l'impasto
+                                    sarà liscio, lucido e con bolle in superficie.</p>
                             </li>
                             <li>
-                                <strong>Appretto in Cassetta</strong>
-                                <p>Disporre i panetti pirlati in cassetta infarinata ben distanziati (5-6cm tra loro). Coprire con pellicola o panno umido. Far lievitare 12-14 ore a 16-18°C. I panetti devono triplicare di volume e risultare morbidissimi al tatto. 2 ore prima dell'uso, portare a temperatura ambiente (20-22°C).</p>
+                                <strong>Staglio e Pirlatura (10 min)</strong>
+                                <p>Rovesciare su piano oleato, dividere in panetti da 250-280g. Ripiegare i lati verso
+                                    il centro, capovolgere e pirlare con movimento circolare fino a ottenere sfere
+                                    lisce.</p>
                             </li>
                             <li>
-                                <strong>Stesura Napoletana</strong>
-                                <p>Infarinare abbondantemente piano e panetto. Con polpastrelli, schiacciare delicatamente dal centro verso l'esterno, lasciando sempre 2cm di cornicione intatto. Sollevare il disco e allargarlo sulle nocche con movimento rotatorio, lasciando che la gravità lo stenda. NON tirare con forza, NON usare mattarello. Trasferire su pala infarinata, condire: 80g passata San Marzano, 100g mozzarella di bufala, basilico, olio EVO.</p>
+                                <strong>Appretto Finale (4-6h)</strong>
+                                <p>Disporre i panetti in ciotole oleate, coprire con panno umido. Lievitare a
+                                    temperatura ambiente (22-24°C) per 4-6 ore fino a raddoppio. Dovranno risultare
+                                    soffici al tatto.</p>
                             </li>
                         </ol>
 
                         <div class="pro-tip-box" style="margin-top: 16px;">
-                            <p><strong>💡 PRO TIP:</strong> 🕐 TIMING DELL'APPRETTO: I panetti pirlati devono lievitare 12-14h a 16-18°C. Questo freddo controllato rallenta la fermentazione, sviluppa aromi complessi e rende la pizza digeribilissima. 2 ore prima dell'uso, portali a 20-22°C: saranno più estensibili.</p>
+                            <p><strong>💡 PRO TIP:</strong> ⏱️ LIEVITO VARIABILE: 1-2g per lievitazione 24h (più
+                                digeribile, più aromi), 3-5g per 8-12h (se hai fretta). MAI superare 1.2% su farina o
+                                avrai sapore di lievito.</p>
                         </div>
                     </div>
 
+                    <!-- ── Procedimento: Condimento ── -->
+                    <div class="recipe-panel reveal reveal-delay-2" data-setup="condimento" id="steps-condimento"
+                        style="margin-top: 32px;">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">🍳</span>
+                            Preparazione Condimento
+                        </h2>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Preparazione Salsa al Pomodoro</strong>
+                                <p>Frullare 400g di pomodori pelati San Marzano DOP. Versare in una ciotola, aggiungere
+                                    4-5g di sale fino, 6-8 foglie di basilico spezzettate a mano e un filo di olio
+                                    extravergine. Mescolare e tenere da parte. NON cuocere la salsa: andrà cruda sulla
+                                    pizza.</p>
+                            </li>
+                            <li>
+                                <strong>Preparazione Mozzarella</strong>
+                                <p>Utilizzare 250-300g di fiordilatte o mozzarella per pizza. Tagliare a listarelle e
+                                    far sgocciolare in un colino per almeno 30 minuti. Questo eviterà eccesso di acqua
+                                    durante la cottura.</p>
+                            </li>
+                        </ol>
+                    </div>
 
                 </div>
 
@@ -264,14 +335,19 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Farina 00 Pizza Napoletana</td>
-                            <td style="color: var(--color-accent); font-weight: 600;">280-320</td>
-                            <td>Caputo Pizzeria (Rossa), Molino Dallagiovanna Manitoba, Molino Vigevano Superpan, Le 5 Stagioni Napoletana, Molino Rossetto Vesuvio</td>
+                            <td>Farina Tipo 0</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">280-300</td>
+                            <td>Molino Caputo Pizzeria, Molino Vigevano Le 5 Stagioni Oro, Molino Grassi</td>
                         </tr>
                         <tr>
-                            <td>Farina 00 Alta Forza (alternativa)</td>
-                            <td style="color: var(--color-accent); font-weight: 600;">320-360</td>
-                            <td>Caputo Cuoco (Blu), Molino Grassi Manitoba Oro, Molino Quaglia Petra 9, Molino Pasini Manitoba</td>
+                            <td>Farina Tipo 0 + Manitoba</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">300-320</td>
+                            <td>Mix 60% Tipo 0 + 40% Manitoba (es. Caputo Chef + Caputo Manitoba)</td>
+                        </tr>
+                        <tr>
+                            <td>Farina Tipo 00 Alta Forza</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">300-320</td>
+                            <td>Molino Caputo Chef, Molino Dallagiovanna Napoletana, Molino Nuvola Super</td>
                         </tr>
                     </tbody>
                 </table>
@@ -287,7 +363,13 @@
                 <span class="alert__icon">🚫</span>
                 <div class="alert__content">
                     <strong>ALERT PROFESSIONALE</strong>
-                    <p>❌ NON superare MAI i 28°C di temperatura finale dell'impasto: oltre questa soglia il lievito accelera eccessivamente e si compromettono aromi e alveolatura. NON usare il mattarello per stendere: distrugge completamente i gas e il cornicione non si gonfierà. NON schiacciare il cornicione durante la stesura. NON aprire il forno nei primi 4 minuti di cottura: il calo di temperatura blocca lo sviluppo del cornicione. NON condire la pizza con troppa passata o mozzarella: l'umidità eccessiva impedisce la cottura corretta del fondo che resterà gommoso.</p>
+                    <p>⚠️ NON stendere la pizza con il mattarello: appiattisce l'alveolatura e schiaccia il cornicione.
+                        La pizza napoletana si stende SOLO a mano, partendo dal centro e picchiettando con i
+                        polpastrelli. NON usare farine deboli (W&lt;260): l'impasto si strapperà durante la stesura. NON
+                        condire troppo: max 80g di salsa e 80-100g di mozzarella per pizza, altrimenti la base rimarrà
+                        cruda. NON infornare con forno freddo: la pietra refrattaria deve essere rovente (min 45 min di
+                        preriscaldo). NON mettere la mozzarella subito: aggiungerla negli ultimi 2-3 minuti per evitare
+                        che rilasci troppa acqua.</p>
                 </div>
             </div>
 
@@ -299,20 +381,28 @@
                 </h2>
                 <div class="tech-badges" style="margin-bottom: 16px;">
                     <div class="tech-badge">
-                        🌡️ Temperatura: <span class="tech-badge__value">&nbsp;280°C (forno casalingo statico) con pietra refrattaria</span>
+                        🌡️ Temperatura: <span class="tech-badge__value">&nbsp;280°C (forno casalingo) o 450°C (forno a
+                            legna professionale)</span>
                     </div>
                     <div class="tech-badge">
-                        ⏱️ Tempo: <span class="tech-badge__value">&nbsp;6-8 minuti a 280°C con pietra / 10-12 minuti senza pietra</span>
+                        ⏱️ Tempo: <span class="tech-badge__value">&nbsp;6-8 minuti a 280°C | 90-120 secondi a
+                            450°C</span>
                     </div>
                 </div>
                 <ul class="baking-tips" style="list-style: none; padding: 0;">
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 FONDAMENTALE: Preriscaldare forno + pietra refrattaria per 45-60 minuti a 280°C (temperatura massima del forno casalingo)</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Infornare rapidamente con pala di legno infarinata, controllare che la pizza scivoli bene prima di trasferirla</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Cuocere sul ripiano più basso del forno per simulare il calore dal basso del forno a legna</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Creare vapore: posizionare una teglia con acqua bollente sul fondo del forno durante il preriscaldaggio</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 La pizza è cotta quando il cornicione è dorato con leopardature scure, il fondo è croccante (sollevare con pala per verificare) e la mozzarella è fusa con bollosità dorate</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 NON aprire il forno nei primi 4 minuti, ruotare la pizza a metà cottura se il forno cuoce in modo non uniforme</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Temperatura interna della pizza cotta: 90-95°C al cuore del cornicione</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Preriscaldare forno +
+                        pietra refrattaria per 45-60 minuti alla massima temperatura</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Stendere la pizza su
+                        abbondante semola di grano duro per evitare che si attacchi</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Tecniche di stesura:
+                        partire dal centro, picchiettare con i polpastrelli allargando verso l'esterno, LASCIARE il
+                        cornicione di 1-2cm intatto (NON schiacciarlo)</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Condire con salsa al
+                        centro (non sul cornicione), infornare SENZA mozzarella i primi 4-5 minuti</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Aggiungere mozzarella
+                        sgocciolata negli ultimi 2-3 minuti di cottura</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 La pizza è pronta
+                        quando il cornicione è dorato con leggere leopardature scure e la base è asciutta</li>
                 </ul>
             </div>
 
@@ -323,30 +413,55 @@
                     Glossario
                 </h2>
                 <dl class="glossary-list" style="margin: 0; padding: 0;">
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Autolisi</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Riposo di farina e acqua (senza sale e lievito) per 20-30 minuti. Idrata completamente le proteine, sviluppa glutine naturalmente e riduce i tempi di impastamento.</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Incordatura</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Fase finale dell'impastamento in cui il glutine si sviluppa completamente. L'impasto si incorda, ovvero si stacca dalle pareti della vasca formando un cordone elastico attorno al gancio/spirale.</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Fase
+                        dell'impastamento in cui il glutine si sviluppa e l'impasto diventa elastico, liscio e si stacca
+                        dalle pareti della vasca formando un cordone</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Puntata</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prima lievitazione dell'impasto in massa unica (non diviso). Serve a sviluppare aromi, struttura alveolare e volume. Per la pizza napoletana: 8-12 ore a 18-20°C.</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Staglio</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Divisione dell'impasto lievitato in porzioni del peso desiderato (250-280g per pizza napoletana Ø 30cm). Si esegue con tarocco o spatola, tagliando senza strappare.</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prima
+                        lievitazione dell'impasto in massa, prima di essere diviso in panetti. Serve a far maturare
+                        l'impasto e sviluppare aromi</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Pirlatura</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica per dare forma sferica ai panetti dopo lo staglio. Si esegue con movimento rotatorio del palmo della mano, creando tensione superficiale. La chiusura resta sotto, la superficie sopra deve essere liscia e tesa.</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica per
+                        formare palline lisce e tese: si fa ruotare il panetto sul banco con movimento circolare usando
+                        il palmo della mano</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Appretto</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Seconda lievitazione dopo lo staglio, in cui i panetti pirlati lievitano in cassetta. Per la pizza napoletana: 12-14 ore a 16-18°C fino a triplicare di volume.</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Slap & Fold</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica manuale per impasti idratati: si solleva l'impasto, lo si sbatte sul piano e lo si ripiega su se stesso. Sviluppa glutine senza impastatrice, ideale per idratazioni >60%.</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Stretch & Fold</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Serie di pieghe eseguite durante la puntata: si allunga delicatamente un lembo dell'impasto e lo si ripiega al centro, ruotando di 90° per 4 volte. Rinforza la maglia glutinica senza lavorazione aggressiva.</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Lievitazione
+                        finale dei singoli panetti dopo lo staglio. Fase delicata che determina la morbidezza e
+                        alveolatura della pizza</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Staglio</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Divisione
+                        dell'impasto in massa in panetti di peso specifico (250-280g per pizza napoletana)</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Madia</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Contenitore
+                        tradizionale in legno usato dai pizzaioli napoletani per impastare. Oggi sostituita da
+                        contenitori in plastica alimentare</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">W (Forza della Farina)
+                    </dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Indice
+                        alveografico Chopin che misura la forza della farina (capacità di trattenere gas). Per pizza
+                        napoletana: W 260-320</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Idratazione</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Percentuale
+                        di acqua rispetto alla farina. Pizza napoletana: 65-75%. Più alta = impasto più morbido ma più
+                        difficile da gestire</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Temperatura Finale Impasto
+                    </dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Temperatura
+                        dell'impasto a fine lavorazione. Per pizza napoletana: 24-26°C. Determina velocità di
+                        lievitazione e sviluppo aromi</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Cornicione</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Bordo rialzato della pizza napoletana (2cm). Durante la stesura NON va mai schiacciato: si lavora solo la parte centrale, lasciando i gas intrappolati nel bordo che si gonfierà in cottura.</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Leopardatura</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Macchie scure irregolari (simili alla pelle del leopardo) che compaiono sul cornicione della pizza cotta ad alta temperatura. Sono indice di cottura perfetta e sviluppo aromatico (caramellizzazione + reazione di Maillard).</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Maglia Glutinica</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Rete tridimensionale formata dalle proteine del glutine (gliadina + glutenina) che intrappola gas e conferisce elasticità e struttura all'impasto. Si sviluppa con impastamento, pieghe e riposi.</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Alveolatura</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Struttura interna dell'impasto lievitato, caratterizzata da alveoli (bolle) di dimensioni variabili. Una buona alveolatura indica fermentazione corretta e maglia glutinica sviluppata. Nella pizza napoletana deve essere irregolare e aperta.</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Bordo
+                        rialzato della pizza napoletana (1-2cm), morbido e alveolato. Si ottiene NON schiacciando il
+                        bordo durante la stesura</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Leopardature</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Macchie scure
+                        caratteristiche sulla superficie della pizza napoletana, segno di cottura ad alta temperatura
+                    </dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Pieghe</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica per
+                        rinforzare la maglia glutinica senza impastare: si portano i lembi dell'impasto verso il centro.
+                        Usata nella tecnica napoletana a mano</dd>
                 </dl>
             </div>
 
@@ -378,7 +493,7 @@
                     <h4 class="footer__col-title">Questa Ricetta</h4>
                     <ul class="footer__links">
                         <li><a href="#">🍕 Pizza Napoletana STG</a></li>
-                        <li><a href="#">💧 Idratazione 65%</a></li>
+                        <li><a href="#">💧 Idratazione 70%</a></li>
                     </ul>
                 </div>
 
