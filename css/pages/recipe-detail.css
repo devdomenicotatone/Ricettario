@@ -204,6 +204,15 @@
         }
     }
 
+    /* Colonna sinistra sticky — ingredienti seguono lo scroll */
+    @media (min-width: 769px) {
+        .recipe-layout > div:first-child {
+            position: sticky;
+            top: 80px;
+            align-self: start;
+        }
+    }
+
     .recipe-panel {
         background: var(--color-surface-2);
         border: 1px solid var(--border-subtle);
