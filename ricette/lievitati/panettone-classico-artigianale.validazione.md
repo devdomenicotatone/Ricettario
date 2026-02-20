@@ -5,30 +5,34 @@
 **Fonti consultate:** 8
 
 ### ✅ Confermato
-- Ingredienti: 12/12 confermati (100%)
+- Ingredienti: 16/16 confermati (100%)
 
 ### ⚠️ Attenzione
-- ⚠️ Idratazione significativamente diversa: 48% vs media fonti 82%
+- ⚠️ Idratazione significativamente diversa: 42% vs media fonti 82%
 
 ### 📋 Ingredienti
 | Status | Ingrediente | Note |
 |--------|-------------|------|
-| ✅ | farina manitoba per panettone | Confermato da fonti |
+| ✅ | farina manitoba forte | Confermato da fonti |
+| ✅ | farina tipo 0 media forza | Confermato da fonti |
 | ✅ | lievito madre solido rinfrescato | Confermato da fonti |
-| ✅ | tuorli d'uovo | Confermato da fonti |
-| ✅ | zucchero semolato | Confermato da fonti |
-| ✅ | burro | Confermato da fonti |
 | ✅ | acqua | Confermato da fonti |
-| ✅ | miele millefiori | Confermato da fonti |
-| ✅ | latte intero | Confermato da fonti |
+| ✅ | acqua | Confermato da fonti |
+| ✅ | zucchero semolato fine | Confermato da fonti |
+| ✅ | tuorli d'uovo pastorizzati | Confermato da fonti |
+| ✅ | uova intere pastorizzate | Confermato da fonti |
+| ✅ | burro di alta qualità | Confermato da fonti |
+| ✅ | miele d'acacia liquido | Confermato da fonti |
 | ✅ | sale fino | Confermato da fonti |
-| ✅ | vaniglia bourbon | Confermato da fonti |
-| ✅ | scorza di arancia | Confermato da fonti |
-| ✅ | scorza di limone | Confermato da fonti |
+| ✅ | malto diastasico | Confermato da fonti |
+| ✅ | buccia di limone bio | Confermato da fonti |
+| ✅ | buccia di arancia bio | Confermato da fonti |
+| ✅ | semi di vaniglia bourbon | Confermato da fonti |
+| ✅ | rum scuro o cointreau | Confermato da fonti |
 
 ### 📊 Dettagli
 - Tempi fonti: 0min, 48h, 60min, 30min
-- Tempo Claude: ~36h totali (3 impasti + maturazioni)
+- Tempo Claude: ~48h totali (12h+8h+12h)
 
 ### 📰 Fonti
 1. **kenwoodclub.it** — Dati strutturati (18 ingredienti)

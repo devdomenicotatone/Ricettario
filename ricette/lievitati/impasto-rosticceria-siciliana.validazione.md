@@ -1,30 +1,31 @@
 # Validazione: Impasto per Rosticceria Siciliana
 
-## 🟢 Confidenza: 95%
+## 🟢 Confidenza: 100%
 
 **Fonti consultate:** 7
 
 ### ✅ Confermato
-- Ingredienti: 7/8 confermati (88%)
+- Ingredienti: 9/9 confermati (100%)
 
 ### ⚠️ Attenzione
-- ⚠️ Idratazione significativamente diversa: 55% vs media fonti 89%
+- ⚠️ Idratazione significativamente diversa: 50% vs media fonti 89%
 
 ### 📋 Ingredienti
 | Status | Ingrediente | Note |
 |--------|-------------|------|
-| ✅ | farina tipo 0 media forza | Confermato da fonti |
+| ✅ | farina tipo 00 media forza | Confermato da fonti |
+| ✅ | farina manitoba | Confermato da fonti |
 | ✅ | acqua | Confermato da fonti |
-| ✅ | strutto | Confermato da fonti |
-| ✅ | tuorli d'uovo | Confermato da fonti |
-| ✅ | zucchero semolato | Confermato da fonti |
-| ✅ | sale fino | Confermato da fonti |
 | ✅ | lievito di birra fresco | Confermato da fonti |
-| ⚠️ | scorza di limone grattugiata | Non trovato nelle fonti |
+| ✅ | strutto | Confermato da fonti |
+| ✅ | olio extravergine di oliva | Confermato da fonti |
+| ✅ | zucchero semolato | Confermato da fonti |
+| ✅ | miele | Confermato da fonti |
+| ✅ | sale fino | Confermato da fonti |
 
 ### 📊 Dettagli
 - Tempi fonti: 40min, P0DT2H0M, 1h 30min, 15min, P0DT0H30M, 00h 20min
-- Tempo Claude: 2-3h + 30min appretto
+- Tempo Claude: 2-3h prima lievitazione + 30-45min appretto
 
 ### 📰 Fonti
 1. **tavolartegusto.it** — Dati strutturati (16 ingredienti)

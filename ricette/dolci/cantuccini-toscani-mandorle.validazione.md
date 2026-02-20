@@ -5,26 +5,24 @@
 **Fonti consultate:** 9
 
 ### ✅ Confermato
-- Ingredienti: 11/11 confermati (100%)
+- Ingredienti: 9/9 confermati (100%)
 
 ### 📋 Ingredienti
 | Status | Ingrediente | Note |
 |--------|-------------|------|
-| ✅ | farina tipo 00 debole | Confermato da fonti |
+| ✅ | farina tipo 00 | Confermato da fonti |
 | ✅ | zucchero semolato | Confermato da fonti |
 | ✅ | uova intere | Confermato da fonti |
-| ✅ | tuorli | Confermato da fonti |
-| ✅ | burro morbido | Confermato da fonti |
-| ✅ | mandorle pelate intere | Confermato da fonti |
-| ✅ | lievito chimico per dolci | Confermato da fonti |
-| ✅ | scorza di limone grattugiata | Confermato da fonti |
-| ✅ | estratto di vaniglia | Confermato da fonti |
+| ✅ | burro | Confermato da fonti |
+| ✅ | ammoniaca per dolci | Confermato da fonti |
+| ✅ | marsala o vin santo | Confermato da fonti |
+| ✅ | scorza d'arancia | Confermato da fonti |
 | ✅ | sale fino | Confermato da fonti |
-| ✅ | tuorlo per doratura | Confermato da fonti |
+| ✅ | tuorlo d'uovo | Confermato da fonti |
 
 ### 📊 Dettagli
 - Tempi fonti: 10min, 20min, P0DT0H10M, 15min, 40min, 2h 0min
-- Tempo Claude: N/A
+- Tempo Claude: nessuna lievitazione
 
 ### 📰 Fonti
 1. **tavolartegusto.it** — Dati strutturati (9 ingredienti)

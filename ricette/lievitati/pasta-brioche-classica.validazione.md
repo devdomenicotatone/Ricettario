@@ -5,26 +5,28 @@
 **Fonti consultate:** 9
 
 ### ✅ Confermato
-- Ingredienti: 10/10 confermati (100%)
+- Ingredienti: 12/12 confermati (100%)
 - Idratazione: 52% (media fonti: 50%) — ✅ OK
 
 ### 📋 Ingredienti
 | Status | Ingrediente | Note |
 |--------|-------------|------|
-| ✅ | farina manitoba o tipo 0 forte | Confermato da fonti |
-| ✅ | burro morbido | Confermato da fonti |
-| ✅ | zucchero semolato | Confermato da fonti |
+| ✅ | farina di forza media-alta | Confermato da fonti |
+| ✅ | latte intero fresco | Confermato da fonti |
 | ✅ | uova intere | Confermato da fonti |
 | ✅ | tuorli | Confermato da fonti |
-| ✅ | latte intero | Confermato da fonti |
+| ✅ | zucchero semolato | Confermato da fonti |
+| ✅ | burro | Confermato da fonti |
 | ✅ | lievito di birra fresco | Confermato da fonti |
 | ✅ | sale fino | Confermato da fonti |
-| ✅ | scorza di limone grattugiata | Confermato da fonti |
-| ✅ | estratto di vaniglia | Confermato da fonti |
+| ✅ | miele di acacia | Confermato da fonti |
+| ✅ | estratto naturale di vaniglia | Confermato da fonti |
+| ✅ | scorza di limone | Confermato da fonti |
+| ✅ | scorza di arancia | Confermato da fonti |
 
 ### 📊 Dettagli
 - Tempi fonti: 40min, 15h, 30min, 30min, 240h, 85min
-- Tempo Claude: 8-10h totali (puntata + appretto)
+- Tempo Claude: 3h + 12h frigo
 
 ### 📰 Fonti
 1. **ricette.giallozafferano.it** — Dati strutturati (11 ingredienti)

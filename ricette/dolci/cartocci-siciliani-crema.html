@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Cartocci siciliani fritti con crema pasticcera: cilindri di pasta lievitata dolce arrotolati su cannelli, fritti e farciti con crema vellutata.">
+    <title>Cartocci Siciliani alla Crema — Il Ricettario</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap"
+        rel="stylesheet">
+    <!-- FOUC Prevention: applica tema prima del rendering -->
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = saved || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- Skip to content — Accessibilità -->
+    <a href="#recipe-content" class="skip-link">Vai al contenuto principale</a>
+
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="../../index.html" class="navbar__logo">
+                <div class="navbar__logo-icon">🔥</div>
+                <span>Il Ricettario</span>
+            </a>
+
+            <ul class="navbar__links" id="nav-links">
+                <li><a href="../../index.html#ricette">Ricette</a></li>
+                <li><a href="../../index.html#strumenti">Strumenti</a></li>
+                <li><a href="../../index.html#chi-sono">Chi Sono</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+                <span class="theme-toggle__icon theme-toggle__sun">☀️</span>
+                <span class="theme-toggle__icon theme-toggle__moon">🌙</span>
+            </button>
+
+            <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════ RECIPE HERO ═══════════ -->
+    <div class="recipe-hero" style="background-image: url('../../images/ricette/dolci/cartocci-siciliani-crema.jpg')">
+        <div class="container">
+            <nav class="breadcrumb reveal">
+                <a href="../../index.html">Home</a>
+                <span class="breadcrumb__separator">›</span>
+                <a href="../../index.html#ricette">Ricette</a>
+                <span class="breadcrumb__separator">›</span>
+                <a href="./">Dolci</a>
+                <span class="breadcrumb__separator">›</span>
+                <span>Cartocci Siciliani alla Crema</span>
+            </nav>
+
+            <div class="recipe-hero__content">
+                <div class="recipe-hero__tags reveal">
+                    <span class="tag tag--tool" id="hero-setup-tag">🔧 Impastatrice a spirale</span>
+                    <span class="tag tag--category">🥐 Dolci</span>
+                </div>
+                <h1 class="recipe-hero__title reveal reveal-delay-1">Cartocci Siciliani alla Crema</h1>
+                <p class="recipe-hero__subtitle reveal reveal-delay-2">
+                    Specialità siciliana della tradizione pasticcera: pasta lievitata dolce fritta e ripiena
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ TECH BADGES ═══════════ -->
+    <div class="container" style="padding-top: 40px;">
+        <div class="tech-badges reveal">
+            <div class="tech-badge">
+                💧 Idratazione: <span class="tech-badge__value">&nbsp;50%</span>
+            </div>
+            <div class="tech-badge">
+                🌡️ Target Temp: <span class="tech-badge__value">&nbsp;26-27°C</span>
+            </div>
+            <div class="tech-badge">
+                ⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;2h + 30min appretto</span>
+            </div>
+            <div class="tech-badge tech-badge--toggle" id="setup-badge" role="button" tabindex="0"
+                aria-label="Cambia setup">
+                🔧 Setup: <span class="tech-badge__value" id="setup-badge-value">&nbsp;A mano</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ RECIPE CONTENT ═══════════ -->
+    <section class="recipe-content">
+        <div class="container">
+            <div class="recipe-layout">
+
+                <!-- COLONNA SINISTRA: Ingredienti -->
+                <div>
+                    <div class="recipe-panel reveal">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">🛒</span>
+                            Ingredienti Base
+                        </h2>
+
+                        <!-- Calcolatore Dosi -->
+                        <div class="dose-calculator" id="dose-calculator">
+                            <div class="dose-calculator__label">
+                                <span class="dose-calculator__label-icon">⚖️</span>
+                                Farina totale
+                            </div>
+                            <div class="dose-calculator__controls">
+                                <button class="dose-calculator__btn" id="dose-decrease"
+                                    aria-label="Diminuisci dosi">−</button>
+                                <div class="dose-calculator__input-wrapper">
+                                    <input type="number" class="dose-calculator__input" id="dose-input" value="0.5"
+                                        min="0.5" max="5" step="0.5" data-base-total="500" aria-label="Kg di farina">
+                                    <span class="dose-calculator__unit">kg</span>
+                                </div>
+                                <button class="dose-calculator__btn" id="dose-increase"
+                                    aria-label="Aumenta dosi">+</button>
+                            </div>
+                            <div class="dose-calculator__badge" id="dose-badge">×1</div>
+                        </div>
+
+                        <table class="ingredients-table" id="ingredients-table">
+                            <tr>
+                                <td>Farina 00 Media Forza <span class="ingredient-note">(W 280-320, ideale manitoba per tenuta in frittura)</span></td>
+                                <td class="ingredient-qty" data-base="500">500g</td>
+                            </tr>
+                            <tr>
+                                <td>Acqua <span class="ingredient-note" data-setup-note-spirale="(15-18°C per controllare temperatura finale)" data-setup-note-mano="(20-22°C, aggiungere in 2 riprese durante impastamento)">(15-18°C per controllare temperatura finale)</span></td>
+                                <td class="ingredient-qty" data-base="250">250g</td>
+                            </tr>
+                            <tr>
+                                <td>Strutto <span class="ingredient-note">(temperatura ambiente, sostituibile con burro)</span></td>
+                                <td class="ingredient-qty" data-base="70">70g</td>
+                            </tr>
+                            <tr>
+                                <td>Zucchero Semolato <span class="ingredient-note">(per impasto dolce)</span></td>
+                                <td class="ingredient-qty" data-base="50">50g</td>
+                            </tr>
+                            <tr>
+                                <td>Sale Fino <span class="ingredient-note">(aggiungere a fine impasto)</span></td>
+                                <td class="ingredient-qty" data-base="8">8g</td>
+                            </tr>
+                            <tr>
+                                <td>Lievito di Birra Fresco <span class="ingredient-note">(o 2,5g lievito secco)</span></td>
+                                <td class="ingredient-qty" data-base="7">7g</td>
+                            </tr>
+                            <tr>
+                                <td>Latte Intero <span class="ingredient-note">(per crema pasticcera)</span></td>
+                                <td class="ingredient-qty" data-base="1000">1000g</td>
+                            </tr>
+                            <tr>
+                                <td>Zucchero Semolato per Crema <span class="ingredient-note">(per addensare e dolcificare)</span></td>
+                                <td class="ingredient-qty" data-base="200">200g</td>
+                            </tr>
+                            <tr>
+                                <td>Maizena (Amido di Mais) <span class="ingredient-note">(per crema liscia e vellutata)</span></td>
+                                <td class="ingredient-qty" data-base="90">90g</td>
+                            </tr>
+                            <tr>
+                                <td>Essenza di Vaniglia <span class="ingredient-note">(o vanillina in polvere)</span></td>
+                                <td class="ingredient-qty" data-base="5">5g</td>
+                            </tr>
+                            <tr>
+                                <td>Olio di Semi per Friggere <span class="ingredient-note">(arachidi o girasole alto oleico, T 170-175°C)</span></td>
+                                <td class="ingredient-qty" data-base="2000">2000g</td>
+                            </tr>
+                            <tr>
+                                <td>Zucchero Semolato per Finitura <span class="ingredient-note">(per spolverare dopo frittura)</span></td>
+                                <td class="ingredient-qty" data-base="100">100g</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!-- COLONNA DESTRA: Procedimento -->
+                <div>
+
+                    <!-- ── Procedimento: Primario (Spirale o Estrusore) ── -->
+                    <div class="recipe-panel reveal reveal-delay-1" data-setup="spirale" id="steps-spirale">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">⚙️</span>
+                            Procedimento
+                            <span class="recipe-panel__title-badge">🔧 Spirale</span>
+                        </h2>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Impasto Base in Spirale</strong>
+                                <p>Inserire nella vasca dell'impastatrice farina, acqua a 15-18°C, lievito sbriciolato e zucchero. Avviare in prima velocità per 3 minuti per amalgamare. Aggiungere lo strutto a pezzetti e continuare in prima velocità per altri 4 minuti. Aumentare a seconda velocità e impastare per 6-7 minuti fino a incordatura completa. Negli ultimi 2 minuti aggiungere il sale. Temperatura finale target: 26-27°C. L'impasto deve risultare liscio, elastico e leggermente appiccicoso.</p>
+                            </li>
+                            <li>
+                                <strong>Puntata e Preparazione Crema</strong>
+                                <p>Trasferire l'impasto in contenitore leggermente unto, coprire con pellicola a contatto e far lievitare a 26-28°C per 2 ore o fino al raddoppio del volume. Nel frattempo preparare la crema pasticcera: in una casseruola mescolare maizena, zucchero e un pizzico di sale. Aggiungere il latte freddo poco alla volta, mescolando con frusta per evitare grumi. Portare su fuoco medio, mescolando costantemente fino a bollore. Cuocere 2-3 minuti a fiamma bassa fino a consistenza densa. Fuori dal fuoco aggiungere essenza di vaniglia. Trasferire in contenitore, coprire con pellicola a contatto e raffreddare completamente in frigorifero (minimo 2 ore).</p>
+                            </li>
+                            <li>
+                                <strong>Formatura Cartocci</strong>
+                                <p>Rovesciare l'impasto su piano leggermente infarinato. Degassare delicatamente e dividere in pezzi da 80-90g ciascuno (circa 10-12 pezzi). Formare dei cordoni cilindrici lunghi 25-30 cm, lavorando con movimento a va-e-vieni sotto le mani. Avvolgere ogni cordone a spirale attorno a cannelli per cannoli siciliani (acciaio o alluminio Ø 2,5-3 cm), partendo da un'estremità e formando 4-5 giri sovrapposti per 1/3. Sigillare bene le estremità premendo leggermente. Disporre i cartocci su teglia rivestita, coprire con canovaccio umido e far riposare 30 minuti a temperatura ambiente.</p>
+                            </li>
+                            <li>
+                                <strong>Frittura e Farciture</strong>
+                                <p>Scaldare abbondante olio di semi in pentola alta e stretta fino a 170-175°C (verificare con termometro). Friggere i cartocci ancora sui cannelli, 2-3 alla volta, per 4-5 minuti girandoli spesso fino a doratura uniforme. Scolare su carta assorbente e sfilare delicatamente i cannelli ancora caldi. Lasciar raffreddare completamente. Trasferire la crema pasticcera in sac-à-poche con bocchetta liscia da 1 cm. Riempire generosamente ogni cartoccio dalle due estremità. Spolverare abbondantemente con zucchero semolato e servire.</p>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <!-- ── Procedimento: A mano ── -->
+                    <div class="recipe-panel reveal reveal-delay-1" data-setup="mano" id="steps-mano"
+                        style="display: none;">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">⚙️</span>
+                            Procedimento
+                            <span class="recipe-panel__title-badge">🤲 A mano</span>
+                        </h2>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Impasto a Mano</strong>
+                                <p>Disporre la farina a fontana su spianatoia. Al centro sciogliere il lievito con metà dell'acqua a 20-22°C e lo zucchero. Iniziare a incorporare la farina dai bordi interni, aggiungendo gradualmente l'acqua rimanente. Quando l'impasto inizia a formarsi, aggiungere lo strutto a pezzetti. Impastare energicamente per 12-15 minuti con movimento di spinta e ripiegamento, fino a ottenere un impasto liscio ed elastico. Negli ultimi 3 minuti incorporare il sale. Eseguire alcune pieghe a tre per rinforzare la maglia glutinica. L'impasto deve risultare morbido ma non appiccicoso.</p>
+                            </li>
+                            <li>
+                                <strong>Lievitazione e Preparazione Crema</strong>
+                                <p>Formare una palla liscia, trasferire in ciotola leggermente unta, incidere una croce sulla superficie e coprire con canovaccio umido. Far lievitare a 26-28°C per 2 ore o fino al raddoppio. Preparare nel frattempo la crema pasticcera: in una casseruola setacciare insieme maizena, zucchero e un pizzico di sale. Versare il latte freddo a filo, mescolando con frusta a mano per sciogliere completamente gli ingredienti secchi. Cuocere a fuoco medio-basso, mescolando costantemente con frusta o cucchiaio di legno, fino a bollore. Continuare la cottura per 2-3 minuti finché la crema non si addensa e riveste il dorso di un cucchiaio. Aggiungere essenza di vaniglia, trasferire in contenitore, coprire con pellicola a contatto diretto e raffreddare in frigorifero.</p>
+                            </li>
+                            <li>
+                                <strong>Formatura Manuale dei Cartocci</strong>
+                                <p>Capovolgere l'impasto lievitato su piano infarinato. Degassare delicatamente con le mani aperte, premendo dall'interno verso l'esterno per eliminare le bolle d'aria più grosse. Dividere in porzioni da 80-90g con taglio netto usando tarocco o spatola. Formare ogni pezzo in una pallina con movimento rotatorio sul piano. Lasciar riposare 5 minuti coperte con canovaccio. Allungare ogni pallina in cordone cilindrico di 25-30 cm, lavorando con movimento a va-e-vieni sotto i palmi delle mani, partendo dal centro verso le estremità. Avvolgere a spirale attorno ai cannelli per cannoli, formando 4-5 giri sovrapposti. Sigillare le estremità premendo e far aderire bene ogni spira. Appoggiare su teglia, coprire e lasciar riposare 30 minuti.</p>
+                            </li>
+                            <li>
+                                <strong>Frittura e Farcitura</strong>
+                                <p>Portare l'olio di semi a 170-175°C in pentola capiente (verificare con termometro da cucina o prova dello stuzzicadenti: deve friggere vivacemente senza bruciare). Immergere i cartocci con i cannelli, 2-3 alla volta per mantenere temperatura costante. Friggere 4-5 minuti, ruotandoli continuamente con schiumarola per doratura uniforme. Quando sono gonfi e dorati, scolare bene e trasferire su vassoio con carta assorbente. Sfilare i cannelli ancora caldi con movimento rotatorio delicato. Lasciar raffreddare completamente i cartocci. Montare la crema fredda in sac-à-poche con bocchetta liscia Ø 1 cm. Inserire la bocchetta in entrambe le estremità di ogni cartoccio e riempire premendo delicatamente fino a fuoriuscita. Spolverare generosamente con zucchero semolato e servire entro 2-3 ore.</p>
+                            </li>
+                        </ol>
+
+                        <div class="pro-tip-box" style="margin-top: 16px;">
+                            <p><strong>💡 PRO TIP:</strong> Se non hai i cannelli metallici, puoi costruirli avvolgendo 3-4 strati di carta alluminio spessa attorno a un manico di legno Ø 2,5 cm. Funziona perfettamente e costa zero.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <!-- ═══════════ CONSIGLI FARINE & MARCHI ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 40px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">🌾</span>
+                    Consigli Farine & Marchi
+                </h2>
+                <table class="flour-table">
+                    <thead>
+                        <tr>
+                            <th>Tipo Farina</th>
+                            <th>Forza (W)</th>
+                            <th>Marchi Consigliati</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Farina 00 Media-Alta Forza</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">280-320</td>
+                            <td>Molino Dallagiovanna Napoletana, Molino Vigevano Manitoba Oro, Molino Spadoni Chef</td>
+                        </tr>
+                        <tr>
+                            <td>Farina Manitoba (alternativa)</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">350-400</td>
+                            <td>Lo Conte Manitoba, Molino Grassi Manitoba, Caputo Manitoba</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pro-tip-box" style="margin-top: 16px;">
+                    <p><strong>💡 PRO TIP:</strong> La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti,
+                        cerca qualsiasi farina con il valore W indicato.</p>
+                </div>
+            </div>
+
+            <!-- ═══════════ ALERT ═══════════ -->
+            <div class="alert alert--danger reveal" style="margin-top: 32px;">
+                <span class="alert__icon">🚫</span>
+                <div class="alert__content">
+                    <strong>ALERT PROFESSIONALE</strong>
+                    <p>NON friggere i cartocci a temperatura troppo alta (oltre 180°C): bruceranno fuori rimanendo crudi dentro. NON sfilare i cannelli quando i cartocci sono freddi: si spezzeranno. NON farcire i cartocci ancora caldi: la crema si scioglierà e colerà fuori. NON usare farine troppo deboli (W inferiore a 260): l'impasto non reggerebbe la frittura e si sgonfierebbe.</p>
+                </div>
+            </div>
+
+            <!-- ═══════════ COTTURA ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 32px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">🔥</span>
+                    Cottura
+                </h2>
+                <div class="tech-badges" style="margin-bottom: 16px;">
+                    <div class="tech-badge">
+                        🌡️ Temperatura: <span class="tech-badge__value">&nbsp;Frittura a 170-175°C</span>
+                    </div>
+                    <div class="tech-badge">
+                        ⏱️ Tempo: <span class="tech-badge__value">&nbsp;4-5 minuti per cartoccio</span>
+                    </div>
+                </div>
+                <ul class="baking-tips" style="list-style: none; padding: 0;">
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Usare termometro da cucina per mantenere temperatura olio costante</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Friggere pochi pezzi alla volta per evitare cali di temperatura</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 I cartocci devono galleggiare e dorare uniformemente, girandoli spesso</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Sfilare i cannelli quando ancora caldi, ma senza bruciare le mani (usare canovaccio)</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Farcire solo dopo completo raffreddamento per evitare che la crema si sciolga</li>
+                </ul>
+            </div>
+
+            <!-- ═══════════ GLOSSARIO ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 32px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">📖</span>
+                    Glossario
+                </h2>
+                <dl class="glossary-list" style="margin: 0; padding: 0;">
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Incordatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Momento in cui l'impasto forma il glutine e si avvolge attorno al gancio, staccandosi dalle pareti della vasca. Segno di impasto ben sviluppato.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Puntata</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prima lievitazione dell'impasto in blocco unico, prima della divisione e formatura dei singoli pezzi.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Degassare</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Eliminare le bolle d'aria grosse dall'impasto lievitato, premendo delicatamente con le mani, per ottenere alveolatura uniforme.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Appretto</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Lievitazione finale dei pezzi già formati, prima della cottura o frittura. Serve a far rilassare il glutine e dare volume.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Crema Pasticcera</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Crema a base di latte, zucchero e addensanti (maizena o farina), cotta fino a consistenza densa e vellutata. Base della pasticceria italiana.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Maizena</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Amido di mais, usato come addensante per creme. Rende la consistenza più liscia e leggera rispetto alla sola farina.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Cannelli</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tubi cilindrici in metallo (acciaio o alluminio) usati per dare forma ai cannoli siciliani e ai cartocci durante la frittura.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Sac-à-poche</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tasca da pasticciere in tessuto o plastica, con bocchette intercambiabili, per dosare e decorare creme e farce.</dd>
+                </dl>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__brand-name">🔥 <span>Il Ricettario</span></div>
+                    <p class="footer__brand-desc">
+                        Ricettario personale. Ricette artigianali documentate con precisione tecnica per
+                        risultati replicabili al 100%.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Navigazione</h4>
+                    <ul class="footer__links">
+                        <li><a href="../../index.html">↗ Home</a></li>
+                        <li><a href="../../index.html#ricette">↗ Ricette</a></li>
+                        <li><a href="../../index.html#strumenti">↗ Strumenti</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Questa Ricetta</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">🥐 Cartocci Siciliani alla Crema</a></li>
+                        <li><a href="#">💧 Idratazione 50%</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Altre Ricette</h4>
+                    <ul class="footer__links">
+                        <li><a href="../../index.html#ricette">↗ Tutte le Ricette</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <span>© <span id="current-year">2026</span> Il Ricettario</span>
+                <div class="footer__social">
+                    <a href="https://github.com/devdomenicotatone" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
+</body>
+
+</html>
