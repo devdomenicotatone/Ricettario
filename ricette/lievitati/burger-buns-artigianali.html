@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Panini per hamburger soffici e dorati con crosta croccante, perfetti per burger gourmet. Impasto arricchito a media idratazione con maturazione controllata.">
+        content="Panini per hamburger soffici con crosta dorata, impasto arricchito con latte e burro. Perfetti per burger gourmet casalinghi.">
     <title>Burger Buns Artigianali — Il Ricettario</title>
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
@@ -58,7 +58,7 @@
     </nav>
 
     <!-- ═══════════ RECIPE HERO ═══════════ -->
-    <div class="recipe-hero" style="background-image: url('../../images/ricette/lievitati/burger-buns-artigianali.jpg')">
+    <div class="recipe-hero">
         <div class="container">
             <nav class="breadcrumb reveal">
                 <a href="../../index.html">Home</a>
@@ -77,7 +77,7 @@
                 </div>
                 <h1 class="recipe-hero__title reveal reveal-delay-1">Burger Buns Artigianali</h1>
                 <p class="recipe-hero__subtitle reveal reveal-delay-2">
-                    Panini per hamburger con impasto arricchito e doppia lievitazione
+                    Panini morbidi per hamburger con impasto arricchito
                 </p>
             </div>
         </div>
@@ -93,7 +93,7 @@
                 🌡️ Target Temp: <span class="tech-badge__value">&nbsp;26-27°C</span>
             </div>
             <div class="tech-badge">
-                ⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;~4-5h totali</span>
+                ⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;2h puntata + 1h appretto</span>
             </div>
             <div class="tech-badge tech-badge--toggle" id="setup-badge" role="button" tabindex="0"
                 aria-label="Cambia setup">
@@ -137,44 +137,64 @@
 
                         <table class="ingredients-table" id="ingredients-table">
                             <tr>
-                                <td>Farina Tipo 0 Media Forza <span class="ingredient-note">(W 260-280)</span></td>
+                                <td>Farina Tipo 0 Media Forza <span class="ingredient-note">(W 260-280, per struttura soffice ma stabile)</span></td>
                                 <td class="ingredient-qty" data-base="1000">1000g</td>
                             </tr>
                             <tr>
-                                <td>Acqua <span class="ingredient-note">(temperatura ambiente 20°C)</span></td>
-                                <td class="ingredient-qty" data-base="520">520g</td>
+                                <td>Acqua <span class="ingredient-note" data-setup-note-spirale="(ghiacciata 2-4°C)" data-setup-note-mano="(20-22°C, aggiunta graduale)">(ghiacciata 2-4°C)</span></td>
+                                <td class="ingredient-qty" data-base="380">380g</td>
                             </tr>
                             <tr>
-                                <td>Latte Intero <span class="ingredient-note">(temperatura ambiente)</span></td>
-                                <td class="ingredient-qty" data-base="60">60g</td>
+                                <td>Latte Intero <span class="ingredient-note">(temperatura ambiente, 20°C)</span></td>
+                                <td class="ingredient-qty" data-base="200">200g</td>
                             </tr>
                             <tr>
-                                <td>Lievito di Birra Fresco</td>
-                                <td class="ingredient-qty" data-base="25">25g</td>
-                            </tr>
-                            <tr>
-                                <td>Zucchero Semolato</td>
-                                <td class="ingredient-qty" data-base="40">40g</td>
-                            </tr>
-                            <tr>
-                                <td>Burro Morbido <span class="ingredient-note">(temperatura ambiente, 18-20°C)</span></td>
+                                <td>Burro Morbido <span class="ingredient-note">(temperatura ambiente, 18-20°C, tagliato a cubetti)</span></td>
                                 <td class="ingredient-qty" data-base="80">80g</td>
                             </tr>
                             <tr>
-                                <td>Sale Fino</td>
+                                <td>Zucchero Semolato <span class="ingredient-note">(per doratura e morbidezza)</span></td>
+                                <td class="ingredient-qty" data-base="60">60g</td>
+                            </tr>
+                            <tr>
+                                <td>Lievito di Birra Fresco <span class="ingredient-note" data-setup-note-spirale="(15g)" data-setup-note-mano="(18g (lievitazione più lenta))">(15g)</span></td>
+                                <td class="ingredient-qty" data-base="15">15g</td>
+                            </tr>
+                            <tr>
+                                <td>Sale Fino <span class="ingredient-note">(aggiunto dopo incordatura)</span></td>
                                 <td class="ingredient-qty" data-base="20">20g</td>
                             </tr>
                             <tr>
-                                <td>Uova <span class="ingredient-note">(per spennellatura finale)</span></td>
-                                <td class="ingredient-qty" data-base="50">50g</td>
-                            </tr>
-                            <tr>
-                                <td>Semi di Sesamo <span class="ingredient-note">(per decorazione)</span></td>
+                                <td>Olio Extravergine d'Oliva <span class="ingredient-note">(o olio di semi per sapore più neutro)</span></td>
                                 <td class="ingredient-qty" data-base="30">30g</td>
                             </tr>
                         </table>
                     </div>
 
+                    <div class="recipe-panel reveal" style="margin-top: 28px;">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">🥜</span>
+                            Sospensioni
+                        </h2>
+                        <table class="ingredients-table" id="suspensions-table">
+                            <tr>
+                                <td>Tuorlo d'Uovo <span class="ingredient-note">(per spennellatura pre-cottura)</span></td>
+                                <td class="ingredient-qty" data-base="20">20g</td>
+                            </tr>
+                            <tr>
+                                <td>Latte <span class="ingredient-note">(per spennellatura, miscelato al tuorlo)</span></td>
+                                <td class="ingredient-qty" data-base="10">10g</td>
+                            </tr>
+                            <tr>
+                                <td>Semi di Sesamo <span class="ingredient-note">(tostati, per guarnizione)</span></td>
+                                <td class="ingredient-qty" data-base="30">30g</td>
+                            </tr>
+                        </table>
+
+                        <div class="pro-tip-box" style="margin-top: 16px;">
+                            <p><strong>💡 PRO TIP:</strong> Per buns extra soffici, sostituisci il 10% della farina Tipo 0 con Manitoba (W 350-400). Questo rinforza la struttura e trattiene meglio i liquidi, risultando in panini più alti e durevoli.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- COLONNA DESTRA: Procedimento -->
@@ -189,36 +209,32 @@
                         </h2>
                         <ol class="steps-list">
                             <li>
-                                <strong>Preparazione Poolish (Prefermentazione)</strong>
-                                <p>In una ciotola mescolare 200g di farina, 200g di acqua tiepida (25°C) e 5g di lievito fresco sbriciolato. Amalgamare bene fino a ottenere una pastella liscia. Coprire con pellicola e lasciare maturare a temperatura ambiente (20-22°C) per 2-3 ore, fino a quando la superficie sarà coperta di bolle e avrà triplicato il volume. Questo pre-impasto svilupperà aromi complessi e migliorerà la digeribilità.</p>
+                                <strong>Preparazione Base (5 min, V1)</strong>
+                                <p>Inserire nella vasca dell'impastatrice farina, zucchero, lievito sbriciolato e latte. Avviare a V1 per 2 minuti fino a completa incorporazione. Aggiungere l'acqua ghiacciata (2-4°C) e impastare a V1 per altri 3 minuti fino a ottenere un composto ruvido ma amalgamato.</p>
                             </li>
                             <li>
-                                <strong>Impasto Base in Spirale</strong>
-                                <p>Inserire nella vasca dell'impastatrice il poolish maturo, i restanti 800g di farina, 320g di acqua, 60g di latte, 40g di zucchero e i 20g di lievito fresco rimasti. Avviare in prima velocità per 4 minuti per incorporare gli ingredienti. Passare in seconda velocità per 8-10 minuti fino a ottenere un impasto liscio e omogeneo che inizia a staccarsi dalle pareti. Temperatura impasto target: 26-27°C.</p>
+                                <strong>Incordatura e Sale (8 min, V2)</strong>
+                                <p>Passare a V2 e impastare per 4 minuti fino a incordatura completa (l'impasto si stacca dalle pareti). Aggiungere il sale e continuare a V2 per altri 4 minuti. L'impasto deve risultare elastico e omogeneo, temperatura target 26-27°C.</p>
                             </li>
                             <li>
-                                <strong>Aggiunta Grassi e Sale</strong>
-                                <p>Con l'impastatrice in prima velocità, aggiungere il sale e continuare a impastare per 2 minuti. Successivamente incorporare il burro morbido a pezzetti, 20g alla volta, attendendo che ogni porzione sia completamente assorbita prima di aggiungere la successiva. Impastare in seconda velocità per ulteriori 5-6 minuti fino a ottenere un impasto elastico, liscio e incordato che si stacca completamente dalla vasca. Test del velo: prelevare un pezzetto di impasto e stenderlo delicatamente tra le dita fino a formare una membrana sottile e translucida senza rompersi.</p>
+                                <strong>Incorporazione Grassi (6 min, V1-V2)</strong>
+                                <p>Ridurre a V1 e aggiungere il burro a cubetti morbidi poco alla volta, attendendo che ogni porzione sia assorbita prima di aggiungere la successiva (circa 3 minuti). Aggiungere l'olio e passare a V2 per 3 minuti finali. L'impasto deve essere liscio, lucido e morbido. Verificare temperatura: deve essere 26-27°C.</p>
                             </li>
                             <li>
-                                <strong>Prima Lievitazione (Puntata)</strong>
-                                <p>Formare una palla liscia, trasferire l'impasto in un contenitore leggermente unto d'olio, coprire con pellicola e lasciare lievitare a temperatura ambiente (24-26°C) per 60-90 minuti, fino al raddoppio del volume. L'impasto deve risultare soffice, gonfio e pieno d'aria.</p>
+                                <strong>Puntata in Massa (2h, 26-28°C)</strong>
+                                <p>Trasferire l'impasto in un contenitore leggermente unto, coprire con pellicola a contatto e lasciar lievitare a 26-28°C per circa 2 ore, fino a raddoppio del volume. L'impasto deve risultare gonfio e arioso al tatto.</p>
                             </li>
                             <li>
-                                <strong>Staglio e Pirlatura</strong>
-                                <p>Rovesciare delicatamente l'impasto su un piano leggermente infarinato. Dividere in pezzi da 90-100g ciascuno (per burger buns di circa 10cm di diametro). Eseguire la pirlatura: con il palmo della mano leggermente curvo, far ruotare ogni pezzo sul piano di lavoro con movimenti circolari, creando tensione superficiale. La superficie deve risultare liscia e tesa, la chiusura verso il basso.</p>
+                                <strong>Staglio e Pirlatura (15 min)</strong>
+                                <p>Rovesciare l'impasto su piano leggermente infarinato, sgassare delicatamente con le mani. Dividere in pezzi da 100-110g ciascuno (circa 16-18 panini). Pirlare ogni pezzo con movimento rotatorio fino a ottenere sfere perfettamente lisce e tese. Disporre su teglia foderata con carta forno, distanziati 8-10 cm.</p>
                             </li>
                             <li>
-                                <strong>Formatura e Seconda Lievitazione (Appretto)</strong>
-                                <p>Disporre i panetti pirlati su teglie rivestite di carta forno, distanziati di almeno 8-10cm l'uno dall'altro. Schiacciare leggermente ogni panetto con il palmo della mano per dare la forma caratteristica leggermente appiattita. Coprire con un canovaccio umido o pellicola e lasciare lievitare in ambiente caldo (26-28°C) per 40-60 minuti, fino a quando risulteranno gonfi e soffici al tatto. Test del dito: premere delicatamente con un polpastrello, l'impronta deve risalire lentamente.</p>
+                                <strong>Appretto e Spennellatura (1h)</strong>
+                                <p>Coprire i panini con pellicola leggermente unta o strofinaccio umido. Lasciar lievitare a 26-28°C per circa 1 ora, fino a raddoppio. Preparare la doratura miscelando tuorlo e latte. Spennellare delicatamente la superficie dei panini con pennello morbido, poi cospargere con semi di sesamo tostati.</p>
                             </li>
                             <li>
-                                <strong>Finitura Pre-Cottura</strong>
-                                <p>Preriscaldare il forno a 200°C (statico) o 180°C (ventilato). Spennellare delicatamente la superficie di ogni burger bun con uovo sbattuto diluito con un cucchiaio di latte, usando un pennello morbido per non sgonfiare l'impasto. Cospargere immediatamente con semi di sesamo, premendo leggermente per farli aderire.</p>
-                            </li>
-                            <li>
-                                <strong>Cottura Finale</strong>
-                                <p>Infornare nella parte centrale del forno e cuocere per 12-15 minuti, fino a doratura uniforme color oro antico. I burger buns devono risultare gonfi, con superficie lucida e dorata. Sfornare e lasciar raffreddare su griglia per mantenere la base croccante. Una volta freddi, tagliare orizzontalmente a metà per farcire.</p>
+                                <strong>Cottura</strong>
+                                <p>Infornare i panini in forno preriscaldato a 200°C (statico) per 15-18 minuti, fino a doratura uniforme. I buns devono risultare dorati in superficie e suonare 'vuoti' se picchiettati sotto. Sfornare e lasciar raffreddare su griglia prima di tagliare.</p>
                             </li>
                         </ol>
                     </div>
@@ -233,41 +249,37 @@
                         </h2>
                         <ol class="steps-list">
                             <li>
-                                <strong>Preparazione Poolish (Prefermentazione)</strong>
-                                <p>In una ciotola capiente mescolare con un cucchiaio 200g di farina, 200g di acqua tiepida (25°C) e 5g di lievito fresco sbriciolato. Amalgamare bene fino a ottenere una pastella liscia senza grumi. Coprire con pellicola trasparente e lasciare maturare a temperatura ambiente (20-22°C) per 2-3 ore, fino a quando la superficie sarà coperta di bolle e avrà triplicato il volume.</p>
+                                <strong>Preparazione Base e Autolisi (20 min)</strong>
+                                <p>In una ciotola capiente mescolare farina, zucchero e lievito sbriciolato. Aggiungere il latte e l'acqua a temperatura ambiente (20-22°C) gradualmente, mescolando con cucchiaio di legno fino a formare un composto ruvido. Coprire e lasciar riposare 15 minuti (autolisi breve per facilitare lo sviluppo del glutine).</p>
                             </li>
                             <li>
-                                <strong>Impasto Base a Mano</strong>
-                                <p>Su una spianatoia o in una ciotola grande, versare i restanti 800g di farina a fontana. Al centro aggiungere il poolish maturo, 320g di acqua, 60g di latte, 40g di zucchero e i 20g di lievito fresco sbriciolato. Con una forchetta iniziare a incorporare gradualmente la farina dai bordi verso il centro. Quando il composto è troppo denso per la forchetta, continuare a mano impastando energicamente per 15-18 minuti. L'impasto deve diventare liscio, elastico e non più appiccicoso.</p>
+                                <strong>Impasto e Incordatura (15 min)</strong>
+                                <p>Trasferire l'impasto su piano di lavoro, aggiungere il sale e iniziare a impastare con tecnica di slap & fold: sollevare l'impasto, sbatterlo sul piano e ripiegarlo su se stesso. Continuare per 10-12 minuti fino a sviluppare elasticità. L'impasto deve diventare liscio e non appiccicoso. Temperatura target: 26-27°C.</p>
                             </li>
                             <li>
-                                <strong>Incorporazione Grassi e Sale</strong>
-                                <p>Appiattire leggermente l'impasto, cospargere il sale sulla superficie e ripiegare più volte, impastando per 3-4 minuti per distribuirlo uniformemente. Aggiungere il burro morbido a pezzetti, incorporandolo gradualmente con la tecnica dello slap and fold: sollevare l'impasto, sbatterlo sul piano di lavoro e ripiegarlo su se stesso. Ripetere per 10-12 minuti fino a completo assorbimento del burro. L'impasto deve risultare liscio, lucido, elastico e leggermente appiccicoso.</p>
+                                <strong>Incorporazione Grassi (10 min)</strong>
+                                <p>Stendere l'impasto in forma rettangolare, distribuire metà del burro morbido a cubetti sulla superficie. Ripiegare a portafoglio e impastare con movimento di pressione e rotazione per 3-4 minuti. Ripetere con la seconda metà del burro. Infine aggiungere l'olio e lavorare per altri 3 minuti. L'impasto deve essere setoso e lucido.</p>
                             </li>
                             <li>
-                                <strong>Prima Lievitazione (Puntata)</strong>
-                                <p>Formare una palla liscia con movimenti rotatori sul piano, trasferire in un contenitore leggermente unto d'olio, coprire con pellicola e lasciare lievitare a temperatura ambiente (24-26°C) per 60-90 minuti, fino al raddoppio del volume. La superficie deve risultare tesa e gonfia.</p>
+                                <strong>Puntata in Massa (2h-2h30, 26-28°C)</strong>
+                                <p>Formare una palla liscia, trasferire in ciotola unta, coprire con pellicola. Lasciar lievitare a 26-28°C per 2-2h30 (più lungo rispetto a spirale per compensare minor ossigenazione). L'impasto deve raddoppiare e risultare gonfio e morbido.</p>
                             </li>
                             <li>
-                                <strong>Staglio e Pirlatura Manuale</strong>
-                                <p>Rovesciare delicatamente l'impasto su un piano leggermente infarinato, senza sgonfiarlo troppo. Con un tarocco o un coltello affilato dividere in pezzi da 90-100g. Per ogni pezzo, eseguire la pirlatura manuale: posizionare la mano leggermente a coppa sopra l'impasto e con movimenti circolari rapidi far ruotare il pezzo sul piano, creando tensione superficiale. La superficie superiore deve risultare liscia e tesa, con la chiusura ben sigillata sul fondo.</p>
+                                <strong>Staglio e Pirlatura (20 min)</strong>
+                                <p>Rovesciare su piano infarinato, sgassare delicatamente premendo con i palmi. Dividere in pezzi da 100-110g con tarocco ben affilato. Per ogni pezzo: appiattire leggermente, ripiegare i bordi verso il centro, capovolgere e pirlare con movimento rotatorio usando il palmo della mano, creando tensione superficiale. Disporre su teglia distanziati.</p>
                             </li>
                             <li>
-                                <strong>Formatura e Seconda Lievitazione (Appretto)</strong>
-                                <p>Disporre i panetti pirlati su teglie rivestite di carta forno, distanziati 8-10cm. Schiacciare leggermente ogni panetto con il palmo della mano per ottenere la forma tipica leggermente schiacciata (circa 2cm di altezza). Coprire con canovaccio umido e lasciare lievitare in luogo tiepido (26-28°C) per 40-60 minuti, fino a quando risulteranno soffici e gonfi.</p>
-                            </li>
-                            <li>
-                                <strong>Finitura e Decorazione</strong>
-                                <p>Preriscaldare il forno a 200°C (statico) o 180°C (ventilato). Sbattere un uovo con un cucchiaio di latte. Con un pennello morbido, spennellare delicatamente la superficie di ogni burger bun senza premere troppo per non sgonfiare. Cospargere uniformemente con semi di sesamo, tamponando leggermente con le dita per farli aderire.</p>
+                                <strong>Appretto e Spennellatura (1h-1h15)</strong>
+                                <p>Coprire con pellicola unta o strofinaccio umido. Lievitare a 26-28°C per 1-1h15 (tempo leggermente più lungo). I panini devono raddoppiare e risultare soffici al tatto. Preparare doratura (tuorlo + latte), spennellare delicatamente senza sgonfiare, cospargere con semi di sesamo.</p>
                             </li>
                             <li>
                                 <strong>Cottura</strong>
-                                <p>Infornare nella parte centrale del forno e cuocere per 12-15 minuti, monitorando la doratura. I burger buns sono pronti quando presentano un colore dorato uniforme e suonano leggermente vuoti se battuti sul fondo. Sfornare e trasferire immediatamente su una griglia per raffreddare, evitando condensa sul fondo. Una volta completamente freddi, tagliare orizzontalmente a metà con un coltello seghettato.</p>
+                                <p>Infornare a 200°C (statico) per 15-18 minuti fino a doratura dorata uniforme. Controllare cottura: i buns devono suonare vuoti se picchiettati sotto. Raffreddare su griglia prima di tagliare orizzontalmente per farcire.</p>
                             </li>
                         </ol>
 
                         <div class="pro-tip-box" style="margin-top: 16px;">
-                            <p><strong>💡 PRO TIP:</strong> Se l'ambiente è freddo, posizionare la ciotola durante la lievitazione sopra una pentola con acqua tiepida (non bollente) coperta con un canovaccio: crea una camera di lievitazione casalinga a temperatura stabile tra 26-28°C</p>
+                            <p><strong>💡 PRO TIP:</strong> La temperatura dell'acqua è cruciale: con impastatrice a spirale usa acqua ghiacciata (2-4°C) perché l'attrito meccanico scalda l'impasto di 6-8°C. A mano, usa acqua a 20-22°C per raggiungere comunque i 26-27°C finali.</p>
                         </div>
                     </div>
 
@@ -294,12 +306,12 @@
                         <tr>
                             <td>Farina Tipo 0 Media Forza</td>
                             <td style="color: var(--color-accent); font-weight: 600;">260-280</td>
-                            <td>Molino Dallagiovanna Cuordoro, Molino Grassi Panificabile, Le 5 Stagioni Oro</td>
+                            <td>Molino Spadoni Tipo 0, Caputo Cuoco, Molino Grassi Bio Tipo 0, Le 5 Stagioni Napoletana</td>
                         </tr>
                         <tr>
-                            <td>Farina Manitoba (alternativa per più sofficità)</td>
+                            <td>Manitoba (per rinforzo)</td>
                             <td style="color: var(--color-accent); font-weight: 600;">350-400</td>
-                            <td>Molino Spadoni Manitoba Oro, Molino Caputo Manitoba, Lo Conte Manitoba</td>
+                            <td>Molino Spadoni Manitoba, Lo Conte Manitoba, Molino Dallagiovanna Manitoba (opzionale: sostituire 10-15% della Tipo 0)</td>
                         </tr>
                     </tbody>
                 </table>
@@ -315,7 +327,7 @@
                 <span class="alert__icon">🚫</span>
                 <div class="alert__content">
                     <strong>ALERT PROFESSIONALE</strong>
-                    <p>NON aggiungere il sale insieme al lievito all'inizio dell'impasto: il contatto diretto uccide i microrganismi e blocca la lievitazione. Incorporare sempre il sale dopo aver sviluppato la maglia glutinica. NON aggiungere il burro troppo presto: i grassi ostacolano lo sviluppo del glutine, devono essere incorporati solo quando l'impasto è già ben incordato. NON aprire il forno durante i primi 10 minuti di cottura: gli sbalzi termici fanno crollare la struttura dei burger buns. NON conservare i panini ancora caldi in contenitori chiusi: la condensa ammorbidisce la crosta e favorisce la formazione di muffe.</p>
+                    <p>⚠️ NON aggiungere il burro troppo presto: deve essere incorporato DOPO l'incordatura completa, altrimenti i grassi impermeabilizzano la farina e impediscono lo sviluppo del glutine. NON eccedere con la lievitazione: panini troppo gonfi collassano in cottura. NON aprire il forno nei primi 10 minuti: lo shock termico provoca cascatura. NON spennellare con mano pesante: si rischia di sgonfiare i panini. NON tagliare i buns ancora caldi: il vapore interno non si è stabilizzato e risulteranno gommosi.</p>
                 </div>
             </div>
 
@@ -327,18 +339,18 @@
                 </h2>
                 <div class="tech-badges" style="margin-bottom: 16px;">
                     <div class="tech-badge">
-                        🌡️ Temperatura: <span class="tech-badge__value">&nbsp;200°C (statico) o 180°C (ventilato)</span>
+                        🌡️ Temperatura: <span class="tech-badge__value">&nbsp;200°C</span>
                     </div>
                     <div class="tech-badge">
-                        ⏱️ Tempo: <span class="tech-badge__value">&nbsp;12-15 minuti</span>
+                        ⏱️ Tempo: <span class="tech-badge__value">&nbsp;15-18 minuti</span>
                     </div>
                 </div>
                 <ul class="baking-tips" style="list-style: none; padding: 0;">
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Preriscaldare il forno per almeno 20 minuti prima di infornare</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Posizionare la teglia nella parte centrale del forno per cottura uniforme</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Non aprire il forno nei primi 10 minuti per evitare sbalzi termici</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 La superficie deve risultare dorata color oro antico, non troppo scura</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Trasferire immediatamente su griglia dopo la cottura per mantenere la base croccante</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Preriscaldare il forno a 200°C statico per almeno 20 minuti</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Posizionare la teglia a metà altezza per cottura uniforme</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 NON aprire il forno nei primi 10 minuti per evitare cascatura</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 I panini sono cotti quando la base suona vuota se picchiettata</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Lasciar raffreddare completamente su griglia prima di tagliare (vapore interno deve stabilizzarsi)</li>
                 </ul>
             </div>
 
@@ -349,26 +361,24 @@
                     Glossario
                 </h2>
                 <dl class="glossary-list" style="margin: 0; padding: 0;">
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Poolish</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Pre-impasto liquido (50% acqua, 50% farina, 1% lievito) fatto maturare 2-3 ore. Sviluppa aromi complessi, migliora alveolatura e digeribilità</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Incordatura</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Fase dell'impasto in cui il glutine forma una struttura elastica e resistente, l'impasto si stacca dalle pareti della vasca formando un cordone</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Momento in cui l'impasto diventa elastico e si stacca dalle pareti della vasca, formando una massa coesa intorno al gancio. Indica lo sviluppo completo della maglia glutinica.</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Puntata</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prima lievitazione dopo l'impastamento, in massa unica. L'impasto sviluppa volume e struttura alveolare</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prima lievitazione in massa dell'impasto, prima della divisione in pezzi. Permette lo sviluppo aromatico e della struttura alveolare.</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Staglio</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Divisione dell'impasto lievitato in pezzi di peso determinato, usando tarocco o bilancia per uniformità</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Divisione dell'impasto lievitato in pezzi di peso prestabilito, usando bilancia e tarocco. Fondamentale per uniformità di cottura.</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Pirlatura</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica per formare palline lisce e tese, creando tensione superficiale con movimenti circolari della mano sul piano di lavoro</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica per dare forma sferica ai pezzi di impasto, creando tensione superficiale. Si esegue con movimento rotatorio sul piano di lavoro usando il palmo della mano.</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Appretto</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Seconda lievitazione dopo la formatura, in cui i pezzi già formati raggiungono il volume finale prima della cottura</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Test del Velo</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prova per verificare il corretto sviluppo del glutine: stendendo un pezzetto di impasto tra le dita si deve formare una membrana sottile e translucida senza rompersi</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Test del Dito</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prova per verificare la lievitazione: premendo delicatamente con un polpastrello, l'impronta deve risalire lentamente. Se rimane, è sovralievitato; se risale subito, è sottolievitato</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Slap and Fold</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica di impastamento manuale: sollevare l'impasto, sbatterlo sul piano e ripiegarlo su se stesso. Sviluppa forza e incordatura</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Temperatura Target</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Temperatura ottimale dell'impasto a fine impastamento (26-27°C per questo tipo di lievitato arricchito) per garantire una fermentazione controllata</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Seconda lievitazione dopo la formatura, che permette ai pezzi di rilassarsi e gonfiarsi prima della cottura. Chiamata anche lievitazione finale.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Autolisi</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Riposo di farina e liquidi senza lievito né sale per 15-60 minuti. Facilita lo sviluppo del glutine e riduce i tempi di impasto.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Slap & Fold</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica di impasto manuale per impasti idratati: sollevare l'impasto, sbatterlo energicamente sul piano e ripiegarlo su se stesso. Sviluppa la maglia glutinica per ossigenazione.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Cascatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Sgonfiamento improvviso dell'impasto lievitato, causato da shock termico, eccessiva lievitazione o apertura del forno durante la cottura.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Doratura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Spennellatura pre-cottura con miscela di tuorlo e latte (o acqua) per ottenere superficie lucida e colorazione uniforme. Si applica delicatamente per non sgonfiare.</dd>
                 </dl>
             </div>
 

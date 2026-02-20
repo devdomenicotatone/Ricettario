@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Biscotti toscani croccanti alle mandorle, perfetti da inzuppare nel Vin Santo. Ricetta tradizionale con doppia cottura per massima croccantezza.">
-    <title>Cantuccini Toscani Classici — Il Ricettario</title>
+        content="Ciabatta italiana ad alta idratazione con crosta croccante e alveolatura aperta. Tecnica professionale con biga per massima digeribilità.">
+    <title>Ciabatta Artigianale — Il Ricettario</title>
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,26 +58,26 @@
     </nav>
 
     <!-- ═══════════ RECIPE HERO ═══════════ -->
-    <div class="recipe-hero" style="background-image: url('../../images/ricette/dolci/cantuccini-toscani-classici.jpg')">
+    <div class="recipe-hero">
         <div class="container">
             <nav class="breadcrumb reveal">
                 <a href="../../index.html">Home</a>
                 <span class="breadcrumb__separator">›</span>
                 <a href="../../index.html#ricette">Ricette</a>
                 <span class="breadcrumb__separator">›</span>
-                <a href="./">Dolci</a>
+                <a href="./">Pane</a>
                 <span class="breadcrumb__separator">›</span>
-                <span>Cantuccini Toscani Classici</span>
+                <span>Ciabatta Artigianale</span>
             </nav>
 
             <div class="recipe-hero__content">
                 <div class="recipe-hero__tags reveal">
                     <span class="tag tag--tool" id="hero-setup-tag">🔧 Impastatrice a spirale</span>
-                    <span class="tag tag--category">🥜 Dolci</span>
+                    <span class="tag tag--category">🥖 Pane</span>
                 </div>
-                <h1 class="recipe-hero__title reveal reveal-delay-1">Cantuccini Toscani Classici</h1>
+                <h1 class="recipe-hero__title reveal reveal-delay-1">Ciabatta Artigianale</h1>
                 <p class="recipe-hero__subtitle reveal reveal-delay-2">
-                    Biscotti toscani tradizionali con doppia cottura e mandorle tostate
+                    Il classico pane italiano ad alta idratazione con prefermento
                 </p>
             </div>
         </div>
@@ -87,13 +87,13 @@
     <div class="container" style="padding-top: 40px;">
         <div class="tech-badges reveal">
             <div class="tech-badge">
-                💧 Idratazione: <span class="tech-badge__value">&nbsp;45%</span>
+                💧 Idratazione: <span class="tech-badge__value">&nbsp;80%</span>
             </div>
             <div class="tech-badge">
-                🌡️ Target Temp: <span class="tech-badge__value">&nbsp;20-22°C</span>
+                🌡️ Target Temp: <span class="tech-badge__value">&nbsp;24-26°C</span>
             </div>
             <div class="tech-badge">
-                ⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;Nessuna lievitazione</span>
+                ⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;~18-20h (biga) + 3-4h (puntata)</span>
             </div>
             <div class="tech-badge tech-badge--toggle" id="setup-badge" role="button" tabindex="0"
                 aria-label="Cambia setup">
@@ -125,8 +125,8 @@
                                 <button class="dose-calculator__btn" id="dose-decrease"
                                     aria-label="Diminuisci dosi">−</button>
                                 <div class="dose-calculator__input-wrapper">
-                                    <input type="number" class="dose-calculator__input" id="dose-input" value="0.5"
-                                        min="0.5" max="5" step="0.5" data-base-total="500" aria-label="Kg di farina">
+                                    <input type="number" class="dose-calculator__input" id="dose-input" value="1"
+                                        min="1" max="5" step="1" data-base-total="1000" aria-label="Kg di farina">
                                     <span class="dose-calculator__unit">kg</span>
                                 </div>
                                 <button class="dose-calculator__btn" id="dose-increase"
@@ -137,60 +137,32 @@
 
                         <table class="ingredients-table" id="ingredients-table">
                             <tr>
-                                <td>Farina di Grano Tenero Tipo 00 <span class="ingredient-note">(W 180-200, per dolci)</span></td>
-                                <td class="ingredient-qty" data-base="500">500g</td>
+                                <td>Farina Tipo 0 Media Forza <span class="ingredient-note">(W 260-280, per struttura e alveolatura)</span></td>
+                                <td class="ingredient-qty" data-base="700">700g</td>
                             </tr>
                             <tr>
-                                <td>Zucchero Semolato</td>
-                                <td class="ingredient-qty" data-base="250">250g</td>
+                                <td>Farina Manitoba <span class="ingredient-note">(W 350-380, per rinforzo maglia glutinica)</span></td>
+                                <td class="ingredient-qty" data-base="300">300g</td>
                             </tr>
                             <tr>
-                                <td>Uova Intere <span class="ingredient-note">(temperatura ambiente, circa 3 medie)</span></td>
-                                <td class="ingredient-qty" data-base="165">165g</td>
+                                <td>Acqua <span class="ingredient-note" data-setup-note-spirale="(ghiacciata 2-4°C, in 2 riprese)" data-setup-note-mano="(20-22°C, in 3-4 riprese per controllare l'idratazione)">(ghiacciata 2-4°C, in 2 riprese)</span></td>
+                                <td class="ingredient-qty" data-base="800">800g</td>
                             </tr>
                             <tr>
-                                <td>Burro <span class="ingredient-note">(morbido, non fuso)</span></td>
-                                <td class="ingredient-qty" data-base="60">60g</td>
+                                <td>Lievito di Birra Fresco <span class="ingredient-note" data-setup-note-spirale="(6g totali (1g biga + 5g impasto))" data-setup-note-mano="(8g totali (1g biga + 7g impasto, per compensare tempi più lunghi))">(6g totali (1g biga + 5g impasto))</span></td>
+                                <td class="ingredient-qty" data-base="6">6g</td>
                             </tr>
                             <tr>
-                                <td>Lievito Chimico per Dolci <span class="ingredient-note">(1 bustina)</span></td>
-                                <td class="ingredient-qty" data-base="16">16g</td>
+                                <td>Sale Fino <span class="ingredient-note">(2% su farina totale)</span></td>
+                                <td class="ingredient-qty" data-base="20">20g</td>
                             </tr>
                             <tr>
-                                <td>Bicarbonato di Sodio</td>
-                                <td class="ingredient-qty" data-base="3">3g</td>
-                            </tr>
-                            <tr>
-                                <td>Sale Fino</td>
-                                <td class="ingredient-qty" data-base="3">3g</td>
-                            </tr>
-                            <tr>
-                                <td>Scorza di Limone <span class="ingredient-note">(grattugiata fine, di 1 limone bio)</span></td>
-                                <td class="ingredient-qty" data-base="5">5g</td>
-                            </tr>
-                            <tr>
-                                <td>Estratto di Vaniglia <span class="ingredient-note">(o vanillina in polvere)</span></td>
-                                <td class="ingredient-qty" data-base="5">5g</td>
+                                <td>Olio Extravergine d'Oliva <span class="ingredient-note">(opzionale, per morbidezza)</span></td>
+                                <td class="ingredient-qty" data-base="30">30g</td>
                             </tr>
                         </table>
                     </div>
 
-                    <div class="recipe-panel reveal" style="margin-top: 28px;">
-                        <h2 class="recipe-panel__title">
-                            <span class="recipe-panel__title-icon">🥜</span>
-                            Sospensioni
-                        </h2>
-                        <table class="ingredients-table" id="suspensions-table">
-                            <tr>
-                                <td>Mandorle Sgusciate <span class="ingredient-note">(non pelate, tostate leggermente)</span></td>
-                                <td class="ingredient-qty" data-base="250">250g</td>
-                            </tr>
-                        </table>
-
-                        <div class="pro-tip-box" style="margin-top: 16px;">
-                            <p><strong>💡 PRO TIP:</strong> 🔥 Per cantuccini extra croccanti, abbassare la temperatura della seconda cottura a 150°C e prolungare di 3-4 minuti, controllando che non scuriscano troppo.</p>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- COLONNA DESTRA: Procedimento -->
@@ -205,32 +177,32 @@
                         </h2>
                         <ol class="steps-list">
                             <li>
-                                <strong>Preparazione Mandorle</strong>
-                                <p>Tostare le mandorle in forno a 160°C per 8-10 minuti fino a quando diventano fragranti ma non scure. Lasciarle raffreddare completamente. Questa tostatura esalta il sapore e migliora la croccantezza finale.</p>
+                                <strong>Preparazione Biga (16-18h prima)</strong>
+                                <p>In una ciotola, mescolare 300g di Farina Tipo 0 + 150g di acqua a 20°C + 1g di lievito fresco. Impastare brevemente fino a ottenere un composto ruvido e asciutto (idratazione 50%). Coprire con pellicola e lasciare maturare a 18-20°C per 16-18 ore. La biga è pronta quando triplica di volume e ha un profumo vinoso.</p>
                             </li>
                             <li>
-                                <strong>Impasto Base con Impastatrice</strong>
-                                <p>Montare nell'impastatrice a spirale (gancio a foglia o frusta) le uova con lo zucchero a velocità media per 5-6 minuti fino a ottenere un composto spumoso e chiaro. Aggiungere il burro morbido, la scorza di limone grattugiata e l'estratto di vaniglia. Mescolare 1 minuto a bassa velocità.</p>
+                                <strong>Impasto in Impastatrice (1° fase - Autolisi)</strong>
+                                <p>Nella vasca dell'impastatrice a spirale, versare 700g di Farina Tipo 0 + 500g di acqua ghiacciata (2-4°C). Impastare in 1ª velocità per 3-4 minuti fino a completa idratazione. Lasciare riposare in vasca per 20 minuti (autolisi) per sviluppare glutine senza stress meccanico.</p>
                             </li>
                             <li>
-                                <strong>Incorporamento Secchi</strong>
-                                <p>Setacciare insieme farina, lievito, bicarbonato e sale. Aggiungere gradualmente alla base montata, mescolando a velocità minima per 2-3 minuti fino a completo assorbimento. L'impasto risulterà denso e leggermente appiccicoso.</p>
+                                <strong>Impasto in Impastatrice (2° fase - Incorporazione Biga)</strong>
+                                <p>Aggiungere tutta la biga spezzettata + 5g di lievito fresco. Impastare in 1ª velocità per 5 minuti, poi passare in 2ª velocità per 4-5 minuti. L'impasto deve iniziare a incordarsi e staccarsi dalla vasca. Temperatura impasto: 24-25°C.</p>
                             </li>
                             <li>
-                                <strong>Aggiunta Mandorle</strong>
-                                <p>Incorporare le mandorle tostate e raffreddate mescolando a mano con una spatola o a velocità minima per 30 secondi, giusto per distribuirle uniformemente senza romperle.</p>
+                                <strong>Impasto in Impastatrice (3° fase - Sale e Rinforzo)</strong>
+                                <p>Aggiungere 20g di sale + 150g di acqua ghiacciata + 30g di olio EVO. Impastare in 1ª velocità per 2 minuti (il sale inizialmente 'taglia' l'impasto), poi 2ª velocità per 6-8 minuti fino a piena incordatura. L'impasto deve essere liscio, elastico, non appiccicoso. Temperatura finale: 24-26°C.</p>
                             </li>
                             <li>
-                                <strong>Formatura Filoni</strong>
-                                <p>Dividere l'impasto in 3-4 porzioni (circa 350g ciascuna). Su una superficie leggermente infarinata, formare con le mani dei filoni lunghi circa 25-30cm, larghi 6cm e alti 2cm. Disporre su teglia rivestita di carta forno, lasciando 5cm di spazio tra ogni filone.</p>
+                                <strong>Puntata con Pieghe di Rinforzo</strong>
+                                <p>Trasferire l'impasto in una vasca oliata. Coprire con pellicola. Lasciar riposare 30 minuti a 24-26°C. Eseguire una piega di rinforzo (stretch & fold): sollevare un lembo dell'impasto e ripiegarlo al centro, ripetere da 4 lati. Ripetere la piega dopo altri 30 minuti. Poi lasciare in puntata senza toccare per altre 2 ore. Volume finale: +70-80%.</p>
                             </li>
                             <li>
-                                <strong>Prima Cottura</strong>
-                                <p>Spennellare i filoni con uovo sbattuto (facoltativo, per doratura). Infornare a 180°C in forno statico preriscaldato per 25-28 minuti. I filoni devono risultare dorati in superficie ma ancora morbidi all'interno. Estrarre e lasciar raffreddare su griglia per 10-15 minuti.</p>
+                                <strong>Staglio e Formatura</strong>
+                                <p>Rovesciare delicatamente l'impasto su un piano MOLTO infarinato (usare semola rimacinata). Dividere con tarocco in pezzi da 250-300g. NON sgasare: maneggiare con estrema delicatezza. Allungare ogni pezzo con le mani (non stendere col mattarello) fino a formare rettangoli di 20x10 cm circa. Disporre su teli infarinati o teglie con carta forno, distanziati.</p>
                             </li>
                             <li>
-                                <strong>Taglio e Seconda Cottura</strong>
-                                <p>Con un coltello seghettato ben affilato, tagliare i filoni ancora tiepidi in fette oblique spesse 1-1.5cm. Disporre i cantuccini tagliati sulla teglia in piedi (non sdraiati). Infornare nuovamente a 160°C per 12-15 minuti, girandoli a metà cottura, fino a doratura uniforme e croccantezza completa. Lasciar raffreddare completamente su griglia.</p>
+                                <strong>Appretto Finale</strong>
+                                <p>Coprire le ciabatte con un telo leggermente umido. Lasciar lievitare a 26-28°C per 45-60 minuti. Le ciabatte sono pronte quando gonfie e tremolanti al tocco. NON devono raddoppiare, ma gonfiarsi in modo soffice.</p>
                             </li>
                         </ol>
                     </div>
@@ -245,41 +217,37 @@
                         </h2>
                         <ol class="steps-list">
                             <li>
-                                <strong>Preparazione Mandorle</strong>
-                                <p>Tostare le mandorle in forno a 160°C per 8-10 minuti fino a quando diventano fragranti ma non scure. Lasciarle raffreddare completamente.</p>
+                                <strong>Preparazione Biga (16-18h prima)</strong>
+                                <p>In una ciotola, mescolare 300g di Farina Tipo 0 + 150g di acqua a 20°C + 1g di lievito fresco. Impastare a mano per 3-4 minuti fino a ottenere un composto ruvido e asciutto. Coprire con pellicola e lasciare maturare a 18-20°C per 16-18 ore. La biga è pronta quando triplica di volume e ha un profumo vinoso.</p>
                             </li>
                             <li>
-                                <strong>Montaggio Base a Mano</strong>
-                                <p>In una ciotola capiente, montare le uova con lo zucchero usando una frusta elettrica o a mano per 8-10 minuti con energia, fino a ottenere un composto spumoso, chiaro e che formi il nastro (quando sollevate la frusta, il composto deve cadere formando un nastro che resta visibile 3-4 secondi).</p>
+                                <strong>Autolisi</strong>
+                                <p>In una ciotola capiente, versare 700g di Farina Tipo 0 + 400g di acqua a 20-22°C. Mescolare con un cucchiaio di legno fino a completa idratazione (non impastare). Coprire e lasciare riposare 30 minuti. Questo sviluppa glutine senza sforzo.</p>
                             </li>
                             <li>
-                                <strong>Aggiunta Aromi e Burro</strong>
-                                <p>Incorporare delicatamente il burro morbido a pezzetti, la scorza di limone grattugiata e l'estratto di vaniglia, mescolando con movimenti dal basso verso l'alto per non smontare il composto.</p>
+                                <strong>Incorporazione Biga e Primo Impasto</strong>
+                                <p>Aggiungere all'autolisi: biga spezzettata + 7g di lievito fresco + 100g di acqua. Mescolare energicamente con un cucchiaio per 3-4 minuti. L'impasto sarà molto appiccicoso. Lasciare riposare 10 minuti.</p>
                             </li>
                             <li>
-                                <strong>Incorporamento Farina</strong>
-                                <p>Setacciare insieme farina, lievito, bicarbonato e sale. Aggiungere in 3 volte agli ingredienti liquidi, incorporando con una spatola con movimenti delicati dall'alto verso il basso e dal centro verso l'esterno. L'impasto deve risultare omogeneo ma denso.</p>
+                                <strong>Aggiunta Sale e Sviluppo Glutine (Slap & Fold)</strong>
+                                <p>Sciogliere 20g di sale in 100g di acqua. Versare sull'impasto. Bagnare le mani e iniziare la tecnica slap & fold: sollevare l'impasto, sbatterlo sul piano, ripiegarlo su se stesso. Ripetere per 8-10 minuti. L'impasto diventerà più liscio e meno appiccicoso. Dopo 5 minuti, aggiungere 30g di olio EVO e continuare. Aggiungere gli ultimi 200g di acqua in 2 riprese durante gli slap & fold.</p>
                             </li>
                             <li>
-                                <strong>Aggiunta Mandorle</strong>
-                                <p>Incorporare le mandorle tostate con movimenti delicati, distribuendole uniformemente nell'impasto senza lavorare eccessivamente.</p>
+                                <strong>Puntata con Pieghe di Rinforzo</strong>
+                                <p>Trasferire l'impasto in una ciotola oliata. Coprire. Ogni 30 minuti, eseguire una piega di rinforzo (stretch & fold): bagnare le mani, sollevare un lembo dell'impasto e ripiegarlo al centro, ripetere da 4 lati. Totale: 3 pieghe a intervalli di 30 min. Poi lasciare in puntata senza toccare per altre 2 ore a 24-26°C.</p>
                             </li>
                             <li>
-                                <strong>Formatura Filoni</strong>
-                                <p>Dividere l'impasto in 3-4 porzioni. Con le mani leggermente infarinate o unte, formare dei filoni lunghi circa 25-30cm, larghi 6cm e alti 2cm. Disporre su teglia rivestita di carta forno con almeno 5cm di spazio tra loro.</p>
+                                <strong>Staglio e Formatura</strong>
+                                <p>Rovesciare delicatamente l'impasto su un piano MOLTO infarinato (semola rimacinata). Dividere con spatola in pezzi da 250-300g. NON sgasare. Allungare ogni pezzo delicatamente con le mani fino a formare rettangoli di 20x10 cm. Disporre su teli infarinati, distanziati.</p>
                             </li>
                             <li>
-                                <strong>Prima Cottura</strong>
-                                <p>Spennellare i filoni con uovo sbattuto (facoltativo). Infornare a 180°C in forno statico preriscaldato per 25-28 minuti fino a doratura superficiale. I filoni devono essere cotti ma ancora leggermente morbidi al centro. Estrarre e far raffreddare su griglia per 10-15 minuti.</p>
-                            </li>
-                            <li>
-                                <strong>Taglio e Seconda Cottura</strong>
-                                <p>Tagliare i filoni tiepidi con coltello seghettato in fette oblique di 1-1.5cm. Disporre i cantuccini sulla teglia in piedi. Infornare a 160°C per 12-15 minuti, girandoli a metà cottura, fino a completa asciugatura e doratura. Raffreddare completamente su griglia prima di conservare.</p>
+                                <strong>Appretto Finale</strong>
+                                <p>Coprire con telo umido. Lievitare a 26-28°C per 50-70 minuti. Le ciabatte sono pronte quando gonfie e tremolanti. NON devono raddoppiare completamente.</p>
                             </li>
                         </ol>
 
                         <div class="pro-tip-box" style="margin-top: 16px;">
-                            <p><strong>💡 PRO TIP:</strong> 🥜 Sostituire metà delle mandorle con nocciole tostate per una variante più ricca e aromatica. Oppure aggiungere 50g di pinoli per una versione più raffinata.</p>
+                            <p><strong>💡 PRO TIP:</strong> La temperatura dell'acqua è cruciale: per spirale usa acqua GHIACCIATA (2-4°C) perché l'attrito riscalda l'impasto. Per impasto a mano, usa acqua a 20-22°C.</p>
                         </div>
                     </div>
 
@@ -304,9 +272,14 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Farina 00 per Dolci</td>
-                            <td style="color: var(--color-accent); font-weight: 600;">180-200</td>
-                            <td>Molino Caputo Pasticceria, Molino Vigevano 00, Le 5 Stagioni Pasticceria</td>
+                            <td>Farina Tipo 0 Media Forza</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">260-280</td>
+                            <td>Molino Spadoni Professionale, Molino Caputo Cuoco, Le 5 Stagioni Oro</td>
+                        </tr>
+                        <tr>
+                            <td>Farina Manitoba (Tipo 0 Forte)</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">350-380</td>
+                            <td>Molino Dallagiovanna Manitoba Oro, Molino Caputo Manitoba Rossa, Molino Grassi Manitoba</td>
                         </tr>
                     </tbody>
                 </table>
@@ -322,7 +295,7 @@
                 <span class="alert__icon">🚫</span>
                 <div class="alert__content">
                     <strong>ALERT PROFESSIONALE</strong>
-                    <p>❌ NON tagliare i filoni quando sono ancora troppo caldi: si sbriciolerebbero. Attendere che siano tiepidi ma non completamente freddi. NON esagerare con il tempo della seconda cottura: i cantuccini continuano a indurirsi raffreddandosi. NON conservare in contenitori ermetici finché non sono completamente freddi, altrimenti l'umidità residua li rende mollicci invece che croccanti.</p>
+                    <p>NON sgasare l'impasto durante lo staglio e la formatura: la ciabatta deve mantenere i gas sviluppati nella puntata per ottenere l'alveolatura aperta caratteristica. NON stendere con il mattarello, solo allungare delicatamente con le mani. NON superare i 250°C nei forni casalinghi: temperature superiori non sono gestibili nei forni domestici.</p>
                 </div>
             </div>
 
@@ -334,18 +307,18 @@
                 </h2>
                 <div class="tech-badges" style="margin-bottom: 16px;">
                     <div class="tech-badge">
-                        🌡️ Temperatura: <span class="tech-badge__value">&nbsp;180°C prima cottura, poi 160°C seconda cottura</span>
+                        🌡️ Temperatura: <span class="tech-badge__value">&nbsp;230-250°C (MAX per forni casalinghi)</span>
                     </div>
                     <div class="tech-badge">
-                        ⏱️ Tempo: <span class="tech-badge__value">&nbsp;25-28 min prima cottura + 12-15 min seconda cottura</span>
+                        ⏱️ Tempo: <span class="tech-badge__value">&nbsp;20-25 minuti</span>
                     </div>
                 </div>
                 <ul class="baking-tips" style="list-style: none; padding: 0;">
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Forno statico preriscaldato, posizione centrale</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Prima cottura: i filoni devono dorarsi ma restare morbidi all'interno</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Seconda cottura: i cantuccini devono asciugarsi completamente per la croccantezza</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Non aprire il forno durante la prima cottura per evitare sgonfiamenti</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Tagliare sempre con movimento a sega per non sbriciolate i biscotti</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Preriscaldare forno + pietra refrattaria per 45 minuti a 250°C</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Creare vapore: mettere una teglia con acqua bollente sul fondo nei primi 10 minuti</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Trasferire le ciabatte su pietra o teglia calda con carta forno, senza girarle</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Cottura perfetta: crosta dorata uniforme, suono vuoto se battute sul fondo</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Dopo 15 min abbassare a 230°C e aprire leggermente lo sportello per far uscire vapore</li>
                 </ul>
             </div>
 
@@ -356,16 +329,24 @@
                     Glossario
                 </h2>
                 <dl class="glossary-list" style="margin: 0; padding: 0;">
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Doppia Cottura</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica tipica dei cantuccini: prima si cuoce il filone intero, poi si taglia e si cuoce nuovamente per asciugare completamente e ottenere la croccantezza caratteristica.</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Montare a Nastro</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica per incorporare aria nel composto di uova e zucchero: il risultato è corretto quando il composto, sollevato con la frusta, cade formando un nastro che resta visibile 3-4 secondi.</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Tostatura Mandorle</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Riscaldamento delle mandorle in forno per esaltare il sapore, eliminare l'umidità residua e migliorare la croccantezza finale del biscotto.</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Lievito Chimico</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Agente lievitante a base di bicarbonato e acidi che reagisce con l'umidità e il calore, producendo anidride carbonica che fa gonfiare l'impasto.</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Bicarbonato di Sodio</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Base alcalina usata in piccole quantità per favorire la doratura e bilanciare l'acidità di alcuni ingredienti. Esalta anche la croccantezza.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Biga</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prefermento italiano a bassa idratazione (45-50%) con lievito ridotto, matura 16-18h per sviluppare aromi complessi e migliorare digeribilità</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Autolisi</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Riposo di farina e acqua (senza lievito e sale) per 20-30 minuti. Permette alla farina di idratarsi completamente e sviluppare glutine senza stress meccanico</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Incordatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Fase dell'impasto in cui il glutine si organizza in una rete elastica. L'impasto si avvolge attorno al gancio e si stacca dalle pareti della vasca</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Puntata</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prima lievitazione in massa dopo l'impasto. L'impasto riposa in vasca/ciotola coperto finché non aumenta di volume (60-80%)</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Stretch & Fold (Piega di Rinforzo)</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica delicata per rinforzare il glutine senza sgasare: si solleva un lembo dell'impasto e lo si ripiega al centro, ripetendo da 4 lati</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Slap & Fold</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica di impasto manuale per impasti ad alta idratazione: si solleva l'impasto, lo si sbatte sul piano e lo si ripiega su se stesso, ripetutamente</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Staglio</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Divisione dell'impasto in pezzi del peso desiderato, eseguita con tarocco o spatola. Per ciabatta deve essere delicato per non sgasare</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Appretto</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Lievitazione finale dopo la formatura. I pezzi riposano coperti fino a raggiungere il volume ottimale per la cottura</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Alveolatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Struttura interna del pane caratterizzata da alveoli (bolle) irregolari. Nella ciabatta deve essere aperta e irregolare</dd>
                 </dl>
             </div>
 
@@ -396,8 +377,8 @@
                 <div>
                     <h4 class="footer__col-title">Questa Ricetta</h4>
                     <ul class="footer__links">
-                        <li><a href="#">🥜 Cantuccini Toscani Classici</a></li>
-                        <li><a href="#">💧 Idratazione 45%</a></li>
+                        <li><a href="#">🥖 Ciabatta Artigianale</a></li>
+                        <li><a href="#">💧 Idratazione 80%</a></li>
                     </ul>
                 </div>
 
