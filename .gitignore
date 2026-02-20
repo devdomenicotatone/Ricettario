@@ -16,3 +16,6 @@ Thumbs.db
 # Env
 .env
 .env.local
+
+# PDF source files (troppo grandi per GitHub)
+public/pdf/
