@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Panini per hamburger soffici e dorati con crosta croccante, perfetti per burger gourmet. Impasto arricchito a media idratazione con maturazione controllata.">
+    <title>Burger Buns Artigianali — Il Ricettario</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap"
+        rel="stylesheet">
+    <!-- FOUC Prevention: applica tema prima del rendering -->
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = saved || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+  <script type="module" crossorigin src="/Ricettario/assets/animations-D-SwE_vs.js"></script>
+  <script type="module" crossorigin src="/Ricettario/assets/main-D4DObFNb.js"></script>
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/animations-DUPNX6Ov.css">
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-DGAiiURp.css">
+</head>
+
+<body>
+
+    <!-- Skip to content — Accessibilità -->
+    <a href="#recipe-content" class="skip-link">Vai al contenuto principale</a>
+
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="../../index.html" class="navbar__logo">
+                <div class="navbar__logo-icon">🔥</div>
+                <span>Il Ricettario</span>
+            </a>
+
+            <ul class="navbar__links" id="nav-links">
+                <li><a href="../../index.html#ricette">Ricette</a></li>
+                <li><a href="../../index.html#strumenti">Strumenti</a></li>
+                <li><a href="../../index.html#chi-sono">Chi Sono</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+                <span class="theme-toggle__icon theme-toggle__sun">☀️</span>
+                <span class="theme-toggle__icon theme-toggle__moon">🌙</span>
+            </button>
+
+            <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════ RECIPE HERO ═══════════ -->
+    <div class="recipe-hero" style="background-image: url('../../images/ricette/lievitati/burger-buns-artigianali.jpg')">
+        <div class="container">
+            <nav class="breadcrumb reveal">
+                <a href="../../index.html">Home</a>
+                <span class="breadcrumb__separator">›</span>
+                <a href="../../index.html#ricette">Ricette</a>
+                <span class="breadcrumb__separator">›</span>
+                <a href="./">Lievitati</a>
+                <span class="breadcrumb__separator">›</span>
+                <span>Burger Buns Artigianali</span>
+            </nav>
+
+            <div class="recipe-hero__content">
+                <div class="recipe-hero__tags reveal">
+                    <span class="tag tag--tool" id="hero-setup-tag">🔧 Impastatrice a spirale</span>
+                    <span class="tag tag--category">🍔 Lievitati</span>
+                </div>
+                <h1 class="recipe-hero__title reveal reveal-delay-1">Burger Buns Artigianali</h1>
+                <p class="recipe-hero__subtitle reveal reveal-delay-2">
+                    Panini per hamburger con impasto arricchito e doppia lievitazione
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ TECH BADGES ═══════════ -->
+    <div class="container" style="padding-top: 40px;">
+        <div class="tech-badges reveal">
+            <div class="tech-badge">
+                💧 Idratazione: <span class="tech-badge__value">&nbsp;58%</span>
+            </div>
+            <div class="tech-badge">
+                🌡️ Target Temp: <span class="tech-badge__value">&nbsp;26-27°C</span>
+            </div>
+            <div class="tech-badge">
+                ⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;~4-5h totali</span>
+            </div>
+            <div class="tech-badge tech-badge--toggle" id="setup-badge" role="button" tabindex="0"
+                aria-label="Cambia setup">
+                🔧 Setup: <span class="tech-badge__value" id="setup-badge-value">&nbsp;A mano</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ RECIPE CONTENT ═══════════ -->
+    <section class="recipe-content">
+        <div class="container">
+            <div class="recipe-layout">
+
+                <!-- COLONNA SINISTRA: Ingredienti -->
+                <div>
+                    <div class="recipe-panel reveal">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">🛒</span>
+                            Ingredienti Base
+                        </h2>
+
+                        <!-- Calcolatore Dosi -->
+                        <div class="dose-calculator" id="dose-calculator">
+                            <div class="dose-calculator__label">
+                                <span class="dose-calculator__label-icon">⚖️</span>
+                                Farina totale
+                            </div>
+                            <div class="dose-calculator__controls">
+                                <button class="dose-calculator__btn" id="dose-decrease"
+                                    aria-label="Diminuisci dosi">−</button>
+                                <div class="dose-calculator__input-wrapper">
+                                    <input type="number" class="dose-calculator__input" id="dose-input" value="1"
+                                        min="1" max="5" step="1" data-base-total="1000" aria-label="Kg di farina">
+                                    <span class="dose-calculator__unit">kg</span>
+                                </div>
+                                <button class="dose-calculator__btn" id="dose-increase"
+                                    aria-label="Aumenta dosi">+</button>
+                            </div>
+                            <div class="dose-calculator__badge" id="dose-badge">×1</div>
+                        </div>
+
+                        <table class="ingredients-table" id="ingredients-table">
+                            <tr>
+                                <td>Farina Tipo 0 Media Forza <span class="ingredient-note">(W 260-280)</span></td>
+                                <td class="ingredient-qty" data-base="1000">1000g</td>
+                            </tr>
+                            <tr>
+                                <td>Acqua <span class="ingredient-note">(temperatura ambiente 20°C)</span></td>
+                                <td class="ingredient-qty" data-base="520">520g</td>
+                            </tr>
+                            <tr>
+                                <td>Latte Intero <span class="ingredient-note">(temperatura ambiente)</span></td>
+                                <td class="ingredient-qty" data-base="60">60g</td>
+                            </tr>
+                            <tr>
+                                <td>Lievito di Birra Fresco</td>
+                                <td class="ingredient-qty" data-base="25">25g</td>
+                            </tr>
+                            <tr>
+                                <td>Zucchero Semolato</td>
+                                <td class="ingredient-qty" data-base="40">40g</td>
+                            </tr>
+                            <tr>
+                                <td>Burro Morbido <span class="ingredient-note">(temperatura ambiente, 18-20°C)</span></td>
+                                <td class="ingredient-qty" data-base="80">80g</td>
+                            </tr>
+                            <tr>
+                                <td>Sale Fino</td>
+                                <td class="ingredient-qty" data-base="20">20g</td>
+                            </tr>
+                            <tr>
+                                <td>Uova <span class="ingredient-note">(per spennellatura finale)</span></td>
+                                <td class="ingredient-qty" data-base="50">50g</td>
+                            </tr>
+                            <tr>
+                                <td>Semi di Sesamo <span class="ingredient-note">(per decorazione)</span></td>
+                                <td class="ingredient-qty" data-base="30">30g</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!-- COLONNA DESTRA: Procedimento -->
+                <div>
+
+                    <!-- ── Procedimento: Primario (Spirale o Estrusore) ── -->
+                    <div class="recipe-panel reveal reveal-delay-1" data-setup="spirale" id="steps-spirale">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">⚙️</span>
+                            Procedimento
+                            <span class="recipe-panel__title-badge">🔧 Spirale</span>
+                        </h2>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Preparazione Poolish (Prefermentazione)</strong>
+                                <p>In una ciotola mescolare 200g di farina, 200g di acqua tiepida (25°C) e 5g di lievito fresco sbriciolato. Amalgamare bene fino a ottenere una pastella liscia. Coprire con pellicola e lasciare maturare a temperatura ambiente (20-22°C) per 2-3 ore, fino a quando la superficie sarà coperta di bolle e avrà triplicato il volume. Questo pre-impasto svilupperà aromi complessi e migliorerà la digeribilità.</p>
+                            </li>
+                            <li>
+                                <strong>Impasto Base in Spirale</strong>
+                                <p>Inserire nella vasca dell'impastatrice il poolish maturo, i restanti 800g di farina, 320g di acqua, 60g di latte, 40g di zucchero e i 20g di lievito fresco rimasti. Avviare in prima velocità per 4 minuti per incorporare gli ingredienti. Passare in seconda velocità per 8-10 minuti fino a ottenere un impasto liscio e omogeneo che inizia a staccarsi dalle pareti. Temperatura impasto target: 26-27°C.</p>
+                            </li>
+                            <li>
+                                <strong>Aggiunta Grassi e Sale</strong>
+                                <p>Con l'impastatrice in prima velocità, aggiungere il sale e continuare a impastare per 2 minuti. Successivamente incorporare il burro morbido a pezzetti, 20g alla volta, attendendo che ogni porzione sia completamente assorbita prima di aggiungere la successiva. Impastare in seconda velocità per ulteriori 5-6 minuti fino a ottenere un impasto elastico, liscio e incordato che si stacca completamente dalla vasca. Test del velo: prelevare un pezzetto di impasto e stenderlo delicatamente tra le dita fino a formare una membrana sottile e translucida senza rompersi.</p>
+                            </li>
+                            <li>
+                                <strong>Prima Lievitazione (Puntata)</strong>
+                                <p>Formare una palla liscia, trasferire l'impasto in un contenitore leggermente unto d'olio, coprire con pellicola e lasciare lievitare a temperatura ambiente (24-26°C) per 60-90 minuti, fino al raddoppio del volume. L'impasto deve risultare soffice, gonfio e pieno d'aria.</p>
+                            </li>
+                            <li>
+                                <strong>Staglio e Pirlatura</strong>
+                                <p>Rovesciare delicatamente l'impasto su un piano leggermente infarinato. Dividere in pezzi da 90-100g ciascuno (per burger buns di circa 10cm di diametro). Eseguire la pirlatura: con il palmo della mano leggermente curvo, far ruotare ogni pezzo sul piano di lavoro con movimenti circolari, creando tensione superficiale. La superficie deve risultare liscia e tesa, la chiusura verso il basso.</p>
+                            </li>
+                            <li>
+                                <strong>Formatura e Seconda Lievitazione (Appretto)</strong>
+                                <p>Disporre i panetti pirlati su teglie rivestite di carta forno, distanziati di almeno 8-10cm l'uno dall'altro. Schiacciare leggermente ogni panetto con il palmo della mano per dare la forma caratteristica leggermente appiattita. Coprire con un canovaccio umido o pellicola e lasciare lievitare in ambiente caldo (26-28°C) per 40-60 minuti, fino a quando risulteranno gonfi e soffici al tatto. Test del dito: premere delicatamente con un polpastrello, l'impronta deve risalire lentamente.</p>
+                            </li>
+                            <li>
+                                <strong>Finitura Pre-Cottura</strong>
+                                <p>Preriscaldare il forno a 200°C (statico) o 180°C (ventilato). Spennellare delicatamente la superficie di ogni burger bun con uovo sbattuto diluito con un cucchiaio di latte, usando un pennello morbido per non sgonfiare l'impasto. Cospargere immediatamente con semi di sesamo, premendo leggermente per farli aderire.</p>
+                            </li>
+                            <li>
+                                <strong>Cottura Finale</strong>
+                                <p>Infornare nella parte centrale del forno e cuocere per 12-15 minuti, fino a doratura uniforme color oro antico. I burger buns devono risultare gonfi, con superficie lucida e dorata. Sfornare e lasciar raffreddare su griglia per mantenere la base croccante. Una volta freddi, tagliare orizzontalmente a metà per farcire.</p>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <!-- ── Procedimento: A mano ── -->
+                    <div class="recipe-panel reveal reveal-delay-1" data-setup="mano" id="steps-mano"
+                        style="display: none;">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">⚙️</span>
+                            Procedimento
+                            <span class="recipe-panel__title-badge">🤲 A mano</span>
+                        </h2>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Preparazione Poolish (Prefermentazione)</strong>
+                                <p>In una ciotola capiente mescolare con un cucchiaio 200g di farina, 200g di acqua tiepida (25°C) e 5g di lievito fresco sbriciolato. Amalgamare bene fino a ottenere una pastella liscia senza grumi. Coprire con pellicola trasparente e lasciare maturare a temperatura ambiente (20-22°C) per 2-3 ore, fino a quando la superficie sarà coperta di bolle e avrà triplicato il volume.</p>
+                            </li>
+                            <li>
+                                <strong>Impasto Base a Mano</strong>
+                                <p>Su una spianatoia o in una ciotola grande, versare i restanti 800g di farina a fontana. Al centro aggiungere il poolish maturo, 320g di acqua, 60g di latte, 40g di zucchero e i 20g di lievito fresco sbriciolato. Con una forchetta iniziare a incorporare gradualmente la farina dai bordi verso il centro. Quando il composto è troppo denso per la forchetta, continuare a mano impastando energicamente per 15-18 minuti. L'impasto deve diventare liscio, elastico e non più appiccicoso.</p>
+                            </li>
+                            <li>
+                                <strong>Incorporazione Grassi e Sale</strong>
+                                <p>Appiattire leggermente l'impasto, cospargere il sale sulla superficie e ripiegare più volte, impastando per 3-4 minuti per distribuirlo uniformemente. Aggiungere il burro morbido a pezzetti, incorporandolo gradualmente con la tecnica dello slap and fold: sollevare l'impasto, sbatterlo sul piano di lavoro e ripiegarlo su se stesso. Ripetere per 10-12 minuti fino a completo assorbimento del burro. L'impasto deve risultare liscio, lucido, elastico e leggermente appiccicoso.</p>
+                            </li>
+                            <li>
+                                <strong>Prima Lievitazione (Puntata)</strong>
+                                <p>Formare una palla liscia con movimenti rotatori sul piano, trasferire in un contenitore leggermente unto d'olio, coprire con pellicola e lasciare lievitare a temperatura ambiente (24-26°C) per 60-90 minuti, fino al raddoppio del volume. La superficie deve risultare tesa e gonfia.</p>
+                            </li>
+                            <li>
+                                <strong>Staglio e Pirlatura Manuale</strong>
+                                <p>Rovesciare delicatamente l'impasto su un piano leggermente infarinato, senza sgonfiarlo troppo. Con un tarocco o un coltello affilato dividere in pezzi da 90-100g. Per ogni pezzo, eseguire la pirlatura manuale: posizionare la mano leggermente a coppa sopra l'impasto e con movimenti circolari rapidi far ruotare il pezzo sul piano, creando tensione superficiale. La superficie superiore deve risultare liscia e tesa, con la chiusura ben sigillata sul fondo.</p>
+                            </li>
+                            <li>
+                                <strong>Formatura e Seconda Lievitazione (Appretto)</strong>
+                                <p>Disporre i panetti pirlati su teglie rivestite di carta forno, distanziati 8-10cm. Schiacciare leggermente ogni panetto con il palmo della mano per ottenere la forma tipica leggermente schiacciata (circa 2cm di altezza). Coprire con canovaccio umido e lasciare lievitare in luogo tiepido (26-28°C) per 40-60 minuti, fino a quando risulteranno soffici e gonfi.</p>
+                            </li>
+                            <li>
+                                <strong>Finitura e Decorazione</strong>
+                                <p>Preriscaldare il forno a 200°C (statico) o 180°C (ventilato). Sbattere un uovo con un cucchiaio di latte. Con un pennello morbido, spennellare delicatamente la superficie di ogni burger bun senza premere troppo per non sgonfiare. Cospargere uniformemente con semi di sesamo, tamponando leggermente con le dita per farli aderire.</p>
+                            </li>
+                            <li>
+                                <strong>Cottura</strong>
+                                <p>Infornare nella parte centrale del forno e cuocere per 12-15 minuti, monitorando la doratura. I burger buns sono pronti quando presentano un colore dorato uniforme e suonano leggermente vuoti se battuti sul fondo. Sfornare e trasferire immediatamente su una griglia per raffreddare, evitando condensa sul fondo. Una volta completamente freddi, tagliare orizzontalmente a metà con un coltello seghettato.</p>
+                            </li>
+                        </ol>
+
+                        <div class="pro-tip-box" style="margin-top: 16px;">
+                            <p><strong>💡 PRO TIP:</strong> Se l'ambiente è freddo, posizionare la ciotola durante la lievitazione sopra una pentola con acqua tiepida (non bollente) coperta con un canovaccio: crea una camera di lievitazione casalinga a temperatura stabile tra 26-28°C</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <!-- ═══════════ CONSIGLI FARINE & MARCHI ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 40px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">🌾</span>
+                    Consigli Farine & Marchi
+                </h2>
+                <table class="flour-table">
+                    <thead>
+                        <tr>
+                            <th>Tipo Farina</th>
+                            <th>Forza (W)</th>
+                            <th>Marchi Consigliati</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Farina Tipo 0 Media Forza</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">260-280</td>
+                            <td>Molino Dallagiovanna Cuordoro, Molino Grassi Panificabile, Le 5 Stagioni Oro</td>
+                        </tr>
+                        <tr>
+                            <td>Farina Manitoba (alternativa per più sofficità)</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">350-400</td>
+                            <td>Molino Spadoni Manitoba Oro, Molino Caputo Manitoba, Lo Conte Manitoba</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pro-tip-box" style="margin-top: 16px;">
+                    <p><strong>💡 PRO TIP:</strong> La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti,
+                        cerca qualsiasi farina con il valore W indicato.</p>
+                </div>
+            </div>
+
+            <!-- ═══════════ ALERT ═══════════ -->
+            <div class="alert alert--danger reveal" style="margin-top: 32px;">
+                <span class="alert__icon">🚫</span>
+                <div class="alert__content">
+                    <strong>ALERT PROFESSIONALE</strong>
+                    <p>NON aggiungere il sale insieme al lievito all'inizio dell'impasto: il contatto diretto uccide i microrganismi e blocca la lievitazione. Incorporare sempre il sale dopo aver sviluppato la maglia glutinica. NON aggiungere il burro troppo presto: i grassi ostacolano lo sviluppo del glutine, devono essere incorporati solo quando l'impasto è già ben incordato. NON aprire il forno durante i primi 10 minuti di cottura: gli sbalzi termici fanno crollare la struttura dei burger buns. NON conservare i panini ancora caldi in contenitori chiusi: la condensa ammorbidisce la crosta e favorisce la formazione di muffe.</p>
+                </div>
+            </div>
+
+            <!-- ═══════════ COTTURA ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 32px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">🔥</span>
+                    Cottura
+                </h2>
+                <div class="tech-badges" style="margin-bottom: 16px;">
+                    <div class="tech-badge">
+                        🌡️ Temperatura: <span class="tech-badge__value">&nbsp;200°C (statico) o 180°C (ventilato)</span>
+                    </div>
+                    <div class="tech-badge">
+                        ⏱️ Tempo: <span class="tech-badge__value">&nbsp;12-15 minuti</span>
+                    </div>
+                </div>
+                <ul class="baking-tips" style="list-style: none; padding: 0;">
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Preriscaldare il forno per almeno 20 minuti prima di infornare</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Posizionare la teglia nella parte centrale del forno per cottura uniforme</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Non aprire il forno nei primi 10 minuti per evitare sbalzi termici</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 La superficie deve risultare dorata color oro antico, non troppo scura</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Trasferire immediatamente su griglia dopo la cottura per mantenere la base croccante</li>
+                </ul>
+            </div>
+
+            <!-- ═══════════ GLOSSARIO ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 32px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">📖</span>
+                    Glossario
+                </h2>
+                <dl class="glossary-list" style="margin: 0; padding: 0;">
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Poolish</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Pre-impasto liquido (50% acqua, 50% farina, 1% lievito) fatto maturare 2-3 ore. Sviluppa aromi complessi, migliora alveolatura e digeribilità</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Incordatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Fase dell'impasto in cui il glutine forma una struttura elastica e resistente, l'impasto si stacca dalle pareti della vasca formando un cordone</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Puntata</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prima lievitazione dopo l'impastamento, in massa unica. L'impasto sviluppa volume e struttura alveolare</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Staglio</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Divisione dell'impasto lievitato in pezzi di peso determinato, usando tarocco o bilancia per uniformità</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Pirlatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica per formare palline lisce e tese, creando tensione superficiale con movimenti circolari della mano sul piano di lavoro</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Appretto</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Seconda lievitazione dopo la formatura, in cui i pezzi già formati raggiungono il volume finale prima della cottura</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Test del Velo</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prova per verificare il corretto sviluppo del glutine: stendendo un pezzetto di impasto tra le dita si deve formare una membrana sottile e translucida senza rompersi</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Test del Dito</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prova per verificare la lievitazione: premendo delicatamente con un polpastrello, l'impronta deve risalire lentamente. Se rimane, è sovralievitato; se risale subito, è sottolievitato</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Slap and Fold</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica di impastamento manuale: sollevare l'impasto, sbatterlo sul piano e ripiegarlo su se stesso. Sviluppa forza e incordatura</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Temperatura Target</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Temperatura ottimale dell'impasto a fine impastamento (26-27°C per questo tipo di lievitato arricchito) per garantire una fermentazione controllata</dd>
+                </dl>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__brand-name">🔥 <span>Il Ricettario</span></div>
+                    <p class="footer__brand-desc">
+                        Ricettario personale. Ricette artigianali documentate con precisione tecnica per
+                        risultati replicabili al 100%.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Navigazione</h4>
+                    <ul class="footer__links">
+                        <li><a href="../../index.html">↗ Home</a></li>
+                        <li><a href="../../index.html#ricette">↗ Ricette</a></li>
+                        <li><a href="../../index.html#strumenti">↗ Strumenti</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Questa Ricetta</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">🍔 Burger Buns Artigianali</a></li>
+                        <li><a href="#">💧 Idratazione 58%</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Altre Ricette</h4>
+                    <ul class="footer__links">
+                        <li><a href="../../index.html#ricette">↗ Tutte le Ricette</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <span>© <span id="current-year">2026</span> Il Ricettario</span>
+                <div class="footer__social">
+                    <a href="https://github.com/devdomenicotatone" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Impasto versatile per arancini, cartocciata, scaccia e tutta la rosticceria siciliana. Morbido, elastico e perfetto per frittura o forno.">
+    <title>Impasto per Rosticceria Siciliana — Il Ricettario</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap"
+        rel="stylesheet">
+    <!-- FOUC Prevention: applica tema prima del rendering -->
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = saved || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+  <script type="module" crossorigin src="/Ricettario/assets/animations-D-SwE_vs.js"></script>
+  <script type="module" crossorigin src="/Ricettario/assets/main-D4DObFNb.js"></script>
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/animations-DUPNX6Ov.css">
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-DGAiiURp.css">
+</head>
+
+<body>
+
+    <!-- Skip to content — Accessibilità -->
+    <a href="#recipe-content" class="skip-link">Vai al contenuto principale</a>
+
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="../../index.html" class="navbar__logo">
+                <div class="navbar__logo-icon">🔥</div>
+                <span>Il Ricettario</span>
+            </a>
+
+            <ul class="navbar__links" id="nav-links">
+                <li><a href="../../index.html#ricette">Ricette</a></li>
+                <li><a href="../../index.html#strumenti">Strumenti</a></li>
+                <li><a href="../../index.html#chi-sono">Chi Sono</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+                <span class="theme-toggle__icon theme-toggle__sun">☀️</span>
+                <span class="theme-toggle__icon theme-toggle__moon">🌙</span>
+            </button>
+
+            <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════ RECIPE HERO ═══════════ -->
+    <div class="recipe-hero" style="background-image: url('../../images/ricette/lievitati/impasto-rosticceria-siciliana.jpg')">
+        <div class="container">
+            <nav class="breadcrumb reveal">
+                <a href="../../index.html">Home</a>
+                <span class="breadcrumb__separator">›</span>
+                <a href="../../index.html#ricette">Ricette</a>
+                <span class="breadcrumb__separator">›</span>
+                <a href="./">Lievitati</a>
+                <span class="breadcrumb__separator">›</span>
+                <span>Impasto per Rosticceria Siciliana</span>
+            </nav>
+
+            <div class="recipe-hero__content">
+                <div class="recipe-hero__tags reveal">
+                    <span class="tag tag--tool" id="hero-setup-tag">🔧 Impastatrice a spirale</span>
+                    <span class="tag tag--category">🥐 Lievitati</span>
+                </div>
+                <h1 class="recipe-hero__title reveal reveal-delay-1">Impasto per Rosticceria Siciliana</h1>
+                <p class="recipe-hero__subtitle reveal reveal-delay-2">
+                    Base artigianale per arancini, cartocciata e preparazioni tradizionali
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ TECH BADGES ═══════════ -->
+    <div class="container" style="padding-top: 40px;">
+        <div class="tech-badges reveal">
+            <div class="tech-badge">
+                💧 Idratazione: <span class="tech-badge__value">&nbsp;55%</span>
+            </div>
+            <div class="tech-badge">
+                🌡️ Target Temp: <span class="tech-badge__value">&nbsp;26-28°C</span>
+            </div>
+            <div class="tech-badge">
+                ⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;2-3h puntata + 30min appretto</span>
+            </div>
+            <div class="tech-badge tech-badge--toggle" id="setup-badge" role="button" tabindex="0"
+                aria-label="Cambia setup">
+                🔧 Setup: <span class="tech-badge__value" id="setup-badge-value">&nbsp;A mano</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ RECIPE CONTENT ═══════════ -->
+    <section class="recipe-content">
+        <div class="container">
+            <div class="recipe-layout">
+
+                <!-- COLONNA SINISTRA: Ingredienti -->
+                <div>
+                    <div class="recipe-panel reveal">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">🛒</span>
+                            Ingredienti Base
+                        </h2>
+
+                        <!-- Calcolatore Dosi -->
+                        <div class="dose-calculator" id="dose-calculator">
+                            <div class="dose-calculator__label">
+                                <span class="dose-calculator__label-icon">⚖️</span>
+                                Farina totale
+                            </div>
+                            <div class="dose-calculator__controls">
+                                <button class="dose-calculator__btn" id="dose-decrease"
+                                    aria-label="Diminuisci dosi">−</button>
+                                <div class="dose-calculator__input-wrapper">
+                                    <input type="number" class="dose-calculator__input" id="dose-input" value="1"
+                                        min="1" max="5" step="1" data-base-total="1000" aria-label="Kg di farina">
+                                    <span class="dose-calculator__unit">kg</span>
+                                </div>
+                                <button class="dose-calculator__btn" id="dose-increase"
+                                    aria-label="Aumenta dosi">+</button>
+                            </div>
+                            <div class="dose-calculator__badge" id="dose-badge">×1</div>
+                        </div>
+
+                        <table class="ingredients-table" id="ingredients-table">
+                            <tr>
+                                <td>Farina Tipo 0 Media-Alta Forza <span class="ingredient-note">(W 300-320, per struttura e tenuta in frittura)</span></td>
+                                <td class="ingredient-qty" data-base="1000">1000g</td>
+                            </tr>
+                            <tr>
+                                <td>Acqua <span class="ingredient-note">(fredda 8-10°C per controllare temperatura finale)</span></td>
+                                <td class="ingredient-qty" data-base="550">550g</td>
+                            </tr>
+                            <tr>
+                                <td>Strutto <span class="ingredient-note">(o sugna, per morbidezza e sapore tipico siciliano)</span></td>
+                                <td class="ingredient-qty" data-base="80">80g</td>
+                            </tr>
+                            <tr>
+                                <td>Lievito di Birra Fresco <span class="ingredient-note">(compresso, da frigo)</span></td>
+                                <td class="ingredient-qty" data-base="25">25g</td>
+                            </tr>
+                            <tr>
+                                <td>Sale Fino <span class="ingredient-note">(marino integrale)</span></td>
+                                <td class="ingredient-qty" data-base="20">20g</td>
+                            </tr>
+                            <tr>
+                                <td>Zucchero Semolato <span class="ingredient-note">(per bilanciare e aiutare colorazione)</span></td>
+                                <td class="ingredient-qty" data-base="15">15g</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!-- COLONNA DESTRA: Procedimento -->
+                <div>
+
+                    <!-- ── Procedimento: Primario (Spirale o Estrusore) ── -->
+                    <div class="recipe-panel reveal reveal-delay-1" data-setup="spirale" id="steps-spirale">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">⚙️</span>
+                            Procedimento
+                            <span class="recipe-panel__title-badge">🔧 Spirale</span>
+                        </h2>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Preparazione Base (V1 - 3 min)</strong>
+                                <p>Inserire nella vasca farina, acqua fredda (8-10°C) e lievito sbriciolato. Avviare impastatrice a VELOCITÀ 1 per 3 minuti. L'impasto deve iniziare ad amalgamarsi senza formare ancora la maglia glutinica. Monitorare temperatura: non deve superare 22°C in questa fase.</p>
+                            </li>
+                            <li>
+                                <strong>Aggiunta Grassi e Zucchero (V1 - 2 min)</strong>
+                                <p>Aggiungere strutto a pezzetti e zucchero. Continuare a V1 per 2 minuti fino a completo assorbimento dei grassi. L'impasto deve risultare liscio e omogeneo, senza grumi di strutto visibili.</p>
+                            </li>
+                            <li>
+                                <strong>Incordatura e Sale (V1 → V2 - 6 min)</strong>
+                                <p>Aggiungere il sale e proseguire 2 minuti a V1, poi passare a VELOCITÀ 2 per 4 minuti. L'impasto deve incordarsi completamente: deve staccarsi dalla vasca, avvolgersi sul gancio e produrre un suono di 'schiocco' tipico. Controllare temperatura finale: 26-28°C ideale.</p>
+                            </li>
+                            <li>
+                                <strong>Puntata in Massa (2-3h a 26-28°C)</strong>
+                                <p>Trasferire l'impasto su piano infarinato, formare una palla liscia con piega a tre (portare i lembi verso il centro). Porre in contenitore oleato, coprire con pellicola a contatto. Lasciar lievitare 2-3 ore a temperatura ambiente (26-28°C) fino al raddoppio del volume. L'impasto deve risultare soffice, gonfio e leggermente appiccicoso.</p>
+                            </li>
+                            <li>
+                                <strong>Staglio e Pirlatura</strong>
+                                <p>Rovesciare l'impasto su piano leggermente infarinato senza sgonfiare troppo. Per ARANCINI: stagliare pezzi da 80-100g, pirlarli formando palline regolari. Per CARTOCCIATA/SCACCIA: dividere in panetti da 250-300g. Coprire con telo umido.</p>
+                            </li>
+                            <li>
+                                <strong>Appretto e Modellatura Finale (30 min)</strong>
+                                <p>Lasciar riposare i pezzi formati 30 minuti coperti. Per ARANCINI: schiacciare ogni pallina, farcire al centro con ragù + piselli + mozzarella, chiudere sigillando bene e rotolare nel pangrattato. Per CARTOCCIATA: stendere a rettangolo sottile (3-4mm), farcire, arrotolare e chiudere a mezzaluna. A questo punto sono pronti per frittura o forno.</p>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <!-- ── Procedimento: A mano ── -->
+                    <div class="recipe-panel reveal reveal-delay-1" data-setup="mano" id="steps-mano"
+                        style="display: none;">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">⚙️</span>
+                            Procedimento
+                            <span class="recipe-panel__title-badge">🤲 A mano</span>
+                        </h2>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Autolisi Iniziale (20 min)</strong>
+                                <p>Su spianatoia o in ciotola capiente, versare la farina a fontana. Al centro aggiungere acqua fredda e lievito sbriciolato. Incorporare gradualmente la farina con le dita partendo dal centro. Impastare 3-4 minuti fino a ottenere un composto ruvido e disomogeneo. Coprire con telo e lasciare riposare 20 minuti: questa autolisi renderà l'impasto più estensibile.</p>
+                            </li>
+                            <li>
+                                <strong>Incorporazione Grassi e Zucchero</strong>
+                                <p>Appiattire leggermente l'impasto, distribuire al centro lo strutto a pezzetti e lo zucchero. Chiudere i lembi verso il centro e iniziare a impastare con il palmo della mano, spingendo via e raccogliendo verso di sé. Lavorare 5-6 minuti fino a completo assorbimento dei grassi. L'impasto sarà morbido e leggermente untuoso.</p>
+                            </li>
+                            <li>
+                                <strong>Incordatura Manuale con Slap & Fold (12-15 min)</strong>
+                                <p>Aggiungere il sale e iniziare la fase di incordatura. Tecnica SLAP & FOLD: sollevare l'impasto da un'estremità, sbatterlo con forza sul piano e ripiegarlo su se stesso. Ripetere 50-60 volte (12-15 minuti di lavoro). L'impasto diventerà liscio, elastico e lucido, si staccherà dalle mani senza appiccicosità eccessiva. Temperatura target: 26-28°C.</p>
+                            </li>
+                            <li>
+                                <strong>Puntata in Massa (2h30-3h a 26-28°C)</strong>
+                                <p>Formare una palla tesa con pieghe a libro: allargare l'impasto, portare un lato verso il centro, poi l'altro, poi alto e basso. Capovolgere con chiusura sotto, porre in ciotola oleata. Coprire con pellicola aderente e lasciare lievitare 2h30-3h a temperatura ambiente fino al raddoppio. Ogni 45 minuti eseguire 1 piega di rinforzo.</p>
+                            </li>
+                            <li>
+                                <strong>Staglio e Preformatura</strong>
+                                <p>Rovesciare delicatamente l'impasto su piano infarinato. Dividere con tarocco in pezzi: 80-100g per arancini, 250-300g per scacce/cartocciate. Preformare ogni pezzo con piega a tre, coprire con telo leggermente umido e lasciare rilassare 15 minuti.</p>
+                            </li>
+                            <li>
+                                <strong>Pirlatura e Modellatura Finale</strong>
+                                <p>ARANCINI: con movimenti circolari del palmo della mano, pirlare ogni pezzo fino a ottenere sfere perfette e lisce. Appretto 20-30 minuti. Quindi schiacciare, farcire al centro (ragù, piselli, mozzarella), chiudere sigillando bene i bordi, formare palla o cono, passare nel pangrattato. SCACCIA/CARTOCCIATA: stendere con mattarello a rettangolo sottile (3-4mm), farcire a scelta, arrotolare stretto, sigillare i bordi, dare forma a mezzaluna o spirale.</p>
+                            </li>
+                        </ol>
+
+                        <div class="pro-tip-box" style="margin-top: 16px;">
+                            <p><strong>💡 PRO TIP:</strong> La temperatura dell'olio è cruciale: troppo bassa (sotto 160°C) e assorbiranno grasso diventando unti; troppo alta (oltre 180°C) e bruceranno fuori restando crudi dentro. Usa termometro da cucina.</p>
+                        </div>
+                    </div>
+
+                    <!-- ── Procedimento: Condimento ── -->
+                    <div class="recipe-panel reveal reveal-delay-2" data-setup="condimento" id="steps-condimento"
+                        style="margin-top: 32px;">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">🍳</span>
+                            Preparazione Condimento
+                        </h2>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Ragù Siciliano per Arancini (Opzionale)</strong>
+                                <p>In casseruola, soffriggere 1 cipolla tritata + 1 costa sedano + 1 carota in 40ml olio EVO. Aggiungere 400g carne macinata (manzo), rosolare 5 min a fuoco vivo. Sfumare con 100ml vino rosso. Aggiungere 500g passata di pomodoro, 50g concentrato, 2 foglie alloro, sale, pepe. Cuocere 1h30 a fuoco dolce mescolando. A fine cottura unire 100g piselli lessati. Lasciare raffreddare completamente prima di farcire.</p>
+                            </li>
+                        </ol>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ═══════════ CONSIGLI FARINE & MARCHI ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 40px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">🌾</span>
+                    Consigli Farine & Marchi
+                </h2>
+                <table class="flour-table">
+                    <thead>
+                        <tr>
+                            <th>Tipo Farina</th>
+                            <th>Forza (W)</th>
+                            <th>Marchi Consigliati</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Farina Tipo 0 Media-Alta Forza</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">300-320</td>
+                            <td>Molino Caputo Pizzeria, Molino Dallagiovanna Oro, Molino Grassi Petra 3, Le 5 Stagioni Oro</td>
+                        </tr>
+                        <tr>
+                            <td>Farina Tipo 00 Forte (alternativa)</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">320-350</td>
+                            <td>Molino Caputo Cuoco, Molino Dallagiovanna Chef, Molino Vigevano Superiore</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pro-tip-box" style="margin-top: 16px;">
+                    <p><strong>💡 PRO TIP:</strong> La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti,
+                        cerca qualsiasi farina con il valore W indicato.</p>
+                </div>
+            </div>
+
+            <!-- ═══════════ ALERT ═══════════ -->
+            <div class="alert alert--danger reveal" style="margin-top: 32px;">
+                <span class="alert__icon">🚫</span>
+                <div class="alert__content">
+                    <strong>ALERT PROFESSIONALE</strong>
+                    <p>⚠️ NON aggiungere il sale insieme al lievito all'inizio: il sale inibisce l'attività del lievito per osmosi. Inserirlo sempre DOPO che l'impasto ha iniziato a formarsi (dopo 5-6 minuti di impastamento). NON friggere a temperatura superiore a 180°C: l'esterno brucerebbe prima che il cuore si scaldi. NON usare margarina al posto dello strutto: non otterrai il sapore autentico e la shelf-life sarà ridotta.</p>
+                </div>
+            </div>
+
+            <!-- ═══════════ COTTURA ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 32px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">🔥</span>
+                    Cottura
+                </h2>
+                <div class="tech-badges" style="margin-bottom: 16px;">
+                    <div class="tech-badge">
+                        🌡️ Temperatura: <span class="tech-badge__value">&nbsp;200°C (forno ventilato) / 180°C (statico)</span>
+                    </div>
+                    <div class="tech-badge">
+                        ⏱️ Tempo: <span class="tech-badge__value">&nbsp;25-30 minuti per scaccia/cartocciata, 12-15 minuti per arancini al forno</span>
+                    </div>
+                </div>
+                <ul class="baking-tips" style="list-style: none; padding: 0;">
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Per FRITTURA arancini: olio di arachidi o girasole alto oleico a 170-175°C, friggere 6-8 min fino a doratura uniforme</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Per COTTURA AL FORNO: spennellare superficie con uovo sbattuto + 10ml latte per doratura lucida</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Usare termometro da cucina per controllare temperatura olio: mai superare 180°C o l'esterno brucia prima che il cuore sia caldo</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Per arancini al forno: disporre su teglia con carta forno, distanziare 3-4cm, cuocere a 200°C ventilato 25 min ruotando a metà cottura</li>
+                </ul>
+            </div>
+
+            <!-- ═══════════ GLOSSARIO ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 32px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">📖</span>
+                    Glossario
+                </h2>
+                <dl class="glossary-list" style="margin: 0; padding: 0;">
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Incordatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Fase in cui la maglia glutinica si sviluppa completamente: l'impasto si avvolge sul gancio/braccio, diventa elastico e 'suona' quando lavora.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Puntata</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prima lievitazione in massa, dopo l'impastamento e prima della divisione in pezzi. Fondamentale per sviluppo aromi e struttura.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Appretto</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Lievitazione finale dopo lo staglio e modellatura, prima della cottura. Permette al glutine di rilassarsi e al prodotto di gonfiarsi.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Staglio</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Divisione dell'impasto lievitato in pezzi del peso desiderato, con tarocco o coltello. Si effettua dopo la puntata.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Pirlatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica per formare palline perfettamente rotonde e lisce, con movimenti circolari della mano sul piano. Crea tensione superficiale.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Slap & Fold</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica manuale di impastamento: sollevare l'impasto, sbatterlo sul piano con forza, ripiegarlo. Sviluppa glutine senza sforzo eccessivo.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Autolisi</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Riposo di farina e acqua (senza lievito e sale) per 20-60 min. Facilita idratazione e rende l'impasto più estensibile.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Strutto</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Grasso di maiale purificato, ingrediente tradizionale siciliano. Conferisce morbidezza, sapore caratteristico e migliore conservabilità.</dd>
+                </dl>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__brand-name">🔥 <span>Il Ricettario</span></div>
+                    <p class="footer__brand-desc">
+                        Ricettario personale. Ricette artigianali documentate con precisione tecnica per
+                        risultati replicabili al 100%.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Navigazione</h4>
+                    <ul class="footer__links">
+                        <li><a href="../../index.html">↗ Home</a></li>
+                        <li><a href="../../index.html#ricette">↗ Ricette</a></li>
+                        <li><a href="../../index.html#strumenti">↗ Strumenti</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Questa Ricetta</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">🥐 Impasto per Rosticceria Siciliana</a></li>
+                        <li><a href="#">💧 Idratazione 55%</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Altre Ricette</h4>
+                    <ul class="footer__links">
+                        <li><a href="../../index.html#ricette">↗ Tutte le Ricette</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <span>© <span id="current-year">2026</span> Il Ricettario</span>
+                <div class="footer__social">
+                    <a href="https://github.com/devdomenicotatone" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
