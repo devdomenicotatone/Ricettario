@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Panettone artigianale con lievito madre, uvetta sultanina e canditi. Tre impasti progressivi per un grande lievitato da maestro pasticciere.">
+    <title>Panettone Classico — Il Ricettario</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap"
+        rel="stylesheet">
+    <!-- FOUC Prevention: applica tema prima del rendering -->
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = saved || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+  <script type="module" crossorigin src="/Ricettario/assets/animations-D-SwE_vs.js"></script>
+  <script type="module" crossorigin src="/Ricettario/assets/main-C9XSsPpw.js"></script>
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/animations-DUPNX6Ov.css">
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-Bxetn_nZ.css">
+</head>
+
+<body>
+
+    <!-- Skip to content — Accessibilità -->
+    <a href="#recipe-content" class="skip-link">Vai al contenuto principale</a>
+
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="../../index.html" class="navbar__logo">
+                <div class="navbar__logo-icon">🔥</div>
+                <span>Il Ricettario</span>
+            </a>
+
+            <ul class="navbar__links" id="nav-links">
+                <li><a href="../../index.html#ricette">Ricette</a></li>
+                <li><a href="../../index.html#strumenti">Strumenti</a></li>
+                <li><a href="../../index.html#chi-sono">Chi Sono</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+                <span class="theme-toggle__icon theme-toggle__sun">☀️</span>
+                <span class="theme-toggle__icon theme-toggle__moon">🌙</span>
+            </button>
+
+            <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════ RECIPE HERO ═══════════ -->
+    <div class="recipe-hero" style="background-image: url('../../images/ricette/lievitati/panettone-classico.jpg')">
+        <div class="container">
+            <nav class="breadcrumb reveal">
+                <a href="../../index.html">Home</a>
+                <span class="breadcrumb__separator">›</span>
+                <a href="../../index.html#ricette">Ricette</a>
+                <span class="breadcrumb__separator">›</span>
+                <a href="./">Lievitati</a>
+                <span class="breadcrumb__separator">›</span>
+                <span>Panettone Classico</span>
+            </nav>
+
+            <div class="recipe-hero__content">
+                <div class="recipe-hero__tags reveal">
+                    <span class="tag tag--tool" id="hero-setup-tag">🔧 Impastatrice a spirale</span>
+                    <span class="tag tag--category">🎄 Lievitati</span>
+                </div>
+                <h1 class="recipe-hero__title reveal reveal-delay-1">Panettone Classico</h1>
+                <p class="recipe-hero__subtitle reveal reveal-delay-2">
+                    Grande lievitato tradizionale con lievito madre e triplo impasto
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ TECH BADGES ═══════════ -->
+    <div class="container" style="padding-top: 40px;">
+        <div class="tech-badges reveal">
+            <div class="tech-badge">
+                💧 Idratazione: <span class="tech-badge__value">&nbsp;45%</span>
+            </div>
+            <div class="tech-badge">
+                🌡️ Target Temp: <span class="tech-badge__value">&nbsp;26-28°C</span>
+            </div>
+            <div class="tech-badge">
+                ⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;~48h totali (con puntate intermedie)</span>
+            </div>
+            <div class="tech-badge tech-badge--toggle" id="setup-badge" role="button" tabindex="0"
+                aria-label="Cambia setup">
+                🔧 Setup: <span class="tech-badge__value" id="setup-badge-value">&nbsp;A mano</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ RECIPE CONTENT ═══════════ -->
+    <section class="recipe-content">
+        <div class="container">
+            <div class="recipe-layout">
+
+                <!-- COLONNA SINISTRA: Ingredienti -->
+                <div>
+                    <div class="recipe-panel reveal">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">🛒</span>
+                            Ingredienti Base
+                        </h2>
+
+                        <!-- Calcolatore Dosi -->
+                        <div class="dose-calculator" id="dose-calculator">
+                            <div class="dose-calculator__label">
+                                <span class="dose-calculator__label-icon">⚖️</span>
+                                Farina totale
+                            </div>
+                            <div class="dose-calculator__controls">
+                                <button class="dose-calculator__btn" id="dose-decrease"
+                                    aria-label="Diminuisci dosi">−</button>
+                                <div class="dose-calculator__input-wrapper">
+                                    <input type="number" class="dose-calculator__input" id="dose-input" value="0.7"
+                                        min="0.7" max="5" step="0.7" data-base-total="685" aria-label="Kg di farina">
+                                    <span class="dose-calculator__unit">kg</span>
+                                </div>
+                                <button class="dose-calculator__btn" id="dose-increase"
+                                    aria-label="Aumenta dosi">+</button>
+                            </div>
+                            <div class="dose-calculator__badge" id="dose-badge">×1</div>
+                        </div>
+
+                        <table class="ingredients-table" id="ingredients-table">
+                            <tr>
+                                <td>Farina Manitoba <span class="ingredient-note">(W 350-380, 13-14% proteine)</span></td>
+                                <td class="ingredient-qty" data-base="375">375g</td>
+                            </tr>
+                            <tr>
+                                <td>Lievito Madre <span class="ingredient-note">(rinfrescato 3 volte, in forza)</span></td>
+                                <td class="ingredient-qty" data-base="65">65g</td>
+                            </tr>
+                            <tr>
+                                <td>Acqua <span class="ingredient-note" data-setup-note-spirale="(20-22°C)" data-setup-note-mano="(temperatura ambiente 20-22°C)">(20-22°C)</span></td>
+                                <td class="ingredient-qty" data-base="125">125g</td>
+                            </tr>
+                            <tr>
+                                <td>Zucchero Semolato <span class="ingredient-note">(primo impasto)</span></td>
+                                <td class="ingredient-qty" data-base="65">65g</td>
+                            </tr>
+                            <tr>
+                                <td>Malto <span class="ingredient-note">(diastasico)</span></td>
+                                <td class="ingredient-qty" data-base="2">2g</td>
+                            </tr>
+                            <tr>
+                                <td>Tuorli <span class="ingredient-note">(temperatura ambiente, primo impasto)</span></td>
+                                <td class="ingredient-qty" data-base="50">50g</td>
+                            </tr>
+                            <tr>
+                                <td>Burro <span class="ingredient-note">(morbidissimo, primo impasto)</span></td>
+                                <td class="ingredient-qty" data-base="70">70g</td>
+                            </tr>
+                            <tr>
+                                <td>Farina Manitoba <span class="ingredient-note">(W 350-380, secondo impasto)</span></td>
+                                <td class="ingredient-qty" data-base="62">62g</td>
+                            </tr>
+                            <tr>
+                                <td>Zucchero Semolato <span class="ingredient-note">(secondo impasto)</span></td>
+                                <td class="ingredient-qty" data-base="50">50g</td>
+                            </tr>
+                            <tr>
+                                <td>Tuorli <span class="ingredient-note">(temperatura ambiente, secondo impasto)</span></td>
+                                <td class="ingredient-qty" data-base="50">50g</td>
+                            </tr>
+                            <tr>
+                                <td>Burro <span class="ingredient-note">(morbidissimo, secondo impasto)</span></td>
+                                <td class="ingredient-qty" data-base="40">40g</td>
+                            </tr>
+                            <tr>
+                                <td>Acqua <span class="ingredient-note" data-setup-note-spirale="(20-22°C)" data-setup-note-mano="(temperatura ambiente 20-22°C)">(20-22°C)</span></td>
+                                <td class="ingredient-qty" data-base="10">10g</td>
+                            </tr>
+                            <tr>
+                                <td>Sale Fino <span class="ingredient-note">(secondo impasto)</span></td>
+                                <td class="ingredient-qty" data-base="2">2g</td>
+                            </tr>
+                            <tr>
+                                <td>Farina Manitoba <span class="ingredient-note">(W 350-380, terzo impasto)</span></td>
+                                <td class="ingredient-qty" data-base="248">248g</td>
+                            </tr>
+                            <tr>
+                                <td>Uova Intere <span class="ingredient-note">(temperatura ambiente, terzo impasto)</span></td>
+                                <td class="ingredient-qty" data-base="270">270g</td>
+                            </tr>
+                            <tr>
+                                <td>Tuorli <span class="ingredient-note">(temperatura ambiente, terzo impasto)</span></td>
+                                <td class="ingredient-qty" data-base="50">50g</td>
+                            </tr>
+                            <tr>
+                                <td>Zucchero Semolato <span class="ingredient-note">(terzo impasto)</span></td>
+                                <td class="ingredient-qty" data-base="65">65g</td>
+                            </tr>
+                            <tr>
+                                <td>Miele di Acacia</td>
+                                <td class="ingredient-qty" data-base="45">45g</td>
+                            </tr>
+                            <tr>
+                                <td>Burro <span class="ingredient-note">(morbidissimo, terzo impasto)</span></td>
+                                <td class="ingredient-qty" data-base="40">40g</td>
+                            </tr>
+                            <tr>
+                                <td>Baccello di Vaniglia <span class="ingredient-note">(semi)</span></td>
+                                <td class="ingredient-qty" data-base="1">1g</td>
+                            </tr>
+                            <tr>
+                                <td>Buccia di Limone <span class="ingredient-note">(grattugiata, non trattato)</span></td>
+                                <td class="ingredient-qty" data-base="5">5g</td>
+                            </tr>
+                            <tr>
+                                <td>Buccia di Arancia <span class="ingredient-note">(grattugiata, non trattata)</span></td>
+                                <td class="ingredient-qty" data-base="10">10g</td>
+                            </tr>
+                            <tr>
+                                <td>Rum <span class="ingredient-note">(o Cointreau)</span></td>
+                                <td class="ingredient-qty" data-base="15">15g</td>
+                            </tr>
+                            <tr>
+                                <td>Sale Fino <span class="ingredient-note">(terzo impasto)</span></td>
+                                <td class="ingredient-qty" data-base="9">9g</td>
+                            </tr>
+                            <tr>
+                                <td>Burro <span class="ingredient-note">(per scarpatura finale)</span></td>
+                                <td class="ingredient-qty" data-base="30">30g</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="recipe-panel reveal" style="margin-top: 28px;">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">🥜</span>
+                            Sospensioni
+                        </h2>
+                        <table class="ingredients-table" id="suspensions-table">
+                            <tr>
+                                <td>Uvetta Sultanina <span class="ingredient-note">(ammollata e asciugata)</span></td>
+                                <td class="ingredient-qty" data-base="250">250g</td>
+                            </tr>
+                            <tr>
+                                <td>Arancia Candita <span class="ingredient-note">(a cubetti 6-8mm)</span></td>
+                                <td class="ingredient-qty" data-base="100">100g</td>
+                            </tr>
+                            <tr>
+                                <td>Cedro Candito <span class="ingredient-note">(a cubetti 6-8mm)</span></td>
+                                <td class="ingredient-qty" data-base="50">50g</td>
+                            </tr>
+                        </table>
+
+                        <div class="pro-tip-box" style="margin-top: 16px;">
+                            <p><strong>💡 PRO TIP:</strong> Lievito Madre in Forza: iniziate i 3 rinfreschi 12-16h prima del primo impasto. Il lievito deve triplicare in 3-4h dopo ogni rinfresco a 28°C. Se non raddoppia, non è pronto: rinfrascate ancora.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COLONNA DESTRA: Procedimento -->
+                <div>
+
+                    <!-- ── Procedimento: Primario (Spirale o Estrusore) ── -->
+                    <div class="recipe-panel reveal reveal-delay-1" data-setup="spirale" id="steps-spirale">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">⚙️</span>
+                            Procedimento
+                            <span class="recipe-panel__title-badge">🔧 Spirale</span>
+                        </h2>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Preparazione Mix Aromatico (24-72h prima)</strong>
+                                <p>Almeno 24h prima (ideale 3 giorni), preparare il mix aromatico mescolando le bucce finemente grattugiate di limone e arancia, i semi della bacca di vaniglia, il miele d'acacia (45g) e il rum (15g). Conservare in contenitore ermetico a temperatura ambiente. Questo passaggio è fondamentale per far amalgamare gli aromi.</p>
+                            </li>
+                            <li>
+                                <strong>Trattamento Uvetta (10-12h prima)</strong>
+                                <p>Almeno 10h prima di iniziare, mettere l'uvetta (250g) a bagno con pari quantità di acqua. Dopo 2-3h cambiare l'acqua e ripetere l'operazione per altre 2-3 volte. Scolare bene, tamponare con carta assorbente fino a completa asciugatura. L'uvetta deve risultare morbida ma asciutta in superficie. Conservare coperta.</p>
+                            </li>
+                            <li>
+                                <strong>Primo Impasto (Impasto di Partenza)</strong>
+                                <p>Nella ciotola della spirale versare acqua (125g a 20-22°C), malto (2g) e zucchero (65g). Avviare a velocità minima per sciogliere. Aggiungere farina manitoba (375g) in 2-3 riprese, impastare 2 minuti a V1. Inserire il lievito madre rinfrescato (65g) spezzettato, impastare 5 minuti a V1 fino a incordatura iniziale. Aggiungere i tuorli (50g) precedentemente sbattuti, incorporare 3 minuti a V1-V2. Incorporare il burro morbido (70g) in 2-3 riprese, lavorare 10 minuti a V2 fino a completo assorbimento e incordatura perfetta. Temperatura finale: 26-27°C. Trasferire in contenitore unto, coprire con pellicola.</p>
+                            </li>
+                            <li>
+                                <strong>Prima Puntata</strong>
+                                <p>Lasciar lievitare in ambiente a 26-28°C per 12-14h fino a triplicare il volume. L'impasto deve presentare alveolatura fine e uniforme. Se la temperatura ambiente è inferiore, utilizzare forno spento con luce accesa o cella di lievitazione.</p>
+                            </li>
+                            <li>
+                                <strong>Secondo Impasto (Rinforzo)</strong>
+                                <p>Riprendere il primo impasto lievitato, riporlo nella ciotola della spirale. Aggiungere acqua (10g), zucchero (50g), tuorli (50g) e farina manitoba (62g). Impastare 5 minuti a V1 fino a completa incorporazione. Aggiungere il burro morbido (40g) in 2-3 riprese, impastare 8-10 minuti a V2 fino a incordatura. Negli ultimi 2 minuti aggiungere il sale (2g). Temperatura finale: 26-27°C. Trasferire in contenitore unto, coprire.</p>
+                            </li>
+                            <li>
+                                <strong>Seconda Puntata</strong>
+                                <p>Lasciar lievitare in ambiente a 26-28°C per 4-5h fino a raddoppiare il volume. L'impasto deve risultare elastico e ben strutturato.</p>
+                            </li>
+                            <li>
+                                <strong>Terzo Impasto (Impasto Finale)</strong>
+                                <p>Riprendere il secondo impasto, trasferirlo nella spirale. Aggiungere metà dello zucchero (32g), le uova intere (270g) e i tuorli (50g) precedentemente sbattuti. Impastare 5 minuti a V1. Aggiungere la farina manitoba (248g) in 2-3 riprese, impastare 8 minuti a V2 fino a incordatura. Incorporare il mix aromatico preparato, impastare 2 minuti. Aggiungere il burro morbido (40g) in piccole dosi, impastare 12-15 minuti a V2 fino a completo assorbimento. Aggiungere lo zucchero rimanente (33g) e il sale (9g), impastare 3 minuti. Temperatura finale: 26-28°C. L'impasto deve staccarsi perfettamente dalla ciotola (incordatura completa).</p>
+                            </li>
+                            <li>
+                                <strong>Aggiunta Sospensioni</strong>
+                                <p>A macchina ferma, aggiungere l'uvetta asciugata (250g) e i canditi a cubetti (150g totali: 100g arancia + 50g cedro). Impastare 2 minuti a V1 solo per incorporare uniformemente, senza rompere i canditi. Non lavorare oltre.</p>
+                            </li>
+                            <li>
+                                <strong>Pirlatura e Formatura</strong>
+                                <p>Rovesciare l'impasto su piano leggermente unto di burro (NON infarinato). Eseguire una piega a tre e formare una palla con movimento rotatorio. Trasferire nello stampo da panettone da 1kg (diametro 18cm) precedentemente imburrato e foderato con carta da forno alta. L'impasto deve riempire 1/3 dello stampo.</p>
+                            </li>
+                            <li>
+                                <strong>Appretto Finale</strong>
+                                <p>Lasciar lievitare in ambiente a 28-30°C per 6-8h fino a quando l'impasto raggiungerà il bordo dello stampo (circa 3cm sotto il bordo). Eseguire il taglio a croce con lama affilata. Spennellare con burro fuso (30g) la superficie. Posizionare un fiocchetto di burro (10g) al centro della croce.</p>
+                            </li>
+                            <li>
+                                <strong>Cottura</strong>
+                                <p>Preriscaldare forno statico a 170°C. Infornare nella parte bassa del forno. Cuocere 50-55 minuti (per stampo da 1kg) senza mai aprire il forno nei primi 40 minuti. Il panettone è cotto quando raggiunge 94-96°C al cuore (termometro a sonda). La superficie deve risultare ben dorata ma non bruciata.</p>
+                            </li>
+                            <li>
+                                <strong>Raffreddamento</strong>
+                                <p>Appena sfornato, infilzare la base del panettone con appositi spilloni lunghi (o due grossi spiedi da cucina) e capovolgere immediatamente. Sospendere tra due supporti in modo che il panettone resti capovolto senza toccare nulla. Lasciare raffreddare completamente capovolto per 8-10h. Questo passaggio è FONDAMENTALE per evitare la cascatura. NON saltarlo.</p>
+                            </li>
+                            <li>
+                                <strong>Conservazione</strong>
+                                <p>Una volta freddo, rimuovere gli spilloni. Avvolgere in sacchetto per alimenti, spruzzare 4 erogazioni di alcol alimentare all'interno del sacchetto (non sul panettone), chiudere ermeticamente. Conservare a temperatura ambiente fino a 10-15 giorni. L'alcol previene la formazione di muffe mantenendo il prodotto soffice.</p>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <!-- ── Procedimento: A mano ── -->
+                    <div class="recipe-panel reveal reveal-delay-1" data-setup="mano" id="steps-mano"
+                        style="display: none;">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">⚙️</span>
+                            Procedimento
+                            <span class="recipe-panel__title-badge">🤲 A mano</span>
+                        </h2>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Preparazione Mix Aromatico (24-72h prima)</strong>
+                                <p>Almeno 24h prima (ideale 3 giorni), preparare il mix aromatico mescolando le bucce finemente grattugiate di limone e arancia, i semi della bacca di vaniglia, il miele d'acacia (45g) e il rum (15g). Conservare in contenitore ermetico a temperatura ambiente.</p>
+                            </li>
+                            <li>
+                                <strong>Trattamento Uvetta (10-12h prima)</strong>
+                                <p>Almeno 10h prima, mettere l'uvetta (250g) a bagno con pari quantità di acqua. Dopo 2-3h cambiare l'acqua e ripetere per altre 2-3 volte. Scolare, tamponare fino a completa asciugatura. Conservare coperta.</p>
+                            </li>
+                            <li>
+                                <strong>Primo Impasto (Impasto di Partenza)</strong>
+                                <p>In una ciotola capiente sciogliere malto (2g) e zucchero (65g) in acqua (125g a temperatura ambiente). Versare la farina manitoba (375g) a fontana su un piano di lavoro in legno o marmo. Creare un cratere centrale. Versare l'acqua zuccherata al centro. Iniziare a incorporare la farina dall'interno verso l'esterno con le dita. Quando l'impasto è amalgamato, aggiungere il lievito madre (65g) spezzettato. Impastare energicamente con tecnica slap & fold per 15-20 minuti fino a incordatura iniziale. Aggiungere i tuorli (50g) sbattuti, continuare a impastare 10 minuti. Incorporare il burro morbido (70g) in 3-4 riprese, impastare con forza fino a completo assorbimento (altri 20-25 minuti totali). L'impasto deve risultare liscio, elastico e non appiccicoso. Temperatura finale: 26-27°C.</p>
+                            </li>
+                            <li>
+                                <strong>Prima Puntata</strong>
+                                <p>Formare una palla liscia, trasferire in contenitore unto, coprire con pellicola. Lasciar lievitare in ambiente a 26-28°C per 12-14h fino a triplicare. Utilizzare forno spento con luce accesa se necessario.</p>
+                            </li>
+                            <li>
+                                <strong>Secondo Impasto (Rinforzo)</strong>
+                                <p>Rovesciare il primo impasto su piano di lavoro. Appiattire leggermente. Aggiungere al centro acqua (10g), zucchero (50g), tuorli (50g) e farina (62g). Ripiegare l'impasto su se stesso incorporando gli ingredienti. Impastare con slap & fold per 15 minuti. Aggiungere il burro (40g) in piccole dosi, impastare energicamente per altri 15-20 minuti fino a completa incorporazione. Aggiungere il sale (2g) negli ultimi 3 minuti. Formare una palla liscia.</p>
+                            </li>
+                            <li>
+                                <strong>Seconda Puntata</strong>
+                                <p>Trasferire in contenitore unto, coprire. Lasciar lievitare a 26-28°C per 4-5h fino a raddoppiare.</p>
+                            </li>
+                            <li>
+                                <strong>Terzo Impasto (Impasto Finale)</strong>
+                                <p>Rovesciare l'impasto su piano. Appiattire formando un disco. Versare al centro metà zucchero (32g), uova (270g) e tuorli (50g) sbattuti. Ripiegare, iniziare a impastare con slap & fold. Dopo 5 minuti aggiungere la farina (248g) in 3 riprese, impastare 20 minuti fino a incordatura. Incorporare il mix aromatico, impastare 5 minuti. Aggiungere il burro (40g) pochissimo per volta, impastare con forza per 25-30 minuti fino a completo assorbimento. Aggiungere zucchero rimanente (33g) e sale (9g), impastare 5 minuti. L'impasto deve essere lucido, elasticissimo e staccarsi dalle mani. Temperatura: 26-28°C. Tempo totale lavorazione a mano: circa 60-70 minuti.</p>
+                            </li>
+                            <li>
+                                <strong>Aggiunta Sospensioni</strong>
+                                <p>Appiattire l'impasto, distribuire uniformemente uvetta (250g) e canditi (150g). Ripiegare delicatamente l'impasto su se stesso fino a incorporare senza schiacciare i canditi. Lavorare il meno possibile.</p>
+                            </li>
+                            <li>
+                                <strong>Pirlatura e Formatura</strong>
+                                <p>Su piano unto di burro, eseguire una piega a tre. Formare una palla perfettamente liscia con movimento rotatorio delle mani. Trasferire nello stampo da 1kg imburrato e foderato. L'impasto deve riempire 1/3 dello stampo.</p>
+                            </li>
+                            <li>
+                                <strong>Appretto Finale</strong>
+                                <p>Lasciar lievitare a 28-30°C per 6-8h fino a 3cm dal bordo. Tagliare a croce con lama affilata unta d'olio. Spennellare con burro fuso (30g), posizionare fiocchetto di burro (10g) al centro.</p>
+                            </li>
+                            <li>
+                                <strong>Cottura</strong>
+                                <p>Forno statico a 170°C. Infornare in basso. Cuocere 50-55 minuti senza aprire nei primi 40 minuti. Temperatura interna a fine cottura: 94-96°C.</p>
+                            </li>
+                            <li>
+                                <strong>Raffreddamento Capovolto</strong>
+                                <p>Infilzare la base con spilloni lunghi, capovolgere immediatamente. Sospendere tra due supporti. Lasciare raffreddare capovolto per 8-10h. FONDAMENTALE per evitare la cascatura.</p>
+                            </li>
+                            <li>
+                                <strong>Conservazione</strong>
+                                <p>Rimuovere spilloni a freddo. Avvolgere in sacchetto, spruzzare 4 erogazioni di alcol alimentare, chiudere. Conservare a temperatura ambiente fino a 15 giorni.</p>
+                            </li>
+                        </ol>
+
+                        <div class="pro-tip-box" style="margin-top: 16px;">
+                            <p><strong>💡 PRO TIP:</strong> Controllo Temperature con Precisione: usate un termometro a infrarossi per monitorare la temperatura dell'impasto durante la lavorazione. Se supera i 28°C, fermatevi e lasciate riposare 10 minuti in frigo. Temperature alte = burro fuso = impasto unto e instabile.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <!-- ═══════════ CONSIGLI FARINE & MARCHI ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 40px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">🌾</span>
+                    Consigli Farine & Marchi
+                </h2>
+                <table class="flour-table">
+                    <thead>
+                        <tr>
+                            <th>Tipo Farina</th>
+                            <th>Forza (W)</th>
+                            <th>Marchi Consigliati</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Farina Manitoba</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">350-380</td>
+                            <td>Petra 6384, Molino Vigevano Manitoba, Caputo Panettone, Molino Spadoni Manitoba, Agugiaro & Figna Le Grandi Manitoba</td>
+                        </tr>
+                        <tr>
+                            <td>Farina Tipo 0 Forte</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">320-350</td>
+                            <td>Molino Grassi Miscela Panettone, Molino Dallagiovanna Oro Manitoba, Molino Quaglia Panettone Professional</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pro-tip-box" style="margin-top: 16px;">
+                    <p><strong>💡 PRO TIP:</strong> La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti,
+                        cerca qualsiasi farina con il valore W indicato.</p>
+                </div>
+            </div>
+
+            <!-- ═══════════ ALERT ═══════════ -->
+            <div class="alert alert--danger reveal" style="margin-top: 32px;">
+                <span class="alert__icon">🚫</span>
+                <div class="alert__content">
+                    <strong>ALERT PROFESSIONALE</strong>
+                    <p>NON tentare di velocizzare le lievitazioni aumentando la temperatura sopra i 30°C: uccidereste il lievito madre e otterreste un panettone piatto, gommoso e senza alveolatura. NON saltare il raffreddamento capovolto: la cascatura è quasi certa. NON aprire il forno durante la cottura prima dei 40 minuti: il panettone collasserebbe. NON usare lievito madre non in forza (serve triplo rinfresco): il risultato sarà acido, denso e poco sviluppato. Questo è un grande lievitato: richiede tempo, temperatura controllata e rispetto dei tempi biologici.</p>
+                </div>
+            </div>
+
+            <!-- ═══════════ COTTURA ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 32px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">🔥</span>
+                    Cottura
+                </h2>
+                <div class="tech-badges" style="margin-bottom: 16px;">
+                    <div class="tech-badge">
+                        🌡️ Temperatura: <span class="tech-badge__value">&nbsp;170°C</span>
+                    </div>
+                    <div class="tech-badge">
+                        ⏱️ Tempo: <span class="tech-badge__value">&nbsp;50-55 minuti</span>
+                    </div>
+                </div>
+                <ul class="baking-tips" style="list-style: none; padding: 0;">
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 NON aprire il forno nei primi 40 minuti per evitare il collasso dell'impasto</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Utilizzare termometro a sonda: il panettone è cotto a 94-96°C al cuore</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Posizionare lo stampo nella parte BASSA del forno per cottura uniforme</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Se la superficie scurisce troppo dopo 35 minuti, coprire con foglio di alluminio</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Il raffreddamento capovolto è OBBLIGATORIO: previene la cascatura della struttura</li>
+                </ul>
+            </div>
+
+            <!-- ═══════════ GLOSSARIO ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 32px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">📖</span>
+                    Glossario
+                </h2>
+                <dl class="glossary-list" style="margin: 0; padding: 0;">
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Incordatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Fase dell'impasto in cui il glutine si sviluppa completamente: l'impasto si avvolge attorno al gancio/braccio formando un 'cordone' e si stacca dalle pareti della ciotola. Essenziale per struttura e alveolatura.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Puntata</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Fase di lievitazione dell'impasto dopo la lavorazione e prima della formatura. Nel panettone ci sono più puntate progressive (prima, seconda) che sviluppano aromi e struttura.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Pirlatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica di formatura che consiste nel formare una palla liscia e tesa facendo rotolare l'impasto sul piano con movimento rotatorio delle mani. Crea tensione superficiale fondamentale per la lievitazione verticale.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Appretto</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Ultima lievitazione dopo la formatura e prima della cottura. Nel panettone dura 6-8h e porta l'impasto fino al bordo dello stampo.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Cascatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Collasso della struttura del panettone dopo la cottura. Si previene con il raffreddamento capovolto che mantiene la tensione dell'alveolatura fino al completo raffreddamento.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Lievito Madre</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Coltura naturale di lieviti e batteri lattici mantenuta con rinfreschi periodici. Per il panettone deve essere rinfrescato 3 volte nelle 24h precedenti per raggiungere la massima forza.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Rinfresco</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Operazione di nutrimento del lievito madre: si impasta con farina e acqua in proporzioni precise. Per il panettone servono 3 rinfreschi a distanza di 4h l'uno dall'altro.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Slap & Fold</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica di impasto manuale: si solleva l'impasto, lo si sbatte sul piano e lo si ripiega su se stesso. Sviluppa il glutine in impasti molto idratati o ricchi di grassi.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Scarpatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Operazione finale prima della cottura: si spennella la superficie con burro fuso e si posiziona un fiocchetto di burro al centro del taglio a croce. Dona croccantezza e sapore.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Alveolatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Struttura dei fori (alveoli) nella mollica del panettone. Deve essere fine, uniforme e distribuita. Dipende da lievitazione corretta e sviluppo glutine perfetto.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Temperatura di Incordatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Temperatura ottimale dell'impasto al termine della lavorazione (26-28°C per il panettone). Temperature troppo alte accelerano la lievitazione con aromi meno complessi, temperature basse rallentano tutto.</dd>
+                </dl>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__brand-name">🔥 <span>Il Ricettario</span></div>
+                    <p class="footer__brand-desc">
+                        Ricettario personale. Ricette artigianali documentate con precisione tecnica per
+                        risultati replicabili al 100%.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Navigazione</h4>
+                    <ul class="footer__links">
+                        <li><a href="../../index.html">↗ Home</a></li>
+                        <li><a href="../../index.html#ricette">↗ Ricette</a></li>
+                        <li><a href="../../index.html#strumenti">↗ Strumenti</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Questa Ricetta</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">🎄 Panettone Classico</a></li>
+                        <li><a href="#">💧 Idratazione 45%</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Altre Ricette</h4>
+                    <ul class="footer__links">
+                        <li><a href="../../index.html#ricette">↗ Tutte le Ricette</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <span>© <span id="current-year">2026</span> Il Ricettario</span>
+                <div class="footer__social">
+                    <a href="https://github.com/devdomenicotatone" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

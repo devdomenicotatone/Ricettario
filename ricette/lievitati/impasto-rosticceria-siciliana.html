@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Impasto versatile per la tradizionale rosticceria palermitana: rollò, girelle, pizzette, rustici e calzoni. Morbido, soffice e perfetto per farciture salate.">
-    <title>Impasto per Rosticceria Siciliana — Il Ricettario</title>
+        content="Impasto versatile per la rosticceria palermitana: rollò, pizzette, calzoncini e rustici. Ricetta tradizionale con strutto, perfetto per farciture salate.">
+    <title>Impasto Rosticceria Siciliana — Il Ricettario</title>
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,7 +62,8 @@
     </nav>
 
     <!-- ═══════════ RECIPE HERO ═══════════ -->
-    <div class="recipe-hero" style="background-image: url('../../images/ricette/lievitati/impasto-rosticceria-siciliana.jpg')">
+    <div class="recipe-hero"
+        style="background-image: url('../../images/ricette/lievitati/impasto-rosticceria-siciliana.jpg')">
         <div class="container">
             <nav class="breadcrumb reveal">
                 <a href="../../index.html">Home</a>
@@ -71,7 +72,7 @@
                 <span class="breadcrumb__separator">›</span>
                 <a href="./">Lievitati</a>
                 <span class="breadcrumb__separator">›</span>
-                <span>Impasto per Rosticceria Siciliana</span>
+                <span>Impasto Rosticceria Siciliana</span>
             </nav>
 
             <div class="recipe-hero__content">
@@ -79,9 +80,9 @@
                     <span class="tag tag--tool" id="hero-setup-tag">🔧 Impastatrice a spirale</span>
                     <span class="tag tag--category">🥐 Lievitati</span>
                 </div>
-                <h1 class="recipe-hero__title reveal reveal-delay-1">Impasto per Rosticceria Siciliana</h1>
+                <h1 class="recipe-hero__title reveal reveal-delay-1">Impasto Rosticceria Siciliana</h1>
                 <p class="recipe-hero__subtitle reveal reveal-delay-2">
-                    L'impasto base della tradizione siciliana per rollò, rustici, pizzette e calzoni mignon
+                    Base tradizionale per rollò, calzoncini e pizzette palermitane
                 </p>
             </div>
         </div>
@@ -97,7 +98,7 @@
                 🌡️ Target Temp: <span class="tech-badge__value">&nbsp;26-27°C</span>
             </div>
             <div class="tech-badge">
-                ⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;2-3h prima lievitazione + 30-45min appretto</span>
+                ⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;2-2.5h lievitazione + 30min appretto</span>
             </div>
             <div class="tech-badge tech-badge--toggle" id="setup-badge" role="button" tabindex="0"
                 aria-label="Cambia setup">
@@ -129,8 +130,8 @@
                                 <button class="dose-calculator__btn" id="dose-decrease"
                                     aria-label="Diminuisci dosi">−</button>
                                 <div class="dose-calculator__input-wrapper">
-                                    <input type="number" class="dose-calculator__input" id="dose-input" value="0.5"
-                                        min="0.5" max="5" step="0.5" data-base-total="500" aria-label="Kg di farina">
+                                    <input type="number" class="dose-calculator__input" id="dose-input" value="1"
+                                        min="1" max="5" step="1" data-base-total="1000" aria-label="Kg di farina">
                                     <span class="dose-calculator__unit">kg</span>
                                 </div>
                                 <button class="dose-calculator__btn" id="dose-increase"
@@ -141,40 +142,45 @@
 
                         <table class="ingredients-table" id="ingredients-table">
                             <tr>
-                                <td>Farina Tipo 00 Media Forza <span class="ingredient-note">(W 240-280, per struttura e sofficità)</span></td>
-                                <td class="ingredient-qty" data-base="350">350g</td>
+                                <td>Farina Tipo 0 o 00 <span class="ingredient-note">(W 240-280, media forza)</span>
+                                </td>
+                                <td class="ingredient-qty" data-base="750">750g</td>
                             </tr>
                             <tr>
-                                <td>Farina Manitoba <span class="ingredient-note">(W 350-400, per tenuta e sviluppo)</span></td>
-                                <td class="ingredient-qty" data-base="150">150g</td>
-                            </tr>
-                            <tr>
-                                <td>Acqua <span class="ingredient-note" data-setup-note-spirale="(ghiacciata 2-4°C, tutta in una volta)" data-setup-note-mano="(tiepida 25-28°C, in 2-3 riprese per controllare l'idratazione)">(ghiacciata 2-4°C, tutta in una volta)</span></td>
+                                <td>Farina Manitoba <span class="ingredient-note">(W 350-380, forza elevata)</span></td>
                                 <td class="ingredient-qty" data-base="250">250g</td>
                             </tr>
                             <tr>
-                                <td>Lievito di Birra Fresco <span class="ingredient-note" data-setup-note-spirale="(25g per lievitazione rapida 2-3h)" data-setup-note-mano="(10-12g per lievitazione più lunga e controllata 3-4h)">(25g per lievitazione rapida 2-3h)</span></td>
+                                <td>Acqua <span class="ingredient-note"
+                                        data-setup-note-spirale="(ghiacciata 2-4°C per controllare surriscaldamento)"
+                                        data-setup-note-mano="(tiepida 28-30°C per favorire lievitazione)">(ghiacciata
+                                        2-4°C per controllare surriscaldamento)</span></td>
+                                <td class="ingredient-qty" data-base="500">500g</td>
+                            </tr>
+                            <tr>
+                                <td>Lievito di Birra Fresco <span class="ingredient-note">(2.5% su farina totale)</span>
+                                </td>
                                 <td class="ingredient-qty" data-base="25">25g</td>
                             </tr>
                             <tr>
-                                <td>Strutto <span class="ingredient-note">(tradizionale, sostituibile con burro morbido)</span></td>
-                                <td class="ingredient-qty" data-base="50">50g</td>
+                                <td>Strutto <span class="ingredient-note">(morbido a temperatura ambiente, sostituibile
+                                        con burro)</span></td>
+                                <td class="ingredient-qty" data-base="100">100g</td>
                             </tr>
                             <tr>
-                                <td>Olio Extravergine di Oliva <span class="ingredient-note">(opzionale, per morbidezza)</span></td>
-                                <td class="ingredient-qty" data-base="25">25g</td>
+                                <td>Zucchero Semolato <span class="ingredient-note">(10% su farina, favorisce
+                                        lievitazione e colorazione)</span></td>
+                                <td class="ingredient-qty" data-base="100">100g</td>
                             </tr>
                             <tr>
-                                <td>Zucchero Semolato <span class="ingredient-note">(alimenta lieviti e dona doratura)</span></td>
-                                <td class="ingredient-qty" data-base="40">40g</td>
+                                <td>Sale Fino <span class="ingredient-note">(2% su farina, aggiungere a fine
+                                        impasto)</span></td>
+                                <td class="ingredient-qty" data-base="20">20g</td>
                             </tr>
                             <tr>
-                                <td>Miele <span class="ingredient-note">(millefiori o acacia, per morbidezza e conservazione)</span></td>
-                                <td class="ingredient-qty" data-base="10">10g</td>
-                            </tr>
-                            <tr>
-                                <td>Sale Fino <span class="ingredient-note">(aggiunto a fine impastamento)</span></td>
-                                <td class="ingredient-qty" data-base="12">12g</td>
+                                <td>Miele <span class="ingredient-note">(millefiori o acacia, per morbidezza e
+                                        aroma)</span></td>
+                                <td class="ingredient-qty" data-base="20">20g</td>
                             </tr>
                         </table>
                     </div>
@@ -186,17 +192,23 @@
                         </h2>
                         <table class="ingredients-table" id="suspensions-table">
                             <tr>
-                                <td>Tuorlo d'Uovo <span class="ingredient-note">(per spennellatura finale, con qualche goccia di latte)</span></td>
+                                <td>Tuorlo d'Uovo <span class="ingredient-note">(per spennellatura finale)</span></td>
                                 <td class="ingredient-qty" data-base="20">20g</td>
                             </tr>
                             <tr>
-                                <td>Semi di Sesamo o Papavero <span class="ingredient-note">(q.b. per decorazione)</span></td>
-                                <td class="ingredient-qty" data-base="0">0g</td>
+                                <td>Latte Intero <span class="ingredient-note">(per diluire il tuorlo)</span></td>
+                                <td class="ingredient-qty" data-base="30">30g</td>
+                            </tr>
+                            <tr>
+                                <td>Semi di Sesamo <span class="ingredient-note">(tostati, per decorazione)</span></td>
+                                <td class="ingredient-qty" data-base="30">30g</td>
                             </tr>
                         </table>
 
                         <div class="pro-tip-box" style="margin-top: 16px;">
-                            <p><strong>💡 PRO TIP:</strong> 💡 Per rollò perfetti: prima di arrotolare l'impasto intorno al wurstel, pratica una leggera incisione longitudinale sul wurstel stesso. Durante la cottura si aprirà leggermente rendendo il rollò più scenografico e croccante.</p>
+                            <p><strong>💡 PRO TIP:</strong> Per rollò ancora più saporiti: pennellare la striscia di
+                                impasto con un velo di concentrato di pomodoro prima di arrotolare il prosciutto.
+                                Aggiunge sapore senza inzuppare.</p>
                         </div>
                     </div>
                 </div>
@@ -213,28 +225,62 @@
                         </h2>
                         <ol class="steps-list">
                             <li>
-                                <strong>Impastamento Base (7-8 minuti totali)</strong>
-                                <p>Inserire nella vasca dell'impastatrice a spirale le due farine, lo zucchero e il lievito di birra sbriciolato. Avviare in prima velocità e versare l'acqua ghiacciata (2-4°C) gradualmente. Impastare per 3-4 minuti fino a completo assorbimento. L'acqua fredda compensa il riscaldamento meccanico e mantiene la temperatura target di 26-27°C.</p>
+                                <strong>Preparazione Lievito e Grassi</strong>
+                                <p>Sciogliere il lievito di birra fresco in 100g di acqua ghiacciata (2-4°C) mescolando
+                                    delicatamente. Portare lo strutto a temperatura ambiente finché risulti morbido ma
+                                    non fuso (18-20°C). Se usate burro, deve essere plastico, non cremoso.</p>
                             </li>
                             <li>
-                                <strong>Aggiunta Grassi e Incordatura (3-4 minuti)</strong>
-                                <p>Quando l'impasto inizia a incordarsi, aggiungere lo strutto a pezzetti, l'olio extravergine e il miele. Continuare in prima velocità per 2 minuti, poi aggiungere il sale. Passare in seconda velocità per 1-2 minuti fino a completa incordatura: l'impasto deve staccarsi dalla vasca e avvolgersi attorno al gancio. Temperatura finale: 26-27°C.</p>
+                                <strong>Impasto Base (V1 - 5 minuti)</strong>
+                                <p>Nella vasca dell'impastatrice a spirale versare le due farine, lo zucchero e il
+                                    miele. Avviare in prima velocità e aggiungere l'acqua con il lievito sciolto.
+                                    Impastare per 3 minuti, poi aggiungere gradualmente i restanti 400g di acqua
+                                    ghiacciata. Continuare per altri 2 minuti fino a ottenere un impasto omogeneo ma
+                                    ancora ruvido. Temperatura impasto: 22-23°C.</p>
                             </li>
                             <li>
-                                <strong>Puntata in Massa (2 ore)</strong>
-                                <p>Formare una palla liscia, trasferire in contenitore leggermente unto, coprire con pellicola e far lievitare a 26-28°C per 2 ore. L'impasto deve raddoppiare di volume. Se l'ambiente è fresco, usare il forno spento con luce accesa o una ciotola di acqua calda sotto il contenitore.</p>
+                                <strong>Incorporamento Grassi (V1 - 3 minuti)</strong>
+                                <p>Con impastatrice in movimento a V1, aggiungere lo strutto morbido a pezzetti.
+                                    Attendere che sia completamente incorporato (2 minuti), poi aggiungere il sale.
+                                    Impastare per 1 minuto ulteriore. L'impasto inizia a incordarsi e staccarsi dalle
+                                    pareti.</p>
                             </li>
                             <li>
-                                <strong>Staglio e Pirlatura (pesatura pezzature)</strong>
-                                <p>Rovesciare l'impasto su piano leggermente infarinato. Dividere in pezzi secondo il formato desiderato: 20g per rustici mignon, 50g per panini medi, 70g per rollò con wurstel grossi. Pirlare ogni pezzo con movimento circolare della mano fino a ottenere palline lisce e tese in superficie.</p>
+                                <strong>Incordatura Finale (V2 - 4 minuti)</strong>
+                                <p>Passare in seconda velocità (V2) e impastare per 4 minuti fino a completa
+                                    incordatura. L'impasto deve risultare liscio, elastico, leggermente lucido per via
+                                    dello strutto. Temperatura finale: 26-27°C. Test del velo: una piccola porzione deve
+                                    formare una membrana sottile senza rompersi.</p>
                             </li>
                             <li>
-                                <strong>Appretto e Formatura (30-45 minuti)</strong>
-                                <p>Coprire le palline con un panno umido e lasciar riposare 30-45 minuti. Formare i vari tipi di rosticceria: rollò (arrotolare intorno ai wurstel), girelle (allungare e arrotolare con pancetta), pizzette (schiacciare e condire), rustici/calzoni (stendere, farcire e richiudere). Adagiare su teglia foderata con carta da forno, distanziati 4-5 cm.</p>
+                                <strong>Puntata in Massa</strong>
+                                <p>Formare una palla liscia, adagiarla in un contenitore unto con strutto, coprire con
+                                    pellicola a contatto. Lasciar lievitare a 26-28°C per 2-2.5 ore fino al raddoppio
+                                    del volume. L'impasto deve risultare soffice e non appiccicoso al tatto.</p>
                             </li>
                             <li>
-                                <strong>Lievitazione Finale (30-40 minuti)</strong>
-                                <p>Coprire la teglia con pellicola leggermente unta e far lievitare a 28-30°C per 30-40 minuti. I pezzi devono essere soffici e aumentati di volume (circa +50%). Spennellare con tuorlo sbattuto + qualche goccia di latte, cospargere con semi di sesamo o papavero.</p>
+                                <strong>Staglio e Formatura</strong>
+                                <p>Rovesciare l'impasto su piano leggermente unto con strutto. NON aggiungere farina.
+                                    Dividere in pezzi da 60-80g per rollò e calzoncini, 50g per pizzette. Formare
+                                    palline lisce con la tecnica della pirlatura: girare la mano a spirale sul piano
+                                    creando tensione superficiale. Coprire con telo umido e lasciar riposare 10 minuti.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Farcitura e Modellatura</strong>
+                                <p>ROLLÒ: stendere il panetto in striscia 15×8cm, adagiare fetta di prosciutto cotto con
+                                    bastoncino di mozzarella al centro, arrotolare stretto. CALZONCINI: stendere disco Ø
+                                    10cm, farcire metà con 1 cucchiaio di passata di pomodoro condita (olio, sale,
+                                    origano) + cubetti di mozzarella, richiudere a mezzaluna sigillando bene i bordi.
+                                    PIZZETTE: schiacciare il panetto in disco Ø 8cm, condire con 1 cucchiaino di
+                                    passata, mozzarella a dadini e origano.</p>
+                            </li>
+                            <li>
+                                <strong>Appretto e Finitura</strong>
+                                <p>Disporre i pezzi su teglie con carta forno distanziati 4-5cm. Coprire con pellicola
+                                    leggermente unta. Lasciar lievitare 30-40 minuti a 28-30°C fino a volume aumentato
+                                    del 50%. Spennellare delicatamente con tuorlo sbattuto con latte. Cospargere rollò e
+                                    calzoncini con semi di sesamo.</p>
                             </li>
                         </ol>
                     </div>
@@ -249,54 +295,75 @@
                         </h2>
                         <ol class="steps-list">
                             <li>
-                                <strong>Preparazione Impasto (15-18 minuti a mano)</strong>
-                                <p>Su una spianatoia o in una ciotola capiente, mescolare le due farine con lo zucchero. Formare una fontana, sciogliere il lievito di birra fresco in metà dell'acqua tiepida (25-28°C) e versare al centro. Iniziare a impastare incorporando gradualmente la farina dai bordi. Aggiungere l'acqua restante in 2-3 riprese, continuando a impastare.</p>
+                                <strong>Preparazione Lievito e Grassi</strong>
+                                <p>Sciogliere il lievito di birra fresco in 100g di acqua tiepida (28-30°C) con 1
+                                    cucchiaino di zucchero. Lasciare attivare 10 minuti fino a comparsa di bollicine. Lo
+                                    strutto deve essere morbido a temperatura ambiente (18-20°C).</p>
                             </li>
                             <li>
-                                <strong>Incorporamento Grassi e Lavorazione (10-12 minuti)</strong>
-                                <p>Quando l'impasto è ruvido ma omogeneo, aggiungere lo strutto a pezzetti, l'olio e il miele. Impastare energicamente sul piano fino a completo assorbimento (5-6 minuti). Aggiungere il sale e continuare a lavorare con tecnica slap & fold: sollevare l'impasto, sbatterlo sul piano e ripiegarlo su se stesso. Ripetere per 4-5 minuti fino a ottenere un impasto liscio, elastico e leggermente appiccicoso. Temperatura finale: 25-26°C.</p>
+                                <strong>Impasto Iniziale</strong>
+                                <p>Su una spianatoia o in una ciotola capiente versare le farine a fontana. Al centro
+                                    mettere lo zucchero, il miele e l'acqua con il lievito attivato. Con una forchetta
+                                    iniziare a incorporare la farina dal centro verso l'esterno. Aggiungere gradualmente
+                                    i restanti 400g di acqua tiepida (28-30°C) in 3 riprese, impastando con le mani.</p>
                             </li>
                             <li>
-                                <strong>Prima Lievitazione (3 ore)</strong>
-                                <p>Formare una palla liscia, mettere in ciotola leggermente unta, coprire con pellicola e panno umido. Far lievitare a temperatura ambiente (22-24°C) per 3 ore, oppure a 26-28°C per 2 ore. L'impasto deve raddoppiare. La lievitazione più lunga (dovuta al minor lievito) sviluppa maggiore aroma.</p>
+                                <strong>Incorporamento Grassi</strong>
+                                <p>Quando l'impasto è grossolanamente amalgamato, aggiungere lo strutto a pezzetti.
+                                    Impastare energicamente per 5 minuti schiacciando e ripiegando l'impasto su se
+                                    stesso. Aggiungere il sale e continuare a impastare per altri 3-4 minuti. L'impasto
+                                    diventa più liscio e meno appiccicoso.</p>
                             </li>
                             <li>
-                                <strong>Divisione e Pirlatura (pesatura pezzi)</strong>
-                                <p>Rovesciare delicatamente l'impasto su piano infarinato senza sgonfiarlo troppo. Con tarocco o coltello, dividere in pezzi da 20g (mignon), 50g (medi) o 70g (grossi). Pirlare ogni pezzo: mano a cucchiaio sul pezzo, movimenti circolari rapidi per creare tensione superficiale e forma sferica perfetta.</p>
+                                <strong>Lavorazione con Slap & Fold</strong>
+                                <p>Bagnare leggermente le mani con acqua. Sollevare l'impasto e sbatterlo con forza sul
+                                    piano, poi ripiegarlo su se stesso. Ruotare di 90° e ripetere. Continuare per 8-10
+                                    minuti (circa 150-200 slap) fino a ottenere un impasto liscio, elastico, che si
+                                    stacca dalle mani. Temperatura impasto: 26-27°C.</p>
                             </li>
                             <li>
-                                <strong>Riposo e Formatura (30-40 minuti)</strong>
-                                <p>Coprire le palline con panno umido e lasciar rilassare 30-40 minuti. Questo riposo rende l'impasto più estensibile per la formatura. Procedere alla formatura dei vari tipi: per rollò, allungare a cilindro e avvolgere intorno al wurstel; per pizzette, schiacciare con le dita dal centro verso l'esterno; per calzoni, stendere a disco con matterello, farcire metà superficie e richiudere a mezzaluna sigillando bene i bordi.</p>
+                                <strong>Puntata in Massa</strong>
+                                <p>Formare una palla liscia con tensione superficiale, adagiarla in una ciotola unta con
+                                    strutto. Coprire con pellicola a contatto o telo umido. Lasciar lievitare a
+                                    temperatura ambiente (24-26°C) per 2.5-3 ore fino al raddoppio. Fare il test
+                                    dell'impronta digitale: deve rimanere l'impronta senza rimbalzare.</p>
                             </li>
                             <li>
-                                <strong>Appretto Finale (40-50 minuti)</strong>
-                                <p>Disporre i pezzi formati su teglia con carta forno, distanziati. Coprire con pellicola leggermente unta e far lievitare a 26-28°C per 40-50 minuti. Devono risultare soffici al tatto. Spennellare con tuorlo + latte, decorare con semi. Preriscaldare il forno a 200°C.</p>
+                                <strong>Staglio e Formatura</strong>
+                                <p>Capovolgere delicatamente l'impasto su piano leggermente unto. Sgonfiare con
+                                    pressione delicata delle mani aperte. Con un tarocco o coltello dividere in pezzi da
+                                    60-80g per rollò/calzoncini, 50g per pizzette. Formare palline lisce: prendere un
+                                    pezzo, portare i bordi verso il centro pizzicandoli, capovolgere e con mano a coppa
+                                    far girare sul piano creando tensione. Coprire con telo umido, riposo 10 minuti.</p>
+                            </li>
+                            <li>
+                                <strong>Farcitura e Modellatura</strong>
+                                <p>ROLLÒ: con matterello stendere panetto in rettangolo 15×8cm (spessore 3-4mm).
+                                    Adagiare fetta di prosciutto cotto, al centro mettere bastoncino di mozzarella ben
+                                    strizzata. Arrotolare stretto partendo dal lato lungo, sigillare pizzicando la
+                                    chiusura. CALZONCINI: stendere disco Ø 10cm, su metà mettere 1 cucchiaio di passata
+                                    di pomodoro (già condita con olio, sale, origano) e cubetti di mozzarella strizzata.
+                                    Ripiegare a mezzaluna, sigillare i bordi premendo con i rebbi di una forchetta.
+                                    PIZZETTE: con le dita schiacciare il panetto in disco Ø 8cm, formare un bordino
+                                    pizzicando. Condire con passata, mozzarella a dadini e origano.</p>
+                            </li>
+                            <li>
+                                <strong>Appretto e Finitura</strong>
+                                <p>Disporre i pezzi su teglie con carta forno distanziati 4-5cm. Coprire con pellicola
+                                    leggermente unta (senza toccare la superficie). Lasciar lievitare 30-40 minuti a
+                                    28-30°C (vicino a fonte di calore) fino a volume aumentato del 50%. Sbattere 1
+                                    tuorlo con 30g di latte. Spennellare delicatamente la superficie con pennello
+                                    morbido. Cospargere rollò e calzoncini con semi di sesamo tostati.</p>
                             </li>
                         </ol>
 
                         <div class="pro-tip-box" style="margin-top: 16px;">
-                            <p><strong>💡 PRO TIP:</strong> 💡 Trucco del pasticcere: sostituisci 50g di acqua con 50g di latte fresco intero. Il lattosio dona maggiore doratura e il grasso del latte rende l'impasto ancora più soffice e si conserva meglio per 2-3 giorni.</p>
+                            <p><strong>💡 PRO TIP:</strong> Conservazione perfetta: una volta cotti e raffreddati, i
+                                rustici si possono surgelare in sacchetti ermetici. Rigenerare in forno ventilato a
+                                180°C per 8-10 minuti partendo da congelati.</p>
                         </div>
                     </div>
 
-                    <!-- ── Procedimento: Condimento ── -->
-                    <div class="recipe-panel reveal reveal-delay-2" data-setup="condimento" id="steps-condimento"
-                        style="margin-top: 32px;">
-                        <h2 class="recipe-panel__title">
-                            <span class="recipe-panel__title-icon">🍳</span>
-                            Preparazione Condimento
-                        </h2>
-                        <ol class="steps-list">
-                            <li>
-                                <strong>Preparazione Farciture Base</strong>
-                                <p>Per pizzette: condire 200g di passata di pomodoro con 2 cucchiai di olio EVO, sale, origano. Per rustici: tagliare a dadini 100g di prosciutto cotto e 80g di scamorza o mozzarella ben sgocciolata. Per spinaci: lessare 200g di spinaci freschi, strizzarli bene, ripassarli in padella con olio, aglio e sale.</p>
-                            </li>
-                            <li>
-                                <strong>Montaggio Rollò e Girelle</strong>
-                                <p>Per rollò: avvolgere l'impasto allungato (20 cm) attorno a mezzo wurstel piccolo o intero se grosso. Per girelle: stendere l'impasto a rettangolo, adagiare fette di pancetta tesa, arrotolare stretto e tagliare dischi di 2-3 cm. Disporre in piedi sulla teglia.</p>
-                            </li>
-                        </ol>
-                    </div>
 
                 </div>
 
@@ -318,14 +385,15 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Farina 00 Media Forza</td>
+                            <td>Farina Tipo 0 o 00</td>
                             <td style="color: var(--color-accent); font-weight: 600;">240-280</td>
-                            <td>Molino Caputo Cuoco (W 260), Molino Dallagiovanna Oro (W 260), Le 5 Stagioni Oro (W 280)</td>
+                            <td>Molino Spadoni Farina 0, Molino Vigevano Farina 00, Agugiaro & Figna Le 5 Stagioni
+                                Farina 0</td>
                         </tr>
                         <tr>
-                            <td>Farina Manitoba (Forte)</td>
-                            <td style="color: var(--color-accent); font-weight: 600;">350-400</td>
-                            <td>Molino Caputo Manitoba (W 380), Molino Grassi Manitoba (W 380), Lo Conte Manitoba (W 400)</td>
+                            <td>Farina Manitoba</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">350-380</td>
+                            <td>Molino Spadoni Manitoba, Lo Conte Manitoba Oro, Caputo Manitoba Rossa</td>
                         </tr>
                     </tbody>
                 </table>
@@ -341,7 +409,13 @@
                 <span class="alert__icon">🚫</span>
                 <div class="alert__content">
                     <strong>ALERT PROFESSIONALE</strong>
-                    <p>⚠️ NON aggiungere il sale insieme al lievito all'inizio: il sale inibisce l'attività dei lieviti per osmosi. Inserirlo solo quando l'impasto è già formato (dopo 4-5 minuti). NON eccedere con la farina durante la formatura: troppa farina sul piano impedisce la corretta sigillatura dei calzoni e rustici. NON saltare l'appretto finale: senza questa lievitazione i pezzi risultano duri e compatti. NON aprire il forno nei primi 10 minuti di cottura: lo sbalzo termico blocca la lievitazione e crea cascatura.</p>
+                    <p>NON aggiungere farina durante lo staglio e la formatura: l'impasto ben incordato non deve essere
+                        appiccicoso. L'eccesso di farina sulla superficie crea difetti di cottura (macchie bianche) e
+                        rende i rustici secchi. NON aprire il forno nei primi 10 minuti: lo shock termico causa la
+                        cascatura immediata. NON stendere i pezzi con il mattarello in modo aggressivo: schiaccia le
+                        bolle di CO2 e rende il prodotto denso e pesante. La mozzarella DEVE essere strizzata bene:
+                        l'eccesso di liquido inzuppa l'impasto e impedisce la corretta cottura. NON usare farine deboli
+                        (W &lt; 220): l'impasto non regge la farcitura e si rompe in cottura.</p>
                 </div>
             </div>
 
@@ -353,19 +427,26 @@
                 </h2>
                 <div class="tech-badges" style="margin-bottom: 16px;">
                     <div class="tech-badge">
-                        🌡️ Temperatura: <span class="tech-badge__value">&nbsp;200-210°C</span>
+                        🌡️ Temperatura: <span class="tech-badge__value">&nbsp;220°C (ventilato 200°C)</span>
                     </div>
                     <div class="tech-badge">
-                        ⏱️ Tempo: <span class="tech-badge__value">&nbsp;15-20 minuti</span>
+                        ⏱️ Tempo: <span class="tech-badge__value">&nbsp;15-18 minuti</span>
                     </div>
                 </div>
                 <ul class="baking-tips" style="list-style: none; padding: 0;">
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Preriscaldare il forno a 200°C per almeno 20 minuti</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Infornare a metà altezza, mai troppo in alto per evitare bruciature superficiali</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Se il forno cuoce in modo non uniforme, ruotare la teglia a metà cottura</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 La rosticceria è pronta quando la superficie è dorata uniforme e la base suona 'vuota' se bussata con le nocche</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Per rollò con wurstel: controllare che il wurstel sia ben caldo al centro (minimo 15 minuti)</li>
-                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Lasciar riposare 5 minuti su griglia prima di servire per permettere al vapore di stabilizzarsi</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Preriscaldare il forno
+                        a 220°C per almeno 20 minuti prima di infornare</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Posizionare la teglia
+                        a metà altezza del forno per cottura uniforme</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 I rollò e calzoncini
+                        sono cotti quando la superficie è dorata ambrata (non troppo scura) e il fondo risulta croccante
+                    </li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Le pizzette
+                        necessitano 2-3 minuti in meno: il formaggio deve essere fuso ma non bruciato</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 NON aprire il forno
+                        nei primi 10 minuti per evitare cascatura</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 A cottura ultimata,
+                        lasciar raffreddare su griglia per mantenere la croccantezza del fondo</li>
                 </ul>
             </div>
 
@@ -377,21 +458,45 @@
                 </h2>
                 <dl class="glossary-list" style="margin: 0; padding: 0;">
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Incordatura</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Fase dell'impastamento in cui il glutine si sviluppa completamente e l'impasto si avvolge attorno al gancio dell'impastatrice, staccandosi dalle pareti della vasca. Indica piena formazione della maglia glutinica.</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Fase in cui
+                        il glutine si sviluppa completamente e l'impasto si avvolge attorno al gancio della spirale,
+                        staccandosi dalle pareti della vasca. Indica la corretta formazione della maglia glutinica.</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Puntata</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prima lievitazione in massa dell'impasto, prima della divisione in pezzi. Permette lo sviluppo di aromi e la maturazione della struttura glutinica.</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prima
+                        lievitazione dell'impasto in massa (non diviso) dopo l'impasto. Permette al glutine di
+                        rilassarsi e ai lieviti di produrre CO2 per il volume finale.</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Staglio</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Divisione dell'impasto lievitato in pezzi di peso prestabilito, utilizzando bilancia e tarocco (spatola da banco).</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Operazione di
+                        divisione dell'impasto lievitato in pezzi di peso prestabilito, usando tarocco o coltello. Va
+                        eseguito con decisione per non strappare la maglia glutinica.</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Pirlatura</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica manuale per dare forma sferica ai pezzi d'impasto dopo lo staglio. Si esegue con movimento circolare della mano a cucchiaio sul piano, creando tensione superficiale.</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica per
+                        formare palline lisce e tese. Si gira la mano a spirale sul piano mentre il panetto ruota su se
+                        stesso, creando tensione superficiale che dà struttura al prodotto finale.</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Appretto</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Ultima lievitazione dei pezzi già formati, prima della cottura. Fase cruciale per ottenere volume e sofficità finale.</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Seconda
+                        lievitazione dopo la formatura dei pezzi. Più breve della puntata (30-40 min), serve a far
+                        riprendere volume ai pezzi dopo la lavorazione meccanica.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Cascatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Sgonfiamento
+                        dell'impasto lievitato causato da shock termico, correnti d'aria o apertura del forno durante la
+                        cottura. Rende il prodotto piatto e denso.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Test del Velo</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prova per
+                        verificare il corretto sviluppo del glutine: si prende una piccola porzione di impasto e si
+                        stira delicatamente. Deve formare una membrana traslucida senza rompersi.</dd>
                     <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Slap & Fold</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica di impastamento manuale: si solleva l'impasto, lo si sbatte energicamente sul piano e lo si ripiega su se stesso. Sviluppa glutine in modo efficace senza impastatrice.</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Temperatura Target</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Temperatura ottimale che l'impasto deve raggiungere a fine impastamento per garantire fermentazione corretta. Si calcola considerando temperatura ambiente, farina e acqua.</dd>
-                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Idratazione</dt>
-                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Percentuale di acqua rispetto al peso totale delle farine. Si calcola: (acqua/farina) x 100. In questa ricetta: 50% (250g acqua su 500g farina).</dd>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica
+                        manuale di impasto: si solleva l'impasto, si sbatte con forza sul piano e si ripiega su se
+                        stesso. Sviluppa il glutine senza attrezzature meccaniche.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Temperatura Impasto</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Temperatura
+                        finale dell'impasto dopo la lavorazione. Influenza la velocità di lievitazione e la qualità del
+                        prodotto. Per lievitati con strutto: 26-27°C ottimale.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Maglia Glutinica</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Rete
+                        tridimensionale di proteine (glutenina e gliadina) che si forma durante l'impasto. Trattiene i
+                        gas della lievitazione e dà struttura al prodotto finale.</dd>
                 </dl>
             </div>
 
@@ -422,7 +527,7 @@
                 <div>
                     <h4 class="footer__col-title">Questa Ricetta</h4>
                     <ul class="footer__links">
-                        <li><a href="#">🥐 Impasto per Rosticceria Siciliana</a></li>
+                        <li><a href="#">🥐 Impasto Rosticceria Siciliana</a></li>
                         <li><a href="#">💧 Idratazione 50%</a></li>
                     </ul>
                 </div>

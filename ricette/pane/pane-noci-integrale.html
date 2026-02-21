@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Pane rustico con mix di farine integrali, farro e grano saraceno arricchito con gherigli di noci tostate. Lievitazione lunga per massima digeribilità.">
+    <title>Pane alle Noci Integrale — Il Ricettario</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap"
+        rel="stylesheet">
+    <!-- FOUC Prevention: applica tema prima del rendering -->
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = saved || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+  <script type="module" crossorigin src="/Ricettario/assets/animations-D-SwE_vs.js"></script>
+  <script type="module" crossorigin src="/Ricettario/assets/main-C9XSsPpw.js"></script>
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/animations-DUPNX6Ov.css">
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-Bxetn_nZ.css">
+</head>
+
+<body>
+
+    <!-- Skip to content — Accessibilità -->
+    <a href="#recipe-content" class="skip-link">Vai al contenuto principale</a>
+
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="../../index.html" class="navbar__logo">
+                <div class="navbar__logo-icon">🔥</div>
+                <span>Il Ricettario</span>
+            </a>
+
+            <ul class="navbar__links" id="nav-links">
+                <li><a href="../../index.html#ricette">Ricette</a></li>
+                <li><a href="../../index.html#strumenti">Strumenti</a></li>
+                <li><a href="../../index.html#chi-sono">Chi Sono</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+                <span class="theme-toggle__icon theme-toggle__sun">☀️</span>
+                <span class="theme-toggle__icon theme-toggle__moon">🌙</span>
+            </button>
+
+            <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════ RECIPE HERO ═══════════ -->
+    <div class="recipe-hero" style="background-image: url('../../images/ricette/pane/pane-noci-integrale.jpg')">
+        <div class="container">
+            <nav class="breadcrumb reveal">
+                <a href="../../index.html">Home</a>
+                <span class="breadcrumb__separator">›</span>
+                <a href="../../index.html#ricette">Ricette</a>
+                <span class="breadcrumb__separator">›</span>
+                <a href="./">Pane</a>
+                <span class="breadcrumb__separator">›</span>
+                <span>Pane alle Noci Integrale</span>
+            </nav>
+
+            <div class="recipe-hero__content">
+                <div class="recipe-hero__tags reveal">
+                    <span class="tag tag--tool" id="hero-setup-tag">🔧 Impastatrice a spirale</span>
+                    <span class="tag tag--category">🥖 Pane</span>
+                </div>
+                <h1 class="recipe-hero__title reveal reveal-delay-1">Pane alle Noci Integrale</h1>
+                <p class="recipe-hero__subtitle reveal reveal-delay-2">
+                    Pane rustico multicereale con noci tostate e lievitazione naturale estesa
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ TECH BADGES ═══════════ -->
+    <div class="container" style="padding-top: 40px;">
+        <div class="tech-badges reveal">
+            <div class="tech-badge">
+                💧 Idratazione: <span class="tech-badge__value">&nbsp;68%</span>
+            </div>
+            <div class="tech-badge">
+                🌡️ Target Temp: <span class="tech-badge__value">&nbsp;24-26°C</span>
+            </div>
+            <div class="tech-badge">
+                ⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;~4.5h totali</span>
+            </div>
+            <div class="tech-badge tech-badge--toggle" id="setup-badge" role="button" tabindex="0"
+                aria-label="Cambia setup">
+                🔧 Setup: <span class="tech-badge__value" id="setup-badge-value">&nbsp;A mano</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ RECIPE CONTENT ═══════════ -->
+    <section class="recipe-content">
+        <div class="container">
+            <div class="recipe-layout">
+
+                <!-- COLONNA SINISTRA: Ingredienti -->
+                <div>
+                    <div class="recipe-panel reveal">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">🛒</span>
+                            Ingredienti Base
+                        </h2>
+
+                        <!-- Calcolatore Dosi -->
+                        <div class="dose-calculator" id="dose-calculator">
+                            <div class="dose-calculator__label">
+                                <span class="dose-calculator__label-icon">⚖️</span>
+                                Farina totale
+                            </div>
+                            <div class="dose-calculator__controls">
+                                <button class="dose-calculator__btn" id="dose-decrease"
+                                    aria-label="Diminuisci dosi">−</button>
+                                <div class="dose-calculator__input-wrapper">
+                                    <input type="number" class="dose-calculator__input" id="dose-input" value="0.5"
+                                        min="0.5" max="5" step="0.5" data-base-total="500" aria-label="Kg di farina">
+                                    <span class="dose-calculator__unit">kg</span>
+                                </div>
+                                <button class="dose-calculator__btn" id="dose-increase"
+                                    aria-label="Aumenta dosi">+</button>
+                            </div>
+                            <div class="dose-calculator__badge" id="dose-badge">×1</div>
+                        </div>
+
+                        <table class="ingredients-table" id="ingredients-table">
+                            <tr>
+                                <td>Farina Integrale di Grano Tenero <span class="ingredient-note">(tipo 2, W
+                                        180-200)</span></td>
+                                <td class="ingredient-qty" data-base="300">300g</td>
+                            </tr>
+                            <tr>
+                                <td>Farina di Farro Semi-Integrale <span class="ingredient-note">(tipo 2, W
+                                        160-180)</span></td>
+                                <td class="ingredient-qty" data-base="160">160g</td>
+                            </tr>
+                            <tr>
+                                <td>Farina di Grano Saraceno <span class="ingredient-note">(decorticata)</span></td>
+                                <td class="ingredient-qty" data-base="40">40g</td>
+                            </tr>
+                            <tr>
+                                <td>Acqua <span class="ingredient-note"
+                                        data-setup-note-spirale="(ghiacciata 2-4°C, tutta in unica soluzione)"
+                                        data-setup-note-mano="(tiepida 28-30°C, aggiunta graduale in 3 riprese)">(ghiacciata
+                                        2-4°C, tutta in unica soluzione)</span></td>
+                                <td class="ingredient-qty" data-base="340">340g</td>
+                            </tr>
+                            <tr>
+                                <td>Lievito di Birra Secco <span class="ingredient-note"
+                                        data-setup-note-spirale="(3g secco, aggiunto diretto)"
+                                        data-setup-note-mano="(9g fresco sciolto in acqua con pizzico zucchero (pre-fermento 10 min))">(3g
+                                        secco, aggiunto diretto)</span></td>
+                                <td class="ingredient-qty" data-base="3">3g</td>
+                            </tr>
+                            <tr>
+                                <td>Sale Marino Fino <span class="ingredient-note">(1.8-2% su farina totale)</span></td>
+                                <td class="ingredient-qty" data-base="10">10g</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="recipe-panel reveal" style="margin-top: 28px;">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">🥜</span>
+                            Sospensioni
+                        </h2>
+                        <table class="ingredients-table" id="suspensions-table">
+                            <tr>
+                                <td>Gherigli di Noci <span class="ingredient-note">(tritati grossolanamente, leggermente
+                                        tostati)</span></td>
+                                <td class="ingredient-qty" data-base="100">100g</td>
+                            </tr>
+                        </table>
+
+                        <div class="pro-tip-box" style="margin-top: 16px;">
+                            <p><strong>💡 PRO TIP:</strong> **Tostatura noci strategica**: tostare le noci non solo
+                                esalta il sapore, ma riduce l'umidità superficiale evitando che cedano acqua all'impasto
+                                durante la lievitazione, rischiando zone mollicce.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COLONNA DESTRA: Procedimento -->
+                <div>
+
+                    <!-- ── Procedimento: Primario (Spirale o Estrusore) ── -->
+                    <div class="recipe-panel reveal reveal-delay-1" data-setup="spirale" id="steps-spirale">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">⚙️</span>
+                            Procedimento
+                            <span class="recipe-panel__title-badge">🔧 Spirale</span>
+                        </h2>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Preparazione Noci</strong>
+                                <p>Tritare grossolanamente i gherigli di noci con un coltello (non polverizzarle).
+                                    Tostarle leggermente in padella antiaderente per 3-4 minuti a fuoco medio,
+                                    mescolando continuamente. Lasciarle raffreddare completamente.</p>
+                            </li>
+                            <li>
+                                <strong>Impastamento Base (1ª Velocità)</strong>
+                                <p>Inserire nella vasca della spirale le tre farine (integrale, farro, grano saraceno) e
+                                    il lievito secco. Avviare a velocità 1 e versare l'acqua ghiacciata (2-4°C) a filo
+                                    nell'arco di 2 minuti. Continuare per 4 minuti totali fino a completa
+                                    incorporazione. L'impasto risulterà ancora disomogeneo.</p>
+                            </li>
+                            <li>
+                                <strong>Aggiunta Sale e Incordatura (2ª Velocità)</strong>
+                                <p>Aggiungere il sale e passare a velocità 2. Impastare per 6-8 minuti fino a
+                                    raggiungere incordatura completa: l'impasto si stacca dalle pareti della vasca,
+                                    risulta liscio ed elastico. Temperatura finale: 24-26°C. Se supera 27°C, rallentare
+                                    o sospendere brevemente.</p>
+                            </li>
+                            <li>
+                                <strong>Incorporazione Noci</strong>
+                                <p>Abbassare a velocità 1 e aggiungere le noci tostate raffreddate. Impastare per 1-2
+                                    minuti MASSIMO, giusto per distribuirle uniformemente senza tritarle ulteriormente.
+                                    Spegnere la macchina.</p>
+                            </li>
+                            <li>
+                                <strong>Puntata in Massa</strong>
+                                <p>Trasferire l'impasto in una ciotola leggermente oliata, coprire con pellicola e far
+                                    lievitare in ambiente tiepido (26-28°C) per 3 ore. Dopo 1 ora e dopo 2 ore, eseguire
+                                    una piega: portare i lembi esterni dell'impasto verso il centro, girare la ciotola e
+                                    ripetere. Questo rinforza la maglia glutinica.</p>
+                            </li>
+                            <li>
+                                <strong>Pirlatura e Formatura</strong>
+                                <p>Rovesciare l'impasto su piano leggermente infarinato. Sgasare delicatamente con le
+                                    mani aperte. Eseguire una piega a libro: piegare i 4 lati verso il centro.
+                                    Capovolgere l'impasto con la chiusura verso il basso e pirlare con movimenti
+                                    circolari per dare tensione superficiale. Formare un filone allungato di circa 30-35
+                                    cm.</p>
+                            </li>
+                            <li>
+                                <strong>Appretto</strong>
+                                <p>Adagiare il filone su leccarda con carta forno. Coprire con un canovaccio umido e far
+                                    lievitare a temperatura ambiente (22-24°C) per 45-60 minuti, fino a quando premendo
+                                    delicatamente con un dito l'impronta torna lentamente (prova del dito).</p>
+                            </li>
+                            <li>
+                                <strong>Scarificazione</strong>
+                                <p>Con una lama da pane (lame) o coltello molto affilato, praticare 3-4 tagli obliqui
+                                    profondi 0.5-1 cm sulla superficie del pane, inclinando la lama di 30-45°. I tagli
+                                    devono essere decisi e rapidi per evitare di strappare l'impasto.</p>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <!-- ── Procedimento: A mano ── -->
+                    <div class="recipe-panel reveal reveal-delay-1" data-setup="mano" id="steps-mano"
+                        style="display: none;">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">⚙️</span>
+                            Procedimento
+                            <span class="recipe-panel__title-badge">🤲 A mano</span>
+                        </h2>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Preparazione Noci</strong>
+                                <p>Tritare grossolanamente i gherigli di noci con un coltello. Tostarle in padella
+                                    antiaderente per 3-4 minuti a fuoco medio, mescolando. Lasciarle raffreddare
+                                    completamente.</p>
+                            </li>
+                            <li>
+                                <strong>Pre-Fermento (Lievitino)</strong>
+                                <p>In una ciotolina sciogliere il lievito di birra fresco (9g) in 50 ml di acqua tiepida
+                                    (28-30°C) prelevata dal totale. Aggiungere un pizzico di zucchero e 1 cucchiaio di
+                                    farina integrale. Mescolare e lasciare riposare 10 minuti finché non diventa
+                                    spumoso.</p>
+                            </li>
+                            <li>
+                                <strong>Autoliisi e Primo Impastamento</strong>
+                                <p>Su una spianatoia o in una ciotola capiente, mescolare le tre farine formando una
+                                    fontana. Versare al centro il lievitino attivato e iniziare a incorporare la farina
+                                    dai bordi interni. Aggiungere metà dell'acqua tiepida rimasta (circa 145 ml) e
+                                    impastare energicamente per 5 minuti con movimento di piegatura e pressione.
+                                    L'impasto sarà ancora ruvido.</p>
+                            </li>
+                            <li>
+                                <strong>Aggiunta Sale e Sviluppo Glutine</strong>
+                                <p>Sciogliere il sale nei restanti 145 ml di acqua tiepida. Aggiungere gradualmente
+                                    all'impasto, un poco alla volta, continuando a impastare con tecnica slap & fold:
+                                    sollevare l'impasto, sbatterlo sul piano e ripiegarlo su sé stesso. Ripetere per
+                                    10-12 minuti. L'impasto diventerà liscio, elastico e meno appiccicoso.</p>
+                            </li>
+                            <li>
+                                <strong>Incorporazione Noci</strong>
+                                <p>Stendere l'impasto su piano in un rettangolo di circa 30x20 cm. Distribuire
+                                    uniformemente le noci tostate. Piegare i 4 lati verso il centro per incorporarle.
+                                    Impastare delicatamente per 2 minuti per distribuire le noci senza romperle
+                                    eccessivamente.</p>
+                            </li>
+                            <li>
+                                <strong>Prima Lievitazione con Pieghe</strong>
+                                <p>Formare una palla e trasferirla in ciotola leggermente oliata. Coprire con pellicola
+                                    e far lievitare in luogo tiepido (26-28°C, es. forno spento con luce accesa) per 3
+                                    ore. Dopo 1 ora e dopo 2 ore, eseguire una serie di pieghe: portare i bordi esterni
+                                    verso il centro, ruotare la ciotola, ripetere 4 volte. Questo rinforza la struttura.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Formatura e Pirlatura</strong>
+                                <p>Rovesciare l'impasto su piano leggermente infarinato. Sgasare delicatamente con le
+                                    mani aperte. Piegare i 4 lati verso il centro (piega a libro). Capovolgere con la
+                                    chiusura sotto e pirlare con movimenti circolari per dare tensione superficiale.
+                                    Allungare delicatamente in un filone di 30-35 cm.</p>
+                            </li>
+                            <li>
+                                <strong>Seconda Lievitazione (Appretto)</strong>
+                                <p>Adagiare su leccarda con carta forno. Coprire con canovaccio umido e far lievitare a
+                                    temperatura ambiente (22-24°C) per 45-60 minuti. Il pane è pronto quando premendo
+                                    delicatamente con un dito l'impronta torna lentamente.</p>
+                            </li>
+                            <li>
+                                <strong>Scarificazione</strong>
+                                <p>Con lama da pane o coltello affilato, praticare 3-4 tagli obliqui profondi 0.5-1 cm
+                                    sulla superficie, inclinando la lama di 30-45°. Movimenti decisi e rapidi per non
+                                    strappare l'impasto.</p>
+                            </li>
+                        </ol>
+
+                        <div class="pro-tip-box" style="margin-top: 16px;">
+                            <p><strong>💡 PRO TIP:</strong> **Temperatura acqua in spirale**: con l'attrito della
+                                macchina l'impasto si scalda rapidamente. Acqua ghiacciata (2-4°C) è fondamentale per
+                                non superare i 26-27°C finali, oltre i quali l'impasto perde forza e la lievitazione
+                                accelera in modo incontrollato.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <!-- ═══════════ CONSIGLI FARINE & MARCHI ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 40px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">🌾</span>
+                    Consigli Farine & Marchi
+                </h2>
+                <table class="flour-table">
+                    <thead>
+                        <tr>
+                            <th>Tipo Farina</th>
+                            <th>Forza (W)</th>
+                            <th>Marchi Consigliati</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Farina Integrale Grano Tenero (Tipo 2)</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">180-200</td>
+                            <td>Mulino Marino, Le Farine Magiche, Molino Quaglia Bio</td>
+                        </tr>
+                        <tr>
+                            <td>Farina di Farro Semi-Integrale (Tipo 2)</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">160-180</td>
+                            <td>Molino Merano, Molino Grassi, Prometeo</td>
+                        </tr>
+                        <tr>
+                            <td>Farina di Grano Saraceno Decorticata</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">-</td>
+                            <td>Molino Merano, Molino Quaglia, Valsugana</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pro-tip-box" style="margin-top: 16px;">
+                    <p><strong>💡 PRO TIP:</strong> La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti,
+                        cerca qualsiasi farina con il valore W indicato.</p>
+                </div>
+            </div>
+
+            <!-- ═══════════ ALERT ═══════════ -->
+            <div class="alert alert--danger reveal" style="margin-top: 32px;">
+                <span class="alert__icon">🚫</span>
+                <div class="alert__content">
+                    <strong>ALERT PROFESSIONALE</strong>
+                    <p>NON usare farine deboli (W &lt; 160): le farine integrali e alternative hanno già poco glutine,
+                        serve una base con buona forza per reggere la lievitazione e il peso delle noci. NON aggiungere
+                        le noci troppo presto nell'impastamento: romperebbero la maglia glutinica in fase di sviluppo.
+                        NON saltare le pieghe durante la puntata: con farine integrali sono ESSENZIALI per rinforzare la
+                        struttura. NON infornare se l'appretto non è completato (prova del dito): il pane non si
+                        svilupperà correttamente. NON tagliare il pane ancora caldo: la mollica è in fase di
+                        stabilizzazione e risulterebbe collosa.</p>
+                </div>
+            </div>
+
+            <!-- ═══════════ COTTURA ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 32px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">🔥</span>
+                    Cottura
+                </h2>
+                <div class="tech-badges" style="margin-bottom: 16px;">
+                    <div class="tech-badge">
+                        🌡️ Temperatura: <span class="tech-badge__value">&nbsp;220°C</span>
+                    </div>
+                    <div class="tech-badge">
+                        ⏱️ Tempo: <span class="tech-badge__value">&nbsp;35-40 minuti</span>
+                    </div>
+                </div>
+                <ul class="baking-tips" style="list-style: none; padding: 0;">
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Preriscaldare il forno
+                        a 240°C con pietra refrattaria (se disponibile) per 30 minuti, poi abbassare a 220°C al momento
+                        di infornare</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Creare vapore nei
+                        primi 10 minuti: posizionare una leccarda sul fondo del forno, al momento di infornare versarvi
+                        100 ml di acqua bollente e chiudere subito lo sportello</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Dopo 25 minuti,
+                        abbassare a 200°C e far dorare completamente. Il pane è cotto quando bussando sul fondo suona
+                        vuoto</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Lasciar raffreddare
+                        COMPLETAMENTE su griglia (almeno 1 ora) prima di tagliare, altrimenti la mollica risulterà
+                        gommosa</li>
+                </ul>
+            </div>
+
+            <!-- ═══════════ GLOSSARIO ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 32px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">📖</span>
+                    Glossario
+                </h2>
+                <dl class="glossary-list" style="margin: 0; padding: 0;">
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Incordatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Fase finale
+                        dell'impastamento in cui il glutine raggiunge la massima estensibilità: l'impasto si stacca
+                        dalle pareti, risulta liscio, elastico e forma un 'cordone' se tirato.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Puntata</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prima
+                        lievitazione in massa dell'impasto, prima della formatura. Serve a sviluppare aromi e struttura.
+                    </dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Pirlatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica per
+                        dare tensione superficiale all'impasto formando una palla: si eseguono movimenti circolari con
+                        le mani a coppa sul piano, spingendo l'impasto verso il centro.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Appretto</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Seconda
+                        lievitazione (o lievitazione finale) che avviene dopo la formatura, prima della cottura.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Slap & Fold</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica di
+                        impastamento manuale: si solleva l'impasto, lo si sbatte sul piano e lo si ripiega su sé stesso.
+                        Sviluppa rapidamente la maglia glutinica in impasti ad alta idratazione.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Scarificazione</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Incisioni
+                        (tagli) praticate sulla superficie dell'impasto prima della cottura con una lama affilata.
+                        Permettono l'espansione controllata del pane in forno.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Lame (o Lama da Pane)</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Strumento
+                        professionale con lama molto affilata usato per praticare i tagli sul pane. In alternativa:
+                        lametta da barber o coltello seghettato affilato.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Prova del Dito</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Test per
+                        verificare la maturazione dell'impasto: si preme delicatamente con un dito; se l'impronta torna
+                        lentamente (5-10 sec) l'impasto è pronto per la cottura.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Autolisi</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Riposo di
+                        farina e acqua (senza lievito e sale) per 20-60 minuti. Migliora estensibilità e digeribilità.
+                        In questa ricetta è implicita nella versione manuale durante il primo impastamento.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Pre-Fermento (Lievitino)
+                    </dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Attivazione
+                        del lievito fresco in acqua tiepida con zucchero prima dell'impastamento. Favorisce un avvio più
+                        rapido e regolare della fermentazione.</dd>
+                </dl>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__brand-name">🔥 <span>Il Ricettario</span></div>
+                    <p class="footer__brand-desc">
+                        Ricettario personale. Ricette artigianali documentate con precisione tecnica per
+                        risultati replicabili al 100%.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Navigazione</h4>
+                    <ul class="footer__links">
+                        <li><a href="../../index.html">↗ Home</a></li>
+                        <li><a href="../../index.html#ricette">↗ Ricette</a></li>
+                        <li><a href="../../index.html#strumenti">↗ Strumenti</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Questa Ricetta</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">🥖 Pane alle Noci Integrale</a></li>
+                        <li><a href="#">💧 Idratazione 68%</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Altre Ricette</h4>
+                    <ul class="footer__links">
+                        <li><a href="../../index.html#ricette">↗ Tutte le Ricette</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <span>© <span id="current-year">2026</span> Il Ricettario</span>
+                <div class="footer__social">
+                    <a href="https://github.com/devdomenicotatone" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
