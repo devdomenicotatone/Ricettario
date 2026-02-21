@@ -1,44 +1,45 @@
-# Validazione: Impasto per Rosticceria Siciliana
+# Validazione: Impasto Rosticceria Siciliana
 
 ## 🟢 Confidenza: 100%
 
-**Fonti consultate:** 7
+**Fonti consultate:** 8
 
 ### ✅ Confermato
-- Ingredienti: 9/9 confermati (100%)
+- Ingredienti: 8/8 confermati (100%)
 
 ### ⚠️ Attenzione
-- ⚠️ Idratazione significativamente diversa: 50% vs media fonti 89%
+- ⚠️ Idratazione significativamente diversa: 50% vs media fonti 82%
 
 ### 📋 Ingredienti
 | Status | Ingrediente | Note |
 |--------|-------------|------|
-| ✅ | farina tipo 00 media forza | Confermato da fonti |
+| ✅ | farina tipo 0 o 00 | Confermato da fonti |
 | ✅ | farina manitoba | Confermato da fonti |
 | ✅ | acqua | Confermato da fonti |
 | ✅ | lievito di birra fresco | Confermato da fonti |
 | ✅ | strutto | Confermato da fonti |
-| ✅ | olio extravergine di oliva | Confermato da fonti |
 | ✅ | zucchero semolato | Confermato da fonti |
-| ✅ | miele | Confermato da fonti |
 | ✅ | sale fino | Confermato da fonti |
+| ✅ | miele | Confermato da fonti |
 
 ### 📊 Dettagli
-- Tempi fonti: 40min, P0DT2H0M, 1h 30min, 15min, P0DT0H30M, 00h 20min
-- Tempo Claude: 2-3h prima lievitazione + 30-45min appretto
+- Tempi fonti: 15min, 40min, 1h 0min, P0DT0H5M, 1h 30min
+- Tempo Claude: 2-2.5h lievitazione + 30min appretto
 
 ### 📰 Fonti
-1. **tavolartegusto.it** — Dati strutturati (16 ingredienti)
-   https://www.tavolartegusto.it/ricetta/rosticceria-siciliana-ricetta-originale/
-2. **blog.giallozafferano.it** — Dati strutturati (15 ingredienti)
-   https://blog.giallozafferano.it/lhofattoio/rosticceria-palermitana-o-siciliana/
-3. **soniaperonaci.it** — Dati strutturati (27 ingredienti)
-   https://www.soniaperonaci.it/rosticceria-siciliana/
-4. **blog.giallozafferano.it** — Dati strutturati (7 ingredienti)
+1. **blog.giallozafferano.it** — Dati strutturati (7 ingredienti)
    https://blog.giallozafferano.it/pasticciandoconilenia/impasto-rosticceria-palermitana-siciliana-ricetta-base/
-5. **blog.giallozafferano.it** — Dati strutturati (8 ingredienti)
-   https://blog.giallozafferano.it/mastercheffa/impasto-rosticceria-siciliana-ricetta-base/
-6. **associazioneitalianacuochi.it** — Estrazione HTML (6 ingredienti)
+2. **tavolartegusto.it** — Dati strutturati (16 ingredienti)
+   https://www.tavolartegusto.it/ricetta/rosticceria-siciliana-ricetta-originale/
+3. **cookist.it** — Dati strutturati (17 ingredienti)
+   https://www.cookist.it/rosticceria-siciliana/
+4. **blog.giallozafferano.it** — Dati strutturati (6 ingredienti)
+   https://blog.giallozafferano.it/letortedigessica/impasto-rosticceria-siciliana/
+5. **soniaperonaci.it** — Dati strutturati (27 ingredienti)
+   https://www.soniaperonaci.it/rosticceria-siciliana/
+6. **cosatipreparopercena.com** — Dati strutturati (12 ingredienti)
+   https://www.cosatipreparopercena.com/2015/02/rosticceria-palermitana.html
+7. **associazioneitalianacuochi.it** — Estrazione HTML (18 ingredienti)
    https://www.associazioneitalianacuochi.it/2024/05/27/rosticceria-siciliana/
-7. **tuorlorosso.it** — Dati strutturati (7 ingredienti)
-   https://www.tuorlorosso.it/rosticceria-siciliana-impasto-base/
+8. **cucinareinsiemeate.altervista.org** — Estrazione HTML (11 ingredienti)
+   https://cucinareinsiemeate.altervista.org/2014/11/impasto-per-rosticceria-siciliana.html

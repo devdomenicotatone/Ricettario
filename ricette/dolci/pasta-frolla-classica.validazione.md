@@ -5,21 +5,22 @@
 **Fonti consultate:** 9
 
 ### ✅ Confermato
-- Ingredienti: 6/6 confermati (100%)
+- Ingredienti: 7/7 confermati (100%)
 
 ### 📋 Ingredienti
 | Status | Ingrediente | Note |
 |--------|-------------|------|
-| ✅ | farina tipo 00 debole | Confermato da fonti |
-| ✅ | burro europeo 82% grassi | Confermato da fonti |
-| ✅ | zucchero semolato fino | Confermato da fonti |
-| ✅ | uova intere fresche | Confermato da fonti |
-| ✅ | scorza limone non trattato | Confermato da fonti |
-| ✅ | sale fino marino | Confermato da fonti |
+| ✅ | farina tipo 00 media forza | Confermato da fonti |
+| ✅ | burro | Confermato da fonti |
+| ✅ | zucchero a velo | Confermato da fonti |
+| ✅ | uova intere | Confermato da fonti |
+| ✅ | scorza di limone | Confermato da fonti |
+| ✅ | sale fino | Confermato da fonti |
+| ✅ | estratto di vaniglia | Confermato da fonti |
 
 ### 📊 Dettagli
 - Tempi fonti: 20min,  1h 20min + 2h di riposo, 10min, 5min, 30min, 30min
-- Tempo Claude: Riposo 30-60 min in frigo
+- Tempo Claude: riposo 30-60 min in frigo
 
 ### 📰 Fonti
 1. **ricette.giallozafferano.it** — Dati strutturati (4 ingredienti)

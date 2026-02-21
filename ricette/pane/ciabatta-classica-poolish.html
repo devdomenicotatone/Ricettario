@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Ciabatta artigianale ad alta idratazione con prefermento poolish, alveolatura sviluppata e crosta croccante. Metodo professionale con doppia lievitazione.">
+    <title>Ciabatta Classica con Poolish — Il Ricettario</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap"
+        rel="stylesheet">
+    <!-- FOUC Prevention: applica tema prima del rendering -->
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = saved || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- Skip to content — Accessibilità -->
+    <a href="#recipe-content" class="skip-link">Vai al contenuto principale</a>
+
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="../../index.html" class="navbar__logo">
+                <div class="navbar__logo-icon">🔥</div>
+                <span>Il Ricettario</span>
+            </a>
+
+            <ul class="navbar__links" id="nav-links">
+                <li><a href="../../index.html#ricette">Ricette</a></li>
+                <li><a href="../../index.html#strumenti">Strumenti</a></li>
+                <li><a href="../../index.html#chi-sono">Chi Sono</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+                <span class="theme-toggle__icon theme-toggle__sun">☀️</span>
+                <span class="theme-toggle__icon theme-toggle__moon">🌙</span>
+            </button>
+
+            <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════ RECIPE HERO ═══════════ -->
+    <div class="recipe-hero" style="background-image: url('../../images/ricette/pane/ciabatta-classica-poolish.jpg')">
+        <div class="container">
+            <nav class="breadcrumb reveal">
+                <a href="../../index.html">Home</a>
+                <span class="breadcrumb__separator">›</span>
+                <a href="../../index.html#ricette">Ricette</a>
+                <span class="breadcrumb__separator">›</span>
+                <a href="./">Pane</a>
+                <span class="breadcrumb__separator">›</span>
+                <span>Ciabatta Classica con Poolish</span>
+            </nav>
+
+            <div class="recipe-hero__content">
+                <div class="recipe-hero__tags reveal">
+                    <span class="tag tag--tool" id="hero-setup-tag">🔧 Impastatrice a spirale</span>
+                    <span class="tag tag--category">🥖 Pane</span>
+                </div>
+                <h1 class="recipe-hero__title reveal reveal-delay-1">Ciabatta Classica con Poolish</h1>
+                <p class="recipe-hero__subtitle reveal reveal-delay-2">
+                    Pane italiano ad alta idratazione con prefermento liquido e alveolatura irregolare
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ TECH BADGES ═══════════ -->
+    <div class="container" style="padding-top: 40px;">
+        <div class="tech-badges reveal">
+            <div class="tech-badge">
+                💧 Idratazione: <span class="tech-badge__value">&nbsp;80%</span>
+            </div>
+            <div class="tech-badge">
+                🌡️ Target Temp: <span class="tech-badge__value">&nbsp;24-26°C</span>
+            </div>
+            <div class="tech-badge">
+                ⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;~6-7h totali (3h poolish + 3-4h impasto)</span>
+            </div>
+            <div class="tech-badge tech-badge--toggle" id="setup-badge" role="button" tabindex="0"
+                aria-label="Cambia setup">
+                🔧 Setup: <span class="tech-badge__value" id="setup-badge-value">&nbsp;A mano</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ RECIPE CONTENT ═══════════ -->
+    <section class="recipe-content">
+        <div class="container">
+            <div class="recipe-layout">
+
+                <!-- COLONNA SINISTRA: Ingredienti -->
+                <div>
+                    <div class="recipe-panel reveal">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">🛒</span>
+                            Ingredienti Base
+                        </h2>
+
+                        <!-- Calcolatore Dosi -->
+                        <div class="dose-calculator" id="dose-calculator">
+                            <div class="dose-calculator__label">
+                                <span class="dose-calculator__label-icon">⚖️</span>
+                                Farina totale
+                            </div>
+                            <div class="dose-calculator__controls">
+                                <button class="dose-calculator__btn" id="dose-decrease"
+                                    aria-label="Diminuisci dosi">−</button>
+                                <div class="dose-calculator__input-wrapper">
+                                    <input type="number" class="dose-calculator__input" id="dose-input" value="0.9"
+                                        min="0.9" max="5" step="0.9" data-base-total="900" aria-label="Kg di farina">
+                                    <span class="dose-calculator__unit">kg</span>
+                                </div>
+                                <button class="dose-calculator__btn" id="dose-increase"
+                                    aria-label="Aumenta dosi">+</button>
+                            </div>
+                            <div class="dose-calculator__badge" id="dose-badge">×1</div>
+                        </div>
+
+                        <table class="ingredients-table" id="ingredients-table">
+                            <tr>
+                                <td>Farina Tipo 0 Forte <span class="ingredient-note">(W 300-320, proteine 12-13%)</span></td>
+                                <td class="ingredient-qty" data-base="500">500g</td>
+                            </tr>
+                            <tr>
+                                <td>Farina Manitoba <span class="ingredient-note">(W 350-380, proteine 13-14%)</span></td>
+                                <td class="ingredient-qty" data-base="400">400g</td>
+                            </tr>
+                            <tr>
+                                <td>Acqua <span class="ingredient-note" data-setup-note-spirale="(ghiacciata 2-4°C per impasto finale)" data-setup-note-mano="(20-22°C, aggiunta graduale in 3 riprese)">(ghiacciata 2-4°C per impasto finale)</span></td>
+                                <td class="ingredient-qty" data-base="720">720g</td>
+                            </tr>
+                            <tr>
+                                <td>Lievito di Birra Fresco <span class="ingredient-note" data-setup-note-spirale="(3g poolish + 9g impasto)" data-setup-note-mano="(3g poolish + 6g impasto (tempi più lunghi))">(3g poolish + 9g impasto)</span></td>
+                                <td class="ingredient-qty" data-base="12">12g</td>
+                            </tr>
+                            <tr>
+                                <td>Malto Diastasico <span class="ingredient-note">(oppure miele o zucchero)</span></td>
+                                <td class="ingredient-qty" data-base="10">10g</td>
+                            </tr>
+                            <tr>
+                                <td>Sale Fino <span class="ingredient-note">(aggiunto a metà impastamento)</span></td>
+                                <td class="ingredient-qty" data-base="20">20g</td>
+                            </tr>
+                            <tr>
+                                <td>Olio Extravergine d'Oliva <span class="ingredient-note">(opzionale, per morbidezza)</span></td>
+                                <td class="ingredient-qty" data-base="15">15g</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!-- COLONNA DESTRA: Procedimento -->
+                <div>
+
+                    <!-- ── Procedimento: Primario (Spirale o Estrusore) ── -->
+                    <div class="recipe-panel reveal reveal-delay-1" data-setup="spirale" id="steps-spirale">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">⚙️</span>
+                            Procedimento
+                            <span class="recipe-panel__title-badge">🔧 Spirale</span>
+                        </h2>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Poolish (Prefermento Liquido) - 3 ore prima</strong>
+                                <p>Sciogliere 3g di lievito fresco in 300ml di acqua a temperatura ambiente (20-22°C). Aggiungere 300g di farina (200g Tipo 0 + 100g Manitoba). Mescolare energicamente con cucchiaio di legno fino a ottenere un impasto liscio, omogeneo e molto liquido (consistenza di pastella). Coprire con pellicola a contatto e lasciare maturare 3 ore a 20-22°C. Il poolish è pronto quando presenta superficie bombata, piena di bolle e ha triplicato il volume.</p>
+                            </li>
+                            <li>
+                                <strong>Impasto Base in Impastatrice a Spirale</strong>
+                                <p>Inserire nella vasca il poolish maturo, 420ml di acqua GHIACCIATA (2-4°C), 9g di lievito fresco sciolto, 10g di malto. Avviare in prima velocità. Aggiungere gradualmente 300g Tipo 0 + 300g Manitoba alternando farine e liquidi. Impastare 4 minuti in prima, poi 3 minuti in seconda velocità. A metà seconda velocità aggiungere 20g di sale e 15g di olio. Impastare fino a incordatura completa (l'impasto si stacca dalle pareti ma rimane molto molle e appiccicoso). Temperatura finale impasto: 24-26°C. Durata totale: 10-12 minuti.</p>
+                            </li>
+                            <li>
+                                <strong>Prima Lievitazione e Pieghe di Rinforzo</strong>
+                                <p>Trasferire l'impasto in contenitore oleato e capiente. Coprire con pellicola. Dopo 30 minuti eseguire la prima serie di pieghe a busta: portare un lembo verso il centro, poi il lembo opposto, poi i due laterali. Girare l'impasto con la chiusura sotto. Ripetere altre 2 serie di pieghe ogni 30 minuti (totale 3 serie). Dopo l'ultima piega, lasciare lievitare indisturbato per 1h30-2h a 26-28°C fino al raddoppio. L'impasto deve essere pieno di bolle, molto soffice e tremare al tocco.</p>
+                            </li>
+                            <li>
+                                <strong>Formatura Ciabatta</strong>
+                                <p>Rovesciare delicatamente l'impasto su piano ABBONDANTEMENTE infarinato con semola di grano duro. NON sgonfiare. Con raschietto dividere in 4 porzioni rettangolari uguali (circa 450g l'una). Con mani infarinate, allungare delicatamente ogni porzione fino a ottenere rettangoli 25x12cm, tirando dagli angoli senza schiacciare. Ripiegare i lati lunghi verso il centro sovrapponendoli leggermente. Capovolgere le ciabatte su teglie con carta forno infarinata, con la chiusura sotto.</p>
+                            </li>
+                            <li>
+                                <strong>Appretto e Preparazione alla Cottura</strong>
+                                <p>Dimplare energicamente la superficie con le dita unte d'olio per creare le tipiche impronte. Cospargere abbondante semola di grano duro. Coprire con strofinacci UMIDI (non bagnati). Lasciare lievitare 1h30-2h a 24-26°C. Le ciabatte devono risultare gonfie ma NON raddoppiate (sembreranno ancora un po' piatte, è normale). Preriscaldare il forno a 230°C con pietra refrattaria sul ripiano inferiore per almeno 45 minuti.</p>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <!-- ── Procedimento: A mano ── -->
+                    <div class="recipe-panel reveal reveal-delay-1" data-setup="mano" id="steps-mano"
+                        style="display: none;">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">⚙️</span>
+                            Procedimento
+                            <span class="recipe-panel__title-badge">🤲 A mano</span>
+                        </h2>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Poolish (Prefermento Liquido) - 3 ore prima</strong>
+                                <p>Sciogliere 3g di lievito fresco in 300ml di acqua a temperatura ambiente (20-22°C). Aggiungere 300g di farina (200g Tipo 0 + 100g Manitoba). Mescolare energicamente con cucchiaio di legno per 3-4 minuti fino a ottenere un impasto liscio, omogeneo e molto liquido (consistenza di pastella). Coprire con pellicola a contatto e lasciare maturare 3 ore a 20-22°C. Il poolish è pronto quando presenta superficie bombata, piena di bolle e ha triplicato il volume.</p>
+                            </li>
+                            <li>
+                                <strong>Impasto Base a Mano (Metodo Slap & Fold)</strong>
+                                <p>In ciotola capiente unire poolish maturo, 6g di lievito fresco sciolto in 140ml acqua tiepida (22-24°C), 10g di malto. Mescolare. Aggiungere metà delle farine (150g Tipo 0 + 150g Manitoba) e mescolare con cucchiaio. Aggiungere altri 140ml acqua e il resto delle farine. Quando l'impasto si addensa, trasferire su piano e iniziare slap & fold: sollevare l'impasto, sbatterlo sul piano, ripiegarlo su se stesso. Ripetere 5 minuti. Aggiungere 20g sale + 15g olio e continuare slap & fold per altri 5-8 minuti. Aggiungere gli ultimi 140ml acqua gradualmente, lavorando altri 3-4 minuti. L'impasto deve diventare liscio, elastico ma molto mollo.</p>
+                            </li>
+                            <li>
+                                <strong>Prima Lievitazione con Pieghe di Rinforzo</strong>
+                                <p>Trasferire in contenitore oleato. Coprire con pellicola. Dopo 30 minuti eseguire pieghe a busta su piano leggermente oleato: portare un lembo verso il centro, poi il lembo opposto, poi i due laterali. Girare con chiusura sotto. Ripetere altre 2 volte ogni 30 minuti (totale 3 serie di pieghe in 90 minuti). Dopo l'ultima piega lasciare lievitare indisturbato 2-2h30 a 26-28°C fino al raddoppio. L'impasto deve essere pieno di bolle, soffice, tremare al tocco.</p>
+                            </li>
+                            <li>
+                                <strong>Formatura Delicata Ciabatta</strong>
+                                <p>Rovesciare con delicatezza l'impasto su piano ABBONDANTEMENTE infarinato con semola. NON sgonfiare, NON impastare. Con raschietto dividere in 4 porzioni rettangolari uguali. Con mani infarinate allungare delicatamente ogni porzione tirando dagli angoli fino a rettangoli 25x12cm circa. Ripiegare i lati lunghi verso il centro sovrapponendoli di 2-3cm. Capovolgere su teglie con carta forno infarinata, con chiusura sotto.</p>
+                            </li>
+                            <li>
+                                <strong>Appretto e Preparazione alla Cottura</strong>
+                                <p>Dimplare energicamente la superficie con dita unte d'olio per creare le tipiche impronte profonde. Cospargere abbondante semola di grano duro. Coprire con strofinacci UMIDI. Lievitare 2-2h30 a 24-26°C. Le ciabatte devono gonfiarsi ma NON raddoppiare (sembreranno piatte, è normale: esploderanno in forno). Preriscaldare forno a 230°C con pietra refrattaria per 45 minuti.</p>
+                            </li>
+                        </ol>
+
+                        <div class="pro-tip-box" style="margin-top: 16px;">
+                            <p><strong>💡 PRO TIP:</strong> 🫧 POOLISH MATURO = chiave del successo: deve TRIPLICARE, presentare bolle grandi in superficie e odore leggermente alcolico. Se sottomaturato, manca complessità aromatica</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <!-- ═══════════ CONSIGLI FARINE & MARCHI ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 40px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">🌾</span>
+                    Consigli Farine & Marchi
+                </h2>
+                <table class="flour-table">
+                    <thead>
+                        <tr>
+                            <th>Tipo Farina</th>
+                            <th>Forza (W)</th>
+                            <th>Marchi Consigliati</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Farina Tipo 0 Forte</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">300-320</td>
+                            <td>Molino Agugiaro e Figna Petra 3, Molino Grassi Oro Duro, Molino Quaglia Etna</td>
+                        </tr>
+                        <tr>
+                            <td>Farina Manitoba</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">350-380</td>
+                            <td>Molino Vigevano Manitoba Oro, Caputo Manitoba Oro, Lo Conte Manitoba</td>
+                        </tr>
+                        <tr>
+                            <td>Semola Rimacinata (per banco)</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">-</td>
+                            <td>Divella, De Cecco, Molino Spadoni</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pro-tip-box" style="margin-top: 16px;">
+                    <p><strong>💡 PRO TIP:</strong> La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti,
+                        cerca qualsiasi farina con il valore W indicato.</p>
+                </div>
+            </div>
+
+            <!-- ═══════════ ALERT ═══════════ -->
+            <div class="alert alert--danger reveal" style="margin-top: 32px;">
+                <span class="alert__icon">🚫</span>
+                <div class="alert__content">
+                    <strong>ALERT PROFESSIONALE</strong>
+                    <p>❌ NON schiacciare l'impasto durante la formatura: la ciabatta DEVE mantenere tutte le bolle d'aria create in lievitazione per ottenere l'alveolatura irregolare caratteristica. NON usare matterello. NON lavorare l'impasto dopo il rovesciamento dal contenitore. Se schiacci, avrai un pane compatto invece della texture spugnosa tipica della ciabatta.</p>
+                </div>
+            </div>
+
+            <!-- ═══════════ COTTURA ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 32px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">🔥</span>
+                    Cottura
+                </h2>
+                <div class="tech-badges" style="margin-bottom: 16px;">
+                    <div class="tech-badge">
+                        🌡️ Temperatura: <span class="tech-badge__value">&nbsp;230°C</span>
+                    </div>
+                    <div class="tech-badge">
+                        ⏱️ Tempo: <span class="tech-badge__value">&nbsp;20-25 minuti</span>
+                    </div>
+                </div>
+                <ul class="baking-tips" style="list-style: none; padding: 0;">
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Preriscaldare forno + pietra refrattaria per 45 minuti a 230°C</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Creare vapore nei primi 10 minuti: spruzzare acqua su pareti forno o inserire teglia con acqua bollente sul fondo</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Posizionare le ciabatte sulla pietra con carta forno (eventualmente togliere la carta dopo 12 minuti)</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 La ciabatta è cotta quando suona vuota se battuta sotto e presenta crosta dorata uniforme</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Raffreddare su griglia per almeno 1 ora prima di tagliare (l'interno continua a cuocere)</li>
+                </ul>
+            </div>
+
+            <!-- ═══════════ GLOSSARIO ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 32px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">📖</span>
+                    Glossario
+                </h2>
+                <dl class="glossary-list" style="margin: 0; padding: 0;">
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Poolish</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Prefermento liquido di origine polacca: farina e acqua in parti uguali + 1% lievito. Matura 3-12h e dona profumo, alveolatura e conservabilità al pane</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Idratazione</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Percentuale di acqua rispetto alla farina. Ciabatta = 75-85%. Più acqua = più alveoli grandi e irregolari</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Incordatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Momento in cui l'impasto forma una rete glutinica forte e si stacca dalle pareti della vasca. Segno di impastamento completo</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Slap & Fold</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica di impastamento manuale per impasti molli: sollevare, sbattere sul piano, ripiegare. Sviluppa glutine senza impastatrice</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Pieghe di Rinforzo</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Pieghe a busta eseguite durante la lievitazione per rinforzare la maglia glutinica e ridistribuire lieviti e gas</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Appretto</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Lievitazione finale dopo la formatura. Per la ciabatta dura 1h30-2h30 e deve essere moderata (non raddoppio completo)</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Dimplatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Pressione energica con le dita sulla superficie dell'impasto per creare impronte caratteristiche della ciabatta</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">W (Forza)</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Indice reologico della farina. Misura resistenza ed estensibilità. W 300+ = farina forte, adatta a lunghe lievitazioni</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Malto Diastasico</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Zucchero complesso che nutre i lieviti, favorisce colorazione della crosta e migliora conservabilità</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Temperatura Finale Impasto</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Temperatura dell'impasto a fine impastamento. Per ciabatta: 24-26°C. Influenza velocità fermentazione</dd>
+                </dl>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__brand-name">🔥 <span>Il Ricettario</span></div>
+                    <p class="footer__brand-desc">
+                        Ricettario personale. Ricette artigianali documentate con precisione tecnica per
+                        risultati replicabili al 100%.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Navigazione</h4>
+                    <ul class="footer__links">
+                        <li><a href="../../index.html">↗ Home</a></li>
+                        <li><a href="../../index.html#ricette">↗ Ricette</a></li>
+                        <li><a href="../../index.html#strumenti">↗ Strumenti</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Questa Ricetta</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">🥖 Ciabatta Classica con Poolish</a></li>
+                        <li><a href="#">💧 Idratazione 80%</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Altre Ricette</h4>
+                    <ul class="footer__links">
+                        <li><a href="../../index.html#ricette">↗ Tutte le Ricette</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <span>© <span id="current-year">2026</span> Il Ricettario</span>
+                <div class="footer__social">
+                    <a href="https://github.com/devdomenicotatone" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
+</body>
+
+</html>

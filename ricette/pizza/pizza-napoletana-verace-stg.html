@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Pizza napoletana tradizionale con impasto ad alta idratazione, lievitazione lunga e cottura ad altissima temperatura. Cornicione alto e soffice, disco centrale sottile.">
+    <title>Pizza Napoletana Verace STG — Il Ricettario</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap"
+        rel="stylesheet">
+    <!-- FOUC Prevention: applica tema prima del rendering -->
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = saved || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- Skip to content — Accessibilità -->
+    <a href="#recipe-content" class="skip-link">Vai al contenuto principale</a>
+
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="../../index.html" class="navbar__logo">
+                <div class="navbar__logo-icon">🔥</div>
+                <span>Il Ricettario</span>
+            </a>
+
+            <ul class="navbar__links" id="nav-links">
+                <li><a href="../../index.html#ricette">Ricette</a></li>
+                <li><a href="../../index.html#strumenti">Strumenti</a></li>
+                <li><a href="../../index.html#chi-sono">Chi Sono</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+                <span class="theme-toggle__icon theme-toggle__sun">☀️</span>
+                <span class="theme-toggle__icon theme-toggle__moon">🌙</span>
+            </button>
+
+            <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════ RECIPE HERO ═══════════ -->
+    <div class="recipe-hero" style="background-image: url('../../images/ricette/pizza/pizza-napoletana-verace-stg.jpg')">
+        <div class="container">
+            <nav class="breadcrumb reveal">
+                <a href="../../index.html">Home</a>
+                <span class="breadcrumb__separator">›</span>
+                <a href="../../index.html#ricette">Ricette</a>
+                <span class="breadcrumb__separator">›</span>
+                <a href="./">Pizza</a>
+                <span class="breadcrumb__separator">›</span>
+                <span>Pizza Napoletana Verace STG</span>
+            </nav>
+
+            <div class="recipe-hero__content">
+                <div class="recipe-hero__tags reveal">
+                    <span class="tag tag--tool" id="hero-setup-tag">🔧 Impastatrice a spirale</span>
+                    <span class="tag tag--category">🍕 Pizza</span>
+                </div>
+                <h1 class="recipe-hero__title reveal reveal-delay-1">Pizza Napoletana Verace STG</h1>
+                <p class="recipe-hero__subtitle reveal reveal-delay-2">
+                    La vera pizza napoletana con metodo tradizionale, idratazione 65% e lievitazione controllata 8-24h
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ TECH BADGES ═══════════ -->
+    <div class="container" style="padding-top: 40px;">
+        <div class="tech-badges reveal">
+            <div class="tech-badge">
+                💧 Idratazione: <span class="tech-badge__value">&nbsp;65%</span>
+            </div>
+            <div class="tech-badge">
+                🌡️ Target Temp: <span class="tech-badge__value">&nbsp;24-26°C</span>
+            </div>
+            <div class="tech-badge">
+                ⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;8-24h (controllata)</span>
+            </div>
+            <div class="tech-badge tech-badge--toggle" id="setup-badge" role="button" tabindex="0"
+                aria-label="Cambia setup">
+                🔧 Setup: <span class="tech-badge__value" id="setup-badge-value">&nbsp;A mano</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ RECIPE CONTENT ═══════════ -->
+    <section class="recipe-content">
+        <div class="container">
+            <div class="recipe-layout">
+
+                <!-- COLONNA SINISTRA: Ingredienti -->
+                <div>
+                    <div class="recipe-panel reveal">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">🛒</span>
+                            Ingredienti Base
+                        </h2>
+
+                        <!-- Calcolatore Dosi -->
+                        <div class="dose-calculator" id="dose-calculator">
+                            <div class="dose-calculator__label">
+                                <span class="dose-calculator__label-icon">⚖️</span>
+                                Farina totale
+                            </div>
+                            <div class="dose-calculator__controls">
+                                <button class="dose-calculator__btn" id="dose-decrease"
+                                    aria-label="Diminuisci dosi">−</button>
+                                <div class="dose-calculator__input-wrapper">
+                                    <input type="number" class="dose-calculator__input" id="dose-input" value="1"
+                                        min="1" max="5" step="1" data-base-total="1000" aria-label="Kg di farina">
+                                    <span class="dose-calculator__unit">kg</span>
+                                </div>
+                                <button class="dose-calculator__btn" id="dose-increase"
+                                    aria-label="Aumenta dosi">+</button>
+                            </div>
+                            <div class="dose-calculator__badge" id="dose-badge">×1</div>
+                        </div>
+
+                        <table class="ingredients-table" id="ingredients-table">
+                            <tr>
+                                <td>Farina Tipo 0 o 00 Media-Alta Forza <span class="ingredient-note">(W 280-320, 12-13% proteine)</span></td>
+                                <td class="ingredient-qty" data-base="1000">1000g</td>
+                            </tr>
+                            <tr>
+                                <td>Acqua <span class="ingredient-note" data-setup-note-spirale="(ghiacciata 2-4°C per compensare attrito)" data-setup-note-mano="(temperatura ambiente 20-22°C, aggiunta graduale)">(ghiacciata 2-4°C per compensare attrito)</span></td>
+                                <td class="ingredient-qty" data-base="650">650g</td>
+                            </tr>
+                            <tr>
+                                <td>Sale Marino Fino <span class="ingredient-note">(2.5-3% su farina)</span></td>
+                                <td class="ingredient-qty" data-base="28">28g</td>
+                            </tr>
+                            <tr>
+                                <td>Lievito di Birra Fresco <span class="ingredient-note" data-setup-note-spirale="(1-2g per lievitazione 24h)" data-setup-note-mano="(2-3g per gestione più semplice (lievitazione 8-12h))">(1-2g per lievitazione 24h)</span></td>
+                                <td class="ingredient-qty" data-base="2">2g</td>
+                            </tr>
+                            <tr>
+                                <td>Zucchero Semolato <span class="ingredient-note">(opzionale, favorisce doratura)</span></td>
+                                <td class="ingredient-qty" data-base="5">5g</td>
+                            </tr>
+                            <tr>
+                                <td>Olio Extravergine d'Oliva <span class="ingredient-note">(opzionale, non previsto dal disciplinare STG)</span></td>
+                                <td class="ingredient-qty" data-base="15">15g</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!-- COLONNA DESTRA: Procedimento -->
+                <div>
+
+                    <!-- ── Procedimento: Primario (Spirale o Estrusore) ── -->
+                    <div class="recipe-panel reveal reveal-delay-1" data-setup="spirale" id="steps-spirale">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">⚙️</span>
+                            Procedimento
+                            <span class="recipe-panel__title-badge">🔧 Spirale</span>
+                        </h2>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Fase 1: Scioglimento Sale e Idratazione Base</strong>
+                                <p>Versare in vasca l'acqua GHIACCIATA (2-4°C) con il sale marino e lo zucchero. Avviare spirale a velocità 1 per 1 minuto per sciogliere completamente. Aggiungere 2/3 della farina (circa 650g) e mescolare in prima velocità per 3-4 minuti fino a ottenere un composto grossolano.</p>
+                            </li>
+                            <li>
+                                <strong>Fase 2: Incorporamento Lievito</strong>
+                                <p>Sbricciare il lievito fresco sulla superficie dell'impasto. Aggiungere la farina rimanente (350g) gradualmente in 2-3 riprese. Continuare a impastare in prima velocità per altri 5-6 minuti. L'impasto inizia a incordarsi.</p>
+                            </li>
+                            <li>
+                                <strong>Fase 3: Sviluppo Maglia Glutinica</strong>
+                                <p>Passare in seconda velocità per 8-10 minuti. L'impasto deve staccarsi completamente dalle pareti della vasca, risultare liscio, elastico e brillante. Temperatura finale target: 24-26°C. Se si aggiunge olio EVO, farlo negli ultimi 2 minuti di impastamento in seconda velocità.</p>
+                            </li>
+                            <li>
+                                <strong>Fase 4: Puntata in Massa</strong>
+                                <p>Formare una palla compatta, trasferire in contenitore unto leggermente d'olio. Coprire con pellicola a contatto e panno umido. Lasciare a riposo a temperatura ambiente (20-22°C) per 2-3 ore fino al primo raddoppio. Se la temperatura ambiente è oltre 25°C, ridurre a 1.5-2 ore.</p>
+                            </li>
+                            <li>
+                                <strong>Fase 5: Staglio e Pirlatura</strong>
+                                <p>Rovesciare l'impasto su piano leggermente infarinato. Dividere con tarocco in panetti da 250-280g (per pizze Ø 30-32cm). Pirlare ogni panetto con movimento circolare sul banco, creando tensione superficiale senza strappare la maglia glutinica. La pirlatura corretta crea una superficie liscia e tesa.</p>
+                            </li>
+                            <li>
+                                <strong>Fase 6: Appretto Finale</strong>
+                                <p>Disporre i panetti in cassetta da lievitazione leggermente unta, distanziati 5-6cm. Coprire con coperchio o pellicola. Lievitazione controllata: a) 6-8 ore a temperatura ambiente (20-22°C) oppure b) 18-24 ore in frigorifero (4°C), poi 2-3 ore di rinvenimento a temperatura ambiente prima dell'uso. I panetti devono triplicare di volume.</p>
+                            </li>
+                            <li>
+                                <strong>Fase 7: Stesura Tradizionale con Cornicione</strong>
+                                <p>Preparare piano di lavoro con abbondante semola di grano duro. Prendere un panetto, infarinare leggermente. Partendo dal centro, schiacciare con i polpastrelli verso l'esterno, ruotando di 90° ogni passaggio. LASCIARE intatto un bordo di 1.5-2cm (cornicione). Non usare il mattarello. Stendere fino a Ø 30-32cm, disco centrale 3-4mm, cornicione 1-2cm.</p>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <!-- ── Procedimento: A mano ── -->
+                    <div class="recipe-panel reveal reveal-delay-1" data-setup="mano" id="steps-mano"
+                        style="display: none;">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">⚙️</span>
+                            Procedimento
+                            <span class="recipe-panel__title-badge">🤲 A mano</span>
+                        </h2>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Fase 1: Preparazione Biga Liquida (Opzionale per Metodo Lungo)</strong>
+                                <p>In una madia capiente, versare 400ml di acqua a temperatura ambiente (20-22°C). Aggiungere sale (28g) e zucchero (5g), mescolare con forchetta fino a completo scioglimento. Versare metà della farina (500g), mescolare grossolanamente con forchetta. Sbricciolare il lievito sulla superficie della farina, mescolando fino a incorporamento parziale. Coprire e lasciare riposare 30-40 minuti (autolisi parziale).</p>
+                            </li>
+                            <li>
+                                <strong>Fase 2: Incorporamento Farina Residua</strong>
+                                <p>Aggiungere l'acqua rimanente (250ml) gradualmente, mescolando con una mano. Incorporare la farina residua (500g) in 3-4 riprese, sempre mescolando con movimento circolare con una mano. L'impasto sarà molto appiccicoso e disomogeneo. Continuare a mescolare in madia per 5-7 minuti.</p>
+                            </li>
+                            <li>
+                                <strong>Fase 3: Impastamento su Banco e Pieghe</strong>
+                                <p>Rovesciare su piano di lavoro SENZA farina aggiunta. Impastare con tecnica slap & fold: sollevare l'impasto, sbatterlo sul banco, ripiegarlo su se stesso. Ripetere per 10-12 minuti. Ogni 3-4 minuti fare una pausa di 2 minuti (la maglia glutinica si rilassa e diventa più gestibile). L'impasto diventerà progressivamente liscio ed elastico. Se previsto, aggiungere l'olio EVO negli ultimi 3 minuti, incorporandolo con pieghe successive.</p>
+                            </li>
+                            <li>
+                                <strong>Fase 4: Serie di Pieghe a Intervalli</strong>
+                                <p>Formare una palla, trasferire in ciotola unta. Coprire con panno umido. Ogni 40 minuti per 3 volte: eseguire pieghe stretch & fold (prendere i bordi e riportarli al centro per tutta la circonferenza, 6-8 pieghe). Dopo la terza serie, l'impasto sarà liscio, lucido, con superficie tesa e prime bollicine visibili. Lasciare riposare 1.5-2 ore fino al raddoppio.</p>
+                            </li>
+                            <li>
+                                <strong>Fase 5: Staglio e Pirlatura Manuale</strong>
+                                <p>Rovesciare delicatamente su piano leggermente infarinato. Dividere con tarocco in panetti da 250-280g. Pirlare a mano: con movimento rotatorio sul banco, creare tensione superficiale senza usare troppa farina. La pallina deve essere liscia e tesa, senza strappi. Tecnica: palmo aperto, pressione leggera, movimento circolare veloce.</p>
+                            </li>
+                            <li>
+                                <strong>Fase 6: Appretto Controllato</strong>
+                                <p>Disporre i panetti in contenitori individuali leggermente unti o in cassetta spaziati. Coprire con panno umido o pellicola. Lievitazione: a) 6-8 ore a temperatura ambiente (20-22°C) controllando il volume, oppure b) metodo misto: 2 ore a temperatura ambiente + 12-18 ore in frigorifero (4°C) + 2-3 ore di rinvenimento finale. I panetti devono risultare soffici al tatto, triplicati di volume.</p>
+                            </li>
+                            <li>
+                                <strong>Fase 7: Stesura a Mano con Cornicione Alto</strong>
+                                <p>Preparare piano con abbondante semola. Prendere un panetto, infarinare leggermente entrambe le superfici. Schiacciare delicatamente al centro con i polpastrelli, lasciando 1.5-2cm di bordo intatto. Ruotare di 90° e ripetere, allargando progressivamente verso l'esterno. NON toccare mai il cornicione. Stendere fino a Ø 30-32cm. Tecnica finale: passare i polpastrelli sotto il disco, allargare con movimento rotatorio delle mani (tecnica a 'volante'). Il disco centrale deve essere 3-4mm, il cornicione 1.5-2cm.</p>
+                            </li>
+                        </ol>
+
+                        <div class="pro-tip-box" style="margin-top: 16px;">
+                            <p><strong>💡 PRO TIP:</strong> 💡 TECNICA STESURA PRO: Dopo aver schiacciato il panetto al centro, passa le mani sotto il disco e fallo ruotare come un 'volante', allargandolo per gravità e forza centrifuga. Questa tecnica (usata dai pizzaioli napoletani) evita di strappare la maglia e mantiene distribuzione uniforme dello spessore. Il disco deve essere traslucido al centro (3-4mm), mai bucato.</p>
+                        </div>
+                    </div>
+
+                    <!-- ── Procedimento: Condimento ── -->
+                    <div class="recipe-panel reveal reveal-delay-2" data-setup="condimento" id="steps-condimento"
+                        style="margin-top: 32px;">
+                        <h2 class="recipe-panel__title">
+                            <span class="recipe-panel__title-icon">🍳</span>
+                            Preparazione Condimento
+                        </h2>
+                        <ol class="steps-list">
+                            <li>
+                                <strong>Preparazione Pomodoro per Pizza Napoletana</strong>
+                                <p>Scolare 400g di pomodori pelati San Marzano DOP, eliminare i semi in eccesso. Schiacciare grossolanamente con una forchetta o frullare brevemente (texture rustica). Condire con 4-5g di sale fino, mescolare. NON aggiungere olio o basilico alla passata cruda (si brucerebbero in cottura). Conservare in frigorifero fino all'uso.</p>
+                            </li>
+                            <li>
+                                <strong>Condimento Base Pizza Margherita</strong>
+                                <p>Stendere la pizza, distribuire 80-100g di pomodoro con movimento a spirale, lasciando libero il cornicione (1.5cm dal bordo). Tagliare 80-100g di fiordilatte (o mozzarella per pizza) ben sgocciolato a listarelle. Dopo 60-90 secondi di cottura (quando il pomodoro inizia a bollire), aggiungere velocemente la mozzarella. Infornare altri 60-90 secondi. A pizza cotta, aggiungere basilico fresco spezzettato e filo d'olio EVO a crudo.</p>
+                            </li>
+                            <li>
+                                <strong>Condimento Pizza Marinara</strong>
+                                <p>Stendere 80-100g di pomodoro sulla pizza. Aggiungere 2-3 spicchi d'aglio tagliati a lamelle sottili, origano secco (1 pizzico), sale fino. Infornare per 90-120 secondi. A cottura completata, aggiungere basilico fresco e abbondante olio EVO. La marinara NON prevede mozzarella.</p>
+                            </li>
+                        </ol>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ═══════════ CONSIGLI FARINE & MARCHI ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 40px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">🌾</span>
+                    Consigli Farine & Marchi
+                </h2>
+                <table class="flour-table">
+                    <thead>
+                        <tr>
+                            <th>Tipo Farina</th>
+                            <th>Forza (W)</th>
+                            <th>Marchi Consigliati</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Farina Tipo 0</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">280-320</td>
+                            <td>Caputo Pizzeria (Classica o Rossa), Molino Dallagiovanna Re Mida, Molino Vigevano Petra 3</td>
+                        </tr>
+                        <tr>
+                            <td>Farina Tipo 00</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">260-300</td>
+                            <td>Caputo Cuoco (Blu), Le 5 Stagioni Nuvola Super, Molino Grassi Europa 00</td>
+                        </tr>
+                        <tr>
+                            <td>Mix Tipo 0 + Manitoba (70/30)</td>
+                            <td style="color: var(--color-accent); font-weight: 600;">300-350</td>
+                            <td>Tipo 0 Caputo Pizzeria + Manitoba Molino Vigevano (30%)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pro-tip-box" style="margin-top: 16px;">
+                    <p><strong>💡 PRO TIP:</strong> La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti,
+                        cerca qualsiasi farina con il valore W indicato.</p>
+                </div>
+            </div>
+
+            <!-- ═══════════ ALERT ═══════════ -->
+            <div class="alert alert--danger reveal" style="margin-top: 32px;">
+                <span class="alert__icon">🚫</span>
+                <div class="alert__content">
+                    <strong>ALERT PROFESSIONALE</strong>
+                    <p>⚠️ ERRORI FATALI DA EVITARE: NON stendere la pizza col mattarello (distrugge la maglia glutinica e schiaccia le bolle d'aria, risultato: pizza piatta e gommosa). NON schiacciare o toccare il cornicione durante la stesura (deve restare alto e pieno di alveoli). NON infornare senza preriscaldare la pietra per almeno 45 minuti (il fondo resterebbe crudo e molliccio). NON usare mozzarella troppo umida o fiordilatte non sgocciolato (pizza acquosa). NON aggiungere troppo pomodoro o condimenti (peso max 200g totali, altrimenti il disco centrale si affloscia). La pizza napoletana è un equilibrio delicato: idratazione alta + lievitazione lunga + cottura rapida ad alta temperatura. Alterare uno di questi fattori compromette il risultato finale.</p>
+                </div>
+            </div>
+
+            <!-- ═══════════ COTTURA ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 32px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">🔥</span>
+                    Cottura
+                </h2>
+                <div class="tech-badges" style="margin-bottom: 16px;">
+                    <div class="tech-badge">
+                        🌡️ Temperatura: <span class="tech-badge__value">&nbsp;280°C (MAX forno casalingo)</span>
+                    </div>
+                    <div class="tech-badge">
+                        ⏱️ Tempo: <span class="tech-badge__value">&nbsp;6-8 minuti (pietra refrattaria preriscaldata)</span>
+                    </div>
+                </div>
+                <ul class="baking-tips" style="list-style: none; padding: 0;">
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Preriscaldare forno + pietra refrattaria per ALMENO 45-60 minuti a temperatura massima (280°C ventilato o 300°C statico se disponibile)</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Usare ESCLUSIVAMENTE pietra refrattaria o piastra in acciaio spessa (1cm minimo). Le teglie normali NON funzionano per la napoletana</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Infornare su ripiano più BASSO del forno (la pietra deve essere vicinissima alla resistenza inferiore)</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 NON aprire il forno durante i primi 4 minuti. La pizza cuoce per conduzione (pietra) + irraggiamento (volta)</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Ruotare la pizza a metà cottura (3-4 minuti) solo se si notano dorature irregolari</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Creare vapore: spruzzare 50ml d'acqua sulle pareti del forno (NON sulla pizza) nei primi 30 secondi per favorire lo sviluppo del cornicione</li>
+                    <li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 Pizza cotta perfettamente: cornicione dorato con macchie leopardate scure, disco centrale asciutto (non gommoso), base inferiore rigida ma non bruciata</li>
+                </ul>
+            </div>
+
+            <!-- ═══════════ GLOSSARIO ═══════════ -->
+            <div class="recipe-panel reveal" style="margin-top: 32px;">
+                <h2 class="recipe-panel__title">
+                    <span class="recipe-panel__title-icon">📖</span>
+                    Glossario
+                </h2>
+                <dl class="glossary-list" style="margin: 0; padding: 0;">
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Autolisi</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Riposo dell'impasto con farina e acqua (senza lievito e sale) per 20-60 minuti. Favorisce l'idratazione completa delle proteine e lo sviluppo naturale del glutine, riducendo i tempi di impastamento.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Incordatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Fase dell'impastamento in cui la maglia glutinica inizia a formarsi e l'impasto si avvolge attorno al gancio della spirale o inizia a 'tirare' se lavorato a mano. Segno di corretta struttura.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Puntata</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Primo riposo dell'impasto in massa (non diviso) dopo l'impastamento. Durante la puntata avviene la prima fermentazione e lo sviluppo di aromi. Durata variabile: 1-3 ore a temperatura ambiente.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Staglio</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Divisione dell'impasto in pezzi di peso specifico (panetti) dopo la puntata. Si usa un tarocco (spatola metallica) per tagliare senza strappare la maglia glutinica.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Pirlatura</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica per formare palline compatte e lisce dopo lo staglio. Consiste nel far ruotare il panetto sul banco con movimento circolare del palmo, creando tensione superficiale senza rompere la struttura interna.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Appretto</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Secondo e ultimo riposo dei panetti già formati (dopo la pirlatura) prima della stesura. Durante l'appretto i panetti lievitano fino a triplicare di volume. Durata: 6-24 ore a seconda della temperatura e quantità di lievito.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Maglia Glutinica</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Struttura tridimensionale formata dalle proteine del grano (gliadina + glutenina) a contatto con acqua e lavorazione meccanica. Conferisce elasticità, estensibilità e capacità di trattenere i gas della fermentazione.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Slap & Fold (Schiaffo e Piega)</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica di impastamento manuale per impasti molto idratati. Consiste nel sollevare l'impasto, sbatterlo energicamente sul banco e ripiegarlo su se stesso. Sviluppa la maglia glutinica senza aggiunta di farina.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Stretch & Fold (Stira e Piega)</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Tecnica di rinforzo dell'impasto durante la puntata. Si allungano i bordi dell'impasto e si ripiegano verso il centro per tutta la circonferenza. Si ripete ogni 30-40 minuti per 3-4 volte. Aumenta forza e struttura senza lavorazione aggressiva.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Idratazione</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Percentuale di acqua rispetto al peso della farina (es. 650g acqua su 1000g farina = 65%). Determina la consistenza dell'impasto: più alta = impasto morbido e alveolatura aperta.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Cornicione</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Bordo rialzato della pizza napoletana (1.5-2cm), ricco di alveoli. Si ottiene lasciando intatta questa porzione durante la stesura, senza schiacciarla. In cottura si gonfia per il vapore interno.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Macchie Leopardate</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Caratteristiche bruciature scure sul cornicione della pizza napoletana, segno di cottura ad altissima temperatura (>400°C nei forni a legna professionali). Indicano caramellizzazione degli zuccheri e reazione di Maillard.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">Temperatura Finale dell'Impasto</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Temperatura che l'impasto raggiunge a fine lavorazione. Per la pizza napoletana: 24-26°C ideale. Si controlla con termometro a sonda. Influenza velocità di lievitazione e sviluppo aromi.</dd>
+                    <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">W (Forza della Farina)</dt>
+                    <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">Indice alveografico che misura la resistenza della farina alla lavorazione. Per pizza napoletana: W 260-320. Valori più alti = maggiore assorbimento acqua e tenuta in lievitazioni lunghe.</dd>
+                </dl>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__brand-name">🔥 <span>Il Ricettario</span></div>
+                    <p class="footer__brand-desc">
+                        Ricettario personale. Ricette artigianali documentate con precisione tecnica per
+                        risultati replicabili al 100%.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Navigazione</h4>
+                    <ul class="footer__links">
+                        <li><a href="../../index.html">↗ Home</a></li>
+                        <li><a href="../../index.html#ricette">↗ Ricette</a></li>
+                        <li><a href="../../index.html#strumenti">↗ Strumenti</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Questa Ricetta</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">🍕 Pizza Napoletana Verace STG</a></li>
+                        <li><a href="#">💧 Idratazione 65%</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Altre Ricette</h4>
+                    <ul class="footer__links">
+                        <li><a href="../../index.html#ricette">↗ Tutte le Ricette</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <span>© <span id="current-year">2026</span> Il Ricettario</span>
+                <div class="footer__social">
+                    <a href="https://github.com/devdomenicotatone" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
+</body>
+
+</html>
