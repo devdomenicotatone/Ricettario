@@ -353,57 +353,87 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // === CALCOLATORE DOSI ===
+  // === CALCOLATORE DOSI (v2 — robusto) ===
   const doseInput = document.getElementById('dose-input');
   const doseBadge = document.getElementById('dose-badge');
   const doseDecrease = document.getElementById('dose-decrease');
   const doseIncrease = document.getElementById('dose-increase');
 
   if (doseInput && doseBadge) {
+    // Seleziona SOLO celle con data-base (ignora header sezione senza data-base)
     const allQtyCells = document.querySelectorAll('.ingredient-qty[data-base]');
-    // Base reale della ricetta (dal data-base-total generato dal template)
+    // Base reale dalla ricetta generata
     const baseTotal = parseFloat(doseInput.getAttribute('data-base-total')) || 1000;
     const baseKg = baseTotal / 1000;
+    const maxKg = parseFloat(doseInput.max) || baseKg * 3;
+
+    // Step intelligente: 0.5kg per ricette > 1kg, 0.1kg per ricette <= 1kg
+    const stepKg = baseKg <= 1 ? 0.1 : 0.5;
+
+    /**
+     * Formattazione professionale delle quantità.
+     * Segue le convenzioni delle bilance da panificazione:
+     *   >= 100g  → intero (es. 1500g, 800g)
+     *   >= 10g   → intero (es. 58g, 50g)
+     *   >= 1g    → 1 decimale (es. 2.0g, 3.5g)
+     *   < 1g     → 2 decimali (es. 0.71g)
+     */
+    const formatGrams = (val) => {
+      if (val === 0) return '0g';
+      if (val >= 10) return `${Math.round(val)}g`;
+      if (val >= 1) return `${Math.round(val * 10) / 10}g`;
+      return `${Math.round(val * 100) / 100}g`;
+    };
+
+    /**
+     * Formattazione del badge multiplier.
+     *   Intero: ×1, ×2, ×3
+     *   Decimale pulito: ×0.5, ×1.5
+     *   Altro: ×0.54 (max 2 decimali)
+     */
+    const formatMultiplier = (m) => {
+      if (Number.isInteger(m)) return `×${m}`;
+      // Controlla se è "pulito" con 1 decimale
+      if (Math.abs(m * 10 - Math.round(m * 10)) < 0.001) {
+        return `×${m.toFixed(1)}`;
+      }
+      return `×${m.toFixed(2)}`;
+    };
 
     const updateDoses = () => {
-      const kg = parseFloat(doseInput.value) || baseKg;
+      const kg = parseFloat(doseInput.value);
+      if (isNaN(kg) || kg <= 0) return; // Ignora input invalido
+
       const multiplier = kg / baseKg;
 
-      // Update badge
-      doseBadge.textContent = multiplier === 1 ? '×1' : `×${multiplier % 1 === 0 ? multiplier : multiplier.toFixed(1)}`;
+      // Aggiorna badge
+      doseBadge.textContent = formatMultiplier(multiplier);
 
-      // Update each ingredient quantity
+      // Aggiorna ogni cella ingrediente con data-base
       allQtyCells.forEach(cell => {
         const base = parseFloat(cell.getAttribute('data-base'));
+        if (isNaN(base)) return;
+
         const newVal = base * multiplier;
+        cell.textContent = formatGrams(newVal);
 
-        // Smart rounding: integer if >= 10g, one decimal if < 10g
-        const formatted = newVal >= 10
-          ? `${Math.round(newVal)}g`
-          : `${Math.round(newVal * 10) / 10}g`;
-
-        cell.textContent = formatted;
-
-        // Pulse animation
+        // Pulse animation (re-trigger)
         cell.classList.remove('dose-updated');
-        // Force reflow for re-triggering animation
         void cell.offsetWidth;
         cell.classList.add('dose-updated');
       });
     };
 
+    // Event listeners
     doseInput.addEventListener('input', updateDoses);
     doseInput.addEventListener('change', updateDoses);
-
-    // Step proporzionale alla ricetta: incremento/decremento = base kg
-    const stepKg = baseKg <= 0.5 ? baseKg : 0.5;
 
     if (doseDecrease) {
       doseDecrease.addEventListener('click', () => {
         const current = parseFloat(doseInput.value) || baseKg;
-        const min = parseFloat(doseInput.min) || stepKg;
-        if (current > min) {
-          doseInput.value = Math.round((current - stepKg) * 10) / 10;
+        const newVal = Math.round((current - stepKg) * 100) / 100;
+        if (newVal >= 0.1) {
+          doseInput.value = Math.round(newVal * 10) / 10;
           updateDoses();
         }
       });
@@ -412,9 +442,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (doseIncrease) {
       doseIncrease.addEventListener('click', () => {
         const current = parseFloat(doseInput.value) || baseKg;
-        const max = parseFloat(doseInput.max) || 5;
-        if (current < max) {
-          doseInput.value = Math.round((current + stepKg) * 10) / 10;
+        const newVal = Math.round((current + stepKg) * 100) / 100;
+        if (newVal <= maxKg) {
+          doseInput.value = Math.round(newVal * 10) / 10;
           updateDoses();
         }
       });
