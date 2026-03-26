@@ -126,7 +126,7 @@
                                     aria-label="Diminuisci dosi">−</button>
                                 <div class="dose-calculator__input-wrapper">
                                     <input type="number" class="dose-calculator__input" id="dose-input" value="0.5"
-                                        min="0.1" max="1.5" step="any" data-base-total="500" aria-label="Kg di farina">
+                                        min="0.1" max="1.5" step="any" aria-label="Kg di farina">
                                     <span class="dose-calculator__unit">kg</span>
                                 </div>
                                 <button class="dose-calculator__btn" id="dose-increase"
@@ -138,55 +138,55 @@
                         <table class="ingredients-table" id="ingredients-table">
                             <tr>
                                 <td>Farina Manitoba <span class="ingredient-note">(W 350-380, per biga e impasto finale)</span></td>
-                                <td class="ingredient-qty" data-base="300">300g</td>
+                                <td class="ingredient-qty">300g</td>
                             </tr>
                             <tr>
                                 <td>Farina Tipo 00 Media Forza <span class="ingredient-note">(W 200-280)</span></td>
-                                <td class="ingredient-qty" data-base="200">200g</td>
+                                <td class="ingredient-qty">200g</td>
                             </tr>
                             <tr>
                                 <td>Acqua <span class="ingredient-note" data-setup-note-spirale="(biga 20-22°C, impasto 2-4°C ghiacciata)" data-setup-note-mano="(biga 20-22°C, impasto 20-22°C in 2 riprese)">(biga 20-22°C, impasto 2-4°C ghiacciata)</span></td>
-                                <td class="ingredient-qty" data-base="290">290g</td>
+                                <td class="ingredient-qty">290g</td>
                             </tr>
                             <tr>
                                 <td>Lievito di Birra Fresco <span class="ingredient-note">(per biga)</span></td>
-                                <td class="ingredient-qty" data-base="5">5g</td>
+                                <td class="ingredient-qty">5g</td>
                             </tr>
                             <tr>
                                 <td>Lievito di Birra Fresco <span class="ingredient-note">(per impasto finale)</span></td>
-                                <td class="ingredient-qty" data-base="5">5g</td>
+                                <td class="ingredient-qty">5g</td>
                             </tr>
                             <tr>
                                 <td>Latte Intero <span class="ingredient-note">(temperatura ambiente)</span></td>
-                                <td class="ingredient-qty" data-base="200">200g</td>
+                                <td class="ingredient-qty">200g</td>
                             </tr>
                             <tr>
                                 <td>Uova Medie <span class="ingredient-note">(circa 55g l'uno, temperatura ambiente)</span></td>
-                                <td class="ingredient-qty" data-base="55">55g</td>
+                                <td class="ingredient-qty">55g</td>
                             </tr>
                             <tr>
                                 <td>Tuorli <span class="ingredient-note">(circa 15g l'uno)</span></td>
-                                <td class="ingredient-qty" data-base="15">15g</td>
+                                <td class="ingredient-qty">15g</td>
                             </tr>
                             <tr>
                                 <td>Zucchero Semolato <span class="ingredient-note">(per morbidezza e doratura)</span></td>
-                                <td class="ingredient-qty" data-base="40">40g</td>
+                                <td class="ingredient-qty">40g</td>
                             </tr>
                             <tr>
                                 <td>Miele di Acacia <span class="ingredient-note">(o malto diastasico)</span></td>
-                                <td class="ingredient-qty" data-base="15">15g</td>
+                                <td class="ingredient-qty">15g</td>
                             </tr>
                             <tr>
                                 <td>Sale Fino <span class="ingredient-note">(aggiungere sempre a fine impasto)</span></td>
-                                <td class="ingredient-qty" data-base="12">12g</td>
+                                <td class="ingredient-qty">12g</td>
                             </tr>
                             <tr>
                                 <td>Burro Morbido <span class="ingredient-note">(temperatura ambiente, 18-20°C)</span></td>
-                                <td class="ingredient-qty" data-base="50">50g</td>
+                                <td class="ingredient-qty">50g</td>
                             </tr>
                             <tr>
                                 <td>Olio Extravergine di Oliva <span class="ingredient-note">(o olio di semi)</span></td>
-                                <td class="ingredient-qty" data-base="25">25g</td>
+                                <td class="ingredient-qty">25g</td>
                             </tr>
                         </table>
                     </div>
@@ -199,15 +199,15 @@
                         <table class="ingredients-table" id="suspensions-table">
                             <tr>
                                 <td>Semi di Sesamo <span class="ingredient-note">(per spennellatura finale)</span></td>
-                                <td class="ingredient-qty" data-base="30">30g</td>
+                                <td class="ingredient-qty">30g</td>
                             </tr>
                             <tr>
                                 <td>Tuorlo <span class="ingredient-note">(per spennellatura)</span></td>
-                                <td class="ingredient-qty" data-base="15">15g</td>
+                                <td class="ingredient-qty">15g</td>
                             </tr>
                             <tr>
                                 <td>Latte Intero <span class="ingredient-note">(per spennellatura)</span></td>
-                                <td class="ingredient-qty" data-base="30">30g</td>
+                                <td class="ingredient-qty">30g</td>
                             </tr>
                         </table>
 
@@ -467,6 +467,9 @@
             </div>
         </div>
     </footer>
+    <!-- Recipe Data Model (sorgente di verità per il dose calculator) -->
+    <script type="application/json" id="recipe-data">{"totalFlour":500,"ingredients":[{"name":"Farina Manitoba","grams":300},{"name":"Farina Tipo 00 Media Forza","grams":200},{"name":"Acqua","grams":290},{"name":"Lievito di Birra Fresco","grams":5},{"name":"Lievito di Birra Fresco","grams":5},{"name":"Latte Intero","grams":200},{"name":"Uova Medie","grams":55},{"name":"Tuorli","grams":15},{"name":"Zucchero Semolato","grams":40},{"name":"Miele di Acacia","grams":15},{"name":"Sale Fino","grams":12},{"name":"Burro Morbido","grams":50},{"name":"Olio Extravergine di Oliva","grams":25}],"suspensions":[{"name":"Semi di Sesamo","grams":30},{"name":"Tuorlo","grams":15},{"name":"Latte Intero","grams":30}]}</script>
+
 
     <script type="module" src="/js/main.js"></script>
 </body>

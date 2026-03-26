@@ -126,7 +126,7 @@
                                     aria-label="Diminuisci dosi">−</button>
                                 <div class="dose-calculator__input-wrapper">
                                     <input type="number" class="dose-calculator__input" id="dose-input" value="0.5"
-                                        min="0.1" max="1.5" step="any" data-base-total="500" aria-label="Kg di farina">
+                                        min="0.1" max="1.5" step="any" aria-label="Kg di farina">
                                     <span class="dose-calculator__unit">kg</span>
                                 </div>
                                 <button class="dose-calculator__btn" id="dose-increase"
@@ -138,51 +138,51 @@
                         <table class="ingredients-table" id="ingredients-table">
                             <tr>
                                 <td>Farina 00 Media Forza <span class="ingredient-note">(W 280-320, ideale manitoba per tenuta in frittura)</span></td>
-                                <td class="ingredient-qty" data-base="500">500g</td>
+                                <td class="ingredient-qty">500g</td>
                             </tr>
                             <tr>
                                 <td>Acqua <span class="ingredient-note" data-setup-note-spirale="(15-18°C per controllare temperatura finale)" data-setup-note-mano="(20-22°C, aggiungere in 2 riprese durante impastamento)">(15-18°C per controllare temperatura finale)</span></td>
-                                <td class="ingredient-qty" data-base="250">250g</td>
+                                <td class="ingredient-qty">250g</td>
                             </tr>
                             <tr>
                                 <td>Strutto <span class="ingredient-note">(temperatura ambiente, sostituibile con burro)</span></td>
-                                <td class="ingredient-qty" data-base="70">70g</td>
+                                <td class="ingredient-qty">70g</td>
                             </tr>
                             <tr>
                                 <td>Zucchero Semolato <span class="ingredient-note">(per impasto dolce)</span></td>
-                                <td class="ingredient-qty" data-base="50">50g</td>
+                                <td class="ingredient-qty">50g</td>
                             </tr>
                             <tr>
                                 <td>Sale Fino <span class="ingredient-note">(aggiungere a fine impasto)</span></td>
-                                <td class="ingredient-qty" data-base="8">8g</td>
+                                <td class="ingredient-qty">8g</td>
                             </tr>
                             <tr>
                                 <td>Lievito di Birra Fresco <span class="ingredient-note">(o 2,5g lievito secco)</span></td>
-                                <td class="ingredient-qty" data-base="7">7g</td>
+                                <td class="ingredient-qty">7g</td>
                             </tr>
                             <tr>
                                 <td>Latte Intero <span class="ingredient-note">(per crema pasticcera)</span></td>
-                                <td class="ingredient-qty" data-base="1000">1000g</td>
+                                <td class="ingredient-qty">1000g</td>
                             </tr>
                             <tr>
                                 <td>Zucchero Semolato per Crema <span class="ingredient-note">(per addensare e dolcificare)</span></td>
-                                <td class="ingredient-qty" data-base="200">200g</td>
+                                <td class="ingredient-qty">200g</td>
                             </tr>
                             <tr>
                                 <td>Maizena (Amido di Mais) <span class="ingredient-note">(per crema liscia e vellutata)</span></td>
-                                <td class="ingredient-qty" data-base="90">90g</td>
+                                <td class="ingredient-qty">90g</td>
                             </tr>
                             <tr>
                                 <td>Essenza di Vaniglia <span class="ingredient-note">(o vanillina in polvere)</span></td>
-                                <td class="ingredient-qty" data-base="5">5g</td>
+                                <td class="ingredient-qty">5g</td>
                             </tr>
                             <tr>
                                 <td>Olio di Semi per Friggere <span class="ingredient-note">(arachidi o girasole alto oleico, T 170-175°C)</span></td>
-                                <td class="ingredient-qty" data-base="2000">2000g</td>
+                                <td class="ingredient-qty">2000g</td>
                             </tr>
                             <tr>
                                 <td>Zucchero Semolato per Finitura <span class="ingredient-note">(per spolverare dopo frittura)</span></td>
-                                <td class="ingredient-qty" data-base="100">100g</td>
+                                <td class="ingredient-qty">100g</td>
                             </tr>
                         </table>
                     </div>
@@ -401,6 +401,9 @@
             </div>
         </div>
     </footer>
+    <!-- Recipe Data Model (sorgente di verità per il dose calculator) -->
+    <script type="application/json" id="recipe-data">{"totalFlour":500,"ingredients":[{"name":"Farina 00 Media Forza","grams":500},{"name":"Acqua","grams":250},{"name":"Strutto","grams":70},{"name":"Zucchero Semolato","grams":50},{"name":"Sale Fino","grams":8},{"name":"Lievito di Birra Fresco","grams":7},{"name":"Latte Intero","grams":1000},{"name":"Zucchero Semolato per Crema","grams":200},{"name":"Maizena (Amido di Mais)","grams":90},{"name":"Essenza di Vaniglia","grams":5},{"name":"Olio di Semi per Friggere","grams":2000},{"name":"Zucchero Semolato per Finitura","grams":100}]}</script>
+
 
     <script type="module" src="/js/main.js"></script>
 </body>

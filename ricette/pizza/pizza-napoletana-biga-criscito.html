@@ -126,7 +126,7 @@
                                     aria-label="Diminuisci dosi">−</button>
                                 <div class="dose-calculator__input-wrapper">
                                     <input type="number" class="dose-calculator__input" id="dose-input" value="3"
-                                        min="0.1" max="9" step="any" data-base-total="3000" aria-label="Kg di farina">
+                                        min="0.1" max="9" step="any" aria-label="Kg di farina">
                                     <span class="dose-calculator__unit">kg</span>
                                 </div>
                                 <button class="dose-calculator__btn" id="dose-increase"
@@ -141,46 +141,46 @@
                             </tr>
                             <tr>
                                 <td>Farina Caputo Saccorosso <span class="ingredient-note">(W 330-350, per biga)</span></td>
-                                <td class="ingredient-qty" data-base="900">900g</td>
+                                <td class="ingredient-qty">900g</td>
                             </tr>
                             <tr>
                                 <td>Acqua <span class="ingredient-note">(fredda 10-12°C, per biga)</span></td>
-                                <td class="ingredient-qty" data-base="400">400g</td>
+                                <td class="ingredient-qty">400g</td>
                             </tr>
                             <tr>
                                 <td>Lievito Secco Caputo <span class="ingredient-note">(per biga)</span></td>
-                                <td class="ingredient-qty" data-base="3">3g</td>
+                                <td class="ingredient-qty">3g</td>
                             </tr>
                             <tr class="ingredient-section-header">
                                 <td colspan="2"><strong>Impasto Finale (Rinfresco)</strong></td>
                             </tr>
                             <tr>
                                 <td>Biga di Saccorosso <span class="ingredient-note">(tutta la biga preparata)</span></td>
-                                <td class="ingredient-qty" data-base="1300">1300g</td>
+                                <td class="ingredient-qty">1300g</td>
                             </tr>
                             <tr>
                                 <td>Farina Caputo Saccorosso <span class="ingredient-note">(W 330-350, struttura)</span></td>
-                                <td class="ingredient-qty" data-base="1800">1800g</td>
+                                <td class="ingredient-qty">1800g</td>
                             </tr>
                             <tr>
                                 <td>Farina Caputo Nuvola Super <span class="ingredient-note">(W 260-280, leggerezza e alveolatura)</span></td>
-                                <td class="ingredient-qty" data-base="300">300g</td>
+                                <td class="ingredient-qty">300g</td>
                             </tr>
                             <tr>
                                 <td>Acqua <span class="ingredient-note" data-setup-note-spirale="(60% subito nello spezzamento biga, resto a filo in bassinage)" data-setup-note-mano="(in 3 riprese: 50% iniziale, 30% durante incordatura, 20% finale)">(60% subito nello spezzamento biga, resto a filo in bassinage)</span></td>
-                                <td class="ingredient-qty" data-base="1650">1650g</td>
+                                <td class="ingredient-qty">1650g</td>
                             </tr>
                             <tr>
                                 <td>Criscito Caputo <span class="ingredient-note">(lievito madre secco attivo, 40g/kg farina)</span></td>
-                                <td class="ingredient-qty" data-base="120">120g</td>
+                                <td class="ingredient-qty">120g</td>
                             </tr>
                             <tr>
                                 <td>Estratto di Malto <span class="ingredient-note">(diastasico, favorisce lievitazione e colorazione)</span></td>
-                                <td class="ingredient-qty" data-base="15">15g</td>
+                                <td class="ingredient-qty">15g</td>
                             </tr>
                             <tr>
                                 <td>Sale Marino Fino <span class="ingredient-note">(2.5% su farina totale)</span></td>
-                                <td class="ingredient-qty" data-base="75">75g</td>
+                                <td class="ingredient-qty">75g</td>
                             </tr>
                         </table>
                     </div>
@@ -193,7 +193,7 @@
                         <table class="ingredients-table" id="suspensions-table">
                             <tr>
                                 <td>Semola Rimacinata Caputo <span class="ingredient-note">(per stesura sul banco)</span></td>
-                                <td class="ingredient-qty" data-base="200">200g</td>
+                                <td class="ingredient-qty">200g</td>
                             </tr>
                         </table>
 
@@ -456,6 +456,9 @@
             </div>
         </div>
     </footer>
+    <!-- Recipe Data Model (sorgente di verità per il dose calculator) -->
+    <script type="application/json" id="recipe-data">{"totalFlour":3000,"ingredients":[{"name":"Biga (preparata 18-24h prima)","grams":null},{"name":"Farina Caputo Saccorosso","grams":900},{"name":"Acqua","grams":400},{"name":"Lievito Secco Caputo","grams":3},{"name":"Impasto Finale (Rinfresco)","grams":null},{"name":"Biga di Saccorosso","grams":1300},{"name":"Farina Caputo Saccorosso","grams":1800},{"name":"Farina Caputo Nuvola Super","grams":300},{"name":"Acqua","grams":1650},{"name":"Criscito Caputo","grams":120},{"name":"Estratto di Malto","grams":15},{"name":"Sale Marino Fino","grams":75}],"suspensions":[{"name":"Semola Rimacinata Caputo","grams":200}]}</script>
+
 
     <script type="module" src="/js/main.js"></script>
 </body>

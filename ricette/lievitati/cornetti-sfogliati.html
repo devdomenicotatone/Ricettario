@@ -126,7 +126,7 @@
                                     aria-label="Diminuisci dosi">−</button>
                                 <div class="dose-calculator__input-wrapper">
                                     <input type="number" class="dose-calculator__input" id="dose-input" value="0.5"
-                                        min="0.1" max="1.5" step="any" data-base-total="500" aria-label="Kg di farina">
+                                        min="0.1" max="1.5" step="any" aria-label="Kg di farina">
                                     <span class="dose-calculator__unit">kg</span>
                                 </div>
                                 <button class="dose-calculator__btn" id="dose-increase"
@@ -138,43 +138,43 @@
                         <table class="ingredients-table" id="ingredients-table">
                             <tr>
                                 <td>Farina Forte <span class="ingredient-note">(W 330-350, 13% proteine, oppure 70% manitoba + 30% farina 00)</span></td>
-                                <td class="ingredient-qty" data-base="500">500g</td>
+                                <td class="ingredient-qty">500g</td>
                             </tr>
                             <tr>
                                 <td>Acqua <span class="ingredient-note" data-setup-note-spirale="(ghiacciata 2-4°C per controllare temperatura finale)" data-setup-note-mano="(20-22°C, aggiungere in 2-3 riprese durante l'impasto)">(ghiacciata 2-4°C per controllare temperatura finale)</span></td>
-                                <td class="ingredient-qty" data-base="150">150g</td>
+                                <td class="ingredient-qty">150g</td>
                             </tr>
                             <tr>
                                 <td>Latte Intero Fresco <span class="ingredient-note">(temperatura ambiente)</span></td>
-                                <td class="ingredient-qty" data-base="125">125g</td>
+                                <td class="ingredient-qty">125g</td>
                             </tr>
                             <tr>
                                 <td>Uova <span class="ingredient-note">(2 medie, temperatura ambiente)</span></td>
-                                <td class="ingredient-qty" data-base="110">110g</td>
+                                <td class="ingredient-qty">110g</td>
                             </tr>
                             <tr>
                                 <td>Lievito di Birra Fresco <span class="ingredient-note" data-setup-note-spirale="(20g per lavorazione veloce)" data-setup-note-mano="(25g per compensare tempi più lunghi)">(20g per lavorazione veloce)</span></td>
-                                <td class="ingredient-qty" data-base="20">20g</td>
+                                <td class="ingredient-qty">20g</td>
                             </tr>
                             <tr>
                                 <td>Zucchero Semolato <span class="ingredient-note">(per struttura e colorazione)</span></td>
-                                <td class="ingredient-qty" data-base="75">75g</td>
+                                <td class="ingredient-qty">75g</td>
                             </tr>
                             <tr>
                                 <td>Burro Morbido <span class="ingredient-note">(a pomata, non fuso, per l'impasto base)</span></td>
-                                <td class="ingredient-qty" data-base="80">80g</td>
+                                <td class="ingredient-qty">80g</td>
                             </tr>
                             <tr>
                                 <td>Sale Fino <span class="ingredient-note">(aggiungere dopo incordatura)</span></td>
-                                <td class="ingredient-qty" data-base="10">10g</td>
+                                <td class="ingredient-qty">10g</td>
                             </tr>
                             <tr>
                                 <td>Miele Millefiori <span class="ingredient-note">(opzionale, favorisce colorazione)</span></td>
-                                <td class="ingredient-qty" data-base="12">12g</td>
+                                <td class="ingredient-qty">12g</td>
                             </tr>
                             <tr>
                                 <td>Burro da Laminazione <span class="ingredient-note">(burro piatto da incasso, freddo ma plastico, 82% grassi)</span></td>
-                                <td class="ingredient-qty" data-base="250">250g</td>
+                                <td class="ingredient-qty">250g</td>
                             </tr>
                         </table>
                     </div>
@@ -450,6 +450,9 @@
             </div>
         </div>
     </footer>
+    <!-- Recipe Data Model (sorgente di verità per il dose calculator) -->
+    <script type="application/json" id="recipe-data">{"totalFlour":500,"ingredients":[{"name":"Farina Forte","grams":500},{"name":"Acqua","grams":150},{"name":"Latte Intero Fresco","grams":125},{"name":"Uova","grams":110},{"name":"Lievito di Birra Fresco","grams":20},{"name":"Zucchero Semolato","grams":75},{"name":"Burro Morbido","grams":80},{"name":"Sale Fino","grams":10},{"name":"Miele Millefiori","grams":12},{"name":"Burro da Laminazione","grams":250}]}</script>
+
 
     <script type="module" src="/js/main.js"></script>
 </body>

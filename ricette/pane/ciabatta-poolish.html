@@ -126,7 +126,7 @@
                                     aria-label="Diminuisci dosi">−</button>
                                 <div class="dose-calculator__input-wrapper">
                                     <input type="number" class="dose-calculator__input" id="dose-input" value="0.7"
-                                        min="0.1" max="2.1" step="any" data-base-total="700" aria-label="Kg di farina">
+                                        min="0.1" max="2.1" step="any" aria-label="Kg di farina">
                                     <span class="dose-calculator__unit">kg</span>
                                 </div>
                                 <button class="dose-calculator__btn" id="dose-increase"
@@ -138,43 +138,43 @@
                         <table class="ingredients-table" id="ingredients-table">
                             <tr>
                                 <td>Farina Manitoba o Tipo 0 Forte <span class="ingredient-note" >((W 320-380 per poolish))</span></td>
-                                <td class="ingredient-qty" data-base="200">200g</td>
+                                <td class="ingredient-qty">200g</td>
                             </tr>
                             <tr>
                                 <td>Acqua per Poolish <span class="ingredient-note" >((temperatura ambiente 20-22°C))</span></td>
-                                <td class="ingredient-qty" data-base="200">200g</td>
+                                <td class="ingredient-qty">200g</td>
                             </tr>
                             <tr>
                                 <td>Lievito di Birra Fresco per Poolish <span class="ingredient-note" >((oppure 1g secco))</span></td>
-                                <td class="ingredient-qty" data-base="2">2g</td>
+                                <td class="ingredient-qty">2g</td>
                             </tr>
                             <tr>
                                 <td>Farina Tipo 0 Media-Forte <span class="ingredient-note" >((W 280-320 per impasto finale))</span></td>
-                                <td class="ingredient-qty" data-base="400">400g</td>
+                                <td class="ingredient-qty">400g</td>
                             </tr>
                             <tr>
                                 <td>Acqua Impasto Finale <span class="ingredient-note" data-setup-note-spirale="(ghiacciata 2-4°C, aggiungere gradualmente)" data-setup-note-mano="(20-22°C, in 3 riprese durante stretch & fold)">(ghiacciata 2-4°C, aggiungere gradualmente)</span></td>
-                                <td class="ingredient-qty" data-base="280">280g</td>
+                                <td class="ingredient-qty">280g</td>
                             </tr>
                             <tr>
                                 <td>Lievito di Birra Fresco <span class="ingredient-note" data-setup-note-spirale="(5g per impasto rapido)" data-setup-note-mano="(3g per tempi più lunghi)">(5g per impasto rapido)</span></td>
-                                <td class="ingredient-qty" data-base="5">5g</td>
+                                <td class="ingredient-qty">5g</td>
                             </tr>
                             <tr>
                                 <td>Malto Diastatico <span class="ingredient-note" >((oppure miele o zucchero))</span></td>
-                                <td class="ingredient-qty" data-base="10">10g</td>
+                                <td class="ingredient-qty">10g</td>
                             </tr>
                             <tr>
                                 <td>Sale Fino <span class="ingredient-note" >((aggiungere a incordatura avvenuta))</span></td>
-                                <td class="ingredient-qty" data-base="15">15g</td>
+                                <td class="ingredient-qty">15g</td>
                             </tr>
                             <tr>
                                 <td>Olio Extravergine d'Oliva <span class="ingredient-note" >((opzionale, per maggiore morbidezza))</span></td>
-                                <td class="ingredient-qty" data-base="15">15g</td>
+                                <td class="ingredient-qty">15g</td>
                             </tr>
                             <tr>
                                 <td>Semola Rimacinata <span class="ingredient-note" >((per spianatoia e parte inferiore pani))</span></td>
-                                <td class="ingredient-qty" data-base="100">100g</td>
+                                <td class="ingredient-qty">100g</td>
                             </tr>
                         </table>
                     </div>
@@ -440,6 +440,9 @@
             </div>
         </div>
     </footer>
+    <!-- Recipe Data Model (sorgente di verità per il dose calculator) -->
+    <script type="application/json" id="recipe-data">{"totalFlour":700,"ingredients":[{"name":"Farina Manitoba o Tipo 0 Forte","grams":200},{"name":"Acqua per Poolish","grams":200},{"name":"Lievito di Birra Fresco per Poolish","grams":2},{"name":"Farina Tipo 0 Media-Forte","grams":400},{"name":"Acqua Impasto Finale","grams":280},{"name":"Lievito di Birra Fresco","grams":5},{"name":"Malto Diastatico","grams":10},{"name":"Sale Fino","grams":15},{"name":"Olio Extravergine d'Oliva","grams":15},{"name":"Semola Rimacinata","grams":100}]}</script>
+
 
     <script type="module" src="/js/main.js"></script>
 </body>

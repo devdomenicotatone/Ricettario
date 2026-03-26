@@ -126,7 +126,7 @@
                                     aria-label="Diminuisci dosi">−</button>
                                 <div class="dose-calculator__input-wrapper">
                                     <input type="number" class="dose-calculator__input" id="dose-input" value="0.5"
-                                        min="0.1" max="1.5" step="any" data-base-total="500" aria-label="Kg di farina">
+                                        min="0.1" max="1.5" step="any" aria-label="Kg di farina">
                                     <span class="dose-calculator__unit">kg</span>
                                 </div>
                                 <button class="dose-calculator__btn" id="dose-increase"
@@ -138,55 +138,55 @@
                         <table class="ingredients-table" id="ingredients-table">
                             <tr>
                                 <td>Farina Tipo 0 Media-Alta Forza <span class="ingredient-note">(W 300-330, proteine 12-13%)</span></td>
-                                <td class="ingredient-qty" data-base="300">300g</td>
+                                <td class="ingredient-qty">300g</td>
                             </tr>
                             <tr>
                                 <td>Farina Manitoba <span class="ingredient-note">(W 350-380, proteine 13-14%)</span></td>
-                                <td class="ingredient-qty" data-base="200">200g</td>
+                                <td class="ingredient-qty">200g</td>
                             </tr>
                             <tr>
                                 <td>Latte Intero Fresco <span class="ingredient-note">(temp. ambiente per entrambi i setup)</span></td>
-                                <td class="ingredient-qty" data-base="100">100g</td>
+                                <td class="ingredient-qty">100g</td>
                             </tr>
                             <tr>
                                 <td>Uova Intere <span class="ingredient-note" data-setup-note-spirale="(peso sgusciato ~60g/uovo, aggiungere una alla volta)" data-setup-note-mano="(peso sgusciato ~60g/uovo, incorporare lentamente)">(peso sgusciato ~60g/uovo, aggiungere una alla volta)</span></td>
-                                <td class="ingredient-qty" data-base="120">120g</td>
+                                <td class="ingredient-qty">120g</td>
                             </tr>
                             <tr>
                                 <td>Tuorli <span class="ingredient-note">(da uova fresche cat. A)</span></td>
-                                <td class="ingredient-qty" data-base="20">20g</td>
+                                <td class="ingredient-qty">20g</td>
                             </tr>
                             <tr>
                                 <td>Burro <span class="ingredient-note" data-setup-note-spirale="(tagliato a pezzetti 2x2cm, aggiunto gradualmente)" data-setup-note-mano="(cremoso, incorporato a cucchiaiate dopo incordatura)">(tagliato a pezzetti 2x2cm, aggiunto gradualmente)</span></td>
-                                <td class="ingredient-qty" data-base="100">100g</td>
+                                <td class="ingredient-qty">100g</td>
                             </tr>
                             <tr>
                                 <td>Zucchero Semolato <span class="ingredient-note">(bianco o di canna integrale)</span></td>
-                                <td class="ingredient-qty" data-base="80">80g</td>
+                                <td class="ingredient-qty">80g</td>
                             </tr>
                             <tr>
                                 <td>Lievito di Birra Fresco <span class="ingredient-note" data-setup-note-spirale="(15g per impasto rapido (30-40min lavoro))" data-setup-note-mano="(10-12g per impasto lungo (60min+ lavoro))">(15g per impasto rapido (30-40min lavoro))</span></td>
-                                <td class="ingredient-qty" data-base="15">15g</td>
+                                <td class="ingredient-qty">15g</td>
                             </tr>
                             <tr>
                                 <td>Miele di Acacia <span class="ingredient-note">(liquido, non cristallizzato)</span></td>
-                                <td class="ingredient-qty" data-base="20">20g</td>
+                                <td class="ingredient-qty">20g</td>
                             </tr>
                             <tr>
                                 <td>Sale Fino <span class="ingredient-note">(aggiungere DOPO incordatura)</span></td>
-                                <td class="ingredient-qty" data-base="8">8g</td>
+                                <td class="ingredient-qty">8g</td>
                             </tr>
                             <tr>
                                 <td>Scorza di Limone <span class="ingredient-note">(grattugiata fine, solo parte gialla)</span></td>
-                                <td class="ingredient-qty" data-base="5">5g</td>
+                                <td class="ingredient-qty">5g</td>
                             </tr>
                             <tr>
                                 <td>Scorza di Arancia <span class="ingredient-note">(grattugiata fine, solo parte arancione)</span></td>
-                                <td class="ingredient-qty" data-base="8">8g</td>
+                                <td class="ingredient-qty">8g</td>
                             </tr>
                             <tr>
                                 <td>Rum o Estratto di Vaniglia <span class="ingredient-note">(opzionale, per aromatizzare)</span></td>
-                                <td class="ingredient-qty" data-base="15">15g</td>
+                                <td class="ingredient-qty">15g</td>
                             </tr>
                         </table>
                     </div>
@@ -445,6 +445,9 @@
             </div>
         </div>
     </footer>
+    <!-- Recipe Data Model (sorgente di verità per il dose calculator) -->
+    <script type="application/json" id="recipe-data">{"totalFlour":500,"ingredients":[{"name":"Farina Tipo 0 Media-Alta Forza","grams":300},{"name":"Farina Manitoba","grams":200},{"name":"Latte Intero Fresco","grams":100},{"name":"Uova Intere","grams":120},{"name":"Tuorli","grams":20},{"name":"Burro","grams":100},{"name":"Zucchero Semolato","grams":80},{"name":"Lievito di Birra Fresco","grams":15},{"name":"Miele di Acacia","grams":20},{"name":"Sale Fino","grams":8},{"name":"Scorza di Limone","grams":5},{"name":"Scorza di Arancia","grams":8},{"name":"Rum o Estratto di Vaniglia","grams":15}]}</script>
+
 
     <script type="module" src="/js/main.js"></script>
 </body>

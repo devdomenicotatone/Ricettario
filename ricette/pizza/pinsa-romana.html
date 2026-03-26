@@ -126,7 +126,7 @@
                                     aria-label="Diminuisci dosi">−</button>
                                 <div class="dose-calculator__input-wrapper">
                                     <input type="number" class="dose-calculator__input" id="dose-input" value="1"
-                                        min="0.1" max="3" step="any" data-base-total="1000" aria-label="Kg di farina">
+                                        min="0.1" max="3" step="any" aria-label="Kg di farina">
                                     <span class="dose-calculator__unit">kg</span>
                                 </div>
                                 <button class="dose-calculator__btn" id="dose-increase"
@@ -138,31 +138,31 @@
                         <table class="ingredients-table" id="ingredients-table">
                             <tr>
                                 <td>Farina di Frumento Tipo 0 o Manitoba <span class="ingredient-note">(W 300-350, per struttura e alveolatura)</span></td>
-                                <td class="ingredient-qty" data-base="900">900g</td>
+                                <td class="ingredient-qty">900g</td>
                             </tr>
                             <tr>
                                 <td>Farina di Riso <span class="ingredient-note">(migliora croccantezza)</span></td>
-                                <td class="ingredient-qty" data-base="60">60g</td>
+                                <td class="ingredient-qty">60g</td>
                             </tr>
                             <tr>
                                 <td>Farina di Soia <span class="ingredient-note">(o integrale/farro, per carattere)</span></td>
-                                <td class="ingredient-qty" data-base="40">40g</td>
+                                <td class="ingredient-qty">40g</td>
                             </tr>
                             <tr>
                                 <td>Acqua <span class="ingredient-note" data-setup-note-spirale="(ghiacciata 2-4°C, in 2 riprese (730g + 50g))" data-setup-note-mano="(fredda 10-12°C, in 3 riprese (500g + 200g + 80g))">(ghiacciata 2-4°C, in 2 riprese (730g + 50g))</span></td>
-                                <td class="ingredient-qty" data-base="780">780g</td>
+                                <td class="ingredient-qty">780g</td>
                             </tr>
                             <tr>
                                 <td>Lievito di Birra Fresco <span class="ingredient-note" data-setup-note-spirale="(5g per 24h, 2-3g per 48-72h)" data-setup-note-mano="(7g per 24h, 3-4g per 48-72h (impasto più lungo))">(5g per 24h, 2-3g per 48-72h)</span></td>
-                                <td class="ingredient-qty" data-base="5">5g</td>
+                                <td class="ingredient-qty">5g</td>
                             </tr>
                             <tr>
                                 <td>Sale Fino <span class="ingredient-note">(aggiungere a metà impasto)</span></td>
-                                <td class="ingredient-qty" data-base="20">20g</td>
+                                <td class="ingredient-qty">20g</td>
                             </tr>
                             <tr>
                                 <td>Olio Extravergine d'Oliva <span class="ingredient-note">(a fine impasto per morbidezza)</span></td>
-                                <td class="ingredient-qty" data-base="20">20g</td>
+                                <td class="ingredient-qty">20g</td>
                             </tr>
                         </table>
                     </div>
@@ -402,6 +402,9 @@
             </div>
         </div>
     </footer>
+    <!-- Recipe Data Model (sorgente di verità per il dose calculator) -->
+    <script type="application/json" id="recipe-data">{"totalFlour":1000,"ingredients":[{"name":"Farina di Frumento Tipo 0 o Manitoba","grams":900},{"name":"Farina di Riso","grams":60},{"name":"Farina di Soia","grams":40},{"name":"Acqua","grams":780},{"name":"Lievito di Birra Fresco","grams":5},{"name":"Sale Fino","grams":20},{"name":"Olio Extravergine d'Oliva","grams":20}]}</script>
+
 
     <script type="module" src="/js/main.js"></script>
 </body>

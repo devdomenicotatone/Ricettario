@@ -126,7 +126,7 @@
                                     aria-label="Diminuisci dosi">−</button>
                                 <div class="dose-calculator__input-wrapper">
                                     <input type="number" class="dose-calculator__input" id="dose-input" value="0.5"
-                                        min="0.1" max="1.5" step="any" data-base-total="500" aria-label="Kg di farina">
+                                        min="0.1" max="1.5" step="any" aria-label="Kg di farina">
                                     <span class="dose-calculator__unit">kg</span>
                                 </div>
                                 <button class="dose-calculator__btn" id="dose-increase"
@@ -138,55 +138,55 @@
                         <table class="ingredients-table" id="ingredients-table">
                             <tr>
                                 <td>Farina Manitoba Forte <span class="ingredient-note">(W 340-380, 13-14% proteine)</span></td>
-                                <td class="ingredient-qty" data-base="300">300g</td>
+                                <td class="ingredient-qty">300g</td>
                             </tr>
                             <tr>
                                 <td>Farina Tipo 00 Media Forza <span class="ingredient-note">(W 260-280)</span></td>
-                                <td class="ingredient-qty" data-base="200">200g</td>
+                                <td class="ingredient-qty">200g</td>
                             </tr>
                             <tr>
                                 <td>Lievito di Birra Fresco <span class="ingredient-note">(temperatura 4-6°C)</span></td>
-                                <td class="ingredient-qty" data-base="18">18g</td>
+                                <td class="ingredient-qty">18g</td>
                             </tr>
                             <tr>
                                 <td>Latte Intero Fresco <span class="ingredient-note" data-setup-note-spirale="(20-22°C)" data-setup-note-mano="(leggermente tiepido 28-30°C)">(20-22°C)</span></td>
-                                <td class="ingredient-qty" data-base="200">200g</td>
+                                <td class="ingredient-qty">200g</td>
                             </tr>
                             <tr>
                                 <td>Uova Intere Medie <span class="ingredient-note">(temperatura ambiente, ~110g totali)</span></td>
-                                <td class="ingredient-qty" data-base="110">110g</td>
+                                <td class="ingredient-qty">110g</td>
                             </tr>
                             <tr>
                                 <td>Zucchero Semolato <span class="ingredient-note">(aggiungere dopo iniziale amalgama)</span></td>
-                                <td class="ingredient-qty" data-base="80">80g</td>
+                                <td class="ingredient-qty">80g</td>
                             </tr>
                             <tr>
                                 <td>Burro Bavarese per Impasto <span class="ingredient-note">(temperatura ambiente morbido a pomata, 82% grassi)</span></td>
-                                <td class="ingredient-qty" data-base="80">80g</td>
+                                <td class="ingredient-qty">80g</td>
                             </tr>
                             <tr>
                                 <td>Sale Fino <span class="ingredient-note">(aggiungere a metà impastamento)</span></td>
-                                <td class="ingredient-qty" data-base="10">10g</td>
+                                <td class="ingredient-qty">10g</td>
                             </tr>
                             <tr>
                                 <td>Miele Millefiori o Acacia <span class="ingredient-note">(per morbidezza e conservabilità)</span></td>
-                                <td class="ingredient-qty" data-base="20">20g</td>
+                                <td class="ingredient-qty">20g</td>
                             </tr>
                             <tr>
                                 <td>Estratto Naturale di Vaniglia <span class="ingredient-note">(o semi di 1/2 bacca)</span></td>
-                                <td class="ingredient-qty" data-base="5">5g</td>
+                                <td class="ingredient-qty">5g</td>
                             </tr>
                             <tr>
                                 <td>Scorza Grattugiata di Arancia <span class="ingredient-note">(biologica, solo parte arancione)</span></td>
-                                <td class="ingredient-qty" data-base="10">10g</td>
+                                <td class="ingredient-qty">10g</td>
                             </tr>
                             <tr>
                                 <td>Scorza Grattugiata di Limone <span class="ingredient-note">(biologica, solo parte gialla)</span></td>
-                                <td class="ingredient-qty" data-base="5">5g</td>
+                                <td class="ingredient-qty">5g</td>
                             </tr>
                             <tr>
                                 <td>Burro Bavarese per Sfogliatura <span class="ingredient-note">(freddo di frigo 4-6°C, da lavorare in panetto 20x20 cm)</span></td>
-                                <td class="ingredient-qty" data-base="250">250g</td>
+                                <td class="ingredient-qty">250g</td>
                             </tr>
                         </table>
                     </div>
@@ -487,6 +487,9 @@
             </div>
         </div>
     </footer>
+    <!-- Recipe Data Model (sorgente di verità per il dose calculator) -->
+    <script type="application/json" id="recipe-data">{"totalFlour":500,"ingredients":[{"name":"Farina Manitoba Forte","grams":300},{"name":"Farina Tipo 00 Media Forza","grams":200},{"name":"Lievito di Birra Fresco","grams":18},{"name":"Latte Intero Fresco","grams":200},{"name":"Uova Intere Medie","grams":110},{"name":"Zucchero Semolato","grams":80},{"name":"Burro Bavarese per Impasto","grams":80},{"name":"Sale Fino","grams":10},{"name":"Miele Millefiori o Acacia","grams":20},{"name":"Estratto Naturale di Vaniglia","grams":5},{"name":"Scorza Grattugiata di Arancia","grams":10},{"name":"Scorza Grattugiata di Limone","grams":5},{"name":"Burro Bavarese per Sfogliatura","grams":250}]}</script>
+
 
     <script type="module" src="/js/main.js"></script>
 </body>

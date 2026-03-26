@@ -126,7 +126,7 @@
                                     aria-label="Diminuisci dosi">−</button>
                                 <div class="dose-calculator__input-wrapper">
                                     <input type="number" class="dose-calculator__input" id="dose-input" value="1"
-                                        min="0.1" max="3" step="any" data-base-total="1000" aria-label="Kg di farina">
+                                        min="0.1" max="3" step="any" aria-label="Kg di farina">
                                     <span class="dose-calculator__unit">kg</span>
                                 </div>
                                 <button class="dose-calculator__btn" id="dose-increase"
@@ -138,27 +138,27 @@
                         <table class="ingredients-table" id="ingredients-table">
                             <tr>
                                 <td>Farina Tipo 0 o 00 Media-Alta Forza <span class="ingredient-note">(W 280-320, 12-13% proteine)</span></td>
-                                <td class="ingredient-qty" data-base="1000">1000g</td>
+                                <td class="ingredient-qty">1000g</td>
                             </tr>
                             <tr>
                                 <td>Acqua <span class="ingredient-note" data-setup-note-spirale="(ghiacciata 2-4°C per compensare attrito)" data-setup-note-mano="(temperatura ambiente 20-22°C, aggiunta graduale)">(ghiacciata 2-4°C per compensare attrito)</span></td>
-                                <td class="ingredient-qty" data-base="650">650g</td>
+                                <td class="ingredient-qty">650g</td>
                             </tr>
                             <tr>
                                 <td>Sale Marino Fino <span class="ingredient-note">(2.5-3% su farina)</span></td>
-                                <td class="ingredient-qty" data-base="28">28g</td>
+                                <td class="ingredient-qty">28g</td>
                             </tr>
                             <tr>
                                 <td>Lievito di Birra Fresco <span class="ingredient-note" data-setup-note-spirale="(1-2g per lievitazione 24h)" data-setup-note-mano="(2-3g per gestione più semplice (lievitazione 8-12h))">(1-2g per lievitazione 24h)</span></td>
-                                <td class="ingredient-qty" data-base="2">2g</td>
+                                <td class="ingredient-qty">2g</td>
                             </tr>
                             <tr>
                                 <td>Zucchero Semolato <span class="ingredient-note">(opzionale, favorisce doratura)</span></td>
-                                <td class="ingredient-qty" data-base="5">5g</td>
+                                <td class="ingredient-qty">5g</td>
                             </tr>
                             <tr>
                                 <td>Olio Extravergine d'Oliva <span class="ingredient-note">(opzionale, non previsto dal disciplinare STG)</span></td>
-                                <td class="ingredient-qty" data-base="15">15g</td>
+                                <td class="ingredient-qty">15g</td>
                             </tr>
                         </table>
                     </div>
@@ -442,6 +442,9 @@
             </div>
         </div>
     </footer>
+    <!-- Recipe Data Model (sorgente di verità per il dose calculator) -->
+    <script type="application/json" id="recipe-data">{"totalFlour":1000,"ingredients":[{"name":"Farina Tipo 0 o 00 Media-Alta Forza","grams":1000},{"name":"Acqua","grams":650},{"name":"Sale Marino Fino","grams":28},{"name":"Lievito di Birra Fresco","grams":2},{"name":"Zucchero Semolato","grams":5},{"name":"Olio Extravergine d'Oliva","grams":15}]}</script>
+
 
     <script type="module" src="/js/main.js"></script>
 </body>

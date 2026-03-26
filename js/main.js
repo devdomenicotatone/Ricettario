@@ -353,30 +353,78 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // === CALCOLATORE DOSI (v2 — robusto) ===
+  // === CALCOLATORE DOSI (v3 — JSON model) ===
   const doseInput = document.getElementById('dose-input');
   const doseBadge = document.getElementById('dose-badge');
   const doseDecrease = document.getElementById('dose-decrease');
   const doseIncrease = document.getElementById('dose-increase');
 
   if (doseInput && doseBadge) {
-    // Seleziona SOLO celle con data-base (ignora header sezione senza data-base)
-    const allQtyCells = document.querySelectorAll('.ingredient-qty[data-base]');
-    // Base reale dalla ricetta generata
-    const baseTotal = parseFloat(doseInput.getAttribute('data-base-total')) || 1000;
+    // ── Carica il modello dati dalla sorgente di verità ──
+    let recipeModel = null;
+    const dataScript = document.getElementById('recipe-data');
+    if (dataScript) {
+      try {
+        recipeModel = JSON.parse(dataScript.textContent);
+      } catch (e) {
+        console.warn('[DoseCalc] Errore parsing recipe-data JSON:', e);
+      }
+    }
+
+    // Base farina: dal JSON model, o fallback a data-base-total
+    const baseTotal = recipeModel?.totalFlour
+      || parseFloat(doseInput.getAttribute('data-base-total'))
+      || 1000;
     const baseKg = baseTotal / 1000;
     const maxKg = parseFloat(doseInput.max) || baseKg * 3;
 
     // Step intelligente: 0.5kg per ricette > 1kg, 0.1kg per ricette <= 1kg
     const stepKg = baseKg <= 1 ? 0.1 : 0.5;
 
+    // ── Costruisci mappa ingredienti → celle DOM ──
+    // Ogni entry ha { baseGrams, cell }
+    const ingredientMap = [];
+
+    if (recipeModel) {
+      // v3: mappa dal JSON model → celle DOM per indice
+      const tables = ['ingredients-table', 'suspensions-table'];
+      const modelLists = [recipeModel.ingredients || [], recipeModel.suspensions || []];
+
+      tables.forEach((tableId, listIdx) => {
+        const table = document.getElementById(tableId);
+        if (!table) return;
+
+        const rows = table.querySelectorAll('tr:not(.ingredient-section-header)');
+        const modelList = modelLists[listIdx];
+        let rowIdx = 0;
+
+        for (const item of modelList) {
+          if (item.grams == null) continue; // Header sezione (null grams)
+          if (rowIdx >= rows.length) break;
+
+          const cell = rows[rowIdx]?.querySelector('.ingredient-qty');
+          if (cell) {
+            ingredientMap.push({ baseGrams: item.grams, cell });
+          }
+          rowIdx++;
+        }
+      });
+    } else {
+      // Fallback v2: legge ancora dai data-base attributes (retrocompatibilità)
+      document.querySelectorAll('.ingredient-qty[data-base]').forEach(cell => {
+        const base = parseFloat(cell.getAttribute('data-base'));
+        if (!isNaN(base)) {
+          ingredientMap.push({ baseGrams: base, cell });
+        }
+      });
+    }
+
     /**
      * Formattazione professionale delle quantità.
      * Segue le convenzioni delle bilance da panificazione:
-     *   >= 100g  → intero (es. 1500g, 800g)
-     *   >= 10g   → intero (es. 58g, 50g)
-     *   >= 1g    → 1 decimale (es. 2.0g, 3.5g)
-     *   < 1g     → 2 decimali (es. 0.71g)
+     *   >= 10g  → intero (es. 1500g, 800g, 58g)
+     *   >= 1g   → 1 decimale (es. 2.0g, 3.5g)
+     *   < 1g    → 2 decimali (es. 0.71g)
      */
     const formatGrams = (val) => {
       if (val === 0) return '0g';
@@ -387,13 +435,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /**
      * Formattazione del badge multiplier.
-     *   Intero: ×1, ×2, ×3
-     *   Decimale pulito: ×0.5, ×1.5
-     *   Altro: ×0.54 (max 2 decimali)
      */
     const formatMultiplier = (m) => {
       if (Number.isInteger(m)) return `×${m}`;
-      // Controlla se è "pulito" con 1 decimale
       if (Math.abs(m * 10 - Math.round(m * 10)) < 0.001) {
         return `×${m.toFixed(1)}`;
       }
@@ -402,19 +446,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const updateDoses = () => {
       const kg = parseFloat(doseInput.value);
-      if (isNaN(kg) || kg <= 0) return; // Ignora input invalido
+      if (isNaN(kg) || kg <= 0) return;
 
       const multiplier = kg / baseKg;
 
       // Aggiorna badge
       doseBadge.textContent = formatMultiplier(multiplier);
 
-      // Aggiorna ogni cella ingrediente con data-base
-      allQtyCells.forEach(cell => {
-        const base = parseFloat(cell.getAttribute('data-base'));
-        if (isNaN(base)) return;
-
-        const newVal = base * multiplier;
+      // Aggiorna ogni cella ingrediente dal modello
+      ingredientMap.forEach(({ baseGrams, cell }) => {
+        const newVal = baseGrams * multiplier;
         cell.textContent = formatGrams(newVal);
 
         // Pulse animation (re-trigger)

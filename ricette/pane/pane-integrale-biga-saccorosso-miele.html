@@ -126,7 +126,7 @@
                                     aria-label="Diminuisci dosi">−</button>
                                 <div class="dose-calculator__input-wrapper">
                                     <input type="number" class="dose-calculator__input" id="dose-input" value="2.8"
-                                        min="0.1" max="8.4" step="any" data-base-total="2800" aria-label="Kg di farina">
+                                        min="0.1" max="8.4" step="any" aria-label="Kg di farina">
                                     <span class="dose-calculator__unit">kg</span>
                                 </div>
                                 <button class="dose-calculator__btn" id="dose-increase"
@@ -141,46 +141,46 @@
                             </tr>
                             <tr>
                                 <td>Farina Caputo Saccorosso <span class="ingredient-note">(W 300 - Per biga)</span></td>
-                                <td class="ingredient-qty" data-base="800">800g</td>
+                                <td class="ingredient-qty">800g</td>
                             </tr>
                             <tr>
                                 <td>Acqua <span class="ingredient-note" data-setup-note-spirale="(temperatura ambiente 18-20°C)" data-setup-note-mano="(temperatura ambiente 18-20°C)">(temperatura ambiente 18-20°C)</span></td>
-                                <td class="ingredient-qty" data-base="360">360g</td>
+                                <td class="ingredient-qty">360g</td>
                             </tr>
                             <tr>
                                 <td>Lievito di Birra Secco <span class="ingredient-note">(Per biga)</span></td>
-                                <td class="ingredient-qty" data-base="2">2g</td>
+                                <td class="ingredient-qty">2g</td>
                             </tr>
                             <tr class="ingredient-section-header">
                                 <td colspan="2"><strong>IMPASTO FINALE</strong></td>
                             </tr>
                             <tr>
                                 <td>Biga di Saccorosso <span class="ingredient-note">(Tutta la biga preparata)</span></td>
-                                <td class="ingredient-qty" data-base="1160">1160g</td>
+                                <td class="ingredient-qty">1160g</td>
                             </tr>
                             <tr>
                                 <td>Farina Caputo Integrale <span class="ingredient-note">(Ricca di fibre e crusca)</span></td>
-                                <td class="ingredient-qty" data-base="1000">1000g</td>
+                                <td class="ingredient-qty">1000g</td>
                             </tr>
                             <tr>
                                 <td>Farina Caputo Saccorosso <span class="ingredient-note">(W 300 - Corpo ed elasticità)</span></td>
-                                <td class="ingredient-qty" data-base="1000">1000g</td>
+                                <td class="ingredient-qty">1000g</td>
                             </tr>
                             <tr>
                                 <td>Acqua <span class="ingredient-note" data-setup-note-spirale="(65% in autolisi (975g), resto in bassinage a filo lento)" data-setup-note-mano="(temperatura ambiente 20-22°C, 65% in autolisi, resto con pieghe graduale)">(65% in autolisi (975g), resto in bassinage a filo lento)</span></td>
-                                <td class="ingredient-qty" data-base="1500">1500g</td>
+                                <td class="ingredient-qty">1500g</td>
                             </tr>
                             <tr>
                                 <td>Miele Millefiori <span class="ingredient-note">(Aromi e conservazione)</span></td>
-                                <td class="ingredient-qty" data-base="50">50g</td>
+                                <td class="ingredient-qty">50g</td>
                             </tr>
                             <tr>
                                 <td>Sale Fino <span class="ingredient-note">(2.1% su farine totali)</span></td>
-                                <td class="ingredient-qty" data-base="58">58g</td>
+                                <td class="ingredient-qty">58g</td>
                             </tr>
                             <tr>
                                 <td>Olio Extravergine di Oliva <span class="ingredient-note">(A fine impasto)</span></td>
-                                <td class="ingredient-qty" data-base="50">50g</td>
+                                <td class="ingredient-qty">50g</td>
                             </tr>
                         </table>
                     </div>
@@ -447,6 +447,9 @@
             </div>
         </div>
     </footer>
+    <!-- Recipe Data Model (sorgente di verità per il dose calculator) -->
+    <script type="application/json" id="recipe-data">{"totalFlour":2800,"ingredients":[{"name":"BIGA DI SACCOROSSO","grams":null},{"name":"Farina Caputo Saccorosso","grams":800},{"name":"Acqua","grams":360},{"name":"Lievito di Birra Secco","grams":2},{"name":"IMPASTO FINALE","grams":null},{"name":"Biga di Saccorosso","grams":1160},{"name":"Farina Caputo Integrale","grams":1000},{"name":"Farina Caputo Saccorosso","grams":1000},{"name":"Acqua","grams":1500},{"name":"Miele Millefiori","grams":50},{"name":"Sale Fino","grams":58},{"name":"Olio Extravergine di Oliva","grams":50}]}</script>
+
 
     <script type="module" src="/js/main.js"></script>
 </body>

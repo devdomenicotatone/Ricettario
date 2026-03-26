@@ -126,7 +126,7 @@
                                     aria-label="Diminuisci dosi">−</button>
                                 <div class="dose-calculator__input-wrapper">
                                     <input type="number" class="dose-calculator__input" id="dose-input" value="0.3"
-                                        min="0.1" max="0.8" step="any" data-base-total="280" aria-label="Kg di farina">
+                                        min="0.1" max="0.8" step="any" aria-label="Kg di farina">
                                     <span class="dose-calculator__unit">kg</span>
                                 </div>
                                 <button class="dose-calculator__btn" id="dose-increase"
@@ -138,47 +138,47 @@
                         <table class="ingredients-table" id="ingredients-table">
                             <tr>
                                 <td>Farina Tipo 00 Debole <span class="ingredient-note">(W 120-150, per dolci)</span></td>
-                                <td class="ingredient-qty" data-base="280">280g</td>
+                                <td class="ingredient-qty">280g</td>
                             </tr>
                             <tr>
                                 <td>Zucchero Semolato</td>
-                                <td class="ingredient-qty" data-base="180">180g</td>
+                                <td class="ingredient-qty">180g</td>
                             </tr>
                             <tr>
                                 <td>Uova Intere <span class="ingredient-note">(circa 2 medie, a temperatura ambiente)</span></td>
-                                <td class="ingredient-qty" data-base="100">100g</td>
+                                <td class="ingredient-qty">100g</td>
                             </tr>
                             <tr>
                                 <td>Burro <span class="ingredient-note">(morbido, a temperatura ambiente)</span></td>
-                                <td class="ingredient-qty" data-base="30">30g</td>
+                                <td class="ingredient-qty">30g</td>
                             </tr>
                             <tr>
                                 <td>Mandorle con Pellicina <span class="ingredient-note">(intere, non pelate)</span></td>
-                                <td class="ingredient-qty" data-base="130">130g</td>
+                                <td class="ingredient-qty">130g</td>
                             </tr>
                             <tr>
                                 <td>Ammoniaca per Dolci <span class="ingredient-note">(bicarbonato d'ammonio, E503ii)</span></td>
-                                <td class="ingredient-qty" data-base="3">3g</td>
+                                <td class="ingredient-qty">3g</td>
                             </tr>
                             <tr>
                                 <td>Scorza di Arancia <span class="ingredient-note">(grattugiata, agrume non trattato)</span></td>
-                                <td class="ingredient-qty" data-base="5">5g</td>
+                                <td class="ingredient-qty">5g</td>
                             </tr>
                             <tr>
                                 <td>Scorza di Limone <span class="ingredient-note">(grattugiata, agrume non trattato)</span></td>
-                                <td class="ingredient-qty" data-base="3">3g</td>
+                                <td class="ingredient-qty">3g</td>
                             </tr>
                             <tr>
                                 <td>Sale Fino</td>
-                                <td class="ingredient-qty" data-base="2">2g</td>
+                                <td class="ingredient-qty">2g</td>
                             </tr>
                             <tr>
                                 <td>Marsala o Vin Santo <span class="ingredient-note">(opzionale, per profumare)</span></td>
-                                <td class="ingredient-qty" data-base="10">10g</td>
+                                <td class="ingredient-qty">10g</td>
                             </tr>
                             <tr>
                                 <td>Tuorlo d'Uovo <span class="ingredient-note">(per spennellare)</span></td>
-                                <td class="ingredient-qty" data-base="20">20g</td>
+                                <td class="ingredient-qty">20g</td>
                             </tr>
                         </table>
                     </div>
@@ -383,6 +383,9 @@
             </div>
         </div>
     </footer>
+    <!-- Recipe Data Model (sorgente di verità per il dose calculator) -->
+    <script type="application/json" id="recipe-data">{"totalFlour":280,"ingredients":[{"name":"Farina Tipo 00 Debole","grams":280},{"name":"Zucchero Semolato","grams":180},{"name":"Uova Intere","grams":100},{"name":"Burro","grams":30},{"name":"Mandorle con Pellicina","grams":130},{"name":"Ammoniaca per Dolci","grams":3},{"name":"Scorza di Arancia","grams":5},{"name":"Scorza di Limone","grams":3},{"name":"Sale Fino","grams":2},{"name":"Marsala o Vin Santo","grams":10},{"name":"Tuorlo d'Uovo","grams":20}]}</script>
+
 
     <script type="module" src="/js/main.js"></script>
 </body>

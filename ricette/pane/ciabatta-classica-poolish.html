@@ -126,7 +126,7 @@
                                     aria-label="Diminuisci dosi">−</button>
                                 <div class="dose-calculator__input-wrapper">
                                     <input type="number" class="dose-calculator__input" id="dose-input" value="0.9"
-                                        min="0.1" max="2.7" step="any" data-base-total="900" aria-label="Kg di farina">
+                                        min="0.1" max="2.7" step="any" aria-label="Kg di farina">
                                     <span class="dose-calculator__unit">kg</span>
                                 </div>
                                 <button class="dose-calculator__btn" id="dose-increase"
@@ -138,31 +138,31 @@
                         <table class="ingredients-table" id="ingredients-table">
                             <tr>
                                 <td>Farina Tipo 0 Forte <span class="ingredient-note">(W 300-320, proteine 12-13%)</span></td>
-                                <td class="ingredient-qty" data-base="500">500g</td>
+                                <td class="ingredient-qty">500g</td>
                             </tr>
                             <tr>
                                 <td>Farina Manitoba <span class="ingredient-note">(W 350-380, proteine 13-14%)</span></td>
-                                <td class="ingredient-qty" data-base="400">400g</td>
+                                <td class="ingredient-qty">400g</td>
                             </tr>
                             <tr>
                                 <td>Acqua <span class="ingredient-note" data-setup-note-spirale="(ghiacciata 2-4°C per impasto finale)" data-setup-note-mano="(20-22°C, aggiunta graduale in 3 riprese)">(ghiacciata 2-4°C per impasto finale)</span></td>
-                                <td class="ingredient-qty" data-base="720">720g</td>
+                                <td class="ingredient-qty">720g</td>
                             </tr>
                             <tr>
                                 <td>Lievito di Birra Fresco <span class="ingredient-note" data-setup-note-spirale="(3g poolish + 9g impasto)" data-setup-note-mano="(3g poolish + 6g impasto (tempi più lunghi))">(3g poolish + 9g impasto)</span></td>
-                                <td class="ingredient-qty" data-base="12">12g</td>
+                                <td class="ingredient-qty">12g</td>
                             </tr>
                             <tr>
                                 <td>Malto Diastasico <span class="ingredient-note">(oppure miele o zucchero)</span></td>
-                                <td class="ingredient-qty" data-base="10">10g</td>
+                                <td class="ingredient-qty">10g</td>
                             </tr>
                             <tr>
                                 <td>Sale Fino <span class="ingredient-note">(aggiunto a metà impastamento)</span></td>
-                                <td class="ingredient-qty" data-base="20">20g</td>
+                                <td class="ingredient-qty">20g</td>
                             </tr>
                             <tr>
                                 <td>Olio Extravergine d'Oliva <span class="ingredient-note">(opzionale, per morbidezza)</span></td>
-                                <td class="ingredient-qty" data-base="15">15g</td>
+                                <td class="ingredient-qty">15g</td>
                             </tr>
                         </table>
                     </div>
@@ -398,6 +398,9 @@
             </div>
         </div>
     </footer>
+    <!-- Recipe Data Model (sorgente di verità per il dose calculator) -->
+    <script type="application/json" id="recipe-data">{"totalFlour":900,"ingredients":[{"name":"Farina Tipo 0 Forte","grams":500},{"name":"Farina Manitoba","grams":400},{"name":"Acqua","grams":720},{"name":"Lievito di Birra Fresco","grams":12},{"name":"Malto Diastasico","grams":10},{"name":"Sale Fino","grams":20},{"name":"Olio Extravergine d'Oliva","grams":15}]}</script>
+
 
     <script type="module" src="/js/main.js"></script>
 </body>

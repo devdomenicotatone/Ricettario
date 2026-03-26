@@ -127,7 +127,7 @@
                                     aria-label="Diminuisci dosi">−</button>
                                 <div class="dose-calculator__input-wrapper">
                                     <input type="number" class="dose-calculator__input" id="dose-input" value="1"
-                                        min="0.1" max="3" step="any" data-base-total="1000" aria-label="Kg di farina">
+                                        min="0.1" max="3" step="any" aria-label="Kg di farina">
                                     <span class="dose-calculator__unit">kg</span>
                                 </div>
                                 <button class="dose-calculator__btn" id="dose-increase"
@@ -140,43 +140,43 @@
                             <tr>
                                 <td>Farina Tipo 0 o 00 <span class="ingredient-note">(W 240-280, media forza)</span>
                                 </td>
-                                <td class="ingredient-qty" data-base="750">750g</td>
+                                <td class="ingredient-qty">750g</td>
                             </tr>
                             <tr>
                                 <td>Farina Manitoba <span class="ingredient-note">(W 350-380, forza elevata)</span></td>
-                                <td class="ingredient-qty" data-base="250">250g</td>
+                                <td class="ingredient-qty">250g</td>
                             </tr>
                             <tr>
                                 <td>Acqua <span class="ingredient-note"
                                         data-setup-note-spirale="(ghiacciata 2-4°C per controllare surriscaldamento)"
                                         data-setup-note-mano="(tiepida 28-30°C per favorire lievitazione)">(ghiacciata
                                         2-4°C per controllare surriscaldamento)</span></td>
-                                <td class="ingredient-qty" data-base="500">500g</td>
+                                <td class="ingredient-qty">500g</td>
                             </tr>
                             <tr>
                                 <td>Lievito di Birra Fresco <span class="ingredient-note">(2.5% su farina totale)</span>
                                 </td>
-                                <td class="ingredient-qty" data-base="25">25g</td>
+                                <td class="ingredient-qty">25g</td>
                             </tr>
                             <tr>
                                 <td>Strutto <span class="ingredient-note">(morbido a temperatura ambiente, sostituibile
                                         con burro)</span></td>
-                                <td class="ingredient-qty" data-base="100">100g</td>
+                                <td class="ingredient-qty">100g</td>
                             </tr>
                             <tr>
                                 <td>Zucchero Semolato <span class="ingredient-note">(10% su farina, favorisce
                                         lievitazione e colorazione)</span></td>
-                                <td class="ingredient-qty" data-base="100">100g</td>
+                                <td class="ingredient-qty">100g</td>
                             </tr>
                             <tr>
                                 <td>Sale Fino <span class="ingredient-note">(2% su farina, aggiungere a fine
                                         impasto)</span></td>
-                                <td class="ingredient-qty" data-base="20">20g</td>
+                                <td class="ingredient-qty">20g</td>
                             </tr>
                             <tr>
                                 <td>Miele <span class="ingredient-note">(millefiori o acacia, per morbidezza e
                                         aroma)</span></td>
-                                <td class="ingredient-qty" data-base="20">20g</td>
+                                <td class="ingredient-qty">20g</td>
                             </tr>
                         </table>
                     </div>
@@ -189,15 +189,15 @@
                         <table class="ingredients-table" id="suspensions-table">
                             <tr>
                                 <td>Tuorlo d'Uovo <span class="ingredient-note">(per spennellatura finale)</span></td>
-                                <td class="ingredient-qty" data-base="20">20g</td>
+                                <td class="ingredient-qty">20g</td>
                             </tr>
                             <tr>
                                 <td>Latte Intero <span class="ingredient-note">(per diluire il tuorlo)</span></td>
-                                <td class="ingredient-qty" data-base="30">30g</td>
+                                <td class="ingredient-qty">30g</td>
                             </tr>
                             <tr>
                                 <td>Semi di Sesamo <span class="ingredient-note">(tostati, per decorazione)</span></td>
-                                <td class="ingredient-qty" data-base="30">30g</td>
+                                <td class="ingredient-qty">30g</td>
                             </tr>
                         </table>
 
@@ -549,6 +549,9 @@
             </div>
         </div>
     </footer>
+    <!-- Recipe Data Model (sorgente di verità per il dose calculator) -->
+    <script type="application/json" id="recipe-data">{"totalFlour":1000,"ingredients":[{"name":"Farina Tipo 0 o 00","grams":750},{"name":"Farina Manitoba","grams":250},{"name":"Acqua","grams":500},{"name":"Lievito di Birra Fresco","grams":25},{"name":"Strutto","grams":100},{"name":"Zucchero Semolato","grams":100},{"name":"Sale Fino","grams":20},{"name":"Miele","grams":20}],"suspensions":[{"name":"Tuorlo d'Uovo","grams":20},{"name":"Latte Intero","grams":30},{"name":"Semi di Sesamo","grams":30}]}</script>
+
 
     <script type="module" src="/js/main.js"></script>
 </body>

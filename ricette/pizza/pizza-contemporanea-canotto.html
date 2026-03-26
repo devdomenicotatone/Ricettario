@@ -126,7 +126,7 @@
                                     aria-label="Diminuisci dosi">−</button>
                                 <div class="dose-calculator__input-wrapper">
                                     <input type="number" class="dose-calculator__input" id="dose-input" value="3"
-                                        min="0.1" max="9" step="any" data-base-total="3000" aria-label="Kg di farina">
+                                        min="0.1" max="9" step="any" aria-label="Kg di farina">
                                     <span class="dose-calculator__unit">kg</span>
                                 </div>
                                 <button class="dose-calculator__btn" id="dose-increase"
@@ -138,43 +138,43 @@
                         <table class="ingredients-table" id="ingredients-table">
                             <tr>
                                 <td>Farina Caputo Saccorosso (per biga) <span class="ingredient-note">(W 330-350, Manitoba rossa per struttura)</span></td>
-                                <td class="ingredient-qty" data-base="900">900g</td>
+                                <td class="ingredient-qty">900g</td>
                             </tr>
                             <tr>
                                 <td>Acqua per biga <span class="ingredient-note" data-setup-note-spirale="(fredda da frigo 8-10°C)" data-setup-note-mano="(temperatura ambiente 18-20°C)">(fredda da frigo 8-10°C)</span></td>
-                                <td class="ingredient-qty" data-base="405">405g</td>
+                                <td class="ingredient-qty">405g</td>
                             </tr>
                             <tr>
                                 <td>Lievito Secco Caputo (per biga) <span class="ingredient-note">(0.22% su farina biga)</span></td>
-                                <td class="ingredient-qty" data-base="2">2g</td>
+                                <td class="ingredient-qty">2g</td>
                             </tr>
                             <tr>
                                 <td>Biga matura <span class="ingredient-note">(tutto l'impasto precedente, ~1305g)</span></td>
-                                <td class="ingredient-qty" data-base="1305">1305g</td>
+                                <td class="ingredient-qty">1305g</td>
                             </tr>
                             <tr>
                                 <td>Farina Caputo Nuvola Super <span class="ingredient-note">(W 260-280, protagonista per spinta e alveolatura)</span></td>
-                                <td class="ingredient-qty" data-base="1800">1800g</td>
+                                <td class="ingredient-qty">1800g</td>
                             </tr>
                             <tr>
                                 <td>Farina Caputo Saccorosso (rinfresco) <span class="ingredient-note">(W 330-350, rinforzo finale)</span></td>
-                                <td class="ingredient-qty" data-base="300">300g</td>
+                                <td class="ingredient-qty">300g</td>
                             </tr>
                             <tr>
                                 <td>Acqua rinfresco <span class="ingredient-note" data-setup-note-spirale="(in 2 riprese: 1050g iniziale + 700g bassinage)" data-setup-note-mano="(in 3 riprese progressive durante le pieghe)">(in 2 riprese: 1050g iniziale + 700g bassinage)</span></td>
-                                <td class="ingredient-qty" data-base="1750">1750g</td>
+                                <td class="ingredient-qty">1750g</td>
                             </tr>
                             <tr>
                                 <td>Criscito Caputo <span class="ingredient-note">(lievito madre essiccato, 30g/kg come da indicazioni)</span></td>
-                                <td class="ingredient-qty" data-base="90">90g</td>
+                                <td class="ingredient-qty">90g</td>
                             </tr>
                             <tr>
                                 <td>Estratto di Malto <span class="ingredient-note">(per attività enzimatica e colorazione)</span></td>
-                                <td class="ingredient-qty" data-base="10">10g</td>
+                                <td class="ingredient-qty">10g</td>
                             </tr>
                             <tr>
                                 <td>Sale Marino Fino <span class="ingredient-note">(2.3% su farina totale, massima estensibilità)</span></td>
-                                <td class="ingredient-qty" data-base="70">70g</td>
+                                <td class="ingredient-qty">70g</td>
                             </tr>
                         </table>
                     </div>
@@ -445,6 +445,9 @@
             </div>
         </div>
     </footer>
+    <!-- Recipe Data Model (sorgente di verità per il dose calculator) -->
+    <script type="application/json" id="recipe-data">{"totalFlour":3000,"ingredients":[{"name":"Farina Caputo Saccorosso (per biga)","grams":900},{"name":"Acqua per biga","grams":405},{"name":"Lievito Secco Caputo (per biga)","grams":2},{"name":"Biga matura","grams":1305},{"name":"Farina Caputo Nuvola Super","grams":1800},{"name":"Farina Caputo Saccorosso (rinfresco)","grams":300},{"name":"Acqua rinfresco","grams":1750},{"name":"Criscito Caputo","grams":90},{"name":"Estratto di Malto","grams":10},{"name":"Sale Marino Fino","grams":70}]}</script>
+
 
     <script type="module" src="/js/main.js"></script>
 </body>

@@ -126,7 +126,7 @@
                                     aria-label="Diminuisci dosi">−</button>
                                 <div class="dose-calculator__input-wrapper">
                                     <input type="number" class="dose-calculator__input" id="dose-input" value="0.5"
-                                        min="0.1" max="1.5" step="any" data-base-total="500" aria-label="Kg di farina">
+                                        min="0.1" max="1.5" step="any" aria-label="Kg di farina">
                                     <span class="dose-calculator__unit">kg</span>
                                 </div>
                                 <button class="dose-calculator__btn" id="dose-increase"
@@ -139,34 +139,34 @@
                             <tr>
                                 <td>Farina Integrale di Grano Tenero <span class="ingredient-note">(tipo 2, W
                                         180-200)</span></td>
-                                <td class="ingredient-qty" data-base="300">300g</td>
+                                <td class="ingredient-qty">300g</td>
                             </tr>
                             <tr>
                                 <td>Farina di Farro Semi-Integrale <span class="ingredient-note">(tipo 2, W
                                         160-180)</span></td>
-                                <td class="ingredient-qty" data-base="160">160g</td>
+                                <td class="ingredient-qty">160g</td>
                             </tr>
                             <tr>
                                 <td>Farina di Grano Saraceno <span class="ingredient-note">(decorticata)</span></td>
-                                <td class="ingredient-qty" data-base="40">40g</td>
+                                <td class="ingredient-qty">40g</td>
                             </tr>
                             <tr>
                                 <td>Acqua <span class="ingredient-note"
                                         data-setup-note-spirale="(ghiacciata 2-4°C, tutta in unica soluzione)"
                                         data-setup-note-mano="(tiepida 28-30°C, aggiunta graduale in 3 riprese)">(ghiacciata
                                         2-4°C, tutta in unica soluzione)</span></td>
-                                <td class="ingredient-qty" data-base="340">340g</td>
+                                <td class="ingredient-qty">340g</td>
                             </tr>
                             <tr>
                                 <td>Lievito di Birra Secco <span class="ingredient-note"
                                         data-setup-note-spirale="(3g secco, aggiunto diretto)"
                                         data-setup-note-mano="(9g fresco sciolto in acqua con pizzico zucchero (pre-fermento 10 min))">(3g
                                         secco, aggiunto diretto)</span></td>
-                                <td class="ingredient-qty" data-base="3">3g</td>
+                                <td class="ingredient-qty">3g</td>
                             </tr>
                             <tr>
                                 <td>Sale Marino Fino <span class="ingredient-note">(1.8-2% su farina totale)</span></td>
-                                <td class="ingredient-qty" data-base="10">10g</td>
+                                <td class="ingredient-qty">10g</td>
                             </tr>
                         </table>
                     </div>
@@ -180,7 +180,7 @@
                             <tr>
                                 <td>Gherigli di Noci <span class="ingredient-note">(tritati grossolanamente, leggermente
                                         tostati)</span></td>
-                                <td class="ingredient-qty" data-base="100">100g</td>
+                                <td class="ingredient-qty">100g</td>
                             </tr>
                         </table>
 
@@ -532,6 +532,9 @@
             </div>
         </div>
     </footer>
+    <!-- Recipe Data Model (sorgente di verità per il dose calculator) -->
+    <script type="application/json" id="recipe-data">{"totalFlour":500,"ingredients":[{"name":"Farina Integrale di Grano Tenero","grams":300},{"name":"Farina di Farro Semi-Integrale","grams":160},{"name":"Farina di Grano Saraceno","grams":40},{"name":"Acqua","grams":340},{"name":"Lievito di Birra Secco","grams":3},{"name":"Sale Marino Fino","grams":10}],"suspensions":[{"name":"Gherigli di Noci","grams":100}]}</script>
+
 
     <script type="module" src="/js/main.js"></script>
 </body>

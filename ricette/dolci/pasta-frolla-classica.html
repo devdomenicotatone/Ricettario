@@ -126,7 +126,7 @@
                                     aria-label="Diminuisci dosi">−</button>
                                 <div class="dose-calculator__input-wrapper">
                                     <input type="number" class="dose-calculator__input" id="dose-input" value="0.5"
-                                        min="0.1" max="1.5" step="any" data-base-total="500" aria-label="Kg di farina">
+                                        min="0.1" max="1.5" step="any" aria-label="Kg di farina">
                                     <span class="dose-calculator__unit">kg</span>
                                 </div>
                                 <button class="dose-calculator__btn" id="dose-increase"
@@ -139,38 +139,38 @@
                             <tr>
                                 <td>Farina Tipo 00 Media Forza <span class="ingredient-note">(W 220-240, proteine
                                         10-11%)</span></td>
-                                <td class="ingredient-qty" data-base="500">500g</td>
+                                <td class="ingredient-qty">500g</td>
                             </tr>
                             <tr>
                                 <td>Burro <span class="ingredient-note"
                                         data-setup-note-spirale="(freddo da frigo 4-6°C, tagliato a cubetti)"
                                         data-setup-note-mano="(morbido ma plastico, 16-18°C)">(freddo da frigo 4-6°C,
                                         tagliato a cubetti)</span></td>
-                                <td class="ingredient-qty" data-base="250">250g</td>
+                                <td class="ingredient-qty">250g</td>
                             </tr>
                             <tr>
                                 <td>Zucchero a Velo <span class="ingredient-note">(setacciato, grana finissima)</span>
                                 </td>
-                                <td class="ingredient-qty" data-base="150">150g</td>
+                                <td class="ingredient-qty">150g</td>
                             </tr>
                             <tr>
                                 <td>Uova Intere <span class="ingredient-note">(circa 2 medie, temperatura
                                         ambiente)</span></td>
-                                <td class="ingredient-qty" data-base="110">110g</td>
+                                <td class="ingredient-qty">110g</td>
                             </tr>
                             <tr>
                                 <td>Scorza di Limone <span class="ingredient-note">(non trattato, grattugiata
                                         fine)</span></td>
-                                <td class="ingredient-qty" data-base="5">5g</td>
+                                <td class="ingredient-qty">5g</td>
                             </tr>
                             <tr>
                                 <td>Sale Fino <span class="ingredient-note">(pizzico)</span></td>
-                                <td class="ingredient-qty" data-base="2">2g</td>
+                                <td class="ingredient-qty">2g</td>
                             </tr>
                             <tr>
                                 <td>Estratto di Vaniglia <span class="ingredient-note">(opzionale, semi di 1 bacca o 5
                                         ml estratto)</span></td>
-                                <td class="ingredient-qty" data-base="5">5g</td>
+                                <td class="ingredient-qty">5g</td>
                             </tr>
                         </table>
                     </div>
@@ -446,6 +446,9 @@
             </div>
         </div>
     </footer>
+    <!-- Recipe Data Model (sorgente di verità per il dose calculator) -->
+    <script type="application/json" id="recipe-data">{"totalFlour":500,"ingredients":[{"name":"Farina Tipo 00 Media Forza","grams":500},{"name":"Burro","grams":250},{"name":"Zucchero a Velo","grams":150},{"name":"Uova Intere","grams":110},{"name":"Scorza di Limone","grams":5},{"name":"Sale Fino","grams":2},{"name":"Estratto di Vaniglia","grams":5}]}</script>
+
 
     <script type="module" src="/js/main.js"></script>
 </body>
