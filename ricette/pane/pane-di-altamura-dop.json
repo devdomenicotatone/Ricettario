@@ -1,0 +1,196 @@
+{
+  "title": "Pane di Altamura DOP",
+  "slug": "pane-di-altamura-dop",
+  "emoji": "🍞",
+  "description": "Pane pugliese DOP con semola rimacinata di grano duro, crosta spessa e mollica dorata. Idratazione 68%, lievitazione 24h, crosta croccante perfetta.",
+  "subtitle": "Il re dei pani pugliesi con semola rimacinata e lievitazione naturale",
+  "category": "Pane",
+  "hydration": 68,
+  "targetTemp": "24-26°C",
+  "fermentation": "~24h",
+  "totalFlour": 1000,
+  "ingredients": [
+    {
+      "name": "Semola Rimacinata di Grano Duro",
+      "note": "(certificata per Pane di Altamura DOP, granulometria fine)",
+      "grams": 1000
+    },
+    {
+      "name": "Acqua",
+      "note": "(temperatura ambiente per mano, ghiacciata per spirale)",
+      "grams": 680,
+      "setupNote": {
+        "spirale": "ghiacciata 2-4°C per controllare temperatura finale",
+        "mano": "20-22°C, aggiunta in 3 riprese per favorire assorbimento"
+      }
+    },
+    {
+      "name": "Lievito di Birra Fresco",
+      "note": "(ridotto per lievitazione lunga, oppure 250g di lievito madre rinfrescato)",
+      "grams": 7,
+      "setupNote": {
+        "spirale": "7g per impasto veloce con controllo temperatura",
+        "mano": "8-10g per compensare lavorazione più lunga"
+      }
+    },
+    {
+      "name": "Sale Fino",
+      "note": "(aggiunto a metà impasto per non inibire lievito)",
+      "grams": 18
+    },
+    {
+      "name": "Miele di Acacia",
+      "note": "(facoltativo, nutre il lievito e favorisce colorazione crosta)",
+      "grams": 10
+    }
+  ],
+  "suspensions": [],
+  "stepsSpiral": [
+    {
+      "title": "Autolisi e Attivazione Lievito",
+      "text": "In una ciotola sciogliere il lievito fresco sbriciolato in 100g di acqua tiepida (25°C) con il miele. Lasciare riposare 10 minuti fino a formare schiuma. Nel frattempo, mescolare la semola rimacinata con 500g di acqua ghiacciata (2-4°C) e lasciare in autolisi per 20 minuti. Questo riposo idrata i granuli di semola e sviluppa preglutine."
+    },
+    {
+      "title": "Impasto Base in Spirale",
+      "text": "Versare nella spirale la semola autolisat, il lievito attivato e il restante 80g di acqua ghiacciata. Impastare in 1ª velocità per 4 minuti fino a completa incorporazione. Aggiungere il sale e impastare in 2ª velocità per 8-10 minuti fino a raggiungere incordatura completa. La temperatura finale deve essere 24-26°C. Il glutine della semola è tenace: l'impasto risulterà sodo ma elastico, non appiccicoso."
+    },
+    {
+      "title": "Puntata in Massa",
+      "text": "Trasferire l'impasto in un contenitore oleato, coprire con pellicola e lasciare lievitare a 22-24°C per 8-10 ore (puntata). L'impasto deve raddoppiare di volume. La semola richiede tempi lunghi: non affrettare questa fase. Dopo 4-5 ore eseguire 1 piega di rinforzo: stendere leggermente l'impasto, piegare i lembi verso il centro, capovolgere."
+    },
+    {
+      "title": "Staglio e Formatura",
+      "text": "Rovesciare l'impasto su piano infarinato con semola. Dividere in pezzi da 750-800g (formato classico Alto) o 400g (formato Medio). Pre-formare ogni pezzo in una palla, coprire e lasciare rilassare 15 minuti (puntata di banco). Formare ogni pagnotta: appiattire leggermente, piegare i lembi verso il centro pizzicando per sigillare, capovolgere e pirlare energicamente per creare tensione superficiale. Il fondo deve essere ben sigillato."
+    },
+    {
+      "title": "Appretto Finale",
+      "text": "Disporre le pagnotte capovolte (piega verso l'alto) in un canovaccio di lino ben infarinato con semola, creando pieghe per separare i pezzi. Coprire e lasciare lievitare 12-16 ore a 18-20°C (appretto lungo e lento). Le pagnotte devono gonfiarsi del 70-80% rispetto al volume iniziale. Prova della pressione: premere delicatamente con un dito, l'impronta deve risalire lentamente."
+    },
+    {
+      "title": "Preparazione alla Cottura",
+      "text": "Preriscaldare il forno a 250°C (statico) con pietra refrattaria o teglia spessa per 45 minuti. Preparare una bacinella con 500ml di acqua bollente. Capovolgere le pagnotte su una pala infarinata con semola. Con un taglierino o lametta affilata incidere la superficie: per il formato Alto fare un taglio a croce profondo (1,5cm), per il Medio incisioni oblique. Le incisioni devono essere decise e profonde per permettere lo sviluppo."
+    }
+  ],
+  "stepsHand": [
+    {
+      "title": "Autolisi e Attivazione Lievito",
+      "text": "In una ciotolina sciogliere il lievito fresco sbriciolato in 100g di acqua tiepida (25°C) con il miele. Mescolare e lasciare riposare 10 minuti: deve formare una schiuma cremosa in superficie. In una grande ciotola mescolare la semola rimacinata con 400g di acqua a 20-22°C. Mescolare con un cucchiaio di legno fino a formare un impasto grezzo. Coprire con pellicola e lasciare in autolisi per 30 minuti: la semola assorbe lentamente l'acqua."
+    },
+    {
+      "title": "Impasto Manuale",
+      "text": "Versare il lievito attivato sull'impasto autolisat e mescolare con le mani. Aggiungere 100g di acqua e lavorare energicamente per 5 minuti. Cospargere il sale sulla superficie, aggiungere i restanti 80g di acqua e impastare per 15-20 minuti sul piano di lavoro: la semola richiede forza. Alternare impasto energico (premere, piegare, ruotare) a momenti di riposo (2 minuti ogni 5 di lavoro). L'impasto deve diventare liscio, elastico e non più appiccicoso."
+    },
+    {
+      "title": "Slap and Fold",
+      "text": "Eseguire 3 serie di slap and fold (sbattimento): sollevare l'impasto, sbatterlo sul piano, piegarlo su se stesso. Fare 20 slap per serie con 10 minuti di riposo coperto tra una serie e l'altra. Questa tecnica sviluppa il glutine tenace della semola senza surriscaldare l'impasto. Alla fine la superficie deve essere liscia e tesa. Temperatura impasto: non superare 26-27°C."
+    },
+    {
+      "title": "Puntata in Massa",
+      "text": "Formare una palla liscia, trasferire in una ciotola oleata, coprire con pellicola. Lievitare a 22-24°C per 10-12 ore (la lavorazione manuale richiede più tempo). L'impasto deve raddoppiare. Dopo 5-6 ore eseguire 1 piega di rinforzo: bagnare leggermente le mani, stendere l'impasto nella ciotola, piegare i 4 lembi verso il centro, capovolgere. Questa piega ridistribuisce il nutrimento per il lievito."
+    },
+    {
+      "title": "Staglio e Pre-Formatura",
+      "text": "Rovesciare l'impasto su piano infarinato con semola. Con un tarocco dividere in pezzi da 750-800g. Ogni pezzo va pre-formato: appiattire leggermente con le mani, piegare i 4 lembi verso il centro pizzicando, capovolgere. Coprire con un canovaccio e lasciare rilassare 20 minuti. La semola tende a formare una pelle secca: tenere coperto."
+    },
+    {
+      "title": "Formatura Finale",
+      "text": "Formare ogni pagnotta: appiattire delicatamente il pezzo in un disco, piegare il lembo superiore a metà, premere con i polpastrelli per sigillare. Piegare nuovamente verso di sé, sigillare. Ripetere 2-3 volte fino a formare un cilindro tozzo. Capovolgere, mettere le mani ai lati e pirlare con movimenti circolari creando tensione. Il fondo deve essere ben chiuso, la superficie tesa. La forma classica è tondeggiante alta, non schiacciata."
+    },
+    {
+      "title": "Appretto Lungo",
+      "text": "Disporre le pagnotte capovolte (piega verso l'alto) su un canovaccio di lino ben infarinato con semola. Creare pieghe nel tessuto per separare le pagnotte. Coprire con un altro telo. Lievitare 14-18 ore a 18-20°C (temperatura fresca rallenta e migliora). Le pagnotte devono gonfiare del 70-80%, non raddoppiare completamente. Prova: premere delicatamente, l'impronta deve risalire lentamente in 3-5 secondi."
+    },
+    {
+      "title": "Preparazione alla Cottura",
+      "text": "Preriscaldare il forno a 250°C (statico, NO ventilato) con pietra refrattaria o teglia spessa rovesciata per 45-60 minuti. Il forno deve essere rovente. Preparare una bacinella con 500ml di acqua bollente. Con delicatezza capovolgere le pagnotte su una pala di legno infarinata con semola. Con una lametta affilata o un taglierino incidere la superficie: taglio a croce profondo (1,5cm) per formato Alto, incisioni oblique per formato Medio. Le incisioni devono essere decise."
+    }
+  ],
+  "flourTable": [
+    {
+      "type": "Semola Rimacinata di Grano Duro",
+      "w": "—",
+      "brands": "Molino Spadoni Semola Rimacinata, Caputo Semola Rimacinata, Molini del Ponte Semola Oro, Petra 7 Semola"
+    }
+  ],
+  "baking": {
+    "temperature": "250°C",
+    "time": "40-50 minuti",
+    "tips": [
+      "Preriscaldare pietra refrattaria o teglia spessa rovesciata per 45-60 minuti",
+      "Infornare con decisione: far scivolare le pagnotte dalla pala sulla pietra",
+      "Subito dopo aver infornato, versare 200ml di acqua bollente nella bacinella sul fondo del forno (crea vapore per crosta croccante)",
+      "Dopo 15 minuti aprire leggermente lo sportello per far uscire il vapore (favorisce doratura)",
+      "Ultimi 10 minuti: abbassare a 220°C per evitare bruciature",
+      "Il pane è cotto quando la base suona vuota se bussata e la crosta è color nocciola intenso",
+      "Lasciare raffreddare COMPLETAMENTE su griglia (almeno 2 ore) prima di tagliare: la mollica deve asciugarsi"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Semola Rimacinata",
+      "definition": "Semola di grano duro macinata due volte per ottenere granulometria fine. Ha glutine tenace, assorbe molta acqua lentamente e conferisce colore giallo intenso alla mollica."
+    },
+    {
+      "term": "Autolisi",
+      "definition": "Riposo di farina e acqua senza lievito per 20-60 minuti. Gli enzimi naturali idratano i granuli e sviluppano preglutine, facilitando l'impasto successivo."
+    },
+    {
+      "term": "Incordatura",
+      "definition": "Momento in cui il glutine si sviluppa completamente e l'impasto si avvolge attorno al gancio della spirale formando un cordone elastico. Segno di struttura ottimale."
+    },
+    {
+      "term": "Puntata",
+      "definition": "Prima lievitazione in massa dopo l'impasto, prima della divisione in pezzi. Per il Pane di Altamura dura 8-12 ore a temperatura ambiente."
+    },
+    {
+      "term": "Pirlatura",
+      "definition": "Tecnica di formatura che consiste nel far roteare la pagnotta sul piano con movimenti circolari delle mani per creare tensione superficiale e forma tondeggiante."
+    },
+    {
+      "term": "Staglio",
+      "definition": "Divisione dell'impasto lievitato in pezzi del peso desiderato. Si usa un tarocco (coltello senza seghettatura) per tagli netti senza strappare il glutine."
+    },
+    {
+      "term": "Appretto",
+      "definition": "Seconda lievitazione dopo la formatura, prima della cottura. Per il Pane di Altamura è lungo e lento (12-18 ore a 18-20°C) per sviluppare aromi complessi."
+    },
+    {
+      "term": "Slap and Fold",
+      "definition": "Tecnica di impasto manuale: sollevare l'impasto, sbatterlo sul piano, piegarlo su se stesso. Sviluppa il glutine senza surriscaldare l'impasto."
+    },
+    {
+      "term": "Pietra Refrattaria",
+      "definition": "Lastra di ceramica o cordierite che accumula e distribuisce uniformemente il calore, simulando il forno a legna. Essenziale per crosta croccante."
+    },
+    {
+      "term": "Cascatura",
+      "definition": "Apertura naturale della crosta nelle incisioni durante la cottura. Nel Pane di Altamura la croce deve aprirsi formando 4 'orecchie' evidenti."
+    }
+  ],
+  "alert": "❌ NON usare farina di grano tenero o semola grossa: il Pane di Altamura DOP richiede esclusivamente semola RIMACINATA di grano duro. NON accorciare i tempi di lievitazione: la semola necessita di fermentazioni lunghe per sviluppare digeribilità e aromi. NON cuocere a temperatura troppo bassa: sotto i 230°C la crosta non si forma correttamente. NON tagliare il pane prima del raffreddamento completo: la mollica umida si sbriciola e perde struttura. NON conservare in busta di plastica nei primi 2 giorni: la crosta diventa gommosa.",
+  "proTips": [
+    "💡 Semola di qualità: Scegliere semola rimacinata di grano duro 100% italiano, varietà Appulo, Arcangelo o Duilio. La granulometria fine (rimacinata) è fondamentale: la semola grossa non si idrata bene e produce mollica granulosa.",
+    "💡 Controllo temperatura: La semola genera molto attrito durante l'impasto. In spirale usare acqua ghiacciata (2-4°C) per compensare. A mano fare pause frequenti. Temperatura finale ideale: 24-26°C, MAI oltre 28°C o il lievito accelera troppo.",
+    "💡 Appretto freddo: La lievitazione lunga a 18-20°C (cantina, garage in inverno) sviluppa aromi complessi e acidità equilibrata. A 24°C l'appretto dura 10-12h, a 18°C anche 18h. La pazienza premia: mollica alveolata color oro e profumo di campo di grano.",
+    "💡 Vapore iniziale: Il Pane di Altamura ha crosta spessa (5-6mm) color nocciola scuro. Il vapore nei primi 15 minuti mantiene elastica la superficie permettendo massima espansione. Dopo 15 minuti eliminare il vapore aprendo lo sportello per asciugare e dorare.",
+    "💡 Conservazione lunga: Il Pane di Altamura si conserva 7-10 giorni avvolto in un telo di lino a temperatura ambiente. La crosta si mantiene croccante. Per rinfrescarla: 5 minuti a 180°C. Perfetto per bruschette anche dopo una settimana."
+  ],
+  "imageKeywords": [
+    "pane di altamura pugliese",
+    "altamura bread golden crust",
+    "semolina durum wheat bread",
+    "pane semola rimacinata crosta spessa",
+    "traditional apulian bread cross cut"
+  ],
+  "tags": [
+    "pane pugliese",
+    "semola rimacinata",
+    "DOP",
+    "lievitazione lunga",
+    "crosta croccante",
+    "tradizionale",
+    "grano duro"
+  ],
+  "image": "images/ricette/pane/pane-di-altamura-dop.jpg",
+  "imageAttribution": "📷 Foto: Monserrat Soldú — Pexels License via Pexels"
+}

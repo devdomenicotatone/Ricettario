@@ -1,0 +1,243 @@
+{
+  "title": "Baguette Francese Tradizionale",
+  "slug": "baguette-francese-tradizionale",
+  "emoji": "🥖",
+  "description": "Baguette francese autentica con poolish, crosta dorata croccante e alveolatura perfetta. Metodo professionale con impastatrice a spirale o impasto a mano.",
+  "subtitle": "Pane simbolo della Francia con pre-impasto poolish e idratazione 68%",
+  "category": "Pane",
+  "hydration": 68,
+  "targetTemp": "24-26°C",
+  "fermentation": "~18h (poolish 12-14h + puntata 2h + appretto 1h)",
+  "totalFlour": 1000,
+  "ingredients": [
+    {
+      "name": "Farina Tipo 0 Media-Alta Forza",
+      "note": "(W 280-320, per struttura e alveolatura)",
+      "grams": 850,
+      "setupNote": null
+    },
+    {
+      "name": "Farina di Manitoba",
+      "note": "(W 350-380, per tenuta e sviluppo)",
+      "grams": 150,
+      "setupNote": null
+    },
+    {
+      "name": "Acqua Poolish",
+      "note": "(temperatura ambiente 18-20°C, per poolish)",
+      "grams": 300,
+      "setupNote": null
+    },
+    {
+      "name": "Acqua Impasto Finale",
+      "note": "(temperatura ambiente 18-20°C, in spirale)",
+      "grams": 380,
+      "setupNote": {
+        "spirale": "18-20°C, tutta insieme",
+        "mano": "20-22°C, in 3 riprese durante slap & fold"
+      }
+    },
+    {
+      "name": "Lievito di Birra Fresco Poolish",
+      "note": "(0,5g, solo per il poolish)",
+      "grams": 0.5,
+      "setupNote": null
+    },
+    {
+      "name": "Lievito di Birra Fresco Impasto",
+      "note": "(8g, per l'impasto finale)",
+      "grams": 8,
+      "setupNote": null
+    },
+    {
+      "name": "Sale Marino Fino",
+      "note": "(2% su farina totale)",
+      "grams": 20,
+      "setupNote": null
+    },
+    {
+      "name": "Malto d'Orzo o Miele",
+      "note": "(per colorazione crosta e attività enzimatica)",
+      "grams": 10,
+      "setupNote": null
+    }
+  ],
+  "suspensions": [],
+  "stepsSpiral": [
+    {
+      "title": "Poolish (sera prima, -12/14h)",
+      "text": "In una ciotola capiente miscelare 300g di Farina Tipo 0, 300g di acqua a temperatura ambiente (18-20°C) e 0,5g di lievito fresco (un pizzico). Mescolare con una forchetta fino a completa idratazione. Coprire con pellicola a contatto e lasciare fermentare a 20-22°C per 12-14 ore. Il poolish è pronto quando si presenta gonfio, pieno di bolle e con un odore leggermente acetico."
+    },
+    {
+      "title": "Impasto Base (V1, 3 min)",
+      "text": "Nella vasca dell'impastatrice a spirale versare tutto il poolish maturo. Aggiungere 550g di Farina Tipo 0, 150g di Manitoba, 300g di acqua (18-20°C), 8g di lievito fresco sbriciolato e 10g di malto. Avviare in prima velocità per 3 minuti: si formerà una massa grezza e appiccicosa. Fermare e lasciare riposare 10 minuti coperto (autolisi)."
+    },
+    {
+      "title": "Incordatura e Sale (V1 4 min + V2 3 min)",
+      "text": "Aggiungere 20g di sale. Riprendere in prima velocità per 4 minuti: l'impasto inizierà a incordarsi. Passare in seconda velocità per 3 minuti fino a completo distacco dalle pareti e temperatura finale 24-26°C. L'impasto deve risultare liscio, elastico, leggermente appiccicoso. Test del velo: stendere delicatamente una porzione: deve formare una membrana sottile senza rompersi."
+    },
+    {
+      "title": "Puntata in Blocco (2h, con 1 piega)",
+      "text": "Trasferire l'impasto in un contenitore trasparente leggermente unto. Coprire con pellicola. Lasciare a 22-24°C per 1 ora. Eseguire 1 serie di pieghe a libro: stendere delicatamente su piano leggermente infarinato, piegare i 4 lati verso il centro, capovolgere. Rimettere nel contenitore e lasciare lievitare ancora 1 ora (totale 2h). L'impasto deve crescere del 50-60%, non raddoppiare."
+    },
+    {
+      "title": "Staglio e Pre-Forma (3-4 baguette da 250-300g)",
+      "text": "Rovesciare delicatamente l'impasto su piano leggermente infarinato. Dividere con tarocco in 3-4 pezzi uguali (250-300g ciascuno). Allungare delicatamente ogni pezzo in un rettangolo largo circa 10cm, senza sgonfiare troppo. Piegare a metà per il lato lungo, sigillare con il palmo. Coprire con canovaccio e lasciare rilassare 15 minuti."
+    },
+    {
+      "title": "Pirlatura Baguette (cilindri da 30-35cm)",
+      "text": "Lavorare un pezzo alla volta. Stendere delicatamente il rettangolo con le mani (non matterello) fino a 12-15cm di larghezza. Piegare il bordo superiore verso il centro, sigillare con i polpastrelli. Piegare ancora portando il bordo superiore fino a quello inferiore, sigillare con forza usando il palmo. Ruotare il cilindro con leggera pressione delle mani dal centro verso l'esterno fino a raggiungere 30-35cm di lunghezza e spessore uniforme di 4-5cm."
+    },
+    {
+      "title": "Appretto su Couche (1h)",
+      "text": "Posizionare le baguette con chiusura VERSO L'ALTO su un canovaccio di lino (couche) abbondantemente infarinato con semola rimacinata. Creare delle pieghe nel tessuto tra una baguette e l'altra per tenerle separate. Coprire con un altro canovaccio e poi con pellicola. Lasciare lievitare a 22-24°C per 50-70 minuti. Test della prova dito: premere delicatamente, l'impronta deve risalire lentamente."
+    },
+    {
+      "title": "Preparazione Forno (45 min prima)",
+      "text": "Posizionare una pietra refrattaria o una teglia rovesciata sul ripiano centrale del forno. Sul fondo del forno posizionare una teglia vuota in metallo (per il vapore). Preriscaldare a 250°C ventilato per almeno 45 minuti. Il forno deve essere ben carico di calore."
+    },
+    {
+      "title": "Scarificazione e Infornata",
+      "text": "Capovolgere delicatamente le baguette su una pala infarinata o carta forno (chiusura ora sotto). Spolverare leggermente di farina la superficie. Con una lametta da pane (o rasoio) fare 4-5 tagli obliqui (45°) profondi 5-7mm, leggermente sovrapposti. Incidere con gesto deciso e rapido. Versare 100ml di acqua bollente nella teglia sul fondo del forno (vapore immediato). Infornare rapidamente le baguette sulla pietra. Chiudere subito il forno."
+    }
+  ],
+  "stepsHand": [
+    {
+      "title": "Poolish (sera prima, -12/14h)",
+      "text": "In una ciotola capiente miscelare 300g di Farina Tipo 0, 300g di acqua a temperatura ambiente (18-20°C) e 0,5g di lievito fresco (un pizzico). Mescolare con una forchetta fino a completa idratazione. Coprire con pellicola a contatto e lasciare fermentare a 20-22°C per 12-14 ore. Il poolish è pronto quando si presenta gonfio, pieno di bolle e con un odore leggermente acetico."
+    },
+    {
+      "title": "Impasto Base (15 min a mano)",
+      "text": "In una ciotola capiente versare tutto il poolish maturo. Aggiungere 550g di Farina Tipo 0, 150g di Manitoba, 250g di acqua (20-22°C), 8g di lievito fresco sbriciolato e 10g di malto. Mescolare con un cucchiaio di legno fino a ottenere una massa grezza. Coprire e lasciare riposare 20 minuti (autolisi)."
+    },
+    {
+      "title": "Slap & Fold e Sale (3 serie)",
+      "text": "Aggiungere 20g di sale e 50g di acqua. Rovesciare l'impasto su piano NON infarinato. Prima serie: 50 slap & fold (sollevare l'impasto con entrambe le mani, sbatterlo sul piano piegandolo su se stesso). Aggiungere altri 40g di acqua (in 2 volte) durante il lavoro. Riposare 10 minuti coperto. Seconda serie: 30 slap & fold. Riposare 10 min. Terza serie: 20 slap & fold + ultimi 40g di acqua incorporati gradualmente. L'impasto deve diventare liscio, elastico, meno appiccicoso. Temperatura finale 25-26°C."
+    },
+    {
+      "title": "Puntata con Pieghe (2h30, con 3 pieghe)",
+      "text": "Trasferire in contenitore leggermente unto. Coprire. Lasciare a 22-24°C per 45 minuti. Eseguire 1ª serie di stretch & fold: bagnare leggermente le mani, sollevare un lato dell'impasto e piegarlo verso il centro. Ruotare 90° e ripetere per i 4 lati. Riposare altri 45 minuti. Eseguire 2ª serie di pieghe (stesso metodo). Riposare 1 ora. L'impasto deve crescere del 50-60%."
+    },
+    {
+      "title": "Staglio e Pre-Forma (3-4 baguette da 250-300g)",
+      "text": "Rovesciare delicatamente l'impasto su piano leggermente infarinato. Dividere con tarocco in 3-4 pezzi uguali (250-300g ciascuno). Allungare delicatamente ogni pezzo in un rettangolo largo circa 10cm, senza sgonfiare troppo. Piegare a metà per il lato lungo, sigillare con il palmo. Coprire con canovaccio e lasciare rilassare 20 minuti."
+    },
+    {
+      "title": "Pirlatura Baguette (cilindri da 30-35cm)",
+      "text": "Lavorare un pezzo alla volta. Stendere delicatamente il rettangolo con le mani (non matterello) fino a 12-15cm di larghezza. Piegare il bordo superiore verso il centro, sigillare con i polpastrelli. Piegare ancora portando il bordo superiore fino a quello inferiore, sigillare con forza usando il palmo. Ruotare il cilindro con leggera pressione delle mani dal centro verso l'esterno fino a raggiungere 30-35cm di lunghezza e spessore uniforme di 4-5cm. La chiusura deve essere ben sigillata."
+    },
+    {
+      "title": "Appretto su Couche (1h-1h15)",
+      "text": "Posizionare le baguette con chiusura VERSO L'ALTO su un canovaccio di lino (couche) abbondantemente infarinato con semola rimacinata. Creare delle pieghe nel tessuto tra una baguette e l'altra per tenerle separate. Coprire con un altro canovaccio e poi con pellicola. Lasciare lievitare a 22-24°C per 60-75 minuti (leggermente più lungo rispetto a spirale). Test della prova dito: premere delicatamente, l'impronta deve risalire lentamente."
+    },
+    {
+      "title": "Preparazione Forno (45 min prima)",
+      "text": "Posizionare una pietra refrattaria o una teglia rovesciata sul ripiano centrale del forno. Sul fondo del forno posizionare una teglia vuota in metallo (per il vapore). Preriscaldare a 250°C ventilato per almeno 45 minuti. Il forno deve essere ben carico di calore."
+    },
+    {
+      "title": "Scarificazione e Infornata",
+      "text": "Capovolgere delicatamente le baguette su una pala infarinata o carta forno (chiusura ora sotto). Spolverare leggermente di farina la superficie. Con una lametta da pane (o rasoio) fare 4-5 tagli obliqui (45°) profondi 5-7mm, leggermente sovrapposti. Incidere con gesto deciso e rapido. Versare 100ml di acqua bollente nella teglia sul fondo del forno (vapore immediato). Infornare rapidamente le baguette sulla pietra. Chiudere subito il forno."
+    }
+  ],
+  "flourTable": [
+    {
+      "type": "Farina Tipo 0 Media-Alta Forza",
+      "w": "280-320",
+      "brands": "Molino Caputo Cuoco, Molino Dallagiovanna Panettone, Le 5 Stagioni Petra 3"
+    },
+    {
+      "type": "Farina di Manitoba",
+      "w": "350-380",
+      "brands": "Molino Caputo Manitoba Oro, Molino Spadoni Oro Manitoba, Le 5 Stagioni Manitoba"
+    }
+  ],
+  "baking": {
+    "temperature": "250°C ventilato",
+    "time": "22-26 minuti",
+    "tips": [
+      "Preriscaldare forno + pietra refrattaria per 45 minuti a 250°C",
+      "Vapore nei primi 12 minuti: versare 100ml acqua bollente in teglia sul fondo appena infornato",
+      "Dopo 12 min aprire sportello 10 secondi per far uscire vapore residuo, abbassare a 230°C",
+      "Ultimi 5-8 min a 220°C per doratura uniforme senza bruciare",
+      "La baguette è cotta quando: crosta dorata mogano, suono vuoto picchiettando sotto, temperatura interna 96-98°C"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Poolish",
+      "definition": "Pre-impasto liquido (idratazione 100%) con farina, acqua e lievito minimo, fatto fermentare 12-14h per sviluppare aromi complessi e migliorare alveolatura"
+    },
+    {
+      "term": "Autolisi",
+      "definition": "Riposo di farina e acqua (con poolish) senza sale per 10-20 minuti, favorisce l'idratazione completa della farina e lo sviluppo del glutine naturale"
+    },
+    {
+      "term": "Incordatura",
+      "definition": "Fase dell'impasto in cui il glutine si sviluppa e la massa si avvolge attorno al gancio/spirale formando un cordone elastico che si stacca dalle pareti"
+    },
+    {
+      "term": "Test del Velo",
+      "definition": "Prova di incordatura: stendere delicatamente una piccola porzione di impasto. Se forma una membrana sottile traslucida senza rompersi, il glutine è sviluppato correttamente"
+    },
+    {
+      "term": "Puntata",
+      "definition": "Prima lievitazione in blocco dell'impasto, prima della divisione. Nella baguette dura 2h con 1 piega per rinforzare la maglia glutinica"
+    },
+    {
+      "term": "Staglio",
+      "definition": "Divisione dell'impasto in pezzi di peso uguale con il tarocco. Per baguette: 250-300g a pezzo"
+    },
+    {
+      "term": "Pirlatura",
+      "definition": "Tecnica di formatura della baguette: piegare l'impasto a cilindro, sigillare la chiusura e allungare con movimento rotatorio delle mani dal centro verso l'esterno"
+    },
+    {
+      "term": "Appretto",
+      "definition": "Lievitazione finale dei pezzi già formati, prima della cottura. Per baguette: 50-75 minuti con chiusura verso l'alto su couche"
+    },
+    {
+      "term": "Couche",
+      "definition": "Telo di lino spesso e ruvido su cui si fanno lievitare le baguette. Le pieghe del tessuto creano compartimenti che supportano i filoncini e assorbono umidità superficiale"
+    },
+    {
+      "term": "Prova Dito",
+      "definition": "Test per verificare la maturazione dell'appretto: premere delicatamente l'impasto con un dito infarinato. Se l'impronta risale lentamente è pronto per infornare"
+    },
+    {
+      "term": "Scarificazione",
+      "definition": "Tagli obliqui sulla superficie della baguette con lametta, profondi 5-7mm a 45°. Permettono l'espansione controllata in forno e creano la 'grigne' (cresta croccante)"
+    },
+    {
+      "term": "Slap & Fold",
+      "definition": "Tecnica di impasto a mano: sollevare la massa con entrambe le mani, sbatterla energicamente sul piano ripiegandola su se stessa. Sviluppa il glutine senza farina aggiunta"
+    },
+    {
+      "term": "Stretch & Fold",
+      "definition": "Pieghe di rinforzo durante la puntata: sollevare un lato dell'impasto e piegarlo verso il centro, ripetere per i 4 lati. Rinforza la struttura senza sgonfiare"
+    }
+  ],
+  "alert": "⚠️ NON incidere le baguette prima dell'appretto completo: i tagli si richiuderebbero. NON usare farine deboli (W<260): l'impasto collasserebbe per l'alta idratazione e la lunga fermentazione. NON saltare il vapore iniziale: senza vapore la crosta si forma troppo presto bloccando lo sviluppo e la grigne. NON aprire il forno nei primi 12 minuti: calo di temperatura e perdita di vapore compromettono la struttura. NON pirlare con troppa farina: la baguette deve aderire leggermente al piano durante l'allungamento per creare tensione superficiale.",
+  "proTips": [
+    "💡 **Poolish perfetto**: Il poolish maturo deve avere superficie convessa e piena di bolle, odore vinoso-acetico ma mai pungente. Se affonda al centro è troppo maturo (oltre 16h a 22°C). Meglio tenerlo 12h a 22°C che 8h a 26°C: temperatura bassa = aromi più complessi.",
+    "💡 **Idratazione progressiva a mano**: Se impasti a mano, NON aggiungere tutta l'acqua subito. Parti con 300g, poi incorpora i restanti 80g in 2-3 riprese durante gli slap & fold. L'impasto diventerà gestibile e si incorderà meglio. Mani bagnate facilitano il lavoro senza aggiungere farina.",
+    "💡 **Grigne esplosiva**: Per ottenere la cresta (grigne) spettacolare tipica della baguette francese: 1) pietra refrattaria preriscaldata 45 min, 2) vapore abbondante nei primi 10-12 min, 3) tagli netti e profondi (7mm) a 45°, 4) infornata rapida. La combinazione di questi 4 fattori crea la caratteristica 'orecchia' croccante della baguette artigianale."
+  ],
+  "imageKeywords": [
+    "french baguette golden crust",
+    "baguette crumb alveolatura",
+    "artisan baguette grigne",
+    "traditional french bread",
+    "homemade baguette scored"
+  ],
+  "tags": [
+    "pane francese",
+    "baguette classica",
+    "poolish",
+    "alta idratazione",
+    "lievitazione lunga",
+    "crosta croccante",
+    "alveolatura aperta"
+  ],
+  "image": "images/ricette/pane/baguette-francese-tradizionale.jpg",
+  "imageAttribution": "📷 Foto: Evgeniy Alekseyev — Pexels License via Pexels"
+}

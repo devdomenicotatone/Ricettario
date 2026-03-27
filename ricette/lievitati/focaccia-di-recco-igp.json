@@ -1,0 +1,207 @@
+{
+  "title": "Focaccia di Recco IGP",
+  "slug": "focaccia-di-recco-igp",
+  "emoji": "🫓",
+  "description": "Focaccia ligure ripiena di stracchino, con sfoglia sottilissima stesa a mano. Ricetta tradizionale della tradizione genovese.",
+  "subtitle": "Sfoglia sottile ripiena di formaggio fresco - Tradizione ligure",
+  "category": "Lievitati",
+  "hydration": 68,
+  "targetTemp": "20-22°C",
+  "fermentation": "30-60 min riposo",
+  "totalFlour": 800,
+  "ingredients": [
+    {
+      "name": "Farina Manitoba",
+      "note": "(W 360-380, proteine 13-14%)",
+      "grams": 800
+    },
+    {
+      "name": "Acqua",
+      "note": "(temperatura ambiente 18-20°C)",
+      "grams": 544,
+      "setupNote": {
+        "spirale": "temperatura ambiente, aggiungere in 2 riprese",
+        "mano": "temperatura ambiente, aggiungere gradualmente fino a consistenza corretta"
+      }
+    },
+    {
+      "name": "Sale Fino",
+      "note": "(1.8-2% su farina)",
+      "grams": 16
+    },
+    {
+      "name": "Olio Extravergine di Oliva",
+      "note": "(ligure DOP se possibile, per impasto)",
+      "grams": 40
+    },
+    {
+      "name": "Olio Extravergine di Oliva",
+      "note": "(per ungere teglia e superficie)",
+      "grams": 30
+    },
+    {
+      "name": "Stracchino o Crescenza",
+      "note": "(freschissimo, temperatura frigo, 100% su farina)",
+      "grams": 800
+    },
+    {
+      "name": "Sale Grosso",
+      "note": "(per spolverare in superficie, opzionale)",
+      "grams": 5
+    }
+  ],
+  "suspensions": [],
+  "stepsSpiral": [
+    {
+      "title": "Impasto in Planetaria",
+      "text": "Inserire nella planetaria con gancio la farina Manitoba (800g). Aggiungere l'acqua (544g) a temperatura ambiente in due riprese: prima 400g, poi i restanti 144g quando l'impasto inizia a formarsi. Aggiungere il sale fino (16g) dopo il primo minuto. Lavorare a velocità 1 per 3-4 minuti, fino a quando l'impasto inizia a incordarsi. Aggiungere l'olio EVO (40g) e aumentare a velocità 2 per altri 4-5 minuti. L'impasto finale deve risultare liscio, elastico, leggermente appiccicoso ma ben incordato. Temperatura finale target: 20-22°C."
+    },
+    {
+      "title": "Divisione e Pirlatura",
+      "text": "Trasferire l'impasto su piano leggermente infarinato. Dividerlo in 3 porzioni: 2 panetti da 500g (per sfoglia base e copertura principale) + 1 panetto da 288g (per la copertura superiore sottile). Pirlare ogni panetto roteandolo sul piano con movimento circolare, pizzicando la base per sigillare bene la chiusura. Disporre i panetti su vassoio leggermente unto con la chiusura verso il basso."
+    },
+    {
+      "title": "Riposo dell'Impasto",
+      "text": "Coprire i panetti con pellicola trasparente a contatto e lasciare riposare a temperatura ambiente (20-22°C) per 30-60 minuti. Questo riposo è fondamentale per rilassare la maglia glutinica e permettere una stesura sottilissima senza rotture. Il glutine della Manitoba necessita di tempo per distendersi."
+    },
+    {
+      "title": "Preparazione Teglia",
+      "text": "Ungere abbondantemente con olio EVO una teglia rettangolare da 30x40 cm. L'olio deve coprire uniformemente fondo e bordi per garantire la croccantezza caratteristica e facilitare il distacco dopo cottura."
+    },
+    {
+      "title": "Stesura Sfoglia Base",
+      "text": "Prendere uno dei panetti da 500g. Su piano leggermente infarinato, iniziare a stendere con mattarello partendo dal centro verso i bordi. Girare frequentemente la sfoglia per mantenere forma rettangolare. Stendere fino ad ottenere un rettangolo di 35x45 cm circa (5 cm più grande della teglia per ogni lato), spessore 1 mm massimo. La sfoglia deve essere sottilissima ma uniforme. Sollevare delicatamente aiutandosi con il mattarello e adagiarla nella teglia unta, facendo aderire bene agli angoli e lasciando l'eccedenza sui bordi."
+    },
+    {
+      "title": "Farcitura con Stracchino",
+      "text": "Estrarre lo stracchino/crescenza dal frigo al momento dell'uso (deve essere freddo per non sciogliersi). Distribuirlo a cucchiaiate sulla sfoglia base, lasciando 2-3 cm di bordo libero. Stendere delicatamente con il dorso del cucchiaio per livellare, senza arrivare fino ai bordi. Lo spessore del formaggio deve essere uniforme (circa 3-4 mm)."
+    },
+    {
+      "title": "Stesura Sfoglia di Copertura",
+      "text": "Stendere il secondo panetto da 500g con la stessa tecnica, ottenendo un rettangolo delle stesse dimensioni ma ancora più sottile (0.5-0.8 mm). Adagiarla sopra il formaggio, facendola aderire delicatamente dalla parte centrale verso i bordi, eliminando eventuali bolle d'aria."
+    },
+    {
+      "title": "Sigillatura e Foratura",
+      "text": "Ripiegare i bordi della sfoglia inferiore sopra quella superiore e premere bene con le dita per sigillare, formando un cordone tutto intorno. Con le dita, praticare dei buchi sulla superficie (circa 12-15 fori distribuiti uniformemente), penetrando fino al formaggio. Questo permette al vapore di uscire durante la cottura ed evita che la focaccia si gonfi eccessivamente."
+    },
+    {
+      "title": "Condimento Finale",
+      "text": "Spennellare la superficie con olio EVO abbondante, creando piccole pozze. In alternativa: creare una 'salamoia' emulsionando 2-3 cucchiai di olio con 1 cucchiaio di acqua e qualche granello di sale grosso, e versarla a gocce sulla focaccia. Spolverare eventualmente con sale grosso."
+    }
+  ],
+  "stepsHand": [
+    {
+      "title": "Impasto Manuale",
+      "text": "Disporre la farina Manitoba (800g) a fontana su piano di lavoro. Versare al centro l'acqua (544g) a temperatura ambiente gradualmente, iniziando con 400g. Sciogliere il sale (16g) nell'acqua. Iniziare a incorporare la farina dai bordi interni verso il centro con le dita. Quando l'impasto inizia a formarsi, aggiungere l'olio EVO (40g) e continuare a lavorare energicamente. Aggiungere l'acqua rimanente (144g) poco alla volta se necessario. Impastare con tecnica slap & fold per 10-12 minuti: sollevare l'impasto e sbatterlo sul piano, ripiegarlo e ripetere. L'impasto deve diventare liscio, elastico e leggermente appiccicoso."
+    },
+    {
+      "title": "Divisione e Pirlatura",
+      "text": "Trasferire l'impasto su piano leggermente infarinato. Dividerlo in 3 porzioni: 2 panetti da 500g (per sfoglia base e copertura principale) + 1 panetto da 288g (per la copertura superiore sottile). Pirlare ogni panetto roteandolo sul piano con movimento circolare della mano, pizzicando la base per sigillare bene la chiusura. Disporre i panetti su vassoio leggermente unto con la chiusura verso il basso."
+    },
+    {
+      "title": "Riposo dell'Impasto",
+      "text": "Coprire i panetti con pellicola trasparente a contatto e lasciare riposare a temperatura ambiente (20-22°C) per 45-60 minuti. Questo riposo è ancora più importante nell'impasto manuale, poiché la maglia glutinica necessita di tempo per rilassarsi dopo la lavorazione intensa. La Manitoba ad alta forza richiede un riposo adeguato per essere stesa sottilissima."
+    },
+    {
+      "title": "Preparazione Teglia",
+      "text": "Ungere abbondantemente con olio EVO una teglia rettangolare da 30x40 cm. L'olio deve coprire uniformemente fondo e bordi per garantire la croccantezza caratteristica e facilitare il distacco dopo cottura."
+    },
+    {
+      "title": "Stesura Sfoglia Base a Mano",
+      "text": "Prendere uno dei panetti da 500g. Su piano leggermente infarinato, iniziare a stendere con mattarello partendo dal centro verso i bordi, ruotando la pasta di 90° ad ogni passaggio. Alternare stesura con mattarello e delicato stiramento manuale, passando le mani sotto la sfoglia e allargandola gradualmente con movimenti delicati (tecnica simile alla pasta fillo). Continuare fino ad ottenere un rettangolo di 35x45 cm circa, spessore 1 mm massimo. La pasta deve essere così sottile da poter intravedere le mani controluce. Adagiarla nella teglia unta, facendo aderire bene agli angoli."
+    },
+    {
+      "title": "Farcitura con Stracchino",
+      "text": "Estrarre lo stracchino/crescenza dal frigo al momento dell'uso (deve essere freddo per non sciogliersi). Distribuirlo a cucchiaiate sulla sfoglia base, lasciando 2-3 cm di bordo libero. Stendere delicatamente con il dorso del cucchiaio per livellare, senza arrivare fino ai bordi. Lo spessore del formaggio deve essere uniforme (circa 3-4 mm)."
+    },
+    {
+      "title": "Stesura Sfoglia di Copertura a Mano",
+      "text": "Stendere il secondo panetto da 500g con la stessa tecnica, alternando mattarello e stiramento manuale. La sfoglia di copertura deve essere ancora più sottile della base (0.5-0.8 mm), quasi trasparente. Adagiarla sopra il formaggio con estrema delicatezza, facendola aderire dalla parte centrale verso i bordi, eliminando eventuali bolle d'aria con movimenti dolci delle mani."
+    },
+    {
+      "title": "Sigillatura e Foratura",
+      "text": "Ripiegare i bordi della sfoglia inferiore sopra quella superiore e premere bene con le dita per sigillare, formando un cordone tutto intorno. Con le dita, praticare dei buchi sulla superficie (circa 12-15 fori distribuiti uniformemente), penetrando fino al formaggio. Questo permette al vapore di uscire durante la cottura ed evita che la focaccia si gonfi eccessivamente."
+    },
+    {
+      "title": "Condimento Finale",
+      "text": "Spennellare la superficie con olio EVO abbondante, creando piccole pozze. In alternativa: creare una 'salamoia' emulsionando 2-3 cucchiai di olio con 1 cucchiaio di acqua e qualche granello di sale grosso, e versarla a gocce sulla focaccia con le dita. Spolverare eventualmente con sale grosso."
+    }
+  ],
+  "flourTable": [
+    {
+      "type": "Manitoba",
+      "w": "360-380",
+      "brands": "Molino Caputo Manitoba Oro, Molino Dallagiovanna Manitoba, Le 5 Stagioni Manitoba, Molino Pasini Manitoba"
+    }
+  ],
+  "baking": {
+    "temperature": "260-280°C (forno statico preriscaldato al massimo)",
+    "time": "8-12 minuti",
+    "tips": [
+      "Preriscaldare il forno al massimo (260-280°C) per almeno 30 minuti con pietra refrattaria o teglia all'interno",
+      "Infornare nella parte bassa del forno. La focaccia è pronta quando la superficie è dorata con chiazze marroni e il formaggio bolle visibilmente dai fori",
+      "Non aprire il forno nei primi 6-7 minuti per non disperdere calore. La cottura deve essere rapida e intensa",
+      "La focaccia si gonfia durante la cottura creando bolle irregolari: è normale e desiderabile",
+      "Servire immediatamente, ancora caldissima e filante. La focaccia di Recco non si conserva: va consumata appena sfornata"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Manitoba",
+      "definition": "Farina di forza elevata (W 350-400) ottenuta da grani teneri nordamericani o europei, ricca di proteine (13-15%) che formano un glutine tenace ed elastico, ideale per impasti che richiedono grande estensibilità"
+    },
+    {
+      "term": "Incordatura",
+      "definition": "Fase dell'impastamento in cui il glutine si organizza in una rete elastica e l'impasto passa da appiccicoso e informe a liscio e coeso, staccandosi dalle pareti della ciotola"
+    },
+    {
+      "term": "Pirlatura",
+      "definition": "Tecnica per dare forma sferica ai panetti, eseguita roteando l'impasto sul piano con movimento circolare della mano, creando tensione superficiale e sigillando la chiusura alla base"
+    },
+    {
+      "term": "Maglia Glutinica",
+      "definition": "Rete tridimensionale formata dalle proteine del glutine (gliadina e glutenina) durante l'impastamento, che conferisce elasticità e capacità di trattenere gas all'impasto"
+    },
+    {
+      "term": "Slap & Fold",
+      "definition": "Tecnica di impastamento manuale: si solleva l'impasto con entrambe le mani, lo si sbatte energicamente sul piano e lo si ripiega su se stesso, sviluppando rapidamente la maglia glutinica"
+    },
+    {
+      "term": "Stracchino",
+      "definition": "Formaggio fresco a pasta molle, cremoso e dolce, prodotto tradizionalmente in Lombardia e Liguria. Il nome deriva da 'stracch' (stanco in dialetto), riferito alle mucche stanche del pascolo autunnale"
+    },
+    {
+      "term": "Crescenza",
+      "definition": "Formaggio fresco a pasta molle, cremoso e delicato, simile allo stracchino ma con stagionatura brevissima (pochi giorni). Fonde perfettamente senza rilasciare acqua"
+    },
+    {
+      "term": "IGP",
+      "definition": "Indicazione Geografica Protetta: riconoscimento europeo che certifica il legame di un prodotto con il territorio. La Focaccia di Recco col Formaggio ha ottenuto l'IGP nel 2012"
+    }
+  ],
+  "alert": "NON utilizzare farine deboli o medie (tipo 00 o tipo 0 comuni): la sfoglia non reggerebbe la stesura sottilissima e si romperebbe. NON aggiungere lievito: la Focaccia di Recco è SENZA lievitazione, la fragranza deriva dalla cottura ad alta temperatura. NON usare formaggi stagionati o mozzarella: rilascerebbero troppa acqua o non fonderebbero correttamente. NON stendere la pasta troppo spessa: lo spessore ideale è <1mm, altrimenti non otterrete la croccantezza tipica. NON lasciare riposare l'impasto troppo a lungo (max 60 min): non essendoci lievito, un riposo eccessivo non apporta benefici e può seccare la superficie.",
+  "proTips": [
+    "Il segreto della sottigliezza: la Manitoba ad altissima forza è fondamentale. Più la farina è forte (W>360), più la sfoglia può essere stesa sottile senza rompersi. Lavoratela con pazienza durante il riposo.",
+    "Temperatura del formaggio: lo stracchino/crescenza deve essere freddo di frigo fino al momento dell'uso. Se troppo caldo, inizia a fondere durante l'assemblaggio e rende difficile la chiusura.",
+    "Test di trasparenza: la sfoglia è abbastanza sottile quando, sollevandola controluce, si intravede la sagoma delle mani. È la stessa tecnica dello strudel tradizionale.",
+    "Salamoia ligure: l'emulsione di olio, acqua e sale (tecnica tradizionale) crea durante la cottura piccole bolle croccanti sulla superficie. È il tocco finale dei maestri recchesi."
+  ],
+  "imageKeywords": [
+    "focaccia di recco col formaggio",
+    "focaccia recco cheese liguria",
+    "stracchino focaccia sottile",
+    "recco focaccia IGP traditional",
+    "italian cheese flatbread recco"
+  ],
+  "tags": [
+    "liguria",
+    "recco",
+    "formaggio",
+    "stracchino",
+    "senza-lievito",
+    "IGP",
+    "sfoglia-sottile"
+  ],
+  "image": "images/ricette/lievitati/focaccia-di-recco-igp.jpg",
+  "imageAttribution": "📷 Foto: leonardo prascina — Pexels License via Pexels"
+}
