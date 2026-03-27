@@ -9,7 +9,7 @@
   "targetTemp": "24-26°C",
   "fermentation": "~4.5h totali",
   "totalFlour": 500,
-  "image": "images/ricette/pane/pane-noci-integrale.jpg",
+  "image": "images/ricette/pane/pane-noci-integrale.webp",
   "ingredients": [
     {
       "name": "Farina Integrale di Grano Tenero",
@@ -206,13 +206,12 @@
     "**Temperatura acqua in spirale**: con l'attrito della macchina l'impasto si scalda rapidamente. Acqua ghiacciata (2-4°C) è fondamentale per non superare i 26-27°C finali, oltre i quali l'impasto perde forza e la lievitazione accelera in modo incontrollato."
   ],
   "imageKeywords": [
-    "pane integrale",
-    "pane alle noci",
-    "pane rustico",
-    "pane multicereale",
-    "farina integrale",
-    "farro",
-    "grano saraceno"
+    "whole wheat walnut bread",
+    "pane integrale noci",
+    "wholegrain walnut loaf",
+    "vollkorn walnussbrot",
+    "italian wholemeal walnut",
+    "artisan nut bread"
   ],
   "tags": [
     "pane",

@@ -215,11 +215,12 @@
     "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
   ],
   "imageKeywords": [
-    "pinsa romana",
-    "pizza ovale",
-    "alta idratazione",
-    "mix farine",
-    "alveolatura"
+    "pinsa romana pizza",
+    "roman style pinsa",
+    "pinsa romana ovale",
+    "römische pinsa pizza",
+    "oval roman flatbread",
+    "italian pinsa bread"
   ],
   "tags": [
     "pinsa",
@@ -231,5 +232,5 @@
     "maturazione",
     "slap and fold"
   ],
-  "image": "images/ricette/pizza/pinsa-romana.jpg"
+  "image": "images/ricette/pizza/pinsa-romana.webp"
 }

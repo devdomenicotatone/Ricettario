@@ -9,7 +9,7 @@
   "targetTemp": "24-26°C",
   "fermentation": "~24h",
   "totalFlour": 1000,
-  "image": "images/ricette/pane/pane-di-altamura-dop.jpg",
+  "image": "images/ricette/pane/pane-di-altamura-dop.webp",
   "ingredients": [
     {
       "name": "Semola Rimacinata di Grano Duro",
@@ -176,13 +176,12 @@
     "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
   ],
   "imageKeywords": [
-    "pane di altamura",
-    "semola rimacinata",
-    "pane pugliese",
-    "pane DOP",
-    "crosta dorata",
-    "mollica gialla",
-    "taglio a croce"
+    "pane altamura pugliese",
+    "altamura bread dop",
+    "apulian semolina bread",
+    "altamura brot italien",
+    "italian durum wheat bread",
+    "traditional puglia bread"
   ],
   "tags": [
     "pane",

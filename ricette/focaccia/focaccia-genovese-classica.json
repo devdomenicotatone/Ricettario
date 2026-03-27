@@ -238,13 +238,12 @@
     "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
   ],
   "imageKeywords": [
-    "focaccia genovese",
-    "focaccia ligure",
-    "salamoia",
-    "fossette",
-    "olio extravergine",
-    "focaccia tradizionale",
-    "biga"
+    "focaccia genovese oil",
+    "ligurian focaccia bread",
+    "focaccia ligure classica",
+    "genueser focaccia öl",
+    "genoese flatbread olive",
+    "italian focaccia dimples"
   ],
   "tags": [
     "focaccia",
@@ -256,5 +255,5 @@
     "olio evo",
     "fossette"
   ],
-  "image": "images/ricette/focaccia/focaccia-genovese-classica.jpg"
+  "image": "images/ricette/focaccia/focaccia-genovese-classica.webp"
 }

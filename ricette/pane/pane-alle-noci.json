@@ -208,12 +208,12 @@
     "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
   ],
   "imageKeywords": [
-    "pane integrale",
-    "noci tostate",
-    "farina farro",
-    "grano saraceno",
-    "pane rustico",
-    "filone croccante"
+    "walnut bread loaf",
+    "pane alle noci italiano",
+    "artisan walnut bread",
+    "walnussbrot italienisch",
+    "italian nut bread",
+    "rustic walnut loaf"
   ],
   "tags": [
     "pane integrale",
@@ -224,5 +224,5 @@
     "lievitazione lunga",
     "rustico"
   ],
-  "image": "images/ricette/pane/pane-alle-noci.jpg"
+  "image": "images/ricette/pane/pane-alle-noci.webp"
 }

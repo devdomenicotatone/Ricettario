@@ -9,7 +9,7 @@
   "targetTemp": "20-22°C",
   "fermentation": "nessuna (impasto chimico)",
   "totalFlour": 280,
-  "image": "images/ricette/dolci/cantuccini-di-prato.jpg",
+  "image": "images/ricette/dolci/cantuccini-di-prato.webp",
   "ingredients": [
     {
       "name": "Farina Tipo 00 Debole",
@@ -145,11 +145,12 @@
     "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
   ],
   "imageKeywords": [
-    "cantuccini",
-    "biscotti toscani",
-    "mandorle",
-    "doppia cottura",
-    "prato"
+    "italian almond biscotti",
+    "cantuccini cookies tuscany",
+    "biscotti di prato",
+    "toscani cantucci",
+    "mandel biscotti italienisch",
+    "tuscan almond cookies"
   ],
   "tags": [
     "biscotti",

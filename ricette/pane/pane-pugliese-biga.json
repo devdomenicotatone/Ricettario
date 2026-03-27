@@ -9,7 +9,7 @@
   "targetTemp": "24-26°C",
   "fermentation": "~18h totali (biga 12-14h + puntata 3h + appretto 1h)",
   "totalFlour": 300,
-  "image": "images/ricette/pane/pane-pugliese-biga.jpg",
+  "image": "images/ricette/pane/pane-pugliese-biga.webp",
   "ingredients": [
     {
       "name": "Farina Tipo 00",
@@ -168,12 +168,12 @@
     "Se vuoi crosta ancora più dorata e croccante, negli ultimi 10 minuti di cottura abbassa a 200°C e attiva il grill per 3-4 minuti controllando continuamente."
   ],
   "imageKeywords": [
-    "pane pugliese",
-    "biga",
-    "pane tradizionale",
-    "crosta croccante",
-    "alveolatura",
-    "semola rimacinata"
+    "pane pugliese bread",
+    "apulian rustic loaf",
+    "pane pugliese rustico",
+    "apulisches landbrot",
+    "southern italian bread",
+    "puglia traditional bread"
   ],
   "tags": [
     "pane",

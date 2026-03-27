@@ -230,11 +230,12 @@
     "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
   ],
   "imageKeywords": [
-    "burger buns",
-    "panini americani",
-    "biga",
-    "lievitati",
-    "sesamo"
+    "artisan burger buns",
+    "homemade hamburger buns",
+    "panini burger artigianali",
+    "burger brötchen handgemacht",
+    "sourdough burger rolls",
+    "italian burger buns"
   ],
   "tags": [
     "burger buns",
@@ -246,5 +247,5 @@
     "spirale",
     "impasto a mano"
   ],
-  "image": "images/ricette/lievitati/burger-buns-biga.jpg"
+  "image": "images/ricette/lievitati/burger-buns-biga.webp"
 }

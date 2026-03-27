@@ -215,11 +215,12 @@
     "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
   ],
   "imageKeywords": [
-    "rosticceria siciliana",
-    "rollò",
-    "calzoncini",
-    "pizzette palermitane",
-    "rustici siciliani"
+    "sicilian arancini pastry",
+    "rosticceria siciliana pasta",
+    "sicilian savory pastries",
+    "sizilianisches streetfood gebäck",
+    "sicilian fried pastries",
+    "italian street food dough"
   ],
   "tags": [
     "rosticceria",
@@ -230,5 +231,5 @@
     "strutto",
     "lievitati salati"
   ],
-  "image": "images/ricette/lievitati/impasto-rosticceria-siciliana.jpg"
+  "image": "images/ricette/lievitati/impasto-rosticceria-siciliana.webp"
 }

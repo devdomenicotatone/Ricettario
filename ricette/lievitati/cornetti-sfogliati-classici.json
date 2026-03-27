@@ -274,14 +274,12 @@
     "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
   ],
   "imageKeywords": [
-    "cornetti",
-    "croissant",
-    "sfogliati",
-    "lievitati",
-    "colazione",
-    "pasticceria",
-    "burro",
-    "laminazione"
+    "italian croissant cornetti",
+    "cornetti sfogliati italiani",
+    "italian flaky croissants",
+    "italienische hörnchen blätterteig",
+    "traditional italian cornetti",
+    "layered italian pastry"
   ],
   "tags": [
     "cornetti",
@@ -294,5 +292,5 @@
     "burro",
     "laminazione"
   ],
-  "image": "images/ricette/lievitati/cornetti-sfogliati-classici.jpg"
+  "image": "images/ricette/lievitati/cornetti-sfogliati-classici.webp"
 }

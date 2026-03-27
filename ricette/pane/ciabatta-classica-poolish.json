@@ -9,7 +9,7 @@
   "targetTemp": "24-26°C",
   "fermentation": "~6-7h totali (3h poolish + 3-4h impasto)",
   "totalFlour": 900,
-  "image": "images/ricette/pane/ciabatta-classica-poolish.jpg",
+  "image": "images/ricette/pane/ciabatta-classica-poolish.webp",
   "ingredients": [
     {
       "name": "Farina Tipo 0 Forte",
@@ -178,12 +178,12 @@
     "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato"
   ],
   "imageKeywords": [
-    "ciabatta",
-    "poolish",
-    "pane italiano",
-    "alta idratazione",
-    "alveolatura irregolare",
-    "crosta croccante"
+    "italian ciabatta bread",
+    "ciabatta rustica poolish",
+    "rustic italian loaf",
+    "italienisches ciabatta brot",
+    "artisan ciabatta holes",
+    "classic ciabatta bread"
   ],
   "tags": [
     "pane",

@@ -347,13 +347,12 @@
     "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
   ],
   "imageKeywords": [
-    "panettone",
-    "lievitato",
-    "natale",
-    "uvetta",
-    "canditi",
-    "alveolatura",
-    "lievito madre"
+    "panettone milanese classico",
+    "traditional italian panettone",
+    "classic christmas panettone",
+    "panettone weihnachtskuchen",
+    "italian dome cake",
+    "milanese sweet bread"
   ],
   "tags": [
     "panettone",
@@ -365,5 +364,5 @@
     "canditi",
     "grande-lievitato"
   ],
-  "image": "images/ricette/lievitati/panettone-classico.jpg"
+  "image": "images/ricette/lievitati/panettone-classico.webp"
 }
