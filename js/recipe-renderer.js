@@ -4,6 +4,7 @@
    ============================================ */
 
 import { BASE } from './router.js';
+import { buildHeroPicture } from './image-utils.js';
 
 // ── Emoji per categoria ──
 const CATEGORY_EMOJI = {
@@ -65,7 +66,8 @@ function buildRecipeHTML(r, categoryDir) {
 
   return `
     <!-- ═══════════ RECIPE HERO ═══════════ -->
-    <div class="recipe-hero" style="background-image: url('${imagePath}')">
+    <div class="recipe-hero">
+      ${buildHeroPicture(imagePath, r.title)}
       <div class="container">
         <nav class="breadcrumb reveal">
           <a href="${BASE}" data-link>Home</a>

@@ -20,6 +20,7 @@ import '../css/utilities/animations.css';
 // ── SPA Router ──
 import { initRouter, registerRenderers, initReveal, BASE } from './router.js';
 import { renderRecipe } from './recipe-renderer.js';
+import { buildPicture } from './image-utils.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -170,7 +171,7 @@ function getHomepageHTML() {
 
         <div class="tool-spotlight reveal">
           <div class="tool-spotlight__image-wrapper">
-            <img src="${BASE}images/strumenti/famag-grilletta.png" alt="Famag Grilletta" class="tool-spotlight__image" loading="lazy">
+            ${buildPicture(`${BASE}images/strumenti/famag-grilletta.png`, 'Famag Grilletta', 'tool-spotlight__image', 'lazy')}
             <span class="tool-spotlight__badge">⭐ Impasti</span>
           </div>
           <div class="tool-spotlight__info">
@@ -187,7 +188,7 @@ function getHomepageHTML() {
 
         <div class="tool-spotlight reveal">
           <div class="tool-spotlight__image-wrapper">
-            <img src="${BASE}images/strumenti/philips-serie-7000.jpg" alt="Philips Serie 7000" class="tool-spotlight__image" loading="lazy">
+            ${buildPicture(`${BASE}images/strumenti/philips-serie-7000.jpg`, 'Philips Serie 7000', 'tool-spotlight__image', 'lazy')}
             <span class="tool-spotlight__badge">🏠 Pasta Home</span>
           </div>
           <div class="tool-spotlight__info">
@@ -284,7 +285,7 @@ function initCarousels() {
                 return `
                 <a href="${spaHref}" class="recipe-card--compact" data-link data-title="${r.title.toLowerCase()}" data-category="${r.category}">
                   <div class="recipe-card--compact__image-wrapper">
-                    ${r.image ? `<img src="${r.image}" alt="${r.title}" class="recipe-card--compact__image" loading="lazy">` : ''}
+                    ${r.image ? buildPicture(r.image, r.title, 'recipe-card--compact__image', 'lazy') : ''}
                   </div>
                   <div class="recipe-card--compact__body">
                     <h4 class="recipe-card--compact__title">${r.title}</h4>

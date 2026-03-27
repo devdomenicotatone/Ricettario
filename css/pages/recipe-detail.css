@@ -8,9 +8,6 @@
         position: relative;
         overflow: hidden;
         background-color: var(--color-surface-1);
-        background-size: cover;
-        background-position: center 30%;
-        background-repeat: no-repeat;
 
         @media (min-width: 769px) {
             padding: 160px var(--space-lg) var(--space-3xl);
@@ -27,8 +24,8 @@
         }
 
         /* ══ Dual Scrim — tecnica PRO (Bon Appétit / NYT / Apple) ══
-           Due zone scure (top + bottom), centro trasparente per mostrare il cibo */
-        &[style*="background-image"] {
+           <picture> hero con immagine posizionata assoluta */
+        &:has(.recipe-hero__picture) {
             min-height: 380px;
 
             @media (min-width: 769px) {
@@ -83,8 +80,22 @@
         }
     }
 
-    /* Navbar bianca quando c'è hero con immagine (non scrollata) */
-    body:has(.recipe-hero[style*="background-image"]) .navbar:not(.scrolled) {
+    /* ── Picture hero: posizionamento assoluto ── */
+    .recipe-hero__picture {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+    }
+
+    .recipe-hero__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 30%;
+    }
+
+    /* Navbar bianca quando c'è hero con picture (non scrollata) */
+    body:has(.recipe-hero__picture) .navbar:not(.scrolled) {
         & .navbar__logo {
             color: #fff;
             text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6),
