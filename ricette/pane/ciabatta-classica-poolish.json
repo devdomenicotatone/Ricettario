@@ -1,0 +1,197 @@
+{
+  "title": "Ciabatta Classica con Poolish",
+  "slug": "ciabatta-classica-poolish",
+  "emoji": "🥖",
+  "description": "Pane italiano ad alta idratazione con prefermento liquido, alveolatura irregolare e crosta croccante. Ricetta professionale con poolish.",
+  "subtitle": "Pane italiano ad alta idratazione con prefermento liquido e alveolatura irregolare",
+  "category": "Pane",
+  "hydration": 80,
+  "targetTemp": "24-26°C",
+  "fermentation": "~6-7h totali (3h poolish + 3-4h impasto)",
+  "totalFlour": 900,
+  "image": "images/ricette/pane/ciabatta-classica-poolish.jpg",
+  "ingredients": [
+    {
+      "name": "Farina Tipo 0 Forte",
+      "note": "(W 300-320, proteine 12-13%)",
+      "grams": 500
+    },
+    {
+      "name": "Farina Manitoba",
+      "note": "(W 350-380, proteine 13-14%)",
+      "grams": 400
+    },
+    {
+      "name": "Acqua",
+      "note": "(ghiacciata 2-4°C per impasto finale)",
+      "grams": 720,
+      "setupNote": {
+        "spirale": "(ghiacciata 2-4°C per impasto finale)",
+        "mano": "(20-22°C, aggiunta graduale in 3 riprese)"
+      }
+    },
+    {
+      "name": "Lievito di Birra Fresco",
+      "note": "(3g poolish + 9g impasto)",
+      "grams": 12,
+      "setupNote": {
+        "spirale": "(3g poolish + 9g impasto)",
+        "mano": "(3g poolish + 6g impasto (tempi più lunghi))"
+      }
+    },
+    {
+      "name": "Malto Diastasico",
+      "note": "(oppure miele o zucchero)",
+      "grams": 10
+    },
+    {
+      "name": "Sale Fino",
+      "note": "(aggiunto a metà impastamento)",
+      "grams": 20
+    },
+    {
+      "name": "Olio Extravergine d'Oliva",
+      "note": "(opzionale, per morbidezza)",
+      "grams": 15
+    }
+  ],
+  "suspensions": [],
+  "stepsSpiral": [
+    {
+      "title": "Poolish (Prefermento Liquido) - 3 ore prima",
+      "text": "Sciogliere 3g di lievito fresco in 300ml di acqua a temperatura ambiente (20-22°C). Aggiungere 300g di farina (200g Tipo 0 + 100g Manitoba). Mescolare energicamente con cucchiaio di legno fino a ottenere un impasto liscio, omogeneo e molto liquido (consistenza di pastella). Coprire con pellicola a contatto e lasciare maturare 3 ore a 20-22°C. Il poolish è pronto quando presenta superficie bombata, piena di bolle e ha triplicato il volume."
+    },
+    {
+      "title": "Impasto Base in Impastatrice a Spirale",
+      "text": "Inserire nella vasca il poolish maturo, 420ml di acqua GHIACCIATA (2-4°C), 9g di lievito fresco sciolto, 10g di malto. Avviare in prima velocità. Aggiungere gradualmente 300g Tipo 0 + 300g Manitoba alternando farine e liquidi. Impastare 4 minuti in prima, poi 3 minuti in seconda velocità. A metà seconda velocità aggiungere 20g di sale e 15g di olio. Impastare fino a incordatura completa (l'impasto si stacca dalle pareti ma rimane molto molle e appiccicoso). Temperatura finale impasto: 24-26°C. Durata totale: 10-12 minuti."
+    },
+    {
+      "title": "Prima Lievitazione e Pieghe di Rinforzo",
+      "text": "Trasferire l'impasto in contenitore oleato e capiente. Coprire con pellicola. Dopo 30 minuti eseguire la prima serie di pieghe a busta: portare un lembo verso il centro, poi il lembo opposto, poi i due laterali. Girare l'impasto con la chiusura sotto. Ripetere altre 2 serie di pieghe ogni 30 minuti (totale 3 serie). Dopo l'ultima piega, lasciare lievitare indisturbato per 1h30-2h a 26-28°C fino al raddoppio. L'impasto deve essere pieno di bolle, molto soffice e tremare al tocco."
+    },
+    {
+      "title": "Formatura Ciabatta",
+      "text": "Rovesciare delicatamente l'impasto su piano ABBONDANTEMENTE infarinato con semola di grano duro. NON sgonfiare. Con raschietto dividere in 4 porzioni rettangolari uguali (circa 450g l'una). Con mani infarinate, allungare delicatamente ogni porzione fino a ottenere rettangoli 25x12cm, tirando dagli angoli senza schiacciare. Ripiegare i lati lunghi verso il centro sovrapponendoli leggermente. Capovolgere le ciabatte su teglie con carta forno infarinata, con la chiusura sotto."
+    },
+    {
+      "title": "Appretto e Preparazione alla Cottura",
+      "text": "Dimplare energicamente la superficie con le dita unte d'olio per creare le tipiche impronte. Cospargere abbondante semola di grano duro. Coprire con strofinacci UMIDI (non bagnati). Lasciare lievitare 1h30-2h a 24-26°C. Le ciabatte devono risultare gonfie ma NON raddoppiate (sembreranno ancora un po' piatte, è normale). Preriscaldare il forno a 230°C con pietra refrattaria sul ripiano inferiore per almeno 45 minuti."
+    }
+  ],
+  "stepsHand": [
+    {
+      "title": "Poolish (Prefermento Liquido) - 3 ore prima",
+      "text": "Sciogliere 3g di lievito fresco in 300ml di acqua a temperatura ambiente (20-22°C). Aggiungere 300g di farina (200g Tipo 0 + 100g Manitoba). Mescolare energicamente con cucchiaio di legno per 3-4 minuti fino a ottenere un impasto liscio, omogeneo e molto liquido (consistenza di pastella). Coprire con pellicola a contatto e lasciare maturare 3 ore a 20-22°C. Il poolish è pronto quando presenta superficie bombata, piena di bolle e ha triplicato il volume."
+    },
+    {
+      "title": "Impasto Base a Mano (Metodo Slap & Fold)",
+      "text": "In ciotola capiente unire poolish maturo, 6g di lievito fresco sciolto in 140ml acqua tiepida (22-24°C), 10g di malto. Mescolare. Aggiungere metà delle farine (150g Tipo 0 + 150g Manitoba) e mescolare con cucchiaio. Aggiungere altri 140ml acqua e il resto delle farine. Quando l'impasto si addensa, trasferire su piano e iniziare slap & fold: sollevare l'impasto, sbatterlo sul piano, ripiegarlo su se stesso. Ripetere 5 minuti. Aggiungere 20g sale + 15g olio e continuare slap & fold per altri 5-8 minuti. Aggiungere gli ultimi 140ml acqua gradualmente, lavorando altri 3-4 minuti. L'impasto deve diventare liscio, elastico ma molto mollo."
+    },
+    {
+      "title": "Prima Lievitazione con Pieghe di Rinforzo",
+      "text": "Trasferire in contenitore oleato. Coprire con pellicola. Dopo 30 minuti eseguire pieghe a busta su piano leggermente oleato: portare un lembo verso il centro, poi il lembo opposto, poi i due laterali. Girare con chiusura sotto. Ripetere altre 2 volte ogni 30 minuti (totale 3 serie di pieghe in 90 minuti). Dopo l'ultima piega lasciare lievitare indisturbato 2-2h30 a 26-28°C fino al raddoppio. L'impasto deve essere pieno di bolle, soffice, tremare al tocco."
+    },
+    {
+      "title": "Formatura Delicata Ciabatta",
+      "text": "Rovesciare con delicatezza l'impasto su piano ABBONDANTEMENTE infarinato con semola. NON sgonfiare, NON impastare. Con raschietto dividere in 4 porzioni rettangolari uguali. Con mani infarinate allungare delicatamente ogni porzione tirando dagli angoli fino a rettangoli 25x12cm circa. Ripiegare i lati lunghi verso il centro sovrapponendoli di 2-3cm. Capovolgere su teglie con carta forno infarinata, con chiusura sotto."
+    },
+    {
+      "title": "Appretto e Preparazione alla Cottura",
+      "text": "Dimplare energicamente la superficie con dita unte d'olio per creare le tipiche impronte profonde. Cospargere abbondante semola di grano duro. Coprire con strofinacci UMIDI. Lievitare 2-2h30 a 24-26°C. Le ciabatte devono gonfiarsi ma NON raddoppiare (sembreranno piatte, è normale: esploderanno in forno). Preriscaldare forno a 230°C con pietra refrattaria per 45 minuti."
+    }
+  ],
+  "stepsExtruder": [],
+  "stepsCondiment": [],
+  "flourTable": [
+    {
+      "type": "Farina Tipo 0 Forte",
+      "w": "300-320",
+      "brands": "Molino Agugiaro e Figna Petra 3, Molino Grassi Oro Duro, Molino Quaglia Etna"
+    },
+    {
+      "type": "Farina Manitoba",
+      "w": "350-380",
+      "brands": "Molino Vigevano Manitoba Oro, Caputo Manitoba Oro, Lo Conte Manitoba"
+    },
+    {
+      "type": "Semola Rimacinata (per banco)",
+      "w": "-",
+      "brands": "Divella, De Cecco, Molino Spadoni"
+    }
+  ],
+  "baking": {
+    "temperature": "230°C",
+    "time": "20-25 minuti",
+    "tips": [
+      "Preriscaldare forno + pietra refrattaria per 45 minuti a 230°C",
+      "Creare vapore nei primi 10 minuti: spruzzare acqua su pareti forno o inserire teglia con acqua bollente sul fondo",
+      "Posizionare le ciabatte sulla pietra con carta forno (eventualmente togliere la carta dopo 12 minuti)",
+      "La ciabatta è cotta quando suona vuota se battuta sotto e presenta crosta dorata uniforme",
+      "Raffreddare su griglia per almeno 1 ora prima di tagliare (l'interno continua a cuocere)"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Poolish",
+      "definition": "Prefermento liquido di origine polacca: farina e acqua in parti uguali + 1% lievito. Matura 3-12h e dona profumo, alveolatura e conservabilità al pane"
+    },
+    {
+      "term": "Idratazione",
+      "definition": "Percentuale di acqua rispetto alla farina. Ciabatta = 75-85%. Più acqua = più alveoli grandi e irregolari"
+    },
+    {
+      "term": "Incordatura",
+      "definition": "Momento in cui l'impasto forma una rete glutinica forte e si stacca dalle pareti della vasca. Segno di impastamento completo"
+    },
+    {
+      "term": "Slap & Fold",
+      "definition": "Tecnica di impastamento manuale per impasti molli: sollevare, sbattere sul piano, ripiegare. Sviluppa glutine senza impastatrice"
+    },
+    {
+      "term": "Pieghe di Rinforzo",
+      "definition": "Pieghe a busta eseguite durante la lievitazione per rinforzare la maglia glutinica e ridistribuire lieviti e gas"
+    },
+    {
+      "term": "Appretto",
+      "definition": "Lievitazione finale dopo la formatura. Per la ciabatta dura 1h30-2h30 e deve essere moderata (non raddoppio completo)"
+    },
+    {
+      "term": "Dimplatura",
+      "definition": "Pressione energica con le dita sulla superficie dell'impasto per creare impronte caratteristiche della ciabatta"
+    },
+    {
+      "term": "W (Forza)",
+      "definition": "Indice reologico della farina. Misura resistenza ed estensibilità. W 300+ = farina forte, adatta a lunghe lievitazioni"
+    },
+    {
+      "term": "Malto Diastasico",
+      "definition": "Zucchero complesso che nutre i lieviti, favorisce colorazione della crosta e migliora conservabilità"
+    },
+    {
+      "term": "Temperatura Finale Impasto",
+      "definition": "Temperatura dell'impasto a fine impastamento. Per ciabatta: 24-26°C. Influenza velocità fermentazione"
+    }
+  ],
+  "alert": "❌ NON schiacciare l'impasto durante la formatura: la ciabatta DEVE mantenere tutte le bolle d'aria create in lievitazione per ottenere l'alveolatura irregolare caratteristica. NON usare matterello. NON lavorare l'impasto dopo il rovesciamento dal contenitore. Se schiacci, avrai un pane compatto invece della texture spugnosa tipica della ciabatta.",
+  "proTips": [
+    "🫧 POOLISH MATURO = chiave del successo: deve TRIPLICARE, presentare bolle grandi in superficie e odore leggermente alcolico. Se sottomaturato, manca complessità aromatica",
+    "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato"
+  ],
+  "imageKeywords": [
+    "ciabatta",
+    "poolish",
+    "pane italiano",
+    "alta idratazione",
+    "alveolatura irregolare",
+    "crosta croccante"
+  ],
+  "tags": [
+    "pane",
+    "ciabatta",
+    "poolish",
+    "prefermento",
+    "alta-idratazione",
+    "italiano",
+    "artigianale"
+  ]
+}

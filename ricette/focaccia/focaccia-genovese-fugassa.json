@@ -2,7 +2,7 @@
   "title": "Focaccia Genovese (Fügassa)",
   "slug": "focaccia-genovese-fugassa",
   "emoji": "🫓",
-  "description": "La vera focaccia genovese, presidio Slow Food: alta, soffice, unta al punto giusto. Tecnica professionale con salamoia e doppia lievitazione.",
+  "description": "Presidio Slow Food con idratazione 67%, lievitazione 3-4 ore. La vera focaccia genovese con salamoia, olio EVO ligure e tecnica tradizionale della foratura.",
   "subtitle": "Presidio Slow Food · Idratazione 67% · Lievitazione ~3-4 ore",
   "category": "Focaccia",
   "hydration": 67,
@@ -22,11 +22,11 @@
     },
     {
       "name": "Acqua",
-      "note": "(temperatura ambiente 20-22°C)",
+      "note": "(fredda 16-18°C per controllare temperatura finale)",
       "grams": 335,
       "setupNote": {
-        "spirale": "fredda 16-18°C per controllare temperatura finale",
-        "mano": "20-22°C, aggiunta in 2 riprese"
+        "spirale": "(fredda 16-18°C per controllare temperatura finale)",
+        "mano": "(20-22°C, aggiunta in 2 riprese)"
       }
     },
     {
@@ -41,11 +41,11 @@
     },
     {
       "name": "Lievito di Birra Fresco",
-      "note": "(oppure 6 g lievito secco)",
+      "note": "(18 g per lievitazione controllata 3-4 ore)",
       "grams": 18,
       "setupNote": {
-        "spirale": "18 g per lievitazione controllata 3-4 ore",
-        "mano": "ridurre a 12-15 g se temperatura ambiente alta, lievitazione più lenta"
+        "spirale": "(18 g per lievitazione controllata 3-4 ore)",
+        "mano": "(ridurre a 12-15 g se temperatura ambiente alta, lievitazione più lenta)"
       }
     },
     {
@@ -163,6 +163,8 @@
       "text": "Spolverizzare con velo di farina. Con 3 dita INCLINATE (mai perpendicolari), affondare creando buchi profondi distanti 1 cm. Spingere le dita leggermente verso i bordi. Ruotare teglia per uniformità. Versare al centro 30 g olio + 100 g salamoia. Spargere delicatamente con mano piatta riempiendo i buchi. Lasciare scoperto. Riposo: 40-45 minuti."
     }
   ],
+  "stepsExtruder": [],
+  "stepsCondiment": [],
   "flourTable": [
     {
       "type": "Farina 00 Media Forza",
@@ -229,25 +231,25 @@
   ],
   "alert": "⚠️ NON CUOCERE oltre i 15 minuti: la focaccia genovese deve rimanere umida e soffice all'interno. Una cottura prolungata la seccherebbe. Se il forno è molto potente e la superficie scurisce troppo in fretta, abbassare la temperatura a 220°C ma MAI aumentare il tempo. NON aggiungere la salamoia troppo in anticipo: va versata solo dopo la foratura finale e 40-45 minuti prima di infornare, altrimenti l'impasto collasserebbe.",
   "proTips": [
-    "La vera fügassa genovese deve avere i buchi PROFONDI e regolari: usa sempre 3 dita inclinate (non perpendicolari) e spingi verso i bordi durante la foratura. Questo crea le cavità che trattengono olio e salamoia.",
     "La temperatura dell'impasto è CRUCIALE: deve restare tra 24-26°C. Oltre i 27°C il lievito lavora troppo velocemente e la focaccia risulterà poco digeribile. Usa acqua fredda in spirale, ambiente se impasti a mano.",
-    "Il segreto della morbidezza è la salamoia: penetra nei buchi durante il riposo finale e crea vapore in cottura, mantenendo l'interno umido. Non versarla troppo presto o l'impasto si affloscerà."
+    "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
   ],
   "imageKeywords": [
-    "focaccia genovese ligure",
-    "fugassa ligure traditional",
-    "genoese focaccia brine holes",
-    "focaccia alta soffice ligure",
-    "focaccia olio oliva genovese"
+    "focaccia genovese",
+    "fugassa",
+    "salamoia",
+    "olio extravergine ligure",
+    "presidio slow food",
+    "focaccia tradizionale"
   ],
   "tags": [
     "focaccia",
+    "genovese",
     "liguria",
-    "presidio-slow-food",
-    "lievitazione-breve",
-    "salamoia"
+    "presidio slow food",
+    "salamoia",
+    "lievitazione breve",
+    "olio evo"
   ],
-  "image": "images/ricette/focaccia/focaccia-genovese-fugassa.jpg",
-  "imageAttribution": "📷 Foto: DinaBenedettoFerrandina — CC BY-SA 4.0 via Wikimedia",
-  "_originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Focaccia_Genovese_all%27Origano.jpg"
+  "image": "images/ricette/focaccia/focaccia-genovese-fugassa.jpg"
 }

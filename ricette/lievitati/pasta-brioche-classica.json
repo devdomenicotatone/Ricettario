@@ -1,0 +1,250 @@
+{
+  "title": "Pasta Brioche Classica",
+  "slug": "pasta-brioche-classica",
+  "emoji": "🥐",
+  "description": "Impasto base per brioche, cornetti e trecce dolci con tecnica professionale francese. Idratazione 52%, lievitazione 3-4h.",
+  "subtitle": "Impasto base per brioche, cornetti e trecce dolci — tecnica professionale francese",
+  "category": "Lievitati",
+  "hydration": 52,
+  "targetTemp": "24-26°C",
+  "fermentation": "3-4h + 2h appretto",
+  "totalFlour": 500,
+  "ingredients": [
+    {
+      "name": "Farina Tipo 0 Media-Alta Forza",
+      "note": "(W 300-330, proteine 12-13%)",
+      "grams": 300
+    },
+    {
+      "name": "Farina Manitoba",
+      "note": "(W 350-380, proteine 13-14%)",
+      "grams": 200
+    },
+    {
+      "name": "Latte Intero Fresco",
+      "note": "(temp. ambiente per entrambi i setup)",
+      "grams": 100
+    },
+    {
+      "name": "Uova Intere",
+      "note": "(peso sgusciato ~60g/uovo)",
+      "grams": 120,
+      "setupNote": {
+        "spirale": "(peso sgusciato ~60g/uovo, aggiungere una alla volta)",
+        "mano": "(peso sgusciato ~60g/uovo, incorporare lentamente)"
+      }
+    },
+    {
+      "name": "Tuorli",
+      "note": "(da uova fresche cat. A)",
+      "grams": 20
+    },
+    {
+      "name": "Burro",
+      "note": "(temperatura 18-20°C)",
+      "grams": 100,
+      "setupNote": {
+        "spirale": "(tagliato a pezzetti 2x2cm, aggiunto gradualmente)",
+        "mano": "(cremoso, incorporato a cucchiaiate dopo incordatura)"
+      }
+    },
+    {
+      "name": "Zucchero Semolato",
+      "note": "(bianco o di canna integrale)",
+      "grams": 80
+    },
+    {
+      "name": "Lievito di Birra Fresco",
+      "note": "",
+      "grams": 15,
+      "setupNote": {
+        "spirale": "(15g per impasto rapido (30-40min lavoro))",
+        "mano": "(10-12g per impasto lungo (60min+ lavoro))"
+      }
+    },
+    {
+      "name": "Miele di Acacia",
+      "note": "(liquido, non cristallizzato)",
+      "grams": 20
+    },
+    {
+      "name": "Sale Fino",
+      "note": "(aggiungere DOPO incordatura)",
+      "grams": 8
+    },
+    {
+      "name": "Scorza di Limone",
+      "note": "(grattugiata fine, solo parte gialla)",
+      "grams": 5
+    },
+    {
+      "name": "Scorza di Arancia",
+      "note": "(grattugiata fine, solo parte arancione)",
+      "grams": 8
+    },
+    {
+      "name": "Rum o Estratto di Vaniglia",
+      "note": "(opzionale, per aromatizzare)",
+      "grams": 15
+    }
+  ],
+  "suspensions": [],
+  "stepsSpiral": [
+    {
+      "title": "Marinatura Aromi (2-4h prima)",
+      "text": "In una ciotola piccola unire: scorze grattugiate di limone e arancia, miele, rum (o vaniglia). Mescolare e sigillare con pellicola. Lasciare marinare 2-4h a temperatura ambiente. Gli aromi si amalgameranno creando un profumo intenso e omogeneo."
+    },
+    {
+      "title": "Scioglimento Lievito",
+      "text": "Sciogliere il lievito di birra fresco (15g) nel latte intero a temperatura ambiente (100g). Mescolare e lasciare riposare 5 minuti. Il latte deve essere 20-22°C, mai freddo."
+    },
+    {
+      "title": "Impasto Base — 1ª Velocità (8-10min)",
+      "text": "Nella ciotola della spirale inserire: farina Tipo 0 (300g) + manitoba (200g) + zucchero (80g). Avviare a velocità 1. Aggiungere il latte con lievito sciolto + composto di aromi marinati. Lavorare 2-3min finché si assorbe. Aggiungere le uova una alla volta (2 uova intere + 1 tuorlo), aspettando completo assorbimento prima di aggiungere la successiva. Impastare 8-10min totali. L'impasto risulterà disomogeneo, leggermente sgretolato."
+    },
+    {
+      "title": "Incordatura e Aggiunta Burro — 1ª Velocità (12-15min)",
+      "text": "Con impastatrice in moto, aggiungere il burro morbido a pezzetti (2-3 pezzi alla volta). Aspettare completo assorbimento prima di aggiungere altri pezzi. Dopo l'ultimo pezzo di burro, aggiungere il sale (8g). Continuare a impastare a velocità 1 per altri 10-12min. L'impasto diventerà liscio, elastico e si staccherà dalle pareti incordandosi al gancio. Deve fare 'lo schiocco' quando si stacca. Temperatura finale impasto: 24-26°C."
+    },
+    {
+      "title": "Controllo Incordatura e Pirlatura",
+      "text": "Staccare l'impasto dal gancio. Trasferire su piano leggermente infarinato. Dare 2-3 pieghe tipo slap & fold DELICATE (sollevare un lembo e ripiegare su se stesso, senza sbattere). Pirlare l'impasto con il tarocco per formare una palla liscia e tesa. L'impasto è molto morbido e leggermente appiccicoso: normale per una brioche ricca."
+    },
+    {
+      "title": "Prima Lievitazione (3-4h a 26-28°C)",
+      "text": "Trasferire la palla d'impasto in una ciotola ampia leggermente unta. Coprire con pellicola a contatto. Lievitare in ambiente caldo 26-28°C per 3-4h, finché triplica di volume. In inverno: usare forno spento con luce accesa. In estate: temperatura ambiente."
+    },
+    {
+      "title": "Staglio e Formatura",
+      "text": "Rovesciare l'impasto lievitato su piano leggermente infarinato. Degassare DELICATAMENTE con le mani. Dividere in pezzi da 50-60g per brioche col tuppo, 80g per cornetti, 100g per trecce. Per brioche col tuppo: formare palline lisce pirlando, praticare un foro al centro con il dito, inserire una pallina più piccola (1/3 del peso). Per cornetti: stendere triangoli con mattarello, arrotolare dalla base larga. Per trecce: formare cordoni lunghi, intrecciare a 3 capi."
+    },
+    {
+      "title": "Appretto (1,5-2h a 28-30°C)",
+      "text": "Disporre i pezzi formati su teglia con carta forno, ben distanziati. Coprire con pellicola leggermente unta. Lievitare 1,5-2h a 28-30°C finché raddoppiano. Test del dito: premere leggermente, l'impronta deve risalire lentamente."
+    },
+    {
+      "title": "Spennellatura e Cottura",
+      "text": "Preparare doratura: 1 tuorlo + 20g latte (o panna). Spennellare DELICATAMENTE le superfici. Opzionale: granella di zucchero per trecce, zucchero a velo vanigliato per brioche dopo cottura. Infornare a 170-180°C (forno ventilato) per 15-20min (brioche piccole) o 25-30min (trecce grandi). Devono dorare uniformemente. Sfornare e far raffreddare su griglia."
+    }
+  ],
+  "stepsHand": [
+    {
+      "title": "Marinatura Aromi (2-4h prima)",
+      "text": "In una ciotola piccola unire: scorze grattugiate di limone e arancia, miele, rum (o vaniglia). Mescolare e sigillare con pellicola. Lasciare marinare 2-4h a temperatura ambiente per amalgamare gli aromi."
+    },
+    {
+      "title": "Scioglimento Lievito",
+      "text": "Sciogliere il lievito di birra fresco (10-12g, dose ridotta per impasto lungo) nel latte intero a temperatura ambiente (100g, 20-22°C). Mescolare e lasciare riposare 5 minuti."
+    },
+    {
+      "title": "Impasto Base su Spianatoia (15-20min)",
+      "text": "Disporre le farine (300g Tipo 0 + 200g manitoba) a fontana su spianatoia. Al centro: zucchero, latte con lievito, composto aromi marinati. Iniziare a incorporare la farina con una forchetta. Quando si forma un impasto grezzo, aggiungere le uova una alla volta (2 intere + 1 tuorlo), amalgamando bene prima di aggiungere la successiva. Impastare energicamente per 15-20min con tecnica slap & fold: sollevare l'impasto, sbatterlo sul piano, ripiegare su se stesso. Sviluppare la maglia glutinica."
+    },
+    {
+      "title": "Incorporazione Burro (20-25min)",
+      "text": "Quando l'impasto è incordato (si stacca dalle mani), aggiungere il burro morbido cremoso a cucchiaiate. Incorporare ogni porzione completamente prima di aggiungere la successiva. L'impasto sembrerà sfaldarsi: continuare a lavorare con slap & fold delicati. Dopo l'ultimo burro, aggiungere il sale (8g). Impastare altri 10-15min finché l'impasto torna liscio, elastico e lucido. Totale lavoro manuale: 45-60min. Temperatura finale: 24-26°C."
+    },
+    {
+      "title": "Controllo Incordatura",
+      "text": "Test della finestra: staccare un pezzetto d'impasto, stenderlo delicatamente tra le dita. Deve formare una membrana sottile e trasparente senza rompersi. Se si rompe subito: impastare ancora 5-10min. Formare una palla liscia e tesa pirlando l'impasto sul piano."
+    },
+    {
+      "title": "Prima Lievitazione (3-4h a 26-28°C)",
+      "text": "Trasferire la palla d'impasto in una ciotola ampia leggermente unta. Coprire con pellicola a contatto. Lievitare in ambiente caldo 26-28°C per 3-4h, finché triplica di volume. In inverno: forno spento con luce accesa."
+    },
+    {
+      "title": "Staglio e Formatura",
+      "text": "Rovesciare l'impasto lievitato su piano leggermente infarinato. Degassare DELICATAMENTE schiacciando con i palmi. Dividere in pezzi: 50-60g per brioche col tuppo, 80g per cornetti, 100g per trecce. Pirlare ogni pezzo per formare palline lisce. Per brioche col tuppo: praticare un foro al centro, inserire pallina piccola (1/3 peso). Per cornetti: stendere triangoli, arrotolare. Per trecce: formare cordoni, intrecciare a 3 capi."
+    },
+    {
+      "title": "Appretto (1,5-2h a 28-30°C)",
+      "text": "Disporre su teglia con carta forno, distanziati. Coprire con pellicola unta. Lievitare 1,5-2h a 28-30°C finché raddoppiano. Test del dito: l'impronta deve risalire lentamente."
+    },
+    {
+      "title": "Spennellatura e Cottura",
+      "text": "Doratura: 1 tuorlo + 20g latte. Spennellare delicatamente. Opzionale: granella di zucchero o zucchero a velo vanigliato (dopo cottura). Infornare a 170-180°C ventilato per 15-20min (piccole) o 25-30min (grandi). Doratura uniforme. Raffreddare su griglia."
+    }
+  ],
+  "stepsExtruder": [],
+  "stepsCondiment": [],
+  "flourTable": [
+    {
+      "type": "Farina Tipo 0 Media-Alta Forza",
+      "w": "300-330",
+      "brands": "Molino Spadoni Tipo 0, Molino Dallagiovanna Cuore, Le 5 Stagioni Oro"
+    },
+    {
+      "type": "Farina Manitoba",
+      "w": "350-380",
+      "brands": "Molino Spadoni Manitoba, Lo Conte Manitoba, Molino Grassi Manitoba Oro"
+    }
+  ],
+  "baking": {
+    "temperature": "170-180°C ventilato",
+    "time": "15-30 minuti (a seconda della pezzatura)",
+    "tips": [
+      "Preriscaldare forno a 180°C per 15 minuti prima di infornare",
+      "Controllare doratura dopo 12 minuti: se troppo scura, coprire con foglio d'alluminio",
+      "Per trecce grandi: abbassare a 170°C dopo 15 minuti per cottura uniforme",
+      "Test cottura: battere la base con le nocche, deve suonare vuoto",
+      "Raffreddare SEMPRE su griglia per evitare condensa sul fondo"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Incordatura",
+      "definition": "Fase in cui l'impasto sviluppa la maglia glutinica e si avvolge attorno al gancio dell'impastatrice, staccandosi dalle pareti. Segno di impasto ben sviluppato."
+    },
+    {
+      "term": "Pirlatura",
+      "definition": "Tecnica per formare palline lisce e tese: far ruotare l'impasto sul piano con movimenti circolari della mano, creando tensione superficiale."
+    },
+    {
+      "term": "Slap & Fold",
+      "definition": "Tecnica d'impasto manuale: sollevare l'impasto, sbatterlo sul piano e ripiegarlo su se stesso. Sviluppa glutine in impasti morbidi e idratati."
+    },
+    {
+      "term": "Appretto",
+      "definition": "Seconda lievitazione dopo la formatura dei pezzi. Permette al prodotto di raggiungere il volume finale prima della cottura."
+    },
+    {
+      "term": "Test della Finestra",
+      "definition": "Controllo della maglia glutinica: stendere un pezzetto d'impasto tra le dita fino a formare una membrana sottile e trasparente senza rompersi."
+    },
+    {
+      "term": "Degassare",
+      "definition": "Eliminare l'aria accumulata nell'impasto durante la lievitazione, schiacciando delicatamente con i palmi o ripiegando su se stesso."
+    },
+    {
+      "term": "Staglio",
+      "definition": "Divisione dell'impasto in pezzi di peso determinato, primo passo della formatura."
+    },
+    {
+      "term": "Doratura",
+      "definition": "Spennellatura della superficie con tuorlo + latte (o panna) prima della cottura, per ottenere una crosta lucida e dorata."
+    }
+  ],
+  "alert": "⚠️ NON aggiungere il burro all'inizio: l'impasto deve prima incordarsi con farina, liquidi e uova. Il burro va inserito solo DOPO la prima incordatura, altrimenti impermeabilizza il glutine impedendo lo sviluppo corretto. NON aggiungere il sale insieme al lievito: il sale inibisce l'attività del lievito. Inserirlo sempre DOPO l'incordatura. NON impastare troppo veloce: la brioche richiede velocità 1 (60-80 giri/min) per tutto il processo. Velocità alta surriscalda l'impasto e brucia il burro.",
+  "proTips": [
+    "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato.",
+    "Burro alla temperatura giusta: deve essere morbido (18-20°C) ma NON fuso. Se troppo freddo non si incorpora, se troppo caldo rende l'impasto unto e colloso."
+  ],
+  "image": "images/ricette/lievitati/pasta-brioche-classica.jpg",
+  "imageKeywords": [
+    "brioche",
+    "cornetti",
+    "trecce dolci",
+    "lievitati",
+    "pasta brioche",
+    "dolci da colazione"
+  ],
+  "tags": [
+    "brioche",
+    "lievitati",
+    "colazione",
+    "cornetti",
+    "trecce",
+    "impasto ricco",
+    "tecnica francese"
+  ]
+}

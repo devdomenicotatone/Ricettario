@@ -8,36 +8,36 @@
 - Ingredienti: 6/6 confermati (100%)
 
 ### ⚠️ Attenzione
-- ⚠️ Idratazione significativamente diversa: 68% vs media fonti 87%
+- ⚠️ Idratazione significativamente diversa: 68% vs media fonti 109%
 
 ### 📋 Ingredienti
 | Status | Ingrediente | Note |
 |--------|-------------|------|
-| ✅ | farina integrale di grano tenero | Confermato da fonti |
-| ✅ | farina di farro | Confermato da fonti |
-| ✅ | farina di grano saraceno | Confermato da fonti |
-| ✅ | acqua | Confermato da fonti |
-| ✅ | lievito di birra fresco | Confermato da fonti |
-| ✅ | sale fino | Confermato da fonti |
+| ✅ | 300g farina integrale di grano tenero | Confermato da fonti |
+| ✅ | 160g farina di farro | Confermato da fonti |
+| ✅ | 40g farina di grano saraceno | Confermato da fonti |
+| ✅ | 340g acqua , aggiungere a filo in 2-3 minuti) | Confermato da fonti |
+| ✅ | 9g lievito di birra fresco | Confermato da fonti |
+| ✅ | 10g sale fino | Confermato da fonti |
 
 ### 📊 Dettagli
-- Tempi fonti: 30min, 30min, 1h 10min, P0DT0H10M, 20min, 15min, 20min
-- Tempo Claude: 4-5h totali
+- Tempi fonti: P0DT0H10M, 15min, 60min, PT, 5min, 15min
+- Tempo Claude: 
 
 ### 📰 Fonti
-1. **ricette.giallozafferano.it** — Dati strutturati (7 ingredienti)
-   https://ricette.giallozafferano.it/Pane-alle-noci.html
-2. **misya.info** — Dati strutturati (8 ingredienti)
-   https://www.misya.info/ricetta/pane-alle-noci.htm
-3. **cookist.it** — Dati strutturati (6 ingredienti)
-   https://www.cookist.it/pane-alle-noci/
-4. **lacucinaitaliana.it** — Estrazione HTML (8 ingredienti)
-   https://www.lacucinaitaliana.it/article/pane-di-noci-storia-folklore-ricetta-tradizionale/
-5. **blog.giallozafferano.it** — Dati strutturati (7 ingredienti)
+1. **salepepe.it** — Dati strutturati (9 ingredienti)
+   https://www.salepepe.it/ricette/lieviti/pane-lieviti/pane-integrale-con-le-noci-video-ricetta/
+2. **blog.giallozafferano.it** — Estrazione HTML (6 ingredienti)
+   https://blog.giallozafferano.it/carmencita81/pane-alle-noci/
+3. **blog.giallozafferano.it** — Dati strutturati (7 ingredienti)
    https://blog.giallozafferano.it/cucinafacileconelena/pane-alle-noci/
-6. **cibocrudo.com** — Dati strutturati (8 ingredienti)
-   https://www.cibocrudo.com/blogs/ricette/pane-alle-noci-fatto-in-casa?srsltid=AfmBOopu5JuyouUJLbccGUAN81lQKDsPHETx_8JSBBB4WCIp61n-zkju
-7. **meranermuehle.it** — Dati strutturati (10 ingredienti)
-   https://www.meranermuehle.it/private/it/pane-alle-noci
-8. **cibocrudo.com** — Dati strutturati (8 ingredienti)
-   https://www.cibocrudo.com/blogs/ricette/pane-alle-noci-fatto-in-casa?srsltid=AfmBOorWvohRoq0GZJQNIw9DuxYq7znd9FoXRMziV_27lg39wdCRxu9m
+4. **tavolartegusto.it** — Dati strutturati (7 ingredienti)
+   https://www.tavolartegusto.it/ricetta/pane-alle-noci/
+5. **biancolievito.it** — Dati strutturati (8 ingredienti)
+   https://biancolievito.it/pane-alle-noci/
+6. **food.evosmart.it** — Dati strutturati (8 ingredienti)
+   https://food.evosmart.it/antipasti/pane-alle-noci-fatto-in-casa-ecco-la-ricetta-perfetta/22395/
+7. **ciaoflorentina.com** — Dati strutturati (4 ingredienti)
+   https://ciaoflorentina.com/rustic-crusty-bread-recipe/
+8. **girlversusdough.com** — Dati strutturati (6 ingredienti)
+   https://www.girlversusdough.com/classic-italian-bread/

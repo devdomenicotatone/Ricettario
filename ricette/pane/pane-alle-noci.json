@@ -1,0 +1,228 @@
+{
+  "title": "Pane alle Noci",
+  "slug": "pane-alle-noci",
+  "emoji": "🥖",
+  "description": "Pane rustico con mix di farine integrali (grano tenero, farro, grano saraceno) e noci tostate. Idratazione 68%, lievitazione 4-5h totali.",
+  "subtitle": "Pane rustico con mix di farine integrali e noci tostate",
+  "category": "Pane",
+  "hydration": 68,
+  "targetTemp": "24-26°C",
+  "fermentation": "4-5h totali",
+  "totalFlour": 500,
+  "ingredients": [
+    {
+      "name": "Farina Integrale di Grano Tenero",
+      "note": "(tipo 2, W 180-220)",
+      "grams": 300
+    },
+    {
+      "name": "Farina di Farro",
+      "note": "(tipo 2, W 160-200)",
+      "grams": 160
+    },
+    {
+      "name": "Farina di Grano Saraceno",
+      "note": "(integrale, W 0)",
+      "grams": 40
+    },
+    {
+      "name": "Acqua",
+      "note": "(temperatura 2-4°C (ghiacciata), aggiungere a filo in 2-3 minuti)",
+      "grams": 340,
+      "setupNote": {
+        "spirale": "(temperatura 2-4°C (ghiacciata), aggiungere a filo in 2-3 minuti)",
+        "mano": "(temperatura 24-26°C (tiepida), aggiungere in 3 riprese da 110g)"
+      }
+    },
+    {
+      "name": "Lievito di Birra Fresco",
+      "note": "(9g per impasto veloce a freddo)",
+      "grams": 9,
+      "setupNote": {
+        "spirale": "(9g per impasto veloce a freddo)",
+        "mano": "(12g per compensare lavorazione più lunga)"
+      }
+    },
+    {
+      "name": "Sale Fino",
+      "note": "(2% su peso farine)",
+      "grams": 10
+    }
+  ],
+  "suspensions": [
+    {
+      "name": "Gherigli di Noci",
+      "note": "(tostati 8 min a 160°C, tritati grossolanamente)",
+      "grams": 100
+    }
+  ],
+  "stepsSpiral": [
+    {
+      "title": "Preparazione Noci",
+      "text": "Tostare i gherigli di noci in forno a 160°C per 8 minuti per intensificare l'aroma. Lasciar raffreddare completamente, quindi tritare grossolanamente con un coltello (pezzatura 5-8mm). NON usare frullatori: si rischia di ridurle in polvere."
+    },
+    {
+      "title": "Autolisi Farine (Fase 1)",
+      "text": "Inserire nella vasca dell'impastatrice a spirale: farina integrale (300g), farina di farro (160g) e farina di grano saraceno (40g). Aggiungere 290g di acqua ghiacciata (2-4°C). Impastare a velocità 1 per 3 minuti fino a completa idratazione. STOP. Coprire la vasca con pellicola e lasciare riposare 20 minuti. Questo permette alle fibre integrali di idratarsi completamente."
+    },
+    {
+      "title": "Incordatura con Lievito (Fase 2)",
+      "text": "Sciogliere il lievito fresco (9g) nei restanti 50g di acqua ghiacciata. Avviare l'impastatrice a velocità 1 e versare l'acqua con lievito a filo in 1 minuto. Impastare per 4 minuti a velocità 1, poi passare a velocità 2 per 6-7 minuti fino a completa incordatura. L'impasto deve staccarsi dalle pareti della vasca e avvolgersi sul gancio. Temperatura finale: 24-25°C."
+    },
+    {
+      "title": "Inserimento Sale e Noci",
+      "text": "Fermare l'impastatrice. Aggiungere il sale (10g) e le noci tostate tritate. Riprendere a velocità 1 per 2 minuti, assicurandosi che le noci si distribuiscano uniformemente senza rompersi troppo. L'impasto deve risultare coeso ma morbido."
+    },
+    {
+      "title": "Puntata (Prima Lievitazione)",
+      "text": "Trasferire l'impasto in una ciotola oleata capiente. Coprire con pellicola e far lievitare in ambiente a 26-28°C per 2 ore e 30 minuti. Dopo 1 ora eseguire una piega: portare i bordi dell'impasto verso il centro (tecnica fold) per rinforzare la maglia glutinica. Proseguire la lievitazione fino al raddoppio del volume."
+    },
+    {
+      "title": "Formatura",
+      "text": "Rovesciare l'impasto su spianatoia leggermente infarinata. Sgonfiare delicatamente premendo con i palmi. Formare un filone: stendere l'impasto in rettangolo (30x20cm), ripiegare i lati lunghi verso il centro, poi arrotolare dal lato corto. Sigillare la chiusura pizzicando la pasta. Posizionare sulla leccarda con carta forno, chiusura sotto."
+    },
+    {
+      "title": "Appretto (Seconda Lievitazione)",
+      "text": "Coprire il filone con un panno umido. Lasciar lievitare a temperatura ambiente (22-24°C) per 60-90 minuti, fino a quando premendo delicatamente con un dito l'impronta torna indietro lentamente. Il volume deve aumentare del 70-80%."
+    },
+    {
+      "title": "Scarificazione e Infornata",
+      "text": "Preriscaldare il forno a 240°C (statico) con pietra refrattaria o teglia pesante. Con una lama da scarifica eseguire 3-4 tagli diagonali profondi 1cm sulla superficie del pane (angolo 30°). Spennellare con acqua. Creare vapore: gettare 50ml di acqua nella leccarda sottostante appena infornato. Chiudere subito il forno."
+    }
+  ],
+  "stepsHand": [
+    {
+      "title": "Preparazione Noci",
+      "text": "Tostare i gherigli di noci in forno a 160°C per 8 minuti. Lasciar raffreddare completamente, quindi tritare grossolanamente con un coltello (pezzatura 5-8mm). Tenere da parte."
+    },
+    {
+      "title": "Autolisi (Fase 1)",
+      "text": "In una ciotola capiente mescolare: farina integrale (300g), farina di farro (160g), farina di grano saraceno (40g). Aggiungere 290g di acqua tiepida (24-26°C). Mescolare con un cucchiaio di legno fino a che tutta la farina è idratata. L'impasto sarà grumoso e rustico. Coprire con pellicola e lasciare riposare 30 minuti. Le fibre integrali assorbiranno l'acqua rendendo l'impasto più gestibile."
+    },
+    {
+      "title": "Impasto con Lievito",
+      "text": "Sciogliere il lievito fresco (12g) nei restanti 50g di acqua tiepida con un pizzico di zucchero. Versare sull'impasto autolisato. Iniziare a impastare nella ciotola portando i bordi verso il centro, girando la ciotola. Dopo 5 minuti rovesciare su spianatoia NON infarinata. Impastare con tecnica slap & fold: sollevare l'impasto, sbatterlo sul piano e ripiegarlo su se stesso. Ripetere per 10-12 minuti. L'impasto diventerà liscio ed elastico."
+    },
+    {
+      "title": "Inserimento Sale e Noci",
+      "text": "Stendere l'impasto a rettangolo. Distribuire il sale (10g) sulla superficie, poi le noci tostate. Ripiegare l'impasto più volte per incorporare gli ingredienti. Eseguire 2-3 serie di stretch & fold: allungare un lembo e ripiegarlo al centro, ruotare di 90° e ripetere. Le noci devono distribuirsi uniformemente."
+    },
+    {
+      "title": "Puntata (Prima Lievitazione)",
+      "text": "Formare una palla liscia pizzicando la chiusura sotto. Porre in ciotola oleata. Coprire con pellicola. Lievitare a 26-28°C per 3 ore. Dopo 1 ora e dopo 2 ore eseguire una piega: portare i 4 lati verso il centro. Questo rinforza la struttura. Al termine la pasta deve raddoppiare e al tatto risultare soffice e ariosa."
+    },
+    {
+      "title": "Formatura",
+      "text": "Rovesciare l'impasto su piano leggermente infarinato. Sgonfiare delicatamente. Formare un filone: appiattire in rettangolo 30x20cm, ripiegare i lati lunghi di 1/3 verso il centro, poi arrotolare dal lato corto come un rotolo. Sigillare bene la chiusura con i pollici. Posizionare su leccarda con carta forno, chiusura sotto."
+    },
+    {
+      "title": "Appretto (Seconda Lievitazione)",
+      "text": "Coprire con panno umido. Lasciar lievitare a temperatura ambiente per 90 minuti, finché il volume aumenta del 70-80%. Test del dito: premere delicatamente, l'impronta deve tornare indietro lentamente (in 3-4 secondi)."
+    },
+    {
+      "title": "Scarificazione e Infornata",
+      "text": "Preriscaldare forno a 240°C con pietra refrattaria. Con lama affilata praticare 3-4 tagli diagonali profondi 1cm (angolo 30°). Spennellare con acqua. Generare vapore: gettare 50ml acqua in teglia sul fondo forno appena infornato. Chiudere subito."
+    }
+  ],
+  "stepsExtruder": [],
+  "stepsCondiment": [],
+  "flourTable": [
+    {
+      "type": "Farina Integrale di Grano Tenero",
+      "w": "180-220",
+      "brands": "Molino Dallagiovanna Integrale, Molino Grassi Tipo 2, Mulino Marino Integrale"
+    },
+    {
+      "type": "Farina di Farro",
+      "w": "160-200",
+      "brands": "Molino Naldoni Farro Integrale, Molino Quaglia Farro Tipo 2, La Valletta Farro Bio"
+    },
+    {
+      "type": "Farina di Grano Saraceno",
+      "w": "0 (senza glutine)",
+      "brands": "Molino Merano Grano Saraceno Integrale, Molino Quaglia Saraceno, Molino Spadoni Saraceno"
+    }
+  ],
+  "baking": {
+    "temperature": "240°C iniziale → 220°C dopo 15 min",
+    "time": "35-40 minuti totali",
+    "tips": [
+      "Preriscaldare forno + pietra refrattaria per 45 minuti a 240°C",
+      "Generare vapore nei primi 10 minuti: gettare 50ml acqua in leccarda sul fondo forno",
+      "Dopo 15 minuti abbassare a 220°C per evitare bruciature superficiali dovute alle farine integrali",
+      "Il pane è cotto quando bussando sul fondo suona vuoto (suono tambureggiante)",
+      "Temperatura interna al cuore: 96-98°C misurata con termometro a sonda",
+      "Far raffreddare completamente su griglia (min 2 ore) prima di affettare"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Autolisi",
+      "definition": "Riposo di farine e acqua (senza lievito e sale) per 20-30 minuti. Permette l'idratazione completa delle fibre integrali e sviluppa glutine in modo naturale, riducendo i tempi di impasto."
+    },
+    {
+      "term": "Incordatura",
+      "definition": "Fase in cui l'impasto sviluppa la maglia glutinica e si avvolge attorno al gancio dell'impastatrice, staccandosi dalle pareti della vasca. Indica il corretto sviluppo del glutine."
+    },
+    {
+      "term": "Puntata",
+      "definition": "Prima lievitazione in massa dell'impasto, prima della formatura. Serve a far sviluppare aromi e rinforzare la struttura attraverso le pieghe intermedie."
+    },
+    {
+      "term": "Piega (Fold)",
+      "definition": "Tecnica per rinforzare la maglia glutinica durante la puntata: si portano i bordi dell'impasto verso il centro, senza sgonfiarlo completamente. Migliora struttura e alveolatura."
+    },
+    {
+      "term": "Appretto",
+      "definition": "Seconda lievitazione (o lievitazione finale) dopo la formatura. L'impasto assume la forma definitiva e sviluppa il volume finale prima della cottura."
+    },
+    {
+      "term": "Scarificazione",
+      "definition": "Taglio della superficie del pane con lama affilata prima della cottura. Controlla l'espansione in forno e crea la caratteristica crosta decorativa."
+    },
+    {
+      "term": "Slap & Fold",
+      "definition": "Tecnica di impasto manuale per impasti morbidi: si solleva l'impasto, lo si sbatte sul piano e si ripiega. Sviluppa glutine senza aggiungere farina."
+    },
+    {
+      "term": "Stretch & Fold",
+      "definition": "Tecnica delicata: si allunga un lembo di impasto e lo si ripiega al centro, ruotando di 90° e ripetendo. Rinforza la struttura senza sgonfiare l'impasto."
+    },
+    {
+      "term": "Formatura",
+      "definition": "Processo di dare forma definitiva all'impasto dopo la puntata. La tensione superficiale creata influenza la forma finale e l'alveolatura."
+    },
+    {
+      "term": "Test del Dito",
+      "definition": "Verifica della lievitazione: si preme delicatamente l'impasto con un dito. Se l'impronta torna indietro lentamente (3-4 sec), l'impasto è pronto per la cottura."
+    },
+    {
+      "term": "Vapore Iniziale",
+      "definition": "Umidità creata nei primi 10-15 minuti di cottura. Ritarda la formazione della crosta permettendo al pane di espandersi completamente e crea una crosta croccante e lucida."
+    }
+  ],
+  "alert": "❌ NON aggiungere troppa farina durante l'impasto manuale: l'impasto con farine integrali è naturalmente più appiccicoso e rustico. Aggiungere farina comprometterebbe l'idratazione e la mollica risulterebbe asciutta. Lavorare con mani leggermente umide o oleate. NON sovralievitare: il grano saraceno (senza glutine) indebolisce la struttura. Se l'impasto raddoppia troppo rischia di collassare in cottura.",
+  "proTips": [
+    "🔥 TOSTATURA NOCI: Essenziale per intensificare l'aroma e ridurre l'umidità residua. Noci crude rilascerebbero acqua in cottura ammorbidendo la mollica.",
+    "💧 IDRATAZIONE ADATTATA: Il 68% è ottimale per il mix integrale. Farine 100% raffinate richiederebbero 72-75%, ma le fibre integrali assorbono più acqua.",
+    "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
+  ],
+  "imageKeywords": [
+    "pane integrale",
+    "noci tostate",
+    "farina farro",
+    "grano saraceno",
+    "pane rustico",
+    "filone croccante"
+  ],
+  "tags": [
+    "pane integrale",
+    "farine alternative",
+    "noci",
+    "farro",
+    "grano saraceno",
+    "lievitazione lunga",
+    "rustico"
+  ],
+  "image": "images/ricette/pane/pane-alle-noci.jpg"
+}

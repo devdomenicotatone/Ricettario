@@ -2,7 +2,7 @@
   "title": "Focaccia Genovese Classica",
   "slug": "focaccia-genovese-classica",
   "emoji": "🫒",
-  "description": "La vera focaccia ligure: soffice dentro, croccante fuori, con fossette ricche di salamoia. Ricetta tradizionale con biga e doppia lievitazione.",
+  "description": "Focaccia tradizionale ligure con biga, salamoia e doppia lievitazione. Idratazione 75%, lievitazione controllata 5-6h totali per massima digeribilità.",
   "subtitle": "Focaccia tradizionale ligure con biga, salamoia e doppia lievitazione",
   "category": "Focaccia",
   "hydration": 75,
@@ -12,11 +12,11 @@
   "ingredients": [
     {
       "name": "Farina Manitoba Forte",
-      "note": "(W 350-380, 13% proteine)",
+      "note": "(W 350-380)",
       "grams": 700,
       "setupNote": {
-        "spirale": "fredda da frigo 4-6°C",
-        "mano": "temperatura ambiente 20-22°C"
+        "spirale": "(fredda da frigo 4-6°C)",
+        "mano": "(temperatura ambiente 20-22°C)"
       }
     },
     {
@@ -29,8 +29,8 @@
       "note": "(per impasto)",
       "grams": 600,
       "setupNote": {
-        "spirale": "fredda 8-10°C",
-        "mano": "tiepida 28-30°C, in 2 riprese"
+        "spirale": "(fredda 8-10°C)",
+        "mano": "(tiepida 28-30°C, in 2 riprese)"
       }
     },
     {
@@ -43,8 +43,8 @@
       "note": "(per biga)",
       "grams": 3,
       "setupNote": {
-        "spirale": "3g totali",
-        "mano": "5g se lievitazione più breve"
+        "spirale": "(3g totali)",
+        "mano": "(5g se lievitazione più breve)"
       }
     },
     {
@@ -157,6 +157,8 @@
       "text": "Versare la restante salamoia distribuendola nelle fossette e su tutta la superficie. Cospargere uniformemente con 8g sale grosso marino. Lasciar riposare 5 minuti scoperto: l'olio deve depositarsi nelle fossette creando il caratteristico aspetto lucido. La focaccia è pronta per la cottura."
     }
   ],
+  "stepsExtruder": [],
+  "stepsCondiment": [],
   "flourTable": [
     {
       "type": "Manitoba Forte (70%)",
@@ -230,32 +232,29 @@
       "definition": "Eliminare l'aria dall'impasto lievitato con pressione delicata delle mani. Per la focaccia va fatto con moderazione per non perdere l'alveolatura."
     }
   ],
-  "alert": "⚠️ NON stendere la focaccia troppo sottile in teglia: lo spessore ideale è 1,5-2cm. Focacce troppo sottili si seccano e diventano dure come crackers. NON saltare la salamoia: è l'elemento distintivo della focaccia genovese e crea la croccantezza caratteristica. NON premere le fossette troppo delicatamente: devono arrivare quasi al fondo della teglia per trattenere l'olio. NON usare temperature superiori a 220-230°C: la focaccia brucerebbe in superficie rimanendo cruda dentro. NON usare solo farina debole: serve la manitoba per sostenere l'alta idratazione e la doppia lievitazione.",
+  "alert": "⚠️ NON stendere la focaccia troppo sottile in teglia: lo spessore ideale è 1,5-2cm. Focacce troppo sottili si seccano e diventano dure come crackers. NON saltare la salamoia: è l'elemento distintivo della focaccia genovese e crea la croccantezza caratteristica. NON premere le fossette troppo delicatamente: devono arrivare quasi al fondo della teglia per trattenere l'olio. NON usare temperature superiori a 220-230°C: la focaccia brucerebbe in superficie rimanendo cruda inside. NON usare solo farina debole: serve la manitoba per sostenere l'alta idratazione e la doppia lievitazione.",
   "proTips": [
-    "🔥 SALAMOIA PERFETTA: Per un'emulsione stabile che non si separi, agitare acqua+olio+sale in un barattolo chiuso per almeno 1 minuto. L'emulsione deve diventare lattiginosa e densa. Se si separa, la focaccia assorbirà solo acqua e non olio, risultando secca.",
     "🫒 OLIO LIGURE DOP: Usa olio extravergine ligure DOP Riviera Ligure o Taggiasco per il sapore autentico. L'olio va usato a crudo sulla focaccia sfornata: il calore esalta i profumi fruttati delicati tipici dell'olio ligure.",
-    "🌡️ TEMPERATURA CONTROLLATA: La temperatura della puntata (26°C) è critica. Troppo caldo (>28°C) accelera eccessivamente la lievitazione producendo acidità. Troppo freddo (<24°C) rallenta troppo e la focaccia non sviluppa volume. Usa il forno spento con solo luce accesa: crea l'ambiente perfetto.",
-    "🕳️ FOSSETTE PROFONDE: Le fossette NON sono decorative ma funzionali. Devono essere profonde per: 1) trattenere olio e salamoia 2) creare contrasto texture (punte croccanti, avvallamenti morbidi) 3) impedire rigonfiamento eccessivo. Premere con decisione fino a sentire il fondo della teglia."
+    "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
   ],
   "imageKeywords": [
-    "focaccia genovese classica",
-    "ligurian focaccia with dimples",
-    "focaccia di recco olive oil",
-    "italian flatbread golden crust",
-    "traditional genoese focaccia"
+    "focaccia genovese",
+    "focaccia ligure",
+    "salamoia",
+    "fossette",
+    "olio extravergine",
+    "focaccia tradizionale",
+    "biga"
   ],
   "tags": [
     "focaccia",
     "liguria",
-    "genova",
-    "olio-evo",
-    "salamoia",
-    "lievitazione-lunga",
+    "genovese",
     "biga",
-    "teglia",
-    "alta-idratazione"
+    "salamoia",
+    "doppia lievitazione",
+    "olio evo",
+    "fossette"
   ],
-  "image": "images/ricette/focaccia/focaccia-genovese-classica.jpg",
-  "imageAttribution": "📷 Foto: Anna Shvets — Pexels License via Pexels",
-  "_originalImageUrl": "https://images.pexels.com/photos/5953546/pexels-photo-5953546.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  "image": "images/ricette/focaccia/focaccia-genovese-classica.jpg"
 }

@@ -1,54 +1,44 @@
 # Validazione: Pasta Brioche Classica
 
-## 🟢 Confidenza: 100%
+## 🟢 Confidenza: 80%
 
-**Fonti consultate:** 10
-
-### ✅ Confermato
-- Ingredienti: 13/13 confermati (100%)
+**Fonti consultate:** 6
 
 ### ⚠️ Attenzione
+- Ingredienti: solo 8/13 confermati (62%)
 - ⚠️ Idratazione significativamente diversa: 52% vs media fonti 275%
 
 ### 📋 Ingredienti
 | Status | Ingrediente | Note |
 |--------|-------------|------|
-| ✅ | farina tipo 0 media-alta forza | Confermato da fonti |
-| ✅ | farina manitoba | Confermato da fonti |
-| ✅ | latte intero fresco | Confermato da fonti |
-| ✅ | uova intere | Confermato da fonti |
-| ✅ | tuorli | Confermato da fonti |
-| ✅ | burro | Confermato da fonti |
-| ✅ | zucchero semolato | Confermato da fonti |
-| ✅ | lievito di birra fresco | Confermato da fonti |
-| ✅ | miele di acacia | Confermato da fonti |
-| ✅ | sale fino | Confermato da fonti |
-| ✅ | scorza di limone | Confermato da fonti |
-| ✅ | scorza di arancia | Confermato da fonti |
-| ✅ | rum o estratto di vaniglia | Confermato da fonti |
+| ✅ | 300g farina tipo 0 media-alta forza | Confermato da fonti |
+| ✅ | 200g farina manitoba | Confermato da fonti |
+| ✅ | 100g latte intero fresco | Confermato da fonti |
+| ✅ | 120g uova intere | Confermato da fonti |
+| ⚠️ | 20g tuorli | Non trovato nelle fonti |
+| ✅ | 100g burro | Confermato da fonti |
+| ✅ | 80g zucchero semolato | Confermato da fonti |
+| ✅ | 15g lievito di birra fresco ) | Confermato da fonti |
+| ⚠️ | 20g miele di acacia | Non trovato nelle fonti |
+| ✅ | 8g sale fino | Confermato da fonti |
+| ⚠️ | 5g scorza di limone | Non trovato nelle fonti |
+| ⚠️ | 8g scorza di arancia | Non trovato nelle fonti |
+| ⚠️ | 15g rum o estratto di vaniglia | Non trovato nelle fonti |
 
 ### 📊 Dettagli
-- Tempi fonti: 40min, 15h, 1h + 2h lievitazione + 5h riposo + 18-20min cottura, 30min, 240h, 85min, 3-4 ore lievitazione + 18 min cottura
-- Tempo Claude: 3-4h + 2h appretto
+- Tempi fonti: 1h 45min, 1h, 30min, 75min
+- Tempo Claude: 
 
 ### 📰 Fonti
-1. **ricette.giallozafferano.it** — Dati strutturati (11 ingredienti)
-   https://ricette.giallozafferano.it/Brioches.html
-2. **tavolartegusto.it** — Dati strutturati (16 ingredienti)
-   https://www.tavolartegusto.it/ricetta/pasta-brioche-ricetta-brioches-dolci-trecce-brioches/
+1. **blog.giallozafferano.it** — Estrazione HTML (7 ingredienti)
+   https://blog.giallozafferano.it/dolciecoccoledimiki/2016/05/pan-brioche-classico/
+2. **blog.giallozafferano.it** — Estrazione HTML (10 ingredienti)
+   https://blog.giallozafferano.it/irene57/pasta-brioche-metodo-tang-zhong-ricetta-base/
 3. **cucchiaio.it** — Estrazione HTML (10 ingredienti)
    https://www.cucchiaio.it/ricetta/brioche/
-4. **blog.giallozafferano.it** — Dati strutturati (12 ingredienti)
-   https://blog.giallozafferano.it/annatorte/brioche-ricetta-originale-francese/
-5. **salepepe.it** — Dati strutturati (10 ingredienti)
-   https://www.salepepe.it/ricette/pan-brioche-classico/
-6. **blog.giallozafferano.it** — Estrazione HTML (10 ingredienti)
-   https://blog.giallozafferano.it/irene57/pasta-brioche-metodo-tang-zhong-ricetta-base/
-7. **ricetta.it** — Dati strutturati (10 ingredienti)
-   https://ricetta.it/brioche-fatte-in-casa
-8. **theblackfig.com** — Dati strutturati (10 ingredienti)
-   https://theblackfig.com/2015/03/il-pan-brioche-con-ricetta-originale-e-la-sua-storia.html
-9. **csabadallazorza.com** — Estrazione HTML (10 ingredienti)
-   https://www.csabadallazorza.com/ricette/la-brioche-per-colazione/
-10. **corman.pro** — Estrazione HTML (7 ingredienti)
-   https://www.corman.pro/it/it/chefs/servizi/tutorials/consigli-per-una-pasta-brioche-perfetta/
+4. **cucinabyelena.com** — Dati strutturati (13 ingredienti)
+   https://www.cucinabyelena.com/brioche-bun-recipe-italian-style/
+5. **lacucinaitaliana.com** — Estrazione HTML (9 ingredienti)
+   https://www.lacucinaitaliana.com/italian-food/how-to-cook/homemade-pastry-brioches-with-roberto-miranti
+6. **gourmetproject.net** — Dati strutturati (8 ingredienti)
+   https://www.gourmetproject.net/sicilian-brioche-recipe/

@@ -1,38 +1,45 @@
 # Validazione: Pinsa Romana
 
-## 🟢 Confidenza: 100%
+## 🟢 Confidenza: 90%
 
-**Fonti consultate:** 6
+**Fonti consultate:** 8
 
 ### ✅ Confermato
-- Ingredienti: 7/7 confermati (100%)
-- Idratazione: 78% (media fonti: 82%) — ✅ OK
+- Ingredienti: 8/8 confermati (100%)
+
+### ⚠️ Attenzione
+- ⚠️ Idratazione significativamente diversa: 75% vs media fonti 182%
 
 ### 📋 Ingredienti
 | Status | Ingrediente | Note |
 |--------|-------------|------|
-| ✅ | farina di frumento tipo 0 o manitoba | Confermato da fonti |
+| ✅ | farina di frumento tipo 0 | Confermato da fonti |
 | ✅ | farina di riso | Confermato da fonti |
 | ✅ | farina di soia | Confermato da fonti |
 | ✅ | acqua | Confermato da fonti |
 | ✅ | lievito di birra fresco | Confermato da fonti |
 | ✅ | sale fino | Confermato da fonti |
 | ✅ | olio extravergine d'oliva | Confermato da fonti |
+| ✅ | semola di grano duro rimacinata | Confermato da fonti |
 
 ### 📊 Dettagli
-- Tempi fonti: 30min, P0DT0H20M, 60min, 24-150 ore (maturazione), 40min
-- Tempo Claude: 24-72h
+- Tempi fonti: 30min, 30min, 999min, 30min, 1620min, 48-72 hours fermentation, 30min
+- Tempo Claude: 24-48h
 
 ### 📰 Fonti
 1. **ricette.giallozafferano.it** — Dati strutturati (6 ingredienti)
    https://ricette.giallozafferano.it/Pinsa-romana.html
-2. **blog.giallozafferano.it** — Dati strutturati (8 ingredienti)
-   https://blog.giallozafferano.it/valeriaciccotti/impasto-per-pinsa-romana/
-3. **soniaperonaci.it** — Dati strutturati (7 ingredienti)
-   https://www.soniaperonaci.it/pinsa-romana/
-4. **molinopordenone.it** — Estrazione HTML (6 ingredienti)
-   https://www.molinopordenone.it/it/ricette/pinsa-romana-ricetta.html
-5. **pinsadimarco.com** — Estrazione HTML (5 ingredienti)
-   https://www.pinsadimarco.com/ingredienti-pinsa-romana/
-6. **gustour.it** — Dati strutturati (5 ingredienti)
-   https://www.gustour.it/ricette/pinsa-romana
+2. **cookidoo.it** — Dati strutturati (9 ingredienti)
+   https://cookidoo.it/recipes/recipe/it-it/r493891
+3. **veglifechannel.com** — Estrazione HTML (6 ingredienti)
+   https://www.veglifechannel.com/pinsa-romana-ricetta-originale/
+4. **newscucina.it** — Estrazione HTML (8 ingredienti)
+   https://newscucina.it/2021/12/23/pinsa-romana-ingredienti-ricetta-e-preparazione/
+5. **cucinabyelena.com** — Dati strutturati (9 ingredienti)
+   https://www.cucinabyelena.com/pinsa-romana-recipe-roman-style-pizza-dough/
+6. **cookeatworld.com** — Dati strutturati (27 ingredienti)
+   https://www.cookeatworld.com/pinsa-romana/
+7. **pedonepinsa.com** — Estrazione HTML (7 ingredienti)
+   https://pedonepinsa.com/a-beginners-guide-to-hand-pressed-pinsa-dough/
+8. **giallozafferano.com** — Dati strutturati (6 ingredienti)
+   https://www.giallozafferano.com/recipes/Roman-Pinsa.html

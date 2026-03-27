@@ -11,15 +11,15 @@
 ### 📋 Ingredienti
 | Status | Ingrediente | Note |
 |--------|-------------|------|
-| ✅ | semola rimacinata di grano duro | Confermato da fonti |
-| ✅ | acqua | Confermato da fonti |
-| ✅ | lievito di birra fresco | Confermato da fonti |
-| ✅ | sale fino | Confermato da fonti |
-| ✅ | miele di acacia | Confermato da fonti |
+| ✅ | 1000g semola rimacinata di grano duro | Confermato da fonti |
+| ✅ | 680g acqua | Confermato da fonti |
+| ✅ | 7g lievito di birra fresco | Confermato da fonti |
+| ✅ | 18g sale fino | Confermato da fonti |
+| ✅ | 10g miele di acacia | Confermato da fonti |
 
 ### 📊 Dettagli
 - Tempi fonti: P0DT0H30M, 5min, 15min, 15min, 20min, 2h 25min
-- Tempo Claude: ~24h
+- Tempo Claude: 
 
 ### 📰 Fonti
 1. **blog.giallozafferano.it** — Dati strutturati (5 ingredienti)
@@ -35,4 +35,4 @@
 6. **cosiitaliano.com** — Dati strutturati (6 ingredienti)
    https://www.cosiitaliano.com/835/pane-casereccio-homemade-italian-bread/
 7. **giadzy.com** — Dati strutturati (6 ingredienti)
-   https://giadzy.com/blogs/recipes/giada-s-classic-italian-bread?srsltid=AfmBOoqCWqLkGMUetDxgbkKCQKdZLmdqpiDjAu2ERjETiSy0PEQO1jk9
+   https://giadzy.com/blogs/recipes/giada-s-classic-italian-bread?srsltid=AfmBOop4VLsg5JE-E16mrsNuSMXksEVhrQmF3egvcIW5xr-3MF-yAgB1

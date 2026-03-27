@@ -1,0 +1,298 @@
+{
+  "title": "Cornetti Sfogliati Classici",
+  "slug": "cornetti-sfogliati-classici",
+  "emoji": "🥐",
+  "description": "Cornetti sfogliati con tecnica classica: laminazione con panetto burro, pieghe a portafoglio e lievitazione controllata per strati croccanti e alveolatura perfetta.",
+  "subtitle": "Tecnica di sfogliatura classica con panetto burro e pieghe a portafoglio",
+  "category": "Lievitati",
+  "hydration": 52,
+  "targetTemp": "24-26°C",
+  "fermentation": "18-24h totali (puntata + maturazione in frigo + appretto)",
+  "totalFlour": 500,
+  "ingredients": [
+    {
+      "name": "Farina Manitoba Forte",
+      "note": "(W 340-380, 13-14% proteine)",
+      "grams": 300
+    },
+    {
+      "name": "Farina Tipo 00 Media Forza",
+      "note": "(W 260-280)",
+      "grams": 200
+    },
+    {
+      "name": "Lievito di Birra Fresco",
+      "note": "(temperatura 4-6°C)",
+      "grams": 18
+    },
+    {
+      "name": "Latte Intero Fresco",
+      "note": "(20-22°C)",
+      "grams": 200,
+      "setupNote": {
+        "spirale": "(20-22°C)",
+        "mano": "(leggermente tiepido 28-30°C)"
+      }
+    },
+    {
+      "name": "Uova Intere Medie",
+      "note": "(temperatura ambiente, ~110g totali)",
+      "grams": 110
+    },
+    {
+      "name": "Zucchero Semolato",
+      "note": "(aggiungere dopo iniziale amalgama)",
+      "grams": 80
+    },
+    {
+      "name": "Burro Bavarese per Impasto",
+      "note": "(temperatura ambiente morbido a pomata, 82% grassi)",
+      "grams": 80
+    },
+    {
+      "name": "Sale Fino",
+      "note": "(aggiungere a metà impastamento)",
+      "grams": 10
+    },
+    {
+      "name": "Miele Millefiori o Acacia",
+      "note": "(per morbidezza e conservabilità)",
+      "grams": 20
+    },
+    {
+      "name": "Estratto Naturale di Vaniglia",
+      "note": "(o semi di 1/2 bacca)",
+      "grams": 5
+    },
+    {
+      "name": "Scorza Grattugiata di Arancia",
+      "note": "(biologica, solo parte arancione)",
+      "grams": 10
+    },
+    {
+      "name": "Scorza Grattugiata di Limone",
+      "note": "(biologica, solo parte gialla)",
+      "grams": 5
+    },
+    {
+      "name": "Burro Bavarese per Sfogliatura",
+      "note": "(freddo di frigo 4-6°C, da lavorare in panetto 20x20 cm)",
+      "grams": 250
+    }
+  ],
+  "suspensions": [],
+  "stepsSpiral": [
+    {
+      "title": "Pre-impasto Base (V1, 3 min)",
+      "text": "Inserire nella vasca della spirale: farina manitoba (300g), farina 00 (200g), lievito fresco sbriciolato (18g) e latte a 20-22°C (150g dei 200g totali). Impastare in prima velocità per 3 minuti fino a idratazione completa. Aggiungere scorze di agrumi e vaniglia."
+    },
+    {
+      "title": "Arricchimento (V1, 4 min + V2, 3 min)",
+      "text": "Aggiungere uova (110g) in 2 riprese, aspettando assorbimento completo. Unire zucchero (80g) e miele (20g). Impastare in V1 per 2 minuti. Aumentare a V2, aggiungere il latte restante (50g) e sale (10g). Impastare 3 minuti: l'impasto deve iniziare a incordarsi."
+    },
+    {
+      "title": "Mantecazione Burro (V1, 5-6 min)",
+      "text": "Abbassare a V1. Aggiungere il burro a pomata (80g) in 3-4 riprese, attendendo incorporamento completo tra una aggiunta e l'altra. Impastare fino a completa mantecazione: l'impasto deve essere liscio, lucido, elastico e staccarsi perfettamente dalle pareti. Temperatura finale: 24-26°C. Totale impastamento: ~15 minuti."
+    },
+    {
+      "title": "Puntata Iniziale (30 min, 26-28°C)",
+      "text": "Trasferire l'impasto su piano infarinato, pirlare delicatamente formando una sfera regolare. Riporre in ciotola coperta con pellicola a contatto. Lasciar riposare in ambiente caldo (26-28°C, forno spento con luce accesa) per 30 minuti. L'impasto deve aumentare di circa il 20-30% in volume."
+    },
+    {
+      "title": "Preparazione Panetto Burro Sfogliatura",
+      "text": "Prelevare dal frigo il burro freddo (250g). Posizionarlo tra 2 fogli di carta forno, battere col mattarello per ammorbidirlo leggermente, quindi stendere formando un quadrato di 20x20 cm e spessore uniforme di circa 1 cm. Riporre in frigo per mantenere plasticità (non deve essere durissimo né molle)."
+    },
+    {
+      "title": "Stesura Pastello e Incorporazione Burro",
+      "text": "Rovesciare l'impasto su piano leggermente infarinato. Stendere col mattarello formando un rettangolo di 40x20 cm (larghezza doppia rispetto al panetto burro). Posizionare il panetto burro al centro. Ripiegare i due lembi di impasto verso il centro, sovrapponendoli e sigillando bene i bordi con le dita. Girare di 90° in modo che la giuntura sia verticale. Questo è il 'pastello' pronto per la sfogliatura."
+    },
+    {
+      "title": "Prima Piega Semplice",
+      "text": "Stendere delicatamente il pastello con il mattarello, nel senso della lunghezza, formando un rettangolo di circa 50x20 cm. Eseguire una piega semplice: ripiegare la parte superiore verso il centro, poi quella inferiore sopra (come una lettera commerciale). Avvolgere in pellicola, riporre in frigo per 30 minuti."
+    },
+    {
+      "title": "Seconda Piega Semplice",
+      "text": "Riprendere il pastello dal frigo. Posizionarlo con la giuntura a sinistra. Stendere nuovamente a 50x20 cm. Eseguire una seconda piega semplice. Avvolgere in pellicola e riporre in frigo per altri 30 minuti. Questa fase crea gli strati caratteristici della sfogliatura."
+    },
+    {
+      "title": "Terza Piega (Opzionale per Extra Strati)",
+      "text": "Per cornetti ancora più sfogliati: ripetere l'operazione una terza volta. Altrimenti, dopo la seconda piega, lasciare riposare l'impasto in frigo per minimo 2 ore (o fino a 12 ore per maturazione ottimale). Il freddo stabilizza il burro e rilassa il glutine."
+    },
+    {
+      "title": "Stesura Finale e Taglio Triangoli",
+      "text": "Riprendere il pastello dal frigo. Stendere su piano infarinato formando un rettangolo di 50x30 cm, spessore 3-4 mm. Con rotella tagliapasta o coltello affilato, dividere in rettangoli di base 10 cm. Tagliare ogni rettangolo in triangoli isosceli (base 10 cm, altezza 15 cm). Praticare un taglietto di 1 cm al centro della base."
+    },
+    {
+      "title": "Formatura Cornetti",
+      "text": "Allungare delicatamente ogni triangolo tirandolo per la punta (deve raggiungere 20-22 cm). Posizionare con base verso di sé. Arrotolare partendo dalla base, esercitando leggera tensione. Arrivati alla punta, sigillare bene sotto. Piegare le estremità verso l'interno formando la caratteristica mezzaluna. Disporre su teglie foderata con carta forno, distanziati 6-7 cm (raddoppieranno di volume)."
+    },
+    {
+      "title": "Appretto Finale (2-3h, 26-28°C)",
+      "text": "Coprire le teglie con pellicola leggermente unta o panno umido. Lasciar lievitare in ambiente caldo e umido (26-28°C, umidità 75-80%) per 2-3 ore. I cornetti sono pronti quando raddoppiati di volume, soffici al tatto, con superficie asciutta ma non screpolata. Test: premere delicatamente con un dito, l'impronta deve tornare lentamente."
+    },
+    {
+      "title": "Spennellatura e Cottura",
+      "text": "Preriscaldare il forno a 200°C statico (180°C ventilato). Preparare la doratura: sbattere 1 tuorlo con 30g di panna fresca. Spennellare delicatamente i cornetti con pennello morbido, senza sgonfiarli. Infornare per 18-22 minuti, fino a doratura profonda uniforme. Nei primi 5 minuti NON aprire il forno. I cornetti devono risultare dorati, croccanti fuori, morbidi e alveolati dentro."
+    }
+  ],
+  "stepsHand": [
+    {
+      "title": "Pre-impasto Base (10-12 min)",
+      "text": "In una ciotola capiente, sciogliere il lievito fresco (18g) in metà del latte tiepido (100g a 28-30°C). Aggiungere le farine (300g manitoba + 200g 00) e mescolare con cucchiaio di legno. Unire il latte restante (100g), scorze di agrumi e vaniglia. Rovesciare su piano e iniziare a impastare energicamente, ripiegando e schiacciando con il palmo. L'impasto sarà inizialmente appiccicoso."
+    },
+    {
+      "title": "Arricchimento e Sviluppo Glutine (15 min)",
+      "text": "Quando l'impasto inizia a prendere corpo, aggiungere uova (110g) in 2 riprese, lavorando bene tra una aggiunta e l'altra. Unire zucchero (80g) e miele (20g). Impastare con tecnica 'slap & fold': sollevare l'impasto, sbatterlo sul piano, ripiegarlo su se stesso. Ripetere per 8-10 minuti. Aggiungere sale (10g), continuare altri 5 minuti."
+    },
+    {
+      "title": "Incorporazione Burro (10-12 min)",
+      "text": "Appiattire l'impasto, distribuire sopra il burro morbido (80g) in pezzetti. Ripiegare su se stesso, impastare con movimento di schiacciamento e ripiegamento. Il burro deve amalgamarsi completamente. L'impasto finale deve essere liscio, elastico, lucido e non appiccicoso. Formare una palla liscia con tecnica di pirlatura. Temperatura finale: 24-26°C."
+    },
+    {
+      "title": "Puntata Iniziale (30-40 min, 26-28°C)",
+      "text": "Riporre la palla in ciotola unta, coprire con pellicola. Lasciar riposare in luogo caldo (26-28°C) per 30-40 minuti. L'impasto deve rilassarsi e iniziare a lievitare leggermente (aumento 20-30% volume). Questo riposo è essenziale per facilitare la stesura successiva."
+    },
+    {
+      "title": "Preparazione Panetto Burro Sfogliatura",
+      "text": "Mentre l'impasto riposa, preparare il burro per sfogliare (250g). Prelevarlo dal frigo, posizionarlo tra 2 fogli di carta forno. Battere con mattarello per ammorbidirlo senza scaldarlo troppo. Stendere formando un quadrato perfetto di 20x20 cm, spessore uniforme ~1 cm. Riporre in frigo fino all'uso. Il burro deve essere plastico: né troppo duro (si romperebbe) né troppo molle (fuoriuscirebbe)."
+    },
+    {
+      "title": "Stesura Pastello e Chiusura Burro",
+      "text": "Rovesciare l'impasto su piano leggermente infarinato. Stendere col mattarello in direzioni alternate, formando un rettangolo di 40x20 cm. Posizionare il quadrato di burro al centro. Ripiegare i due lembi laterali verso il centro, sovrapponendoli. Sigillare i bordi superiore e inferiore schiacciando con le dita. Girare di 90° (giuntura verticale). Spolverare leggermente di farina sotto e sopra."
+    },
+    {
+      "title": "Prima Piega Semplice",
+      "text": "Con il mattarello, stendere delicatamente il pastello partendo dal centro verso l'esterno, mai avanti-indietro (il burro uscirebbe). Formare un rettangolo di 50x20 cm. Eseguire piega semplice: ripiegare 1/3 superiore verso il centro, poi 1/3 inferiore sopra. Avvolgere in pellicola, riporre in frigo per 30-40 minuti. Il freddo solidifica il burro e rilassa il glutine."
+    },
+    {
+      "title": "Seconda Piega Semplice",
+      "text": "Riprendere dal frigo, posizionare con giuntura a sinistra. Spolverare leggermente di farina, stendere nuovamente a 50x20 cm con movimento dal centro verso l'esterno. Eseguire seconda piega semplice. Avvolgere in pellicola, riporre in frigo per altri 30-40 minuti. Questa seconda piega crea la struttura lamellare tipica della sfogliatura."
+    },
+    {
+      "title": "Terza Piega (Facoltativa)",
+      "text": "Per cornetti ancora più sfogliati e leggeri: ripetere l'operazione una terza volta. Altrimenti, dopo la seconda piega, lasciar maturare in frigo per minimo 2 ore (ideale 8-12 ore). La maturazione in freddo migliora sapore, digeribilità e stabilità strutturale del prodotto finito."
+    },
+    {
+      "title": "Stesura Finale e Taglio",
+      "text": "Estrarre il pastello dal frigo. Lasciar temperare 5-10 minuti a temperatura ambiente. Stendere delicatamente su piano infarinato formando un rettangolo di 50x30 cm, spessore 3-4 mm uniforme. Con righello e rotella tagliapasta, dividere in strisce verticali larghe 10 cm. Tagliare ogni striscia in triangoli isosceli (base 10 cm, altezza 15 cm). Praticare un taglietto di 1 cm al centro della base (facilita l'arrotolamento)."
+    },
+    {
+      "title": "Formatura Cornetti",
+      "text": "Allungare delicatamente ogni triangolo tirandolo per la punta fino a 20-22 cm. Posizionare con base verso di sé. Allargare leggermente il taglietto centrale. Arrotolare partendo dalla base, esercitando leggera tensione costante. La punta deve finire sotto. Piegare le estremità verso l'interno formando la classica mezzaluna. Disporre su teglie con carta forno, distanziati 6-7 cm."
+    },
+    {
+      "title": "Appretto Finale (2,5-3,5h, 26-28°C)",
+      "text": "Coprire delicatamente con pellicola leggermente unta o canovaccio umido (non deve toccare la superficie dei cornetti). Lasciar lievitare in ambiente caldo e umido (26-28°C, umidità 75-80%) per 2,5-3,5 ore. I cornetti sono pronti quando: volume raddoppiato, superficie opaca (non lucida né appiccicosa), al tatto risultano soffici ma non molli. Test dito: l'impronta deve tornare lentamente."
+    },
+    {
+      "title": "Spennellatura e Cottura",
+      "text": "Preriscaldare il forno a 200°C statico (o 180°C ventilato) con teglia vuota dentro. Preparare doratura: sbattere 1 tuorlo con 30g panna fresca fino a omogeneità. Spennellare i cornetti con pennello morbido, movimenti delicati dall'alto verso il basso (mai orizzontali, sgonfierebbero). Infornare immediatamente per 18-22 minuti. Nei primi 5 minuti NON aprire il forno (perdita vapore blocca sviluppo). Doratura finale: marrone dorato intenso, uniforme. Sfornare, trasferire su griglia, lasciar raffreddare 10 minuti prima di servire."
+    }
+  ],
+  "stepsExtruder": [],
+  "stepsCondiment": [],
+  "flourTable": [
+    {
+      "type": "Manitoba Forte",
+      "w": "340-380",
+      "brands": "Molino Dallagiovanna Panettone (W 380), Molino Spadoni Chef Manitoba (W 350), Le 5 Stagioni Manitoba Gold (W 370)"
+    },
+    {
+      "type": "Tipo 00 Media Forza",
+      "w": "260-280",
+      "brands": "Molino Grassi Petra 9 (W 280), Caputo Pizzeria (W 260), Molino Vigevano Tipo 00 (W 270)"
+    }
+  ],
+  "baking": {
+    "temperature": "200°C statico (180°C ventilato)",
+    "time": "18-22 minuti",
+    "tips": [
+      "Preriscaldare il forno per almeno 20 minuti con teglia vuota dentro",
+      "NON aprire il forno nei primi 5 minuti di cottura (perdita vapore blocca sviluppo)",
+      "La doratura perfetta è marrone dorato intenso, uniforme su tutta la superficie",
+      "Sfornare quando la base risulta dorata (sollevare delicatamente un cornetto per verificare)",
+      "Lasciar raffreddare su griglia per mantenere la croccantezza della sfoglia"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Incordatura",
+      "definition": "Fase dell'impastamento in cui il glutine si sviluppa: l'impasto diventa elastico, liscio e si avvolge intorno al gancio della planetaria formando un 'cordone'. Segno di corretta struttura."
+    },
+    {
+      "term": "Mantecazione",
+      "definition": "Incorporazione finale del burro nell'impasto già sviluppato. Il burro viene aggiunto gradualmente a velocità bassa, creando un'emulsione che rende l'impasto soffice, lucido e arricchito."
+    },
+    {
+      "term": "Pirlatura",
+      "definition": "Tecnica per dare forma sferica regolare all'impasto: si posiziona sul piano, si copre con il palmo della mano e si eseguono movimenti circolari. Crea tensione superficiale utile per la lievitazione."
+    },
+    {
+      "term": "Puntata",
+      "definition": "Prima fase di lievitazione dopo l'impastamento. L'impasto riposa in massa unica, sviluppando struttura e aromi. Per i cornetti: 30-40 minuti a 26-28°C."
+    },
+    {
+      "term": "Pastello",
+      "definition": "Termine tecnico per indicare l'impasto base dei lievitati sfogliati, prima dell'incorporazione del burro di sfogliatura. È l'impasto 'contenitore' che racchiuderà il panetto di burro."
+    },
+    {
+      "term": "Panetto Burro",
+      "definition": "Burro freddo lavorato e steso in forma quadrata (20x20 cm) da incorporare nel pastello. Deve essere plastico: abbastanza morbido da stendersi, ma freddo da non sciogliersi durante la laminazione."
+    },
+    {
+      "term": "Laminazione",
+      "definition": "Processo di stesura e piegatura ripetuta dell'impasto con burro, che crea gli strati sottili alternati (pasta-burro-pasta). È la tecnica che genera la caratteristica sfogliatura dei croissant."
+    },
+    {
+      "term": "Piega Semplice",
+      "definition": "Tipo di piega a 3 strati: l'impasto steso viene ripiegato su se stesso in tre parti (come una lettera commerciale). Ogni piega moltiplica il numero di strati per 3. Due pieghe semplici = 9 strati."
+    },
+    {
+      "term": "Maturazione in Frigo",
+      "definition": "Riposo dell'impasto sfogliato in frigorifero (4-6°C) tra una piega e l'altra, o dopo l'ultima piega. Serve a: solidificare il burro, rilassare il glutine, sviluppare aromi complessi. Minimo 30 min, ideale 8-12h."
+    },
+    {
+      "term": "Appretto",
+      "definition": "Ultima lievitazione dopo la formatura, prima della cottura. Per i cornetti: 2-3 ore a 26-28°C con umidità 75-80%. Il volume deve raddoppiare, la superficie diventare opaca, al tatto risultare soffice ma non molle."
+    },
+    {
+      "term": "Burro a Pomata",
+      "definition": "Burro lasciato a temperatura ambiente fino a raggiungere consistenza cremosa e spalmabile, simile a una pomata. Essenziale per la corretta mantecazione negli impasti arricchiti. NON deve essere liquido."
+    },
+    {
+      "term": "Temperatura Finale Impasto",
+      "definition": "Temperatura che l'impasto raggiunge a fine lavorazione. Per i cornetti: target 24-26°C. Determinata da: temperatura ingredienti, attrito meccanico dell'impastatrice, temperatura ambiente. Cruciale per controllo fermentazione."
+    },
+    {
+      "term": "Doratura",
+      "definition": "Miscela di tuorlo d'uovo e panna (o latte) pennellata sui lievitati prima della cottura. Crea la caratteristica superficie lucida e dorata. Applicare con delicatezza per non sgonfiare il prodotto lievitato."
+    }
+  ],
+  "alert": "❌ NON stendere il pastello con movimenti avanti-indietro bruschi: il burro fuoriuscirebbe dai lati distruggendo la stratificazione. Lavorare sempre dal centro verso l'esterno con pressione uniforme. NON lasciare l'impasto sfogliato fuori dal frigo troppo a lungo: se il burro si scalda, si mescola con la pasta invece di creare strati separati. NON aprire il forno nei primi 5 minuti di cottura: la perdita di calore e vapore blocca lo sviluppo in altezza e la formazione degli strati sfogliati. NON usare burro troppo freddo (si rompe) né troppo molle (fuoriesce): deve essere plastico, come plastilina.",
+  "proTips": [
+    "💡 Strati Visibili: Per cornetti con sfogliatura evidente, dopo l'ultima piega lasciare riposare in frigo 8-12 ore (o tutta la notte). La maturazione prolungata sviluppa aromi complessi e rende gli strati più definiti e croccanti dopo cottura.",
+    "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
+  ],
+  "imageKeywords": [
+    "cornetti",
+    "croissant",
+    "sfogliati",
+    "lievitati",
+    "colazione",
+    "pasticceria",
+    "burro",
+    "laminazione"
+  ],
+  "tags": [
+    "cornetti",
+    "croissant",
+    "lievitati",
+    "sfogliatura",
+    "colazione",
+    "brunch",
+    "pasticceria",
+    "burro",
+    "laminazione"
+  ],
+  "image": "images/ricette/lievitati/cornetti-sfogliati-classici.jpg"
+}

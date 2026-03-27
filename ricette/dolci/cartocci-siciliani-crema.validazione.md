@@ -2,42 +2,46 @@
 
 ## 🟢 Confidenza: 97%
 
-**Fonti consultate:** 6
+**Fonti consultate:** 7
 
 ### ✅ Confermato
 - Ingredienti: 11/12 confermati (92%)
-- Idratazione: 50% (media fonti: 55%) — ✅ OK
+
+### ⚠️ Attenzione
+- ⚠️ Idratazione significativamente diversa: 50% vs media fonti 12%
 
 ### 📋 Ingredienti
 | Status | Ingrediente | Note |
 |--------|-------------|------|
-| ✅ | farina 00 media forza | Confermato da fonti |
-| ✅ | acqua | Confermato da fonti |
-| ✅ | strutto | Confermato da fonti |
-| ✅ | zucchero semolato | Confermato da fonti |
-| ✅ | sale fino | Confermato da fonti |
-| ✅ | lievito di birra fresco | Confermato da fonti |
-| ✅ | latte intero | Confermato da fonti |
-| ✅ | zucchero semolato per crema | Confermato da fonti |
-| ⚠️ | maizena (amido di mais) | Non trovato nelle fonti |
-| ✅ | essenza di vaniglia | Confermato da fonti |
-| ✅ | olio di semi per friggere | Confermato da fonti |
-| ✅ | zucchero semolato per finitura | Confermato da fonti |
+| ✅ | 500g farina 00 media forza | Confermato da fonti |
+| ✅ | 250g acqua | Confermato da fonti |
+| ✅ | 70g strutto | Confermato da fonti |
+| ✅ | 50g zucchero semolato | Confermato da fonti |
+| ✅ | 8g sale fino | Confermato da fonti |
+| ✅ | 7g lievito di birra fresco | Confermato da fonti |
+| ✅ | 1000g latte intero | Confermato da fonti |
+| ✅ | 200g zucchero semolato per crema | Confermato da fonti |
+| ⚠️ | 90g maizena | Non trovato nelle fonti |
+| ✅ | 5g essenza di vaniglia | Confermato da fonti |
+| ✅ | 2000g olio di semi per friggere | Confermato da fonti |
+| ✅ | 100g zucchero semolato per finitura | Confermato da fonti |
 
 ### 📊 Dettagli
-- Tempi fonti: P0DT0H45M, 40min, 50min, 3h 30min
-- Tempo Claude: 2h + 30min appretto
+- Tempi fonti: 45min, 50min, 40min, P0DT0H45M, 5h, 105min, 20min
+- Tempo Claude: 
 
 ### 📰 Fonti
-1. **blog.giallozafferano.it** — Dati strutturati (16 ingredienti)
-   https://blog.giallozafferano.it/rosly/cartocci-fritti-ripieni-di-crema-pasticcera/
-2. **cookist.it** — Dati strutturati (12 ingredienti)
-   https://www.cookist.it/ricetta-cartocci-siciliani/
-3. **soniaperonaci.it** — Dati strutturati (21 ingredienti)
+1. **ricette.giallozafferano.it** — Dati strutturati (12 ingredienti)
+   https://ricette.giallozafferano.it/Cartocci-siciliani.html
+2. **soniaperonaci.it** — Dati strutturati (21 ingredienti)
    https://www.soniaperonaci.it/cartocci-siciliani/
-4. **altacucina.co** — Dati strutturati (13 ingredienti)
-   https://altacucina.co/recipes/cartocci-siciliani-con-crema-pasticcera
-5. **ricocrem.it** — Estrazione HTML (8 ingredienti)
-   https://www.ricocrem.it/cartocci-siciliani-fritti-con-crema-di-ricotta/
-6. **cucinaconmegraziellaeraffaele.it** — Estrazione HTML (7 ingredienti)
-   https://www.cucinaconmegraziellaeraffaele.it/cartocci-siciliani-alla-crema/
+3. **cookist.it** — Dati strutturati (12 ingredienti)
+   https://www.cookist.it/ricetta-cartocci-siciliani/
+4. **blog.giallozafferano.it** — Dati strutturati (16 ingredienti)
+   https://blog.giallozafferano.it/rosly/cartocci-fritti-ripieni-di-crema-pasticcera/
+5. **vasavasakitchen.com** — Estrazione HTML (13 ingredienti)
+   https://www.vasavasakitchen.com/cartocci-siciliani-ricotta/
+6. **mangiabedda.com** — Dati strutturati (13 ingredienti)
+   https://www.mangiabedda.com/cartocci-siciliani-with-ricotta-filling/
+7. **gzrecipes.com** — Dati strutturati (11 ingredienti)
+   https://www.gzrecipes.com/en/cuochinprogress/sicilian-cartocci-2/

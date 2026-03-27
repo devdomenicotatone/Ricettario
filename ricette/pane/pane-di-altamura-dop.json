@@ -2,13 +2,14 @@
   "title": "Pane di Altamura DOP",
   "slug": "pane-di-altamura-dop",
   "emoji": "🍞",
-  "description": "Pane pugliese DOP con semola rimacinata di grano duro, crosta spessa e mollica dorata. Idratazione 68%, lievitazione 24h, crosta croccante perfetta.",
+  "description": "Il re dei pani pugliesi con semola rimacinata e lievitazione naturale. Idratazione 68%, lievitazione 24h, crosta croccante e mollica gialla profumata.",
   "subtitle": "Il re dei pani pugliesi con semola rimacinata e lievitazione naturale",
   "category": "Pane",
   "hydration": 68,
   "targetTemp": "24-26°C",
   "fermentation": "~24h",
   "totalFlour": 1000,
+  "image": "images/ricette/pane/pane-di-altamura-dop.jpg",
   "ingredients": [
     {
       "name": "Semola Rimacinata di Grano Duro",
@@ -17,20 +18,20 @@
     },
     {
       "name": "Acqua",
-      "note": "(temperatura ambiente per mano, ghiacciata per spirale)",
+      "note": "(ghiacciata 2-4°C per controllare temperatura finale)",
       "grams": 680,
       "setupNote": {
-        "spirale": "ghiacciata 2-4°C per controllare temperatura finale",
-        "mano": "20-22°C, aggiunta in 3 riprese per favorire assorbimento"
+        "spirale": "(ghiacciata 2-4°C per controllare temperatura finale)",
+        "mano": "(20-22°C, aggiunta in 3 riprese per favorire assorbimento)"
       }
     },
     {
       "name": "Lievito di Birra Fresco",
-      "note": "(ridotto per lievitazione lunga, oppure 250g di lievito madre rinfrescato)",
+      "note": "(7g per impasto veloce con controllo temperatura)",
       "grams": 7,
       "setupNote": {
-        "spirale": "7g per impasto veloce con controllo temperatura",
-        "mano": "8-10g per compensare lavorazione più lunga"
+        "spirale": "(7g per impasto veloce con controllo temperatura)",
+        "mano": "(8-10g per compensare lavorazione più lunga)"
       }
     },
     {
@@ -105,6 +106,8 @@
       "text": "Preriscaldare il forno a 250°C (statico, NO ventilato) con pietra refrattaria o teglia spessa rovesciata per 45-60 minuti. Il forno deve essere rovente. Preparare una bacinella con 500ml di acqua bollente. Con delicatezza capovolgere le pagnotte su una pala di legno infarinata con semola. Con una lametta affilata o un taglierino incidere la superficie: taglio a croce profondo (1,5cm) per formato Alto, incisioni oblique per formato Medio. Le incisioni devono essere decise."
     }
   ],
+  "stepsExtruder": [],
+  "stepsCondiment": [],
   "flourTable": [
     {
       "type": "Semola Rimacinata di Grano Duro",
@@ -169,28 +172,25 @@
   ],
   "alert": "❌ NON usare farina di grano tenero o semola grossa: il Pane di Altamura DOP richiede esclusivamente semola RIMACINATA di grano duro. NON accorciare i tempi di lievitazione: la semola necessita di fermentazioni lunghe per sviluppare digeribilità e aromi. NON cuocere a temperatura troppo bassa: sotto i 230°C la crosta non si forma correttamente. NON tagliare il pane prima del raffreddamento completo: la mollica umida si sbriciola e perde struttura. NON conservare in busta di plastica nei primi 2 giorni: la crosta diventa gommosa.",
   "proTips": [
-    "💡 Semola di qualità: Scegliere semola rimacinata di grano duro 100% italiano, varietà Appulo, Arcangelo o Duilio. La granulometria fine (rimacinata) è fondamentale: la semola grossa non si idrata bene e produce mollica granulosa.",
     "💡 Controllo temperatura: La semola genera molto attrito durante l'impasto. In spirale usare acqua ghiacciata (2-4°C) per compensare. A mano fare pause frequenti. Temperatura finale ideale: 24-26°C, MAI oltre 28°C o il lievito accelera troppo.",
-    "💡 Appretto freddo: La lievitazione lunga a 18-20°C (cantina, garage in inverno) sviluppa aromi complessi e acidità equilibrata. A 24°C l'appretto dura 10-12h, a 18°C anche 18h. La pazienza premia: mollica alveolata color oro e profumo di campo di grano.",
-    "💡 Vapore iniziale: Il Pane di Altamura ha crosta spessa (5-6mm) color nocciola scuro. Il vapore nei primi 15 minuti mantiene elastica la superficie permettendo massima espansione. Dopo 15 minuti eliminare il vapore aprendo lo sportello per asciugare e dorare.",
-    "💡 Conservazione lunga: Il Pane di Altamura si conserva 7-10 giorni avvolto in un telo di lino a temperatura ambiente. La crosta si mantiene croccante. Per rinfrescarla: 5 minuti a 180°C. Perfetto per bruschette anche dopo una settimana."
+    "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
   ],
   "imageKeywords": [
-    "pane di altamura pugliese",
-    "altamura bread golden crust",
-    "semolina durum wheat bread",
-    "pane semola rimacinata crosta spessa",
-    "traditional apulian bread cross cut"
+    "pane di altamura",
+    "semola rimacinata",
+    "pane pugliese",
+    "pane DOP",
+    "crosta dorata",
+    "mollica gialla",
+    "taglio a croce"
   ],
   "tags": [
-    "pane pugliese",
-    "semola rimacinata",
+    "pane",
+    "semola",
+    "puglia",
     "DOP",
     "lievitazione lunga",
-    "crosta croccante",
-    "tradizionale",
-    "grano duro"
-  ],
-  "image": "images/ricette/pane/pane-di-altamura-dop.jpg",
-  "imageAttribution": "📷 Foto: Monserrat Soldú — Pexels License via Pexels"
+    "grano duro",
+    "tradizionale"
+  ]
 }

@@ -2,7 +2,7 @@
   "title": "Baguette Francese Tradizionale",
   "slug": "baguette-francese-tradizionale",
   "emoji": "🥖",
-  "description": "Baguette francese autentica con poolish, crosta dorata croccante e alveolatura perfetta. Metodo professionale con impastatrice a spirale o impasto a mano.",
+  "description": "Baguette francese autentica con pre-impasto poolish, idratazione 68% e crosta croccante. Tecnica professionale con pietra refrattaria e vapore.",
   "subtitle": "Pane simbolo della Francia con pre-impasto poolish e idratazione 68%",
   "category": "Pane",
   "hydration": 68,
@@ -13,53 +13,46 @@
     {
       "name": "Farina Tipo 0 Media-Alta Forza",
       "note": "(W 280-320, per struttura e alveolatura)",
-      "grams": 850,
-      "setupNote": null
+      "grams": 850
     },
     {
       "name": "Farina di Manitoba",
       "note": "(W 350-380, per tenuta e sviluppo)",
-      "grams": 150,
-      "setupNote": null
+      "grams": 150
     },
     {
       "name": "Acqua Poolish",
       "note": "(temperatura ambiente 18-20°C, per poolish)",
-      "grams": 300,
-      "setupNote": null
+      "grams": 300
     },
     {
       "name": "Acqua Impasto Finale",
-      "note": "(temperatura ambiente 18-20°C, in spirale)",
+      "note": "(18-20°C, tutta insieme)",
       "grams": 380,
       "setupNote": {
-        "spirale": "18-20°C, tutta insieme",
-        "mano": "20-22°C, in 3 riprese durante slap & fold"
+        "spirale": "(18-20°C, tutta insieme)",
+        "mano": "(20-22°C, in 3 riprese durante slap & fold)"
       }
     },
     {
       "name": "Lievito di Birra Fresco Poolish",
       "note": "(0,5g, solo per il poolish)",
-      "grams": 0.5,
-      "setupNote": null
+      "grams": 0.5
     },
     {
       "name": "Lievito di Birra Fresco Impasto",
       "note": "(8g, per l'impasto finale)",
-      "grams": 8,
-      "setupNote": null
+      "grams": 8
     },
     {
       "name": "Sale Marino Fino",
       "note": "(2% su farina totale)",
-      "grams": 20,
-      "setupNote": null
+      "grams": 20
     },
     {
       "name": "Malto d'Orzo o Miele",
       "note": "(per colorazione crosta e attività enzimatica)",
-      "grams": 10,
-      "setupNote": null
+      "grams": 10
     }
   ],
   "suspensions": [],
@@ -139,6 +132,8 @@
       "text": "Capovolgere delicatamente le baguette su una pala infarinata o carta forno (chiusura ora sotto). Spolverare leggermente di farina la superficie. Con una lametta da pane (o rasoio) fare 4-5 tagli obliqui (45°) profondi 5-7mm, leggermente sovrapposti. Incidere con gesto deciso e rapido. Versare 100ml di acqua bollente nella teglia sul fondo del forno (vapore immediato). Infornare rapidamente le baguette sulla pietra. Chiudere subito il forno."
     }
   ],
+  "stepsExtruder": [],
+  "stepsCondiment": [],
   "flourTable": [
     {
       "type": "Farina Tipo 0 Media-Alta Forza",
@@ -218,26 +213,30 @@
   ],
   "alert": "⚠️ NON incidere le baguette prima dell'appretto completo: i tagli si richiuderebbero. NON usare farine deboli (W<260): l'impasto collasserebbe per l'alta idratazione e la lunga fermentazione. NON saltare il vapore iniziale: senza vapore la crosta si forma troppo presto bloccando lo sviluppo e la grigne. NON aprire il forno nei primi 12 minuti: calo di temperatura e perdita di vapore compromettono la struttura. NON pirlare con troppa farina: la baguette deve aderire leggermente al piano durante l'allungamento per creare tensione superficiale.",
   "proTips": [
-    "💡 **Poolish perfetto**: Il poolish maturo deve avere superficie convessa e piena di bolle, odore vinoso-acetico ma mai pungente. Se affonda al centro è troppo maturo (oltre 16h a 22°C). Meglio tenerlo 12h a 22°C che 8h a 26°C: temperatura bassa = aromi più complessi.",
-    "💡 **Idratazione progressiva a mano**: Se impasti a mano, NON aggiungere tutta l'acqua subito. Parti con 300g, poi incorpora i restanti 80g in 2-3 riprese durante gli slap & fold. L'impasto diventerà gestibile e si incorderà meglio. Mani bagnate facilitano il lavoro senza aggiungere farina.",
-    "💡 **Grigne esplosiva**: Per ottenere la cresta (grigne) spettacolare tipica della baguette francese: 1) pietra refrattaria preriscaldata 45 min, 2) vapore abbondante nei primi 10-12 min, 3) tagli netti e profondi (7mm) a 45°, 4) infornata rapida. La combinazione di questi 4 fattori crea la caratteristica 'orecchia' croccante della baguette artigianale."
-  ],
-  "imageKeywords": [
-    "french baguette golden crust",
-    "baguette crumb alveolatura",
-    "artisan baguette grigne",
-    "traditional french bread",
-    "homemade baguette scored"
-  ],
-  "tags": [
-    "pane francese",
-    "baguette classica",
-    "poolish",
-    "alta idratazione",
-    "lievitazione lunga",
-    "crosta croccante",
-    "alveolatura aperta"
+    "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato.",
+    "💡 Idratazione progressiva a mano: Se impasti a mano, NON aggiungere tutta l'acqua subito. Parti con 300g, poi incorpora i restanti 80g in 2-3 riprese durante gli slap & fold. L'impasto diventerà gestibile e si incorderà meglio. Mani bagnate facilitano il lavoro senza aggiungere farina."
   ],
   "image": "images/ricette/pane/baguette-francese-tradizionale.jpg",
-  "imageAttribution": "📷 Foto: Evgeniy Alekseyev — Pexels License via Pexels"
+  "imageKeywords": [
+    "baguette",
+    "francese",
+    "tradizionale",
+    "poolish",
+    "grigne",
+    "crosta",
+    "alveolatura",
+    "vapore",
+    "pietra refrattaria"
+  ],
+  "tags": [
+    "baguette",
+    "pane francese",
+    "poolish",
+    "alta idratazione",
+    "pietra refrattaria",
+    "vapore",
+    "scarificazione",
+    "couche",
+    "lino"
+  ]
 }

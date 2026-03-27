@@ -2,7 +2,7 @@
   "title": "Focaccia Barese",
   "slug": "focaccia-barese",
   "emoji": "🫒",
-  "description": "Focaccia pugliese con semola rimacinata, patate lesse, pomodorini e olive baresane. Idratazione 80%, crosta croccante e mollica soffice.",
+  "description": "La regina della tradizione pugliese: morbida dentro, croccante fuori. Idratazione 80%, con patate lesse, semola rimacinata e generoso condimento di pomodorini, olive e olio EVO.",
   "subtitle": "La regina della tradizione pugliese: morbida dentro, croccante fuori",
   "category": "Focaccia",
   "hydration": 80,
@@ -13,56 +13,50 @@
     {
       "name": "Farina Tipo 0",
       "note": "(W 240-260, media forza)",
-      "grams": 250,
-      "setupNote": null
+      "grams": 250
     },
     {
       "name": "Semola Rimacinata di Grano Duro",
       "note": "(qualità Senatore Cappelli o simile)",
-      "grams": 250,
-      "setupNote": null
+      "grams": 250
     },
     {
       "name": "Acqua",
-      "note": "(temperatura ambiente 20-22°C per spirale)",
+      "note": "(20-22°C, tutta in una volta)",
       "grams": 400,
       "setupNote": {
-        "spirale": "20-22°C, tutta in una volta",
-        "mano": "20-22°C, aggiunta graduale in 2-3 riprese"
+        "spirale": "(20-22°C, tutta in una volta)",
+        "mano": "(20-22°C, aggiunta graduale in 2-3 riprese)"
       }
     },
     {
       "name": "Patate Lesse",
       "note": "(schiacciate a purea, completamente fredde)",
-      "grams": 100,
-      "setupNote": null
+      "grams": 100
     },
     {
       "name": "Lievito di Birra Fresco",
-      "note": "(in alternativa 3g lievito secco o 100g pasta madre solida)",
+      "note": "(8g per fermentazione controllata 3-4h)",
       "grams": 8,
       "setupNote": {
-        "spirale": "8g per fermentazione controllata 3-4h",
-        "mano": "10g per compensare lavorazione più lunga"
+        "spirale": "(8g per fermentazione controllata 3-4h)",
+        "mano": "(10g per compensare lavorazione più lunga)"
       }
     },
     {
       "name": "Sale Fino",
       "note": "(aggiunto a metà impastamento)",
-      "grams": 12,
-      "setupNote": null
+      "grams": 12
     },
     {
       "name": "Olio Extravergine d'Oliva Pugliese",
       "note": "(cultivar Coratina o Ogliarola, fruttato medio)",
-      "grams": 30,
-      "setupNote": null
+      "grams": 30
     },
     {
       "name": "Zucchero o Malto d'Orzo",
       "note": "(opzionale, favorisce lievitazione e doratura)",
-      "grams": 5,
-      "setupNote": null
+      "grams": 5
     }
   ],
   "suspensions": [
@@ -140,6 +134,8 @@
       "text": "Rinforzare le fossette premendo nuovamente con i polpastrelli. Distribuire i pomodorini tagliati a metà (o spezzati a mano), premendoli leggermente. Aggiungere le olive baresane, cospargere con origano secco, sale grosso e abbondante olio EVO (50g) che deve 'pozzare' nelle fossette. Non lesinare sull'olio: è il segreto della croccantezza."
     }
   ],
+  "stepsExtruder": [],
+  "stepsCondiment": [],
   "flourTable": [
     {
       "type": "Farina Tipo 0 Media Forza",
@@ -201,29 +197,25 @@
   "alert": "⚠️ NON aggiungere farina durante l'impastamento anche se l'impasto sembra troppo molle: l'alta idratazione (80%) è fondamentale per la morbidezza tipica della focaccia barese. NON saltare le pieghe a portafoglio: sono essenziali per dare struttura a un impasto così idratato. NON stendere troppo l'impasto in teglia: mantieni almeno 1,5-2cm di spessore per avere la caratteristica sofficità interna. NON risparmiare sull'olio in superficie: è il segreto della crosta croccante e dorata. NON infornare senza aver preriscaldato il forno alla massima temperatura: serve shock termico per far sviluppare le bolle e la croccantezza. NON usare patate ancora calde: danno acidità e rallentano/bloccano la lievitazione.",
   "proTips": [
     "🔥 Per una base extra-croccante stile forno a legna, ungi generosamente il fondo della teglia con olio EVO e infarina leggermente con semola rimacinata prima di stendere l'impasto. L'olio friggerà delicatamente la base durante la cottura.",
-    "🥔 Le patate lesse vanno schiacciate finissime (senza grumi) e devono essere COMPLETAMENTE FREDDE prima dell'uso. Puoi prepararle il giorno prima e conservarle in frigo coperte. Le patate apportano morbidezza, aiutano la lievitazione e mantengono la focaccia soffice anche il giorno dopo.",
-    "🫒 Usa olive baresane originali (Bella della Daunia o Termite di Bitetto) in salamoia, non quelle nere da tavola. Denocciolale e scolale bene. Per un twist gourmet, puoi aggiungere capperi dissalati insieme alle olive.",
-    "🍅 Scegli pomodorini ciliegino o datterini ben maturi ma sodi. Tagliali a metà e disponi con il taglio verso l'alto per evitare che rilascino troppa acqua in cottura. Per una versione più tradizionale, usa pomodori pelati San Marzano spezzati a mano e ben scolati.",
-    "💧 L'acqua di cottura delle patate (ricca di amidi) può sostituire fino a 50g di acqua della ricetta per aumentare ulteriormente la morbidezza — ma deve essere completamente fredda."
+    "🥔 Le patate lesse vanno schiacciate finissime (senza grumi) e devono essere COMPLETAMENTE FREDDE prima dell'uso. Puoi prepararle il giorno prima e conservarle in frigo coperte. Le patate apportano morbidezza, aiutano la lievitazione e mantengono la focaccia soffice anche il giorno dopo."
   ],
   "imageKeywords": [
-    "focaccia barese cherry tomatoes olives",
-    "focaccia pugliese pomodorini olive",
-    "traditional apulian focaccia",
-    "focaccia barese golden crust",
-    "puglia focaccia oregano"
+    "focaccia barese",
+    "pomodorini",
+    "olive",
+    "focaccia pugliese",
+    "olio extravergine",
+    "semola rimacinata"
   ],
   "tags": [
     "focaccia",
-    "puglia",
     "barese",
-    "semola",
+    "puglia",
     "pomodorini",
     "olive",
-    "alta-idratazione",
-    "lievitati-salati",
-    "ricetta-tradizionale"
+    "alta idratazione",
+    "semola",
+    "patate"
   ],
-  "image": "images/ricette/pane/focaccia-barese.jpg",
-  "imageAttribution": "📷 Foto: leonardo prascina — Pexels License via Pexels"
+  "image": "images/ricette/pane/focaccia-barese.jpg"
 }

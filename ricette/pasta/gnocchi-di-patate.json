@@ -2,7 +2,7 @@
   "title": "Gnocchi di Patate",
   "slug": "gnocchi-di-patate",
   "emoji": "🥔",
-  "description": "Gnocchi di patate tradizionali con o senza uova: morbidi, delicati e perfetti per ogni condimento. Tecnica artigianale e proporzioni professionali.",
+  "description": "La pasta fresca classica italiana a base di patate: ricetta professionale con ingredienti, dosi precise e tecnica artigianale per gnocchi soffici.",
   "subtitle": "La pasta fresca classica italiana a base di patate",
   "category": "Pasta",
   "hydration": 0,
@@ -25,13 +25,12 @@
       "note": "(facoltativo - omettere per gnocchi più delicati)",
       "grams": 50,
       "setupNote": {
-        "conUova": "1 uovo medio (~50g)",
-        "senzaUova": "omettere e aumentare farina a 350g"
+        "conUova": "(1 uovo medio (~50g))",
+        "senzaUova": "(omettere e aumentare farina a 350g)"
       }
     },
     {
       "name": "Sale Fino",
-      "note": "",
       "grams": 10
     },
     {
@@ -81,7 +80,6 @@
       "brands": "Molino Spadoni Rossa, Molino Grassi Tipo 00, Le 5 Stagioni Cuoco"
     }
   ],
-  "baking": null,
   "glossary": [
     {
       "term": "Patate Farinose",
@@ -114,27 +112,23 @@
   ],
   "alert": "NON far raffreddare le patate prima di schiacciarle: patate fredde assorbono il doppio della farina rendendo gli gnocchi duri e gommosi. NON impastare troppo: ogni minuto in più rende l'impasto colloso e gli gnocchi pesanti. NON cuocere troppi gnocchi insieme: si abbassa la temperatura dell'acqua e si ottiene una cottura irregolare.",
   "proTips": [
-    "Per gnocchi extrasoffici: usa solo 250g di farina e ometti l'uovo. L'impasto sarà più delicato ma richiede mani rapide nella formatura.",
     "Congela gli gnocchi crudi su vassoio infarinato per 2 ore, poi trasferisci in sacchetti: si conservano 3 mesi e si cuociono ancora congelati (1 minuto in più).",
-    "Variante gourmet: aggiungi 100g di parmigiano grattugiato all'impasto e riduci la farina di pari quantità. Gli gnocchi saranno più saporiti e compatti."
+    "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
   ],
+  "image": "images/ricette/pasta/gnocchi-di-patate.jpg",
   "imageKeywords": [
-    "homemade potato gnocchi on wooden board",
-    "italian gnocchi di patate rigati",
-    "fresh gnocchi with tomato sauce basil",
-    "traditional potato dumplings fork ridges",
-    "gnocchi preparation process hands"
-  ],
-  "tags": [
     "gnocchi",
     "patate",
     "pasta fresca",
-    "primo piatto",
-    "tradizionale",
-    "senza uova",
-    "vegetariano"
+    "ricetta tradizionale",
+    "cucina italiana"
   ],
-  "image": "images/ricette/pasta/gnocchi-di-patate.jpg",
-  "imageAttribution": "📷 Foto: Maxi Gagliano — Pexels License via Pexels",
-  "_originalImageUrl": "https://images.pexels.com/photos/4694432/pexels-photo-4694432.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  "tags": [
+    "pasta fresca",
+    "gnocchi",
+    "patate",
+    "ricetta tradizionale",
+    "senza lievitazione",
+    "artigianale"
+  ]
 }

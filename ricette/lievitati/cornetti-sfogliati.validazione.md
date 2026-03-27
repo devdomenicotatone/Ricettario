@@ -1,49 +1,43 @@
 # Validazione: Cornetti Sfogliati
 
-## 🟢 Confidenza: 100%
+## 🟢 Confidenza: 91%
 
-**Fonti consultate:** 9
+**Fonti consultate:** 6
 
 ### ✅ Confermato
-- Ingredienti: 10/10 confermati (100%)
+- Ingredienti: 9/10 confermati (90%)
 
 ### ⚠️ Attenzione
-- ⚠️ Idratazione significativamente diversa: 55% vs media fonti 38%
+- ⚠️ Idratazione significativamente diversa: 55% vs media fonti 67%
 
 ### 📋 Ingredienti
 | Status | Ingrediente | Note |
 |--------|-------------|------|
-| ✅ | farina forte | Confermato da fonti |
-| ✅ | acqua | Confermato da fonti |
-| ✅ | latte intero fresco | Confermato da fonti |
-| ✅ | uova | Confermato da fonti |
-| ✅ | lievito di birra fresco | Confermato da fonti |
-| ✅ | zucchero semolato | Confermato da fonti |
-| ✅ | burro morbido | Confermato da fonti |
-| ✅ | sale fino | Confermato da fonti |
-| ✅ | miele millefiori | Confermato da fonti |
-| ✅ | burro da laminazione | Confermato da fonti |
+| ✅ | 500g farina forte | Confermato da fonti |
+| ✅ | 150g acqua | Confermato da fonti |
+| ✅ | 125g latte intero fresco | Confermato da fonti |
+| ✅ | 110g uova | Confermato da fonti |
+| ✅ | 20g lievito di birra fresco | Confermato da fonti |
+| ✅ | 75g zucchero semolato | Confermato da fonti |
+| ✅ | 80g burro morbido | Confermato da fonti |
+| ✅ | 10g sale fino | Confermato da fonti |
+| ⚠️ | 12g miele millefiori | Non trovato nelle fonti |
+| ✅ | 250g burro da laminazione | Confermato da fonti |
 
 ### 📊 Dettagli
-- Tempi fonti: 0min, 120min, 2h + 4h di riposo, 15h, 50min, 40min, 120min
-- Tempo Claude: ~18h (con riposo in frigo 12h)
+- Tempi fonti: P0DT3H0M, 2h + 4h di riposo, 240min, 45min, overnight, 24+ hours
+- Tempo Claude: 
 
 ### 📰 Fonti
-1. **kenwoodclub.it** — Dati strutturati (7 ingredienti)
-   https://www.kenwoodclub.it/ricette/croissant-sfogliati
-2. **ricette.giallozafferano.it** — Dati strutturati (15 ingredienti)
-   https://ricette.giallozafferano.it/Cornetti-sfogliati-all-italiana.html
-3. **lacucinaitaliana.it** — Dati strutturati (8 ingredienti)
+1. **blog.giallozafferano.it** — Dati strutturati (12 ingredienti)
+   https://blog.giallozafferano.it/allacciateilgrembiule/cornetti-sfogliati-come-al-bar/
+2. **lacucinaitaliana.it** — Dati strutturati (8 ingredienti)
    https://www.lacucinaitaliana.it/ricetta/cornetti-sfogliati/
-4. **tavolartegusto.it** — Dati strutturati (8 ingredienti)
-   https://www.tavolartegusto.it/ricetta/croissant-francesi-ricetta-originale/
-5. **ricette.giallozafferano.it** — Dati strutturati (10 ingredienti)
-   https://ricette.giallozafferano.it/Croissant.html
-6. **gabilagerardi.it** — Estrazione HTML (8 ingredienti)
-   https://www.gabilagerardi.it/lievitati-dolci/croissant-sfogliati-francesi-ricetta-di/
-7. **valcor.it** — Dati strutturati (18 ingredienti)
-   https://www.valcor.it/ricetta/cornetti-sfogliati/
-8. **andreadigiglio.it** — Estrazione HTML (20 ingredienti)
-   https://www.andreadigiglio.it/2020/12/28/ricette-dello-chef/ricette-di-pasticceria/ricetta-cornetti-sfogliati-fatti-in-casa/
-9. **pastigioca.it** — Dati strutturati (14 ingredienti)
-   https://www.pastigioca.it/ricette/croissant-francesi
+3. **en.julskitchen.com** — Dati strutturati (16 ingredienti)
+   https://en.julskitchen.com/breakfast/italian-croissants
+4. **onesarcasticbaker.com** — Dati strutturati (11 ingredienti)
+   https://www.onesarcasticbaker.com/cornetti-italian-croissants/
+5. **silviascucina.net** — Estrazione HTML (11 ingredienti)
+   https://silviascucina.net/2015/03/09/cornetti-italian-croissants/
+6. **fattiretours.com** — Estrazione HTML (14 ingredienti)
+   https://www.fattiretours.com/travel-to-eat/cornetto-sfogliato-italian-croissant-recipe/

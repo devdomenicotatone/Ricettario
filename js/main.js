@@ -1,10 +1,8 @@
 /* ============================================
-   IL RICETTARIO — Main JS 2026
-   Il Ricettario — Main JS 2026
+   IL RICETTARIO — Main JS 2026 (SPA)
    ============================================ */
 
-// ── Cascade Layers — ordine di priorità ──
-// L'ordine degli import definisce la priorità dei layer CSS
+// ── CSS Imports (design system) ──
 import '../css/base/tokens.css';
 import '../css/base/reset.css';
 import '../css/layout/container.css';
@@ -19,496 +17,358 @@ import '../css/components/footer.css';
 import '../css/pages/recipe-detail.css';
 import '../css/utilities/animations.css';
 
+// ── SPA Router ──
+import { initRouter, registerRenderers, initReveal, BASE } from './router.js';
+import { renderRecipe } from './recipe-renderer.js';
+
 document.addEventListener('DOMContentLoaded', () => {
 
-  // === NAVBAR SCROLL EFFECT ===
+  // === NAVBAR (persistente — fuori da #app) ===
+  initNavbar();
+  initThemeToggle();
+  initHamburger();
+
+  // === FOOTER (persistente) ===
+  const yearEl = document.getElementById('current-year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // === REGISTRA RENDERERS & AVVIA ROUTER ===
+  registerRenderers({
+    home: renderHomepage,
+    recipe: renderRecipe,
+    category: renderCategory,
+  });
+
+  initRouter();
+});
+
+// ═══════════════════════════════════════
+//  NAVBAR (persistente, non cambia tra pagine)
+// ═══════════════════════════════════════
+
+function initNavbar() {
   const navbar = document.getElementById('navbar');
-  if (navbar) {
-    const onScroll = () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 50);
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-  }
+  if (!navbar) return;
 
-  // === THEME TOGGLE ===
+  const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 50);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+}
+
+function initThemeToggle() {
   const themeToggle = document.getElementById('theme-toggle');
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
+  if (!themeToggle) return;
 
-      // Animazione rotazione
-      themeToggle.classList.add('theme-toggle--switching');
-      setTimeout(() => themeToggle.classList.remove('theme-toggle--switching'), 400);
+  themeToggle.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
 
-      document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-    });
+    themeToggle.classList.add('theme-toggle--switching');
+    setTimeout(() => themeToggle.classList.remove('theme-toggle--switching'), 400);
 
-    // Ascolta cambiamenti del sistema (solo se non c'è override manuale)
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-      if (!localStorage.getItem('theme')) {
-        document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
-      }
-    });
-  }
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  });
 
-  // === HAMBURGER MENU MOBILE ===
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) {
+      document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+    }
+  });
+}
+
+function initHamburger() {
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('nav-links');
 
-  if (hamburger && navLinks) {
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      navLinks.classList.toggle('open');
-    });
+  if (!hamburger || !navLinks) return;
 
-    // Chiudi menu quando clicchi un link
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('open');
-        navLinks.classList.remove('open');
-      });
-    });
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
 
-    // Chiudi cliccando fuori
-    document.addEventListener('click', (e) => {
-      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
-        hamburger.classList.remove('open');
-        navLinks.classList.remove('open');
-      }
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('open');
     });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('open');
+    }
+  });
+}
+
+// ═══════════════════════════════════════
+//  HOMEPAGE RENDERER
+// ═══════════════════════════════════════
+
+/**
+ * Renderizza la homepage. Se il contenuto HTML è già inline (primo caricamento),
+ * lo mantiene e aggiunge solo la logica interattiva. Se è una navigazione SPA,
+ * ricostruisce il contenuto.
+ */
+async function renderHomepage(app /*, params */) {
+  // Resetta metadata
+  document.title = 'Il Ricettario';
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute('content', 'Il Ricettario — Ricette artigianali ottimizzate per i miei strumenti.');
+
+  // Se il contenuto homepage non è presente (navigazione SPA), ricostruiscilo
+  if (!app.querySelector('#ricette')) {
+    // Fetch recipes.json e ricostruisci
+    app.innerHTML = getHomepageHTML();
   }
 
-  // === SCROLL REVEAL — IntersectionObserver ===
-  const reveals = document.querySelectorAll('.reveal');
-  if (reveals.length > 0) {
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    });
+  // Init caroselli e search
+  initCarousels();
+  initReveal();
+}
 
-    reveals.forEach(el => revealObserver.observe(el));
-  }
+function getHomepageHTML() {
+  return `
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero" id="home">
+      <div class="hero__content">
+        <div class="hero__badge reveal">🔥 Laboratorio Artigianale</div>
+        <h1 class="hero__title reveal reveal-delay-1">Il mio<br><span>Ricettario</span></h1>
+        <p class="hero__subtitle reveal reveal-delay-2">Pane, lievitati e pasta — ricette replicabili, parametri reali.</p>
+        <div class="hero__search reveal reveal-delay-3" id="recipe-search">
+          <svg class="hero__search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input type="text" class="hero__search-input" id="search-input"
+            placeholder="Cerca ricette, ingredienti, setup..." aria-label="Cerca ricette">
+          <kbd class="hero__search-kbd">/</kbd>
+        </div>
+      </div>
+    </section>
 
-  // === ACTIVE NAV LINK ===
-  const sections = document.querySelectorAll('section[id]');
-  if (sections.length > 0) {
-    const navObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.getAttribute('id');
-          document.querySelectorAll('.navbar__links a').forEach(link => {
-            link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-          });
-        }
-      });
-    }, { threshold: 0.3 });
+    <section class="section" id="ricette">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-header__label">Le mie ricette</div>
+          <h2 class="section-header__title">Ricette Testate & Documentate</h2>
+          <p class="section-header__desc">Ogni ricetta è stata perfezionata con dosi precise, parametri tecnici e note dettagliate per risultati replicabili al 100%.</p>
+        </div>
+        <div id="recipe-carousels"></div>
+      </div>
+    </section>
 
-    sections.forEach(section => navObserver.observe(section));
-  }
+    <section class="section tools-section" id="strumenti">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-header__label">Il mio setup</div>
+          <h2 class="section-header__title">Strumenti del Mestiere</h2>
+          <p class="section-header__desc">Ogni ricetta è tarata specificamente per questi strumenti. Hardware serio per risultati seri.</p>
+        </div>
 
-  // === CATEGORY CAROUSELS — Netflix-style rows ===
+        <div class="tool-spotlight reveal">
+          <div class="tool-spotlight__image-wrapper">
+            <img src="${BASE}images/strumenti/famag-grilletta.png" alt="Famag Grilletta" class="tool-spotlight__image" loading="lazy">
+            <span class="tool-spotlight__badge">⭐ Impasti</span>
+          </div>
+          <div class="tool-spotlight__info">
+            <h3 class="tool-spotlight__name">Famag Grilletta <span>IM 5/230 HH</span></h3>
+            <p class="tool-spotlight__desc">Impastatrice a spirale professionale. 10 velocità, capacità 5 kg, vasca da 7L. Fino al 95% idratazione. Made in Italy.</p>
+            <div class="tool-spotlight__specs">
+              <div class="spec-card reveal"><div class="spec-card__icon">⚡</div><div class="spec-card__label">Motore</div><div class="spec-card__value">Brushless 0.5 HP</div></div>
+              <div class="spec-card reveal reveal-delay-1"><div class="spec-card__icon">🎯</div><div class="spec-card__label">Velocità</div><div class="spec-card__value">10 (90–320 RPM)</div></div>
+              <div class="spec-card reveal reveal-delay-2"><div class="spec-card__icon">📦</div><div class="spec-card__label">Capacità</div><div class="spec-card__value">5 kg / 7 litri</div></div>
+              <div class="spec-card reveal reveal-delay-3"><div class="spec-card__icon">💧</div><div class="spec-card__label">Idr. Max</div><div class="spec-card__value">Fino al 95%</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tool-spotlight reveal">
+          <div class="tool-spotlight__image-wrapper">
+            <img src="${BASE}images/strumenti/philips-serie-7000.jpg" alt="Philips Serie 7000" class="tool-spotlight__image" loading="lazy">
+            <span class="tool-spotlight__badge">🏠 Pasta Home</span>
+          </div>
+          <div class="tool-spotlight__info">
+            <h3 class="tool-spotlight__name">Philips <span>Serie 7000</span></h3>
+            <p class="tool-spotlight__desc">Macchina per la pasta automatica. Pesatura integrata, 8 trafile, fino a 8 porzioni. Pasta in < 10 min.</p>
+            <div class="tool-spotlight__specs">
+              <div class="spec-card reveal"><div class="spec-card__icon">⚡</div><div class="spec-card__label">Potenza</div><div class="spec-card__value">200 W</div></div>
+              <div class="spec-card reveal reveal-delay-1"><div class="spec-card__icon">⚖️</div><div class="spec-card__label">Capacità</div><div class="spec-card__value">800g / 8 porz.</div></div>
+              <div class="spec-card reveal reveal-delay-2"><div class="spec-card__icon">🍝</div><div class="spec-card__label">Trafile</div><div class="spec-card__value">8 incluse</div></div>
+              <div class="spec-card reveal reveal-delay-3"><div class="spec-card__icon">⏱️</div><div class="spec-card__label">Tempo</div><div class="spec-card__value">< 10 min</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="chi-sono">
+      <div class="container container--narrow">
+        <div class="section-header reveal">
+          <div class="section-header__label">About</div>
+          <h2 class="section-header__title">Chi Sono</h2>
+          <p class="section-header__desc">Appassionato di panificazione artigianale, pasta fresca e impasti ad alta idratazione. Ogni ricetta è documentata con precisione tecnica per risultati replicabili al 100%.</p>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+// ═══════════════════════════════════════
+//  CATEGORY RENDERER (placeholder)
+// ═══════════════════════════════════════
+
+async function renderCategory(app, { category }) {
+  document.title = `${category} — Il Ricettario`;
+  app.innerHTML = `
+    <div class="container" style="padding: 120px 0;">
+      <h2 style="text-align:center;">${category}</h2>
+      <p style="text-align:center; color: var(--color-text-muted);">Pagina categoria — in arrivo</p>
+      <p style="text-align:center;"><a href="${BASE}" data-link>← Torna alla Home</a></p>
+    </div>`;
+}
+
+// ═══════════════════════════════════════
+//  CAROUSELS (Netflix-style rows)
+// ═══════════════════════════════════════
+
+function initCarousels() {
   const carouselsContainer = document.getElementById('recipe-carousels');
-  if (carouselsContainer) {
-    const CATEGORY_ORDER = [
-      { key: 'Pasta', emoji: '🍝', dir: 'pasta' },
-      { key: 'Pane', emoji: '🥖', dir: 'pane' },
-      { key: 'Pizza', emoji: '🍕', dir: 'pizza' },
-      { key: 'Lievitati', emoji: '🥐', dir: 'lievitati' },
-      { key: 'Dolci', emoji: '🍪', dir: 'dolci' },
-      { key: 'Focaccia', emoji: '🫓', dir: 'focaccia' },
-    ];
+  if (!carouselsContainer) return;
 
-    // Fetch recipes data
-    fetch(`${import.meta.env.BASE_URL}recipes.json`)
-      .then(r => r.json())
-      .then(data => {
-        carouselsContainer.innerHTML = ''; // Remove loading placeholder
+  const CATEGORY_ORDER = [
+    { key: 'Pasta', emoji: '🍝', dir: 'pasta' },
+    { key: 'Pane', emoji: '🥖', dir: 'pane' },
+    { key: 'Pizza', emoji: '🍕', dir: 'pizza' },
+    { key: 'Lievitati', emoji: '🥐', dir: 'lievitati' },
+    { key: 'Dolci', emoji: '🍪', dir: 'dolci' },
+    { key: 'Focaccia', emoji: '🫓', dir: 'focaccia' },
+  ];
 
-        // Group by category
-        const grouped = {};
-        data.recipes.forEach(r => {
-          if (!grouped[r.category]) grouped[r.category] = [];
-          grouped[r.category].push(r);
-        });
+  fetch(`${BASE}recipes.json`)
+    .then(r => r.json())
+    .then(data => {
+      carouselsContainer.innerHTML = '';
 
-        // Render each category row
-        CATEGORY_ORDER.forEach(cat => {
-          const recipes = grouped[cat.key];
-          if (!recipes || recipes.length === 0) return;
+      const grouped = {};
+      data.recipes.forEach(r => {
+        if (!grouped[r.category]) grouped[r.category] = [];
+        grouped[r.category].push(r);
+      });
 
-          const row = document.createElement('div');
-          row.className = 'category-row reveal';
-          row.dataset.category = cat.key;
+      CATEGORY_ORDER.forEach(cat => {
+        const recipes = grouped[cat.key];
+        if (!recipes || recipes.length === 0) return;
 
-          row.innerHTML = `
-            <div class="category-row__header">
-              <h3 class="category-row__title">
-                ${cat.emoji} ${cat.key}
-                <span class="category-row__count">${recipes.length} ricette</span>
-              </h3>
-              <a href="ricette/${cat.dir}/" class="category-row__link">Vedi tutte</a>
-            </div>
-            <div class="category-row__carousel-wrapper">
-              <button class="carousel-arrow carousel-arrow--prev" aria-label="Precedente">‹</button>
-              <div class="category-row__carousel">
-                ${recipes.map(r => `
-                  <a href="${r.href}" class="recipe-card--compact" data-title="${r.title.toLowerCase()}" data-category="${r.category}">
-                    <div class="recipe-card--compact__image-wrapper">
-                      ${r.image ? `<img src="${r.image}" alt="${r.title}" class="recipe-card--compact__image" loading="lazy">` : ''}
+        const row = document.createElement('div');
+        row.className = 'category-row reveal';
+        row.dataset.category = cat.key;
+
+        // Fix href per SPA: rimuovi .html
+        row.innerHTML = `
+          <div class="category-row__header">
+            <h3 class="category-row__title">
+              ${cat.emoji} ${cat.key}
+              <span class="category-row__count">${recipes.length} ricette</span>
+            </h3>
+            <a href="${BASE}ricette/${cat.dir}/" class="category-row__link" data-link>Vedi tutte</a>
+          </div>
+          <div class="category-row__carousel-wrapper">
+            <button class="carousel-arrow carousel-arrow--prev" aria-label="Precedente">‹</button>
+            <div class="category-row__carousel">
+              ${recipes.map(r => {
+                // Converti href .html → senza estensione per SPA
+                const spaHref = r.href.replace('.html', '');
+                return `
+                <a href="${spaHref}" class="recipe-card--compact" data-link data-title="${r.title.toLowerCase()}" data-category="${r.category}">
+                  <div class="recipe-card--compact__image-wrapper">
+                    ${r.image ? `<img src="${r.image}" alt="${r.title}" class="recipe-card--compact__image" loading="lazy">` : ''}
+                  </div>
+                  <div class="recipe-card--compact__body">
+                    <h4 class="recipe-card--compact__title">${r.title}</h4>
+                    <div class="recipe-card--compact__meta">
+                      ${r.hydration ? `<span class="recipe-card--compact__tag">💧 ${r.hydration}</span>` : ''}
+                      ${r.time ? `<span>⏱️ ${r.time}</span>` : ''}
                     </div>
-                    <div class="recipe-card--compact__body">
-                      <h4 class="recipe-card--compact__title">${r.title}</h4>
-                      <div class="recipe-card--compact__meta">
-                        ${r.hydration ? `<span class="recipe-card--compact__tag">💧 ${r.hydration}</span>` : ''}
-                        ${r.time ? `<span>⏱️ ${r.time}</span>` : ''}
-                      </div>
-                    </div>
-                  </a>
-                `).join('')}
-              </div>
-              <button class="carousel-arrow carousel-arrow--next" aria-label="Successivo">›</button>
+                  </div>
+                </a>`;
+              }).join('')}
             </div>
-          `;
+            <button class="carousel-arrow carousel-arrow--next" aria-label="Successivo">›</button>
+          </div>
+        `;
 
-          carouselsContainer.appendChild(row);
+        carouselsContainer.appendChild(row);
 
-          // Setup carousel scroll logic
-          const carousel = row.querySelector('.category-row__carousel');
-          const wrapper = row.querySelector('.category-row__carousel-wrapper');
-          const prevBtn = row.querySelector('.carousel-arrow--prev');
-          const nextBtn = row.querySelector('.carousel-arrow--next');
-          const cardWidth = 276; // card width + gap
+        // Carousel scroll logic
+        const carousel = row.querySelector('.category-row__carousel');
+        const wrapper = row.querySelector('.category-row__carousel-wrapper');
+        const prevBtn = row.querySelector('.carousel-arrow--prev');
+        const nextBtn = row.querySelector('.carousel-arrow--next');
+        const cardWidth = 276;
 
-          const updateScrollState = () => {
-            const { scrollLeft, scrollWidth, clientWidth } = carousel;
-            wrapper.classList.toggle('has-scroll-left', scrollLeft > 10);
-            wrapper.classList.toggle('has-scroll-right', scrollLeft < scrollWidth - clientWidth - 10);
-            prevBtn.disabled = scrollLeft <= 10;
-            nextBtn.disabled = scrollLeft >= scrollWidth - clientWidth - 10;
-          };
+        const updateScrollState = () => {
+          const { scrollLeft, scrollWidth, clientWidth } = carousel;
+          wrapper.classList.toggle('has-scroll-left', scrollLeft > 10);
+          wrapper.classList.toggle('has-scroll-right', scrollLeft < scrollWidth - clientWidth - 10);
+          prevBtn.disabled = scrollLeft <= 10;
+          nextBtn.disabled = scrollLeft >= scrollWidth - clientWidth - 10;
+        };
 
-          carousel.addEventListener('scroll', updateScrollState, { passive: true });
-          requestAnimationFrame(updateScrollState);
+        carousel.addEventListener('scroll', updateScrollState, { passive: true });
+        requestAnimationFrame(updateScrollState);
 
-          prevBtn.addEventListener('click', () => {
-            carousel.scrollBy({ left: -cardWidth * 3, behavior: 'smooth' });
-          });
-          nextBtn.addEventListener('click', () => {
-            carousel.scrollBy({ left: cardWidth * 3, behavior: 'smooth' });
-          });
-        });
-
-        // Re-observe reveal elements for new dynamic content
-        const newReveals = carouselsContainer.querySelectorAll('.reveal');
-        if (newReveals.length > 0) {
-          const revealObs = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                revealObs.unobserve(entry.target);
-              }
-            });
-          }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-          newReveals.forEach(el => revealObs.observe(el));
-        }
-
-        // Setup search after carousels are rendered
-        setupSearch();
-      })
-      .catch(err => {
-        console.error('Errore caricamento recipes.json:', err);
-        carouselsContainer.innerHTML = '<p style="text-align:center; color: var(--color-text-muted);">Errore nel caricamento delle ricette.</p>';
-      });
-  }
-
-  // === SEARCH RICETTE ===
-  function setupSearch() {
-    const searchInput = document.getElementById('search-input');
-    if (!searchInput) return;
-
-    searchInput.addEventListener('input', () => {
-      const query = searchInput.value.toLowerCase().trim();
-      const allCards = document.querySelectorAll('.recipe-card--compact');
-      const allRows = document.querySelectorAll('.category-row');
-
-      allCards.forEach(card => {
-        const title = card.dataset.title || card.textContent.toLowerCase();
-        card.style.display = (!query || title.includes(query)) ? '' : 'none';
+        prevBtn.addEventListener('click', () => carousel.scrollBy({ left: -cardWidth * 3, behavior: 'smooth' }));
+        nextBtn.addEventListener('click', () => carousel.scrollBy({ left: cardWidth * 3, behavior: 'smooth' }));
       });
 
-      // Hide entire category row if no visible cards
-      allRows.forEach(row => {
-        const visibleCards = row.querySelectorAll('.recipe-card--compact:not([style*="display: none"])');
-        row.style.display = visibleCards.length > 0 ? '' : 'none';
-      });
+      // Re-init reveal
+      initReveal();
+      // Setup search
+      setupSearch();
+    })
+    .catch(err => {
+      console.error('Errore caricamento recipes.json:', err);
+      carouselsContainer.innerHTML = '<p style="text-align:center; color: var(--color-text-muted);">Errore nel caricamento delle ricette.</p>';
+    });
+}
+
+// ═══════════════════════════════════════
+//  SEARCH
+// ═══════════════════════════════════════
+
+function setupSearch() {
+  const searchInput = document.getElementById('search-input');
+  if (!searchInput) return;
+
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.toLowerCase().trim();
+    const allCards = document.querySelectorAll('.recipe-card--compact');
+    const allRows = document.querySelectorAll('.category-row');
+
+    allCards.forEach(card => {
+      const title = card.dataset.title || card.textContent.toLowerCase();
+      card.style.display = (!query || title.includes(query)) ? '' : 'none';
     });
 
-    // Shortcut: "/" per focus search
-    document.addEventListener('keydown', (e) => {
-      if (e.key === '/' && document.activeElement !== searchInput) {
-        e.preventDefault();
-        searchInput.focus();
-        searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-      if (e.key === 'Escape' && document.activeElement === searchInput) {
-        searchInput.value = '';
-        searchInput.dispatchEvent(new Event('input'));
-        searchInput.blur();
-      }
+    allRows.forEach(row => {
+      const visibleCards = row.querySelectorAll('.recipe-card--compact:not([style*="display: none"])');
+      row.style.display = visibleCards.length > 0 ? '' : 'none';
     });
-  }
+  });
 
-  // === ANNO DINAMICO nel Footer ===
-  const yearEl = document.getElementById('current-year');
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-  }
-
-  // === SETUP TOGGLE ===
-  const setupBadge = document.getElementById('setup-badge');
-  if (setupBadge) {
-    const heroTag = document.getElementById('hero-setup-tag');
-    const badgeValue = document.getElementById('setup-badge-value');
-    const stepPanels = document.querySelectorAll('.recipe-panel[data-setup]');
-
-    // Rileva dinamicamente quali setup sono disponibili nella pagina
-    const SETUP_CONFIG = {
-      spirale: { icon: '🔧', label: 'Impastatrice a spirale' },
-      estrusore: { icon: '🔧', label: 'Estrusore con trafila' },
-      mano: { icon: '🤲', label: 'A mano' },
-    };
-
-    const SETUPS = [];
-    stepPanels.forEach(panel => {
-      const id = panel.getAttribute('data-setup');
-      if (SETUP_CONFIG[id]) {
-        SETUPS.push({ id, ...SETUP_CONFIG[id] });
-      }
-    });
-
-    // Se c'è un solo setup, nascondi il toggle
-    if (SETUPS.length <= 1) {
-      setupBadge.style.cursor = 'default';
-      setupBadge.removeAttribute('role');
-      setupBadge.removeAttribute('tabindex');
+  document.addEventListener('keydown', (e) => {
+    if (e.key === '/' && document.activeElement !== searchInput) {
+      e.preventDefault();
+      searchInput.focus();
+      searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
-
-    let currentIndex = 0;
-
-    const activateSetup = (index) => {
-      currentIndex = index;
-      const config = SETUPS[index];
-
-      // Show/hide procedure panels (escludendo "condimento" che è sempre visibile)
-      stepPanels.forEach(panel => {
-        if (panel.getAttribute('data-setup') === 'condimento') return;
-        panel.style.display = panel.getAttribute('data-setup') === config.id ? '' : 'none';
-      });
-
-      // Update hero tag
-      if (heroTag) heroTag.textContent = `${config.icon} ${config.label}`;
-
-      // Update tech badge
-      if (badgeValue) badgeValue.textContent = `\u00a0${config.label}`;
-
-      // Update note ingredienti dinamiche per il setup corrente
-      document.querySelectorAll('.ingredient-note[data-setup-note-' + config.id + ']').forEach(el => {
-        el.textContent = el.getAttribute('data-setup-note-' + config.id);
-      });
-
-      // Persist
-      localStorage.setItem('recipe-setup', config.id);
-    };
-
-    // Click cycles to next setup (solo se > 1 setup)
-    if (SETUPS.length > 1) {
-      setupBadge.addEventListener('click', () => {
-        activateSetup((currentIndex + 1) % SETUPS.length);
-      });
-
-      // Keyboard accessibility
-      setupBadge.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          activateSetup((currentIndex + 1) % SETUPS.length);
-        }
-      });
+    if (e.key === 'Escape' && document.activeElement === searchInput) {
+      searchInput.value = '';
+      searchInput.dispatchEvent(new Event('input'));
+      searchInput.blur();
     }
-
-    // Restore saved choice
-    const savedSetup = localStorage.getItem('recipe-setup');
-    if (savedSetup) {
-      const savedIndex = SETUPS.findIndex(s => s.id === savedSetup);
-      if (savedIndex !== -1) activateSetup(savedIndex);
-    }
-  }
-
-  // === CALCOLATORE DOSI (v3 — JSON model) ===
-  const doseInput = document.getElementById('dose-input');
-  const doseBadge = document.getElementById('dose-badge');
-  const doseDecrease = document.getElementById('dose-decrease');
-  const doseIncrease = document.getElementById('dose-increase');
-
-  if (doseInput && doseBadge) {
-    // ── Carica il modello dati dalla sorgente di verità ──
-    let recipeModel = null;
-    const dataScript = document.getElementById('recipe-data');
-    if (dataScript) {
-      try {
-        recipeModel = JSON.parse(dataScript.textContent);
-      } catch (e) {
-        console.warn('[DoseCalc] Errore parsing recipe-data JSON:', e);
-      }
-    }
-
-    // Base farina: dal JSON model, o fallback a data-base-total
-    const baseTotal = recipeModel?.totalFlour
-      || parseFloat(doseInput.getAttribute('data-base-total'))
-      || 1000;
-    const baseKg = baseTotal / 1000;
-    const maxKg = parseFloat(doseInput.max) || baseKg * 3;
-
-    // Step intelligente: 0.5kg per ricette > 1kg, 0.1kg per ricette <= 1kg
-    const stepKg = baseKg <= 1 ? 0.1 : 0.5;
-
-    // ── Costruisci mappa ingredienti → celle DOM ──
-    // Ogni entry ha { baseGrams, cell }
-    const ingredientMap = [];
-
-    if (recipeModel) {
-      // v3: mappa dal JSON model → celle DOM per indice
-      const tables = ['ingredients-table', 'suspensions-table'];
-      const modelLists = [recipeModel.ingredients || [], recipeModel.suspensions || []];
-
-      tables.forEach((tableId, listIdx) => {
-        const table = document.getElementById(tableId);
-        if (!table) return;
-
-        const rows = table.querySelectorAll('tr:not(.ingredient-section-header)');
-        const modelList = modelLists[listIdx];
-        let rowIdx = 0;
-
-        for (const item of modelList) {
-          if (item.grams == null) continue; // Header sezione (null grams)
-          if (rowIdx >= rows.length) break;
-
-          const cell = rows[rowIdx]?.querySelector('.ingredient-qty');
-          if (cell) {
-            ingredientMap.push({ baseGrams: item.grams, cell });
-          }
-          rowIdx++;
-        }
-      });
-    } else {
-      // Fallback v2: legge ancora dai data-base attributes (retrocompatibilità)
-      document.querySelectorAll('.ingredient-qty[data-base]').forEach(cell => {
-        const base = parseFloat(cell.getAttribute('data-base'));
-        if (!isNaN(base)) {
-          ingredientMap.push({ baseGrams: base, cell });
-        }
-      });
-    }
-
-    /**
-     * Formattazione professionale delle quantità.
-     * Segue le convenzioni delle bilance da panificazione:
-     *   >= 10g  → intero (es. 1500g, 800g, 58g)
-     *   >= 1g   → 1 decimale (es. 2.0g, 3.5g)
-     *   < 1g    → 2 decimali (es. 0.71g)
-     */
-    const formatGrams = (val) => {
-      if (val === 0) return '0g';
-      if (val >= 10) return `${Math.round(val)}g`;
-      if (val >= 1) return `${Math.round(val * 10) / 10}g`;
-      return `${Math.round(val * 100) / 100}g`;
-    };
-
-    /**
-     * Formattazione del badge multiplier.
-     */
-    const formatMultiplier = (m) => {
-      if (Number.isInteger(m)) return `×${m}`;
-      if (Math.abs(m * 10 - Math.round(m * 10)) < 0.001) {
-        return `×${m.toFixed(1)}`;
-      }
-      return `×${m.toFixed(2)}`;
-    };
-
-    const updateDoses = () => {
-      const kg = parseFloat(doseInput.value);
-      if (isNaN(kg) || kg <= 0) return;
-
-      const multiplier = kg / baseKg;
-
-      // Aggiorna badge
-      doseBadge.textContent = formatMultiplier(multiplier);
-
-      // Aggiorna ogni cella ingrediente dal modello
-      ingredientMap.forEach(({ baseGrams, cell }) => {
-        const newVal = baseGrams * multiplier;
-        cell.textContent = formatGrams(newVal);
-
-        // Pulse animation (re-trigger)
-        cell.classList.remove('dose-updated');
-        void cell.offsetWidth;
-        cell.classList.add('dose-updated');
-      });
-    };
-
-    // Event listeners
-    doseInput.addEventListener('input', updateDoses);
-    doseInput.addEventListener('change', updateDoses);
-
-    if (doseDecrease) {
-      doseDecrease.addEventListener('click', () => {
-        const current = parseFloat(doseInput.value) || baseKg;
-        const newVal = Math.round((current - stepKg) * 100) / 100;
-        if (newVal >= 0.1) {
-          doseInput.value = Math.round(newVal * 10) / 10;
-          updateDoses();
-        }
-      });
-    }
-
-    if (doseIncrease) {
-      doseIncrease.addEventListener('click', () => {
-        const current = parseFloat(doseInput.value) || baseKg;
-        const newVal = Math.round((current + stepKg) * 100) / 100;
-        if (newVal <= maxKg) {
-          doseInput.value = Math.round(newVal * 10) / 10;
-          updateDoses();
-        }
-      });
-    }
-
-    // Sincronizza UI all'avvio
-    updateDoses();
-  }
-
-  // === VIEW TRANSITIONS API — Navigazione Fluida ===
-  if ('startViewTransition' in document) {
-    document.querySelectorAll('a[href]').forEach(link => {
-      const href = link.getAttribute('href');
-      // Solo link interni a pagine HTML
-      if (href && href.endsWith('.html') && !href.startsWith('http')) {
-        link.addEventListener('click', (e) => {
-          e.preventDefault();
-          document.startViewTransition(() => {
-            window.location.href = href;
-          });
-        });
-      }
-    });
-  }
-
-});
+  });
+}

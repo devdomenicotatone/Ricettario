@@ -1,46 +1,46 @@
 # Validazione: Cornetti Sfogliati Classici
 
-## 🟢 Confidenza: 100%
+## 🟢 Confidenza: 94%
 
 **Fonti consultate:** 7
 
 ### ✅ Confermato
-- Ingredienti: 13/13 confermati (100%)
-- Idratazione: 52% (media fonti: 49%) — ✅ OK
+- Ingredienti: 11/13 confermati (85%)
+- Idratazione: 52% (media fonti: 56%) — ✅ OK
 
 ### 📋 Ingredienti
 | Status | Ingrediente | Note |
 |--------|-------------|------|
-| ✅ | farina manitoba forte | Confermato da fonti |
-| ✅ | farina tipo 00 media forza | Confermato da fonti |
-| ✅ | lievito di birra fresco | Confermato da fonti |
-| ✅ | latte intero fresco | Confermato da fonti |
-| ✅ | uova intere medie | Confermato da fonti |
-| ✅ | zucchero semolato | Confermato da fonti |
-| ✅ | burro bavarese per impasto | Confermato da fonti |
-| ✅ | sale fino | Confermato da fonti |
-| ✅ | miele millefiori o acacia | Confermato da fonti |
-| ✅ | estratto naturale di vaniglia | Confermato da fonti |
-| ✅ | scorza grattugiata di arancia | Confermato da fonti |
-| ✅ | scorza grattugiata di limone | Confermato da fonti |
-| ✅ | burro bavarese per sfogliatura | Confermato da fonti |
+| ✅ | 300g farina manitoba forte | Confermato da fonti |
+| ✅ | 200g farina tipo 00 media forza | Confermato da fonti |
+| ✅ | 18g lievito di birra fresco | Confermato da fonti |
+| ✅ | 200g latte intero fresco | Confermato da fonti |
+| ✅ | 110g uova intere medie | Confermato da fonti |
+| ✅ | 80g zucchero semolato | Confermato da fonti |
+| ✅ | 80g burro bavarese per impasto | Confermato da fonti |
+| ✅ | 10g sale fino | Confermato da fonti |
+| ✅ | 20g miele millefiori o acacia | Confermato da fonti |
+| ✅ | 5g estratto naturale di vaniglia | Confermato da fonti |
+| ⚠️ | 10g scorza grattugiata di arancia | Non trovato nelle fonti |
+| ⚠️ | 5g scorza grattugiata di limone | Non trovato nelle fonti |
+| ✅ | 250g burro bavarese per sfogliatura | Confermato da fonti |
 
 ### 📊 Dettagli
-- Tempi fonti: 2h + 4h di riposo, 120min, 15h, 40min, 120min
-- Tempo Claude: 18-24h totali (puntata + maturazione in frigo + appretto)
+- Tempi fonti: 2h + 4h di riposo, P0DT3H0M, 45min, 24+ hours, 240min
+- Tempo Claude: 
 
 ### 📰 Fonti
-1. **lacucinaitaliana.it** — Dati strutturati (8 ingredienti)
+1. **blog.giallozafferano.it** — Dati strutturati (13 ingredienti)
+   https://blog.giallozafferano.it/lemerendedellafranci/croissant-classici-sfogliati/
+2. **lacucinaitaliana.it** — Dati strutturati (8 ingredienti)
    https://www.lacucinaitaliana.it/ricetta/cornetti-sfogliati/
-2. **ricette.giallozafferano.it** — Dati strutturati (15 ingredienti)
-   https://ricette.giallozafferano.it/Cornetti-sfogliati-all-italiana.html
-3. **tavolartegusto.it** — Dati strutturati (8 ingredienti)
-   https://www.tavolartegusto.it/ricetta/croissant-francesi-ricetta-originale/
-4. **davidezambelli.com** — Dati strutturati (30 ingredienti)
-   https://www.davidezambelli.com/ricette/croissant-fatti-in-casa-straordinari/
-5. **valcor.it** — Dati strutturati (18 ingredienti)
-   https://www.valcor.it/ricetta/cornetti-sfogliati/
-6. **aniceecannella.com** — Estrazione HTML (11 ingredienti)
-   https://www.aniceecannella.com/i-cornetti-sfogliati-quelli-del-bar/
-7. **pastigioca.it** — Dati strutturati (14 ingredienti)
-   https://www.pastigioca.it/ricette/croissant-francesi
+3. **blog.giallozafferano.it** — Dati strutturati (12 ingredienti)
+   https://blog.giallozafferano.it/allacciateilgrembiule/cornetti-sfogliati-come-al-bar/
+4. **onesarcasticbaker.com** — Dati strutturati (11 ingredienti)
+   https://www.onesarcasticbaker.com/cornetti-italian-croissants/
+5. **silviascucina.net** — Estrazione HTML (12 ingredienti)
+   https://silviascucina.net/2015/03/09/cornetti-italian-croissants/
+6. **fattiretours.com** — Estrazione HTML (14 ingredienti)
+   https://www.fattiretours.com/travel-to-eat/cornetto-sfogliato-italian-croissant-recipe/
+7. **en.julskitchen.com** — Dati strutturati (16 ingredienti)
+   https://en.julskitchen.com/breakfast/italian-croissants

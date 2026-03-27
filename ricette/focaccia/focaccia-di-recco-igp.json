@@ -2,7 +2,7 @@
   "title": "Focaccia di Recco IGP",
   "slug": "focaccia-di-recco-igp",
   "emoji": "🫓",
-  "description": "Focaccia ligure ripiena di stracchino, con sfoglia sottilissima stesa a mano. Ricetta tradizionale della tradizione genovese.",
+  "description": "Sfoglia sottilissima ripiena di formaggio fresco - Tradizione ligure protetta IGP con farina Manitoba ad alta forza",
   "subtitle": "Sfoglia sottile ripiena di formaggio fresco - Tradizione ligure",
   "category": "Focaccia",
   "hydration": 68,
@@ -17,11 +17,11 @@
     },
     {
       "name": "Acqua",
-      "note": "(temperatura ambiente 18-20°C)",
+      "note": "(temperatura ambiente)",
       "grams": 544,
       "setupNote": {
-        "spirale": "temperatura ambiente, aggiungere in 2 riprese",
-        "mano": "temperatura ambiente, aggiungere gradualmente fino a consistenza corretta"
+        "spirale": "(temperatura ambiente, aggiungere in 2 riprese)",
+        "mano": "(temperatura ambiente, aggiungere gradualmente fino a consistenza corretta)"
       }
     },
     {
@@ -127,6 +127,8 @@
       "text": "Spennellare la superficie con olio EVO abbondante, creando piccole pozze. In alternativa: creare una 'salamoia' emulsionando 2-3 cucchiai di olio con 1 cucchiaio di acqua e qualche granello di sale grosso, e versarla a gocce sulla focaccia con le dita. Spolverare eventualmente con sale grosso."
     }
   ],
+  "stepsExtruder": [],
+  "stepsCondiment": [],
   "flourTable": [
     {
       "type": "Manitoba",
@@ -181,27 +183,29 @@
   ],
   "alert": "NON utilizzare farine deboli o medie (tipo 00 o tipo 0 comuni): la sfoglia non reggerebbe la stesura sottilissima e si romperebbe. NON aggiungere lievito: la Focaccia di Recco è SENZA lievitazione, la fragranza deriva dalla cottura ad alta temperatura. NON usare formaggi stagionati o mozzarella: rilascerebbero troppa acqua o non fonderebbero correttamente. NON stendere la pasta troppo spessa: lo spessore ideale è <1mm, altrimenti non otterrete la croccantezza tipica. NON lasciare riposare l'impasto troppo a lungo (max 60 min): non essendoci lievito, un riposo eccessivo non apporta benefici e può seccare la superficie.",
   "proTips": [
-    "Il segreto della sottigliezza: la Manitoba ad altissima forza è fondamentale. Più la farina è forte (W>360), più la sfoglia può essere stesa sottile senza rompersi. Lavoratela con pazienza durante il riposo.",
     "Temperatura del formaggio: lo stracchino/crescenza deve essere freddo di frigo fino al momento dell'uso. Se troppo caldo, inizia a fondere durante l'assemblaggio e rende difficile la chiusura.",
-    "Test di trasparenza: la sfoglia è abbastanza sottile quando, sollevandola controluce, si intravede la sagoma delle mani. È la stessa tecnica dello strudel tradizionale.",
-    "Salamoia ligure: l'emulsione di olio, acqua e sale (tecnica tradizionale) crea durante la cottura piccole bolle croccanti sulla superficie. È il tocco finale dei maestri recchesi."
-  ],
-  "imageKeywords": [
-    "focaccia di recco col formaggio",
-    "focaccia recco cheese liguria",
-    "stracchino focaccia sottile",
-    "recco focaccia IGP traditional",
-    "italian cheese flatbread recco"
-  ],
-  "tags": [
-    "liguria",
-    "recco",
-    "formaggio",
-    "stracchino",
-    "senza-lievito",
-    "IGP",
-    "sfoglia-sottile"
+    "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
   ],
   "image": "images/ricette/focaccia/focaccia-di-recco-igp.jpg",
-  "imageAttribution": "📷 Foto: leonardo prascina — Pexels License via Pexels"
+  "imageKeywords": [
+    "focaccia di recco",
+    "sfoglia sottile",
+    "stracchino",
+    "crescenza",
+    "IGP",
+    "liguria",
+    "formaggio filante",
+    "focaccia ripiena"
+  ],
+  "tags": [
+    "focaccia",
+    "liguria",
+    "IGP",
+    "stracchino",
+    "crescenza",
+    "senza lievito",
+    "formaggio",
+    "manitoba",
+    "tradizione"
+  ]
 }
