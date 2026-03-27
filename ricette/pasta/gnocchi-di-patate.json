@@ -1,0 +1,140 @@
+{
+  "title": "Gnocchi di Patate",
+  "slug": "gnocchi-di-patate",
+  "emoji": "🥔",
+  "description": "Gnocchi di patate tradizionali con o senza uova: morbidi, delicati e perfetti per ogni condimento. Tecnica artigianale e proporzioni professionali.",
+  "subtitle": "La pasta fresca classica italiana a base di patate",
+  "category": "Pasta",
+  "hydration": 0,
+  "targetTemp": "28-32°C",
+  "fermentation": "nessuna (riposo 20-40 min)",
+  "totalFlour": 300,
+  "ingredients": [
+    {
+      "name": "Patate Rosse o Gialle",
+      "note": "(vecchie, farinose, a pasta compatta - es. Desiree, Kennebec)",
+      "grams": 1000
+    },
+    {
+      "name": "Farina Tipo 00",
+      "note": "(media forza W 200-220)",
+      "grams": 300
+    },
+    {
+      "name": "Uova Medie",
+      "note": "(facoltativo - omettere per gnocchi più delicati)",
+      "grams": 50,
+      "setupNote": {
+        "conUova": "1 uovo medio (~50g)",
+        "senzaUova": "omettere e aumentare farina a 350g"
+      }
+    },
+    {
+      "name": "Sale Fino",
+      "note": "",
+      "grams": 10
+    },
+    {
+      "name": "Semola Rimacinata",
+      "note": "(per spolverare banco e vassoio)",
+      "grams": 50
+    }
+  ],
+  "suspensions": [],
+  "stepsExtruder": [],
+  "stepsHand": [
+    {
+      "title": "Cottura Patate (40 min)",
+      "text": "Lavare accuratamente le patate intere con la buccia sotto acqua corrente. Immergerle in una pentola capiente con abbondante acqua FREDDA leggermente salata. Portare a ebollizione e cuocere per 30-40 minuti (dipende dalla grandezza). Fare la prova forchetta: i rebbi devono entrare senza fatica. Scolare e pelare le patate ANCORA CALDE (aiutarsi con un canovaccio). NOTA TECNICA: le patate calde assorbono meno farina e producono gnocchi più soffici. MAI farle raffreddare completamente."
+    },
+    {
+      "title": "Preparazione Impasto (5 min)",
+      "text": "Setacciare 200g di farina sul banco formando una fontana larga. Schiacciare le patate calde direttamente sulla farina con uno schiacciapatate (la buccia resterà all'interno). Aggiungere al centro: uovo leggermente sbattuto (se usato), sale fino, noce moscata (facoltativa). Con le mani iniziare ad amalgamare gli ingredienti dal centro verso l'esterno. Aggiungere la farina restante gradualmente (potrebbero bastare 250-280g totali). Impastare POCHISSIMO: giusto il tempo di ottenere un composto omogeneo, morbido ma non appiccicoso. REGOLA D'ORO: meno si lavora l'impasto, più teneri saranno gli gnocchi. Tempo impasto: max 3-4 minuti."
+    },
+    {
+      "title": "Formatura Gnocchi (15 min)",
+      "text": "Dividere l'impasto in 6-8 porzioni. Coprire le parti non utilizzate con un canovaccio umido. Spolverare il banco con semola rimacinata. Con le punte delle dita (non il palmo), stendere ogni porzione formando filoncini dello spessore di 2 cm. Tagliare a tocchetti di 2-3 cm con un tarocco o coltello. Rigare ogni gnocco: appoggiare il tocchetto sul rigagnocchi (o rebbi di forchetta) e trascinarlo con il pollice esercitando una leggera pressione. Si forma una conchetta con righe esterne. Sistemare gli gnocchi su vassoi con canovaccio infarinato di semola, ben distanziati."
+    },
+    {
+      "title": "Riposo (20-40 min)",
+      "text": "Lasciare gli gnocchi all'aria per 20-40 minuti. La superficie si asciugherà leggermente e manterrà meglio la rigatura durante la cottura. Evitare di cuocere subito: gnocchi troppo umidi si disfano. Se non si cuociono entro 2 ore, congelare su vassoio e poi trasferire in sacchetti (si conservano 3 mesi)."
+    },
+    {
+      "title": "Cottura (2-3 min)",
+      "text": "Portare a ebollizione una pentola capiente con abbondante acqua salata (10g sale per litro). Versare gli gnocchi in piccole quantità (max 200g per volta). Appena vengono a galla (dopo 1-2 minuti) attendere altri 30 secondi e scolare con schiumarola. Trasferire direttamente nel condimento in padella e mantecare 30-60 secondi. NON sciacquare sotto acqua fredda."
+    }
+  ],
+  "stepsCondiment": [
+    {
+      "title": "Sugo al Pomodoro Semplice (15 min)",
+      "text": "In una padella capiente scaldare 4 cucchiai di olio EVO con 1 spicchio d'aglio schiacciato. Aggiungere 400g di passata di pomodoro, sale, pepe. Cuocere 10-12 minuti a fuoco medio mescolando. Togliere l'aglio, aggiungere basilico fresco. Versare gli gnocchi scolati direttamente nel sugo, mantecare 1 minuto. Servire con parmigiano grattugiato."
+    },
+    {
+      "title": "Condimento Pancetta e Pomodorini (20 min)",
+      "text": "Tagliare 250g di pancetta tesa a listarelle. Rosolare in padella con 2 cucchiai di olio EVO fino a renderla croccante. Aggiungere 600g di pomodorini tagliati a metà, sale, pepe. Cuocere 8-10 minuti a fuoco vivace. Aggiungere gli gnocchi scolati, mantecare con basilico fresco e parmigiano grattugiato. Servire subito."
+    }
+  ],
+  "flourTable": [
+    {
+      "type": "Farina Tipo 00 Media Forza",
+      "w": "200-220",
+      "brands": "Molino Spadoni Rossa, Molino Grassi Tipo 00, Le 5 Stagioni Cuoco"
+    }
+  ],
+  "baking": null,
+  "glossary": [
+    {
+      "term": "Patate Farinose",
+      "definition": "Patate a pasta asciutta e ricca di amido (es. rosse, Desiree) ideali per gnocchi perché assorbono meno farina e producono impasti più soffici"
+    },
+    {
+      "term": "Schiacciapatate",
+      "definition": "Utensile a leva con fori che riduce le patate cotte in purea rustica, mantenendo consistenza e evitando che diventino collosi"
+    },
+    {
+      "term": "Rigagnocchi",
+      "definition": "Tavoletta di legno rigata su cui si trascina l'impasto per creare la tipica forma concava e rigata degli gnocchi"
+    },
+    {
+      "term": "Tarocco",
+      "definition": "Spatola da banco rigida usata per tagliare impasti e raschiare il piano di lavoro"
+    },
+    {
+      "term": "Mantecare",
+      "definition": "Tecnica di amalgamare pasta e condimento in padella a fuoco vivace, mescolando energicamente per creare emulsione cremosa"
+    },
+    {
+      "term": "Prova Forchetta",
+      "definition": "Test per verificare cottura delle patate: i rebbi devono penetrare senza resistenza fino al centro"
+    },
+    {
+      "term": "Semola Rimacinata",
+      "definition": "Farina di grano duro macinata fine, usata per infarinare perché assorbe umidità senza appiccicare e mantiene la forma degli gnocchi"
+    }
+  ],
+  "alert": "NON far raffreddare le patate prima di schiacciarle: patate fredde assorbono il doppio della farina rendendo gli gnocchi duri e gommosi. NON impastare troppo: ogni minuto in più rende l'impasto colloso e gli gnocchi pesanti. NON cuocere troppi gnocchi insieme: si abbassa la temperatura dell'acqua e si ottiene una cottura irregolare.",
+  "proTips": [
+    "Per gnocchi extrasoffici: usa solo 250g di farina e ometti l'uovo. L'impasto sarà più delicato ma richiede mani rapide nella formatura.",
+    "Congela gli gnocchi crudi su vassoio infarinato per 2 ore, poi trasferisci in sacchetti: si conservano 3 mesi e si cuociono ancora congelati (1 minuto in più).",
+    "Variante gourmet: aggiungi 100g di parmigiano grattugiato all'impasto e riduci la farina di pari quantità. Gli gnocchi saranno più saporiti e compatti."
+  ],
+  "imageKeywords": [
+    "homemade potato gnocchi on wooden board",
+    "italian gnocchi di patate rigati",
+    "fresh gnocchi with tomato sauce basil",
+    "traditional potato dumplings fork ridges",
+    "gnocchi preparation process hands"
+  ],
+  "tags": [
+    "gnocchi",
+    "patate",
+    "pasta fresca",
+    "primo piatto",
+    "tradizionale",
+    "senza uova",
+    "vegetariano"
+  ],
+  "image": "images/ricette/pasta/gnocchi-di-patate.jpg",
+  "imageAttribution": "📷 Foto: Maxi Gagliano — Pexels License via Pexels",
+  "_originalImageUrl": "https://images.pexels.com/photos/4694432/pexels-photo-4694432.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+}

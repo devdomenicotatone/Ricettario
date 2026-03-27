@@ -4,7 +4,7 @@
   "emoji": "🫓",
   "description": "Focaccia ligure ripiena di stracchino, con sfoglia sottilissima stesa a mano. Ricetta tradizionale della tradizione genovese.",
   "subtitle": "Sfoglia sottile ripiena di formaggio fresco - Tradizione ligure",
-  "category": "Lievitati",
+  "category": "Focaccia",
   "hydration": 68,
   "targetTemp": "20-22°C",
   "fermentation": "30-60 min riposo",
@@ -202,6 +202,6 @@
     "IGP",
     "sfoglia-sottile"
   ],
-  "image": "images/ricette/lievitati/focaccia-di-recco-igp.jpg",
+  "image": "images/ricette/focaccia/focaccia-di-recco-igp.jpg",
   "imageAttribution": "📷 Foto: leonardo prascina — Pexels License via Pexels"
 }

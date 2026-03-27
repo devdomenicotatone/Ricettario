@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-27T11:19:12.297Z",
-  "totalRecipes": 28,
+  "generatedAt": "2026-03-27T12:27:06.713Z",
+  "totalRecipes": 29,
   "categories": [
     {
       "name": "Pane",
@@ -13,8 +13,13 @@
       "emoji": "🍕"
     },
     {
+      "name": "Pasta",
+      "count": 1,
+      "emoji": "🍝"
+    },
+    {
       "name": "Lievitati",
-      "count": 9,
+      "count": 8,
       "emoji": "🥐"
     },
     {
@@ -24,7 +29,7 @@
     },
     {
       "name": "Focaccia",
-      "count": 3,
+      "count": 4,
       "emoji": "🫓"
     }
   ],
@@ -198,6 +203,20 @@
       "tool": "🔧 Impastatrice a spirale"
     },
     {
+      "title": "Gnocchi di Patate",
+      "slug": "gnocchi-di-patate",
+      "category": "Pasta",
+      "categoryDir": "pasta",
+      "emoji": "🥔",
+      "href": "ricette/pasta/gnocchi-di-patate.html",
+      "image": "images/ricette/pasta/gnocchi-di-patate.jpg",
+      "description": "Gnocchi di patate tradizionali con o senza uova: morbidi, delicati e perfetti per ogni condimento. Tecnica artigianale e proporzioni professionali.",
+      "hydration": "0%",
+      "time": "nessuna (riposo 20-40 min)",
+      "temp": "28-32°C",
+      "tool": "🍝 Pasta"
+    },
+    {
       "title": "Burger Buns con Biga",
       "slug": "burger-buns-biga",
       "category": "Lievitati",
@@ -251,20 +270,6 @@
       "hydration": "52%",
       "time": "18-24h totali (puntata + maturazione in frigo + appretto)",
       "temp": "24-26°C",
-      "tool": "🔧 Impastatrice a spirale"
-    },
-    {
-      "title": "Focaccia di Recco IGP",
-      "slug": "focaccia-di-recco-igp",
-      "category": "Lievitati",
-      "categoryDir": "lievitati",
-      "emoji": "🫓",
-      "href": "ricette/lievitati/focaccia-di-recco-igp.html",
-      "image": "images/ricette/lievitati/focaccia-di-recco-igp.jpg",
-      "description": "Focaccia ligure ripiena di stracchino, con sfoglia sottilissima stesa a mano. Ricetta tradizionale della tradizione genovese.",
-      "hydration": "68%",
-      "time": "30-60 min riposo",
-      "temp": "20-22°C",
       "tool": "🔧 Impastatrice a spirale"
     },
     {
@@ -391,6 +396,20 @@
       "hydration": "80%",
       "time": "3-4h puntata + 1h appretto",
       "temp": "24-26°C",
+      "tool": "🔧 Impastatrice a spirale"
+    },
+    {
+      "title": "Focaccia di Recco IGP",
+      "slug": "focaccia-di-recco-igp",
+      "category": "Focaccia",
+      "categoryDir": "focaccia",
+      "emoji": "🫓",
+      "href": "ricette/focaccia/focaccia-di-recco-igp.html",
+      "image": "images/ricette/focaccia/focaccia-di-recco-igp.jpg",
+      "description": "Focaccia ligure ripiena di stracchino, con sfoglia sottilissima stesa a mano. Ricetta tradizionale della tradizione genovese.",
+      "hydration": "68%",
+      "time": "30-60 min riposo",
+      "temp": "20-22°C",
       "tool": "🔧 Impastatrice a spirale"
     },
     {
