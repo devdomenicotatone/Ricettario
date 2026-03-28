@@ -1,0 +1,233 @@
+{
+  "title": "Pane alle Noci con Poolish",
+  "slug": "pane-alle-noci-con-poolish",
+  "emoji": "🥖",
+  "description": "Pane rustico settentrionale con preimpasto liquido poolish e noci non trattate. Alveolatura sviluppata, profumo intenso, perfetto per formaggi e mostarde.",
+  "subtitle": "Lievitato con metodo indiretto e frutta secca",
+  "category": "Pane",
+  "hydration": 70,
+  "targetTemp": "25-26°C",
+  "fermentation": "~14h (12h poolish + 2h impasto)",
+  "totalFlour": 1000,
+  "ingredients": [
+    {
+      "name": "Farina Tipo 0 o 00 Media-Alta Forza",
+      "note": "(W 260-300, per poolish)",
+      "grams": 300
+    },
+    {
+      "name": "Farina Tipo 0 o 00 Media-Alta Forza",
+      "note": "(W 260-300, per impasto finale)",
+      "grams": 700
+    },
+    {
+      "name": "Acqua",
+      "note": "(per poolish, temperatura ambiente 20°C)",
+      "grams": 300
+    },
+    {
+      "name": "Acqua",
+      "note": "(per impasto finale, 18-20°C)",
+      "grams": 400,
+      "setupNote": {
+        "spirale": "18-20°C, aggiungere in 2 riprese da 200g",
+        "mano": "20-22°C, aggiungere gradualmente in 3 riprese"
+      }
+    },
+    {
+      "name": "Lievito di Birra Fresco",
+      "note": "(per poolish)",
+      "grams": 1
+    },
+    {
+      "name": "Lievito di Birra Fresco",
+      "note": "(per impasto finale)",
+      "grams": 14
+    },
+    {
+      "name": "Olio Extravergine di Oliva",
+      "note": "(a temperatura ambiente)",
+      "grams": 50
+    },
+    {
+      "name": "Sale Marino Fino",
+      "note": "(aggiungere dopo la prima fase di impastamento)",
+      "grams": 20
+    }
+  ],
+  "suspensions": [
+    {
+      "name": "Noci non Trattate",
+      "note": "(tritate grossolanamente, sgusciate)",
+      "grams": 320
+    }
+  ],
+  "stepsSpiral": [
+    {
+      "title": "Preparazione Poolish (12h prima)",
+      "text": "In una ciotola capiente versare 300g di acqua a temperatura ambiente (20°C). Sciogliere 1g di lievito di birra fresco nell'acqua mescolando con una frusta. Aggiungere 300g di farina e mescolare energicamente con la frusta fino a ottenere una pastella liscia e omogenea, senza grumi. Il poolish deve avere la consistenza di una crema densa che cade a nastro dalla frusta. Coprire ermeticamente con pellicola trasparente e lasciare maturare a temperatura ambiente (20°C) per 12 ore. Il poolish è pronto quando è raddoppiato di volume, presenta una superficie ricca di bolle e ha sviluppato un aroma acidulo piacevole."
+    },
+    {
+      "title": "Impastamento Base in Spirale",
+      "text": "Versare il poolish maturo nella vasca dell'impastatrice a spirale. Aggiungere i 700g di farina restante e 14g di lievito sbriciolato. Avviare a velocità bassa (V1) e incorporare 200g di acqua (18-20°C). Impastare per 3 minuti a velocità media (V4-5) fino a ottenere un impasto ruvido ma coeso. Aggiungere il sale e i 50g di olio extravergine di oliva, continuare a impastare per 2 minuti. Incorporare i restanti 200g di acqua a filo, sempre a velocità media. Aumentare gradualmente la velocità fino a V8-10 e continuare l'impastamento per altri 5-6 minuti fino a completa incordatura. L'impasto deve staccarsi dalle pareti della vasca, essere liscio, elastico e con temperatura finale di 25-26°C. Tempo totale impastamento: 10-12 minuti."
+    },
+    {
+      "title": "Incorporamento Noci",
+      "text": "Abbassare la spirale a velocità minima (V1). Aggiungere le 320g di noci tritate grossolanamente. Impastare solo per 2-3 minuti, giusto il tempo necessario per distribuire uniformemente le noci senza tritarle ulteriormente. L'impasto finale deve presentare una distribuzione omogenea della frutta secca senza che questa venga ridotta in farina. Tempo totale con noci: 14-15 minuti massimo."
+    },
+    {
+      "title": "Prima Puntata",
+      "text": "Trasferire l'impasto in un contenitore capiente unto leggermente con olio extravergine. Coprire con pellicola e lasciare riposare in un luogo a 25-26°C per 40-45 minuti. L'impasto deve aumentare di circa il 30-40% del volume iniziale e risultare morbido e soffice al tatto."
+    },
+    {
+      "title": "Piega di Rinforzo",
+      "text": "Rovesciare delicatamente l'impasto su un piano di lavoro leggermente infarinato. Eseguire una piega a tre: stendere leggermente l'impasto formando un rettangolo. Afferrare il lembo superiore e portarlo verso il centro, premendo leggermente per sigillare. Ripetere con il lembo inferiore sovrapponendolo al primo. Ruotare l'impasto di 90° e ripetere la piega. Questa operazione ridistribuisce le maglie glutiniche e rinforza la struttura senza sgonfiare l'impasto. Trasferire nuovamente nel contenitore unto, con la chiusura verso il basso. Coprire e lasciare riposare altri 40-45 minuti a 25-26°C."
+    },
+    {
+      "title": "Formatura",
+      "text": "Rovesciare l'impasto su piano leggermente infarinato. Dividere in 2-3 porzioni a seconda della pezzatura desiderata (400-500g per panetti singoli). Per forma sferica: eseguire la pirlatura ruotando l'impasto sotto il palmo della mano con movimenti circolari, creando tensione superficiale. Per filoncino: stendere leggermente, piegare a metà per il lungo, sigillare con il taglio della mano, poi arrotolare allungando progressivamente con le mani dal centro verso l'esterno. Disporre i pezzi formati su placca rivestita di carta forno, lasciando 10cm di distanza tra loro."
+    },
+    {
+      "title": "Appretto Finale",
+      "text": "Coprire i panetti con un canovaccio inumidito o con pellicola leggermente unta. Lasciare lievitare a 26-28°C per circa 60 minuti. I pezzi devono quasi raddoppiare di volume. Test della prova dito: premere delicatamente la superficie con un dito; se l'impronta torna lentamente l'appretto è corretto. Se rimane l'impronta, i pezzi sono pronti per la cottura."
+    },
+    {
+      "title": "Scarificazione e Infornata",
+      "text": "Preriscaldare il forno a 220-230°C con pietra refrattaria per almeno 45 minuti. Con una lama da pane ben affilata praticare 2-3 tagli decisi sulla superficie dei panetti: obliqui a 45° per filoncini (profondi 1cm), a croce per sfere. Vaporizzare abbondantemente le pareti del forno (o versare 150ml di acqua bollente in una teglia con pietre laviche/bulloni sul fondo). Infornare rapidamente i panetti sulla pietra. Chiudere subito il forno."
+    }
+  ],
+  "stepsHand": [
+    {
+      "title": "Preparazione Poolish (12h prima)",
+      "text": "In una ciotola capiente versare 300g di acqua a temperatura ambiente (20°C). Sciogliere 1g di lievito di birra fresco nell'acqua mescolando con una frusta. Aggiungere 300g di farina e mescolare energicamente con la frusta fino a ottenere una pastella liscia e omogenea, senza grumi. Il poolish deve avere la consistenza di una crema densa. Coprire ermeticamente con pellicola trasparente e lasciare maturare a temperatura ambiente (20°C) per 12 ore fino a raddoppio di volume e superficie ricca di bolle."
+    },
+    {
+      "title": "Autoimpasto Iniziale",
+      "text": "In una ciotola capiente o direttamente sul piano di lavoro, versare il poolish maturo. Aggiungere i 700g di farina restante formando una fontana. Nel centro versare 250g di acqua a 20-22°C in cui avrete sciolto i 14g di lievito. Iniziare a incorporare la farina dal centro verso l'esterno con le dita, amalgamando gradualmente. Quando metà della farina è incorporata, aggiungere altri 100g di acqua. Continuare a mescolare fino a ottenere un impasto ruvido e grumoso. Coprire con un canovaccio e lasciare riposare 20 minuti (autolisi). Questo riposo permette alla farina di idratarsi completamente."
+    },
+    {
+      "title": "Impastamento Manuale",
+      "text": "Aggiungere il sale distribuendolo sulla superficie dell'impasto e i 50g di olio extravergine di oliva. Incorporare gli ultimi 50g di acqua gradualmente. Iniziare l'impastamento manuale con tecnica slap & fold: sollevare l'impasto afferrandolo da un'estremità, sbatterlo sul piano distendendo le braccia, ripiegarlo su se stesso e ruotare di 90°. Ripetere per 10-12 minuti. L'impasto diventerà progressivamente più liscio, elastico e meno appiccicoso. Alternare con la tecnica stretch & fold ogni 3-4 minuti: stendere l'impasto, piegare su se stesso da tutti e quattro i lati. Al termine l'impasto deve essere liscio, elastico e con temperatura di 24-25°C."
+    },
+    {
+      "title": "Incorporamento Noci a Mano",
+      "text": "Stendere l'impasto su piano leggermente unto formando un rettangolo di circa 30x40cm. Distribuire uniformemente le 320g di noci tritate sulla superficie. Arrotolare l'impasto su se stesso come un rotolo, poi piegarlo più volte per incorporare le noci. Lavorare delicatamente per 2-3 minuti fino a distribuzione omogenea della frutta secca, evitando di triturare ulteriormente le noci."
+    },
+    {
+      "title": "Prima Puntata",
+      "text": "Formare una palla liscia eseguendo la pirlatura manuale: ruotare l'impasto sul piano creando tensione superficiale. Trasferire in contenitore unto leggermente con olio. Coprire con pellicola e lasciare riposare a 25-26°C per 40-45 minuti. L'impasto deve aumentare del 30-40% del volume."
+    },
+    {
+      "title": "Piega di Rinforzo",
+      "text": "Rovesciare l'impasto su piano leggermente infarinato. Stendere delicatamente formando un rettangolo. Eseguire piega a tre: portare il lembo superiore verso il centro, poi il lembo inferiore sopra il primo. Ruotare di 90° e ripetere. Questa operazione rinforza la maglia glutinica. Trasferire nel contenitore con chiusura verso il basso, coprire e lasciare riposare altri 40-45 minuti a 25-26°C."
+    },
+    {
+      "title": "Formatura Manuale",
+      "text": "Rovesciare l'impasto su piano infarinato. Dividere in 2-3 porzioni da 400-500g. Per panetti rotondi: eseguire pirlatura ruotando sotto il palmo con movimenti circolari decisi, creando tensione superficiale. Per filoncini: stendere leggermente, piegare a metà longitudinalmente, sigillare con il taglio della mano, arrotolare allungando dal centro verso l'esterno con pressione uniforme. La formatura corretta crea la giusta tensione per uno sviluppo ottimale in cottura."
+    },
+    {
+      "title": "Appretto e Scarificazione",
+      "text": "Disporre i pezzi formati su placca con carta forno, distanziati 10cm. Coprire con canovaccio inumidito e lasciare lievitare a 26-28°C per 60 minuti fino a quasi raddoppio. Preriscaldare il forno a 220-230°C con pietra refrattaria per 45 minuti. Praticare 2-3 tagli decisi con lama affilata: obliqui a 45° per filoncini (profondi 1cm), a croce per sfere. Vaporizzare abbondantemente le pareti del forno o versare 150ml di acqua bollente in teglia sul fondo. Infornare rapidamente e chiudere subito."
+    }
+  ],
+  "flourTable": [
+    {
+      "type": "Farina Tipo 0",
+      "w": "260-280",
+      "brands": "Molino Spadoni Tipo 0, Agugiaro & Figna Le 5 Stagioni Oro, Molino Vigevano Fior di Levante"
+    },
+    {
+      "type": "Farina Tipo 00",
+      "w": "280-300",
+      "brands": "Molino Grassi Petra 3, Molino Caputo Pizzeria, Molino Dallagiovanna Americana"
+    },
+    {
+      "type": "Mix 0 + Manitoba",
+      "w": "270-290",
+      "brands": "70% Molino Spadoni Tipo 0 + 30% Manitoba Agugiaro"
+    }
+  ],
+  "baking": {
+    "temperature": "220-230°C iniziale, poi 210°C",
+    "time": "50-60 minuti totali",
+    "tips": [
+      "Preriscaldare il forno con pietra refrattaria per 45 minuti a 230°C",
+      "Vaporizzare abbondantemente le pareti del forno nei primi 30 secondi (o inserire teglia con acqua bollente sul fondo)",
+      "Dopo 20 minuti abbassare a 210°C e aprire leggermente lo sportello per far uscire l'umidità residua",
+      "Il pane è cotto quando la crosta è bruno dorata e suona vuoto se battuto sul fondo",
+      "Far raffreddare completamente su griglia prima di tagliare (almeno 1 ora) per stabilizzare la mollica"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Poolish",
+      "definition": "Preimpasto liquido francese ottenuto con farina, acqua in pari peso e minima quantità di lievito (0,1-0,3%). Matura 8-16h a 18-22°C sviluppando aromi complessi e acidità lattica leggera."
+    },
+    {
+      "term": "Incordatura",
+      "definition": "Fase dell'impastamento in cui il glutine si sviluppa completamente e l'impasto si stacca dalle pareti della vasca formando una massa elastica e liscia."
+    },
+    {
+      "term": "Puntata",
+      "definition": "Prima fase di lievitazione dell'impasto in massa, dopo l'impastamento e prima della formatura. Permette lo sviluppo dei gas e il rilassamento del glutine."
+    },
+    {
+      "term": "Pirlatura",
+      "definition": "Tecnica di formatura per creare tensione superficiale nei panetti rotondi, eseguita ruotando l'impasto sotto il palmo della mano con movimenti circolari continui."
+    },
+    {
+      "term": "Appretto",
+      "definition": "Lievitazione finale dei pezzi già formati, prima della cottura. Fase critica in cui l'impasto deve quasi raddoppiare di volume senza collassare."
+    },
+    {
+      "term": "Slap & Fold",
+      "definition": "Tecnica di impastamento manuale per impasti ad alta idratazione: si solleva l'impasto, si sbatte sul piano e si ripiega su se stesso. Sviluppa il glutine senza surriscaldare."
+    },
+    {
+      "term": "Stretch & Fold",
+      "definition": "Pieghe di rinforzo eseguite durante la puntata: si stende l'impasto e si ripiega da tutti i lati verso il centro. Rinforza la maglia glutinica senza impastare."
+    },
+    {
+      "term": "Autolisi",
+      "definition": "Riposo dell'impasto dopo la prima miscelazione di farina e acqua, senza lievito e sale. Favorisce l'idratazione completa e lo sviluppo naturale del glutine (20-60 min)."
+    },
+    {
+      "term": "Scarificazione",
+      "definition": "Incisioni praticate sulla superficie dell'impasto prima della cottura con lama affilata. Guidano l'espansione del pane e favoriscono la formazione di una crosta croccante."
+    },
+    {
+      "term": "Prova del Dito",
+      "definition": "Test per verificare la corretta lievitazione: premendo delicatamente l'impasto, l'impronta deve tornare lentamente. Se rimane, è pronto; se torna subito, serve più tempo."
+    }
+  ],
+  "alert": "❌ NON aggiungere le noci all'inizio dell'impastamento: verrebbero tritate e rilascerebbero oli che inibiscono lo sviluppo del glutine, compromettendo la struttura del pane. Incorporarle SOLO a fine impasto, a velocità minima, per preservarne la consistenza croccante e il sapore integro. NON superare i 15 minuti totali di impastamento per evitare surriscaldamento dell'impasto e ossidazione delle noci.",
+  "proTips": [
+    "💡 Temperatura controllata: Se il poolish matura in estate, riducete il lievito a 0,5g e lasciatelo fermentare in frigorifero (18°C) per 16-18h. Otterrete aromi più complessi e acidità bilanciata.",
+    "💡 Noci fresche: Tostate leggermente le noci in forno a 160°C per 8-10 minuti prima dell'uso. Questo esalta il sapore, elimina l'umidità residua e previene l'irrancidimento precoce del pane.",
+    "💡 Conservazione ottimale: Avvolgete il pane raffreddato in un canovaccio di lino e conservatelo in un sacchetto di carta. Si mantiene soffice per 3-4 giorni. NON usare plastica: crea condensa e ammorbidisce la crosta.",
+    "💡 Test di maturazione poolish: Il poolish è maturo quando la superficie è convessa e ricca di bolle, con aroma vinoso-fruttato. Se è concava al centro e ha odore acetico, è sovramaturato: riducete la dose di lievito la prossima volta."
+  ],
+  "imageKeywords": [
+    "walnut bread loaf rustic",
+    "pane alle noci italiano",
+    "homemade walnut sourdough bread",
+    "nussbrot walnuss artisan",
+    "crusty walnut bread slice",
+    "traditional italian nut bread",
+    "pane fatto in casa noci",
+    "artisan bread with walnuts crust"
+  ],
+  "tags": [
+    "pane rustico",
+    "poolish",
+    "lievitati salati",
+    "noci",
+    "metodo indiretto",
+    "pane settentrionale",
+    "autunno inverno",
+    "formaggi",
+    "alta idratazione"
+  ],
+  "image": "images/ricette/pane/pane-alle-noci-con-poolish.webp",
+  "imageAttribution": "📷 Foto: KATRIN  BOLOVTSOVA — Pexels License via Pexels"
+}

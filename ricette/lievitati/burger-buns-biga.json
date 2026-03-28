@@ -22,10 +22,10 @@
     },
     {
       "name": "Acqua",
-      "note": "(ghiacciata 2-4°C, aggiunta in 2 riprese)",
+      "note": "(fresca 10-14°C, aggiunta in 2 riprese)",
       "grams": 250,
       "setupNote": {
-        "spirale": "(ghiacciata 2-4°C, aggiunta in 2 riprese)",
+        "spirale": "(fresca 10-14°C, aggiunta in 2 riprese)",
         "mano": "(20-22°C, incorporata gradualmente in 3 riprese)"
       }
     },
@@ -103,7 +103,7 @@
     },
     {
       "title": "Impasto Base (1° fase - Spirale 1)",
-      "text": "Nella vasca dell'impastatrice inserire 200g farina manitoba, 200g farina 00, la biga maturata spezzettata, 30g zucchero e 15g miele. Aggiungere 150g di acqua ghiacciata (2-4°C) e avviare in 1ª velocità per 3 minuti. Impastare fino a ottenere un composto ruvido ma coeso."
+      "text": "Nella vasca dell'impastatrice inserire 200g farina manitoba, 200g farina 00, la biga maturata spezzettata, 30g zucchero e 15g miele. Aggiungere 150g di acqua fresca (10-14°C) e avviare in 1ª velocità per 3 minuti. Impastare fino a ottenere un composto ruvido ma coeso."
     },
     {
       "title": "Incorporamento Liquidi (2° fase - Spirale 1→2)",
@@ -225,7 +225,7 @@
   ],
   "alert": "❌ NON aggiungere sale e grassi (burro/olio) all'inizio: bloccano lo sviluppo del glutine. Il sale va aggiunto solo a metà impastamento, dopo incordatura iniziale. Il burro SEMPRE per ultimo, a pezzetti, quando l'impasto è già elastico. NON sovralievitare nell'appretto: i burger buns troppo gonfi collassano in cottura. Test del dito: pressione leggera deve lasciare impronta che si riassorbe lentamente. Se non rimbalza affatto = sovralievitato. NON aprire il forno nei primi 10 minuti di cottura per evitare cascatura.",
   "proTips": [
-    "💡 TEMPERATURA ACQUA STRATEGICA: Con impastatrice a spirale usa acqua ghiacciata (2-4°C) per compensare il riscaldamento da attrito. Target impasto finale 26-27°C, mai oltre 28°C altrimenti il burro si scioglie e l'impasto diventa unto. Con impasto manuale usa acqua 20-22°C.",
+    "💡 TEMPERATURA ACQUA STRATEGICA: Con impastatrice a spirale usa acqua fresca (10-14°C) per compensare il riscaldamento da attrito. Target impasto finale 26-27°C, mai oltre 28°C altrimenti il burro si scioglie e l'impasto diventa unto. Con impasto manuale usa acqua 20-22°C.",
     "💡 BURRO A PEZZETTI: Taglia il burro morbido in 5-6 cubetti e aggiungili UNO alla volta solo quando il precedente è completamente assorbito. Se aggiungi tutto insieme, l'impasto si sfalda e non si ricompatta più. Pazienza = successo.",
     "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
   ],

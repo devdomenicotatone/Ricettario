@@ -15,6 +15,7 @@ import '../css/components/category-carousel.css';
 import '../css/components/tool-spotlight.css';
 import '../css/components/footer.css';
 import '../css/pages/recipe-detail.css';
+import '../css/components/category-page.css';
 import '../css/utilities/animations.css';
 
 // ── SPA Router ──
@@ -218,17 +219,161 @@ function getHomepageHTML() {
 }
 
 // ═══════════════════════════════════════
-//  CATEGORY RENDERER (placeholder)
+//  CATEGORY RENDERER
 // ═══════════════════════════════════════
 
+const CATEGORY_META = {
+  pane:      { name: 'Pane',      emoji: '🥖', title: 'Pane Artigianale',           desc: 'Ricette di pane ad alta idratazione — ciabatta, filone, baguette e pane speciale.' },
+  pizza:     { name: 'Pizza',     emoji: '🍕', title: 'Pizza Artigianale',          desc: 'Pizze con lievitazione lunga — napoletana, in teglia, canotto e pinsa romana.' },
+  pasta:     { name: 'Pasta',     emoji: '🍝', title: 'Pasta Fresca',               desc: 'Pasta fresca fatta in casa — trafilata, ripiena e formati speciali.' },
+  lievitati: { name: 'Lievitati', emoji: '🥐', title: 'Lievitati Dolci e Salati',   desc: 'Brioche, cornetti, panettone, burger buns e rosticceria.' },
+  focaccia:  { name: 'Focaccia',  emoji: '🫓', title: 'Focaccia Artigianale',       desc: 'Focacce ad alta idratazione — genovese, barese, pugliese e varianti creative.' },
+  dolci:     { name: 'Dolci',     emoji: '🍰', title: 'Dolci e Pasticceria',        desc: 'Dolci tradizionali, frolle, biscotti e pasticceria artigianale.' },
+};
+
 async function renderCategory(app, { category }) {
-  document.title = `${category} — Il Ricettario`;
+  const meta = CATEGORY_META[category] || {
+    name: category, emoji: '🍽️',
+    title: category, desc: `Tutte le ricette di ${category}.`,
+  };
+
+  document.title = `${meta.title} — Il Ricettario`;
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute('content', meta.desc);
+
+  // Struttura HTML della pagina categoria
   app.innerHTML = `
-    <div class="container" style="padding: 120px 0;">
-      <h2 style="text-align:center;">${category}</h2>
-      <p style="text-align:center; color: var(--color-text-muted);">Pagina categoria — in arrivo</p>
-      <p style="text-align:center;"><a href="${BASE}" data-link>← Torna alla Home</a></p>
-    </div>`;
+    <section class="category-hero" id="category-hero">
+      <div class="category-hero__content">
+        <h1 class="category-hero__title">${meta.title}</h1>
+        <p class="category-hero__subtitle">${meta.desc}</p>
+        <div class="category-hero__count" id="recipe-count">⏳ Caricamento...</div>
+      </div>
+    </section>
+
+    <main class="section">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="${BASE}" data-link>Home</a>
+          <span class="breadcrumb__separator">›</span>
+          <a href="${BASE}#ricette" data-link>Ricette</a>
+          <span class="breadcrumb__separator">›</span>
+          <span class="breadcrumb__current">${meta.name}</span>
+        </nav>
+
+        <div class="category-toolbar">
+          <div class="category-toolbar__search">
+            <span class="category-toolbar__search-icon">🔍</span>
+            <input type="text" class="category-toolbar__search-input" id="category-search"
+              placeholder="Cerca tra le ricette di ${meta.name.toLowerCase()}...">
+          </div>
+          <div class="category-toolbar__sort">
+            <button class="category-toolbar__sort-btn active" data-sort="az">A-Z</button>
+            <button class="category-toolbar__sort-btn" data-sort="hydration">💧 Idratazione</button>
+          </div>
+        </div>
+
+        <div class="category-grid" id="category-grid">
+          <div class="category-empty">
+            <div class="category-empty__icon">⏳</div>
+            <p>Caricamento ricette...</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  `;
+
+  // Carica ricette e renderizza
+  try {
+    const resp = await fetch(`${BASE}recipes.json`);
+    const data = await resp.json();
+    const allRecipes = data.recipes.filter(r => r.categoryDir === category || r.category === meta.name);
+
+    // Hero con immagine della prima ricetta che ha un'immagine
+    const heroRecipe = allRecipes.find(r => r.image);
+    if (heroRecipe) {
+      const heroEl = document.getElementById('category-hero');
+      if (heroEl) heroEl.style.backgroundImage = `url('${BASE}${heroRecipe.image}')`;
+    }
+
+    // Contatore
+    const countEl = document.getElementById('recipe-count');
+    if (countEl) countEl.textContent = `📊 ${allRecipes.length} ricette`;
+
+    // Render griglia
+    const grid = document.getElementById('category-grid');
+    renderCategoryGrid(grid, allRecipes, category);
+
+    // Search
+    const searchInput = document.getElementById('category-search');
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        const query = searchInput.value.toLowerCase().trim();
+        const cards = grid.querySelectorAll('.category-card');
+        cards.forEach(card => {
+          const title = card.dataset.title || '';
+          card.style.display = (!query || title.includes(query)) ? '' : 'none';
+        });
+      });
+    }
+
+    // Sort
+    const sortBtns = app.querySelectorAll('.category-toolbar__sort-btn');
+    sortBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        sortBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const sortType = btn.dataset.sort;
+        let sorted = [...allRecipes];
+        if (sortType === 'az') {
+          sorted.sort((a, b) => (a.title || '').localeCompare(b.title || '', 'it'));
+        } else if (sortType === 'hydration') {
+          sorted.sort((a, b) => (parseInt(b.hydration) || 0) - (parseInt(a.hydration) || 0));
+        }
+        renderCategoryGrid(grid, sorted, category);
+      });
+    });
+
+    initReveal();
+  } catch (err) {
+    console.error('Errore caricamento categoria:', err);
+    const grid = document.getElementById('category-grid');
+    if (grid) grid.innerHTML = '<div class="category-empty"><div class="category-empty__icon">❌</div><p>Errore nel caricamento delle ricette.</p></div>';
+  }
+}
+
+function renderCategoryGrid(grid, recipes, categoryDir) {
+  if (!grid) return;
+
+  if (recipes.length === 0) {
+    grid.innerHTML = `
+      <div class="category-empty" style="grid-column: 1 / -1">
+        <div class="category-empty__icon">🔍</div>
+        <p>Nessuna ricetta trovata</p>
+      </div>`;
+    return;
+  }
+
+  grid.innerHTML = recipes.map((r, index) => {
+    const delay = Math.min(index * 0.05, 1.5);
+    const spaHref = `${BASE}ricette/${r.categoryDir || categoryDir}/${r.slug}`;
+    return `
+      <a href="${spaHref}" class="category-card slide-up-enter" data-link
+         style="animation-delay: ${delay}s" data-title="${(r.title || '').toLowerCase()}" 
+         data-hydration="${parseInt(r.hydration) || 0}">
+        <div class="category-card__image-wrapper">
+          ${r.image ? buildPicture(`${BASE}${r.image}`, r.title, 'category-card__image', 'lazy') : ''}
+          <div class="category-card__meta">
+            ${r.hydration ? `<span class="category-card__tag">💧 ${r.hydration}</span>` : ''}
+            ${r.time ? `<span class="category-card__tag">⏱️ ${r.time}</span>` : ''}
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h3 class="category-card__title">${r.title}</h3>
+          ${r.description ? `<p class="category-card__desc">${r.description}</p>` : ''}
+        </div>
+      </a>`;
+  }).join('');
 }
 
 // ═══════════════════════════════════════

@@ -1,15 +1,10 @@
 {
-  "generatedAt": "2026-03-27T21:22:29.981Z",
-  "totalRecipes": 29,
+  "generatedAt": "2026-03-28T01:10:19.530Z",
+  "totalRecipes": 30,
   "categories": [
     {
-      "name": "Pasta",
-      "count": 1,
-      "emoji": "🍝"
-    },
-    {
       "name": "Pane",
-      "count": 8,
+      "count": 9,
       "emoji": "🥖"
     },
     {
@@ -18,49 +13,40 @@
       "emoji": "🍕"
     },
     {
+      "name": "Pasta",
+      "count": 1,
+      "emoji": "🍝"
+    },
+    {
       "name": "Lievitati",
       "count": 8,
       "emoji": "🥐"
     },
     {
+      "name": "Dolci",
+      "count": 4,
+      "emoji": ""
+    },
+    {
       "name": "Focaccia",
       "count": 4,
       "emoji": "🫓"
-    },
-    {
-      "name": "Dolci",
-      "count": 4,
-      "emoji": "🍪"
     }
   ],
   "recipes": [
-    {
-      "title": "Gnocchi di Patate",
-      "slug": "gnocchi-di-patate",
-      "category": "Pasta",
-      "categoryDir": "pasta",
-      "emoji": "🍝",
-      "href": "ricette/pasta/gnocchi-di-patate",
-      "image": "images/ricette/pasta/gnocchi-di-patate.webp",
-      "description": "La pasta fresca classica italiana a base di patate: ricetta professionale con ingredienti, dosi precise e tecnica artigianale per gnocchi soffici.",
-      "hydration": null,
-      "time": "nessuna (riposo 20-40 min)",
-      "temp": "28-32°C",
-      "tool": "🤲 A mano"
-    },
     {
       "title": "Baguette Francese Tradizionale",
       "slug": "baguette-francese-tradizionale",
       "category": "Pane",
       "categoryDir": "pane",
       "emoji": "🥖",
-      "href": "ricette/pane/baguette-francese-tradizionale",
+      "href": "ricette/pane/baguette-francese-tradizionale.html",
       "image": "images/ricette/pane/baguette-francese-tradizionale.webp",
       "description": "Baguette francese autentica con pre-impasto poolish, idratazione 68% e crosta croccante. Tecnica professionale con pietra refrattaria e vapore.",
       "hydration": "68%",
       "time": "~18h (poolish 12-14h + puntata 2h + appretto 1h)",
       "temp": "24-26°C",
-      "tool": "🔧 Impastatrice a spirale"
+      "tool": ""
     },
     {
       "title": "Ciabatta Classica con Poolish",
@@ -68,13 +54,13 @@
       "category": "Pane",
       "categoryDir": "pane",
       "emoji": "🥖",
-      "href": "ricette/pane/ciabatta-classica-poolish",
+      "href": "ricette/pane/ciabatta-classica-poolish.html",
       "image": "images/ricette/pane/ciabatta-classica-poolish.webp",
       "description": "Pane italiano ad alta idratazione con prefermento liquido, alveolatura irregolare e crosta croccante. Ricetta professionale con poolish.",
       "hydration": "80%",
       "time": "~6-7h totali (3h poolish + 3-4h impasto)",
       "temp": "24-26°C",
-      "tool": "🔧 Impastatrice a spirale"
+      "tool": ""
     },
     {
       "title": "Ciabatta con Poolish",
@@ -82,13 +68,13 @@
       "category": "Pane",
       "categoryDir": "pane",
       "emoji": "🥖",
-      "href": "ricette/pane/ciabatta-poolish",
+      "href": "ricette/pane/ciabatta-poolish.html",
       "image": "images/ricette/pane/ciabatta-poolish.webp",
       "description": "Pane ad alta idratazione con poolish — tecnica spirale e manuale per un'alveolatura perfetta e crosta croccante",
       "hydration": "80%",
       "time": "~5h totali (3h poolish + 2h impasto finale)",
       "temp": "24-26°C",
-      "tool": "🔧 Impastatrice a spirale"
+      "tool": ""
     },
     {
       "title": "Pane alle Noci",
@@ -96,13 +82,13 @@
       "category": "Pane",
       "categoryDir": "pane",
       "emoji": "🥖",
-      "href": "ricette/pane/pane-alle-noci",
+      "href": "ricette/pane/pane-alle-noci.html",
       "image": "images/ricette/pane/pane-alle-noci.webp",
       "description": "Pane rustico con mix di farine integrali (grano tenero, farro, grano saraceno) e noci tostate. Idratazione 68%, lievitazione 4-5h totali.",
       "hydration": "68%",
       "time": "4-5h totali",
       "temp": "24-26°C",
-      "tool": "🔧 Impastatrice a spirale"
+      "tool": ""
     },
     {
       "title": "Pane alle Noci Integrale",
@@ -110,55 +96,55 @@
       "category": "Pane",
       "categoryDir": "pane",
       "emoji": "🥖",
-      "href": "ricette/pane/pane-noci-integrale",
+      "href": "ricette/pane/pane-noci-integrale.html",
       "image": "images/ricette/pane/pane-noci-integrale.webp",
       "description": "Pane rustico multicereale con noci tostate e lievitazione naturale estesa. Farine integrali, farro e grano saraceno per un pane dal sapore intenso.",
       "hydration": "68%",
       "time": "~4.5h totali",
       "temp": "24-26°C",
-      "tool": "🔧 Impastatrice a spirale"
+      "tool": ""
     },
     {
       "title": "Pane di Altamura DOP",
       "slug": "pane-di-altamura-dop",
       "category": "Pane",
       "categoryDir": "pane",
-      "emoji": "🥖",
-      "href": "ricette/pane/pane-di-altamura-dop",
+      "emoji": "🍞",
+      "href": "ricette/pane/pane-di-altamura-dop.html",
       "image": "images/ricette/pane/pane-di-altamura-dop.webp",
       "description": "Il re dei pani pugliesi con semola rimacinata e lievitazione naturale. Idratazione 68%, lievitazione 24h, crosta croccante e mollica gialla profumata.",
       "hydration": "68%",
       "time": "~24h",
       "temp": "24-26°C",
-      "tool": "🔧 Impastatrice a spirale"
+      "tool": ""
     },
     {
       "title": "Pane Integrale con Biga di Saccorosso e Miele",
       "slug": "pane-integrale-biga-saccorosso-miele",
       "category": "Pane",
       "categoryDir": "pane",
-      "emoji": "🥖",
-      "href": "ricette/pane/pane-integrale-biga-saccorosso-miele",
+      "emoji": "🍯",
+      "href": "ricette/pane/pane-integrale-biga-saccorosso-miele.html",
       "image": "images/ricette/pane/pane-integrale-biga-saccorosso-miele.webp",
       "description": "Pane integrale con biga lunga di Saccorosso, miele e bassinage. Tecnica avanzata con autolisi, maturazione freddo e W300. Idratazione 70%.",
       "hydration": "70%",
       "time": "Biga 18-24h + Maturazione freddo 18h",
       "temp": "23-25°C",
-      "tool": "🔧 Impastatrice a spirale"
+      "tool": ""
     },
     {
       "title": "Pane Pugliese con Biga",
       "slug": "pane-pugliese-biga",
       "category": "Pane",
       "categoryDir": "pane",
-      "emoji": "🥖",
-      "href": "ricette/pane/pane-pugliese-biga",
+      "emoji": "🍞",
+      "href": "ricette/pane/pane-pugliese-biga.html",
       "image": "images/ricette/pane/pane-pugliese-biga.webp",
       "description": "Pane tradizionale pugliese con prefermento su biga a 12-14 ore. Crosta croccante, mollica soffice e alveolata, lunga conservabilità.",
       "hydration": "62.7%",
       "time": "~18h totali (biga 12-14h + puntata 3h + appretto 1h)",
       "temp": "24-26°C",
-      "tool": "🔧 Impastatrice a spirale"
+      "tool": ""
     },
     {
       "title": "Pinsa Romana",
@@ -166,13 +152,13 @@
       "category": "Pizza",
       "categoryDir": "pizza",
       "emoji": "🍕",
-      "href": "ricette/pizza/pinsa-romana",
+      "href": "ricette/pizza/pinsa-romana.html",
       "image": "images/ricette/pizza/pinsa-romana.webp",
       "description": "La pizza romana ovale ad alta idratazione con mix di farine e lunga maturazione. Ricetta tecnica con procedimento spirale e a mano.",
       "hydration": "75%",
       "time": "24-48h",
       "temp": "24-26°C",
-      "tool": "🔧 Impastatrice a spirale"
+      "tool": ""
     },
     {
       "title": "Pizza Contemporanea Canotto",
@@ -180,13 +166,13 @@
       "category": "Pizza",
       "categoryDir": "pizza",
       "emoji": "🍕",
-      "href": "ricette/pizza/pizza-contemporanea-canotto",
+      "href": "ricette/pizza/pizza-contemporanea-canotto.html",
       "image": "images/ricette/pizza/pizza-contemporanea-canotto.webp",
       "description": "Pizza ad alta idratazione con metodo biga e blend Caputo per cornicione alveolato tipo canotto. Tecnica professionale con bassinage e maturazione controllata.",
       "hydration": "72%",
       "time": "24h biga + 6-7h rinfresco",
       "temp": "23°C",
-      "tool": "🔧 Impastatrice a spirale"
+      "tool": ""
     },
     {
       "title": "Pizza Napoletana Antica Tradizione con Biga e Criscito",
@@ -194,13 +180,13 @@
       "category": "Pizza",
       "categoryDir": "pizza",
       "emoji": "🍕",
-      "href": "ricette/pizza/pizza-napoletana-biga-criscito",
+      "href": "ricette/pizza/pizza-napoletana-biga-criscito.html",
       "image": "images/ricette/pizza/pizza-napoletana-biga-criscito.webp",
       "description": "Metodo professionale con prefermento e lievito madre per pizzeria artigianale. Biga 18-24h, criscito e blend Saccorosso-Nuvola per pizza napoletana autentica.",
       "hydration": "68%",
       "time": "24-30h totali (biga 18-24h + appretto 5-6h)",
       "temp": "23-24°C",
-      "tool": "🔧 Impastatrice a spirale"
+      "tool": ""
     },
     {
       "title": "Pizza Napoletana Verace STG",
@@ -208,41 +194,55 @@
       "category": "Pizza",
       "categoryDir": "pizza",
       "emoji": "🍕",
-      "href": "ricette/pizza/pizza-napoletana-verace-stg",
+      "href": "ricette/pizza/pizza-napoletana-verace-stg.html",
       "image": "images/ricette/pizza/pizza-napoletana-verace-stg.webp",
       "description": "La vera pizza napoletana con metodo tradizionale, idratazione 65% e lievitazione controllata 8-24h. Ricetta completa con procedimento spirale e a mano.",
       "hydration": "65%",
       "time": "8-24h (controllata)",
       "temp": "24-26°C",
-      "tool": "🔧 Impastatrice a spirale"
+      "tool": ""
+    },
+    {
+      "title": "Gnocchi di Patate",
+      "slug": "gnocchi-di-patate",
+      "category": "Pasta",
+      "categoryDir": "pasta",
+      "emoji": "🥔",
+      "href": "ricette/pasta/gnocchi-di-patate.html",
+      "image": "images/ricette/pasta/gnocchi-di-patate.webp",
+      "description": "La pasta fresca classica italiana a base di patate: ricetta professionale con ingredienti, dosi precise e tecnica artigianale per gnocchi soffici.",
+      "hydration": null,
+      "time": "nessuna (riposo 20-40 min)",
+      "temp": "28-32°C",
+      "tool": ""
     },
     {
       "title": "Burger Buns con Biga",
       "slug": "burger-buns-biga",
       "category": "Lievitati",
       "categoryDir": "lievitati",
-      "emoji": "🥐",
-      "href": "ricette/lievitati/burger-buns-biga",
+      "emoji": "🍔",
+      "href": "ricette/lievitati/burger-buns-biga.html",
       "image": "images/ricette/lievitati/burger-buns-biga.webp",
       "description": "Panini americani morbidi con prefermento biga, doppia lievitazione e ricetta completa per impastatrice a spirale o impasto manuale",
       "hydration": "62%",
       "time": "~4h totali (2h biga + 2h impasto finale)",
       "temp": "26-27°C",
-      "tool": "🔧 Impastatrice a spirale"
+      "tool": ""
     },
     {
       "title": "Burger Buns Professionali",
       "slug": "burger-buns-professionali",
       "category": "Lievitati",
       "categoryDir": "lievitati",
-      "emoji": "🥐",
-      "href": "ricette/lievitati/burger-buns-professionali",
+      "emoji": "🍔",
+      "href": "ricette/lievitati/burger-buns-professionali.html",
       "image": "images/ricette/lievitati/burger-buns-professionali.webp",
       "description": "Panini americani professionali con pre-impasto biga e doppia lievitazione. Tecnica spirale e a mano per burger buns soffici con crosta dorata.",
       "hydration": "58%",
       "time": "~4h30 (biga 2h + puntata 1h30 + appretto 1h)",
       "temp": "26-27°C",
-      "tool": "🔧 Impastatrice a spirale"
+      "tool": ""
     },
     {
       "title": "Cornetti Sfogliati",
@@ -250,13 +250,13 @@
       "category": "Lievitati",
       "categoryDir": "lievitati",
       "emoji": "🥐",
-      "href": "ricette/lievitati/cornetti-sfogliati",
+      "href": "ricette/lievitati/cornetti-sfogliati.html",
       "image": "images/ricette/lievitati/cornetti-sfogliati.webp",
       "description": "Lievitato sfogliato a laminazione multipla con burro da incasso. Procedimento completo per cornetti da pasticceria con stratificazione professionale.",
       "hydration": "55%",
       "time": "~18h (con riposo in frigo 12h)",
       "temp": "24-26°C",
-      "tool": "🔧 Impastatrice a spirale"
+      "tool": ""
     },
     {
       "title": "Cornetti Sfogliati Classici",
@@ -264,13 +264,13 @@
       "category": "Lievitati",
       "categoryDir": "lievitati",
       "emoji": "🥐",
-      "href": "ricette/lievitati/cornetti-sfogliati-classici",
+      "href": "ricette/lievitati/cornetti-sfogliati-classici.html",
       "image": "images/ricette/lievitati/cornetti-sfogliati-classici.webp",
-      "description": "Cornetti sfogliati con tecnica classica: laminazione con panetto burro, pieghe a portafoglio e lievitazione controllata per strati croccanti e alveolatura perfetta.",
+      "description": "Cornetti sfogliati con tecnica classica: laminazione con panetto burro, pieghe a portafoglio e lievitazione controllata per strati croccanti e alveolatura perfe",
       "hydration": "52%",
       "time": "18-24h totali (puntata + maturazione in frigo + appretto)",
       "temp": "24-26°C",
-      "tool": "🔧 Impastatrice a spirale"
+      "tool": ""
     },
     {
       "title": "Impasto Rosticceria Siciliana",
@@ -278,41 +278,41 @@
       "category": "Lievitati",
       "categoryDir": "lievitati",
       "emoji": "🥐",
-      "href": "ricette/lievitati/impasto-rosticceria-siciliana",
+      "href": "ricette/lievitati/impasto-rosticceria-siciliana.html",
       "image": "images/ricette/lievitati/impasto-rosticceria-siciliana.webp",
       "description": "Base tradizionale per rollò, calzoncini e pizzette palermitane con idratazione al 50% e lievitazione controllata",
       "hydration": "50%",
       "time": "2-2.5h lievitazione + 30min appretto",
       "temp": "26-27°C",
-      "tool": "🔧 Impastatrice a spirale"
+      "tool": ""
     },
     {
       "title": "Panettone Classico",
       "slug": "panettone-classico",
       "category": "Lievitati",
       "categoryDir": "lievitati",
-      "emoji": "🥐",
-      "href": "ricette/lievitati/panettone-classico",
+      "emoji": "🎄",
+      "href": "ricette/lievitati/panettone-classico.html",
       "image": "images/ricette/lievitati/panettone-classico.webp",
       "description": "Panettone artigianale tradizionale con lievito madre, triplo impasto e lievitazione di 48 ore. Uvetta, canditi e alveolatura perfetta.",
       "hydration": "45%",
       "time": "~48h totali (con puntate intermedie)",
       "temp": "26-28°C",
-      "tool": "🔧 Impastatrice a spirale"
+      "tool": ""
     },
     {
       "title": "Panettone Pere e Cioccolato",
       "slug": "panettone-pere-cioccolato",
       "category": "Lievitati",
       "categoryDir": "lievitati",
-      "emoji": "🥐",
-      "href": "ricette/lievitati/panettone-pere-cioccolato",
+      "emoji": "🍐",
+      "href": "ricette/lievitati/panettone-pere-cioccolato.html",
       "image": "images/ricette/lievitati/panettone-pere-cioccolato.webp",
       "description": "Panettone artigianale con lievito madre, pere candite Williams e cioccolato fondente 60%. Doppio impasto, lievitazione 24-36h totali.",
       "hydration": "45%",
       "time": "24-36h totali (primo impasto 12-14h, secondo 8-10h)",
       "temp": "26-28°C",
-      "tool": "🔧 Impastatrice a spirale"
+      "tool": ""
     },
     {
       "title": "Pasta Brioche Classica",
@@ -320,27 +320,83 @@
       "category": "Lievitati",
       "categoryDir": "lievitati",
       "emoji": "🥐",
-      "href": "ricette/lievitati/pasta-brioche-classica",
+      "href": "ricette/lievitati/pasta-brioche-classica.html",
       "image": "images/ricette/lievitati/pasta-brioche-classica.webp",
       "description": "Impasto base per brioche, cornetti e trecce dolci con tecnica professionale francese. Idratazione 52%, lievitazione 3-4h.",
       "hydration": "52%",
       "time": "3-4h + 2h appretto",
       "temp": "24-26°C",
-      "tool": "🔧 Impastatrice a spirale"
+      "tool": ""
+    },
+    {
+      "title": "Cantuccini di Prato",
+      "slug": "cantuccini-di-prato",
+      "category": "Dolci",
+      "categoryDir": "dolci",
+      "emoji": "🥠",
+      "href": "ricette/dolci/cantuccini-di-prato.html",
+      "image": "images/ricette/dolci/cantuccini-di-prato.webp",
+      "description": "Biscotti tradizionali toscani con mandorle e doppia cottura, friabili e croccanti, perfetti da inzuppare nel Vin Santo",
+      "hydration": null,
+      "time": "nessuna (impasto chimico)",
+      "temp": "20-22°C",
+      "tool": ""
+    },
+    {
+      "title": "Cartocci alla Crema Siciliani",
+      "slug": "cartocci-alla-crema-siciliani",
+      "category": "Dolci",
+      "categoryDir": "dolci",
+      "emoji": "🥐",
+      "href": "ricette/dolci/cartocci-alla-crema-siciliani.html",
+      "image": "images/ricette/dolci/cartocci-alla-crema-siciliani.webp",
+      "description": "Cannoli fritti lievitati con crema pasticcera — tradizione dolciaria siciliana con impasto morbido e friabile",
+      "hydration": "50%",
+      "time": "~2-3h totali",
+      "temp": "26-27°C",
+      "tool": ""
+    },
+    {
+      "title": "Cartocci Siciliani alla Crema",
+      "slug": "cartocci-siciliani-crema",
+      "category": "Dolci",
+      "categoryDir": "dolci",
+      "emoji": "🥐",
+      "href": "ricette/dolci/cartocci-siciliani-crema.html",
+      "image": "images/ricette/dolci/cartocci-siciliani-crema.webp",
+      "description": "Specialità siciliana della tradizione pasticcera: pasta lievitata dolce fritta e ripiena di crema pasticcera vellutata",
+      "hydration": "50%",
+      "time": "2h + 30min appretto",
+      "temp": "26-27°C",
+      "tool": ""
+    },
+    {
+      "title": "Pasta Frolla Classica",
+      "slug": "pasta-frolla-classica",
+      "category": "Dolci",
+      "categoryDir": "dolci",
+      "emoji": "🥧",
+      "href": "ricette/dolci/pasta-frolla-classica.html",
+      "image": "images/ricette/dolci/pasta-frolla-classica.webp",
+      "description": "Base fondamentale della pasticceria italiana con metodo professionale sabbiato o a fontana, per crostate, biscotti e tartellette friabili.",
+      "hydration": null,
+      "time": "riposo 30-60 min in frigo",
+      "temp": "18-20°C",
+      "tool": ""
     },
     {
       "title": "Focaccia Barese",
       "slug": "focaccia-barese",
       "category": "Focaccia",
       "categoryDir": "focaccia",
-      "emoji": "🫓",
-      "href": "ricette/focaccia/focaccia-barese",
+      "emoji": "🫒",
+      "href": "ricette/focaccia/focaccia-barese.html",
       "image": "images/ricette/pane/focaccia-barese.webp",
-      "description": "La regina della tradizione pugliese: morbida dentro, croccante fuori. Idratazione 80%, con patate lesse, semola rimacinata e generoso condimento di pomodorini, olive e olio EVO.",
+      "description": "La regina della tradizione pugliese: morbida dentro, croccante fuori. Idratazione 80%, con patate lesse, semola rimacinata e generoso condimento di pomodorini, ",
       "hydration": "80%",
       "time": "3-4h puntata + 1h appretto",
       "temp": "24-26°C",
-      "tool": "🔧 Impastatrice a spirale"
+      "tool": ""
     },
     {
       "title": "Focaccia di Recco IGP",
@@ -348,13 +404,13 @@
       "category": "Focaccia",
       "categoryDir": "focaccia",
       "emoji": "🫓",
-      "href": "ricette/focaccia/focaccia-di-recco-igp",
+      "href": "ricette/focaccia/focaccia-di-recco-igp.html",
       "image": "images/ricette/focaccia/focaccia-di-recco-igp.webp",
       "description": "Sfoglia sottilissima ripiena di formaggio fresco - Tradizione ligure protetta IGP con farina Manitoba ad alta forza",
       "hydration": "68%",
       "time": "30-60 min riposo",
       "temp": "20-22°C",
-      "tool": "🔧 Impastatrice a spirale"
+      "tool": ""
     },
     {
       "title": "Focaccia Genovese (Fügassa)",
@@ -362,83 +418,41 @@
       "category": "Focaccia",
       "categoryDir": "focaccia",
       "emoji": "🫓",
-      "href": "ricette/focaccia/focaccia-genovese-fugassa",
+      "href": "ricette/focaccia/focaccia-genovese-fugassa.html",
       "image": "images/ricette/focaccia/focaccia-genovese-fugassa.webp",
       "description": "Presidio Slow Food con idratazione 67%, lievitazione 3-4 ore. La vera focaccia genovese con salamoia, olio EVO ligure e tecnica tradizionale della foratura.",
       "hydration": "67%",
       "time": "3-4 ore totali",
       "temp": "24-26°C",
-      "tool": "🔧 Impastatrice a spirale"
+      "tool": ""
     },
     {
       "title": "Focaccia Genovese Classica",
       "slug": "focaccia-genovese-classica",
       "category": "Focaccia",
       "categoryDir": "focaccia",
-      "emoji": "🫓",
-      "href": "ricette/focaccia/focaccia-genovese-classica",
+      "emoji": "🫒",
+      "href": "ricette/focaccia/focaccia-genovese-classica.html",
       "image": "images/ricette/focaccia/focaccia-genovese-classica.webp",
       "description": "Focaccia tradizionale ligure con biga, salamoia e doppia lievitazione. Idratazione 75%, lievitazione controllata 5-6h totali per massima digeribilità.",
       "hydration": "75%",
       "time": "5-6h totali (biga 1,5-2h + impasto 3-4h + appretto 40min)",
       "temp": "24-26°C",
-      "tool": "🔧 Impastatrice a spirale"
+      "tool": ""
     },
     {
-      "title": "Cantuccini di Prato",
-      "slug": "cantuccini-di-prato",
-      "category": "Dolci",
-      "categoryDir": "dolci",
-      "emoji": "🍪",
-      "href": "ricette/dolci/cantuccini-di-prato",
-      "image": "images/ricette/dolci/cantuccini-di-prato.webp",
-      "description": "Biscotti tradizionali toscani con mandorle e doppia cottura, friabili e croccanti, perfetti da inzuppare nel Vin Santo",
-      "hydration": null,
-      "time": "nessuna (impasto chimico)",
-      "temp": "20-22°C",
-      "tool": "🤲 A mano"
-    },
-    {
-      "title": "Cartocci alla Crema Siciliani",
-      "slug": "cartocci-alla-crema-siciliani",
-      "category": "Dolci",
-      "categoryDir": "dolci",
-      "emoji": "🍪",
-      "href": "ricette/dolci/cartocci-alla-crema-siciliani",
-      "image": "images/ricette/dolci/cartocci-alla-crema-siciliani.webp",
-      "description": "Cannoli fritti lievitati con crema pasticcera — tradizione dolciaria siciliana con impasto morbido e friabile",
-      "hydration": "50%",
-      "time": "~2-3h totali",
-      "temp": "26-27°C",
-      "tool": "🔧 Impastatrice a spirale"
-    },
-    {
-      "title": "Cartocci Siciliani alla Crema",
-      "slug": "cartocci-siciliani-crema",
-      "category": "Dolci",
-      "categoryDir": "dolci",
-      "emoji": "🍪",
-      "href": "ricette/dolci/cartocci-siciliani-crema",
-      "image": "images/ricette/dolci/cartocci-siciliani-crema.webp",
-      "description": "Specialità siciliana della tradizione pasticcera: pasta lievitata dolce fritta e ripiena di crema pasticcera vellutata",
-      "hydration": "50%",
-      "time": "2h + 30min appretto",
-      "temp": "26-27°C",
-      "tool": "🔧 Impastatrice a spirale"
-    },
-    {
-      "title": "Pasta Frolla Classica",
-      "slug": "pasta-frolla-classica",
-      "category": "Dolci",
-      "categoryDir": "dolci",
-      "emoji": "🍪",
-      "href": "ricette/dolci/pasta-frolla-classica",
-      "image": "images/ricette/dolci/pasta-frolla-classica.webp",
-      "description": "Base fondamentale della pasticceria italiana con metodo professionale sabbiato o a fontana, per crostate, biscotti e tartellette friabili.",
-      "hydration": null,
-      "time": "riposo 30-60 min in frigo",
-      "temp": "18-20°C",
-      "tool": "🔧 Impastatrice a spirale"
+      "title": "Pane alle Noci con Poolish",
+      "slug": "pane-alle-noci-con-poolish",
+      "category": "Pane",
+      "categoryDir": "pane",
+      "emoji": "🥖",
+      "href": "ricette/pane/pane-alle-noci-con-poolish.html",
+      "image": "images/ricette/pane/pane-alle-noci-con-poolish.webp",
+      "description": "Pane rustico settentrionale con preimpasto liquido poolish e noci non trattate. Alveolatura sviluppata, profumo intenso,",
+      "hydration": "70%",
+      "time": "~14h (12h poolish + 2h impasto)",
+      "temp": "25-26°C",
+      "tool": ""
     }
   ]
 }

@@ -17,10 +17,10 @@
     },
     {
       "name": "Acqua",
-      "note": "(ghiacciata 2-4°C per gestire sviluppo calore)",
+      "note": "(18-20°C, a temperatura ambiente)",
       "grams": 250,
       "setupNote": {
-        "spirale": "(ghiacciata 2-4°C per gestire sviluppo calore)",
+        "spirale": "(18-20°C, a temperatura ambiente)",
         "mano": "(20-22°C, aggiunta graduale in 3 riprese)"
       }
     },
@@ -54,11 +54,11 @@
   "stepsSpiral": [
     {
       "title": "Scioglimento lievito",
-      "text": "Sciogliere il lievito di birra fresco in 50g di acqua ghiacciata (2-4°C) prelevata dalla dose totale. Mescolare delicatamente e lasciare riposare 2-3 minuti."
+      "text": "Sciogliere il lievito di birra fresco in 50g di acqua (18-20°C) prelevata dalla dose totale. Mescolare delicatamente e lasciare riposare 2-3 minuti."
     },
     {
       "title": "Impastamento base — V1 per 4-5 minuti",
-      "text": "Inserire nella vasca della spirale: farina, acqua ghiacciata rimanente, zucchero, uovo intero. Avviare a velocità 1 (V1) per 4-5 minuti fino a incordatura parziale. L'impasto inizia a staccarsi dalle pareti ma non è ancora elastico."
+      "text": "Inserire nella vasca della spirale: farina, acqua rimanente, zucchero, uovo intero. Avviare a velocità 1 (V1) per 4-5 minuti fino a incordatura parziale. L'impasto inizia a staccarsi dalle pareti ma non è ancora elastico."
     },
     {
       "title": "Aggiunta sale e grassi — V1 per 2 minuti",

@@ -17,10 +17,10 @@
     },
     {
       "name": "Acqua",
-      "note": "(ghiacciata 2-4°C per compensare attrito)",
+      "note": "(fresca 14-18°C per controllare temperatura impasto)",
       "grams": 650,
       "setupNote": {
-        "spirale": "(ghiacciata 2-4°C per compensare attrito)",
+        "spirale": "(fresca 14-18°C per controllare temperatura impasto)",
         "mano": "(temperatura ambiente 20-22°C, aggiunta graduale)"
       }
     },
@@ -53,7 +53,7 @@
   "stepsSpiral": [
     {
       "title": "Fase 1: Scioglimento Sale e Idratazione Base",
-      "text": "Versare in vasca l'acqua GHIACCIATA (2-4°C) con il sale marino e lo zucchero. Avviare spirale a velocità 1 per 1 minuto per sciogliere completamente. Aggiungere 2/3 della farina (circa 650g) e mescolare in prima velocità per 3-4 minuti fino a ottenere un composto grossolano."
+      "text": "Versare in vasca l'acqua FRESCA (14-18°C) con il sale marino e lo zucchero. Avviare spirale a velocità 1 per 1 minuto per sciogliere completamente. Aggiungere 2/3 della farina (circa 650g) e mescolare in prima velocità per 3-4 minuti fino a ottenere un composto grossolano."
     },
     {
       "title": "Fase 2: Incorporamento Lievito",

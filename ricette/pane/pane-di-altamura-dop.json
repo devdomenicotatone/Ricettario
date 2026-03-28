@@ -18,20 +18,20 @@
     },
     {
       "name": "Acqua",
-      "note": "(ghiacciata 2-4°C per controllare temperatura finale)",
+      "note": "(fresca 14-16°C per controllare temperatura finale)",
       "grams": 680,
       "setupNote": {
-        "spirale": "(ghiacciata 2-4°C per controllare temperatura finale)",
+        "spirale": "(fresca 14-16°C per controllare temperatura finale)",
         "mano": "(20-22°C, aggiunta in 3 riprese per favorire assorbimento)"
       }
     },
     {
       "name": "Lievito di Birra Fresco",
-      "note": "(7g per impasto veloce con controllo temperatura)",
-      "grams": 7,
+      "note": "(3g per fermentazione lunga 24h+)",
+      "grams": 3,
       "setupNote": {
-        "spirale": "(7g per impasto veloce con controllo temperatura)",
-        "mano": "(8-10g per compensare lavorazione più lunga)"
+        "spirale": "(3g per fermentazione lunga 24h+)",
+        "mano": "(4g per lavorazione più lunga)"
       }
     },
     {
@@ -49,11 +49,11 @@
   "stepsSpiral": [
     {
       "title": "Autolisi e Attivazione Lievito",
-      "text": "In una ciotola sciogliere il lievito fresco sbriciolato in 100g di acqua tiepida (25°C) con il miele. Lasciare riposare 10 minuti fino a formare schiuma. Nel frattempo, mescolare la semola rimacinata con 500g di acqua ghiacciata (2-4°C) e lasciare in autolisi per 20 minuti. Questo riposo idrata i granuli di semola e sviluppa preglutine."
+      "text": "In una ciotola sciogliere il lievito fresco sbriciolato in 100g di acqua tiepida (25°C) con il miele. Lasciare riposare 10 minuti fino a formare schiuma. Nel frattempo, mescolare la semola rimacinata con 500g di acqua fresca (14-16°C) e lasciare in autolisi per 20 minuti. Questo riposo idrata i granuli di semola e sviluppa preglutine."
     },
     {
       "title": "Impasto Base in Spirale",
-      "text": "Versare nella spirale la semola autolisat, il lievito attivato e il restante 80g di acqua ghiacciata. Impastare in 1ª velocità per 4 minuti fino a completa incorporazione. Aggiungere il sale e impastare in 2ª velocità per 8-10 minuti fino a raggiungere incordatura completa. La temperatura finale deve essere 24-26°C. Il glutine della semola è tenace: l'impasto risulterà sodo ma elastico, non appiccicoso."
+      "text": "Versare nella spirale la semola autolisat, il lievito attivato e il restante 80g di acqua fresca. Impastare in 1ª velocità per 4 minuti fino a completa incorporazione. Aggiungere il sale e impastare in 2ª velocità per 8-10 minuti fino a raggiungere incordatura completa. La temperatura finale deve essere 24-26°C. Il glutine della semola è tenace: l'impasto risulterà sodo ma elastico, non appiccicoso."
     },
     {
       "title": "Puntata in Massa",
@@ -172,7 +172,7 @@
   ],
   "alert": "❌ NON usare farina di grano tenero o semola grossa: il Pane di Altamura DOP richiede esclusivamente semola RIMACINATA di grano duro. NON accorciare i tempi di lievitazione: la semola necessita di fermentazioni lunghe per sviluppare digeribilità e aromi. NON cuocere a temperatura troppo bassa: sotto i 230°C la crosta non si forma correttamente. NON tagliare il pane prima del raffreddamento completo: la mollica umida si sbriciola e perde struttura. NON conservare in busta di plastica nei primi 2 giorni: la crosta diventa gommosa.",
   "proTips": [
-    "💡 Controllo temperatura: La semola genera molto attrito durante l'impasto. In spirale usare acqua ghiacciata (2-4°C) per compensare. A mano fare pause frequenti. Temperatura finale ideale: 24-26°C, MAI oltre 28°C o il lievito accelera troppo.",
+    "💡 Controllo temperatura: La semola genera attrito durante l'impasto. In spirale usare acqua fresca (14-16°C) per compensare. A mano fare pause frequenti. Temperatura finale ideale: 24-26°C, MAI oltre 28°C o il lievito accelera troppo.",
     "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
   ],
   "imageKeywords": [

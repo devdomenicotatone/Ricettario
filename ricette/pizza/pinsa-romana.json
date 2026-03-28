@@ -27,20 +27,20 @@
     },
     {
       "name": "Acqua",
-      "note": "(750g totali, ghiacciata 2-4°C, aggiunta in 2 riprese (700g + 50g finali con sale e olio))",
+      "note": "(750g totali, fresca 10-14°C, aggiunta in 2 riprese (700g + 50g finali con sale e olio))",
       "grams": 750,
       "setupNote": {
-        "spirale": "(750g totali, ghiacciata 2-4°C, aggiunta in 2 riprese (700g + 50g finali con sale e olio))",
+        "spirale": "(750g totali, fresca 10-14°C, aggiunta in 2 riprese (700g + 50g finali con sale e olio))",
         "mano": "(750g totali a 18-20°C, aggiunta in 3 riprese (500g iniziali + 200g gradualmente + 50g finali))"
       }
     },
     {
       "name": "Lievito di Birra Fresco",
-      "note": "(5g fresco per fermentazione controllata 24-48h)",
-      "grams": 5,
+      "note": "(2g per maturazione lunga 24-48h in frigo)",
+      "grams": 2,
       "setupNote": {
-        "spirale": "(5g fresco per fermentazione controllata 24-48h)",
-        "mano": "(6-7g fresco (impasto più lungo richiede leggero aumento))"
+        "spirale": "(2g per maturazione lunga 24-48h in frigo)",
+        "mano": "(3g per compensare lavorazione più lunga)"
       }
     },
     {
@@ -63,11 +63,11 @@
   "stepsSpiral": [
     {
       "title": "Preparazione acqua e mix farine",
-      "text": "Mettere 750g di acqua in frigorifero almeno 2 ore prima (deve essere 2-4°C). In una ciotola mescolare a secco: 900g farina tipo 0 + 60g farina di riso + 40g farina di soia. Questo mix è fondamentale per la texture caratteristica della pinsa: il riso dona croccantezza, la soia migliora l'elasticità e la doratura."
+      "text": "Mettere 750g di acqua in frigorifero almeno 2 ore prima (deve essere 10-14°C). In una ciotola mescolare a secco: 900g farina tipo 0 + 60g farina di riso + 40g farina di soia. Questo mix è fondamentale per la texture caratteristica della pinsa: il riso dona croccantezza, la soia migliora l'elasticità e la doratura."
     },
     {
       "title": "Fase 1 - Incordatura base (1a velocità, 5 min)",
-      "text": "Inserire nella planetaria con gancio: mix farine + 5g lievito di birra fresco sbriciolato + 700g acqua ghiacciata. Impastare 1a velocità per 5 minuti. L'impasto inizierà ad incordarsi lentamente: l'acqua fredda rallenta lo sviluppo del glutine permettendo un assorbimento graduale. Deve risultare molto morbido e appiccicoso, NON aggiungere farina."
+      "text": "Inserire nella planetaria con gancio: mix farine + 2g lievito di birra fresco sbriciolato + 700g acqua fresca (10-14°C). Impastare 1a velocità per 5 minuti. L'impasto inizierà ad incordarsi lentamente: l'acqua fresca rallenta lo sviluppo del glutine permettendo un assorbimento graduale. Deve risultare molto morbido e appiccicoso, NON aggiungere farina."
     },
     {
       "title": "Fase 2 - Sviluppo glutine (2a velocità, 8-10 min)",
@@ -101,7 +101,7 @@
     },
     {
       "title": "Fase 1 - Impasto base (10 min a mano)",
-      "text": "Formare una fontana con il mix farine, al centro sbricolare 6-7g lievito fresco. Versare 500g acqua al centro e iniziare a incorporare la farina dai bordi verso il centro. Quando inizia a formarsi un impasto grezzo, trasferire su piano e impastare energicamente per 10 minuti con tecnica slap & fold: sollevare l'impasto, sbatterlo sul piano e ripiegarlo su se stesso. L'impasto sarà molto appiccicoso: NON aggiungere farina."
+      "text": "Formare una fontana con il mix farine, al centro sbricolare 3g lievito fresco. Versare 500g acqua al centro e iniziare a incorporare la farina dai bordi verso il centro. Quando inizia a formarsi un impasto grezzo, trasferire su piano e impastare energicamente per 10 minuti con tecnica slap & fold: sollevare l'impasto, sbatterlo sul piano e ripiegarlo su se stesso. L'impasto sarà molto appiccicoso: NON aggiungere farina."
     },
     {
       "title": "Fase 2 - Idratazione graduale (15 min)",
