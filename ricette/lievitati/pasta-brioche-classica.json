@@ -9,85 +9,7 @@
   "targetTemp": "24-26°C",
   "fermentation": "3-4h + 2h appretto",
   "totalFlour": 500,
-  "ingredients": [
-    {
-      "name": "Farina Tipo 0 Media-Alta Forza",
-      "note": "(W 300-330, proteine 12-13%)",
-      "grams": 300
-    },
-    {
-      "name": "Farina Manitoba",
-      "note": "(W 350-380, proteine 13-14%)",
-      "grams": 200
-    },
-    {
-      "name": "Latte Intero Fresco",
-      "note": "(temp. ambiente per entrambi i setup)",
-      "grams": 100
-    },
-    {
-      "name": "Uova Intere",
-      "note": "(peso sgusciato ~60g/uovo)",
-      "grams": 120,
-      "setupNote": {
-        "spirale": "(peso sgusciato ~60g/uovo, aggiungere una alla volta)",
-        "mano": "(peso sgusciato ~60g/uovo, incorporare lentamente)"
-      }
-    },
-    {
-      "name": "Tuorli",
-      "note": "(da uova fresche cat. A)",
-      "grams": 20
-    },
-    {
-      "name": "Burro",
-      "note": "(temperatura 18-20°C)",
-      "grams": 100,
-      "setupNote": {
-        "spirale": "(tagliato a pezzetti 2x2cm, aggiunto gradualmente)",
-        "mano": "(cremoso, incorporato a cucchiaiate dopo incordatura)"
-      }
-    },
-    {
-      "name": "Zucchero Semolato",
-      "note": "(bianco o di canna integrale)",
-      "grams": 80
-    },
-    {
-      "name": "Lievito di Birra Fresco",
-      "note": "",
-      "grams": 15,
-      "setupNote": {
-        "spirale": "(15g per impasto rapido (30-40min lavoro))",
-        "mano": "(10-12g per impasto lungo (60min+ lavoro))"
-      }
-    },
-    {
-      "name": "Miele di Acacia",
-      "note": "(liquido, non cristallizzato)",
-      "grams": 20
-    },
-    {
-      "name": "Sale Fino",
-      "note": "(aggiungere DOPO incordatura)",
-      "grams": 8
-    },
-    {
-      "name": "Scorza di Limone",
-      "note": "(grattugiata fine, solo parte gialla)",
-      "grams": 5
-    },
-    {
-      "name": "Scorza di Arancia",
-      "note": "(grattugiata fine, solo parte arancione)",
-      "grams": 8
-    },
-    {
-      "name": "Rum o Estratto di Vaniglia",
-      "note": "(opzionale, per aromatizzare)",
-      "grams": 15
-    }
-  ],
+  "ingredients": [],
   "suspensions": [],
   "stepsSpiral": [
     {
@@ -248,5 +170,89 @@
     "tecnica francese"
   ],
   "imageAttribution": "📷 Foto: RitaE — Pixabay License via Pixabay",
-  "_originalImageUrl": "https://pixabay.com/get/g0d6866bcf70bc897e094779855a1eaa0b98affe4638ef4f52bc147ee64841044e031f19308e1faee5c6c93b5f219b11c5b8f33af1d6215c455f209ec3254cd93_1280.jpg"
+  "_originalImageUrl": "https://pixabay.com/get/g0d6866bcf70bc897e094779855a1eaa0b98affe4638ef4f52bc147ee64841044e031f19308e1faee5c6c93b5f219b11c5b8f33af1d6215c455f209ec3254cd93_1280.jpg",
+  "ingredientGroups": [
+    {
+      "group": "Per l'Impasto",
+      "items": [
+        {
+          "name": "Farina Tipo 0 Media-Alta Forza",
+          "note": "(W 300-330, proteine 12-13%)",
+          "grams": 300
+        },
+        {
+          "name": "Farina Manitoba",
+          "note": "(W 350-380, proteine 13-14%)",
+          "grams": 200
+        },
+        {
+          "name": "Latte Intero Fresco",
+          "note": "(temp. ambiente per entrambi i setup)",
+          "grams": 100
+        },
+        {
+          "name": "Uova Intere",
+          "note": "(peso sgusciato ~60g/uovo)",
+          "grams": 120,
+          "setupNote": {
+            "spirale": "(peso sgusciato ~60g/uovo, aggiungere una alla volta)",
+            "mano": "(peso sgusciato ~60g/uovo, incorporare lentamente)"
+          }
+        },
+        {
+          "name": "Tuorli",
+          "note": "(da uova fresche cat. A)",
+          "grams": 20
+        },
+        {
+          "name": "Burro",
+          "note": "(temperatura 18-20°C)",
+          "grams": 100,
+          "setupNote": {
+            "spirale": "(tagliato a pezzetti 2x2cm, aggiunto gradualmente)",
+            "mano": "(cremoso, incorporato a cucchiaiate dopo incordatura)"
+          }
+        },
+        {
+          "name": "Zucchero Semolato",
+          "note": "(bianco o di canna integrale)",
+          "grams": 80
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "",
+          "grams": 15,
+          "setupNote": {
+            "spirale": "(15g per impasto rapido (30-40min lavoro))",
+            "mano": "(10-12g per impasto lungo (60min+ lavoro))"
+          }
+        },
+        {
+          "name": "Miele di Acacia",
+          "note": "(liquido, non cristallizzato)",
+          "grams": 20
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(aggiungere DOPO incordatura)",
+          "grams": 8
+        },
+        {
+          "name": "Scorza di Limone",
+          "note": "(grattugiata fine, solo parte gialla)",
+          "grams": 5
+        },
+        {
+          "name": "Scorza di Arancia",
+          "note": "(grattugiata fine, solo parte arancione)",
+          "grams": 8
+        },
+        {
+          "name": "Rum o Estratto di Vaniglia",
+          "note": "(opzionale, per aromatizzare)",
+          "grams": 15
+        }
+      ]
+    }
+  ]
 }

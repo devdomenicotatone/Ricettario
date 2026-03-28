@@ -9,60 +9,71 @@
   "targetTemp": "23-25°C",
   "fermentation": "Biga 18-24h + Maturazione freddo 18h",
   "totalFlour": 2800,
-  "ingredients": [
+  "ingredients": [],
+  "ingredientGroups": [
     {
-      "name": "Farina Caputo Saccorosso",
-      "note": "(W 300 - Per biga)",
-      "grams": 800
+      "group": "Per la Biga",
+      "items": [
+        {
+          "name": "Farina Caputo Saccorosso",
+          "note": "(W 300 - Per biga)",
+          "grams": 800
+        },
+        {
+          "name": "Acqua",
+          "note": "(temperatura ambiente 18-20°C)",
+          "grams": 360
+        },
+        {
+          "name": "Lievito di Birra Secco",
+          "note": "(Per biga)",
+          "grams": 2
+        }
+      ]
     },
     {
-      "name": "Acqua",
-      "note": "(temperatura ambiente 18-20°C)",
-      "grams": 360
-    },
-    {
-      "name": "Lievito di Birra Secco",
-      "note": "(Per biga)",
-      "grams": 2
-    },
-    {
-      "name": "Biga di Saccorosso",
-      "note": "(Tutta la biga preparata)",
-      "grams": 1160
-    },
-    {
-      "name": "Farina Caputo Integrale",
-      "note": "(Ricca di fibre e crusca)",
-      "grams": 1000
-    },
-    {
-      "name": "Farina Caputo Saccorosso",
-      "note": "(W 300 - Corpo ed elasticità)",
-      "grams": 1000
-    },
-    {
-      "name": "Acqua",
-      "note": "(65% in autolisi (975g), resto in bassinage a filo lento)",
-      "grams": 1500,
-      "setupNote": {
-        "spirale": "(65% in autolisi (975g), resto in bassinage a filo lento)",
-        "mano": "(temperatura ambiente 20-22°C, 65% in autolisi, resto con pieghe graduale)"
-      }
-    },
-    {
-      "name": "Miele Millefiori",
-      "note": "(Aromi e conservazione)",
-      "grams": 50
-    },
-    {
-      "name": "Sale Fino",
-      "note": "(2.1% su farine totali)",
-      "grams": 58
-    },
-    {
-      "name": "Olio Extravergine di Oliva",
-      "note": "(A fine impasto)",
-      "grams": 50
+      "group": "Per l'Impasto Finale",
+      "items": [
+        {
+          "name": "Biga di Saccorosso",
+          "note": "(Tutta la biga preparata)",
+          "grams": 1160
+        },
+        {
+          "name": "Farina Caputo Integrale",
+          "note": "(Ricca di fibre e crusca)",
+          "grams": 1000
+        },
+        {
+          "name": "Farina Caputo Saccorosso",
+          "note": "(W 300 - Corpo ed elasticità)",
+          "grams": 1000
+        },
+        {
+          "name": "Acqua",
+          "note": "(65% in autolisi (975g), resto in bassinage a filo lento)",
+          "grams": 1500,
+          "setupNote": {
+            "spirale": "(65% in autolisi (975g), resto in bassinage a filo lento)",
+            "mano": "(temperatura ambiente 20-22°C, 65% in autolisi, resto con pieghe graduale)"
+          }
+        },
+        {
+          "name": "Miele Millefiori",
+          "note": "(Aromi e conservazione)",
+          "grams": 50
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(2.1% su farine totali)",
+          "grams": 58
+        },
+        {
+          "name": "Olio Extravergine di Oliva",
+          "note": "(A fine impasto)",
+          "grams": 50
+        }
+      ]
     }
   ],
   "suspensions": [],

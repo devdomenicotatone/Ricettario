@@ -9,77 +9,7 @@
   "targetTemp": "24-26°C",
   "fermentation": "18-24h totali (puntata + maturazione in frigo + appretto)",
   "totalFlour": 500,
-  "ingredients": [
-    {
-      "name": "Farina Manitoba Forte",
-      "note": "(W 340-380, 13-14% proteine)",
-      "grams": 300
-    },
-    {
-      "name": "Farina Tipo 00 Media Forza",
-      "note": "(W 260-280)",
-      "grams": 200
-    },
-    {
-      "name": "Lievito di Birra Fresco",
-      "note": "(temperatura 4-6°C)",
-      "grams": 18
-    },
-    {
-      "name": "Latte Intero Fresco",
-      "note": "(20-22°C)",
-      "grams": 200,
-      "setupNote": {
-        "spirale": "(20-22°C)",
-        "mano": "(leggermente tiepido 28-30°C)"
-      }
-    },
-    {
-      "name": "Uova Intere Medie",
-      "note": "(temperatura ambiente, ~110g totali)",
-      "grams": 110
-    },
-    {
-      "name": "Zucchero Semolato",
-      "note": "(aggiungere dopo iniziale amalgama)",
-      "grams": 80
-    },
-    {
-      "name": "Burro Bavarese per Impasto",
-      "note": "(temperatura ambiente morbido a pomata, 82% grassi)",
-      "grams": 80
-    },
-    {
-      "name": "Sale Fino",
-      "note": "(aggiungere a metà impastamento)",
-      "grams": 10
-    },
-    {
-      "name": "Miele Millefiori o Acacia",
-      "note": "(per morbidezza e conservabilità)",
-      "grams": 20
-    },
-    {
-      "name": "Estratto Naturale di Vaniglia",
-      "note": "(o semi di 1/2 bacca)",
-      "grams": 5
-    },
-    {
-      "name": "Scorza Grattugiata di Arancia",
-      "note": "(biologica, solo parte arancione)",
-      "grams": 10
-    },
-    {
-      "name": "Scorza Grattugiata di Limone",
-      "note": "(biologica, solo parte gialla)",
-      "grams": 5
-    },
-    {
-      "name": "Burro Bavarese per Sfogliatura",
-      "note": "(freddo di frigo 4-6°C, da lavorare in panetto 20x20 cm)",
-      "grams": 250
-    }
-  ],
+  "ingredients": [],
   "suspensions": [],
   "stepsSpiral": [
     {
@@ -292,5 +222,86 @@
     "burro",
     "laminazione"
   ],
-  "image": "images/ricette/lievitati/cornetti-sfogliati-classici.webp"
+  "image": "images/ricette/lievitati/cornetti-sfogliati-classici.webp",
+  "ingredientGroups": [
+    {
+      "group": "Per l'Impasto",
+      "items": [
+        {
+          "name": "Farina Manitoba Forte",
+          "note": "(W 340-380, 13-14% proteine)",
+          "grams": 300
+        },
+        {
+          "name": "Farina Tipo 00 Media Forza",
+          "note": "(W 260-280)",
+          "grams": 200
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(temperatura 4-6°C)",
+          "grams": 18
+        },
+        {
+          "name": "Latte Intero Fresco",
+          "note": "(20-22°C)",
+          "grams": 200,
+          "setupNote": {
+            "spirale": "(20-22°C)",
+            "mano": "(leggermente tiepido 28-30°C)"
+          }
+        },
+        {
+          "name": "Uova Intere Medie",
+          "note": "(temperatura ambiente, ~110g totali)",
+          "grams": 110
+        },
+        {
+          "name": "Zucchero Semolato",
+          "note": "(aggiungere dopo iniziale amalgama)",
+          "grams": 80
+        },
+        {
+          "name": "Burro Bavarese per Impasto",
+          "note": "(temperatura ambiente morbido a pomata, 82% grassi)",
+          "grams": 80
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(aggiungere a metà impastamento)",
+          "grams": 10
+        },
+        {
+          "name": "Miele Millefiori o Acacia",
+          "note": "(per morbidezza e conservabilità)",
+          "grams": 20
+        },
+        {
+          "name": "Estratto Naturale di Vaniglia",
+          "note": "(o semi di 1/2 bacca)",
+          "grams": 5
+        },
+        {
+          "name": "Scorza Grattugiata di Arancia",
+          "note": "(biologica, solo parte arancione)",
+          "grams": 10
+        },
+        {
+          "name": "Scorza Grattugiata di Limone",
+          "note": "(biologica, solo parte gialla)",
+          "grams": 5
+        }
+      ]
+    },
+    {
+      "group": "Per la Sfogliatura",
+      "items": [
+        {
+          "name": "Burro Bavarese per Sfogliatura",
+          "note": "(freddo di frigo 4-6°C, da lavorare in panetto 20x20 cm)",
+          "grams": 250
+        }
+      ]
+    }
+  ]
 }

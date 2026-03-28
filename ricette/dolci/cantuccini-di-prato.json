@@ -10,61 +10,7 @@
   "fermentation": "nessuna (impasto chimico)",
   "totalFlour": 280,
   "image": "images/ricette/dolci/cantuccini-di-prato.webp",
-  "ingredients": [
-    {
-      "name": "Farina Tipo 00 Debole",
-      "note": "(W 120-150, per dolci)",
-      "grams": 280
-    },
-    {
-      "name": "Zucchero Semolato",
-      "grams": 180
-    },
-    {
-      "name": "Uova Intere",
-      "note": "(circa 2 medie, a temperatura ambiente)",
-      "grams": 100
-    },
-    {
-      "name": "Burro",
-      "note": "(morbido, a temperatura ambiente)",
-      "grams": 30
-    },
-    {
-      "name": "Mandorle con Pellicina",
-      "note": "(intere, non pelate)",
-      "grams": 130
-    },
-    {
-      "name": "Ammoniaca per Dolci",
-      "note": "(bicarbonato d'ammonio, E503ii)",
-      "grams": 3
-    },
-    {
-      "name": "Scorza di Arancia",
-      "note": "(grattugiata, agrume non trattato)",
-      "grams": 5
-    },
-    {
-      "name": "Scorza di Limone",
-      "note": "(grattugiata, agrume non trattato)",
-      "grams": 3
-    },
-    {
-      "name": "Sale Fino",
-      "grams": 2
-    },
-    {
-      "name": "Marsala o Vin Santo",
-      "note": "(opzionale, per profumare)",
-      "grams": 10
-    },
-    {
-      "name": "Tuorlo d'Uovo",
-      "note": "(per spennellare)",
-      "grams": 20
-    }
-  ],
+  "ingredients": [],
   "suspensions": [],
   "stepsSpiral": [],
   "stepsHand": [
@@ -159,5 +105,72 @@
     "tradizionale",
     "vin santo",
     "doppia cottura"
-  ]
+  ],
+  "ingredientGroups": [
+    {
+      "group": "Per l'Impasto",
+      "items": [
+        {
+          "name": "Farina Tipo 00 Debole",
+          "note": "(W 120-150, per dolci)",
+          "grams": 280
+        },
+        {
+          "name": "Zucchero Semolato",
+          "grams": 180
+        },
+        {
+          "name": "Uova Intere",
+          "note": "(circa 2 medie, a temperatura ambiente)",
+          "grams": 100
+        },
+        {
+          "name": "Burro",
+          "note": "(morbido, a temperatura ambiente)",
+          "grams": 30
+        },
+        {
+          "name": "Mandorle con Pellicina",
+          "note": "(intere, non pelate)",
+          "grams": 130
+        },
+        {
+          "name": "Ammoniaca per Dolci",
+          "note": "(bicarbonato d'ammonio, E503ii)",
+          "grams": 3
+        },
+        {
+          "name": "Scorza di Arancia",
+          "note": "(grattugiata, agrume non trattato)",
+          "grams": 5
+        },
+        {
+          "name": "Scorza di Limone",
+          "note": "(grattugiata, agrume non trattato)",
+          "grams": 3
+        },
+        {
+          "name": "Sale Fino",
+          "grams": 2
+        },
+        {
+          "name": "Marsala o Vin Santo",
+          "note": "(opzionale, per profumare)",
+          "grams": 10
+        }
+      ]
+    },
+    {
+      "group": "Per la Finitura",
+      "items": [
+        {
+          "name": "Tuorlo d'Uovo",
+          "note": "(per spennellare)",
+          "grams": 20
+        }
+      ]
+    }
+  ],
+  "imageAttribution": "📷 Foto: Anna.Massini — CC BY 4.0 via Wikimedia",
+  "_originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/74/Biscotti_tipo_cantuccini_di_prato.jpg"
 }

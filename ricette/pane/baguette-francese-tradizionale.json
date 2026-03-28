@@ -9,50 +9,66 @@
   "targetTemp": "24-26°C",
   "fermentation": "~18h (poolish 12-14h + puntata 2h + appretto 1h)",
   "totalFlour": 1000,
-  "ingredients": [
+  "ingredients": [],
+  "ingredientGroups": [
     {
-      "name": "Farina Tipo 0 Media-Alta Forza",
-      "note": "(W 280-320, per struttura e alveolatura)",
-      "grams": 850
+      "group": "Per il Poolish",
+      "items": [
+        {
+          "name": "Farina Tipo 0 Media-Alta Forza",
+          "note": "(W 280-320, 300g prelevati dal totale)",
+          "grams": 300
+        },
+        {
+          "name": "Acqua Poolish",
+          "note": "(temperatura ambiente 18-20°C)",
+          "grams": 300
+        },
+        {
+          "name": "Lievito di Birra Fresco Poolish",
+          "note": "(0,5g, solo per il poolish)",
+          "grams": 0.5
+        }
+      ]
     },
     {
-      "name": "Farina di Manitoba",
-      "note": "(W 350-380, per tenuta e sviluppo)",
-      "grams": 150
-    },
-    {
-      "name": "Acqua Poolish",
-      "note": "(temperatura ambiente 18-20°C, per poolish)",
-      "grams": 300
-    },
-    {
-      "name": "Acqua Impasto Finale",
-      "note": "(18-20°C, tutta insieme)",
-      "grams": 380,
-      "setupNote": {
-        "spirale": "(18-20°C, tutta insieme)",
-        "mano": "(20-22°C, in 3 riprese durante slap & fold)"
-      }
-    },
-    {
-      "name": "Lievito di Birra Fresco Poolish",
-      "note": "(0,5g, solo per il poolish)",
-      "grams": 0.5
-    },
-    {
-      "name": "Lievito di Birra Fresco Impasto",
-      "note": "(8g, per l'impasto finale)",
-      "grams": 8
-    },
-    {
-      "name": "Sale Marino Fino",
-      "note": "(2% su farina totale)",
-      "grams": 20
-    },
-    {
-      "name": "Malto d'Orzo o Miele",
-      "note": "(per colorazione crosta e attività enzimatica)",
-      "grams": 10
+      "group": "Per l'Impasto Finale",
+      "items": [
+        {
+          "name": "Farina Tipo 0 Media-Alta Forza",
+          "note": "(W 280-320, restanti 550g)",
+          "grams": 550
+        },
+        {
+          "name": "Farina di Manitoba",
+          "note": "(W 350-380, per tenuta e sviluppo)",
+          "grams": 150
+        },
+        {
+          "name": "Acqua Impasto Finale",
+          "note": "(18-20°C, tutta insieme)",
+          "grams": 380,
+          "setupNote": {
+            "spirale": "(18-20°C, tutta insieme)",
+            "mano": "(20-22°C, in 3 riprese durante slap & fold)"
+          }
+        },
+        {
+          "name": "Lievito di Birra Fresco Impasto",
+          "note": "(8g, per l'impasto finale)",
+          "grams": 8
+        },
+        {
+          "name": "Sale Marino Fino",
+          "note": "(2% su farina totale)",
+          "grams": 20
+        },
+        {
+          "name": "Malto d'Orzo o Miele",
+          "note": "(per colorazione crosta e attività enzimatica)",
+          "grams": 10
+        }
+      ]
     }
   ],
   "suspensions": [],

@@ -9,50 +9,61 @@
   "targetTemp": "25-26°C",
   "fermentation": "~14h (12h poolish + 2h impasto)",
   "totalFlour": 1000,
-  "ingredients": [
+  "ingredients": [],
+  "ingredientGroups": [
     {
-      "name": "Farina Tipo 0 o 00 Media-Alta Forza",
-      "note": "(W 260-300, per poolish)",
-      "grams": 300
+      "group": "Per il Poolish",
+      "items": [
+        {
+          "name": "Farina Tipo 0 o 00 Media-Alta Forza",
+          "note": "(W 260-300, per poolish)",
+          "grams": 300
+        },
+        {
+          "name": "Acqua",
+          "note": "(per poolish, temperatura ambiente 20°C)",
+          "grams": 300
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(per poolish)",
+          "grams": 1
+        }
+      ]
     },
     {
-      "name": "Farina Tipo 0 o 00 Media-Alta Forza",
-      "note": "(W 260-300, per impasto finale)",
-      "grams": 700
-    },
-    {
-      "name": "Acqua",
-      "note": "(per poolish, temperatura ambiente 20°C)",
-      "grams": 300
-    },
-    {
-      "name": "Acqua",
-      "note": "(per impasto finale, 18-20°C)",
-      "grams": 400,
-      "setupNote": {
-        "spirale": "18-20°C, aggiungere in 2 riprese da 200g",
-        "mano": "20-22°C, aggiungere gradualmente in 3 riprese"
-      }
-    },
-    {
-      "name": "Lievito di Birra Fresco",
-      "note": "(per poolish)",
-      "grams": 1
-    },
-    {
-      "name": "Lievito di Birra Fresco",
-      "note": "(per impasto finale)",
-      "grams": 14
-    },
-    {
-      "name": "Olio Extravergine di Oliva",
-      "note": "(a temperatura ambiente)",
-      "grams": 50
-    },
-    {
-      "name": "Sale Marino Fino",
-      "note": "(aggiungere dopo la prima fase di impastamento)",
-      "grams": 20
+      "group": "Per l'Impasto Finale",
+      "items": [
+        {
+          "name": "Farina Tipo 0 o 00 Media-Alta Forza",
+          "note": "(W 260-300, per impasto finale)",
+          "grams": 700
+        },
+        {
+          "name": "Acqua",
+          "note": "(per impasto finale, 18-20°C)",
+          "grams": 400,
+          "setupNote": {
+            "spirale": "18-20°C, aggiungere in 2 riprese da 200g",
+            "mano": "20-22°C, aggiungere gradualmente in 3 riprese"
+          }
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(per impasto finale)",
+          "grams": 14
+        },
+        {
+          "name": "Olio Extravergine di Oliva",
+          "note": "(a temperatura ambiente)",
+          "grams": 50
+        },
+        {
+          "name": "Sale Marino Fino",
+          "note": "(aggiungere dopo la prima fase di impastamento)",
+          "grams": 20
+        }
+      ]
     }
   ],
   "suspensions": [

@@ -9,36 +9,7 @@
   "targetTemp": "28-32°C",
   "fermentation": "nessuna (riposo 20-40 min)",
   "totalFlour": 300,
-  "ingredients": [
-    {
-      "name": "Patate Rosse o Gialle",
-      "note": "(vecchie, farinose, a pasta compatta - es. Desiree, Kennebec)",
-      "grams": 1000
-    },
-    {
-      "name": "Farina Tipo 00",
-      "note": "(media forza W 200-220)",
-      "grams": 300
-    },
-    {
-      "name": "Uova Medie",
-      "note": "(facoltativo - omettere per gnocchi più delicati)",
-      "grams": 50,
-      "setupNote": {
-        "conUova": "(1 uovo medio (~50g))",
-        "senzaUova": "(omettere e aumentare farina a 350g)"
-      }
-    },
-    {
-      "name": "Sale Fino",
-      "grams": 10
-    },
-    {
-      "name": "Semola Rimacinata",
-      "note": "(per spolverare banco e vassoio)",
-      "grams": 50
-    }
-  ],
+  "ingredients": [],
   "suspensions": [],
   "stepsExtruder": [],
   "stepsHand": [
@@ -131,5 +102,40 @@
     "ricetta tradizionale",
     "senza lievitazione",
     "artigianale"
+  ],
+  "ingredientGroups": [
+    {
+      "group": "Per l'Impasto",
+      "items": [
+        {
+          "name": "Patate Rosse o Gialle",
+          "note": "(vecchie, farinose, a pasta compatta - es. Desiree, Kennebec)",
+          "grams": 1000
+        },
+        {
+          "name": "Farina Tipo 00",
+          "note": "(media forza W 200-220)",
+          "grams": 300
+        },
+        {
+          "name": "Uova Medie",
+          "note": "(facoltativo - omettere per gnocchi più delicati)",
+          "grams": 50,
+          "setupNote": {
+            "conUova": "(1 uovo medio (~50g))",
+            "senzaUova": "(omettere e aumentare farina a 350g)"
+          }
+        },
+        {
+          "name": "Sale Fino",
+          "grams": 10
+        },
+        {
+          "name": "Semola Rimacinata",
+          "note": "(per spolverare banco e vassoio)",
+          "grams": 50
+        }
+      ]
+    }
   ]
 }

@@ -10,38 +10,7 @@
   "fermentation": "~18h totali (biga 12-14h + puntata 3h + appretto 1h)",
   "totalFlour": 300,
   "image": "images/ricette/pane/pane-pugliese-biga.webp",
-  "ingredients": [
-    {
-      "name": "Farina Tipo 00",
-      "note": "(W 280-320, per biga e struttura)",
-      "grams": 250
-    },
-    {
-      "name": "Semola Rimacinata di Grano Duro",
-      "note": "(per sapore e croccantezza)",
-      "grams": 50
-    },
-    {
-      "name": "Acqua",
-      "note": "(temperatura ambiente 18-20°C)",
-      "grams": 188
-    },
-    {
-      "name": "Lievito di Birra Fresco",
-      "note": "(totale)",
-      "grams": 3.5
-    },
-    {
-      "name": "Miele",
-      "note": "(millefiori o acacia, per attivazione lievito)",
-      "grams": 5
-    },
-    {
-      "name": "Sale Fino",
-      "note": "(2% su farina totale)",
-      "grams": 6
-    }
-  ],
+  "ingredients": [],
   "suspensions": [],
   "stepsSpiral": [
     {
@@ -183,5 +152,62 @@
     "tradizionale",
     "puglia",
     "semola"
+  ],
+  "ingredientGroups": [
+    {
+      "group": "Per la Biga",
+      "items": [
+        {
+          "name": "Farina Tipo 00",
+          "note": "(W 280-320, per biga e struttura)",
+          "grams": 125
+        },
+        {
+          "name": "Acqua",
+          "note": "(temperatura ambiente 18-20°C)",
+          "grams": 56
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(totale)",
+          "grams": 1
+        }
+      ]
+    },
+    {
+      "group": "Per l'Impasto Finale",
+      "items": [
+        {
+          "name": "Farina Tipo 00",
+          "note": "(W 280-320, per biga e struttura)",
+          "grams": 125
+        },
+        {
+          "name": "Semola Rimacinata di Grano Duro",
+          "note": "(per sapore e croccantezza)",
+          "grams": 50
+        },
+        {
+          "name": "Acqua",
+          "note": "(temperatura ambiente 18-20°C)",
+          "grams": 132
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(totale)",
+          "grams": 2.5
+        },
+        {
+          "name": "Miele",
+          "note": "(millefiori o acacia, per attivazione lievito)",
+          "grams": 5
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(2% su farina totale)",
+          "grams": 6
+        }
+      ]
+    }
   ]
 }

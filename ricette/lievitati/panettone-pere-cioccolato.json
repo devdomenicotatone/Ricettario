@@ -9,104 +9,7 @@
   "targetTemp": "26-28°C",
   "fermentation": "24-36h totali (primo impasto 12-14h, secondo 8-10h)",
   "totalFlour": 1250,
-  "ingredients": [
-    {
-      "name": "Farina Panettone Forte",
-      "note": "(temperatura ambiente 20°C)",
-      "grams": 1000
-    },
-    {
-      "name": "Lievito Madre Solido",
-      "note": "(a temperatura 28-30°C)",
-      "grams": 350,
-      "setupNote": {
-        "spirale": "(a temperatura 28-30°C)",
-        "mano": "(a temperatura 28-30°C, spezzettato finemente)"
-      }
-    },
-    {
-      "name": "Acqua",
-      "note": "(a 24-26°C)",
-      "grams": 350,
-      "setupNote": {
-        "spirale": "(a 24-26°C)",
-        "mano": "(a 28-30°C, in 2 riprese)"
-      }
-    },
-    {
-      "name": "Zucchero Semolato Fine",
-      "note": "(per primo impasto)",
-      "grams": 350
-    },
-    {
-      "name": "Tuorli d'Uovo",
-      "note": "(per primo impasto, circa 18 tuorli medi, pasta gialla)",
-      "grams": 350
-    },
-    {
-      "name": "Burro",
-      "note": "(a pezzi da 50g, temperatura 18-20°C)",
-      "grams": 450,
-      "setupNote": {
-        "spirale": "(a pezzi da 50g, temperatura 18-20°C)",
-        "mano": "(ammorbidito cremoso, incorporato gradualmente)"
-      }
-    },
-    {
-      "name": "Farina Panettone Forte",
-      "note": "(per secondo impasto, W 380-420)",
-      "grams": 250
-    },
-    {
-      "name": "Zucchero Semolato Fine",
-      "note": "(per secondo impasto)",
-      "grams": 235
-    },
-    {
-      "name": "Tuorli d'Uovo",
-      "note": "(per secondo impasto, circa 15 tuorli medi)",
-      "grams": 300
-    },
-    {
-      "name": "Burro",
-      "note": "(a pezzi, temperatura 18-20°C)",
-      "grams": 500,
-      "setupNote": {
-        "spirale": "(a pezzi, temperatura 18-20°C)",
-        "mano": "(ammorbidito cremoso)"
-      }
-    },
-    {
-      "name": "Acqua",
-      "note": "(per emulsione aromatica secondo impasto)",
-      "grams": 200
-    },
-    {
-      "name": "Miele d'Acacia",
-      "note": "(per emulsione aromatica)",
-      "grams": 37
-    },
-    {
-      "name": "Pasta d'Arancia",
-      "note": "(scorza d'arancia candita tritata o pasta concentrata)",
-      "grams": 25
-    },
-    {
-      "name": "Malto Diastasico in Pasta",
-      "note": "(per maggiore alveolatura e doratura)",
-      "grams": 3
-    },
-    {
-      "name": "Vaniglia Bourbon",
-      "note": "(1 bacca, semini estratti)",
-      "grams": 2
-    },
-    {
-      "name": "Sale Fino",
-      "note": "(aggiunto nel secondo impasto)",
-      "grams": 27
-    }
-  ],
+  "ingredients": [],
   "suspensions": [
     {
       "name": "Pere Candite Williams",
@@ -303,5 +206,113 @@
     "doppio-impasto",
     "natale"
   ],
-  "image": "images/ricette/lievitati/panettone-pere-cioccolato.webp"
+  "image": "images/ricette/lievitati/panettone-pere-cioccolato.webp",
+  "ingredientGroups": [
+    {
+      "group": "Per il Primo Impasto",
+      "items": [
+        {
+          "name": "Farina Panettone Forte",
+          "note": "(temperatura ambiente 20°C)",
+          "grams": 1000
+        },
+        {
+          "name": "Lievito Madre Solido",
+          "note": "(a temperatura 28-30°C)",
+          "grams": 350,
+          "setupNote": {
+            "spirale": "(a temperatura 28-30°C)",
+            "mano": "(a temperatura 28-30°C, spezzettato finemente)"
+          }
+        },
+        {
+          "name": "Acqua",
+          "note": "(a 24-26°C)",
+          "grams": 350,
+          "setupNote": {
+            "spirale": "(a 24-26°C)",
+            "mano": "(a 28-30°C, in 2 riprese)"
+          }
+        },
+        {
+          "name": "Zucchero Semolato Fine",
+          "note": "(per primo impasto)",
+          "grams": 350
+        },
+        {
+          "name": "Tuorli d'Uovo",
+          "note": "(per primo impasto, circa 18 tuorli medi, pasta gialla)",
+          "grams": 350
+        },
+        {
+          "name": "Burro",
+          "note": "(a pezzi da 50g, temperatura 18-20°C)",
+          "grams": 450,
+          "setupNote": {
+            "spirale": "(a pezzi da 50g, temperatura 18-20°C)",
+            "mano": "(ammorbidito cremoso, incorporato gradualmente)"
+          }
+        }
+      ]
+    },
+    {
+      "group": "Per il Secondo Impasto",
+      "items": [
+        {
+          "name": "Farina Panettone Forte",
+          "note": "(per secondo impasto, W 380-420)",
+          "grams": 250
+        },
+        {
+          "name": "Zucchero Semolato Fine",
+          "note": "(per secondo impasto)",
+          "grams": 235
+        },
+        {
+          "name": "Tuorli d'Uovo",
+          "note": "(per secondo impasto, circa 15 tuorli medi)",
+          "grams": 300
+        },
+        {
+          "name": "Burro",
+          "note": "(a pezzi, temperatura 18-20°C)",
+          "grams": 500,
+          "setupNote": {
+            "spirale": "(a pezzi, temperatura 18-20°C)",
+            "mano": "(ammorbidito cremoso)"
+          }
+        },
+        {
+          "name": "Acqua",
+          "note": "(per emulsione aromatica secondo impasto)",
+          "grams": 200
+        },
+        {
+          "name": "Miele d'Acacia",
+          "note": "(per emulsione aromatica)",
+          "grams": 37
+        },
+        {
+          "name": "Pasta d'Arancia",
+          "note": "(scorza d'arancia candita tritata o pasta concentrata)",
+          "grams": 25
+        },
+        {
+          "name": "Malto Diastasico in Pasta",
+          "note": "(per maggiore alveolatura e doratura)",
+          "grams": 3
+        },
+        {
+          "name": "Vaniglia Bourbon",
+          "note": "(1 bacca, semini estratti)",
+          "grams": 2
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(aggiunto nel secondo impasto)",
+          "grams": 27
+        }
+      ]
+    }
+  ]
 }

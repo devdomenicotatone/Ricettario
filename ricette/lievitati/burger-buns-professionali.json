@@ -9,77 +9,7 @@
   "targetTemp": "26-27°C",
   "fermentation": "~4h30 (biga 2h + puntata 1h30 + appretto 1h)",
   "totalFlour": 500,
-  "ingredients": [
-    {
-      "name": "Farina Manitoba",
-      "note": "(W 350-380, per biga e impasto finale)",
-      "grams": 300
-    },
-    {
-      "name": "Farina Tipo 00 Media Forza",
-      "note": "(W 200-280)",
-      "grams": 200
-    },
-    {
-      "name": "Acqua",
-      "note": "(biga 20-22°C, impasto 10-14°C fresca)",
-      "grams": 290,
-      "setupNote": {
-        "spirale": "(biga 20-22°C, impasto 10-14°C fresca)",
-        "mano": "(biga 20-22°C, impasto 20-22°C in 2 riprese)"
-      }
-    },
-    {
-      "name": "Lievito di Birra Fresco",
-      "note": "(per biga)",
-      "grams": 5
-    },
-    {
-      "name": "Lievito di Birra Fresco",
-      "note": "(per impasto finale)",
-      "grams": 5
-    },
-    {
-      "name": "Latte Intero",
-      "note": "(temperatura ambiente)",
-      "grams": 200
-    },
-    {
-      "name": "Uova Medie",
-      "note": "(circa 55g l'uno, temperatura ambiente)",
-      "grams": 55
-    },
-    {
-      "name": "Tuorli",
-      "note": "(circa 15g l'uno)",
-      "grams": 15
-    },
-    {
-      "name": "Zucchero Semolato",
-      "note": "(per morbidezza e doratura)",
-      "grams": 40
-    },
-    {
-      "name": "Miele di Acacia",
-      "note": "(o malto diastasico)",
-      "grams": 15
-    },
-    {
-      "name": "Sale Fino",
-      "note": "(aggiungere sempre a fine impasto)",
-      "grams": 12
-    },
-    {
-      "name": "Burro Morbido",
-      "note": "(temperatura ambiente, 18-20°C)",
-      "grams": 50
-    },
-    {
-      "name": "Olio Extravergine di Oliva",
-      "note": "(o olio di semi)",
-      "grams": 25
-    }
-  ],
+  "ingredients": [],
   "suspensions": [
     {
       "name": "Semi di Sesamo",
@@ -255,5 +185,106 @@
     "manitoba",
     "lievitati-arricchiti"
   ],
-  "image": "images/ricette/lievitati/burger-buns-professionali.webp"
+  "image": "images/ricette/lievitati/burger-buns-professionali.webp",
+  "ingredientGroups": [
+    {
+      "group": "Per la Biga",
+      "items": [
+        {
+          "name": "Farina Manitoba",
+          "note": "(W 350-380, per biga e impasto finale)",
+          "grams": 300
+        },
+        {
+          "name": "Acqua",
+          "note": "(biga 20-22°C, impasto 10-14°C fresca)",
+          "grams": 290,
+          "setupNote": {
+            "spirale": "(biga 20-22°C, impasto 10-14°C fresca)",
+            "mano": "(biga 20-22°C, impasto 20-22°C in 2 riprese)"
+          }
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(per biga)",
+          "grams": 5
+        }
+      ]
+    },
+    {
+      "group": "Per l'Impasto Finale",
+      "items": [
+        {
+          "name": "Farina Tipo 00 Media Forza",
+          "note": "(W 200-280)",
+          "grams": 200
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(per impasto finale)",
+          "grams": 5
+        },
+        {
+          "name": "Latte Intero",
+          "note": "(temperatura ambiente)",
+          "grams": 200
+        },
+        {
+          "name": "Uova Medie",
+          "note": "(circa 55g l'uno, temperatura ambiente)",
+          "grams": 55
+        },
+        {
+          "name": "Tuorli",
+          "note": "(circa 15g l'uno)",
+          "grams": 15
+        },
+        {
+          "name": "Zucchero Semolato",
+          "note": "(per morbidezza e doratura)",
+          "grams": 40
+        },
+        {
+          "name": "Miele di Acacia",
+          "note": "(o malto diastasico)",
+          "grams": 15
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(aggiungere sempre a fine impasto)",
+          "grams": 12
+        },
+        {
+          "name": "Burro Morbido",
+          "note": "(temperatura ambiente, 18-20°C)",
+          "grams": 50
+        },
+        {
+          "name": "Olio Extravergine di Oliva",
+          "note": "(o olio di semi)",
+          "grams": 25
+        }
+      ]
+    },
+    {
+      "group": "Per la Finitura",
+      "items": [
+        {
+          "name": "Semi di Sesamo",
+          "note": "(per spennellatura finale)",
+          "grams": 30
+        },
+        {
+          "name": "Tuorlo",
+          "note": "(per spennellatura)",
+          "grams": 15
+        },
+        {
+          "name": "Latte Intero",
+          "note": "(per spennellatura)",
+          "grams": 30
+        }
+      ]
+    }
+  ]
 }

@@ -9,47 +9,7 @@
   "targetTemp": "26-27°C",
   "fermentation": "~2-3h totali",
   "totalFlour": 500,
-  "ingredients": [
-    {
-      "name": "Farina Tipo 00 Media Forza",
-      "note": "(W 260-280, per struttura morbida e friabilità)",
-      "grams": 500
-    },
-    {
-      "name": "Acqua",
-      "note": "(18-20°C, a temperatura ambiente)",
-      "grams": 250,
-      "setupNote": {
-        "spirale": "(18-20°C, a temperatura ambiente)",
-        "mano": "(20-22°C, aggiunta graduale in 3 riprese)"
-      }
-    },
-    {
-      "name": "Strutto",
-      "note": "(o burro morbido, per friabilità e sapore)",
-      "grams": 70
-    },
-    {
-      "name": "Zucchero Semolato",
-      "note": "(per dolcezza impasto)",
-      "grams": 50
-    },
-    {
-      "name": "Sale Fino",
-      "note": "(rafforza glutine, aggiungere dopo incordatura)",
-      "grams": 8
-    },
-    {
-      "name": "Lievito di Birra Fresco",
-      "note": "(o 2g lievito secco, per lievitazione controllata)",
-      "grams": 7
-    },
-    {
-      "name": "Uovo Intero Medio",
-      "note": "(a temperatura ambiente, per colore e struttura)",
-      "grams": 50
-    }
-  ],
+  "ingredients": [],
   "suspensions": [],
   "stepsSpiral": [
     {
@@ -199,5 +159,55 @@
     "cannoli",
     "crema pasticcera",
     "tradizione"
+  ],
+  "ingredientGroups": [
+    {
+      "group": "Per l'Impasto",
+      "items": [
+        {
+          "name": "Farina Tipo 00 Media Forza",
+          "note": "(W 260-280, per struttura morbida e friabilità)",
+          "grams": 500
+        },
+        {
+          "name": "Acqua",
+          "note": "(18-20°C, a temperatura ambiente)",
+          "grams": 250,
+          "setupNote": {
+            "spirale": "(18-20°C, a temperatura ambiente)",
+            "mano": "(20-22°C, aggiunta graduale in 3 riprese)"
+          }
+        },
+        {
+          "name": "Strutto",
+          "note": "(o burro morbido, per friabilità e sapore)",
+          "grams": 70
+        },
+        {
+          "name": "Zucchero Semolato",
+          "note": "(per dolcezza impasto)",
+          "grams": 50
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(rafforza glutine, aggiungere dopo incordatura)",
+          "grams": 8
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(o 2g lievito secco, per lievitazione controllata)",
+          "grams": 7
+        },
+        {
+          "name": "Uovo Intero Medio",
+          "note": "(a temperatura ambiente, per colore e struttura)",
+          "grams": 50
+        }
+      ]
+    },
+    {
+      "group": "Per la Farcitura",
+      "items": []
+    }
   ]
 }

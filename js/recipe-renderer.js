@@ -155,20 +155,33 @@ function buildSetupBadge(r) {
     </div>`;
 }
 
-// ── Ingredienti ──
+// ── Ingredienti (con supporto gruppi) ──
+function buildIngredientRow(ing) {
+  const setupNotes = ing.setupNote
+    ? Object.entries(ing.setupNote).map(([k, v]) => `data-setup-note-${k}="${escHtml(v)}"`).join(' ')
+    : '';
+
+  return `<tr>
+    <td>${escHtml(ing.name)} ${ing.note ? `<span class="ingredient-note" ${setupNotes}>${escHtml(ing.note)}</span>` : ''}</td>
+    <td class="ingredient-qty">${ing.grams != null ? `${ing.grams}g` : ''}</td>
+  </tr>`;
+}
+
 function buildIngredientsPanel(r) {
-  if (!r.ingredients?.length) return '';
+  const hasGroups = r.ingredientGroups?.length > 0;
+  const hasFlat = r.ingredients?.length > 0;
+  if (!hasGroups && !hasFlat) return '';
 
-  const rows = r.ingredients.map(ing => {
-    const setupNotes = ing.setupNote
-      ? Object.entries(ing.setupNote).map(([k, v]) => `data-setup-note-${k}="${escHtml(v)}"`).join(' ')
-      : '';
-
-    return `<tr>
-      <td>${escHtml(ing.name)} ${ing.note ? `<span class="ingredient-note" ${setupNotes}>${escHtml(ing.note)}</span>` : ''}</td>
-      <td class="ingredient-qty">${ing.grams != null ? `${ing.grams}g` : ''}</td>
-    </tr>`;
-  }).join('');
+  let rows;
+  if (hasGroups) {
+    rows = r.ingredientGroups.map(group => {
+      const header = `<tr class="ingredient-section-header"><td colspan="2">${escHtml(group.group)}</td></tr>`;
+      const items = group.items.map(buildIngredientRow).join('');
+      return header + items;
+    }).join('');
+  } else {
+    rows = r.ingredients.map(buildIngredientRow).join('');
+  }
 
   return `
     <div class="recipe-panel reveal">
@@ -405,8 +418,13 @@ function initDoseCalculator(recipe) {
   // Mappa ingredienti → celle DOM (usa direttamente il JSON)
   const ingredientMap = [];
 
+  // Costruisci lista ingredienti piatta (supporta ingredientGroups o ingredients)
+  const flatIngredients = recipe.ingredientGroups?.length
+    ? recipe.ingredientGroups.flatMap(g => g.items)
+    : (recipe.ingredients || []);
+
   const tables = ['ingredients-table', 'suspensions-table'];
-  const modelLists = [recipe.ingredients || [], recipe.suspensions || []];
+  const modelLists = [flatIngredients, recipe.suspensions || []];
 
   tables.forEach((tableId, listIdx) => {
     const table = document.getElementById(tableId);

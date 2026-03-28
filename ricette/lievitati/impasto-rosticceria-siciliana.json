@@ -9,52 +9,7 @@
   "targetTemp": "26-27°C",
   "fermentation": "2-2.5h lievitazione + 30min appretto",
   "totalFlour": 1000,
-  "ingredients": [
-    {
-      "name": "Farina Tipo 0 o 00",
-      "note": "(W 240-280, media forza)",
-      "grams": 750
-    },
-    {
-      "name": "Farina Manitoba",
-      "note": "(W 350-380, forza elevata)",
-      "grams": 250
-    },
-    {
-      "name": "Acqua",
-      "note": "(fresca 14-18°C per controllare temperatura impasto)",
-      "grams": 500,
-      "setupNote": {
-        "spirale": "(fresca 14-18°C per controllare temperatura impasto)",
-        "mano": "(tiepida 28-30°C per favorire lievitazione)"
-      }
-    },
-    {
-      "name": "Lievito di Birra Fresco",
-      "note": "(2.5% su farina totale)",
-      "grams": 25
-    },
-    {
-      "name": "Strutto",
-      "note": "(morbido a temperatura ambiente, sostituibile con burro)",
-      "grams": 100
-    },
-    {
-      "name": "Zucchero Semolato",
-      "note": "(10% su farina, favorisce lievitazione e colorazione)",
-      "grams": 100
-    },
-    {
-      "name": "Sale Fino",
-      "note": "(2% su farina, aggiungere a fine impasto)",
-      "grams": 20
-    },
-    {
-      "name": "Miele",
-      "note": "(millefiori o acacia, per morbidezza e aroma)",
-      "grams": 20
-    }
-  ],
+  "ingredients": [],
   "suspensions": [
     {
       "name": "Tuorlo d'Uovo",
@@ -231,5 +186,76 @@
     "strutto",
     "lievitati salati"
   ],
-  "image": "images/ricette/lievitati/impasto-rosticceria-siciliana.webp"
+  "image": "images/ricette/lievitati/impasto-rosticceria-siciliana.webp",
+  "ingredientGroups": [
+    {
+      "group": "Per l'Impasto",
+      "items": [
+        {
+          "name": "Farina Tipo 0 o 00",
+          "note": "(W 240-280, media forza)",
+          "grams": 750
+        },
+        {
+          "name": "Farina Manitoba",
+          "note": "(W 350-380, forza elevata)",
+          "grams": 250
+        },
+        {
+          "name": "Acqua",
+          "note": "(fresca 14-18°C per controllare temperatura impasto)",
+          "grams": 500,
+          "setupNote": {
+            "spirale": "(fresca 14-18°C per controllare temperatura impasto)",
+            "mano": "(tiepida 28-30°C per favorire lievitazione)"
+          }
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(2.5% su farina totale)",
+          "grams": 25
+        },
+        {
+          "name": "Strutto",
+          "note": "(morbido a temperatura ambiente, sostituibile con burro)",
+          "grams": 100
+        },
+        {
+          "name": "Zucchero Semolato",
+          "note": "(10% su farina, favorisce lievitazione e colorazione)",
+          "grams": 100
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(2% su farina, aggiungere a fine impasto)",
+          "grams": 20
+        },
+        {
+          "name": "Miele",
+          "note": "(millefiori o acacia, per morbidezza e aroma)",
+          "grams": 20
+        }
+      ]
+    },
+    {
+      "group": "Per la Finitura",
+      "items": [
+        {
+          "name": "Tuorlo d'Uovo",
+          "note": "(per spennellatura finale)",
+          "grams": 20
+        },
+        {
+          "name": "Latte Intero",
+          "note": "(per diluire il tuorlo)",
+          "grams": 30
+        },
+        {
+          "name": "Semi di Sesamo",
+          "note": "(tostati, per decorazione)",
+          "grams": 30
+        }
+      ]
+    }
+  ]
 }

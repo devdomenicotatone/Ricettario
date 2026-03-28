@@ -9,66 +9,7 @@
   "targetTemp": "23°C",
   "fermentation": "24h biga + 6-7h rinfresco",
   "totalFlour": 3000,
-  "ingredients": [
-    {
-      "name": "Farina Caputo Saccorosso (per biga)",
-      "note": "(W 330-350, Manitoba rossa per struttura)",
-      "grams": 900
-    },
-    {
-      "name": "Acqua per biga",
-      "note": "(fredda da frigo 8-10°C)",
-      "grams": 405,
-      "setupNote": {
-        "spirale": "(fredda da frigo 8-10°C)",
-        "mano": "(temperatura ambiente 18-20°C)"
-      }
-    },
-    {
-      "name": "Lievito Secco Caputo (per biga)",
-      "note": "(0.22% su farina biga)",
-      "grams": 2
-    },
-    {
-      "name": "Biga matura",
-      "note": "(tutto l'impasto precedente, ~1305g)",
-      "grams": 1305
-    },
-    {
-      "name": "Farina Caputo Nuvola Super",
-      "note": "(W 260-280, protagonista per spinta e alveolatura)",
-      "grams": 1800
-    },
-    {
-      "name": "Farina Caputo Saccorosso (rinfresco)",
-      "note": "(W 330-350, rinforzo finale)",
-      "grams": 300
-    },
-    {
-      "name": "Acqua rinfresco",
-      "note": "(in 2 riprese: 1050g iniziale + 700g bassinage)",
-      "grams": 1750,
-      "setupNote": {
-        "spirale": "(in 2 riprese: 1050g iniziale + 700g bassinage)",
-        "mano": "(in 3 riprese progressive durante le pieghe)"
-      }
-    },
-    {
-      "name": "Criscito Caputo",
-      "note": "(lievito madre essiccato, 30g/kg come da indicazioni)",
-      "grams": 90
-    },
-    {
-      "name": "Estratto di Malto",
-      "note": "(per attività enzimatica e colorazione)",
-      "grams": 10
-    },
-    {
-      "name": "Sale Marino Fino",
-      "note": "(2.3% su farina totale, massima estensibilità)",
-      "grams": 70
-    }
-  ],
+  "ingredients": [],
   "suspensions": [],
   "stepsSpiral": [
     {
@@ -254,5 +195,75 @@
     "forno professionale",
     "bassinage",
     "criscito"
+  ],
+  "ingredientGroups": [
+    {
+      "group": "Per la Biga",
+      "items": [
+        {
+          "name": "Farina Caputo Saccorosso (per biga)",
+          "note": "(W 330-350, Manitoba rossa per struttura)",
+          "grams": 900
+        },
+        {
+          "name": "Acqua per biga",
+          "note": "(fredda da frigo 8-10°C)",
+          "grams": 405,
+          "setupNote": {
+            "spirale": "(fredda da frigo 8-10°C)",
+            "mano": "(temperatura ambiente 18-20°C)"
+          }
+        },
+        {
+          "name": "Lievito Secco Caputo (per biga)",
+          "note": "(0.22% su farina biga)",
+          "grams": 2
+        }
+      ]
+    },
+    {
+      "group": "Per l'Impasto Finale",
+      "items": [
+        {
+          "name": "Biga matura",
+          "note": "(tutto l'impasto precedente, ~1305g)",
+          "grams": 1305
+        },
+        {
+          "name": "Farina Caputo Nuvola Super",
+          "note": "(W 260-280, protagonista per spinta e alveolatura)",
+          "grams": 1800
+        },
+        {
+          "name": "Farina Caputo Saccorosso (rinfresco)",
+          "note": "(W 330-350, rinforzo finale)",
+          "grams": 300
+        },
+        {
+          "name": "Acqua rinfresco",
+          "note": "(in 2 riprese: 1050g iniziale + 700g bassinage)",
+          "grams": 1750,
+          "setupNote": {
+            "spirale": "(in 2 riprese: 1050g iniziale + 700g bassinage)",
+            "mano": "(in 3 riprese progressive durante le pieghe)"
+          }
+        },
+        {
+          "name": "Criscito Caputo",
+          "note": "(lievito madre essiccato, 30g/kg come da indicazioni)",
+          "grams": 90
+        },
+        {
+          "name": "Estratto di Malto",
+          "note": "(per attività enzimatica e colorazione)",
+          "grams": 10
+        },
+        {
+          "name": "Sale Marino Fino",
+          "note": "(2.3% su farina totale, massima estensibilità)",
+          "grams": 70
+        }
+      ]
+    }
   ]
 }

@@ -10,41 +10,7 @@
   "fermentation": "~24h",
   "totalFlour": 1000,
   "image": "images/ricette/pane/pane-di-altamura-dop.webp",
-  "ingredients": [
-    {
-      "name": "Semola Rimacinata di Grano Duro",
-      "note": "(certificata per Pane di Altamura DOP, granulometria fine)",
-      "grams": 1000
-    },
-    {
-      "name": "Acqua",
-      "note": "(fresca 14-16°C per controllare temperatura finale)",
-      "grams": 680,
-      "setupNote": {
-        "spirale": "(fresca 14-16°C per controllare temperatura finale)",
-        "mano": "(20-22°C, aggiunta in 3 riprese per favorire assorbimento)"
-      }
-    },
-    {
-      "name": "Lievito di Birra Fresco",
-      "note": "(3g per fermentazione lunga 24h+)",
-      "grams": 3,
-      "setupNote": {
-        "spirale": "(3g per fermentazione lunga 24h+)",
-        "mano": "(4g per lavorazione più lunga)"
-      }
-    },
-    {
-      "name": "Sale Fino",
-      "note": "(aggiunto a metà impasto per non inibire lievito)",
-      "grams": 18
-    },
-    {
-      "name": "Miele di Acacia",
-      "note": "(facoltativo, nutre il lievito e favorisce colorazione crosta)",
-      "grams": 10
-    }
-  ],
+  "ingredients": [],
   "suspensions": [],
   "stepsSpiral": [
     {
@@ -191,5 +157,45 @@
     "lievitazione lunga",
     "grano duro",
     "tradizionale"
+  ],
+  "ingredientGroups": [
+    {
+      "group": "Per l'Impasto",
+      "items": [
+        {
+          "name": "Semola Rimacinata di Grano Duro",
+          "note": "(certificata per Pane di Altamura DOP, granulometria fine)",
+          "grams": 1000
+        },
+        {
+          "name": "Acqua",
+          "note": "(fresca 14-16°C per controllare temperatura finale)",
+          "grams": 680,
+          "setupNote": {
+            "spirale": "(fresca 14-16°C per controllare temperatura finale)",
+            "mano": "(20-22°C, aggiunta in 3 riprese per favorire assorbimento)"
+          }
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(3g per fermentazione lunga 24h+)",
+          "grams": 3,
+          "setupNote": {
+            "spirale": "(3g per fermentazione lunga 24h+)",
+            "mano": "(4g per lavorazione più lunga)"
+          }
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(aggiunto a metà impasto per non inibire lievito)",
+          "grams": 18
+        },
+        {
+          "name": "Miele di Acacia",
+          "note": "(facoltativo, nutre il lievito e favorisce colorazione crosta)",
+          "grams": 10
+        }
+      ]
+    }
   ]
 }

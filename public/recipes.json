@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-28T19:38:32.632Z",
-  "totalRecipes": 26,
+  "generatedAt": "2026-03-28T22:36:36.224Z",
+  "totalRecipes": 25,
   "categories": [
     {
       "name": "Pane",
@@ -24,8 +24,8 @@
     },
     {
       "name": "Dolci",
-      "count": 4,
-      "emoji": ""
+      "count": 3,
+      "emoji": "🍪"
     },
     {
       "name": "Focaccia",
@@ -60,6 +60,20 @@
       "hydration": "80%",
       "time": "~5h totali (3h poolish + 2h impasto finale)",
       "temp": "24-26°C",
+      "tool": ""
+    },
+    {
+      "title": "Pane alle Noci con Poolish",
+      "slug": "pane-alle-noci-con-poolish",
+      "category": "Pane",
+      "categoryDir": "pane",
+      "emoji": "🥖",
+      "href": "ricette/pane/pane-alle-noci-con-poolish.html",
+      "image": "images/ricette/pane/pane-alle-noci-con-poolish.webp",
+      "description": "Pane rustico settentrionale con preimpasto liquido poolish e noci non trattate. Alveolatura sviluppata, profumo intenso, perfetto per formaggi e mostarde.",
+      "hydration": "70%",
+      "time": "~14h (12h poolish + 2h impasto)",
+      "temp": "25-26°C",
       "tool": ""
     },
     {
@@ -210,7 +224,7 @@
       "emoji": "🥐",
       "href": "ricette/lievitati/cornetti-sfogliati-classici.html",
       "image": "images/ricette/lievitati/cornetti-sfogliati-classici.webp",
-      "description": "Cornetti sfogliati con tecnica classica: laminazione con panetto burro, pieghe a portafoglio e lievitazione controllata per strati croccanti e alveolatura perfetta.",
+      "description": "Cornetti sfogliati con tecnica classica: laminazione con panetto burro, pieghe a portafoglio e lievitazione controllata per strati croccanti e alveolatura perfe",
       "hydration": "52%",
       "time": "18-24h totali (puntata + maturazione in frigo + appretto)",
       "temp": "24-26°C",
@@ -301,17 +315,17 @@
       "tool": ""
     },
     {
-      "title": "Pasta Frolla Classica",
-      "slug": "pasta-frolla-classica",
+      "title": "Migliaccio Napoletano",
+      "slug": "migliaccio-napoletano",
       "category": "Dolci",
       "categoryDir": "dolci",
-      "emoji": "🥧",
-      "href": "ricette/dolci/pasta-frolla-classica.html",
-      "image": "images/ricette/dolci/pasta-frolla-classica.webp",
-      "description": "Base fondamentale della pasticceria italiana con metodo professionale sabbiato o a fontana, per crostate, biscotti e tartellette friabili.",
+      "emoji": "🍰",
+      "href": "ricette/dolci/migliaccio-napoletano.html",
+      "image": "images/ricette/dolci/migliaccio-napoletano.webp",
+      "description": "Dolce tradizionale napoletano di Carnevale a base di semolino e ricotta: morbido, compatto e profumato di agrumi e vaniglia.",
       "hydration": null,
-      "time": "riposo 30-60 min in frigo",
-      "temp": "18-20°C",
+      "time": null,
+      "temp": null,
       "tool": ""
     },
     {
@@ -368,34 +382,6 @@
       "hydration": "75%",
       "time": "5-6h totali (biga 1,5-2h + impasto 3-4h + appretto 40min)",
       "temp": "24-26°C",
-      "tool": ""
-    },
-    {
-      "title": "Pane alle Noci con Poolish",
-      "slug": "pane-alle-noci-con-poolish",
-      "category": "Pane",
-      "categoryDir": "pane",
-      "emoji": "🥖",
-      "href": "ricette/pane/pane-alle-noci-con-poolish.html",
-      "image": "images/ricette/pane/pane-alle-noci-con-poolish.webp",
-      "description": "Pane rustico settentrionale con preimpasto liquido poolish e noci non trattate. Alveolatura sviluppata, profumo intenso,",
-      "hydration": "70%",
-      "time": "~14h (12h poolish + 2h impasto)",
-      "temp": "25-26°C",
-      "tool": ""
-    },
-    {
-      "title": "Migliaccio Napoletano",
-      "slug": "migliaccio-napoletano",
-      "category": "Dolci",
-      "categoryDir": "dolci",
-      "emoji": "🍰",
-      "href": "ricette/dolci/migliaccio-napoletano.html",
-      "image": "images/ricette/dolci/migliaccio-napoletano.webp",
-      "description": "Dolce tradizionale napoletano di Carnevale a base di semolino e ricotta: morbido, compatto e profumato di agrumi e vanig",
-      "hydration": null,
-      "time": null,
-      "temp": null,
       "tool": ""
     }
   ]

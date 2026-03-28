@@ -9,47 +9,7 @@
   "targetTemp": "20-22°C",
   "fermentation": "30-60 min riposo",
   "totalFlour": 800,
-  "ingredients": [
-    {
-      "name": "Farina Manitoba",
-      "note": "(W 360-380, proteine 13-14%)",
-      "grams": 800
-    },
-    {
-      "name": "Acqua",
-      "note": "(temperatura ambiente)",
-      "grams": 544,
-      "setupNote": {
-        "spirale": "(temperatura ambiente, aggiungere in 2 riprese)",
-        "mano": "(temperatura ambiente, aggiungere gradualmente fino a consistenza corretta)"
-      }
-    },
-    {
-      "name": "Sale Fino",
-      "note": "(1.8-2% su farina)",
-      "grams": 16
-    },
-    {
-      "name": "Olio Extravergine di Oliva",
-      "note": "(ligure DOP se possibile, per impasto)",
-      "grams": 40
-    },
-    {
-      "name": "Olio Extravergine di Oliva",
-      "note": "(per ungere teglia e superficie)",
-      "grams": 30
-    },
-    {
-      "name": "Stracchino o Crescenza",
-      "note": "(freschissimo, temperatura frigo, 100% su farina)",
-      "grams": 800
-    },
-    {
-      "name": "Sale Grosso",
-      "note": "(per spolverare in superficie, opzionale)",
-      "grams": 5
-    }
-  ],
+  "ingredients": [],
   "suspensions": [],
   "stepsSpiral": [
     {
@@ -207,5 +167,61 @@
     "tradizione"
   ],
   "imageAttribution": "📷 Foto: Damien Kopp — Unsplash License via Unsplash",
-  "_originalImageUrl": "https://images.unsplash.com/photo-1689524469768-8fd02667e920?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIzOTJ8MHwxfHNlYXJjaHwyMHx8bGlndXJpYW4lMjBjaGVlc2UlMjBmbGF0YnJlYWR8ZW58MXwwfHx8MTc3NDY1ODQ5M3ww&ixlib=rb-4.1.0&q=80&w=1080"
+  "_originalImageUrl": "https://images.unsplash.com/photo-1689524469768-8fd02667e920?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NTIzOTJ8MHwxfHNlYXJjaHwyMHx8bGlndXJpYW4lMjBjaGVlc2UlMjBmbGF0YnJlYWR8ZW58MXwwfHx8MTc3NDY1ODQ5M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+  "ingredientGroups": [
+    {
+      "group": "Per l'Impasto",
+      "items": [
+        {
+          "name": "Farina Manitoba",
+          "note": "(W 360-380, proteine 13-14%)",
+          "grams": 800
+        },
+        {
+          "name": "Acqua",
+          "note": "(temperatura ambiente)",
+          "grams": 544,
+          "setupNote": {
+            "spirale": "(temperatura ambiente, aggiungere in 2 riprese)",
+            "mano": "(temperatura ambiente, aggiungere gradualmente fino a consistenza corretta)"
+          }
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(1.8-2% su farina)",
+          "grams": 16
+        },
+        {
+          "name": "Olio Extravergine di Oliva",
+          "note": "(ligure DOP se possibile, per impasto)",
+          "grams": 40
+        }
+      ]
+    },
+    {
+      "group": "Per la Farcitura",
+      "items": [
+        {
+          "name": "Stracchino o Crescenza",
+          "note": "(freschissimo, temperatura frigo, 100% su farina)",
+          "grams": 800
+        }
+      ]
+    },
+    {
+      "group": "Per la Finitura",
+      "items": [
+        {
+          "name": "Olio Extravergine di Oliva",
+          "note": "(per ungere teglia e superficie)",
+          "grams": 30
+        },
+        {
+          "name": "Sale Grosso",
+          "note": "(per spolverare in superficie, opzionale)",
+          "grams": 5
+        }
+      ]
+    }
+  ]
 }

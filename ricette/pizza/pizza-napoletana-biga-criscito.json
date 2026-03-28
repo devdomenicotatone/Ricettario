@@ -9,62 +9,7 @@
   "targetTemp": "23-24°C",
   "fermentation": "24-30h totali (biga 18-24h + appretto 5-6h)",
   "totalFlour": 3000,
-  "ingredients": [
-    {
-      "name": "Farina Caputo Saccorosso",
-      "note": "(W 330-350, per biga)",
-      "grams": 900
-    },
-    {
-      "name": "Acqua",
-      "note": "(fredda 10-12°C, per biga)",
-      "grams": 400
-    },
-    {
-      "name": "Lievito Secco Caputo",
-      "note": "(per biga)",
-      "grams": 3
-    },
-    {
-      "name": "Biga di Saccorosso",
-      "note": "(tutta la biga preparata)",
-      "grams": 1300
-    },
-    {
-      "name": "Farina Caputo Saccorosso",
-      "note": "(W 330-350, struttura)",
-      "grams": 1800
-    },
-    {
-      "name": "Farina Caputo Nuvola Super",
-      "note": "(W 260-280, leggerezza e alveolatura)",
-      "grams": 300
-    },
-    {
-      "name": "Acqua",
-      "note": "(in 3 riprese: 50% iniziale, 30% durante incordatura, 20% finale)",
-      "grams": 1650,
-      "setupNote": {
-        "spirale": "(60% subito nello spezzamento biga, resto a filo in bassinage)",
-        "mano": "(in 3 riprese: 50% iniziale, 30% durante incordatura, 20% finale)"
-      }
-    },
-    {
-      "name": "Criscito Caputo",
-      "note": "(lievito madre secco attivo, 40g/kg farina)",
-      "grams": 120
-    },
-    {
-      "name": "Estratto di Malto",
-      "note": "(diastasico, favorisce lievitazione e colorazione)",
-      "grams": 15
-    },
-    {
-      "name": "Sale Marino Fino",
-      "note": "(2.5% su farina totale)",
-      "grams": 75
-    }
-  ],
+  "ingredients": [],
   "suspensions": [
     {
       "name": "Semola Rimacinata Caputo",
@@ -245,5 +190,71 @@
     "tradizione napoletana",
     "professionale",
     "pizzeria"
+  ],
+  "ingredientGroups": [
+    {
+      "group": "Per la Biga",
+      "items": [
+        {
+          "name": "Farina Caputo Saccorosso",
+          "note": "(W 330-350, per biga)",
+          "grams": 900
+        },
+        {
+          "name": "Acqua",
+          "note": "(fredda 10-12°C, per biga)",
+          "grams": 400
+        },
+        {
+          "name": "Lievito Secco Caputo",
+          "note": "(per biga)",
+          "grams": 3
+        }
+      ]
+    },
+    {
+      "group": "Per l'Impasto Finale",
+      "items": [
+        {
+          "name": "Biga di Saccorosso",
+          "note": "(tutta la biga preparata)",
+          "grams": 1300
+        },
+        {
+          "name": "Farina Caputo Saccorosso",
+          "note": "(W 330-350, struttura)",
+          "grams": 1800
+        },
+        {
+          "name": "Farina Caputo Nuvola Super",
+          "note": "(W 260-280, leggerezza e alveolatura)",
+          "grams": 300
+        },
+        {
+          "name": "Acqua",
+          "note": "(in 3 riprese: 50% iniziale, 30% durante incordatura, 20% finale)",
+          "grams": 1650,
+          "setupNote": {
+            "spirale": "(60% subito nello spezzamento biga, resto a filo in bassinage)",
+            "mano": "(in 3 riprese: 50% iniziale, 30% durante incordatura, 20% finale)"
+          }
+        },
+        {
+          "name": "Criscito Caputo",
+          "note": "(lievito madre secco attivo, 40g/kg farina)",
+          "grams": 120
+        },
+        {
+          "name": "Estratto di Malto",
+          "note": "(diastasico, favorisce lievitazione e colorazione)",
+          "grams": 15
+        },
+        {
+          "name": "Sale Marino Fino",
+          "note": "(2.5% su farina totale)",
+          "grams": 75
+        }
+      ]
+    }
   ]
 }

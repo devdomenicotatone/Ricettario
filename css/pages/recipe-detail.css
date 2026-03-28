@@ -429,6 +429,26 @@
         font-size: 0.82rem;
     }
 
+    /* ── Ingredient Group Headers ── */
+    .ingredient-section-header td {
+        padding: var(--space-sm) 12px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        color: var(--color-accent);
+        border-bottom: 2px solid var(--border-accent);
+        background: transparent;
+    }
+
+    .ingredient-section-header:not(:first-child) td {
+        padding-top: var(--space-lg);
+    }
+
+    .ingredient-section-header:hover {
+        background: transparent !important;
+    }
+
     /* ── Dose Calculator ── */
     .dose-calculator {
         display: flex;

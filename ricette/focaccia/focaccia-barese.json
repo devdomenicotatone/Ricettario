@@ -9,56 +9,7 @@
   "targetTemp": "24-26°C",
   "fermentation": "3-4h puntata + 1h appretto",
   "totalFlour": 500,
-  "ingredients": [
-    {
-      "name": "Farina Tipo 0",
-      "note": "(W 240-260, media forza)",
-      "grams": 250
-    },
-    {
-      "name": "Semola Rimacinata di Grano Duro",
-      "note": "(qualità Senatore Cappelli o simile)",
-      "grams": 250
-    },
-    {
-      "name": "Acqua",
-      "note": "(20-22°C, tutta in una volta)",
-      "grams": 400,
-      "setupNote": {
-        "spirale": "(20-22°C, tutta in una volta)",
-        "mano": "(20-22°C, aggiunta graduale in 2-3 riprese)"
-      }
-    },
-    {
-      "name": "Patate Lesse",
-      "note": "(schiacciate a purea, completamente fredde)",
-      "grams": 100
-    },
-    {
-      "name": "Lievito di Birra Fresco",
-      "note": "(8g per fermentazione controllata 3-4h)",
-      "grams": 8,
-      "setupNote": {
-        "spirale": "(8g per fermentazione controllata 3-4h)",
-        "mano": "(10g per compensare lavorazione più lunga)"
-      }
-    },
-    {
-      "name": "Sale Fino",
-      "note": "(aggiunto a metà impastamento)",
-      "grams": 12
-    },
-    {
-      "name": "Olio Extravergine d'Oliva Pugliese",
-      "note": "(cultivar Coratina o Ogliarola, fruttato medio)",
-      "grams": 30
-    },
-    {
-      "name": "Zucchero o Malto d'Orzo",
-      "note": "(opzionale, favorisce lievitazione e doratura)",
-      "grams": 5
-    }
-  ],
+  "ingredients": [],
   "suspensions": [
     {
       "name": "Pomodorini Ciliegino o Pachino",
@@ -217,5 +168,90 @@
     "semola",
     "patate"
   ],
-  "image": "images/ricette/pane/focaccia-barese.webp"
+  "image": "images/ricette/pane/focaccia-barese.webp",
+  "ingredientGroups": [
+    {
+      "group": "Per l'Impasto",
+      "items": [
+        {
+          "name": "Farina Tipo 0",
+          "note": "(W 240-260, media forza)",
+          "grams": 250
+        },
+        {
+          "name": "Semola Rimacinata di Grano Duro",
+          "note": "(qualità Senatore Cappelli o simile)",
+          "grams": 250
+        },
+        {
+          "name": "Acqua",
+          "note": "(20-22°C, tutta in una volta)",
+          "grams": 400,
+          "setupNote": {
+            "spirale": "(20-22°C, tutta in una volta)",
+            "mano": "(20-22°C, aggiunta graduale in 2-3 riprese)"
+          }
+        },
+        {
+          "name": "Patate Lesse",
+          "note": "(schiacciate a purea, completamente fredde)",
+          "grams": 100
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(8g per fermentazione controllata 3-4h)",
+          "grams": 8,
+          "setupNote": {
+            "spirale": "(8g per fermentazione controllata 3-4h)",
+            "mano": "(10g per compensare lavorazione più lunga)"
+          }
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(aggiunto a metà impastamento)",
+          "grams": 12
+        },
+        {
+          "name": "Olio Extravergine d'Oliva Pugliese",
+          "note": "(cultivar Coratina o Ogliarola, fruttato medio)",
+          "grams": 30
+        },
+        {
+          "name": "Zucchero o Malto d'Orzo",
+          "note": "(opzionale, favorisce lievitazione e doratura)",
+          "grams": 5
+        }
+      ]
+    },
+    {
+      "group": "Per il Condimento",
+      "items": [
+        {
+          "name": "Pomodorini Ciliegino o Pachino",
+          "note": "(tagliati a metà o spezzati a mano)",
+          "grams": 300
+        },
+        {
+          "name": "Olive Baresane o Nere in Salamoia",
+          "note": "(denocciolate, circa 15-20 pezzi)",
+          "grams": 80
+        },
+        {
+          "name": "Origano Secco",
+          "note": "(qualità pugliese)",
+          "grams": 3
+        },
+        {
+          "name": "Sale Grosso",
+          "note": "(per la superficie)",
+          "grams": 5
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(per condire in superficie, abbondante)",
+          "grams": 50
+        }
+      ]
+    }
+  ]
 }

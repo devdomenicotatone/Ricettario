@@ -10,64 +10,80 @@
   "fermentation": "~5h totali (3h poolish + 2h impasto finale)",
   "totalFlour": 600,
   "image": "images/ricette/pane/ciabatta-poolish.webp",
-  "ingredients": [
+  "ingredients": [],
+  "ingredientGroups": [
     {
-      "name": "Farina Manitoba o Tipo 0 Forte",
-      "note": "(W 320-380 per poolish)",
-      "grams": 200
+      "group": "Per il Poolish",
+      "items": [
+        {
+          "name": "Farina Manitoba o Tipo 0 Forte",
+          "note": "(W 320-380 per poolish)",
+          "grams": 200
+        },
+        {
+          "name": "Acqua per Poolish",
+          "note": "(temperatura ambiente 20-22°C)",
+          "grams": 200
+        },
+        {
+          "name": "Lievito di Birra Fresco per Poolish",
+          "note": "(oppure 1g secco)",
+          "grams": 2
+        }
+      ]
     },
     {
-      "name": "Acqua per Poolish",
-      "note": "(temperatura ambiente 20-22°C)",
-      "grams": 200
+      "group": "Per l'Impasto Finale",
+      "items": [
+        {
+          "name": "Farina Tipo 0 Media-Forte",
+          "note": "(W 280-320 per impasto finale)",
+          "grams": 400
+        },
+        {
+          "name": "Acqua Impasto Finale",
+          "note": "(ghiacciata 2-4°C, aggiungere gradualmente)",
+          "grams": 280,
+          "setupNote": {
+            "spirale": "(ghiacciata 2-4°C, aggiungere gradualmente)",
+            "mano": "(20-22°C, in 3 riprese durante stretch & fold)"
+          }
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(5g per impasto rapido)",
+          "grams": 5,
+          "setupNote": {
+            "spirale": "(5g per impasto rapido)",
+            "mano": "(3g per tempi più lunghi)"
+          }
+        },
+        {
+          "name": "Malto Diastatico",
+          "note": "(oppure miele o zucchero)",
+          "grams": 10
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(aggiungere a incordatura avvenuta)",
+          "grams": 15
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(opzionale, per maggiore morbidezza)",
+          "grams": 15
+        }
+      ]
     },
     {
-      "name": "Lievito di Birra Fresco per Poolish",
-      "note": "(oppure 1g secco)",
-      "grams": 2
-    },
-    {
-      "name": "Farina Tipo 0 Media-Forte",
-      "note": "(W 280-320 per impasto finale)",
-      "grams": 400
-    },
-    {
-      "name": "Acqua Impasto Finale",
-      "note": "(ghiacciata 2-4°C, aggiungere gradualmente)",
-      "grams": 280,
-      "setupNote": {
-        "spirale": "(ghiacciata 2-4°C, aggiungere gradualmente)",
-        "mano": "(20-22°C, in 3 riprese durante stretch & fold)"
-      }
-    },
-    {
-      "name": "Lievito di Birra Fresco",
-      "note": "(5g per impasto rapido)",
-      "grams": 5,
-      "setupNote": {
-        "spirale": "(5g per impasto rapido)",
-        "mano": "(3g per tempi più lunghi)"
-      }
-    },
-    {
-      "name": "Malto Diastatico",
-      "note": "(oppure miele o zucchero)",
-      "grams": 10
-    },
-    {
-      "name": "Sale Fino",
-      "note": "(aggiungere a incordatura avvenuta)",
-      "grams": 15
-    },
-    {
-      "name": "Olio Extravergine d'Oliva",
-      "note": "(opzionale, per maggiore morbidezza)",
-      "grams": 15
-    },
-    {
-      "name": "Semola Rimacinata",
-      "note": "(per spianatoia e parte inferiore pani)",
-      "grams": 100
+      "group": "Per lo Spolvero",
+      "items": [
+        {
+          "name": "Semola Rimacinata",
+          "note": "(per spianatoia e parte inferiore pani)",
+          "grams": 100
+        }
+      ]
     }
   ],
   "suspensions": [],

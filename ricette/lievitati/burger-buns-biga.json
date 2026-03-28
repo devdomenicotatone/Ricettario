@@ -9,76 +9,7 @@
   "targetTemp": "26-27°C",
   "fermentation": "~4h totali (2h biga + 2h impasto finale)",
   "totalFlour": 500,
-  "ingredients": [
-    {
-      "name": "Farina Manitoba Forte",
-      "note": "(W 350-380, per struttura e sviluppo)",
-      "grams": 300
-    },
-    {
-      "name": "Farina Tipo 00 Media Forza",
-      "note": "(W 260-280, per equilibrio e friabilità)",
-      "grams": 200
-    },
-    {
-      "name": "Acqua",
-      "note": "(fresca 10-14°C, aggiunta in 2 riprese)",
-      "grams": 250,
-      "setupNote": {
-        "spirale": "(fresca 10-14°C, aggiunta in 2 riprese)",
-        "mano": "(20-22°C, incorporata gradualmente in 3 riprese)"
-      }
-    },
-    {
-      "name": "Latte Intero",
-      "note": "(temperatura ambiente, per morbidezza)",
-      "grams": 50
-    },
-    {
-      "name": "Lievito di Birra Fresco",
-      "note": "(15g totali (5g biga + 10g impasto))",
-      "grams": 15,
-      "setupNote": {
-        "spirale": "(15g totali (5g biga + 10g impasto))",
-        "mano": "(18g totali (6g biga + 12g impasto, tempi più lunghi))"
-      }
-    },
-    {
-      "name": "Uova Medie",
-      "note": "(1 intero, circa 55g)",
-      "grams": 55
-    },
-    {
-      "name": "Tuorlo d'Uovo",
-      "note": "(per ricchezza e colore, ~18g)",
-      "grams": 18
-    },
-    {
-      "name": "Zucchero Semolato",
-      "note": "(per doratura e sapore)",
-      "grams": 30
-    },
-    {
-      "name": "Miele di Acacia",
-      "note": "(per morbidezza e shelf life)",
-      "grams": 15
-    },
-    {
-      "name": "Sale Fino",
-      "note": "(aggiunto a metà impastamento)",
-      "grams": 12
-    },
-    {
-      "name": "Burro Morbido",
-      "note": "(temperatura ambiente, 20-22°C)",
-      "grams": 40
-    },
-    {
-      "name": "Olio Extravergine d'Oliva",
-      "note": "(per morbidezza e conservazione)",
-      "grams": 25
-    }
-  ],
+  "ingredients": [],
   "suspensions": [
     {
       "name": "Semi di Sesamo",
@@ -247,5 +178,105 @@
     "spirale",
     "impasto a mano"
   ],
-  "image": "images/ricette/lievitati/burger-buns-biga.webp"
+  "image": "images/ricette/lievitati/burger-buns-biga.webp",
+  "ingredientGroups": [
+    {
+      "group": "Per la Biga",
+      "items": [
+        {
+          "name": "Farina Manitoba Forte",
+          "note": "(W 350-380, per struttura e sviluppo)",
+          "grams": 300
+        },
+        {
+          "name": "Acqua",
+          "note": "(fresca 10-14°C, aggiunta in 2 riprese)",
+          "grams": 250,
+          "setupNote": {
+            "spirale": "(fresca 10-14°C, aggiunta in 2 riprese)",
+            "mano": "(20-22°C, incorporata gradualmente in 3 riprese)"
+          }
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(15g totali (5g biga + 10g impasto))",
+          "grams": 15,
+          "setupNote": {
+            "spirale": "(15g totali (5g biga + 10g impasto))",
+            "mano": "(18g totali (6g biga + 12g impasto, tempi più lunghi))"
+          }
+        }
+      ]
+    },
+    {
+      "group": "Per l'Impasto Finale",
+      "items": [
+        {
+          "name": "Farina Tipo 00 Media Forza",
+          "note": "(W 260-280, per equilibrio e friabilità)",
+          "grams": 200
+        },
+        {
+          "name": "Latte Intero",
+          "note": "(temperatura ambiente, per morbidezza)",
+          "grams": 50
+        },
+        {
+          "name": "Uova Medie",
+          "note": "(1 intero, circa 55g)",
+          "grams": 55
+        },
+        {
+          "name": "Tuorlo d'Uovo",
+          "note": "(per ricchezza e colore, ~18g)",
+          "grams": 18
+        },
+        {
+          "name": "Zucchero Semolato",
+          "note": "(per doratura e sapore)",
+          "grams": 30
+        },
+        {
+          "name": "Miele di Acacia",
+          "note": "(per morbidezza e shelf life)",
+          "grams": 15
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(aggiunto a metà impastamento)",
+          "grams": 12
+        },
+        {
+          "name": "Burro Morbido",
+          "note": "(temperatura ambiente, 20-22°C)",
+          "grams": 40
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(per morbidezza e conservazione)",
+          "grams": 25
+        }
+      ]
+    },
+    {
+      "group": "Per la Finitura",
+      "items": [
+        {
+          "name": "Semi di Sesamo",
+          "note": "(per spennellatura finale)",
+          "grams": 30
+        },
+        {
+          "name": "Tuorlo d'Uovo",
+          "note": "(per spennellatura + 20g latte)",
+          "grams": 18
+        },
+        {
+          "name": "Latte Intero",
+          "note": "(per spennellatura con tuorlo)",
+          "grams": 20
+        }
+      ]
+    }
+  ]
 }

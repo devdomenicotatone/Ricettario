@@ -8,69 +8,13 @@
   "hydration": null,
   "targetTemp": null,
   "fermentation": null,
-  "totalFlour": 200,
-  "ingredients": [
-    {
-      "name": "Semolino di Grano Duro",
-      "note": "(granulometria fine, tipo per polenta)",
-      "grams": 200
-    },
-    {
-      "name": "Latte Intero",
-      "note": "(temperatura ambiente)",
-      "grams": 500
-    },
-    {
-      "name": "Acqua",
-      "note": "(temperatura ambiente)",
-      "grams": 500
-    },
-    {
-      "name": "Ricotta Vaccina",
-      "note": "(fresca, da setacciare)",
-      "grams": 350
-    },
-    {
-      "name": "Uova Medie",
-      "note": "(4 uova, ~55g l'una)",
-      "grams": 220
-    },
-    {
-      "name": "Zucchero Semolato",
-      "note": "(granulato fine)",
-      "grams": 250
-    },
-    {
-      "name": "Burro",
-      "note": "(per l'impasto + imburro teglia)",
-      "grams": 40
-    },
-    {
-      "name": "Scorza di Arancia",
-      "note": "(1 arancia bio non trattata, solo parte arancione)",
-      "grams": 5
-    },
-    {
-      "name": "Baccello di Vaniglia",
-      "note": "(1 bacca, semi raschiati)",
-      "grams": 2
-    },
-    {
-      "name": "Sale Fino",
-      "note": "(1 pizzico)",
-      "grams": 2
-    },
-    {
-      "name": "Zucchero a Velo",
-      "note": "(per spolverizzare a fine cottura)",
-      "grams": 30
-    }
-  ],
+  "totalFlour": null,
+  "ingredients": [],
   "suspensions": [],
   "stepsHand": [
     {
       "title": "Preparazione Crema di Semolino",
-      "text": "In una pentola capiente versare latte (500g), acqua (500g), sale (2g) e burro (40g). Aggiungere la scorza d'arancia grattugiata (5g). Portare a bollore mescolando occasionalmente per sciogliere il burro. Quando bolle, rimuovere la scorza d'arancia e versare il semolino (200g) a pioggia mescolando energicamente con una frusta per evitare grumi. Abbassare la fiamma al minimo e cuocere per 4-5 minuti, continuando a mescolare, fino a ottenere una crema densa simile a una polenta soda. Trasferire immediatamente in una pirofila ampia e coprire con pellicola a contatto per evitare la formazione di pellicola superficiale. Lasciar raffreddare a temperatura ambiente per 20-30 minuti."
+      "text": "In una pentola capiente versare latte (500g), acqua (500g), sale (2g) e burro (40g). Aggiungere la scorza d'arancia tagliata a strisce larghe con un pelapatate (5g). Portare a bollore mescolando occasionalmente per sciogliere il burro. Quando bolle, rimuovere le strisce di scorza d'arancia con una pinza o un cucchiaio e versare il semolino (200g) a pioggia mescolando energicamente con una frusta per evitare grumi. Abbassare la fiamma al minimo e cuocere per 4-5 minuti, continuando a mescolare, fino a ottenere una crema densa e compatta. Trasferire immediatamente in una pirofila ampia e coprire con pellicola a contatto per evitare la formazione di pellicola superficiale. Lasciar raffreddare a temperatura ambiente per 20-30 minuti."
     },
     {
       "title": "Preparazione Composto di Ricotta",
@@ -154,5 +98,72 @@
     "dolce agli agrumi"
   ],
   "image": "images/ricette/dolci/migliaccio-napoletano.webp",
-  "imageAttribution": "📷 Foto: Pervane Mustafa27 — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: Pervane Mustafa27 — Pexels License via Pexels",
+  "ingredientGroups": [
+    {
+      "group": "Per il Composto",
+      "items": [
+        {
+          "name": "Semolino di Grano Duro",
+          "note": "(granulometria fine, tipo gnocchi alla romana)",
+          "grams": 200
+        },
+        {
+          "name": "Latte Intero",
+          "note": "(temperatura ambiente)",
+          "grams": 500
+        },
+        {
+          "name": "Acqua",
+          "note": "(temperatura ambiente)",
+          "grams": 500
+        },
+        {
+          "name": "Ricotta Vaccina",
+          "note": "(fresca, da setacciare)",
+          "grams": 350
+        },
+        {
+          "name": "Uova Medie",
+          "note": "(4 uova, ~55g l'una)",
+          "grams": 220
+        },
+        {
+          "name": "Zucchero Semolato",
+          "note": "(granulato fine)",
+          "grams": 250
+        },
+        {
+          "name": "Burro",
+          "note": "(per l'impasto + imburro teglia)",
+          "grams": 40
+        },
+        {
+          "name": "Scorza di Arancia",
+          "note": "(1 arancia bio non trattata, pelata a strisce larghe con pelapatate)",
+          "grams": 5
+        },
+        {
+          "name": "Baccello di Vaniglia",
+          "note": "(1 bacca, semi raschiati)",
+          "grams": 2
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(1 pizzico)",
+          "grams": 2
+        }
+      ]
+    },
+    {
+      "group": "Per la Finitura",
+      "items": [
+        {
+          "name": "Zucchero a Velo",
+          "note": "(per spolverizzare a fine cottura)",
+          "grams": 30
+        }
+      ]
+    }
+  ]
 }

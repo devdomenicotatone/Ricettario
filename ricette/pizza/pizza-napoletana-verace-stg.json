@@ -9,46 +9,7 @@
   "targetTemp": "24-26°C",
   "fermentation": "8-24h (controllata)",
   "totalFlour": 1000,
-  "ingredients": [
-    {
-      "name": "Farina Tipo 0 o 00 Media-Alta Forza",
-      "note": "(W 280-320, 12-13% proteine)",
-      "grams": 1000
-    },
-    {
-      "name": "Acqua",
-      "note": "(fresca 14-18°C per controllare temperatura impasto)",
-      "grams": 650,
-      "setupNote": {
-        "spirale": "(fresca 14-18°C per controllare temperatura impasto)",
-        "mano": "(temperatura ambiente 20-22°C, aggiunta graduale)"
-      }
-    },
-    {
-      "name": "Sale Marino Fino",
-      "note": "(2.5-3% su farina)",
-      "grams": 28
-    },
-    {
-      "name": "Lievito di Birra Fresco",
-      "note": "(1-2g per lievitazione 24h)",
-      "grams": 2,
-      "setupNote": {
-        "spirale": "(1-2g per lievitazione 24h)",
-        "mano": "(2-3g per gestione più semplice (lievitazione 8-12h))"
-      }
-    },
-    {
-      "name": "Zucchero Semolato",
-      "note": "(opzionale, favorisce doratura)",
-      "grams": 5
-    },
-    {
-      "name": "Olio Extravergine d'Oliva",
-      "note": "(opzionale, non previsto dal disciplinare STG)",
-      "grams": 15
-    }
-  ],
+  "ingredients": [],
   "suspensions": [],
   "stepsSpiral": [
     {
@@ -236,5 +197,50 @@
     "a mano",
     "metodo tradizionale"
   ],
-  "image": "images/ricette/pizza/pizza-napoletana-verace-stg.webp"
+  "image": "images/ricette/pizza/pizza-napoletana-verace-stg.webp",
+  "ingredientGroups": [
+    {
+      "group": "Per l'Impasto",
+      "items": [
+        {
+          "name": "Farina Tipo 0 o 00 Media-Alta Forza",
+          "note": "(W 280-320, 12-13% proteine)",
+          "grams": 1000
+        },
+        {
+          "name": "Acqua",
+          "note": "(fresca 14-18°C per controllare temperatura impasto)",
+          "grams": 650,
+          "setupNote": {
+            "spirale": "(fresca 14-18°C per controllare temperatura impasto)",
+            "mano": "(temperatura ambiente 20-22°C, aggiunta graduale)"
+          }
+        },
+        {
+          "name": "Sale Marino Fino",
+          "note": "(2.5-3% su farina)",
+          "grams": 28
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(1-2g per lievitazione 24h)",
+          "grams": 2,
+          "setupNote": {
+            "spirale": "(1-2g per lievitazione 24h)",
+            "mano": "(2-3g per gestione più semplice (lievitazione 8-12h))"
+          }
+        },
+        {
+          "name": "Zucchero Semolato",
+          "note": "(opzionale, favorisce doratura)",
+          "grams": 5
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(opzionale, non previsto dal disciplinare STG)",
+          "grams": 15
+        }
+      ]
+    }
+  ]
 }

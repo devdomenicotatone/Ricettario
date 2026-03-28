@@ -9,56 +9,7 @@
   "targetTemp": "24-26°C",
   "fermentation": "24-48h",
   "totalFlour": 1000,
-  "ingredients": [
-    {
-      "name": "Farina di Frumento Tipo 0",
-      "note": "(W 260-280, media forza)",
-      "grams": 900
-    },
-    {
-      "name": "Farina di Riso",
-      "note": "(preferibilmente semi-integrale)",
-      "grams": 60
-    },
-    {
-      "name": "Farina di Soia",
-      "note": "(tostata, migliora croccantezza)",
-      "grams": 40
-    },
-    {
-      "name": "Acqua",
-      "note": "(750g totali, fresca 10-14°C, aggiunta in 2 riprese (700g + 50g finali con sale e olio))",
-      "grams": 750,
-      "setupNote": {
-        "spirale": "(750g totali, fresca 10-14°C, aggiunta in 2 riprese (700g + 50g finali con sale e olio))",
-        "mano": "(750g totali a 18-20°C, aggiunta in 3 riprese (500g iniziali + 200g gradualmente + 50g finali))"
-      }
-    },
-    {
-      "name": "Lievito di Birra Fresco",
-      "note": "(2g per maturazione lunga 24-48h in frigo)",
-      "grams": 2,
-      "setupNote": {
-        "spirale": "(2g per maturazione lunga 24-48h in frigo)",
-        "mano": "(3g per compensare lavorazione più lunga)"
-      }
-    },
-    {
-      "name": "Sale Fino",
-      "note": "(aggiunto a fine impasto)",
-      "grams": 18
-    },
-    {
-      "name": "Olio Extravergine d'Oliva",
-      "note": "(preferibilmente delicato)",
-      "grams": 20
-    },
-    {
-      "name": "Semola di Grano Duro Rimacinata",
-      "note": "(per spolverare durante stesura)",
-      "grams": 50
-    }
-  ],
+  "ingredients": [],
   "suspensions": [],
   "stepsSpiral": [
     {
@@ -232,5 +183,60 @@
     "maturazione",
     "slap and fold"
   ],
-  "image": "images/ricette/pizza/pinsa-romana.webp"
+  "image": "images/ricette/pizza/pinsa-romana.webp",
+  "ingredientGroups": [
+    {
+      "group": "Per l'Impasto",
+      "items": [
+        {
+          "name": "Farina di Frumento Tipo 0",
+          "note": "(W 260-280, media forza)",
+          "grams": 900
+        },
+        {
+          "name": "Farina di Riso",
+          "note": "(preferibilmente semi-integrale)",
+          "grams": 60
+        },
+        {
+          "name": "Farina di Soia",
+          "note": "(tostata, migliora croccantezza)",
+          "grams": 40
+        },
+        {
+          "name": "Acqua",
+          "note": "(750g totali, fresca 10-14°C, aggiunta in 2 riprese (700g + 50g finali con sale e olio))",
+          "grams": 750,
+          "setupNote": {
+            "spirale": "(750g totali, fresca 10-14°C, aggiunta in 2 riprese (700g + 50g finali con sale e olio))",
+            "mano": "(750g totali a 18-20°C, aggiunta in 3 riprese (500g iniziali + 200g gradualmente + 50g finali))"
+          }
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(2g per maturazione lunga 24-48h in frigo)",
+          "grams": 2,
+          "setupNote": {
+            "spirale": "(2g per maturazione lunga 24-48h in frigo)",
+            "mano": "(3g per compensare lavorazione più lunga)"
+          }
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(aggiunto a fine impasto)",
+          "grams": 18
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(preferibilmente delicato)",
+          "grams": 20
+        },
+        {
+          "name": "Semola di Grano Duro Rimacinata",
+          "note": "(per spolverare durante stesura)",
+          "grams": 50
+        }
+      ]
+    }
+  ]
 }

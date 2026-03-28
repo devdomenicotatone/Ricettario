@@ -9,141 +9,7 @@
   "targetTemp": "26-28°C",
   "fermentation": "~48h totali (con puntate intermedie)",
   "totalFlour": 685,
-  "ingredients": [
-    {
-      "name": "Farina Manitoba",
-      "note": "(W 350-380, 13-14% proteine)",
-      "grams": 375
-    },
-    {
-      "name": "Lievito Madre",
-      "note": "(rinfrescato 3 volte, in forza)",
-      "grams": 65
-    },
-    {
-      "name": "Acqua",
-      "note": "(20-22°C)",
-      "grams": 125,
-      "setupNote": {
-        "spirale": "(20-22°C)",
-        "mano": "(temperatura ambiente 20-22°C)"
-      }
-    },
-    {
-      "name": "Zucchero Semolato",
-      "note": "(primo impasto)",
-      "grams": 65
-    },
-    {
-      "name": "Malto",
-      "note": "(diastasico)",
-      "grams": 2
-    },
-    {
-      "name": "Tuorli",
-      "note": "(temperatura ambiente, primo impasto)",
-      "grams": 50
-    },
-    {
-      "name": "Burro",
-      "note": "(morbidissimo, primo impasto)",
-      "grams": 70
-    },
-    {
-      "name": "Farina Manitoba",
-      "note": "(W 350-380, secondo impasto)",
-      "grams": 62
-    },
-    {
-      "name": "Zucchero Semolato",
-      "note": "(secondo impasto)",
-      "grams": 50
-    },
-    {
-      "name": "Tuorli",
-      "note": "(temperatura ambiente, secondo impasto)",
-      "grams": 50
-    },
-    {
-      "name": "Burro",
-      "note": "(morbidissimo, secondo impasto)",
-      "grams": 40
-    },
-    {
-      "name": "Acqua",
-      "note": "(20-22°C)",
-      "grams": 10,
-      "setupNote": {
-        "spirale": "(20-22°C)",
-        "mano": "(temperatura ambiente 20-22°C)"
-      }
-    },
-    {
-      "name": "Sale Fino",
-      "note": "(secondo impasto)",
-      "grams": 2
-    },
-    {
-      "name": "Farina Manitoba",
-      "note": "(W 350-380, terzo impasto)",
-      "grams": 248
-    },
-    {
-      "name": "Uova Intere",
-      "note": "(temperatura ambiente, terzo impasto)",
-      "grams": 270
-    },
-    {
-      "name": "Tuorli",
-      "note": "(temperatura ambiente, terzo impasto)",
-      "grams": 50
-    },
-    {
-      "name": "Zucchero Semolato",
-      "note": "(terzo impasto)",
-      "grams": 65
-    },
-    {
-      "name": "Miele di Acacia",
-      "note": "",
-      "grams": 45
-    },
-    {
-      "name": "Burro",
-      "note": "(morbidissimo, terzo impasto)",
-      "grams": 40
-    },
-    {
-      "name": "Baccello di Vaniglia",
-      "note": "(semi)",
-      "grams": 1
-    },
-    {
-      "name": "Buccia di Limone",
-      "note": "(grattugiata, non trattato)",
-      "grams": 5
-    },
-    {
-      "name": "Buccia di Arancia",
-      "note": "(grattugiata, non trattata)",
-      "grams": 10
-    },
-    {
-      "name": "Rum",
-      "note": "(o Cointreau)",
-      "grams": 15
-    },
-    {
-      "name": "Sale Fino",
-      "note": "(terzo impasto)",
-      "grams": 9
-    },
-    {
-      "name": "Burro",
-      "note": "(per scarpatura finale)",
-      "grams": 30
-    }
-  ],
+  "ingredients": [],
   "suspensions": [
     {
       "name": "Uvetta Sultanina",
@@ -364,5 +230,155 @@
     "canditi",
     "grande-lievitato"
   ],
-  "image": "images/ricette/lievitati/panettone-classico.webp"
+  "image": "images/ricette/lievitati/panettone-classico.webp",
+  "ingredientGroups": [
+    {
+      "group": "Per il Primo Impasto",
+      "items": [
+        {
+          "name": "Farina Manitoba",
+          "note": "(W 350-380, 13-14% proteine)",
+          "grams": 375
+        },
+        {
+          "name": "Lievito Madre",
+          "note": "(rinfrescato 3 volte, in forza)",
+          "grams": 65
+        },
+        {
+          "name": "Acqua",
+          "note": "(20-22°C)",
+          "grams": 125,
+          "setupNote": {
+            "spirale": "(20-22°C)",
+            "mano": "(temperatura ambiente 20-22°C)"
+          }
+        },
+        {
+          "name": "Zucchero Semolato",
+          "note": "(primo impasto)",
+          "grams": 65
+        },
+        {
+          "name": "Malto",
+          "note": "(diastasico)",
+          "grams": 2
+        },
+        {
+          "name": "Tuorli",
+          "note": "(temperatura ambiente, primo impasto)",
+          "grams": 50
+        },
+        {
+          "name": "Burro",
+          "note": "(morbidissimo, primo impasto)",
+          "grams": 70
+        }
+      ]
+    },
+    {
+      "group": "Per il Secondo Impasto",
+      "items": [
+        {
+          "name": "Farina Manitoba",
+          "note": "(W 350-380, secondo impasto)",
+          "grams": 62
+        },
+        {
+          "name": "Zucchero Semolato",
+          "note": "(secondo impasto)",
+          "grams": 50
+        },
+        {
+          "name": "Tuorli",
+          "note": "(temperatura ambiente, secondo impasto)",
+          "grams": 50
+        },
+        {
+          "name": "Burro",
+          "note": "(morbidissimo, secondo impasto)",
+          "grams": 40
+        },
+        {
+          "name": "Acqua",
+          "note": "(20-22°C)",
+          "grams": 10,
+          "setupNote": {
+            "spirale": "(20-22°C)",
+            "mano": "(temperatura ambiente 20-22°C)"
+          }
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(secondo impasto)",
+          "grams": 2
+        }
+      ]
+    },
+    {
+      "group": "Per il Terzo Impasto",
+      "items": [
+        {
+          "name": "Farina Manitoba",
+          "note": "(W 350-380, terzo impasto)",
+          "grams": 248
+        },
+        {
+          "name": "Uova Intere",
+          "note": "(temperatura ambiente, terzo impasto)",
+          "grams": 270
+        },
+        {
+          "name": "Tuorli",
+          "note": "(temperatura ambiente, terzo impasto)",
+          "grams": 50
+        },
+        {
+          "name": "Zucchero Semolato",
+          "note": "(terzo impasto)",
+          "grams": 65
+        },
+        {
+          "name": "Miele di Acacia",
+          "note": "",
+          "grams": 45
+        },
+        {
+          "name": "Burro",
+          "note": "(morbidissimo, terzo impasto)",
+          "grams": 40
+        },
+        {
+          "name": "Baccello di Vaniglia",
+          "note": "(semi)",
+          "grams": 1
+        },
+        {
+          "name": "Buccia di Limone",
+          "note": "(grattugiata, non trattato)",
+          "grams": 5
+        },
+        {
+          "name": "Buccia di Arancia",
+          "note": "(grattugiata, non trattata)",
+          "grams": 10
+        },
+        {
+          "name": "Rum",
+          "note": "(o Cointreau)",
+          "grams": 15
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(terzo impasto)",
+          "grams": 9
+        },
+        {
+          "name": "Burro",
+          "note": "(per scarpatura finale)",
+          "grams": 30
+        }
+      ]
+    }
+  ]
 }

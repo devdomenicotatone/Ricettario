@@ -9,71 +9,7 @@
   "targetTemp": "24-26°C",
   "fermentation": "3-4 ore totali",
   "totalFlour": 650,
-  "ingredients": [
-    {
-      "name": "Farina 00 Media Forza",
-      "note": "(W 260–280, proteine 11-12%)",
-      "grams": 400
-    },
-    {
-      "name": "Farina Manitoba Forte",
-      "note": "(W 380–420, proteine 13-14%)",
-      "grams": 250
-    },
-    {
-      "name": "Acqua",
-      "note": "(fredda 16-18°C per controllare temperatura finale)",
-      "grams": 335,
-      "setupNote": {
-        "spirale": "(fredda 16-18°C per controllare temperatura finale)",
-        "mano": "(20-22°C, aggiunta in 2 riprese)"
-      }
-    },
-    {
-      "name": "Sale Fino",
-      "note": "(13 g nell'impasto)",
-      "grams": 13
-    },
-    {
-      "name": "Malto Diastasico",
-      "note": "(o 1 cucchiaino miele se non disponibile)",
-      "grams": 10
-    },
-    {
-      "name": "Lievito di Birra Fresco",
-      "note": "(18 g per lievitazione controllata 3-4 ore)",
-      "grams": 18,
-      "setupNote": {
-        "spirale": "(18 g per lievitazione controllata 3-4 ore)",
-        "mano": "(ridurre a 12-15 g se temperatura ambiente alta, lievitazione più lenta)"
-      }
-    },
-    {
-      "name": "Olio Extravergine d'Oliva Ligure DOP",
-      "note": "(nell'impasto, preferire taggiasco o riviera)",
-      "grams": 30
-    },
-    {
-      "name": "Olio Extravergine d'Oliva",
-      "note": "(per ungere le 2 teglie 30×40 cm)",
-      "grams": 30
-    },
-    {
-      "name": "Olio Extravergine d'Oliva",
-      "note": "(per condire la superficie prima di infornare)",
-      "grams": 60
-    },
-    {
-      "name": "Sale Fino",
-      "note": "(per salamoia)",
-      "grams": 10
-    },
-    {
-      "name": "Acqua",
-      "note": "(per salamoia, temperatura ambiente)",
-      "grams": 200
-    }
-  ],
+  "ingredients": [],
   "suspensions": [],
   "stepsSpiral": [
     {
@@ -251,5 +187,80 @@
     "lievitazione breve",
     "olio evo"
   ],
-  "image": "images/ricette/focaccia/focaccia-genovese-fugassa.webp"
+  "image": "images/ricette/focaccia/focaccia-genovese-fugassa.webp",
+  "ingredientGroups": [
+    {
+      "group": "Per l'Impasto",
+      "items": [
+        {
+          "name": "Farina 00 Media Forza",
+          "note": "(W 260–280, proteine 11-12%)",
+          "grams": 400
+        },
+        {
+          "name": "Farina Manitoba Forte",
+          "note": "(W 380–420, proteine 13-14%)",
+          "grams": 250
+        },
+        {
+          "name": "Acqua",
+          "note": "(fredda 16-18°C per controllare temperatura finale)",
+          "grams": 335,
+          "setupNote": {
+            "spirale": "(fredda 16-18°C per controllare temperatura finale)",
+            "mano": "(20-22°C, aggiunta in 2 riprese)"
+          }
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(13 g nell'impasto)",
+          "grams": 13
+        },
+        {
+          "name": "Malto Diastasico",
+          "note": "(o 1 cucchiaino miele se non disponibile)",
+          "grams": 10
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(18 g per lievitazione controllata 3-4 ore)",
+          "grams": 18,
+          "setupNote": {
+            "spirale": "(18 g per lievitazione controllata 3-4 ore)",
+            "mano": "(ridurre a 12-15 g se temperatura ambiente alta, lievitazione più lenta)"
+          }
+        },
+        {
+          "name": "Olio Extravergine d'Oliva Ligure DOP",
+          "note": "(nell'impasto, preferire taggiasco o riviera)",
+          "grams": 30
+        }
+      ]
+    },
+    {
+      "group": "Per il Condimento",
+      "items": [
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(per ungere le 2 teglie 30×40 cm)",
+          "grams": 30
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(per condire la superficie prima di infornare)",
+          "grams": 60
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(per salamoia)",
+          "grams": 10
+        },
+        {
+          "name": "Acqua",
+          "note": "(per salamoia, temperatura ambiente)",
+          "grams": 200
+        }
+      ]
+    }
+  ]
 }
