@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-03-28T01:10:19.530Z",
-  "totalRecipes": 30,
+  "generatedAt": "2026-03-28T02:17:00.000Z",
+  "totalRecipes": 25,
   "categories": [
     {
       "name": "Pane",
-      "count": 9,
+      "count": 6,
       "emoji": "🥖"
     },
     {
@@ -19,13 +19,13 @@
     },
     {
       "name": "Lievitati",
-      "count": 8,
+      "count": 7,
       "emoji": "🥐"
     },
     {
       "name": "Dolci",
-      "count": 4,
-      "emoji": ""
+      "count": 3,
+      "emoji": "🍪"
     },
     {
       "name": "Focaccia",
@@ -49,20 +49,6 @@
       "tool": ""
     },
     {
-      "title": "Ciabatta Classica con Poolish",
-      "slug": "ciabatta-classica-poolish",
-      "category": "Pane",
-      "categoryDir": "pane",
-      "emoji": "🥖",
-      "href": "ricette/pane/ciabatta-classica-poolish.html",
-      "image": "images/ricette/pane/ciabatta-classica-poolish.webp",
-      "description": "Pane italiano ad alta idratazione con prefermento liquido, alveolatura irregolare e crosta croccante. Ricetta professionale con poolish.",
-      "hydration": "80%",
-      "time": "~6-7h totali (3h poolish + 3-4h impasto)",
-      "temp": "24-26°C",
-      "tool": ""
-    },
-    {
       "title": "Ciabatta con Poolish",
       "slug": "ciabatta-poolish",
       "category": "Pane",
@@ -73,34 +59,6 @@
       "description": "Pane ad alta idratazione con poolish — tecnica spirale e manuale per un'alveolatura perfetta e crosta croccante",
       "hydration": "80%",
       "time": "~5h totali (3h poolish + 2h impasto finale)",
-      "temp": "24-26°C",
-      "tool": ""
-    },
-    {
-      "title": "Pane alle Noci",
-      "slug": "pane-alle-noci",
-      "category": "Pane",
-      "categoryDir": "pane",
-      "emoji": "🥖",
-      "href": "ricette/pane/pane-alle-noci.html",
-      "image": "images/ricette/pane/pane-alle-noci.webp",
-      "description": "Pane rustico con mix di farine integrali (grano tenero, farro, grano saraceno) e noci tostate. Idratazione 68%, lievitazione 4-5h totali.",
-      "hydration": "68%",
-      "time": "4-5h totali",
-      "temp": "24-26°C",
-      "tool": ""
-    },
-    {
-      "title": "Pane alle Noci Integrale",
-      "slug": "pane-noci-integrale",
-      "category": "Pane",
-      "categoryDir": "pane",
-      "emoji": "🥖",
-      "href": "ricette/pane/pane-noci-integrale.html",
-      "image": "images/ricette/pane/pane-noci-integrale.webp",
-      "description": "Pane rustico multicereale con noci tostate e lievitazione naturale estesa. Farine integrali, farro e grano saraceno per un pane dal sapore intenso.",
-      "hydration": "68%",
-      "time": "~4.5h totali",
       "temp": "24-26°C",
       "tool": ""
     },
@@ -245,20 +203,6 @@
       "tool": ""
     },
     {
-      "title": "Cornetti Sfogliati",
-      "slug": "cornetti-sfogliati",
-      "category": "Lievitati",
-      "categoryDir": "lievitati",
-      "emoji": "🥐",
-      "href": "ricette/lievitati/cornetti-sfogliati.html",
-      "image": "images/ricette/lievitati/cornetti-sfogliati.webp",
-      "description": "Lievitato sfogliato a laminazione multipla con burro da incasso. Procedimento completo per cornetti da pasticceria con stratificazione professionale.",
-      "hydration": "55%",
-      "time": "~18h (con riposo in frigo 12h)",
-      "temp": "24-26°C",
-      "tool": ""
-    },
-    {
       "title": "Cornetti Sfogliati Classici",
       "slug": "cornetti-sfogliati-classici",
       "category": "Lievitati",
@@ -266,7 +210,7 @@
       "emoji": "🥐",
       "href": "ricette/lievitati/cornetti-sfogliati-classici.html",
       "image": "images/ricette/lievitati/cornetti-sfogliati-classici.webp",
-      "description": "Cornetti sfogliati con tecnica classica: laminazione con panetto burro, pieghe a portafoglio e lievitazione controllata per strati croccanti e alveolatura perfe",
+      "description": "Cornetti sfogliati con tecnica classica: laminazione con panetto burro, pieghe a portafoglio e lievitazione controllata per strati croccanti e alveolatura perfetta.",
       "hydration": "52%",
       "time": "18-24h totali (puntata + maturazione in frigo + appretto)",
       "temp": "24-26°C",
@@ -356,20 +300,7 @@
       "temp": "26-27°C",
       "tool": ""
     },
-    {
-      "title": "Cartocci Siciliani alla Crema",
-      "slug": "cartocci-siciliani-crema",
-      "category": "Dolci",
-      "categoryDir": "dolci",
-      "emoji": "🥐",
-      "href": "ricette/dolci/cartocci-siciliani-crema.html",
-      "image": "images/ricette/dolci/cartocci-siciliani-crema.webp",
-      "description": "Specialità siciliana della tradizione pasticcera: pasta lievitata dolce fritta e ripiena di crema pasticcera vellutata",
-      "hydration": "50%",
-      "time": "2h + 30min appretto",
-      "temp": "26-27°C",
-      "tool": ""
-    },
+
     {
       "title": "Pasta Frolla Classica",
       "slug": "pasta-frolla-classica",
