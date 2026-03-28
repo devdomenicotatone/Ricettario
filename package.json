@@ -9,10 +9,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && gh-pages -d dist --no-history --nojekyll"
+    "deploy": "vite build && node scripts/deploy-ghpages.js"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0",
     "sharp": "^0.34.5",
     "vite": "^6.1.0"
   }
