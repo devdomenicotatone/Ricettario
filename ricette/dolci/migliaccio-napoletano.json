@@ -1,0 +1,158 @@
+{
+  "title": "Migliaccio Napoletano",
+  "slug": "migliaccio-napoletano",
+  "emoji": "🍰",
+  "description": "Dolce tradizionale napoletano di Carnevale a base di semolino e ricotta: morbido, compatto e profumato di agrumi e vaniglia.",
+  "subtitle": "Torta di semolino e ricotta del Carnevale partenopeo",
+  "category": "Dolci",
+  "hydration": null,
+  "targetTemp": null,
+  "fermentation": null,
+  "totalFlour": 200,
+  "ingredients": [
+    {
+      "name": "Semolino di Grano Duro",
+      "note": "(granulometria fine, tipo per polenta)",
+      "grams": 200
+    },
+    {
+      "name": "Latte Intero",
+      "note": "(temperatura ambiente)",
+      "grams": 500
+    },
+    {
+      "name": "Acqua",
+      "note": "(temperatura ambiente)",
+      "grams": 500
+    },
+    {
+      "name": "Ricotta Vaccina",
+      "note": "(fresca, da setacciare)",
+      "grams": 350
+    },
+    {
+      "name": "Uova Medie",
+      "note": "(4 uova, ~55g l'una)",
+      "grams": 220
+    },
+    {
+      "name": "Zucchero Semolato",
+      "note": "(granulato fine)",
+      "grams": 250
+    },
+    {
+      "name": "Burro",
+      "note": "(per l'impasto + imburro teglia)",
+      "grams": 40
+    },
+    {
+      "name": "Scorza di Arancia",
+      "note": "(1 arancia bio non trattata, solo parte arancione)",
+      "grams": 5
+    },
+    {
+      "name": "Baccello di Vaniglia",
+      "note": "(1 bacca, semi raschiati)",
+      "grams": 2
+    },
+    {
+      "name": "Sale Fino",
+      "note": "(1 pizzico)",
+      "grams": 2
+    },
+    {
+      "name": "Zucchero a Velo",
+      "note": "(per spolverizzare a fine cottura)",
+      "grams": 30
+    }
+  ],
+  "suspensions": [],
+  "stepsHand": [
+    {
+      "title": "Preparazione Crema di Semolino",
+      "text": "In una pentola capiente versare latte (500g), acqua (500g), sale (2g) e burro (40g). Aggiungere la scorza d'arancia grattugiata (5g). Portare a bollore mescolando occasionalmente per sciogliere il burro. Quando bolle, rimuovere la scorza d'arancia e versare il semolino (200g) a pioggia mescolando energicamente con una frusta per evitare grumi. Abbassare la fiamma al minimo e cuocere per 4-5 minuti, continuando a mescolare, fino a ottenere una crema densa simile a una polenta soda. Trasferire immediatamente in una pirofila ampia e coprire con pellicola a contatto per evitare la formazione di pellicola superficiale. Lasciar raffreddare a temperatura ambiente per 20-30 minuti."
+    },
+    {
+      "title": "Preparazione Composto di Ricotta",
+      "text": "Mentre la crema di semolino si raffredda, setacciare la ricotta vaccina (350g) attraverso un colino a maglia fine per eliminare grumi e renderla cremosa. Incidere longitudinalmente il baccello di vaniglia e raschiare i semi con la punta di un coltellino. In una ciotola capiente montare le uova (220g, 4 uova medie) con lo zucchero (250g) e i semi di vaniglia usando fruste elettriche a velocità media-alta per 5-6 minuti, fino a ottenere una spuma chiara, voluminosa e omogenea (il composto deve triplicare di volume e diventare quasi bianco)."
+    },
+    {
+      "title": "Amalgama e Incorporazione",
+      "text": "Incorporare la ricotta setacciata (350g) nel composto montato di uova e zucchero, mescolando delicatamente con una spatola o con le fruste a bassa velocità per non smontare il composto. Quando la crema di semolino è tiepida (non calda, altrimenti le uova potrebbero coagulare), aggiungerla poco alla volta al composto di ricotta, mescolando con le fruste elettriche a velocità bassa-media. Lavorare fino a ottenere un impasto perfettamente liscio, omogeneo e privo di grumi. La consistenza finale deve essere cremosa e fluida, simile a una pastella per torta."
+    },
+    {
+      "title": "Cottura in Forno",
+      "text": "Imburrare generosamente una tortiera a cerchio apribile da 24 cm di diametro e foderarla con carta forno sul fondo. Versare il composto nella tortiera e livellare la superficie con una spatola. Infornare in forno statico preriscaldato a 200°C per 60 minuti. Dopo 40-50 minuti controllare la colorazione superficiale: se il migliaccio è già ben dorato ma non cotto al centro, coprire con un foglio di alluminio e proseguire la cottura. Il dolce è pronto quando la superficie presenta le caratteristiche crepe (craquelé) e uno stecchino inserito al centro esce asciutto. Spegnere il forno e lasciar raffreddare completamente il migliaccio nella teglia prima di sformarlo (almeno 2-3 ore). Spolverizzare con zucchero a velo prima di servire."
+    }
+  ],
+  "baking": {
+    "temperature": "200°C",
+    "time": "60 minuti",
+    "tips": [
+      "Preriscaldare il forno a 200°C forno statico per almeno 20 minuti prima di infornare",
+      "Dopo 40-50 minuti, se la superficie è già ben dorata, coprire con alluminio per evitare che bruci",
+      "Il migliaccio è cotto quando presenta crepe superficiali (craquelé) e uno stecchino inserito al centro esce asciutto",
+      "Lasciare raffreddare completamente nella teglia prima di sformare (minimo 2-3 ore) per evitare che si rompa",
+      "Conservare in frigorifero per 3-4 giorni coperto con pellicola"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Semolino",
+      "definition": "Farina di grano duro a granulometria grossa, utilizzata per polenta, gnocchi alla romana e dolci come il migliaccio. Ha una texture leggermente granulosa che dona struttura al dolce."
+    },
+    {
+      "term": "Setacciare la ricotta",
+      "definition": "Passare la ricotta attraverso un colino a maglia fine per eliminare grumi e ottenere una consistenza cremosa e omogenea, fondamentale per un impasto liscio."
+    },
+    {
+      "term": "Montare a spuma",
+      "definition": "Lavorare uova e zucchero con fruste elettriche fino a triplicare il volume e ottenere un composto chiaro, spumoso e omogeneo. Questa tecnica incorpora aria e rende il dolce soffice."
+    },
+    {
+      "term": "Versare a pioggia",
+      "definition": "Tecnica per aggiungere ingredienti secchi (farina, semolino) a liquidi caldi mescolando contemporaneamente, per evitare la formazione di grumi."
+    },
+    {
+      "term": "Craquelé",
+      "definition": "Effetto di superficie crepata e screpolata tipico del migliaccio, che si forma durante la cottura quando l'impasto si espande e la crosta superficiale si spacca in modo irregolare."
+    },
+    {
+      "term": "Pellicola a contatto",
+      "definition": "Coprire un impasto o una crema con pellicola trasparente premendola sulla superficie per evitare che si formi una pellicola secca a contatto con l'aria."
+    },
+    {
+      "term": "Semi di vaniglia",
+      "definition": "Piccoli semi neri contenuti all'interno del baccello di vaniglia, estratti raschiando con un coltellino. Conferiscono un aroma intenso e naturale, superiore alla vanillina sintetica."
+    }
+  ],
+  "alert": "NON aggiungere la crema di semolino ancora calda al composto di uova: rischi di far coagulare le uova e ottenere un impasto granuloso invece che cremoso. Attendi che il semolino sia tiepido (35-40°C max). NON aprire il forno nei primi 40 minuti di cottura: lo sbalzo termico può far sgonfiare il dolce. NON utilizzare ricotta troppo liquida o acquosa: se necessario, scolarla in un colino per 30 minuti prima di usarla.",
+  "proTips": [
+    "Per un migliaccio ancora più profumato, aggiungi anche la scorza grattugiata di 1 limone bio insieme all'arancia durante la cottura del semolino",
+    "Alcune varianti tradizionali prevedono l'aggiunta di 50-80g di uvetta ammorbidita in rum, 50g di canditi a dadini o 50g di gocce di cioccolato fondente: incorporarli delicatamente nell'impasto finale",
+    "Il migliaccio è ottimo anche tiepido, appena sfornato: la consistenza sarà più cremosa e morbida. A freddo diventa più compatto e 'tagliabile'",
+    "Per un risultato più delicato, sostituisci metà ricotta vaccina con ricotta di pecora: otterrai un sapore più intenso e tradizionale"
+  ],
+  "imageKeywords": [
+    "migliaccio napoletano carnival cake",
+    "neapolitan semolina ricotta cake",
+    "italian carnival dessert cracked top",
+    "torta di semolino carnevale",
+    "ricotta kuchen italienisch",
+    "traditional neapolitan sweet semolina",
+    "migliaccio craquelé surface",
+    "italian ricotta cake powdered sugar"
+  ],
+  "tags": [
+    "dolce napoletano",
+    "carnevale",
+    "semolino",
+    "ricotta",
+    "tradizione campana",
+    "torta rustica",
+    "senza lievito",
+    "dolce agli agrumi"
+  ],
+  "image": "images/ricette/dolci/migliaccio-napoletano.webp",
+  "imageAttribution": "📷 Foto: Pervane Mustafa27 — Pexels License via Pexels"
+}

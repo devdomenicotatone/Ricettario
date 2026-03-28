@@ -64,6 +64,19 @@ function buildRecipeHTML(r, categoryDir) {
     ? `${BASE}${r.image.replace(/^\//, '')}`
     : `${BASE}images/ricette/${categoryDir}/${r.slug}.jpg`;
 
+  // Determina quali step esistono realmente
+  const hasSpiralSteps = (r.stepsSpiral || []).length > 0;
+  const hasExtruderSteps = (r.stepsExtruder || []).length > 0;
+  const hasHandSteps = (r.stepsHand || []).length > 0;
+  const isPasta = (r.category || '').toLowerCase() === 'pasta';
+  const hasMachineSteps = isPasta ? hasExtruderSteps : hasSpiralSteps;
+  const isHandOnly = !hasMachineSteps && hasHandSteps;
+
+  // Hero tag dinamico (nascosto se hand-only)
+  const heroToolTag = isHandOnly
+    ? ''
+    : `<span class="tag tag--tool" id="hero-setup-tag">${isPasta ? '🍝 Pasta' : '🔧 Impastatrice a spirale'}</span>`;
+
   return `
     <!-- ═══════════ RECIPE HERO ═══════════ -->
     <div class="recipe-hero">
@@ -81,7 +94,7 @@ function buildRecipeHTML(r, categoryDir) {
 
         <div class="recipe-hero__content">
           <div class="recipe-hero__tags reveal">
-            <span class="tag tag--tool" id="hero-setup-tag">🔧 Impastatrice a spirale</span>
+            ${heroToolTag}
             <span class="tag tag--category">${catEmoji} ${r.category}</span>
           </div>
           <h1 class="recipe-hero__title reveal reveal-delay-1">${r.title}</h1>
@@ -113,10 +126,10 @@ function buildRecipeHTML(r, categoryDir) {
 
           <!-- COLONNA DX: Procedimento -->
           <div>
-            ${buildStepsPanel(r, 'stepsSpiral', 'spirale', '🔧 Spirale')}
-            ${buildStepsPanel(r, 'stepsExtruder', 'estrusore', '🔧 Estrusore')}
-            ${buildStepsPanel(r, 'stepsHand', 'mano', '🤲 A mano')}
-            ${buildStepsPanel(r, 'stepsCondiment', 'condimento', '🍅 Condimento')}
+            ${buildStepsPanel(r, 'stepsSpiral', 'spirale', '🔧 Spirale', isHandOnly)}
+            ${buildStepsPanel(r, 'stepsExtruder', 'estrusore', '🔧 Estrusore', isHandOnly)}
+            ${buildStepsPanel(r, 'stepsHand', 'mano', '🤲 A mano', isHandOnly)}
+            ${buildStepsPanel(r, 'stepsCondiment', 'condimento', '🍅 Condimento', isHandOnly)}
           </div>
 
         </div>
@@ -199,11 +212,14 @@ function buildSuspensionsPanel(r) {
 }
 
 // ── Steps (Procedimento) ──
-function buildStepsPanel(r, key, setupId, label) {
+function buildStepsPanel(r, key, setupId, label, isHandOnly = false) {
   const steps = r[key];
   if (!steps?.length) return '';
 
-  const isHidden = setupId === 'mano' ? ' style="display: none;"' : '';
+  // Se è hand-only, il pannello "mano" è il primario e deve essere visibile
+  // Nasconde "mano" SOLO se ci sono altri setup (spirale/estrusore)
+  const shouldHide = setupId === 'mano' && !isHandOnly;
+  const isHidden = shouldHide ? ' style="display: none;"' : '';
 
   return `
     <div class="recipe-panel reveal reveal-delay-1" data-setup="${setupId}" id="steps-${setupId}"${isHidden}>

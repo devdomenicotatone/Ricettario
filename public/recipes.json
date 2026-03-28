@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-28T02:17:00.000Z",
-  "totalRecipes": 25,
+  "generatedAt": "2026-03-28T19:38:32.632Z",
+  "totalRecipes": 26,
   "categories": [
     {
       "name": "Pane",
@@ -24,8 +24,8 @@
     },
     {
       "name": "Dolci",
-      "count": 3,
-      "emoji": "🍪"
+      "count": 4,
+      "emoji": ""
     },
     {
       "name": "Focaccia",
@@ -300,7 +300,6 @@
       "temp": "26-27°C",
       "tool": ""
     },
-
     {
       "title": "Pasta Frolla Classica",
       "slug": "pasta-frolla-classica",
@@ -383,6 +382,20 @@
       "hydration": "70%",
       "time": "~14h (12h poolish + 2h impasto)",
       "temp": "25-26°C",
+      "tool": ""
+    },
+    {
+      "title": "Migliaccio Napoletano",
+      "slug": "migliaccio-napoletano",
+      "category": "Dolci",
+      "categoryDir": "dolci",
+      "emoji": "🍰",
+      "href": "ricette/dolci/migliaccio-napoletano.html",
+      "image": "images/ricette/dolci/migliaccio-napoletano.webp",
+      "description": "Dolce tradizionale napoletano di Carnevale a base di semolino e ricotta: morbido, compatto e profumato di agrumi e vanig",
+      "hydration": null,
+      "time": null,
+      "temp": null,
       "tool": ""
     }
   ]
