@@ -7,7 +7,7 @@
 | Schema | ✅ Pass | 0 errori, 1 warning |
 | Claude | 92/100 | 🟢 Buona |
 
-Ricetta molto ben strutturata e fedele alla tradizione della Focaccia di Recco IGP. Dosi corrette, temperature appropriate per forno casalingo, procedimento dettagliato e professionale. Gli alert e pro tips sono pertinenti e utili. Solo piccoli miglioramenti suggeriti per ottimizzare sapore e chiarezza.
+Ricetta tecnicamente molto solida per Focaccia di Recco IGP. Dosi corrette (idratazione 68%, sale 2%), temperature adeguate (260-280°C), tempi appropriati (8-12 min). Ottima attenzione ai dettagli tecnici: uso farina Manitoba ad alta forza, stesura sottilissima, formaggio freddo. Procedimento dettagliato e coerente. Solo piccole ottimizzazioni di forma sui placeholder e allineamento terminologico setup.
 
 ## 🔍 Schema Validation
 
@@ -17,9 +17,9 @@ Ricetta molto ben strutturata e fedele alla tradizione della Focaccia di Recco I
 
 | Sev. | Area | Problema | Correzione | Fonte |
 |------|------|----------|------------|-------|
-| 💡 | Dosi | Sale al 2% su farina (16g su 800g) è al limite inferiore per focaccia, che tradizionalmente usa 2.5-3% | Considerare 20-24g di sale (2.5-3%) per sapore più tradizionale | 🔵 Claude |
-| 💡 | Coerenza | Nel punto 8 si menziona un terzo panetto da 288g che non viene utilizzato nel procedimento | Rimuovere il riferimento al terzo panetto o spiegarne l'uso (eventuale riserva) | 🔵 Claude |
-| 💡 | Gruppi | L'olio per ungere teglia (30g) potrebbe essere unificato con quello per finitura visto l'uso multiplo | Considerare un unico gruppo 'Olio EVO per teglia e finitura: 30g' | 🔵 Claude |
+| 💡 | Dosi | Sale al 2% su farina risulta 16g su 800g, ma la matematica corretta sarebbe 800g × 2% = 16g. Il calcolo è corretto. | Mantenere 16g (2% su farina) - dose corretta per focaccia | 🔵 Claude |
+| 💡 | Coerenza | Nel procedimento si cita '{farina_forte_impasto:800}' e simili placeholder che sembrano riferimenti a un sistema di templating | Sostituire i placeholder con i valori diretti per maggiore chiarezza | 🔵 Claude |
+| 💡 | Setup | Setup indica 'Impastatrice a spirale + A mano' ma nel procedimento si parla di 'planetaria con gancio' | Allineare terminologia: specificare chiaramente se si tratta di planetaria domestica o impastatrice a spirale professionale | 🔵 Claude |
 
 ---
-*Generato: 2026-03-30T20:23:25.547Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-03-30T21:42:24.820Z | Pipeline: Schema → Claude → Gemini*

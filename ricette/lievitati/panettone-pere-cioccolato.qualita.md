@@ -1,24 +1,23 @@
 # Qualità: Panettone Pere e Cioccolato
 
-## 🟡 Score Finale: 75/100
+## 🟢 Score Finale: 92/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 0 warning |
-| Claude | 75/100 | 🟡 Da migliorare |
+| Claude | 92/100 | 🟢 Buona |
 
-Ricetta tecnicamente valida per panettone tradizionale con buone proporzioni base e procedure corrette. I problemi principali sono errori di placeholder nel procedimento che creano confusione. Le dosi sono equilibrate, temperature e tempi appropriati, setup corretto. Con le correzioni dei placeholder sarà una ricetta solida.
+Ricetta tecnicamente solida con dosi, temperature e tempi corretti per un panettone professionale. Gli errori principali sono nei riferimenti delle variabili nel procedimento (zucchero/acqua/tuorli mal referenziati). Il carico di sospensioni è al limite superiore ma gestibile con la tecnica descritta. Una volta corretti i riferimenti, sarà un'ottima ricetta per panettone artigianale.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione | Fonte |
 |------|------|----------|------------|-------|
-| ❌ | Coerenza | Nel punto 5 del procedimento si riferisce a '{semola_secondo_impasto:235}g' ma negli ingredienti è 'Zucchero Semolato Fine' non semola | Correggere il placeholder con {zucchero_secondo_impasto:235}g | 🔵 Claude |
-| ❌ | Coerenza | Nel punto 5 si riferisce a '{uova_secondo_impasto:300}g' ma negli ingredienti sono specificatamente 'Tuorli d'Uovo' | Correggere il placeholder con {tuorli_secondo_impasto:300}g | 🔵 Claude |
-| ❌ | Coerenza | Nel punto 6 c'è un errore di sintassi '1-{vaniglia_bourbon_secondo_impasto:2} giri lenti' che non ha senso | Correggere con '1-2 giri lenti' oppure rimuovere il placeholder errato | 🔵 Claude |
-| ⚠️ | Dosi | Sale a 27g su 1250g farina totale = 2.16%, nella fascia bassa per panettone che richiede struttura forte | Considerare di portare il sale a 30-32g (2.4-2.5%) per migliore struttura glutinica | 🔵 Claude |
-| ⚠️ | Coerenza | Nel punto 2 alcuni placeholder sono errati: usa 'lievito_madre_primo_impasto' per acqua, zucchero e tuorli che non sono lievito madre | Correggere i placeholder con nomi appropriati: {acqua_primo_impasto}, {zucchero_primo_impasto}, {tuorli_primo_impasto} | 🔵 Claude |
-| 💡 | Temperature | L'idratazione totale risulta circa 44% considerando anche i tuorli, coerente con l'indicazione del 45% | Nessuna correzione necessaria, solo verifica positiva | 🔵 Claude |
+| ❌ | Coerenza | Nel punto 2 del procedimento c'è un grave errore di riferimento: viene indicato '{zucchero_secondo_impasto:235}g acqua' invece di '{acqua_primo_impasto:350}g acqua'. I 235g si riferiscono allo zucchero del secondo impasto, non all'acqua del primo | Correggere con '{acqua_primo_impasto:350}g acqua a 24-26°C' | 🔵 Claude |
+| ❌ | Coerenza | Nel punto 2, il riferimento '{lievito_madre_primo_impasto:350}g zucchero' è errato. Dovrebbe riferirsi allo zucchero del primo impasto (350g), non al lievito madre | Correggere con '{zucchero_primo_impasto:350}g zucchero' | 🔵 Claude |
+| ❌ | Coerenza | Nel punto 2, '{lievito_madre_primo_impasto:350}g tuorli' è errato. I tuorli del primo impasto sono 350g, non il lievito madre | Correggere con '{tuorli_primo_impasto:350}g tuorli' | 🔵 Claude |
+| ❌ | Coerenza | Nel punto 6, il riferimento '{vaniglia_bourbon_secondo_impasto:2} giri lenti' è inappropriato. I 2g sono il peso della vaniglia, non il numero di giri | Correggere con '1-2 giri lenti di spirale' eliminando il riferimento alla vaniglia | 🔵 Claude |
+| ⚠️ | Dosi | Le sospensioni totali pesano 1250g (875g pere + 375g cioccolato) contro un impasto di circa 3527g, risultando circa 35% del peso impasto. Pur rientrando nel limite dichiarato del 50%, è una percentuale molto alta che potrebbe compromettere la struttura | Considerare di ridurre leggermente le sospensioni o specificare meglio nel testo le precauzioni per gestire questo carico elevato | 🔵 Claude |
 
 ---
-*Generato: 2026-03-30T20:19:03.736Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-03-30T21:40:56.754Z | Pipeline: Schema → Claude → Gemini*

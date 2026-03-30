@@ -564,9 +564,9 @@ function initVariantToggle(recipe) {
 
   let activeVariant = null; // null = default, index = variant attiva
 
-  // Mappatura ingredientGroups piatti per override
+  // Mappatura ingredientGroups piatti per override (conserva gruppo)
   const flatIngredients = recipe.ingredientGroups?.length
-    ? recipe.ingredientGroups.flatMap(g => g.items)
+    ? recipe.ingredientGroups.flatMap(g => g.items.map(item => ({ ...item, _groupName: g.group })))
     : (recipe.ingredients || []);
 
   toggle.addEventListener('click', () => {
@@ -630,7 +630,7 @@ function applyIngredientOverrides(variant, flatIngredients, activate) {
 
         // Verifica se questo ingrediente corrisponde al ref dell'override
         // Usiamo un match sul nome dell'ingrediente (case insensitive)
-        if (matchesRef(item.name, override.ref)) {
+        if (matchesRef(item.name, override.ref, item._groupName, item.tokenId)) {
           if (activate) {
             // Salva il base originale
             if (!cell.hasAttribute('data-base-original')) {
@@ -675,19 +675,40 @@ function applyIngredientOverrides(variant, flatIngredients, activate) {
   updateInlineTokens(variant, activate);
 }
 
-function matchesRef(ingredientName, ref) {
+function matchesRef(ingredientName, ref, groupName = '', tokenId = '') {
+  // MATCH PRIORITARIO: tokenId esatto (deterministico, zero ambiguità)
+  if (tokenId && tokenId === ref) return true;
+
+  // FALLBACK: match semantico (per ricette senza tokenId)
   const name = ingredientName.toLowerCase();
   const r = ref.toLowerCase();
-  // Match diretto o parziale
-  if (r === 'lievito' && name.includes('lievito')) return true;
-  if (r === 'sale' && name.includes('sale')) return true;
-  if (r === 'criscito' && name.includes('criscito')) return true;
-  if (r === 'malto' && name.includes('malto')) return true;
-  if (r === 'farina_biga' && name.includes('saccorosso') && name.includes('biga')) return true;
-  if (r === 'farina_rinfresco' && name.includes('saccorosso') && name.includes('rinfresco')) return true;
-  if (r === 'farina_nuvola' && name.includes('nuvola')) return true;
-  if (r === 'acqua_biga' && name.includes('acqua') && name.includes('biga')) return true;
-  return false;
+  const group = groupName.toLowerCase();
+
+  if (name.includes(r) || r.includes(name.split(' ')[0].toLowerCase())) return true;
+
+  const refParts = r.split('_');
+  const keywords = {
+    lievito: ['lievito'], sale: ['sale'], acqua: ['acqua'],
+    farina: ['farina', 'manitoba', 'nuvola', 'saccorosso', 'tipo 0', 'tipo 00'],
+    semola: ['semola'], olio: ['olio', 'evo', 'extravergine'],
+    zucchero: ['zucchero'], burro: ['burro'],
+    uova: ['uova', 'uovo', 'tuorlo', 'tuorli', 'albume'],
+    latte: ['latte'], miele: ['miele'], malto: ['malto'],
+    strutto: ['strutto'], criscito: ['criscito', 'lievito madre'],
+  };
+
+  const groupHints = ['impasto', 'biga', 'poolish', 'rinfresco', 'crema', 'finitura', 'farcitura', 'condimento', 'finale'];
+  const refGroupHint = refParts.find(p => groupHints.includes(p));
+
+  let ingredientMatches = false;
+  for (const part of refParts) {
+    const kws = keywords[part];
+    if (kws && kws.some(kw => name.includes(kw))) { ingredientMatches = true; break; }
+  }
+  if (!ingredientMatches) return false;
+
+  if (refGroupHint && group) return group.includes(refGroupHint);
+  return true;
 }
 
 function updateInlineTokens(variant, activate) {

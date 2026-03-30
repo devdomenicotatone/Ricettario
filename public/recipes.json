@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T21:06:18.239Z",
+  "generatedAt": "2026-03-30T23:40:36.851Z",
   "totalRecipes": 25,
   "categories": [
     {
@@ -189,6 +189,20 @@
       "tool": ""
     },
     {
+      "title": "Burger Buns Professionali",
+      "slug": "burger-buns-professionali",
+      "category": "Lievitati",
+      "categoryDir": "lievitati",
+      "emoji": "🍔",
+      "href": "ricette/lievitati/burger-buns-professionali.html",
+      "image": "images/ricette/lievitati/burger-buns-professionali.webp",
+      "description": "Panini per hamburger soffici e dorati, con crosta sottile e mollica morbida. Lievitazione controllata e cottura perfetta per il burger perfetto.",
+      "hydration": "62%",
+      "time": "~4-5h totali (biga 2h + puntata 2h + appretto 1h)",
+      "temp": "26-27°C",
+      "tool": ""
+    },
+    {
       "title": "Cornetti Sfogliati Classici",
       "slug": "cornetti-sfogliati-classici",
       "category": "Lievitati",
@@ -357,20 +371,6 @@
       "tool": ""
     },
     {
-      "title": "Burger Buns Professionali",
-      "slug": "burger-buns-professionali",
-      "category": "Lievitati",
-      "categoryDir": "lievitati",
-      "emoji": "🍔",
-      "href": "ricette/lievitati/burger-buns-professionali.html",
-      "image": "images/ricette/lievitati/burger-buns-professionali.webp",
-      "description": "Panini per hamburger soffici e dorati, con crosta sottile e mollica morbida. Lievitazione controllata e cottura perfetta",
-      "hydration": "62%",
-      "time": "~4-5h totali (biga 2h + puntata 2h + appretto 1h)",
-      "temp": "26-27°C",
-      "tool": ""
-    },
-    {
       "title": "Pane Pugliese con Biga",
       "slug": "pane-pugliese-con-biga",
       "category": "Pane",
@@ -378,9 +378,9 @@
       "emoji": "🍞",
       "href": "ricette/pane/pane-pugliese-con-biga.html",
       "image": "images/ricette/pane/pane-pugliese-con-biga.webp",
-      "description": "Pane pugliese tradizionale con biga 18-24h, crosta croccante e mollica alveolata. Metodo artigianale con semola rimacina",
+      "description": "Pane tradizionale pugliese con biga matura 18-24h, crosta croccante dorata e mollica alveolata morbida. Tecnica artigian",
       "hydration": "70%",
-      "time": "~24-28h totali (biga 18-24h + puntata 3h + appretto 1h)",
+      "time": "~24h (biga) + 4-5h (impasto)",
       "temp": "24-26°C",
       "tool": ""
     }
