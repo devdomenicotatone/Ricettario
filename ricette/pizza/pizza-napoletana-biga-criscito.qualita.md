@@ -1,14 +1,14 @@
 # Qualità: Pizza Napoletana Antica Tradizione con Biga e Criscito
 
-## 🟢 Score Finale: 85/100
+## 🟢 Score Finale: 92/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 1 warning |
-| Claude | 88/100 | 🟢 Buona |
-| Gemini | 🟡 Parziale disaccordo (-3) | Claude ha segnalato finti problemi pignoli (non riconoscendo |
+| Claude | 92/100 | 🟢 Buona |
+| Gemini | 🟡 Parziale disaccordo | Claude è stato inutilmente pignolo su aspetti pratici corret |
 
-Ricetta molto ben strutturata con dosi corrette e procedimento dettagliato. L'idratazione del 68% è appropriata per pizza napoletana con biga, le percentuali di lievito e sale sono nella norma. Il blend di farine è tecnicamente valido. Temperature e tempi sono coerenti. Solo piccole imprecisioni nella nomenclatura dell'attrezzatura e nei calcoli percentuali dell'acqua.
+Ricetta di ottima qualità tecnica con dosi perfettamente bilanciate. L'idratazione al 68% è corretta per pizza napoletana con biga, il sale al 2.5% è nella norma, e la gestione termica è accurata. Setup appropriato e procedimento dettagliato con tutti i parametri necessari. Solo lievi incongruenze di nomenclatura e precisione nei calcoli.
 
 ## 🔍 Schema Validation
 
@@ -18,24 +18,23 @@ Ricetta molto ben strutturata con dosi corrette e procedimento dettagliato. L'id
 
 | Sev. | Area | Problema | Correzione | Fonte |
 |------|------|----------|------------|-------|
-| ⚠️ | Coerenza | Nel punto 2 del procedimento viene menzionata l'impastatrice 'Grilletta IM5' che non è citata nel SETUP, dove si indica solo 'Impastatrice a spirale + A mano' | Specificare nel SETUP che si tratta di una Grilletta IM5 oppure utilizzare la denominazione generica 'impastatrice a spirale' | 🔵 Claude |
-| 💡 | Coerenza | Nel punto 2 si parla di '60% dell'acqua di rinfresco (circa 990g)' ma non è chiaro da dove derivi questo valore specifico, considerando che l'acqua totale è 1650g | Chiarire il calcolo: se 60% di 1650g = 990g, specificarlo meglio per evitare confusione | 🔵 Claude |
-| ⚠️ | Coerenza Ingredienti/Procedimento | C'è una netta contraddizione sulla gestione dell'acqua: negli ingredienti è indicata 'in 3 riprese: 50% iniziale, 30% incordatura, 20% finale', ma nel procedimento (punti 2 e 4) viene inserita in sole due fasi (60% iniziale, restante 40% a filo). | Allineare la descrizione negli ingredienti con i passaggi reali del procedimento. | 🔴 Gemini |
-| 💡 | Calcolo Resa | Il peso totale dell'impasto è di circa 5263g (3000g farina + 2050g acqua + 213g altri ingredienti). Facendo panetti da 265g di media, si ottengono quasi 20 panetti, non '18-19'. | Correggere la resa stimata in 'circa 19-20 pezzi'. | 🔴 Gemini |
+| 💡 | Coerenza | Nel procedimento punto 2 si menziona 'Grilletta IM5' ma il setup indica solo 'Impastatrice a spirale' | Sostituire 'Grilletta IM5' con 'impastatrice a spirale' per coerenza con il setup dichiarato | 🔵 Claude |
+| 💡 | Dosi | Il calcolo dell'acqua nel bassinage (punto 4) indica 'circa 660g' ma dovrebbe essere più preciso | Specificare che l'acqua rimanente è esattamente 660g (1650g totali - 990g già aggiunti) | 🔵 Claude |
+| ⚠️ | Ingredienti | Errore tecnico sulla forza della farina: la Caputo 'Nuvola Super' è una farina di forza con W 320-340 (pensata per prefermenti), mentre la Caputo 'Nuvola' classica ha W 260-280. | Correggere il testo in '(W 320-340)' per la Nuvola Super, oppure cambiare l'ingrediente in 'Caputo Nuvola' se si cercava un W 260-280 per alleggerire il blend. | 🔴 Gemini |
+| 💡 | Procedimento | La stima della resa dei panetti è matematicamente imprecisa. Peso totale impasto: 3000g (farine) + 2050g (acqua) + 213g (altri) = 5263g. Spezzando a 265g (media) si ottengono quasi 20 panetti (19.8), non 18-19. | Aggiornare la resa indicata al punto 6 a 'circa 20 pezzi'. | 🔴 Gemini |
 
 ## 🔴 Revisione Gemini
 
 **Verdetto**: 🟡 Parziale disaccordo
-**Adjustment**: -3
 
-Claude ha segnalato finti problemi pignoli (non riconoscendo che la Grilletta è un'impastatrice a spirale e sbagliando la matematica) ma si è perso l'unica vera svista della ricetta: la forte contraddizione sulle percentuali di inserimento dell'acqua tra lista ingredienti e procedimento.
+Claude è stato inutilmente pignolo su aspetti pratici corretti ('circa' per il bassinage e nomi dei macchinari), mancando però un reale errore tecnico sui valori 'W' commerciali delle farine Caputo. La ricetta resta eccellente, il punteggio di 92 è confermato nonostante le diverse motivazioni.
 
 ### Issues contestate
 
 | Problema | Verdetto | Motivo |
 |---|---|---|
-| Menzione della 'Grilletta IM5' nel punto 2 non citata nel SETUP | ❌ Falso positivo | La Grilletta IM5 è letteralmente un'impastatrice a spirale (il modello più famoso in ambito domestico). Citare la categoria nel setup e il modello specifico nel testo è normalissimo e non crea confusione. |
-| Non è chiaro da dove derivi il 60% dell'acqua (990g) nel punto 2 | ❌ Falso positivo | Il calcolo è palese ed esatto: il 60% dell'acqua di rinfresco (1650g) è esattamente 990g. Claude ha fallito un calcolo matematico basilare, mancando però il vero problema legato a questa percentuale. |
+| Sostituire 'Grilletta IM5' con 'impastatrice a spirale' per coerenza | ❌ Falso positivo | La 'Grilletta IM5' è, di fatto, una delle più note impastatrici a spirale in commercio. Menzionare il modello specifico nel testo è un dettaglio utile che non crea alcuna contraddizione logica col setup generico. |
+| Specificare che l'acqua rimanente è esattamente 660g | ❌ Falso positivo | Nella tecnica del bassinage è assolutamente corretto (e consigliato) usare 'circa': l'acqua finale va aggiunta gradualmente valutando l'effettivo assorbimento dell'impasto, che varia in base a umidità e lotto di farina. |
 
 ---
-*Generato: 2026-03-30T19:49:37.616Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-03-30T20:13:22.481Z | Pipeline: Schema → Claude → Gemini*

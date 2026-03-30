@@ -2,212 +2,34 @@
   "title": "Burger Buns Professionali",
   "slug": "burger-buns-professionali",
   "emoji": "🍔",
-  "description": "Panini americani professionali con pre-impasto biga e doppia lievitazione. Tecnica spirale e a mano per burger buns soffici con crosta dorata.",
-  "subtitle": "Panini americani con pre-impasto e doppia lievitazione",
+  "description": "Panini per hamburger soffici e dorati, con crosta sottile e mollica morbida. Lievitazione controllata e cottura perfetta per il burger perfetto.",
+  "subtitle": "Panini americani da burger con latte e burro – tecnica professionale",
   "category": "Lievitati",
-  "hydration": 58,
+  "hydration": 62,
   "targetTemp": "26-27°C",
-  "fermentation": "~4h30 (biga 2h + puntata 1h30 + appretto 1h)",
+  "fermentation": "~4-5h totali (biga 2h + puntata 2h + appretto 1h)",
   "totalFlour": 500,
-  "ingredients": [],
-  "suspensions": [
-    {
-      "name": "Semi di Sesamo",
-      "note": "(per spennellatura finale)",
-      "grams": 30
-    },
-    {
-      "name": "Tuorlo",
-      "note": "(per spennellatura)",
-      "grams": 15
-    },
-    {
-      "name": "Latte Intero",
-      "note": "(per spennellatura)",
-      "grams": 30
-    }
-  ],
-  "stepsSpiral": [
-    {
-      "title": "Preparazione Biga (2h prima)",
-      "text": "In una ciotola versare {burro_impasto_finale:50}g di acqua a 20-22°C, sciogliere {lievito_fresco_biga:5}g di lievito fresco. Aggiungere 100g di Manitoba e mescolare con cucchiaio fino a composto sbricioloso, NON amalgamato. Coprire con pellicola e far maturare 2 ore a 22-24°C fino a raddoppio. La biga deve risultare spugnosa e rigonfia."
-    },
-    {
-      "title": "Impasto Base in Spirale (1° fase - V1)",
-      "text": "Nella vasca dell'impastatrice inserire {farina_media_impasto_finale:200}g Manitoba + {farina_media_impasto_finale:200}g farina 00. Aggiungere la biga maturata spezzettata e {tuorli_impasto_finale:15}g di miele. Versare {farina_media_impasto_finale:200}g di latte a temperatura ambiente. Avviare spirale a V1 (bassa) per 3-4 minuti fino a primi segni di amalgama."
-    },
-    {
-      "title": "Aggiunta Uova e Incordatura (V1 → V2)",
-      "text": "Unire {uova_impasto_finale:55}g di uovo intero, attendere assorbimento (2 min). Aggiungere {tuorli_impasto_finale:15}g di tuorlo. Continuare V1 per 3-4 minuti. Quando l'impasto inizia a incordarsi, passare a V2 per 4-5 minuti fino a impasto liscio che si stacca dalle pareti."
-    },
-    {
-      "title": "Aggiunta Grassi e Sale (V1)",
-      "text": "Abbassare a V1. Versare lentamente {olio_evo_impasto_finale:25}g di olio EVO a filo. Quando assorbito (1-2 min), aggiungere {sale_impasto_finale:12}g di sale. Attendere assorbimento completo (2 min). Aggiungere {burro_impasto_finale:50}g di burro morbido a pezzetti, uno alla volta, aspettando 30-40 secondi tra uno e l'altro. Impastare V1 fino a completa incorporazione (4-5 min). Temperatura finale target: 26-27°C."
-    },
-    {
-      "title": "Puntata (1h30)",
-      "text": "Formare una palla liscia, porre in contenitore leggermente oliato. Coprire con pellicola e far lievitare 1h30 a 26-28°C fino a raddoppio. L'impasto deve risultare gonfio e soffice al tatto."
-    },
-    {
-      "title": "Staglio e Formatura (8 pezzi da 100g)",
-      "text": "Rovesciare l'impasto su piano leggermente infarinato. Degassare delicatamente con mani piatte. Formare un cilindro e dividere in 8 pezzi da 100g (bilancia di precisione). Formare palline con tecnica di pirlatura: mano a coppa, movimento circolare fino a tensione superficiale. Disporre in stampi per burger buns o su teglia con carta forno, distanziati 8-10cm."
-    },
-    {
-      "title": "Appretto e Spennellatura (1h)",
-      "text": "Coprire con canovaccio umido e far lievitare 50 minuti a 26-28°C. Preparare spennellatura: 1 tuorlo + {semi_di_sesamo_finitura:30}g latte, mescolare. A 50 min, spennellare delicatamente superficie dei panini, cospargere semi di sesamo. Lasciar riposare altri 10 minuti. I panini devono essere ben gonfi, morbidi al tatto."
-    },
-    {
-      "title": "Cottura",
-      "text": "Infornare a 180°C (forno statico preriscaldato 20 min) per 18-22 minuti fino a doratura uniforme. NON aprire forno nei primi 10 minuti. Sfornare e far raffreddare su griglia per 15 minuti prima di tagliare."
-    }
-  ],
-  "stepsHand": [
-    {
-      "title": "Preparazione Biga (2h prima)",
-      "text": "In una ciotola capiente versare {burro_impasto_finale:50}g di acqua a 20-22°C, sciogliere {lievito_fresco_biga:5}g di lievito fresco mescolando con forchetta. Aggiungere 100g di Manitoba e mescolare energicamente con cucchiaio di legno per 2-3 minuti fino a composto grumoso ma NON liscio. Coprire con pellicola e far maturare 2 ore a 22-24°C. La biga è pronta quando raddoppiata e spugnosa."
-    },
-    {
-      "title": "Impasto Base a Mano (1° fase)",
-      "text": "In ciotola larga mescolare {farina_media_impasto_finale:200}g Manitoba + {farina_media_impasto_finale:200}g farina 00. Formare fontana. Al centro: biga spezzettata, {tuorli_impasto_finale:15}g miele, {farina_media_impasto_finale:200}g latte a 20-22°C. Iniziare a incorporare farine dal bordo con forchetta, poi passare alle mani. Impastare 5-7 minuti fino a massa ruvida ma compatta."
-    },
-    {
-      "title": "Aggiunta Uova e Lavorazione (10 min)",
-      "text": "Unire {uova_impasto_finale:55}g uovo intero, impastare 2-3 minuti fino a incorporazione. Aggiungere {tuorli_impasto_finale:15}g tuorlo, continuare a impastare. Su piano di lavoro, eseguire 5 minuti di slap and fold: sollevare impasto, sbatterlo sul piano, ripiegare. Ripetere 50-60 volte fino a primi segni di incordatura. L'impasto inizia a essere elastico."
-    },
-    {
-      "title": "Aggiunta Grassi e Sale (15 min)",
-      "text": "Versare {olio_evo_impasto_finale:25}g olio EVO su piano, distribuire su impasto con mani. Impastare 3-4 minuti fino a assorbimento. Cospargere {sale_impasto_finale:12}g sale, impastare altri 3 min. Aggiungere {burro_impasto_finale:50}g burro morbido diviso in 5 pezzi: incorporare un pezzo alla volta con impastamento energico (2 min per pezzo). Totale 10-12 min. L'impasto deve diventare lucido, liscio, elastico. Temperatura finale: 24-26°C (più bassa che a spirale è normale)."
-    },
-    {
-      "title": "Puntata (2h)",
-      "text": "Formare palla liscia con tensione superficiale (pieghe verso il basso). Porre in ciotola oleata, coprire con pellicola. Far lievitare 2 ore a 24-26°C (lievitazione più lunga compensa temperatura più bassa). L'impasto deve raddoppiare."
-    },
-    {
-      "title": "Staglio e Pirlatura (8 pezzi)",
-      "text": "Rovesciare impasto su piano leggermente infarinato. Schiacciare delicatamente con mani piatte per degassare. Dividere in 8 porzioni da 100g con tarocco. Formare palline: prendere un pezzo, chiudere i bordi verso il centro pizzicando, capovolgere. Con mano a coppa sul piano, eseguire movimenti circolari per 15-20 secondi fino a palla liscia e tesa. Disporre su teglia con carta forno, 8-10cm di distanza."
-    },
-    {
-      "title": "Appretto e Finitura (1h10)",
-      "text": "Coprire con canovaccio leggermente umido. Far lievitare 1 ora a 24-26°C. Preparare spennellatura: 1 tuorlo + {semi_di_sesamo_finitura:30}g latte. A 1 ora, spennellare superficie con pennello morbido (movimento delicato), cospargere semi di sesamo. Lasciar riposare 10 minuti. I panini devono essere molto gonfi e morbidi."
-    },
-    {
-      "title": "Cottura",
-      "text": "Infornare in forno statico preriscaldato a 180°C per 18-22 minuti. Controllare doratura dopo 15 minuti. I burger buns sono cotti quando: superficie dorata uniforme, suono vuoto se battuti sotto, temperatura interna 90-92°C. Sfornare e raffreddare su griglia 15 minuti."
-    }
-  ],
-  "stepsExtruder": [],
-  "stepsCondiment": [],
-  "flourTable": [
-    {
-      "type": "Manitoba (W 350-380)",
-      "w": "350-380",
-      "brands": "Molino Grassi Manitoba, Molino Caputo Manitoba Oro, Le 5 Stagioni Manitoba"
-    },
-    {
-      "type": "Farina 00 Media Forza (W 200-280)",
-      "w": "200-280",
-      "brands": "Molino Caputo Pizzeria, Molino Grassi Petra 3, Molino Dallagiovanna Napoletana"
-    }
-  ],
-  "baking": {
-    "temperature": "180°C",
-    "time": "18-22 minuti",
-    "tips": [
-      "Preriscaldare forno statico per almeno 20 minuti prima di infornare",
-      "NON usare ventilato: seccherebbe troppo la superficie",
-      "Posizione teglia: ripiano centrale del forno",
-      "Non aprire forno nei primi 10 minuti: i panini collasserebbero",
-      "Controllare doratura dopo 15 minuti: se troppo scuri, coprire con alluminio",
-      "Temperatura interna ideale a fine cottura: 90-92°C (termometro a sonda)",
-      "Raffreddare SEMPRE su griglia: evita condensa sul fondo"
-    ]
-  },
-  "glossary": [
-    {
-      "term": "Biga",
-      "definition": "Pre-impasto duro (50% idratazione) con farina, acqua e lievito. Matura 12-48h e sviluppa aromi complessi, migliora alveolatura e conservabilità."
-    },
-    {
-      "term": "Incordatura",
-      "definition": "Fase dell'impasto in cui il glutine sviluppa elasticità e l'impasto inizia ad avvolgersi attorno al gancio/braccio, staccandosi dalle pareti."
-    },
-    {
-      "term": "Puntata",
-      "definition": "Prima lievitazione dell'impasto in massa, dopo l'impastamento e prima della divisione in pezzi. Sviluppa struttura e aromi."
-    },
-    {
-      "term": "Staglio",
-      "definition": "Divisione dell'impasto in pezzi di peso uguale con tarocco o spatola. Fondamentale per cottura uniforme."
-    },
-    {
-      "term": "Pirlatura",
-      "definition": "Tecnica di formatura a mano: movimento circolare con mano a coppa su piano per creare tensione superficiale nella palla di impasto."
-    },
-    {
-      "term": "Appretto",
-      "definition": "Seconda e ultima lievitazione dopo la formatura, prima della cottura. Permette ai pezzi di gonfiarsi e rilassarsi."
-    },
-    {
-      "term": "Slap and Fold",
-      "definition": "Tecnica di impastamento manuale: sollevare l'impasto, sbatterlo sul piano, ripiegarlo su se stesso. Sviluppa glutine in impasti molli."
-    },
-    {
-      "term": "Temperatura Finale Impasto",
-      "definition": "Temperatura target dell'impasto a fine lavorazione. Controlla velocità fermentazione. Spirale: 26-27°C. Mano: 24-26°C (normale che sia più bassa)."
-    },
-    {
-      "term": "Degassare",
-      "definition": "Schiacciare delicatamente l'impasto lievitato per eliminare CO2 in eccesso e ridistribuire lieviti. Si fa con mani piatte, NON energicamente."
-    },
-    {
-      "term": "Farina Manitoba",
-      "definition": "Farina di grano tenero ad altissima forza (W 350-400) ricca di proteine (13-15%). Assorbe molta acqua, ideale per impasti arricchiti e lievitazioni lunghe."
-    }
-  ],
-  "alert": "NON aggiungere il burro prima che l'impasto sia ben incordato: i grassi impediscono lo sviluppo del glutine. Il burro va SEMPRE inserito alla fine, dopo sale e olio, quando l'impasto è già elastico. NON aprire il forno nei primi 10 minuti di cottura: lo sbalzo termico farebbe sgonfiare i panini. NON usare acqua fredda per la biga: temperatura troppo bassa rallenta eccessivamente la maturazione.",
-  "proTips": [
-    "Per burger buns ancora più soffici, sostituire 50g di farina con 50g di patate lesse schiacciate: trattengono umidità e prolungano freschezza fino a 3 giorni.",
-    "La biga può maturare fino a 24h in frigo (5-6°C): aromi più complessi e alveolatura migliore. Riportare a temperatura ambiente 1h prima dell'uso."
-  ],
-  "imageKeywords": [
-    "professional burger buns",
-    "bakery style hamburger",
-    "burger buns gourmet",
-    "professionelle burgerbrötchen",
-    "artisan brioche buns",
-    "homemade burger bread"
-  ],
-  "tags": [
-    "burger-buns",
-    "panini-americani",
-    "biga",
-    "doppia-lievitazione",
-    "manitoba",
-    "lievitati-arricchiti"
-  ],
-  "image": "images/ricette/lievitati/burger-buns-professionali.webp",
   "ingredientGroups": [
     {
-      "group": "Per la Biga",
+      "group": "Per la Biga (Lievitino)",
       "items": [
         {
           "name": "Farina Manitoba",
-          "note": "(W 350-380, per biga e impasto finale)",
-          "grams": 300
+          "note": "(W 350-380, proteine 13-14%)",
+          "grams": 100,
+          "excludeFromTotal": true
         },
         {
           "name": "Acqua",
-          "note": "(biga 20-22°C, impasto 10-14°C fresca)",
-          "grams": 290,
-          "setupNote": {
-            "spirale": "(biga 20-22°C, impasto 10-14°C fresca)",
-            "mano": "(biga 20-22°C, impasto 20-22°C in 2 riprese)"
-          }
+          "note": "(temperatura ambiente 20-22°C)",
+          "grams": 50,
+          "excludeFromTotal": true
         },
         {
           "name": "Lievito di Birra Fresco",
-          "note": "(per biga)",
-          "grams": 5
+          "note": "(circa 1/4 di cubetto)",
+          "grams": 5,
+          "excludeFromTotal": true
         }
       ]
     },
@@ -215,76 +37,249 @@
       "group": "Per l'Impasto Finale",
       "items": [
         {
-          "name": "Farina Tipo 00 Media Forza",
-          "note": "(W 200-280)",
-          "grams": 200
+          "name": "Biga Matura",
+          "note": "(dopo 2h di lievitazione)",
+          "grams": 155
         },
         {
-          "name": "Lievito di Birra Fresco",
-          "note": "(per impasto finale)",
-          "grams": 5
+          "name": "Farina Manitoba",
+          "note": "(W 350-380)",
+          "grams": 150
+        },
+        {
+          "name": "Farina Tipo 00",
+          "note": "(W 260-280)",
+          "grams": 250
         },
         {
           "name": "Latte Intero",
-          "note": "(temperatura ambiente)",
-          "grams": 200
+          "note": "(temperatura ambiente 20-22°C)",
+          "grams": 220
         },
         {
-          "name": "Uova Medie",
-          "note": "(circa 55g l'uno, temperatura ambiente)",
+          "name": "Uovo Intero",
+          "note": "(medio, circa 55g)",
           "grams": 55
         },
         {
-          "name": "Tuorli",
-          "note": "(circa 15g l'uno)",
+          "name": "Tuorlo",
+          "note": "(medio, circa 15g)",
+          "grams": 15
+        },
+        {
+          "name": "Miele Millefiori",
+          "note": "(o di acacia)",
           "grams": 15
         },
         {
           "name": "Zucchero Semolato",
-          "note": "(per morbidezza e doratura)",
-          "grams": 40
-        },
-        {
-          "name": "Miele di Acacia",
-          "note": "(o malto diastasico)",
-          "grams": 15
+          "note": "(per dolcezza e doratura)",
+          "grams": 25
         },
         {
           "name": "Sale Fino",
-          "note": "(aggiungere sempre a fine impasto)",
-          "grams": 12
+          "note": "(da aggiungere dopo incordatura)",
+          "grams": 10
         },
         {
           "name": "Burro Morbido",
-          "note": "(temperatura ambiente, 18-20°C)",
-          "grams": 50
-        },
-        {
-          "name": "Olio Extravergine di Oliva",
-          "note": "(o olio di semi)",
-          "grams": 25
+          "note": "(non fuso, a cubetti)",
+          "grams": 40
         }
       ]
     },
     {
-      "group": "Per la Finitura",
+      "group": "Per la Spennellatura e Decorazione",
       "items": [
         {
-          "name": "Semi di Sesamo",
-          "note": "(per spennellatura finale)",
-          "grams": 30
-        },
-        {
           "name": "Tuorlo",
-          "note": "(per spennellatura)",
-          "grams": 15
+          "note": "(per doratura)",
+          "grams": 18
         },
         {
           "name": "Latte Intero",
-          "note": "(per spennellatura)",
+          "note": "(per diluire il tuorlo)",
+          "grams": 20
+        },
+        {
+          "name": "Semi di Sesamo",
+          "note": "(bianchi o misti bianco/nero)",
           "grams": 30
         }
       ]
     }
-  ]
+  ],
+  "ingredients": [],
+  "suspensions": [],
+  "stepsSpiral": [
+    {
+      "title": "Preparazione Biga (Lievitino)",
+      "text": "In una ciotola, sciogliere {lievito_biga:5}g di lievito in {acqua_biga:50}g di acqua a temperatura ambiente. Aggiungere {farina_manitoba_biga:100}g di farina Manitoba e mescolare con una forchetta fino a ottenere un composto ruvido e disomogeneo (non deve essere liscio). Coprire con pellicola e lasciare maturare 2 ore a temperatura ambiente (22-24°C) fino al raddoppio di volume. La biga sarà pronta quando presenta bolle in superficie e odore leggermente alcolico."
+    },
+    {
+      "title": "Impasto Base in Spirale (V1-V2, 3 min)",
+      "text": "Nella ciotola dell'impastatrice a spirale, versare {farina_manitoba_impasto:150}g di Manitoba e {farina_00_impasto:250}g di Farina 00. Aggiungere {zucchero_impasto:25}g di zucchero e {miele_impasto:15}g di miele. Avviare a velocità lenta (V1) e incorporare gradualmente {latte_impasto:220}g di latte a temperatura ambiente. Aggiungere la {biga_matura:155}g di biga matura a pezzi. Impastare 3 minuti in V1-V2 fino a completo assorbimento dei liquidi."
+    },
+    {
+      "title": "Incorporamento Uova (V2, 2 min)",
+      "text": "Con impastatrice in movimento (V2), aggiungere {uovo_impasto:55}g di uovo intero e {tuorlo_impasto:15}g di tuorlo. Attendere completo assorbimento (circa 2 minuti) prima di proseguire. L'impasto inizierà a incordarsi sul gancio."
+    },
+    {
+      "title": "Aggiunta Sale (V2-V3, 2 min)",
+      "text": "Quando l'impasto è ben incordato, aggiungere {sale_impasto:10}g di sale fino. Impastare in V2-V3 per 2 minuti fino a completo assorbimento. L'impasto deve iniziare a staccarsi dalle pareti della ciotola."
+    },
+    {
+      "title": "Incorporamento Burro (V3, 4-5 min)",
+      "text": "Con impastatrice in V3, aggiungere {burro_impasto:40}g di burro morbido a cubetti, un pezzetto per volta, attendendo che ogni porzione sia completamente assorbita prima di aggiungere la successiva. Tempo totale: 4-5 minuti. L'impasto finale deve essere liscio, elastico, setoso e completamente staccato dalle pareti. Temperatura impasto target: 26-27°C."
+    },
+    {
+      "title": "Puntata (Lievitazione in Massa)",
+      "text": "Estrarre l'impasto dalla ciotola, formare una palla liscia con le mani e trasferirla in una ciotola leggermente unta. Coprire con pellicola o un piatto e lasciare lievitare 2 ore a temperatura ambiente (24-26°C) o fino al raddoppio del volume. L'impasto è pronto quando, premendo con un dito, l'impronta rimane senza che l'impasto si ritiri."
+    },
+    {
+      "title": "Staglio e Pirlatura",
+      "text": "Rovesciare l'impasto su un piano leggermente infarinato. Formare un cilindro e dividerlo in 8 porzioni da {panetto_peso:95!}g ciascuna. Pirlare ogni porzione con movimenti circolari della mano sul piano, senza farina, fino a ottenere sfere lisce e tese. Trasferire i panetti in stampi per burger buns (ø 10cm) o direttamente su teglia rivestita di carta forno, lasciando 8-10cm di distanza tra loro."
+    },
+    {
+      "title": "Appretto (Lievitazione Finale)",
+      "text": "Coprire i panetti con pellicola trasparente leggermente unta o un canovaccio umido. Lasciare lievitare 50-60 minuti a 26-28°C fino a che non saranno raddoppiati e al tatto risulteranno soffici. NON far lievitare troppo: i buns devono mantenere struttura per reggere il burger."
+    },
+    {
+      "title": "Spennellatura e Decorazione",
+      "text": "In una ciotolina, sbattere {tuorlo_spennellatura:18}g di tuorlo con {latte_spennellatura:20}g di latte. Con pennello morbido, spennellare DELICATAMENTE la superficie dei panetti senza schiacciarli. Cospargere abbondantemente con {sesamo:30}g di semi di sesamo. Preriscaldare il forno statico a 200°C (NO ventilato)."
+    },
+    {
+      "title": "Cottura",
+      "text": "Infornare i burger buns nel forno preriscaldato a 200°C (statico, ripiano centrale) per 15-18 minuti. I panini sono cotti quando la superficie è dorata uniformemente e la base suona vuota se battuta con le nocche. NON aprire il forno nei primi 12 minuti per evitare cascature. Sfornare e trasferire su una gratella per raffreddare completamente prima di tagliare."
+    }
+  ],
+  "stepsHand": [
+    {
+      "title": "Preparazione Biga (Lievitino)",
+      "text": "In una ciotola, sciogliere {lievito_biga:5}g di lievito in {acqua_biga:50}g di acqua a temperatura ambiente. Aggiungere {farina_manitoba_biga:100}g di farina Manitoba e mescolare con una forchetta fino a ottenere un composto ruvido e disomogeneo. Coprire con pellicola e lasciare maturare 2 ore a temperatura ambiente fino al raddoppio."
+    },
+    {
+      "title": "Impasto Base a Mano",
+      "text": "In una grande ciotola, mescolare {farina_manitoba_impasto:150}g di Manitoba, {farina_00_impasto:250}g di Farina 00, {zucchero_impasto:25}g di zucchero e {miele_impasto:15}g di miele. Fare una fontana al centro. In una brocca, intiepidire leggermente {latte_impasto:220}g di latte (22-24°C) e versarlo gradualmente nel centro della fontana, incorporando la farina dai bordi. Aggiungere la {biga_matura:155}g biga matura a pezzi e iniziare a impastare con le mani."
+    },
+    {
+      "title": "Incorporamento Uova a Mano",
+      "text": "Quando l'impasto inizia a formarsi, aggiungere {uovo_impasto:55}g di uovo intero e {tuorlo_impasto:15}g di tuorlo. Lavorare energicamente l'impasto sul piano per 5-6 minuti con la tecnica dello slap and fold: sollevare l'impasto, sbatterlo sul piano e ripiegarlo su se stesso. Ripetere fino a quando l'impasto assorbe completamente le uova."
+    },
+    {
+      "title": "Aggiunta Sale e Lavorazione",
+      "text": "Quando l'impasto è liscio e inizia a incordarsi, aggiungere {sale_impasto:10}g di sale e continuare a lavorare con slap and fold per altri 4-5 minuti. L'impasto deve diventare elastico e leggermente lucido."
+    },
+    {
+      "title": "Incorporamento Burro a Mano",
+      "text": "Stendere l'impasto sul piano, distribuire {burro_impasto:40}g di burro morbido a cubetti sulla superficie. Ripiegare l'impasto su se stesso e lavorarlo con le mani per 6-8 minuti, schiacciando e ripiegando, fino a completo assorbimento del burro. L'impasto finale deve essere morbido, setoso e non appiccicoso. Se necessario, aggiungere 1-2 cucchiai di farina. Temperatura impasto target: 27-28°C (leggermente più calda rispetto alla spirale, perché le mani non scaldano come l'attrito meccanico)."
+    },
+    {
+      "title": "Puntata (Lievitazione in Massa)",
+      "text": "Formare una palla liscia con le mani e trasferirla in una ciotola leggermente unta. Coprire con pellicola e lasciare lievitare 2 ore e 15 minuti a temperatura ambiente (il lievito deve lavorare leggermente più a lungo per compensare la minore ossigenazione rispetto alla spirale). L'impasto è pronto quando raddoppia di volume."
+    },
+    {
+      "title": "Staglio e Pirlatura",
+      "text": "Rovesciare l'impasto su un piano leggermente infarinato. Formare un cilindro e dividerlo in 8 porzioni da {panetto_peso:95!}g ciascuna. Pirlare ogni porzione con movimenti circolari della mano sul piano, senza farina, fino a ottenere sfere lisce e tese. Trasferire i panetti su teglia con carta forno, lasciando 8-10cm di spazio."
+    },
+    {
+      "title": "Appretto (Lievitazione Finale)",
+      "text": "Coprire i panetti con pellicola o canovaccio umido. Lasciare lievitare 60-70 minuti a 26-28°C (leggermente più lungo rispetto alla spirale). I buns devono raddoppiare e risultare soffici al tatto."
+    },
+    {
+      "title": "Spennellatura e Decorazione",
+      "text": "Sbattere {tuorlo_spennellatura:18}g di tuorlo con {latte_spennellatura:20}g di latte. Spennellare delicatamente i panetti e cospargere con {sesamo:30}g di semi di sesamo. Preriscaldare il forno statico a 200°C."
+    },
+    {
+      "title": "Cottura",
+      "text": "Infornare a 200°C (statico, ripiano centrale) per 15-18 minuti fino a doratura uniforme. Sfornare e raffreddare su gratella prima di tagliare."
+    }
+  ],
+  "flourTable": [
+    {
+      "type": "Manitoba (Farina Forte)",
+      "w": "350-400",
+      "brands": "Caputo Manitoba (Saccorosso), Molino Spadoni Manitoba, Molino Vigevano Pizza Piuma, Le 5 Stagioni Manitoba"
+    },
+    {
+      "type": "Farina Tipo 00 (Media Forza)",
+      "w": "260-280",
+      "brands": "Caputo Cuoco (Saccoblu), Molino Spadoni 00, Molino Grassi 00, Agugiaro & Figna Petra 3"
+    }
+  ],
+  "baking": {
+    "temperature": "200°C",
+    "time": "15-18 minuti",
+    "tips": [
+      "Usare SEMPRE forno statico: il ventilato asciuga troppo la superficie e impedisce lo sviluppo corretto",
+      "Infornare con forno già caldo: i buns devono trovare subito calore per l'oven spring",
+      "NON aprire il forno nei primi 12 minuti: il vapore interno deve rimanere intrappolato per crosta sottile e mollica soffice",
+      "I panini sono cotti quando la base suona vuota se battuta con le nocche e la superficie è dorata uniforme",
+      "Raffreddare SEMPRE su gratella: il vapore deve uscire dal fondo, altrimenti la base diventa molle"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Biga",
+      "definition": "Pre-impasto rigido (idratazione 44-50%) che matura 12-24h. In questa ricetta si usa un 'lievitino' più idratato (50%) con maturazione breve (2h) per sviluppare aromi senza acidità eccessiva."
+    },
+    {
+      "term": "Incordatura",
+      "definition": "Fase in cui l'impasto sviluppa la maglia glutinica e inizia ad attorcigliarsi sul gancio della spirale, staccandosi dalle pareti della ciotola. Segnale che il glutine è ben sviluppato."
+    },
+    {
+      "term": "Puntata",
+      "definition": "Prima lievitazione in massa dopo l'impasto. L'impasto riposa in ciotola coperto fino al raddoppio del volume. Fondamentale per sviluppo aromi e struttura."
+    },
+    {
+      "term": "Pirlatura",
+      "definition": "Tecnica di arrotondamento dell'impasto in sfere perfette. Si esegue con movimenti circolari della mano sul piano senza farina, creando tensione superficiale per un bun alto e regolare."
+    },
+    {
+      "term": "Appretto",
+      "definition": "Lievitazione finale dopo la formatura. I panetti lievitano fino al raddoppio prima della cottura. Cruciale per volume e sofficità del prodotto finito."
+    },
+    {
+      "term": "Oven Spring",
+      "definition": "Spinta di lievitazione che avviene nei primi 8-10 minuti di cottura per lo shock termico. Il calore del forno fa espandere rapidamente i gas nell'impasto, creando volume e alveolatura."
+    },
+    {
+      "term": "Slap and Fold",
+      "definition": "Tecnica di impasto manuale: si solleva l'impasto, lo si sbatte con forza sul piano e lo si ripiega su se stesso. Sviluppa glutine senza bisogno di impastatrice."
+    },
+    {
+      "term": "Cascatura",
+      "definition": "Collasso improvviso dell'impasto durante o dopo la cottura, causato da lievitazione eccessiva, apertura forno prematura o impasto troppo debole."
+    }
+  ],
+  "alert": "⚠️ NON usare forno ventilato: asciuga la superficie dei buns creando crosta dura e impedendo lo sviluppo corretto. I burger buns richiedono calore statico uniforme per crosta sottile e mollica soffice. NON far lievitare troppo i panetti: devono raddoppiare, ma mantenere struttura per reggere il peso del burger senza schiacciarsi. NON aggiungere il burro prima che l'impasto sia incordato: rischio di impasto unto e glutine poco sviluppato. NON spennellare con troppa forza: i panetti lievitati sono delicati e si sgonfiano facilmente.",
+  "proTips": [
+    "🧈 Burro a temperatura perfetta: deve essere morbido (18-20°C) ma non fuso. Se troppo freddo, non si incorpora; se troppo caldo, unge l'impasto. Taglialo a cubetti e lascialo 30 minuti a temperatura ambiente prima dell'uso.",
+    "🥛 Latte intero vs acqua: il latte conferisce mollica più soffice e doratura migliore per i grassi e gli zuccheri. Se usi acqua, aggiungi +5g di zucchero per compensare la mancanza di lattosio.",
+    "🌡️ Temperatura impasto cruciale: se l'impasto supera 28°C, il burro inizia a fondere e l'impasto diventa unto. Se usi spirale veloce (V5-V6), metti il latte in frigo 1h prima per compensare il calore meccanico.",
+    "✂️ Taglio perfetto: aspetta che i buns siano COMPLETAMENTE freddi prima di tagliarli. Usa un coltello a lama seghettata e taglia con movimento orizzontale (non schiacciando dall'alto) per mantenere la sofficità.",
+    "🧊 Variante freezer-friendly: dopo la cottura, lascia raffreddare completamente, sigilla in sacchetti freezer e congela fino a 2 mesi. Scongela a temperatura ambiente 2h prima dell'uso, poi riscalda 3-4 minuti a 160°C per riattivare la crosta."
+  ],
+  "imageKeywords": [
+    "burger buns sesame seeds",
+    "homemade hamburger buns",
+    "soft brioche burger bread",
+    "panini hamburger fatti in casa",
+    "burger bun with sesame",
+    "american style burger buns",
+    "hausgemachte burger brötchen",
+    "golden brown burger rolls"
+  ],
+  "tags": [
+    "burger",
+    "panini",
+    "lievitati-dolci",
+    "con-latte",
+    "con-burro",
+    "street-food",
+    "american-style",
+    "freezabile"
+  ],
+  "image": "images/ricette/lievitati/burger-buns-professionali.webp",
+  "imageAttribution": "📷 Foto: Shameel mukkath — Pexels License via Pexels"
 }

@@ -1,46 +1,44 @@
 # Qualità: Panettone Classico
 
-## 🔴 Score Finale: 57/100
+## 🔴 Score Finale: 20/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 0 warning |
-| Claude | 72/100 | 🟡 Da migliorare |
-| Gemini | 🟡 Parziale disaccordo (-15) | Claude ha individuato benissimo il disastro dei tag di testo |
+| Claude | 45/100 | 🔴 Problematica |
+| Gemini | 🟡 Parziale disaccordo (-25) | Claude ha individuato gli evidenti errori di formattazione ( |
 
-Ricetta tecnicamente valida per il panettone classico ma presenta diversi errori nei riferimenti dinamici del procedimento che rendono confusa la lettura. L'idratazione dichiarata non corrisponde a quella effettiva. Setup, temperature e tempi sono corretti per la tipologia.
+Ricetta con gravi problemi strutturali: idratazione dichiarata errata (59% reale vs 45% dichiarata), quantità insufficiente di lievito madre, e numerosi errori nei riferimenti delle variabili nel procedimento che renderebbero impossibile seguire correttamente la ricetta. Serve revisione completa dei calcoli e correzione di tutti i riferimenti.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione | Fonte |
 |------|------|----------|------------|-------|
-| ❌ | Coerenza | Riferimenti dinamici errati: nel procedimento ci sono placeholder come {zucchero_secondo_impasto:50} ma viene usato il valore 65g dal primo impasto, e {sale_secondo_impasto:2} riferisce erroneamente al malto | Correggere tutti i placeholder dinamici con i valori corretti degli ingredienti specifici di ogni impasto | 🔵 Claude |
-| ❌ | Coerenza | Nel punto 5 si dice 'aggiungere il sale (2g)' ma si riferisce al malto del primo impasto invece del sale del secondo impasto | Correggere il riferimento al sale del secondo impasto (2g) invece del malto | 🔵 Claude |
-| ❌ | Coerenza | Nel punto 13 conservazione si cita '{rum_terzo_impasto:15} giorni' che dovrebbe essere un numero fisso, non un placeholder | Specificare chiaramente il numero di giorni di conservazione (es. 10-15 giorni) | 🔵 Claude |
-| ⚠️ | Dosi | Idratazione finale risulta circa 52-54% considerando tutti e tre gli impasti, non il 45% dichiarato nel header | Ricalcolare l'idratazione totale: (125+10+270ml acqua da uova) / (375+62+248g farina) = ~59% idratazione effettiva | 🔵 Claude |
-| ⚠️ | Coerenza | Il burro per scarpatura finale (30g) nel punto 10 viene erroneamente riferito come burro del terzo impasto | Creare ingrediente separato 'Burro per spennellatura' e riferirsi correttamente ad esso | 🔵 Claude |
-| 💡 | Dosi | La quantità di lievito madre (65g su 685g farina totale = 9.5%) è al limite basso per un panettone classico che richiede 48h di lievitazione | Considerare di aumentare il lievito madre a 75-85g per garantire una lievitazione più sicura | 🔵 Claude |
-| ❌ | Dosi / Resa | Il peso totale dell'impasto supera abbondantemente i 2,1 kg, ma al punto 9 si indica di metterlo in UN SOLO stampo da 1kg. Un errore fatale che rovinerebbe completamente la cottura e la lievitazione. | Indicare di dividere l'impasto in due parti (inserendo 1050-1100g per ogni stampo da 1kg) o ricalcolare l'intera ricetta dimezzando le dosi. | 🔴 Gemini |
-| ❌ | Tecnica / Coerenza | Il 'Panettone Classico' prevede universalmente DUE impasti e l'uso prevalente di tuorli. Questa ricetta introduce un anomalo 'Terzo Impasto' con ben 270g di uova intere. Si tratta di un ibrido brioche/babà, non di un panettone classico. | Modificare il titolo specificando 'Lievitato anomalo a 3 impasti' oppure riscrivere la struttura eliminando il terzo impasto e riproporzionando i liquidi. | 🔴 Gemini |
-| ⚠️ | Procedimento | Al punto 9 manca la fase di 'puntatura sul banco' prima della pirlatura. Nel panettone è obbligatorio far riposare e asciugare l'impasto (spesso con pre-forma) per dargli corda prima della messa a stampo. | Inserire un riposo (puntatura a caldo o a freddo) di 30-45 minuti sul banco prima di eseguire la pirlatura. | 🔴 Gemini |
+| ❌ | Dosi | Grave errore nel calcolo dell'idratazione: con 685g farina totale e 405g liquidi totali (acqua + uova + tuorli + miele) l'idratazione reale è ~59%, non 45% | Ricalcolare correttamente: (135g acqua + 270g uova + 150g tuorli + 45g miele) / 685g farina = 87.6% idratazione | 🔵 Claude |
+| ❌ | Dosi | Quantità di sale eccessiva: 11g totali su 685g farina = 1.6%, accettabile ma al limite basso per panettone | Il sale è corretto, errore di valutazione iniziale | 🔵 Claude |
+| ❌ | Coerenza | Gravi errori nei riferimenti delle variabili nel procedimento: {lievito_madre_primo_impasto:65} usato per zucchero (step 3), {malto_primo_impasto:2} usato per sale (step 5), {tuorli_primo_impasto:50} usato più volte per ingredienti diversi | Correggere tutti i riferimenti delle variabili: usare {zucchero_primo_impasto:65}, {sale_secondo_impasto:2}, {tuorli_secondo_impasto:50}, {cedro_candito:50}, etc. | 🔵 Claude |
+| ❌ | Dosi | Lievito madre insufficiente: 65g su 685g farina = 9.5%. Per panettone classico serve 15-20% minimo | Aumentare lievito madre a 100-140g per garantire lievitazione adeguata | 🔵 Claude |
+| ⚠️ | Coerenza | Contraddizione nelle quantità di burro finale: procedimento cita {burro_terzo_impasto_2:30}g e {acqua_secondo_impasto:10}g per spennellatura, ma dovrebbe essere tutto burro | Correggere: 30g burro per spennellatura + 10g burro per fiocchetto centrale | 🔵 Claude |
+| 💡 | Tempi | Lievitazioni molto lunghe (48h totali) per la quantità di lievito madre utilizzata | Con più lievito madre (15-20%) i tempi si ridurrebbero a 24-30h totali mantenendo qualità | 🔵 Claude |
+| ❌ | Dosi / Resa | Il peso totale dell'impasto supera i 2090g (senza contare evaporazione), ma al punto 9 si indica di metterlo in UN SOLO stampo da 1kg. L'impasto strariperà o esploderà in cottura. | Specificare che la dose è per DUE panettoni da 1kg, oppure dimezzare tutte le dosi della ricetta. | 🔴 Gemini |
+| ❌ | Dosi / Struttura | Presenza di ben 270g di Uova Intere nel terzo impasto, sommate a 150g di tuorli e 135g di acqua. Questo trasformerà l'impasto in una pastella liquida impossibile da incordare e pirlare. | Eliminare completamente le uova intere. Il panettone classico si fa in DUE impasti, usando prevalentemente o esclusivamente tuorli. | 🔴 Gemini |
+| ❌ | Dosi | La quantità di burro (150g totali su 685g di farina = 21.8%) è drammaticamente bassa per un panettone, che richiede dal 40% al 60% di burro sulla farina. | Aumentare il burro totale ad almeno 300-350g, bilanciandolo tra i vari impasti. | 🔴 Gemini |
 
 ## 🔴 Revisione Gemini
 
 **Verdetto**: 🟡 Parziale disaccordo
-**Adjustment**: -15
+**Adjustment**: -25
 
-Claude ha individuato benissimo il disastro dei tag di testo generati male, ma ha completamente mancato due errori catastrofici: l'impasto è il doppio della capienza dello stampo indicato e la struttura a 3 impasti con uova intere non ha nulla a che vedere con il Panettone Classico. Il punteggio va severamente abbassato.
+Claude ha individuato gli evidenti errori di formattazione (placeholder), ma ha fallito come pasticcere mancando difetti strutturali fatali: la ricetta produce oltre 2kg di impasto (non 1kg), prevede un'assurda quantità di uova intere che renderebbe l'impasto liquido, e ha troppo poco burro. È ineseguibile.
 
 ### Issues contestate
 
 | Problema | Verdetto | Motivo |
 |---|---|---|
-| Riferimenti dinamici errati: nel procedimento ci sono placeholder... | ✅ Confermo | Il testo è palesemente il risultato di un template rotto. I tag sono un disastro e richiamano ingredienti sbagliati (es. zucchero taggato come lievito madre, cedro taggato come tuorli). |
-| Nel punto 5 si dice 'aggiungere il sale (2g)' ma si riferisce al malto... | ✅ Confermo | Fa parte del problema dei tag dinamici sballati, giusto segnalarlo. |
-| Nel punto 13 conservazione si cita '{rum_terzo_impasto:15} giorni'... | ✅ Confermo | Altro evidente errore del motore di generazione del testo. |
-| Idratazione finale risulta circa 52-54% considerando tutti e tre gli impasti, non il 45% dichiarato | ✅ Confermo | Il calcolo è corretto, l'idratazione dichiarata nell'header è del tutto slegata dalla realtà della ricetta. |
-| Il burro per scarpatura finale (30g) nel punto 10 viene erroneamente riferito come burro del terzo impasto | ✅ Confermo | Ennesimo errore di tag. |
-| La quantità di lievito madre (65g su 685g farina totale = 9.5%) è al limite basso... | ✅ Confermo | Per un impasto così ricco e pesante, scendere sotto il 20% sul primo impasto (qui è circa il 17%) è rischioso, l'osservazione è tecnicamente valida. |
+| Grave errore nel calcolo dell'idratazione: con 685g farina totale e 405g liquidi totali l'idratazione reale è ~59%, non 45% / Fix: 87.6% | ⚠️ Parziale | Claude individua giustamente l'errore nell'idratazione, ma fa confusione matematica nel suo stesso verdetto indicando prima 59% e poi 87.6%. |
+| Quantità di sale eccessiva [...] Fix: Il sale è corretto, errore di valutazione iniziale | ❌ Falso positivo | Claude si contraddice da solo nello stesso punto. 11g di sale su 685g di farina (1.6%) è una percentuale standard e corretta per i grandi lievitati. |
+| Lievito madre insufficiente: 65g su 685g farina = 9.5% | ❌ Falso positivo | Nei lievitati a più impasti, il lievito madre si calcola sulla farina del PRIMO impasto. 65g su 375g di farina è il 17.3%, una percentuale assolutamente plausibile per una prima puntata lunga. |
+| Gravi errori nei riferimenti delle variabili nel procedimento | ✅ Confermo | Correttissimo. La ricetta è chiaramente il risultato di un template non compilato bene, con placeholder come {tuorli_primo_impasto:50} usati a caso al posto di altri ingredienti. |
 
 ---
-*Generato: 2026-03-30T19:54:49.359Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-03-30T20:18:10.025Z | Pipeline: Schema → Claude → Gemini*

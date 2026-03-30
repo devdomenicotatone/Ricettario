@@ -6,9 +6,9 @@
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 1 warning |
 | Claude | 75/100 | 🟡 Da migliorare |
-| Gemini | 🟡 Parziale disaccordo (-5) | Claude ha svolto un eccellente lavoro matematico e di debug  |
+| Gemini | 🟡 Parziale disaccordo (-5) | Claude ha individuato correttamente i gravi difetti di forma |
 
-Ricetta tecnicamente valida con biga e bassinage ben strutturati, ma presenta errori di calcolo del sale, incongruenze nelle variabili del procedimento e discrepanza nell'idratazione dichiarata. Gli errori nelle variabili potrebbero creare confusione nell'esecuzione.
+Ricetta tecnicamente valida con buona strutturazione e dettagli professionali. Setup corretto per pane, temperature e tempi appropriati. Presenta alcuni errori di coerenza nei placeholder e nel calcolo delle percentuali che necessitano correzione. La tecnica della biga lunga e bassinage è ben spiegata e appropriata per un pane integrale ad alta idratazione.
 
 ## 🔍 Schema Validation
 
@@ -18,29 +18,28 @@ Ricetta tecnicamente valida con biga e bassinage ben strutturati, ma presenta er
 
 | Sev. | Area | Problema | Correzione | Fonte |
 |------|------|----------|------------|-------|
-| ❌ | Dosi | Errore grave nel calcolo del sale: indicato 58g per 2.1% su 2800g di farine totali, ma 2800g × 2.1% = 58.8g ≈ 59g. Inoltre 2.1% è al limite superiore per il pane. | Correggere a 56g (2% su 2800g farine) o aggiornare la percentuale a 2.07% | 🔵 Claude |
-| ❌ | Coerenza | Nel procedimento punto 4, l'olio (50g) viene citato come 'miele_impasto_finale:50g' invece che come variabile olio. Errore di copy-paste. | Sostituire con {olio_evo_impasto_finale:50}g di olio EVO | 🔵 Claude |
-| ❌ | Coerenza | Nel procedimento punto 2, viene usata variabile errata 'farina_integrale_impasto_finale' per la Saccorosso (1000g). Dovrebbe essere 'farina_caputo_saccor_impasto_finale'. | Correggere con {farina_caputo_saccor_impasto_finale:1000}g Caputo Saccorosso | 🔵 Claude |
-| ⚠️ | Dosi | Idratazione effettiva: (360+1500)g acqua / 2800g farine = 66.4%, non 70% come dichiarato | Correggere idratazione dichiarata a 66% oppure aumentare acqua a 1960g per raggiungere 70% | 🔵 Claude |
-| ⚠️ | Coerenza | Nel punto 8 formatura, il range pesi è incongruente: '600-800g' dove 800g corrisponde al peso della farina biga, non al peso finale pagnotta | Specificare peso corretto pagnotte: es. '800-1000g' considerando il peso totale impasto diviso numero pagnotte | 🔵 Claude |
-| 💡 | Dosi | Sale al 2.1% è elevato per pane integrale. Lo standard italiano è 2-2.5%, ma con integrale si può ridurre leggermente per bilanciare il sapore della crusca | Considerare riduzione sale a 1.8-2% (50-56g) per migliorare equilibrio gustativo | 🔵 Claude |
-| ❌ | Tecnica / Processo | Errore concettuale sull'Autolisi (Punto 2). Viene richiesto di mescolare acqua, farina e TUTTA LA BIGA per un'autolisi di 30-45 min. L'autolisi tecnica prevede SOLO farina e acqua. Inserire quasi 1.2kg di biga (lievito e acidità) fa partire immediatamente la fermentazione (tecnicamente è una 'fermentolisi'), cambiando totalmente la reazione chimica dell'impasto. | Separare l'autolisi vera (solo acqua e farina per 45 min) dall'aggiunta della biga (da inserire nel Punto 3), oppure rinominare la fase 'Fermentolisi' e ridurre i tempi. | 🔴 Gemini |
-| ⚠️ | Terminologia / Dosi | Al punto 2 si dice '975g di acqua (65% dell'idratazione totale)'. 975g è il 65% dei 1500g di acqua dell'impasto finale, ma non dell'idratazione totale della ricetta (che include l'acqua della biga). | Riscrivere come '65% dell'acqua dell'impasto finale'. | 🔴 Gemini |
+| ❌ | Coerenza | Errore grave nel passaggio 4: viene citato {miele_impasto_finale:50}g di olio EVO, ma dovrebbe essere {olio_impasto_finale:50}g. Il placeholder è sbagliato. | Correggere il placeholder da {miele_impasto_finale:50}g a {olio_impasto_finale:50}g quando si riferisce all'olio | 🔵 Claude |
+| ⚠️ | Dosi | Sale calcolato al 2.1% su farine totali (58g), ma le farine totali sono 2800g. Il calcolo corretto sarebbe: 2800g × 2.1% = 58.8g. La differenza è minima ma il valore dichiarato non è preciso. | Aggiustare il sale a 59g oppure dichiarare 2.07% invece di 2.1% | 🔵 Claude |
+| ⚠️ | Coerenza | Nel passaggio 8 viene citata una divisione in pezzi da '600-{farina_caputo_saccor_biga:800}g' che non ha senso logico. Probabilmente doveva essere un range di peso realistico. | Specificare un range logico come '600-800g' o '700-900g' per i pezzi finali | 🔵 Claude |
+| 💡 | Dosi | Idratazione dichiarata 70% ma con 1500g acqua su 2800g farine totali risulta 53.6%. Probabilmente è calcolata solo sull'impasto finale (1500g acqua su 2000g farine = 75%) escludendo la biga. | Chiarire se l'idratazione è calcolata sull'impasto totale o solo finale, e correggere il valore dichiarato | 🔵 Claude |
+| ❌ | Matematica/Dosi | Errore matematico per raggiungere il 70% di idratazione. Farina totale: 2800g. Acqua target per il 70%: 1960g. Sottraendo i 360g della biga, l'acqua dell'impasto finale deve essere 1600g, non 1500g come indicato in ricetta. Inoltre al punto 4 l'autore afferma '975g + 525g se si punta al 70%', ma la somma dà 1500g, che porta l'idratazione finale al 66.4%. | Modificare l'acqua dell'impasto finale a 1600g e correggere il punto 4 indicando 625g di acqua per il bassinage (975+625=1600). | 🔴 Gemini |
+| 💡 | Terminologia Tecnica | Al Punto 2 viene descritta un' 'Autolisi Lunga' in cui viene inserita subito la biga. Tecnicamente, inserire un pre-impasto contenente lievito trasforma il processo in una 'Fermentolisi', poiché la fermentazione inizia immediatamente. | Cambiare il termine in 'Fermentolisi' o suggerire di inserire la biga solo al termine del riposo autolitico di acqua e farina. | 🔴 Gemini |
 
 ## 🔴 Revisione Gemini
 
 **Verdetto**: 🟡 Parziale disaccordo
 **Adjustment**: -5
 
-Claude ha svolto un eccellente lavoro matematico e di debug del testo (scovando le variabili rotte e il calcolo errato dell'idratazione), ma è stato inutilmente punitivo su 1 grammo di sale. Tuttavia, Claude ha completamente mancato un grave errore di tecnica panificatoria (l'autolisi fatta con la biga inclusa), motivo per cui abbasso leggermente il punteggio.
+Claude ha individuato correttamente i gravi difetti di formattazione (placeholder), ma si è mostrato troppo pignolo sul sale e, soprattutto, ha fallito la matematica dell'idratazione tralasciando l'acqua della biga. La ricetta ha seri errori di calcolo dell'acqua che abbassano ulteriormente il punteggio.
 
 ### Issues contestate
 
 | Problema | Verdetto | Motivo |
 |---|---|---|
-| Errore grave nel calcolo del sale: indicato 58g per 2.1% su 2800g... (Issue 1) | ❌ Falso positivo | 58g su 2800g di farina corrisponde al 2.07%, che nel testo viene normalissimamente arrotondato a 2.1%. Definire 'errore grave' una discrepanza di 0.8 grammi su un impasto totale di quasi 5 kg è estrema pignoleria da intelligenza artificiale. |
-| Errore nelle variabili copia-incolla per olio, Saccorosso e pesi (Issues 2, 3, 5) | ✅ Confermo | Ottima revisione del testo. Le variabili in formato {nome:numero} sono chiaramente errate e usate a sproposito in vari punti del procedimento. |
-| Idratazione effettiva 66.4% e non 70% (Issue 4) | ✅ Confermo | Il calcolo matematico dei liquidi totali (1860g) sulle farine totali (2800g) è ineccepibile. L'autore ha fatto confusione calcolando probabilmente le percentuali in base ai pesi parziali. |
+| Errore grave nel passaggio 4: viene citato {miele_impasto_finale:50}g di olio EVO | ✅ Confermo | Evidente errore di compilazione del template (refuso di placeholder). |
+| Sale calcolato al 2.1% su farine totali (58g), ma le farine totali sono 2800g. Il calcolo corretto sarebbe 58.8g. | ❌ Falso positivo | Eccesso di pignoleria. Arrotondare 58.8g a 58g (0.07% di differenza) è una prassi normale e perfettamente accettabile anche nella panificazione professionale. Le bilance standard spesso non leggono i decimali. |
+| Nel passaggio 8 viene citata una divisione in pezzi da '600-{farina_caputo_saccor_biga:800}g' | ✅ Confermo | Altro evidente errore visivo dovuto a un placeholder non risolto correttamente. |
+| Idratazione dichiarata 70% ma con 1500g acqua su 2800g farine totali risulta 53.6%. | ⚠️ Parziale | Claude ha intuito un problema di idratazione ma ha sbagliato completamente i calcoli, dimenticando di sommare i 360g di acqua presenti nella biga. L'idratazione totale reale della ricetta è del 66.4% (1860g su 2800g), non 53.6%. |
 
 ---
-*Generato: 2026-03-30T19:46:59.428Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-03-30T20:10:36.318Z | Pipeline: Schema → Claude → Gemini*

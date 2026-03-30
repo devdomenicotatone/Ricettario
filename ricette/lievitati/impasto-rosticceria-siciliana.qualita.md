@@ -1,38 +1,38 @@
 # Qualità: Impasto Rosticceria Siciliana
 
-## 🟢 Score Finale: 88/100
+## 🟢 Score Finale: 95/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 0 warning |
 | Claude | 92/100 | 🟢 Buona |
-| Gemini | 🟡 Parziale disaccordo (-4) | Claude ha individuato correttamente il grave errore della va |
+| Gemini | 🟡 Parziale disaccordo (+3) | Ricetta eccellente e filologicamente corretta per i tipici ' |
 
-Ricetta tecnicamente solida per rosticceria siciliana. Dosi ben bilanciate (idratazione 50%, lievito 2.5%, sale 2%), temperature e tempi appropriati. Setup corretto per lievitati. L'unico errore significativo è la sintassi confusa nella gestione dell'acqua nel procedimento. Ottimo dettaglio tecnico negli ALERT e PRO TIPS.
+Ricetta molto ben strutturata con dosi equilibrate e procedimento dettagliato. L'idratazione al 50% è corretta per rustici, il lievito al 2.5% appropriato per 2.5h di lievitazione, temperature e tempi di cottura adeguati. Setup corretto per lievitati. Solo piccoli dettagli da perfezionare: errore di formattazione nel procedimento e quantità di zucchero leggermente generosa rispetto alla tradizione.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione | Fonte |
 |------|------|----------|------------|-------|
-| ❌ | Coerenza | Nel punto 1 del procedimento si riferisce a '{strutto_impasto:100}g di acqua' invece che a 100g di acqua totale. La sintassi con parentesi graffe è incorretta e confusa. | Correggere con '100g di acqua fresca' eliminando la sintassi errata | 🔵 Claude |
-| ⚠️ | Coerenza | Nel punto 2 si menziona di aggiungere 'i restanti 400g di acqua' ma non è chiaro se i primi 100g fossero già stati utilizzati per sciogliere il lievito | Chiarire meglio la divisione dell'acqua: 100g per sciogliere il lievito + 400g nel secondo step | 🔵 Claude |
-| 💡 | Dosi | Lo zucchero è al 10% su farina (100g su 1000g), percentuale elevata ma accettabile per rosticceria siciliana tradizionale che prevede impasti ricchi e dolci | Considerare di specificare che questa alta percentuale è tipica della tradizione siciliana | 🔵 Claude |
-| ❌ | Struttura / Categorie | Gli ingredienti di guarnizione (tuorlo, latte, sesamo) sono stati erroneamente elencati sotto la voce 'SOSPENSIONI'. Le sospensioni sono ingredienti solidi integrati all'interno della maglia glutinica (es. gocce di cioccolato), non la spennellatura esterna. | Rimuovere l'intero blocco 'SOSPENSIONI'. Gli ingredienti sono già correttamente elencati in 'Per la Finitura'. | 🔴 Gemini |
+| ⚠️ | Coerenza | Nel punto 1 del procedimento si fa riferimento a '{strutto_impasto:100}g di acqua' invece di semplicemente '100g di acqua' - sembra un residuo di template | Correggere in 'Sciogliere il lievito di birra fresco in 100g di acqua fresca' | 🔵 Claude |
+| 💡 | Dosi | Il 10% di zucchero su farina (100g su 1kg) è elevato per la rosticceria tradizionale siciliana, dove si usa solitamente 3-6% | Considerare di ridurre lo zucchero a 30-60g per un gusto più tradizionale | 🔵 Claude |
+| 💡 | Gruppi | Gli ingredienti per la finitura sono duplicati sia nella lista principale che nelle SOSPENSIONI | Rimuovere la duplicazione o chiarire il motivo della doppia elencazione | 🔵 Claude |
+| 💡 | Ingredienti / Farcitura | Negli 'ALERT' si raccomanda di strizzare bene la mozzarella. Tuttavia, nella vera rosticceria siciliana non si usa la mozzarella fresca proprio per questo motivo, ma si predilige formaggio a pasta filata a bassa umidità (filone per pizza o provola/caciocavallo). | Specificare nel testo del procedimento (Punto 7) 'mozzarella per pizza (filone) a bassa umidità' al posto di generica 'mozzarella'. | 🔴 Gemini |
 
 ## 🔴 Revisione Gemini
 
 **Verdetto**: 🟡 Parziale disaccordo
-**Adjustment**: -4
+**Adjustment**: +3
 
-Claude ha individuato correttamente il grave errore della variabile di testo non compilata, ma ha segnalato un falso problema sulla gestione dell'acqua (che è chiarissima). Soprattutto, ha completamente ignorato l'uso tecnicamente errato del termine 'Sospensioni' per indicare la doratura.
+Ricetta eccellente e filologicamente corretta per i tipici 'pezzi' siciliani. Claude ha sbagliato a penalizzare lo zucchero (il 10% è perfetto per questo stile) abbassando il punteggio. Alzerei lo score correggendo solo il refuso nel testo e chiarendo l'uso improprio della categoria 'sospensioni'.
 
 ### Issues contestate
 
 | Problema | Verdetto | Motivo |
 |---|---|---|
-| Sintassi incorretta {strutto_impasto:100}g al punto 1 | ✅ Confermo | Palese errore di templating (variabile non parsata dal sistema) che compromette la leggibilità del passaggio. |
-| Mancata chiarezza sui 400g di acqua al punto 2 | ❌ Falso positivo | La critica di Claude è infondata. Il punto 1 dice chiaramente di usare 100g, e il punto 2 dice di inserire l'acqua col lievito E POI i 'restanti 400g'. Sequenza e matematica sono perfettamente chiare. |
-| Nota sul 10% di zucchero | ⚠️ Parziale | L'osservazione tecnica è giusta (è lo standard siciliano), ma non è un vero 'problema' o 'issue' della ricetta, non necessita di correzioni. |
+| Nel punto 1 del procedimento si fa riferimento a '{strutto_impasto:100}g di acqua' | ✅ Confermo | Si tratta di un palese errore di compilazione o residuo di template (probabilmente una variabile non processata). |
+| Il 10% di zucchero su farina (100g su 1kg) è elevato per la rosticceria tradizionale siciliana, dove si usa solitamente 3-6% | ❌ Falso positivo | Claude sbaglia. L'impasto della tipica rosticceria siciliana (in particolare palermitana) è a tutti gli effetti una 'pasta brioche' declinata al salato. Il 10% di zucchero (80-100g per kg di farina) è lo standard assoluto per ottenere la tipica colorazione e il famoso contrasto dolce/salato. |
+| Gli ingredienti per la finitura sono duplicati sia nella lista principale che nelle SOSPENSIONI | ⚠️ Parziale | Claude nota la duplicazione ma manca il problema tecnico principale: uovo, latte e sesamo posti all'esterno NON sono 'sospensioni' (termine tecnico che indica inerti inglobati NELLA maglia glutinica, come l'uvetta). La sezione va eliminata in toto, non solo per duplicazione. |
 
 ---
-*Generato: 2026-03-30T19:53:58.535Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-03-30T20:17:23.688Z | Pipeline: Schema → Claude → Gemini*

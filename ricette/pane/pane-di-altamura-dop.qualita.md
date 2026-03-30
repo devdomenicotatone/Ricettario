@@ -1,14 +1,14 @@
 # Qualità: Pane di Altamura DOP
 
-## 🔴 Score Finale: 52/100
+## 🔴 Score Finale: 57/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 2 warning |
 | Claude | 92/100 | 🟢 Buona |
-| Gemini | 🔴 Forte disaccordo (-40) | Claude ha fallito nel riconoscere i vincoli basilari di una  |
+| Gemini | 🔴 Forte disaccordo (-35) | Claude ha valutato positivamente una ricetta gravemente dife |
 
-Ricetta tecnicamente molto solida con dosi equilibrate, tempi appropriati per la fermentazione lunga e setup corretto. L'idratazione al 68% è perfetta per la semola rimacinata. Temperature e tempi sono ben calibrati per il prodotto DOP. Le uniche migliorie riguardano il sale (leggermente basso per tradizione) e la specifica del valore W della semola.
+Ricetta molto ben strutturata e tecnicamente corretta per il Pane di Altamura DOP. Dosi equilibrate, tempi di lievitazione appropriati per la semola rimacinata, setup coerente. Solo piccoli miglioramenti suggeriti per ottimizzare sapore e crosta. Ottima attenzione ai dettagli tecnici della semola di grano duro.
 
 ## 🔍 Schema Validation
 
@@ -19,26 +19,27 @@ Ricetta tecnicamente molto solida con dosi equilibrate, tempi appropriati per la
 
 | Sev. | Area | Problema | Correzione | Fonte |
 |------|------|----------|------------|-------|
-| 💡 | Dosi | Sale al 1.8% (18g su 1000g farina): corretto per legge ma al limite inferiore per il gusto tradizionale del Pane di Altamura | Considerare 20-22g (2-2.2%) per sapidità più marcata tipica del prodotto DOP | 🔵 Claude |
-| 💡 | Coerenza | Nel procedimento si parla di 'forza (W)' nei PRO TIPS ma non viene specificato il valore W della semola rimacinata negli ingredienti | Aggiungere il valore W suggerito per la semola rimacinata (es. W280-320) nella descrizione ingrediente | 🔵 Claude |
-| ❌ | Ingredienti / Autenticità | Uso di Lievito di Birra in un prodotto denominato 'DOP'. Il disciplinare del Pane di Altamura DOP impone TASSATIVAMENTE l'uso esclusivo di Lievito Madre (pasta acida). | Sostituire il lievito di birra con Lievito Madre (circa 200g), oppure rimuovere la dicitura 'DOP' dal titolo. | 🔴 Gemini |
-| ❌ | Ingredienti / Autenticità | Presenza di Miele di Acacia. Il disciplinare DOP ammette unicamente: semola rimacinata, acqua, lievito madre e sale. | Rimuovere completamente il miele dalla ricetta. | 🔴 Gemini |
-| ❌ | PRO TIPS | Il consiglio finale indica di cercare la forza (W) per la farina. Come detto, la semola non riporta il parametro W. | Modificare il tip suggerendo di cercare una semola rimacinata con almeno il 12.5% - 13% di proteine. | 🔴 Gemini |
-| ⚠️ | Formatura e Tagli | Il taglio 'a croce' o 'obliquo' non appartiene alla tradizione di Altamura. Le forme ufficiali sono 'U sckuanète' (pane accavallato/alto) e 'a cappidde de prèvete' (basso). | Descrivere la formatura tradizionale accavallata invece del generico taglio a croce con lametta. | 🔴 Gemini |
+| 💡 | Dosi | Sale al 1.8% su farina: percentuale corretta ma al limite minimo per il pane tradizionale italiano | Considerare 20-22g di sale (2-2.2%) per esaltare meglio il sapore caratteristico del Pane di Altamura | 🔵 Claude |
+| 💡 | Coerenza | Nel PRO TIPS si menziona 'valore W' e 'marchi suggeriti' ma nella ricetta non sono specificati parametri W né marchi | Rimuovere il riferimento ai marchi/W dal PRO TIPS oppure aggiungere nella descrizione della semola il valore W consigliato (280-320 W tipico per Altamura) | 🔵 Claude |
+| 💡 | Temperature | Temperatura cottura 250°C costante per 35 minuti + 220°C per 10 minuti: potrebbe essere ottimizzata | Considerare un inizio più alto (260°C primi 15 min) poi 240°C per sviluppare meglio la crosta caratteristica | 🔵 Claude |
+| ❌ | Ingredienti e Autenticità | Falso DOP: Il disciplinare del Pane di Altamura DOP impone tassativamente l'uso ESCLUSIVO di Lievito Naturale (Lievito Madre/Pasta acida). L'uso di Lievito di Birra e Miele invalida totalmente la denominazione DOP. | Cambiare il titolo rimuovendo 'DOP' (es. 'Pane di Semola tipo Altamura') OPPURE sostituire il lievito di birra e il miele con 200g di Lievito Madre rinfrescato. | 🔴 Gemini |
+| ❌ | Lievitazione | Tempi impossibili per il lievito scelto: 3g di lievito di birra fresco (0.3%) tenuti 8-10 ore a 22-24°C + 12-16 ore a 18-20°C porteranno a un overproofing (sovralievitazione) estremo e al collasso dell'impasto. Questi tempi sono stati palesemente copiati da una ricetta con Lievito Madre ma applicati al Lievito di Birra. | Se si usa lievito di birra fresco, fare la puntata in frigorifero a 4°C, oppure ridurre drasticamente i tempi (es. 2-3h a TA + appretto in frigo). Se si tengono i tempi attuali, usare Lievito Madre. | 🔴 Gemini |
+| ⚠️ | Formatura/Cottura | Taglio non tradizionale per la forma Alta ('U sckuanète'): la forma classica accavallata non prevede un 'taglio a croce profondo', ma si apre naturalmente lungo la piegatura. Il taglio a croce è tipico solo della forma bassa ('A cappidde de prèvete'). | Correggere le istruzioni: non incidere la forma Alta, o al limite fare incisioni solo sul formato basso. | 🔴 Gemini |
 
 ## 🔴 Revisione Gemini
 
 **Verdetto**: 🔴 Forte disaccordo
-**Adjustment**: -40
+**Adjustment**: -35
 
-Claude ha fallito nel riconoscere i vincoli basilari di una ricetta 'DOP', ignorando che il Pane di Altamura vieta miele e lievito di birra (richiede lievito madre). Inoltre, ha commesso un errore grossolano confermando l'uso dell'indice 'W' per la semola di grano duro. La ricetta va fortemente penalizzata se mantiene la dicitura DOP.
+Claude ha valutato positivamente una ricetta gravemente difettosa. Ha completamente ignorato che l'uso di Lievito di Birra e Miele invalida la dicitura DOP (richiesto Lievito Madre), e non si è accorto che applicare tempi da Lievito Madre (20+ ore a temperatura ambiente) al Lievito di Birra causerà il collasso totale dell'impasto. Punteggio abbassato severamente per errori tecnici e di disciplinare.
 
 ### Issues contestate
 
 | Problema | Verdetto | Motivo |
 |---|---|---|
-| Sale al 1.8% (18g su 1000g farina): corretto per legge ma al limite inferiore... | ❌ Falso positivo | Il disciplinare DOP prevede circa 20g di sale per kg di semola. 18g (1.8%) è una quantità eccellente e corretta; suggerire di alzarlo fino al 2.2% rischia di rendere il pane eccessivamente sapido. |
-| Nel procedimento si parla di 'forza (W)'... Aggiungere il valore W suggerito per la semola rimacinata | ❌ Falso positivo | Claude ha avallato e aggravato un grave errore tecnico della ricetta. La semola di grano duro (Triticum durum) NON si classifica commercialmente con la forza 'W' (Alveografo di Chopin, usato per il grano tenero), ma tramite percentuale proteica (minimo 12.5%) e Indice di Glutine. Suggerire un 'W280-320' per la semola è un'inesattezza tecnica. |
+| Sale al 1.8% su farina: percentuale corretta ma al limite minimo | ⚠️ Parziale | 1.8% è accettabile. Aumentare al 2.2% (come suggerisce Claude) supererebbe il limite imposto dal Disciplinare DOP che prevede circa il 2% massimo. |
+| Nel PRO TIPS si menziona 'valore W' e 'marchi suggeriti' ma nella ricetta non sono specificati | ✅ Confermo | Evidente refuso (copia-incolla da un'altra ricetta) individuato correttamente da Claude. |
+| Temperatura cottura 250°C costante per 35 minuti + 220°C per 10 minuti: potrebbe essere ottimizzata | ❌ Falso positivo | Le istruzioni di cottura originali (250° e abbassamento a 220° alla fine) sono già ottime e perfettamente standard per la cottura in forno domestico di una pagnotta grande. Non necessitano di modifiche. |
 
 ---
-*Generato: 2026-03-30T19:46:05.960Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-03-30T20:09:32.412Z | Pipeline: Schema → Claude → Gemini*

@@ -30,7 +30,7 @@
   "stepsSpiral": [
     {
       "title": "Preparazione Lievito e Grassi",
-      "text": "Sciogliere il lievito di birra fresco in {strutto_impasto:100}g di acqua fresca (14-18°C) mescolando delicatamente. Portare lo strutto a temperatura ambiente finché risulti morbido ma non fuso (18-20°C). Se usate burro, deve essere plastico, non cremoso."
+      "text": "Sciogliere il lievito di birra fresco in {acqua_impasto:500}g di acqua fresca (14-18°C) mescolando delicatamente. Portare lo strutto a temperatura ambiente finché risulti morbido ma non fuso (18-20°C). Se usate burro, deve essere plastico, non cremoso."
     },
     {
       "title": "Impasto Base (V1 - 5 minuti)",
@@ -64,7 +64,7 @@
   "stepsHand": [
     {
       "title": "Preparazione Lievito e Grassi",
-      "text": "Sciogliere il lievito di birra fresco in {strutto_impasto:100}g di acqua tiepida (28-30°C) con 1 cucchiaino di zucchero. Lasciare attivare 10 minuti fino a comparsa di bollicine. Lo strutto deve essere morbido a temperatura ambiente (18-20°C)."
+      "text": "Sciogliere il lievito di birra fresco in {acqua_impasto:500}g di acqua tiepida (28-30°C) con 1 cucchiaino di zucchero. Lasciare attivare 10 minuti fino a comparsa di bollicine. Lo strutto deve essere morbido a temperatura ambiente (18-20°C)."
     },
     {
       "title": "Impasto Iniziale",

@@ -18,7 +18,7 @@
     },
     {
       "title": "Impasto Base con Spirale",
-      "text": "Nella vasca della spirale inserire la biga a pezzi, aggiungere il restante mix farine (560g manitoba + 240g tipo 0), {acqua_impasto_finale:600}g acqua fredda 8-10°C, {lievito_fresco_impasto_finale:12}g lievito fresco sbriciolato e {zucchero_impasto_finale:10}g miele. Avviare spirale a velocità 1 per 8 minuti fino a completa amalgamazione. La massa deve risultare ruvida ma omogenea. TEMPERATURA IMPASTO TARGET: 23-24°C massimo."
+      "text": "Nella vasca della spirale inserire la biga a pezzi, aggiungere il restante mix farine (560g manitoba + 240g tipo 0), {acqua_impasto_finale:600}g acqua fredda 8-10°C, {lievito_fresco_impasto_finale:12}g lievito fresco sbriciolato e {miele:10}g miele. Avviare spirale a velocità 1 per 8 minuti fino a completa amalgamazione. La massa deve risultare ruvida ma omogenea. TEMPERATURA IMPASTO TARGET: 23-24°C massimo."
     },
     {
       "title": "Incordatura e Aggiunta Olio",
@@ -52,7 +52,7 @@
     },
     {
       "title": "Impasto Base a Mano",
-      "text": "In ciotola grande sbriciolare la biga lievitata, aggiungere il restante mix farine (560g manitoba + 240g tipo 0), {zucchero_impasto_finale:10}g miele e 5g lievito fresco sbriciolato. Aggiungere 400g acqua tiepida (28-30°C) e mescolare con cucchiaio di legno fino a impasto ruvido. Versare su piano e iniziare a impastare: piegare la massa su se stessa, spingere con palmo, ruotare 90° e ripetere per 8-10 minuti."
+      "text": "In ciotola grande sbriciolare la biga lievitata, aggiungere il restante mix farine (560g manitoba + 240g tipo 0), {lievito_impasto_finale:12}g miele e 5g lievito fresco sbriciolato. Aggiungere 400g acqua tiepida (28-30°C) e mescolare con cucchiaio di legno fino a impasto ruvido. Versare su piano e iniziare a impastare: piegare la massa su se stessa, spingere con palmo, ruotare 90° e ripetere per 8-10 minuti."
     },
     {
       "title": "Aggiunta Acqua Residua e Olio (Bassinage)",

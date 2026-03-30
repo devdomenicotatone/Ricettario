@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T22:36:36.224Z",
+  "generatedAt": "2026-03-30T21:06:18.239Z",
   "totalRecipes": 25,
   "categories": [
     {
@@ -25,7 +25,7 @@
     {
       "name": "Dolci",
       "count": 3,
-      "emoji": "🍪"
+      "emoji": ""
     },
     {
       "name": "Focaccia",
@@ -105,20 +105,6 @@
       "tool": ""
     },
     {
-      "title": "Pane Pugliese con Biga",
-      "slug": "pane-pugliese-biga",
-      "category": "Pane",
-      "categoryDir": "pane",
-      "emoji": "🍞",
-      "href": "ricette/pane/pane-pugliese-biga.html",
-      "image": "images/ricette/pane/pane-pugliese-biga.webp",
-      "description": "Pane tradizionale pugliese con prefermento su biga a 12-14 ore. Crosta croccante, mollica soffice e alveolata, lunga conservabilità.",
-      "hydration": "62.7%",
-      "time": "~18h totali (biga 12-14h + puntata 3h + appretto 1h)",
-      "temp": "24-26°C",
-      "tool": ""
-    },
-    {
       "title": "Pinsa Romana",
       "slug": "pinsa-romana",
       "category": "Pizza",
@@ -190,29 +176,15 @@
     },
     {
       "title": "Burger Buns con Biga",
-      "slug": "burger-buns-biga",
+      "slug": "burger-buns-con-biga",
       "category": "Lievitati",
       "categoryDir": "lievitati",
       "emoji": "🍔",
-      "href": "ricette/lievitati/burger-buns-biga.html",
-      "image": "images/ricette/lievitati/burger-buns-biga.webp",
-      "description": "Panini americani morbidi con prefermento biga, doppia lievitazione e ricetta completa per impastatrice a spirale o impasto manuale",
+      "href": "ricette/lievitati/burger-buns-con-biga.html",
+      "image": "images/ricette/lievitati/burger-buns-con-biga.webp",
+      "description": "Panini per hamburger soffici e professionali con pre-impasto biga per massima digeribilità e shelf-life. Crosta dorata, mollica ariosa.",
       "hydration": "62%",
-      "time": "~4h totali (2h biga + 2h impasto finale)",
-      "temp": "26-27°C",
-      "tool": ""
-    },
-    {
-      "title": "Burger Buns Professionali",
-      "slug": "burger-buns-professionali",
-      "category": "Lievitati",
-      "categoryDir": "lievitati",
-      "emoji": "🍔",
-      "href": "ricette/lievitati/burger-buns-professionali.html",
-      "image": "images/ricette/lievitati/burger-buns-professionali.webp",
-      "description": "Panini americani professionali con pre-impasto biga e doppia lievitazione. Tecnica spirale e a mano per burger buns soffici con crosta dorata.",
-      "hydration": "58%",
-      "time": "~4h30 (biga 2h + puntata 1h30 + appretto 1h)",
+      "time": "~20h totali (biga 16-18h + puntata 2h + appretto 1.5h)",
       "temp": "26-27°C",
       "tool": ""
     },
@@ -252,9 +224,9 @@
       "emoji": "🎄",
       "href": "ricette/lievitati/panettone-classico.html",
       "image": "images/ricette/lievitati/panettone-classico.webp",
-      "description": "Panettone artigianale tradizionale con lievito madre, triplo impasto e lievitazione di 48 ore. Uvetta, canditi e alveolatura perfetta.",
-      "hydration": "45%",
-      "time": "~48h totali (con puntate intermedie)",
+      "description": "Panettone artigianale con lievito madre, uvetta e canditi. Impasto a doppia lievitazione per 24-48 ore con tecnica tradizionale milanese.",
+      "hydration": "42%",
+      "time": "~24-36h totali (primo impasto 12h + secondo impasto 12h + appretto finale 4-6h)",
       "temp": "26-28°C",
       "tool": ""
     },
@@ -381,6 +353,34 @@
       "description": "Focaccia tradizionale ligure con biga, salamoia e doppia lievitazione. Idratazione 75%, lievitazione controllata 5-6h totali per massima digeribilità.",
       "hydration": "75%",
       "time": "5-6h totali (biga 1,5-2h + impasto 3-4h + appretto 40min)",
+      "temp": "24-26°C",
+      "tool": ""
+    },
+    {
+      "title": "Burger Buns Professionali",
+      "slug": "burger-buns-professionali",
+      "category": "Lievitati",
+      "categoryDir": "lievitati",
+      "emoji": "🍔",
+      "href": "ricette/lievitati/burger-buns-professionali.html",
+      "image": "images/ricette/lievitati/burger-buns-professionali.webp",
+      "description": "Panini per hamburger soffici e dorati, con crosta sottile e mollica morbida. Lievitazione controllata e cottura perfetta",
+      "hydration": "62%",
+      "time": "~4-5h totali (biga 2h + puntata 2h + appretto 1h)",
+      "temp": "26-27°C",
+      "tool": ""
+    },
+    {
+      "title": "Pane Pugliese con Biga",
+      "slug": "pane-pugliese-con-biga",
+      "category": "Pane",
+      "categoryDir": "pane",
+      "emoji": "🍞",
+      "href": "ricette/pane/pane-pugliese-con-biga.html",
+      "image": "images/ricette/pane/pane-pugliese-con-biga.webp",
+      "description": "Pane pugliese tradizionale con biga 18-24h, crosta croccante e mollica alveolata. Metodo artigianale con semola rimacina",
+      "hydration": "70%",
+      "time": "~24-28h totali (biga 18-24h + puntata 3h + appretto 1h)",
       "temp": "24-26°C",
       "tool": ""
     }

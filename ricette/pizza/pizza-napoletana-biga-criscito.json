@@ -54,7 +54,7 @@
     },
     {
       "title": "2. Spezzamento Biga",
-      "text": "Versare la biga in una madia o grande ciotola. Aggiungere {malto_impasto_finale:15}g malto e 500g acqua (50% del totale). Con le mani, spezzare e sciogliere la biga nell'acqua per 5-6 minuti fino a ottenere una crema liquida e omogenea."
+      "text": "Versare la biga in una madia o grande ciotola. Aggiungere {acqua_impasto_finale:1650}g malto e 500g acqua (50% del totale). Con le mani, spezzare e sciogliere la biga nell'acqua per 5-6 minuti fino a ottenere una crema liquida e omogenea."
     },
     {
       "title": "3. Aggiunta Farine",
@@ -62,7 +62,7 @@
     },
     {
       "title": "4. Incorporamento Sale e Acqua",
-      "text": "Sciogliere {sale_impasto_finale:75}g sale in 500g acqua restante. Versare a riprese sull'impasto continuando a impastare. Tecnica slap and fold: sollevare l'impasto, sbatterlo sul piano, ripiegarlo. Ripetere 10-12 minuti. Aggiungere gli ultimi 650g acqua gradualmente. Impasto liscio, elastico, temperatura 23-24°C."
+      "text": "Sciogliere {acqua_impasto_finale:1650}g sale in 500g acqua restante. Versare a riprese sull'impasto continuando a impastare. Tecnica slap and fold: sollevare l'impasto, sbatterlo sul piano, ripiegarlo. Ripetere 10-12 minuti. Aggiungere gli ultimi 650g acqua gradualmente. Impasto liscio, elastico, temperatura 23-24°C."
     },
     {
       "title": "5. Puntata in Massa",

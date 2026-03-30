@@ -1,14 +1,14 @@
 # Qualità: Pinsa Romana
 
-## 🟢 Score Finale: 80/100
+## 🟡 Score Finale: 75/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 1 warning |
 | Claude | 88/100 | 🟢 Buona |
-| Gemini | 🟡 Parziale disaccordo (-8) | Claude ha fatto un buon lavoro sui refusi testuali e sui pla |
+| Gemini | 🟡 Parziale disaccordo (-13) | Claude ha colto un errore logico ma si è perso difetti molto |
 
-Ricetta molto ben strutturata con dosi corrette (idratazione 75%, lievito 0,2% perfetto per maturazione lunga). Setup appropriato per pinsa. Temperature e tempi coerenti. Procedimento dettagliato e tecnicamente accurato. Solo piccole imprecisioni nella descrizione di alcuni passaggi che non compromettono la riuscita della ricetta.
+Ricetta complessivamente ben strutturata con tecnica corretta per pinsa romana. L'idratazione 75% è appropriata, il lievito 0.2% per maturazione lunga è corretto, temperature e tempi sono realistici per forno casalingo. Setup coerente con il prodotto. Solo un errore di battitura nel procedimento che confonde acqua con semola, e dosaggio sale leggermente conservativo ma accettabile per stile romano.
 
 ## 🔍 Schema Validation
 
@@ -18,27 +18,28 @@ Ricetta molto ben strutturata con dosi corrette (idratazione 75%, lievito 0,2% p
 
 | Sev. | Area | Problema | Correzione | Fonte |
 |------|------|----------|------------|-------|
-| 💡 | Dosi | Errore nel step 3: indica '50g acqua fredda restante' ma dovrebbe essere '50g acqua fredda restante' (sono i 50g finali dei 750g totali) | Correggere con 'i 50g di acqua fredda restanti' | 🔵 Claude |
-| 💡 | Coerenza | Nel step 3 viene citata '{semola_impasto:50}g' con placeholder, ma si riferisce ai 50g di acqua restante, non alla semola | Sostituire con il riferimento corretto all'acqua o rimuovere il placeholder errato | 🔵 Claude |
-| 💡 | Gruppi | La semola di grano duro è elencata negli ingredienti dell'impasto ma serve solo per spolverare durante la stesura | Spostare la semola in un gruppo separato 'Per la lavorazione' o specificare meglio il suo utilizzo | 🔵 Claude |
-| ❌ | Procedimento (Lievitazione) | Step 4: Con 2g di lievito fresco su 1kg di farina (0.2%), l'impasto non arriverà mai 'fino al raddoppio' in 2 ore a 20-22°C. In 2 ore la fermentazione si avvierà appena. | Modificare in 'lasciare a temperatura ambiente per 1-2 ore per far partire la fermentazione (l'impasto non deve raddoppiare)'. | 🔴 Gemini |
-| ⚠️ | Matematica/Dosi | Il peso totale dell'impasto è di 1790g (1000g farine + 750g acqua + 20g olio + 18g sale + 2g lievito). Diviso per 6 panetti fa 298g a panetto, non 270-280g come scritto allo Step 5. | Correggere il peso dei panetti a 'circa 295-300g'. | 🔴 Gemini |
-| ⚠️ | Ingredienti | La forza della farina indicata (W 260-280) è troppo bassa per reggere un'idratazione del 75% e una maturazione in frigo fino a 48 ore. L'impasto rischia di cedere. | Aumentare la forza della farina 0 indicando 'W 320-350 (forza medio-alta)'. | 🔴 Gemini |
+| ❌ | Coerenza | Nel punto 3 si dice 'aggiungere 50g acqua fredda restante' ma si riferisce alla semola (50g). Errore di copy-paste che confonde acqua con semola. | Correggere: 'aggiungere 18g sale + 20g olio EVO + 50g acqua fredda restante' dove i 50g sono effettivamente acqua (700g + 50g = 750g totali) | 🔵 Claude |
+| ⚠️ | Dosi | Sale al 1.8% (18g su 1000g farine) è al limite inferiore per pizza. Standard italiano è 2-2.5%. | Considerare 20-25g di sale per migliorare sapore e struttura, pur rispettando la tradizione romana più delicata | 🔵 Claude |
+| 💡 | Coerenza | La semola è elencata negli ingredienti per 'spolverare durante stesura' ma nel procedimento si usa per infarinare il piano, non come ingrediente dell'impasto. | Chiarire nella lista ingredienti: 'Semola di Grano Duro Rimacinata (per infarinare piano di stesura)' per evitare confusione | 🔵 Claude |
+| ❌ | Formattazione | Il testo è pieno di variabili di sistema non renderizzate, come '{acqua_impasto:750}', '{farina_media_impasto:900}', '{lievito_fresco_impasto:2}', ecc. | Rimuovere le parentesi graffe e i tag di codice, lasciando solo i valori numerici nel testo del procedimento. | 🔴 Gemini |
+| ❌ | Lievitazione | Al punto 4 si afferma che con 2g di lievito (0.2%) l'impasto raddoppierà in 2 ore a temperatura ambiente (20-22°C). Questo è scientificamente impossibile; a queste dosi servirebbero 10-14 ore. | Modificare in: 'lasciare a temperatura ambiente per 2 ore per innescare la lievitazione (puntata) prima di mettere in frigo'. Rimuovere il riferimento al raddoppio in questa fase. | 🔴 Gemini |
+| ⚠️ | Matematica / Pezzatura | Il peso totale dell'impasto è 1790g (1000+750+2+18+20). Dividendo per 6 panetti si ottengono panetti da 298g, non 270-280g come scritto al punto 5. | Correggere il peso dei panetti a 'circa 295-300g ciascuno', oppure indicare la divisione in 7 panetti. | 🔴 Gemini |
+| 💡 | Ingredienti | Una farina con W 260-280 è al limite della tenuta per un'idratazione al 75% unita a una maturazione fino a 48h. Rischia di cedere. | Consigliare una farina W 300-320 per garantire una maglia glutinica solida a 48h con alta idratazione. | 🔴 Gemini |
 
 ## 🔴 Revisione Gemini
 
 **Verdetto**: 🟡 Parziale disaccordo
-**Adjustment**: -8
+**Adjustment**: -13
 
-Claude ha fatto un buon lavoro sui refusi testuali e sui placeholder errati, ma ha mancato completamente la revisione tecnica: la matematica dello staglio è sbagliata, la forza della farina è insufficiente per 48h al 75% di idratazione, e l'affermazione sul raddoppio in 2 ore con 2g di lievito è tecnicamente impossibile.
+Claude ha colto un errore logico ma si è perso difetti molto più gravi: la presenza di codice non processato nel testo, l'errore matematico sul peso dei panetti e, soprattutto, l'impossibilità tecnica di un raddoppio in 2 ore con lo 0.2% di lievito. Il punteggio va abbassato.
 
 ### Issues contestate
 
 | Problema | Verdetto | Motivo |
 |---|---|---|
-| Errore nel step 3: indica '50g acqua fredda restante' | ✅ Confermo | Corretto, il testo fa confusione a causa di un refuso sui placeholder. |
-| Nel step 3 viene citata '{semola_impasto:50}g' con placeholder | ✅ Confermo | Il tag della semola è stato palesemente usato per indicare l'acqua residua. |
-| La semola di grano duro è elencata negli ingredienti dell'impasto | ✅ Confermo | Creare un gruppo 'Per lo spolvero/stesura' rende la ricetta più ordinata ed evita che la semola venga impastata per sbaglio. |
+| Nel punto 3 si dice 'aggiungere 50g acqua fredda restante' ma si riferisce alla semola (50g). Errore di copy-paste che confonde acqua con semola. | ✅ Confermo | Corretto. Nel testo c'è un evidente errore di inserimento della variabile che mischia la semola con l'acqua. |
+| Sale al 1.8% (18g su 1000g farine) è al limite inferiore per pizza. Standard italiano è 2-2.5%. | ✅ Confermo | Osservazione sensata. La pinsa tollera sapori delicati, ma 1.8% è effettivamente il limite minimo sindacale. |
+| La semola è elencata negli ingredienti per 'spolverare durante stesura' ma nel procedimento si usa per infarinare il piano, non come ingrediente dell'impasto. | ❌ Falso positivo | Pignoleria inutile. 'Spolverare durante la stesura' significa esattamente cospargere il piano e la pasta con la semola per non farla attaccare. La dicitura originale andava benissimo. |
 
 ---
-*Generato: 2026-03-30T19:48:20.611Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-03-30T20:11:57.452Z | Pipeline: Schema → Claude → Gemini*

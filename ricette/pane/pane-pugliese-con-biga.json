@@ -1,0 +1,284 @@
+{
+  "title": "Pane Pugliese con Biga",
+  "slug": "pane-pugliese-con-biga",
+  "emoji": "🍞",
+  "description": "Pane pugliese tradizionale con biga 18-24h, crosta croccante e mollica alveolata. Metodo artigianale con semola rimacinata e farina forte.",
+  "subtitle": "Pagnotta rustica pugliese con pre-impasto biga per massima digeribilità e sapore intenso",
+  "category": "Pane",
+  "hydration": 70,
+  "targetTemp": "24-26°C",
+  "fermentation": "~24-28h totali (biga 18-24h + puntata 3h + appretto 1h)",
+  "totalFlour": 600,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per la Biga (18-24h prima)",
+      "items": [
+        {
+          "name": "Farina Tipo 0 Media-Alta Forza",
+          "note": "(W 280-320, proteine 12-13%)",
+          "grams": 100,
+          "excludeFromTotal": true
+        },
+        {
+          "name": "Acqua",
+          "note": "(temperatura ambiente 20-22°C)",
+          "grams": 45,
+          "excludeFromTotal": true
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(0.5-1g per maturazione lunga)",
+          "grams": 0.8,
+          "excludeFromTotal": true
+        }
+      ]
+    },
+    {
+      "group": "Per l'Impasto Finale",
+      "items": [
+        {
+          "name": "Biga Matura",
+          "note": "(tutto il pre-impasto, ~145g)",
+          "grams": 145
+        },
+        {
+          "name": "Semola Rimacinata di Grano Duro",
+          "note": "(Caputo Semola o Molino Spadoni)",
+          "grams": 500
+        },
+        {
+          "name": "Acqua",
+          "note": "(16-18°C per spirale, 18-20°C a mano)",
+          "grams": 330,
+          "setupNote": {
+            "spirale": "(16-18°C, compensare calore meccanico)",
+            "mano": "(18-20°C, lavorazione più lunga)"
+          }
+        },
+        {
+          "name": "Sale Marino Fino",
+          "note": "(1.6-1.8% su farina)",
+          "grams": 10
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(ridotto per presenza biga)",
+          "grams": 3,
+          "setupNote": {
+            "spirale": "(3g, impasto 10-12 min)",
+            "mano": "(4g, lavorazione più lunga +30%)"
+          }
+        },
+        {
+          "name": "Miele o Malto d'Orzo",
+          "note": "(opzionale, migliora crosta e attività enzimatica)",
+          "grams": 5
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "stepsSpiral": [
+    {
+      "title": "Preparazione Biga (18-24h prima)",
+      "text": "Sciogliere {lievito_fresco_biga:0.8}g di lievito in {acqua_biga:45}g di acqua a temperatura ambiente. Aggiungere {farina_biga:100}g di farina Tipo 0 e impastare brevemente (2-3 min velocità V1) fino a ottenere un panetto ruvido e asciutto. La biga deve avere consistenza solida, non appiccicosa. Trasferire in una ciotola, coprire con pellicola e lasciare maturare a 18-20°C per 18-24 ore. La biga è pronta quando triplica di volume, presenta una superficie a cupola screpolata e emana profumo dolce-acido di fermentazione."
+    },
+    {
+      "title": "Impasto Base (Incordatura)",
+      "text": "Spezzettare la biga matura in pezzi grossolani direttamente nella vasca dell'impastatrice. Aggiungere {semola_rimacinata:500}g di semola rimacinata, {acqua_impasto:280}g di acqua fredda (riservare {acqua_bassinage:50}g per bassinage) e {miele:5}g di miele o malto. Avviare impastatrice a V1 per 3-4 minuti fino a incorporare biga e idratare completamente la semola. Aggiungere {lievito_impasto:3}g di lievito sbriciolato e aumentare a V2 per 4-5 minuti. Quando l'impasto inizia a incordarsi (si stacca dalle pareti), aggiungere {sale:10}g di sale."
+    },
+    {
+      "title": "Sviluppo Glutine e Bassinage",
+      "text": "Continuare impastamento a V2-V3 per 3-4 minuti dopo il sale. Quando l'impasto è liscio ma ancora leggermente appiccicoso, aggiungere i restanti {acqua_bassinage:50}g di acqua a filo (tecnica bassinage) mentre l'impastatrice lavora a V2. Questo aumenta l'idratazione finale senza stressare la maglia glutinica. Impastare ulteriori 2-3 minuti a V3 fino a completa incordatura: l'impasto deve staccarsi nettamente dalla vasca, risultare elastico e liscio al tatto. Temperatura finale target: 24-26°C. Tempo totale impastamento: 10-12 minuti."
+    },
+    {
+      "title": "Puntata in Massa (Prima Lievitazione)",
+      "text": "Formare una palla (pirlatura leggera senza sgonfiare) e trasferire l'impasto in un contenitore trasparente leggermente unto d'olio. Coprire con pellicola e lasciare lievitare a 24-26°C per 2.5-3 ore. L'impasto deve raddoppiare di volume e presentare superficie a cupola con alveoli visibili. A metà puntata (dopo 1.5h) eseguire una piega di rinforzo: stendere delicatamente l'impasto su piano infarinato, portare i bordi verso il centro (nord-sud, est-ovest), rigirare con chiusura sotto e riposizionare nel contenitore."
+    },
+    {
+      "title": "Formatura Pagnotta Pugliese",
+      "text": "Rovesciare l'impasto lievitato su piano leggermente infarinato SENZA sgonfiare. Stendere delicatamente in un rettangolo largo circa 25cm. Eseguire formatura a rotolo stretto: portare il lembo superiore verso il basso di 1/3, premere con i palmi per sigillare, ripetere con il lembo inferiore verso l'alto. Ruotare l'impasto di 90° e arrotolare su se stesso dalla parte alta verso il basso, sigillando ogni giro con la base del palmo. Alla fine, chiudere bene la saldatura pizzicando con le dita. Posizionare con saldatura SOTTO su teglia infarinata con semola o farina di mais."
+    },
+    {
+      "title": "Appretto Finale (Seconda Lievitazione)",
+      "text": "Coprire la pagnotta con un canovaccio umido o una ciotola capovolta per evitare crostificazione. Lasciare lievitare a 24-26°C per 50-70 minuti. La pagnotta è pronta quando aumenta di volume del 70-80% (non raddoppia), al tocco risulta soffice ma con leggera resistenza (prova dito: impronta torna lentamente). Non sovralievitare: il pane pugliese deve mantenere struttura per reggere la cottura in forno molto caldo."
+    },
+    {
+      "title": "Preparazione alla Cottura",
+      "text": "Negli ultimi 30 minuti di appretto, preriscaldare il forno a 250°C (statico) con pietra refrattaria o teglia rovesciata sul ripiano centrale. Posizionare una leccarda vuota sul fondo del forno. Quando il forno è caldo, praticare sulla pagnotta 3-4 tagli obliqui profondi 1cm con lama affilata o lametta (taglio deciso, senza esitazioni). Spolverare leggermente con semola."
+    },
+    {
+      "title": "Cottura con Vapore",
+      "text": "Trasferire la pagnotta sulla pietra calda (con pala o scorrimento da carta forno). Versare IMMEDIATAMENTE 100ml di acqua bollente nella leccarda sul fondo (creare vapore iniziale per oven spring). Chiudere subito il forno. Cuocere a 250°C per 10 minuti (fase vapore), poi abbassare a 200°C e cuocere altri 35-40 minuti. La pagnotta è cotta quando crosta è dorata scura, alla battitura sul fondo suona vuota e la temperatura interna è 96-98°C. Sfornare e raffreddare su griglia per almeno 1 ora prima di tagliare."
+    }
+  ],
+  "stepsHand": [
+    {
+      "title": "Preparazione Biga (18-24h prima)",
+      "text": "Sciogliere {lievito_fresco_biga:0.8}g di lievito in {acqua_biga:45}g di acqua a temperatura ambiente in una ciotola. Aggiungere {farina_biga:100}g di farina Tipo 0 e mescolare con un cucchiaio fino a formare un impasto grezzo e asciutto. Rovesciare su piano e impastare manualmente per 3-4 minuti: la biga deve risultare compatta, ruvida, NON liscia. Formare una palla, trasferire in ciotola coperta con pellicola e lasciare maturare 18-24h a 18-20°C. La biga è pronta quando triplica, si formano crepe in superficie e odora di lievito maturo."
+    },
+    {
+      "title": "Impasto Base (Integrazione Ingredienti)",
+      "text": "Spezzettare la biga matura in pezzi piccoli in una grande ciotola. Aggiungere {acqua_impasto:280}g di acqua (riservare {acqua_bassinage:50}g), {miele:5}g di miele e {lievito_impasto:4}g di lievito sbriciolato. Mescolare con cucchiaio di legno fino a sciogliere parzialmente la biga (non deve essere completamente omogenea). Aggiungere {semola_rimacinata:500}g di semola rimacinata e mescolare fino a incorporare tutta la farina. L'impasto risulterà grezzo e appiccicoso."
+    },
+    {
+      "title": "Autolisi e Sviluppo Glutine (Slap & Fold)",
+      "text": "Coprire la ciotola e lasciare riposare 20 minuti (autolisi parziale con biga). Spargere {sale:10}g di sale sull'impasto e incorporarlo con le dita bagnate. Rovesciare l'impasto su piano NON infarinato. Eseguire tecnica slap & fold per 8-10 minuti: afferrare l'impasto, sollevarlo e sbatterlo energicamente sul piano, piegarlo su se stesso, ruotare di 90° e ripetere. Ogni 2 minuti aggiungere gradualmente i {acqua_bassinage:50}g di acqua riservata (a cucchiai). L'impasto passerà da appiccicoso a liscio, elastico e solo leggermente adesivo. Temperatura finale: 25-27°C (più alta che a spirale per calore mani)."
+    },
+    {
+      "title": "Puntata con Pieghe di Rinforzo",
+      "text": "Formare una palla e trasferire in contenitore unto. Coprire e lasciare lievitare a 24-26°C per 3-3.5 ore totali. Eseguire 2 serie di pieghe di rinforzo: dopo 60 min e dopo 120 min. Tecnica piega: bagnare le mani, stendere delicatamente l'impasto nella ciotola, portare i 4 lati verso il centro (su-giù-destra-sinistra), rigirare con chiusura sotto. Le pieghe rinforzano il glutine senza degassare. Alla fine della puntata l'impasto deve essere raddoppiato, soffice, con alveoli visibili in superficie."
+    },
+    {
+      "title": "Formatura Pagnotta",
+      "text": "Rovesciare l'impasto su piano leggermente infarinato con semola. NON sgonfiare. Pre-formare in un rettangolo largo 25cm con tocchi delicati (solo appiattire, non stendere con forza). Formatura a rotolo: piegare 1/3 superiore verso centro, premere con palmi per sigillare, piegare 1/3 inferiore sopra, sigillare. Ruotare di 90°. Arrotolare dalla parte alta verso il basso, sigillando ogni giro con pressione decisa ma controllata. Chiudere la saldatura finale pizzicando bene. Posizionare con saldatura SOTTO su teglia con semola o carta forno infarinata."
+    },
+    {
+      "title": "Appretto Finale",
+      "text": "Coprire con canovaccio umido o ciotola capovolta. Lievitare a 24-26°C per 60-80 minuti (leggermente più lungo che a spirale per compensare lievito in più). La pagnotta è pronta quando aumenta del 70-80%, alla pressione leggera con dito l'impronta torna lentamente (non subito = sovralievitato, non torna = sottolievitato). Il pane pugliese deve mantenere buona struttura per oven spring in cottura."
+    },
+    {
+      "title": "Preparazione e Incisione",
+      "text": "Negli ultimi 30 min di appretto preriscaldare forno a 250°C statico con pietra refrattaria (o teglia rovesciata) e leccarda vuota sul fondo. Quando il forno è pronto, praticare sulla pagnotta 3-4 tagli obliqui profondi 1cm con lama affilata o lametta da barba. I tagli devono essere DECISI e veloci (esitare provoca strappi). Spolverare con semola."
+    },
+    {
+      "title": "Cottura",
+      "text": "Trasferire la pagnotta sulla pietra calda con una pala o facendo scivolare dalla carta forno. SUBITO versare 100ml di acqua bollente nella leccarda sul fondo (vapore per oven spring). Chiudere forno immediatamente. Cuocere 10 min a 250°C, poi abbassare a 200°C e cuocere 40-45 minuti totali. La crosta deve essere dorata scura e croccante, il fondo alla battitura suona vuoto, temperatura interna 96-98°C. Sfornare, raffreddare su griglia almeno 1h prima di affettare (la mollica stabilizza raffreddandosi)."
+    }
+  ],
+  "flourTable": [
+    {
+      "type": "Farina Tipo 0 per Biga",
+      "w": "280-320",
+      "brands": "Caputo Cuoco (W 300), Molino Spadoni Chef (W 300), Le 5 Stagioni Manitoba (W 350), Molino Grassi Panettone (W 340)"
+    },
+    {
+      "type": "Semola Rimacinata",
+      "w": "N/A (grano duro)",
+      "brands": "Caputo Semola Rimacinata, Molino Spadoni Semola, Divella Semola Rimacinata, Casillo Semola"
+    }
+  ],
+  "baking": {
+    "temperature": "250°C iniziali, poi 200°C",
+    "time": "50 minuti totali (10 min a 250°C + 40 min a 200°C)",
+    "tips": [
+      "Preriscaldare forno + pietra refrattaria per 45 minuti a 250°C prima di infornare",
+      "Creare vapore versando 100ml acqua bollente in leccarda sul fondo nei primi 10 secondi di cottura",
+      "Usare SEMPRE forno STATICO (mai ventilato) — il ventilato impedisce oven spring e secca la crosta",
+      "La pagnotta è cotta quando: crosta dorata scura quasi bruciata, fondo suona vuoto alla battitura, temperatura interna 96-98°C (termometro a sonda)",
+      "Raffreddare SEMPRE su griglia per almeno 1h — tagliare il pane caldo rilascia vapore e rende la mollica gommosa"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Biga",
+      "definition": "Pre-impasto rigido (idratazione 45-50%) maturato 16-24h. Sviluppa acidi organici, enzimi e aromi complessi che migliorano digeribilità, alveolatura e shelf-life del pane. Differisce dal poolish (liquido al 100% idratazione)."
+    },
+    {
+      "term": "Incordatura",
+      "definition": "Fase dell'impastamento in cui il glutine si sviluppa completamente e l'impasto si stacca dalle pareti della vasca formando un 'cordone' elastico attorno al gancio. Indica che la maglia glutinica è formata."
+    },
+    {
+      "term": "Bassinage",
+      "definition": "Tecnica di aggiunta graduale dell'acqua a fine impastamento (5-10% dell'idratazione totale). Permette di raggiungere alte idratazioni senza compromettere la struttura glutinica. L'acqua si aggiunge a filo quando l'impasto è già incordato."
+    },
+    {
+      "term": "Puntata",
+      "definition": "Prima lievitazione in massa (impasto intero) dopo l'impastamento. Serve a sviluppare aromi, gas e struttura alveolare. Dura 2-4h a temperatura ambiente o 12-24h in frigo."
+    },
+    {
+      "term": "Pirlatura",
+      "definition": "Tecnica di arrotondamento dell'impasto a forma di sfera (boule). Si esegue facendo ruotare l'impasto sul piano con movimenti circolari delle mani, creando tensione superficiale senza sgonfiare."
+    },
+    {
+      "term": "Appretto",
+      "definition": "Lievitazione finale dopo la formatura. L'impasto già formato riposa coperto fino a raggiungere il volume ottimale per la cottura (70-90% della crescita finale). Dura 30-90 min a seconda di ricetta e temperatura."
+    },
+    {
+      "term": "Oven Spring",
+      "definition": "Esplosione di crescita del pane nei primi 10-12 minuti di cottura. Il calore attiva il lievito (fino a 50°C), vaporizza l'acqua e dilata i gas intrappolati. Il vapore iniziale mantiene la crosta morbida permettendo massima espansione."
+    },
+    {
+      "term": "Slap & Fold",
+      "definition": "Tecnica di impastamento manuale ad alta energia. Si solleva l'impasto, lo si sbatte energicamente sul piano, si piega su se stesso e si ruota. Sviluppa glutine senza bisogno di farina extra sul piano (si lavora su superficie pulita)."
+    },
+    {
+      "term": "Pieghe di Rinforzo (Stretch & Fold)",
+      "definition": "Serie di pieghe eseguite durante la puntata (ogni 30-60 min) per rinforzare il glutine senza degassare completamente. Si stende delicatamente l'impasto e si portano i bordi verso il centro. Migliora struttura e alveolatura."
+    },
+    {
+      "term": "Idratazione",
+      "definition": "Percentuale di liquidi (acqua, latte, uova liquide) rispetto al peso totale delle farine. Esempio: 350g acqua su 500g farina = 70% idratazione. Idratazioni alte (>70%) danno mollica soffice e alveolata ma impasti più difficili da gestire."
+    },
+    {
+      "term": "Maglia Glutinica",
+      "definition": "Rete tridimensionale di proteine (glutenina + gliadina) che si forma durante l'impastamento. Intrappola gas e dà struttura all'impasto. Si sviluppa con lavoro meccanico, idratazione corretta e tempo di riposo."
+    },
+    {
+      "term": "Temperatura Finale Impasto",
+      "definition": "Temperatura dell'impasto al termine della lavorazione. Ideale 24-26°C per panificazione. Temperature alte (>28°C) accelerano fermentazione ma indeboliscono glutine. Si controlla regolando temperatura acqua e tempo impastamento."
+    }
+  ],
+  "variants": [
+    {
+      "id": "cold-fermentation",
+      "label": "❄️ Maturazione in Frigo 24-48h",
+      "description": "Lievitazione controllata a 4-6°C per sviluppare aromi complessi, alveolatura pronunciata e massima digeribilità. Metodo professionale per panifici.",
+      "ingredientOverrides": [
+        {
+          "ref": "lievito_impasto",
+          "grams": 1.5,
+          "note": "(ridotto del 50% per maturazione lunga in frigo)"
+        }
+      ],
+      "branchAfterStep": 3,
+      "altSteps": [
+        {
+          "title": "Maturazione in Frigo (24-48h)",
+          "text": "Al termine della puntata in massa (dopo 2.5-3h a temperatura ambiente), quando l'impasto è ben lievitato e alveolato, coprire ermeticamente il contenitore con pellicola. Trasferire in frigorifero a 4-6°C e lasciare maturare per 24-48 ore. La fermentazione rallenta drasticamente ma continua: i lieviti producono meno gas, i batteri lattici sviluppano acidi (sapore complesso), gli enzimi scindono gli amidi (maggiore digeribilità). L'impasto si rilassa e diventa più estensibile. Dopo 24h: sapore delicato, alveolatura media. Dopo 48h: sapore intenso acido-dolce, alveolatura pronunciata, shelf-life +2 giorni."
+        },
+        {
+          "title": "Ritempramento e Formatura",
+          "text": "Estrarre l'impasto dal frigo e lasciarlo a temperatura ambiente per 1-1.5 ore (ritempramento). L'impasto deve tornare a 18-20°C per essere lavorabile. Rovesciare delicatamente su piano infarinato con semola SENZA sgonfiare (gli alveoli freddi sono fragili). Eseguire formatura a rotolo come da procedimento standard: pre-formare rettangolo, piegare in 3, ruotare, arrotolare stretto sigillando ogni giro. La maglia glutinica rilassata dal freddo sarà molto estensibile — lavorare con decisione ma delicatezza per non strappare."
+        },
+        {
+          "title": "Appretto Finale Post-Frigo",
+          "text": "Posizionare la pagnotta formata su teglia con semola, saldatura sotto. Coprire con canovaccio umido. Lievitare a 24-26°C per 1.5-2 ore (più lungo del metodo standard perché l'impasto parte freddo e il lievito è meno attivo). La pagnotta è pronta quando aumenta del 60-70% (meno del metodo diretto — l'impasto maturo ha meno spinta), al tocco risulta soffice con leggera resistenza. Non sovralievitare: l'impasto freddo ha meno tenuta strutturale."
+        },
+        {
+          "title": "Cottura Pane Maturo",
+          "text": "Preriscaldare forno a 250°C con pietra e leccarda. Incidere la pagnotta con 3-4 tagli obliqui profondi 1cm. Infornare sulla pietra, versare 100ml acqua bollente in leccarda (vapore). Cuocere 10 min a 250°C, poi 40-45 min a 200°C. Il pane maturo sviluppa crosta molto scura (quasi bruciata) per caramellizzazione avanzata degli zuccheri prodotti dalla maturazione. È normale e desiderabile. Controllo cottura: suono vuoto al fondo, temperatura interna 96-98°C. Raffreddare 1-2h su griglia prima di tagliare."
+        }
+      ]
+    }
+  ],
+  "alert": "⚠️ NON usare forno ventilato durante la cottura del pane — il flusso d'aria continuo impedisce l'oven spring (espansione iniziale) e secca eccessivamente la crosta impedendo la corretta caramellizzazione. Il pane pugliese DEVE cuocere in forno statico. NON aggiungere farina durante l'impastamento se sembra appiccicoso: con idratazione al 70% è normale che l'impasto sia morbido e leggermente adesivo. Aggiungere farina compromette l'alveolatura e rende la mollica asciutta. Lavorare con mani/piano leggermente bagnati invece di infarinare. NON sovralievitare l'appretto: il pane pugliese richiede una lievitazione finale del 70-80% (NON raddoppio completo) per mantenere struttura durante l'oven spring in forno caldissimo.",
+  "proTips": [
+    "💡 Controllo maturazione biga — La biga è perfetta quando: triplica di volume, presenta crepe superficiali a raggiera, odora di yogurt dolce (non acido forte = sovramatura), se tagliata mostra alveoli medi e struttura filamentosa. Una biga sottomatura (odore di lievito grezzo, pochi alveoli) darà pane piatto con scarsa alveolatura. Una sovramatura (odore acido pungente, collassa facilmente) darà impasto colloso impossibile da lavorare.",
+    "💡 Test della finestra per incordatura — Per verificare che l'impasto sia pronto dopo impastamento: prelevare una piccola porzione, stendera delicatamente con le dita formando un quadrato sottile. Se riesci a creare una 'finestra' semi-trasparente senza che si rompa, il glutine è sviluppato perfettamente. Se si strappa subito, impastare altri 2-3 minuti. Questo test funziona sia per spirale che a mano.",
+    "💡 Crosta scura = sapore — Il pane pugliese tradizionale ha una crosta MOLTO scura, quasi bruciata in alcuni punti. Non è un errore: la caramellizzazione avanzata (reazione di Maillard) sviluppa note tostate, nocciolate e caramellate che caratterizzano questo pane. Una crosta bionda/dorata chiara indica cottura insufficiente e sapore piatto. Fidati della temperatura interna (96-98°C) e del suono vuoto, non del colore 'rassicurante'."
+  ],
+  "imageKeywords": [
+    "pugliese bread crust dark",
+    "italian rustic bread crumb",
+    "pane pugliese traditional",
+    "artisan sourdough loaf crusty",
+    "homemade italian bread scored",
+    "pugliese brot kruste",
+    "pane artigianale alveolato",
+    "crusty bread semolina flour"
+  ],
+  "tags": [
+    "pane",
+    "biga",
+    "semola",
+    "pugliese",
+    "lievitazione-lunga",
+    "artigianale",
+    "tradizionale",
+    "rustico"
+  ],
+  "image": "images/ricette/pane/pane-pugliese-con-biga.webp",
+  "imageAttribution": "📷 Foto: Travel with  Lenses — Pexels License via Pexels"
+}

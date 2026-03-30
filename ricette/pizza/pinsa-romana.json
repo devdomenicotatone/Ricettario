@@ -22,7 +22,7 @@
     },
     {
       "title": "Fase 2 - Sviluppo glutine (2a velocità, 8-10 min)",
-      "text": "Passare a 2a velocità e impastare 8-10 minuti fino a completa incordatura. Quando l'impasto inizia a staccarsi dalle pareti, aggiungere {sale_impasto:18}g sale + {olio_evo_impasto:20}g olio EVO + {semola_impasto:50}g acqua fredda restante. Continuare a impastare 2-3 minuti. L'impasto finale deve essere liscio, elastico ma molto morbido e leggermente appiccicoso. Temperatura impasto: 24-26°C massimo."
+      "text": "Passare a 2a velocità e impastare 8-10 minuti fino a completa incordatura. Quando l'impasto inizia a staccarsi dalle pareti, aggiungere {sale_impasto:18}g sale + {olio_evo_impasto:20}g olio EVO + {acqua_impasto:750}g acqua fredda restante. Continuare a impastare 2-3 minuti. L'impasto finale deve essere liscio, elastico ma molto morbido e leggermente appiccicoso. Temperatura impasto: 24-26°C massimo."
     },
     {
       "title": "Prima fermentazione (puntata)",
@@ -56,7 +56,7 @@
     },
     {
       "title": "Fase 2 - Idratazione graduale (15 min)",
-      "text": "Aggiungere 200g acqua a filo continuando a impastare e piegare. L'impasto diventerà ancora più morbido: continuare con slap & fold per 10 minuti. Aggiungere {sale_impasto:18}g sale + {olio_evo_impasto:20}g olio + {semola_impasto:50}g acqua finali. Impastare altri 5 minuti fino a completo assorbimento. L'impasto deve essere liscio, molto elastico ma appiccicoso. Se la temperatura supera 26°C, far riposare 10 minuti in ciotola coperta."
+      "text": "Aggiungere 200g acqua a filo continuando a impastare e piegare. L'impasto diventerà ancora più morbido: continuare con slap & fold per 10 minuti. Aggiungere {sale_impasto:18}g sale + {olio_evo_impasto:20}g olio + {acqua_impasto:750}g acqua finali. Impastare altri 5 minuti fino a completo assorbimento. L'impasto deve essere liscio, molto elastico ma appiccicoso. Se la temperatura supera 26°C, far riposare 10 minuti in ciotola coperta."
     },
     {
       "title": "Prima fermentazione (puntata)",

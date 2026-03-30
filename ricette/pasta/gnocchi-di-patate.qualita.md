@@ -5,10 +5,10 @@
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 1 warning |
-| Claude | 92/100 | 🟢 Buona |
-| Gemini | 🟡 Parziale disaccordo | Ricetta ottima e tecnicamente validissima. Claude ha individ |
+| Claude | 88/100 | 🟢 Buona |
+| Gemini | 🟡 Parziale disaccordo (+4) | La ricetta è tecnicamente eccellente: le regole sulle patate |
 
-Ricetta tecnicamente molto solida con dosi corrette (300g farina su 1kg patate è il rapporto tradizionale), procedimento dettagliato e ben strutturato. Gli alert e pro tips sono particolarmente utili. Solo piccoli dettagli di coerenza da sistemare, ma la qualità complessiva è eccellente.
+Ricetta tecnicamente solida con proporzioni corrette (75% patate, 25% farina circa) e procedimento dettagliato. La temperatura delle patate calde è fondamentale e ben spiegata. Il riposo pre-cottura è un dettaglio professionale apprezzabile. Lievi migliorie su dosaggio sale e coerenza ingredienti.
 
 ## 🔍 Schema Validation
 
@@ -18,25 +18,25 @@ Ricetta tecnicamente molto solida con dosi corrette (300g farina su 1kg patate �
 
 | Sev. | Area | Problema | Correzione | Fonte |
 |------|------|----------|------------|-------|
-| 💡 | Dosi | Nel procedimento si menziona 'noce moscata (facoltativa)' ma non è presente negli ingredienti | Aggiungere 'Noce Moscata (facoltativa) 1-2g' negli ingredienti oppure rimuovere il riferimento dal procedimento | 🔵 Claude |
-| 💡 | Coerenza | Il placeholder '{sale_impasto:10}' nella sezione cottura dovrebbe essere sostituito con il valore numerico | Sostituire con '10g sale per litro' per chiarezza | 🔵 Claude |
-| 💡 | Setup | Per la pasta fresca tradizionale come gli gnocchi, potrebbe essere appropriato aggiungere anche l'opzione 'Estrusore' nel setup | Considerare l'aggiunta di 'Estrusore' per chi volesse utilizzare macchinari specifici per pasta | 🔵 Claude |
-| 💡 | Coerenza | Nei PRO TIPS si afferma: 'Se non trovi i marchi suggeriti, cerca qualsiasi farina...'. Tuttavia, nella lista ingredienti non è suggerito alcun marchio di farina (sono citate solo le varietà di patate Desiree/Kennebec). | Rimuovere il riferimento ai marchi dai Pro Tips o inserire marchi di esempio nella lista ingredienti. | 🔴 Gemini |
-| 💡 | Metadata | La 'TEMPERATURA TARGET: 28-32°C' è un parametro tipico dei lievitati (pane/pizza) per favorire la fermentazione. Per gli gnocchi, le patate si impastano da calde, ma non c'è una temperatura di chiusura/mantenimento target da rispettare per i lieviti. | Impostare 'N/A' o 'Temperatura ambiente' nella temperatura target. | 🔴 Gemini |
+| 💡 | Dosi | La percentuale di sale (1% su patate) è corretta ma inusualmente bassa rispetto agli standard pasta (1.8-2.5%) | Considerare 15-18g di sale per un sapore più marcato, tipico della tradizione | 🔵 Claude |
+| 💡 | Setup | Setup 'A mano' è corretto per gnocchi tradizionali, ma manca riferimento ad alternative come planetaria con gancio a bassa velocità | Aggiungere opzione planetaria per chi preferisce un approccio semi-meccanico | 🔵 Claude |
+| 💡 | Coerenza | Nel procedimento si cita 'noce moscata (facoltativa)' ma non è presente negli ingredienti | Aggiungere 'Noce Moscata (facoltativo) 2g' negli ingredienti o rimuovere dal procedimento | 🔵 Claude |
+| ⚠️ | Formattazione/Testo | Nel punto 5 (Cottura) è rimasto un tag o segnaposto di codice visibile: '{sale_impasto:10}g sale per litro'. | Sostituire il tag con il valore testuale corretto (es. '10g di sale per litro'). | 🔴 Gemini |
 
 ## 🔴 Revisione Gemini
 
 **Verdetto**: 🟡 Parziale disaccordo
+**Adjustment**: +4
 
-Ricetta ottima e tecnicamente validissima. Claude ha individuato bene i refusi, ma ha preso una cantonata suggerendo l'uso di un estrusore per un impasto di patate. Segnalo inoltre alcune lievi incoerenze nei Pro Tips e nei metadati sfuggite al primo controllo.
+La ricetta è tecnicamente eccellente: le regole sulle patate calde e sulla lavorazione breve sono perfette. Ho respinto il consiglio di Claude sull'uso della planetaria (che rovinerebbe gli gnocchi) e sul sale, ma ho penalizzato lievemente la presenza di un tag di codice sfuggito nel testo.
 
 ### Issues contestate
 
 | Problema | Verdetto | Motivo |
 |---|---|---|
-| Nel procedimento si menziona 'noce moscata (facoltativa)' ma non è presente negli ingredienti | ✅ Confermo | Corretto, è una classica svista in cui si cita un ingrediente nello svolgimento senza averlo listato. |
-| Il placeholder '{sale_impasto:10}' nella sezione cottura dovrebbe essere sostituito con il valore numerico | ✅ Confermo | Giusto, è un evidente errore di formattazione/variabile non parsata nel testo. |
-| Per la pasta fresca tradizionale come gli gnocchi, potrebbe essere appropriato aggiungere anche l'opzione 'Estrusore' nel setup | ❌ Falso positivo | Consiglio tecnicamente assurdo. Gli gnocchi di patate non si fanno MAI al torchio/estrusore (l'amido della patata tapperebbe la trafila e creerebbe colla). Esistono le 'gnoccatrici' a rulli, ma non sono estrusori. |
+| La percentuale di sale (1% su patate) è bassa rispetto agli standard pasta | ❌ Falso positivo | Gli gnocchi di patate non sono pasta all'uovo o di semola. 10g di sale nell'impasto sono corretti, a volte non si mette affatto, poiché l'impasto cuoce in acqua salata assorbendone la sapidità. Aumentarlo a 15-18g è inutile e rischioso. |
+| Manca riferimento ad alternative come planetaria | ❌ Falso positivo | Consigliare la planetaria per gli gnocchi è un errore tecnico grave. Come ben dice la ricetta, l'impasto va lavorato pochissimo. Un'azione meccanica svilupperebbe glutine rendendo gli gnocchi gommosi. Il setup 'A mano' è l'unico corretto per le dosi casalinghe. |
+| Manca noce moscata negli ingredienti | ✅ Confermo | Corretta segnalazione di incoerenza tra lista ingredienti e procedimento. |
 
 ---
-*Generato: 2026-03-30T19:50:49.521Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-03-30T20:14:36.355Z | Pipeline: Schema → Claude → Gemini*

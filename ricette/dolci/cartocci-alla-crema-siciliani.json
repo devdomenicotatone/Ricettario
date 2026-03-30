@@ -14,7 +14,7 @@
   "stepsSpiral": [
     {
       "title": "Scioglimento lievito",
-      "text": "Sciogliere il lievito di birra fresco in {semola_impasto:50}g di acqua (18-20°C) prelevata dalla dose totale. Mescolare delicatamente e lasciare riposare 2-3 minuti."
+      "text": "Sciogliere il lievito di birra fresco in {acqua_impasto:250}g di acqua (18-20°C) prelevata dalla dose totale. Mescolare delicatamente e lasciare riposare 2-3 minuti."
     },
     {
       "title": "Impastamento base — V1 per 4-5 minuti",
@@ -48,7 +48,7 @@
   "stepsHand": [
     {
       "title": "Scioglimento lievito",
-      "text": "Sciogliere il lievito di birra fresco in {semola_impasto:50}g di acqua tiepida (20-22°C) prelevata dalla dose totale. Mescolare delicatamente e lasciare riposare 2-3 minuti."
+      "text": "Sciogliere il lievito di birra fresco in {acqua_impasto:250}g di acqua tiepida (20-22°C) prelevata dalla dose totale. Mescolare delicatamente e lasciare riposare 2-3 minuti."
     },
     {
       "title": "Impastamento base — fontana e incordatura",

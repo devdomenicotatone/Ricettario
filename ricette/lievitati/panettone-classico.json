@@ -2,277 +2,75 @@
   "title": "Panettone Classico",
   "slug": "panettone-classico",
   "emoji": "🎄",
-  "description": "Panettone artigianale tradizionale con lievito madre, triplo impasto e lievitazione di 48 ore. Uvetta, canditi e alveolatura perfetta.",
-  "subtitle": "Grande lievitato tradizionale con lievito madre e triplo impasto",
+  "description": "Panettone artigianale con lievito madre, uvetta e canditi. Impasto a doppia lievitazione per 24-48 ore con tecnica tradizionale milanese.",
+  "subtitle": "Il dolce natalizio milanese per eccellenza — lievitazione lenta, uvetta e canditi, crosta dorata e alveolatura soffice",
   "category": "Lievitati",
-  "hydration": 45,
+  "hydration": 42,
   "targetTemp": "26-28°C",
-  "fermentation": "~48h totali (con puntate intermedie)",
-  "totalFlour": 685,
+  "fermentation": "~24-36h totali (primo impasto 12h + secondo impasto 12h + appretto finale 4-6h)",
+  "totalFlour": 1000,
   "ingredients": [],
-  "suspensions": [
-    {
-      "name": "Uvetta Sultanina",
-      "note": "(ammollata e asciugata)",
-      "grams": 250
-    },
-    {
-      "name": "Arancia Candita",
-      "note": "(a cubetti 6-8mm)",
-      "grams": 100
-    },
-    {
-      "name": "Cedro Candito",
-      "note": "(a cubetti 6-8mm)",
-      "grams": 50
-    }
-  ],
-  "stepsSpiral": [
-    {
-      "title": "Preparazione Mix Aromatico (24-72h prima)",
-      "text": "Almeno 24h prima (ideale 3 giorni), preparare il mix aromatico mescolando le bucce finemente grattugiate di limone e arancia, i semi della bacca di vaniglia, il miele d'acacia ({miele_terzo_impasto:45}g) e il rum ({rum_terzo_impasto:15}g). Conservare in contenitore ermetico a temperatura ambiente. Questo passaggio è fondamentale per far amalgamare gli aromi."
-    },
-    {
-      "title": "Trattamento Uvetta (10-12h prima)",
-      "text": "Almeno 10h prima di iniziare, mettere l'uvetta (250g) a bagno con pari quantità di acqua. Dopo 2-3h cambiare l'acqua e ripetere l'operazione per altre 2-3 volte. Scolare bene, tamponare con carta assorbente fino a completa asciugatura. L'uvetta deve risultare morbida ma asciutta in superficie. Conservare coperta."
-    },
-    {
-      "title": "Primo Impasto (Impasto di Partenza)",
-      "text": "Nella ciotola della spirale versare acqua ({acqua_primo_impasto:125}g a 20-22°C), malto ({malto_primo_impasto:2}g) e zucchero ({lievito_madre_primo_impasto:65}g). Avviare a velocità minima per sciogliere. Aggiungere farina manitoba ({farina_forte_primo_impasto:375}g) in 2-3 riprese, impastare 2 minuti a V1. Inserire il lievito madre rinfrescato ({lievito_madre_primo_impasto:65}g) spezzettato, impastare 5 minuti a V1 fino a incordatura iniziale. Aggiungere i tuorli ({tuorli_primo_impasto:50}g) precedentemente sbattuti, incorporare 3 minuti a V1-V2. Incorporare il burro morbido ({burro_primo_impasto:70}g) in 2-3 riprese, lavorare 10 minuti a V2 fino a completo assorbimento e incordatura perfetta. Temperatura finale: 26-27°C. Trasferire in contenitore unto, coprire con pellicola."
-    },
-    {
-      "title": "Prima Puntata",
-      "text": "Lasciar lievitare in ambiente a 26-28°C per 12-14h fino a triplicare il volume. L'impasto deve presentare alveolatura fine e uniforme. Se la temperatura ambiente è inferiore, utilizzare forno spento con luce accesa o cella di lievitazione."
-    },
-    {
-      "title": "Secondo Impasto (Rinforzo)",
-      "text": "Riprendere il primo impasto lievitato, riporlo nella ciotola della spirale. Aggiungere acqua ({acqua_secondo_impasto:10}g), zucchero ({tuorli_primo_impasto:50}g), tuorli ({tuorli_primo_impasto:50}g) e farina manitoba ({farina_forte_secondo_impasto:62}g). Impastare 5 minuti a V1 fino a completa incorporazione. Aggiungere il burro morbido ({burro_secondo_impasto:40}g) in 2-3 riprese, impastare 8-10 minuti a V2 fino a incordatura. Negli ultimi 2 minuti aggiungere il sale ({malto_primo_impasto:2}g). Temperatura finale: 26-27°C. Trasferire in contenitore unto, coprire."
-    },
-    {
-      "title": "Seconda Puntata",
-      "text": "Lasciar lievitare in ambiente a 26-28°C per 4-5h fino a raddoppiare il volume. L'impasto deve risultare elastico e ben strutturato."
-    },
-    {
-      "title": "Terzo Impasto (Impasto Finale)",
-      "text": "Riprendere il secondo impasto, trasferirlo nella spirale. Aggiungere metà dello zucchero (32g), le uova intere ({uova_terzo_impasto:270}g) e i tuorli ({tuorli_primo_impasto:50}g) precedentemente sbattuti. Impastare 5 minuti a V1. Aggiungere la farina manitoba ({farina_forte_terzo_impasto:248}g) in 2-3 riprese, impastare 8 minuti a V2 fino a incordatura. Incorporare il mix aromatico preparato, impastare 2 minuti. Aggiungere il burro morbido ({burro_secondo_impasto:40}g) in piccole dosi, impastare 12-15 minuti a V2 fino a completo assorbimento. Aggiungere lo zucchero rimanente (33g) e il sale ({sale_terzo_impasto:9}g), impastare 3 minuti. Temperatura finale: 26-28°C. L'impasto deve staccarsi perfettamente dalla ciotola (incordatura completa)."
-    },
-    {
-      "title": "Aggiunta Sospensioni",
-      "text": "A macchina ferma, aggiungere l'uvetta asciugata (250g) e i canditi a cubetti (150g totali: 100g arancia + {tuorli_primo_impasto:50}g cedro). Impastare 2 minuti a V1 solo per incorporare uniformemente, senza rompere i canditi. Non lavorare oltre."
-    },
-    {
-      "title": "Pirlatura e Formatura",
-      "text": "Rovesciare l'impasto su piano leggermente unto di burro (NON infarinato). Eseguire una piega a tre e formare una palla con movimento rotatorio. Trasferire nello stampo da panettone da 1kg (diametro 18cm) precedentemente imburrato e foderato con carta da forno alta. L'impasto deve riempire 1/3 dello stampo."
-    },
-    {
-      "title": "Appretto Finale",
-      "text": "Lasciar lievitare in ambiente a 28-30°C per 6-8h fino a quando l'impasto raggiungerà il bordo dello stampo (circa 3cm sotto il bordo). Eseguire il taglio a croce con lama affilata. Spennellare con burro fuso ({burro_terzo_impasto_2:30}g) la superficie. Posizionare un fiocchetto di burro ({acqua_secondo_impasto:10}g) al centro della croce."
-    },
-    {
-      "title": "Cottura",
-      "text": "Preriscaldare forno statico a 170°C. Infornare nella parte bassa del forno. Cuocere 50-55 minuti (per stampo da 1kg) senza mai aprire il forno nei primi 40 minuti. Il panettone è cotto quando raggiunge 94-96°C al cuore (termometro a sonda). La superficie deve risultare ben dorata ma non bruciata."
-    },
-    {
-      "title": "Raffreddamento",
-      "text": "Appena sfornato, infilzare la base del panettone con appositi spilloni lunghi (o due grossi spiedi da cucina) e capovolgere immediatamente. Sospendere tra due supporti in modo che il panettone resti capovolto senza toccare nulla. Lasciare raffreddare completamente capovolto per 8-10h. Questo passaggio è FONDAMENTALE per evitare la cascatura. NON saltarlo."
-    },
-    {
-      "title": "Conservazione",
-      "text": "Una volta freddo, rimuovere gli spilloni. Avvolgere in sacchetto per alimenti, spruzzare 4 erogazioni di alcol alimentare all'interno del sacchetto (non sul panettone), chiudere ermeticamente. Conservare a temperatura ambiente fino a 10-{rum_terzo_impasto:15} giorni. L'alcol previene la formazione di muffe mantenendo il prodotto soffice."
-    }
-  ],
-  "stepsHand": [
-    {
-      "title": "Preparazione Mix Aromatico (24-72h prima)",
-      "text": "Almeno 24h prima (ideale 3 giorni), preparare il mix aromatico mescolando le bucce finemente grattugiate di limone e arancia, i semi della bacca di vaniglia, il miele d'acacia ({miele_terzo_impasto:45}g) e il rum ({rum_terzo_impasto:15}g). Conservare in contenitore ermetico a temperatura ambiente."
-    },
-    {
-      "title": "Trattamento Uvetta (10-12h prima)",
-      "text": "Almeno 10h prima, mettere l'uvetta (250g) a bagno con pari quantità di acqua. Dopo 2-3h cambiare l'acqua e ripetere per altre 2-3 volte. Scolare, tamponare fino a completa asciugatura. Conservare coperta."
-    },
-    {
-      "title": "Primo Impasto (Impasto di Partenza)",
-      "text": "In una ciotola capiente sciogliere malto ({malto_primo_impasto:2}g) e zucchero ({lievito_madre_primo_impasto:65}g) in acqua ({acqua_primo_impasto:125}g a temperatura ambiente). Versare la farina manitoba ({farina_forte_primo_impasto:375}g) a fontana su un piano di lavoro in legno o marmo. Creare un cratere centrale. Versare l'acqua zuccherata al centro. Iniziare a incorporare la farina dall'interno verso l'esterno con le dita. Quando l'impasto è amalgamato, aggiungere il lievito madre ({lievito_madre_primo_impasto:65}g) spezzettato. Impastare energicamente con tecnica slap & fold per 15-20 minuti fino a incordatura iniziale. Aggiungere i tuorli ({tuorli_primo_impasto:50}g) sbattuti, continuare a impastare 10 minuti. Incorporare il burro morbido ({burro_primo_impasto:70}g) in 3-4 riprese, impastare con forza fino a completo assorbimento (altri 20-25 minuti totali). L'impasto deve risultare liscio, elastico e non appiccicoso. Temperatura finale: 26-27°C."
-    },
-    {
-      "title": "Prima Puntata",
-      "text": "Formare una palla liscia, trasferire in contenitore unto, coprire con pellicola. Lasciar lievitare in ambiente a 26-28°C per 12-14h fino a triplicare. Utilizzare forno spento con luce accesa se necessario."
-    },
-    {
-      "title": "Secondo Impasto (Rinforzo)",
-      "text": "Rovesciare il primo impasto su piano di lavoro. Appiattire leggermente. Aggiungere al centro acqua ({acqua_secondo_impasto:10}g), zucchero ({tuorli_primo_impasto:50}g), tuorli ({tuorli_primo_impasto:50}g) e farina ({farina_forte_secondo_impasto:62}g). Ripiegare l'impasto su se stesso incorporando gli ingredienti. Impastare con slap & fold per 15 minuti. Aggiungere il burro ({burro_secondo_impasto:40}g) in piccole dosi, impastare energicamente per altri 15-20 minuti fino a completa incorporazione. Aggiungere il sale ({malto_primo_impasto:2}g) negli ultimi 3 minuti. Formare una palla liscia."
-    },
-    {
-      "title": "Seconda Puntata",
-      "text": "Trasferire in contenitore unto, coprire. Lasciar lievitare a 26-28°C per 4-5h fino a raddoppiare."
-    },
-    {
-      "title": "Terzo Impasto (Impasto Finale)",
-      "text": "Rovesciare l'impasto su piano. Appiattire formando un disco. Versare al centro metà zucchero (32g), uova ({uova_terzo_impasto:270}g) e tuorli ({tuorli_primo_impasto:50}g) sbattuti. Ripiegare, iniziare a impastare con slap & fold. Dopo 5 minuti aggiungere la farina ({farina_forte_terzo_impasto:248}g) in 3 riprese, impastare 20 minuti fino a incordatura. Incorporare il mix aromatico, impastare 5 minuti. Aggiungere il burro ({burro_secondo_impasto:40}g) pochissimo per volta, impastare con forza per 25-30 minuti fino a completo assorbimento. Aggiungere zucchero rimanente (33g) e sale ({sale_terzo_impasto:9}g), impastare 5 minuti. L'impasto deve essere lucido, elasticissimo e staccarsi dalle mani. Temperatura: 26-28°C. Tempo totale lavorazione a mano: circa 60-70 minuti."
-    },
-    {
-      "title": "Aggiunta Sospensioni",
-      "text": "Appiattire l'impasto, distribuire uniformemente uvetta (250g) e canditi (150g). Ripiegare delicatamente l'impasto su se stesso fino a incorporare senza schiacciare i canditi. Lavorare il meno possibile."
-    },
-    {
-      "title": "Pirlatura e Formatura",
-      "text": "Su piano unto di burro, eseguire una piega a tre. Formare una palla perfettamente liscia con movimento rotatorio delle mani. Trasferire nello stampo da 1kg imburrato e foderato. L'impasto deve riempire 1/3 dello stampo."
-    },
-    {
-      "title": "Appretto Finale",
-      "text": "Lasciar lievitare a 28-30°C per 6-8h fino a 3cm dal bordo. Tagliare a croce con lama affilata unta d'olio. Spennellare con burro fuso ({burro_terzo_impasto_2:30}g), posizionare fiocchetto di burro ({acqua_secondo_impasto:10}g) al centro."
-    },
-    {
-      "title": "Cottura",
-      "text": "Forno statico a 170°C. Infornare in basso. Cuocere 50-55 minuti senza aprire nei primi 40 minuti. Temperatura interna a fine cottura: 94-96°C."
-    },
-    {
-      "title": "Raffreddamento Capovolto",
-      "text": "Infilzare la base con spilloni lunghi, capovolgere immediatamente. Sospendere tra due supporti. Lasciare raffreddare capovolto per 8-10h. FONDAMENTALE per evitare la cascatura."
-    },
-    {
-      "title": "Conservazione",
-      "text": "Rimuovere spilloni a freddo. Avvolgere in sacchetto, spruzzare 4 erogazioni di alcol alimentare, chiudere. Conservare a temperatura ambiente fino a {rum_terzo_impasto:15} giorni."
-    }
-  ],
-  "stepsExtruder": [],
-  "stepsCondiment": [],
-  "flourTable": [
-    {
-      "type": "Farina Manitoba",
-      "w": "350-380",
-      "brands": "Petra 6384, Molino Vigevano Manitoba, Caputo Panettone, Molino Spadoni Manitoba, Agugiaro & Figna Le Grandi Manitoba"
-    },
-    {
-      "type": "Farina Tipo 0 Forte",
-      "w": "320-350",
-      "brands": "Molino Grassi Miscela Panettone, Molino Dallagiovanna Oro Manitoba, Molino Quaglia Panettone Professional"
-    }
-  ],
-  "baking": {
-    "temperature": "170°C",
-    "time": "50-55 minuti",
-    "tips": [
-      "NON aprire il forno nei primi 40 minuti per evitare il collasso dell'impasto",
-      "Utilizzare termometro a sonda: il panettone è cotto a 94-96°C al cuore",
-      "Posizionare lo stampo nella parte BASSA del forno per cottura uniforme",
-      "Se la superficie scurisce troppo dopo 35 minuti, coprire con foglio di alluminio",
-      "Il raffreddamento capovolto è OBBLIGATORIO: previene la cascatura della struttura"
-    ]
-  },
-  "glossary": [
-    {
-      "term": "Incordatura",
-      "definition": "Fase dell'impasto in cui il glutine si sviluppa completamente: l'impasto si avvolge attorno al gancio/braccio formando un 'cordone' e si stacca dalle pareti della ciotola. Essenziale per struttura e alveolatura."
-    },
-    {
-      "term": "Puntata",
-      "definition": "Fase di lievitazione dell'impasto dopo la lavorazione e prima della formatura. Nel panettone ci sono più puntate progressive (prima, seconda) che sviluppano aromi e struttura."
-    },
-    {
-      "term": "Pirlatura",
-      "definition": "Tecnica di formatura che consiste nel formare una palla liscia e tesa facendo rotolare l'impasto sul piano con movimento rotatorio delle mani. Crea tensione superficiale fondamentale per la lievitazione verticale."
-    },
-    {
-      "term": "Appretto",
-      "definition": "Ultima lievitazione dopo la formatura e prima della cottura. Nel panettone dura 6-8h e porta l'impasto fino al bordo dello stampo."
-    },
-    {
-      "term": "Cascatura",
-      "definition": "Collasso della struttura del panettone dopo la cottura. Si previene con il raffreddamento capovolto che mantiene la tensione dell'alveolatura fino al completo raffreddamento."
-    },
-    {
-      "term": "Lievito Madre",
-      "definition": "Coltura naturale di lieviti e batteri lattici mantenuta con rinfreschi periodici. Per il panettone deve essere rinfrescato 3 volte nelle 24h precedenti per raggiungere la massima forza."
-    },
-    {
-      "term": "Rinfresco",
-      "definition": "Operazione di nutrimento del lievito madre: si impasta con farina e acqua in proporzioni precise. Per il panettone servono 3 rinfreschi a distanza di 4h l'uno dall'altro."
-    },
-    {
-      "term": "Slap & Fold",
-      "definition": "Tecnica di impasto manuale: si solleva l'impasto, lo si sbatte sul piano e lo si ripiega su se stesso. Sviluppa il glutine in impasti molto idratati o ricchi di grassi."
-    },
-    {
-      "term": "Scarpatura",
-      "definition": "Operazione finale prima della cottura: si spennella la superficie con burro fuso e si posiziona un fiocchetto di burro al centro del taglio a croce. Dona croccantezza e sapore."
-    },
-    {
-      "term": "Alveolatura",
-      "definition": "Struttura dei fori (alveoli) nella mollica del panettone. Deve essere fine, uniforme e distribuita. Dipende da lievitazione corretta e sviluppo glutine perfetto."
-    },
-    {
-      "term": "Temperatura di Incordatura",
-      "definition": "Temperatura ottimale dell'impasto al termine della lavorazione (26-28°C per il panettone). Temperature troppo alte accelerano la lievitazione con aromi meno complessi, temperature basse rallentano tutto."
-    }
-  ],
-  "alert": "NON tentare di velocizzare le lievitazioni aumentando la temperatura sopra i 30°C: uccidereste il lievito madre e otterreste un panettone piatto, gommoso e senza alveolatura. NON saltare il raffreddamento capovolto: la cascatura è quasi certa. NON aprire il forno durante la cottura prima dei 40 minuti: il panettone collasserebbe. NON usare lievito madre non in forza (serve triplo rinfresco): il risultato sarà acido, denso e poco sviluppato. Questo è un grande lievitato: richiede tempo, temperatura controllata e rispetto dei tempi biologici.",
-  "proTips": [
-    "Lievito Madre in Forza: iniziate i 3 rinfreschi 12-16h prima del primo impasto. Il lievito deve triplicare in 3-4h dopo ogni rinfresco a 28°C. Se non raddoppia, non è pronto: rinfrascate ancora.",
-    "Controllo Temperature con Precisione: usate un termometro a infrarossi per monitorare la temperatura dell'impasto durante la lavorazione. Se supera i 28°C, fermatevi e lasciate riposare 10 minuti in frigo. Temperature alte = burro fuso = impasto unto e instabile.",
-    "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
-  ],
-  "imageKeywords": [
-    "panettone milanese classico",
-    "traditional italian panettone",
-    "classic christmas panettone",
-    "panettone weihnachtskuchen",
-    "italian dome cake",
-    "milanese sweet bread"
-  ],
-  "tags": [
-    "panettone",
-    "lievitati",
-    "natale",
-    "lievito-madre",
-    "triplo-impasto",
-    "uvetta",
-    "canditi",
-    "grande-lievitato"
-  ],
-  "image": "images/ricette/lievitati/panettone-classico.webp",
   "ingredientGroups": [
+    {
+      "group": "Per il Lievito Madre Rinfrescato",
+      "items": [
+        {
+          "name": "Lievito Madre Maturo",
+          "note": "(al 3° rinfresco giornaliero, raddoppiato in 3-4h)",
+          "grams": 150,
+          "excludeFromTotal": true
+        },
+        {
+          "name": "Farina Manitoba",
+          "note": "(W 360-400)",
+          "grams": 150,
+          "excludeFromTotal": true
+        },
+        {
+          "name": "Acqua",
+          "note": "(30°C)",
+          "grams": 75,
+          "excludeFromTotal": true
+        }
+      ]
+    },
     {
       "group": "Per il Primo Impasto",
       "items": [
         {
-          "name": "Farina Manitoba",
-          "note": "(W 350-380, 13-14% proteine)",
-          "grams": 375
-        },
-        {
           "name": "Lievito Madre",
-          "note": "(rinfrescato 3 volte, in forza)",
-          "grams": 65
+          "note": "(rinfrescato 3 volte, triplicato)",
+          "grams": 300
         },
         {
-          "name": "Acqua",
-          "note": "(20-22°C)",
-          "grams": 125,
-          "setupNote": {
-            "spirale": "(20-22°C)",
-            "mano": "(temperatura ambiente 20-22°C)"
-          }
-        },
-        {
-          "name": "Zucchero Semolato",
-          "note": "(primo impasto)",
-          "grams": 65
-        },
-        {
-          "name": "Malto",
-          "note": "(diastasico)",
-          "grams": 2
+          "name": "Farina Manitoba",
+          "note": "(W 360-400)",
+          "grams": 500
         },
         {
           "name": "Tuorli",
-          "note": "(temperatura ambiente, primo impasto)",
-          "grams": 50
+          "note": "(temperatura ambiente, ~50g/uovo)",
+          "grams": 100
+        },
+        {
+          "name": "Acqua",
+          "note": "(30°C)",
+          "grams": 150
+        },
+        {
+          "name": "Zucchero Semolato",
+          "note": "(fino)",
+          "grams": 100
         },
         {
           "name": "Burro",
-          "note": "(morbidissimo, primo impasto)",
-          "grams": 70
+          "note": "(morbido, temperatura ambiente)",
+          "grams": 100
+        },
+        {
+          "name": "Malto",
+          "note": "(in polvere o sciroppo)",
+          "grams": 3
         }
       ]
     },
@@ -281,104 +79,226 @@
       "items": [
         {
           "name": "Farina Manitoba",
-          "note": "(W 350-380, secondo impasto)",
-          "grams": 62
-        },
-        {
-          "name": "Zucchero Semolato",
-          "note": "(secondo impasto)",
-          "grams": 50
+          "note": "(W 360-400)",
+          "grams": 500
         },
         {
           "name": "Tuorli",
-          "note": "(temperatura ambiente, secondo impasto)",
-          "grams": 50
-        },
-        {
-          "name": "Burro",
-          "note": "(morbidissimo, secondo impasto)",
-          "grams": 40
+          "note": "(temperatura ambiente)",
+          "grams": 200
         },
         {
           "name": "Acqua",
-          "note": "(20-22°C)",
-          "grams": 10,
-          "setupNote": {
-            "spirale": "(20-22°C)",
-            "mano": "(temperatura ambiente 20-22°C)"
-          }
-        },
-        {
-          "name": "Sale Fino",
-          "note": "(secondo impasto)",
-          "grams": 2
-        }
-      ]
-    },
-    {
-      "group": "Per il Terzo Impasto",
-      "items": [
-        {
-          "name": "Farina Manitoba",
-          "note": "(W 350-380, terzo impasto)",
-          "grams": 248
-        },
-        {
-          "name": "Uova Intere",
-          "note": "(temperatura ambiente, terzo impasto)",
-          "grams": 270
-        },
-        {
-          "name": "Tuorli",
-          "note": "(temperatura ambiente, terzo impasto)",
-          "grams": 50
+          "note": "(30°C)",
+          "grams": 100
         },
         {
           "name": "Zucchero Semolato",
-          "note": "(terzo impasto)",
-          "grams": 65
+          "note": "(fino)",
+          "grams": 200
+        },
+        {
+          "name": "Burro",
+          "note": "(morbido, temperatura ambiente)",
+          "grams": 300
         },
         {
           "name": "Miele di Acacia",
-          "note": "",
-          "grams": 45
-        },
-        {
-          "name": "Burro",
-          "note": "(morbidissimo, terzo impasto)",
+          "note": "(liquido)",
           "grams": 40
         },
         {
-          "name": "Baccello di Vaniglia",
-          "note": "(semi)",
-          "grams": 1
-        },
-        {
-          "name": "Buccia di Limone",
-          "note": "(grattugiata, non trattato)",
-          "grams": 5
-        },
-        {
-          "name": "Buccia di Arancia",
-          "note": "(grattugiata, non trattata)",
+          "name": "Sale Fino",
+          "note": "(marino)",
           "grams": 10
         },
         {
-          "name": "Rum",
-          "note": "(o Cointreau)",
-          "grams": 15
-        },
-        {
-          "name": "Sale Fino",
-          "note": "(terzo impasto)",
-          "grams": 9
-        },
-        {
-          "name": "Burro",
-          "note": "(per scarpatura finale)",
-          "grams": 30
+          "name": "Baccello di Vaniglia",
+          "note": "(Bourbon Madagascar, semi estratti)",
+          "grams": 2
         }
       ]
     }
-  ]
+  ],
+  "suspensions": [
+    {
+      "name": "Uvetta Sultanina",
+      "note": "(rinvenuta in acqua tiepida 12h prima, scolata e asciugata)",
+      "grams": 300
+    },
+    {
+      "name": "Arancia Candita",
+      "note": "(cubetti 8mm)",
+      "grams": 150
+    },
+    {
+      "name": "Cedro Candito",
+      "note": "(cubetti 8mm)",
+      "grams": 100
+    }
+  ],
+  "stepsHand": [
+    {
+      "title": "Preparazione Lievito Madre (3 Rinfreschi)",
+      "text": "Il giorno prima: eseguire 3 rinfreschi del lievito madre a distanza di 4 ore. Per ogni rinfresco: {lievito_madre_base:150}g lievito maturo + {farina_rinfresco:150}g farina Manitoba + {acqua_rinfresco:75}g acqua 30°C. Impastare rapidamente, formare un panetto, incidere a croce, lasciare triplicare a 28-30°C. Al terzo rinfresco il lievito deve triplicare in 3-4 ore ed essere all'apice della forza (test del galleggiamento: deve galleggiare in acqua 25°C). Questo lievito sarà pronto per il primo impasto."
+    },
+    {
+      "title": "Rinvenimento Uvetta",
+      "text": "La sera prima: mettere {uvetta:300}g uvetta sultanina in una ciotola con acqua tiepida. Lasciare in ammollo 12 ore. Scolare, asciugare perfettamente con carta assorbente e lasciare ad asciugare all'aria per 2-3 ore. L'uvetta deve essere morbida ma non bagnata (l'acqua residua abbassa l'idratazione dell'impasto)."
+    },
+    {
+      "title": "Primo Impasto — Emulsione Liquidi",
+      "text": "In una ciotola emulsionare {tuorli_primo:100}g tuorli + {acqua_primo:150}g acqua 30°C + {zucchero_primo:100}g zucchero + {malto:3}g malto fino a ottenere una crema omogenea. Sciogliere {burro_primo:100}g burro morbido nell'emulsione mescolando energicamente."
+    },
+    {
+      "title": "Primo Impasto — Impastamento",
+      "text": "In una ciotola capiente versare {farina_primo:500}g farina Manitoba. Aggiungere {lievito_madre_primo:300}g lievito madre rinfrescato (deve essere all'apice, triplicato). Versare l'emulsione liquida al centro. Iniziare ad impastare a mano incorporando gradualmente la farina. Impastare energicamente per 15-20 minuti fino a ottenere un impasto liscio, elastico, che si stacca dalle mani. Temperatura finale impasto: 26-28°C. Se l'impasto supera i 28°C, raffreddare la ciotola in acqua fredda."
+    },
+    {
+      "title": "Prima Lievitazione — Puntata",
+      "text": "Formare una palla liscia (pirlatura), trasferire in una ciotola di vetro leggermente unta d'olio. Incidere una croce profonda sulla superficie con un coltello affilato. Coprire con pellicola e un panno. Lasciar lievitare in ambiente caldo (26-28°C) per 10-12 ore fino al triplicamento. Il test: l'impasto deve tremare leggermente se mosso, e la croce deve essere ben aperta. Se la temperatura ambiente è inferiore, usare il forno spento con luce accesa o una stufa di lievitazione."
+    },
+    {
+      "title": "Secondo Impasto — Emulsione Liquidi",
+      "text": "Preparare la seconda emulsione: {tuorli_secondo:200}g tuorli + {acqua_secondo:100}g acqua 30°C + {zucchero_secondo:200}g zucchero + {miele:40}g miele. Mescolare fino a completa emulsione. Tenere da parte {burro_secondo:300}g burro morbido."
+    },
+    {
+      "title": "Secondo Impasto — Incorporazione",
+      "text": "Trasferire il primo impasto lievitato in una ciotola capiente. Aggiungere metà dell'emulsione liquida del secondo impasto. Iniziare ad impastare energicamente a mano per incorporare i liquidi. Quando l'impasto assorbe, aggiungere {farina_secondo:500}g farina Manitoba a pioggia, continuando ad impastare. Aggiungere gradualmente la seconda metà dell'emulsione. Impastare per 10 minuti fino a completo assorbimento."
+    },
+    {
+      "title": "Incorporazione Burro e Aromi",
+      "text": "Aggiungere {burro_secondo:300}g burro morbido a pezzetti, poco alla volta, impastando energicamente fino a completo assorbimento (ogni aggiunta deve essere completamente incorporata prima di aggiungere altro burro). Quando il burro è completamente assorbito, aggiungere {sale:10}g sale fino e i semi di {vaniglia:2}g vaniglia (incidere il baccello, estrarre i semi con un coltello). Impastare ancora 5-10 minuti fino a ottenere un impasto liscissimo, lucido, elastico, che forma il velo (si allunga sottile senza rompersi). Temperatura finale: 26-28°C."
+    },
+    {
+      "title": "Incorporazione Uvetta e Canditi",
+      "text": "Stendere l'impasto su un piano leggermente infarinato in un rettangolo. Distribuire uniformemente {uvetta:300}g uvetta asciutta, {arancia_candita:150}g arancia candita e {cedro_candito:100}g cedro candito. Piegare l'impasto su se stesso, impastare delicatamente per 2-3 minuti fino a distribuire uniformemente le sospensioni (attenzione: non sovrimpastare o l'uvetta si romperà e tingerà l'impasto)."
+    },
+    {
+      "title": "Seconda Lievitazione — Puntata Secondo Impasto",
+      "text": "Formare una palla liscia, trasferire in ciotola unta d'olio, incidere una croce. Coprire con pellicola. Lievitare a 26-28°C per 10-12 ore fino al raddoppio abbondante (l'impasto deve essere soffice, gonfio, con alveoli visibili sulla superficie). Test: premendo leggermente con un dito, l'impronta deve tornare lentamente."
+    },
+    {
+      "title": "Pirlatura e Formatura nei Pirottini",
+      "text": "Dividere l'impasto in pezzi da {peso_panettone:1000!}g per panettoni classici da 1kg (o {peso_mini:500!}g per versioni mignon). Formare ogni pezzo in una palla perfettamente liscia e tesa (pirlatura: piegare i bordi verso il centro, capovolgere, ruotare sul piano con le mani a coppa per creare tensione superficiale). Inserire ogni palla nel pirottino da panettone (carta plissettata alta) con la chiusura rivolta verso il basso. La superficie deve essere perfettamente liscia."
+    },
+    {
+      "title": "Appretto Finale — Lievitazione in Pirottino",
+      "text": "Coprire i pirottini con un panno umido o una campana di plastica (per evitare che la superficie si secchi). Lasciar lievitare a 28-30°C per 4-6 ore fino a quando l'impasto raggiunge 1cm dal bordo del pirottino. La superficie deve essere gonfia, bombata, soffice al tato. Verificare con il dito: l'impronta deve tornare molto lentamente."
+    },
+    {
+      "title": "Scarpatura e Burro Superficiale",
+      "text": "Prima di infornare: con una lametta o un coltello affilato, praticare un taglio a croce sulla superficie del panettone (la scarpatura) profondo 5mm. Al centro della croce posizionare una noce di burro freddo (~15g). Questo creerà la caratteristica screpolatura e crosta dorata."
+    },
+    {
+      "title": "Cottura",
+      "text": "Infornare in forno statico preriscaldato a 170°C (termometro a forno, mai superare i 180°C) nel ripiano basso. Cuocere per 10 minuti a 170°C, poi abbassare a 160°C e continuare per altri 40-50 minuti (totale 50-60 minuti per panettoni da 1kg, 35-40 minuti per mignon da 500g). Il panettone è cotto quando: superficie dorata scura, screpolatura ben aperta, sonda al cuore segna 94-96°C. Se la superficie scurisce troppo, coprire con un foglio di alluminio negli ultimi 15 minuti."
+    },
+    {
+      "title": "Capovolgitura e Raffreddamento",
+      "text": "FONDAMENTALE: appena sfornato, infilzare la base del panettone con 2 spiedi lunghi (o aghi da materasso) e capovolgere immediatamente, appoggiando gli spiedi su due supporti (o tra due sedie) in modo che il panettone penda a testa in giù. Questa operazione evita il collasso della struttura durante il raffreddamento. Lasciare così per almeno 8-12 ore fino a completo raffreddamento. Solo quando è completamente freddo, raddrizzare e rimuovere gli spiedi. Conservare in sacchetto per alimenti chiuso."
+    }
+  ],
+  "flourTable": [
+    {
+      "type": "Manitoba W 360-400",
+      "w": "360-400",
+      "brands": "Molino Grassi Panettone, Molino Dallagiovanna Panettone, Le5Stagioni Oro manitoba, Caputo Cuoco manitoba"
+    },
+    {
+      "type": "Farina per Panettone W 380-420",
+      "w": "380-420",
+      "brands": "Molino Dallagiovanna Panettone (linea rossa), Molino Grassi Professional, Agrimontana Panettone"
+    }
+  ],
+  "baking": {
+    "temperature": "170°C → 160°C (statico, ripiano basso)",
+    "time": "50-60 minuti (1kg) / 35-40 minuti (500g)",
+    "tips": [
+      "Usare termometro a forno: mai superare 180°C o la crosta brucerà prima che il cuore cuocia",
+      "Temperatura al cuore finale: 94-96°C (verificare con sonda)",
+      "Capovolgitura IMMEDIATA post-cottura: fondamentale per evitare il collasso",
+      "Se la superficie scurisce troppo, coprire con alluminio negli ultimi 15 min",
+      "Mai aprire il forno nei primi 30 minuti: il panettone collasserebbe"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Lievito Madre",
+      "definition": "Coltura naturale di lieviti e batteri lattici mantenuta con rinfreschi periodici. Per il panettone deve essere rinfrescato 3 volte in giornata e triplicare in 3-4 ore."
+    },
+    {
+      "term": "Rinfresco",
+      "definition": "Operazione di nutrimento del lievito madre con farina e acqua. Rapporto tipico: 1:1:0.5 (lievito:farina:acqua)."
+    },
+    {
+      "term": "Pirlatura",
+      "definition": "Tecnica di formatura a sfera: piegare i bordi dell'impasto verso il centro, capovolgere, ruotare sul piano con le mani a coppa per creare tensione superficiale."
+    },
+    {
+      "term": "Puntata",
+      "definition": "Prima fase di lievitazione in massa, prima della divisione e formatura."
+    },
+    {
+      "term": "Appretto",
+      "definition": "Lievitazione finale dopo la formatura, prima della cottura."
+    },
+    {
+      "term": "Scarpatura",
+      "definition": "Taglio a croce sulla superficie del panettone prima della cottura, che causa la caratteristica screpolatura."
+    },
+    {
+      "term": "Capovolgitura",
+      "definition": "Operazione post-cottura: il panettone viene appeso a testa in giù per 8-12 ore per evitare il collasso della struttura alveolare."
+    },
+    {
+      "term": "Emulsione",
+      "definition": "Miscela omogenea di ingredienti liquidi (tuorli, acqua, zucchero) ottenuta per miscelazione energica."
+    },
+    {
+      "term": "Test del Velo",
+      "definition": "Verifica dello sviluppo del glutine: l'impasto deve allargarsi sottile come una membrana senza rompersi."
+    },
+    {
+      "term": "Idratazione",
+      "definition": "Percentuale di liquidi totali (acqua + tuorli) rispetto alla farina. Il panettone classico ha idratazione bassa (40-45%) per sostenere uvetta e canditi."
+    },
+    {
+      "term": "W della Farina",
+      "definition": "Indice di forza della farina misurato con alveografo Chopin. Per panettone serve W 360-420 (farine molto forti)."
+    },
+    {
+      "term": "Temperatura Impasto",
+      "definition": "Temperatura della massa impastata, fondamentale per la lievitazione. Target panettone: 26-28°C. Se supera 30°C il lievito soffre."
+    }
+  ],
+  "alert": "⚠️ Il panettone è il lievitato più tecnico: NON improvvisare. Errori critici: lievito madre debole (deve triplicare in 3-4h, galleggiare in acqua), temperatura impasto >28°C (uccide il lievito), mancata capovolgitura post-cottura (il panettone collassa), temperatura forno >180°C (brucia fuori, crudo dentro). Se è il tuo primo panettone, segui ESATTAMENTE tempi e temperature. La fretta è nemica: le lievitazioni devono completarsi (test del dito).",
+  "proTips": [
+    "🌡️ Temperatura ambiente è CRITICA: lievitazioni a 26-28°C. Usa forno spento con luce accesa, stufa di lievitazione, o termostato ambiente. Sotto i 24°C le lievitazioni si allungano di ore.",
+    "🧪 Test lievito madre: deve galleggiare in acqua 25°C dopo il terzo rinfresco. Se affonda, non è pronto (troppo debole o troppo maturo). Meglio rinviare a domani.",
+    "🧈 Burro morbido ma NON fuso: deve essere a 18-20°C, cremoso. Se troppo freddo non si incorpora, se fuso l'emulsione si rompe e l'impasto diventa unto.",
+    "🍇 Uvetta e canditi si aggiungono DOPO aver sviluppato completamente il glutine. Se aggiunti prima, rompono la maglia glutinica e il panettone non cresce.",
+    "📏 Peso preciso del panettone: per pirottini da 1kg, fare pezzi da 1000g. Per mignon (pirottino 500g), fare pezzi da 500g. Il peso errato altera proporzioni e cottura."
+  ],
+  "imageKeywords": [
+    "panettone italiano",
+    "italian christmas cake panettone",
+    "panettone uvetta canditi",
+    "traditional panettone milan",
+    "panettone artigianale",
+    "christmas panettone slice",
+    "italienischer weihnachtskuchen panettone",
+    "homemade panettone"
+  ],
+  "tags": [
+    "Natale",
+    "Lievito Madre",
+    "Lievitazione Lunga",
+    "Milano",
+    "Dolce Tradizionale",
+    "Uvetta",
+    "Canditi"
+  ],
+  "image": "images/ricette/lievitati/panettone-classico.webp",
+  "imageAttribution": "📷 Foto: Marcelo Verfe — Pexels License via Pexels"
 }

@@ -44,7 +44,7 @@
     },
     {
       "title": "Impastamento in Spirale (1a Velocità)",
-      "text": "Versare nella vasca della spirale: le due farine rimanenti (150g tipo 0 + {farina_media_impasto:250}g semola), la purea di patate fredda, il lievitino attivo e {farina_media_impasto:250}g di acqua. Avviare a velocità 1 per 4-5 minuti fino a completo assorbimento. L'impasto sarà molto molle e appiccicoso — è normale. Aggiungere il sale e continuare a impastare a velocità 1 per altri 3-4 minuti. Quando il sale è incorporato, aggiungere i restanti {olio_evo_condimento:50}g di acqua e l'olio EVO. Proseguire a velocità 1 per altri 5-6 minuti: l'impasto deve diventare liscio, elastico e staccarsi dalle pareti (incordatura completa). Temperatura finale: 24-26°C. Tempo totale spirale: 12-15 minuti."
+      "text": "Versare nella vasca della spirale: le due farine rimanenti (150g tipo 0 + {acqua_impasto:400}g semola), la purea di patate fredda, il lievitino attivo e {farina_media_impasto:250}g di acqua. Avviare a velocità 1 per 4-5 minuti fino a completo assorbimento. L'impasto sarà molto molle e appiccicoso — è normale. Aggiungere il sale e continuare a impastare a velocità 1 per altri 3-4 minuti. Quando il sale è incorporato, aggiungere i restanti {acqua_impasto:400}g di acqua e l'olio EVO. Proseguire a velocità 1 per altri 5-6 minuti: l'impasto deve diventare liscio, elastico e staccarsi dalle pareti (incordatura completa). Temperatura finale: 24-26°C. Tempo totale spirale: 12-15 minuti."
     },
     {
       "title": "Puntata con Pieghe",

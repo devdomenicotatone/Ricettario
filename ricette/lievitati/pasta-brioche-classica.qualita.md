@@ -1,41 +1,39 @@
 # Qualità: Pasta Brioche Classica
 
-## 🟡 Score Finale: 70/100
+## 🟢 Score Finale: 80/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 0 warning |
-| Claude | 78/100 | 🟡 Da migliorare |
-| Gemini | 🟡 Parziale disaccordo (-8) | Claude ha penalizzato ingiustamente l'uso della spirale e le |
+| Claude | 92/100 | 🟢 Buona |
+| Gemini | 🟡 Parziale disaccordo (-12) | La ricetta è valida nelle proporzioni, ma Claude ha ignorato |
 
-Ricetta tecnicamente valida con buona strutturazione del procedimento e dettagli professionali. Problemi principali: setup errato (spirale invece di planetaria per brioche) e dosaggio lievito al limite superiore. La nomenclatura delle variabili nel testo andrebbe uniformata per maggiore chiarezza.
+Ricetta ben strutturata con dosi appropriate per brioche classica (lievito 3% su farina, burro 20%, zucchero 16%). Temperature e tempi coerenti, procedimento dettagliato con ottime indicazioni tecniche. Setup corretto per lievitati. Piccole imprecisioni nel calcolo dell'idratazione e presenza di placeholder tecnici, ma complessivamente una ricetta solida e professionale.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione | Fonte |
 |------|------|----------|------------|-------|
-| ❌ | Setup | Setup 'Impastatrice a spirale + A mano' incongruente per pasta brioche. La brioche è un lievitato da forno che richiede impastatrice planetaria o a forcella, non spirale (che è per pane/pizza) | Correggere setup in 'Impastatrice planetaria + A mano' o 'Impastatrice a forcella + A mano' | 🔵 Claude |
-| ⚠️ | Dosi | Lievito di birra fresco 15g (3% su farina) è al limite superiore per una brioche classica. Rischio di sapore troppo marcato | Ridurre a 10-12g (2-2.4%) per sapore più equilibrato | 🔵 Claude |
-| ⚠️ | Coerenza | Nel procedimento si cita '{semola_impasto:80}g' e '{latte_impasto:100}g' ma negli ingredienti sono 'Zucchero Semolato 80g' e 'Latte 100g'. Nomenclatura variabile inconsistente | Uniformare le variabili: usare '{zucchero_impasto}' e '{latte_impasto}' coerentemente | 🔵 Claude |
-| 💡 | Tempi | Lievitazione 3-4h + 2h appretto con 15g lievito (3%) potrebbe essere eccessiva. Con questa % di lievito basterebbero 2-3h + 1.5h | Ridurre tempi a 2-3h + 1.5h appretto oppure diminuire il lievito a 10g | 🔵 Claude |
-| 💡 | Dosi | Idratazione 52% calcolata solo su acqua/latte. In brioche va considerata anche l'idratazione da uova (~75% acqua). Idratazione reale circa 60% | Specificare 'Idratazione base: 52% (totale con uova: ~60%)' | 🔵 Claude |
-| ❌ | Variabili/Dinamismo | Uso errato e distruttivo dei placeholder. Al punto 7 si usa '{semola_impasto:80}g' per indicare il peso dei cornetti e '{latte_impasto:100}g' per le trecce. Al punto 9 '{tuorli_impasto:20}g' per i grammi di latte. Se l'utente raddoppia la ricetta, il testo gli dirà di fare cornetti da 160g e trecce da 200g. | Rimuovere i placeholder per i pesi fissi di porzionatura e per ingredienti slegati (usare '80g', '100g', '20g' come testo statico o creare variabili apposite). | 🔴 Gemini |
-| ⚠️ | Temperature/Procedimento | Il latte a 20-22°C unito a burro a 18-20°C e un'impastamento totale di 20-25 minuti rischia seriamente di far superare la temperatura target di 24-26°C a causa dell'attrito meccanico. | Consigliare latte freddo di frigo (o almeno a 10-12°C) se si prevede un tempo di impastamento così lungo. | 🔴 Gemini |
+| 💡 | Setup | Setup include 'Impastatrice a spirale' che è corretto per impasti di panificazione/lievitati, non per pasta fresca. Ma trattandosi di brioche (lievitato), il setup è appropriato | Setup corretto per la categoria lievitati | 🔵 Claude |
+| 💡 | Coerenza | Nel procedimento si fa riferimento a variabili tra graffe (es. {lievito_fresco_impasto:15}, {semola_impasto:80}) che sembrano placeholder tecnici | Sostituire le variabili con i valori numerici diretti per maggiore chiarezza | 🔵 Claude |
+| 💡 | Dosi | Idratazione calcolata: con latte 100g + uova 120g + tuorli 20g = 240g di liquidi su 500g farine = 48%, non 52% dichiarato | Correggere idratazione dichiarata da 52% a 48% o verificare calcolo | 🔵 Claude |
+| ❌ | Testo/Coerenza | Uso grottesco ed errato delle variabili (templating error). Al punto 3 lo zucchero viene chiamato '{semola_impasto:80}'. Al punto 7 per indicare il peso dei cornetti si usa '{semola_impasto:80}' e per le trecce '{latte_impasto:100}'. Al punto 9 per spennellare si usa '{tuorli_impasto:20}g latte'. Il generatore ha pescato variabili a caso solo per far match con i numeri. | Ripulire l'intero testo rimuovendo le variabili e lasciando solo i numeri e i termini corretti. | 🔴 Gemini |
+| ⚠️ | Setup / Procedimento | Nel Setup si dichiara 'Impastatrice a spirale + A mano', ma nel procedimento l'impasto a mano (che richiederebbe istruzioni specifiche e faticose per incordare uova e burro senza scaldare) non è minimamente spiegato. Tutto il testo presuppone l'uso della macchina (es. 'Con impastatrice in moto', 'velocità 1'). | Rimuovere 'A mano' dal setup o aggiungere un paragrafo dedicato a come incordare a mano (slap & fold prima di inserire il burro). | 🔴 Gemini |
 
 ## 🔴 Revisione Gemini
 
 **Verdetto**: 🟡 Parziale disaccordo
-**Adjustment**: -8
+**Adjustment**: -12
 
-Claude ha penalizzato ingiustamente l'uso della spirale e le dosi di lievito (che invece sono corrette per un impasto ricco), ma ha clamorosamente mancato l'uso distruttivo dei placeholder nel testo. La ricetta ha un bug logico grave sulle variabili dinamiche applicate a pesi fissi.
+La ricetta è valida nelle proporzioni, ma Claude ha ignorato che il testo è gravemente corrotto da un errore di programmazione/templating che inserisce variabili assurde nel procedimento. Il punteggio originale (92) è decisamente troppo alto per un testo così confusionario.
 
 ### Issues contestate
 
 | Problema | Verdetto | Motivo |
 |---|---|---|
-| Setup 'Impastatrice a spirale + A mano' incongruente per pasta brioche. | ❌ Falso positivo | L'impastatrice a spirale è eccellente e ampiamente usata a livello professionale per impasti altamente idratati o ricchi di grassi (come brioche e panettoni) perché sviluppa un'ottima maglia glutinica limitando il surriscaldamento rispetto alla planetaria. |
-| Lievito di birra fresco 15g (3% su farina) è al limite superiore... Lievitazione 3-4h + 2h potrebbe essere eccessiva. | ❌ Falso positivo | In un impasto indiretto o comunque arricchito con 16% di zucchero e 20% di burro, la pressione osmotica rallenta il lievito. 15g (3%) per 3-4h a 26°C è una tempistica assolutamente realistica e standard. |
-| Nomenclatura variabile inconsistente ({semola_impasto:80}g per lo Zucchero). | ⚠️ Parziale | Claude ha notato l'incoerenza del nome, ma ha mancato l'errore tecnico DEVASTANTE: le variabili degli ingredienti sono state usate per indicare i pesi delle pezzature. |
+| Setup include 'Impastatrice a spirale' che è corretto per impasti di panificazione/lievitati, non per pasta fresca... | ❌ Falso positivo | Osservazione priva di senso. La ricetta è chiaramente una brioche (lievitato), citare la 'pasta fresca' è un'allucinazione fuorviante di Claude. |
+| Variabili tra graffe (es. {lievito_fresco_impasto:15}) che sembrano placeholder tecnici | ⚠️ Parziale | Claude individua il problema ma ne sottovaluta gravemente la portata (assegnando solo 💡). Non è solo una questione di 'chiarezza': le variabili usate sono semanticamente errate e creano vera e propria confusione nel testo (vedi missed issues). |
+| Idratazione calcolata... = 48%, non 52% dichiarato | ❌ Falso positivo | Claude dimentica di calcolare il Rum (15g) e ignora il Miele (20g). Considerando latte (100) + uova (140) + rum (15) si arriva a 255g di liquidi su 500g di farina, ovvero il 51%, praticamente in linea col 52% dichiarato. La correzione è pignola e matematicamente inesatta. |
 
 ---
-*Generato: 2026-03-30T19:56:07.124Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-03-30T20:20:03.069Z | Pipeline: Schema → Claude → Gemini*

@@ -94,7 +94,7 @@
     },
     {
       "title": "Impasto Base (Impastatrice Spirale)",
-      "text": "Nella vasca dell'impastatrice versare il poolish maturo ({farina_media_impasto_finale:400}g totali). Aggiungere {farina_media_impasto_finale:400}g di farina tipo 0, {malto_impasto_finale:10}g di malto e {lievito_fresco_impasto_finale:5}g di lievito fresco sciolto in parte dell'acqua ghiacciata ({acqua_impasto_finale:280}g totali). Avviare velocità 1 (lenta) e impastare 4-5 minuti. L'impasto inizierà a raccogliersi. Aggiungere acqua ghiacciata gradualmente in 2-3 riprese, permettendo l'assorbimento completo tra un'aggiunta e l'altra. Dopo 8-10 minuti totali, quando l'impasto inizia a incordarsi (si stacca dalle pareti), aggiungere {sale_impasto_finale:15}g di sale e {sale_impasto_finale:15}g di olio EVO."
+      "text": "Nella vasca dell'impastatrice versare il poolish maturo ({farina_media_impasto_finale:400}g totali). Aggiungere {farina_media_impasto_finale:400}g di farina tipo 0, {malto_impasto_finale:10}g di malto e {acqua_poolish:200}g di lievito fresco sciolto in parte dell'acqua ghiacciata ({acqua_impasto_finale:280}g totali). Avviare velocità 1 (lenta) e impastare 4-5 minuti. L'impasto inizierà a raccogliersi. Aggiungere acqua ghiacciata gradualmente in 2-3 riprese, permettendo l'assorbimento completo tra un'aggiunta e l'altra. Dopo 8-10 minuti totali, quando l'impasto inizia a incordarsi (si stacca dalle pareti), aggiungere {olio_impasto_finale:15}g di sale e {sale_impasto_finale:15}g di olio EVO."
     },
     {
       "title": "Incordatura e Ossigenazione",

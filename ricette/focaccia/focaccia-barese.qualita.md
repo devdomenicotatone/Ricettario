@@ -1,14 +1,14 @@
 # Qualità: Focaccia Barese
 
-## 🟡 Score Finale: 65/100
+## 🟢 Score Finale: 85/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 1 warning |
 | Claude | 75/100 | 🟡 Da migliorare |
-| Gemini | 🟡 Parziale disaccordo (-10) | Claude ha individuato bene il disastroso utilizzo dei tag va |
+| Gemini | 🟡 Parziale disaccordo (+10) | La ricetta è tecnicamente eccellente e matematicamente bilan |
 
-Ricetta tradizionale ben strutturata ma presenta gravi errori nei riferimenti variabili del procedimento che rendono confusa l'esecuzione. Il dosaggio del lievito appare sottodimensionato per i tempi indicati. Temperature e setup sono corretti, la sezione cottura è completa ed esauriente.
+Ricetta tecnicamente valida con dosi e proporzioni corrette per focaccia barese (idratazione 80%, lievito 1.6%). I problemi principali sono i placeholder non risolti nel procedimento che creano confusione nelle quantità. Temperature e tempi sono appropriati per forno casalingo.
 
 ## 🔍 Schema Validation
 
@@ -18,30 +18,28 @@ Ricetta tradizionale ben strutturata ma presenta gravi errori nei riferimenti va
 
 | Sev. | Area | Problema | Correzione | Fonte |
 |------|------|----------|------------|-------|
-| ❌ | Coerenza | Gravi errori nei riferimenti variabili: {patate_impasto:100}g non corrisponde alle patate (100g), {farina_media_impasto:250}g riferito alla semola, {olio_evo_condimento:50}g per l'acqua invece che per l'olio | Correggere tutti i riferimenti variabili errati nel procedimento | 🔵 Claude |
-| ❌ | Dosi | Lievito 8g su 500g farina (1.6%) per solo 3-4h è insufficiente, specialmente con patate che rallentano la fermentazione | Aumentare a 10-12g di lievito o allungare i tempi a 5-6h | 🔵 Claude |
-| ⚠️ | Coerenza | Nel punto 2 si parla di '150g tipo 0' ma dovrebbero essere i restanti 150g dopo aver prelevato 100g per il lievitino | Specificare chiaramente che sono i restanti 150g di farina tipo 0 | 🔵 Claude |
-| ⚠️ | Coerenza | Le quantità d'acqua nel procedimento non tornano: 100g per lievitino + 250g + 50g = 400g totali, ma la sequenza è confusa | Chiarire la ripartizione dell'acqua: 100g lievitino, 250g seconda aggiunta, 50g terza aggiunta | 🔵 Claude |
-| 💡 | Setup | Per un impasto così idratato (80%) sarebbe più efficace specificare l'uso di vasca unta d'olio per evitare che si attacchi | Aggiungere indicazione di ungere la vasca dell'impastatrice | 🔵 Claude |
-| ❌ | Procedimento / Dosi | Manca lo staglio (divisione) dell'impasto. L'impasto totale pesa 1055g: mettendolo tutto in un'unica teglia tonda da 30-32cm si otterrebbe un prodotto spesso 4-5 cm (crudo all'interno). Le dosi indicate sono per DUE teglie da 30-32cm. | Aggiungere al punto 3 o 4 la divisione dell'impasto in due panetti da circa 520g l'uno. | 🔴 Gemini |
-| ⚠️ | Struttura | La sezione 'SOSPENSIONI' è un duplicato inutile e semanticamente errato della sezione 'Condimento'. Pomodori e olive nella barese vanno messi in superficie, non integrati all'interno della maglia glutinica come sospensioni. | Eliminare l'intero blocco SOSPENSIONI. | 🔴 Gemini |
+| ❌ | Coerenza | Nel procedimento si riferisce a '{patate_impasto:100}g di acqua' e '{farina_media_impasto:250}g semola' - placeholder non risolti che creano confusione nelle quantità | Sostituire i placeholder con i valori corretti: 100g di acqua e 250g di semola | 🔵 Claude |
+| ❌ | Coerenza | Nel punto 2 si menziona '{olio_evo_condimento:50}g di acqua' invece di acqua normale - errore di placeholder | Correggere con la quantità corretta di acqua rimanente (150g) | 🔵 Claude |
+| ❌ | Coerenza | Nel punto 2 si dice '30g di olio EVO' ma usa il placeholder sbagliato '{olio_evo_condimento:50}g' che si riferisce all'olio di superficie | Correggere con '30g di olio EVO' dall'impasto | 🔵 Claude |
+| ⚠️ | Dosi | Sale totale 17g (12g impasto + 5g superficie) = 3.4% su farina - leggermente elevato ma accettabile per focaccia | Considerare di ridurre il sale dell'impasto a 10g per un totale del 3% | 🔵 Claude |
+| ⚠️ | Coerenza | La sezione SOSPENSIONI duplica identicamente il condimento - ridondante | Rimuovere la sezione SOSPENSIONI o chiarirne lo scopo specifico | 🔵 Claude |
+| 💡 | Coerenza | Nel punto 5 usa '{olio_evo_condimento:50}g' invece del valore diretto | Sostituire con '50g' per chiarezza | 🔵 Claude |
+| ⚠️ | Cottura | 250-260°C per 20-25 minuti in forno casalingo rischiano di carbonizzare i pomodorini e la superficie della focaccia. | Consigliare di coprire con stagnola negli ultimi 5-10 minuti se la superficie scurisce troppo, oppure ridurre a 220°C dopo i primi 10-15 minuti di shock termico. | 🔴 Gemini |
 
 ## 🔴 Revisione Gemini
 
 **Verdetto**: 🟡 Parziale disaccordo
-**Adjustment**: -10
+**Adjustment**: +10
 
-Claude ha individuato bene il disastroso utilizzo dei tag variabili, ma ha preso grossi abbagli tecnici su lievito (le patate accelerano, non rallentano) e impastamento (mai oliare la spirale). Ha però mancato un errore critico: 1kg di impasto non entra in una singola teglia da 30cm. Voto da abbassare per via dell'errore di staglio omesso.
+La ricetta è tecnicamente eccellente e matematicamente bilanciata. Claude ha giustamente segnalato i brutti refusi dei 'placeholder' nel testo, ma ha commesso errori matematici e di lettura critici nei suoi tentativi di correzione (che avrebbero rovinato l'idratazione). Il punteggio va alzato perché i difetti sono solo formali, non strutturali.
 
 ### Issues contestate
 
 | Problema | Verdetto | Motivo |
 |---|---|---|
-| Gravi errori nei riferimenti variabili: {patate_impasto:100}g non corrisponde alle patate... | ✅ Confermo | I tag nel testo del procedimento sono effettivamente tutti sballati e assegnati agli ingredienti sbagliati (es. tag patate per l'acqua, tag olio per l'acqua). |
-| Lievito 8g su 500g farina (1.6%) per solo 3-4h è insufficiente, specialmente con patate che rallentano la fermentazione | ❌ Falso positivo | 8g di lievito fresco (1.6%) a 26-28°C per 4-4.5h totali sono assolutamente adeguati (anzi, abbondanti). Inoltre, le patate lesse fredde forniscono amidi gelatinizzati facilmente attaccabili dai lieviti, il che ACCELERA la fermentazione, non la rallenta. |
-| Nel punto 2 si parla di '150g tipo 0' ma dovrebbero essere i restanti 150g... | ❌ Falso positivo | Il testo dice già testualmente 'le due farine rimanenti (150g tipo 0 + ...)', quindi è già esplicitato in modo chiarissimo. |
-| Le quantità d'acqua nel procedimento non tornano: 100g per lievitino + 250g + 50g = 400g totali, ma la sequenza è confusa | ❌ Falso positivo | La sequenza matematica è perfetta e tecnicamente ineccepibile (inserimento a step, detto bassinage, fondamentale per l'80% di idratazione). La confusione visiva deriva solo dai tag errati già segnalati al punto 1. |
-| Per un impasto così idratato (80%) sarebbe più efficace specificare l'uso di vasca unta d'olio... | ❌ Falso positivo | Consiglio tecnicamente sbagliato. Ungere la vasca della spirale durante l'impastamento azzera l'attrito, impedendo la formazione della maglia glutinica. Giustamente la ricetta dice di ungere la ciotola di lievitazione al punto 3, dopo l'impastamento. |
+| Nel punto 2 si menziona '{olio_evo_condimento:50}g di acqua' invece di acqua normale - errore di placeholder | ⚠️ Parziale | Vero che il NOME del placeholder è sbagliato, ma il NUMERO (50g) è matematicamente corretto (400g totali - 100g lievitino - 250g primo impasto = 50g rimanenti). La correzione di Claude ('Correggere con 150g') è un grave errore: porterebbe l'acqua totale a 500g (idratazione al 100%), rovinando la ricetta. |
+| Nel punto 2 si dice '30g di olio EVO' ma usa il placeholder sbagliato '{olio_evo_condimento:50}g' che si riferisce all'olio di superficie | ❌ Falso positivo | Claude ha letto male il testo. La ricetta dice 'i restanti {olio_evo_condimento:50}g di acqua e l'olio EVO'. Non c'è nessun placeholder errato applicato ai 30g di olio dell'impasto. |
+| Sale totale 17g (12g impasto + 5g superficie) = 3.4% su farina - leggermente elevato | ❌ Falso positivo | In panificazione non si somma il sale dell'impasto con il sale grosso di finitura superficiale per calcolare le percentuali del panettiere. Il sale nell'impasto è 12g su 500g di farina (2.4%), una percentuale assolutamente perfetta. |
 
 ---
-*Generato: 2026-03-30T19:58:52.830Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-03-30T20:22:35.529Z | Pipeline: Schema → Claude → Gemini*

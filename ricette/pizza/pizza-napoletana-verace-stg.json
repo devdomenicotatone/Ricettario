@@ -75,7 +75,7 @@
   "stepsCondiment": [
     {
       "title": "Preparazione Pomodoro per Pizza Napoletana",
-      "text": "Scolare 400g di pomodori pelati San Marzano DOP, eliminare i semi in eccesso. Schiacciare grossolanamente con una forchetta o frullare brevemente (texture rustica). Condire con 4-{semola_impasto:5}g di sale fino, mescolare. NON aggiungere olio o basilico alla passata cruda (si brucerebbero in cottura). Conservare in frigorifero fino all'uso."
+      "text": "Scolare 400g di pomodori pelati San Marzano DOP, eliminare i semi in eccesso. Schiacciare grossolanamente con una forchetta o frullare brevemente (texture rustica). Condire con 4-{sale_impasto:28}g di sale fino, mescolare. NON aggiungere olio o basilico alla passata cruda (si brucerebbero in cottura). Conservare in frigorifero fino all'uso."
     },
     {
       "title": "Condimento Base Pizza Margherita",

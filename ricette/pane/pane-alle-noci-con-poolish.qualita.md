@@ -6,9 +6,9 @@
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 1 warning |
 | Claude | 92/100 | 🟢 Buona |
-| Gemini | 🟡 Parziale disaccordo (-7) | Claude ha verificato in modo eccellente le percentuali matem |
+| Gemini | 🟡 Parziale disaccordo (-7) | Claude ha sanzionato l'ordine degli ingredienti leggendo mal |
 
-Ricetta tecnicamente eccellente. Dosi perfettamente bilanciate: idratazione 70%, sale 2%, lievito 1.5% ideale per poolish. Temperature, tempi e procedimento sono coerenti e professionali. Setup corretto per pane. Tutti gli ingredienti sono citati nel procedimento. Ottima gestione tecnica dell'incorporamento noci e maturazione poolish. Solo note informative positive, nessun errore rilevato.
+Ricetta tecnicamente molto solida con dosi corrette (poolish 100% idratazione, sale 2% su farina totale, lievito bilanciato). Temperature e tempi appropriati per pane casalingo. Setup coerente per pane. Procedimento dettagliato e professionale con ottime indicazioni tecniche. Solo piccole imprecisioni nell'ordine di descrizione degli ingredienti del poolish, ma senza impatto sulla riuscita.
 
 ## 🔍 Schema Validation
 
@@ -18,26 +18,25 @@ Ricetta tecnicamente eccellente. Dosi perfettamente bilanciate: idratazione 70%,
 
 | Sev. | Area | Problema | Correzione | Fonte |
 |------|------|----------|------------|-------|
-| 💡 | Dosi | Il poolish ha idratazione 100% (300g farina + 300g acqua) che è corretto per definizione, ma l'idratazione finale dichiarata del 70% non corrisponde al calcolo: (300+400)g acqua / 1000g farina totale = 70% ✓ | L'idratazione è effettivamente corretta, solo nota informativa | 🔵 Claude |
-| 💡 | Dosi | Sale al 2% su farina totale (20g su 1000g) è perfetto per pane secondo standard italiani | Dosaggio ottimale, nessuna correzione necessaria | 🔵 Claude |
-| 💡 | Dosi | Lievito totale 1.5% (15g su 1000g farina) è appropriato per lievitazione di 14h con poolish | Percentuale corretta per il metodo indiretto utilizzato | 🔵 Claude |
-| ❌ | Procedimento (Impastamento) | Errore tecnico nella sequenza: si richiede di aggiungere ben 200g di acqua DOPO aver inserito i 50g di olio. I grassi lubrificano e impermeabilizzano la maglia glutinica; inserire il 50% dell'acqua della seconda fase dopo i lipidi provocherà lo slittamento dell'impasto nella spirale, rendendo l'assorbimento lunghissimo e surriscaldando l'impasto. | Modificare lo step 2: completare l'inserimento dell'acqua a filo (bassinage) e aggiungere l'olio SOLO alla fine, a maglia glutinica formata e idratata, appena prima delle noci. | 🔴 Gemini |
-| 💡 | Dosi (Poolish) | 1g di lievito fresco su 300g di farina (0,33%) per un poolish di 12 ore a 20°C è tecnicamente un po' alto e rischia di far collassare il preimpasto. Le tabelle standard per 12h a 20°C consigliano circa lo 0.1% - 0.15%. | Ridurre il lievito del poolish a circa 0,3g - 0,5g (come peraltro correttamente suggerito a metà nei 'Pro Tips' per la versione estiva). | 🔴 Gemini |
+| 💡 | Dosi | Nel procedimento viene citato erroneamente 300g di acqua nel poolish, mentre il testo dice di versare la farina prima dell'acqua | Correggere il punto 1: 'versare 300g di acqua a temperatura ambiente, poi sciogliere il lievito e aggiungere 300g di farina' | 🔵 Claude |
+| 💡 | Coerenza | L'ordine di aggiunta degli ingredienti nel poolish è invertito nel testo rispetto alla logica (acqua poi farina vs farina poi acqua) | Uniformare la sequenza: prima acqua, sciogliere lievito, poi farina per evitare confusione | 🔵 Claude |
+| ❌ | Formatura (Pezzatura) | Errore matematico: il peso totale dell'impasto è di circa 2100g (1000g farina + 700g acqua + 320g noci + 50g olio + 20g sale + 15g lievito). Se si divide in 2-3 porzioni, i panetti peseranno 700-1050g l'uno, non 400-500g come scritto. | Modificare in 'Dividere in 4-5 porzioni per panetti da 400-500g, oppure in 2 porzioni per pagnotte da 1kg'. | 🔴 Gemini |
+| ⚠️ | Testo/Variabili | Nel punto 1 c'è un errore nel nome del tag dinamico: è scritto '{farina_media_poolish:300}g di acqua'. | Correggere il tag con quello relativo all'acqua o inserire il testo statico '300g di acqua'. | 🔴 Gemini |
+| 💡 | Setup/Attrezzatura | Si indicano velocità 'V8-10' per un'impastatrice a spirale. Questa è una scala tipica delle planetarie (es. KitchenAid). Le spirali casalinghe standard hanno 1 o 2 velocità, quelle a inverter raramente usano una scala 1-10 nei manuali base. | Parlare genericamente di 'velocità alta' o 'seconda velocità' per essere coerenti con le macchine a spirale. | 🔴 Gemini |
 
 ## 🔴 Revisione Gemini
 
 **Verdetto**: 🟡 Parziale disaccordo
 **Adjustment**: -7
 
-Claude ha verificato in modo eccellente le percentuali matematiche, ma ha agito da calcolatrice ignorando un importante difetto tecnico nella sequenza di impasto. Aggiungere grandi quantità di acqua dopo l'olio compromette seriamente la riuscita meccanica della ricetta. Correggendo questo step, la ricetta diventa impeccabile.
+Claude ha sanzionato l'ordine degli ingredienti leggendo male il testo (ingannato da un refuso nel tag), ma ha mancato un grave errore matematico sulla pezzatura dell'impasto che confonderà sicuramente l'utente. Ricetta valida, ma va rivista la matematica della divisione.
 
 ### Issues contestate
 
 | Problema | Verdetto | Motivo |
 |---|---|---|
-| Il poolish ha idratazione 100%... | ✅ Confermo | La matematica dell'idratazione è effettivamente corretta (700g acqua totale / 1000g farina totale = 70%). |
-| Sale al 2% su farina totale... | ✅ Confermo | Il bilanciamento del sale è corretto e in linea con le percentuali da panificazione. |
-| Lievito totale 1.5%... | ⚠️ Parziale | Il totale ha senso, ma Claude ha omesso di valutare il rapporto lievito/tempo/temperatura nello specifico del poolish (vedi missed issues). |
+| Nel procedimento viene citato erroneamente 300g di acqua nel poolish, mentre il testo dice di versare la farina prima dell'acqua | ❌ Falso positivo | Claude ha letto male. Il testo dice chiaramente 'versare [...] acqua', poi 'sciogliere il lievito', e infine 'Aggiungere [...] farina'. L'unico errore è il nome del tag variabile usato per l'acqua ({farina_media_poolish:300}), ma l'ordine logico descritto a parole è corretto. |
+| L'ordine di aggiunta degli ingredienti nel poolish è invertito nel testo rispetto alla logica | ❌ Falso positivo | Conseguenza diretta del falso positivo precedente. La logica nel testo (acqua -> lievito -> farina) è ineccepibile. |
 
 ---
-*Generato: 2026-03-30T19:45:31.082Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-03-30T20:08:53.628Z | Pipeline: Schema → Claude → Gemini*

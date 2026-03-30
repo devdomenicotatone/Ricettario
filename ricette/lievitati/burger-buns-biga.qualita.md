@@ -1,45 +1,41 @@
 # Qualità: Burger Buns con Biga
 
-## 🟡 Score Finale: 65/100
+## 🔴 Score Finale: 40/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 0 warning |
 | Claude | 75/100 | 🟡 Da migliorare |
-| Gemini | 🟡 Parziale disaccordo (-10) | Claude ha individuato il caos nei placeholder e nelle dosi,  |
+| Gemini | 🟡 Parziale disaccordo (-35) | Claude ha individuato correttamente le gravi incongruenze lo |
 
-Ricetta con concept valido ma presenta errori critici nell'idratazione della biga (83% invece di 50-60%) e multiple incoerenze tra ingredienti e procedimento. I placeholder non risolti e i riferimenti errati rendono la ricetta difficile da seguire. Tempi, temperature e setup sono appropriati.
+La ricetta presenta errori strutturali gravi: la 'biga' ha idratazione da poolish (83%), il procedimento contiene incongruenze sui codici ingredienti e quantità, manca parte del lievito nell'impasto finale. Le tecniche sono corrette ma l'esecuzione è compromessa dalle dosi sbagliate.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione | Fonte |
 |------|------|----------|------------|-------|
-| ❌ | Dosi | Biga con idratazione 83% (250g acqua su 300g farina) - irrealistica, dovrebbe essere 50-60% | Correggere a 150-180g di acqua per ottenere idratazione 50-60% | 🔵 Claude |
-| ❌ | Coerenza | Procedimento punto 1: usa acqua per biga ma parla di '{latte_impasto_finale:50}g di acqua' - riferimento errato | Sostituire con quantità corretta di acqua per la biga | 🔵 Claude |
-| ❌ | Coerenza | Procedimento punto 2: cita '{farina_media_impasto_finale:200}g farina manitoba' ma dovrebbe essere 300g secondo ingredienti | Correggere le quantità nel procedimento per rispettare le dosi degli ingredienti | 🔵 Claude |
-| ❌ | Coerenza | Procedimento punto 2: cita '{semola_impasto_finale:30}g zucchero' ma ingredienti indicano 30g di zucchero semolato | Correggere il riferimento da 'semola' a 'zucchero' | 🔵 Claude |
-| ❌ | Coerenza | Procedimento punto 2: parla di 150g acqua aggiuntiva non presente negli ingredienti della ricetta | Rimuovere o giustificare questa acqua aggiuntiva non listata | 🔵 Claude |
-| ⚠️ | Dosi | Lievito fresco 15g totali per 500g farine (3%) - al limite superiore ma accettabile per lievitati dolci | Considerare riduzione a 10-12g per fermentazione più controllata | 🔵 Claude |
-| ⚠️ | Coerenza | Multiple riferimenti placeholder non risolti nel procedimento (es. {lievito_fresco_biga:15}, {uova_impasto_finale:55}) | Sostituire tutti i placeholder con le quantità corrette | 🔵 Claude |
-| ❌ | Procedimento | I 10g di lievito destinati all'impasto finale (descritti negli ingredienti) non vengono MAI inseriti nel procedimento. | Aggiungere i 10g di lievito fresco sbriciolato nel Punto 2 dell'impasto. | 🔴 Gemini |
-| ❌ | Struttura Lista Ingredienti | Tutta l'acqua (250g) e tutta la Manitoba (300g) sono messe sotto la voce 'Biga', creando confusione. | Spostare 200g di Manitoba e 150g di acqua (per arrivare a 200 considerando che la ricetta ne ha 250 listati ma ne usa 200+50 di latte) sotto la sezione 'Impasto Finale'. | 🔴 Gemini |
-| ⚠️ | Sospensioni | Semi di sesamo, tuorlo e latte sono inseriti nella sezione 'SOSPENSIONI'. Le sospensioni sono ingredienti inseriti ALL'INTERNO dell'impasto (es. gocce di cioccolato), questi sono per la finitura esterna. | Rimuovere la sezione SOSPENSIONI e lasciare questi ingredienti solo sotto 'Per la Finitura'. | 🔴 Gemini |
+| ❌ | Dosi | Grave errore nella biga: 300g farina + 250g acqua = 83% idratazione. Una biga tradizionale ha 45-50% idratazione (es. 300g farina + 150g acqua). Con 83% si ottiene un poolish, non una biga. | Correggere acqua biga: 135-150g per ottenere idratazione 45-50% | 🔵 Claude |
+| ❌ | Coerenza | Procedimento punto 1: dice di sciogliere lievito in {latte_impasto_finale:50}g di acqua, ma dovrebbe essere acqua della biga (non latte). Inoltre cita 100g farina mentre la ricetta prevede 300g per la biga. | Correggere: '5g lievito in 135g acqua biga' e usare tutti i 300g farina manitoba | 🔵 Claude |
+| ❌ | Coerenza | Procedimento punto 2: cita ingredienti con codici errati (semola_impasto_finale, zucchero come 30g mentre ricetta dice 30g, lievito_fresco_biga invece di miele). Inoltre aggiunge 150g acqua che non è negli ingredienti. | Correggere codici ingredienti e rimuovere i 150g acqua extra non previsti | 🔵 Claude |
+| ❌ | Dosi | Lievito: indicato 15g totali (5g biga + 10g impasto), ma procedimento usa solo i 5g nella biga. Mancano i 10g restanti nell'impasto finale. | Aggiungere 10g lievito fresco nell'impasto finale al punto 2 | 🔵 Claude |
+| ⚠️ | Coerenza | Farina manitoba: ricetta prevede 300g per biga, ma procedimento punto 2 cita sia manitoba che tipo 00 (200g+200g=400g totali). La farina manitoba negli ingredienti finali non esiste. | Chiarire le farine: 300g manitoba solo per biga, 200g tipo 00 per impasto finale | 🔵 Claude |
+| ⚠️ | Dosi | Idratazione totale risulta ~55% (300g acqua biga + 50g latte + 55g uovo + 18g tuorlo = 423g liquidi su 500g farine totali), non 62% dichiarato. | Ricalcolare idratazione corretta o correggere le dosi liquidi | 🔵 Claude |
+| ❌ | Cottura | 200°C per 16-20 minuti sono troppi per un impasto ricco di zuccheri (30g zucchero + 15g miele) e spennellato con tuorlo. I panini si bruceranno o diventeranno eccessivamente scuri. | Abbassare la temperatura a 180-190°C per 13-15 minuti. | 🔴 Gemini |
+| ⚠️ | Struttura Ricetta | La sezione 'SOSPENSIONI' contiene sesamo, latte e tuorlo. Questi non sono sospensioni (che andrebbero nell'impasto), ma ingredienti per la finitura (topping/doratura), creando una fastidiosa duplicazione. | Eliminare la sezione SOSPENSIONI. | 🔴 Gemini |
+| ❌ | Formattazione/Procedimento | La ricetta contiene palesi errori di generazione con tag di variabili non risolti (es. {latte_impasto_finale:50}g, {semola_impasto_finale:30}g, {lievito_fresco_biga:15}g) inseriti in contesti totalmente sbagliati. Claude lo ha notato, ma non ha penalizzato a sufficienza questo errore critico. | Riscrivere il procedimento rimuovendo il codice e usando le dosi della lista ingredienti. | 🔴 Gemini |
 
 ## 🔴 Revisione Gemini
 
 **Verdetto**: 🟡 Parziale disaccordo
-**Adjustment**: -10
+**Adjustment**: -35
 
-Claude ha individuato il caos nei placeholder e nelle dosi, ma non ha compreso la matematica sottostante: il procedimento è corretto, è la categorizzazione della lista ingredienti a essere errata. Inoltre, Claude ha mancato un errore gravissimo: l'assenza totale del lievito nel secondo impasto e l'uso errato della sezione 'Sospensioni'. Il punteggio va abbassato.
+Claude ha individuato correttamente le gravi incongruenze logiche e matematiche (inclusa l'errata definizione di biga), ma ha sbagliato un calcolo e, soprattutto, è stato esageratamente generoso col punteggio. Una ricetta con tag di codice esposti e dosi totalmente sballate merita un'insufficienza grave.
 
 ### Issues contestate
 
 | Problema | Verdetto | Motivo |
 |---|---|---|
-| Biga con idratazione 83% (250g acqua su 300g farina) - irrealistica | ⚠️ Parziale | Claude ha ragione sull'errore numerico nella lista, ma sbaglia la diagnosi e la correzione. L'errore non è la quantità totale di acqua, ma l'impostazione della lista ingredienti: l'autore ha inserito TUTTA l'acqua e TUTTA la farina Manitoba sotto la voce 'Biga', mentre nel procedimento le divide correttamente (Biga: 100g farina/50g acqua = 50% idratazione. Impasto: 200g farina/150g acqua). |
-| Procedimento punto 2: cita '{farina_media_impasto_finale:200}g farina manitoba' ma dovrebbe essere 300g | ❌ Falso positivo | Claude non ha fatto i conti. I 300g totali di Manitoba sono divisi: 100g nella biga (Punto 1) e 200g nell'impasto base (Punto 2). Il procedimento è matematicamente corretto, è la lista ingredienti a essere raggruppata male. |
-| Procedimento punto 2: parla di 150g acqua aggiuntiva non presente negli ingredienti | ❌ Falso positivo | Stesso errore di sopra. I 150g di acqua del Punto 2, sommati ai 50g del Punto 1, danno esattamente i 200g di acqua (più i 50g di latte fanno 250g di liquidi totali). L'acqua è presente, solo raggruppata male negli ingredienti. |
-| Lievito fresco 15g totali per 500g farine (3%) - al limite superiore | ❌ Falso positivo | Per una lievitazione totale di sole 4 ore (2h biga + 2h impasto), il 3% di lievito di birra fresco è una quantità assolutamente standard e corretta. Non c'è motivo di ridurla. |
+| Idratazione totale risulta ~55% (300g acqua biga + 50g latte + 55g uovo + 18g tuorlo = 423g liquidi su 500g farine totali), non 62% dichiarato. | ❌ Falso positivo | Claude ha sbagliato a leggere gli ingredienti: l'acqua della biga è 250g, non 300g (che è il peso della farina). I calcoli di Claude sono quindi errati, anche se il problema di fondo (l'incoerenza dell'idratazione, aggravata dai 150g di acqua extra nel procedimento) è reale. |
 
 ---
-*Generato: 2026-03-30T19:51:40.334Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-03-30T20:15:20.426Z | Pipeline: Schema → Claude → Gemini*

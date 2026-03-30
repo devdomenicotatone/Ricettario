@@ -46,7 +46,7 @@
     },
     {
       "title": "Spennellatura e Cottura",
-      "text": "Preparare doratura: 1 tuorlo + {tuorli_impasto:20}g latte (o panna). Spennellare DELICATAMENTE le superfici. Opzionale: granella di zucchero per trecce, zucchero a velo vanigliato per brioche dopo cottura. Infornare a 170-180°C (forno ventilato) per 15-20min (brioche piccole) o 25-30min (trecce grandi). Devono dorare uniformemente. Sfornare e far raffreddare su griglia."
+      "text": "Preparare doratura: 1 tuorlo + {latte_impasto:100}g latte (o panna). Spennellare DELICATAMENTE le superfici. Opzionale: granella di zucchero per trecce, zucchero a velo vanigliato per brioche dopo cottura. Infornare a 170-180°C (forno ventilato) per 15-20min (brioche piccole) o 25-30min (trecce grandi). Devono dorare uniformemente. Sfornare e far raffreddare su griglia."
     }
   ],
   "stepsHand": [
@@ -84,7 +84,7 @@
     },
     {
       "title": "Spennellatura e Cottura",
-      "text": "Doratura: 1 tuorlo + {tuorli_impasto:20}g latte. Spennellare delicatamente. Opzionale: granella di zucchero o zucchero a velo vanigliato (dopo cottura). Infornare a 170-180°C ventilato per 15-20min (piccole) o 25-30min (grandi). Doratura uniforme. Raffreddare su griglia."
+      "text": "Doratura: 1 tuorlo + {latte_impasto:100}g latte. Spennellare delicatamente. Opzionale: granella di zucchero o zucchero a velo vanigliato (dopo cottura). Infornare a 170-180°C ventilato per 15-20min (piccole) o 25-30min (grandi). Doratura uniforme. Raffreddare su griglia."
     }
   ],
   "stepsExtruder": [],

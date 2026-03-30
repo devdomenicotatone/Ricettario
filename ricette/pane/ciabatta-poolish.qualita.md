@@ -5,10 +5,10 @@
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 1 warning |
-| Claude | 88/100 | 🟢 Buona |
-| Gemini | 🟡 Parziale disaccordo (-8) | Claude ha individuato alcuni difetti di tagging ma ha fallit |
+| Claude | 95/100 | 🟢 Buona |
+| Gemini | 🟡 Parziale disaccordo (-15) | Claude ha intercettato giustamente i problemi di templating  |
 
-Ricetta tecnicamente solida con dosi corrette (80% idratazione appropriata per ciabatta), temperature adeguate al forno casalingo e procedimento ben dettagliato. Il poolish con idratazione 100% è perfetto per definizione. Setup coerente per pane. Gli errori sono principalmente di riferimenti variabili nel testo, facilmente correggibili. La ricetta dimostra buona competenza tecnica nella panificazione.
+Ricetta tecnicamente eccellente con dosi, idratazione e metodologia corrette. La ciabatta con poolish è ben strutturata con temperature, tempi e setup appropriati. Solo piccoli errori di referenza nelle variabili che non compromettono la comprensibilità della ricetta.
 
 ## 🔍 Schema Validation
 
@@ -18,27 +18,25 @@ Ricetta tecnicamente solida con dosi corrette (80% idratazione appropriata per c
 
 | Sev. | Area | Problema | Correzione | Fonte |
 |------|------|----------|------------|-------|
-| ⚠️ | Coerenza | Nel punto 2 del procedimento c'è un errore di riferimento: dice 'versare il poolish maturo ({farina_media_impasto_finale:400}g totali)' ma dovrebbe riferirsi al poolish da 400g totali (200g farina + 200g acqua) | Correggere il riferimento variabile da {farina_media_impasto_finale:400} a una variabile che rappresenti il peso totale del poolish | 🔵 Claude |
-| ⚠️ | Coerenza | Nel punto 2 si ripete erroneamente '{sale_impasto_finale:15}g di olio EVO' invece di usare una variabile specifica per l'olio | Sostituire con {olio_evo:15}g di olio EVO o variabile dedicata | 🔵 Claude |
-| 💡 | Dosi | Il peso indicato per ogni ciabatta (280g) nel punto 7 dovrebbe essere calcolato sul peso totale dell'impasto finale, non solo sull'acqua | Correggere il peso indicativo: ogni porzione sarà circa 230-250g considerando il peso totale dell'impasto diviso per 4 | 🔵 Claude |
-| ❌ | Tecnica / Formatura | Nel punto 8 viene detto di 'Schiacciare vigorosamente la superficie con la punta delle dita creando buchi profondi: questa è la tecnica tradizionale della ciabatta'. È un gravissimo errore tecnico: questa è la formatura della focaccia! Facendo così si sgonfia la ciabatta (in aperta contraddizione con l'ALERT finale). | Eliminare l'istruzione di schiacciare coi polpastrelli. L'impasto va solo capovolto e allungato delicatamente. | 🔴 Gemini |
-| ⚠️ | Variabili / Tag | Nel punto 1 viene usato un tag sbagliato per l'acqua del poolish: {farina_media_poolish:200}g di acqua. | Usare un tag specifico per l'acqua, es: {acqua_poolish:200}. | 🔴 Gemini |
-| 💡 | Tempi di lievitazione | L'intestazione dichiara '2h impasto finale', ma sommando i tempi descritti nel procedimento (impasto 20' + puntata 60' + riposo post pieghe 45' + appretto 90') si arriva a quasi 3.5 ore. | Aggiornare l'intestazione a '~3.5h impasto finale' per coerenza con il testo. | 🔴 Gemini |
+| 💡 | Coerenza | Nel punto 2 del procedimento c'è un errore di riferimento variabile: viene usato {farina_media_poolish:200}g per indicare l'acqua poolish invece di {acqua_poolish:200}g | Correggere 'sciogliere {lievito_fresco_poolish:2}g di lievito fresco in {farina_media_poolish:200}g di acqua' con 'in {acqua_poolish:200}g di acqua' | 🔵 Claude |
+| 💡 | Coerenza | Nel punto 2 viene indicato erroneamente {farina_media_impasto_finale:400}g come riferimento al poolish maturo | Sostituire con riferimento corretto al poolish o rimuovere il riferimento variabile | 🔵 Claude |
+| ❌ | Tecnica | Al punto 8 si dice di 'Schiacciare vigorosamente la superficie... creando buchi profondi'. Questa è la tecnica di formatura della Focaccia, assolutamente VIETATA per la ciabatta, che va maneggiata con estrema delicatezza per non distruggere l'alveolatura. La ricetta stessa si contraddice avendo prima scritto 'SENZA sgonfiarla'. | Eliminare l'istruzione di schiacciare coi polpastrelli. La ciabatta va solo allungata delicatamente ai bordi. | 🔴 Gemini |
+| 💡 | Coerenza Testo | Al punto 2 viene usata la variabile del sale per indicare l'olio: '{sale_impasto_finale:15}g di olio EVO'. | Sostituire con il tag variabile corretto per l'olio. | 🔴 Gemini |
+| 💡 | Coerenza Testo | Al punto 7 viene usata la variabile dell'acqua per indicare il peso della singola pezzatura: 'circa {acqua_impasto_finale:280}g ciascuna'. Anche se il peso è casualmente corretto (1127g / 4 = ~281g), la variabile usata è sbagliata. | Rimuovere il tag variabile e lasciare solo il numero 280g. | 🔴 Gemini |
 
 ## 🔴 Revisione Gemini
 
 **Verdetto**: 🟡 Parziale disaccordo
-**Adjustment**: -8
+**Adjustment**: -15
 
-Claude ha individuato alcuni difetti di tagging ma ha fallito gravemente la matematica sulle porzioni, proponendo una correzione errata. Inoltre, ha completamente ignorato un clamoroso errore tecnico nella formatura (step 8) che di fatto trasformerebbe la ciabatta in una focaccia. Il punteggio va abbassato.
+Claude ha intercettato giustamente i problemi di templating (variabili), ma ha ignorato un errore tecnico madornale: al punto 8 viene descritta la formatura di una focaccia. Schiacciare la ciabatta distrugge tutto il lavoro fatto per creare l'alveolatura.
 
 ### Issues contestate
 
 | Problema | Verdetto | Motivo |
 |---|---|---|
-| Nel punto 2 del procedimento c'è un errore di riferimento: dice 'versare il poolish maturo ({farina_media_impasto_finale:400}g totali)...' | ✅ Confermo | Il tag variabile usato è effettivamente errato, essendo riferito alla farina dell'impasto finale. |
-| Nel punto 2 si ripete erroneamente '{sale_impasto_finale:15}g di olio EVO' invece di usare una variabile specifica per l'olio | ✅ Confermo | Confermo il refuso: è stato riutilizzato il tag del sale per l'olio. |
-| Il peso indicato per ogni ciabatta (280g) nel punto 7 dovrebbe essere calcolato sul peso totale dell'impasto finale [...] ogni porzione sarà circa 230-250g | ❌ Falso positivo | Claude ha sbagliato i calcoli matematici. Il peso totale dell'impasto è 1127g. Dividendo per 4 si ottengono esattamente 281,75g. Il numero 280 inserito dall'autore è quindi corretto. L'unico errore dell'autore è stato usare goffamente il tag dell'acqua {acqua_impasto_finale:280} per stampare il numero 280. |
+| Nel punto 2 del procedimento c'è un errore di riferimento variabile: viene usato {farina_media_poolish:200}g per indicare l'acqua poolish | ✅ Confermo | Corretto, l'autore ha fatto un palese errore di copia-incolla nei tag delle variabili per l'acqua nel poolish (punto 1, non punto 2 come scritto da Claude, ma l'errore c'è). |
+| Nel punto 2 viene indicato erroneamente {farina_media_impasto_finale:400}g come riferimento al poolish maturo | ✅ Confermo | Corretto, oltretutto il peso totale del poolish è 402g (200 acqua + 200 farina + 2 lievito), non 400g. |
 
 ---
-*Generato: 2026-03-30T19:44:20.860Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-03-30T20:08:08.991Z | Pipeline: Schema → Claude → Gemini*

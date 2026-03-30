@@ -1,38 +1,24 @@
 # Qualità: Panettone Pere e Cioccolato
 
-## 🟢 Score Finale: 93/100
+## 🟡 Score Finale: 75/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 0 warning |
-| Claude | 92/100 | 🟢 Buona |
-| Gemini | 🟡 Parziale disaccordo (+1) | La ricetta è eccezionale, formulata per un batch professiona |
+| Claude | 75/100 | 🟡 Da migliorare |
 
-Ricetta tecnicamente molto solida per panettone artigianale. Dosi, temperature e tempi sono corretti e coerenti con la tradizione. Setup appropriato per lievitati. Solo piccoli errori nei placeholder del procedimento e peso sospensioni al limite massimo consigliato. La struttura della ricetta è professionale e dettagliata.
+Ricetta tecnicamente valida per panettone tradizionale con buone proporzioni base e procedure corrette. I problemi principali sono errori di placeholder nel procedimento che creano confusione. Le dosi sono equilibrate, temperature e tempi appropriati, setup corretto. Con le correzioni dei placeholder sarà una ricetta solida.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione | Fonte |
 |------|------|----------|------------|-------|
-| ⚠️ | Coerenza | Nel punto 5 del procedimento viene citato '{semola_secondo_impasto:235}g' invece di 'zucchero_secondo_impasto' | Correggere il placeholder con il nome corretto dell'ingrediente | 🔵 Claude |
-| ⚠️ | Coerenza | Nel punto 5 viene citato '{uova_secondo_impasto:300}g' invece di 'tuorli_secondo_impasto' | Correggere il placeholder per essere coerente con l'ingrediente 'Tuorli d'Uovo' | 🔵 Claude |
-| 💡 | Dosi | Le sospensioni (1250g totali) rappresentano il 100% del peso dell'impasto, al limite superiore consigliato | Considerare di ridurre leggermente le sospensioni a 1000-1100g totali per maggiore sicurezza strutturale | 🔵 Claude |
-| ⚠️ | Formattazione | Al punto 6 del procedimento c'è un evidente errore di sostituzione automatica del testo: 'con 1-{vaniglia_bourbon_secondo_impasto:2} giri lenti di spirale'. Il numero 2 è stato rimpiazzato dal placeholder della vaniglia. | Sostituire l'intero blocco con 'con 1-2 giri lenti di spirale'. | 🔴 Gemini |
-
-## 🔴 Revisione Gemini
-
-**Verdetto**: 🟡 Parziale disaccordo
-**Adjustment**: +1
-
-La ricetta è eccezionale, formulata per un batch professionale (circa 5 panettoni) con bilanciamento perfetto. Claude ha preso un grosso abbaglio calcolando l'incidenza delle sospensioni, scambiando il peso della farina per il peso totale dell'impasto. Gli unici difetti reali sono legati ai placeholder del testo.
-
-### Issues contestate
-
-| Problema | Verdetto | Motivo |
-|---|---|---|
-| Le sospensioni (1250g totali) rappresentano il 100% del peso dell'impasto, al limite superiore consigliato | ❌ Falso positivo | Grave errore matematico di Claude. Il peso totale dell'impasto base (primo + secondo impasto) è di circa 4429g. Le sospensioni (1250g) rappresentano circa il 28% del peso della pasta, una percentuale assolutamente standard e ben al di sotto del limite del 50% citato anche negli alert della ricetta. |
-| Nel punto 5 del procedimento viene citato '{semola_secondo_impasto:235}g' invece di 'zucchero_secondo_impasto' | ✅ Confermo | Evidente errore nei tag di formattazione/placeholder del testo. |
-| Nel punto 5 viene citato '{uova_secondo_impasto:300}g' invece di 'tuorli_secondo_impasto' | ✅ Confermo | Corretto, c'è un mismatch tra il nome dell'ingrediente e il tag utilizzato nel testo. |
+| ❌ | Coerenza | Nel punto 5 del procedimento si riferisce a '{semola_secondo_impasto:235}g' ma negli ingredienti è 'Zucchero Semolato Fine' non semola | Correggere il placeholder con {zucchero_secondo_impasto:235}g | 🔵 Claude |
+| ❌ | Coerenza | Nel punto 5 si riferisce a '{uova_secondo_impasto:300}g' ma negli ingredienti sono specificatamente 'Tuorli d'Uovo' | Correggere il placeholder con {tuorli_secondo_impasto:300}g | 🔵 Claude |
+| ❌ | Coerenza | Nel punto 6 c'è un errore di sintassi '1-{vaniglia_bourbon_secondo_impasto:2} giri lenti' che non ha senso | Correggere con '1-2 giri lenti' oppure rimuovere il placeholder errato | 🔵 Claude |
+| ⚠️ | Dosi | Sale a 27g su 1250g farina totale = 2.16%, nella fascia bassa per panettone che richiede struttura forte | Considerare di portare il sale a 30-32g (2.4-2.5%) per migliore struttura glutinica | 🔵 Claude |
+| ⚠️ | Coerenza | Nel punto 2 alcuni placeholder sono errati: usa 'lievito_madre_primo_impasto' per acqua, zucchero e tuorli che non sono lievito madre | Correggere i placeholder con nomi appropriati: {acqua_primo_impasto}, {zucchero_primo_impasto}, {tuorli_primo_impasto} | 🔵 Claude |
+| 💡 | Temperature | L'idratazione totale risulta circa 44% considerando anche i tuorli, coerente con l'indicazione del 45% | Nessuna correzione necessaria, solo verifica positiva | 🔵 Claude |
 
 ---
-*Generato: 2026-03-30T19:55:24.126Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-03-30T20:19:03.736Z | Pipeline: Schema → Claude → Gemini*

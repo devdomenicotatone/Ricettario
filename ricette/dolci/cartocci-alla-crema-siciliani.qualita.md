@@ -1,14 +1,14 @@
 # Qualità: Cartocci alla Crema Siciliani
 
-## 🟡 Score Finale: 60/100
+## 🔴 Score Finale: 50/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ❌ Fail | 1 errori, 0 warning |
-| Claude | 72/100 | 🟡 Da migliorare |
-| Gemini | 🟡 Parziale disaccordo (-4) | Claude ha individuato bene i gravi errori strutturali (varia |
+| Claude | 70/100 | 🟡 Da migliorare |
+| Gemini | 🟡 Parziale disaccordo (-20) | Claude ha individuato correttamente i gravissimi errori di s |
 
-Ricetta con buone basi tecniche ma presenta errori significativi: variabile non risolta nel testo, ingredienti mancanti per la farcitura promessa nel titolo, e discrepanza nell'idratazione dichiarata. Il procedimento di frittura è ben dettagliato ma manca la parte di farcitura finale.
+Ricetta con buona base tecnica ma presenta errori di coerenza critici: riferimenti a ingredienti inesistenti (semola), setup non corrispondente al procedimento, e gruppo ingredienti vuoto. Le dosi sono accettabili ma il lievito potrebbe essere insufficiente per i tempi dichiarati.
 
 ## 🔍 Schema Validation
 
@@ -18,29 +18,30 @@ Ricetta con buone basi tecniche ma presenta errori significativi: variabile non 
 
 | Sev. | Area | Problema | Correzione | Fonte |
 |------|------|----------|------------|-------|
-| ❌ | Coerenza | Nel procedimento si cita '{semola_impasto:50}g' ma la 'semola' non è presente negli ingredienti - sembra un errore di template o variabile non risolta | Sostituire con '50g' o aggiungere la semola negli ingredienti se necessaria | 🔵 Claude |
-| ❌ | Coerenza | La sezione 'Per la Farcitura' negli ingredienti è vuota ma nel titolo si parla di 'Cartocci alla Crema' - mancano gli ingredienti della crema | Aggiungere ingredienti per la crema (ricotta, zucchero a velo, canditi, pistacchi, ecc.) o specificare che la farcitura è opzionale | 🔵 Claude |
-| ⚠️ | Dosi | L'idratazione indicata è 50% ma il calcolo reale è 250g acqua + 50g uovo su 500g farina = 60% - discrepanza significativa | Correggere l'idratazione a 60% oppure rivedere le dosi per ottenere effettivamente il 50% | 🔵 Claude |
-| ⚠️ | Setup | Per dolci fritti come i cartocci, l'impastatrice a spirale può essere eccessiva - potrebbe surriscaldare l'impasto con grassi | Considerare setup 'A mano' o 'Impastatrice a forcella' per impasti dolci delicati | 🔵 Claude |
-| 💡 | Coerenza | Il procedimento non specifica mai quando/come utilizzare la crema per farcire i cartocci dopo la frittura | Aggiungere step finale di farcitura con crema usando sac-à-poche | 🔵 Claude |
-| ❌ | Procedimento / Tradizione | Manca un passaggio cruciale per il Cartoccio Siciliano: la rotolatura nello zucchero semolato subito dopo la frittura, prima della farcitura. | Aggiungere 'Zucchero semolato per guarnire' e inserire il passaggio alla fine del punto 8. | 🔴 Gemini |
+| ❌ | Coerenza | Nel procedimento si fa riferimento a {semola_impasto:50}g ma negli ingredienti non è presente semola, solo farina 00 | Sostituire {semola_impasto:50}g con 50g di acqua o correggere il riferimento | 🔵 Claude |
+| ❌ | Setup | Setup indica 'Impastatrice a spirale + A mano' ma il procedimento usa solo l'impastatrice a spirale, mai lavorazione a mano | Rimuovere 'A mano' dal setup o aggiungere passaggio di lavorazione manuale nel procedimento | 🔵 Claude |
+| ❌ | Gruppi | Il gruppo 'Per la Farcitura' è vuoto ma dovrebbe contenere ingredienti per la crema | Aggiungere gli ingredienti per la crema (panna, zucchero, ricotta, ecc.) o rimuovere il gruppo vuoto | 🔵 Claude |
+| ⚠️ | Dosi | Lievito di birra fresco 7g su 500g farina = 1.4%, molto basso per un dolce lievitato che dovrebbe avere lievitazioni più veloci | Aumentare a 10-15g (2-3%) per ridurre i tempi di lievitazione o giustificare la scelta per sapore più neutro | 🔵 Claude |
+| ⚠️ | Coerenza | Formatura prescrive pezzi da '40-{semola_impasto:50}g' con grammatura variabile non chiara | Specificare grammatura precisa (es. 45g) per uniformità del prodotto | 🔵 Claude |
+| 💡 | Dosi | Sale 8g su 500g farina = 1.6%, nella norma per dolci ma al limite basso | Considerare 10g (2%) per esaltare meglio i sapori | 🔵 Claude |
+| ❌ | Procedimento | Manca totalmente la preparazione della crema e la farcitura. Il titolo è 'Cartocci alla Crema', ma la ricetta finisce con la frittura. Il gruppo ingredienti vuoto è solo metà del problema. | Aggiungere le istruzioni su come preparare la crema (es. di ricotta) e lo step finale per riempire i cartocci. | 🔴 Gemini |
+| ❌ | Matematica / Resa | Il peso totale dell'impasto è di circa 935g. Dividendo in pezzi da 40-50g, si otterrebbero circa 19-23 pezzi, non 'circa 16' come indicato. Per averne 16, i pezzi dovrebbero pesare circa 58g. | Ricalcolare la pezzatura a circa 55-60g per ottenere 16 pezzi, oppure correggere il numero di pezzi stimati a 20. | 🔴 Gemini |
+| ⚠️ | Procedimento | Nello Step 1 si scioglie il lievito in acqua. Nello Step 2 si inseriscono gli ingredienti nell'impastatrice ('acqua rimanente', ecc.) ma ci si dimentica di dire di inserire l'acqua con il lievito sciolto. | Specificare nello Step 2 di aggiungere anche la miscela di acqua e lievito preparata nello Step 1. | 🔴 Gemini |
 
 ## 🔴 Revisione Gemini
 
 **Verdetto**: 🟡 Parziale disaccordo
-**Adjustment**: -4
+**Adjustment**: -20
 
-Claude ha individuato bene i gravi errori strutturali (variabili di codice visibili, ingredienti della crema omessi). Disaccordo sulla critica all'impastatrice a spirale (del tutto adeguata). Ho abbassato il punteggio perché, oltre alla crema, manca del tutto il passaggio fondamentale della panatura nello zucchero semolato.
+Claude ha individuato correttamente i gravissimi errori di sintassi (placeholder nel testo) e il gruppo ingredienti vuoto, ma il punteggio assegnato è troppo alto. La ricetta omette totalmente le istruzioni per fare e inserire la crema, ha errori matematici sulla resa e dimentica di inserire il lievito nell'impastatrice. Inutilizzabile nello stato attuale.
 
 ### Issues contestate
 
 | Problema | Verdetto | Motivo |
 |---|---|---|
-| Nel procedimento si cita '{semola_impasto:50}g' ma la 'semola' non è presente negli ingredienti - sembra un errore di template o variabile non risolta | ✅ Confermo | Errore palese di compilazione del testo che compromette la fluidità della lettura. |
-| La sezione 'Per la Farcitura' negli ingredienti è vuota ma nel titolo si parla di 'Cartocci alla Crema' - mancano gli ingredienti della crema | ✅ Confermo | Mancanza gravissima, la ricetta è a tutti gli effetti incompleta rispetto a quanto promesso nel titolo. |
-| L'idratazione indicata è 50% ma il calcolo reale è 250g acqua + 50g uovo su 500g farina = 60% - discrepanza significativa | ✅ Confermo | Osservazione corretta. In impasti di questo tipo (simil-brioche) i liquidi dell'uovo vanno conteggiati nell'idratazione totale. |
-| Per dolci fritti come i cartocci, l'impastatrice a spirale può essere eccessiva - potrebbe surriscaldare l'impasto con grassi | ❌ Falso positivo | La spirale è eccellente e ampiamente usata per gli impasti di rosticceria/brioche siciliana. Inoltre, la ricetta prevede già il controllo della temperatura ('Se supera i 28°C...'), annullando di fatto il rischio segnalato. |
-| Il procedimento non specifica mai quando/come utilizzare la crema per farcire i cartocci dopo la frittura | ✅ Confermo | La ricetta si interrompe bruscamente lasciando il prodotto finito 'a metà'. |
+| Setup indica 'Impastatrice a spirale + A mano' ma il procedimento usa solo l'impastatrice a spirale | ❌ Falso positivo | La formatura dei panetti, la pirlatura e l'arrotolamento sui cannelli (Step 5 e 6) sono lavorazioni manuali fondamentali. Il setup è corretto. |
+| Sale 8g su 500g farina = 1.6%, nella norma per dolci ma al limite basso. Considerare 10g (2%) | ❌ Falso positivo | 1.6% di sale in un impasto dolce fritto e farcito con crema è una percentuale perfetta. Salire al 2% in una ricetta del genere rischierebbe di renderlo sgradevole al palato. |
+| Formatura prescrive pezzi da '40-{semola_impasto:50}g' con grammatura variabile non chiara | ✅ Confermo | Oltre alla grammatura variabile, è evidente che si tratta di un errore di sintassi/placeholder del software rimasto nel testo, esattamente come nello Step 1. |
 
 ---
-*Generato: 2026-03-30T19:57:24.084Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-03-30T20:21:25.360Z | Pipeline: Schema → Claude → Gemini*

@@ -46,7 +46,7 @@
     },
     {
       "title": "Preparazione Salamoia",
-      "text": "Mescolare {acqua_condimento:200} g acqua + {malto_impasto:10} g sale fino fino a completo scioglimento. Tenere da parte a temperatura ambiente."
+      "text": "Mescolare {acqua_condimento:200} g acqua + {sale_condimento:10} g sale fino fino a completo scioglimento. Tenere da parte a temperatura ambiente."
     },
     {
       "title": "Foratura e Condimento Finale (tecnica dei 3 dita)",
@@ -60,7 +60,7 @@
     },
     {
       "title": "Incorporazione Sale e Malto (5 min)",
-      "text": "Unire malto ({malto_impasto:10} g) e sale ({sale_impasto:13} g) sull'impasto. Versare altri {olio_evo_impasto:30} g di acqua. Mescolare energicamente con marisa per 4-5 minuti fino a ottenere una massa omogenea. Il sale deve sciogliersi completamente. L'impasto sarà denso e appiccicoso."
+      "text": "Unire malto ({malto_impasto:10} g) e sale ({sale_impasto:13} g) sull'impasto. Versare altri {acqua_condimento:200} g di acqua. Mescolare energicamente con marisa per 4-5 minuti fino a ottenere una massa omogenea. Il sale deve sciogliersi completamente. L'impasto sarà denso e appiccicoso."
     },
     {
       "title": "Aggiunta Lievito e Completamento Idratazione (3 min)",
@@ -92,7 +92,7 @@
     },
     {
       "title": "Salamoia",
-      "text": "Sciogliere {malto_impasto:10} g sale fino in {acqua_condimento:200} g acqua temperatura ambiente. Mescolare bene."
+      "text": "Sciogliere {sale_condimento:10} g sale fino in {acqua_condimento:200} g acqua temperatura ambiente. Mescolare bene."
     },
     {
       "title": "Foratura Finale e Condimento (tecnica genovese)",

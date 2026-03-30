@@ -79,7 +79,7 @@
     },
     {
       "title": "Impasto Base (V1, 3 min)",
-      "text": "Nella vasca dell'impastatrice a spirale versare tutto il poolish maturo. Aggiungere {farina_media_impasto_finale:550}g di Farina Tipo 0, {farina_forte_impasto_finale:150}g di Manitoba, {acqua_impasto_finale:380}g di acqua (18-20°C), {lievito_fresco_impasto_finale:8}g di lievito fresco sbriciolato e {miele_impasto_finale:10}g di malto. Avviare in prima velocità per 3 minuti: si formerà una massa grezza e appiccicosa. Fermare e lasciare riposare 10 minuti coperto (riposo per idratazione)."
+      "text": "Nella vasca dell'impastatrice a spirale versare tutto il poolish maturo. Aggiungere {farina_media_impasto_finale:550}g di Farina Tipo 0, {farina_forte_impasto_finale:150}g di Manitoba, {acqua_impasto_finale:380}g di acqua (18-20°C), {lievito_fresco_impasto_finale:8}g di lievito fresco sbriciolato e {malto:10}g di malto. Avviare in prima velocità per 3 minuti: si formerà una massa grezza e appiccicosa. Fermare e lasciare riposare 10 minuti coperto (riposo per idratazione)."
     },
     {
       "title": "Incordatura e Sale (V1 4 min + V2 3 min)",
@@ -117,11 +117,11 @@
     },
     {
       "title": "Impasto Base (15 min a mano)",
-      "text": "In una ciotola capiente versare tutto il poolish maturo. Aggiungere {farina_media_impasto_finale:550}g di Farina Tipo 0, {farina_forte_impasto_finale:150}g di Manitoba, 250g di acqua (20-22°C), {lievito_fresco_impasto_finale:8}g di lievito fresco sbriciolato e {miele_impasto_finale:10}g di malto. Mescolare con un cucchiaio di legno fino a ottenere una massa grezza. Coprire e lasciare riposare 20 minuti (riposo per idratazione)."
+      "text": "In una ciotola capiente versare tutto il poolish maturo. Aggiungere {farina_media_impasto_finale:550}g di Farina Tipo 0, {farina_forte_impasto_finale:150}g di Manitoba, 250g di acqua (20-22°C), {lievito_fresco_impasto_finale:8}g di lievito fresco sbriciolato e {malto:10}g di malto. Mescolare con un cucchiaio di legno fino a ottenere una massa grezza. Coprire e lasciare riposare 20 minuti (riposo per idratazione)."
     },
     {
       "title": "Slap & Fold e Sale (3 serie)",
-      "text": "Aggiungere {sale_impasto_finale:20}g di sale e 50g di acqua. Rovesciare l'impasto su piano NON infarinato. Prima serie: 50 slap & fold (sollevare l'impasto con entrambe le mani, sbatterlo sul piano piegandolo su se stesso). Aggiungere altri 40g di acqua (in 2 volte) durante il lavoro. Riposare 10 minuti coperto. Seconda serie: 30 slap & fold. Riposare 10 min. Terza serie: 20 slap & fold + ultimi 40g di acqua incorporati gradualmente. L'impasto deve diventare liscio, elastico, meno appiccicoso. Temperatura finale 25-26°C."
+      "text": "Aggiungere {acqua_poolish:300}g di sale e 50g di acqua. Rovesciare l'impasto su piano NON infarinato. Prima serie: 50 slap & fold (sollevare l'impasto con entrambe le mani, sbatterlo sul piano piegandolo su se stesso). Aggiungere altri 40g di acqua (in 2 volte) durante il lavoro. Riposare 10 minuti coperto. Seconda serie: 30 slap & fold. Riposare 10 min. Terza serie: 20 slap & fold + ultimi 40g di acqua incorporati gradualmente. L'impasto deve diventare liscio, elastico, meno appiccicoso. Temperatura finale 25-26°C."
     },
     {
       "title": "Puntata con Pieghe (2h30, con 3 pieghe)",
