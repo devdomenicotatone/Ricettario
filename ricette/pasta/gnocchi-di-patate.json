@@ -31,7 +31,7 @@
     },
     {
       "title": "Cottura (2-3 min)",
-      "text": "Portare a ebollizione una pentola capiente con abbondante acqua salata (10g sale per litro). Versare gli gnocchi in piccole quantità (max 200g per volta). Appena vengono a galla (dopo 1-2 minuti) attendere altri 30 secondi e scolare con schiumarola. Trasferire direttamente nel condimento in padella e mantecare 30-60 secondi. NON sciacquare sotto acqua fredda."
+      "text": "Portare a ebollizione una pentola capiente con abbondante acqua salata ({sale_impasto:10}g sale per litro). Versare gli gnocchi in piccole quantità (max 200g per volta). Appena vengono a galla (dopo 1-2 minuti) attendere altri 30 secondi e scolare con schiumarola. Trasferire direttamente nel condimento in padella e mantecare 30-60 secondi. NON sciacquare sotto acqua fredda."
     }
   ],
   "stepsCondiment": [

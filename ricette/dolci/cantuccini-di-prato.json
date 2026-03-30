@@ -16,15 +16,15 @@
   "stepsHand": [
     {
       "title": "Preparazione Base",
-      "text": "In una ciotola capiente, unire le uova intere (100g) con lo zucchero semolato (180g). Mescolare con una spatola o frusta a mano per 2-3 minuti fino a sciogliere completamente i cristalli di zucchero. NON serve montare: l'obiettivo è solo amalgamare. Aggiungere la scorza grattugiata di arancia (5g) e limone (3g), il pizzico di sale (2g) e il Marsala (10g opzionale). Mescolare bene."
+      "text": "In una ciotola capiente, unire le uova intere ({uova_impasto:100}g) con lo zucchero semolato ({semola_impasto:180}g). Mescolare con una spatola o frusta a mano per 2-3 minuti fino a sciogliere completamente i cristalli di zucchero. NON serve montare: l'obiettivo è solo amalgamare. Aggiungere la scorza grattugiata di arancia ({scorza_di_arancia_impasto:5}g) e limone ({ammoniaca_per_dolci_impasto:3}g), il pizzico di sale ({sale_impasto:2}g) e il Marsala ({marsala_o_vin_santo_impasto:10}g opzionale). Mescolare bene."
     },
     {
       "title": "Incorporamento Ingredienti Secchi",
-      "text": "Setacciare insieme la farina 00 debole (280g) e l'ammoniaca per dolci (3g). Versare gli ingredienti secchi nel composto di uova e zucchero. Mescolare con una spatola fino a metà incorporamento, poi aggiungere il burro morbido (30g) a pezzetti. Continuare a mescolare finché l'impasto non inizia a staccarsi dalla ciotola."
+      "text": "Setacciare insieme la farina 00 debole ({farina_media_impasto:280}g) e l'ammoniaca per dolci ({ammoniaca_per_dolci_impasto:3}g). Versare gli ingredienti secchi nel composto di uova e zucchero. Mescolare con una spatola fino a metà incorporamento, poi aggiungere il burro morbido ({burro_impasto:30}g) a pezzetti. Continuare a mescolare finché l'impasto non inizia a staccarsi dalla ciotola."
     },
     {
       "title": "Incorporamento Mandorle",
-      "text": "Aggiungere le mandorle con pellicina (130g) intere. Trasferire l'impasto sul piano di lavoro e impastare a mano per 3-4 minuti, lavorando dal centro verso l'esterno, fino a ottenere un panetto omogeneo e compatto. L'impasto deve risultare leggermente sabbioso ma coeso. Se troppo appiccicoso, spolverare con pochissima farina."
+      "text": "Aggiungere le mandorle con pellicina ({mandorle_con_pellici_impasto:130}g) intere. Trasferire l'impasto sul piano di lavoro e impastare a mano per 3-4 minuti, lavorando dal centro verso l'esterno, fino a ottenere un panetto omogeneo e compatto. L'impasto deve risultare leggermente sabbioso ma coeso. Se troppo appiccicoso, spolverare con pochissima farina."
     },
     {
       "title": "Formatura Filoncini",
@@ -32,7 +32,7 @@
     },
     {
       "title": "Spennellatura e Prima Cottura",
-      "text": "Sbattere il tuorlo (20g) con 1 cucchiaino d'acqua. Spennellare delicatamente la superficie dei filoncini con un pennello da cucina. Infornare in forno statico preriscaldato a 180°C (ventilato 170°C) nella parte centrale per 20-22 minuti, finché i filoncini risultano gonfi e dorati in superficie. NON devono colorire troppo."
+      "text": "Sbattere il tuorlo ({uova_finitura:20}g) con 1 cucchiaino d'acqua. Spennellare delicatamente la superficie dei filoncini con un pennello da cucina. Infornare in forno statico preriscaldato a 180°C (ventilato 170°C) nella parte centrale per 20-22 minuti, finché i filoncini risultano gonfi e dorati in superficie. NON devono colorire troppo."
     },
     {
       "title": "Taglio e Seconda Cottura",

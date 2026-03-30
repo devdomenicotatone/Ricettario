@@ -40,11 +40,11 @@
   "stepsSpiral": [
     {
       "title": "Preparazione Patate e Pre-impasto",
-      "text": "Bollire la patata intera con la buccia fino a completa cottura (circa 20-25 minuti). Sbucciarla ancora calda, schiacciarla finemente con lo schiacciapatate e lasciarla raffreddare COMPLETAMENTE (almeno 30 minuti a temperatura ambiente). Le patate calde danno acidità e rallentano la lievitazione. Nel frattempo, sciogliere il lievito di birra in 100g di acqua tiepida (25°C) prelevata dal totale, aggiungere 100g di farina tipo 0 dal totale e lo zucchero/malto. Mescolare fino a ottenere un lievitino fluido. Coprire e lasciare attivare per 15-20 minuti fino a comparsa di bollicine."
+      "text": "Bollire la patata intera con la buccia fino a completa cottura (circa 20-25 minuti). Sbucciarla ancora calda, schiacciarla finemente con lo schiacciapatate e lasciarla raffreddare COMPLETAMENTE (almeno 30 minuti a temperatura ambiente). Le patate calde danno acidità e rallentano la lievitazione. Nel frattempo, sciogliere il lievito di birra in {patate_impasto:100}g di acqua tiepida (25°C) prelevata dal totale, aggiungere {patate_impasto:100}g di farina tipo 0 dal totale e lo zucchero/malto. Mescolare fino a ottenere un lievitino fluido. Coprire e lasciare attivare per 15-20 minuti fino a comparsa di bollicine."
     },
     {
       "title": "Impastamento in Spirale (1a Velocità)",
-      "text": "Versare nella vasca della spirale: le due farine rimanenti (150g tipo 0 + 250g semola), la purea di patate fredda, il lievitino attivo e 250g di acqua. Avviare a velocità 1 per 4-5 minuti fino a completo assorbimento. L'impasto sarà molto molle e appiccicoso — è normale. Aggiungere il sale e continuare a impastare a velocità 1 per altri 3-4 minuti. Quando il sale è incorporato, aggiungere i restanti 50g di acqua e l'olio EVO. Proseguire a velocità 1 per altri 5-6 minuti: l'impasto deve diventare liscio, elastico e staccarsi dalle pareti (incordatura completa). Temperatura finale: 24-26°C. Tempo totale spirale: 12-15 minuti."
+      "text": "Versare nella vasca della spirale: le due farine rimanenti (150g tipo 0 + {farina_media_impasto:250}g semola), la purea di patate fredda, il lievitino attivo e {farina_media_impasto:250}g di acqua. Avviare a velocità 1 per 4-5 minuti fino a completo assorbimento. L'impasto sarà molto molle e appiccicoso — è normale. Aggiungere il sale e continuare a impastare a velocità 1 per altri 3-4 minuti. Quando il sale è incorporato, aggiungere i restanti {olio_evo_condimento:50}g di acqua e l'olio EVO. Proseguire a velocità 1 per altri 5-6 minuti: l'impasto deve diventare liscio, elastico e staccarsi dalle pareti (incordatura completa). Temperatura finale: 24-26°C. Tempo totale spirale: 12-15 minuti."
     },
     {
       "title": "Puntata con Pieghe",
@@ -56,21 +56,21 @@
     },
     {
       "title": "Condimento Finale",
-      "text": "Al termine dell'appretto, premere nuovamente con i polpastrelli per rinforzare le fossette. Distribuire uniformemente i pomodorini tagliati a metà (o spezzati a mano), premendoli leggermente nell'impasto. Inserire le olive baresane qua e là. Cospargere con origano secco, una spolverata di sale grosso e una generosa emulsione di olio EVO (circa 50g) su tutta la superficie. L'olio deve 'pozzare' nelle fossette — non risparmiare."
+      "text": "Al termine dell'appretto, premere nuovamente con i polpastrelli per rinforzare le fossette. Distribuire uniformemente i pomodorini tagliati a metà (o spezzati a mano), premendoli leggermente nell'impasto. Inserire le olive baresane qua e là. Cospargere con origano secco, una spolverata di sale grosso e una generosa emulsione di olio EVO (circa {olio_evo_condimento:50}g) su tutta la superficie. L'olio deve 'pozzare' nelle fossette — non risparmiare."
     }
   ],
   "stepsHand": [
     {
       "title": "Preparazione Patate e Lievitino",
-      "text": "Bollire la patata intera con la buccia fino a completa cottura (circa 20-25 minuti). Sbucciarla ancora calda, schiacciarla finemente con lo schiacciapatate e lasciarla raffreddare COMPLETAMENTE (almeno 30 minuti a temperatura ambiente). Nel frattempo, sciogliere il lievito (10g) in 100g di acqua tiepida (25°C), aggiungere 100g di farina tipo 0 e lo zucchero/malto. Mescolare fino a ottenere un lievitino fluido. Coprire e lasciare attivare per 15-20 minuti fino a comparsa di bollicine."
+      "text": "Bollire la patata intera con la buccia fino a completa cottura (circa 20-25 minuti). Sbucciarla ancora calda, schiacciarla finemente con lo schiacciapatate e lasciarla raffreddare COMPLETAMENTE (almeno 30 minuti a temperatura ambiente). Nel frattempo, sciogliere il lievito (10g) in {patate_impasto:100}g di acqua tiepida (25°C), aggiungere {patate_impasto:100}g di farina tipo 0 e lo zucchero/malto. Mescolare fino a ottenere un lievitino fluido. Coprire e lasciare attivare per 15-20 minuti fino a comparsa di bollicine."
     },
     {
       "title": "Impastamento Manuale (Fase 1)",
-      "text": "Su una spianatoia capiente, versare le farine rimanenti (150g tipo 0 + 250g semola) e formare una fontana. Al centro: purea di patate fredda, lievitino attivo e 200g di acqua. Iniziare a incorporare la farina dall'interno verso l'esterno con le mani, mescolando fino a ottenere un impasto grumoso. Aggiungere altri 100g di acqua e continuare a impastare energicamente per 5-7 minuti. L'impasto sarà estremamente molle e appiccicoso — NON aggiungere farina. Usare la tecnica dello 'slap and fold': sollevare l'impasto, sbatterlo sul piano e ripiegarlo su se stesso. Ripetere 50-60 volte."
+      "text": "Su una spianatoia capiente, versare le farine rimanenti (150g tipo 0 + {farina_media_impasto:250}g semola) e formare una fontana. Al centro: purea di patate fredda, lievitino attivo e 200g di acqua. Iniziare a incorporare la farina dall'interno verso l'esterno con le mani, mescolando fino a ottenere un impasto grumoso. Aggiungere altri {patate_impasto:100}g di acqua e continuare a impastare energicamente per 5-7 minuti. L'impasto sarà estremamente molle e appiccicoso — NON aggiungere farina. Usare la tecnica dello 'slap and fold': sollevare l'impasto, sbatterlo sul piano e ripiegarlo su se stesso. Ripetere 50-60 volte."
     },
     {
       "title": "Incorporazione Sale, Olio e Acqua Finale",
-      "text": "Quando l'impasto inizia a prendere coesione (dopo 5-7 minuti di slap and fold), aggiungere il sale sciogliendolo leggermente con le mani umide. Continuare a lavorare per altri 3-4 minuti. Aggiungere i restanti 100g di acqua in 2 riprese e l'olio EVO. L'impasto diventerà nuovamente molto molle: proseguire con slap and fold per altri 5-8 minuti fino a ottenere un impasto liscio, lucido ed elastico che si stacca dal piano (incordatura). Tempo totale impastamento a mano: 18-22 minuti. Temperatura finale: 24-26°C."
+      "text": "Quando l'impasto inizia a prendere coesione (dopo 5-7 minuti di slap and fold), aggiungere il sale sciogliendolo leggermente con le mani umide. Continuare a lavorare per altri 3-4 minuti. Aggiungere i restanti {patate_impasto:100}g di acqua in 2 riprese e l'olio EVO. L'impasto diventerà nuovamente molto molle: proseguire con slap and fold per altri 5-8 minuti fino a ottenere un impasto liscio, lucido ed elastico che si stacca dal piano (incordatura). Tempo totale impastamento a mano: 18-22 minuti. Temperatura finale: 24-26°C."
     },
     {
       "title": "Puntata con Pieghe a Portafoglio",
@@ -82,7 +82,7 @@
     },
     {
       "title": "Condimento Finale",
-      "text": "Rinforzare le fossette premendo nuovamente con i polpastrelli. Distribuire i pomodorini tagliati a metà (o spezzati a mano), premendoli leggermente. Aggiungere le olive baresane, cospargere con origano secco, sale grosso e abbondante olio EVO (50g) che deve 'pozzare' nelle fossette. Non lesinare sull'olio: è il segreto della croccantezza."
+      "text": "Rinforzare le fossette premendo nuovamente con i polpastrelli. Distribuire i pomodorini tagliati a metà (o spezzati a mano), premendoli leggermente. Aggiungere le olive baresane, cospargere con origano secco, sale grosso e abbondante olio EVO ({olio_evo_condimento:50}g) che deve 'pozzare' nelle fossette. Non lesinare sull'olio: è il segreto della croccantezza."
     }
   ],
   "stepsExtruder": [],

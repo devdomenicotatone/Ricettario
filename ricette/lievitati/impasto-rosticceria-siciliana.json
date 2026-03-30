@@ -30,7 +30,7 @@
   "stepsSpiral": [
     {
       "title": "Preparazione Lievito e Grassi",
-      "text": "Sciogliere il lievito di birra fresco in 100g di acqua fresca (14-18°C) mescolando delicatamente. Portare lo strutto a temperatura ambiente finché risulti morbido ma non fuso (18-20°C). Se usate burro, deve essere plastico, non cremoso."
+      "text": "Sciogliere il lievito di birra fresco in {strutto_impasto:100}g di acqua fresca (14-18°C) mescolando delicatamente. Portare lo strutto a temperatura ambiente finché risulti morbido ma non fuso (18-20°C). Se usate burro, deve essere plastico, non cremoso."
     },
     {
       "title": "Impasto Base (V1 - 5 minuti)",
@@ -64,7 +64,7 @@
   "stepsHand": [
     {
       "title": "Preparazione Lievito e Grassi",
-      "text": "Sciogliere il lievito di birra fresco in 100g di acqua tiepida (28-30°C) con 1 cucchiaino di zucchero. Lasciare attivare 10 minuti fino a comparsa di bollicine. Lo strutto deve essere morbido a temperatura ambiente (18-20°C)."
+      "text": "Sciogliere il lievito di birra fresco in {strutto_impasto:100}g di acqua tiepida (28-30°C) con 1 cucchiaino di zucchero. Lasciare attivare 10 minuti fino a comparsa di bollicine. Lo strutto deve essere morbido a temperatura ambiente (18-20°C)."
     },
     {
       "title": "Impasto Iniziale",
@@ -92,7 +92,7 @@
     },
     {
       "title": "Appretto e Finitura",
-      "text": "Disporre i pezzi su teglie con carta forno distanziati 4-5cm. Coprire con pellicola leggermente unta (senza toccare la superficie). Lasciar lievitare 30-40 minuti a 28-30°C (vicino a fonte di calore) fino a volume aumentato del 50%. Sbattere 1 tuorlo con 30g di latte. Spennellare delicatamente la superficie con pennello morbido. Cospargere rollò e calzoncini con semi di sesamo tostati."
+      "text": "Disporre i pezzi su teglie con carta forno distanziati 4-5cm. Coprire con pellicola leggermente unta (senza toccare la superficie). Lasciar lievitare 30-40 minuti a 28-30°C (vicino a fonte di calore) fino a volume aumentato del 50%. Sbattere 1 tuorlo con {latte_finitura:30}g di latte. Spennellare delicatamente la superficie con pennello morbido. Cospargere rollò e calzoncini con semi di sesamo tostati."
     }
   ],
   "stepsExtruder": [],

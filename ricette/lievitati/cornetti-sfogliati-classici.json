@@ -14,15 +14,15 @@
   "stepsSpiral": [
     {
       "title": "Pre-impasto Base (V1, 3 min)",
-      "text": "Inserire nella vasca della spirale: farina manitoba (300g), farina 00 (200g), lievito fresco sbriciolato (18g) e latte a 20-22°C (150g dei 200g totali). Impastare in prima velocità per 3 minuti fino a idratazione completa. Aggiungere scorze di agrumi e vaniglia."
+      "text": "Inserire nella vasca della spirale: farina manitoba ({farina_forte_impasto:300}g), farina 00 ({farina_media_impasto:200}g), lievito fresco sbriciolato ({lievito_fresco_impasto:18}g) e latte a 20-22°C (150g dei {farina_media_impasto:200}g totali). Impastare in prima velocità per 3 minuti fino a idratazione completa. Aggiungere scorze di agrumi e vaniglia."
     },
     {
       "title": "Arricchimento (V1, 4 min + V2, 3 min)",
-      "text": "Aggiungere uova (110g) in 2 riprese, aspettando assorbimento completo. Unire zucchero (80g) e miele (20g). Impastare in V1 per 2 minuti. Aumentare a V2, aggiungere il latte restante (50g) e sale (10g). Impastare 3 minuti: l'impasto deve iniziare a incordarsi."
+      "text": "Aggiungere uova ({uova_impasto:110}g) in 2 riprese, aspettando assorbimento completo. Unire zucchero ({semola_impasto:80}g) e miele ({miele_impasto:20}g). Impastare in V1 per 2 minuti. Aumentare a V2, aggiungere il latte restante (50g) e sale ({sale_impasto:10}g). Impastare 3 minuti: l'impasto deve iniziare a incordarsi."
     },
     {
       "title": "Mantecazione Burro (V1, 5-6 min)",
-      "text": "Abbassare a V1. Aggiungere il burro a pomata (80g) in 3-4 riprese, attendendo incorporamento completo tra una aggiunta e l'altra. Impastare fino a completa mantecazione: l'impasto deve essere liscio, lucido, elastico e staccarsi perfettamente dalle pareti. Temperatura finale: 24-26°C. Totale impastamento: ~15 minuti."
+      "text": "Abbassare a V1. Aggiungere il burro a pomata ({semola_impasto:80}g) in 3-4 riprese, attendendo incorporamento completo tra una aggiunta e l'altra. Impastare fino a completa mantecazione: l'impasto deve essere liscio, lucido, elastico e staccarsi perfettamente dalle pareti. Temperatura finale: 24-26°C. Totale impastamento: ~15 minuti."
     },
     {
       "title": "Puntata Iniziale (30 min, 26-28°C)",
@@ -30,7 +30,7 @@
     },
     {
       "title": "Preparazione Panetto Burro Sfogliatura",
-      "text": "Prelevare dal frigo il burro freddo (250g). Posizionarlo tra 2 fogli di carta forno, battere col mattarello per ammorbidirlo leggermente, quindi stendere formando un quadrato di 20x20 cm e spessore uniforme di circa 1 cm. Riporre in frigo per mantenere plasticità (non deve essere durissimo né molle)."
+      "text": "Prelevare dal frigo il burro freddo ({burro_sfogliatura:250}g). Posizionarlo tra 2 fogli di carta forno, battere col mattarello per ammorbidirlo leggermente, quindi stendere formando un quadrato di 20x20 cm e spessore uniforme di circa 1 cm. Riporre in frigo per mantenere plasticità (non deve essere durissimo né molle)."
     },
     {
       "title": "Stesura Pastello e Incorporazione Burro",
@@ -68,15 +68,15 @@
   "stepsHand": [
     {
       "title": "Pre-impasto Base (10-12 min)",
-      "text": "In una ciotola capiente, sciogliere il lievito fresco (18g) in metà del latte tiepido (100g a 28-30°C). Aggiungere le farine (300g manitoba + 200g 00) e mescolare con cucchiaio di legno. Unire il latte restante (100g), scorze di agrumi e vaniglia. Rovesciare su piano e iniziare a impastare energicamente, ripiegando e schiacciando con il palmo. L'impasto sarà inizialmente appiccicoso."
+      "text": "In una ciotola capiente, sciogliere il lievito fresco ({lievito_fresco_impasto:18}g) in metà del latte tiepido (100g a 28-30°C). Aggiungere le farine ({farina_forte_impasto:300}g manitoba + {farina_media_impasto:200}g 00) e mescolare con cucchiaio di legno. Unire il latte restante (100g), scorze di agrumi e vaniglia. Rovesciare su piano e iniziare a impastare energicamente, ripiegando e schiacciando con il palmo. L'impasto sarà inizialmente appiccicoso."
     },
     {
       "title": "Arricchimento e Sviluppo Glutine (15 min)",
-      "text": "Quando l'impasto inizia a prendere corpo, aggiungere uova (110g) in 2 riprese, lavorando bene tra una aggiunta e l'altra. Unire zucchero (80g) e miele (20g). Impastare con tecnica 'slap & fold': sollevare l'impasto, sbatterlo sul piano, ripiegarlo su se stesso. Ripetere per 8-10 minuti. Aggiungere sale (10g), continuare altri 5 minuti."
+      "text": "Quando l'impasto inizia a prendere corpo, aggiungere uova ({uova_impasto:110}g) in 2 riprese, lavorando bene tra una aggiunta e l'altra. Unire zucchero ({semola_impasto:80}g) e miele ({miele_impasto:20}g). Impastare con tecnica 'slap & fold': sollevare l'impasto, sbatterlo sul piano, ripiegarlo su se stesso. Ripetere per 8-10 minuti. Aggiungere sale ({sale_impasto:10}g), continuare altri 5 minuti."
     },
     {
       "title": "Incorporazione Burro (10-12 min)",
-      "text": "Appiattire l'impasto, distribuire sopra il burro morbido (80g) in pezzetti. Ripiegare su se stesso, impastare con movimento di schiacciamento e ripiegamento. Il burro deve amalgamarsi completamente. L'impasto finale deve essere liscio, elastico, lucido e non appiccicoso. Formare una palla liscia con tecnica di pirlatura. Temperatura finale: 24-26°C."
+      "text": "Appiattire l'impasto, distribuire sopra il burro morbido ({semola_impasto:80}g) in pezzetti. Ripiegare su se stesso, impastare con movimento di schiacciamento e ripiegamento. Il burro deve amalgamarsi completamente. L'impasto finale deve essere liscio, elastico, lucido e non appiccicoso. Formare una palla liscia con tecnica di pirlatura. Temperatura finale: 24-26°C."
     },
     {
       "title": "Puntata Iniziale (30-40 min, 26-28°C)",
@@ -84,7 +84,7 @@
     },
     {
       "title": "Preparazione Panetto Burro Sfogliatura",
-      "text": "Mentre l'impasto riposa, preparare il burro per sfogliare (250g). Prelevarlo dal frigo, posizionarlo tra 2 fogli di carta forno. Battere con mattarello per ammorbidirlo senza scaldarlo troppo. Stendere formando un quadrato perfetto di 20x20 cm, spessore uniforme ~1 cm. Riporre in frigo fino all'uso. Il burro deve essere plastico: né troppo duro (si romperebbe) né troppo molle (fuoriuscirebbe)."
+      "text": "Mentre l'impasto riposa, preparare il burro per sfogliare ({burro_sfogliatura:250}g). Prelevarlo dal frigo, posizionarlo tra 2 fogli di carta forno. Battere con mattarello per ammorbidirlo senza scaldarlo troppo. Stendere formando un quadrato perfetto di 20x20 cm, spessore uniforme ~1 cm. Riporre in frigo fino all'uso. Il burro deve essere plastico: né troppo duro (si romperebbe) né troppo molle (fuoriuscirebbe)."
     },
     {
       "title": "Stesura Pastello e Chiusura Burro",

@@ -30,19 +30,19 @@
   "stepsSpiral": [
     {
       "title": "Preparazione Biga (2h prima)",
-      "text": "In una ciotola versare 50g di acqua a 20-22°C, sciogliere 5g di lievito fresco. Aggiungere 100g di Manitoba e mescolare con cucchiaio fino a composto sbricioloso, NON amalgamato. Coprire con pellicola e far maturare 2 ore a 22-24°C fino a raddoppio. La biga deve risultare spugnosa e rigonfia."
+      "text": "In una ciotola versare {burro_impasto_finale:50}g di acqua a 20-22°C, sciogliere {lievito_fresco_biga:5}g di lievito fresco. Aggiungere 100g di Manitoba e mescolare con cucchiaio fino a composto sbricioloso, NON amalgamato. Coprire con pellicola e far maturare 2 ore a 22-24°C fino a raddoppio. La biga deve risultare spugnosa e rigonfia."
     },
     {
       "title": "Impasto Base in Spirale (1° fase - V1)",
-      "text": "Nella vasca dell'impastatrice inserire 200g Manitoba + 200g farina 00. Aggiungere la biga maturata spezzettata e 15g di miele. Versare 200g di latte a temperatura ambiente. Avviare spirale a V1 (bassa) per 3-4 minuti fino a primi segni di amalgama."
+      "text": "Nella vasca dell'impastatrice inserire {farina_media_impasto_finale:200}g Manitoba + {farina_media_impasto_finale:200}g farina 00. Aggiungere la biga maturata spezzettata e {tuorli_impasto_finale:15}g di miele. Versare {farina_media_impasto_finale:200}g di latte a temperatura ambiente. Avviare spirale a V1 (bassa) per 3-4 minuti fino a primi segni di amalgama."
     },
     {
       "title": "Aggiunta Uova e Incordatura (V1 → V2)",
-      "text": "Unire 55g di uovo intero, attendere assorbimento (2 min). Aggiungere 15g di tuorlo. Continuare V1 per 3-4 minuti. Quando l'impasto inizia a incordarsi, passare a V2 per 4-5 minuti fino a impasto liscio che si stacca dalle pareti."
+      "text": "Unire {uova_impasto_finale:55}g di uovo intero, attendere assorbimento (2 min). Aggiungere {tuorli_impasto_finale:15}g di tuorlo. Continuare V1 per 3-4 minuti. Quando l'impasto inizia a incordarsi, passare a V2 per 4-5 minuti fino a impasto liscio che si stacca dalle pareti."
     },
     {
       "title": "Aggiunta Grassi e Sale (V1)",
-      "text": "Abbassare a V1. Versare lentamente 25g di olio EVO a filo. Quando assorbito (1-2 min), aggiungere 12g di sale. Attendere assorbimento completo (2 min). Aggiungere 50g di burro morbido a pezzetti, uno alla volta, aspettando 30-40 secondi tra uno e l'altro. Impastare V1 fino a completa incorporazione (4-5 min). Temperatura finale target: 26-27°C."
+      "text": "Abbassare a V1. Versare lentamente {olio_evo_impasto_finale:25}g di olio EVO a filo. Quando assorbito (1-2 min), aggiungere {sale_impasto_finale:12}g di sale. Attendere assorbimento completo (2 min). Aggiungere {burro_impasto_finale:50}g di burro morbido a pezzetti, uno alla volta, aspettando 30-40 secondi tra uno e l'altro. Impastare V1 fino a completa incorporazione (4-5 min). Temperatura finale target: 26-27°C."
     },
     {
       "title": "Puntata (1h30)",
@@ -54,7 +54,7 @@
     },
     {
       "title": "Appretto e Spennellatura (1h)",
-      "text": "Coprire con canovaccio umido e far lievitare 50 minuti a 26-28°C. Preparare spennellatura: 1 tuorlo + 30g latte, mescolare. A 50 min, spennellare delicatamente superficie dei panini, cospargere semi di sesamo. Lasciar riposare altri 10 minuti. I panini devono essere ben gonfi, morbidi al tatto."
+      "text": "Coprire con canovaccio umido e far lievitare 50 minuti a 26-28°C. Preparare spennellatura: 1 tuorlo + {semi_di_sesamo_finitura:30}g latte, mescolare. A 50 min, spennellare delicatamente superficie dei panini, cospargere semi di sesamo. Lasciar riposare altri 10 minuti. I panini devono essere ben gonfi, morbidi al tatto."
     },
     {
       "title": "Cottura",
@@ -64,19 +64,19 @@
   "stepsHand": [
     {
       "title": "Preparazione Biga (2h prima)",
-      "text": "In una ciotola capiente versare 50g di acqua a 20-22°C, sciogliere 5g di lievito fresco mescolando con forchetta. Aggiungere 100g di Manitoba e mescolare energicamente con cucchiaio di legno per 2-3 minuti fino a composto grumoso ma NON liscio. Coprire con pellicola e far maturare 2 ore a 22-24°C. La biga è pronta quando raddoppiata e spugnosa."
+      "text": "In una ciotola capiente versare {burro_impasto_finale:50}g di acqua a 20-22°C, sciogliere {lievito_fresco_biga:5}g di lievito fresco mescolando con forchetta. Aggiungere 100g di Manitoba e mescolare energicamente con cucchiaio di legno per 2-3 minuti fino a composto grumoso ma NON liscio. Coprire con pellicola e far maturare 2 ore a 22-24°C. La biga è pronta quando raddoppiata e spugnosa."
     },
     {
       "title": "Impasto Base a Mano (1° fase)",
-      "text": "In ciotola larga mescolare 200g Manitoba + 200g farina 00. Formare fontana. Al centro: biga spezzettata, 15g miele, 200g latte a 20-22°C. Iniziare a incorporare farine dal bordo con forchetta, poi passare alle mani. Impastare 5-7 minuti fino a massa ruvida ma compatta."
+      "text": "In ciotola larga mescolare {farina_media_impasto_finale:200}g Manitoba + {farina_media_impasto_finale:200}g farina 00. Formare fontana. Al centro: biga spezzettata, {tuorli_impasto_finale:15}g miele, {farina_media_impasto_finale:200}g latte a 20-22°C. Iniziare a incorporare farine dal bordo con forchetta, poi passare alle mani. Impastare 5-7 minuti fino a massa ruvida ma compatta."
     },
     {
       "title": "Aggiunta Uova e Lavorazione (10 min)",
-      "text": "Unire 55g uovo intero, impastare 2-3 minuti fino a incorporazione. Aggiungere 15g tuorlo, continuare a impastare. Su piano di lavoro, eseguire 5 minuti di slap and fold: sollevare impasto, sbatterlo sul piano, ripiegare. Ripetere 50-60 volte fino a primi segni di incordatura. L'impasto inizia a essere elastico."
+      "text": "Unire {uova_impasto_finale:55}g uovo intero, impastare 2-3 minuti fino a incorporazione. Aggiungere {tuorli_impasto_finale:15}g tuorlo, continuare a impastare. Su piano di lavoro, eseguire 5 minuti di slap and fold: sollevare impasto, sbatterlo sul piano, ripiegare. Ripetere 50-60 volte fino a primi segni di incordatura. L'impasto inizia a essere elastico."
     },
     {
       "title": "Aggiunta Grassi e Sale (15 min)",
-      "text": "Versare 25g olio EVO su piano, distribuire su impasto con mani. Impastare 3-4 minuti fino a assorbimento. Cospargere 12g sale, impastare altri 3 min. Aggiungere 50g burro morbido diviso in 5 pezzi: incorporare un pezzo alla volta con impastamento energico (2 min per pezzo). Totale 10-12 min. L'impasto deve diventare lucido, liscio, elastico. Temperatura finale: 24-26°C (più bassa che a spirale è normale)."
+      "text": "Versare {olio_evo_impasto_finale:25}g olio EVO su piano, distribuire su impasto con mani. Impastare 3-4 minuti fino a assorbimento. Cospargere {sale_impasto_finale:12}g sale, impastare altri 3 min. Aggiungere {burro_impasto_finale:50}g burro morbido diviso in 5 pezzi: incorporare un pezzo alla volta con impastamento energico (2 min per pezzo). Totale 10-12 min. L'impasto deve diventare lucido, liscio, elastico. Temperatura finale: 24-26°C (più bassa che a spirale è normale)."
     },
     {
       "title": "Puntata (2h)",
@@ -88,7 +88,7 @@
     },
     {
       "title": "Appretto e Finitura (1h10)",
-      "text": "Coprire con canovaccio leggermente umido. Far lievitare 1 ora a 24-26°C. Preparare spennellatura: 1 tuorlo + 30g latte. A 1 ora, spennellare superficie con pennello morbido (movimento delicato), cospargere semi di sesamo. Lasciar riposare 10 minuti. I panini devono essere molto gonfi e morbidi."
+      "text": "Coprire con canovaccio leggermente umido. Far lievitare 1 ora a 24-26°C. Preparare spennellatura: 1 tuorlo + {semi_di_sesamo_finitura:30}g latte. A 1 ora, spennellare superficie con pennello morbido (movimento delicato), cospargere semi di sesamo. Lasciar riposare 10 minuti. I panini devono essere molto gonfi e morbidi."
     },
     {
       "title": "Cottura",

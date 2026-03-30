@@ -14,7 +14,7 @@
   "stepsSpiral": [
     {
       "title": "Impasto in Planetaria",
-      "text": "Inserire nella planetaria con gancio la farina Manitoba (800g). Aggiungere l'acqua (544g) a temperatura ambiente in due riprese: prima 400g, poi i restanti 144g quando l'impasto inizia a formarsi. Aggiungere il sale fino (16g) dopo il primo minuto. Lavorare a velocità 1 per 3-4 minuti, fino a quando l'impasto inizia a incordarsi. Aggiungere l'olio EVO (40g) e aumentare a velocità 2 per altri 4-5 minuti. L'impasto finale deve risultare liscio, elastico, leggermente appiccicoso ma ben incordato. Temperatura finale target: 20-22°C."
+      "text": "Inserire nella planetaria con gancio la farina Manitoba ({farina_forte_impasto:800}g). Aggiungere l'acqua ({acqua_impasto:544}g) a temperatura ambiente in due riprese: prima 400g, poi i restanti 144g quando l'impasto inizia a formarsi. Aggiungere il sale fino ({sale_impasto:16}g) dopo il primo minuto. Lavorare a velocità 1 per 3-4 minuti, fino a quando l'impasto inizia a incordarsi. Aggiungere l'olio EVO ({olio_evo_impasto:40}g) e aumentare a velocità 2 per altri 4-5 minuti. L'impasto finale deve risultare liscio, elastico, leggermente appiccicoso ma ben incordato. Temperatura finale target: 20-22°C."
     },
     {
       "title": "Divisione e Pirlatura",
@@ -52,7 +52,7 @@
   "stepsHand": [
     {
       "title": "Impasto Manuale",
-      "text": "Disporre la farina Manitoba (800g) a fontana su piano di lavoro. Versare al centro l'acqua (544g) a temperatura ambiente gradualmente, iniziando con 400g. Sciogliere il sale (16g) nell'acqua. Iniziare a incorporare la farina dai bordi interni verso il centro con le dita. Quando l'impasto inizia a formarsi, aggiungere l'olio EVO (40g) e continuare a lavorare energicamente. Aggiungere l'acqua rimanente (144g) poco alla volta se necessario. Impastare con tecnica slap & fold per 10-12 minuti: sollevare l'impasto e sbatterlo sul piano, ripiegarlo e ripetere. L'impasto deve diventare liscio, elastico e leggermente appiccicoso."
+      "text": "Disporre la farina Manitoba ({farina_forte_impasto:800}g) a fontana su piano di lavoro. Versare al centro l'acqua ({acqua_impasto:544}g) a temperatura ambiente gradualmente, iniziando con 400g. Sciogliere il sale ({sale_impasto:16}g) nell'acqua. Iniziare a incorporare la farina dai bordi interni verso il centro con le dita. Quando l'impasto inizia a formarsi, aggiungere l'olio EVO ({olio_evo_impasto:40}g) e continuare a lavorare energicamente. Aggiungere l'acqua rimanente (144g) poco alla volta se necessario. Impastare con tecnica slap & fold per 10-12 minuti: sollevare l'impasto e sbatterlo sul piano, ripiegarlo e ripetere. L'impasto deve diventare liscio, elastico e leggermente appiccicoso."
     },
     {
       "title": "Divisione e Pirlatura",

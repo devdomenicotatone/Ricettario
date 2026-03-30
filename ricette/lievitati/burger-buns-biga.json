@@ -30,19 +30,19 @@
   "stepsSpiral": [
     {
       "title": "Preparazione Biga (2 ore prima)",
-      "text": "In una ciotola sciogliere 5g di lievito fresco in 50g di acqua a 20°C. Aggiungere 100g di farina manitoba e mescolare con cucchiaio di legno fino a ottenere un composto ruvido e sbricioloso (non deve essere liscio). Coprire con pellicola a contatto e lasciare maturare 2 ore a 22-24°C fino al raddoppio. La biga sarà gonfia, alveolata e leggermente cupola."
+      "text": "In una ciotola sciogliere 5g di lievito fresco in {latte_impasto_finale:50}g di acqua a 20°C. Aggiungere 100g di farina manitoba e mescolare con cucchiaio di legno fino a ottenere un composto ruvido e sbricioloso (non deve essere liscio). Coprire con pellicola a contatto e lasciare maturare 2 ore a 22-24°C fino al raddoppio. La biga sarà gonfia, alveolata e leggermente cupola."
     },
     {
       "title": "Impasto Base (1° fase - Spirale 1)",
-      "text": "Nella vasca dell'impastatrice inserire 200g farina manitoba, 200g farina 00, la biga maturata spezzettata, 30g zucchero e 15g miele. Aggiungere 150g di acqua fresca (10-14°C) e avviare in 1ª velocità per 3 minuti. Impastare fino a ottenere un composto ruvido ma coeso."
+      "text": "Nella vasca dell'impastatrice inserire {farina_media_impasto_finale:200}g farina manitoba, {farina_media_impasto_finale:200}g farina 00, la biga maturata spezzettata, {semola_impasto_finale:30}g zucchero e {lievito_fresco_biga:15}g miele. Aggiungere 150g di acqua fresca (10-14°C) e avviare in 1ª velocità per 3 minuti. Impastare fino a ottenere un composto ruvido ma coeso."
     },
     {
       "title": "Incorporamento Liquidi (2° fase - Spirale 1→2)",
-      "text": "Aggiungere 50g di latte intero a temperatura ambiente e 1 uovo intero (55g). Impastare in 1ª velocità per 2 minuti, poi passare in 2ª velocità per 4-5 minuti fino a incordatura iniziale. L'impasto deve iniziare a staccarsi dalle pareti. Aggiungere il tuorlo (18g) e continuare in 2ª velocità per altri 3 minuti."
+      "text": "Aggiungere {latte_impasto_finale:50}g di latte intero a temperatura ambiente e 1 uovo intero ({uova_impasto_finale:55}g). Impastare in 1ª velocità per 2 minuti, poi passare in 2ª velocità per 4-5 minuti fino a incordatura iniziale. L'impasto deve iniziare a staccarsi dalle pareti. Aggiungere il tuorlo ({uova_impasto_finale_2:18}g) e continuare in 2ª velocità per altri 3 minuti."
     },
     {
       "title": "Aggiunta Grassi e Sale (3° fase - Spirale 2)",
-      "text": "Con impasto ben incordato, versare a filo 25g di olio EVO e aggiungere 12g di sale. Continuare in 2ª velocità per 2 minuti fino a completo assorbimento. Aggiungere quindi 40g di burro morbido a pezzetti (5-6 pezzi), uno alla volta, aspettando che ogni pezzo sia completamente incorporato prima di aggiungere il successivo. Impastare fino a ottenere un impasto liscio, elastico e lucido che si stacca completamente dalla vasca. Temperatura finale target: 26-27°C."
+      "text": "Con impasto ben incordato, versare a filo {olio_evo_impasto_finale:25}g di olio EVO e aggiungere {sale_impasto_finale:12}g di sale. Continuare in 2ª velocità per 2 minuti fino a completo assorbimento. Aggiungere quindi {burro_impasto_finale:40}g di burro morbido a pezzetti (5-6 pezzi), uno alla volta, aspettando che ogni pezzo sia completamente incorporato prima di aggiungere il successivo. Impastare fino a ottenere un impasto liscio, elastico e lucido che si stacca completamente dalla vasca. Temperatura finale target: 26-27°C."
     },
     {
       "title": "Puntata (1ª Lievitazione)",
@@ -54,25 +54,25 @@
     },
     {
       "title": "Appretto (2ª Lievitazione)",
-      "text": "Disporre le palline su teglia con carta forno distanziate 8-10cm. Schiacciare leggermente ogni pallina con il palmo per ottenere dischetti di 8-9cm di diametro e 2cm di altezza. Coprire con strofinaccio umido e far lievitare 60-90 minuti a 24-26°C fino a quando saranno gonfie e soffici al tatto (test del dito: pressione leggera, rimbalzo lento). Ultimi 15 minuti: spennellare delicatamente con mix di 1 tuorlo + 20g latte, cospargere abbondante sesamo."
+      "text": "Disporre le palline su teglia con carta forno distanziate 8-10cm. Schiacciare leggermente ogni pallina con il palmo per ottenere dischetti di 8-9cm di diametro e 2cm di altezza. Coprire con strofinaccio umido e far lievitare 60-90 minuti a 24-26°C fino a quando saranno gonfie e soffici al tatto (test del dito: pressione leggera, rimbalzo lento). Ultimi 15 minuti: spennellare delicatamente con mix di 1 tuorlo + {latte_finitura:20}g latte, cospargere abbondante sesamo."
     }
   ],
   "stepsHand": [
     {
       "title": "Preparazione Biga (2 ore prima)",
-      "text": "In una ciotola sciogliere 6g di lievito fresco in 50g di acqua a 22°C. Aggiungere 100g di farina manitoba e mescolare energicamente con cucchiaio di legno per 2-3 minuti fino a ottenere un composto ruvido, appiccicoso ma compatto. Coprire con pellicola a contatto e lasciare maturare 2 ore a 22-24°C. La biga sarà raddoppiata, con superficie screpolata e odore alcolico."
+      "text": "In una ciotola sciogliere 6g di lievito fresco in {latte_impasto_finale:50}g di acqua a 22°C. Aggiungere 100g di farina manitoba e mescolare energicamente con cucchiaio di legno per 2-3 minuti fino a ottenere un composto ruvido, appiccicoso ma compatto. Coprire con pellicola a contatto e lasciare maturare 2 ore a 22-24°C. La biga sarà raddoppiata, con superficie screpolata e odore alcolico."
     },
     {
       "title": "Impasto Base (1° fase - Manuale)",
-      "text": "Su spianatoia o in ciotola capiente unire 200g farina manitoba, 200g farina 00, la biga spezzettata a pezzetti, 30g zucchero, 15g miele. Aggiungere 100g di acqua a 20-22°C e iniziare a impastare con le mani: movimento dall'esterno verso il centro, schiacciare e ripiegare per 5 minuti. Aggiungere altri 50g di acqua in 2 riprese, continuando a impastare per altri 5 minuti. L'impasto sarà appiccicoso e irregolare."
+      "text": "Su spianatoia o in ciotola capiente unire {farina_media_impasto_finale:200}g farina manitoba, {farina_media_impasto_finale:200}g farina 00, la biga spezzettata a pezzetti, {semola_impasto_finale:30}g zucchero, {lievito_fresco_biga:15}g miele. Aggiungere 100g di acqua a 20-22°C e iniziare a impastare con le mani: movimento dall'esterno verso il centro, schiacciare e ripiegare per 5 minuti. Aggiungere altri {latte_impasto_finale:50}g di acqua in 2 riprese, continuando a impastare per altri 5 minuti. L'impasto sarà appiccicoso e irregolare."
     },
     {
       "title": "Incorporamento Liquidi (2° fase - Slap & Fold)",
-      "text": "Aggiungere 50g latte, 1 uovo intero (55g) e 1 tuorlo (18g). Iniziare la tecnica slap & fold (sbattimento e piegatura): sollevare l'impasto, sbatterlo sul piano allungandolo, ripiegare su se stesso. Continuare per 10-12 minuti con ritmo costante. L'impasto diventerà progressivamente più liscio ed elastico, iniziando a staccarsi dalle mani."
+      "text": "Aggiungere {latte_impasto_finale:50}g latte, 1 uovo intero ({uova_impasto_finale:55}g) e 1 tuorlo ({uova_impasto_finale_2:18}g). Iniziare la tecnica slap & fold (sbattimento e piegatura): sollevare l'impasto, sbatterlo sul piano allungandolo, ripiegare su se stesso. Continuare per 10-12 minuti con ritmo costante. L'impasto diventerà progressivamente più liscio ed elastico, iniziando a staccarsi dalle mani."
     },
     {
       "title": "Aggiunta Grassi e Sale (3° fase - Stretch & Fold)",
-      "text": "Spalmare sul piano 25g di olio EVO, stendere l'impasto sopra, cospargere 12g di sale, ripiegare e impastare con slap & fold per 5 minuti fino a completo assorbimento. Stendere nuovamente l'impasto a rettangolo, distribuire 40g di burro morbido a piccoli fiocchi, ripiegare a libro e impastare con stretch & fold (allungare delicatamente i lembi e ripiegare verso il centro, ruotare di 90°, ripetere) per 8-10 minuti. L'impasto finale deve essere liscio, lucido, elastico e non appiccicoso. Temperatura target: 26-27°C."
+      "text": "Spalmare sul piano {olio_evo_impasto_finale:25}g di olio EVO, stendere l'impasto sopra, cospargere {sale_impasto_finale:12}g di sale, ripiegare e impastare con slap & fold per 5 minuti fino a completo assorbimento. Stendere nuovamente l'impasto a rettangolo, distribuire {burro_impasto_finale:40}g di burro morbido a piccoli fiocchi, ripiegare a libro e impastare con stretch & fold (allungare delicatamente i lembi e ripiegare verso il centro, ruotare di 90°, ripetere) per 8-10 minuti. L'impasto finale deve essere liscio, lucido, elastico e non appiccicoso. Temperatura target: 26-27°C."
     },
     {
       "title": "Puntata (1ª Lievitazione)",
@@ -84,7 +84,7 @@
     },
     {
       "title": "Appretto (2ª Lievitazione) e Finitura",
-      "text": "Adagiare le palline su teglia con carta forno distanziate 8-10cm. Schiacciare ogni pallina con il palmo per ottenere dischetti di 8-9cm (spessore 2cm). Coprire con canovaccio umido e lievitare 75-90 minuti a 24-26°C. I burger buns devono diventare molto gonfi e soffici (test: pressione leggera, rimbalzo lento). Ultimi 15 minuti: in una ciotolina sbattere 1 tuorlo con 20g latte, spennellare delicatamente la superficie di ogni panino, cospargere abbondante sesamo premendo leggermente perché aderisca."
+      "text": "Adagiare le palline su teglia con carta forno distanziate 8-10cm. Schiacciare ogni pallina con il palmo per ottenere dischetti di 8-9cm (spessore 2cm). Coprire con canovaccio umido e lievitare 75-90 minuti a 24-26°C. I burger buns devono diventare molto gonfi e soffici (test: pressione leggera, rimbalzo lento). Ultimi 15 minuti: in una ciotolina sbattere 1 tuorlo con {latte_finitura:20}g latte, spennellare delicatamente la superficie di ogni panino, cospargere abbondante sesamo premendo leggermente perché aderisca."
     }
   ],
   "stepsExtruder": [],

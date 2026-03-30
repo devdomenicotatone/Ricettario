@@ -22,6 +22,7 @@ import '../css/utilities/animations.css';
 import { initRouter, registerRenderers, initReveal, BASE } from './router.js';
 import { renderRecipe } from './recipe-renderer.js';
 import { buildPicture } from './image-utils.js';
+import { applyMadeBadgesToCards } from './recipe-bookmarks.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -335,6 +336,7 @@ async function renderCategory(app, { category }) {
     });
 
     initReveal();
+    applyMadeBadgesToCards();
   } catch (err) {
     console.error('Errore caricamento categoria:', err);
     const grid = document.getElementById('category-grid');
@@ -474,6 +476,8 @@ function initCarousels() {
       initReveal();
       // Setup search
       setupSearch();
+      // Badge "Fatta" sulle card
+      applyMadeBadgesToCards();
     })
     .catch(err => {
       console.error('Errore caricamento recipes.json:', err);

@@ -14,15 +14,15 @@
   "stepsSpiral": [
     {
       "title": "Preparazione acqua e mix farine",
-      "text": "Mettere 750g di acqua in frigorifero almeno 2 ore prima (deve essere 10-14°C). In una ciotola mescolare a secco: 900g farina tipo 0 + 60g farina di riso + 40g farina di soia. Questo mix è fondamentale per la texture caratteristica della pinsa: il riso dona croccantezza, la soia migliora l'elasticità e la doratura."
+      "text": "Mettere {acqua_impasto:750}g di acqua in frigorifero almeno 2 ore prima (deve essere 10-14°C). In una ciotola mescolare a secco: {farina_media_impasto:900}g farina tipo 0 + {farina_di_riso_impasto:60}g farina di riso + {farina_di_soia_impasto:40}g farina di soia. Questo mix è fondamentale per la texture caratteristica della pinsa: il riso dona croccantezza, la soia migliora l'elasticità e la doratura."
     },
     {
       "title": "Fase 1 - Incordatura base (1a velocità, 5 min)",
-      "text": "Inserire nella planetaria con gancio: mix farine + 2g lievito di birra fresco sbriciolato + 700g acqua fresca (10-14°C). Impastare 1a velocità per 5 minuti. L'impasto inizierà ad incordarsi lentamente: l'acqua fresca rallenta lo sviluppo del glutine permettendo un assorbimento graduale. Deve risultare molto morbido e appiccicoso, NON aggiungere farina."
+      "text": "Inserire nella planetaria con gancio: mix farine + {lievito_fresco_impasto:2}g lievito di birra fresco sbriciolato + 700g acqua fresca (10-14°C). Impastare 1a velocità per 5 minuti. L'impasto inizierà ad incordarsi lentamente: l'acqua fresca rallenta lo sviluppo del glutine permettendo un assorbimento graduale. Deve risultare molto morbido e appiccicoso, NON aggiungere farina."
     },
     {
       "title": "Fase 2 - Sviluppo glutine (2a velocità, 8-10 min)",
-      "text": "Passare a 2a velocità e impastare 8-10 minuti fino a completa incordatura. Quando l'impasto inizia a staccarsi dalle pareti, aggiungere 18g sale + 20g olio EVO + 50g acqua fredda restante. Continuare a impastare 2-3 minuti. L'impasto finale deve essere liscio, elastico ma molto morbido e leggermente appiccicoso. Temperatura impasto: 24-26°C massimo."
+      "text": "Passare a 2a velocità e impastare 8-10 minuti fino a completa incordatura. Quando l'impasto inizia a staccarsi dalle pareti, aggiungere {sale_impasto:18}g sale + {olio_evo_impasto:20}g olio EVO + {semola_impasto:50}g acqua fredda restante. Continuare a impastare 2-3 minuti. L'impasto finale deve essere liscio, elastico ma molto morbido e leggermente appiccicoso. Temperatura impasto: 24-26°C massimo."
     },
     {
       "title": "Prima fermentazione (puntata)",
@@ -48,7 +48,7 @@
   "stepsHand": [
     {
       "title": "Preparazione acqua e mix farine",
-      "text": "Preparare 750g acqua a 18-20°C (NON ghiacciata per impasto manuale). In una ciotola capiente mescolare: 900g farina tipo 0 + 60g farina di riso + 40g farina di soia. Il mix tri-cereale è la base della pinsa autentica."
+      "text": "Preparare {acqua_impasto:750}g acqua a 18-20°C (NON ghiacciata per impasto manuale). In una ciotola capiente mescolare: {farina_media_impasto:900}g farina tipo 0 + {farina_di_riso_impasto:60}g farina di riso + {farina_di_soia_impasto:40}g farina di soia. Il mix tri-cereale è la base della pinsa autentica."
     },
     {
       "title": "Fase 1 - Impasto base (10 min a mano)",
@@ -56,7 +56,7 @@
     },
     {
       "title": "Fase 2 - Idratazione graduale (15 min)",
-      "text": "Aggiungere 200g acqua a filo continuando a impastare e piegare. L'impasto diventerà ancora più morbido: continuare con slap & fold per 10 minuti. Aggiungere 18g sale + 20g olio + 50g acqua finali. Impastare altri 5 minuti fino a completo assorbimento. L'impasto deve essere liscio, molto elastico ma appiccicoso. Se la temperatura supera 26°C, far riposare 10 minuti in ciotola coperta."
+      "text": "Aggiungere 200g acqua a filo continuando a impastare e piegare. L'impasto diventerà ancora più morbido: continuare con slap & fold per 10 minuti. Aggiungere {sale_impasto:18}g sale + {olio_evo_impasto:20}g olio + {semola_impasto:50}g acqua finali. Impastare altri 5 minuti fino a completo assorbimento. L'impasto deve essere liscio, molto elastico ma appiccicoso. Se la temperatura supera 26°C, far riposare 10 minuti in ciotola coperta."
     },
     {
       "title": "Prima fermentazione (puntata)",

@@ -90,11 +90,11 @@
   "stepsSpiral": [
     {
       "title": "Poolish (Prefermento)",
-      "text": "In una ciotola capiente, sciogliere 2g di lievito fresco in 200g di acqua a 20-22°C. Aggiungere 200g di farina manitoba o tipo 0 forte e mescolare con cucchiaio di legno fino a ottenere un impasto fluido, omogeneo e senza grumi (consistenza pastella densa). Coprire con pellicola e far maturare 3 ore a 24-26°C. Il poolish sarà pronto quando avrà triplicato il volume, presenterà bolle superficiali e avrà un profumo vinoso caratteristico."
+      "text": "In una ciotola capiente, sciogliere {lievito_fresco_poolish:2}g di lievito fresco in {farina_media_poolish:200}g di acqua a 20-22°C. Aggiungere {farina_media_poolish:200}g di farina manitoba o tipo 0 forte e mescolare con cucchiaio di legno fino a ottenere un impasto fluido, omogeneo e senza grumi (consistenza pastella densa). Coprire con pellicola e far maturare 3 ore a 24-26°C. Il poolish sarà pronto quando avrà triplicato il volume, presenterà bolle superficiali e avrà un profumo vinoso caratteristico."
     },
     {
       "title": "Impasto Base (Impastatrice Spirale)",
-      "text": "Nella vasca dell'impastatrice versare il poolish maturo (400g totali). Aggiungere 400g di farina tipo 0, 10g di malto e 5g di lievito fresco sciolto in parte dell'acqua ghiacciata (280g totali). Avviare velocità 1 (lenta) e impastare 4-5 minuti. L'impasto inizierà a raccogliersi. Aggiungere acqua ghiacciata gradualmente in 2-3 riprese, permettendo l'assorbimento completo tra un'aggiunta e l'altra. Dopo 8-10 minuti totali, quando l'impasto inizia a incordarsi (si stacca dalle pareti), aggiungere 15g di sale e 15g di olio EVO."
+      "text": "Nella vasca dell'impastatrice versare il poolish maturo ({farina_media_impasto_finale:400}g totali). Aggiungere {farina_media_impasto_finale:400}g di farina tipo 0, {malto_impasto_finale:10}g di malto e {lievito_fresco_impasto_finale:5}g di lievito fresco sciolto in parte dell'acqua ghiacciata ({acqua_impasto_finale:280}g totali). Avviare velocità 1 (lenta) e impastare 4-5 minuti. L'impasto inizierà a raccogliersi. Aggiungere acqua ghiacciata gradualmente in 2-3 riprese, permettendo l'assorbimento completo tra un'aggiunta e l'altra. Dopo 8-10 minuti totali, quando l'impasto inizia a incordarsi (si stacca dalle pareti), aggiungere {sale_impasto_finale:15}g di sale e {sale_impasto_finale:15}g di olio EVO."
     },
     {
       "title": "Incordatura e Ossigenazione",
@@ -114,7 +114,7 @@
     },
     {
       "title": "Rovesciamento e Divisione",
-      "text": "Rovesciare DELICATAMENTE l'impasto su piano di lavoro abbondantemente infarinato con semola. NON sgonfiarlo. Con tarocco o spatola infarinata, dividere in 4 porzioni rettangolari uguali (circa 280g ciascuna). Evitare di manipolare troppo: ogni taglio deve essere netto e deciso."
+      "text": "Rovesciare DELICATAMENTE l'impasto su piano di lavoro abbondantemente infarinato con semola. NON sgonfiarlo. Con tarocco o spatola infarinata, dividere in 4 porzioni rettangolari uguali (circa {acqua_impasto_finale:280}g ciascuna). Evitare di manipolare troppo: ogni taglio deve essere netto e deciso."
     },
     {
       "title": "Formatura Ciabatte",
@@ -128,15 +128,15 @@
   "stepsHand": [
     {
       "title": "Poolish (Prefermento)",
-      "text": "In una ciotola capiente, sciogliere 2g di lievito fresco in 200g di acqua a 20-22°C. Aggiungere 200g di farina manitoba o tipo 0 forte e mescolare energicamente con cucchiaio di legno per 2-3 minuti, fino a ottenere un impasto fluido, liscio e senza grumi (consistenza crema densa). Coprire con pellicola e far maturare 3 ore a 24-26°C. Il poolish sarà pronto quando avrà triplicato il volume, presenterà una superficie a bolle e profumo vinoso-acido."
+      "text": "In una ciotola capiente, sciogliere {lievito_fresco_poolish:2}g di lievito fresco in {farina_media_poolish:200}g di acqua a 20-22°C. Aggiungere {farina_media_poolish:200}g di farina manitoba o tipo 0 forte e mescolare energicamente con cucchiaio di legno per 2-3 minuti, fino a ottenere un impasto fluido, liscio e senza grumi (consistenza crema densa). Coprire con pellicola e far maturare 3 ore a 24-26°C. Il poolish sarà pronto quando avrà triplicato il volume, presenterà una superficie a bolle e profumo vinoso-acido."
     },
     {
       "title": "Autolisi e Impasto Base",
-      "text": "In una grande ciotola o su spianatoia leggermente infarinata, versare il poolish maturo. Aggiungere 400g di farina tipo 0 e 200g di acqua a 20-22°C (NON tutta subito: riservarne 50g). Mescolare con cucchiaio di legno o mani fino a formare un impasto irregolare ma senza farina secca visibile. Coprire e lasciare riposare 20-30 minuti: questa è l'autolisi, che permette alla farina di idratarsi completamente e sviluppare glutine naturalmente, facilitando la lavorazione manuale."
+      "text": "In una grande ciotola o su spianatoia leggermente infarinata, versare il poolish maturo. Aggiungere {farina_media_impasto_finale:400}g di farina tipo 0 e {farina_media_poolish:200}g di acqua a 20-22°C (NON tutta subito: riservarne 50g). Mescolare con cucchiaio di legno o mani fino a formare un impasto irregolare ma senza farina secca visibile. Coprire e lasciare riposare 20-30 minuti: questa è l'autolisi, che permette alla farina di idratarsi completamente e sviluppare glutine naturalmente, facilitando la lavorazione manuale."
     },
     {
       "title": "Aggiunta Sale e Lievito",
-      "text": "Sciogliere 3g di lievito fresco nei 50g di acqua riservata. Aggiungere all'impasto insieme a 10g di malto e 15g di sale. Impastare con tecnica slap & fold: sollevare l'impasto da un lato, sbatterlo energicamente sul piano e ripiegarlo su se stesso. Ripetere 5-8 minuti (l'impasto sarà molto appiccicoso inizialmente, è normale). Quando inizia a formare una massa coesa, aggiungere 15g di olio EVO a filo e continuare slap & fold altri 3-5 minuti."
+      "text": "Sciogliere 3g di lievito fresco nei 50g di acqua riservata. Aggiungere all'impasto insieme a {malto_impasto_finale:10}g di malto e {sale_impasto_finale:15}g di sale. Impastare con tecnica slap & fold: sollevare l'impasto da un lato, sbatterlo energicamente sul piano e ripiegarlo su se stesso. Ripetere 5-8 minuti (l'impasto sarà molto appiccicoso inizialmente, è normale). Quando inizia a formare una massa coesa, aggiungere {sale_impasto_finale:15}g di olio EVO a filo e continuare slap & fold altri 3-5 minuti."
     },
     {
       "title": "Stretch & Fold (Prima Serie)",
@@ -152,7 +152,7 @@
     },
     {
       "title": "Preparazione Piano e Divisione",
-      "text": "Preparare 4 fogli di carta forno su teglie, spolverizzare generosamente con semola rimacinata. Rovesciare DELICATAMENTE l'impasto su piano abbondantemente infarinato con semola. Con tarocco o spatola ben infarinata, dividere in 4 porzioni rettangolari uguali (circa 280g ciascuna) con tagli netti e decisi, senza manipolare."
+      "text": "Preparare 4 fogli di carta forno su teglie, spolverizzare generosamente con semola rimacinata. Rovesciare DELICATAMENTE l'impasto su piano abbondantemente infarinato con semola. Con tarocco o spatola ben infarinata, dividere in 4 porzioni rettangolari uguali (circa {acqua_impasto_finale:280}g ciascuna) con tagli netti e decisi, senza manipolare."
     },
     {
       "title": "Formatura Manuale Ciabatte",

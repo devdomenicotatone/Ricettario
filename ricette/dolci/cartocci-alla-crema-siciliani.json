@@ -14,7 +14,7 @@
   "stepsSpiral": [
     {
       "title": "Scioglimento lievito",
-      "text": "Sciogliere il lievito di birra fresco in 50g di acqua (18-20°C) prelevata dalla dose totale. Mescolare delicatamente e lasciare riposare 2-3 minuti."
+      "text": "Sciogliere il lievito di birra fresco in {semola_impasto:50}g di acqua (18-20°C) prelevata dalla dose totale. Mescolare delicatamente e lasciare riposare 2-3 minuti."
     },
     {
       "title": "Impastamento base — V1 per 4-5 minuti",
@@ -34,7 +34,7 @@
     },
     {
       "title": "Pirlatura e formatura su cannelli",
-      "text": "Rovesciare l'impasto su piano leggermente infarinato. Dividere in pezzi da 40-50g ciascuno (circa 16 pezzi). Pirlare ogni pezzo formando cilindri lisci lunghi circa 25-30 cm. Avvolgere ogni cilindro attorno a un cannello per cannoli in acciaio, partendo da un'estremità e formando 4-5 spire sovrapposte. Sigillare l'estremità finale con una leggera pressione."
+      "text": "Rovesciare l'impasto su piano leggermente infarinato. Dividere in pezzi da 40-{semola_impasto:50}g ciascuno (circa 16 pezzi). Pirlare ogni pezzo formando cilindri lisci lunghi circa 25-30 cm. Avvolgere ogni cilindro attorno a un cannello per cannoli in acciaio, partendo da un'estremità e formando 4-5 spire sovrapposte. Sigillare l'estremità finale con una leggera pressione."
     },
     {
       "title": "Appretto finale — 30-40 minuti",
@@ -48,7 +48,7 @@
   "stepsHand": [
     {
       "title": "Scioglimento lievito",
-      "text": "Sciogliere il lievito di birra fresco in 50g di acqua tiepida (20-22°C) prelevata dalla dose totale. Mescolare delicatamente e lasciare riposare 2-3 minuti."
+      "text": "Sciogliere il lievito di birra fresco in {semola_impasto:50}g di acqua tiepida (20-22°C) prelevata dalla dose totale. Mescolare delicatamente e lasciare riposare 2-3 minuti."
     },
     {
       "title": "Impastamento base — fontana e incordatura",
@@ -64,7 +64,7 @@
     },
     {
       "title": "Pirlatura e formatura su cannelli",
-      "text": "Rovesciare l'impasto su piano leggermente infarinato. Dividere in pezzi da 40-50g ciascuno (circa 16 pezzi). Pirlare ogni pezzo formando cilindri lisci lunghi circa 25-30 cm, eseguendo movimenti delicati avanti-indietro con i palmi delle mani. Avvolgere ogni cilindro attorno a un cannello per cannoli in acciaio, partendo da un'estremità e formando 4-5 spire sovrapposte. Sigillare l'estremità finale con una leggera pressione."
+      "text": "Rovesciare l'impasto su piano leggermente infarinato. Dividere in pezzi da 40-{semola_impasto:50}g ciascuno (circa 16 pezzi). Pirlare ogni pezzo formando cilindri lisci lunghi circa 25-30 cm, eseguendo movimenti delicati avanti-indietro con i palmi delle mani. Avvolgere ogni cilindro attorno a un cannello per cannoli in acciaio, partendo da un'estremità e formando 4-5 spire sovrapposte. Sigillare l'estremità finale con una leggera pressione."
     },
     {
       "title": "Appretto finale — 40-50 minuti",
@@ -83,7 +83,7 @@
     },
     {
       "title": "Crema di ricotta dolce (opzione 2 — versione siciliana)",
-      "text": "Setacciare 500g di ricotta vaccina o di pecora fresca in una ciotola. Aggiungere 150g di zucchero a velo e mescolare energicamente con una spatola fino a crema liscia e senza grumi. Aggiungere 80g di gocce di cioccolato fondente (facoltativo) e mescolare delicatamente. Coprire e conservare in frigorifero fino al momento del ripieno."
+      "text": "Setacciare {farina_media_impasto:500}g di ricotta vaccina o di pecora fresca in una ciotola. Aggiungere 150g di zucchero a velo e mescolare energicamente con una spatola fino a crema liscia e senza grumi. Aggiungere 80g di gocce di cioccolato fondente (facoltativo) e mescolare delicatamente. Coprire e conservare in frigorifero fino al momento del ripieno."
     },
     {
       "title": "Riempimento e finitura",

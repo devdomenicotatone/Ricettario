@@ -30,7 +30,7 @@
   "stepsSpiral": [
     {
       "title": "Preparazione Mix Aromatico (24-72h prima)",
-      "text": "Almeno 24h prima (ideale 3 giorni), preparare il mix aromatico mescolando le bucce finemente grattugiate di limone e arancia, i semi della bacca di vaniglia, il miele d'acacia (45g) e il rum (15g). Conservare in contenitore ermetico a temperatura ambiente. Questo passaggio è fondamentale per far amalgamare gli aromi."
+      "text": "Almeno 24h prima (ideale 3 giorni), preparare il mix aromatico mescolando le bucce finemente grattugiate di limone e arancia, i semi della bacca di vaniglia, il miele d'acacia ({miele_terzo_impasto:45}g) e il rum ({rum_terzo_impasto:15}g). Conservare in contenitore ermetico a temperatura ambiente. Questo passaggio è fondamentale per far amalgamare gli aromi."
     },
     {
       "title": "Trattamento Uvetta (10-12h prima)",
@@ -38,7 +38,7 @@
     },
     {
       "title": "Primo Impasto (Impasto di Partenza)",
-      "text": "Nella ciotola della spirale versare acqua (125g a 20-22°C), malto (2g) e zucchero (65g). Avviare a velocità minima per sciogliere. Aggiungere farina manitoba (375g) in 2-3 riprese, impastare 2 minuti a V1. Inserire il lievito madre rinfrescato (65g) spezzettato, impastare 5 minuti a V1 fino a incordatura iniziale. Aggiungere i tuorli (50g) precedentemente sbattuti, incorporare 3 minuti a V1-V2. Incorporare il burro morbido (70g) in 2-3 riprese, lavorare 10 minuti a V2 fino a completo assorbimento e incordatura perfetta. Temperatura finale: 26-27°C. Trasferire in contenitore unto, coprire con pellicola."
+      "text": "Nella ciotola della spirale versare acqua ({acqua_primo_impasto:125}g a 20-22°C), malto ({malto_primo_impasto:2}g) e zucchero ({lievito_madre_primo_impasto:65}g). Avviare a velocità minima per sciogliere. Aggiungere farina manitoba ({farina_forte_primo_impasto:375}g) in 2-3 riprese, impastare 2 minuti a V1. Inserire il lievito madre rinfrescato ({lievito_madre_primo_impasto:65}g) spezzettato, impastare 5 minuti a V1 fino a incordatura iniziale. Aggiungere i tuorli ({tuorli_primo_impasto:50}g) precedentemente sbattuti, incorporare 3 minuti a V1-V2. Incorporare il burro morbido ({burro_primo_impasto:70}g) in 2-3 riprese, lavorare 10 minuti a V2 fino a completo assorbimento e incordatura perfetta. Temperatura finale: 26-27°C. Trasferire in contenitore unto, coprire con pellicola."
     },
     {
       "title": "Prima Puntata",
@@ -46,7 +46,7 @@
     },
     {
       "title": "Secondo Impasto (Rinforzo)",
-      "text": "Riprendere il primo impasto lievitato, riporlo nella ciotola della spirale. Aggiungere acqua (10g), zucchero (50g), tuorli (50g) e farina manitoba (62g). Impastare 5 minuti a V1 fino a completa incorporazione. Aggiungere il burro morbido (40g) in 2-3 riprese, impastare 8-10 minuti a V2 fino a incordatura. Negli ultimi 2 minuti aggiungere il sale (2g). Temperatura finale: 26-27°C. Trasferire in contenitore unto, coprire."
+      "text": "Riprendere il primo impasto lievitato, riporlo nella ciotola della spirale. Aggiungere acqua ({acqua_secondo_impasto:10}g), zucchero ({tuorli_primo_impasto:50}g), tuorli ({tuorli_primo_impasto:50}g) e farina manitoba ({farina_forte_secondo_impasto:62}g). Impastare 5 minuti a V1 fino a completa incorporazione. Aggiungere il burro morbido ({burro_secondo_impasto:40}g) in 2-3 riprese, impastare 8-10 minuti a V2 fino a incordatura. Negli ultimi 2 minuti aggiungere il sale ({malto_primo_impasto:2}g). Temperatura finale: 26-27°C. Trasferire in contenitore unto, coprire."
     },
     {
       "title": "Seconda Puntata",
@@ -54,11 +54,11 @@
     },
     {
       "title": "Terzo Impasto (Impasto Finale)",
-      "text": "Riprendere il secondo impasto, trasferirlo nella spirale. Aggiungere metà dello zucchero (32g), le uova intere (270g) e i tuorli (50g) precedentemente sbattuti. Impastare 5 minuti a V1. Aggiungere la farina manitoba (248g) in 2-3 riprese, impastare 8 minuti a V2 fino a incordatura. Incorporare il mix aromatico preparato, impastare 2 minuti. Aggiungere il burro morbido (40g) in piccole dosi, impastare 12-15 minuti a V2 fino a completo assorbimento. Aggiungere lo zucchero rimanente (33g) e il sale (9g), impastare 3 minuti. Temperatura finale: 26-28°C. L'impasto deve staccarsi perfettamente dalla ciotola (incordatura completa)."
+      "text": "Riprendere il secondo impasto, trasferirlo nella spirale. Aggiungere metà dello zucchero (32g), le uova intere ({uova_terzo_impasto:270}g) e i tuorli ({tuorli_primo_impasto:50}g) precedentemente sbattuti. Impastare 5 minuti a V1. Aggiungere la farina manitoba ({farina_forte_terzo_impasto:248}g) in 2-3 riprese, impastare 8 minuti a V2 fino a incordatura. Incorporare il mix aromatico preparato, impastare 2 minuti. Aggiungere il burro morbido ({burro_secondo_impasto:40}g) in piccole dosi, impastare 12-15 minuti a V2 fino a completo assorbimento. Aggiungere lo zucchero rimanente (33g) e il sale ({sale_terzo_impasto:9}g), impastare 3 minuti. Temperatura finale: 26-28°C. L'impasto deve staccarsi perfettamente dalla ciotola (incordatura completa)."
     },
     {
       "title": "Aggiunta Sospensioni",
-      "text": "A macchina ferma, aggiungere l'uvetta asciugata (250g) e i canditi a cubetti (150g totali: 100g arancia + 50g cedro). Impastare 2 minuti a V1 solo per incorporare uniformemente, senza rompere i canditi. Non lavorare oltre."
+      "text": "A macchina ferma, aggiungere l'uvetta asciugata (250g) e i canditi a cubetti (150g totali: 100g arancia + {tuorli_primo_impasto:50}g cedro). Impastare 2 minuti a V1 solo per incorporare uniformemente, senza rompere i canditi. Non lavorare oltre."
     },
     {
       "title": "Pirlatura e Formatura",
@@ -66,7 +66,7 @@
     },
     {
       "title": "Appretto Finale",
-      "text": "Lasciar lievitare in ambiente a 28-30°C per 6-8h fino a quando l'impasto raggiungerà il bordo dello stampo (circa 3cm sotto il bordo). Eseguire il taglio a croce con lama affilata. Spennellare con burro fuso (30g) la superficie. Posizionare un fiocchetto di burro (10g) al centro della croce."
+      "text": "Lasciar lievitare in ambiente a 28-30°C per 6-8h fino a quando l'impasto raggiungerà il bordo dello stampo (circa 3cm sotto il bordo). Eseguire il taglio a croce con lama affilata. Spennellare con burro fuso ({burro_terzo_impasto_2:30}g) la superficie. Posizionare un fiocchetto di burro ({acqua_secondo_impasto:10}g) al centro della croce."
     },
     {
       "title": "Cottura",
@@ -78,13 +78,13 @@
     },
     {
       "title": "Conservazione",
-      "text": "Una volta freddo, rimuovere gli spilloni. Avvolgere in sacchetto per alimenti, spruzzare 4 erogazioni di alcol alimentare all'interno del sacchetto (non sul panettone), chiudere ermeticamente. Conservare a temperatura ambiente fino a 10-15 giorni. L'alcol previene la formazione di muffe mantenendo il prodotto soffice."
+      "text": "Una volta freddo, rimuovere gli spilloni. Avvolgere in sacchetto per alimenti, spruzzare 4 erogazioni di alcol alimentare all'interno del sacchetto (non sul panettone), chiudere ermeticamente. Conservare a temperatura ambiente fino a 10-{rum_terzo_impasto:15} giorni. L'alcol previene la formazione di muffe mantenendo il prodotto soffice."
     }
   ],
   "stepsHand": [
     {
       "title": "Preparazione Mix Aromatico (24-72h prima)",
-      "text": "Almeno 24h prima (ideale 3 giorni), preparare il mix aromatico mescolando le bucce finemente grattugiate di limone e arancia, i semi della bacca di vaniglia, il miele d'acacia (45g) e il rum (15g). Conservare in contenitore ermetico a temperatura ambiente."
+      "text": "Almeno 24h prima (ideale 3 giorni), preparare il mix aromatico mescolando le bucce finemente grattugiate di limone e arancia, i semi della bacca di vaniglia, il miele d'acacia ({miele_terzo_impasto:45}g) e il rum ({rum_terzo_impasto:15}g). Conservare in contenitore ermetico a temperatura ambiente."
     },
     {
       "title": "Trattamento Uvetta (10-12h prima)",
@@ -92,7 +92,7 @@
     },
     {
       "title": "Primo Impasto (Impasto di Partenza)",
-      "text": "In una ciotola capiente sciogliere malto (2g) e zucchero (65g) in acqua (125g a temperatura ambiente). Versare la farina manitoba (375g) a fontana su un piano di lavoro in legno o marmo. Creare un cratere centrale. Versare l'acqua zuccherata al centro. Iniziare a incorporare la farina dall'interno verso l'esterno con le dita. Quando l'impasto è amalgamato, aggiungere il lievito madre (65g) spezzettato. Impastare energicamente con tecnica slap & fold per 15-20 minuti fino a incordatura iniziale. Aggiungere i tuorli (50g) sbattuti, continuare a impastare 10 minuti. Incorporare il burro morbido (70g) in 3-4 riprese, impastare con forza fino a completo assorbimento (altri 20-25 minuti totali). L'impasto deve risultare liscio, elastico e non appiccicoso. Temperatura finale: 26-27°C."
+      "text": "In una ciotola capiente sciogliere malto ({malto_primo_impasto:2}g) e zucchero ({lievito_madre_primo_impasto:65}g) in acqua ({acqua_primo_impasto:125}g a temperatura ambiente). Versare la farina manitoba ({farina_forte_primo_impasto:375}g) a fontana su un piano di lavoro in legno o marmo. Creare un cratere centrale. Versare l'acqua zuccherata al centro. Iniziare a incorporare la farina dall'interno verso l'esterno con le dita. Quando l'impasto è amalgamato, aggiungere il lievito madre ({lievito_madre_primo_impasto:65}g) spezzettato. Impastare energicamente con tecnica slap & fold per 15-20 minuti fino a incordatura iniziale. Aggiungere i tuorli ({tuorli_primo_impasto:50}g) sbattuti, continuare a impastare 10 minuti. Incorporare il burro morbido ({burro_primo_impasto:70}g) in 3-4 riprese, impastare con forza fino a completo assorbimento (altri 20-25 minuti totali). L'impasto deve risultare liscio, elastico e non appiccicoso. Temperatura finale: 26-27°C."
     },
     {
       "title": "Prima Puntata",
@@ -100,7 +100,7 @@
     },
     {
       "title": "Secondo Impasto (Rinforzo)",
-      "text": "Rovesciare il primo impasto su piano di lavoro. Appiattire leggermente. Aggiungere al centro acqua (10g), zucchero (50g), tuorli (50g) e farina (62g). Ripiegare l'impasto su se stesso incorporando gli ingredienti. Impastare con slap & fold per 15 minuti. Aggiungere il burro (40g) in piccole dosi, impastare energicamente per altri 15-20 minuti fino a completa incorporazione. Aggiungere il sale (2g) negli ultimi 3 minuti. Formare una palla liscia."
+      "text": "Rovesciare il primo impasto su piano di lavoro. Appiattire leggermente. Aggiungere al centro acqua ({acqua_secondo_impasto:10}g), zucchero ({tuorli_primo_impasto:50}g), tuorli ({tuorli_primo_impasto:50}g) e farina ({farina_forte_secondo_impasto:62}g). Ripiegare l'impasto su se stesso incorporando gli ingredienti. Impastare con slap & fold per 15 minuti. Aggiungere il burro ({burro_secondo_impasto:40}g) in piccole dosi, impastare energicamente per altri 15-20 minuti fino a completa incorporazione. Aggiungere il sale ({malto_primo_impasto:2}g) negli ultimi 3 minuti. Formare una palla liscia."
     },
     {
       "title": "Seconda Puntata",
@@ -108,7 +108,7 @@
     },
     {
       "title": "Terzo Impasto (Impasto Finale)",
-      "text": "Rovesciare l'impasto su piano. Appiattire formando un disco. Versare al centro metà zucchero (32g), uova (270g) e tuorli (50g) sbattuti. Ripiegare, iniziare a impastare con slap & fold. Dopo 5 minuti aggiungere la farina (248g) in 3 riprese, impastare 20 minuti fino a incordatura. Incorporare il mix aromatico, impastare 5 minuti. Aggiungere il burro (40g) pochissimo per volta, impastare con forza per 25-30 minuti fino a completo assorbimento. Aggiungere zucchero rimanente (33g) e sale (9g), impastare 5 minuti. L'impasto deve essere lucido, elasticissimo e staccarsi dalle mani. Temperatura: 26-28°C. Tempo totale lavorazione a mano: circa 60-70 minuti."
+      "text": "Rovesciare l'impasto su piano. Appiattire formando un disco. Versare al centro metà zucchero (32g), uova ({uova_terzo_impasto:270}g) e tuorli ({tuorli_primo_impasto:50}g) sbattuti. Ripiegare, iniziare a impastare con slap & fold. Dopo 5 minuti aggiungere la farina ({farina_forte_terzo_impasto:248}g) in 3 riprese, impastare 20 minuti fino a incordatura. Incorporare il mix aromatico, impastare 5 minuti. Aggiungere il burro ({burro_secondo_impasto:40}g) pochissimo per volta, impastare con forza per 25-30 minuti fino a completo assorbimento. Aggiungere zucchero rimanente (33g) e sale ({sale_terzo_impasto:9}g), impastare 5 minuti. L'impasto deve essere lucido, elasticissimo e staccarsi dalle mani. Temperatura: 26-28°C. Tempo totale lavorazione a mano: circa 60-70 minuti."
     },
     {
       "title": "Aggiunta Sospensioni",
@@ -120,7 +120,7 @@
     },
     {
       "title": "Appretto Finale",
-      "text": "Lasciar lievitare a 28-30°C per 6-8h fino a 3cm dal bordo. Tagliare a croce con lama affilata unta d'olio. Spennellare con burro fuso (30g), posizionare fiocchetto di burro (10g) al centro."
+      "text": "Lasciar lievitare a 28-30°C per 6-8h fino a 3cm dal bordo. Tagliare a croce con lama affilata unta d'olio. Spennellare con burro fuso ({burro_terzo_impasto_2:30}g), posizionare fiocchetto di burro ({acqua_secondo_impasto:10}g) al centro."
     },
     {
       "title": "Cottura",
@@ -132,7 +132,7 @@
     },
     {
       "title": "Conservazione",
-      "text": "Rimuovere spilloni a freddo. Avvolgere in sacchetto, spruzzare 4 erogazioni di alcol alimentare, chiudere. Conservare a temperatura ambiente fino a 15 giorni."
+      "text": "Rimuovere spilloni a freddo. Avvolgere in sacchetto, spruzzare 4 erogazioni di alcol alimentare, chiudere. Conservare a temperatura ambiente fino a {rum_terzo_impasto:15} giorni."
     }
   ],
   "stepsExtruder": [],

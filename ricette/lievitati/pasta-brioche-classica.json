@@ -18,15 +18,15 @@
     },
     {
       "title": "Scioglimento Lievito",
-      "text": "Sciogliere il lievito di birra fresco (15g) nel latte intero a temperatura ambiente (100g). Mescolare e lasciare riposare 5 minuti. Il latte deve essere 20-22°C, mai freddo."
+      "text": "Sciogliere il lievito di birra fresco ({lievito_fresco_impasto:15}g) nel latte intero a temperatura ambiente ({latte_impasto:100}g). Mescolare e lasciare riposare 5 minuti. Il latte deve essere 20-22°C, mai freddo."
     },
     {
       "title": "Impasto Base — 1ª Velocità (8-10min)",
-      "text": "Nella ciotola della spirale inserire: farina Tipo 0 (300g) + manitoba (200g) + zucchero (80g). Avviare a velocità 1. Aggiungere il latte con lievito sciolto + composto di aromi marinati. Lavorare 2-3min finché si assorbe. Aggiungere le uova una alla volta (2 uova intere + 1 tuorlo), aspettando completo assorbimento prima di aggiungere la successiva. Impastare 8-10min totali. L'impasto risulterà disomogeneo, leggermente sgretolato."
+      "text": "Nella ciotola della spirale inserire: farina Tipo 0 ({farina_media_impasto:300}g) + manitoba ({farina_forte_impasto:200}g) + zucchero ({semola_impasto:80}g). Avviare a velocità 1. Aggiungere il latte con lievito sciolto + composto di aromi marinati. Lavorare 2-3min finché si assorbe. Aggiungere le uova una alla volta (2 uova intere + 1 tuorlo), aspettando completo assorbimento prima di aggiungere la successiva. Impastare 8-10min totali. L'impasto risulterà disomogeneo, leggermente sgretolato."
     },
     {
       "title": "Incordatura e Aggiunta Burro — 1ª Velocità (12-15min)",
-      "text": "Con impastatrice in moto, aggiungere il burro morbido a pezzetti (2-3 pezzi alla volta). Aspettare completo assorbimento prima di aggiungere altri pezzi. Dopo l'ultimo pezzo di burro, aggiungere il sale (8g). Continuare a impastare a velocità 1 per altri 10-12min. L'impasto diventerà liscio, elastico e si staccherà dalle pareti incordandosi al gancio. Deve fare 'lo schiocco' quando si stacca. Temperatura finale impasto: 24-26°C."
+      "text": "Con impastatrice in moto, aggiungere il burro morbido a pezzetti (2-3 pezzi alla volta). Aspettare completo assorbimento prima di aggiungere altri pezzi. Dopo l'ultimo pezzo di burro, aggiungere il sale ({sale_impasto:8}g). Continuare a impastare a velocità 1 per altri 10-12min. L'impasto diventerà liscio, elastico e si staccherà dalle pareti incordandosi al gancio. Deve fare 'lo schiocco' quando si stacca. Temperatura finale impasto: 24-26°C."
     },
     {
       "title": "Controllo Incordatura e Pirlatura",
@@ -38,7 +38,7 @@
     },
     {
       "title": "Staglio e Formatura",
-      "text": "Rovesciare l'impasto lievitato su piano leggermente infarinato. Degassare DELICATAMENTE con le mani. Dividere in pezzi da 50-60g per brioche col tuppo, 80g per cornetti, 100g per trecce. Per brioche col tuppo: formare palline lisce pirlando, praticare un foro al centro con il dito, inserire una pallina più piccola (1/3 del peso). Per cornetti: stendere triangoli con mattarello, arrotolare dalla base larga. Per trecce: formare cordoni lunghi, intrecciare a 3 capi."
+      "text": "Rovesciare l'impasto lievitato su piano leggermente infarinato. Degassare DELICATAMENTE con le mani. Dividere in pezzi da 50-60g per brioche col tuppo, {semola_impasto:80}g per cornetti, {latte_impasto:100}g per trecce. Per brioche col tuppo: formare palline lisce pirlando, praticare un foro al centro con il dito, inserire una pallina più piccola (1/3 del peso). Per cornetti: stendere triangoli con mattarello, arrotolare dalla base larga. Per trecce: formare cordoni lunghi, intrecciare a 3 capi."
     },
     {
       "title": "Appretto (1,5-2h a 28-30°C)",
@@ -46,7 +46,7 @@
     },
     {
       "title": "Spennellatura e Cottura",
-      "text": "Preparare doratura: 1 tuorlo + 20g latte (o panna). Spennellare DELICATAMENTE le superfici. Opzionale: granella di zucchero per trecce, zucchero a velo vanigliato per brioche dopo cottura. Infornare a 170-180°C (forno ventilato) per 15-20min (brioche piccole) o 25-30min (trecce grandi). Devono dorare uniformemente. Sfornare e far raffreddare su griglia."
+      "text": "Preparare doratura: 1 tuorlo + {tuorli_impasto:20}g latte (o panna). Spennellare DELICATAMENTE le superfici. Opzionale: granella di zucchero per trecce, zucchero a velo vanigliato per brioche dopo cottura. Infornare a 170-180°C (forno ventilato) per 15-20min (brioche piccole) o 25-30min (trecce grandi). Devono dorare uniformemente. Sfornare e far raffreddare su griglia."
     }
   ],
   "stepsHand": [
@@ -56,15 +56,15 @@
     },
     {
       "title": "Scioglimento Lievito",
-      "text": "Sciogliere il lievito di birra fresco (10-12g, dose ridotta per impasto lungo) nel latte intero a temperatura ambiente (100g, 20-22°C). Mescolare e lasciare riposare 5 minuti."
+      "text": "Sciogliere il lievito di birra fresco (10-12g, dose ridotta per impasto lungo) nel latte intero a temperatura ambiente ({latte_impasto:100}g, 20-22°C). Mescolare e lasciare riposare 5 minuti."
     },
     {
       "title": "Impasto Base su Spianatoia (15-20min)",
-      "text": "Disporre le farine (300g Tipo 0 + 200g manitoba) a fontana su spianatoia. Al centro: zucchero, latte con lievito, composto aromi marinati. Iniziare a incorporare la farina con una forchetta. Quando si forma un impasto grezzo, aggiungere le uova una alla volta (2 intere + 1 tuorlo), amalgamando bene prima di aggiungere la successiva. Impastare energicamente per 15-20min con tecnica slap & fold: sollevare l'impasto, sbatterlo sul piano, ripiegare su se stesso. Sviluppare la maglia glutinica."
+      "text": "Disporre le farine ({farina_media_impasto:300}g Tipo 0 + {farina_forte_impasto:200}g manitoba) a fontana su spianatoia. Al centro: zucchero, latte con lievito, composto aromi marinati. Iniziare a incorporare la farina con una forchetta. Quando si forma un impasto grezzo, aggiungere le uova una alla volta (2 intere + 1 tuorlo), amalgamando bene prima di aggiungere la successiva. Impastare energicamente per 15-20min con tecnica slap & fold: sollevare l'impasto, sbatterlo sul piano, ripiegare su se stesso. Sviluppare la maglia glutinica."
     },
     {
       "title": "Incorporazione Burro (20-25min)",
-      "text": "Quando l'impasto è incordato (si stacca dalle mani), aggiungere il burro morbido cremoso a cucchiaiate. Incorporare ogni porzione completamente prima di aggiungere la successiva. L'impasto sembrerà sfaldarsi: continuare a lavorare con slap & fold delicati. Dopo l'ultimo burro, aggiungere il sale (8g). Impastare altri 10-15min finché l'impasto torna liscio, elastico e lucido. Totale lavoro manuale: 45-60min. Temperatura finale: 24-26°C."
+      "text": "Quando l'impasto è incordato (si stacca dalle mani), aggiungere il burro morbido cremoso a cucchiaiate. Incorporare ogni porzione completamente prima di aggiungere la successiva. L'impasto sembrerà sfaldarsi: continuare a lavorare con slap & fold delicati. Dopo l'ultimo burro, aggiungere il sale ({sale_impasto:8}g). Impastare altri 10-15min finché l'impasto torna liscio, elastico e lucido. Totale lavoro manuale: 45-60min. Temperatura finale: 24-26°C."
     },
     {
       "title": "Controllo Incordatura",
@@ -76,7 +76,7 @@
     },
     {
       "title": "Staglio e Formatura",
-      "text": "Rovesciare l'impasto lievitato su piano leggermente infarinato. Degassare DELICATAMENTE schiacciando con i palmi. Dividere in pezzi: 50-60g per brioche col tuppo, 80g per cornetti, 100g per trecce. Pirlare ogni pezzo per formare palline lisce. Per brioche col tuppo: praticare un foro al centro, inserire pallina piccola (1/3 peso). Per cornetti: stendere triangoli, arrotolare. Per trecce: formare cordoni, intrecciare a 3 capi."
+      "text": "Rovesciare l'impasto lievitato su piano leggermente infarinato. Degassare DELICATAMENTE schiacciando con i palmi. Dividere in pezzi: 50-60g per brioche col tuppo, {semola_impasto:80}g per cornetti, {latte_impasto:100}g per trecce. Pirlare ogni pezzo per formare palline lisce. Per brioche col tuppo: praticare un foro al centro, inserire pallina piccola (1/3 peso). Per cornetti: stendere triangoli, arrotolare. Per trecce: formare cordoni, intrecciare a 3 capi."
     },
     {
       "title": "Appretto (1,5-2h a 28-30°C)",
@@ -84,7 +84,7 @@
     },
     {
       "title": "Spennellatura e Cottura",
-      "text": "Doratura: 1 tuorlo + 20g latte. Spennellare delicatamente. Opzionale: granella di zucchero o zucchero a velo vanigliato (dopo cottura). Infornare a 170-180°C ventilato per 15-20min (piccole) o 25-30min (grandi). Doratura uniforme. Raffreddare su griglia."
+      "text": "Doratura: 1 tuorlo + {tuorli_impasto:20}g latte. Spennellare delicatamente. Opzionale: granella di zucchero o zucchero a velo vanigliato (dopo cottura). Infornare a 170-180°C ventilato per 15-20min (piccole) o 25-30min (grandi). Doratura uniforme. Raffreddare su griglia."
     }
   ],
   "stepsExtruder": [],

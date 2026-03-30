@@ -20,19 +20,19 @@
   "stepsSpiral": [
     {
       "title": "1. Preparazione Biga (18-24h prima)",
-      "text": "Nella ciotola dell'impastatrice versare 900g di Caputo Saccorosso e 400g di acqua fredda (10-12°C). Aggiungere 3g di lievito secco. Mescolare a velocità 1 per 2-3 minuti fino a ottenere un impasto 'a stracci' (grumoso, non omogeneo). Trasferire in contenitore chiuso e far maturare 18-24 ore a 18°C (cantina/frigo alto)."
+      "text": "Nella ciotola dell'impastatrice versare {farina_caputo_saccor_biga:900}g di Caputo Saccorosso e {acqua_biga:400}g di acqua fredda (10-12°C). Aggiungere {lievito_secco_biga:3}g di lievito secco. Mescolare a velocità 1 per 2-3 minuti fino a ottenere un impasto 'a stracci' (grumoso, non omogeneo). Trasferire in contenitore chiuso e far maturare 18-24 ore a 18°C (cantina/frigo alto)."
     },
     {
       "title": "2. Spezzamento Biga e Malto",
-      "text": "Inserire nella Grilletta IM5 tutta la biga (circa 1300g), l'estratto di malto (15g) e il 60% dell'acqua di rinfresco (circa 990g). Azionare a velocità 1 per 3-4 minuti per spezzare la biga e renderla cremosa. L'impasto deve risultare liquido e omogeneo."
+      "text": "Inserire nella Grilletta IM5 tutta la biga (circa {biga_di_saccorosso_impasto_finale:1300}g), l'estratto di malto ({malto_impasto_finale:15}g) e il 60% dell'acqua di rinfresco (circa 990g). Azionare a velocità 1 per 3-4 minuti per spezzare la biga e renderla cremosa. L'impasto deve risultare liquido e omogeneo."
     },
     {
       "title": "3. Aggiunta Polveri e Criscito",
-      "text": "Con impastatrice in movimento a velocità 1, aggiungere: 1800g Saccorosso + 300g Nuvola Super + 120g Criscito Caputo. Impastare 3-4 minuti fino a completo assorbimento. L'impasto inizia a strutturarsi ma è ancora morbido."
+      "text": "Con impastatrice in movimento a velocità 1, aggiungere: {farina_caputo_saccor_impasto_finale:1800}g Saccorosso + {farina_caputo_nuvola_impasto_finale:300}g Nuvola Super + {criscito_impasto_finale:120}g Criscito Caputo. Impastare 3-4 minuti fino a completo assorbimento. L'impasto inizia a strutturarsi ma è ancora morbido."
     },
     {
       "title": "4. Incordatura e Bassinage",
-      "text": "Aumentare a velocità 2-3. Aggiungere il sale (75g) e versare a filo l'acqua rimanente (circa 660g) in tecnica bassinage. Impastare 6-8 minuti fino a maglia liscia, lucida e incordata. Temperatura finale: 23-24°C. Se supera i 25°C, l'impasto è sovrariscaldato."
+      "text": "Aumentare a velocità 2-3. Aggiungere il sale ({sale_impasto_finale:75}g) e versare a filo l'acqua rimanente (circa 660g) in tecnica bassinage. Impastare 6-8 minuti fino a maglia liscia, lucida e incordata. Temperatura finale: 23-24°C. Se supera i 25°C, l'impasto è sovrariscaldato."
     },
     {
       "title": "5. Puntata in Massa",
@@ -50,19 +50,19 @@
   "stepsHand": [
     {
       "title": "1. Preparazione Biga (18-24h prima)",
-      "text": "In una ciotola capiente mescolare 900g Saccorosso, 400g acqua fredda (10-12°C) e 3g lievito secco. Mescolare con cucchiaio di legno per 2-3 minuti fino a ottenere un composto grumoso 'a stracci'. NON impastare. Coprire e far maturare 18-24 ore a 18°C."
+      "text": "In una ciotola capiente mescolare {farina_caputo_saccor_biga:900}g Saccorosso, {acqua_biga:400}g acqua fredda (10-12°C) e {lievito_secco_biga:3}g lievito secco. Mescolare con cucchiaio di legno per 2-3 minuti fino a ottenere un composto grumoso 'a stracci'. NON impastare. Coprire e far maturare 18-24 ore a 18°C."
     },
     {
       "title": "2. Spezzamento Biga",
-      "text": "Versare la biga in una madia o grande ciotola. Aggiungere 15g malto e 500g acqua (50% del totale). Con le mani, spezzare e sciogliere la biga nell'acqua per 5-6 minuti fino a ottenere una crema liquida e omogenea."
+      "text": "Versare la biga in una madia o grande ciotola. Aggiungere {malto_impasto_finale:15}g malto e 500g acqua (50% del totale). Con le mani, spezzare e sciogliere la biga nell'acqua per 5-6 minuti fino a ottenere una crema liquida e omogenea."
     },
     {
       "title": "3. Aggiunta Farine",
-      "text": "Versare 1800g Saccorosso + 300g Nuvola Super + 120g Criscito sulla crema di biga. Iniziare a impastare con movimento circolare dal centro verso l'esterno. Dopo 5 minuti l'impasto inizia a strutturarsi (ancora appiccicoso)."
+      "text": "Versare {farina_caputo_saccor_impasto_finale:1800}g Saccorosso + {farina_caputo_nuvola_impasto_finale:300}g Nuvola Super + {criscito_impasto_finale:120}g Criscito sulla crema di biga. Iniziare a impastare con movimento circolare dal centro verso l'esterno. Dopo 5 minuti l'impasto inizia a strutturarsi (ancora appiccicoso)."
     },
     {
       "title": "4. Incorporamento Sale e Acqua",
-      "text": "Sciogliere 75g sale in 500g acqua restante. Versare a riprese sull'impasto continuando a impastare. Tecnica slap and fold: sollevare l'impasto, sbatterlo sul piano, ripiegarlo. Ripetere 10-12 minuti. Aggiungere gli ultimi 650g acqua gradualmente. Impasto liscio, elastico, temperatura 23-24°C."
+      "text": "Sciogliere {sale_impasto_finale:75}g sale in 500g acqua restante. Versare a riprese sull'impasto continuando a impastare. Tecnica slap and fold: sollevare l'impasto, sbatterlo sul piano, ripiegarlo. Ripetere 10-12 minuti. Aggiungere gli ultimi 650g acqua gradualmente. Impasto liscio, elastico, temperatura 23-24°C."
     },
     {
       "title": "5. Puntata in Massa",
@@ -198,17 +198,20 @@
         {
           "name": "Farina Caputo Saccorosso",
           "note": "(W 330-350, per biga)",
-          "grams": 900
+          "grams": 900,
+          "excludeFromTotal": true
         },
         {
           "name": "Acqua",
           "note": "(fredda 10-12°C, per biga)",
-          "grams": 400
+          "grams": 400,
+          "excludeFromTotal": true
         },
         {
           "name": "Lievito Secco Caputo",
           "note": "(per biga)",
-          "grams": 3
+          "grams": 3,
+          "excludeFromTotal": true
         }
       ]
     },

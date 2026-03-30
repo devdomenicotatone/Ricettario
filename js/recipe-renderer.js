@@ -5,6 +5,7 @@
 
 import { BASE } from './router.js';
 import { buildHeroPicture } from './image-utils.js';
+import { initMadeToggle } from './recipe-bookmarks.js';
 
 // ── Emoji per categoria ──
 const CATEGORY_EMOJI = {
@@ -43,6 +44,8 @@ export async function renderRecipe(app, { category, slug }) {
     // ── Init interactive features ──
     initSetupToggle();
     initDoseCalculator(recipe);
+    initVariantToggle(recipe);
+    initMadeToggle(recipe.slug);
 
   } catch (err) {
     app.innerHTML = `
@@ -110,6 +113,7 @@ function buildRecipeHTML(r, categoryDir) {
         ${r.targetTemp ? `<div class="tech-badge">🌡️ Target Temp: <span class="tech-badge__value">&nbsp;${r.targetTemp}</span></div>` : ''}
         ${r.fermentation ? `<div class="tech-badge">⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;${r.fermentation}</span></div>` : ''}
         ${buildSetupBadge(r)}
+        <button class="made-toggle" id="made-toggle" type="button" aria-label="Segna come fatta"></button>
       </div>
     </div>
 
@@ -120,6 +124,7 @@ function buildRecipeHTML(r, categoryDir) {
 
           <!-- COLONNA SX: Ingredienti -->
           <div>
+            ${buildVariantSelector(r)}
             ${buildIngredientsPanel(r)}
             ${r.suspensions?.length ? buildSuspensionsPanel(r) : ''}
           </div>
@@ -160,8 +165,9 @@ function buildIngredientRow(ing) {
   const setupNotes = ing.setupNote
     ? Object.entries(ing.setupNote).map(([k, v]) => `data-setup-note-${k}="${escHtml(v)}"`).join(' ')
     : '';
+  const excludeAttr = ing.excludeFromTotal ? ' data-exclude-total="true"' : '';
 
-  return `<tr>
+  return `<tr${excludeAttr}>
     <td>${escHtml(ing.name)} ${ing.note ? `<span class="ingredient-note" ${setupNotes}>${escHtml(ing.note)}</span>` : ''}</td>
     <td class="ingredient-qty">${ing.grams != null ? `${ing.grams}g` : ''}</td>
   </tr>`;
@@ -202,6 +208,10 @@ function buildIngredientsPanel(r) {
 
       <table class="ingredients-table" id="ingredients-table">
         ${rows}
+        <tr class="ingredient-total-row" id="ingredient-total-row">
+          <td>Peso Totale Impasto</td>
+          <td class="ingredient-qty" id="ingredient-total-qty"></td>
+        </tr>
       </table>
     </div>`;
 }
@@ -234,14 +244,26 @@ function buildStepsPanel(r, key, setupId, label, isHandOnly = false) {
   const shouldHide = setupId === 'mano' && !isHandOnly;
   const isHidden = shouldHide ? ' style="display: none;"' : '';
 
+  // Determina il branchAfterStep per le varianti (se presenti)
+  const variantBranch = r.variants?.[0]?.branchAfterStep;
+
   return `
     <div class="recipe-panel reveal reveal-delay-1" data-setup="${setupId}" id="steps-${setupId}"${isHidden}>
       <h2 class="recipe-panel__title">
         <span class="recipe-panel__title-icon">⚙️</span> Procedimento
         <span class="recipe-panel__title-badge">${label}</span>
       </h2>
-      <ol class="steps-list">
-        ${steps.map(s => `<li><strong>${escHtml(s.title)}</strong><p>${escHtml(s.text)}</p></li>`).join('')}
+      <ol class="steps-list" data-setup-key="${key}">
+        ${steps.map((s, i) => {
+          const branchBadge = (variantBranch != null && i === variantBranch)
+            ? '<span class="variant-branch-badge">⚡ Punto variante — da qui il procedimento può cambiare</span>'
+            : '';
+          return `<li data-step-index="${i}" class="step-item${i > variantBranch && variantBranch != null ? ' step-after-branch' : ''}">
+            <strong>${escHtml(s.title)}</strong>
+            ${branchBadge}
+            <p>${resolveTokens(escHtml(s.text))}</p>
+          </li>`;
+        }).join('')}
       </ol>
     </div>`;
 }
@@ -463,12 +485,28 @@ function initDoseCalculator(recipe) {
     doseBadge.classList.toggle('dose-calculator__display--modified', multiplier !== 1);
     doseDecrease.disabled = multiplier <= MIN_MULT;
 
+    // Aggiorna tabella ingredienti (usa data-base se presente, altrimenti baseGrams statico)
     ingredientMap.forEach(({ baseGrams, cell }) => {
-      cell.textContent = formatGrams(baseGrams * multiplier);
+      const dynamicBase = parseFloat(cell.getAttribute('data-base')) || baseGrams;
+      cell.textContent = formatGrams(dynamicBase * multiplier);
       cell.classList.remove('dose-updated');
       void cell.offsetWidth;
       cell.classList.add('dose-updated');
     });
+
+    // Aggiorna tutti i token inline nel procedimento (escluso i fissi)
+    document.querySelectorAll('.dose-inline:not([data-fixed])').forEach(el => {
+      const base = parseFloat(el.getAttribute('data-base'));
+      if (!isNaN(base)) {
+        el.textContent = formatDoseInline(base * multiplier);
+        el.classList.remove('dose-updated');
+        void el.offsetWidth;
+        el.classList.add('dose-updated');
+      }
+    });
+
+    // Aggiorna il totale impasto
+    updateTotalWeight();
   };
 
   doseDecrease.addEventListener('click', () => {
@@ -480,11 +518,304 @@ function initDoseCalculator(recipe) {
     updateDoses();
   });
 
+  // Ascolta eventi di cambio variante per rieseguire l'aggiornamento dosi
+  doseBadge.addEventListener('variant-changed', () => updateDoses());
+
   updateDoses();
+}
+
+/**
+ * Ricalcola il peso totale sommando tutte le celle .ingredient-qty visibili
+ */
+function updateTotalWeight() {
+  const totalCell = document.getElementById('ingredient-total-qty');
+  if (!totalCell) return;
+
+  let total = 0;
+  const table = document.getElementById('ingredients-table');
+  if (!table) return;
+
+  table.querySelectorAll('tr:not(.ingredient-section-header):not(.ingredient-total-row):not([data-exclude-total]) .ingredient-qty').forEach(cell => {
+    const text = cell.textContent.trim();
+    const val = parseFloat(text);
+    if (!isNaN(val)) total += val;
+  });
+
+  // Formatta il totale
+  const formatted = total >= 1000
+    ? `~${(total / 1000).toFixed(1)}kg`
+    : `${Math.round(total)}g`;
+  totalCell.textContent = formatted;
+  totalCell.classList.remove('dose-updated');
+  void totalCell.offsetWidth;
+  totalCell.classList.add('dose-updated');
+}
+
+// ═══════════════════════════════════════
+//  VARIANT TOGGLE (post-render)
+// ═══════════════════════════════════════
+
+function initVariantToggle(recipe) {
+  const variants = recipe.variants;
+  if (!variants?.length) return;
+
+  const toggle = document.getElementById('variant-toggle');
+  if (!toggle) return;
+
+  let activeVariant = null; // null = default, index = variant attiva
+
+  // Mappatura ingredientGroups piatti per override
+  const flatIngredients = recipe.ingredientGroups?.length
+    ? recipe.ingredientGroups.flatMap(g => g.items)
+    : (recipe.ingredients || []);
+
+  toggle.addEventListener('click', () => {
+    const variant = variants[0]; // per ora supportiamo 1 variante
+
+    if (activeVariant === null) {
+      // Attiva la variante
+      activeVariant = 0;
+      toggle.classList.add('variant-selector__toggle--active');
+      toggle.querySelector('.variant-selector__toggle-label').textContent = 'Attiva';
+
+      // Override ingredienti
+      if (variant.ingredientOverrides?.length) {
+        applyIngredientOverrides(variant, flatIngredients, true);
+      }
+
+      // Swap step dopo il branch
+      swapStepsAfterBranch(variant, recipe, true);
+
+    } else {
+      // Disattiva la variante → torna al default
+      activeVariant = null;
+      toggle.classList.remove('variant-selector__toggle--active');
+      toggle.querySelector('.variant-selector__toggle-label').textContent = 'Disattivata';
+
+      // Ripristina ingredienti
+      if (variant.ingredientOverrides?.length) {
+        applyIngredientOverrides(variant, flatIngredients, false);
+      }
+
+      // Ripristina step
+      swapStepsAfterBranch(variant, recipe, false);
+    }
+
+    // Riesegui il dose calculator per aggiornare con il moltiplicatore corrente
+    const doseBadge = document.getElementById('dose-badge');
+    if (doseBadge) {
+      doseBadge.dispatchEvent(new CustomEvent('variant-changed'));
+    }
+  });
+}
+
+function applyIngredientOverrides(variant, flatIngredients, activate) {
+  const table = document.getElementById('ingredients-table');
+  if (!table) return;
+
+  const rows = table.querySelectorAll('tr:not(.ingredient-section-header)');
+
+  for (const override of variant.ingredientOverrides) {
+    // Trova l'ingrediente nel modello piatto tramite ref (token name)
+    // Il ref deve matchare un token id usato nel testo degli step
+    // Cerchiamo nella riga per data-base value
+    let rowIdx = 0;
+    for (const item of flatIngredients) {
+      if (item.grams == null) continue;
+      if (rowIdx >= rows.length) break;
+
+      const cell = rows[rowIdx]?.querySelector('.ingredient-qty');
+      if (cell) {
+        const currentBase = parseFloat(cell.getAttribute('data-base-original') || cell.getAttribute('data-base') || item.grams);
+
+        // Verifica se questo ingrediente corrisponde al ref dell'override
+        // Usiamo un match sul nome dell'ingrediente (case insensitive)
+        if (matchesRef(item.name, override.ref)) {
+          if (activate) {
+            // Salva il base originale
+            if (!cell.hasAttribute('data-base-original')) {
+              cell.setAttribute('data-base-original', item.grams);
+            }
+            cell.setAttribute('data-base', override.grams);
+            cell.classList.add('ingredient-overridden');
+
+            // Aggiorna anche la nota se presente
+            const noteEl = rows[rowIdx]?.querySelector('.ingredient-note');
+            if (noteEl && override.note) {
+              if (!noteEl.hasAttribute('data-note-original')) {
+                noteEl.setAttribute('data-note-original', noteEl.textContent);
+              }
+              noteEl.textContent = override.note;
+            }
+          } else {
+            // Ripristina
+            const originalBase = cell.getAttribute('data-base-original');
+            if (originalBase) {
+              cell.setAttribute('data-base', originalBase);
+              cell.removeAttribute('data-base-original');
+            }
+            cell.classList.remove('ingredient-overridden');
+
+            const noteEl = rows[rowIdx]?.querySelector('.ingredient-note');
+            if (noteEl) {
+              const origNote = noteEl.getAttribute('data-note-original');
+              if (origNote) {
+                noteEl.textContent = origNote;
+                noteEl.removeAttribute('data-note-original');
+              }
+            }
+          }
+        }
+      }
+      rowIdx++;
+    }
+  }
+
+  // Aggiorna anche i token inline nel procedimento
+  updateInlineTokens(variant, activate);
+}
+
+function matchesRef(ingredientName, ref) {
+  const name = ingredientName.toLowerCase();
+  const r = ref.toLowerCase();
+  // Match diretto o parziale
+  if (r === 'lievito' && name.includes('lievito')) return true;
+  if (r === 'sale' && name.includes('sale')) return true;
+  if (r === 'criscito' && name.includes('criscito')) return true;
+  if (r === 'malto' && name.includes('malto')) return true;
+  if (r === 'farina_biga' && name.includes('saccorosso') && name.includes('biga')) return true;
+  if (r === 'farina_rinfresco' && name.includes('saccorosso') && name.includes('rinfresco')) return true;
+  if (r === 'farina_nuvola' && name.includes('nuvola')) return true;
+  if (r === 'acqua_biga' && name.includes('acqua') && name.includes('biga')) return true;
+  return false;
+}
+
+function updateInlineTokens(variant, activate) {
+  if (!variant.ingredientOverrides) return;
+
+  for (const override of variant.ingredientOverrides) {
+    const inlines = document.querySelectorAll(`.dose-inline[data-token-id="${override.ref}"]`);
+    inlines.forEach(el => {
+      if (activate) {
+        if (!el.hasAttribute('data-base-original')) {
+          el.setAttribute('data-base-original', el.getAttribute('data-base'));
+        }
+        el.setAttribute('data-base', override.grams);
+      } else {
+        const orig = el.getAttribute('data-base-original');
+        if (orig) {
+          el.setAttribute('data-base', orig);
+          el.removeAttribute('data-base-original');
+        }
+      }
+    });
+  }
+}
+
+function swapStepsAfterBranch(variant, recipe, activate) {
+  const branchIdx = variant.branchAfterStep;
+  if (branchIdx == null) return;
+
+  // Trovi tutti i panels di step (spirale, mano, etc.)
+  const stepPanels = document.querySelectorAll('.recipe-panel[data-setup]');
+
+  stepPanels.forEach(panel => {
+    const setupKey = panel.querySelector('.steps-list')?.getAttribute('data-setup-key');
+    if (!setupKey || setupKey === 'stepsCondiment') return;
+
+    const ol = panel.querySelector('.steps-list');
+    if (!ol) return;
+
+    const items = ol.querySelectorAll('.step-item');
+
+    if (activate) {
+      // Nascondi step dopo il branch
+      items.forEach(li => {
+        const idx = parseInt(li.getAttribute('data-step-index'));
+        if (idx > branchIdx) {
+          li.setAttribute('data-original-display', li.style.display || '');
+          li.style.display = 'none';
+        }
+      });
+
+      // Aggiungi gli altSteps
+      if (variant.altSteps?.length) {
+        variant.altSteps.forEach((s, i) => {
+          const li = document.createElement('li');
+          li.className = 'step-item step-variant';
+          li.setAttribute('data-step-index', `v${i}`);
+          li.innerHTML = `<strong>${escHtml(s.title)}</strong><span class="variant-step-badge">❄️ Variante</span><p>${resolveTokens(escHtml(s.text))}</p>`;
+          ol.appendChild(li);
+        });
+      }
+    } else {
+      // Rimuovi altSteps
+      ol.querySelectorAll('.step-variant').forEach(el => el.remove());
+
+      // Mostra step originali
+      items.forEach(li => {
+        const idx = parseInt(li.getAttribute('data-step-index'));
+        if (idx > branchIdx) {
+          li.style.display = li.getAttribute('data-original-display') || '';
+          li.removeAttribute('data-original-display');
+        }
+      });
+    }
+  });
+}
+
+// ═══════════════════════════════════════
+//  VARIANT SELECTOR BUILDER
+// ═══════════════════════════════════════
+
+function buildVariantSelector(r) {
+  if (!r.variants?.length) return '';
+
+  const v = r.variants[0]; // supporto 1 variante per ora
+  return `
+    <div class="variant-selector reveal" id="variant-selector">
+      <div class="variant-selector__header">
+        <span class="variant-selector__icon">${v.label.split(' ')[0]}</span>
+        <div class="variant-selector__info">
+          <span class="variant-selector__title">${escHtml(v.label.replace(/^\S+\s*/, ''))}</span>
+          <span class="variant-selector__desc">${escHtml(v.description)}</span>
+        </div>
+        <button class="variant-selector__toggle" id="variant-toggle" type="button" aria-label="Attiva variante">
+          <span class="variant-selector__toggle-dot"></span>
+          <span class="variant-selector__toggle-label">Disattivata</span>
+        </button>
+      </div>
+      ${v.ingredientOverrides?.length ? `
+        <div class="variant-selector__changes">
+          <span class="variant-selector__changes-title">⚠️ Cambia:</span>
+          ${v.ingredientOverrides.map(o => `<span class="variant-selector__change-chip">${escHtml(o.ref)}: ${o.grams}g ${o.note || ''}</span>`).join('')}
+        </div>
+      ` : ''}
+    </div>`;
 }
 
 // ── Utility ──
 function escHtml(str) {
   if (!str) return '';
   return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+/**
+ * Risolve i token {id:base} nel testo degli step.
+ * Sostituisce {token_name:123} con <span class="dose-inline" data-base="123" data-token-id="token_name">123</span>
+ */
+function resolveTokens(text) {
+  return text.replace(/\{([a-z_]+):(\d+\.?\d*)(!)?\}/g, (match, tokenId, baseValue, fixedFlag) => {
+    const num = parseFloat(baseValue);
+    const formatted = formatDoseInline(num);
+    const fixedAttr = fixedFlag ? ' data-fixed="true"' : '';
+    return `<span class="dose-inline" data-base="${num}" data-token-id="${tokenId}"${fixedAttr}>${formatted}</span>`;
+  });
+}
+
+function formatDoseInline(val) {
+  if (val === 0) return '0';
+  if (val >= 10) return `${Math.round(val)}`;
+  if (val >= 1) return `${Math.round(val * 10) / 10}`;
+  return `${Math.round(val * 100) / 100}`;
 }

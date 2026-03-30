@@ -75,15 +75,15 @@
   "stepsSpiral": [
     {
       "title": "Poolish (sera prima, -12/14h)",
-      "text": "In una ciotola capiente miscelare 300g di Farina Tipo 0, 300g di acqua a temperatura ambiente (18-20°C) e 0,5g di lievito fresco (un pizzico). Mescolare con una forchetta fino a completa idratazione. Coprire con pellicola a contatto e lasciare fermentare a 20-22°C per 12-14 ore. Il poolish è pronto quando si presenta gonfio, pieno di bolle e con un odore leggermente acetico."
+      "text": "In una ciotola capiente miscelare {farina_media_poolish:300}g di Farina Tipo 0, {farina_media_poolish:300}g di acqua a temperatura ambiente (18-20°C) e 0,5g di lievito fresco (un pizzico). Mescolare con una forchetta fino a completa idratazione. Coprire con pellicola a contatto e lasciare fermentare a 20-22°C per 12-14 ore. Il poolish è pronto quando si presenta gonfio, pieno di bolle e con un odore leggermente acetico."
     },
     {
       "title": "Impasto Base (V1, 3 min)",
-      "text": "Nella vasca dell'impastatrice a spirale versare tutto il poolish maturo. Aggiungere 550g di Farina Tipo 0, 150g di Manitoba, 300g di acqua (18-20°C), 8g di lievito fresco sbriciolato e 10g di malto. Avviare in prima velocità per 3 minuti: si formerà una massa grezza e appiccicosa. Fermare e lasciare riposare 10 minuti coperto (autolisi)."
+      "text": "Nella vasca dell'impastatrice a spirale versare tutto il poolish maturo. Aggiungere {farina_media_impasto_finale:550}g di Farina Tipo 0, {farina_forte_impasto_finale:150}g di Manitoba, {farina_media_poolish:300}g di acqua (18-20°C), {lievito_fresco_impasto_finale:8}g di lievito fresco sbriciolato e {miele_impasto_finale:10}g di malto. Avviare in prima velocità per 3 minuti: si formerà una massa grezza e appiccicosa. Fermare e lasciare riposare 10 minuti coperto (autolisi)."
     },
     {
       "title": "Incordatura e Sale (V1 4 min + V2 3 min)",
-      "text": "Aggiungere 20g di sale. Riprendere in prima velocità per 4 minuti: l'impasto inizierà a incordarsi. Passare in seconda velocità per 3 minuti fino a completo distacco dalle pareti e temperatura finale 24-26°C. L'impasto deve risultare liscio, elastico, leggermente appiccicoso. Test del velo: stendere delicatamente una porzione: deve formare una membrana sottile senza rompersi."
+      "text": "Aggiungere {sale_impasto_finale:20}g di sale. Riprendere in prima velocità per 4 minuti: l'impasto inizierà a incordarsi. Passare in seconda velocità per 3 minuti fino a completo distacco dalle pareti e temperatura finale 24-26°C. L'impasto deve risultare liscio, elastico, leggermente appiccicoso. Test del velo: stendere delicatamente una porzione: deve formare una membrana sottile senza rompersi."
     },
     {
       "title": "Puntata in Blocco (2h, con 1 piega)",
@@ -91,7 +91,7 @@
     },
     {
       "title": "Staglio e Pre-Forma (3-4 baguette da 250-300g)",
-      "text": "Rovesciare delicatamente l'impasto su piano leggermente infarinato. Dividere con tarocco in 3-4 pezzi uguali (250-300g ciascuno). Allungare delicatamente ogni pezzo in un rettangolo largo circa 10cm, senza sgonfiare troppo. Piegare a metà per il lato lungo, sigillare con il palmo. Coprire con canovaccio e lasciare rilassare 15 minuti."
+      "text": "Rovesciare delicatamente l'impasto su piano leggermente infarinato. Dividere con tarocco in 3-4 pezzi uguali (250-{farina_media_poolish:300}g ciascuno). Allungare delicatamente ogni pezzo in un rettangolo largo circa 10cm, senza sgonfiare troppo. Piegare a metà per il lato lungo, sigillare con il palmo. Coprire con canovaccio e lasciare rilassare 15 minuti."
     },
     {
       "title": "Pirlatura Baguette (cilindri da 30-35cm)",
@@ -113,15 +113,15 @@
   "stepsHand": [
     {
       "title": "Poolish (sera prima, -12/14h)",
-      "text": "In una ciotola capiente miscelare 300g di Farina Tipo 0, 300g di acqua a temperatura ambiente (18-20°C) e 0,5g di lievito fresco (un pizzico). Mescolare con una forchetta fino a completa idratazione. Coprire con pellicola a contatto e lasciare fermentare a 20-22°C per 12-14 ore. Il poolish è pronto quando si presenta gonfio, pieno di bolle e con un odore leggermente acetico."
+      "text": "In una ciotola capiente miscelare {farina_media_poolish:300}g di Farina Tipo 0, {farina_media_poolish:300}g di acqua a temperatura ambiente (18-20°C) e 0,5g di lievito fresco (un pizzico). Mescolare con una forchetta fino a completa idratazione. Coprire con pellicola a contatto e lasciare fermentare a 20-22°C per 12-14 ore. Il poolish è pronto quando si presenta gonfio, pieno di bolle e con un odore leggermente acetico."
     },
     {
       "title": "Impasto Base (15 min a mano)",
-      "text": "In una ciotola capiente versare tutto il poolish maturo. Aggiungere 550g di Farina Tipo 0, 150g di Manitoba, 250g di acqua (20-22°C), 8g di lievito fresco sbriciolato e 10g di malto. Mescolare con un cucchiaio di legno fino a ottenere una massa grezza. Coprire e lasciare riposare 20 minuti (autolisi)."
+      "text": "In una ciotola capiente versare tutto il poolish maturo. Aggiungere {farina_media_impasto_finale:550}g di Farina Tipo 0, {farina_forte_impasto_finale:150}g di Manitoba, 250g di acqua (20-22°C), {lievito_fresco_impasto_finale:8}g di lievito fresco sbriciolato e {miele_impasto_finale:10}g di malto. Mescolare con un cucchiaio di legno fino a ottenere una massa grezza. Coprire e lasciare riposare 20 minuti (autolisi)."
     },
     {
       "title": "Slap & Fold e Sale (3 serie)",
-      "text": "Aggiungere 20g di sale e 50g di acqua. Rovesciare l'impasto su piano NON infarinato. Prima serie: 50 slap & fold (sollevare l'impasto con entrambe le mani, sbatterlo sul piano piegandolo su se stesso). Aggiungere altri 40g di acqua (in 2 volte) durante il lavoro. Riposare 10 minuti coperto. Seconda serie: 30 slap & fold. Riposare 10 min. Terza serie: 20 slap & fold + ultimi 40g di acqua incorporati gradualmente. L'impasto deve diventare liscio, elastico, meno appiccicoso. Temperatura finale 25-26°C."
+      "text": "Aggiungere {sale_impasto_finale:20}g di sale e 50g di acqua. Rovesciare l'impasto su piano NON infarinato. Prima serie: 50 slap & fold (sollevare l'impasto con entrambe le mani, sbatterlo sul piano piegandolo su se stesso). Aggiungere altri 40g di acqua (in 2 volte) durante il lavoro. Riposare 10 minuti coperto. Seconda serie: 30 slap & fold. Riposare 10 min. Terza serie: 20 slap & fold + ultimi 40g di acqua incorporati gradualmente. L'impasto deve diventare liscio, elastico, meno appiccicoso. Temperatura finale 25-26°C."
     },
     {
       "title": "Puntata con Pieghe (2h30, con 3 pieghe)",
@@ -129,7 +129,7 @@
     },
     {
       "title": "Staglio e Pre-Forma (3-4 baguette da 250-300g)",
-      "text": "Rovesciare delicatamente l'impasto su piano leggermente infarinato. Dividere con tarocco in 3-4 pezzi uguali (250-300g ciascuno). Allungare delicatamente ogni pezzo in un rettangolo largo circa 10cm, senza sgonfiare troppo. Piegare a metà per il lato lungo, sigillare con il palmo. Coprire con canovaccio e lasciare rilassare 20 minuti."
+      "text": "Rovesciare delicatamente l'impasto su piano leggermente infarinato. Dividere con tarocco in 3-4 pezzi uguali (250-{farina_media_poolish:300}g ciascuno). Allungare delicatamente ogni pezzo in un rettangolo largo circa 10cm, senza sgonfiare troppo. Piegare a metà per il lato lungo, sigillare con il palmo. Coprire con canovaccio e lasciare rilassare 20 minuti."
     },
     {
       "title": "Pirlatura Baguette (cilindri da 30-35cm)",

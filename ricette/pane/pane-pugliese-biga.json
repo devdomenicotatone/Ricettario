@@ -15,11 +15,11 @@
   "stepsSpiral": [
     {
       "title": "Preparazione Biga (12-14h prima)",
-      "text": "In planetaria con gancio: versare 250g farina 00, aggiungere 2,5g lievito fresco sbriciolato. Impastare a V1 per 2 minuti amalgamando lievito e farina. Aggiungere 150g acqua a filo in 3 minuti a V1. L'impasto risulterà asciutto e grumoso (idratazione 60%). Formare una palla ruvida, trasferire in ciotola capiente. Coprire con pellicola e far maturare a 18-20°C per 12-14 ore. La biga sarà pronta quando avrà raddoppiato il volume e presenterà crepe in superficie."
+      "text": "In planetaria con gancio: versare 250g farina 00, aggiungere 2,{miele_impasto_finale:5}g lievito fresco sbriciolato. Impastare a V1 per 2 minuti amalgamando lievito e farina. Aggiungere 150g acqua a filo in 3 minuti a V1. L'impasto risulterà asciutto e grumoso (idratazione 60%). Formare una palla ruvida, trasferire in ciotola capiente. Coprire con pellicola e far maturare a 18-20°C per 12-14 ore. La biga sarà pronta quando avrà raddoppiato il volume e presenterà crepe in superficie."
     },
     {
       "title": "Impasto Finale",
-      "text": "Spezzettare la biga matura nella vasca dell'impastatrice. Aggiungere 50g semola rimacinata, 5g miele, 1g lievito fresco. Avviare V1 e versare 38g acqua a filo in 2 minuti. Quando l'impasto inizia a incordarsi (dopo 4-5 minuti), aggiungere 6g sale. Continuare V1 per altri 3-4 minuti fino a completa incorporazione. Passare a V2 per 2 minuti per sviluppare glutine. Temperatura finale impasto: 24-26°C. L'impasto sarà liscio, elastico e si staccherà dalle pareti."
+      "text": "Spezzettare la biga matura nella vasca dell'impastatrice. Aggiungere {semola_impasto_finale:50}g semola rimacinata, {miele_impasto_finale:5}g miele, {lievito_fresco_biga:1}g lievito fresco. Avviare V1 e versare 38g acqua a filo in 2 minuti. Quando l'impasto inizia a incordarsi (dopo 4-5 minuti), aggiungere {sale_impasto_finale:6}g sale. Continuare V1 per altri 3-4 minuti fino a completa incorporazione. Passare a V2 per 2 minuti per sviluppare glutine. Temperatura finale impasto: 24-26°C. L'impasto sarà liscio, elastico e si staccherà dalle pareti."
     },
     {
       "title": "Puntata (Prima Lievitazione)",
@@ -41,11 +41,11 @@
   "stepsHand": [
     {
       "title": "Preparazione Biga (12-14h prima)",
-      "text": "In ciotola capiente: versare 250g farina 00 setacciata. Aggiungere 2,5g lievito fresco sbriciolato con le dita, mescolando per distribuirlo uniformemente nella farina. Versare 150g acqua a filo mentre si raccoglie l'impasto con le mani. Impastare per 8-10 minuti sbriciolando e amalgamando con movimento rotatorio delle mani. L'impasto sarà ruvido e poco elastico. Formare una palla, adagiare in ciotola capiente. Coprire con pellicola. Far maturare 12-14 ore a 18-20°C."
+      "text": "In ciotola capiente: versare 250g farina 00 setacciata. Aggiungere 2,{miele_impasto_finale:5}g lievito fresco sbriciolato con le dita, mescolando per distribuirlo uniformemente nella farina. Versare 150g acqua a filo mentre si raccoglie l'impasto con le mani. Impastare per 8-10 minuti sbriciolando e amalgamando con movimento rotatorio delle mani. L'impasto sarà ruvido e poco elastico. Formare una palla, adagiare in ciotola capiente. Coprire con pellicola. Far maturare 12-14 ore a 18-20°C."
     },
     {
       "title": "Rinfresco Biga e Impasto Finale",
-      "text": "Spezzettare la biga matura direttamente nella ciotola con le mani. Aggiungere 50g semola rimacinata, 5g miele, 1g lievito fresco. Versare 38g acqua a filo e impastare nella ciotola per 5 minuti amalgamando tutti gli ingredienti. Quando l'impasto inizia a compattarsi, aggiungere 6g sale e continuare a impastare. Dopo 3 minuti trasferire su spianatoia leggermente infarinata con semola."
+      "text": "Spezzettare la biga matura direttamente nella ciotola con le mani. Aggiungere {semola_impasto_finale:50}g semola rimacinata, {miele_impasto_finale:5}g miele, {lievito_fresco_biga:1}g lievito fresco. Versare 38g acqua a filo e impastare nella ciotola per 5 minuti amalgamando tutti gli ingredienti. Quando l'impasto inizia a compattarsi, aggiungere {sale_impasto_finale:6}g sale e continuare a impastare. Dopo 3 minuti trasferire su spianatoia leggermente infarinata con semola."
     },
     {
       "title": "Impasto su Spianatoia",

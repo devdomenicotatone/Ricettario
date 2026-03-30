@@ -14,19 +14,19 @@
   "stepsSpiral": [
     {
       "title": "Miscelazione Farine e Idratazione Base (5 min, V1)",
-      "text": "Inserire in vasca le 2 farine (400 g tipo 00 + 250 g Manitoba). Avviare impastatrice a spirale V1 (velocità lenta). Versare 300 g di acqua fredda (16-18°C) gradualmente nei primi 2 minuti. Lasciare amalgamare fino a ottenere una massa ruvida ma coesa. Non serve omogeneità perfetta in questa fase."
+      "text": "Inserire in vasca le 2 farine ({farina_media_impasto:400} g tipo 00 + {farina_forte_impasto:250} g Manitoba). Avviare impastatrice a spirale V1 (velocità lenta). Versare 300 g di acqua fredda (16-18°C) gradualmente nei primi 2 minuti. Lasciare amalgamare fino a ottenere una massa ruvida ma coesa. Non serve omogeneità perfetta in questa fase."
     },
     {
       "title": "Aggiunta Sale, Malto e Completamento Idratazione (4 min, V1)",
-      "text": "Unire il malto (10 g) e il sale (13 g) insieme. Versare i restanti 35 g di acqua. Continuare impasto a V1 per 3-4 minuti. L'impasto inizierà a incordarsi leggermente. Verificare che il sale sia completamente sciolto."
+      "text": "Unire il malto ({malto_impasto:10} g) e il sale ({sale_impasto:13} g) insieme. Versare i restanti 35 g di acqua. Continuare impasto a V1 per 3-4 minuti. L'impasto inizierà a incordarsi leggermente. Verificare che il sale sia completamente sciolto."
     },
     {
       "title": "Incorporazione Lievito (3 min, V1)",
-      "text": "Sbricolare il lievito fresco (18 g) direttamente in vasca. Lavorare 3 minuti a V1. L'impasto deve risultare omogeneo, morbido ma ancora appiccicoso. Temperatura target: 24-26°C. Se supera i 27°C, l'impasto sarà troppo reattivo."
+      "text": "Sbricolare il lievito fresco ({lievito_fresco_impasto:18} g) direttamente in vasca. Lavorare 3 minuti a V1. L'impasto deve risultare omogeneo, morbido ma ancora appiccicoso. Temperatura target: 24-26°C. Se supera i 27°C, l'impasto sarà troppo reattivo."
     },
     {
       "title": "Emulsione Olio (5 min, V1→V2)",
-      "text": "Versare l'olio EVO (30 g) a filo. Continuare 3 minuti a V1 fino a completa assorbimento. Passare a V2 (velocità media) per 2 minuti: l'impasto deve staccarsi dalle pareti, risultare liscio, elastico e lucido. Temperatura finale: 25-26°C MAX."
+      "text": "Versare l'olio EVO ({olio_evo_impasto:30} g) a filo. Continuare 3 minuti a V1 fino a completa assorbimento. Passare a V2 (velocità media) per 2 minuti: l'impasto deve staccarsi dalle pareti, risultare liscio, elastico e lucido. Temperatura finale: 25-26°C MAX."
     },
     {
       "title": "Puntata in Massa (30 min, 26-28°C)",
@@ -46,25 +46,25 @@
     },
     {
       "title": "Preparazione Salamoia",
-      "text": "Mescolare 200 g acqua + 10 g sale fino fino a completo scioglimento. Tenere da parte a temperatura ambiente."
+      "text": "Mescolare {acqua_condimento:200} g acqua + {malto_impasto:10} g sale fino fino a completo scioglimento. Tenere da parte a temperatura ambiente."
     },
     {
       "title": "Foratura e Condimento Finale (tecnica dei 3 dita)",
-      "text": "Scoprire la focaccia. Spolverizzare con un velo di farina. Con 3 dita (indice-medio-anulare) INCLINATE (non perpendicolari), affondare creando i tipici buchi profondi fino quasi al fondo. Distanza tra buchi: 1 cm. Spingere le dita leggermente verso i bordi durante la foratura. Ruotare la teglia per forare uniformemente anche i lati. Versare al centro 30 g olio + 100 g salamoia. Spargere delicatamente con mano piatta riempiendo tutti i buchi. NON coprire. Riposo finale: 40-45 minuti."
+      "text": "Scoprire la focaccia. Spolverizzare con un velo di farina. Con 3 dita (indice-medio-anulare) INCLINATE (non perpendicolari), affondare creando i tipici buchi profondi fino quasi al fondo. Distanza tra buchi: 1 cm. Spingere le dita leggermente verso i bordi durante la foratura. Ruotare la teglia per forare uniformemente anche i lati. Versare al centro {olio_evo_impasto:30} g olio + 100 g salamoia. Spargere delicatamente con mano piatta riempiendo tutti i buchi. NON coprire. Riposo finale: 40-45 minuti."
     }
   ],
   "stepsHand": [
     {
       "title": "Miscelazione Farine e Autolisi Breve (10 min)",
-      "text": "In ciotola capiente, miscelare con frusta le 2 farine (400 g tipo 00 + 250 g Manitoba). Formare fontana. Versare al centro 300 g di acqua a 20-22°C. Mescolare con marisa (spatola a manico lungo) o cucchiaio di legno con movimenti circolari dal centro verso l'esterno. Quando l'acqua è assorbita, lasciare riposare coperto 10 minuti (autolisi breve per facilitare lo sviluppo del glutine)."
+      "text": "In ciotola capiente, miscelare con frusta le 2 farine ({farina_media_impasto:400} g tipo 00 + {farina_forte_impasto:250} g Manitoba). Formare fontana. Versare al centro 300 g di acqua a 20-22°C. Mescolare con marisa (spatola a manico lungo) o cucchiaio di legno con movimenti circolari dal centro verso l'esterno. Quando l'acqua è assorbita, lasciare riposare coperto 10 minuti (autolisi breve per facilitare lo sviluppo del glutine)."
     },
     {
       "title": "Incorporazione Sale e Malto (5 min)",
-      "text": "Unire malto (10 g) e sale (13 g) sull'impasto. Versare altri 30 g di acqua. Mescolare energicamente con marisa per 4-5 minuti fino a ottenere una massa omogenea. Il sale deve sciogliersi completamente. L'impasto sarà denso e appiccicoso."
+      "text": "Unire malto ({malto_impasto:10} g) e sale ({sale_impasto:13} g) sull'impasto. Versare altri {olio_evo_impasto:30} g di acqua. Mescolare energicamente con marisa per 4-5 minuti fino a ottenere una massa omogenea. Il sale deve sciogliersi completamente. L'impasto sarà denso e appiccicoso."
     },
     {
       "title": "Aggiunta Lievito e Completamento Idratazione (3 min)",
-      "text": "Sbricolare il lievito fresco (18 g, o ridurre a 12-15 g se fa molto caldo). Versare gli ultimi 5 g di acqua. Mescolare con marisa fino a completa incorporazione. Non serve ancora incordare perfettamente."
+      "text": "Sbricolare il lievito fresco ({lievito_fresco_impasto:18} g, o ridurre a 12-15 g se fa molto caldo). Versare gli ultimi 5 g di acqua. Mescolare con marisa fino a completa incorporazione. Non serve ancora incordare perfettamente."
     },
     {
       "title": "Incordatura Manuale sul Piano (10-12 min, tecnica energica)",
@@ -72,7 +72,7 @@
     },
     {
       "title": "Emulsione Olio (5 min)",
-      "text": "Versare l'olio EVO (30 g) sull'impasto. Continuare l'impastamento energico: schiacciare, ripiegare, strappare. L'olio verrà assorbito gradualmente. Dopo 4-5 minuti l'impasto sarà liscio, lucido, elastico. Se troppo appiccicoso, spolverizzare con pochissima farina (MAX 10-20 g). Totale lavorazione a mano: 13-15 minuti. Temperatura finale: 24-26°C."
+      "text": "Versare l'olio EVO ({olio_evo_impasto:30} g) sull'impasto. Continuare l'impastamento energico: schiacciare, ripiegare, strappare. L'olio verrà assorbito gradualmente. Dopo 4-5 minuti l'impasto sarà liscio, lucido, elastico. Se troppo appiccicoso, spolverizzare con pochissima farina (MAX 10-20 g). Totale lavorazione a mano: 13-15 minuti. Temperatura finale: 24-26°C."
     },
     {
       "title": "Pirlatura e Puntata (30 min)",
@@ -92,11 +92,11 @@
     },
     {
       "title": "Salamoia",
-      "text": "Sciogliere 10 g sale fino in 200 g acqua temperatura ambiente. Mescolare bene."
+      "text": "Sciogliere {malto_impasto:10} g sale fino in {acqua_condimento:200} g acqua temperatura ambiente. Mescolare bene."
     },
     {
       "title": "Foratura Finale e Condimento (tecnica genovese)",
-      "text": "Spolverizzare con velo di farina. Con 3 dita INCLINATE (mai perpendicolari), affondare creando buchi profondi distanti 1 cm. Spingere le dita leggermente verso i bordi. Ruotare teglia per uniformità. Versare al centro 30 g olio + 100 g salamoia. Spargere delicatamente con mano piatta riempiendo i buchi. Lasciare scoperto. Riposo: 40-45 minuti."
+      "text": "Spolverizzare con velo di farina. Con 3 dita INCLINATE (mai perpendicolari), affondare creando buchi profondi distanti 1 cm. Spingere le dita leggermente verso i bordi. Ruotare teglia per uniformità. Versare al centro {olio_evo_impasto:30} g olio + 100 g salamoia. Spargere delicatamente con mano piatta riempiendo i buchi. Lasciare scoperto. Riposo: 40-45 minuti."
     }
   ],
   "stepsExtruder": [],
