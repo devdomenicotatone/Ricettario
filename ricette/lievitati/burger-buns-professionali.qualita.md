@@ -7,18 +7,19 @@
 | Schema | ✅ Pass | 0 errori, 0 warning |
 | Claude | 75/100 | 🟡 Da migliorare |
 
-La ricetta presenta errori critici nelle dosi della biga e mancanze nel procedimento (zucchero non incorporato). Setup e temperature corretti, ma idratazione e proporzioni lievito da rivedere. Base solida ma necessita correzioni sostanziali.
+Ricetta con buona struttura tecnica ma presenta diversi errori nei riferimenti delle variabili del procedimento e incongruenze nelle quantità. Le dosi di lievito sono eccessive per i tempi indicati e l'idratazione reale non corrisponde a quella dichiarata. Correggendo questi aspetti, la ricetta può funzionare bene per burger buns professionali.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione | Fonte |
 |------|------|----------|------------|-------|
-| ❌ | Dosi | Errore grave nelle dosi della biga: nel procedimento usa solo 50g acqua + 100g Manitoba, ma negli ingredienti dichiara 290g acqua + 300g Manitoba | Correggere ingredienti biga: 50g acqua + 100g Manitoba (come da procedimento) oppure correggere procedimento | 🔵 Claude |
-| ❌ | Coerenza | Nel procedimento manca totalmente lo zucchero (40g dichiarato negli ingredienti) | Aggiungere nel procedimento quando incorporare i 40g di zucchero semolato | 🔵 Claude |
-| ❌ | Dosi | Idratazione dichiarata 58% non corrisponde alle dosi effettive: con biga corretta (50g acqua) + 200g latte = 250g liquidi totali su 500g farine = 50% | Correggere idratazione a 50% o rivedere dosi liquidi | 🔵 Claude |
-| ❌ | Dosi | Manitoba dichiarata 300g ma usata solo 200g (100g biga + 100g impasto base mancante) | Nel procedimento step 2: usare 200g Manitoba + 100g dalla biga = 300g totali come dichiarato | 🔵 Claude |
-| ⚠️ | Dosi | Lievito totale 10g su 500g farine = 2%: alto per lievitazione lunga 4h30, rischio sovralievitazione | Ridurre a 3-4g biga + 3-4g finale oppure allungare lievitazione | 🔵 Claude |
-| 💡 | Coerenza | Sale 12g su 500g farine = 2.4%: corretto ma al limite superiore per dolci lievitati | Considerare riduzione a 8-10g per equilibrio gustativo migliore | 🔵 Claude |
+| ❌ | Coerenza | Nel punto 1 del procedimento si riferisce a '{burro_impasto_finale:50}g di acqua' invece di 290g di acqua per la biga | Correggere con '{acqua_biga:290}g di acqua' | 🔵 Claude |
+| ❌ | Coerenza | Nel punto 1 si usa solo 100g di Manitoba invece dei 300g previsti negli ingredienti per la biga | Correggere con '{farina_manitoba_biga:300}g di Manitoba' | 🔵 Claude |
+| ❌ | Coerenza | Nel punto 2 si indicano quantità sbagliate: '{farina_media_impasto_finale:200}g Manitoba' ma la Manitoba nell'impasto finale non esiste negli ingredienti | Usare '{farina_manitoba_rimanente:200}g Manitoba rimanente dalla biga + {farina_00_impasto_finale:200}g farina 00' | 🔵 Claude |
+| ❌ | Coerenza | Nel punto 7 riferimento errato '{semi_di_sesamo_finitura:30}g latte' invece di '{latte_spennellatura:30}g latte' | Correggere il riferimento alla variabile del latte per spennellatura | 🔵 Claude |
+| ⚠️ | Dosi | Idratazione totale reale 62.4% (585g liquidi/935g farine totali), non 58% dichiarata | Correggere l'idratazione dichiarata a 62% o ridurre i liquidi | 🔵 Claude |
+| ⚠️ | Dosi | Lievito totale 2% su farina, alto per lievitazione di 4h30 con biga | Ridurre lievito totale a 6-7g per evitare sovralievitazione | 🔵 Claude |
+| 💡 | Coerenza | Manca {zucchero_impasto_finale:40} nel procedimento, ingrediente non utilizzato | Aggiungere lo zucchero insieme al miele nel punto 2 | 🔵 Claude |
 
 ---
-*Generato: 2026-03-29T00:19:11.468Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-03-30T20:06:01.717Z | Pipeline: Schema → Claude → Gemini*

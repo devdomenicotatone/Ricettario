@@ -1,14 +1,14 @@
 # Qualità: Baguette Francese Tradizionale
 
-## 🟢 Score Finale: 80/100
+## 🟢 Score Finale: 90/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 1 warning |
 | Claude | 92/100 | 🟢 Buona |
-| Gemini | 🟡 Parziale disaccordo (-12) | Claude ha individuato il problema dell'acqua ma ne ha sottov |
+| Gemini | 🟡 Parziale disaccordo (-2) | Claude ha segnalato falsi positivi a causa di un'errata inte |
 
-Ricetta tecnicamente molto solida con ottima struttura professionale. Idratazione 68% appropriata per baguette, percentuale sale corretta (2%), setup poolish ben bilanciato. Temperature e tempi coerenti. Solo due piccole discrepanze: acqua finale (300g vs 380g) e setup che include metodo manuale non sviluppato nel procedimento. Ricetta di alto livello tecnico.
+Ricetta molto ben strutturata e tecnicamente corretta. La metodologia poolish, le proporzioni di idratazione (68%), i tempi di lievitazione e le tecniche di formatura sono perfettamente allineate alla tradizione francese. Setup appropriato, procedimento dettagliato e coerente. Unici miglioramenti suggeriti: adeguamento del sale alla tradizione francese e mantenimento di temperatura più alta in cottura per la crosta tipica della baguette.
 
 ## 🔍 Schema Validation
 
@@ -18,25 +18,24 @@ Ricetta tecnicamente molto solida con ottima struttura professionale. Idratazion
 
 | Sev. | Area | Problema | Correzione | Fonte |
 |------|------|----------|------------|-------|
-| 💡 | Dosi | Acqua totale nell'impasto finale: nel procedimento step 2 si usano 300g invece dei 380g indicati negli ingredienti | Correggere nel procedimento: 'Aggiungere...380g di acqua (18-20°C)' oppure correggere l'ingrediente a 300g | 🔵 Claude |
-| 💡 | Coerenza | Setup indica 'A mano' ma il procedimento è interamente per impastatrice a spirale | Rimuovere 'A mano' dal setup oppure aggiungere istruzioni alternative per impasto manuale nel procedimento principale | 🔵 Claude |
-| ❌ | Pezzatura / Matematica | Errore matematico grave sul peso totale. L'impasto totale pesa circa 1718g. Dividendo per 3-4 pezzi non si ottengono panetti da 250-300g (ne avanzerebbero oltre 500g). | Modificare lo step 5: 'Dividere in 5-6 pezzi da 280-300g' oppure 'Dividere in 4 pezzi da circa 430g'. | 🔴 Gemini |
-| ❌ | Procedimento (Acqua) | Manca l'inserimento dell'acqua residua per l'impastatrice. Lo step 2 usa 300g, ma i restanti 80g scompaiono dal procedimento principale. | Aggiungere nello Step 3: 'Aggiungere a filo i restanti 80g di acqua durante l'incordatura in seconda velocità'. | 🔴 Gemini |
-| ⚠️ | Cottura | L'uso del forno 'ventilato' a 250°C è altamente sconsigliato per le baguette. La ventilazione disperde il vapore istantaneamente e secca la crosta troppo in fretta, bloccando l'apertura dei tagli (grigne). | Cambiare la modalità di cottura in 'Forno Statico', mantenendo le stesse temperature e la gestione del vapore. | 🔴 Gemini |
+| 💡 | Dosi | Sale al 2% su farina totale (20g su 1000g): nella tradizione italiana si usa 2-2.5%, mentre in Francia il limite legale è 1.4% (14g). Per autenticità francese considera 14-16g. | Ridurre sale a 14-16g per rispettare la tradizione francese, oppure specificare che si segue la tradizione italiana | 🔵 Claude |
+| 💡 | Temperature | Temperatura finale di cottura 220°C negli ultimi minuti: per baguette tradizionale francese si mantiene solitamente 230-240°C per tutta la cottura per ottenere la crosta croccante caratteristica. | Mantenere 230-240°C per tutta la cottura, eventualmente scendere solo a 220°C negli ultimissimi 2-3 minuti se necessario | 🔵 Claude |
+| ❌ | Procedimento / Cottura | Forte contraddizione nel testo: il punto 8 dice 'Preriscaldare a 250°C ventilato... IMPORTANTE: passare a modalità STATICA prima di infornare'. Invece la sezione COTTURA dice 'Preriscaldare forno STATICO (NON ventilato)'. | Allineare i testi: consigliare il preriscaldamento in ventilato (per scaldare prima la pietra) e il passaggio a statico al momento di infornare, eliminando la dicitura 'Preriscaldare forno STATICO'. | 🔴 Gemini |
+| 💡 | Ingredienti / Autenticità | La ricetta si chiama 'Francese Tradizionale', ma l'uso di Malto (10g) e farina Manitoba (150g) viola il rigido disciplinare della 'Baguette de Tradition' francese, che ammette solo farina (tipo T65, media forza), acqua, lievito e sale, senza zuccheri o miglioratori aggiunti. | Rinominare in 'Baguette (adattamento casalingo)' oppure rimuovere malto e Manitoba per rispettare l'effettiva tradizione francese. | 🔴 Gemini |
 
 ## 🔴 Revisione Gemini
 
 **Verdetto**: 🟡 Parziale disaccordo
-**Adjustment**: -12
+**Adjustment**: -2
 
-Claude ha individuato il problema dell'acqua ma ne ha sottovalutato l'impatto tecnico, suggerendo una correzione sbagliata. Ha inoltre completamente mancato un enorme errore matematico sulla resa dell'impasto (mancano all'appello 500g di pasta) e l'errore concettuale della cottura ventilata per questo tipo di pane.
+Claude ha segnalato falsi positivi a causa di un'errata interpretazione matematica delle percentuali del pane francese. Ha tuttavia mancato una netta contraddizione nelle istruzioni di preriscaldamento del forno che rischia di confondere molto chi legge.
 
 ### Issues contestate
 
 | Problema | Verdetto | Motivo |
 |---|---|---|
-| Acqua totale nell'impasto finale: nel procedimento step 2 si usano 300g invece dei 380g indicati negli ingredienti | ⚠️ Parziale | Claude ha individuato la discrepanza, ma la severità (💡) è troppo bassa: è un errore grave (❌). Inoltre, la soluzione proposta da Claude ('correggere l'ingrediente a 300g') sballerebbe l'idratazione al 60%, contraddicendo il 68% dichiarato. I restanti 80g vanno inseriti al punto 3 (bassinage). |
-| Setup indica 'A mano' ma il procedimento è interamente per impastatrice a spirale | ❌ Falso positivo | Claude non ha notato che nei 'PRO TIPS' c'è un'indicazione esplicita e corretta su come gestire l'impasto a mano (slap & fold, idratazione progressiva), giustificando la presenza del tag nel setup. |
+| Sale al 2% su farina totale (20g su 1000g): nella tradizione italiana si usa 2-2.5%, mentre in Francia il limite legale è 1.4%... | ❌ Falso positivo | Claude confonde il limite legale sul prodotto finito con la percentuale del fornaio. L'accordo francese punta a 1.4g di sale su 100g di PANE COTTO. Il 2% di sale sulla farina (considerando l'acqua e la perdita di peso in cottura) porta esattamente a circa 1.4-1.5% sul pane cotto. Il 2% in ricetta è tecnicamente perfetto e standard. |
+| Temperatura finale di cottura 220°C negli ultimi minuti: per baguette tradizionale francese si mantiene solitamente 230-240°C... | ❌ Falso positivo | Nei forni domestici italiani, abbassare a 220°C negli ultimi 5-8 minuti è una tecnica eccellente (e molto diffusa) per permettere alla mollica di asciugarsi senza bruciare la crosta, specialmente usando una pietra refrattaria. |
 
 ---
-*Generato: 2026-03-29T00:11:18.083Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-03-30T19:43:33.202Z | Pipeline: Schema → Claude → Gemini*

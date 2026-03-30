@@ -75,11 +75,11 @@
   "stepsSpiral": [
     {
       "title": "Poolish (sera prima, -12/14h)",
-      "text": "In una ciotola capiente miscelare {farina_media_poolish:300}g di Farina Tipo 0, {farina_media_poolish:300}g di acqua a temperatura ambiente (18-20°C) e 0,5g di lievito fresco (un pizzico). Mescolare con una forchetta fino a completa idratazione. Coprire con pellicola a contatto e lasciare fermentare a 20-22°C per 12-14 ore. Il poolish è pronto quando si presenta gonfio, pieno di bolle e con un odore leggermente acetico."
+      "text": "In una ciotola capiente miscelare {farina_media_poolish:300}g di Farina Tipo 0, {acqua_poolish:300}g di acqua a temperatura ambiente (18-20°C) e 0,5g di lievito fresco (un pizzico). Mescolare con una forchetta fino a completa idratazione. Coprire con pellicola a contatto e lasciare fermentare a 20-22°C per 12-14 ore. Il poolish è pronto quando si presenta gonfio, pieno di bolle e con un odore leggermente acetico."
     },
     {
       "title": "Impasto Base (V1, 3 min)",
-      "text": "Nella vasca dell'impastatrice a spirale versare tutto il poolish maturo. Aggiungere {farina_media_impasto_finale:550}g di Farina Tipo 0, {farina_forte_impasto_finale:150}g di Manitoba, {farina_media_poolish:300}g di acqua (18-20°C), {lievito_fresco_impasto_finale:8}g di lievito fresco sbriciolato e {miele_impasto_finale:10}g di malto. Avviare in prima velocità per 3 minuti: si formerà una massa grezza e appiccicosa. Fermare e lasciare riposare 10 minuti coperto (autolisi)."
+      "text": "Nella vasca dell'impastatrice a spirale versare tutto il poolish maturo. Aggiungere {farina_media_impasto_finale:550}g di Farina Tipo 0, {farina_forte_impasto_finale:150}g di Manitoba, {acqua_impasto_finale:380}g di acqua (18-20°C), {lievito_fresco_impasto_finale:8}g di lievito fresco sbriciolato e {miele_impasto_finale:10}g di malto. Avviare in prima velocità per 3 minuti: si formerà una massa grezza e appiccicosa. Fermare e lasciare riposare 10 minuti coperto (riposo per idratazione)."
     },
     {
       "title": "Incordatura e Sale (V1 4 min + V2 3 min)",
@@ -90,11 +90,11 @@
       "text": "Trasferire l'impasto in un contenitore trasparente leggermente unto. Coprire con pellicola. Lasciare a 22-24°C per 1 ora. Eseguire 1 serie di pieghe a libro: stendere delicatamente su piano leggermente infarinato, piegare i 4 lati verso il centro, capovolgere. Rimettere nel contenitore e lasciare lievitare ancora 1 ora (totale 2h). L'impasto deve crescere del 50-60%, non raddoppiare."
     },
     {
-      "title": "Staglio e Pre-Forma (3-4 baguette da 250-300g)",
-      "text": "Rovesciare delicatamente l'impasto su piano leggermente infarinato. Dividere con tarocco in 3-4 pezzi uguali (250-{farina_media_poolish:300}g ciascuno). Allungare delicatamente ogni pezzo in un rettangolo largo circa 10cm, senza sgonfiare troppo. Piegare a metà per il lato lungo, sigillare con il palmo. Coprire con canovaccio e lasciare rilassare 15 minuti."
+      "title": "Staglio e Pre-Forma (5-6 baguette da ~285g)",
+      "text": "Rovesciare delicatamente l'impasto su piano leggermente infarinato. Dividere con tarocco in 5-6 pezzi uguali (circa {peso_baguette:285!}g ciascuno). Allungare delicatamente ogni pezzo in un rettangolo largo circa 10cm, senza sgonfiare troppo. Piegare a metà per il lato lungo, sigillare con il palmo. Coprire con canovaccio e lasciare rilassare 15 minuti."
     },
     {
-      "title": "Pirlatura Baguette (cilindri da 30-35cm)",
+      "title": "Formatura Baguette (cilindri da 30-35cm)",
       "text": "Lavorare un pezzo alla volta. Stendere delicatamente il rettangolo con le mani (non matterello) fino a 12-15cm di larghezza. Piegare il bordo superiore verso il centro, sigillare con i polpastrelli. Piegare ancora portando il bordo superiore fino a quello inferiore, sigillare con forza usando il palmo. Ruotare il cilindro con leggera pressione delle mani dal centro verso l'esterno fino a raggiungere 30-35cm di lunghezza e spessore uniforme di 4-5cm."
     },
     {
@@ -103,21 +103,21 @@
     },
     {
       "title": "Preparazione Forno (45 min prima)",
-      "text": "Posizionare una pietra refrattaria o una teglia rovesciata sul ripiano centrale del forno. Sul fondo del forno posizionare una teglia vuota in metallo (per il vapore). Preriscaldare a 250°C ventilato per almeno 45 minuti. Il forno deve essere ben carico di calore."
+      "text": "Posizionare una pietra refrattaria o una teglia rovesciata sul ripiano centrale del forno. Sul fondo del forno posizionare una teglia vuota in metallo (per il vapore). Preriscaldare a 250°C ventilato per almeno 45 minuti per roventare la pietra più in fretta. IMPORTANTE: passare a modalità STATICA prima di infornare. Il forno deve essere ben carico di calore."
     },
     {
       "title": "Scarificazione e Infornata",
-      "text": "Capovolgere delicatamente le baguette su una pala infarinata o carta forno (chiusura ora sotto). Spolverare leggermente di farina la superficie. Con una lametta da pane (o rasoio) fare 4-5 tagli obliqui (45°) profondi 5-7mm, leggermente sovrapposti. Incidere con gesto deciso e rapido. Versare 100ml di acqua bollente nella teglia sul fondo del forno (vapore immediato). Infornare rapidamente le baguette sulla pietra. Chiudere subito il forno."
+      "text": "Capovolgere delicatamente le baguette su una pala infarinata o carta forno (chiusura ora sotto). Spolverare leggermente di farina la superficie. Con una lametta da pane (o rasoio) fare 4-5 tagli quasi longitudinali (~20° rispetto all'asse), profondi 5-7mm, sovrapposti di circa 1/3 della loro lunghezza. Incidere con gesto deciso e rapido per ottenere la tipica apertura a spiga (grigne). Versare 100ml di acqua bollente nella teglia sul fondo del forno (vapore immediato). Infornare rapidamente le baguette sulla pietra. Chiudere subito il forno."
     }
   ],
   "stepsHand": [
     {
       "title": "Poolish (sera prima, -12/14h)",
-      "text": "In una ciotola capiente miscelare {farina_media_poolish:300}g di Farina Tipo 0, {farina_media_poolish:300}g di acqua a temperatura ambiente (18-20°C) e 0,5g di lievito fresco (un pizzico). Mescolare con una forchetta fino a completa idratazione. Coprire con pellicola a contatto e lasciare fermentare a 20-22°C per 12-14 ore. Il poolish è pronto quando si presenta gonfio, pieno di bolle e con un odore leggermente acetico."
+      "text": "In una ciotola capiente miscelare {farina_media_poolish:300}g di Farina Tipo 0, {acqua_poolish:300}g di acqua a temperatura ambiente (18-20°C) e 0,5g di lievito fresco (un pizzico). Mescolare con una forchetta fino a completa idratazione. Coprire con pellicola a contatto e lasciare fermentare a 20-22°C per 12-14 ore. Il poolish è pronto quando si presenta gonfio, pieno di bolle e con un odore leggermente acetico."
     },
     {
       "title": "Impasto Base (15 min a mano)",
-      "text": "In una ciotola capiente versare tutto il poolish maturo. Aggiungere {farina_media_impasto_finale:550}g di Farina Tipo 0, {farina_forte_impasto_finale:150}g di Manitoba, 250g di acqua (20-22°C), {lievito_fresco_impasto_finale:8}g di lievito fresco sbriciolato e {miele_impasto_finale:10}g di malto. Mescolare con un cucchiaio di legno fino a ottenere una massa grezza. Coprire e lasciare riposare 20 minuti (autolisi)."
+      "text": "In una ciotola capiente versare tutto il poolish maturo. Aggiungere {farina_media_impasto_finale:550}g di Farina Tipo 0, {farina_forte_impasto_finale:150}g di Manitoba, 250g di acqua (20-22°C), {lievito_fresco_impasto_finale:8}g di lievito fresco sbriciolato e {miele_impasto_finale:10}g di malto. Mescolare con un cucchiaio di legno fino a ottenere una massa grezza. Coprire e lasciare riposare 20 minuti (riposo per idratazione)."
     },
     {
       "title": "Slap & Fold e Sale (3 serie)",
@@ -128,11 +128,11 @@
       "text": "Trasferire in contenitore leggermente unto. Coprire. Lasciare a 22-24°C per 45 minuti. Eseguire 1ª serie di stretch & fold: bagnare leggermente le mani, sollevare un lato dell'impasto e piegarlo verso il centro. Ruotare 90° e ripetere per i 4 lati. Riposare altri 45 minuti. Eseguire 2ª serie di pieghe (stesso metodo). Riposare 1 ora. L'impasto deve crescere del 50-60%."
     },
     {
-      "title": "Staglio e Pre-Forma (3-4 baguette da 250-300g)",
-      "text": "Rovesciare delicatamente l'impasto su piano leggermente infarinato. Dividere con tarocco in 3-4 pezzi uguali (250-{farina_media_poolish:300}g ciascuno). Allungare delicatamente ogni pezzo in un rettangolo largo circa 10cm, senza sgonfiare troppo. Piegare a metà per il lato lungo, sigillare con il palmo. Coprire con canovaccio e lasciare rilassare 20 minuti."
+      "title": "Staglio e Pre-Forma (5-6 baguette da ~285g)",
+      "text": "Rovesciare delicatamente l'impasto su piano leggermente infarinato. Dividere con tarocco in 5-6 pezzi uguali (circa {peso_baguette:285!}g ciascuno). Allungare delicatamente ogni pezzo in un rettangolo largo circa 10cm, senza sgonfiare troppo. Piegare a metà per il lato lungo, sigillare con il palmo. Coprire con canovaccio e lasciare rilassare 20 minuti."
     },
     {
-      "title": "Pirlatura Baguette (cilindri da 30-35cm)",
+      "title": "Formatura Baguette (cilindri da 30-35cm)",
       "text": "Lavorare un pezzo alla volta. Stendere delicatamente il rettangolo con le mani (non matterello) fino a 12-15cm di larghezza. Piegare il bordo superiore verso il centro, sigillare con i polpastrelli. Piegare ancora portando il bordo superiore fino a quello inferiore, sigillare con forza usando il palmo. Ruotare il cilindro con leggera pressione delle mani dal centro verso l'esterno fino a raggiungere 30-35cm di lunghezza e spessore uniforme di 4-5cm. La chiusura deve essere ben sigillata."
     },
     {
@@ -141,11 +141,11 @@
     },
     {
       "title": "Preparazione Forno (45 min prima)",
-      "text": "Posizionare una pietra refrattaria o una teglia rovesciata sul ripiano centrale del forno. Sul fondo del forno posizionare una teglia vuota in metallo (per il vapore). Preriscaldare a 250°C ventilato per almeno 45 minuti. Il forno deve essere ben carico di calore."
+      "text": "Posizionare una pietra refrattaria o una teglia rovesciata sul ripiano centrale del forno. Sul fondo del forno posizionare una teglia vuota in metallo (per il vapore). Preriscaldare a 250°C ventilato per almeno 45 minuti per roventare la pietra più in fretta. IMPORTANTE: passare a modalità STATICA prima di infornare. Il forno deve essere ben carico di calore."
     },
     {
       "title": "Scarificazione e Infornata",
-      "text": "Capovolgere delicatamente le baguette su una pala infarinata o carta forno (chiusura ora sotto). Spolverare leggermente di farina la superficie. Con una lametta da pane (o rasoio) fare 4-5 tagli obliqui (45°) profondi 5-7mm, leggermente sovrapposti. Incidere con gesto deciso e rapido. Versare 100ml di acqua bollente nella teglia sul fondo del forno (vapore immediato). Infornare rapidamente le baguette sulla pietra. Chiudere subito il forno."
+      "text": "Capovolgere delicatamente le baguette su una pala infarinata o carta forno (chiusura ora sotto). Spolverare leggermente di farina la superficie. Con una lametta da pane (o rasoio) fare 4-5 tagli quasi longitudinali (~20° rispetto all'asse), profondi 5-7mm, sovrapposti di circa 1/3 della loro lunghezza. Incidere con gesto deciso e rapido per ottenere la tipica apertura a spiga (grigne). Versare 100ml di acqua bollente nella teglia sul fondo del forno (vapore immediato). Infornare rapidamente le baguette sulla pietra. Chiudere subito il forno."
     }
   ],
   "stepsExtruder": [],
@@ -163,10 +163,10 @@
     }
   ],
   "baking": {
-    "temperature": "250°C ventilato",
+    "temperature": "250°C statico",
     "time": "22-26 minuti",
     "tips": [
-      "Preriscaldare forno + pietra refrattaria per 45 minuti a 250°C",
+      "Preriscaldare forno STATICO + pietra refrattaria per 45 minuti a 250°C (NON ventilato: il calore radiante è essenziale per la grigne)",
       "Vapore nei primi 12 minuti: versare 100ml acqua bollente in teglia sul fondo appena infornato",
       "Dopo 12 min aprire sportello 10 secondi per far uscire vapore residuo, abbassare a 230°C",
       "Ultimi 5-8 min a 220°C per doratura uniforme senza bruciare",
@@ -199,8 +199,8 @@
       "definition": "Divisione dell'impasto in pezzi di peso uguale con il tarocco. Per baguette: 250-300g a pezzo"
     },
     {
-      "term": "Pirlatura",
-      "definition": "Tecnica di formatura della baguette: piegare l'impasto a cilindro, sigillare la chiusura e allungare con movimento rotatorio delle mani dal centro verso l'esterno"
+      "term": "Formatura",
+      "definition": "Tecnica di modellazione della baguette: piegare l'impasto a cilindro, sigillare la chiusura e allungare con movimento rotatorio delle mani dal centro verso l'esterno. Da non confondere con la pirlatura, che è l'arrotondamento per forme sferiche (boule, panettoni)"
     },
     {
       "term": "Appretto",

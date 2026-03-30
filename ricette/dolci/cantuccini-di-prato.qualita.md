@@ -1,14 +1,14 @@
 # Qualità: Cantuccini di Prato
 
-## 🟢 Score Finale: 85/100
+## 🟡 Score Finale: 65/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 1 warning |
-| Claude | 88/100 | 🟢 Buona |
-| Gemini | 🟡 Parziale disaccordo (-3) | Claude ha proposto correzioni sbagliate (troppo sale e uso s |
+| Claude | 75/100 | 🟡 Da migliorare |
+| Gemini | 🟡 Parziale disaccordo (-10) | Claude ha fatto un buon lavoro nel trovare alcuni dei fastid |
 
-Ricetta tecnicamente corretta e ben strutturata. Dosi equilibrate, temperature appropriate per le due cotture, procedimento dettagliato con tempistiche precise. L'uso dell'ammoniaca per dolci è tradizionalmente corretto. Tutti gli ingredienti sono ben integrati nel procedimento. Solo piccoli miglioramenti suggeriti per completezza.
+Ricetta tradizionale ben strutturata con temperature e tempi corretti. Presenta alcuni errori nei placeholder del procedimento che compromettono la chiarezza. L'idratazione dichiarata non è accurata considerando il contenuto liquido delle uova. La ricetta è tecnicamente valida ma necessita correzioni editoriali per la precisione.
 
 ## 🔍 Schema Validation
 
@@ -18,26 +18,28 @@ Ricetta tecnicamente corretta e ben strutturata. Dosi equilibrate, temperature a
 
 | Sev. | Area | Problema | Correzione | Fonte |
 |------|------|----------|------------|-------|
-| 💡 | Dosi | Il sale (2g) è nella media bassa per i dolci (0.5-1% su farina), potrebbe essere aumentato leggermente | Considerare 3-4g di sale per esaltare meglio i sapori | 🔵 Claude |
-| 💡 | Setup | Setup 'A mano' corretto per cantuccini tradizionali, ma potrebbe beneficiare anche di impastatrice planetaria per omogeneità | Aggiungere opzione 'Impastatrice planetaria' nel setup | 🔵 Claude |
-| 💡 | Coerenza | L'idratazione è indicata 0% ma ci sono uova (100g) che apportano circa 75g di liquidi (~27% di idratazione reale) | Correggere idratazione a 27% o specificare 'solo da uova, no acqua aggiunta' | 🔵 Claude |
-| ❌ | Procedimento | L'ammoniaca per dolci viene setacciata con la farina. Questo è un errore tecnico: per evitare spiacevoli residui di sapore/odore ammoniacale, deve essere sciolta in un liquido tiepido o acido. | Sciogliere i 3g di ammoniaca nei 10g di Marsala/Vin Santo prima di aggiungerla all'impasto. | 🔴 Gemini |
-| ⚠️ | Ingredienti | La ricetta si intitola 'Cantuccini di Prato', ma include burro. Il disciplinare tradizionale IGP dei Cantuccini (o Biscotti) di Prato NON prevede alcun tipo di grasso aggiunto oltre alle uova e alle mandorle. | Rimuovere il burro per la versione filologica, oppure rinominare in 'Cantuccini' (generico) specificando che il burro è un'aggiunta moderna per renderli meno duri. | 🔴 Gemini |
+| ❌ | Coerenza | Errore nei placeholder: {ammoniaca_per_dolci_impasto:3} inserito al posto di {scorza_di_limone_impasto:3} nel punto 1 | Correggere il placeholder con {scorza_di_limone_impasto:3} | 🔵 Claude |
+| ❌ | Coerenza | Errore nei placeholder: {farina_media_impasto:280} invece di {farina_tipo_00_debole_impasto:280} nel punto 2 | Correggere il placeholder con il nome corretto dell'ingrediente | 🔵 Claude |
+| ❌ | Coerenza | Errore nei placeholder: {mandorle_con_pellici_impasto:130} troncato, dovrebbe essere {mandorle_con_pellicina_impasto:130} | Completare correttamente il placeholder | 🔵 Claude |
+| ⚠️ | Dosi | Idratazione 0% non rispecchia la realtà: 100g uova + 10g Marsala danno circa 15% di liquidi sulla farina | Correggere l'idratazione indicandola come ~15% o specificare che si riferisce solo all'acqua pura | 🔵 Claude |
+| 💡 | Setup | Setup 'A mano' corretto ma potrebbe beneficiare anche dell'opzione 'Impastatrice planetaria' per la fase iniziale | Considerare l'aggiunta di 'Impastatrice planetaria' come alternativa per amalgamare uova e zucchero | 🔵 Claude |
+| ❌ | Matematica / Porzioni | Al punto 4 si dice di dividere l'impasto in 2 parti da 'circa 265g ciascuna'. Il peso totale degli ingredienti dell'impasto è di 743g. Diviso 2 fa circa 371g a filoncino, non 265g. | Correggere il peso indicativo dei filoncini al punto 4 in 'circa 370g ciascuna'. | 🔴 Gemini |
+| ❌ | Coerenza | Errore nel placeholder al punto 1: lo zucchero semolato viene richiamato come {semola_impasto:180}g. | Correggere in {zucchero_semolato_impasto:180}g. | 🔴 Gemini |
+| ❌ | Coerenza | Errore nel placeholder al punto 5: il tuorlo d'uovo della finitura viene richiamato come {uova_finitura:20}g. | Correggere in {tuorlo_d_uovo_finitura:20}g. | 🔴 Gemini |
 
 ## 🔴 Revisione Gemini
 
 **Verdetto**: 🟡 Parziale disaccordo
-**Adjustment**: -3
+**Adjustment**: -10
 
-Claude ha proposto correzioni sbagliate (troppo sale e uso sconsigliato della planetaria) mancando due aspetti critici: un errore tecnico sull'utilizzo dell'ammoniaca (che va sciolta nei liquidi) e una palese discrepanza storica sugli ingredienti (assenza di burro nella ricetta originale di Prato).
+Claude ha fatto un buon lavoro nel trovare alcuni dei fastidiosi errori nei placeholder, ma ha clamorosamente mancato un errore matematico importante sul peso dei panetti divisi e altri due placeholder errati. Abbasso il punteggio per queste gravi sviste.
 
 ### Issues contestate
 
 | Problema | Verdetto | Motivo |
 |---|---|---|
-| Il sale (2g) è nella media bassa... Considerare 3-4g | ❌ Falso positivo | 2g di sale su 280g di farina corrispondono a circa lo 0.7%, una percentuale perfetta e bilanciata per la biscotteria secca. Aumentarlo a 4g (1.4%) renderebbe i cantuccini eccessivamente sapidi, alterando la ricetta. |
-| Setup 'A mano' potrebbe beneficiare anche di impastatrice planetaria | ❌ Falso positivo | Per i cantuccini, impastare a mano è il metodo migliore. Usare una planetaria rischia di sviluppare glutine (rendendoli duri anziché friabili) e di frantumare le mandorle che devono rimanere intere. |
-| L'idratazione è indicata 0% ma ci sono uova | ⚠️ Parziale | Tecnicamente vero che le uova idratano, ma in pasticceria classica (non lievitati) il parametro 'idratazione' viene spesso ignorato o settato a 0% se non ci sono acqua o latte aggiunti. È una pignoleria di sistema. |
+| Idratazione 0% non rispecchia la realtà: 100g uova + 10g Marsala danno circa 15% di liquidi sulla farina | ⚠️ Parziale | Tecnicamente vero, ma in pasticceria (specialmente per i biscotti) il parametro idratazione viene spesso lasciato a 0% o ignorato se non c'è aggiunta diretta di acqua. È una pignoleria eccessiva. |
+| Setup 'A mano' corretto ma potrebbe beneficiare anche dell'opzione 'Impastatrice planetaria' | ❌ Falso positivo | L'impasto dei cantuccini per queste dosi (circa 700g totali) si gestisce benissimo a mano come da tradizione. Suggerire l'aggiunta della planetaria è un vezzo inutile che non migliora la ricetta. |
 
 ---
-*Generato: 2026-03-29T00:23:05.181Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-03-30T19:56:42.894Z | Pipeline: Schema → Claude → Gemini*

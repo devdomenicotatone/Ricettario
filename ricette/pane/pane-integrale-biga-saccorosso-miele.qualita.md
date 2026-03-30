@@ -1,14 +1,14 @@
 # Qualità: Pane Integrale con Biga di Saccorosso e Miele
 
-## 🟡 Score Finale: 75/100
+## 🟡 Score Finale: 70/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 1 warning |
-| Claude | 92/100 | 🟢 Buona |
-| Gemini | 🟡 Parziale disaccordo (-17) | Claude ha premiato la ricetta per l'ottima discorsività, man |
+| Claude | 75/100 | 🟡 Da migliorare |
+| Gemini | 🟡 Parziale disaccordo (-5) | Claude ha svolto un eccellente lavoro matematico e di debug  |
 
-Ricetta molto ben strutturata e tecnicamente solida. Le dosi sono equilibrate, la biga ha proporzioni corrette (45% idratazione, 0.25% lievito), l'idratazione finale al 70% è appropriata per un pane integrale con biga. Il procedimento è dettagliato e professionale, con attenzione alle specifiche tecniche. Setup corretto per pane. Temperature e tempi ben definiti nella sezione cottura. Solo piccole imprecisioni numeriche che non compromettono il risultato.
+Ricetta tecnicamente valida con biga e bassinage ben strutturati, ma presenta errori di calcolo del sale, incongruenze nelle variabili del procedimento e discrepanza nell'idratazione dichiarata. Gli errori nelle variabili potrebbero creare confusione nell'esecuzione.
 
 ## 🔍 Schema Validation
 
@@ -18,27 +18,29 @@ Ricetta molto ben strutturata e tecnicamente solida. Le dosi sono equilibrate, l
 
 | Sev. | Area | Problema | Correzione | Fonte |
 |------|------|----------|------------|-------|
-| 💡 | Dosi | Sale al 2.1% su farine totali (58g su 2800g) risulta in realtà 2.07%, calcolo leggermente impreciso ma accettabile | Arrotondare a 59g per avere esattamente 2.1% o specificare 2.07% | 🔵 Claude |
-| 💡 | Coerenza | Nel bassinage si menziona '525g se si punta al 70%' ma l'idratazione dichiarata è già 70% con 1500g totali | Chiarire che i 525g sono il resto dell'acqua dopo i 975g dell'autolisi | 🔵 Claude |
-| 💡 | Temperature | Range temperature cottura molto ampio (240-270°C) potrebbe confondere, anche se le opzioni specifiche sono dettagliate | Specificare meglio il range raccomandato per forno domestico standard | 🔵 Claude |
-| ❌ | Idratazione/Matematica | Errore grave nel calcolo dell'idratazione. Farina totale: 2800g (800 biga + 2000 impasto). Acqua totale indicata: 1860g (360 biga + 1500 impasto). Questo dà un'idratazione del 66.4%, non del 70%. | Per avere il 70% di idratazione su 2800g di farina, l'acqua totale deve essere 1960g. L'acqua nell'impasto finale deve quindi passare da 1500g a 1600g. | 🔴 Gemini |
-| ❌ | Tempi/Temperature | Appretto impossibile (Fase 9). Formare un impasto appena tolto dal frigo a 4°C e pretendere che lieviti del 70-80% in soli 45-60 minuti a 20-22°C è fisicamente impossibile. Ci vorranno almeno 2-3 ore. | Aumentare il tempo di appretto a 2-3 ore, o suggerire di far acclimatare l'impasto a temperatura ambiente prima di formarlo. | 🔴 Gemini |
-| ⚠️ | Tecnica | Falsa autolisi (Fase 2). Inserire la biga (che contiene lievito attivo) insieme a farina e acqua prima del riposo innesca la fermentazione. Questa si chiama tecnicamente 'fermentolisi', non autolisi pura. | Rinominare la fase in 'Fermentolisi', oppure fare una vera autolisi solo con farina e acqua, aggiungendo la biga dopo il riposo di 45 minuti. | 🔴 Gemini |
+| ❌ | Dosi | Errore grave nel calcolo del sale: indicato 58g per 2.1% su 2800g di farine totali, ma 2800g × 2.1% = 58.8g ≈ 59g. Inoltre 2.1% è al limite superiore per il pane. | Correggere a 56g (2% su 2800g farine) o aggiornare la percentuale a 2.07% | 🔵 Claude |
+| ❌ | Coerenza | Nel procedimento punto 4, l'olio (50g) viene citato come 'miele_impasto_finale:50g' invece che come variabile olio. Errore di copy-paste. | Sostituire con {olio_evo_impasto_finale:50}g di olio EVO | 🔵 Claude |
+| ❌ | Coerenza | Nel procedimento punto 2, viene usata variabile errata 'farina_integrale_impasto_finale' per la Saccorosso (1000g). Dovrebbe essere 'farina_caputo_saccor_impasto_finale'. | Correggere con {farina_caputo_saccor_impasto_finale:1000}g Caputo Saccorosso | 🔵 Claude |
+| ⚠️ | Dosi | Idratazione effettiva: (360+1500)g acqua / 2800g farine = 66.4%, non 70% come dichiarato | Correggere idratazione dichiarata a 66% oppure aumentare acqua a 1960g per raggiungere 70% | 🔵 Claude |
+| ⚠️ | Coerenza | Nel punto 8 formatura, il range pesi è incongruente: '600-800g' dove 800g corrisponde al peso della farina biga, non al peso finale pagnotta | Specificare peso corretto pagnotte: es. '800-1000g' considerando il peso totale impasto diviso numero pagnotte | 🔵 Claude |
+| 💡 | Dosi | Sale al 2.1% è elevato per pane integrale. Lo standard italiano è 2-2.5%, ma con integrale si può ridurre leggermente per bilanciare il sapore della crusca | Considerare riduzione sale a 1.8-2% (50-56g) per migliorare equilibrio gustativo | 🔵 Claude |
+| ❌ | Tecnica / Processo | Errore concettuale sull'Autolisi (Punto 2). Viene richiesto di mescolare acqua, farina e TUTTA LA BIGA per un'autolisi di 30-45 min. L'autolisi tecnica prevede SOLO farina e acqua. Inserire quasi 1.2kg di biga (lievito e acidità) fa partire immediatamente la fermentazione (tecnicamente è una 'fermentolisi'), cambiando totalmente la reazione chimica dell'impasto. | Separare l'autolisi vera (solo acqua e farina per 45 min) dall'aggiunta della biga (da inserire nel Punto 3), oppure rinominare la fase 'Fermentolisi' e ridurre i tempi. | 🔴 Gemini |
+| ⚠️ | Terminologia / Dosi | Al punto 2 si dice '975g di acqua (65% dell'idratazione totale)'. 975g è il 65% dei 1500g di acqua dell'impasto finale, ma non dell'idratazione totale della ricetta (che include l'acqua della biga). | Riscrivere come '65% dell'acqua dell'impasto finale'. | 🔴 Gemini |
 
 ## 🔴 Revisione Gemini
 
 **Verdetto**: 🟡 Parziale disaccordo
-**Adjustment**: -17
+**Adjustment**: -5
 
-Claude ha premiato la ricetta per l'ottima discorsività, mancando però due errori tecnici gravissimi: il calcolo matematico dell'idratazione è errato (è un 66%, non un 70%) e i tempi di lievitazione post-frigorifero sfidano le leggi della termodinamica. Voto abbassato a 75.
+Claude ha svolto un eccellente lavoro matematico e di debug del testo (scovando le variabili rotte e il calcolo errato dell'idratazione), ma è stato inutilmente punitivo su 1 grammo di sale. Tuttavia, Claude ha completamente mancato un grave errore di tecnica panificatoria (l'autolisi fatta con la biga inclusa), motivo per cui abbasso leggermente il punteggio.
 
 ### Issues contestate
 
 | Problema | Verdetto | Motivo |
 |---|---|---|
-| Sale al 2.1% su farine totali (58g su 2800g) risulta in realtà 2.07% | ❌ Falso positivo | Pignoleria inutile. Una differenza dello 0.03% (meno di 1 grammo su quasi 5kg di impasto) è irrilevante a livello domestico e professionale. |
-| Nel bassinage si menziona '525g se si punta al 70%' ma l'idratazione dichiarata è già 70% | ⚠️ Parziale | Claude nota una discrepanza ma manca il problema di fondo: i calcoli matematici dell'idratazione totale sono completamente sbagliati, non è solo un problema di chiarezza. |
-| Range temperature cottura molto ampio (240-270°C) potrebbe confondere | ❌ Falso positivo | Il range generale è ampio ma è immediatamente seguito da 3 opzioni (A, B, C) estremamente dettagliate in base al tipo di forno. Nessuna confusione. |
+| Errore grave nel calcolo del sale: indicato 58g per 2.1% su 2800g... (Issue 1) | ❌ Falso positivo | 58g su 2800g di farina corrisponde al 2.07%, che nel testo viene normalissimamente arrotondato a 2.1%. Definire 'errore grave' una discrepanza di 0.8 grammi su un impasto totale di quasi 5 kg è estrema pignoleria da intelligenza artificiale. |
+| Errore nelle variabili copia-incolla per olio, Saccorosso e pesi (Issues 2, 3, 5) | ✅ Confermo | Ottima revisione del testo. Le variabili in formato {nome:numero} sono chiaramente errate e usate a sproposito in vari punti del procedimento. |
+| Idratazione effettiva 66.4% e non 70% (Issue 4) | ✅ Confermo | Il calcolo matematico dei liquidi totali (1860g) sulle farine totali (2800g) è ineccepibile. L'autore ha fatto confusione calcolando probabilmente le percentuali in base ai pesi parziali. |
 
 ---
-*Generato: 2026-03-29T00:13:38.649Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-03-30T19:46:59.428Z | Pipeline: Schema → Claude → Gemini*

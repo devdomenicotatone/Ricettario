@@ -1,40 +1,41 @@
 # Qualità: Pasta Brioche Classica
 
-## 🟢 Score Finale: 90/100
+## 🟡 Score Finale: 70/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 0 warning |
-| Claude | 88/100 | 🟢 Buona |
-| Gemini | 🟡 Parziale disaccordo (+2) | Claude ha commesso errori di lettura (inventando la mancanza |
+| Claude | 78/100 | 🟡 Da migliorare |
+| Gemini | 🟡 Parziale disaccordo (-8) | Claude ha penalizzato ingiustamente l'uso della spirale e le |
 
-Ricetta ben strutturata con procedimento dettagliato e tecnicamente corretto. Setup impastatrice non ottimale per il tipo di prodotto. Dosi e proporzioni corrette, temperature e tempi appropriati. Ottima spiegazione delle tecniche specifiche della brioche.
+Ricetta tecnicamente valida con buona strutturazione del procedimento e dettagli professionali. Problemi principali: setup errato (spirale invece di planetaria per brioche) e dosaggio lievito al limite superiore. La nomenclatura delle variabili nel testo andrebbe uniformata per maggiore chiarezza.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione | Fonte |
 |------|------|----------|------------|-------|
-| ⚠️ | Setup | Setup 'Impastatrice a spirale' non è ottimale per brioche. La spirale è specifica per pane ad alta idratazione, mentre la brioche (52% idratazione + grassi) richiede impastatrice a forcella o planetaria per incorporare meglio burro e sviluppare correttamente la maglia glutinica | Sostituire con 'Impastatrice planetaria + A mano' o 'Impastatrice a forcella + A mano' | 🔵 Claude |
-| 💡 | Dosi | Percentuale lievito molto alta (3% su farina totale) per lievitazione di 3-4h. Con questa dose si potrebbe ridurre il tempo di lievitazione | Considerare riduzione lievito a 10-12g (2-2.4%) per tempi indicati, oppure specificare che con 15g il tempo può ridursi a 2-3h | 🔵 Claude |
-| 💡 | Coerenza | Nel procedimento si parla di '2 uova intere + 1 tuorlo' ma negli ingredienti sono indicati 120g uova intere + 20g tuorli. Con uova da 60g sgusciate, 120g = 2 uova, quindi manca 1 tuorlo negli ingredienti | Correggere ingredienti: '40g tuorli (da 2 uova fresche cat. A)' oppure specificare nel procedimento '2 uova intere + tuorli separati' | 🔵 Claude |
-| ❌ | Procedimento | Aggiunta del sale DOPO tutto il burro. È un errore tecnico: il grasso impermeabilizza l'impasto e impedisce ai cristalli di sale di sciogliersi correttamente nell'acqua. | Inserire il sale alla fine dell'incordatura base, PRIMA di iniziare ad aggiungere il burro (o al massimo con l'ultima aggiunta di uova/liquidi). | 🔴 Gemini |
-| ⚠️ | Cottura | La temperatura di 170-180°C IN MODALITÀ VENTILATA è troppo aggressiva per un impasto ricco di zuccheri (80g zucchero + 20g miele) e spennellato con uovo. Rischia di bruciare o scurire eccessivamente la superficie prima che l'interno sia cotto. | Specificare 170-180°C in modalità STATICA, oppure abbassare a 150-160°C se si usa il forno ventilato. | 🔴 Gemini |
-| 💡 | Idratazione | Il valore 52% è impreciso. Calcolando latte (100g) + uova/tuorli (140g) su 500g di farina abbiamo il 48%. Se si includono miele e rum (liquidi/viscosi) si arriva al 55%. | Correggere l'idratazione dichiarata al 48% (o 55% calcolando tutti i liquidi extra). | 🔴 Gemini |
+| ❌ | Setup | Setup 'Impastatrice a spirale + A mano' incongruente per pasta brioche. La brioche è un lievitato da forno che richiede impastatrice planetaria o a forcella, non spirale (che è per pane/pizza) | Correggere setup in 'Impastatrice planetaria + A mano' o 'Impastatrice a forcella + A mano' | 🔵 Claude |
+| ⚠️ | Dosi | Lievito di birra fresco 15g (3% su farina) è al limite superiore per una brioche classica. Rischio di sapore troppo marcato | Ridurre a 10-12g (2-2.4%) per sapore più equilibrato | 🔵 Claude |
+| ⚠️ | Coerenza | Nel procedimento si cita '{semola_impasto:80}g' e '{latte_impasto:100}g' ma negli ingredienti sono 'Zucchero Semolato 80g' e 'Latte 100g'. Nomenclatura variabile inconsistente | Uniformare le variabili: usare '{zucchero_impasto}' e '{latte_impasto}' coerentemente | 🔵 Claude |
+| 💡 | Tempi | Lievitazione 3-4h + 2h appretto con 15g lievito (3%) potrebbe essere eccessiva. Con questa % di lievito basterebbero 2-3h + 1.5h | Ridurre tempi a 2-3h + 1.5h appretto oppure diminuire il lievito a 10g | 🔵 Claude |
+| 💡 | Dosi | Idratazione 52% calcolata solo su acqua/latte. In brioche va considerata anche l'idratazione da uova (~75% acqua). Idratazione reale circa 60% | Specificare 'Idratazione base: 52% (totale con uova: ~60%)' | 🔵 Claude |
+| ❌ | Variabili/Dinamismo | Uso errato e distruttivo dei placeholder. Al punto 7 si usa '{semola_impasto:80}g' per indicare il peso dei cornetti e '{latte_impasto:100}g' per le trecce. Al punto 9 '{tuorli_impasto:20}g' per i grammi di latte. Se l'utente raddoppia la ricetta, il testo gli dirà di fare cornetti da 160g e trecce da 200g. | Rimuovere i placeholder per i pesi fissi di porzionatura e per ingredienti slegati (usare '80g', '100g', '20g' come testo statico o creare variabili apposite). | 🔴 Gemini |
+| ⚠️ | Temperature/Procedimento | Il latte a 20-22°C unito a burro a 18-20°C e un'impastamento totale di 20-25 minuti rischia seriamente di far superare la temperatura target di 24-26°C a causa dell'attrito meccanico. | Consigliare latte freddo di frigo (o almeno a 10-12°C) se si prevede un tempo di impastamento così lungo. | 🔴 Gemini |
 
 ## 🔴 Revisione Gemini
 
 **Verdetto**: 🟡 Parziale disaccordo
-**Adjustment**: +2
+**Adjustment**: -8
 
-Claude ha commesso errori di lettura (inventando la mancanza di tuorli) e ha penalizzato ingiustamente la spirale, che è invece una macchina perfetta per questo impasto. La ricetta è valida, ma presenta una forte criticità tecnica sfuggita al primo revisore: inserire il sale dopo tutto il burro compromette il suo scioglimento.
+Claude ha penalizzato ingiustamente l'uso della spirale e le dosi di lievito (che invece sono corrette per un impasto ricco), ma ha clamorosamente mancato l'uso distruttivo dei placeholder nel testo. La ricetta ha un bug logico grave sulle variabili dinamiche applicate a pesi fissi.
 
 ### Issues contestate
 
 | Problema | Verdetto | Motivo |
 |---|---|---|
-| Setup 'Impastatrice a spirale' non è ottimale per brioche. | ❌ Falso positivo | L'impastatrice a spirale è eccellente per la brioche e per i grandi lievitati ricchi di grassi (come il panettone). A differenza della planetaria, sviluppa una maglia glutinica fortissima riducendo il surriscaldamento dell'impasto. |
-| Percentuale lievito molto alta (3% su farina totale) per lievitazione di 3-4h. | ⚠️ Parziale | Osservazione corretta sui tempi a 26-28°C (con 15g triplicherà in circa 2-2.5h), ma bisogna considerare che grassi e zuccheri rallentano l'azione del lievito. Non è un errore grave. |
-| Manca 1 tuorlo negli ingredienti rispetto al procedimento. | ❌ Falso positivo | Allucinazione totale di Claude. L'ingrediente n. 6 è chiaramente 'Tuorli 20g', che corrisponde esattamente al tuorlo singolo menzionato nel procedimento (assieme ai 120g di uova intere). |
+| Setup 'Impastatrice a spirale + A mano' incongruente per pasta brioche. | ❌ Falso positivo | L'impastatrice a spirale è eccellente e ampiamente usata a livello professionale per impasti altamente idratati o ricchi di grassi (come brioche e panettoni) perché sviluppa un'ottima maglia glutinica limitando il surriscaldamento rispetto alla planetaria. |
+| Lievito di birra fresco 15g (3% su farina) è al limite superiore... Lievitazione 3-4h + 2h potrebbe essere eccessiva. | ❌ Falso positivo | In un impasto indiretto o comunque arricchito con 16% di zucchero e 20% di burro, la pressione osmotica rallenta il lievito. 15g (3%) per 3-4h a 26°C è una tempistica assolutamente realistica e standard. |
+| Nomenclatura variabile inconsistente ({semola_impasto:80}g per lo Zucchero). | ⚠️ Parziale | Claude ha notato l'incoerenza del nome, ma ha mancato l'errore tecnico DEVASTANTE: le variabili degli ingredienti sono state usate per indicare i pesi delle pezzature. |
 
 ---
-*Generato: 2026-03-29T00:22:30.128Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-03-30T19:56:07.124Z | Pipeline: Schema → Claude → Gemini*

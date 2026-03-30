@@ -47,11 +47,11 @@
     },
     {
       "title": "Scomposizione Biga",
-      "text": "Inserire tutta la biga matura (~{biga_matura:1205}g) nella vasca e aggiungere {acqua_rinfresco:970}g acqua rinfresco (60% della totale). Avviare a velocità 1 per 3-4 minuti: la biga deve sfaldarsi completamente e amalgamarsi con l'acqua formando una crema omogenea."
+      "text": "Inserire tutta la biga matura (~{biga_matura:1205}g) nella vasca e aggiungere {acqua_rinfresco:970}g acqua rinfresco (60% dell'acqua di rinfresco). Avviare a velocità 1 per 3-4 minuti: la biga deve sfaldarsi completamente e amalgamarsi con l'acqua formando una crema omogenea."
     },
     {
-      "title": "Autolisi Short",
-      "text": "Aggiungere {farina_nuvola:1660}g Nuvola Super, {farina_rinfresco:275}g Saccorosso e {criscito:83}g Criscito. Mescolare a velocità 1-2 per 2 minuti, solo fino a incorporare le farine (impasto disomogeneo ok). STOP macchina: riposo autolitico di 20 minuti coperto. Questo sviluppa glutine naturalmente e migliora l'estensibilità."
+      "title": "Riposo Idratazione",
+      "text": "Aggiungere {farina_nuvola:1660}g Nuvola Super, {farina_rinfresco:275}g Saccorosso e {criscito:83}g Criscito. Mescolare a velocità 1-2 per 2 minuti, solo fino a incorporare le farine (impasto disomogeneo ok). STOP macchina: riposo di 20 minuti coperto. Questo favorisce l'idratazione delle farine e migliora l'estensibilità."
     },
     {
       "title": "Incordatura Pro con Bassinage",
@@ -80,8 +80,8 @@
       "text": "In bacinella grande: sbriciolare tutta la biga matura con le mani. Aggiungere {acqua_rinfresco:645}g acqua rinfresco (prima ripresa) e lavorare con le mani per 5 minuti fino a ottenere una crema liscia. La biga deve dissolversi completamente nell'acqua."
     },
     {
-      "title": "Incorporamento Farine e Autolisi",
-      "text": "Aggiungere {farina_nuvola:1660}g Nuvola Super, {farina_rinfresco:275}g Saccorosso, {criscito:83}g Criscito. Mescolare con mano a uncino fino a formare un impasto ruvido (3-4 minuti). Non serve incordatura. Coprire e lasciare riposare 20 minuti (autolisi). Durante questo tempo il glutine si sviluppa naturalmente."
+      "title": "Incorporamento Farine e Riposo Idratazione",
+      "text": "Aggiungere {farina_nuvola:1660}g Nuvola Super, {farina_rinfresco:275}g Saccorosso, {criscito:83}g Criscito. Mescolare con mano a uncino fino a formare un impasto ruvido (3-4 minuti). Non serve incordatura. Coprire e lasciare riposare 20 minuti (riposo per idratazione). Durante questo tempo le farine si idratano naturalmente."
     },
     {
       "title": "Slap & Fold con Bassinage Progressivo",

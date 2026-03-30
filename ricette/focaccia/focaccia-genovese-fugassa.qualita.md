@@ -1,14 +1,14 @@
 # Qualità: Focaccia Genovese (Fügassa)
 
-## 🔴 Score Finale: 57/100
+## 🟡 Score Finale: 65/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 1 warning |
-| Claude | 92/100 | 🟢 Buona |
-| Gemini | 🔴 Forte disaccordo (-35) | Claude ha assegnato un punteggio altissimo mancando errori s |
+| Claude | 75/100 | 🟡 Da migliorare |
+| Gemini | 🟡 Parziale disaccordo (-10) | Claude ha intercettato bene gli errori di sintassi sulle var |
 
-Ricetta tecnicamente solida con dosi equilibrate e procedimento dettagliato. L'idratazione al 67% è appropriata, le temperature sono corrette per forno casalingo, e il setup impastatrice spirale + a mano è adeguato. Il procedimento è molto preciso con ottimi dettagli tecnici sulla manipolazione dell'impasto e la salamoia finale. Solo piccole ottimizzazioni suggerite per perfezionare ulteriormente la ricetta.
+Ricetta tecnicamente valida ma con errori nei riferimenti agli ingredienti nel procedimento e discrepanza sull'idratazione dichiarata. La struttura è professionale e i tempi/temperature sono appropriati per focaccia genovese tradizionale.
 
 ## 🔍 Schema Validation
 
@@ -18,28 +18,29 @@ Ricetta tecnicamente solida con dosi equilibrate e procedimento dettagliato. L'i
 
 | Sev. | Area | Problema | Correzione | Fonte |
 |------|------|----------|------------|-------|
-| 💡 | Dosi | Sale nell'impasto al 2% (13g su 650g farina totale) - nella norma ma al limite inferiore per focaccia | Considerare 15-16g per sapore più marcato tipico della tradizione ligure | 🔵 Claude |
-| 💡 | Coerenza | Malto diastasico 10g citato negli ingredienti ma nel procedimento non si specifica se è in polvere o liquido | Specificare nel procedimento se malto in polvere o liquido per dosaggio corretto | 🔵 Claude |
-| 💡 | Tempi | Lievitazione totale dichiarata 3-4 ore ma sommando i tempi del procedimento risulta circa 3 ore e 20 minuti | Aggiustare dichiarazione iniziale a '3-3.5 ore' per coerenza | 🔵 Claude |
-| ❌ | Idratazione e Matematica | L'intestazione dichiara 67% di idratazione, ma 335g di acqua su 650g di farina danno un'idratazione del 51.5%. È un errore grave e un impasto al 51.5% sarà troppo duro per una focaccia. | Aumentare l'acqua nell'impasto a 435g per raggiungere il 67% dichiarato, oppure correggere il valore (ma 51.5% resta troppo basso). | 🔴 Gemini |
-| ❌ | Salamoia e Cottura | 200g di acqua per la salamoia su 2 teglie è una quantità abnorme. 100g di acqua a teglia, cotti per soli 15 minuti a 230°C, bolliranno l'impasto invece di cuocerlo, lasciandolo crudo e molliccio sul fondo. | Ridurre l'acqua della salamoia a 60-80g TOTALI (30-40g per teglia) per consentire la corretta evaporazione e caramellizzazione. | 🔴 Gemini |
-| ❌ | Procedimento (Inserimento Lievito) | Nello step 3 si fa sbriciolare il lievito DOPO che l'acqua (poca) è stata assorbita e il sale inserito. In un impasto al 51% è impossibile distribuire omogeneamente il lievito fresco sbriciolato in questa fase. | Inserire il lievito all'inizio insieme alle farine e alla prima acqua, tenendo il sale alla fine. | 🔴 Gemini |
-| ⚠️ | Scelta Farine | 250g di Manitoba (W400) + 400g di farina media è un blend estremamente forte per una Focaccia Genovese, che per tradizione richiede farine deboli (W260-280 max) per risultare friabile e non gommosa. | Sostituire la Manitoba usando solo farina W260-280 per l'intero impasto. | 🔴 Gemini |
+| ❌ | Coerenza | Al punto 9 si riferisce a '{malto_impasto:10} g sale' invece che al sale per salamoia da 10g | Correggere con '{sale_condimento:10} g sale' | 🔵 Claude |
+| ❌ | Coerenza | Al punto 10 si riferisce a '{olio_evo_impasto:30} g olio' ma dovrebbe usare l'olio per condire superficie (60g) | Correggere con '{olio_evo_condimento:60} g olio' | 🔵 Claude |
+| ⚠️ | Dosi | Idratazione dichiarata 67% ma calcolata è 51.5% (335g acqua su 650g farina totale) | Per 67% servono 435g di acqua totale o correggere l'idratazione dichiarata a 51.5% | 🔵 Claude |
+| ⚠️ | Dosi | Sale nell'impasto 2% (13g su 650g farina), nella norma ma al limite inferiore per focaccia | Considerare 16-20g (2.5-3%) per migliorare sapore tipico focaccia ligure | 🔵 Claude |
+| 💡 | Coerenza | Mancanza di chiarezza su salamoia: preparata con 200g acqua + 10g sale ma ne vengono usati solo 100g | Specificare che si usa solo metà salamoia preparata (100g) o prepararne la quantità esatta | 🔵 Claude |
+| ❌ | Proporzioni teglia/impasto | Panetti da 530g sono gravemente insufficienti per teglie 30x40. La regola per la Genovese è Area / 2 (o * 0.6). Servono circa 700-750g per una 30x40. Con 530g uscirà un velo secco. | Diminuire le dimensioni delle teglie (es. 25x35) oppure aumentare tutte le dosi dell'impasto del 40%. | 🔴 Gemini |
+| ⚠️ | Procedimento (Tecnica) | Il lievito fresco (Step 3) viene inserito DOPO il sale (Step 2). Inserire il lievito a contatto con un impasto in cui il sale è appena stato concentrato è un errore tecnico di panificazione. | Invertire l'ordine: sciogliere/sbriciolare il lievito in fase 1 o 2, e inserire il sale solo alla fine dell'idratazione. | 🔴 Gemini |
+| 💡 | Chiarezza | Allo step 10 manca l'istruzione esplicita di ripetere il condimento per la seconda teglia, il che genera confusione sulle dosi totali (come successo a Claude). | Aggiungere 'Ripetere l'operazione per la seconda teglia con la restante salamoia e olio' alla fine del punto 10. | 🔴 Gemini |
 
 ## 🔴 Revisione Gemini
 
-**Verdetto**: 🔴 Forte disaccordo
-**Adjustment**: -35
+**Verdetto**: 🟡 Parziale disaccordo
+**Adjustment**: -10
 
-Claude ha assegnato un punteggio altissimo mancando errori strutturali fatali. L'idratazione reale (51.5%) smentisce quella dichiarata (67%), la sequenza di impastamento è tecnicamente errata e la quantità d'acqua nella salamoia garantisce una focaccia letteralmente bollita e cruda. Ricetta da rivedere pesantemente.
+Claude ha intercettato bene gli errori di sintassi sulle variabili e la grave discrepanza sull'idratazione, ma ha sbagliato la matematica sulle dosi per teglia. Abbasso il punteggio perché le proporzioni peso impasto / area teglia sono completamente errate e comprometteranno del tutto la riuscita della ricetta.
 
 ### Issues contestate
 
 | Problema | Verdetto | Motivo |
 |---|---|---|
-| Sale nell'impasto al 2% (13g su 650g farina totale) - nella norma ma al limite inferiore per focaccia | ❌ Falso positivo | 13g (2%) di sale nell'impasto è giustissimo: la salamoia ne aggiunge altri 10g sulla superficie. Aumentare il sale nell'impasto renderebbe il prodotto finale immangiabile. |
-| Malto diastasico 10g citato negli ingredienti ma nel procedimento non si specifica se è in polvere o liquido | ✅ Confermo | Osservazione corretta, 10g di malto in polvere (circa 1.5%) sarebbero eccessivi, probabile si intenda quello liquido. |
-| Lievitazione totale dichiarata 3-4 ore ma sommando i tempi del procedimento risulta circa 3 ore e 20 minuti | ❌ Falso positivo | 3 ore e 20 minuti rientrano letteralmente e perfettamente nell'intervallo '3-4 ore'. Segnalazione pedante e inutile. |
+| Al punto 10 si riferisce a '{olio_evo_impasto:30} g olio' ma dovrebbe usare l'olio per condire superficie (60g) | ⚠️ Parziale | Vero che la variabile è sbagliata, ma il valore 30g è corretto: la ricetta prevede 2 teglie, quindi 30g a teglia equivalgono esattamente ai 60g totali dichiarati negli ingredienti. |
+| Sale nell'impasto 2% (13g su 650g farina), nella norma ma al limite inferiore per focaccia | ❌ Falso positivo | Il 2% di sale nell'impasto è corretto e standard, specialmente per la Focaccia Genovese che riceve un'abbondante salatura esterna tramite la salamoia (altri 10g). Aumentarlo comprometterebbe l'equilibrio. |
+| Mancanza di chiarezza su salamoia: preparata con 200g acqua + 10g sale ma ne vengono usati solo 100g | ❌ Falso positivo | Errore logico di Claude: la ricetta prevede 2 teglie. L'uso di 100g di salamoia al punto 10 è inteso per singola teglia (100g x 2 = 200g esatti). Manca solo la dicitura 'ripetere per la seconda teglia'. |
 
 ---
-*Generato: 2026-03-29T00:26:12.194Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-03-30T20:00:38.216Z | Pipeline: Schema → Claude → Gemini*

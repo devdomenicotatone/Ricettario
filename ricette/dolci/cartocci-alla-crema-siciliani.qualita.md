@@ -5,10 +5,10 @@
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ❌ Fail | 1 errori, 0 warning |
-| Claude | 75/100 | 🟡 Da migliorare |
-| Gemini | 🟡 Parziale disaccordo (-10) | Claude individua la grave assenza della farcitura ma manca i |
+| Claude | 72/100 | 🟡 Da migliorare |
+| Gemini | 🟡 Parziale disaccordo (-4) | Claude ha individuato bene i gravi errori strutturali (varia |
 
-Ricetta tecnicamente valida per i gusci dei cartocci con dosi e temperature corrette, ma presenta incongruenze significative: manca completamente la ricetta della crema promessa dal titolo, e il setup non rispecchia il procedimento reale che usa solo impastatrice.
+Ricetta con buone basi tecniche ma presenta errori significativi: variabile non risolta nel testo, ingredienti mancanti per la farcitura promessa nel titolo, e discrepanza nell'idratazione dichiarata. Il procedimento di frittura è ben dettagliato ma manca la parte di farcitura finale.
 
 ## 🔍 Schema Validation
 
@@ -18,30 +18,29 @@ Ricetta tecnicamente valida per i gusci dei cartocci con dosi e temperature corr
 
 | Sev. | Area | Problema | Correzione | Fonte |
 |------|------|----------|------------|-------|
-| ❌ | Coerenza | La sezione 'Per la Farcitura' negli ingredienti è vuota, ma il titolo indica 'Cartocci alla Crema' e il procedimento non include preparazione della crema | Aggiungere ingredienti per la crema (panna, zucchero, vaniglia, ecc.) o modificare il titolo in 'Gusci per Cartocci' | 🔵 Claude |
-| ❌ | Setup | Setup indica 'Impastatrice a spirale + A mano' ma il procedimento usa SOLO impastatrice a spirale (V1, V2, vasca). Nessun passaggio prevede lavorazione a mano | Rimuovere 'A mano' dal setup o aggiungere un passaggio di rifinitura manuale | 🔵 Claude |
-| ⚠️ | Dosi | Lievito di birra 7g (1.4% su farina) è al limite superiore per dolci lievitati, soprattutto con lievitazione di sole 2-3h totali | Considerare riduzione a 5-6g per lievitazione più controllata o aumentare i tempi | 🔵 Claude |
-| 💡 | Coerenza | L'acqua per sciogliere il lievito (50g) viene prelevata dai 250g totali, ma questo dovrebbe essere specificato più chiaramente nella lista ingredienti | Nella lista ingredienti specificare 'Acqua 250g (di cui 50g per sciogliere il lievito)' | 🔵 Claude |
-| ❌ | Procedimento | Il lievito sciolto in acqua (Step 1) viene dimenticato. Nello Step 2 si elencano gli ingredienti da inserire nell'impastatrice ma manca la miscela di lievito. L'impasto così non lieviterà mai. | Specificare nello Step 2: 'Inserire nella vasca della spirale: farina, acqua rimanente, IL LIEVITO SCIOLTO, zucchero, uovo intero'. | 🔴 Gemini |
-| ⚠️ | Dati Tecnici | L'idratazione dichiarata al 50% è errata perché non calcola l'uovo. Con 250g di acqua e 50g di uovo su 500g di farina, l'idratazione totale in liquidi è del 60%. | Correggere il parametro IDRATAZIONE a 60%. | 🔴 Gemini |
-| 💡 | Procedimento / Tradizione | Manca un passaggio fondamentale dei cartocci siciliani: la panatura nello zucchero semolato dopo la frittura. | Nello Step 8 aggiungere: 'Dopo aver sfilato i cannelli, rotolare i cartocci ancora caldi/tiepidi nello zucchero semolato'. | 🔴 Gemini |
-| 💡 | Ingredienti / Identità della Ricetta | Claude suggerisce di aggiungere panna o vaniglia per la crema, ma i 'Cartocci Siciliani' prevedono storicamente la crema di ricotta. | Completare la sezione 9 con: Ricotta di pecora scolata, zucchero, gocce di cioccolato fondente. | 🔴 Gemini |
+| ❌ | Coerenza | Nel procedimento si cita '{semola_impasto:50}g' ma la 'semola' non è presente negli ingredienti - sembra un errore di template o variabile non risolta | Sostituire con '50g' o aggiungere la semola negli ingredienti se necessaria | 🔵 Claude |
+| ❌ | Coerenza | La sezione 'Per la Farcitura' negli ingredienti è vuota ma nel titolo si parla di 'Cartocci alla Crema' - mancano gli ingredienti della crema | Aggiungere ingredienti per la crema (ricotta, zucchero a velo, canditi, pistacchi, ecc.) o specificare che la farcitura è opzionale | 🔵 Claude |
+| ⚠️ | Dosi | L'idratazione indicata è 50% ma il calcolo reale è 250g acqua + 50g uovo su 500g farina = 60% - discrepanza significativa | Correggere l'idratazione a 60% oppure rivedere le dosi per ottenere effettivamente il 50% | 🔵 Claude |
+| ⚠️ | Setup | Per dolci fritti come i cartocci, l'impastatrice a spirale può essere eccessiva - potrebbe surriscaldare l'impasto con grassi | Considerare setup 'A mano' o 'Impastatrice a forcella' per impasti dolci delicati | 🔵 Claude |
+| 💡 | Coerenza | Il procedimento non specifica mai quando/come utilizzare la crema per farcire i cartocci dopo la frittura | Aggiungere step finale di farcitura con crema usando sac-à-poche | 🔵 Claude |
+| ❌ | Procedimento / Tradizione | Manca un passaggio cruciale per il Cartoccio Siciliano: la rotolatura nello zucchero semolato subito dopo la frittura, prima della farcitura. | Aggiungere 'Zucchero semolato per guarnire' e inserire il passaggio alla fine del punto 8. | 🔴 Gemini |
 
 ## 🔴 Revisione Gemini
 
 **Verdetto**: 🟡 Parziale disaccordo
-**Adjustment**: -10
+**Adjustment**: -4
 
-Claude individua la grave assenza della farcitura ma manca il problema più critico: il lievito non viene mai inserito nell'impasto nello step 2. Inoltre, le sue critiche sul lievito (7g non sono troppi) e sul setup 'a mano' sono errate. Manca anche la tradizionale copertura di zucchero.
+Claude ha individuato bene i gravi errori strutturali (variabili di codice visibili, ingredienti della crema omessi). Disaccordo sulla critica all'impastatrice a spirale (del tutto adeguata). Ho abbassato il punteggio perché, oltre alla crema, manca del tutto il passaggio fondamentale della panatura nello zucchero semolato.
 
 ### Issues contestate
 
 | Problema | Verdetto | Motivo |
 |---|---|---|
-| La sezione 'Per la Farcitura' negli ingredienti è vuota | ✅ Confermo | Errore strutturale grave, manca un intero blocco promesso dal titolo. |
-| Setup indica 'A mano' ma il procedimento usa SOLO impastatrice a spirale | ❌ Falso positivo | La divisione in pezzi, la pirlatura e l'avvolgimento sui cannelli (Step 6) sono chiaramente lavorazioni manuali. Il setup non si riferisce esclusivamente alla fase di impastamento. |
-| Lievito di birra 7g (1.4% su farina) è al limite superiore per dolci lievitati | ❌ Falso positivo | 7g di lievito di birra FRESCO su 500g di farina sono pochissimi per un impasto arricchito (con grassi e zucchero) da chiudere in 2-3 ore. Normalmente servirebbero dai 12 ai 15g. Claude sta confondendo fresco e secco, o non considera l'impatto dei grassi/zuccheri. |
-| L'acqua per sciogliere il lievito dovrebbe essere specificata nella lista ingredienti | ✅ Confermo | Migliora la chiarezza e previene errori di dosaggio da parte dell'utente. |
+| Nel procedimento si cita '{semola_impasto:50}g' ma la 'semola' non è presente negli ingredienti - sembra un errore di template o variabile non risolta | ✅ Confermo | Errore palese di compilazione del testo che compromette la fluidità della lettura. |
+| La sezione 'Per la Farcitura' negli ingredienti è vuota ma nel titolo si parla di 'Cartocci alla Crema' - mancano gli ingredienti della crema | ✅ Confermo | Mancanza gravissima, la ricetta è a tutti gli effetti incompleta rispetto a quanto promesso nel titolo. |
+| L'idratazione indicata è 50% ma il calcolo reale è 250g acqua + 50g uovo su 500g farina = 60% - discrepanza significativa | ✅ Confermo | Osservazione corretta. In impasti di questo tipo (simil-brioche) i liquidi dell'uovo vanno conteggiati nell'idratazione totale. |
+| Per dolci fritti come i cartocci, l'impastatrice a spirale può essere eccessiva - potrebbe surriscaldare l'impasto con grassi | ❌ Falso positivo | La spirale è eccellente e ampiamente usata per gli impasti di rosticceria/brioche siciliana. Inoltre, la ricetta prevede già il controllo della temperatura ('Se supera i 28°C...'), annullando di fatto il rischio segnalato. |
+| Il procedimento non specifica mai quando/come utilizzare la crema per farcire i cartocci dopo la frittura | ✅ Confermo | La ricetta si interrompe bruscamente lasciando il prodotto finito 'a metà'. |
 
 ---
-*Generato: 2026-03-29T00:23:42.969Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-03-30T19:57:24.084Z | Pipeline: Schema → Claude → Gemini*

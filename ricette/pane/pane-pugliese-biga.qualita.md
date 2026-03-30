@@ -1,14 +1,13 @@
 # Qualità: Pane Pugliese con Biga
 
-## 🟡 Score Finale: 65/100
+## 🟡 Score Finale: 75/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 1 warning |
 | Claude | 75/100 | 🟡 Da migliorare |
-| Gemini | 🟡 Parziale disaccordo (-10) | Claude ha colto in pieno il problema principale: le dosi tra |
 
-La ricetta presenta errori significativi di coerenza tra ingredienti e procedimento, soprattutto per le dosi della biga e dell'acqua finale. Le temperature e i tempi sono appropriati, ma le discrepanze nelle quantità compromettono l'affidabilità della ricetta.
+La ricetta ha una buona struttura tecnica con dosi e tempi appropriati per un pane pugliese con biga. Tuttavia presenta errori significativi di coerenza tra ingredienti e procedimento, con quantità diverse citate nel testo e placeholder non sostituiti che compromettono la chiarezza esecutiva.
 
 ## 🔍 Schema Validation
 
@@ -18,26 +17,11 @@ La ricetta presenta errori significativi di coerenza tra ingredienti e procedime
 
 | Sev. | Area | Problema | Correzione | Fonte |
 |------|------|----------|------------|-------|
-| ❌ | Dosi | Errore grave nelle quantità della biga: procedimento usa 250g farina + 2,5g lievito + 150g acqua, ma ingredienti indicano 125g farina + 1g lievito + 56g acqua | Correggere le dosi degli ingredienti della biga o del procedimento per coerenza | 🔵 Claude |
-| ❌ | Coerenza | Nel procedimento finale si citano 38g acqua, ma negli ingredienti sono indicati 132g acqua | Verificare e correggere la quantità di acqua per l'impasto finale | 🔵 Claude |
-| ⚠️ | Dosi | L'idratazione dichiarata (62.7%) non corrisponde ai calcoli: con 300g farina totale e 188g acqua totale sarebbe ~62.6%, ma le dosi nel procedimento portano a valori diversi | Ricalcolare e correggere l'idratazione in base alle dosi effettive | 🔵 Claude |
-| ⚠️ | Coerenza | Il lievito totale negli ingredienti è 3,5g (1g + 2,5g) ma nel procedimento della biga si usano 2,5g invece di 1g | Allineare le quantità di lievito tra ingredienti e procedimento | 🔵 Claude |
-| ❌ | Cottura / Pro Tips | Il consiglio di attivare il grill negli ultimi 3-4 minuti per dorare il pane è pessimo e rischia di bruciare irrimediabilmente la calotta superiore della pagnotta. | Rimuovere il riferimento al grill. Suggerire invece l'apertura dello sportello 'a spiffero' negli ultimi 10 minuti per far uscire l'umidità e rendere la crosta croccante. | 🔴 Gemini |
-| ⚠️ | Tempi di Cottura | Il tempo di cottura indicato (50 minuti a 220°C) è eccessivo per una pagnotta che, sviluppata da soli 300g di farina totale, peserà cruda poco più di 500g. Si asciugherebbe o brucerebbe. | Ridurre il tempo totale a circa 35-40 minuti, magari con un abbassamento della temperatura a 200°C a metà cottura. | 🔴 Gemini |
-| 💡 | Tecnica / Biga | Nel procedimento (se si seguissero quelle dosi) l'idratazione della biga è al 60%, un valore molto alto che la rende più simile a un poolish denso che a una biga classica (solitamente 44-50%), sfasando i tempi di maturazione. | Uniformare la ricetta alla proporzione della lista ingredienti originale (125g farina / 56g acqua), che dà una corretta biga al 44.8%. | 🔴 Gemini |
-
-## 🔴 Revisione Gemini
-
-**Verdetto**: 🟡 Parziale disaccordo
-**Adjustment**: -10
-
-Claude ha colto in pieno il problema principale: le dosi tra la lista ingredienti e il procedimento sono totalmente scollegate e invertite, rendendo la ricetta ineseguibile. Tuttavia, ha fallito l'arrotondamento matematico dell'idratazione e ha mancato gravi difetti nella fase di cottura, tra cui tempistiche eccessive e il disastroso consiglio del grill. Abbasso ulteriormente il punteggio.
-
-### Issues contestate
-
-| Problema | Verdetto | Motivo |
-|---|---|---|
-| L'idratazione dichiarata (62.7%) non corrisponde ai calcoli: con 300g farina totale e 188g acqua totale sarebbe ~62.6% | ❌ Falso positivo | 188 diviso 300 fa esattamente 0.62666... Arrotondando al primo decimale, 62.7% è assolutamente corretto. La pignoleria di Claude è matematicamente errata. |
+| ❌ | Coerenza | Nel procedimento step 1 si citano quantità diverse dagli ingredienti: '250g farina 00, 2.5g lievito fresco, 150g acqua' invece di 125g, 1g, 56g della biga | Correggere le quantità nel procedimento usando quelle della lista ingredienti: 125g farina, 1g lievito, 56g acqua | 🔵 Claude |
+| ❌ | Coerenza | Nel procedimento step 2 si citano '38g acqua' ma dalla lista ingredienti dovrebbero essere 132g per l'impasto finale | Correggere la quantità d'acqua nell'impasto finale: usare 132g come indicato negli ingredienti | 🔵 Claude |
+| ❌ | Coerenza | Presenza di placeholder non sostituiti nel testo: {miele_impasto_finale:5}, {semola_impasto_finale:50}, {lievito_fresco_biga:1}, {sale_impasto_finale:6} | Sostituire tutti i placeholder con i valori corretti: 5g miele, 50g semola, 1g lievito, 6g sale | 🔵 Claude |
+| ⚠️ | Dosi | Idratazione calcolata 62.7% non corrisponde alle dosi reali: con 300g farina totale e 188g acqua totale l'idratazione è 62.7% (corretto) | Verificare il calcolo dell'idratazione che risulta corretto | 🔵 Claude |
+| 💡 | Coerenza | Nel procedimento non si specifica quando aggiungere la farina 00 dell'impasto finale (125g) | Aggiungere nel step 2 l'indicazione di incorporare anche i 125g di farina 00 dell'impasto finale | 🔵 Claude |
 
 ---
-*Generato: 2026-03-29T00:14:18.044Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-03-30T20:04:04.581Z | Pipeline: Schema → Claude → Gemini*
