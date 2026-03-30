@@ -8,25 +8,25 @@
   "hydration": 72,
   "targetTemp": "23°C",
   "fermentation": "24h biga + 6-7h rinfresco",
-  "totalFlour": 3000,
+  "totalFlour": 2765,
   "ingredients": [],
   "suspensions": [],
   "stepsSpiral": [
     {
       "title": "Preparazione Biga (24h prima)",
-      "text": "In impastatrice Grilletta IM 5: unire 900g Saccorosso, 405g acqua fredda, 2g lievito secco. Mescolare a velocità 1 per 2-3 minuti fino a ottenere un impasto 'a stracci' (grumo disomogeneo, no incordatura). Trasferire in contenitore coperto e maturare 24 ore a 16-18°C controllata (cantina/frigo cantina). La biga è pronta quando triplica di volume e presenta struttura spugnosa."
+      "text": "In impastatrice Grilletta IM 5: unire 830g Saccorosso, 375g acqua fredda, 1.8g lievito secco. Mescolare a velocità 1 per 2-3 minuti fino a ottenere un impasto 'a stracci' (grumo disomogeneo, no incordatura). Trasferire in contenitore coperto e maturare 24 ore a 16-18°C controllata (cantina/frigo cantina). La biga è pronta quando triplica di volume e presenta struttura spugnosa."
     },
     {
       "title": "Scomposizione Biga",
-      "text": "Inserire tutta la biga matura (~1305g) nella vasca e aggiungere 1050g acqua rinfresco (60% della totale). Avviare a velocità 1 per 3-4 minuti: la biga deve sfaldarsi completamente e amalgamarsi con l'acqua formando una crema omogenea."
+      "text": "Inserire tutta la biga matura (~1205g) nella vasca e aggiungere 970g acqua rinfresco (60% della totale). Avviare a velocità 1 per 3-4 minuti: la biga deve sfaldarsi completamente e amalgamarsi con l'acqua formando una crema omogenea."
     },
     {
       "title": "Autolisi Short",
-      "text": "Aggiungere 1800g Nuvola Super, 300g Saccorosso e 90g Criscito. Mescolare a velocità 1-2 per 2 minuti, solo fino a incorporare le farine (impasto disomogeneo ok). STOP macchina: riposo autolitico di 20 minuti coperto. Questo sviluppa glutine naturalmente e migliora l'estensibilità."
+      "text": "Aggiungere 1660g Nuvola Super, 275g Saccorosso e 83g Criscito. Mescolare a velocità 1-2 per 2 minuti, solo fino a incorporare le farine (impasto disomogeneo ok). STOP macchina: riposo autolitico di 20 minuti coperto. Questo sviluppa glutine naturalmente e migliora l'estensibilità."
     },
     {
       "title": "Incordatura Pro con Bassinage",
-      "text": "Ripartire a velocità 3-4. Aggiungere 70g sale e 10g estratto di malto. Incorporare i restanti 700g acqua A GOCCIA (bassinage) in 8-10 minuti, aspettando che ogni aggiunta venga assorbita. L'impasto deve incordarsi completamente, staccarsi dalle pareti e mostrare superficie liscia e lucida. Temperatura finale TASSATIVA: 23°C (controllare con termometro a sonda). Se necessario, regolare con acqua ghiacciata o temperatura ambiente vasca."
+      "text": "Ripartire a velocità 3-4. Aggiungere 64g sale e 9g estratto di malto. Incorporare i restanti 645g acqua A GOCCIA (bassinage) in 8-10 minuti, aspettando che ogni aggiunta venga assorbita. L'impasto deve incordarsi completamente, staccarsi dalle pareti e mostrare superficie liscia e lucida. Temperatura finale TASSATIVA: 23°C (controllare con termometro a sonda). Se necessario, regolare con acqua ghiacciata o temperatura ambiente vasca."
     },
     {
       "title": "Puntata in Massa con Pieghe di Rinforzo",
@@ -34,7 +34,7 @@
     },
     {
       "title": "Staglio Panetti",
-      "text": "Rovesciare delicatamente l'impasto su piano leggermente infarinato. Dividere in panetti da 280g con tarocco. Per ogni panetto: piegare i lembi verso il centro, girare e chiudere bene la chiave sul fondo con movimento rotatorio (pirlatura). La superficie deve essere tesa ma non strappata."
+      "text": "Rovesciare delicatamente l'impasto su piano leggermente infarinato. Dividere in panetti da 285g con tarocco (~17 panetti). Per ogni panetto: piegare i lembi verso il centro, girare e chiudere bene la chiave sul fondo con movimento rotatorio (pirlatura). La superficie deve essere tesa ma non strappata."
     },
     {
       "title": "Appretto in Cassetta",
@@ -44,23 +44,23 @@
   "stepsHand": [
     {
       "title": "Preparazione Biga (24h prima)",
-      "text": "In ciotola capiente: unire 900g Saccorosso, 405g acqua temperatura ambiente (18-20°C), 2g lievito secco. Mescolare con cucchiaio di legno per 3-4 minuti fino a ottenere un composto grumoso 'a stracci' (non serve omogeneità). Coprire con pellicola e maturare 24 ore a 16-18°C (cantina/frigo cantina). La biga triplica di volume e diventa spugnosa."
+      "text": "In ciotola capiente: unire 830g Saccorosso, 375g acqua temperatura ambiente (18-20°C), 1.8g lievito secco. Mescolare con cucchiaio di legno per 3-4 minuti fino a ottenere un composto grumoso 'a stracci' (non serve omogeneità). Coprire con pellicola e maturare 24 ore a 16-18°C (cantina/frigo cantina). La biga triplica di volume e diventa spugnosa."
     },
     {
       "title": "Scomposizione Biga Manuale",
-      "text": "In bacinella grande: sbriciolare tutta la biga matura con le mani. Aggiungere 700g acqua rinfresco (prima ripresa) e lavorare con le mani per 5 minuti fino a ottenere una crema liscia. La biga deve dissolversi completamente nell'acqua."
+      "text": "In bacinella grande: sbriciolare tutta la biga matura con le mani. Aggiungere 645g acqua rinfresco (prima ripresa) e lavorare con le mani per 5 minuti fino a ottenere una crema liscia. La biga deve dissolversi completamente nell'acqua."
     },
     {
       "title": "Incorporamento Farine e Autolisi",
-      "text": "Aggiungere 1800g Nuvola Super, 300g Saccorosso, 90g Criscito. Mescolare con mano a uncino fino a formare un impasto ruvido (3-4 minuti). Non serve incordatura. Coprire e lasciare riposare 20 minuti (autolisi). Durante questo tempo il glutine si sviluppa naturalmente."
+      "text": "Aggiungere 1660g Nuvola Super, 275g Saccorosso, 83g Criscito. Mescolare con mano a uncino fino a formare un impasto ruvido (3-4 minuti). Non serve incordatura. Coprire e lasciare riposare 20 minuti (autolisi). Durante questo tempo il glutine si sviluppa naturalmente."
     },
     {
       "title": "Slap & Fold con Bassinage Progressivo",
-      "text": "Aggiungere 70g sale e 10g malto. Iniziare slap & fold: sollevare l'impasto, sbatterlo sul piano e ripiegarlo. Dopo 50 slap, aggiungere 350g acqua (seconda ripresa) gradualmente durante le pieghe. Continuare 100 slap totali. L'impasto diventa progressivamente più liscio ed elastico."
+      "text": "Aggiungere 64g sale e 9g malto. Iniziare slap & fold: sollevare l'impasto, sbatterlo sul piano e ripiegarlo. Dopo 50 slap, aggiungere 325g acqua (seconda ripresa) gradualmente durante le pieghe. Continuare 100 slap totali. L'impasto diventa progressivamente più liscio ed elastico."
     },
     {
       "title": "Stretch & Fold Finali",
-      "text": "Aggiungere gli ultimi 700g acqua (terza ripresa) in 2-3 aggiunte durante le pieghe. Eseguire 4 serie di stretch & fold a intervalli di 15 minuti: bagnare le mani, sollevare un lembo, allungarlo delicatamente e ripiegarlo al centro. Ruotare 90° e ripetere 4 volte per serie. Temperatura target: 24-25°C (leggermente più alta che a spirale, per compensare tempo lavorazione)."
+      "text": "Aggiungere gli ultimi 645g acqua (terza ripresa) in 2-3 aggiunte durante le pieghe. Eseguire 4 serie di stretch & fold a intervalli di 15 minuti: bagnare le mani, sollevare un lembo, allungarlo delicatamente e ripiegarlo al centro. Ruotare 90° e ripetere 4 volte per serie. Temperatura target: 24-25°C (leggermente più alta che a spirale, per compensare tempo lavorazione)."
     },
     {
       "title": "Puntata con Pieghe di Rinforzo",
@@ -68,7 +68,7 @@
     },
     {
       "title": "Staglio e Pirlatura Manuale",
-      "text": "Rovesciare su piano infarinato senza sgonfiare. Dividere con tarocco in porzioni da 280g. Per ogni panetto: allargare delicatamente con le dita, piegare i 4 lembi al centro, girare e chiudere la chiave sul fondo con movimento rotatorio delle mani (pirlatura). La superficie deve essere tesa."
+      "text": "Rovesciare su piano infarinato senza sgonfiare. Dividere con tarocco in porzioni da 285g (~17 panetti). Per ogni panetto: allargare delicatamente con le dita, piegare i 4 lembi al centro, girare e chiudere la chiave sul fondo con movimento rotatorio delle mani (pirlatura). La superficie deve essere tesa."
     },
     {
       "title": "Appretto Controllato",
@@ -203,12 +203,12 @@
         {
           "name": "Farina Caputo Saccorosso (per biga)",
           "note": "(W 330-350, Manitoba rossa per struttura)",
-          "grams": 900
+          "grams": 830
         },
         {
           "name": "Acqua per biga",
           "note": "(fredda da frigo 8-10°C)",
-          "grams": 405,
+          "grams": 375,
           "setupNote": {
             "spirale": "(fredda da frigo 8-10°C)",
             "mano": "(temperatura ambiente 18-20°C)"
@@ -217,7 +217,7 @@
         {
           "name": "Lievito Secco Caputo (per biga)",
           "note": "(0.22% su farina biga)",
-          "grams": 2
+          "grams": 1.8
         }
       ]
     },
@@ -226,42 +226,42 @@
       "items": [
         {
           "name": "Biga matura",
-          "note": "(tutto l'impasto precedente, ~1305g)",
-          "grams": 1305
+          "note": "(tutto l'impasto precedente, ~1205g)",
+          "grams": 1205
         },
         {
           "name": "Farina Caputo Nuvola Super",
           "note": "(W 260-280, protagonista per spinta e alveolatura)",
-          "grams": 1800
+          "grams": 1660
         },
         {
           "name": "Farina Caputo Saccorosso (rinfresco)",
           "note": "(W 330-350, rinforzo finale)",
-          "grams": 300
+          "grams": 275
         },
         {
           "name": "Acqua rinfresco",
-          "note": "(in 2 riprese: 1050g iniziale + 700g bassinage)",
-          "grams": 1750,
+          "note": "(in 2 riprese: 970g iniziale + 645g bassinage)",
+          "grams": 1615,
           "setupNote": {
-            "spirale": "(in 2 riprese: 1050g iniziale + 700g bassinage)",
+            "spirale": "(in 2 riprese: 970g iniziale + 645g bassinage)",
             "mano": "(in 3 riprese progressive durante le pieghe)"
           }
         },
         {
           "name": "Criscito Caputo",
           "note": "(lievito madre essiccato, 30g/kg come da indicazioni)",
-          "grams": 90
+          "grams": 83
         },
         {
           "name": "Estratto di Malto",
           "note": "(per attività enzimatica e colorazione)",
-          "grams": 10
+          "grams": 9
         },
         {
           "name": "Sale Marino Fino",
           "note": "(2.3% su farina totale, massima estensibilità)",
-          "grams": 70
+          "grams": 64
         }
       ]
     }
