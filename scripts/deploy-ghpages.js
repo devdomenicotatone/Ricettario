@@ -22,12 +22,28 @@ const COMMIT_MSG = process.argv[2] || 'deploy: aggiornamento GitHub Pages';
 
 function run(cmd, cwd) {
   try {
-    return execSync(cmd, { cwd, stdio: 'pipe', encoding: 'utf8' });
+    return execSync(cmd, {
+      cwd,
+      stdio: 'pipe',
+      encoding: 'utf8',
+      timeout: 60_000,
+      env: { ...process.env, GIT_TERMINAL_PROMPT: '0' }
+    });
   } catch (e) {
     // git commit ritorna exit code 1 se non ci sono cambiamenti
     if (e.stdout) return e.stdout;
     throw e;
   }
+}
+
+/** Versione con output visibile in console (per clone/push) */
+function runVisible(cmd, cwd) {
+  execSync(cmd, {
+    cwd,
+    stdio: 'inherit',
+    timeout: 120_000,
+    env: { ...process.env, GIT_TERMINAL_PROMPT: '0' }
+  });
 }
 
 function getRemoteUrl() {
@@ -55,7 +71,7 @@ async function deploy() {
   // 4. Clona branch gh-pages (shallow)
   console.log('📥 Clono branch gh-pages...');
   try {
-    run(`git clone --branch gh-pages --single-branch --depth 1 "${remoteUrl}" "${TEMP_DIR}"`);
+    runVisible(`git clone --branch gh-pages --single-branch --depth 1 "${remoteUrl}" "${TEMP_DIR}"`);
   } catch {
     // Se il branch non esiste, crea un repo vuoto con branch orfano
     console.log('⚠️  Branch gh-pages non trovato, ne creo uno nuovo...');
@@ -100,7 +116,7 @@ async function deploy() {
   run(`git commit -m "${COMMIT_MSG}"`, TEMP_DIR);
   
   console.log('🚀 Push su gh-pages...');
-  run('git push origin gh-pages', TEMP_DIR);
+  runVisible('git push origin gh-pages', TEMP_DIR);
 
   // 10. Cleanup
   cleanup();
