@@ -132,6 +132,25 @@ export function initRouter() {
 
     const href = link.getAttribute('href');
 
+    // Gestione link navbar con data-nav-section
+    const navSection = link.getAttribute('data-nav-section');
+    if (navSection) {
+      const route = matchRoute(window.location.pathname);
+      if (route.type !== 'home') {
+        // Non siamo in homepage: naviga prima alla home, poi scrolla
+        e.preventDefault();
+        navigateTo(BASE).then(() => {
+          setTimeout(() => {
+            const target = document.getElementById(navSection);
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+        });
+        return;
+      }
+      // Siamo in homepage: lascia il comportamento anchor nativo
+      return;
+    }
+
     // Skip link esterni, anchor, mailto, tel
     if (!href || href.startsWith('http') || href.startsWith('#') ||
         href.startsWith('mailto:') || href.startsWith('tel:')) return;

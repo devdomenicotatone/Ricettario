@@ -1,0 +1,448 @@
+/* ============================================
+   LOGO INTRO V2 — Ultra Pro Refined
+   Il Ricettario · Splash Animation System
+
+   Upgrade da V1:
+   ✦ Logo 2x più grande (220→280px desktop)
+   ✦ Dual-ring glow halo con profondità
+   ✦ Backdrop-filter frosted glass overlay
+   ✦ Shimmer sweep corretto (no barra artefatto)
+   ✦ Particle dorati visibili con blur trail
+   ✦ Scale-up exit per transizione seamless
+   ✦ Subtitle "Laboratorio Artigianale" aggiunto
+   ✦ Glow finale pulsante prima del dissolve
+   ============================================ */
+
+@layer components {
+
+    /* ─────────── Custom properties ─────────── */
+    .logo-intro {
+        --intro-gold:     oklch(0.72 0.16 55);
+        --intro-gold-dim: oklch(0.55 0.14 40);
+        --intro-amber:    oklch(0.65 0.18 45);
+        --intro-cream:    oklch(0.92 0.03 75);
+        --intro-duration: 3.2s;
+    }
+
+    /* ═══════════ OVERLAY — Fullscreen frosted splash ═══════════ */
+    .logo-intro {
+        position: fixed;
+        inset: 0;
+        z-index: 10000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        overflow: hidden;
+        pointer-events: all;
+        will-change: opacity, transform;
+
+        /* Frosted glass overlay */
+        background: var(--intro-bg);
+        backdrop-filter: blur(30px) saturate(1.4);
+        -webkit-backdrop-filter: blur(30px) saturate(1.4);
+
+        /* Phase 9: scale-up + fade dissolve */
+        animation: introOverlayOut 0.85s cubic-bezier(0.32, 0, 0.67, 0) 3.0s forwards;
+    }
+
+    [data-theme="dark"] .logo-intro {
+        --intro-bg: oklch(0.10 0.015 50 / 0.97);
+    }
+    [data-theme="light"] .logo-intro {
+        --intro-bg: oklch(0.97 0.008 80 / 0.97);
+    }
+
+    /* ═══════════ DUAL RING GLOW — Halo system ═══════════ */
+
+    /* Inner ring — warm & bright */
+    .logo-intro__glow {
+        position: absolute;
+        width: min(520px, 85vw);
+        height: min(520px, 85vw);
+        border-radius: 50%;
+        background: radial-gradient(
+            circle,
+            color-mix(in oklch, var(--intro-gold) 30%, transparent) 0%,
+            color-mix(in oklch, var(--intro-amber) 18%, transparent) 30%,
+            color-mix(in oklch, var(--intro-gold-dim) 8%, transparent) 55%,
+            transparent 75%
+        );
+        opacity: 0;
+        transform: scale(0.2);
+        animation: introGlowPulse 2.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        z-index: 0;
+    }
+
+    /* Outer ring — soft breathing halo */
+    .logo-intro__glow::after {
+        content: '';
+        position: absolute;
+        inset: -35%;
+        border-radius: 50%;
+        background: radial-gradient(
+            circle,
+            transparent 30%,
+            color-mix(in oklch, var(--intro-gold) 6%, transparent) 50%,
+            color-mix(in oklch, var(--intro-amber) 3%, transparent) 70%,
+            transparent 85%
+        );
+        animation: introHaloBreath 2.5s ease-in-out 0.3s infinite alternate;
+    }
+
+    /* Ring border — ultra-thin golden circle */  
+    .logo-intro__ring {
+        position: absolute;
+        width: min(340px, 65vw);
+        height: min(340px, 65vw);
+        border-radius: 50%;
+        border: 1.5px solid color-mix(in oklch, var(--intro-gold) 20%, transparent);
+        opacity: 0;
+        transform: scale(0.6);
+        animation: introRingExpand 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+        z-index: 0;
+    }
+
+    /* Second ring — larger, delayed */
+    .logo-intro__ring--outer {
+        width: min(460px, 80vw);
+        height: min(460px, 80vw);
+        border-color: color-mix(in oklch, var(--intro-gold) 10%, transparent);
+        animation-delay: 0.5s;
+    }
+
+    /* ═══════════ LOGO CONTAINER — Phase 1 ═══════════ */
+    .logo-intro__logo {
+        position: relative;
+        z-index: 2;
+        width: min(220px, 50vw);
+        height: min(220px, 50vw);
+        opacity: 0;
+        transform: scale(0) rotate(-8deg);
+        animation: introLogoBounce 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s forwards;
+        filter: drop-shadow(0 0 0px transparent);
+
+        @media (min-width: 640px) {
+            width: 280px;
+            height: 280px;
+        }
+
+        & svg {
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+        }
+    }
+
+    /* V2B: Spiga botanica — container allungato verticale */
+    .logo-intro__logo--tall {
+        width: min(130px, 30vw);
+        height: min(320px, 65vh);
+
+        @media (min-width: 640px) {
+            width: 160px;
+            height: 400px;
+        }
+    }
+
+    /* ═══════════ SVG INTERNAL ANIMATIONS ═══════════ */
+
+    /* Phase 2: Stelo — elegant stroke draw */
+    .logo-intro__stelo {
+        stroke-dasharray: 220;
+        stroke-dashoffset: 220;
+        animation: introStrokeDraw 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.35s forwards;
+    }
+
+    /* Phase 2b: Rametti — wave stagger */
+    .logo-intro__ramo {
+        stroke-dasharray: 80;
+        stroke-dashoffset: 80;
+        animation: introStrokeDraw 0.45s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+    .logo-intro__ramo--1 { animation-delay: 0.55s; }
+    .logo-intro__ramo--2 { animation-delay: 0.62s; }
+    .logo-intro__ramo--3 { animation-delay: 0.69s; }
+    .logo-intro__ramo--4 { animation-delay: 0.76s; }
+
+    /* Phase 3-4: Chicchi — cascading bloom dal basso */
+    .logo-intro__chicco {
+        opacity: 0;
+        transform-origin: center;
+        transform: scale(0) rotate(-12deg);
+        animation: introChiccoBloom 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    /* Bottom → Top stagger (dal basso al centro) */
+    /* SX: basso → alto */
+    .logo-intro__chicco--l1  { animation-delay: 0.60s; }
+    .logo-intro__chicco--l1h { animation-delay: 0.64s; }
+    .logo-intro__chicco--l2  { animation-delay: 0.72s; }
+    .logo-intro__chicco--l2h { animation-delay: 0.76s; }
+    .logo-intro__chicco--l3  { animation-delay: 0.84s; }
+    .logo-intro__chicco--l3h { animation-delay: 0.88s; }
+
+    /* DX: basso → alto (leggermente sfasato) */
+    .logo-intro__chicco--r1  { animation-delay: 0.66s; }
+    .logo-intro__chicco--r1h { animation-delay: 0.70s; }
+    .logo-intro__chicco--r2  { animation-delay: 0.78s; }
+    .logo-intro__chicco--r2h { animation-delay: 0.82s; }
+    .logo-intro__chicco--r3  { animation-delay: 0.90s; }
+    .logo-intro__chicco--r3h { animation-delay: 0.94s; }
+
+    /* Apice — ultimo */
+    .logo-intro__chicco--top  { animation-delay: 0.98s; }
+    .logo-intro__chicco--toph { animation-delay: 1.02s; }
+
+    /* Phase 5: Ariste — grow outward */
+    .logo-intro__arista {
+        opacity: 0;
+        stroke-dasharray: 20;
+        stroke-dashoffset: 20;
+        animation: introAristaGrow 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .logo-intro__arista--1 { animation-delay: 1.05s; }
+    .logo-intro__arista--2 { animation-delay: 1.10s; }
+    .logo-intro__arista--3 { animation-delay: 1.12s; }
+    .logo-intro__arista--4 { animation-delay: 1.15s; }
+
+    /* Phase 6: Shimmer sweep — contained inside circle */
+    .logo-intro__logo::after {
+        content: '';
+        position: absolute;
+        inset: -5%;
+        background: linear-gradient(
+            105deg,
+            transparent 0%,
+            transparent 38%,
+            color-mix(in oklch, oklch(0.95 0.06 65) 45%, transparent) 43%,
+            color-mix(in oklch, oklch(0.98 0.04 70) 60%, transparent) 50%,
+            color-mix(in oklch, oklch(0.95 0.06 65) 35%, transparent) 57%,
+            transparent 62%,
+            transparent 100%
+        );
+        opacity: 0;
+        transform: translateX(-120%);
+        animation: introShimmerSweep 0.85s cubic-bezier(0.4, 0, 0.2, 1) 1.25s forwards;
+        pointer-events: none;
+        z-index: 10;
+        clip-path: circle(50% at 50% 50%);
+    }
+
+    /* Post-shimmer: pulsing golden aura */
+    .logo-intro__logo.glowing {
+        filter: drop-shadow(0 0 20px color-mix(in oklch, var(--intro-gold) 50%, transparent))
+                drop-shadow(0 0 45px color-mix(in oklch, var(--intro-amber) 25%, transparent))
+                drop-shadow(0 4px 12px oklch(0 0 0 / 0.15));
+        transition: filter 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* ═══════════ TITLE TEXT — Phase 7 ═══════════ */
+    .logo-intro__text {
+        position: relative;
+        z-index: 2;
+        margin-top: 24px;
+        font-family: var(--font-display, 'Playfair Display', Georgia, serif);
+        font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+        font-weight: 800;
+        letter-spacing: 2px;
+        background: linear-gradient(
+            135deg,
+            var(--intro-gold) 0%,
+            var(--intro-amber) 45%,
+            oklch(0.80 0.12 60) 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+        transform: translateY(18px) scale(0.92);
+        animation: introTextReveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.6s forwards;
+    }
+
+    [data-theme="light"] .logo-intro__text {
+        background: linear-gradient(
+            135deg,
+            oklch(0.42 0.18 35) 0%,
+            oklch(0.48 0.16 40) 45%,
+            oklch(0.55 0.14 50) 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+
+    /* ═══════════ SUBTITLE — Phase 7b ═══════════ */
+    .logo-intro__subtitle {
+        position: relative;
+        z-index: 2;
+        margin-top: 10px;
+        font-family: var(--font-ui, 'Inter', sans-serif);
+        font-size: clamp(0.7rem, 1.8vw, 0.85rem);
+        font-weight: 500;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: color-mix(in oklch, var(--intro-gold) 60%, transparent);
+        opacity: 0;
+        transform: translateY(10px);
+        animation: introSubtitleReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.85s forwards;
+    }
+
+    [data-theme="light"] .logo-intro__subtitle {
+        color: color-mix(in oklch, var(--intro-gold-dim) 55%, transparent);
+    }
+
+    /* ═══════════ PARTICLE BURST — Phase 8 (upgraded) ═══════════ */
+    .logo-intro__particles {
+        position: absolute;
+        width: min(400px, 80vw);
+        height: min(400px, 80vw);
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .logo-intro__particle {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0;
+        top: 50%;
+        left: 50%;
+        /* Golden gradient dot */
+        background: radial-gradient(
+            circle,
+            var(--intro-gold) 0%,
+            var(--intro-amber) 60%,
+            transparent 100%
+        );
+        box-shadow: 0 0 6px 2px color-mix(in oklch, var(--intro-gold) 40%, transparent);
+    }
+
+    /* Varied sizes for depth */
+    .logo-intro__particle:nth-child(odd)  { width: 5px; height: 5px; }
+    .logo-intro__particle:nth-child(even) { width: 3px; height: 3px; }
+    .logo-intro__particle:nth-child(3)    { width: 7px; height: 7px; }
+    .logo-intro__particle:nth-child(6)    { width: 6px; height: 6px; }
+
+    /* 12 particles — 30° spacing radial burst */
+    .logo-intro__particle:nth-child(1)  { animation: introP  0.95s cubic-bezier(0.16, 1, 0.3, 1) 1.75s forwards; --px: -65px; --py: -110px; }
+    .logo-intro__particle:nth-child(2)  { animation: introP  0.95s cubic-bezier(0.16, 1, 0.3, 1) 1.78s forwards; --px: 30px;  --py: -125px; }
+    .logo-intro__particle:nth-child(3)  { animation: introP  0.95s cubic-bezier(0.16, 1, 0.3, 1) 1.81s forwards; --px: 95px;  --py: -80px; }
+    .logo-intro__particle:nth-child(4)  { animation: introP  0.95s cubic-bezier(0.16, 1, 0.3, 1) 1.84s forwards; --px: 120px; --py: -15px; }
+    .logo-intro__particle:nth-child(5)  { animation: introP  0.95s cubic-bezier(0.16, 1, 0.3, 1) 1.87s forwards; --px: 100px; --py: 65px; }
+    .logo-intro__particle:nth-child(6)  { animation: introP  0.95s cubic-bezier(0.16, 1, 0.3, 1) 1.90s forwards; --px: 40px;  --py: 115px; }
+    .logo-intro__particle:nth-child(7)  { animation: introP  0.95s cubic-bezier(0.16, 1, 0.3, 1) 1.93s forwards; --px: -50px; --py: 100px; }
+    .logo-intro__particle:nth-child(8)  { animation: introP  0.95s cubic-bezier(0.16, 1, 0.3, 1) 1.96s forwards; --px: -105px;--py: 40px; }
+    .logo-intro__particle:nth-child(9)  { animation: introP  0.95s cubic-bezier(0.16, 1, 0.3, 1) 1.99s forwards; --px: -115px;--py: -45px; }
+    .logo-intro__particle:nth-child(10) { animation: introP  0.95s cubic-bezier(0.16, 1, 0.3, 1) 2.02s forwards; --px: 75px;  --py: -100px;}
+    .logo-intro__particle:nth-child(11) { animation: introP  0.95s cubic-bezier(0.16, 1, 0.3, 1) 2.05s forwards; --px: -90px; --py: 75px; }
+    .logo-intro__particle:nth-child(12) { animation: introP  0.95s cubic-bezier(0.16, 1, 0.3, 1) 2.08s forwards; --px: 110px; --py: 30px; }
+
+
+    /* ═══════════════════════════════════════════
+       KEYFRAMES — Refined
+       ═══════════════════════════════════════════ */
+
+    /* Phase 0: Radiant glow expand */
+    @keyframes introGlowPulse {
+        0%   { opacity: 0; transform: scale(0.2); }
+        25%  { opacity: 0.6; transform: scale(0.7); }
+        50%  { opacity: 0.9; transform: scale(1.0); }
+        70%  { opacity: 1; transform: scale(1.06); }
+        85%  { opacity: 0.85; transform: scale(0.98); }
+        100% { opacity: 0.7; transform: scale(1.02); }
+    }
+
+    /* Halo breathing */
+    @keyframes introHaloBreath {
+        0%   { opacity: 0.5; transform: scale(1); }
+        100% { opacity: 0.8; transform: scale(1.08); }
+    }
+
+    /* Ring expand */
+    @keyframes introRingExpand {
+        0%   { opacity: 0; transform: scale(0.6); }
+        60%  { opacity: 0.6; transform: scale(1.05); }
+        100% { opacity: 0.3; transform: scale(1); }
+    }
+
+    /* Phase 1: Logo bounce with micro-rotation */
+    @keyframes introLogoBounce {
+        0%   { opacity: 0; transform: scale(0) rotate(-8deg); }
+        20%  { opacity: 0.7; transform: scale(0.5) rotate(-3deg); }
+        55%  { opacity: 1; transform: scale(1.10) rotate(1deg); }
+        72%  { opacity: 1; transform: scale(0.96) rotate(-0.5deg); }
+        88%  { opacity: 1; transform: scale(1.02) rotate(0deg); }
+        100% { opacity: 1; transform: scale(1) rotate(0deg); }
+    }
+
+    /* Phase 2: Universal stroke draw */
+    @keyframes introStrokeDraw {
+        to { stroke-dashoffset: 0; }
+    }
+
+    /* Phase 3-4: Chicco bloom with rotation settle */
+    @keyframes introChiccoBloom {
+        0%   { opacity: 0; transform: scale(0) rotate(-12deg); }
+        40%  { opacity: 1; transform: scale(1.18) rotate(3deg); }
+        65%  { opacity: 1; transform: scale(0.93) rotate(-1deg); }
+        85%  { opacity: 1; transform: scale(1.03) rotate(0deg); }
+        100% { opacity: 1; transform: scale(1) rotate(0deg); }
+    }
+
+    /* Phase 5: Ariste grow (stroke + opacity) */
+    @keyframes introAristaGrow {
+        0%   { opacity: 0; stroke-dashoffset: 20; }
+        60%  { opacity: 0.9; }
+        100% { opacity: 0.75; stroke-dashoffset: 0; }
+    }
+
+    /* Phase 6: Shimmer sweep — translateX through clip-path circle */
+    @keyframes introShimmerSweep {
+        0%   { transform: translateX(-120%); opacity: 0; }
+        15%  { opacity: 0.85; }
+        100% { transform: translateX(120%); opacity: 0; }
+    }
+
+    /* Phase 7: Title — scale + translate + fade */
+    @keyframes introTextReveal {
+        0%   { opacity: 0; transform: translateY(18px) scale(0.92); }
+        60%  { opacity: 0.8; transform: translateY(-2px) scale(1.01); }
+        100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* Phase 7b: Subtitle */
+    @keyframes introSubtitleReveal {
+        0%   { opacity: 0; transform: translateY(10px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Phase 8: Unified particle keyframe (custom properties) */
+    @keyframes introP {
+        0%   { opacity: 0.9; transform: translate(0, 0) scale(1); }
+        30%  { opacity: 1; }
+        100% { opacity: 0; transform: translate(var(--px), var(--py)) scale(0.15); }
+    }
+
+    /* Phase 9: Overlay exit — scale + fade for cinematic feel */
+    @keyframes introOverlayOut {
+        0%   { opacity: 1; transform: scale(1); filter: blur(0px); }
+        40%  { opacity: 0.75; transform: scale(1.02); }
+        100% { opacity: 0; transform: scale(1.06); filter: blur(4px);
+               pointer-events: none; visibility: hidden; }
+    }
+
+
+    /* ═══════════ DONE STATE ═══════════ */
+    .logo-intro--done {
+        display: none !important;
+    }
+
+
+    /* ═══════════ ACCESSIBILITY ═══════════ */
+    @media (prefers-reduced-motion: reduce) {
+        .logo-intro {
+            animation: none !important;
+            display: none !important;
+        }
+    }
+}

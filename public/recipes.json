@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T23:40:36.851Z",
+  "generatedAt": "2026-03-31T00:34:29.273Z",
   "totalRecipes": 25,
   "categories": [
     {
@@ -46,7 +46,8 @@
       "hydration": "68%",
       "time": "~18h (poolish 12-14h + puntata 2h + appretto 1h)",
       "temp": "24-26°C",
-      "tool": ""
+      "tool": "",
+      "_generatedBy": null
     },
     {
       "title": "Ciabatta con Poolish",
@@ -60,7 +61,8 @@
       "hydration": "80%",
       "time": "~5h totali (3h poolish + 2h impasto finale)",
       "temp": "24-26°C",
-      "tool": ""
+      "tool": "",
+      "_generatedBy": null
     },
     {
       "title": "Pane alle Noci con Poolish",
@@ -74,7 +76,8 @@
       "hydration": "70%",
       "time": "~14h (12h poolish + 2h impasto)",
       "temp": "25-26°C",
-      "tool": ""
+      "tool": "",
+      "_generatedBy": null
     },
     {
       "title": "Pane di Altamura DOP",
@@ -88,7 +91,8 @@
       "hydration": "68%",
       "time": "~24h",
       "temp": "24-26°C",
-      "tool": ""
+      "tool": "",
+      "_generatedBy": null
     },
     {
       "title": "Pane Integrale con Biga di Saccorosso e Miele",
@@ -102,7 +106,8 @@
       "hydration": "70%",
       "time": "Biga 18-24h + Maturazione freddo 18h",
       "temp": "23-25°C",
-      "tool": ""
+      "tool": "",
+      "_generatedBy": null
     },
     {
       "title": "Pinsa Romana",
@@ -116,7 +121,8 @@
       "hydration": "75%",
       "time": "24-48h",
       "temp": "24-26°C",
-      "tool": ""
+      "tool": "",
+      "_generatedBy": null
     },
     {
       "title": "Pizza Contemporanea Canotto",
@@ -130,7 +136,8 @@
       "hydration": "72%",
       "time": "24h biga + 6-7h rinfresco",
       "temp": "23°C",
-      "tool": ""
+      "tool": "",
+      "_generatedBy": null
     },
     {
       "title": "Pizza Napoletana Antica Tradizione con Biga e Criscito",
@@ -144,7 +151,8 @@
       "hydration": "68%",
       "time": "24-30h totali (biga 18-24h + appretto 5-6h)",
       "temp": "23-24°C",
-      "tool": ""
+      "tool": "",
+      "_generatedBy": null
     },
     {
       "title": "Pizza Napoletana Verace STG",
@@ -158,7 +166,8 @@
       "hydration": "65%",
       "time": "8-24h (controllata)",
       "temp": "24-26°C",
-      "tool": ""
+      "tool": "",
+      "_generatedBy": null
     },
     {
       "title": "Gnocchi di Patate",
@@ -172,7 +181,8 @@
       "hydration": null,
       "time": "nessuna (riposo 20-40 min)",
       "temp": "28-32°C",
-      "tool": ""
+      "tool": "",
+      "_generatedBy": null
     },
     {
       "title": "Burger Buns con Biga",
@@ -186,7 +196,8 @@
       "hydration": "62%",
       "time": "~20h totali (biga 16-18h + puntata 2h + appretto 1.5h)",
       "temp": "26-27°C",
-      "tool": ""
+      "tool": "",
+      "_generatedBy": null
     },
     {
       "title": "Burger Buns Professionali",
@@ -200,7 +211,8 @@
       "hydration": "62%",
       "time": "~4-5h totali (biga 2h + puntata 2h + appretto 1h)",
       "temp": "26-27°C",
-      "tool": ""
+      "tool": "",
+      "_generatedBy": null
     },
     {
       "title": "Cornetti Sfogliati Classici",
@@ -214,7 +226,8 @@
       "hydration": "52%",
       "time": "18-24h totali (puntata + maturazione in frigo + appretto)",
       "temp": "24-26°C",
-      "tool": ""
+      "tool": "",
+      "_generatedBy": null
     },
     {
       "title": "Impasto Rosticceria Siciliana",
@@ -228,7 +241,8 @@
       "hydration": "50%",
       "time": "2-2.5h lievitazione + 30min appretto",
       "temp": "26-27°C",
-      "tool": ""
+      "tool": "",
+      "_generatedBy": null
     },
     {
       "title": "Panettone Classico",
@@ -242,7 +256,8 @@
       "hydration": "42%",
       "time": "~24-36h totali (primo impasto 12h + secondo impasto 12h + appretto finale 4-6h)",
       "temp": "26-28°C",
-      "tool": ""
+      "tool": "",
+      "_generatedBy": null
     },
     {
       "title": "Panettone Pere e Cioccolato",
@@ -256,7 +271,8 @@
       "hydration": "45%",
       "time": "24-36h totali (primo impasto 12-14h, secondo 8-10h)",
       "temp": "26-28°C",
-      "tool": ""
+      "tool": "",
+      "_generatedBy": null
     },
     {
       "title": "Pasta Brioche Classica",
@@ -270,7 +286,8 @@
       "hydration": "52%",
       "time": "3-4h + 2h appretto",
       "temp": "24-26°C",
-      "tool": ""
+      "tool": "",
+      "_generatedBy": null
     },
     {
       "title": "Cantuccini di Prato",
@@ -284,7 +301,8 @@
       "hydration": null,
       "time": "nessuna (impasto chimico)",
       "temp": "20-22°C",
-      "tool": ""
+      "tool": "",
+      "_generatedBy": null
     },
     {
       "title": "Cartocci alla Crema Siciliani",
@@ -298,7 +316,8 @@
       "hydration": "50%",
       "time": "~2-3h totali",
       "temp": "26-27°C",
-      "tool": ""
+      "tool": "",
+      "_generatedBy": null
     },
     {
       "title": "Migliaccio Napoletano",
@@ -312,7 +331,8 @@
       "hydration": null,
       "time": null,
       "temp": null,
-      "tool": ""
+      "tool": "",
+      "_generatedBy": null
     },
     {
       "title": "Focaccia Barese",
@@ -326,7 +346,8 @@
       "hydration": "80%",
       "time": "3-4h puntata + 1h appretto",
       "temp": "24-26°C",
-      "tool": ""
+      "tool": "",
+      "_generatedBy": null
     },
     {
       "title": "Focaccia di Recco IGP",
@@ -340,7 +361,8 @@
       "hydration": "68%",
       "time": "30-60 min riposo",
       "temp": "20-22°C",
-      "tool": ""
+      "tool": "",
+      "_generatedBy": null
     },
     {
       "title": "Focaccia Genovese (Fügassa)",
@@ -354,7 +376,8 @@
       "hydration": "67%",
       "time": "3-4 ore totali",
       "temp": "24-26°C",
-      "tool": ""
+      "tool": "",
+      "_generatedBy": null
     },
     {
       "title": "Focaccia Genovese Classica",
@@ -368,7 +391,8 @@
       "hydration": "75%",
       "time": "5-6h totali (biga 1,5-2h + impasto 3-4h + appretto 40min)",
       "temp": "24-26°C",
-      "tool": ""
+      "tool": "",
+      "_generatedBy": null
     },
     {
       "title": "Pane Pugliese con Biga",
@@ -378,9 +402,9 @@
       "emoji": "🍞",
       "href": "ricette/pane/pane-pugliese-con-biga.html",
       "image": "images/ricette/pane/pane-pugliese-con-biga.webp",
-      "description": "Pane tradizionale pugliese con biga matura 18-24h, crosta croccante dorata e mollica alveolata morbida. Tecnica artigian",
+      "description": "Pane tradizionale pugliese con semola rimacinata, crosta dorata croccante e mollica alveolata. Lievitazione su biga 18-2",
       "hydration": "70%",
-      "time": "~24h (biga) + 4-5h (impasto)",
+      "time": "~24h biga + 4h impasto",
       "temp": "24-26°C",
       "tool": ""
     }

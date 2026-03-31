@@ -6,12 +6,7 @@
 import { BASE } from './router.js';
 import { buildHeroPicture } from './image-utils.js';
 import { initMadeToggle } from './recipe-bookmarks.js';
-
-// ── Emoji per categoria ──
-const CATEGORY_EMOJI = {
-  Pane: '🥖', Pasta: '🍝', Pizza: '🍕',
-  Lievitati: '🥐', Dolci: '🍪', Focaccia: '🫓',
-};
+import { fluentEmoji, categoryEmoji, CATEGORY_FLUENT } from './emoji.js';
 
 /**
  * Renderizza una ricetta completa nel container #app.
@@ -50,9 +45,9 @@ export async function renderRecipe(app, { category, slug }) {
   } catch (err) {
     app.innerHTML = `
       <div class="container" style="padding: 120px 0; text-align: center;">
-        <h2>😔 Ricetta non trovata</h2>
+        <h2>${fluentEmoji('prohibited', 28)} Ricetta non trovata</h2>
         <p style="color: var(--color-text-muted);">${err.message}</p>
-        <a href="${BASE}" data-link class="btn-back">← Torna alla Home</a>
+        <a href="${BASE}" data-link class="btn-back">${fluentEmoji('fire', 16)} Torna alla Home</a>
       </div>`;
   }
 }
@@ -62,7 +57,7 @@ export async function renderRecipe(app, { category, slug }) {
 // ═══════════════════════════════════════
 
 function buildRecipeHTML(r, categoryDir) {
-  const catEmoji = CATEGORY_EMOJI[r.category] || '📖';
+  const catEmoji = categoryEmoji(r.category, 22);
   const imagePath = r.image
     ? `${BASE}${r.image.replace(/^\//, '')}`
     : `${BASE}images/ricette/${categoryDir}/${r.slug}.jpg`;
@@ -78,7 +73,7 @@ function buildRecipeHTML(r, categoryDir) {
   // Hero tag dinamico (nascosto se hand-only)
   const heroToolTag = isHandOnly
     ? ''
-    : `<span class="tag tag--tool" id="hero-setup-tag">${isPasta ? '🍝 Pasta' : '🔧 Impastatrice a spirale'}</span>`;
+    : `<span class="tag tag--tool" id="hero-setup-tag">${isPasta ? fluentEmoji('spaghetti', 18) + ' Pasta' : fluentEmoji('wrench', 18) + ' Impastatrice a spirale'}</span>`;
 
   return `
     <!-- ═══════════ RECIPE HERO ═══════════ -->
@@ -109,9 +104,9 @@ function buildRecipeHTML(r, categoryDir) {
     <!-- ═══════════ TECH BADGES ═══════════ -->
     <div class="container" style="padding-top: 40px;">
       <div class="tech-badges reveal">
-        ${r.hydration ? `<div class="tech-badge">💧 Idratazione: <span class="tech-badge__value">&nbsp;${r.hydration}%</span></div>` : ''}
-        ${r.targetTemp ? `<div class="tech-badge">🌡️ Target Temp: <span class="tech-badge__value">&nbsp;${r.targetTemp}</span></div>` : ''}
-        ${r.fermentation ? `<div class="tech-badge">⏱️ Lievitazione: <span class="tech-badge__value">&nbsp;${r.fermentation}</span></div>` : ''}
+        ${r.hydration ? `<div class="tech-badge">${fluentEmoji('droplet', 18)} Idratazione: <span class="tech-badge__value">&nbsp;${r.hydration}%</span></div>` : ''}
+        ${r.targetTemp ? `<div class="tech-badge">${fluentEmoji('thermometer', 18)} Target Temp: <span class="tech-badge__value">&nbsp;${r.targetTemp}</span></div>` : ''}
+        ${r.fermentation ? `<div class="tech-badge">${fluentEmoji('stopwatch', 18)} Lievitazione: <span class="tech-badge__value">&nbsp;${r.fermentation}</span></div>` : ''}
         ${buildSetupBadge(r)}
         <button class="made-toggle" id="made-toggle" type="button" aria-label="Segna come fatta"></button>
       </div>
@@ -131,10 +126,10 @@ function buildRecipeHTML(r, categoryDir) {
 
           <!-- COLONNA DX: Procedimento -->
           <div>
-            ${buildStepsPanel(r, 'stepsSpiral', 'spirale', '🔧 Spirale', isHandOnly)}
-            ${buildStepsPanel(r, 'stepsExtruder', 'estrusore', '🔧 Estrusore', isHandOnly)}
-            ${buildStepsPanel(r, 'stepsHand', 'mano', '🤲 A mano', isHandOnly)}
-            ${buildStepsPanel(r, 'stepsCondiment', 'condimento', '🍅 Condimento', isHandOnly)}
+            ${buildStepsPanel(r, 'stepsSpiral', 'spirale', fluentEmoji('wrench', 18) + ' Spirale', isHandOnly)}
+            ${buildStepsPanel(r, 'stepsExtruder', 'estrusore', fluentEmoji('wrench', 18) + ' Estrusore', isHandOnly)}
+            ${buildStepsPanel(r, 'stepsHand', 'mano', fluentEmoji('wrench', 18) + ' A mano', isHandOnly)}
+            ${buildStepsPanel(r, 'stepsCondiment', 'condimento', fluentEmoji('tomato', 18) + ' Condimento', isHandOnly)}
           </div>
 
         </div>
@@ -154,9 +149,9 @@ function buildSetupBadge(r) {
   const hasMultiSetup = (r.stepsSpiral?.length || r.stepsExtruder?.length) && r.stepsHand?.length;
   if (!hasMultiSetup) return '';
 
-  return `
+    return `
     <div class="tech-badge tech-badge--toggle" id="setup-badge" role="button" tabindex="0" aria-label="Cambia setup">
-      🔧 Setup: <span class="tech-badge__value" id="setup-badge-value">&nbsp;Impastatrice a spirale</span>
+      ${fluentEmoji('wrench', 18)} Setup: <span class="tech-badge__value" id="setup-badge-value">&nbsp;Impastatrice a spirale</span>
     </div>`;
 }
 
@@ -192,12 +187,12 @@ function buildIngredientsPanel(r) {
   return `
     <div class="recipe-panel reveal">
       <h2 class="recipe-panel__title">
-        <span class="recipe-panel__title-icon">🛒</span> Ingredienti Base
+        <span class="recipe-panel__title-icon">${fluentEmoji('shopping-cart', 24)}</span> Ingredienti Base
       </h2>
 
       <div class="dose-calculator" id="dose-calculator">
         <div class="dose-calculator__label">
-          <span class="dose-calculator__label-icon">⚖️</span> Dosi
+          <span class="dose-calculator__label-icon">${fluentEmoji('balance-scale', 18)}</span> Dosi
         </div>
         <div class="dose-calculator__controls">
           <button class="dose-calculator__btn" id="dose-decrease" aria-label="Diminuisci dosi">−</button>
@@ -228,7 +223,7 @@ function buildSuspensionsPanel(r) {
   return `
     <div class="recipe-panel reveal" style="margin-top: 24px;">
       <h2 class="recipe-panel__title">
-        <span class="recipe-panel__title-icon">🥜</span> Ingredienti Aggiuntivi / Sospensioni
+        <span class="recipe-panel__title-icon">${fluentEmoji('peanuts', 24)}</span> Ingredienti Aggiuntivi / Sospensioni
       </h2>
       <table class="ingredients-table" id="suspensions-table">${rows}</table>
     </div>`;
@@ -250,13 +245,13 @@ function buildStepsPanel(r, key, setupId, label, isHandOnly = false) {
   return `
     <div class="recipe-panel reveal reveal-delay-1" data-setup="${setupId}" id="steps-${setupId}"${isHidden}>
       <h2 class="recipe-panel__title">
-        <span class="recipe-panel__title-icon">⚙️</span> Procedimento
+        <span class="recipe-panel__title-icon">${fluentEmoji('gear', 24)}</span> Procedimento
         <span class="recipe-panel__title-badge">${label}</span>
       </h2>
       <ol class="steps-list" data-setup-key="${key}">
         ${steps.map((s, i) => {
           const branchBadge = (variantBranch != null && i === variantBranch)
-            ? '<span class="variant-branch-badge">⚡ Punto variante — da qui il procedimento può cambiare</span>'
+            ? `<span class="variant-branch-badge">${fluentEmoji('high-voltage', 16)} Punto variante — da qui il procedimento può cambiare</span>`
             : '';
           return `<li data-step-index="${i}" class="step-item${i > variantBranch && variantBranch != null ? ' step-after-branch' : ''}">
             <strong>${escHtml(s.title)}</strong>
@@ -275,7 +270,7 @@ function buildFlourTable(r) {
   return `
     <div class="recipe-panel reveal" style="margin-top: 40px;">
       <h2 class="recipe-panel__title">
-        <span class="recipe-panel__title-icon">🌾</span> Consigli Farine & Marchi
+        <span class="recipe-panel__title-icon">${fluentEmoji('flatbread', 24)}</span> Consigli Farine & Marchi
       </h2>
       <table class="flour-table">
         <thead><tr><th>Tipo Farina</th><th>Forza (W)</th><th>Marchi Consigliati</th></tr></thead>
@@ -291,7 +286,7 @@ function buildFlourTable(r) {
       </table>
 
       <div class="pro-tip-box" style="margin-top: 16px;">
-        <p><strong>💡 PRO TIP:</strong> La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato.</p>
+        <p><strong>${fluentEmoji('light-bulb', 18)} PRO TIP:</strong> La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato.</p>
       </div>
     </div>`;
 }
@@ -301,10 +296,10 @@ function buildAlert(r) {
   if (!r.alert) return '';
   return `
     <div class="alert alert--danger reveal" style="margin-top: 32px;">
-      <span class="alert__icon">🚫</span>
+      <span class="alert__icon">${fluentEmoji('prohibited', 28)}</span>
       <div class="alert__content">
         <strong>ALERT PROFESSIONALE</strong>
-        <p>⚠️ ${escHtml(r.alert)}</p>
+        <p>${fluentEmoji('warning', 18)} ${escHtml(r.alert)}</p>
       </div>
     </div>`;
 }
@@ -316,14 +311,14 @@ function buildBaking(r) {
   return `
     <div class="recipe-panel reveal" style="margin-top: 32px;">
       <h2 class="recipe-panel__title">
-        <span class="recipe-panel__title-icon">🔥</span> Cottura
+        <span class="recipe-panel__title-icon">${fluentEmoji('fire', 24)}</span> Cottura
       </h2>
       <div class="tech-badges" style="margin-bottom: 16px;">
-        ${b.temperature ? `<div class="tech-badge">🌡️ Temperatura: <span class="tech-badge__value">&nbsp;${escHtml(b.temperature)}</span></div>` : ''}
-        ${b.time ? `<div class="tech-badge">⏱️ Tempo: <span class="tech-badge__value">&nbsp;${escHtml(b.time)}</span></div>` : ''}
+        ${b.temperature ? `<div class="tech-badge">${fluentEmoji('thermometer', 18)} Temperatura: <span class="tech-badge__value">&nbsp;${escHtml(b.temperature)}</span></div>` : ''}
+        ${b.time ? `<div class="tech-badge">${fluentEmoji('stopwatch', 18)} Tempo: <span class="tech-badge__value">&nbsp;${escHtml(b.time)}</span></div>` : ''}
       </div>
       ${b.tips?.length ? `<ul class="baking-tips" style="list-style: none; padding: 0;">
-        ${b.tips.map(t => `<li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 ${escHtml(t)}</li>`).join('')}
+        ${b.tips.map(t => `<li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">${fluentEmoji('light-bulb', 16)} ${escHtml(t)}</li>`).join('')}
       </ul>` : ''}
     </div>`;
 }
@@ -334,10 +329,10 @@ function buildProTips(r) {
   return `
     <div class="recipe-panel reveal" style="margin-top: 32px;">
       <h2 class="recipe-panel__title">
-        <span class="recipe-panel__title-icon">💡</span> Pro Tips
+        <span class="recipe-panel__title-icon">${fluentEmoji('light-bulb', 24)}</span> Pro Tips
       </h2>
       <ul class="baking-tips" style="list-style: none; padding: 0;">
-        ${r.proTips.map(t => `<li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">💡 ${escHtml(t)}</li>`).join('')}
+        ${r.proTips.map(t => `<li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">${fluentEmoji('light-bulb', 16)} ${escHtml(t)}</li>`).join('')}
       </ul>
     </div>`;
 }
@@ -348,7 +343,7 @@ function buildGlossary(r) {
   return `
     <div class="recipe-panel reveal" style="margin-top: 32px;">
       <h2 class="recipe-panel__title">
-        <span class="recipe-panel__title-icon">📖</span> Glossario
+        <span class="recipe-panel__title-icon">${fluentEmoji('open-book', 24)}</span> Glossario
       </h2>
       <dl class="glossary-list" style="margin: 0; padding: 0;">
         ${r.glossary.map(g => `
@@ -372,9 +367,9 @@ function initSetupToggle() {
   const stepPanels = document.querySelectorAll('.recipe-panel[data-setup]');
 
   const SETUP_CONFIG = {
-    spirale: { icon: '🔧', label: 'Impastatrice a spirale' },
-    estrusore: { icon: '🔧', label: 'Estrusore con trafila' },
-    mano: { icon: '🤲', label: 'A mano' },
+    spirale: { icon: fluentEmoji('wrench', 18), label: 'Impastatrice a spirale' },
+    estrusore: { icon: fluentEmoji('wrench', 18), label: 'Estrusore con trafila' },
+    mano: { icon: fluentEmoji('wrench', 18), label: 'A mano' },
   };
 
   const SETUPS = [];
@@ -401,8 +396,8 @@ function initSetupToggle() {
       panel.style.display = panel.getAttribute('data-setup') === config.id ? '' : 'none';
     });
 
-    if (heroTag) heroTag.textContent = `${config.icon} ${config.label}`;
-    if (badgeValue) badgeValue.textContent = `\u00a0${config.label}`;
+    if (heroTag) heroTag.innerHTML = `${config.icon} ${config.label}`;
+    if (badgeValue) badgeValue.innerHTML = `\u00a0${config.label}`;
 
     document.querySelectorAll('.ingredient-note[data-setup-note-' + config.id + ']').forEach(el => {
       el.textContent = el.getAttribute('data-setup-note-' + config.id);
@@ -765,7 +760,7 @@ function swapStepsAfterBranch(variant, recipe, activate) {
           const li = document.createElement('li');
           li.className = 'step-item step-variant';
           li.setAttribute('data-step-index', `v${i}`);
-          li.innerHTML = `<strong>${escHtml(s.title)}</strong><span class="variant-step-badge">❄️ Variante</span><p>${resolveTokens(escHtml(s.text))}</p>`;
+          li.innerHTML = `<strong>${escHtml(s.title)}</strong><span class="variant-step-badge">${fluentEmoji('droplet', 16)} Variante</span><p>${resolveTokens(escHtml(s.text))}</p>`;
           ol.appendChild(li);
         });
       }
@@ -808,7 +803,7 @@ function buildVariantSelector(r) {
       </div>
       ${v.ingredientOverrides?.length ? `
         <div class="variant-selector__changes">
-          <span class="variant-selector__changes-title">⚠️ Cambia:</span>
+          <span class="variant-selector__changes-title">${fluentEmoji('warning', 14)} Cambia:</span>
           ${v.ingredientOverrides.map(o => `<span class="variant-selector__change-chip">${escHtml(o.ref)}: ${o.grams}g ${o.note || ''}</span>`).join('')}
         </div>
       ` : ''}

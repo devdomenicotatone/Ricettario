@@ -17,12 +17,18 @@ import '../css/components/footer.css';
 import '../css/pages/recipe-detail.css';
 import '../css/components/category-page.css';
 import '../css/utilities/animations.css';
+import '../css/components/logo-intro.css';
 
 // ── SPA Router ──
 import { initRouter, registerRenderers, initReveal, BASE } from './router.js';
 import { renderRecipe } from './recipe-renderer.js';
 import { buildPicture } from './image-utils.js';
 import { applyMadeBadgesToCards } from './recipe-bookmarks.js';
+import { fluentEmoji, categoryEmoji, CATEGORY_FLUENT } from './emoji.js';
+import { initLogoIntro } from './logo-intro-v2b.js';
+
+// ── Logo Intro: inietta subito (pre-render) ──
+initLogoIntro();
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -137,7 +143,7 @@ function getHomepageHTML() {
     <!-- ═══════════ HERO ═══════════ -->
     <section class="hero" id="home">
       <div class="hero__content">
-        <div class="hero__badge reveal">🔥 Laboratorio Artigianale</div>
+        <div class="hero__badge reveal">${fluentEmoji('fire', 24)} Laboratorio Artigianale</div>
         <h1 class="hero__title reveal reveal-delay-1">Il mio<br><span>Ricettario</span></h1>
         <p class="hero__subtitle reveal reveal-delay-2">Pane, lievitati e pasta — ricette replicabili, parametri reali.</p>
         <div class="hero__search reveal reveal-delay-3" id="recipe-search">
@@ -174,16 +180,16 @@ function getHomepageHTML() {
         <div class="tool-spotlight reveal">
           <div class="tool-spotlight__image-wrapper">
             ${buildPicture(`${BASE}images/strumenti/famag-grilletta.png`, 'Famag Grilletta', 'tool-spotlight__image', 'lazy')}
-            <span class="tool-spotlight__badge">⭐ Impasti</span>
+            <span class="tool-spotlight__badge">${fluentEmoji('star', 22)} Impasti</span>
           </div>
           <div class="tool-spotlight__info">
             <h3 class="tool-spotlight__name">Famag Grilletta <span>IM 5/230 HH</span></h3>
             <p class="tool-spotlight__desc">Impastatrice a spirale professionale. 10 velocità, capacità 5 kg, vasca da 7L. Fino al 95% idratazione. Made in Italy.</p>
             <div class="tool-spotlight__specs">
-              <div class="spec-card reveal"><div class="spec-card__icon">⚡</div><div class="spec-card__label">Motore</div><div class="spec-card__value">Brushless 0.5 HP</div></div>
-              <div class="spec-card reveal reveal-delay-1"><div class="spec-card__icon">🎯</div><div class="spec-card__label">Velocità</div><div class="spec-card__value">10 (90–320 RPM)</div></div>
-              <div class="spec-card reveal reveal-delay-2"><div class="spec-card__icon">📦</div><div class="spec-card__label">Capacità</div><div class="spec-card__value">5 kg / 7 litri</div></div>
-              <div class="spec-card reveal reveal-delay-3"><div class="spec-card__icon">💧</div><div class="spec-card__label">Idr. Max</div><div class="spec-card__value">Fino al 95%</div></div>
+              <div class="spec-card reveal"><div class="spec-card__icon">${fluentEmoji('high-voltage', 32)}</div><div class="spec-card__label">Motore</div><div class="spec-card__value">Brushless 0.5 HP</div></div>
+              <div class="spec-card reveal reveal-delay-1"><div class="spec-card__icon">${fluentEmoji('bullseye', 32)}</div><div class="spec-card__label">Velocità</div><div class="spec-card__value">10 (90–320 RPM)</div></div>
+              <div class="spec-card reveal reveal-delay-2"><div class="spec-card__icon">${fluentEmoji('package', 32)}</div><div class="spec-card__label">Capacità</div><div class="spec-card__value">5 kg / 7 litri</div></div>
+              <div class="spec-card reveal reveal-delay-3"><div class="spec-card__icon">${fluentEmoji('droplet', 32)}</div><div class="spec-card__label">Idr. Max</div><div class="spec-card__value">Fino al 95%</div></div>
             </div>
           </div>
         </div>
@@ -191,16 +197,16 @@ function getHomepageHTML() {
         <div class="tool-spotlight reveal">
           <div class="tool-spotlight__image-wrapper">
             ${buildPicture(`${BASE}images/strumenti/philips-serie-7000.jpg`, 'Philips Serie 7000', 'tool-spotlight__image', 'lazy')}
-            <span class="tool-spotlight__badge">🏠 Pasta Home</span>
+            <span class="tool-spotlight__badge">${fluentEmoji('house', 22)} Pasta Home</span>
           </div>
           <div class="tool-spotlight__info">
             <h3 class="tool-spotlight__name">Philips <span>Serie 7000</span></h3>
             <p class="tool-spotlight__desc">Macchina per la pasta automatica. Pesatura integrata, 8 trafile, fino a 8 porzioni. Pasta in < 10 min.</p>
             <div class="tool-spotlight__specs">
-              <div class="spec-card reveal"><div class="spec-card__icon">⚡</div><div class="spec-card__label">Potenza</div><div class="spec-card__value">200 W</div></div>
-              <div class="spec-card reveal reveal-delay-1"><div class="spec-card__icon">⚖️</div><div class="spec-card__label">Capacità</div><div class="spec-card__value">800g / 8 porz.</div></div>
-              <div class="spec-card reveal reveal-delay-2"><div class="spec-card__icon">🍝</div><div class="spec-card__label">Trafile</div><div class="spec-card__value">8 incluse</div></div>
-              <div class="spec-card reveal reveal-delay-3"><div class="spec-card__icon">⏱️</div><div class="spec-card__label">Tempo</div><div class="spec-card__value">< 10 min</div></div>
+              <div class="spec-card reveal"><div class="spec-card__icon">${fluentEmoji('high-voltage', 32)}</div><div class="spec-card__label">Potenza</div><div class="spec-card__value">200 W</div></div>
+              <div class="spec-card reveal reveal-delay-1"><div class="spec-card__icon">${fluentEmoji('balance-scale', 32)}</div><div class="spec-card__label">Capacità</div><div class="spec-card__value">800g / 8 porz.</div></div>
+              <div class="spec-card reveal reveal-delay-2"><div class="spec-card__icon">${fluentEmoji('spaghetti', 32)}</div><div class="spec-card__label">Trafile</div><div class="spec-card__value">8 incluse</div></div>
+              <div class="spec-card reveal reveal-delay-3"><div class="spec-card__icon">${fluentEmoji('stopwatch', 32)}</div><div class="spec-card__label">Tempo</div><div class="spec-card__value">< 10 min</div></div>
             </div>
           </div>
         </div>
@@ -224,17 +230,17 @@ function getHomepageHTML() {
 // ═══════════════════════════════════════
 
 const CATEGORY_META = {
-  pane:      { name: 'Pane',      emoji: '🥖', title: 'Pane Artigianale',           desc: 'Ricette di pane ad alta idratazione — ciabatta, filone, baguette e pane speciale.' },
-  pizza:     { name: 'Pizza',     emoji: '🍕', title: 'Pizza Artigianale',          desc: 'Pizze con lievitazione lunga — napoletana, in teglia, canotto e pinsa romana.' },
-  pasta:     { name: 'Pasta',     emoji: '🍝', title: 'Pasta Fresca',               desc: 'Pasta fresca fatta in casa — trafilata, ripiena e formati speciali.' },
-  lievitati: { name: 'Lievitati', emoji: '🥐', title: 'Lievitati Dolci e Salati',   desc: 'Brioche, cornetti, panettone, burger buns e rosticceria.' },
-  focaccia:  { name: 'Focaccia',  emoji: '🫓', title: 'Focaccia Artigianale',       desc: 'Focacce ad alta idratazione — genovese, barese, pugliese e varianti creative.' },
-  dolci:     { name: 'Dolci',     emoji: '🍰', title: 'Dolci e Pasticceria',        desc: 'Dolci tradizionali, frolle, biscotti e pasticceria artigianale.' },
+  pane:      { name: 'Pane',      emoji: 'baguette-bread', title: 'Pane Artigianale',           desc: 'Ricette di pane ad alta idratazione — ciabatta, filone, baguette e pane speciale.' },
+  pizza:     { name: 'Pizza',     emoji: 'pizza',           title: 'Pizza Artigianale',          desc: 'Pizze con lievitazione lunga — napoletana, in teglia, canotto e pinsa romana.' },
+  pasta:     { name: 'Pasta',     emoji: 'spaghetti',       title: 'Pasta Fresca',               desc: 'Pasta fresca fatta in casa — trafilata, ripiena e formati speciali.' },
+  lievitati: { name: 'Lievitati', emoji: 'croissant',       title: 'Lievitati Dolci e Salati',   desc: 'Brioche, cornetti, panettone, burger buns e rosticceria.' },
+  focaccia:  { name: 'Focaccia',  emoji: 'flatbread',       title: 'Focaccia Artigianale',       desc: 'Focacce ad alta idratazione — genovese, barese, pugliese e varianti creative.' },
+  dolci:     { name: 'Dolci',     emoji: 'shortcake',       title: 'Dolci e Pasticceria',        desc: 'Dolci tradizionali, frolle, biscotti e pasticceria artigianale.' },
 };
 
 async function renderCategory(app, { category }) {
   const meta = CATEGORY_META[category] || {
-    name: category, emoji: '🍽️',
+    name: category, emoji: 'spaghetti',
     title: category, desc: `Tutte le ricette di ${category}.`,
   };
 
@@ -264,13 +270,13 @@ async function renderCategory(app, { category }) {
 
         <div class="category-toolbar">
           <div class="category-toolbar__search">
-            <span class="category-toolbar__search-icon">🔍</span>
+            <span class="category-toolbar__search-icon"><i data-lucide="search" style="width:16px;height:16px"></i></span>
             <input type="text" class="category-toolbar__search-input" id="category-search"
               placeholder="Cerca tra le ricette di ${meta.name.toLowerCase()}...">
           </div>
           <div class="category-toolbar__sort">
             <button class="category-toolbar__sort-btn active" data-sort="az">A-Z</button>
-            <button class="category-toolbar__sort-btn" data-sort="hydration">💧 Idratazione</button>
+            <button class="category-toolbar__sort-btn" data-sort="hydration">${fluentEmoji('droplet', 14)} Idratazione</button>
           </div>
         </div>
 
@@ -299,7 +305,7 @@ async function renderCategory(app, { category }) {
 
     // Contatore
     const countEl = document.getElementById('recipe-count');
-    if (countEl) countEl.textContent = `📊 ${allRecipes.length} ricette`;
+    if (countEl) countEl.textContent = `${fluentEmoji('bullseye', 16)} ${allRecipes.length} ricette`;
 
     // Render griglia
     const grid = document.getElementById('category-grid');
@@ -340,7 +346,7 @@ async function renderCategory(app, { category }) {
   } catch (err) {
     console.error('Errore caricamento categoria:', err);
     const grid = document.getElementById('category-grid');
-    if (grid) grid.innerHTML = '<div class="category-empty"><div class="category-empty__icon">❌</div><p>Errore nel caricamento delle ricette.</p></div>';
+    if (grid) grid.innerHTML = `<div class="category-empty"><div class="category-empty__icon">${fluentEmoji('prohibited', 32)}</div><p>Errore nel caricamento delle ricette.</p></div>`;
   }
 }
 
@@ -350,7 +356,7 @@ function renderCategoryGrid(grid, recipes, categoryDir) {
   if (recipes.length === 0) {
     grid.innerHTML = `
       <div class="category-empty" style="grid-column: 1 / -1">
-        <div class="category-empty__icon">🔍</div>
+        <div class="category-empty__icon"><i data-lucide="search" style="width:32px;height:32px"></i></div>
         <p>Nessuna ricetta trovata</p>
       </div>`;
     return;
@@ -366,8 +372,8 @@ function renderCategoryGrid(grid, recipes, categoryDir) {
         <div class="category-card__image-wrapper">
           ${r.image ? buildPicture(`${BASE}${r.image}`, r.title, 'category-card__image', 'lazy') : ''}
           <div class="category-card__meta">
-            ${r.hydration ? `<span class="category-card__tag">💧 ${r.hydration}</span>` : ''}
-            ${r.time ? `<span class="category-card__tag">⏱️ ${r.time}</span>` : ''}
+            ${r.hydration ? `<span class="category-card__tag">${fluentEmoji('droplet', 14)} ${r.hydration}</span>` : ''}
+            ${r.time ? `<span class="category-card__tag">${fluentEmoji('stopwatch', 14)} ${r.time}</span>` : ''}
           </div>
         </div>
         <div class="category-card__body">
@@ -387,12 +393,12 @@ function initCarousels() {
   if (!carouselsContainer) return;
 
   const CATEGORY_ORDER = [
-    { key: 'Pasta', emoji: '🍝', dir: 'pasta' },
-    { key: 'Pane', emoji: '🥖', dir: 'pane' },
-    { key: 'Pizza', emoji: '🍕', dir: 'pizza' },
-    { key: 'Lievitati', emoji: '🥐', dir: 'lievitati' },
-    { key: 'Dolci', emoji: '🍪', dir: 'dolci' },
-    { key: 'Focaccia', emoji: '🫓', dir: 'focaccia' },
+    { key: 'Pasta', emoji: 'spaghetti', dir: 'pasta' },
+    { key: 'Pane', emoji: 'baguette-bread', dir: 'pane' },
+    { key: 'Pizza', emoji: 'pizza', dir: 'pizza' },
+    { key: 'Lievitati', emoji: 'croissant', dir: 'lievitati' },
+    { key: 'Dolci', emoji: 'cookie', dir: 'dolci' },
+    { key: 'Focaccia', emoji: 'flatbread', dir: 'focaccia' },
   ];
 
   fetch(`${BASE}recipes.json`)
@@ -418,7 +424,7 @@ function initCarousels() {
         row.innerHTML = `
           <div class="category-row__header">
             <h3 class="category-row__title">
-              ${cat.emoji} ${cat.key}
+              ${fluentEmoji(cat.emoji, 32)} ${cat.key}
               <span class="category-row__count">${recipes.length} ricette</span>
             </h3>
             <a href="${BASE}ricette/${cat.dir}/" class="category-row__link" data-link>Vedi tutte</a>
@@ -437,8 +443,8 @@ function initCarousels() {
                   <div class="recipe-card--compact__body">
                     <h4 class="recipe-card--compact__title">${r.title}</h4>
                     <div class="recipe-card--compact__meta">
-                      ${r.hydration ? `<span class="recipe-card--compact__tag">💧 ${r.hydration}</span>` : ''}
-                      ${r.time ? `<span>⏱️ ${r.time}</span>` : ''}
+                      ${r.hydration ? `<span class="recipe-card--compact__tag">${fluentEmoji('droplet', 16)} ${r.hydration}</span>` : ''}
+                      ${r.time ? `<span>${fluentEmoji('stopwatch', 16)} ${r.time}</span>` : ''}
                     </div>
                   </div>
                 </a>`;

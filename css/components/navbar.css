@@ -8,16 +8,29 @@
         top: 0;
         inset-inline: 0;
         z-index: 1000;
-        padding-block: var(--space-md);
-        transition: all var(--transition-medium);
-        background: color-mix(in srgb, var(--color-surface-1) 85%, transparent);
-        backdrop-filter: blur(16px) saturate(1.2);
-        -webkit-backdrop-filter: blur(16px) saturate(1.2);
-        border-bottom: 1px solid var(--border-subtle);
+        padding-block: 16px;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        background: color-mix(in srgb, var(--color-surface-1) 88%, transparent);
+        backdrop-filter: blur(20px) saturate(1.4);
+        -webkit-backdrop-filter: blur(20px) saturate(1.4);
+        border-bottom: 2px solid transparent;
+        border-image: linear-gradient(90deg,
+            transparent 0%,
+            rgba(194, 136, 77, 0.15) 20%,
+            rgba(194, 136, 77, 0.3) 50%,
+            rgba(194, 136, 77, 0.15) 80%,
+            transparent 100%) 1;
 
         &.scrolled {
-            padding-block: 12px;
-            box-shadow: var(--shadow-md);
+            padding-block: 10px;
+            box-shadow: 0 4px 24px rgba(107, 66, 38, 0.12),
+                        0 1px 3px rgba(0, 0, 0, 0.06);
+            border-image: linear-gradient(90deg,
+                transparent 0%,
+                rgba(194, 136, 77, 0.25) 20%,
+                rgba(194, 136, 77, 0.45) 50%,
+                rgba(194, 136, 77, 0.25) 80%,
+                transparent 100%) 1;
         }
     }
 
@@ -41,20 +54,37 @@
         text-decoration: none;
 
         &:hover .navbar__logo-icon {
-            transform: rotate(-10deg) scale(1.1);
+            transform: scale(1.12);
+            filter: drop-shadow(0 2px 8px rgba(194, 136, 77, 0.45));
+        }
+
+        &:hover .navbar__logo-icon svg {
+            animation: spiga-sway 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
     }
 
     .navbar__logo-icon {
         width: 40px;
         height: 40px;
-        background: var(--gradient-hero);
-        border-radius: var(--radius-sm);
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.2rem;
-        transition: transform var(--transition-fast);
+        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+                    filter 0.3s ease;
+
+        & svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    @keyframes spiga-sway {
+        0% { transform: rotate(0deg) scale(1); }
+        20% { transform: rotate(-5deg) scale(1.05); }
+        40% { transform: rotate(4deg) scale(1.02); }
+        60% { transform: rotate(-3deg) scale(1.03); }
+        80% { transform: rotate(2deg) scale(1.01); }
+        100% { transform: rotate(0deg) scale(1); }
     }
 
     /* Mobile-first: menu mobile di default */

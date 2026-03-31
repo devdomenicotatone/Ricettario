@@ -38,6 +38,13 @@
         display: block;
     }
 
+    /* Fluent Emoji: inline images that behave like text emoji */
+    img.fluent-emoji {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: none;
+    }
+
     a {
         color: var(--color-text-accent);
         text-decoration: none;
