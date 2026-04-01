@@ -1,186 +1,100 @@
 /**
- * Deploy personalizzato su GitHub Pages
- * 
- * Strategia:
- *   1. PRIMA: usa `gh-pages` (veloce, push diretto)
- *   2. FALLBACK: clone manuale del branch gh-pages (lento ma robusto)
- *      Necessario quando gh-pages ha bug ENAMETOOLONG su Windows
+ * Deploy su GitHub Pages via git subtree push
+ * Metodo diretto e robusto — nessuna dipendenza npm
  */
 
 import { execSync } from 'child_process';
-import { cpSync, existsSync, mkdirSync, rmSync, readdirSync, writeFileSync } from 'fs';
+import { existsSync, writeFileSync } from 'fs';
 import { join } from 'path';
-import { tmpdir } from 'os';
 
 const DIST_DIR = join(process.cwd(), 'dist');
-const TEMP_DIR = join(tmpdir(), 'gh-pages-deploy');
 const COMMIT_MSG = process.argv[2] || 'deploy: aggiornamento GitHub Pages';
 
-function run(cmd, cwd) {
-    try {
-        return execSync(cmd, {
-            cwd,
-            stdio: 'pipe',
-            encoding: 'utf8',
-            timeout: 60_000,
-            env: { ...process.env, GIT_TERMINAL_PROMPT: '0' }
-        });
-    } catch (e) {
-        if (e.stdout) return e.stdout;
-        throw e;
-    }
-}
-
-function runVisible(cmd, cwd) {
-    execSync(cmd, {
-        cwd,
+function run(cmd, opts = {}) {
+    console.log(`   → ${cmd}`);
+    return execSync(cmd, {
+        cwd: process.cwd(),
         stdio: 'inherit',
-        timeout: 120_000,
+        timeout: 300_000, // 5 min per push grossi
+        env: { ...process.env, GIT_TERMINAL_PROMPT: '0' },
+        ...opts
+    });
+}
+
+function runSilent(cmd) {
+    return execSync(cmd, {
+        cwd: process.cwd(),
+        stdio: 'pipe',
+        encoding: 'utf8',
+        timeout: 30_000,
         env: { ...process.env, GIT_TERMINAL_PROMPT: '0' }
-    });
+    }).trim();
 }
 
-function getRemoteUrl() {
-    return run('git remote get-url origin', process.cwd()).trim();
-}
-
-// ═══════════════════════════════════════════════════
-// METODO 1: gh-pages (veloce)
-// ═══════════════════════════════════════════════════
-async function deployFast() {
-    console.log('⚡ Metodo veloce: gh-pages...');
-    
-    // Pulisci cache MANUALMENTE prima di importare il modulo
-    // (gh-pages.clean() non funziona se la cache è corrotta)
-    console.log('   🧹 Pulizia cache gh-pages...');
-    const cacheDir = join(process.cwd(), 'node_modules', '.cache', 'gh-pages');
-    if (existsSync(cacheDir)) {
-        rmSync(cacheDir, { recursive: true, force: true });
-        console.log('   ✅ Cache eliminata');
-    }
-    
-    const ghpages = await import('gh-pages');
-    const { publish } = ghpages;
-    
-    console.log('   📤 Push in corso...');
-    return new Promise((resolve, reject) => {
-        publish('dist', {
-            branch: 'gh-pages',
-            message: COMMIT_MSG,
-            dotfiles: true,  // include .nojekyll
-            add: false,      // sostituisci tutto, non aggiungere
-            force: true,     // forza push
-        }, (err) => {
-            if (err) {
-                console.error('   ❌ gh-pages errore:', err.message);
-                reject(err);
-            } else {
-                resolve();
-            }
-        });
-    });
-}
-
-// ═══════════════════════════════════════════════════
-// METODO 2: Clone manuale (fallback robusto)
-// ═══════════════════════════════════════════════════
-async function deployClone() {
-    console.log('🔧 Fallback: clone manuale...\n');
-    
-    const remoteUrl = getRemoteUrl();
-    console.log(`📦 Remote: ${remoteUrl}`);
-
-    // Pulisci temp
-    if (existsSync(TEMP_DIR)) {
-        rmSync(TEMP_DIR, { recursive: true, force: true });
-    }
-
-    // Clona branch gh-pages (shallow)
-    console.log('📥 Clono branch gh-pages...');
-    try {
-        runVisible(`git clone --branch gh-pages --single-branch --depth 1 "${remoteUrl}" "${TEMP_DIR}"`);
-    } catch {
-        console.log('⚠️  Branch gh-pages non trovato, ne creo uno nuovo...');
-        mkdirSync(TEMP_DIR, { recursive: true });
-        run('git init', TEMP_DIR);
-        run('git checkout --orphan gh-pages', TEMP_DIR);
-        run(`git remote add origin "${remoteUrl}"`, TEMP_DIR);
-    }
-
-    // Pulisci tutto tranne .git
-    console.log('🧹 Pulizia vecchi file...');
-    for (const item of readdirSync(TEMP_DIR)) {
-        if (item === '.git') continue;
-        rmSync(join(TEMP_DIR, item), { recursive: true, force: true });
-    }
-
-    // Copia dist/ → temp
-    console.log('📋 Copio file da dist/...');
-    cpSync(DIST_DIR, TEMP_DIR, { recursive: true });
-
-    // Crea .nojekyll
-    writeFileSync(join(TEMP_DIR, '.nojekyll'), '');
-
-    // Conteggio
-    const fileCount = run('git ls-files --others --exclude-standard', TEMP_DIR)
-        .split('\n').filter(Boolean).length;
-    const modifiedCount = run('git diff --name-only', TEMP_DIR)
-        .split('\n').filter(Boolean).length;
-
-    console.log(`📝 Commit (${fileCount} nuovi, ${modifiedCount} modificati)...`);
-    run('git add -A', TEMP_DIR);
-
-    const status = run('git status --porcelain', TEMP_DIR).trim();
-    if (!status) {
-        console.log('✅ Nessuna modifica da pubblicare. Il sito è già aggiornato.');
-        cleanup();
-        return;
-    }
-
-    run(`git commit -m "${COMMIT_MSG}"`, TEMP_DIR);
-
-    console.log('🚀 Push su gh-pages...');
-    runVisible('git push origin gh-pages', TEMP_DIR);
-    cleanup();
-}
-
-function cleanup() {
-    try { rmSync(TEMP_DIR, { recursive: true, force: true }); } catch {}
-}
-
-// ═══════════════════════════════════════════════════
-// MAIN: prova veloce, poi fallback
-// ═══════════════════════════════════════════════════
 async function deploy() {
     console.log('🚀 Deploy su GitHub Pages...\n');
 
+    // 1. Verifica dist/
     if (!existsSync(DIST_DIR)) {
         console.error('❌ Cartella dist/ non trovata. Esegui prima "vite build".');
         process.exit(1);
     }
 
+    // 2. Assicurati che .nojekyll esista
+    const nojekyll = join(DIST_DIR, '.nojekyll');
+    if (!existsSync(nojekyll)) {
+        writeFileSync(nojekyll, '');
+    }
+
+    // 3. Salva stato attuale (per ripristinare dopo)
+    const hadChanges = runSilent('git status --porcelain').length > 0;
+    if (hadChanges) {
+        console.log('💾 Salvo modifiche locali (stash)...');
+        run('git stash push -m "pre-deploy-stash"');
+    }
+
     try {
-        await deployFast();
-        console.log('\n✅ Deploy completato con successo! (metodo veloce)');
-    } catch (err) {
-        console.warn(`\n⚠️  gh-pages fallito: ${err.message}`);
-        console.log('📦 Provo con il metodo clone...\n');
+        // 4. Aggiungi dist/ forzatamente al commit temporaneo
+        console.log('📦 Preparo dist/ per il push...');
+        run('git add dist -f');
         
         try {
-            await deployClone();
-            console.log('\n✅ Deploy completato con successo! (metodo clone)');
-        } catch (err2) {
-            console.error('❌ Errore durante il deploy:', err2.message);
-            cleanup();
-            process.exit(1);
+            run('git commit -m "' + COMMIT_MSG + '"', { stdio: 'pipe' });
+        } catch {
+            console.log('   ℹ️  Nessuna modifica in dist/, procedo comunque...');
+        }
+
+        // 5. Elimina branch gh-pages remoto se esiste (per evitare conflitti)
+        console.log('🧹 Pulizia branch gh-pages remoto...');
+        try {
+            run('git push origin --delete gh-pages', { stdio: 'pipe' });
+            console.log('   ✅ Vecchio branch eliminato');
+        } catch {
+            console.log('   ℹ️  Branch gh-pages non esisteva');
+        }
+
+        // 6. Push con subtree
+        console.log('🚀 Push dist/ → gh-pages...');
+        run('git subtree push --prefix dist origin gh-pages');
+
+        console.log('\n✅ Deploy completato con successo!');
+        console.log('🌐 https://devdomenicotatone.github.io/Ricettario/');
+
+    } finally {
+        // 7. Ripristina: rimuovi il commit temporaneo di dist
+        console.log('\n🧹 Ripristino stato locale...');
+        try {
+            run('git reset HEAD~1', { stdio: 'pipe' });
+        } catch {}
+
+        // 8. Ripristina stash se c'era
+        if (hadChanges) {
+            console.log('💾 Ripristino modifiche locali...');
+            try {
+                run('git stash pop', { stdio: 'pipe' });
+            } catch {}
         }
     }
 }
-
-// Previeni crash silenziosi
-process.on('unhandledRejection', (err) => {
-    console.error('❌ Errore non gestito:', err?.message || err);
-    process.exit(1);
-});
 
 deploy();
