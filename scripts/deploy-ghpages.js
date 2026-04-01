@@ -50,13 +50,19 @@ function getRemoteUrl() {
 async function deployFast() {
     console.log('⚡ Metodo veloce: gh-pages...');
     
+    // Pulisci cache MANUALMENTE prima di importare il modulo
+    // (gh-pages.clean() non funziona se la cache è corrotta)
+    console.log('   🧹 Pulizia cache gh-pages...');
+    const cacheDir = join(process.cwd(), 'node_modules', '.cache', 'gh-pages');
+    if (existsSync(cacheDir)) {
+        rmSync(cacheDir, { recursive: true, force: true });
+        console.log('   ✅ Cache eliminata');
+    }
+    
     const ghpages = await import('gh-pages');
     const { publish } = ghpages;
     
-    // Pulisci cache stale (causa "local changes would be overwritten")
-    console.log('   🧹 Pulizia cache gh-pages...');
-    try { ghpages.clean(); } catch {}
-    
+    console.log('   📤 Push in corso...');
     return new Promise((resolve, reject) => {
         publish('dist', {
             branch: 'gh-pages',
@@ -65,8 +71,12 @@ async function deployFast() {
             add: false,      // sostituisci tutto, non aggiungere
             force: true,     // forza push
         }, (err) => {
-            if (err) reject(err);
-            else resolve();
+            if (err) {
+                console.error('   ❌ gh-pages errore:', err.message);
+                reject(err);
+            } else {
+                resolve();
+            }
         });
     });
 }
@@ -166,5 +176,11 @@ async function deploy() {
         }
     }
 }
+
+// Previeni crash silenziosi
+process.on('unhandledRejection', (err) => {
+    console.error('❌ Errore non gestito:', err?.message || err);
+    process.exit(1);
+});
 
 deploy();
