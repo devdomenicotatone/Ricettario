@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T12:07:11.684Z",
+  "generatedAt": "2026-04-01T18:50:11.439Z",
   "totalRecipes": 25,
   "categories": [
     {
@@ -207,12 +207,12 @@
       "emoji": "🍔",
       "href": "ricette/lievitati/burger-buns-con-biga.html",
       "image": "images/ricette/lievitati/burger-buns-con-biga.webp",
-      "description": "Panini per hamburger soffici e professionali con pre-impasto biga per massima digeribilità e shelf-life. Crosta dorata, mollica ariosa.",
-      "hydration": "62%",
-      "time": "~20h totali (biga 16-18h + puntata 2h + appretto 1.5h)",
-      "temp": "26-27°C",
+      "description": "Panini soffici per hamburger con biga a lunga maturazione: crosta dorata, mollica filante e aroma complesso. Ricetta professionale con dosi precise.",
+      "hydration": "58%",
+      "time": "~16-18h biga + 2h puntata + 1h appretto",
+      "temp": "24-26°C",
       "tool": "",
-      "_generatedBy": null
+      "_generatedBy": "claude-opus"
     },
     {
       "title": "Burger Buns Professionali",
