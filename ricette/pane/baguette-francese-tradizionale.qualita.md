@@ -1,23 +1,17 @@
 # Qualità: Baguette Francese Tradizionale
 
-## 🟡 Score Finale: 60/100
+## 🟢 Score Finale: 100/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
-| Schema | ❌ Fail | 1 errori, 0 warning |
-| Gemini | 95/100 | 🟢 Buona |
+| Schema | ✅ Pass | 0 errori, 1 warning |
+| Gemini | 100/100 | 🟢 Buona |
 
-Ricetta eccellente, tecnicamente molto accurata e completa. Il calcolo dell'idratazione è corretto e conferma il 68% dichiarato. Le percentuali di sale (2%) e lievito (0.85%) sono perfette per il prodotto. L'unica nota è una lieve incongruenza sulla modalità di preriscaldamento del forno che va corretta per garantire la massima chiarezza e un risultato ottimale.
+Ricetta eccellente e tecnicamente ineccepibile. L'idratazione ricalcolata (420g acqua / 600g farina = 70%) coincide perfettamente, le proporzioni sono corrette e la spiegazione della formatura e dei tagli è da manuale.
 
 ## 🔍 Schema Validation
 
-- ❌ Idratazione dichiarata 68% ma calcolata 38% (380g acqua / 1000g farina). Scarto: 30%
-
-## Problemi trovati
-
-| Sev. | Area | Problema | Correzione |
-|------|------|----------|------------|
-| ⚠️ | Temperature | C'è una contraddizione sulla modalità di preriscaldamento del forno. Il punto 9 del procedimento (sia per spirale che a mano) indica di preriscaldare a 250°C 'ventilato' per poi passare a 'statico'. La sezione COTTURA invece consiglia di preriscaldare direttamente in modalità 'STATICO', specificando che 'il calore radiante è essenziale per la grigne'. Quest'ultima indicazione è tecnicamente più corretta. | Uniformare le istruzioni, consigliando di preriscaldare il forno sempre in modalità STATICA come suggerito nella sezione COTTURA, che è la pratica migliore. Rimuovere la menzione 'ventilato' dal punto 9 del procedimento per evitare confusione. |
+- ⚠️ Campo sconosciuto: "_generatedBy" — non presente nello schema
 
 ---
-*Generato: 2026-04-01T02:37:31.900Z | Pipeline: Schema → Gemini*
+*Generato: 2026-04-01T11:58:56.350Z | Pipeline: Schema → Gemini*

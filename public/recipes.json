@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T01:03:32.776Z",
+  "generatedAt": "2026-04-01T12:07:11.684Z",
   "totalRecipes": 25,
   "categories": [
     {
@@ -25,7 +25,7 @@
     {
       "name": "Dolci",
       "count": 3,
-      "emoji": ""
+      "emoji": "🍪"
     },
     {
       "name": "Focaccia",
@@ -42,12 +42,12 @@
       "emoji": "🥖",
       "href": "ricette/pane/baguette-francese-tradizionale.html",
       "image": "images/ricette/pane/baguette-francese-tradizionale.webp",
-      "description": "Baguette francese autentica con pre-impasto poolish, idratazione 68% e crosta croccante. Tecnica professionale con pietra refrattaria e vapore.",
-      "hydration": "68%",
-      "time": "~18h (poolish 12-14h + puntata 2h + appretto 1h)",
-      "temp": "24-26°C",
+      "description": "La vera ricetta della baguette francese croccante e alveolata, preparata con metodo indiretto (Poolish) per massimizzare profumi e conservabilità.",
+      "hydration": "70%",
+      "time": "~18h",
+      "temp": "24-25°C",
       "tool": "",
-      "_generatedBy": null
+      "_generatedBy": "gemini-3.1"
     },
     {
       "title": "Ciabatta con Poolish",
@@ -102,12 +102,27 @@
       "emoji": "🍯",
       "href": "ricette/pane/pane-integrale-biga-saccorosso-miele.html",
       "image": "images/ricette/pane/pane-integrale-biga-saccorosso-miele.webp",
-      "description": "Pane integrale con biga lunga di Saccorosso, miele e bassinage. Tecnica avanzata con autolisi, maturazione freddo e W300. Idratazione 70%.",
-      "hydration": "70%",
+      "description": "Pane integrale con biga lunga di Saccorosso, miele e bassinage. Tecnica avanzata con autolisi, maturazione freddo e W300. Idratazione 66.4%.",
+      "hydration": "66.4%",
       "time": "Biga 18-24h + Maturazione freddo 18h",
       "temp": "23-25°C",
       "tool": "",
       "_generatedBy": null
+    },
+    {
+      "title": "Pane Pugliese con Biga",
+      "slug": "pane-pugliese-con-biga",
+      "category": "Pane",
+      "categoryDir": "pane",
+      "emoji": "🥖",
+      "href": "ricette/pane/pane-pugliese-con-biga.html",
+      "image": "images/ricette/pane/pane-pugliese-con-biga.webp",
+      "description": "Autentico pane pugliese di semola rimacinata con metodo indiretto. Crosta spessa e croccante, mollica morbida e profumata grazie all'uso della biga.",
+      "hydration": "75%",
+      "time": "~22h",
+      "temp": "25-26°C",
+      "tool": "",
+      "_generatedBy": "gemini-3.1"
     },
     {
       "title": "Pinsa Romana",
@@ -208,7 +223,7 @@
       "href": "ricette/lievitati/burger-buns-professionali.html",
       "image": "images/ricette/lievitati/burger-buns-professionali.webp",
       "description": "Panini per hamburger soffici e dorati, con crosta sottile e mollica morbida. Lievitazione controllata e cottura perfetta per il burger perfetto.",
-      "hydration": "62%",
+      "hydration": "54%",
       "time": "~4-5h totali (biga 2h + puntata 2h + appretto 1h)",
       "temp": "26-27°C",
       "tool": "",
@@ -313,7 +328,7 @@
       "href": "ricette/dolci/cartocci-alla-crema-siciliani.html",
       "image": "images/ricette/dolci/cartocci-alla-crema-siciliani.webp",
       "description": "Cannoli fritti lievitati con crema pasticcera — tradizione dolciaria siciliana con impasto morbido e friabile",
-      "hydration": "50%",
+      "hydration": "45%",
       "time": "~2-3h totali",
       "temp": "26-27°C",
       "tool": "",
@@ -329,8 +344,8 @@
       "image": "images/ricette/dolci/migliaccio-napoletano.webp",
       "description": "Dolce tradizionale napoletano di Carnevale a base di semolino e ricotta: morbido, compatto e profumato di agrumi e vaniglia.",
       "hydration": null,
-      "time": null,
-      "temp": null,
+      "time": "Nessuna fermentazione richiesta",
+      "temp": "temperatura ambiente",
       "tool": "",
       "_generatedBy": null
     },
@@ -372,8 +387,8 @@
       "emoji": "🫓",
       "href": "ricette/focaccia/focaccia-genovese-fugassa.html",
       "image": "images/ricette/focaccia/focaccia-genovese-fugassa.webp",
-      "description": "Presidio Slow Food con idratazione 67%, lievitazione 3-4 ore. La vera focaccia genovese con salamoia, olio EVO ligure e tecnica tradizionale della foratura.",
-      "hydration": "67%",
+      "description": "Presidio Slow Food con idratazione 51.5%, lievitazione 3-4 ore. La vera focaccia genovese con salamoia, olio EVO ligure e tecnica tradizionale della foratura.",
+      "hydration": "51.5%",
       "time": "3-4 ore totali",
       "temp": "24-26°C",
       "tool": "",
@@ -393,20 +408,6 @@
       "temp": "24-26°C",
       "tool": "",
       "_generatedBy": null
-    },
-    {
-      "title": "Pane Pugliese con Biga",
-      "slug": "pane-pugliese-con-biga",
-      "category": "Pane",
-      "categoryDir": "pane",
-      "emoji": "🥖",
-      "href": "ricette/pane/pane-pugliese-con-biga.html",
-      "image": "images/ricette/pane/pane-pugliese-con-biga.webp",
-      "description": "Autentico pane pugliese di semola rimacinata con metodo indiretto. Crosta spessa e croccante, mollica morbida e profumat",
-      "hydration": "75%",
-      "time": "~22h",
-      "temp": "25-26°C",
-      "tool": ""
     }
   ]
 }
