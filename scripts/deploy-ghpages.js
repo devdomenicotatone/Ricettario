@@ -1,14 +1,10 @@
 /**
  * Deploy personalizzato su GitHub Pages
- * Sostituisce il modulo 'gh-pages' che ha un bug su Windows (ENAMETOOLONG)
- * quando il branch gh-pages contiene troppi file.
  * 
- * Funzionamento:
- * 1. Clona il branch gh-pages in una cartella temporanea
- * 2. Pulisce tutto tranne .git
- * 3. Copia il contenuto di dist/
- * 4. Crea .nojekyll
- * 5. Committa e pusha
+ * Strategia:
+ *   1. PRIMA: usa `gh-pages` (veloce, push diretto)
+ *   2. FALLBACK: clone manuale del branch gh-pages (lento ma robusto)
+ *      Necessario quando gh-pages ha bug ENAMETOOLONG su Windows
  */
 
 import { execSync } from 'child_process';
@@ -21,118 +17,147 @@ const TEMP_DIR = join(tmpdir(), 'gh-pages-deploy');
 const COMMIT_MSG = process.argv[2] || 'deploy: aggiornamento GitHub Pages';
 
 function run(cmd, cwd) {
-  try {
-    return execSync(cmd, {
-      cwd,
-      stdio: 'pipe',
-      encoding: 'utf8',
-      timeout: 60_000,
-      env: { ...process.env, GIT_TERMINAL_PROMPT: '0' }
-    });
-  } catch (e) {
-    // git commit ritorna exit code 1 se non ci sono cambiamenti
-    if (e.stdout) return e.stdout;
-    throw e;
-  }
+    try {
+        return execSync(cmd, {
+            cwd,
+            stdio: 'pipe',
+            encoding: 'utf8',
+            timeout: 60_000,
+            env: { ...process.env, GIT_TERMINAL_PROMPT: '0' }
+        });
+    } catch (e) {
+        if (e.stdout) return e.stdout;
+        throw e;
+    }
 }
 
-/** Versione con output visibile in console (per clone/push) */
 function runVisible(cmd, cwd) {
-  execSync(cmd, {
-    cwd,
-    stdio: 'inherit',
-    timeout: 120_000,
-    env: { ...process.env, GIT_TERMINAL_PROMPT: '0' }
-  });
+    execSync(cmd, {
+        cwd,
+        stdio: 'inherit',
+        timeout: 120_000,
+        env: { ...process.env, GIT_TERMINAL_PROMPT: '0' }
+    });
 }
 
 function getRemoteUrl() {
-  return run('git remote get-url origin', process.cwd()).trim();
+    return run('git remote get-url origin', process.cwd()).trim();
 }
 
-async function deploy() {
-  console.log('🚀 Deploy su GitHub Pages...\n');
+// ═══════════════════════════════════════════════════
+// METODO 1: gh-pages (veloce)
+// ═══════════════════════════════════════════════════
+async function deployFast() {
+    console.log('⚡ Metodo veloce: gh-pages...');
+    
+    const { publish } = await import('gh-pages');
+    
+    return new Promise((resolve, reject) => {
+        publish('dist', {
+            branch: 'gh-pages',
+            message: COMMIT_MSG,
+            dotfiles: true, // include .nojekyll
+        }, (err) => {
+            if (err) reject(err);
+            else resolve();
+        });
+    });
+}
 
-  // 1. Verifica che dist/ esista
-  if (!existsSync(DIST_DIR)) {
-    console.error('❌ Cartella dist/ non trovata. Esegui prima "vite build".');
-    process.exit(1);
-  }
+// ═══════════════════════════════════════════════════
+// METODO 2: Clone manuale (fallback robusto)
+// ═══════════════════════════════════════════════════
+async function deployClone() {
+    console.log('🔧 Fallback: clone manuale...\n');
+    
+    const remoteUrl = getRemoteUrl();
+    console.log(`📦 Remote: ${remoteUrl}`);
 
-  // 2. Ottieni URL remoto
-  const remoteUrl = getRemoteUrl();
-  console.log(`📦 Remote: ${remoteUrl}`);
+    // Pulisci temp
+    if (existsSync(TEMP_DIR)) {
+        rmSync(TEMP_DIR, { recursive: true, force: true });
+    }
 
-  // 3. Pulisci temp
-  if (existsSync(TEMP_DIR)) {
-    rmSync(TEMP_DIR, { recursive: true, force: true });
-  }
+    // Clona branch gh-pages (shallow)
+    console.log('📥 Clono branch gh-pages...');
+    try {
+        runVisible(`git clone --branch gh-pages --single-branch --depth 1 "${remoteUrl}" "${TEMP_DIR}"`);
+    } catch {
+        console.log('⚠️  Branch gh-pages non trovato, ne creo uno nuovo...');
+        mkdirSync(TEMP_DIR, { recursive: true });
+        run('git init', TEMP_DIR);
+        run('git checkout --orphan gh-pages', TEMP_DIR);
+        run(`git remote add origin "${remoteUrl}"`, TEMP_DIR);
+    }
 
-  // 4. Clona branch gh-pages (shallow)
-  console.log('📥 Clono branch gh-pages...');
-  try {
-    runVisible(`git clone --branch gh-pages --single-branch --depth 1 "${remoteUrl}" "${TEMP_DIR}"`);
-  } catch {
-    // Se il branch non esiste, crea un repo vuoto con branch orfano
-    console.log('⚠️  Branch gh-pages non trovato, ne creo uno nuovo...');
-    mkdirSync(TEMP_DIR, { recursive: true });
-    run('git init', TEMP_DIR);
-    run('git checkout --orphan gh-pages', TEMP_DIR);
-    run(`git remote add origin "${remoteUrl}"`, TEMP_DIR);
-  }
+    // Pulisci tutto tranne .git
+    console.log('🧹 Pulizia vecchi file...');
+    for (const item of readdirSync(TEMP_DIR)) {
+        if (item === '.git') continue;
+        rmSync(join(TEMP_DIR, item), { recursive: true, force: true });
+    }
 
-  // 5. Pulisci tutto tranne .git
-  console.log('🧹 Pulizia vecchi file...');
-  const items = readdirSync(TEMP_DIR);
-  for (const item of items) {
-    if (item === '.git') continue;
-    rmSync(join(TEMP_DIR, item), { recursive: true, force: true });
-  }
+    // Copia dist/ → temp
+    console.log('📋 Copio file da dist/...');
+    cpSync(DIST_DIR, TEMP_DIR, { recursive: true });
 
-  // 6. Copia dist/ → temp
-  console.log('📋 Copio file da dist/...');
-  cpSync(DIST_DIR, TEMP_DIR, { recursive: true });
+    // Crea .nojekyll
+    writeFileSync(join(TEMP_DIR, '.nojekyll'), '');
 
-  // 7. Crea .nojekyll
-  writeFileSync(join(TEMP_DIR, '.nojekyll'), '');
+    // Conteggio
+    const fileCount = run('git ls-files --others --exclude-standard', TEMP_DIR)
+        .split('\n').filter(Boolean).length;
+    const modifiedCount = run('git diff --name-only', TEMP_DIR)
+        .split('\n').filter(Boolean).length;
 
-  // 8. Conta file copiati
-  const fileCount = run('git ls-files --others --exclude-standard', TEMP_DIR)
-    .split('\n').filter(Boolean).length;
-  const modifiedCount = run('git diff --name-only', TEMP_DIR)
-    .split('\n').filter(Boolean).length;
+    console.log(`📝 Commit (${fileCount} nuovi, ${modifiedCount} modificati)...`);
+    run('git add -A', TEMP_DIR);
 
-  // 9. Commit e push
-  console.log(`📝 Commit (${fileCount} nuovi, ${modifiedCount} modificati)...`);
-  run('git add -A', TEMP_DIR);
-  
-  const status = run('git status --porcelain', TEMP_DIR).trim();
-  if (!status) {
-    console.log('✅ Nessuna modifica da pubblicare. Il sito è già aggiornato.');
+    const status = run('git status --porcelain', TEMP_DIR).trim();
+    if (!status) {
+        console.log('✅ Nessuna modifica da pubblicare. Il sito è già aggiornato.');
+        cleanup();
+        return;
+    }
+
+    run(`git commit -m "${COMMIT_MSG}"`, TEMP_DIR);
+
+    console.log('🚀 Push su gh-pages...');
+    runVisible('git push origin gh-pages', TEMP_DIR);
     cleanup();
-    return;
-  }
-
-  run(`git commit -m "${COMMIT_MSG}"`, TEMP_DIR);
-  
-  console.log('🚀 Push su gh-pages...');
-  runVisible('git push origin gh-pages', TEMP_DIR);
-
-  // 10. Cleanup
-  cleanup();
-  console.log('\n✅ Deploy completato con successo!');
 }
 
 function cleanup() {
-  try {
-    rmSync(TEMP_DIR, { recursive: true, force: true });
-  } catch {
-    // Ignora errori di cleanup
-  }
+    try { rmSync(TEMP_DIR, { recursive: true, force: true }); } catch {}
 }
 
-deploy().catch(err => {
-  console.error('❌ Errore durante il deploy:', err.message);
-  cleanup();
-  process.exit(1);
-});
+// ═══════════════════════════════════════════════════
+// MAIN: prova veloce, poi fallback
+// ═══════════════════════════════════════════════════
+async function deploy() {
+    console.log('🚀 Deploy su GitHub Pages...\n');
+
+    if (!existsSync(DIST_DIR)) {
+        console.error('❌ Cartella dist/ non trovata. Esegui prima "vite build".');
+        process.exit(1);
+    }
+
+    try {
+        await deployFast();
+        console.log('\n✅ Deploy completato con successo! (metodo veloce)');
+    } catch (err) {
+        console.warn(`\n⚠️  gh-pages fallito: ${err.message}`);
+        console.log('📦 Provo con il metodo clone...\n');
+        
+        try {
+            await deployClone();
+            console.log('\n✅ Deploy completato con successo! (metodo clone)');
+        } catch (err2) {
+            console.error('❌ Errore durante il deploy:', err2.message);
+            cleanup();
+            process.exit(1);
+        }
+    }
+}
+
+deploy();
