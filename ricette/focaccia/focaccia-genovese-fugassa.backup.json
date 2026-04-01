@@ -2,10 +2,10 @@
   "title": "Focaccia Genovese (Fügassa)",
   "slug": "focaccia-genovese-fugassa",
   "emoji": "🫓",
-  "description": "Presidio Slow Food con idratazione 51.5%, lievitazione 3-4 ore. La vera focaccia genovese con salamoia, olio EVO ligure e tecnica tradizionale della foratura.",
-  "subtitle": "Presidio Slow Food · Idratazione 51.5% · Lievitazione ~3-4 ore",
+  "description": "Presidio Slow Food con idratazione 67%, lievitazione 3-4 ore. La vera focaccia genovese con salamoia, olio EVO ligure e tecnica tradizionale della foratura.",
+  "subtitle": "Presidio Slow Food · Idratazione 67% · Lievitazione ~3-4 ore",
   "category": "Focaccia",
-  "hydration": 51.5,
+  "hydration": 67,
   "targetTemp": "24-26°C",
   "fermentation": "3-4 ore totali",
   "totalFlour": 650,
@@ -50,7 +50,7 @@
     },
     {
       "title": "Foratura e Condimento Finale (tecnica dei 3 dita)",
-      "text": "Scoprire la focaccia. Spolverizzare con un velo di farina. Con 3 dita (indice-medio-anulare) INCLINATE (non perpendicolari), affondare creando i tipici buchi profondi fino quasi al fondo. Distanza tra buchi: 1 cm. Spingere le dita leggermente verso i bordi durante la foratura. Ruotare la teglia per forare uniformemente anche i lati. Versare al centro {olio_superficie:30} g olio + 100 g salamoia. Spargere delicatamente con mano piatta riempiendo tutti i buchi. NON coprire. Riposo finale: 40-45 minuti."
+      "text": "Scoprire la focaccia. Spolverizzare con un velo di farina. Con 3 dita (indice-medio-anulare) INCLINATE (non perpendicolari), affondare creando i tipici buchi profondi fino quasi al fondo. Distanza tra buchi: 1 cm. Spingere le dita leggermente verso i bordi durante la foratura. Ruotare la teglia per forare uniformemente anche i lati. Versare al centro {olio_evo_impasto:30} g olio + 100 g salamoia. Spargere delicatamente con mano piatta riempiendo tutti i buchi. NON coprire. Riposo finale: 40-45 minuti."
     }
   ],
   "stepsHand": [
@@ -60,7 +60,7 @@
     },
     {
       "title": "Incorporazione Sale e Malto (5 min)",
-      "text": "Unire malto ({malto_impasto:10} g) e sale ({sale_impasto:13} g) sull'impasto. Versare altri 30 g di acqua. Mescolare energicamente con marisa per 4-5 minuti fino a ottenere una massa omogenea. Il sale deve sciogliersi completamente. L'impasto sarà denso e appiccicoso."
+      "text": "Unire malto ({malto_impasto:10} g) e sale ({sale_impasto:13} g) sull'impasto. Versare altri {acqua_condimento:200} g di acqua. Mescolare energicamente con marisa per 4-5 minuti fino a ottenere una massa omogenea. Il sale deve sciogliersi completamente. L'impasto sarà denso e appiccicoso."
     },
     {
       "title": "Aggiunta Lievito e Completamento Idratazione (3 min)",
@@ -96,7 +96,7 @@
     },
     {
       "title": "Foratura Finale e Condimento (tecnica genovese)",
-      "text": "Spolverizzare con velo di farina. Con 3 dita INCLINATE (mai perpendicolari), affondare creando buchi profondi distanti 1 cm. Spingere le dita leggermente verso i bordi. Ruotare teglia per uniformità. Versare al centro {olio_superficie:30} g olio + 100 g salamoia. Spargere delicatamente con mano piatta riempiendo i buchi. Lasciare scoperto. Riposo: 40-45 minuti."
+      "text": "Spolverizzare con velo di farina. Con 3 dita INCLINATE (mai perpendicolari), affondare creando buchi profondi distanti 1 cm. Spingere le dita leggermente verso i bordi. Ruotare teglia per uniformità. Versare al centro {olio_evo_impasto:30} g olio + 100 g salamoia. Spargere delicatamente con mano piatta riempiendo i buchi. Lasciare scoperto. Riposo: 40-45 minuti."
     }
   ],
   "stepsExtruder": [],

@@ -2,10 +2,10 @@
   "title": "Pane Integrale con Biga di Saccorosso e Miele",
   "slug": "pane-integrale-biga-saccorosso-miele",
   "emoji": "🍯",
-  "description": "Pane integrale con biga lunga di Saccorosso, miele e bassinage. Tecnica avanzata con autolisi, maturazione freddo e W300. Idratazione 66.4%.",
+  "description": "Pane integrale con biga lunga di Saccorosso, miele e bassinage. Tecnica avanzata con autolisi, maturazione freddo e W300. Idratazione 70%.",
   "subtitle": "Tecnica biga lunga + bassinage con farine Caputo Saccorosso e Integrale",
   "category": "Pane",
-  "hydration": 66.4,
+  "hydration": 70,
   "targetTemp": "23-25°C",
   "fermentation": "Biga 18-24h + Maturazione freddo 18h",
   "totalFlour": 2800,
@@ -87,7 +87,7 @@
     },
     {
       "title": "GIORNO 2 - Autolisi Lunga (30-45 min)",
-      "text": "Inserire nella Grilletta IM 5: tutta la biga ({biga_di_saccorosso_impasto_finale:1160}g), {farina_integrale_impasto_finale:1000}g di Caputo Integrale, {farina_caputo_saccorosso_impasto_finale:1000}g di Caputo Saccorosso e 975g di acqua (65% del totale). Impastare a VELOCITÀ 1 per 3-4 minuti, giusto per amalgamare. Spegnere e lasciare riposare 30-45 minuti SENZA toccare. Questa fase è VITALE con farine integrali: la crusca assorbe lentamente l'acqua e il glutine si sviluppa spontaneamente senza stress meccanico. La temperatura dell'impasto deve rimanere sotto i 20°C."
+      "text": "Inserire nella Grilletta IM 5: tutta la biga ({biga_di_saccorosso_impasto_finale:1160}g), {acqua_impasto_finale:1500}g Caputo Integrale, {farina_integrale_impasto_finale:1000}g Caputo Saccorosso e 975g di acqua (65% dell'idratazione totale). Impastare a VELOCITÀ 1 per 3-4 minuti, giusto per amalgamare. Spegnere e lasciare riposare 30-45 minuti SENZA toccare. Questa fase è VITALE con farine integrali: la crusca assorbe lentamente l'acqua e il glutine si sviluppa spontaneamente senza stress meccanico. La temperatura dell'impasto deve rimanere sotto i 20°C."
     },
     {
       "title": "Impasto - Aggiunta Miele e Sale",
@@ -125,7 +125,7 @@
     },
     {
       "title": "GIORNO 2 - Autolisi Lunga (30-45 min)",
-      "text": "In una bacinella capiente, sbriciolare tutta la biga ({biga_di_saccorosso_impasto_finale:1160}g). Aggiungere {farina_integrale_impasto_finale:1000}g di Caputo Integrale, {farina_caputo_saccorosso_impasto_finale:1000}g di Caputo Saccorosso e 975g di acqua (65% del totale). Mescolare con le mani o con un cucchiaio di legno SOLO per amalgamare, senza impastare. Coprire e lasciare riposare 30-45 minuti. La crusca assorbe acqua lentamente, il glutine si sviluppa da solo."
+      "text": "In una bacinella capiente, sbriciolare tutta la biga ({biga_di_saccorosso_impasto_finale:1160}g). Aggiungere {acqua_impasto_finale:1500}g Caputo Integrale, {farina_integrale_impasto_finale:1000}g Caputo Saccorosso e 975g di acqua a temperatura ambiente (20-22°C). Mescolare con le mani o con un cucchiaio di legno SOLO per amalgamare, senza impastare. Coprire e lasciare riposare 30-45 minuti. La crusca assorbe acqua lentamente, il glutine si sviluppa da solo."
     },
     {
       "title": "Impasto - Aggiunta Miele e Sale",

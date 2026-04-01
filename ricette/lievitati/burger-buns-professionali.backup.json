@@ -5,10 +5,10 @@
   "description": "Panini per hamburger soffici e dorati, con crosta sottile e mollica morbida. Lievitazione controllata e cottura perfetta per il burger perfetto.",
   "subtitle": "Panini americani da burger con latte e burro – tecnica professionale",
   "category": "Lievitati",
-  "hydration": 54,
+  "hydration": 62,
   "targetTemp": "26-27°C",
   "fermentation": "~4-5h totali (biga 2h + puntata 2h + appretto 1h)",
-  "totalFlour": 525,
+  "totalFlour": 500,
   "ingredientGroups": [
     {
       "group": "Per la Biga (Lievitino)",
@@ -44,7 +44,7 @@
         {
           "name": "Farina Manitoba",
           "note": "(W 350-380)",
-          "grams": 175
+          "grams": 150
         },
         {
           "name": "Farina Tipo 00",
@@ -118,7 +118,7 @@
     },
     {
       "title": "Impasto Base in Spirale (V1-V2, 3 min)",
-      "text": "Nella ciotola dell'impastatrice a spirale, versare {farina_manitoba_impasto:175}g di Manitoba e {farina_00_impasto:250}g di Farina 00. Aggiungere {zucchero_impasto:25}g di zucchero e {miele_impasto:15}g di miele. Avviare a velocità lenta (V1) e incorporare gradualmente {latte_impasto:220}g di latte a temperatura ambiente. Aggiungere la {biga_matura:155}g di biga matura a pezzi. Impastare 3 minuti in V1-V2 fino a completo assorbimento dei liquidi."
+      "text": "Nella ciotola dell'impastatrice a spirale, versare {farina_manitoba_impasto:150}g di Manitoba e {farina_00_impasto:250}g di Farina 00. Aggiungere {zucchero_impasto:25}g di zucchero e {miele_impasto:15}g di miele. Avviare a velocità lenta (V1) e incorporare gradualmente {latte_impasto:220}g di latte a temperatura ambiente. Aggiungere la {biga_matura:155}g di biga matura a pezzi. Impastare 3 minuti in V1-V2 fino a completo assorbimento dei liquidi."
     },
     {
       "title": "Incorporamento Uova (V2, 2 min)",
@@ -138,7 +138,7 @@
     },
     {
       "title": "Staglio e Pirlatura",
-      "text": "Rovesciare l'impasto su un piano leggermente infarinato. Formare un cilindro e dividerlo in 10 porzioni da circa {panetto_peso:95}g ciascuna. Pirlare ogni porzione con movimenti circolari della mano sul piano, senza farina, fino a ottenere sfere lisce e tese. Trasferire i panetti in stampi per burger buns (ø 10cm) o direttamente su teglia rivestita di carta forno, lasciando 8-10cm di distanza tra loro."
+      "text": "Rovesciare l'impasto su un piano leggermente infarinato. Formare un cilindro e dividerlo in 8 porzioni da {panetto_peso:95!}g ciascuna. Pirlare ogni porzione con movimenti circolari della mano sul piano, senza farina, fino a ottenere sfere lisce e tese. Trasferire i panetti in stampi per burger buns (ø 10cm) o direttamente su teglia rivestita di carta forno, lasciando 8-10cm di distanza tra loro."
     },
     {
       "title": "Appretto (Lievitazione Finale)",
@@ -160,7 +160,7 @@
     },
     {
       "title": "Impasto Base a Mano",
-      "text": "In una grande ciotola, mescolare {farina_manitoba_impasto:175}g di Manitoba, {farina_00_impasto:250}g di Farina 00, {zucchero_impasto:25}g di zucchero e {miele_impasto:15}g di miele. Fare una fontana al centro. In una brocca, intiepidire leggermente {latte_impasto:220}g di latte (22-24°C) e versarlo gradualmente nel centro della fontana, incorporando la farina dai bordi. Aggiungere la {biga_matura:155}g biga matura a pezzi e iniziare a impastare con le mani."
+      "text": "In una grande ciotola, mescolare {farina_manitoba_impasto:150}g di Manitoba, {farina_00_impasto:250}g di Farina 00, {zucchero_impasto:25}g di zucchero e {miele_impasto:15}g di miele. Fare una fontana al centro. In una brocca, intiepidire leggermente {latte_impasto:220}g di latte (22-24°C) e versarlo gradualmente nel centro della fontana, incorporando la farina dai bordi. Aggiungere la {biga_matura:155}g biga matura a pezzi e iniziare a impastare con le mani."
     },
     {
       "title": "Incorporamento Uova a Mano",
@@ -180,7 +180,7 @@
     },
     {
       "title": "Staglio e Pirlatura",
-      "text": "Rovesciare l'impasto su un piano leggermente infarinato. Formare un cilindro e dividerlo in 10 porzioni da circa {panetto_peso:95}g ciascuna. Pirlare ogni porzione con movimenti circolari della mano sul piano, senza farina, fino a ottenere sfere lisce e tese. Trasferire i panetti su teglia con carta forno, lasciando 8-10cm di spazio."
+      "text": "Rovesciare l'impasto su un piano leggermente infarinato. Formare un cilindro e dividerlo in 8 porzioni da {panetto_peso:95!}g ciascuna. Pirlare ogni porzione con movimenti circolari della mano sul piano, senza farina, fino a ottenere sfere lisce e tese. Trasferire i panetti su teglia con carta forno, lasciando 8-10cm di spazio."
     },
     {
       "title": "Appretto (Lievitazione Finale)",

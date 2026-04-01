@@ -5,10 +5,10 @@
   "description": "Cannoli fritti lievitati con crema pasticcera — tradizione dolciaria siciliana con impasto morbido e friabile",
   "subtitle": "Cannoli fritti lievitati con crema pasticcera — tradizione dolciaria siciliana",
   "category": "Dolci",
-  "hydration": 45,
+  "hydration": 50,
   "targetTemp": "26-27°C",
   "fermentation": "~2-3h totali",
-  "totalFlour": 550,
+  "totalFlour": 500,
   "ingredients": [],
   "suspensions": [],
   "stepsSpiral": [
@@ -167,7 +167,7 @@
         {
           "name": "Farina Tipo 00 Media Forza",
           "note": "(W 260-280, per struttura morbida e friabilità)",
-          "grams": 550
+          "grams": 500
         },
         {
           "name": "Acqua",
@@ -207,53 +207,7 @@
     },
     {
       "group": "Per la Farcitura",
-      "items": [
-        {
-          "name": "Latte Intero",
-          "note": "(per crema pasticcera opzione 1)",
-          "grams": 1000
-        },
-        {
-          "name": "Scorza di Limone Grattugiata",
-          "note": "(per crema pasticcera opzione 1)",
-          "grams": 5
-        },
-        {
-          "name": "Tuorli d'Uovo",
-          "note": "(per crema pasticcera opzione 1)",
-          "grams": 160
-        },
-        {
-          "name": "Zucchero Semolato",
-          "note": "(per crema pasticcera opzione 1)",
-          "grams": 200
-        },
-        {
-          "name": "Maizena",
-          "note": "(amido di mais per crema pasticcera opzione 1)",
-          "grams": 90
-        },
-        {
-          "name": "Ricotta Fresca",
-          "note": "(vaccina o di pecora per crema opzione 2)",
-          "grams": 500
-        },
-        {
-          "name": "Zucchero a Velo",
-          "note": "(per crema ricotta opzione 2 e finitura)",
-          "grams": 150
-        },
-        {
-          "name": "Gocce di Cioccolato Fondente",
-          "note": "(facoltativo per crema ricotta opzione 2)",
-          "grams": 80
-        },
-        {
-          "name": "Zucchero Semolato",
-          "note": "(per spolverizzata finale)",
-          "grams": 50
-        }
-      ]
+      "items": []
     }
   ]
 }

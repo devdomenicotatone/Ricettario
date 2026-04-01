@@ -1,27 +1,20 @@
 # Qualità: Pane alle Noci con Poolish
 
-## 🟡 Score Finale: 65/100
+## 🟡 Score Finale: 70/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
-| Schema | ✅ Pass | 0 errori, 1 warning |
-| Claude | 65/100 | 🟡 Da migliorare |
+| Schema | ✅ Pass | 0 errori, 0 warning |
+| Gemini | 70/100 | 🟡 Da migliorare |
 
-Ricetta con buone basi tecniche ma presenta errori critici nei riferimenti delle variabili (passo 1) e dosaggio lievito eccessivo per i tempi indicati. L'idratazione 70% e il setup sono corretti. Temperature e tempi di cottura appropriati per forno casalingo. Necessita correzione dei riferimenti ingredienti e bilanciamento lieviti.
-
-## 🔍 Schema Validation
-
-- ⚠️ Categoria "Pane" senza sezione cottura (bakingSection/cookingSection)
+Struttura della ricetta, bilanciamento degli ingredienti e idratazione (70% reale e verificata: 700g acqua / 1000g farina) sono tecnicamente perfetti. Tuttavia, il testo del procedimento presenta gravi errori di trascrizione dei pesi, scambiando le dosi di acqua, olio e lievito tra le varie fasi, rendendo le istruzioni inutilizzabili se lette letteralmente.
 
 ## Problemi trovati
 
-| Sev. | Area | Problema | Correzione | Fonte |
-|------|------|----------|------------|-------|
-| ❌ | Coerenza | Nel procedimento passo 1, si riferisce a {acqua_impasto_finale:400}g per sciogliere il lievito, ma dovrebbe essere {acqua_poolish:300}g. Errore grave di riferimento alle variabili. | Correggere nel passo 1: usare {acqua_poolish:300}g e {lievito_poolish:1}g invece dei riferimenti all'impasto finale | 🔵 Claude |
-| ❌ | Dosi | Sale 20g su 1000g di farina = 2% che è corretto, ma nel procedimento si aggiunge troppo presto: il sale dovrebbe essere aggiunto dopo aver formato la maglia glutinica base | Specificare di aggiungere il sale dopo i primi 5-6 minuti di impastamento, non subito dopo acqua e olio | 🔵 Claude |
-| ⚠️ | Coerenza | Lievito totale: 1g poolish + 14g impasto = 15g su 1000g farina = 1.5%. Per 14h totali è eccessivo, rischia sovralievitazione | Ridurre il lievito nell'impasto finale a 8-10g per bilanciare meglio i tempi di lievitazione | 🔵 Claude |
-| ⚠️ | Tempi | Appretto finale 60 minuti a 26-28°C con 1.5% lievito totale potrebbe essere insufficiente o eccessivo a seconda della temperatura ambiente | Specificare meglio il controllo visivo/tattile piuttosto che tempo fisso, dato l'alto contenuto di lievito | 🔵 Claude |
-| 💡 | Coerenza | Il procedimento parla di 'acqua a filo' per i restanti 200g, ma con poolish a 70% idratazione totale l'acqua dovrebbe essere gestita diversamente | Rivedere la distribuzione dell'acqua: 300g nel poolish + 400g nell'impasto finale dà 70% corretto, ma la gestione nel procedimento va ottimizzata | 🔵 Claude |
+| Sev. | Area | Problema | Correzione |
+|------|------|----------|------------|
+| ❌ | Coerenza | Nei passaggi 2 e 11 (Preparazione Poolish) il testo indica erroneamente di versare 400g di acqua e sciogliere ben 400g di lievito di birra. La lista ingredienti richiede correttamente 300g di acqua e 1g di lievito per il poolish. | Correggere i valori nel testo dei passaggi 2 e 11, indicando 300g di acqua e 1g di lievito per la preparazione del poolish. |
+| ❌ | Coerenza | Nel passaggio 13 (Impastamento Manuale) le quantità e gli ingredienti sono stati invertiti nel testo: si indica di aggiungere '400g di olio extravergine' e di incorporare 'gli ultimi 50g di acqua'. La ricetta prevede 50g di olio totali. | Modificare il passaggio 13 scrivendo di aggiungere 50g di olio extravergine e di incorporare gradualmente gli ultimi 50g di acqua (per raggiungere i 400g totali dell'impasto finale). |
 
 ---
-*Generato: 2026-03-30T21:36:21.749Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-04-01T01:45:44.451Z | Pipeline: Schema → Gemini*

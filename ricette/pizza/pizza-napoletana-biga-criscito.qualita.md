@@ -1,25 +1,20 @@
 # Qualità: Pizza Napoletana Antica Tradizione con Biga e Criscito
 
-## 🟢 Score Finale: 92/100
+## 🟢 Score Finale: 90/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
-| Schema | ✅ Pass | 0 errori, 1 warning |
-| Claude | 92/100 | 🟢 Buona |
+| Schema | ✅ Pass | 0 errori, 0 warning |
+| Gemini | 90/100 | 🟡 Da migliorare |
 
-Ricetta di alta qualità tecnica con dosi ben bilanciate e procedimento dettagliato. L'idratazione al 68% è corretta per pizza napoletana con biga, il sale al 2.5% è appropriato, temperature e tempi sono realistici. Setup corretto per pizza. Gli unici miglioramenti riguardano piccole imprecisioni nei calcoli e coerenza nella nomenclatura delle attrezzature.
-
-## 🔍 Schema Validation
-
-- ⚠️ Categoria "Pizza" senza sezione cottura (bakingSection/cookingSection)
+Ricetta eccellente a livello tecnico: idratazione calcolata perfettamente coerente (2050g acqua totale / 3000g farina totale = 68.33%), ottima gestione della biga e temperature in linea con la tradizione. Necessita solo della correzione di due refusi critici legati ai token nel procedimento a mano.
 
 ## Problemi trovati
 
-| Sev. | Area | Problema | Correzione | Fonte |
-|------|------|----------|------------|-------|
-| 💡 | Dosi | L'idratazione dichiarata del 68% non corrisponde al calcolo: con 3000g farina e 2050g acqua totale (400+1650) l'idratazione è del 68.3% | Correggere l'idratazione a 68.3% o aggiustare leggermente le dosi d'acqua | 🔵 Claude |
-| 💡 | Coerenza | Nel punto 2 si cita 'Grilletta IM5' ma nel setup è indicata genericamente 'Impastatrice a spirale' | Mantenere coerenza tra setup generico e procedimento specifico, o specificare il modello nel setup | 🔵 Claude |
-| 💡 | Dosi | Nel punto 4 si parla di 'acqua rimanente (circa 660g)' ma il calcolo esatto sarebbe 1650-990=660g. Il 'circa' è impreciso | Specificare 660g esatti invece di 'circa 660g' | 🔵 Claude |
+| Sev. | Area | Problema | Correzione |
+|------|------|----------|------------|
+| ❌ | Coerenza | Nel PROCEDIMENTO (A Mano) al punto 2, è presente un grave errore materiale/di token: viene indicato di aggiungere '{acqua_impasto_finale:1650}g malto', associando il peso e il token dell'acqua al malto. | Correggere la dicitura inserendo il token e il quantitativo corretto per il malto: '{malto_impasto_finale:15}g estratto di malto'. |
+| ❌ | Coerenza | Nel PROCEDIMENTO (A Mano) al punto 4, si ripete l'errore sui token: viene indicato 'Sciogliere {acqua_impasto_finale:1650}g sale', associando l'intera quantità d'acqua al quantitativo di sale. | Correggere inserendo la quantità corretta di sale: '{sale_impasto_finale:75}g sale'. |
 
 ---
-*Generato: 2026-03-30T21:38:10.460Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-04-01T01:48:13.527Z | Pipeline: Schema → Gemini*

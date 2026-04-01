@@ -1,40 +1,26 @@
 # Qualità: Impasto Rosticceria Siciliana
 
-## 🟢 Score Finale: 80/100
+## 🟡 Score Finale: 60/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
-| Schema | ✅ Pass | 0 errori, 0 warning |
-| Claude | 75/100 | 🟡 Da migliorare |
-| Gemini | 🟡 Parziale disaccordo (+5) | Claude ha intercettato correttamente il bug fondamentale sul |
+| Schema | ❌ Fail | 2 errori, 0 warning |
+| Gemini | 65/100 | 🔴 Problematica |
 
-Ricetta tecnicamente valida per rosticceria siciliana con dosi bilanciate (idratazione 50%, lievito 2.5%, sale 2%). Setup corretto, temperature e tempi appropriati. Principale criticità: incongruenza nei dosaggi acqua nel procedimento che va corretta. Minori miglioramenti su chiarezza terminologia e sequenza operativa.
+L'idratazione base (50%) e i parametri di cottura sono ideali per la rosticceria siciliana. Tuttavia, la ricetta contiene un grave refuso testuale nel procedimento che porterebbe l'utente ad aggiungere 400g di acqua in eccesso, rovinando irrimediabilmente l'impasto.
+
+## 🔍 Schema Validation
+
+- ❌ Idratazione dichiarata 50% ma calcolata 45% (500g acqua / 1100g farina). Scarto: 5%
+- ❌ totalFlour dichiarato 1000g ma somma farine = 1100g (differenza: 100g)
 
 ## Problemi trovati
 
-| Sev. | Area | Problema | Correzione | Fonte |
-|------|------|----------|------------|-------|
-| ❌ | Coerenza | Nel punto 2 si parla di 'restanti 400g di acqua' ma nell'impasto base dovrebbero essere già stati aggiunti tutti i 500g con il lievito sciolto | Correggere: aggiungere solo i 500g totali di acqua con lievito sciolto, eliminare il riferimento ai 'restanti 400g' | 🔵 Claude |
-| ❌ | Dosi | Percentuale sale del 2% su 1000g farina = 20g è corretta, ma manca chiarimento nel procedimento su quando aggiungere il sale rispetto al calcolo totale | Specificare che il sale (20g = 2% su farina totale 1000g) va aggiunto dopo l'incorporamento grassi | 🔵 Claude |
-| ⚠️ | Coerenza | Il riferimento {acqua_impasto:500}g nel punto 1 usa una sintassi non standard che potrebbe confondere | Sostituire con riferimento diretto: '500g di acqua fresca' | 🔵 Claude |
-| 💡 | Temperature | Nel punto 2 si indica temperatura impasto 22-23°C ma la target è 26-27°C, creando potenziale confusione sui valori intermedi | Chiarire che 22-23°C è temperatura intermedia dopo impasto base, 26-27°C è la finale dopo incordatura | 🔵 Claude |
-| ❌ | Struttura | Gli ingredienti di finitura (Tuorlo, Latte, Sesamo) sono stati erroneamente inseriti sotto la voce 'SOSPENSIONI'. Le sospensioni sono inclusioni da inglobare all'interno della maglia glutinica (es. uvetta), non decorazioni esterne. | Svuotare/eliminare la sezione SOSPENSIONI. Gli ingredienti sono già correttamente listati sotto 'Per la Finitura'. | 🔴 Gemini |
-
-## 🔴 Revisione Gemini
-
-**Verdetto**: 🟡 Parziale disaccordo
-**Adjustment**: +5
-
-Claude ha intercettato correttamente il bug fondamentale sull'inserimento dell'acqua e il refuso di testo, ma ha inventato un errore sul sale e ha mancato l'errata categorizzazione tecnica delle 'sospensioni'. Alzo leggermente il punteggio perché la base tecnica della ricetta è ottima e i problemi sono puramente di redazione testuale.
-
-### Issues contestate
-
-| Problema | Verdetto | Motivo |
-|---|---|---|
-| Nel punto 2 si parla di 'restanti 400g di acqua' ma nell'impasto base dovrebbero essere già stati aggiunti tutti i 500g | ✅ Confermo | Errore matematico grave nel procedimento: seguendo il testo alla lettera si inserirebbero 900g di acqua totali, sballando completamente l'idratazione target del 50%. |
-| manca chiarimento nel procedimento su quando aggiungere il sale rispetto al calcolo totale | ❌ Falso positivo | Il punto 3 indica in modo esplicito: 'Attendere che [lo strutto] sia completamente incorporato (2 minuti), poi aggiungere il sale.' Claude ha preso un abbaglio. |
-| Il riferimento {acqua_impasto:500}g nel punto 1 usa una sintassi non standard | ✅ Confermo | Si tratta di un palese refuso di programmazione/variabile di template che sporca la lettura. |
-| Nel punto 2 si indica temperatura impasto 22-23°C ma la target è 26-27°C, creando potenziale confusione | ❌ Falso positivo | La ricetta è già precisissima: al punto 2 indica la temperatura al termine della fase 1 (22-23°C), e al punto 4 indica 'Temperatura finale: 26-27°C'. Non genera alcuna confusione per chi ha le basi della panificazione. |
+| Sev. | Area | Problema | Correzione |
+|------|------|----------|------------|
+| ❌ | Dosi | Grave discrepanza sull'acqua tra ingredienti e procedimento. Negli ingredienti sono previsti 500g (Idratazione calcolata: 500g / 1000g = 50%, che è corretta per questo prodotto). Tuttavia, ai punti 3 e 12 del procedimento si chiede di usare prima 500g per il lievito e poi di 'aggiungere gradualmente i restanti 400g di acqua'. Questo porterebbe l'acqua totale a 900g (90% di idratazione), rendendo l'impasto completamente ingestibile per la rosticceria. | Modificare i punti 3 e 12 rimuovendo la frase sull'aggiunta dei 'restanti 400g di acqua', oppure correggere i punti 2 e 11 specificando di sciogliere il lievito solo in 100g di acqua (e aggiungere i restanti 400g dopo). |
+| ⚠️ | Coerenza | Nei passaggi 8 e 17 (Farcitura e Modellatura) il procedimento fa uso di ingredienti totalmente assenti nella lista principale: prosciutto cotto, mozzarella, passata di pomodoro, olio e origano. | Aggiungere un nuovo gruppo 'Per la Farcitura' nella lista degli ingredienti elencando i prodotti necessari per riempire rollò, calzoncini e pizzette. |
+| 💡 | Gruppi | Tuorlo d'uovo, latte e semi di sesamo sono stati erroneamente inseriti nella categoria 'SOSPENSIONI'. In panificazione le sospensioni sono inclusioni da inglobare all'interno della maglia glutinica (es. uvetta, gocce di cioccolato). | Rimuovere il blocco 'SOSPENSIONI'. Gli ingredienti sono già presenti e correttamente categorizzati nel gruppo 'Per la Finitura'. |
 
 ---
-*Generato: 2026-03-30T21:39:51.355Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-04-01T01:52:24.788Z | Pipeline: Schema → Gemini*

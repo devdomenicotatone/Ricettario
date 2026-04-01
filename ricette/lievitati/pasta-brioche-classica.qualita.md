@@ -1,21 +1,23 @@
 # Qualità: Pasta Brioche Classica
 
-## 🟢 Score Finale: 92/100
+## 🟡 Score Finale: 60/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
-| Schema | ✅ Pass | 0 errori, 0 warning |
-| Claude | 92/100 | 🟢 Buona |
+| Schema | ❌ Fail | 1 errori, 0 warning |
+| Gemini | 90/100 | 🟡 Da migliorare |
 
-Ricetta tecnicamente molto solida con dosi corrette (idratazione 52% appropriata per brioche, lievito 3% adeguato), temperature e tempi coerenti. Il procedimento è dettagliato e professionale. Gli unici aspetti migliorabili sono alcuni placeholder confusionari e una piccola discrepanza nel setup dichiarato.
+Ricetta eccellente e ben strutturata. Parametri di lievitazione, idratazione (reale ~51%, coerente con il 52% dichiarato) e cottura sono perfetti per una brioche. Unica pecca: mancano gli ingredienti per la doratura nella lista principale.
+
+## 🔍 Schema Validation
+
+- ❌ totalFlour dichiarato 500g ma somma farine = 580g (differenza: 80g)
 
 ## Problemi trovati
 
-| Sev. | Area | Problema | Correzione | Fonte |
-|------|------|----------|------------|-------|
-| 💡 | Setup | Setup indica 'Impastatrice a spirale + A mano' ma il procedimento usa solo l'impastatrice a spirale. La parte 'A mano' si limita a poche pieghe finali | Considerare se modificare setup in solo 'Impastatrice a spirale' o aggiungere variante manuale nel procedimento | 🔵 Claude |
-| 💡 | Coerenza | Nel punto 7 si usano placeholder {semola_impasto:80} e {latte_impasto:100} per indicare grammature di pezzatura, creando confusione (semola non è presente negli ingredienti) | Sostituire con grammature dirette: '80g per cornetti, 100g per trecce' | 🔵 Claude |
-| 💡 | Coerenza | Nel punto 9 si menciona '{latte_impasto:100}g latte' per la doratura, ma questa quantità sembra eccessiva per spennellare | Specificare '1-2 cucchiai di latte' per la miscela di doratura | 🔵 Claude |
+| Sev. | Area | Problema | Correzione |
+|------|------|----------|------------|
+| ⚠️ | Coerenza | Nel procedimento (Step 10 e 20) viene richiesta la preparazione di una doratura con '1 tuorlo + 100g latte (o panna)'. Tuttavia, questi ingredienti non sono presenti nella distinta iniziale. Tutto il latte (100g) e le uova/tuorli elencati tra gli ingredienti vengono interamente utilizzati per la formazione dell'impasto (Step 4 e 14). Inoltre, 100g di latte per spennellare sono sproporzionati. | Aggiungere un gruppo 'Per la doratura' nella lista ingredienti inserendo 1 tuorlo e una quantità adeguata di latte o panna (es. 15-20g sono sufficienti per spennellare, non 100g). |
 
 ---
-*Generato: 2026-03-30T21:41:10.120Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-04-01T01:54:07.518Z | Pipeline: Schema → Gemini*

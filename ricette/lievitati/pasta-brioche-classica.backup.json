@@ -8,7 +8,7 @@
   "hydration": 52,
   "targetTemp": "24-26°C",
   "fermentation": "3-4h + 2h appretto",
-  "totalFlour": 580,
+  "totalFlour": 500,
   "ingredients": [],
   "suspensions": [],
   "stepsSpiral": [
@@ -46,7 +46,7 @@
     },
     {
       "title": "Spennellatura e Cottura",
-      "text": "Preparare doratura: 1 tuorlo + 15g latte (o panna). Spennellare DELICATAMENTE le superfici. Opzionale: granella di zucchero per trecce, zucchero a velo vanigliato per brioche dopo cottura. Infornare a 170-180°C (forno ventilato) per 15-20min (brioche piccole) o 25-30min (trecce grandi). Devono dorare uniformemente. Sfornare e far raffreddare su griglia."
+      "text": "Preparare doratura: 1 tuorlo + {latte_impasto:100}g latte (o panna). Spennellare DELICATAMENTE le superfici. Opzionale: granella di zucchero per trecce, zucchero a velo vanigliato per brioche dopo cottura. Infornare a 170-180°C (forno ventilato) per 15-20min (brioche piccole) o 25-30min (trecce grandi). Devono dorare uniformemente. Sfornare e far raffreddare su griglia."
     }
   ],
   "stepsHand": [
@@ -84,7 +84,7 @@
     },
     {
       "title": "Spennellatura e Cottura",
-      "text": "Doratura: 1 tuorlo + 15g latte. Spennellare delicatamente. Opzionale: granella di zucchero o zucchero a velo vanigliato (dopo cottura). Infornare a 170-180°C ventilato per 15-20min (piccole) o 25-30min (grandi). Doratura uniforme. Raffreddare su griglia."
+      "text": "Doratura: 1 tuorlo + {latte_impasto:100}g latte. Spennellare delicatamente. Opzionale: granella di zucchero o zucchero a velo vanigliato (dopo cottura). Infornare a 170-180°C ventilato per 15-20min (piccole) o 25-30min (grandi). Doratura uniforme. Raffreddare su griglia."
     }
   ],
   "stepsExtruder": [],
@@ -183,7 +183,7 @@
         {
           "name": "Farina Manitoba",
           "note": "(W 350-380, proteine 13-14%)",
-          "grams": 280
+          "grams": 200
         },
         {
           "name": "Latte Intero Fresco",
@@ -250,21 +250,6 @@
         {
           "name": "Rum o Estratto di Vaniglia",
           "note": "(opzionale, per aromatizzare)",
-          "grams": 15
-        }
-      ]
-    },
-    {
-      "group": "Per la Doratura",
-      "items": [
-        {
-          "name": "Tuorlo",
-          "note": "(da uovo fresco)",
-          "grams": 20
-        },
-        {
-          "name": "Latte Intero",
-          "note": "(o panna fresca)",
           "grams": 15
         }
       ]

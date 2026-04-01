@@ -17,11 +17,7 @@
       "label": "❄️ Lievitazione in Frigo 24-48h",
       "description": "Maturazione lenta per sapore più complesso, stesura più facile e digeribilità migliore",
       "ingredientOverrides": [
-        {
-          "ref": "lievito",
-          "grams": 1.3,
-          "note": "(ridotto per maturazione lunga in frigo)"
-        }
+        { "ref": "lievito", "grams": 1.3, "note": "(ridotto per maturazione lunga in frigo)" }
       ],
       "branchAfterStep": 4,
       "altSteps": [
@@ -77,7 +73,7 @@
   "stepsHand": [
     {
       "title": "Preparazione Biga (24h prima)",
-      "text": "In ciotola capiente: unire {farina_biga:830}g Saccorosso, {acqua_biga:375}g acqua fredda (8-10°C), {lievito:1.8}g lievito secco. Mescolare con cucchiaio di legno per 3-4 minuti fino a ottenere un composto grumoso 'a stracci' (non serve omogeneità). Coprire con pellicola e maturare 24 ore a 16-18°C (cantina/frigo cantina). La biga triplica di volume e diventa spugnosa."
+      "text": "In ciotola capiente: unire {farina_biga:830}g Saccorosso, {acqua_biga:375}g acqua temperatura ambiente (18-20°C), {lievito:1.8}g lievito secco. Mescolare con cucchiaio di legno per 3-4 minuti fino a ottenere un composto grumoso 'a stracci' (non serve omogeneità). Coprire con pellicola e maturare 24 ore a 16-18°C (cantina/frigo cantina). La biga triplica di volume e diventa spugnosa."
     },
     {
       "title": "Scomposizione Biga Manuale",
@@ -237,23 +233,23 @@
           "name": "Farina Caputo Saccorosso (per biga)",
           "note": "(W 330-350, Manitoba rossa per struttura)",
           "grams": 830,
-          "excludeFromTotal": false
+          "excludeFromTotal": true
         },
         {
           "name": "Acqua per biga",
           "note": "(fredda da frigo 8-10°C)",
           "grams": 375,
-          "excludeFromTotal": false,
+          "excludeFromTotal": true,
           "setupNote": {
             "spirale": "(fredda da frigo 8-10°C)",
-            "mano": "(fredda da frigo 8-10°C)"
+            "mano": "(temperatura ambiente 18-20°C)"
           }
         },
         {
           "name": "Lievito Secco Caputo (per biga)",
           "note": "(0.22% su farina biga)",
           "grams": 1.8,
-          "excludeFromTotal": false
+          "excludeFromTotal": true
         }
       ]
     },
@@ -263,26 +259,22 @@
         {
           "name": "Biga matura",
           "note": "(tutto l'impasto precedente, ~1205g)",
-          "grams": 1205,
-          "excludeFromTotal": true
+          "grams": 1205
         },
         {
           "name": "Farina Caputo Nuvola Super",
           "note": "(W 260-280, protagonista per spinta e alveolatura)",
-          "grams": 1660,
-          "excludeFromTotal": false
+          "grams": 1660
         },
         {
           "name": "Farina Caputo Saccorosso (rinfresco)",
           "note": "(W 330-350, rinforzo finale)",
-          "grams": 275,
-          "excludeFromTotal": false
+          "grams": 275
         },
         {
           "name": "Acqua rinfresco",
-          "note": "(da inserire in più riprese come da procedimento)",
+          "note": "(in 2 riprese: 970g iniziale + 645g bassinage)",
           "grams": 1615,
-          "excludeFromTotal": false,
           "setupNote": {
             "spirale": "(in 2 riprese: 970g iniziale + 645g bassinage)",
             "mano": "(in 3 riprese progressive durante le pieghe)"
@@ -291,20 +283,17 @@
         {
           "name": "Criscito Caputo",
           "note": "(lievito madre essiccato, 30g/kg come da indicazioni)",
-          "grams": 83,
-          "excludeFromTotal": true
+          "grams": 83
         },
         {
           "name": "Estratto di Malto",
           "note": "(per attività enzimatica e colorazione)",
-          "grams": 9,
-          "excludeFromTotal": true
+          "grams": 9
         },
         {
           "name": "Sale Marino Fino",
           "note": "(2.3% su farina totale, massima estensibilità)",
-          "grams": 64,
-          "excludeFromTotal": true
+          "grams": 64
         }
       ]
     }

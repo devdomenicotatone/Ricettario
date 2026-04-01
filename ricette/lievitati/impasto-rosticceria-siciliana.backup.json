@@ -8,12 +8,29 @@
   "hydration": 50,
   "targetTemp": "26-27°C",
   "fermentation": "2-2.5h lievitazione + 30min appretto",
-  "totalFlour": 1100,
+  "totalFlour": 1000,
   "ingredients": [],
+  "suspensions": [
+    {
+      "name": "Tuorlo d'Uovo",
+      "note": "(per spennellatura finale)",
+      "grams": 20
+    },
+    {
+      "name": "Latte Intero",
+      "note": "(per diluire il tuorlo)",
+      "grams": 30
+    },
+    {
+      "name": "Semi di Sesamo",
+      "note": "(tostati, per decorazione)",
+      "grams": 30
+    }
+  ],
   "stepsSpiral": [
     {
       "title": "Preparazione Lievito e Grassi",
-      "text": "Sciogliere il lievito di birra fresco in 100g di acqua fresca (14-18°C) mescolando delicatamente. Portare lo strutto a temperatura ambiente finché risulti morbido ma non fuso (18-20°C). Se usate burro, deve essere plastico, non cremoso."
+      "text": "Sciogliere il lievito di birra fresco in {acqua_impasto:500}g di acqua fresca (14-18°C) mescolando delicatamente. Portare lo strutto a temperatura ambiente finché risulti morbido ma non fuso (18-20°C). Se usate burro, deve essere plastico, non cremoso."
     },
     {
       "title": "Impasto Base (V1 - 5 minuti)",
@@ -42,16 +59,12 @@
     {
       "title": "Appretto e Finitura",
       "text": "Disporre i pezzi su teglie con carta forno distanziati 4-5cm. Coprire con pellicola leggermente unta. Lasciar lievitare 30-40 minuti a 28-30°C fino a volume aumentato del 50%. Spennellare delicatamente con tuorlo sbattuto con latte. Cospargere rollò e calzoncini con semi di sesamo."
-    },
-    {
-      "title": "Cottura",
-      "text": "Preriscaldare il forno a 220°C (ventilato 200°C) per almeno 20 minuti. Posizionare la teglia a metà altezza del forno. Infornare per 15-18 minuti per rollò e calzoncini, 12-15 minuti per le pizzette. I prodotti sono cotti quando la superficie è dorata ambrata e il fondo risulta croccante. NON aprire il forno nei primi 10 minuti. A cottura ultimata, lasciar raffreddare su griglia."
     }
   ],
   "stepsHand": [
     {
       "title": "Preparazione Lievito e Grassi",
-      "text": "Sciogliere il lievito di birra fresco in 100g di acqua tiepida (28-30°C) con 1 cucchiaino di zucchero. Lasciare attivare 10 minuti fino a comparsa di bollicine. Lo strutto deve essere morbido a temperatura ambiente (18-20°C)."
+      "text": "Sciogliere il lievito di birra fresco in {acqua_impasto:500}g di acqua tiepida (28-30°C) con 1 cucchiaino di zucchero. Lasciare attivare 10 minuti fino a comparsa di bollicine. Lo strutto deve essere morbido a temperatura ambiente (18-20°C)."
     },
     {
       "title": "Impasto Iniziale",
@@ -79,11 +92,7 @@
     },
     {
       "title": "Appretto e Finitura",
-      "text": "Disporre i pezzi su teglie con carta forno distanziati 4-5cm. Coprire con pellicola leggermente unta (senza toccare la superficie). Lasciar lievitare 30-40 minuti a 28-30°C (vicino a fonte di calore) fino a volume aumentato del 50%. Sbattere 1 tuorlo con 30g di latte. Spennellare delicatamente la superficie con pennello morbido. Cospargere rollò e calzoncini con semi di sesamo tostati."
-    },
-    {
-      "title": "Cottura",
-      "text": "Preriscaldare il forno a 220°C (ventilato 200°C) per almeno 20 minuti. Posizionare la teglia a metà altezza del forno. Infornare per 15-18 minuti per rollò e calzoncini, 12-15 minuti per le pizzette. I prodotti sono cotti quando la superficie è dorata ambrata e il fondo risulta croccante. NON aprire il forno nei primi 10 minuti. A cottura ultimata, lasciar raffreddare su griglia."
+      "text": "Disporre i pezzi su teglie con carta forno distanziati 4-5cm. Coprire con pellicola leggermente unta (senza toccare la superficie). Lasciar lievitare 30-40 minuti a 28-30°C (vicino a fonte di calore) fino a volume aumentato del 50%. Sbattere 1 tuorlo con {latte_finitura:30}g di latte. Spennellare delicatamente la superficie con pennello morbido. Cospargere rollò e calzoncini con semi di sesamo tostati."
     }
   ],
   "stepsExtruder": [],
@@ -190,12 +199,12 @@
         {
           "name": "Farina Manitoba",
           "note": "(W 350-380, forza elevata)",
-          "grams": 350
+          "grams": 250
         },
         {
           "name": "Acqua",
           "note": "(fresca 14-18°C per controllare temperatura impasto)",
-          "grams": 550,
+          "grams": 500,
           "setupNote": {
             "spirale": "(fresca 14-18°C per controllare temperatura impasto)",
             "mano": "(tiepida 28-30°C per favorire lievitazione)"
@@ -225,36 +234,6 @@
           "name": "Miele",
           "note": "(millefiori o acacia, per morbidezza e aroma)",
           "grams": 20
-        }
-      ]
-    },
-    {
-      "group": "Per la Farcitura",
-      "items": [
-        {
-          "name": "Prosciutto Cotto",
-          "note": "(a fette, per rollò)",
-          "grams": 200
-        },
-        {
-          "name": "Mozzarella",
-          "note": "(ben strizzata, per tutte le preparazioni)",
-          "grams": 300
-        },
-        {
-          "name": "Passata di Pomodoro",
-          "note": "(per calzoncini e pizzette)",
-          "grams": 200
-        },
-        {
-          "name": "Olio Extravergine",
-          "note": "(per condire la passata)",
-          "grams": 30
-        },
-        {
-          "name": "Origano Secco",
-          "note": "(per condimento)",
-          "grams": 5
         }
       ]
     },

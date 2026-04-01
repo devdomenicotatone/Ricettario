@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T00:34:29.273Z",
+  "generatedAt": "2026-04-01T01:03:32.776Z",
   "totalRecipes": 25,
   "categories": [
     {
@@ -399,13 +399,13 @@
       "slug": "pane-pugliese-con-biga",
       "category": "Pane",
       "categoryDir": "pane",
-      "emoji": "🍞",
+      "emoji": "🥖",
       "href": "ricette/pane/pane-pugliese-con-biga.html",
       "image": "images/ricette/pane/pane-pugliese-con-biga.webp",
-      "description": "Pane tradizionale pugliese con semola rimacinata, crosta dorata croccante e mollica alveolata. Lievitazione su biga 18-2",
-      "hydration": "70%",
-      "time": "~24h biga + 4h impasto",
-      "temp": "24-26°C",
+      "description": "Autentico pane pugliese di semola rimacinata con metodo indiretto. Crosta spessa e croccante, mollica morbida e profumat",
+      "hydration": "75%",
+      "time": "~22h",
+      "temp": "25-26°C",
       "tool": ""
     }
   ]

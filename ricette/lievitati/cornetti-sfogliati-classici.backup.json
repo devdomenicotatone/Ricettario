@@ -14,15 +14,15 @@
   "stepsSpiral": [
     {
       "title": "Pre-impasto Base (V1, 3 min)",
-      "text": "Inserire nella vasca della spirale: farina manitoba ({farina_forte_impasto:300}g), farina 00 ({farina_media_impasto:200}g), lievito fresco sbriciolato ({lievito_fresco_impasto:10}g) e latte a 20-22°C (150g dei {latte_impasto:200}g totali). Impastare in prima velocità per 3 minuti fino a idratazione completa. Aggiungere scorze di agrumi ({scorza_arancia:10}g, {scorza_limone:5}g) e vaniglia ({vaniglia:5}g)."
+      "text": "Inserire nella vasca della spirale: farina manitoba ({farina_forte_impasto:300}g), farina 00 ({farina_media_impasto:200}g), lievito fresco sbriciolato ({lievito_fresco_impasto:18}g) e latte a 20-22°C (150g dei {farina_media_impasto:200}g totali). Impastare in prima velocità per 3 minuti fino a idratazione completa. Aggiungere scorze di agrumi e vaniglia."
     },
     {
       "title": "Arricchimento (V1, 4 min + V2, 3 min)",
-      "text": "Aggiungere uova ({uova_impasto:110}g) in 2 riprese, aspettando assorbimento completo. Unire zucchero ({zucchero_impasto:80}g) e miele ({miele_impasto:20}g). Impastare in V1 per 2 minuti. Aumentare a V2, aggiungere il latte restante (50g) e sale ({sale_impasto:10}g). Impastare 3 minuti: l'impasto deve iniziare a incordarsi."
+      "text": "Aggiungere uova ({uova_impasto:110}g) in 2 riprese, aspettando assorbimento completo. Unire zucchero ({semola_impasto:80}g) e miele ({miele_impasto:20}g). Impastare in V1 per 2 minuti. Aumentare a V2, aggiungere il latte restante (50g) e sale ({sale_impasto:10}g). Impastare 3 minuti: l'impasto deve iniziare a incordarsi."
     },
     {
       "title": "Mantecazione Burro (V1, 5-6 min)",
-      "text": "Abbassare a V1. Aggiungere il burro a pomata ({burro_impasto:80}g) in 3-4 riprese, attendendo incorporamento completo tra una aggiunta e l'altra. Impastare fino a completa mantecazione: l'impasto deve essere liscio, lucido, elastico e staccarsi perfettamente dalle pareti. Temperatura finale: 24-26°C. Totale impastamento: ~15 minuti."
+      "text": "Abbassare a V1. Aggiungere il burro a pomata ({semola_impasto:80}g) in 3-4 riprese, attendendo incorporamento completo tra una aggiunta e l'altra. Impastare fino a completa mantecazione: l'impasto deve essere liscio, lucido, elastico e staccarsi perfettamente dalle pareti. Temperatura finale: 24-26°C. Totale impastamento: ~15 minuti."
     },
     {
       "title": "Puntata Iniziale (30 min, 26-28°C)",
@@ -57,8 +57,8 @@
       "text": "Allungare delicatamente ogni triangolo tirandolo per la punta (deve raggiungere 20-22 cm). Posizionare con base verso di sé. Arrotolare partendo dalla base, esercitando leggera tensione. Arrivati alla punta, sigillare bene sotto. Piegare le estremità verso l'interno formando la caratteristica mezzaluna. Disporre su teglie foderata con carta forno, distanziati 6-7 cm (raddoppieranno di volume)."
     },
     {
-      "title": "Appretto Finale (3-4h, 26-28°C)",
-      "text": "Coprire le teglie con pellicola leggermente unta o panno umido. Lasciar lievitare in ambiente caldo e umido (26-28°C, umidità 75-80%) per 3-4 ore. I cornetti sono pronti quando raddoppiati di volume, soffici al tatto, con superficie asciutta ma non screpolata. Test: premere delicatamente con un dito, l'impronta deve tornare lentamente."
+      "title": "Appretto Finale (2-3h, 26-28°C)",
+      "text": "Coprire le teglie con pellicola leggermente unta o panno umido. Lasciar lievitare in ambiente caldo e umido (26-28°C, umidità 75-80%) per 2-3 ore. I cornetti sono pronti quando raddoppiati di volume, soffici al tatto, con superficie asciutta ma non screpolata. Test: premere delicatamente con un dito, l'impronta deve tornare lentamente."
     },
     {
       "title": "Spennellatura e Cottura",
@@ -68,15 +68,15 @@
   "stepsHand": [
     {
       "title": "Pre-impasto Base (10-12 min)",
-      "text": "In una ciotola capiente, sciogliere il lievito fresco ({lievito_fresco_impasto:10}g) in metà del latte tiepido (100g a 28-30°C). Aggiungere le farine ({farina_forte_impasto:300}g manitoba + {farina_media_impasto:200}g 00) e mescolare con cucchiaio di legno. Unire il latte restante (100g), scorze di agrumi ({scorza_arancia:10}g, {scorza_limone:5}g) e vaniglia ({vaniglia:5}g). Rovesciare su piano e iniziare a impastare energicamente, ripiegando e schiacciando con il palmo. L'impasto sarà inizialmente appiccicoso."
+      "text": "In una ciotola capiente, sciogliere il lievito fresco ({lievito_fresco_impasto:18}g) in metà del latte tiepido (100g a 28-30°C). Aggiungere le farine ({farina_forte_impasto:300}g manitoba + {farina_media_impasto:200}g 00) e mescolare con cucchiaio di legno. Unire il latte restante (100g), scorze di agrumi e vaniglia. Rovesciare su piano e iniziare a impastare energicamente, ripiegando e schiacciando con il palmo. L'impasto sarà inizialmente appiccicoso."
     },
     {
       "title": "Arricchimento e Sviluppo Glutine (15 min)",
-      "text": "Quando l'impasto inizia a prendere corpo, aggiungere uova ({uova_impasto:110}g) in 2 riprese, lavorando bene tra una aggiunta e l'altra. Unire zucchero ({zucchero_impasto:80}g) e miele ({miele_impasto:20}g). Impastare con tecnica 'slap & fold': sollevare l'impasto, sbatterlo sul piano, ripiegarlo su se stesso. Ripetere per 8-10 minuti. Aggiungere sale ({sale_impasto:10}g), continuare altri 5 minuti."
+      "text": "Quando l'impasto inizia a prendere corpo, aggiungere uova ({uova_impasto:110}g) in 2 riprese, lavorando bene tra una aggiunta e l'altra. Unire zucchero ({semola_impasto:80}g) e miele ({miele_impasto:20}g). Impastare con tecnica 'slap & fold': sollevare l'impasto, sbatterlo sul piano, ripiegarlo su se stesso. Ripetere per 8-10 minuti. Aggiungere sale ({sale_impasto:10}g), continuare altri 5 minuti."
     },
     {
       "title": "Incorporazione Burro (10-12 min)",
-      "text": "Appiattire l'impasto, distribuire sopra il burro morbido ({burro_impasto:80}g) in pezzetti. Ripiegare su se stesso, impastare con movimento di schiacciamento e ripiegamento. Il burro deve amalgamarsi completamente. L'impasto finale deve essere liscio, elastico, lucido e non appiccicoso. Formare una palla liscia con tecnica di pirlatura. Temperatura finale: 24-26°C."
+      "text": "Appiattire l'impasto, distribuire sopra il burro morbido ({semola_impasto:80}g) in pezzetti. Ripiegare su se stesso, impastare con movimento di schiacciamento e ripiegamento. Il burro deve amalgamarsi completamente. L'impasto finale deve essere liscio, elastico, lucido e non appiccicoso. Formare una palla liscia con tecnica di pirlatura. Temperatura finale: 24-26°C."
     },
     {
       "title": "Puntata Iniziale (30-40 min, 26-28°C)",
@@ -111,8 +111,8 @@
       "text": "Allungare delicatamente ogni triangolo tirandolo per la punta fino a 20-22 cm. Posizionare con base verso di sé. Allargare leggermente il taglietto centrale. Arrotolare partendo dalla base, esercitando leggera tensione costante. La punta deve finire sotto. Piegare le estremità verso l'interno formando la classica mezzaluna. Disporre su teglie con carta forno, distanziati 6-7 cm."
     },
     {
-      "title": "Appretto Finale (3-4h, 26-28°C)",
-      "text": "Coprire delicatamente con pellicola leggermente unta o canovaccio umido (non deve toccare la superficie dei cornetti). Lasciar lievitare in ambiente caldo e umido (26-28°C, umidità 75-80%) per 3-4 ore. I cornetti sono pronti quando: volume raddoppiato, superficie opaca (non lucida né appiccicosa), al tatto risultano soffici ma non molli. Test dito: l'impronta deve tornare lentamente."
+      "title": "Appretto Finale (2,5-3,5h, 26-28°C)",
+      "text": "Coprire delicatamente con pellicola leggermente unta o canovaccio umido (non deve toccare la superficie dei cornetti). Lasciar lievitare in ambiente caldo e umido (26-28°C, umidità 75-80%) per 2,5-3,5 ore. I cornetti sono pronti quando: volume raddoppiato, superficie opaca (non lucida né appiccicosa), al tatto risultano soffici ma non molli. Test dito: l'impronta deve tornare lentamente."
     },
     {
       "title": "Spennellatura e Cottura",
@@ -183,7 +183,7 @@
     },
     {
       "term": "Appretto",
-      "definition": "Ultima lievitazione dopo la formatura, prima della cottura. Per i cornetti: 3-4 ore a 26-28°C con umidità 75-80%. Il volume deve raddoppiare, la superficie diventare opaca, al tatto risultare soffice ma non molle."
+      "definition": "Ultima lievitazione dopo la formatura, prima della cottura. Per i cornetti: 2-3 ore a 26-28°C con umidità 75-80%. Il volume deve raddoppiare, la superficie diventare opaca, al tatto risultare soffice ma non molle."
     },
     {
       "term": "Burro a Pomata",
@@ -240,7 +240,7 @@
         {
           "name": "Lievito di Birra Fresco",
           "note": "(temperatura 4-6°C)",
-          "grams": 10
+          "grams": 18
         },
         {
           "name": "Latte Intero Fresco",

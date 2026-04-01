@@ -1,25 +1,24 @@
 # Qualità: Pane di Altamura DOP
 
-## 🟢 Score Finale: 95/100
+## 🟢 Score Finale: 90/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
-| Schema | ✅ Pass | 0 errori, 2 warning |
-| Claude | 95/100 | 🟢 Buona |
+| Schema | ✅ Pass | 0 errori, 1 warning |
+| Gemini | 90/100 | 🟡 Da migliorare |
 
-Ricetta molto ben strutturata e tecnicamente corretta. Rispetta tutti i parametri fondamentali del Pane di Altamura DOP: semola rimacinata certificata, idratazione adeguata (68%), fermentazione lunga, temperature corrette. Setup appropriato, procedimento dettagliato con tempi e temperature precisi. Solo lievi miglioramenti suggeriti per completezza.
+Ricetta eccellente dal punto di vista matematico e tecnico: il calcolo dell'acqua nei vari step coincide perfettamente con l'idratazione dichiarata del 68%. L'unico neo riguarda la nomenclatura DOP associata al lievito di birra.
 
 ## 🔍 Schema Validation
 
-- ⚠️ Categoria "Pane" senza sezione cottura (bakingSection/cookingSection)
 - ⚠️ Nessun token {id:base} trovato negli step — le dosi nel procedimento non saranno dinamiche
 
 ## Problemi trovati
 
-| Sev. | Area | Problema | Correzione | Fonte |
-|------|------|----------|------------|-------|
-| 💡 | Dosi | Sale al 1.8% su farina: è al limite inferiore per il pane, considerando che il Pane di Altamura ha tradizionalmente sapore più deciso | Valutare aumento a 20-22g (2-2.2%) per maggiore sapore caratteristico | 🔵 Claude |
-| 💡 | Coerenza | Nel PRO TIPS si menziona 'forza (W)' e 'marchi suggeriti' ma questi non sono citati negli ingredienti o nel procedimento | Rimuovere il riferimento alla forza W o aggiungere specifica sulla forza della semola rimacinata negli ingredienti | 🔵 Claude |
+| Sev. | Area | Problema | Correzione |
+|------|------|----------|------------|
+| ⚠️ | Coerenza | Il titolo indica 'Pane di Altamura DOP', ma tra gli ingredienti è presente il 'Lievito di Birra Fresco'. Il disciplinare ufficiale del Pane di Altamura DOP impone tassativamente l'uso esclusivo di lievito madre (pasta acida). Con il lievito di birra, il prodotto è tecnicamente un ottimo 'Pane di Semola', ma non può fregiarsi della dicitura DOP. | Cambiare il titolo in 'Pane di Semola tipo Altamura' oppure sostituire il lievito di birra con lievito madre (adeguando idratazione e tempi). |
+| 💡 | Coerenza | Nel procedimento spirale (step 3) e a mano (step 10) è presente un errore di battitura: viene scritto 'autolisat' invece di 'autolisata' o 'in autolisi' (es. 'semola autolisat', 'impasto autolisat'). | Correggere il refuso in 'semola autolisata' e 'impasto autolisato'. |
 
 ---
-*Generato: 2026-03-30T21:36:33.877Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-04-01T01:46:10.486Z | Pipeline: Schema → Gemini*

@@ -1,28 +1,24 @@
 # Qualità: Pane Integrale con Biga di Saccorosso e Miele
 
-## 🟡 Score Finale: 75/100
+## 🟡 Score Finale: 60/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
-| Schema | ✅ Pass | 0 errori, 1 warning |
-| Claude | 75/100 | 🟡 Da migliorare |
+| Schema | ❌ Fail | 1 errori, 0 warning |
+| Gemini | 75/100 | 🟡 Da migliorare |
 
-Ricetta tecnicamente valida con biga e gestione corretta dell'integrale, ma presenta errori significativi nei calcoli di idratazione e percentuali sale. Il procedimento è ben strutturato con ottimi consigli tecnici, ma necessita correzioni matematiche per essere affidabile.
+Ricetta tecnicamente molto ben strutturata (ottima gestione di biga, autolisi e bassinage per le farine integrali). Presenta però un errore matematico sull'idratazione e un fastidioso refuso testuale nell'assegnazione degli ingredienti nei passaggi chiave.
 
 ## 🔍 Schema Validation
 
-- ⚠️ Categoria "Pane" senza sezione cottura (bakingSection/cookingSection)
+- ❌ Idratazione dichiarata 70% ma calcolata 66% (1860g acqua / 2800g farina). Scarto: 4%
 
 ## Problemi trovati
 
-| Sev. | Area | Problema | Correzione | Fonte |
-|------|------|----------|------------|-------|
-| ❌ | Dosi | Errore grave nel calcolo dell'idratazione: con 2800g farine totali e 1860g acqua (360+1500), l'idratazione è 66.4%, NON 70% come dichiarato | Correggere l'idratazione dichiarata a 66% oppure aumentare l'acqua dell'impasto finale a 1600g per raggiungere il 70% | 🔵 Claude |
-| ❌ | Dosi | Percentuale di sale errata: 58g su 2800g di farine = 2.07%, non 2.1% come dichiarato | Correggere il sale a 59g per ottenere il 2.1% dichiarato | 🔵 Claude |
-| ❌ | Coerenza | Nel punto 2 si cita {acqua_impasto_finale:1500}g ma poi si specifica 'SOLO 975g' per l'autolisi, creando confusione sui dosaggi | Chiarire che nell'autolisi si usano 975g dei 1500g totali di acqua | 🔵 Claude |
-| ⚠️ | Coerenza | Nel punto 8 si indica peso formatura '600-{farina_caputo_saccor_biga:800}g' usando una variabile invece di un valore numerico | Sostituire con un range numerico corretto, es. '600-700g' per pezzi singoli | 🔵 Claude |
-| ⚠️ | Dosi | Lievito in biga molto basso: 0.25% su farina biga per 18-24h può essere insufficiente, specialmente a 18-20°C | Considerare 3-4g di lievito per garantire fermentazione adeguata in 18-24h | 🔵 Claude |
-| 💡 | Temperature | Range temperatura forno 240-270°C corretto per forno domestico, ma l'opzione B suggerisce 260°C che è al limite massimo | Specificare che 260°C richiede forno domestico di fascia alta | 🔵 Claude |
+| Sev. | Area | Problema | Correzione |
+|------|------|----------|------------|
+| ❌ | Dosi | L'idratazione dichiarata del 70% è errata. Calcolo reale: 1860g acqua totale (360g in biga + 1500g in impasto) / 2800g farina totale (800g in biga + 1000g integrale + 1000g saccorosso) = 66.4% ≠ 70%. | Modificare l'idratazione dichiarata al 66.4% oppure aumentare l'acqua dell'impasto finale da 1500g a 1600g per raggiungere il 70% reale. |
+| ❌ | Coerenza | Nei punti 3 (Spirale) e 13 (A mano) i token e i nomi degli ingredienti sono gravemente invertiti: si legge '{acqua_impasto_finale:1500}g Caputo Integrale, {farina_integrale_impasto_finale:1000}g Caputo Saccorosso e 975g di acqua'. Questo genera enorme confusione per chi legge e omette la farina Saccorosso dal testo. | Riscrivere le frasi assegnando correttamente i token: '{farina_integrale_impasto_finale:1000}g di Caputo Integrale, {farina_caputo_saccorosso_impasto_finale:1000}g di Caputo Saccorosso e 975g di acqua (65% del totale)'. |
 
 ---
-*Generato: 2026-03-30T21:36:52.754Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-04-01T01:46:36.874Z | Pipeline: Schema → Gemini*

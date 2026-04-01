@@ -4,22 +4,25 @@
 
 | Layer | Score | Dettaglio |
 |---|---|---|
-| Schema | ❌ Fail | 1 errori, 0 warning |
-| Claude | 92/100 | 🟢 Buona |
+| Schema | ❌ Fail | 4 errori, 0 warning |
+| Gemini | 90/100 | 🟢 Buona |
 
-Ricetta molto ben strutturata del migliaccio napoletano con dosi equilibrate (idratazione corretta latte+acqua vs semolino, proporzioni tradizionali). Temperature e tempi di cottura appropriati. Procedimento dettagliato e chiaro. Solo due errori minori di naming delle variabili nel testo e una considerazione sul setup per la montatura.
+Ricetta eccellente e perfettamente bilanciata. Dosi, temperature (200°C per 60 min) e procedimento rispecchiano fedelmente la tradizione del Migliaccio Napoletano. L'idratazione non è stata calcolata in quanto non applicabile (si tratta di una pastella dolce). Necessaria solo la correzione di alcuni errori di mappatura nei token del testo.
 
 ## 🔍 Schema Validation
 
-- ❌ Campo obbligatorio mancante: "hydration"
+- ❌ Campo obbligatorio mancante: "hydration" — Idratazione % (0 per dolci/pasta senza calcolo)
+- ❌ Campo obbligatorio mancante: "targetTemp" — Temperatura target impasto (es. "24-26°C")
+- ❌ Campo obbligatorio mancante: "fermentation" — Descrizione tempi fermentazione
+- ❌ Campo obbligatorio mancante: "totalFlour" — Farina totale in grammi (base per ricalcolo dosi)
 
 ## Problemi trovati
 
-| Sev. | Area | Problema | Correzione | Fonte |
-|------|------|----------|------------|-------|
-| ⚠️ | Coerenza | Nel punto 2 del procedimento viene citato {semola_composto:250}g per lo zucchero invece di {zucchero_composto:250}g - errore di naming nella variabile | Correggere la variabile da {semola_composto:250}g a {zucchero_composto:250}g | 🔵 Claude |
-| ⚠️ | Coerenza | Nel punto 1 viene citato {baccello_di_vaniglia_composto:2}g per il sale invece di {sale_composto:2}g - errore di naming nella variabile | Correggere la variabile da {baccello_di_vaniglia_composto:2}g a {sale_composto:2}g | 🔵 Claude |
-| 💡 | Dosi | Il setup 'A mano' può essere limitante per montare 4 uova + 250g zucchero per 5-6 minuti - le fruste elettriche sono quasi necessarie | Considerare di aggiungere 'Fruste elettriche' nel setup o specificare che si può fare a mano ma con maggiore fatica e tempo | 🔵 Claude |
+| Sev. | Area | Problema | Correzione |
+|------|------|----------|------------|
+| ⚠️ | Coerenza | Nel punto 2 del procedimento, il token associato all'acqua fa riferimento al latte: 'acqua ({latte_composto:500}g)'. Questo sballerà il calcolatore delle dosi nel frontend. | Modificare il token in {acqua_composto:500}g. |
+| ⚠️ | Coerenza | Nel punto 2 del procedimento, il token associato al sale fa riferimento alla vaniglia: 'sale ({baccello_di_vaniglia_composto:2}g)'. | Modificare il token in {sale_fino_composto:2}g. |
+| ⚠️ | Coerenza | Nel punto 3 del procedimento, il token associato allo zucchero fa riferimento alla semola: 'zucchero ({semola_composto:250}g)'. | Modificare il token in {zucchero_semolato_composto:250}g. |
 
 ---
-*Generato: 2026-03-30T21:41:54.071Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-04-01T01:55:22.638Z | Pipeline: Schema → Gemini*

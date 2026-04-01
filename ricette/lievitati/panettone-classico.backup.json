@@ -148,11 +148,11 @@
     },
     {
       "title": "Primo Impasto — Emulsione Liquidi",
-      "text": "In una ciotola emulsionare {tuorli_primo:100}g tuorli + {acqua_primo:150}g acqua 30°C + {zucchero_primo:100}g zucchero + {malto:3}g malto fino a ottenere una crema omogenea."
+      "text": "In una ciotola emulsionare {tuorli_primo:100}g tuorli + {acqua_primo:150}g acqua 30°C + {zucchero_primo:100}g zucchero + {malto:3}g malto fino a ottenere una crema omogenea. Sciogliere {burro_primo:100}g burro morbido nell'emulsione mescolando energicamente."
     },
     {
       "title": "Primo Impasto — Impastamento",
-      "text": "In una ciotola capiente versare {farina_primo:500}g farina Manitoba. Aggiungere {lievito_madre_primo:300}g lievito madre rinfrescato (deve essere all'apice, triplicato). Versare l'emulsione liquida al centro. Iniziare ad impastare a mano incorporando gradualmente la farina fino a formare un impasto omogeneo. Aggiungere {burro_primo:100}g burro morbido a pezzetti, poco alla volta, impastando energicamente fino a completo assorbimento. Impastare energicamente per 15-20 minuti fino a ottenere un impasto liscio, elastico, che si stacca dalle mani. Temperatura finale impasto: 26-28°C. Se l'impasto supera i 28°C, raffreddare la ciotola in acqua fredda."
+      "text": "In una ciotola capiente versare {farina_primo:500}g farina Manitoba. Aggiungere {lievito_madre_primo:300}g lievito madre rinfrescato (deve essere all'apice, triplicato). Versare l'emulsione liquida al centro. Iniziare ad impastare a mano incorporando gradualmente la farina. Impastare energicamente per 15-20 minuti fino a ottenere un impasto liscio, elastico, che si stacca dalle mani. Temperatura finale impasto: 26-28°C. Se l'impasto supera i 28°C, raffreddare la ciotola in acqua fredda."
     },
     {
       "title": "Prima Lievitazione — Puntata",
@@ -164,7 +164,7 @@
     },
     {
       "title": "Secondo Impasto — Incorporazione",
-      "text": "Trasferire il primo impasto lievitato in una ciotola capiente. Aggiungere {farina_secondo:500}g farina Manitoba e iniziare ad impastare energicamente a mano per ricostruire la maglia glutinica. Quando la farina è incorporata e l'impasto si incorda, aggiungere gradualmente l'emulsione liquida del secondo impasto in 2-3 riprese. Impastare per 10 minuti fino a completo assorbimento."
+      "text": "Trasferire il primo impasto lievitato in una ciotola capiente. Aggiungere metà dell'emulsione liquida del secondo impasto. Iniziare ad impastare energicamente a mano per incorporare i liquidi. Quando l'impasto assorbe, aggiungere {farina_secondo:500}g farina Manitoba a pioggia, continuando ad impastare. Aggiungere gradualmente la seconda metà dell'emulsione. Impastare per 10 minuti fino a completo assorbimento."
     },
     {
       "title": "Incorporazione Burro e Aromi",
@@ -180,7 +180,7 @@
     },
     {
       "title": "Pirlatura e Formatura nei Pirottini",
-      "text": "Dividere l'impasto in pezzi da {peso_panettone:1100!}g per panettoni classici da 1kg (o {peso_mini:550!}g per versioni mignon). Formare ogni pezzo in una palla perfettamente liscia e tesa (pirlatura: piegare i bordi verso il centro, capovolgere, ruotare sul piano con le mani a coppa per creare tensione superficiale). Inserire ogni palla nel pirottino da panettone (carta plissettata alta) con la chiusura rivolta verso il basso. La superficie deve essere perfettamente liscia."
+      "text": "Dividere l'impasto in pezzi da {peso_panettone:1000!}g per panettoni classici da 1kg (o {peso_mini:500!}g per versioni mignon). Formare ogni pezzo in una palla perfettamente liscia e tesa (pirlatura: piegare i bordi verso il centro, capovolgere, ruotare sul piano con le mani a coppa per creare tensione superficiale). Inserire ogni palla nel pirottino da panettone (carta plissettata alta) con la chiusura rivolta verso il basso. La superficie deve essere perfettamente liscia."
     },
     {
       "title": "Appretto Finale — Lievitazione in Pirottino",
@@ -278,7 +278,7 @@
     "🧪 Test lievito madre: deve galleggiare in acqua 25°C dopo il terzo rinfresco. Se affonda, non è pronto (troppo debole o troppo maturo). Meglio rinviare a domani.",
     "🧈 Burro morbido ma NON fuso: deve essere a 18-20°C, cremoso. Se troppo freddo non si incorpora, se fuso l'emulsione si rompe e l'impasto diventa unto.",
     "🍇 Uvetta e canditi si aggiungono DOPO aver sviluppato completamente il glutine. Se aggiunti prima, rompono la maglia glutinica e il panettone non cresce.",
-    "📏 Peso preciso del panettone: per pirottini da 1kg, fare pezzi da 1100g. Per mignon (pirottino 500g), fare pezzi da 550g. Il peso extra compensa la perdita in cottura e permette la cupola caratteristica."
+    "📏 Peso preciso del panettone: per pirottini da 1kg, fare pezzi da 1000g. Per mignon (pirottino 500g), fare pezzi da 500g. Il peso errato altera proporzioni e cottura."
   ],
   "imageKeywords": [
     "panettone italiano",

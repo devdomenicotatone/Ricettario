@@ -1,25 +1,20 @@
 # Qualità: Gnocchi di Patate
 
-## 🟢 Score Finale: 88/100
+## 🟢 Score Finale: 85/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
-| Schema | ✅ Pass | 0 errori, 1 warning |
-| Claude | 88/100 | 🟢 Buona |
+| Schema | ✅ Pass | 0 errori, 0 warning |
+| Gemini | 85/100 | 🟡 Da migliorare |
 
-Ricetta ben strutturata e tecnicamente corretta per gli gnocchi di patate. Le dosi sono appropriate (rapporto patate:farina 1000:300g), il setup 'A mano' è corretto, e il procedimento è dettagliato con ottime indicazioni tecniche. Presenti solo piccole incongruenze tra ingredienti e procedimento che non compromettono la qualità complessiva della ricetta.
-
-## 🔍 Schema Validation
-
-- ⚠️ Idratazione 0% fuori range tipico (25-100%)
+Ricetta tecnicamente eccellente per l'impasto base degli gnocchi, con proporzioni corrette e ottimi consigli sulla lavorazione a caldo delle patate. È necessario però integrare la lista ingredienti per supportare i condimenti descritti nel procedimento.
 
 ## Problemi trovati
 
-| Sev. | Area | Problema | Correzione | Fonte |
-|------|------|----------|------------|-------|
-| 💡 | Coerenza | Nel procedimento si cita 'noce moscata (facoltativa)' ma non è presente tra gli ingredienti | Aggiungere 'Noce Moscata q.b.' negli ingredienti o rimuovere il riferimento dal procedimento | 🔵 Claude |
-| 💡 | Coerenza | La dicitura '{sale_impasto:10}g sale per litro' nel punto 5 sembra un placeholder non risolto | Sostituire con '10g sale per litro' o valore appropriato per acqua di cottura | 🔵 Claude |
-| 💡 | Dosi | Nel procedimento si dice 'potrebbero bastare 250-280g totali' di farina ma negli ingredienti sono indicati 300g | Allineare la quantità finale di farina o specificare meglio che 300g è la quantità massima disponibile | 🔵 Claude |
+| Sev. | Area | Problema | Correzione |
+|------|------|----------|------------|
+| ❌ | Coerenza | I passaggi 8 e 9 descrivono ricette dettagliate per i sughi con grammature specifiche (400g passata, 250g pancetta, 600g pomodorini, olio, aglio, basilico, parmigiano), ma nessuno di questi ingredienti è presente nella lista iniziale. | Aggiungere un gruppo '── Per il Condimento ──' nella lista degli ingredienti inserendo le voci necessarie per i sughi proposti. |
+| ⚠️ | Coerenza | Nel passaggio 3 del procedimento viene richiesto di aggiungere 'noce moscata (facoltativa)', ma questo ingrediente non compare nella lista iniziale. | Aggiungere 'Noce Moscata (facoltativa)' alla lista degli ingredienti nel gruppo 'Per l'Impasto'. |
 
 ---
-*Generato: 2026-03-30T21:38:40.040Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-04-01T01:49:41.089Z | Pipeline: Schema → Gemini*

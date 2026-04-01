@@ -4,43 +4,25 @@
 
 | Layer | Score | Dettaglio |
 |---|---|---|
-| Schema | ✅ Pass | 0 errori, 1 warning |
-| Claude | 75/100 | 🟡 Da migliorare |
-| Gemini | 🟡 Parziale disaccordo (-15) | Claude ha individuato bene il disastroso uso dei placeholder |
+| Schema | ❌ Fail | 2 errori, 0 warning |
+| Gemini | 65/100 | 🔴 Problematica |
 
-Ricetta tecnicamente valida con dosi e metodi corretti per ciabatta ad alta idratazione. Problemi gravi nei placeholder del procedimento che compromettono la leggibilità e potrebbero confondere chi segue la ricetta. Sale leggermente alto ma accettabile. Necessaria revisione dei placeholder prima della pubblicazione.
+La ricetta ha basi tecniche eccellenti e l'idratazione matematica è perfettamente calcolata all'80% (480g acqua / 600g farina). Tuttavia, la stesura del procedimento contiene errori critici nelle dosi (es. 200g di lievito) e incongruenze importanti nei liquidi per l'impasto a mano che ne impediscono la corretta esecuzione.
 
 ## 🔍 Schema Validation
 
-- ⚠️ Categoria "Pane" senza sezione cottura (bakingSection/cookingSection)
+- ❌ Idratazione dichiarata 80% ma calcolata 40% (280g acqua / 700g farina). Scarto: 40%
+- ❌ totalFlour dichiarato 600g ma somma farine = 700g (differenza: 100g)
 
 ## Problemi trovati
 
-| Sev. | Area | Problema | Correzione | Fonte |
-|------|------|----------|------------|-------|
-| ❌ | Coerenza | Nel punto 2 del procedimento si legge '{acqua_poolish:200}g di lievito fresco' invece di acqua. Errore di placeholder che compromette la comprensibilità. | Correggere con '{acqua_impasto_finale:280}g di acqua ghiacciata' o simile | 🔵 Claude |
-| ❌ | Coerenza | Nel punto 3 si dice 'aggiungere {olio_impasto_finale:15}g di sale e {sale_impasto_finale:15}g di olio' - quantità invertite nei placeholder. | Correggere con '{sale_impasto_finale:15}g di sale e {olio_impasto_finale:15}g di olio' | 🔵 Claude |
-| ❌ | Coerenza | Nel punto 1 si usa '{farina_media_poolish:200}g di acqua' e '{farina_media_poolish:200}g di farina' - stesso placeholder per ingredienti diversi. | Usare placeholder corretti: {acqua_poolish:200} per acqua e {farina_poolish:200} per farina | 🔵 Claude |
-| ⚠️ | Dosi | Sale al 2.5% su farina totale (15g su 600g) è al limite superiore per il pane, potrebbe risultare troppo salato. | Considerare 12-13g di sale (2-2.2%) per un sapore più equilibrato | 🔵 Claude |
-| ⚠️ | Coerenza | Nel punto 7 si dice 'circa {acqua_impasto_finale:280}g ciascuna' per il peso delle porzioni, ma dovrebbe essere circa 300g (1200g totali ÷ 4). | Correggere il peso indicativo delle porzioni a circa 300g ciascuna | 🔵 Claude |
-| ❌ | Tecnica | Al punto 8 si dice: 'Schiacciare vigorosamente la superficie... creando buchi profondi: questa è la tecnica tradizionale della ciabatta'. Errore fatale: questa è la tecnica della focaccia. Schiacciare la ciabatta distrugge l'alveolatura faticosamente costruita, contraddicendo peraltro l'ordine 'NON sgonfiarla' dato nella riga precedente. | Eliminare il riferimento a schiacciare vigorosamente e creare buchi. La ciabatta va solo allungata e appoggiata delicatamente per preservare i gas. | 🔴 Gemini |
-
-## 🔴 Revisione Gemini
-
-**Verdetto**: 🟡 Parziale disaccordo
-**Adjustment**: -15
-
-Claude ha individuato bene il disastroso uso dei placeholder, ma ha fallito la matematica di base penalizzando ingiustamente le dosi. Soprattutto, ha mancato un errore tecnico enorme (schiacciare la ciabatta come fosse focaccia), che rovina inesorabilmente il risultato. Il punteggio va abbassato.
-
-### Issues contestate
-
-| Problema | Verdetto | Motivo |
-|---|---|---|
-| Nel punto 2 si legge '200g di lievito fresco' invece di acqua | ✅ Confermo | Grave errore di placeholder che rende la ricetta assurda. |
-| Nel punto 3 quantità invertite tra sale e olio nei placeholder | ✅ Confermo | Corretto, i placeholder sono scambiati. |
-| Nel punto 1 stesso placeholder per acqua e farina | ✅ Confermo | Il sistema di variabili è palesemente mal configurato. |
-| Sale al 2.5% su farina totale è al limite superiore | ✅ Confermo | Osservazione corretta: 15g su 600g totali di farina dà un 2.5%, che è piuttosto sapido, il 2-2.2% è lo standard. |
-| Nel punto 7 il peso dovrebbe essere 300g (1200g ÷ 4) e non 280g | ❌ Falso positivo | La matematica di Claude è sbagliata. L'impasto totale pesa 1127g (600 farina + 480 acqua + 15 sale + 15 olio + 10 malto + 7 lievito). 1127 ÷ 4 fa esattamente 281,7g. L'indicazione 'circa 280g' della ricetta è precisissima. |
+| Sev. | Area | Problema | Correzione |
+|------|------|----------|------------|
+| ❌ | Coerenza | Nello step 3 (Impastatrice Spirale), il testo indica di aggiungere '{acqua_poolish:200}g di lievito fresco'. Questo è un grave errore di battitura/assegnazione: la lista ingredienti prevede 5g di lievito per l'impasto finale. | Correggere il testo in '{lievito_impasto_finale:5}g di lievito fresco'. |
+| ❌ | Dosi | Nello step 13 (Procedimento a mano), si indica di aggiungere 200g di acqua a 20-22°C. Tuttavia, la lista ingredienti prevede 280g di acqua per l'impasto finale. Questa discrepanza abbassa drasticamente l'idratazione reale dell'impasto a mano. | Allineare la quantità d'acqua nello step 13 ai 280g previsti dalla ricetta (riservandone una parte per le fasi finali, es. 230g subito e 50g dopo). |
+| ⚠️ | Coerenza | Nello step 14 (Procedimento a mano), il testo recita 'Sciogliere 3g di lievito fresco'. La lista ingredienti ne prevede 5g per l'impasto finale. | Modificare il testo in 'Sciogliere 5g di lievito fresco' per coerenza con la lista ingredienti. |
+| ⚠️ | Coerenza | Nello step 17 (Procedimento a mano), si dice 'Aggiungere gli ultimi 30g di acqua riservata'. La matematica dell'acqua nel procedimento a mano è confusa (200g totali - 50g riservati = 150g; poi si parla di 30g finali). | Riscrivere la gestione dell'acqua nel procedimento a mano basandosi sui 280g totali (es. inserire 230g in autolisi e i restanti 50g con lievito/sale). |
+| 💡 | Coerenza | Nello step 3, le parole e i token sono invertiti: si legge '{olio_impasto_finale:15}g di sale e {sale_impasto_finale:15}g di olio EVO'. Le quantità (15g) sono corrette, ma la lettura risulta invertita. | Invertire i testi per farli combaciare con i token, scrivendo '15g di sale e 15g di olio EVO'. |
 
 ---
-*Generato: 2026-03-30T21:36:02.812Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-04-01T01:45:21.094Z | Pipeline: Schema → Gemini*

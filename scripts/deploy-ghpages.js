@@ -1,6 +1,6 @@
 /**
- * Deploy su GitHub Pages via git subtree push
- * Metodo diretto e robusto — nessuna dipendenza npm
+ * Deploy su GitHub Pages via git subtree split + force push
+ * Manda SOLO i file modificati, non ri-carica tutto ogni volta
  */
 
 import { execSync } from 'child_process';
@@ -9,44 +9,46 @@ import { join } from 'path';
 
 const DIST_DIR = join(process.cwd(), 'dist');
 const COMMIT_MSG = process.argv[2] || 'deploy: aggiornamento GitHub Pages';
+const TEMP_BRANCH = 'gh-pages-deploy-tmp';
 
 function run(cmd, opts = {}) {
     console.log(`   → ${cmd}`);
     return execSync(cmd, {
         cwd: process.cwd(),
         stdio: 'inherit',
-        timeout: 300_000, // 5 min per push grossi
+        timeout: 600_000,
         env: { ...process.env, GIT_TERMINAL_PROMPT: '0' },
         ...opts
     });
 }
 
 function runSilent(cmd) {
-    return execSync(cmd, {
-        cwd: process.cwd(),
-        stdio: 'pipe',
-        encoding: 'utf8',
-        timeout: 30_000,
-        env: { ...process.env, GIT_TERMINAL_PROMPT: '0' }
-    }).trim();
+    try {
+        return execSync(cmd, {
+            cwd: process.cwd(),
+            stdio: 'pipe',
+            encoding: 'utf8',
+            timeout: 30_000,
+            env: { ...process.env, GIT_TERMINAL_PROMPT: '0' }
+        }).trim();
+    } catch {
+        return '';
+    }
 }
 
 async function deploy() {
     console.log('🚀 Deploy su GitHub Pages...\n');
 
-    // 1. Verifica dist/
     if (!existsSync(DIST_DIR)) {
         console.error('❌ Cartella dist/ non trovata. Esegui prima "vite build".');
         process.exit(1);
     }
 
-    // 2. Assicurati che .nojekyll esista
+    // .nojekyll
     const nojekyll = join(DIST_DIR, '.nojekyll');
-    if (!existsSync(nojekyll)) {
-        writeFileSync(nojekyll, '');
-    }
+    if (!existsSync(nojekyll)) writeFileSync(nojekyll, '');
 
-    // 3. Salva stato attuale (per ripristinare dopo)
+    // Salva stato
     const hadChanges = runSilent('git status --porcelain').length > 0;
     if (hadChanges) {
         console.log('💾 Salvo modifiche locali (stash)...');
@@ -54,45 +56,40 @@ async function deploy() {
     }
 
     try {
-        // 4. Aggiungi dist/ forzatamente al commit temporaneo
+        // Aggiungi dist/ e committa
         console.log('📦 Preparo dist/ per il push...');
         run('git add dist -f');
-        
-        try {
-            run('git commit -m "' + COMMIT_MSG + '"', { stdio: 'pipe' });
-        } catch {
-            console.log('   ℹ️  Nessuna modifica in dist/, procedo comunque...');
+
+        const status = runSilent('git diff --cached --name-only');
+        if (!status) {
+            console.log('✅ Nessuna modifica in dist/. Il sito è già aggiornato.');
+            return;
         }
 
-        // 5. Elimina branch gh-pages remoto se esiste (per evitare conflitti)
-        console.log('🧹 Pulizia branch gh-pages remoto...');
-        try {
-            run('git push origin --delete gh-pages', { stdio: 'pipe' });
-            console.log('   ✅ Vecchio branch eliminato');
-        } catch {
-            console.log('   ℹ️  Branch gh-pages non esisteva');
-        }
+        run('git commit -m "' + COMMIT_MSG + '"', { stdio: 'pipe' });
 
-        // 6. Push con subtree
-        console.log('🚀 Push dist/ → gh-pages...');
-        run('git subtree push --prefix dist origin gh-pages');
+        // Pulisci branch temporaneo locale se esiste
+        try { runSilent(`git branch -D ${TEMP_BRANCH}`); } catch {}
 
-        console.log('\n✅ Deploy completato con successo!');
+        // Split: estrai dist/ in un branch temporaneo
+        console.log('🔀 Estraggo subtree dist/...');
+        run(`git subtree split --prefix dist -b ${TEMP_BRANCH}`);
+
+        // Force push: manda SOLO le differenze rispetto al gh-pages esistente
+        console.log('🚀 Push modifiche su gh-pages (solo delta)...');
+        run(`git push origin ${TEMP_BRANCH}:gh-pages --force`);
+
+        console.log('\n✅ Deploy completato!');
         console.log('🌐 https://devdomenicotatone.github.io/Ricettario/');
 
     } finally {
-        // 7. Ripristina: rimuovi il commit temporaneo di dist
-        console.log('\n🧹 Ripristino stato locale...');
-        try {
-            run('git reset HEAD~1', { stdio: 'pipe' });
-        } catch {}
+        // Cleanup
+        console.log('\n🧹 Pulizia...');
+        try { runSilent(`git branch -D ${TEMP_BRANCH}`); } catch {}
+        try { run('git reset HEAD~1', { stdio: 'pipe' }); } catch {}
 
-        // 8. Ripristina stash se c'era
         if (hadChanges) {
-            console.log('💾 Ripristino modifiche locali...');
-            try {
-                run('git stash pop', { stdio: 'pipe' });
-            } catch {}
+            try { run('git stash pop', { stdio: 'pipe' }); } catch {}
         }
     }
 }
