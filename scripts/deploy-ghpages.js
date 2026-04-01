@@ -50,13 +50,20 @@ function getRemoteUrl() {
 async function deployFast() {
     console.log('⚡ Metodo veloce: gh-pages...');
     
-    const { publish } = await import('gh-pages');
+    const ghpages = await import('gh-pages');
+    const { publish } = ghpages;
+    
+    // Pulisci cache stale (causa "local changes would be overwritten")
+    console.log('   🧹 Pulizia cache gh-pages...');
+    try { ghpages.clean(); } catch {}
     
     return new Promise((resolve, reject) => {
         publish('dist', {
             branch: 'gh-pages',
             message: COMMIT_MSG,
-            dotfiles: true, // include .nojekyll
+            dotfiles: true,  // include .nojekyll
+            add: false,      // sostituisci tutto, non aggiungere
+            force: true,     // forza push
         }, (err) => {
             if (err) reject(err);
             else resolve();
