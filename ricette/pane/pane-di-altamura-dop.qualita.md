@@ -1,24 +1,24 @@
 # Qualità: Pane di Altamura DOP
 
-## 🟢 Score Finale: 90/100
+## 🟢 Score Finale: 95/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 1 warning |
-| Gemini | 90/100 | 🟡 Da migliorare |
+| Gemini | 95/100 | 🟢 Buona |
 
-Ricetta eccellente dal punto di vista matematico e tecnico: il calcolo dell'acqua nei vari step coincide perfettamente con l'idratazione dichiarata del 68%. L'unico neo riguarda la nomenclatura DOP associata al lievito di birra.
+Ricetta eccellente e calcolata alla perfezione. Il calcolo dell'idratazione (600g acqua / 900g semola = 66.6%) e il peso dei panetti (1533g totali / 2 = 766.5g) sono matematicamente ineccepibili. Ottima la gestione delle temperature e fedele la formatura tipica. Solo un paio di piccolissime imprecisioni terminologiche.
 
 ## 🔍 Schema Validation
 
-- ⚠️ Nessun token {id:base} trovato negli step — le dosi nel procedimento non saranno dinamiche
+- ⚠️ Variante "lievitazione-frigo": ingredientOverride "lievito_biga" appare nello step 0 ma branchAfterStep è 4 — gli step pre-branch mostreranno dosi/testo incoerente
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| ⚠️ | Coerenza | Il titolo indica 'Pane di Altamura DOP', ma tra gli ingredienti è presente il 'Lievito di Birra Fresco'. Il disciplinare ufficiale del Pane di Altamura DOP impone tassativamente l'uso esclusivo di lievito madre (pasta acida). Con il lievito di birra, il prodotto è tecnicamente un ottimo 'Pane di Semola', ma non può fregiarsi della dicitura DOP. | Cambiare il titolo in 'Pane di Semola tipo Altamura' oppure sostituire il lievito di birra con lievito madre (adeguando idratazione e tempi). |
-| 💡 | Coerenza | Nel procedimento spirale (step 3) e a mano (step 10) è presente un errore di battitura: viene scritto 'autolisat' invece di 'autolisata' o 'in autolisi' (es. 'semola autolisat', 'impasto autolisat'). | Correggere il refuso in 'semola autolisata' e 'impasto autolisato'. |
+| 💡 | Coerenza | Al Punto 3 del procedimento con impastatrice viene usato il termine 'autolisi (fermentolisi)'. Tuttavia, poiché vengono mescolate solo semola e acqua, e la biga viene inserita solo al Punto 4, si tratta di una pura 'autolisi'. La fermentolisi prevede l'inserimento del lievito/pre-impasto già in questa fase. | Rimuovere la parola '(fermentolisi)' dal Punto 3, lasciando solo 'autolisi', che è il termine tecnicamente corretto per il processo descritto. |
+| 💡 | Coerenza | Il titolo riporta la dicitura 'DOP'. Il disciplinare ufficiale del Pane di Altamura DOP impone l'uso esclusivo di Lievito Madre (pasta acida), mentre la ricetta principale utilizza Lievito di Birra (Biga). | Sebbene l'autore abbia inserito intelligentemente la conversione a Lievito Madre nei PRO TIPS, per correttezza formale sarebbe meglio rimuovere 'DOP' dal titolo principale (es. 'Pane in stile Altamura'), oppure invertire le ricette mettendo il Lievito Madre come principale e la Biga come variante. |
 
 ---
-*Generato: 2026-04-01T01:46:10.486Z | Pipeline: Schema → Gemini*
+*Generato: 2026-04-03T22:09:27.668Z | Pipeline: Schema → Gemini*

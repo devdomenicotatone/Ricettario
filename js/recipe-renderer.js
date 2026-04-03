@@ -176,7 +176,8 @@ function buildIngredientsPanel(r) {
   let rows;
   if (hasGroups) {
     rows = r.ingredientGroups.map(group => {
-      const header = `<tr class="ingredient-section-header"><td colspan="2">${escHtml(group.group)}</td></tr>`;
+      if (!group.items?.length) return ''; // skip gruppi malformati
+      const header = `<tr class="ingredient-section-header"><td colspan="2">${escHtml(group.group || 'Ingredienti')}</td></tr>`;
       const items = group.items.map(buildIngredientRow).join('');
       return header + items;
     }).join('');
@@ -437,7 +438,7 @@ function initDoseCalculator(recipe) {
 
   // Costruisci lista ingredienti piatta (supporta ingredientGroups o ingredients)
   const flatIngredients = recipe.ingredientGroups?.length
-    ? recipe.ingredientGroups.flatMap(g => g.items)
+    ? recipe.ingredientGroups.flatMap(g => g.items || [])
     : (recipe.ingredients || []);
 
   const tables = ['ingredients-table', 'suspensions-table'];
@@ -561,7 +562,7 @@ function initVariantToggle(recipe) {
 
   // Mappatura ingredientGroups piatti per override (conserva gruppo)
   const flatIngredients = recipe.ingredientGroups?.length
-    ? recipe.ingredientGroups.flatMap(g => g.items.map(item => ({ ...item, _groupName: g.group })))
+    ? recipe.ingredientGroups.flatMap(g => (g.items || []).map(item => ({ ...item, _groupName: g.group })))
     : (recipe.ingredients || []);
 
   toggle.addEventListener('click', () => {

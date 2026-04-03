@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T22:50:29.582Z",
+  "generatedAt": "2026-04-03T21:50:27.690Z",
   "totalRecipes": 24,
   "categories": [
     {
@@ -51,48 +51,48 @@
     },
     {
       "title": "Ciabatta con Poolish",
-      "slug": "ciabatta-poolish",
+      "slug": "ciabatta-con-poolish",
       "category": "Pane",
       "categoryDir": "pane",
       "emoji": "🥖",
-      "href": "ricette/pane/ciabatta-poolish.html",
-      "image": "images/ricette/pane/ciabatta-poolish.webp",
-      "description": "Pane ad alta idratazione con poolish — tecnica spirale e manuale per un'alveolatura perfetta e crosta croccante",
-      "hydration": "80%",
-      "time": "~5h totali (3h poolish + 2h impasto finale)",
-      "temp": "24-26°C",
+      "href": "ricette/pane/ciabatta-con-poolish.html",
+      "image": "images/ricette/pane/ciabatta-con-poolish.webp",
+      "description": "Croccante fuori, alveolata e leggera dentro. La classica ciabatta italiana ad alta idratazione preparata con pre-impasto liquido (poolish).",
+      "hydration": "76%",
+      "time": "~18h",
+      "temp": "24-25°C",
       "tool": "",
-      "_generatedBy": null
+      "_generatedBy": "gemini-3.1"
     },
     {
       "title": "Pane alle Noci con Poolish",
       "slug": "pane-alle-noci-con-poolish",
       "category": "Pane",
       "categoryDir": "pane",
-      "emoji": "🥖",
+      "emoji": "🍞",
       "href": "ricette/pane/pane-alle-noci-con-poolish.html",
       "image": "images/ricette/pane/pane-alle-noci-con-poolish.webp",
-      "description": "Pane rustico settentrionale con preimpasto liquido poolish e noci non trattate. Alveolatura sviluppata, profumo intenso, perfetto per formaggi e mostarde.",
+      "description": "Pane rustico artigianale a lievitazione mista: la croccantezza delle noci tostate incontra gli aromi complessi di un prefermento liquido di 12 ore.",
       "hydration": "70%",
-      "time": "~14h (12h poolish + 2h impasto)",
+      "time": "12h (prefermento) + 4-5h (impasto)",
       "temp": "25-26°C",
       "tool": "",
-      "_generatedBy": null
+      "_generatedBy": "gemini-3.1"
     },
     {
       "title": "Pane di Altamura DOP",
       "slug": "pane-di-altamura-dop",
       "category": "Pane",
       "categoryDir": "pane",
-      "emoji": "🍞",
+      "emoji": "🥖",
       "href": "ricette/pane/pane-di-altamura-dop.html",
       "image": "images/ricette/pane/pane-di-altamura-dop.webp",
-      "description": "Il re dei pani pugliesi con semola rimacinata e lievitazione naturale. Idratazione 68%, lievitazione 24h, crosta croccante e mollica gialla profumata.",
-      "hydration": "68%",
-      "time": "~24h",
-      "temp": "24-26°C",
+      "description": "La ricetta tradizionale pugliese con 100% semola rimacinata. Crosta spessa e croccante, mollica giallo oro e un profumo inconfondibile.",
+      "hydration": "67%",
+      "time": "18-20h",
+      "temp": "25-26°C",
       "tool": "",
-      "_generatedBy": null
+      "_generatedBy": "gemini-3.1"
     },
     {
       "title": "Pane Integrale con Biga di Saccorosso e Miele",

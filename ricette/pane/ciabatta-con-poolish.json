@@ -1,0 +1,208 @@
+{
+  "title": "Ciabatta con Poolish",
+  "slug": "ciabatta-con-poolish",
+  "emoji": "🥖",
+  "description": "Croccante fuori, alveolata e leggera dentro. La classica ciabatta italiana ad alta idratazione preparata con pre-impasto liquido (poolish).",
+  "subtitle": "Impasto ad alta idratazione (76%) con pre-fermento liquido a temperatura ambiente",
+  "category": "Pane",
+  "hydration": 76,
+  "targetTemp": "24-25°C",
+  "fermentation": "~18h",
+  "totalFlour": 500,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per il Poolish",
+      "items": [
+        {
+          "name": "Farina Tipo 0",
+          "note": "(W 280-300)",
+          "grams": 150,
+          "tokenId": "farina_poolish"
+        },
+        {
+          "name": "Acqua",
+          "note": "(temperatura ambiente 20-22°C)",
+          "grams": 150,
+          "tokenId": "acqua_poolish"
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(1.5g)",
+          "grams": 1.5,
+          "tokenId": "lievito_poolish"
+        }
+      ]
+    },
+    {
+      "group": "Per l'Impasto Finale",
+      "items": [
+        {
+          "name": "Farina Tipo 0",
+          "note": "(W 280-300)",
+          "grams": 350,
+          "tokenId": "farina_impasto"
+        },
+        {
+          "name": "Acqua (Base)",
+          "note": "(10-12°C per spirale, 18-20°C a mano)",
+          "grams": 180,
+          "tokenId": "acqua_impasto_base",
+          "setupNote": {
+            "spirale": "Fredda di frigo (10-12°C)",
+            "mano": "Fresca (18-20°C)"
+          }
+        },
+        {
+          "name": "Acqua (Bassinage)",
+          "note": "(aggiunta a filo a fine impasto)",
+          "grams": 50,
+          "tokenId": "acqua_bassinage"
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(aggiunta per spinta finale)",
+          "grams": 3,
+          "tokenId": "lievito_impasto"
+        },
+        {
+          "name": "Malto d'orzo in polvere",
+          "note": "(o miele, per la crosta)",
+          "grams": 5,
+          "tokenId": "malto"
+        },
+        {
+          "name": "Sale fino",
+          "note": "(2% sulla farina totale)",
+          "grams": 10,
+          "tokenId": "sale"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "stepsSpiral": [
+    {
+      "title": "Preparazione del Poolish",
+      "text": "In una ciotola stretta e alta, sciogliere {lievito_poolish:1.5}g di lievito in {acqua_poolish:150}g di acqua. Aggiungere {farina_poolish:150}g di farina e mescolare vigorosamente con una forchetta fino a ottenere una pastella liscia. Coprire e lasciare maturare a {temp_poolish:20!}°C per circa {tempo_poolish:12!} ore (o fino a quando si forma un leggero cedimento al centro)."
+    },
+    {
+      "title": "Avvio dell'Impasto",
+      "text": "Nella vasca della spirale, inserire tutto il poolish maturo, {farina_impasto:350}g di farina, {malto:5}g di malto, {lievito_impasto:3}g di lievito sbriciolato e {acqua_impasto_base:180}g di acqua fredda. Avviare in prima velocità (V1) per circa {min_v1:5!} minuti, fino a formare una maglia glutinica grezza ma coesa."
+    },
+    {
+      "title": "Incordatura e Bassinage",
+      "text": "Passare in seconda velocità (V2). Quando l'impasto si stacca dalle pareti, aggiungere {sale:10}g di sale. Iniziare ad inserire i restanti {acqua_bassinage:50}g di acqua a filo (tecnica del bassinage), aspettando che la dose precedente sia completamente assorbita prima di aggiungerne altra. L'impasto finale deve essere liscio, elastico e semi-lucido. Temperatura target: {temp_target:25!}°C."
+    },
+    {
+      "title": "Puntata e Pieghe",
+      "text": "Trasferire l'impasto in un contenitore leggermente oliato con bordi dritti. Lasciar riposare per {puntata_totale:120!} minuti a {temp_puntata:24!}°C. Durante questo tempo, eseguire due serie di pieghe di rinforzo (coil fold) a distanza di {intervallo_pieghe:45!} minuti l'una dall'altra per dare struttura."
+    },
+    {
+      "title": "Formatura (Staglio)",
+      "text": "Spolverare abbondantemente il piano di lavoro con semola rimacinata. Rovesciare delicatamente l'impasto, evitando di sgonfiarlo. Spolverare anche la superficie superiore di semola. Con un tarocco in metallo tagliapasta, ricavare dei rettangoli (le ciabatte) dal peso desiderato. Non arrotolare o pirlare i pezzi."
+    },
+    {
+      "title": "Appretto",
+      "text": "Disporre le ciabatte su un telo di lino (couche) o carta forno, distanziate tra loro e ben infarinate di semola. Lasciare lievitare coperte per circa {appretto_tempo:45!} minuti a temperatura ambiente, finché non risulteranno gonfie e tremolanti."
+    }
+  ],
+  "stepsHand": [
+    {
+      "title": "Preparazione del Poolish",
+      "text": "In una ciotola stretta e alta, sciogliere {lievito_poolish:1.5}g di lievito in {acqua_poolish:150}g di acqua. Aggiungere {farina_poolish:150}g di farina e mescolare vigorosamente con una forchetta. Coprire e lasciare maturare a {temp_poolish:20!}°C per circa {tempo_poolish:12!} ore."
+    },
+    {
+      "title": "Miscelazione Iniziale",
+      "text": "In una ciotola capiente, versare il poolish maturo. Aggiungere {farina_impasto:350}g di farina, {malto:5}g di malto, {lievito_impasto:3}g di lievito e {acqua_impasto_base:180}g di acqua fresca. Mescolare con un cucchiaio di legno o le mani fino a idratare tutta la farina. L'impasto sarà grezzo e appiccicoso. Lasciar riposare {riposo_iniziale:20!} minuti."
+    },
+    {
+      "title": "Lavorazione (Slap & Fold)",
+      "text": "Rovesciare l'impasto sul banco da lavoro (senza farina). Aggiungere {sale:10}g di sale. Iniziare a impastare con la tecnica dello 'slap & fold' (sbattere e piegare) per sviluppare il glutine. Dopo circa 5-7 minuti, quando l'impasto prende forza, aggiungere i restanti {acqua_bassinage:50}g di acqua in piccole dosi, continuando a sbattere l'impasto finché non risulta elastico, coeso e non si appiccica più tenacemente al banco."
+    },
+    {
+      "title": "Puntata e Coil Folds",
+      "text": "Trasferire l'impasto in un contenitore oliato. Lasciar fermentare per {puntata_totale:120!} minuti a {temp_puntata:24!}°C. Fare tre serie di pieghe in ciotola (coil folds) ogni {intervallo_pieghe:30!} minuti per irrobustire un impasto idratato e lavorato a mano."
+    },
+    {
+      "title": "Formatura (Staglio)",
+      "text": "Infarinare abbondantemente il banco con semola. Rovesciare l'impasto delicatamente, senza schiacciare le bolle d'aria. Con le dita, quadrare leggermente i bordi. Usando un tarocco netto, tagliare a strisce larghe 8-10 cm, poi tagliare a metà per formare le ciabatte. Toccare l'impasto il meno possibile."
+    },
+    {
+      "title": "Appretto",
+      "text": "Spostare delicatamente le ciabatte su carta forno ben infarinata, usando le mani o due tarocchi per sollevarle e allungarle appena. Coprire con un panno asciutto e lasciar lievitare per {appretto_tempo:45!} minuti."
+    }
+  ],
+  "stepsExtruder": [],
+  "stepsCondiment": [],
+  "flourTable": [
+    {
+      "type": "Farina Tipo 0 o 1 (Media Forza)",
+      "w": "280-320",
+      "brands": "Petra 3, Caputo Nuvola, Garofalo W260"
+    }
+  ],
+  "baking": {
+    "temperature": "250°C",
+    "time": "25-30 minuti",
+    "tips": [
+      "Preriscaldare la pietra refrattaria per 45 minuti a 250°C.",
+      "Cuocere con vapore (pentolino d'acqua bollente o spruzzino) per i primi 12 minuti.",
+      "Dopo 12 minuti, rimuovere il vapore e abbassare la temperatura a 220°C.",
+      "Gli ultimi 5 minuti aprire leggermente lo sportello (cottura a spiffero) per asciugare la mollica ed esaltare la croccantezza."
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Poolish",
+      "definition": "Pre-impasto liquido (100% idratazione, pari peso acqua/farina) che conferisce estensibilità, alveolatura e croccantezza."
+    },
+    {
+      "term": "Bassinage",
+      "definition": "Tecnica che consiste nell'aggiungere una parte dell'acqua (solitamente il 15-20%) solo dopo che si è formata la maglia glutinica, essenziale nelle alte idratazioni."
+    },
+    {
+      "term": "Slap & Fold",
+      "definition": "Tecnica manuale per impasti ad alta idratazione: si solleva l'impasto, lo si sbatte sul banco e lo si ripiega su se stesso intrappolando aria."
+    },
+    {
+      "term": "Coil Fold",
+      "definition": "Pieghe di rinforzo eseguite sollevando l'impasto dal centro e lasciando cadere le estremità sotto di esso, delicate per non rovinare la maglia glutinica."
+    },
+    {
+      "term": "Appretto",
+      "definition": "La seconda lievitazione dell'impasto, che avviene dopo la formatura dei panetti/ciabatte e precede la cottura."
+    },
+    {
+      "term": "Puntata",
+      "definition": "La prima lievitazione in massa dell'impasto, prima della divisione in panetti."
+    },
+    {
+      "term": "Staglio",
+      "definition": "La fase in cui la massa lievitata viene divisa nelle pezzature finali."
+    }
+  ],
+  "alert": "Non sgonfiare MAI l'impasto durante la formatura. A differenza del pane tondo che necessita di 'pirlatura', la ciabatta richiede un trattamento ruspante: si taglia di netto col tarocco e si cuoce. Qualsiasi manipolazione eccessiva distruggerà i gas e impedirà la formazione dei classici alveoli irregolari.",
+  "proTips": [
+    "Per spolverare il banco e i pani, usa solo semola rimacinata di grano duro e mai farina 00: la semola non viene assorbita dall'impasto umido e garantisce una crosta rustica.",
+    "Il poolish è pronto quando in superficie si formano tante piccole bollicine e al centro si nota un leggero cedimento (collassamento). Se odora di aceto è andato oltre, se odora di yogurt dolce è perfetto.",
+    "Data l'alta idratazione, maneggiare i pezzi tagliati richiede delicatezza. Quando trasferisci la ciabatta dal banco alla teglia, afferrala dalle estremità e allungala leggermente, questo aiuterà a formare la tipica sagoma stirata."
+  ],
+  "imageKeywords": [
+    "italian ciabatta bread",
+    "ciabatta loaf high hydration",
+    "artisan bread poolish",
+    "pane ciabatta alveolatura",
+    "ciabatta bread crumb open"
+  ],
+  "tags": [
+    "alta idratazione",
+    "poolish",
+    "pane italiano",
+    "pane rustico",
+    "lievito di birra"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "image": "images/ricette/pane/ciabatta-con-poolish.webp",
+  "imageAttribution": "📷 Foto: Cats Coming — Pexels License via Pexels"
+}
