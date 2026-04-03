@@ -1,40 +1,14 @@
 /**
- * Deploy su GitHub Pages via git subtree split + force push
- * Manda SOLO i file modificati, non ri-carica tutto ogni volta
+ * Deploy su GitHub Pages via pacchetto gh-pages
+ * Mantiene la storia del branch gh-pages → push incrementale (solo delta)
  */
 
-import { execSync } from 'child_process';
+import ghpages from 'gh-pages';
 import { existsSync, writeFileSync } from 'fs';
 import { join } from 'path';
 
 const DIST_DIR = join(process.cwd(), 'dist');
 const COMMIT_MSG = process.argv[2] || 'deploy: aggiornamento GitHub Pages';
-const TEMP_BRANCH = 'gh-pages-deploy-tmp';
-
-function run(cmd, opts = {}) {
-    console.log(`   → ${cmd}`);
-    return execSync(cmd, {
-        cwd: process.cwd(),
-        stdio: 'inherit',
-        timeout: 600_000,
-        env: { ...process.env, GIT_TERMINAL_PROMPT: '0' },
-        ...opts
-    });
-}
-
-function runSilent(cmd) {
-    try {
-        return execSync(cmd, {
-            cwd: process.cwd(),
-            stdio: 'pipe',
-            encoding: 'utf8',
-            timeout: 30_000,
-            env: { ...process.env, GIT_TERMINAL_PROMPT: '0' }
-        }).trim();
-    } catch {
-        return '';
-    }
-}
 
 async function deploy() {
     console.log('🚀 Deploy su GitHub Pages...\n');
@@ -44,54 +18,38 @@ async function deploy() {
         process.exit(1);
     }
 
-    // .nojekyll
+    // .nojekyll per evitare che GitHub Pages ignori file con underscore
     const nojekyll = join(DIST_DIR, '.nojekyll');
     if (!existsSync(nojekyll)) writeFileSync(nojekyll, '');
 
-    // Salva stato
-    const hadChanges = runSilent('git status --porcelain').length > 0;
-    if (hadChanges) {
-        console.log('💾 Salvo modifiche locali (stash)...');
-        run('git stash push -m "pre-deploy-stash"');
+    // 404.html per SPA routing su GitHub Pages
+    const indexPath = join(DIST_DIR, 'index.html');
+    const notFoundPath = join(DIST_DIR, '404.html');
+    if (existsSync(indexPath) && !existsSync(notFoundPath)) {
+        const indexContent = await import('fs').then(fs => fs.readFileSync(indexPath, 'utf8'));
+        writeFileSync(notFoundPath, indexContent);
     }
 
-    try {
-        // Aggiungi dist/ e committa
-        console.log('📦 Preparo dist/ per il push...');
-        run('git add dist -f');
+    console.log('📦 Push incrementale su gh-pages...');
 
-        const status = runSilent('git diff --cached --name-only');
-        if (!status) {
-            console.log('✅ Nessuna modifica in dist/. Il sito è già aggiornato.');
-            return;
+    ghpages.publish(
+        DIST_DIR,
+        {
+            branch: 'gh-pages',
+            message: COMMIT_MSG,
+            dotfiles: true,      // include .nojekyll
+            history: true,       // mantieni storia → push incrementale
+            silent: false,
+        },
+        (err) => {
+            if (err) {
+                console.error('❌ Deploy fallito:', err.message);
+                process.exit(1);
+            }
+            console.log('\n✅ Deploy completato!');
+            console.log('🌐 https://devdomenicotatone.github.io/Ricettario/');
         }
-
-        run('git commit -m "' + COMMIT_MSG + '"', { stdio: 'pipe' });
-
-        // Pulisci branch temporaneo locale se esiste
-        try { runSilent(`git branch -D ${TEMP_BRANCH}`); } catch {}
-
-        // Split: estrai dist/ in un branch temporaneo
-        console.log('🔀 Estraggo subtree dist/...');
-        run(`git subtree split --prefix dist -b ${TEMP_BRANCH}`);
-
-        // Force push: manda SOLO le differenze rispetto al gh-pages esistente
-        console.log('🚀 Push modifiche su gh-pages (solo delta)...');
-        run(`git push origin ${TEMP_BRANCH}:gh-pages --force`);
-
-        console.log('\n✅ Deploy completato!');
-        console.log('🌐 https://devdomenicotatone.github.io/Ricettario/');
-
-    } finally {
-        // Cleanup
-        console.log('\n🧹 Pulizia...');
-        try { runSilent(`git branch -D ${TEMP_BRANCH}`); } catch {}
-        try { run('git reset HEAD~1', { stdio: 'pipe' }); } catch {}
-
-        if (hadChanges) {
-            try { run('git stash pop', { stdio: 'pipe' }); } catch {}
-        }
-    }
+    );
 }
 
 deploy();
