@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-01T18:50:11.439Z",
-  "totalRecipes": 25,
+  "generatedAt": "2026-04-01T22:50:29.582Z",
+  "totalRecipes": 24,
   "categories": [
     {
       "name": "Pane",
@@ -19,7 +19,7 @@
     },
     {
       "name": "Lievitati",
-      "count": 7,
+      "count": 6,
       "emoji": "🥐"
     },
     {
@@ -207,27 +207,12 @@
       "emoji": "🍔",
       "href": "ricette/lievitati/burger-buns-con-biga.html",
       "image": "images/ricette/lievitati/burger-buns-con-biga.webp",
-      "description": "Panini soffici per hamburger con biga a lunga maturazione: crosta dorata, mollica filante e aroma complesso. Ricetta professionale con dosi precise.",
-      "hydration": "58%",
-      "time": "~16-18h biga + 2h puntata + 1h appretto",
-      "temp": "24-26°C",
+      "description": "Panini per hamburger artigianali morbidissimi, arricchiti con burro, latte e uova. L'uso della biga regala una sofficità estrema e una shelf-life prolungata.",
+      "hydration": "63%",
+      "time": "~20h",
+      "temp": "25-26°C",
       "tool": "",
-      "_generatedBy": "claude-opus"
-    },
-    {
-      "title": "Burger Buns Professionali",
-      "slug": "burger-buns-professionali",
-      "category": "Lievitati",
-      "categoryDir": "lievitati",
-      "emoji": "🍔",
-      "href": "ricette/lievitati/burger-buns-professionali.html",
-      "image": "images/ricette/lievitati/burger-buns-professionali.webp",
-      "description": "Panini per hamburger soffici e dorati, con crosta sottile e mollica morbida. Lievitazione controllata e cottura perfetta per il burger perfetto.",
-      "hydration": "54%",
-      "time": "~4-5h totali (biga 2h + puntata 2h + appretto 1h)",
-      "temp": "26-27°C",
-      "tool": "",
-      "_generatedBy": null
+      "_generatedBy": "gemini-3.1"
     },
     {
       "title": "Cornetti Sfogliati Classici",
