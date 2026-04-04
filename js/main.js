@@ -305,7 +305,7 @@ async function renderCategory(app, { category }) {
 
     // Contatore
     const countEl = document.getElementById('recipe-count');
-    if (countEl) countEl.textContent = `${fluentEmoji('bullseye', 16)} ${allRecipes.length} ricette`;
+    if (countEl) countEl.innerHTML = `${fluentEmoji('bullseye', 16)} ${allRecipes.length} ricett${allRecipes.length === 1 ? 'a' : 'e'}`;
 
     // Render griglia
     const grid = document.getElementById('category-grid');
