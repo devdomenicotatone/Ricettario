@@ -2,38 +2,35 @@
   "title": "Burger Buns con Biga",
   "slug": "burger-buns-con-biga",
   "emoji": "🍔",
-  "description": "Panini per hamburger artigianali morbidissimi, arricchiti con burro, latte e uova. L'uso della biga regala una sofficità estrema e una shelf-life prolungata.",
-  "subtitle": "Impasto arricchito (brioche) con pre-fermento per massima morbidezza",
+  "description": "Panini da hamburger soffici e aromatici con biga a lunga maturazione, crosta dorata ai semi di sesamo. Ricetta professionale con tecnica artigianale.",
+  "subtitle": "Panini briochati da burger con pre-impasto a lunga maturazione — crosta sottile, mollica soffice e filante",
   "category": "Lievitati",
-  "hydration": 63,
-  "targetTemp": "25-26°C",
-  "fermentation": "~20h",
+  "hydration": 59,
+  "targetTemp": "24-26°C",
+  "fermentation": "~18-20h biga + 2-2.5h puntata + 1h appretto",
   "totalFlour": 500,
   "ingredients": [],
   "ingredientGroups": [
     {
-      "group": "Per la Biga (Pre-impasto al 45%)",
+      "group": "Per la Biga (18-20h)",
       "items": [
         {
-          "name": "Farina Tipo 0 o Manitoba",
-          "note": "(W 320-350)",
+          "name": "Farina Manitoba",
+          "note": "(W 340-380)",
           "grams": 100,
-          "tokenId": "farina_biga",
-          "excludeFromTotal": true
+          "tokenId": "farina_biga"
         },
         {
           "name": "Acqua",
-          "note": "(18°C)",
+          "note": "(temperatura ambiente, 20-22°C)",
           "grams": 45,
-          "tokenId": "acqua_biga",
-          "excludeFromTotal": true
+          "tokenId": "acqua_biga"
         },
         {
           "name": "Lievito di Birra Fresco",
-          "note": "(1%)",
-          "grams": 1,
-          "tokenId": "lievito_biga",
-          "excludeFromTotal": true
+          "note": "(microdose per maturazione lunga)",
+          "grams": 0.2,
+          "tokenId": "lievito_fresco_biga"
         }
       ]
     },
@@ -41,95 +38,95 @@
       "group": "Per l'Impasto Finale",
       "items": [
         {
-          "name": "Biga Matura",
-          "note": "(tutta quella preparata)",
-          "grams": 146,
-          "tokenId": "biga_matura"
+          "name": "Farina Manitoba",
+          "note": "(W 340-380)",
+          "grams": 200,
+          "tokenId": "farina_manitoba_impasto"
         },
         {
-          "name": "Farina Tipo 0",
-          "note": "(W 280-300)",
-          "grams": 400,
-          "tokenId": "farina_impasto"
+          "name": "Farina Tipo 00",
+          "note": "(W 250-270)",
+          "grams": 200,
+          "tokenId": "farina_00_impasto"
         },
         {
           "name": "Latte Intero",
-          "note": "(vedi nota)",
-          "grams": 200,
+          "note": "(a temperatura ambiente, 20°C)",
+          "grams": 240,
           "tokenId": "latte_impasto",
           "setupNote": {
-            "spirale": "(freddo di frigo 4-6°C)",
-            "mano": "(temperatura ambiente 18-20°C)"
+            "spirale": "(16-18°C)",
+            "mano": "(20-22°C)"
           }
-        },
-        {
-          "name": "Lievito di Birra Fresco",
-          "note": "(addizionale)",
-          "grams": 4,
-          "tokenId": "lievito_impasto",
-          "setupNote": {
-            "spirale": "(4g)",
-            "mano": "(6g)"
-          }
-        },
-        {
-          "name": "Miele d'Acacia o Zucchero",
-          "note": "(aiuta la doratura)",
-          "grams": 20,
-          "tokenId": "miele_impasto"
         },
         {
           "name": "Uovo Intero",
-          "note": "(circa 1 uovo medio)",
-          "grams": 50,
+          "note": "(circa 1 medio, a temperatura ambiente)",
+          "grams": 55,
           "tokenId": "uovo_impasto"
         },
         {
-          "name": "Tuorlo d'Uovo",
-          "note": "(circa 1 tuorlo)",
-          "grams": 20,
-          "tokenId": "tuorlo_impasto"
-        },
-        {
-          "name": "Sale Fino",
-          "note": "(2% su farina totale)",
-          "grams": 10,
-          "tokenId": "sale_impasto"
-        },
-        {
-          "name": "Olio Extra Vergine di Oliva",
-          "note": "(dona elasticità)",
+          "name": "Miele di Acacia",
+          "note": "(dolcificante naturale e umettante)",
           "grams": 15,
-          "tokenId": "olio_impasto"
+          "tokenId": "miele_impasto"
+        },
+        {
+          "name": "Zucchero Semolato",
+          "note": "(per struttura e colore crosta)",
+          "grams": 25,
+          "tokenId": "zucchero_impasto"
         },
         {
           "name": "Burro",
-          "note": "(morbido a pomata, 18-20°C)",
-          "grams": 40,
+          "note": "(morbido, a pomata, 18-20°C)",
+          "grams": 30,
           "tokenId": "burro_impasto"
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(delicato, non fruttato)",
+          "grams": 25,
+          "tokenId": "olio_impasto"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(marino integrale)",
+          "grams": 12,
+          "tokenId": "sale_impasto"
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(2g spirale / 3g a mano — la biga fornisce già forza lievitante)",
+          "grams": 2,
+          "tokenId": "lievito_fresco_impasto",
+          "setupNote": {
+            "spirale": "(2g)",
+            "mano": "(3g, per compensare tempi più lunghi)"
+          }
         }
       ]
     },
     {
-      "group": "Per la Decorazione",
+      "group": "Per la Finitura",
       "items": [
         {
           "name": "Tuorlo d'Uovo",
-          "note": "(per spennellare)",
-          "grams": 20,
-          "tokenId": "tuorlo_spennellatura"
+          "note": "(per doratura)",
+          "grams": 18,
+          "tokenId": "tuorlo_doratura"
         },
         {
           "name": "Latte Intero",
-          "note": "(da mixare al tuorlo)",
+          "note": "(per doratura)",
           "grams": 20,
-          "tokenId": "latte_spennellatura"
+          "tokenId": "latte_doratura"
         },
         {
           "name": "Semi di Sesamo",
-          "note": "(bianchi o misti)",
+          "note": "(bianchi, o misti bianchi e neri)",
           "grams": 15,
-          "tokenId": "semi_sesamo"
+          "tokenId": "sesamo_finitura"
         }
       ]
     }
@@ -137,185 +134,191 @@
   "suspensions": [],
   "stepsSpiral": [
     {
-      "title": "Preparazione della Biga (Giorno 1)",
-      "text": "Sciogliere {lievito_biga:1}g di lievito in {acqua_biga:45}g di acqua a 18°C. Aggiungere {farina_biga:100}g di farina forte e impastare brevemente a mano. Non deve formarsi un impasto liscio, ma un panetto grezzo e asciutto (idratazione 45%). Coprire con pellicola e far maturare a 18-20°C per 16-18 ore."
+      "title": "Preparazione Biga (sera prima)",
+      "text": "In una ciotola, sciogliere {lievito_fresco_biga:0.2}g di lievito di birra fresco in {acqua_biga:45}g di acqua a temperatura ambiente (20-22°C). Versare {farina_biga:100}g di farina Manitoba e mescolare grossolanamente con un cucchiaio o con le mani per 1-2 minuti. NON impastare a fondo: la biga deve risultare un panetto ruvido, sbricioloso e compatto, non liscio. Coprire con pellicola a contatto e lasciare maturare 18-20 ore a 16-18°C (ambiente fresco o cantina). In estate, maturare 1 ora a temperatura ambiente poi trasferire in frigo; il mattino dopo estrarre 1 ora prima dell'uso. A maturazione, la biga avrà raddoppiato il volume con superficie leggermente cupolare e profumo acidulo-alcolico."
     },
     {
-      "title": "Avvio Impasto (Giorno 2)",
-      "text": "Spezzettare la {biga_matura:146}g nella vasca della spirale. Aggiungere {farina_impasto:400}g di farina, {lievito_impasto:4}g di lievito fresco, {miele_impasto:20}g di miele e circa l'80% del {latte_impasto:200}g (rigorosamente freddo di frigo). Avviare a velocità 1 per 5 minuti."
+      "title": "Inserimento Ingredienti Secchi e Biga",
+      "text": "Nella vasca della spirale, versare {farina_manitoba_impasto:200}g di farina Manitoba e {farina_00_impasto:200}g di farina Tipo 00. Spezzettare la biga matura in 5-6 pezzi e aggiungerla alle farine insieme a {zucchero_impasto:25}g di zucchero semolato e {miele_impasto:15}g di miele. Avviare in V1 (velocità 1) per amalgamare a secco per 1 minuto."
     },
     {
-      "title": "Inserimento Uova e Incordatura",
-      "text": "Quando l'impasto prende corpo, aggiungere {uovo_impasto:50}g di uovo intero e {tuorlo_impasto:20}g di tuorlo, alternandoli al restante latte freddo. Passare a velocità 2. Attendere che la maglia glutinica sia ben formata e liscia prima di procedere. L'impasto deve staccarsi perfettamente dalle pareti."
+      "title": "Aggiunta Liquidi e Incordatura",
+      "text": "Con la spirale in V1, versare a filo {latte_impasto:240}g di latte intero (16-18°C) alternandolo con {uovo_impasto:55}g di uovo sbattuto. Aggiungere {lievito_fresco_impasto:2}g di lievito di birra fresco sbriciolato. Lavorare in V1 per 5 minuti fino ad ottenere un impasto omogeneo. Passare in V2 e lavorare per 6-8 minuti fino a incordatura: l'impasto deve staccarsi dalle pareti e attorcigliarsi al gancio formando un velo sottile (test della finestra)."
     },
     {
-      "title": "Inserimento Sale e Grassi",
-      "text": "Aggiungere {sale_impasto:10}g di sale. Una volta assorbito, versare {olio_impasto:15}g di olio a filo. Infine, inserire {burro_impasto:40}g di burro a pomata in 3-4 riprese, aspettando che il pezzo precedente sia assorbito. L'impasto finale dovrà essere setoso, lucido e avere una temperatura al cuore di {temp:25!}°C."
+      "title": "Aggiunta Grassi e Sale",
+      "text": "Tornare in V1 e aggiungere {sale_impasto:12}g di sale. Lavorare 1 minuto. Aggiungere {olio_impasto:25}g di olio EVO a filo sottile, attendere il completo assorbimento (2-3 minuti in V1). Poi aggiungere {burro_impasto:30}g di burro morbido in 3 porzioni, una alla volta, aspettando che ogni porzione sia completamente assorbita prima di aggiungere la successiva. Passare in V2 per 3-4 minuti finali. L'impasto finito deve essere liscio, lucido, elastico e leggermente appiccicoso. Temperatura target: 24-26°C."
     },
     {
-      "title": "Puntata (Prima Lievitazione)",
-      "text": "Trasferire l'impasto sul banco leggermente unto, formare una sfera e riporla in un contenitore oliato con pareti dritte. Coprire e lasciar lievitare a temperatura ambiente (circa 25-26°C) per 2 ore, o fino al raddoppio del volume."
+      "title": "Puntata (prima lievitazione)",
+      "text": "Trasferire l'impasto su un piano leggermente oliato, eseguire una pirlatura formando una sfera tesa. Porre in una ciotola leggermente oliata, coprire con pellicola o piatto e lasciare lievitare a 26-28°C per 2-2,5 ore, o fino a raddoppio del volume. A metà lievitazione (dopo 1 ora) eseguire una delicata piega a tre ripiegando l'impasto su se stesso per rinforzare la struttura glutinica."
     },
     {
-      "title": "Staglio e Pirlatura",
-      "text": "Capovolgere l'impasto sul banco di lavoro. Dividere in pezzi da {panetto_peso:100!}g. Procedere con una pirlatura molto stretta: arrotondare ogni porzione facendola strisciare sul banco in modo da tendere al massimo la superficie superiore. Sigillare bene la chiusura inferiore."
+      "title": "Staglio e Formatura",
+      "text": "Ribaltare delicatamente l'impasto sul piano di lavoro leggermente infarinato. Sgonfiare con dolcezza premendo con i polpastrelli. Dividere in {panetto_peso:95!}g ciascuno (si ottengono circa 9-10 buns). Per ogni pezzo: ripiegare i lembi verso il centro, capovolgere con la chiusura sotto e pirlare sul piano facendo ruotare la pallina con le mani a coppa fino a ottenere una sfera tesa e regolare. Disporre le palline su una o due teglie rivestite di carta forno, distanziandole almeno 5 cm l'una dall'altra. Schiacciare leggermente con il palmo della mano fino a ottenere dischi di circa 8-9 cm di diametro e 2,5 cm di altezza."
     },
     {
-      "title": "Appretto (Seconda Lievitazione)",
-      "text": "Disporre i panetti ben distanziati su una teglia foderata di carta forno. Coprire con pellicola leggermente unta (per non farla attaccare) o in una cella di lievitazione. Lasciare raddoppiare per circa 1.5 - 2 ore a 26°C. Il panetto sarà pronto quando, premendolo dolcemente con un dito, la fossetta tornerà indietro lentamente."
-    },
-    {
-      "title": "Decorazione",
-      "text": "In una ciotolina, sbattere {tuorlo_spennellatura:20}g di tuorlo con {latte_spennellatura:20}g di latte. Spennellare la superficie dei buns con estrema delicatezza per non sgonfiarli. Cospargere uniformemente con {semi_sesamo:15}g di semi."
+      "title": "Appretto (seconda lievitazione) e Finitura",
+      "text": "Coprire le teglie con pellicola alimentare leggermente oliata (non a contatto diretto, creare una cupola) o un canovaccio umido. Lasciare lievitare a 26-28°C per 50-70 minuti: i buns devono crescere del 50-60%, risultare gonfi e soffici al tatto ma non raddoppiati (altrimenti collassano in cottura). Nel frattempo, preparare la doratura: sbattere {tuorlo_doratura:18}g di tuorlo con {latte_doratura:20}g di latte intero. A lievitazione completata, spennellare delicatamente i buns con la doratura usando un pennello morbido a movimenti leggerissimi per non sgonfiare la superficie. Cospargere subito con {sesamo_finitura:15}g di semi di sesamo, premendo leggermente con le dita per farli aderire."
     }
   ],
   "stepsHand": [
     {
-      "title": "Preparazione della Biga (Giorno 1)",
-      "text": "Sciogliere {lievito_biga:1}g di lievito in {acqua_biga:45}g di acqua a 18°C. Aggiungere {farina_biga:100}g di farina e formare un panetto ruvido e grezzo (idratazione 45%). Coprire bene e lasciar maturare a 18-20°C per 16-18 ore."
+      "title": "Preparazione Biga (sera prima)",
+      "text": "In una ciotola, sciogliere {lievito_fresco_biga:0.2}g di lievito di birra fresco in {acqua_biga:45}g di acqua a temperatura ambiente (20-22°C). Versare {farina_biga:100}g di farina Manitoba e mescolare grossolanamente con le mani per 1-2 minuti. NON impastare a fondo: la biga deve risultare un panetto ruvido, sbricioloso e compatto, non liscio. Coprire con pellicola a contatto e lasciare maturare 18-20 ore a 16-18°C (ambiente fresco o cantina). In estate, maturare 1 ora a temperatura ambiente poi trasferire in frigo; il mattino dopo estrarre 1 ora prima dell'uso."
     },
     {
-      "title": "Scioglimento della Biga",
-      "text": "In una ciotola capiente, versare {latte_impasto:200}g di latte a temperatura ambiente. Aggiungere la {biga_matura:146}g spezzettata, {lievito_impasto:6}g di lievito (leggermente aumentato per impasto a mano), {miele_impasto:20}g di miele, {uovo_impasto:50}g di uovo e {tuorlo_impasto:20}g di tuorlo. Rompere bene la biga nei liquidi con le mani."
+      "title": "Inserimento Ingredienti e Prima Idratazione",
+      "text": "Su una spianatoia ampia (o in una ciotola capiente), versare {farina_manitoba_impasto:200}g di farina Manitoba e {farina_00_impasto:200}g di farina Tipo 00 a fontana. Al centro spezzettare la biga matura in piccoli pezzi. Aggiungere {zucchero_impasto:25}g di zucchero semolato, {miele_impasto:15}g di miele e {lievito_fresco_impasto:3}g di lievito di birra fresco sbriciolato (dose aumentata a 3g per compensare i tempi più lunghi dell'impasto manuale). Versare gradualmente {latte_impasto:240}g di latte intero (20-22°C) e {uovo_impasto:55}g di uovo sbattuto, incorporando dal centro verso l'esterno."
     },
     {
-      "title": "Miscelazione e Fermentolisi",
-      "text": "Aggiungere {farina_impasto:400}g di farina e mescolare grossolanamente con un cucchiaio o tarocco fino a completo assorbimento dei liquidi. L'impasto sarà irregolare. Coprire con un panno e far riposare per 20 minuti (aiuta lo sviluppo del glutine)."
+      "title": "Impastamento e Incordatura",
+      "text": "Impastare con entrambe le mani per 10-12 minuti utilizzando la tecnica slap & fold: sollevare l'impasto, sbatterlo sul piano e ripiegarlo su se stesso. L'impasto sarà inizialmente appiccicoso — NON aggiungere farina. Resistere alla tentazione e continuare a lavorare. Quando l'impasto inizia a diventare liscio ed elastico (dopo circa 8 minuti), aggiungere {sale_impasto:12}g di sale e continuare a impastare per 2-3 minuti."
     },
     {
-      "title": "Chiusura Impasto e Grassi",
-      "text": "Ribaltare sul banco. Aggiungere {sale_impasto:10}g di sale e iniziare a impastare con la tecnica slap & fold (sbattere e piegare) per 5-8 minuti. Inserire {olio_impasto:15}g di olio, continuare a impastare finché assorbito. Infine, spalmare {burro_impasto:40}g di burro a pomata sulla superficie in due riprese, impastando energicamente fino a ottenere una maglia glutinica liscia ed elastica (finestra)."
+      "title": "Aggiunta Grassi",
+      "text": "Appiattire leggermente l'impasto e distribuire {olio_impasto:25}g di olio EVO sulla superficie. Ripiegare e impastare con slap & fold per 3-4 minuti fino a completo assorbimento. Poi aggiungere {burro_impasto:30}g di burro morbido in 2-3 porzioni, lavorando ciascuna fino ad assorbimento con la stessa tecnica. L'impasto finale deve essere liscio, lucido, elastico e leggermente appiccicoso. Tempo totale impasto a mano: 18-22 minuti. Temperatura target: 24-26°C."
     },
     {
-      "title": "Puntata",
-      "text": "Pirlare l'impasto in una sfera, trasferire in un contenitore oliato, coprire e far raddoppiare a 25-26°C per circa 2 ore."
+      "title": "Puntata (prima lievitazione)",
+      "text": "Formare una sfera tesa (pirlatura), porre in una ciotola leggermente oliata, coprire con pellicola e lasciar lievitare a 26-28°C per 2-2,5 ore fino al raddoppio. Dopo 45 minuti e dopo 1,5 ore, eseguire una serie di stretch & fold direttamente in ciotola: afferrare un lembo, tirare in alto e ripiegare al centro, ruotare di 90° e ripetere per 4 lati. Queste pieghe compensano la minor lavorazione meccanica e rinforzano la maglia glutinica."
     },
     {
-      "title": "Staglio e Pirlatura",
-      "text": "Spezzare l'impasto in porzioni da {panetto_peso:100!}g. Arrotondare ogni panetto (pirlatura) stringendo molto bene la chiusura alla base, essenziale per una spinta verticale in cottura."
+      "title": "Staglio e Formatura",
+      "text": "Ribaltare delicatamente l'impasto su un piano leggermente infarinato. Sgonfiare con i polpastrelli. Dividere in porzioni da {panetto_peso:95!}g ciascuno (circa 9-10 buns). Per ogni pezzo: ripiegare i lembi verso il centro, capovolgere con la chiusura sotto e pirlare sul piano facendo ruotare la pallina sotto le mani a coppa per creare tensione superficiale. Disporre su teglie con carta forno, distanziare di 5 cm. Schiacciare leggermente con il palmo fino a dischi di 8-9 cm, alti circa 2,5 cm."
     },
     {
-      "title": "Appretto",
-      "text": "Posizionare i buns su teglia con carta forno, distanziati. Coprire delicatamente con pellicola unta e far raddoppiare in volume (1.5 - 2 ore a 26°C)."
-    },
-    {
-      "title": "Spennellatura",
-      "text": "Mischiare {tuorlo_spennellatura:20}g di tuorlo e {latte_spennellatura:20}g di latte. Spennellare delicatamente i buns lievitati e spargere {semi_sesamo:15}g di semi."
-    }
-  ],
-  "stepsExtruder": [],
-  "stepsCondiment": [],
-  "flourTable": [
-    {
-      "type": "Farina per Biga (Forte)",
-      "w": "320-350",
-      "brands": "Caputo Cuoco, Garofalo W350, Petra 5037"
-    },
-    {
-      "type": "Farina per Impasto (Media)",
-      "w": "280-300",
-      "brands": "Caputo Nuvola, Dalla Giovanna Nuvola, Molino Pasini Tipo 0"
+      "title": "Appretto e Finitura",
+      "text": "Coprire con pellicola oliata a cupola e far lievitare a 26-28°C per 50-70 minuti (crescita del 50-60%). Preparare la doratura sbattendo {tuorlo_doratura:18}g di tuorlo con {latte_doratura:20}g di latte. Spennellare i buns con tocco leggerissimo e cospargere con {sesamo_finitura:15}g di semi di sesamo, premendo delicatamente per farli aderire."
     }
   ],
   "baking": {
-    "temperature": "190°C",
-    "time": "15-18 minuti",
+    "temperature": "180°C statico",
+    "time": "14-18 minuti",
     "tips": [
-      "Forno statico preriscaldato",
-      "Cuocere nella parte medio-bassa",
-      "Se la superficie scurisce troppo in fretta, coprire con carta stagnola a metà cottura",
-      "Sfornare quando la temperatura al cuore raggiunge i 93-94°C"
+      "Forno STATICO obbligatorio — il ventilato secca la crosta e impedisce una lievitazione uniforme nei panini morbidi",
+      "Preriscaldare il forno a 180°C per almeno 20 minuti prima di infornare",
+      "Posizionare la teglia nel ripiano medio-basso del forno",
+      "NON aprire il forno nei primi 10 minuti — i buns stanno completando l'oven spring",
+      "I buns sono pronti quando la crosta è dorata uniforme (colore nocciola chiaro) e suonano leggermente cavi battendo sotto. La temperatura interna ideale è 88-92°C al cuore",
+      "Sfornare e lasciar raffreddare su una griglia per almeno 20 minuti — tagliare i buns caldi genera una mollica gommosa",
+      "Se si desidera una crosta più lucida, dare una seconda passata di doratura dopo 8 minuti di cottura (aprire velocemente il forno)"
     ]
   },
+  "flourTable": [
+    {
+      "type": "Farina Manitoba (W 340-380) — per biga e impasto",
+      "w": "340-380",
+      "brands": "Caputo Manitoba Oro, Molino Grassi Manitoba, Le 5 Stagioni Manitoba, Dallagiovanna Superiore"
+    },
+    {
+      "type": "Farina Tipo 00 (W 250-270) — per impasto finale",
+      "w": "250-270",
+      "brands": "Caputo Nuvola, Molino Grassi 00, Dallagiovanna Classica, Le 5 Stagioni Oro"
+    }
+  ],
   "glossary": [
     {
       "term": "Biga",
-      "definition": "Pre-impasto di origini italiane, molto asciutto (idratazione massima 45-50%), che matura lentamente. Conferisce struttura, digeribilità e prolunga la morbidezza del prodotto."
+      "definition": "Pre-impasto rigido con idratazione del 44-50%, maturazione lunga (16-24h). Conferisce struttura alveolare, profumo complesso e maggiore conservabilità rispetto all'impasto diretto."
     },
     {
       "term": "Incordatura",
-      "definition": "Fase in cui l'impasto sviluppa una maglia glutinica tenace ed elastica, aggrappandosi al gancio dell'impastatrice o risultando liscio a mano."
+      "definition": "Fase in cui la maglia glutinica è completamente sviluppata: l'impasto si stacca dalle pareti della ciotola/vasca e si attorciglia attorno al gancio. Si verifica con il test della finestra (windowpane test)."
+    },
+    {
+      "term": "Test della finestra (Windowpane test)",
+      "definition": "Verifica dello sviluppo del glutine: si stacca un pezzetto di impasto e lo si stira tra le dita. Se forma un velo sottile e traslucido senza rompersi, la maglia glutinica è ben sviluppata."
     },
     {
       "term": "Pirlatura",
-      "definition": "Arrotondamento manuale dell'impasto o dei panetti facendoli scivolare sul piano di lavoro per tendere la superficie esterna e sigillare la base."
+      "definition": "Tecnica di arrotondamento: si fa ruotare l'impasto porzionato sul piano sotto le mani a coppa per creare tensione superficiale. La chiusura resta sotto, la superficie diventa tesa e liscia."
     },
     {
       "term": "Puntata",
-      "definition": "Prima fase di lievitazione della massa in blocco prima della divisione in porzioni."
+      "definition": "Prima lievitazione dell'impasto in massa, dopo l'impastamento. Permette lo sviluppo della struttura alveolare e la fermentazione iniziale."
     },
     {
       "term": "Appretto",
-      "definition": "Seconda lievitazione, quella che avviene dopo aver dato la forma ai singoli panetti, prima della cottura."
+      "definition": "Seconda e ultima lievitazione dopo la formatura dei panetti. Avviene direttamente nella forma finale (su teglia o in stampo) prima della cottura."
     },
     {
       "term": "Staglio",
-      "definition": "Divisione della massa (puntata) nei pesi desiderati per la formatura."
+      "definition": "Operazione di porzionatura dell'impasto in pezzi del peso desiderato, eseguita dopo la puntata e prima della formatura."
     },
     {
       "term": "Slap & Fold",
-      "definition": "Tecnica manuale per impasti idratati o ricchi di grassi: consiste nel sollevare la pasta, sbatterla sul banco e ripiegarla su se stessa per sviluppare il glutine."
+      "definition": "Tecnica di impastamento manuale: l'impasto viene sollevato, sbattuto energicamente sul piano di lavoro e ripiegato su se stesso. Molto efficace per impasti molli e appiccicosi."
+    },
+    {
+      "term": "Stretch & Fold",
+      "definition": "Piega di rinforzo eseguita in ciotola durante la puntata: si afferra un lembo dell'impasto, si stira verso l'alto e si ripiega al centro, ripetendo per tutti e 4 i lati. Rinforza la maglia glutinica senza impastare."
+    },
+    {
+      "term": "Bassinage",
+      "definition": "Tecnica di aggiunta graduale di liquidi (acqua, olio) durante l'impastamento, a filo sottile, per permettere un migliore assorbimento senza spezzare la maglia glutinica."
+    },
+    {
+      "term": "Oven spring",
+      "definition": "Espansione rapida dell'impasto nei primi minuti di cottura in forno, dovuta all'evaporazione dell'acqua e all'espansione dei gas della fermentazione."
+    },
+    {
+      "term": "Doratura (egg wash)",
+      "definition": "Miscela di tuorlo d'uovo e latte spennellata sulla superficie dei panini prima della cottura per ottenere una crosta lucida e dorata di colore uniforme."
     }
   ],
   "variants": [
     {
       "id": "cold-fermentation",
-      "label": "❄️ Maturazione in Frigo (Panini più aromatici)",
-      "description": "Prolunga la lievitazione ritardando lo sviluppo con il freddo, migliorando sapore e conservabilità.",
+      "label": "❄️ Maturazione Lenta in Frigo (12-16h)",
+      "description": "Dopo la formatura, i buns maturano in frigo 12-16 ore. Sapore più complesso, aromi più sviluppati, e la comodità di preparare la sera per cuocere la mattina dopo.",
       "ingredientOverrides": [
         {
-          "ref": "lievito_impasto",
-          "grams": 2,
-          "note": "(dimezzato per resistere alla lunga tempistica)"
+          "ref": "lievito_fresco_impasto",
+          "grams": 1,
+          "note": "(ridotto per maturazione lunga in frigo)"
         }
       ],
-      "branchAfterStep": 4,
+      "branchAfterStep": 5,
       "altSteps": [
         {
-          "title": "Puntata in Frigo",
-          "text": "Dopo aver formato la sfera a fine impasto, riporla in un contenitore ermetico e trasferirla immediatamente in frigorifero a 4°C per 12-18 ore."
+          "title": "Appretto Breve e Preparazione Frigo",
+          "text": "Dopo la formatura in sfere da {panetto_peso:95!}g e la disposizione in teglia, coprire con pellicola oliata e lasciare a temperatura ambiente per 30 minuti (pre-appretto). I buns devono appena iniziare a gonfiarsi. Coprire la teglia con pellicola alimentare ben aderente ma non a contatto con i panini (creare una cupola con stecchini ai lati) e trasferire in frigorifero a 4-6°C per 12-16 ore."
         },
         {
-          "title": "Acclimatamento",
-          "text": "Il giorno successivo, estrarre l'impasto dal frigorifero e lasciarlo a temperatura ambiente per circa 1.5 - 2 ore per farlo ripartire."
-        },
-        {
-          "title": "Staglio e Pirlatura",
-          "text": "Spezzare in porzioni da {panetto_peso:100!}g e procedere alla pirlatura stretta sul piano da lavoro."
-        },
-        {
-          "title": "Appretto Lento",
-          "text": "Disporre sulla teglia, coprire e far raddoppiare. Partendo da un impasto freddo, l'appretto richiederà circa 2.5 - 3 ore a 26°C."
-        },
-        {
-          "title": "Spennellatura",
-          "text": "Mischiare {tuorlo_spennellatura:20}g di tuorlo con {latte_spennellatura:20}g di latte, spennellare e aggiungere {semi_sesamo:15}g di semi prima di infornare."
+          "title": "Recupero Temperatura e Finitura",
+          "text": "Il giorno dopo (o dopo almeno 12 ore), estrarre i buns dal frigo e lasciarli a temperatura ambiente per 45-60 minuti — devono riprendere volume e risultare morbidi al tatto. Non devono necessariamente raddoppiare. Preriscaldare il forno a 180°C statico durante questa fase. Preparare la doratura sbattendo {tuorlo_doratura:18}g di tuorlo con {latte_doratura:20}g di latte. Spennellare delicatamente i buns e cospargere con {sesamo_finitura:15}g di semi di sesamo. Infornare e cuocere 14-18 minuti fino a doratura uniforme."
         }
       ]
     }
   ],
-  "alert": "ERRORE CRITICO SUI GRASSI: Mai inserire il burro prima che l'impasto sia perfettamente incordato (liscio ed elastico). Se i grassi vengono inseriti troppo presto, foderano le proteine della farina impedendo la formazione del glutine. L'impasto rimarrà debole e appiccicoso all'infinito.",
+  "alert": "⚠️ NON aggiungere farina durante l'impastamento manuale, anche se l'impasto sembra troppo appiccicoso — i grassi (burro e olio) lo renderanno più gestibile una volta assorbiti. Aggiungere farina altera le proporzioni, produce buns secchi e compatti invece che soffici. NON spennellare la doratura con mano pesante: i buns lievitati sono delicatissimi, un colpo di pennello troppo energico sgonfia la superficie e produce panini piatti con crosta irregolare.",
   "proTips": [
-    "Per ottenere panini in perfetto stile fast-food (flat e larghi) anziché a fungo, schiaccia delicatamente i panetti pirlati con il palmo della mano prima dell'appretto.",
-    "Il trucco per una morbidezza estrema che dura giorni: appena sfornati, copri i burger buns (ancora caldi sulla griglia) con un canovaccio pulito e inumidito. Il vapore rimarrà intrappolato ammorbidendo la crosta in modo eccezionale.",
-    "La perfetta doratura è garantita dalla presenza del miele e dal tuorlo spennellato: se vedi che in cottura si scuriscono troppo rapidamente prima dei 15 minuti, abbassa la teglia o metti un foglio di stagnola volante sopra."
+    "Per buns da competizione, sostituire 5g di zucchero con 5g di malto diastatico in polvere: migliora la reazione di Maillard donando un colore dorato più profondo e un profumo più complesso, e aiuta la crosta a restare morbida anche il giorno dopo.",
+    "Per una mollica ancora più soffice e filante stile brioche americana, aumentare il burro a 50g e il tuorlo a 2, riducendo il latte di 30g. L'impasto sarà più ricco ma richiederà 3-4 minuti in più di incordatura.",
+    "I buns si congelano perfettamente: dopo il raffreddamento completo, chiudere in sacchetti per freezer eliminando tutta l'aria. Si scongelano in 15 minuti a temperatura ambiente o 30 secondi in microonde. Per ripristinare la crosta, 2 minuti in forno a 160°C."
   ],
   "imageKeywords": [
-    "homemade burger buns",
-    "brioche buns for burger",
-    "soft hamburger buns sesame",
-    "burger brötchen backen",
-    "panini per hamburger artigianali"
+    "homemade burger buns sesame seeds",
+    "brioche hamburger buns golden",
+    "fresh baked burger rolls",
+    "panini hamburger fatti in casa",
+    "soft burger buns close up",
+    "Hamburger Brötchen sesam",
+    "artisan burger buns bakery"
   ],
   "tags": [
-    "burger",
-    "buns",
+    "burger buns",
+    "panini hamburger",
     "biga",
-    "brioche",
     "lievitati",
-    "hamburger"
+    "panificazione",
+    "brioche salata",
+    "pre-impasto",
+    "sesamo"
   ],
-  "_generatedBy": "gemini-3.1",
+  "_generatedBy": "claude-opus",
+  "_createdAt": "2026-04-05T01:36:05.142Z",
   "image": "images/ricette/lievitati/burger-buns-con-biga.webp",
-  "imageAttribution": "📷 Foto: Ron Lach — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: Nadin Sh — Pexels License via Pexels"
 }

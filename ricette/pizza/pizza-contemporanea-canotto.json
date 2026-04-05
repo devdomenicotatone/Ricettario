@@ -237,12 +237,14 @@
           "name": "Farina Caputo Saccorosso (per biga)",
           "note": "(W 330-350, Manitoba rossa per struttura)",
           "grams": 830,
+          "tokenId": "farina_biga",
           "excludeFromTotal": false
         },
         {
           "name": "Acqua per biga",
           "note": "(fredda da frigo 8-10°C)",
           "grams": 375,
+          "tokenId": "acqua_biga",
           "excludeFromTotal": false,
           "setupNote": {
             "spirale": "(fredda da frigo 8-10°C)",
@@ -253,6 +255,7 @@
           "name": "Lievito Secco Caputo (per biga)",
           "note": "(0.22% su farina biga)",
           "grams": 1.8,
+          "tokenId": "lievito",
           "excludeFromTotal": false
         }
       ]
@@ -264,24 +267,28 @@
           "name": "Biga matura",
           "note": "(tutto l'impasto precedente, ~1205g)",
           "grams": 1205,
+          "tokenId": "biga_matura",
           "excludeFromTotal": true
         },
         {
           "name": "Farina Caputo Nuvola Super",
           "note": "(W 260-280, protagonista per spinta e alveolatura)",
           "grams": 1660,
+          "tokenId": "farina_nuvola",
           "excludeFromTotal": false
         },
         {
           "name": "Farina Caputo Saccorosso (rinfresco)",
           "note": "(W 330-350, rinforzo finale)",
           "grams": 275,
+          "tokenId": "farina_rinfresco",
           "excludeFromTotal": false
         },
         {
           "name": "Acqua rinfresco",
           "note": "(da inserire in più riprese come da procedimento)",
           "grams": 1615,
+          "tokenId": "acqua_rinfresco",
           "excludeFromTotal": false,
           "setupNote": {
             "spirale": "(in 2 riprese: 970g iniziale + 645g bassinage)",
@@ -292,18 +299,21 @@
           "name": "Criscito Caputo",
           "note": "(lievito madre essiccato, 30g/kg come da indicazioni)",
           "grams": 83,
+          "tokenId": "criscito",
           "excludeFromTotal": true
         },
         {
           "name": "Estratto di Malto",
           "note": "(per attività enzimatica e colorazione)",
           "grams": 9,
+          "tokenId": "malto",
           "excludeFromTotal": true
         },
         {
           "name": "Sale Marino Fino",
           "note": "(2.3% su farina totale, massima estensibilità)",
           "grams": 64,
+          "tokenId": "sale",
           "excludeFromTotal": true
         }
       ]

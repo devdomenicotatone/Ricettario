@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-05T00:44:15.116Z",
-  "totalRecipes": 24,
+  "generatedAt": "2026-04-05T02:19:45.465Z",
+  "totalRecipes": 25,
   "categories": [
     {
       "name": "Pane",
@@ -19,7 +19,7 @@
     },
     {
       "name": "Lievitati",
-      "count": 6,
+      "count": 7,
       "emoji": "🥐"
     },
     {
@@ -52,7 +52,8 @@
       "time": "~18h",
       "temp": "24-25°C",
       "tool": "",
-      "_generatedBy": "gemini-3.1"
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-01T11:58:21.393Z"
     },
     {
       "title": "Ciabatta con Poolish",
@@ -67,7 +68,8 @@
       "time": "~18h",
       "temp": "24-25°C",
       "tool": "",
-      "_generatedBy": "gemini-3.1"
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-03T20:59:40.669Z"
     },
     {
       "title": "Pane alle Noci con Poolish",
@@ -82,7 +84,8 @@
       "time": "12h (prefermento) + 4-5h (impasto)",
       "temp": "25-26°C",
       "tool": "",
-      "_generatedBy": "gemini-3.1"
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-03T21:06:09.485Z"
     },
     {
       "title": "Pane di Altamura",
@@ -97,7 +100,8 @@
       "time": "18-20h",
       "temp": "25-26°C",
       "tool": "",
-      "_generatedBy": "gemini-3.1"
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-03T22:13:32.867Z"
     },
     {
       "title": "Pane Integrale con Biga",
@@ -107,12 +111,13 @@
       "emoji": "🌾",
       "href": "ricette/pane/pane-integrale-con-biga.html",
       "image": "images/ricette/pane/pane-integrale-con-biga.webp",
-      "description": "Pane integrale con biga a 18h: crosta croccante, mollica alveolata e sapore profondo grazie al malto diastasico e alla farina integrale.",
-      "hydration": "64%",
-      "time": "18h biga + 4-5h impasto",
-      "temp": "24-26°C",
+      "description": "Un pane rustico e profumato con farina integrale e biga al 30%. Alta idratazione (75%) per una mollica alveolata e crosta croccante.",
+      "hydration": "75%",
+      "time": "16h (biga) + 4-5h (impasto)",
+      "temp": "25-26°C",
       "tool": "",
-      "_generatedBy": "claude"
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-05T02:05:44.664Z"
     },
     {
       "title": "Pane Pugliese con Biga",
@@ -127,7 +132,8 @@
       "time": "~22h",
       "temp": "25-26°C",
       "tool": "",
-      "_generatedBy": "gemini-3.1"
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-01T01:03:32.772Z"
     },
     {
       "title": "Pinsa Romana",
@@ -142,7 +148,8 @@
       "time": "24-48h",
       "temp": "24-26°C",
       "tool": "",
-      "_generatedBy": null
+      "_generatedBy": null,
+      "_createdAt": "2026-04-01T02:30:22.260Z"
     },
     {
       "title": "Pizza Contemporanea Canotto",
@@ -157,7 +164,8 @@
       "time": "24h biga + 6-7h rinfresco",
       "temp": "23°C",
       "tool": "",
-      "_generatedBy": null
+      "_generatedBy": null,
+      "_createdAt": "2026-04-05T01:58:59.344Z"
     },
     {
       "title": "Pizza Napoletana Antica Tradizione con Biga e Criscito",
@@ -172,7 +180,8 @@
       "time": "24-30h totali (biga 18-24h + appretto 5-6h)",
       "temp": "23-24°C",
       "tool": "",
-      "_generatedBy": null
+      "_generatedBy": null,
+      "_createdAt": "2026-03-30T20:45:28.688Z"
     },
     {
       "title": "Pizza Napoletana Verace STG",
@@ -187,7 +196,8 @@
       "time": "8-24h (controllata)",
       "temp": "24-26°C",
       "tool": "",
-      "_generatedBy": null
+      "_generatedBy": null,
+      "_createdAt": "2026-03-30T20:45:28.689Z"
     },
     {
       "title": "Gnocchi di Patate",
@@ -202,7 +212,8 @@
       "time": "nessuna (riposo 20-40 min)",
       "temp": "28-32°C",
       "tool": "",
-      "_generatedBy": null
+      "_generatedBy": null,
+      "_createdAt": "2026-03-30T16:49:24.844Z"
     },
     {
       "title": "Burger Buns con Biga",
@@ -212,12 +223,13 @@
       "emoji": "🍔",
       "href": "ricette/lievitati/burger-buns-con-biga.html",
       "image": "images/ricette/lievitati/burger-buns-con-biga.webp",
-      "description": "Panini per hamburger artigianali morbidissimi, arricchiti con burro, latte e uova. L'uso della biga regala una sofficità estrema e una shelf-life prolungata.",
-      "hydration": "63%",
-      "time": "~20h",
-      "temp": "25-26°C",
+      "description": "Panini da hamburger soffici e aromatici con biga a lunga maturazione, crosta dorata ai semi di sesamo. Ricetta professionale con tecnica artigianale.",
+      "hydration": "59%",
+      "time": "~18-20h biga + 2-2.5h puntata + 1h appretto",
+      "temp": "24-26°C",
       "tool": "",
-      "_generatedBy": "gemini-3.1"
+      "_generatedBy": "claude-opus",
+      "_createdAt": "2026-04-05T01:36:05.142Z"
     },
     {
       "title": "Cornetti Sfogliati Classici",
@@ -227,12 +239,29 @@
       "emoji": "🥐",
       "href": "ricette/lievitati/cornetti-sfogliati-classici.html",
       "image": "images/ricette/lievitati/cornetti-sfogliati-classici.webp",
-      "description": "Cornetti sfogliati con tecnica classica: laminazione con panetto burro, pieghe a portafoglio e lievitazione controllata per strati croccanti e alveolatura perfe",
-      "hydration": "52%",
-      "time": "18-24h totali (puntata + maturazione in frigo + appretto)",
+      "description": "Cornetti sfogliati all'italiana con biga, sfogliatura a 3 pieghe e lievitazione lenta in frigo. Ricetta professionale con procedimento dettagliato.",
+      "hydration": "53%",
+      "time": "~24h totali (biga 8-10h + puntata 1h + frigo 12h)",
+      "temp": "22-24°C",
+      "tool": "",
+      "_generatedBy": "claude-opus",
+      "_createdAt": "2026-04-05T01:25:46.208Z"
+    },
+    {
+      "title": "Focaccia Barese",
+      "slug": "focaccia-barese",
+      "category": "Lievitati",
+      "categoryDir": "lievitati",
+      "emoji": "🫒",
+      "href": "ricette/lievitati/focaccia-barese.html",
+      "image": "images/ricette/lievitati/focaccia-barese.webp",
+      "description": "Focaccia barese tradizionale con semola, patate, pomodorini e olive: croccante sotto, soffice dentro, profumo di Puglia.",
+      "hydration": "64%",
+      "time": "~3h a temperatura ambiente",
       "temp": "24-26°C",
       "tool": "",
-      "_generatedBy": null
+      "_generatedBy": "claude-opus",
+      "_createdAt": "2026-04-05T00:47:39.206Z"
     },
     {
       "title": "Impasto Rosticceria Siciliana",
@@ -247,7 +276,8 @@
       "time": "2-2.5h lievitazione + 30min appretto",
       "temp": "26-27°C",
       "tool": "",
-      "_generatedBy": null
+      "_generatedBy": null,
+      "_createdAt": "2026-04-01T02:38:15.036Z"
     },
     {
       "title": "Panettone Classico",
@@ -262,7 +292,8 @@
       "time": "~24-36h totali (primo impasto 12h + secondo impasto 12h + appretto finale 4-6h)",
       "temp": "26-28°C",
       "tool": "",
-      "_generatedBy": null
+      "_generatedBy": null,
+      "_createdAt": "2026-04-01T02:40:01.229Z"
     },
     {
       "title": "Panettone Pere e Cioccolato",
@@ -277,7 +308,8 @@
       "time": "24-36h totali (primo impasto 12-14h, secondo 8-10h)",
       "temp": "26-28°C",
       "tool": "",
-      "_generatedBy": null
+      "_generatedBy": null,
+      "_createdAt": "2026-03-30T20:45:28.683Z"
     },
     {
       "title": "Pasta Brioche Classica",
@@ -292,7 +324,8 @@
       "time": "3-4h + 2h appretto",
       "temp": "24-26°C",
       "tool": "",
-      "_generatedBy": null
+      "_generatedBy": null,
+      "_createdAt": "2026-04-01T02:41:38.395Z"
     },
     {
       "title": "Cantuccini di Prato",
@@ -307,7 +340,8 @@
       "time": "nessuna (impasto chimico)",
       "temp": "20-22°C",
       "tool": "",
-      "_generatedBy": null
+      "_generatedBy": null,
+      "_createdAt": "2026-03-30T16:49:24.825Z"
     },
     {
       "title": "Cartocci alla Crema Siciliani",
@@ -322,7 +356,8 @@
       "time": "~2-3h totali",
       "temp": "26-27°C",
       "tool": "",
-      "_generatedBy": null
+      "_generatedBy": null,
+      "_createdAt": "2026-04-01T02:42:26.340Z"
     },
     {
       "title": "Migliaccio Napoletano",
@@ -337,7 +372,8 @@
       "time": "Nessuna fermentazione richiesta",
       "temp": "temperatura ambiente",
       "tool": "",
-      "_generatedBy": null
+      "_generatedBy": null,
+      "_createdAt": "2026-04-01T02:43:23.325Z"
     },
     {
       "title": "Focaccia di Recco IGP",
@@ -352,7 +388,8 @@
       "time": "30-60 min riposo",
       "temp": "20-22°C",
       "tool": "",
-      "_generatedBy": null
+      "_generatedBy": null,
+      "_createdAt": "2026-03-30T16:49:24.830Z"
     },
     {
       "title": "Focaccia Genovese (Fügassa)",
@@ -367,7 +404,8 @@
       "time": "3-4 ore totali",
       "temp": "24-26°C",
       "tool": "",
-      "_generatedBy": null
+      "_generatedBy": null,
+      "_createdAt": "2026-04-01T02:46:08.266Z"
     },
     {
       "title": "Focaccia Genovese Classica",
@@ -382,7 +420,8 @@
       "time": "5-6h totali (biga 1,5-2h + impasto 3-4h + appretto 40min)",
       "temp": "24-26°C",
       "tool": "",
-      "_generatedBy": null
+      "_generatedBy": null,
+      "_createdAt": "2026-03-30T20:45:28.678Z"
     },
     {
       "title": "Dado Vegetale Fatto in Casa",
@@ -397,7 +436,8 @@
       "time": "n/a",
       "temp": "n/a",
       "tool": "",
-      "_generatedBy": "claude"
+      "_generatedBy": "claude",
+      "_createdAt": "2026-04-05T00:40:09.254Z"
     }
   ]
 }

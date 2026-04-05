@@ -483,7 +483,8 @@ function initDoseCalculator(recipe) {
 
     // Aggiorna tabella ingredienti (usa data-base se presente, altrimenti baseGrams statico)
     ingredientMap.forEach(({ baseGrams, cell }) => {
-      const dynamicBase = parseFloat(cell.getAttribute('data-base')) || baseGrams;
+      const dataBaseAttr = cell.getAttribute('data-base');
+      const dynamicBase = dataBaseAttr !== null ? parseFloat(dataBaseAttr) : baseGrams;
       cell.textContent = formatGrams(dynamicBase * multiplier);
       cell.classList.remove('dose-updated');
       void cell.offsetWidth;
@@ -577,6 +578,7 @@ function initVariantToggle(recipe) {
       // Override ingredienti
       if (variant.ingredientOverrides?.length) {
         applyIngredientOverrides(variant, flatIngredients, true);
+        updateInlineTokens(variant, true);
       }
 
       // Swap step dopo il branch
@@ -591,6 +593,7 @@ function initVariantToggle(recipe) {
       // Ripristina ingredienti
       if (variant.ingredientOverrides?.length) {
         applyIngredientOverrides(variant, flatIngredients, false);
+        updateInlineTokens(variant, false);
       }
 
       // Ripristina step
@@ -674,6 +677,10 @@ function applyIngredientOverrides(variant, flatIngredients, activate) {
 function matchesRef(ingredientName, ref, groupName = '', tokenId = '') {
   // MATCH PRIORITARIO: tokenId esatto (deterministico, zero ambiguità)
   if (tokenId && tokenId === ref) return true;
+
+  // Se l'ingrediente HA un tokenId ma non corrisponde al ref → NON è questo ingrediente
+  // Il semantic fallback è SOLO per ricette legacy senza tokenId
+  if (tokenId) return false;
 
   // FALLBACK: match semantico (per ricette senza tokenId)
   const name = ingredientName.toLowerCase();
