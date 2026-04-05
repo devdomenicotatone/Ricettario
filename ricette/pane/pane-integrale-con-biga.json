@@ -1,0 +1,272 @@
+{
+  "title": "Pane Integrale con Biga",
+  "slug": "pane-integrale-con-biga",
+  "emoji": "🌾",
+  "description": "Pane integrale con biga a 18h: crosta croccante, mollica alveolata e sapore profondo grazie al malto diastasico e alla farina integrale.",
+  "subtitle": "Biga 18h · Malto Diastasico · Idratazione 64%",
+  "category": "Pane",
+  "hydration": 64,
+  "targetTemp": "24-26°C",
+  "fermentation": "18h biga + 4-5h impasto",
+  "totalFlour": 1000,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per la Biga (18h prima)",
+      "items": [
+        {
+          "name": "Farina Tipo 0 Media-Forte",
+          "note": "(W 280–320)",
+          "grams": 500,
+          "tokenId": "farina_biga"
+        },
+        {
+          "name": "Acqua",
+          "note": "(18–20°C)",
+          "grams": 225,
+          "tokenId": "acqua_biga"
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(1g — 0.2% su farina biga, per 18h a 18–20°C)",
+          "grams": 1,
+          "tokenId": "lievito_biga"
+        }
+      ]
+    },
+    {
+      "group": "Per l'Impasto Finale",
+      "items": [
+        {
+          "name": "Farina Integrale di Frumento",
+          "note": "(macinata a pietra, W 180–220)",
+          "grams": 500,
+          "tokenId": "farina_integrale"
+        },
+        {
+          "name": "Acqua (quota base)",
+          "note": "(18–20°C) — 75% dell'acqua totale dell'impasto finale",
+          "grams": 350,
+          "tokenId": "acqua_base",
+          "setupNote": {
+            "spirale": "(18–20°C)",
+            "mano": "(20–22°C)"
+          }
+        },
+        {
+          "name": "Acqua (bassinage)",
+          "note": "(18–20°C) — restante 25%, aggiunta a filo dopo l'incordatura",
+          "grams": 60,
+          "tokenId": "acqua_bassinage",
+          "setupNote": {
+            "spirale": "(18–20°C)",
+            "mano": "(20–22°C)"
+          }
+        },
+        {
+          "name": "Malto Diastasico in Polvere",
+          "note": "(0.5% su farina totale — attiva le amilasi per crosta più colorata e mollica più soffice)",
+          "grams": 5,
+          "tokenId": "malto"
+        },
+        {
+          "name": "Miele Millefiori (o d'Acacia)",
+          "note": "(1% su farina totale — nutrimento per il lievito, brunatura crosta)",
+          "grams": 10,
+          "tokenId": "miele"
+        },
+        {
+          "name": "Olio Extravergine di Oliva",
+          "note": "(delicato, leggero fruttato)",
+          "grams": 20,
+          "tokenId": "olio_evo"
+        },
+        {
+          "name": "Sale Marino Fino",
+          "note": "(2% su farina totale)",
+          "grams": 20,
+          "tokenId": "sale"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "stepsSpiral": [
+    {
+      "title": "Preparazione della Biga (18h prima)",
+      "text": "In una ciotola capiente, sciogli {lievito_biga:1}g di lievito di birra fresco in {acqua_biga:225}g di acqua a 18–20°C. Aggiungi in un colpo {farina_biga:500}g di farina W 280–320 e mescola brevemente con le mani o una forchetta, giusto il tempo di idratare tutta la farina: il risultato deve essere un panetto ruvido, grumoso e compatto — NON un impasto liscio. Questo è fondamentale: la biga non deve essere lavorata, la struttura disomogenea garantisce la corretta maturazione. Copri con pellicola alimentare e lascia maturare 18h a 18–20°C (ideale: cantina fresca o forno spento con luce accesa). Non usare frigo: la biga lavora al meglio a questa temperatura. La biga è pronta quando mostra bolle in superficie, ha un profumo acidulo-alcolico e, spezzata, rivela una struttura fibrosa interna."
+    },
+    {
+      "title": "Avvio dell'Impasto — Scioglimento Biga",
+      "text": "Nella vasca dell'impastatrice a spirale, spezza la biga matura a pezzetti con le mani e aggiungi {acqua_base:350}g di acqua a 18–20°C. Avvia a V1 per 2–3 minuti: la biga deve sciogliersi e amalgamarsi con l'acqua prima di aggiungere le farine. Aggiungi {farina_integrale:500}g di farina integrale, il {malto:5}g di malto diastasico in polvere e il {miele:10}g di miele. Impasta a V2 per 3 minuti fino a ottenere un impasto grossolano ma uniforme."
+    },
+    {
+      "title": "Incordatura e Bassinage",
+      "text": "Porta la velocità a V3 e continua l'impasto per altri 5–6 minuti fino all'incordatura: il panetto si stacca dalle pareti della vasca e si aggancia alla spirale. A questo punto, con la macchina in moto a V3, aggiungi {sale:20}g di sale marino fine e lascia incorporare per 1 minuto. Avvia subito dopo il bassinage: versa {acqua_bassinage:60}g di acqua residua a filo, molto lentamente (1 cucchiaio ogni 30–40 secondi), aspettando che ogni aggiunta venga assorbita prima di versare la successiva. Se l'impasto dovesse cedere (effetto 'sbavatura'), fermati e attendi il riassorbimento. Porta la velocità a V4 per 2 minuti. Aggiungi {olio_evo:20}g di olio EVO a filo nell'ultimo minuto: versalo lentamente con la macchina in moto. L'impasto finale deve risultare liscio, elastico, non appiccicoso. Temperatura target impasto: 24–26°C."
+    },
+    {
+      "title": "Puntata con Pieghe",
+      "text": "Trasferisci l'impasto in una ciotola unta con un filo d'olio EVO. Esegui 3 serie di stretch & fold a intervalli di 40 minuti: bagna le mani, solleva un lembo d'impasto dal basso, portalo in tensione verso l'alto e ripiegalo sul lato opposto. Ruota la ciotola di 90° e ripeti per i 4 lati (= 1 giro completo). Copri con pellicola tra le serie. Dopo il terzo giro di pieghe, lascia riposare l'impasto in ciotola coperta per ulteriori 30–40 minuti (puntata totale: circa 2h–2h30). L'impasto è pronto quando appare gonfio, con bolle visibili sotto la superficie e ha aumentato il volume del 60–70%."
+    },
+    {
+      "title": "Formatura e Appretto",
+      "text": "Rovescia l'impasto sul piano di lavoro leggermente infarinato (usa farina integrale). Pre-forma: con il tarocco stacca delicatamente la massa, allargala con le mani e dai le pieghe a portafoglio (porta i lembi al centro). Capovolgi il panetto in modo che la chiusura sia sul fondo e pirlalo sul piano NON infarinato con movimenti circolari, creando tensione superficiale. Otterrai una boule tesa e compatta. Trasferiscila — con la chiusura in alto — in un cestino per pane (banneton) foderato con un canovaccio generosamente infarinato con farina integrale. Copri con pellicola. Appretto: 2–2h30 a temperatura ambiente (22–24°C) oppure vedi variante frigo per maturazione lenta. La pagnotta è pronta per il forno quando premendo con un dito la fossetta torna su lentamente (test del dito)."
+    },
+    {
+      "title": "Incisione e Infornata",
+      "text": "Preriscalda il forno a 240°C statico con la pietra refrattaria (o una teglia capovolta) sul ripiano centrale per almeno 45 minuti. Ribalta la pagnotta su carta forno, eliminando l'eccesso di farina. Con una lama da baker (o lametta affilata), esegui un'incisione decisa a 45° — lunga circa 2/3 della pagnotta — o una griglia a rombi per uno stile rustico. Inforna immediatamente trasferendo con una pala (o capovolgi la teglia fredda usata come pala). Per il vapore nei primi minuti: versa 200ml di acqua bollente in una piccola teglia già calda sul fondo del forno, oppure copri con un coperchio o una cocotte per i primi 15 minuti. Vedi sezione Cottura per i dettagli completi."
+    }
+  ],
+  "stepsHand": [
+    {
+      "title": "Preparazione della Biga (18h prima)",
+      "text": "In una ciotola capiente, sciogli {lievito_biga:1}g di lievito di birra fresco in {acqua_biga:225}g di acqua a 20–22°C (qualche grado in più rispetto alla spirale, perché le mani non generano calore meccanico). Aggiungi {farina_biga:500}g di farina W 280–320 e mescola brevemente con una forchetta: basta idratare tutta la farina. Il risultato deve essere un panetto grumoso e compatto — non liscio. Copri con pellicola e lascia maturare 18h a 18–20°C."
+    },
+    {
+      "title": "Avvio dell'Impasto — Scioglimento Biga",
+      "text": "In una ciotola grande, spezza la biga matura a pezzetti e versaci sopra {acqua_base:350}g di acqua a 20–22°C. Schiaccia la biga con le dita fino a scioglierla nell'acqua (ci vorranno 2–3 minuti). Aggiungi {farina_integrale:500}g di farina integrale, {malto:5}g di malto diastasico e {miele:10}g di miele. Mescola con un cucchiaio robusto fino a che tutta la farina sia bagnata, poi porta il composto sul piano di lavoro."
+    },
+    {
+      "title": "Impasto con Slap & Fold",
+      "text": "Impasta energicamente sul piano NON infarinato per 8–10 minuti usando la tecnica slap & fold: afferra l'impasto con una mano, solleva e sbatti sul piano, poi piega su sé stesso. Ripeti ritmicamente. Quando l'impasto comincia a prendere struttura (5–6 minuti), aggiungi {sale:20}g di sale sciolto in pochissima acqua prelevata dal bassinage. Continua a lavorare per altri 3 minuti. Avvia ora il bassinage manuale: versa {acqua_bassinage:60}g di acqua residua un cucchiaio alla volta, incorporando completamente tra un'aggiunta e l'altra. Infine aggiungi {olio_evo:20}g di olio EVO a filo, lavorando fino all'assorbimento completo. L'impasto deve risultare liscio ed elastico (test del velo). Temperatura target: 24–26°C."
+    },
+    {
+      "title": "Puntata con Pieghe",
+      "text": "Metti l'impasto in una ciotola unta d'olio. Esegui 3 serie di stretch & fold a intervalli di 40 minuti: con le mani bagnate, solleva un lembo d'impasto, stendilo in tensione e piegalo sul lato opposto. Ruota la ciotola di 90° e ripeti per 4 lati. Copri tra le serie con pellicola o canovaccio umido. Dopo il terzo giro, riposo finale di 30–40 minuti coperto. Puntata totale: 2h–2h30 a 22–24°C. L'impasto è pronto quando appare gonfiato con bolle visibili."
+    },
+    {
+      "title": "Formatura e Appretto",
+      "text": "Rovescia l'impasto sul piano leggermente infarinato con farina integrale. Pre-forma portando i lembi al centro (pieghe a portafoglio), poi capovolgi e pirlalo senza farina sotto, con movimenti circolari, fino a creare tensione superficiale. La boule deve risultare tesa. Trasferisci con la chiusura verso l'alto in un cestino foderato con un canovaccio infarinato con farina integrale. Copri con pellicola. Appretto: 2–2h30 a 22–24°C. Fai il test del dito prima di infornare: la fossetta deve tornare su lentamente."
+    },
+    {
+      "title": "Incisione e Infornata",
+      "text": "Preriscalda il forno a 240°C statico con una teglia capovolta sul ripiano centrale per almeno 45 minuti. Ribalta la pagnotta su carta forno. Con una lametta o coltello affilatissimo, esegui un'incisione a 45° lunga circa 2/3 della pagnotta. Inforna trasferendo la carta forno sulla teglia calda. Per creare vapore: metti una ciotola con ghiaccio o acqua bollente sul fondo del forno per i primi 15 minuti. Vedi sezione Cottura per i dettagli."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [
+    {
+      "type": "Farina Tipo 0 Media-Forte (per la biga)",
+      "w": "280–320",
+      "brands": "Caputo Nuvola Super, Molino Grassi Tipica, Spadoni Gran Mugnaio Gialla, Lo Conte Le Farine Magiche Forza"
+    },
+    {
+      "type": "Farina Integrale di Frumento (macinata a pietra)",
+      "w": "180–220",
+      "brands": "Molino Quaglia Uniqua Integrale, Mulino Marino Integrale, Petra 9 (Molino Quaglia), Antico Molino Rosso Bio Integrale"
+    }
+  ],
+  "baking": {
+    "temperature": "240°C → 210°C",
+    "time": "45–50 minuti totali",
+    "tips": [
+      "Preriscalda forno STATICO a 240°C con pietra refrattaria (o teglia capovolta) per almeno 45 minuti prima di infornare — la massa termica è fondamentale per l'oven spring",
+      "Primi 15 minuti a 240°C con vapore (teglietta con acqua bollente sul fondo o coperchio di cocotte): il vapore ritarda la formazione della crosta e consente all'alveolatura di aprirsi",
+      "Dopo 15 minuti: rimuovi la fonte di vapore, abbassa a 210°C e continua per altri 30–35 minuti. Negli ultimi 5 minuti lascia il forno a spiffero (porta socchiusa con un cucchiaio di legno) per asciugare la crosta",
+      "La pagnotta è cotta quando picchiettando il fondo suona 'vuota' (suono sordo e cavo) e la crosta è scura, profonda (colore mogano). La temperatura interna deve raggiungere 94–96°C (usa un termometro a sonda se disponibile)",
+      "Non tagliare il pane prima che sia completamente freddo (almeno 1h su griglia): la mollica continua a cuocere per conduzione ancora dopo l'uscita dal forno. Tagliarlo caldo rovina l'alveolatura"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Biga",
+      "definition": "Pre-impasto rigido italiano (44–50% di idratazione) con pochissimo lievito (0.1–0.3%), lasciato maturare 16–24h a 18–20°C. Sviluppa acidi organici e aromi complessi. Si distingue dal poolish perché ha meno acqua ed è solido e grumoso."
+    },
+    {
+      "term": "Malto Diastasico",
+      "definition": "Farina di malto d'orzo germogliato ricca di enzimi amilasici attivi. A differenza del malto non diastasico (solo zuccheri), il malto diastasico scompone l'amido in zuccheri semplici, nutrendo il lievito, migliorando la colorazione della crosta (reazione di Maillard) e la struttura della mollica. Dose: 0.3–0.5% sulla farina."
+    },
+    {
+      "term": "Bassinage",
+      "definition": "Tecnica di aggiunta dell'acqua residua a filo dopo l'incordatura dell'impasto. Permette di raggiungere idratazioni più alte senza perdere la struttura glutinica. L'impasto deve essere già incordato prima di aggiungere l'acqua del bassinage."
+    },
+    {
+      "term": "Incordatura",
+      "definition": "Momento in cui il glutine è completamente sviluppato: l'impasto si stacca dalle pareti della vasca, è liscio, elastico e supera il test del velo (si allunga in una membrana sottile senza strapparsi)."
+    },
+    {
+      "term": "Puntata",
+      "definition": "Prima fase di lievitazione dell'impasto, dalla fine dell'impastamento allo staglio (o alla formatura). Durante la puntata il lievito produce CO₂ e si sviluppano gli aromi."
+    },
+    {
+      "term": "Appretto",
+      "definition": "Seconda e ultima fase di lievitazione dopo la formatura. L'impasto lievita nella forma definitiva (boule, filone) prima di essere infornato. Fine appretto = test del dito."
+    },
+    {
+      "term": "Stretch & Fold",
+      "definition": "Tecnica di piega in ciotola: si afferra un lembo d'impasto, si stende verso l'alto in tensione e si ripiega sul lato opposto. Si ruota la ciotola di 90° e si ripete. Sostituisce l'impasto prolungato e rafforza il glutine senza surriscaldare l'impasto."
+    },
+    {
+      "term": "Slap & Fold",
+      "definition": "Tecnica di impasto manuale 'francese': si afferra l'impasto, si sbatte sul piano (slap) e si piega su sé stesso (fold). Sviluppa rapidamente il glutine anche in impasti idratati. Molto efficace per i primi 8–10 minuti."
+    },
+    {
+      "term": "Pirlatura",
+      "definition": "Arrotondamento dell'impasto a forma sferica (boule) tramite movimenti circolari sul piano NON infarinato. Crea tensione superficiale che aiuta la pagnotta a tenere la forma durante la lievitazione e la cottura."
+    },
+    {
+      "term": "Oven Spring",
+      "definition": "Rapido aumento di volume della pagnotta nei primi 10–15 minuti di cottura, causato dall'espansione dei gas e dall'attività del lievito prima che le alte temperature lo uccidano. La pietra refrattaria e il vapore massimizzano l'oven spring."
+    },
+    {
+      "term": "Banneton (cestino da lievitazione)",
+      "definition": "Cestino di vimini o plastica usato per sostenere la pagnotta durante l'appretto. Mantiene la forma e crea i caratteristici cerchi concentrici sulla crosta. Va sempre foderato con un canovaccio abbondantemente infarinato per evitare che l'impasto si attacchi."
+    },
+    {
+      "term": "Test del Dito",
+      "definition": "Tecnica per valutare se l'appretto è completato: premi con un dito infarinato sull'impasto per circa 1cm. Se la fossetta torna su immediatamente = sotto-lievitato. Se torna su lentamente = pronto. Se non torna su = eccessivamente lievitato."
+    },
+    {
+      "term": "Maturazione",
+      "definition": "Processo enzimatico e biochimico che avviene nell'impasto (o nella biga) nel tempo. Distinto dalla lievitazione (produzione di gas): la maturazione sviluppa aromi, ammorbidisce la struttura glutinica e migliora la digeribilità."
+    }
+  ],
+  "variants": [
+    {
+      "id": "cold-retard",
+      "label": "❄️ Maturazione in Frigo 12–16h",
+      "description": "Appretto in frigorifero overnight per aromi più complessi, crosta più scura e gestione flessibile dei tempi. Non richiede modifiche alla biga.",
+      "ingredientOverrides": [],
+      "branchAfterStep": 4,
+      "altSteps": [
+        {
+          "title": "Appretto in Frigo (variante fredda)",
+          "text": "Dopo la pirlatura, trasferisci la boule nel banneton foderato con chiusura in alto. Copri con pellicola e metti in frigorifero a 4–6°C per 12–16h (fino a 18h per una maturazione più spinta). Non è necessario ridurre il lievito: la biga già usa 1g per 18h, e il freddo rallenta ulteriormente la fermentazione. Il giorno successivo, tira fuori la pagnotta dal frigo 20–30 minuti prima di infornare — NON aspettare che torni a temperatura ambiente. Infornare fredda migliora il contrasto di temperatura e favorisce un oven spring più pronunciato."
+        },
+        {
+          "title": "Incisione e Infornata (dal frigo)",
+          "text": "Preriscalda il forno a 250°C statico con pietra refrattaria per almeno 45 minuti. Ribalta la pagnotta fredda su carta forno e incidi rapidamente (l'impasto freddo è più sodo, l'incisione è più precisa). Inforna immediatamente a 250°C con vapore per i primi 15 minuti, poi abbassa a 210°C e completa la cottura per altri 30–35 minuti senza vapore. La crosta sarà più scura e caramellata grazie alla maggiore concentrazione di zuccheri fermentati."
+        }
+      ]
+    }
+  ],
+  "alert": "NON lavorare la biga: deve restare grumosa e ruvida. Un impasto troppo liscio in fase di biga significa eccessivo sviluppo del glutine che impedirà la corretta maturazione enzimatica nelle 18 ore successive. Allo stesso modo, NON aggiungere il sale all'inizio dell'impasto: il sale inibisce il lievito se a contatto diretto. Attendi sempre l'incordatura. MAI usare farina integrale nella biga: i cruschi tagliano le catene proteiche del glutine e compromettono la struttura del pre-impasto.",
+  "proTips": [
+    "Sostituisci il 10% della farina integrale dell'impasto (50g) con farina di farro integrale: amplifica le note nocciolate senza alterare l'idratazione. Il farro ha glutine più fragile, quindi evita di aumentare le pieghe.",
+    "Il malto diastasico va aggiunto INSIEME alle farine, mai sciolto nell'acqua calda: le amilasi sono proteine e si denaturano oltre i 65°C — e già con l'acqua tiepida perdi parte dell'attività enzimatica. Conserva il malto in frigorifero dopo l'apertura.",
+    "Per una crosta extra croccante e durevole: dopo i 45–50 minuti di cottura, spegni il forno, apri leggermente lo sportello e lascia il pane dentro per altri 10–15 minuti. Questo asciuga ulteriormente la crosta evitando che 'ammorbidisca' col vapore interno durante il raffreddamento."
+  ],
+  "imageKeywords": [
+    "homemade whole wheat bread sourdough biga",
+    "rustic italian wholegrain bread loaf",
+    "pane integrale artigianale crosta croccante",
+    "whole wheat bread crumb open texture",
+    "italienisches Vollkornbrot hausgemacht",
+    "artisan bread scoring crust dark",
+    "integrale biga lievitazione lunga"
+  ],
+  "tags": [
+    "pane integrale",
+    "biga",
+    "lievito di birra",
+    "malto diastasico",
+    "farina integrale",
+    "lievitazione lunga",
+    "pane artigianale",
+    "stretch and fold",
+    "pane rustico"
+  ],
+  "_generatedBy": "claude",
+  "image": "images/ricette/pane/pane-integrale-con-biga.webp",
+  "imageAttribution": "📷 Foto: Charles Chen — Pexels License via Pexels"
+}

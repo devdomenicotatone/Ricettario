@@ -29,18 +29,24 @@ export default defineConfig({
 
     plugins: [
         // Plugin 1: SPA fallback per dev server
+        // Usa return() per aggiungere middleware DOPO quelli interni di Vite
         {
             name: 'spa-fallback',
             configureServer(server) {
-                server.middlewares.use((req, res, next) => {
-                    const url = req.url || '';
-                    if (url.includes('.') && !url.endsWith('.html')) return next();
-                    if (url.startsWith('/@') || url.startsWith('/__')) return next();
-                    if (url.startsWith('/Ricettario/ricette/') && !url.endsWith('.json')) {
-                        req.url = '/index.html';
-                    }
-                    next();
-                });
+                return () => {
+                    server.middlewares.use((req, res, next) => {
+                        const url = req.url || '';
+                        // Skip file statici (con estensione) tranne .html
+                        if (url.includes('.') && !url.endsWith('.html')) return next();
+                        // Skip Vite internals
+                        if (url.startsWith('/@') || url.startsWith('/__')) return next();
+                        // SPA fallback: tutte le route /Ricettario/ricette/* → index.html
+                        if (url.startsWith('/Ricettario/ricette/') && !url.endsWith('.json')) {
+                            req.url = '/Ricettario/index.html';
+                        }
+                        next();
+                    });
+                };
             },
         },
 
