@@ -236,6 +236,7 @@ const CATEGORY_META = {
   lievitati: { name: 'Lievitati', emoji: 'croissant',       title: 'Lievitati Dolci e Salati',   desc: 'Brioche, cornetti, panettone, burger buns e rosticceria.' },
   focaccia:  { name: 'Focaccia',  emoji: 'flatbread',       title: 'Focaccia Artigianale',       desc: 'Focacce ad alta idratazione — genovese, barese, pugliese e varianti creative.' },
   dolci:     { name: 'Dolci',     emoji: 'shortcake',       title: 'Dolci e Pasticceria',        desc: 'Dolci tradizionali, frolle, biscotti e pasticceria artigianale.' },
+  conserve:  { name: 'Conserve',  emoji: 'canned-food',     title: 'Conserve e Preparazioni',    desc: 'Conserve fatte in casa — dadi vegetali, salse, sottoli e preparazioni base.' },
 };
 
 async function renderCategory(app, { category }) {
@@ -388,10 +389,72 @@ function renderCategoryGrid(grid, recipes, categoryDir) {
 //  CAROUSELS (Netflix-style rows)
 // ═══════════════════════════════════════
 
+function buildCarouselRow(container, catKey, catEmoji, catDir, recipes) {
+  const row = document.createElement('div');
+  row.className = 'category-row reveal';
+  row.dataset.category = catKey;
+
+  row.innerHTML = `
+    <div class="category-row__header">
+      <h3 class="category-row__title">
+        ${fluentEmoji(catEmoji, 32)} ${catKey}
+        <span class="category-row__count">${recipes.length} ricett${recipes.length === 1 ? 'a' : 'e'}</span>
+      </h3>
+      <a href="${BASE}ricette/${catDir}/" class="category-row__link" data-link>Vedi tutte</a>
+    </div>
+    <div class="category-row__carousel-wrapper">
+      <button class="carousel-arrow carousel-arrow--prev" aria-label="Precedente">‹</button>
+      <div class="category-row__carousel">
+        ${recipes.map(r => {
+          const spaHref = r.href.replace('.html', '');
+          return `
+          <a href="${spaHref}" class="recipe-card--compact" data-link data-title="${r.title.toLowerCase()}" data-category="${r.category}">
+            <div class="recipe-card--compact__image-wrapper">
+              ${r.image ? buildPicture(r.image, r.title, 'recipe-card--compact__image', 'lazy') : ''}
+            </div>
+            <div class="recipe-card--compact__body">
+              <h4 class="recipe-card--compact__title">${r.title}</h4>
+              <div class="recipe-card--compact__meta">
+                ${r.hydration ? `<span class="recipe-card--compact__tag">${fluentEmoji('droplet', 16)} ${r.hydration}</span>` : ''}
+                ${r.time ? `<span>${fluentEmoji('stopwatch', 16)} ${r.time}</span>` : ''}
+              </div>
+            </div>
+          </a>`;
+        }).join('')}
+      </div>
+      <button class="carousel-arrow carousel-arrow--next" aria-label="Successivo">›</button>
+    </div>
+  `;
+
+  container.appendChild(row);
+
+  // Carousel scroll logic
+  const carousel = row.querySelector('.category-row__carousel');
+  const wrapper = row.querySelector('.category-row__carousel-wrapper');
+  const prevBtn = row.querySelector('.carousel-arrow--prev');
+  const nextBtn = row.querySelector('.carousel-arrow--next');
+  const cardWidth = 276;
+
+  const updateScrollState = () => {
+    const { scrollLeft, scrollWidth, clientWidth } = carousel;
+    wrapper.classList.toggle('has-scroll-left', scrollLeft > 10);
+    wrapper.classList.toggle('has-scroll-right', scrollLeft < scrollWidth - clientWidth - 10);
+    prevBtn.disabled = scrollLeft <= 10;
+    nextBtn.disabled = scrollLeft >= scrollWidth - clientWidth - 10;
+  };
+
+  carousel.addEventListener('scroll', updateScrollState, { passive: true });
+  requestAnimationFrame(updateScrollState);
+
+  prevBtn.addEventListener('click', () => carousel.scrollBy({ left: -cardWidth * 3, behavior: 'smooth' }));
+  nextBtn.addEventListener('click', () => carousel.scrollBy({ left: cardWidth * 3, behavior: 'smooth' }));
+}
+
 function initCarousels() {
   const carouselsContainer = document.getElementById('recipe-carousels');
   if (!carouselsContainer) return;
 
+  // Ordine predefinito — le categorie qui appaiono per prime, in quest'ordine
   const CATEGORY_ORDER = [
     { key: 'Pasta', emoji: 'spaghetti', dir: 'pasta' },
     { key: 'Pane', emoji: 'baguette-bread', dir: 'pane' },
@@ -399,6 +462,7 @@ function initCarousels() {
     { key: 'Lievitati', emoji: 'croissant', dir: 'lievitati' },
     { key: 'Dolci', emoji: 'cookie', dir: 'dolci' },
     { key: 'Focaccia', emoji: 'flatbread', dir: 'focaccia' },
+    { key: 'Conserve', emoji: 'canned-food', dir: 'conserve' },
   ];
 
   fetch(`${BASE}recipes.json`)
@@ -412,70 +476,22 @@ function initCarousels() {
         grouped[r.category].push(r);
       });
 
+      // Categorie note — ordine predefinito
       CATEGORY_ORDER.forEach(cat => {
         const recipes = grouped[cat.key];
         if (!recipes || recipes.length === 0) return;
+        buildCarouselRow(carouselsContainer, cat.key, cat.emoji, cat.dir, recipes);
+      });
 
-        const row = document.createElement('div');
-        row.className = 'category-row reveal';
-        row.dataset.category = cat.key;
-
-        // Fix href per SPA: rimuovi .html
-        row.innerHTML = `
-          <div class="category-row__header">
-            <h3 class="category-row__title">
-              ${fluentEmoji(cat.emoji, 32)} ${cat.key}
-              <span class="category-row__count">${recipes.length} ricette</span>
-            </h3>
-            <a href="${BASE}ricette/${cat.dir}/" class="category-row__link" data-link>Vedi tutte</a>
-          </div>
-          <div class="category-row__carousel-wrapper">
-            <button class="carousel-arrow carousel-arrow--prev" aria-label="Precedente">‹</button>
-            <div class="category-row__carousel">
-              ${recipes.map(r => {
-                // Converti href .html → senza estensione per SPA
-                const spaHref = r.href.replace('.html', '');
-                return `
-                <a href="${spaHref}" class="recipe-card--compact" data-link data-title="${r.title.toLowerCase()}" data-category="${r.category}">
-                  <div class="recipe-card--compact__image-wrapper">
-                    ${r.image ? buildPicture(r.image, r.title, 'recipe-card--compact__image', 'lazy') : ''}
-                  </div>
-                  <div class="recipe-card--compact__body">
-                    <h4 class="recipe-card--compact__title">${r.title}</h4>
-                    <div class="recipe-card--compact__meta">
-                      ${r.hydration ? `<span class="recipe-card--compact__tag">${fluentEmoji('droplet', 16)} ${r.hydration}</span>` : ''}
-                      ${r.time ? `<span>${fluentEmoji('stopwatch', 16)} ${r.time}</span>` : ''}
-                    </div>
-                  </div>
-                </a>`;
-              }).join('')}
-            </div>
-            <button class="carousel-arrow carousel-arrow--next" aria-label="Successivo">›</button>
-          </div>
-        `;
-
-        carouselsContainer.appendChild(row);
-
-        // Carousel scroll logic
-        const carousel = row.querySelector('.category-row__carousel');
-        const wrapper = row.querySelector('.category-row__carousel-wrapper');
-        const prevBtn = row.querySelector('.carousel-arrow--prev');
-        const nextBtn = row.querySelector('.carousel-arrow--next');
-        const cardWidth = 276;
-
-        const updateScrollState = () => {
-          const { scrollLeft, scrollWidth, clientWidth } = carousel;
-          wrapper.classList.toggle('has-scroll-left', scrollLeft > 10);
-          wrapper.classList.toggle('has-scroll-right', scrollLeft < scrollWidth - clientWidth - 10);
-          prevBtn.disabled = scrollLeft <= 10;
-          nextBtn.disabled = scrollLeft >= scrollWidth - clientWidth - 10;
-        };
-
-        carousel.addEventListener('scroll', updateScrollState, { passive: true });
-        requestAnimationFrame(updateScrollState);
-
-        prevBtn.addEventListener('click', () => carousel.scrollBy({ left: -cardWidth * 3, behavior: 'smooth' }));
-        nextBtn.addEventListener('click', () => carousel.scrollBy({ left: cardWidth * 3, behavior: 'smooth' }));
+      // ── Auto-discovery: nuove categorie non in CATEGORY_ORDER ──
+      const knownKeys = new Set(CATEGORY_ORDER.map(c => c.key));
+      Object.keys(grouped).forEach(catName => {
+        if (knownKeys.has(catName)) return;
+        const recipes = grouped[catName];
+        if (!recipes || recipes.length === 0) return;
+        const dir = catName.toLowerCase();
+        const emoji = CATEGORY_FLUENT[catName] || 'fork-and-knife';
+        buildCarouselRow(carouselsContainer, catName, emoji, dir, recipes);
       });
 
       // Re-init reveal

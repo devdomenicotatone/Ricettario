@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T00:07:37.686Z",
+  "generatedAt": "2026-04-05T00:44:15.116Z",
   "totalRecipes": 24,
   "categories": [
     {
@@ -29,8 +29,13 @@
     },
     {
       "name": "Focaccia",
-      "count": 4,
+      "count": 3,
       "emoji": "🫓"
+    },
+    {
+      "name": "Conserve",
+      "count": 1,
+      "emoji": "🫙"
     }
   ],
   "recipes": [
@@ -335,21 +340,6 @@
       "_generatedBy": null
     },
     {
-      "title": "Focaccia Barese",
-      "slug": "focaccia-barese",
-      "category": "Focaccia",
-      "categoryDir": "focaccia",
-      "emoji": "🫒",
-      "href": "ricette/focaccia/focaccia-barese.html",
-      "image": "images/ricette/pane/focaccia-barese.webp",
-      "description": "La regina della tradizione pugliese: morbida dentro, croccante fuori. Idratazione 80%, con patate lesse, semola rimacinata e generoso condimento di pomodorini, ",
-      "hydration": "80%",
-      "time": "3-4h puntata + 1h appretto",
-      "temp": "24-26°C",
-      "tool": "",
-      "_generatedBy": null
-    },
-    {
       "title": "Focaccia di Recco IGP",
       "slug": "focaccia-di-recco-igp",
       "category": "Focaccia",
@@ -393,6 +383,21 @@
       "temp": "24-26°C",
       "tool": "",
       "_generatedBy": null
+    },
+    {
+      "title": "Dado Vegetale Fatto in Casa",
+      "slug": "dado-vegetale-fatto-in-casa",
+      "category": "Conserve",
+      "categoryDir": "conserve",
+      "emoji": "🧊",
+      "href": "ricette/conserve/dado-vegetale-fatto-in-casa.html",
+      "image": "images/ricette/conserve/dado-vegetale-fatto-in-casa.webp",
+      "description": "Dado vegetale artigianale con verdure fresche e sale: senza conservanti, senza glutammato, da congelare in cubetti pronti all'uso.",
+      "hydration": null,
+      "time": "n/a",
+      "temp": "n/a",
+      "tool": "",
+      "_generatedBy": "claude"
     }
   ]
 }
