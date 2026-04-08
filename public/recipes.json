@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-04-05T02:19:45.465Z",
-  "totalRecipes": 25,
+  "generatedAt": "2026-04-08T09:03:20.680Z",
+  "totalRecipes": 26,
   "categories": [
     {
       "name": "Pane",
-      "count": 6,
+      "count": 7,
       "emoji": "🥖"
     },
     {
@@ -56,20 +56,36 @@
       "_createdAt": "2026-04-01T11:58:21.393Z"
     },
     {
-      "title": "Ciabatta con Poolish",
-      "slug": "ciabatta-con-poolish",
+      "title": "Ciabatta con Poolish, Malto e Criscito",
+      "slug": "ciabatta-poolish-malto-criscito",
       "category": "Pane",
       "categoryDir": "pane",
       "emoji": "🥖",
-      "href": "ricette/pane/ciabatta-con-poolish.html",
-      "image": "images/ricette/pane/ciabatta-con-poolish.webp",
-      "description": "Croccante fuori, alveolata e leggera dentro. La classica ciabatta italiana ad alta idratazione preparata con pre-impasto liquido (poolish).",
+      "href": "ricette/pane/ciabatta-poolish-malto-criscito.html",
+      "image": "images/ricette/pane/ciabatta-poolish-malto.webp",
+      "description": "Versione evoluta della ciabatta: l'aggiunta di malto diastasico garantisce una crosta bruna e croccante, mentre il criscito dona la complessità aromatica del li",
       "hydration": "76%",
       "time": "~18h",
       "temp": "24-25°C",
       "tool": "",
       "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-03T20:59:40.669Z"
+      "_createdAt": "2026-04-08T08:56:22.755Z"
+    },
+    {
+      "title": "Ciabatta con Poolish, Malto e Criscito",
+      "slug": "ciabatta-poolish-malto-criscito",
+      "category": "Pane",
+      "categoryDir": "pane",
+      "emoji": "🥖",
+      "href": "ricette/pane/ciabatta-poolish-malto-criscito.html",
+      "image": "images/ricette/pane/ciabatta-poolish-malto.webp",
+      "description": "Versione evoluta della ciabatta: l'aggiunta di malto diastasico garantisce una crosta bruna e croccante, mentre il criscito dona la complessità aromatica del li",
+      "hydration": "76%",
+      "time": "~18h",
+      "temp": "24-25°C",
+      "tool": "",
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-08T08:56:42.327Z"
     },
     {
       "title": "Pane alle Noci con Poolish",
