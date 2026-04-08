@@ -1,10 +1,10 @@
 {
   "generatedAt": "2026-04-08T09:03:20.680Z",
-  "totalRecipes": 26,
+  "totalRecipes": 25,
   "categories": [
     {
       "name": "Pane",
-      "count": 7,
+      "count": 6,
       "emoji": "🥖"
     },
     {
@@ -62,7 +62,7 @@
       "categoryDir": "pane",
       "emoji": "🥖",
       "href": "ricette/pane/ciabatta-poolish-malto-criscito.html",
-      "image": "images/ricette/pane/ciabatta-poolish-malto.webp",
+      "image": "images/ricette/pane/ciabatta-con-poolish.webp",
       "description": "Versione evoluta della ciabatta: l'aggiunta di malto diastasico garantisce una crosta bruna e croccante, mentre il criscito dona la complessità aromatica del li",
       "hydration": "76%",
       "time": "~18h",
@@ -70,22 +70,6 @@
       "tool": "",
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-08T08:56:22.755Z"
-    },
-    {
-      "title": "Ciabatta con Poolish, Malto e Criscito",
-      "slug": "ciabatta-poolish-malto-criscito",
-      "category": "Pane",
-      "categoryDir": "pane",
-      "emoji": "🥖",
-      "href": "ricette/pane/ciabatta-poolish-malto-criscito.html",
-      "image": "images/ricette/pane/ciabatta-poolish-malto.webp",
-      "description": "Versione evoluta della ciabatta: l'aggiunta di malto diastasico garantisce una crosta bruna e croccante, mentre il criscito dona la complessità aromatica del li",
-      "hydration": "76%",
-      "time": "~18h",
-      "temp": "24-25°C",
-      "tool": "",
-      "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-08T08:56:42.327Z"
     },
     {
       "title": "Pane alle Noci con Poolish",
