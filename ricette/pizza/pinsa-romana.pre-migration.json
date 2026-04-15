@@ -1,0 +1,242 @@
+{
+  "title": "Pinsa Romana",
+  "slug": "pinsa-romana",
+  "emoji": "🍕",
+  "description": "La pizza romana ovale ad alta idratazione con mix di farine e lunga maturazione. Ricetta tecnica con procedimento spirale e a mano.",
+  "subtitle": "La pizza romana ovale ad alta idratazione con mix di farine e lunga maturazione",
+  "category": "Pizza",
+  "hydration": 75,
+  "targetTemp": "24-26°C",
+  "fermentation": "24-48h",
+  "totalFlour": 1000,
+  "ingredients": [],
+  "suspensions": [],
+  "stepsSpiral": [
+    {
+      "title": "Preparazione acqua e mix farine",
+      "text": "Mettere {acqua_impasto:750}g di acqua in frigorifero almeno 2 ore prima (deve essere 10-14°C). In una ciotola mescolare a secco: {farina_media_impasto:900}g farina tipo 0 + {farina_di_riso_impasto:50}g farina di riso + {farina_di_soia_impasto:50}g farina di soia. Questo mix è fondamentale per la texture caratteristica della pinsa: il riso dona croccantezza, la soia migliora l'elasticità e la doratura."
+    },
+    {
+      "title": "Fase 1 - Incordatura base (1a velocità, 5 min)",
+      "text": "Inserire nella planetaria con gancio: mix farine + {lievito_fresco_impasto:2}g lievito di birra fresco sbriciolato + 700g acqua fresca (10-14°C). Impastare 1a velocità per 5 minuti. L'impasto inizierà ad incordarsi lentamente: l'acqua fresca rallenta lo sviluppo del glutine permettendo un assorbimento graduale. Deve risultare molto morbido e appiccicoso, NON aggiungere farina."
+    },
+    {
+      "title": "Fase 2 - Sviluppo glutine (2a velocità, 8-10 min)",
+      "text": "Passare a 2a velocità e impastare 8-10 minuti fino a completa incordatura. Quando l'impasto inizia a staccarsi dalle pareti, aggiungere {sale_impasto:18}g sale + {olio_evo_impasto:20}g olio EVO + 50g acqua fredda restante. Continuare a impastare 2-3 minuti. L'impasto finale deve essere liscio, elastico ma molto morbido e leggermente appiccicoso. Temperatura impasto: 24-26°C massimo."
+    },
+    {
+      "title": "Prima fermentazione (puntata)",
+      "text": "Trasferire l'impasto in contenitore oliato, coprire con pellicola e lasciare a temperatura ambiente (20-22°C) per 2 ore fino al raddoppio. L'impasto deve gonfiarsi visibilmente. Questa fase sviluppa i primi aromi e rende l'impasto più gestibile."
+    },
+    {
+      "title": "Staglio e pirlatura",
+      "text": "Rovesciare l'impasto su piano leggermente infarinato. Dividere in 6 panetti da circa 270-280g ciascuno. Piegare ogni pezzo portando i lembi verso il centro per dare forza, poi capovolgere e pirlare delicatamente su piano SENZA farina per creare tensione superficiale. Non stringere troppo: la pinsa deve rimanere soffice."
+    },
+    {
+      "title": "Maturazione in frigo (24-48h)",
+      "text": "Disporre i panetti in contenitori oliati (o su teglia con olio), coprire con pellicola. Mettere in frigorifero (4°C) per 24-48 ore. Più lunga è la maturazione, più digeribile sarà la pinsa. I panetti raddoppieranno lentamente di volume. Tirare fuori dal frigo 1-2 ore prima di stendere per riportarli a temperatura ambiente."
+    },
+    {
+      "title": "Stesura (tecnica caratteristica)",
+      "text": "Spolverare abbondantemente il piano con semola rimacinata. Prendere un panetto, capovolgerlo sulla semola (parte liscia sotto). Premere delicatamente al centro con le dita, poi allargare con movimenti dall'interno verso l'esterno formando un ovale allungato (circa 25x15 cm). NON usare il mattarello: la pinsa deve avere spessore irregolare (1-1,5 cm al centro, più sottile ai bordi). Trasferire su teglia con carta forno leggermente oliata."
+    },
+    {
+      "title": "Appretto finale (30-45 min)",
+      "text": "Lasciare riposare le pinse stese 30-45 minuti a temperatura ambiente, coperte con un canovaccio umido. Questo rilassamento finale permette all'impasto di gonfiarsi leggermente e facilita la cottura uniforme."
+    }
+  ],
+  "stepsHand": [
+    {
+      "title": "Preparazione acqua e mix farine",
+      "text": "Preparare {acqua_impasto:750}g acqua a 18-20°C (NON ghiacciata per impasto manuale). In una ciotola capiente mescolare: {farina_media_impasto:900}g farina tipo 0 + {farina_di_riso_impasto:50}g farina di riso + {farina_di_soia_impasto:50}g farina di soia. Il mix tri-cereale è la base della pinsa autentica."
+    },
+    {
+      "title": "Fase 1 - Impasto base (10 min a mano)",
+      "text": "Formare una fontana con il mix farine, al centro sbricolare {lievito_fresco_impasto:2}g lievito fresco. Versare 500g acqua al centro e iniziare a incorporare la farina dai bordi verso il centro. Quando inizia a formarsi un impasto grezzo, trasferire su piano e impastare energicamente per 10 minuti con tecnica slap & fold: sollevare l'impasto, sbatterlo sul piano e ripiegarlo su se stesso. L'impasto sarà molto appiccicoso: NON aggiungere farina."
+    },
+    {
+      "title": "Fase 2 - Idratazione graduale (15 min)",
+      "text": "Aggiungere 200g acqua a filo continuando a impastare e piegare. L'impasto diventerà ancora più morbido: continuare con slap & fold per 10 minuti. Aggiungere {sale_impasto:18}g sale + {olio_evo_impasto:20}g olio + 50g acqua finali. Impastare altri 5 minuti fino a completo assorbimento. L'impasto deve essere liscio, molto elastico ma appiccicoso. Se la temperatura supera 26°C, far riposare 10 minuti in ciotola coperta."
+    },
+    {
+      "title": "Prima fermentazione (puntata)",
+      "text": "Trasferire in ciotola oliata, coprire con pellicola. Lasciare a temperatura ambiente 2 ore fino al raddoppio. Durante questo tempo l'impasto acquisisce forza e diventa più gestibile."
+    },
+    {
+      "title": "Pieghe di rinforzo (facoltativo ma consigliato)",
+      "text": "Dopo 1 ora di puntata, eseguire una serie di pieghe: inumidire le mani, sollevare un lembo dell'impasto e ripiegarlo verso il centro, ruotare la ciotola e ripetere 4 volte. Questo rinforza la maglia glutinica senza sgonfiare l'impasto. Coprire e lasciare terminare la puntata."
+    },
+    {
+      "title": "Staglio e pirlatura delicata",
+      "text": "Rovesciare su piano infarinato, dividere in 6 panetti da 270-280g. Per ogni pezzo: allargare leggermente, portare i 4 lembi verso il centro, capovolgere. Pirlare con mani a coppa su piano SENZA farina per creare tensione, ma senza stringere troppo. La pinsa deve rimanere ariosa."
+    },
+    {
+      "title": "Maturazione in frigo (24-48h)",
+      "text": "Disporre i panetti in contenitori oliati, coprire con pellicola. Frigo a 4°C per 24-48 ore. La lunga maturazione sviluppa aromi complessi e rende la pinsa leggerissima. Estrarre dal frigo 1-2 ore prima dell'uso."
+    },
+    {
+      "title": "Stesura manuale caratteristica",
+      "text": "Spolverare abbondantemente il piano con semola rimacinata. Capovolgere un panetto sulla semola. Con le dita premere delicatamente al centro, poi allargare con movimenti delicati dall'interno verso l'esterno formando un ovale irregolare (25x15 cm circa). La pinsa NON deve essere perfetta: spessore variabile (1-1,5 cm al centro, più sottile ai bordi) è caratteristico. Trasferire su teglia oliata con carta forno."
+    },
+    {
+      "title": "Appretto finale (30-45 min)",
+      "text": "Coprire con canovaccio umido, lasciare riposare 30-45 minuti a temperatura ambiente. Le pinse si gonfieranno leggermente e saranno pronte per la farcitura e cottura."
+    }
+  ],
+  "stepsExtruder": [],
+  "stepsCondiment": [],
+  "flourTable": [
+    {
+      "type": "Farina Tipo 0 Media Forza",
+      "w": "260-280",
+      "brands": "Molino Dallagiovanna Farina Rossa, Molino Vigevano Tipo 0, Le 5 Stagioni Pinsa Romana"
+    },
+    {
+      "type": "Farina di Riso (semi-integrale)",
+      "w": "-",
+      "brands": "Molino Vigevano, Agugiaro & Figna, Molino Pordenone"
+    },
+    {
+      "type": "Farina di Soia Tostata",
+      "w": "-",
+      "brands": "Molino Rossetto, Molino Dallagiovanna, Molini del Ponte"
+    },
+    {
+      "type": "Mix Pinsa Pronto (alternativa)",
+      "w": "260-280",
+      "brands": "Molino Pordenone Pinsa Romana, Le 5 Stagioni Pinsa Mix, Agugiaro & Figna Pinsa Expert"
+    }
+  ],
+  "baking": {
+    "temperature": "250-260°C",
+    "time": "12-15 minuti",
+    "tips": [
+      "Preriscaldare forno statico o ventilato a 250-260°C (massimo) con pietra refrattaria per 45 minuti. Se non hai la pietra, usa una teglia rovesciata preriscaldata.",
+      "Condire la pinsa solo DOPO la stesura: pomodoro (se usato) al centro lasciando 2 cm di bordo, mozzarella a pezzetti (NON abbondante), condimenti leggeri. La pinsa romana è leggera, non sovraccaricata.",
+      "Cuocere nel terzo inferiore del forno per 12-15 minuti fino a doratura irregolare. I bordi devono essere dorati e croccanti, il centro morbido. La base deve suonare 'vuota' se battuta sotto.",
+      "Riconoscere la cottura perfetta: alveolatura evidente sui bordi, base croccante ma non bruciata, interno soffice. La pinsa si può piegare leggermente senza spezzarsi.",
+      "Per pinse molto idratate (oltre 75%), ridurre leggermente il tempo ed eventualmente finire con 2-3 minuti di grill per asciugare la superficie."
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Incordatura",
+      "definition": "Fase in cui l'impasto inizia a sviluppare la maglia glutinica e si stacca dalle pareti della ciotola/planetaria formando un composto elastico e omogeneo."
+    },
+    {
+      "term": "Puntata",
+      "definition": "Prima fermentazione dell'impasto in massa, dopo l'impastamento e prima della divisione in panetti. Serve a sviluppare volume, aromi e forza."
+    },
+    {
+      "term": "Staglio",
+      "definition": "Operazione di divisione dell'impasto in massa in pezzi (panetti) di peso prestabilito, prima della pirlatura."
+    },
+    {
+      "term": "Pirlatura",
+      "definition": "Tecnica per dare forma sferica ai panetti creando tensione superficiale. Si esegue con movimento rotatorio delle mani a coppa su piano senza farina."
+    },
+    {
+      "term": "Maturazione",
+      "definition": "Riposo prolungato dell'impasto in frigorifero (4-48h) che permette la degradazione enzimatica degli amidi e lo sviluppo di aromi complessi, rendendo l'impasto più digeribile."
+    },
+    {
+      "term": "Appretto",
+      "definition": "Riposo finale dei panetti (o delle pinse stese) a temperatura ambiente prima della cottura. Permette all'impasto di rilassarsi e gonfiarsi leggermente."
+    },
+    {
+      "term": "Slap & Fold",
+      "definition": "Tecnica di impastamento manuale per impasti molto idratati: sollevare l'impasto, sbatterlo energicamente sul piano e ripiegarlo su se stesso. Sviluppa glutine senza aggiungere farina."
+    },
+    {
+      "term": "Stretch & Fold (Pieghe di rinforzo)",
+      "definition": "Serie di pieghe eseguite durante la fermentazione: sollevare un lembo dell'impasto e ripiegarlo verso il centro, ruotando la ciotola. Rinforza la maglia glutinica senza sgonfiare."
+    },
+    {
+      "term": "Alveolatura",
+      "definition": "Struttura interna dell'impasto cotto caratterizzata da bolle d'aria irregolari (alveoli). Indica corretta fermentazione e sviluppo glutinico. Nella pinsa deve essere evidente soprattutto sui bordi."
+    },
+    {
+      "term": "Idratazione",
+      "definition": "Rapporto percentuale tra acqua e farina nell'impasto (peso acqua / peso farina × 100). La pinsa romana ha idratazione 68-80%, molto superiore alla pizza tradizionale (55-65%)."
+    }
+  ],
+  "alert": "⚠️ NON aggiungere farina durante l'impastamento anche se sembra troppo appiccicoso: l'alta idratazione (75%) è fondamentale per la texture della pinsa. NON usare il mattarello per stendere: la pinsa deve avere spessore irregolare e alveolatura naturale. NON sovraccaricare di condimenti: la pinsa romana è leggera, non una pizza tradizionale. La mozzarella deve essere ben asciugata e NON abbondante. Temperatura forno massima 260°C (limite forni casalinghi): temperature superiori richiedono forni professionali. NON saltare la maturazione in frigo: è ciò che rende la pinsa digeribile e aromatica.",
+  "proTips": [
+    "MIX FARINE personalizzabile: puoi sostituire parte della tipo 0 con tipo 1 o semi-integrale (max 20%) per più sapore rustico. Oppure usare mix pronti 'Pinsa Romana' che hanno già le proporzioni ottimali.",
+    "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
+  ],
+  "imageKeywords": [
+    "pinsa romana pizza",
+    "roman style pinsa",
+    "pinsa romana ovale",
+    "römische pinsa pizza",
+    "oval roman flatbread",
+    "italian pinsa bread"
+  ],
+  "tags": [
+    "pinsa",
+    "romana",
+    "pizza",
+    "alta idratazione",
+    "mix farine",
+    "lievitazione lunga",
+    "maturazione",
+    "slap and fold"
+  ],
+  "image": "images/ricette/pizza/pinsa-romana.webp",
+  "ingredientGroups": [
+    {
+      "group": "Per l'Impasto",
+      "items": [
+        {
+          "name": "Farina di Frumento Tipo 0",
+          "note": "(W 260-280, media forza)",
+          "grams": 900
+        },
+        {
+          "name": "Farina di Riso",
+          "note": "(preferibilmente semi-integrale)",
+          "grams": 50
+        },
+        {
+          "name": "Farina di Soia",
+          "note": "(tostata, migliora croccantezza)",
+          "grams": 50
+        },
+        {
+          "name": "Acqua",
+          "note": "(750g totali, fresca 10-14°C, aggiunta in 2 riprese (700g + 50g finali con sale e olio))",
+          "grams": 750,
+          "setupNote": {
+            "spirale": "(750g totali, fresca 10-14°C, aggiunta in 2 riprese (700g + 50g finali con sale e olio))",
+            "mano": "(750g totali a 18-20°C, aggiunta in 3 riprese (500g iniziali + 200g gradualmente + 50g finali))"
+          }
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(2g per maturazione lunga 24-48h in frigo)",
+          "grams": 2,
+          "setupNote": {
+            "spirale": "(2g per maturazione lunga 24-48h in frigo)",
+            "mano": "(2g per maturazione lunga 24-48h in frigo)"
+          }
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(aggiunto a fine impasto)",
+          "grams": 18
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(preferibilmente delicato)",
+          "grams": 20
+        },
+        {
+          "name": "Semola di Grano Duro Rimacinata",
+          "note": "(per spolverare durante stesura)",
+          "grams": 50
+        }
+      ]
+    }
+  ]
+}

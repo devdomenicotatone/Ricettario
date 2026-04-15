@@ -11,6 +11,104 @@
   "totalFlour": 2765,
   "ingredients": [],
   "suspensions": [],
+  "variants": [
+    {
+      "id": "cold-fermentation",
+      "label": "❄️ Lievitazione in Frigo 24-48h",
+      "description": "Maturazione lenta per sapore più complesso, stesura più facile e digeribilità migliore",
+      "ingredientOverrides": [
+        {
+          "ref": "lievito",
+          "grams": 1.3,
+          "note": "(ridotto per maturazione lunga in frigo)"
+        }
+      ],
+      "branchAfterStep": 4,
+      "altSteps": [
+        {
+          "title": "Staglio Panetti",
+          "text": "Rovesciare delicatamente l'impasto su piano leggermente infarinato. Dividere in panetti da {panetto_peso:285!}g con tarocco. Per ogni panetto: piegare i lembi verso il centro, girare e chiudere bene la chiave sul fondo con movimento rotatorio (pirlatura). La superficie deve essere tesa ma non strappata."
+        },
+        {
+          "title": "Appretto Breve a Temperatura Ambiente",
+          "text": "Disporre i panetti in cassette da lievitazione oliate, spaziati 5-6 cm. Lasciare riposare 30-45 minuti a temperatura ambiente (22°C). Questo breve appretto permette ai panetti di rilassarsi dopo la pirlatura prima di entrare in frigo."
+        },
+        {
+          "title": "Maturazione in Frigo",
+          "text": "Coprire le cassette con coperchio o pellicola aderente. Riporre in frigorifero a 4-5°C per 24-48 ore. La maturazione lenta al freddo sviluppa aromi complessi, rilassa la maglia glutinica e migliora la digeribilità. I panetti sono pronti quando risultano gonfi e morbidi al tatto."
+        },
+        {
+          "title": "Estrazione e Cottura",
+          "text": "Estrarre le cassette dal frigo 2-3 ore prima della cottura. Lasciare i panetti a temperatura ambiente fino a quando tornano a ~18-20°C e risultano morbidi e gonfi. Test del dito: premere delicatamente, la fossetta deve richiudersi lentamente (3-4 secondi). Procedere con la stesura e la cottura."
+        }
+      ]
+    }
+  ],
+  "stepsSpiral": [
+    {
+      "title": "Preparazione Biga (24h prima)",
+      "text": "In impastatrice Grilletta IM 5: unire {farina_biga:830}g Saccorosso, {acqua_biga:375}g acqua fredda, {lievito:1.8}g lievito secco. Mescolare a velocità 1 per 2-3 minuti fino a ottenere un impasto 'a stracci' (grumo disomogeneo, no incordatura). Trasferire in contenitore coperto e maturare 24 ore a 16-18°C controllata (cantina/frigo cantina). La biga è pronta quando triplica di volume e presenta struttura spugnosa."
+    },
+    {
+      "title": "Scomposizione Biga",
+      "text": "Inserire tutta la biga matura (~{biga_matura:1205}g) nella vasca e aggiungere {acqua_rinfresco:970}g acqua rinfresco (60% dell'acqua di rinfresco). Avviare a velocità 1 per 3-4 minuti: la biga deve sfaldarsi completamente e amalgamarsi con l'acqua formando una crema omogenea."
+    },
+    {
+      "title": "Riposo Idratazione",
+      "text": "Aggiungere {farina_nuvola:1660}g Nuvola Super, {farina_rinfresco:275}g Saccorosso e {criscito:83}g Criscito. Mescolare a velocità 1-2 per 2 minuti, solo fino a incorporare le farine (impasto disomogeneo ok). STOP macchina: riposo di 20 minuti coperto. Questo favorisce l'idratazione delle farine e migliora l'estensibilità."
+    },
+    {
+      "title": "Incordatura Pro con Bassinage",
+      "text": "Ripartire a velocità 3-4. Aggiungere {sale:64}g sale e {malto:9}g estratto di malto. Incorporare i restanti {acqua_bassinage:645}g acqua A GOCCIA (bassinage) in 8-10 minuti, aspettando che ogni aggiunta venga assorbita. L'impasto deve incordarsi completamente, staccarsi dalle pareti e mostrare superficie liscia e lucida. Temperatura finale TASSATIVA: 23°C (controllare con termometro a sonda). Se necessario, regolare con acqua ghiacciata o temperatura ambiente vasca."
+    },
+    {
+      "title": "Puntata in Massa con Pieghe di Rinforzo",
+      "text": "Trasferire l'impasto in contenitore oliato. Puntata 2 ore a temperatura ambiente (22°C). Eseguire 2 serie di pieghe di rinforzo: prima piega dopo 30 min, seconda dopo 1 ora. Tecnica piega: sollevare delicatamente un lembo dell'impasto e ripiegarlo al centro, ruotare 90° e ripetere 4 volte. Questo redistribuisce i gas e rinforza la maglia glutinica."
+    },
+    {
+      "title": "Staglio Panetti",
+      "text": "Rovesciare delicatamente l'impasto su piano leggermente infarinato. Dividere in panetti da {panetto_peso:285!}g con tarocco. Per ogni panetto: piegare i lembi verso il centro, girare e chiudere bene la chiave sul fondo con movimento rotatorio (pirlatura). La superficie deve essere tesa ma non strappata."
+    },
+    {
+      "title": "Appretto in Cassetta",
+      "text": "Disporre i panetti in cassette da lievitazione oliate, spaziati 5-6 cm. Coprire con coperchio o pellicola. Appretto 4-5 ore a temperatura ambiente (22°C). I panetti sono pronti quando raddoppiano di volume e al test del dito la fossetta si richiude lentamente. Usare entro 1 ora dal termine appretto per massima alveolatura."
+    }
+  ],
+  "stepsHand": [
+    {
+      "title": "Preparazione Biga (24h prima)",
+      "text": "In ciotola capiente: unire {farina_biga:830}g Saccorosso, {acqua_biga:375}g acqua fredda (8-10°C), {lievito:1.8}g lievito secco. Mescolare con cucchiaio di legno per 3-4 minuti fino a ottenere un composto grumoso 'a stracci' (non serve omogeneità). Coprire con pellicola e maturare 24 ore a 16-18°C (cantina/frigo cantina). La biga triplica di volume e diventa spugnosa."
+    },
+    {
+      "title": "Scomposizione Biga Manuale",
+      "text": "In bacinella grande: sbriciolare tutta la biga matura con le mani. Aggiungere {acqua_rinfresco:645}g acqua rinfresco (prima ripresa) e lavorare con le mani per 5 minuti fino a ottenere una crema liscia. La biga deve dissolversi completamente nell'acqua."
+    },
+    {
+      "title": "Incorporamento Farine e Riposo Idratazione",
+      "text": "Aggiungere {farina_nuvola:1660}g Nuvola Super, {farina_rinfresco:275}g Saccorosso, {criscito:83}g Criscito. Mescolare con mano a uncino fino a formare un impasto ruvido (3-4 minuti). Non serve incordatura. Coprire e lasciare riposare 20 minuti (riposo per idratazione). Durante questo tempo le farine si idratano naturalmente."
+    },
+    {
+      "title": "Slap & Fold con Bassinage Progressivo",
+      "text": "Aggiungere {sale:64}g sale e {malto:9}g malto. Iniziare slap & fold: sollevare l'impasto, sbatterlo sul piano e ripiegarlo. Dopo 50 slap, aggiungere {acqua_seconda:325}g acqua (seconda ripresa) gradualmente durante le pieghe. Continuare 100 slap totali. L'impasto diventa progressivamente più liscio ed elastico."
+    },
+    {
+      "title": "Stretch & Fold Finali",
+      "text": "Aggiungere gli ultimi {acqua_bassinage:645}g acqua (terza ripresa) in 2-3 aggiunte durante le pieghe. Eseguire 4 serie di stretch & fold a intervalli di 15 minuti: bagnare le mani, sollevare un lembo, allungarlo delicatamente e ripiegarlo al centro. Ruotare 90° e ripetere 4 volte per serie. Temperatura target: 24-25°C (leggermente più alta che a spirale, per compensare tempo lavorazione)."
+    },
+    {
+      "title": "Puntata con Pieghe di Rinforzo",
+      "text": "Trasferire in contenitore oliato. Puntata 2 ore a 22°C. Eseguire 2 pieghe di rinforzo: dopo 30 min e dopo 1 ora (stessa tecnica stretch & fold, 1 serie da 4 ripetizioni). L'impasto deve essere gonfio e alveolato."
+    },
+    {
+      "title": "Staglio e Pirlatura Manuale",
+      "text": "Rovesciare su piano infarinato senza sgonfiare. Dividere con tarocco in porzioni da {panetto_peso:285!}g. Per ogni panetto: allargare delicatamente con le dita, piegare i 4 lembi al centro, girare e chiudere la chiave sul fondo con movimento rotatorio delle mani (pirlatura). La superficie deve essere tesa."
+    },
+    {
+      "title": "Appretto Controllato",
+      "text": "Disporre i panetti in cassette oliate, distanziati. Coprire e lasciare lievitare 4-5 ore a 22°C. Test del dito: premere delicatamente, la fossetta deve richiudersi lentamente. Usare entro 1 ora per cornicione ottimale."
+    }
+  ],
+  "stepsExtruder": [],
   "stepsCondiment": [],
   "flourTable": [
     {
@@ -147,7 +245,11 @@
           "note": "(fredda da frigo 8-10°C)",
           "grams": 375,
           "tokenId": "acqua_biga",
-          "excludeFromTotal": false
+          "excludeFromTotal": false,
+          "setupNote": {
+            "spirale": "(fredda da frigo 8-10°C)",
+            "mano": "(fredda da frigo 8-10°C)"
+          }
         },
         {
           "name": "Lievito Secco Caputo (per biga)",
@@ -187,7 +289,11 @@
           "note": "(da inserire in più riprese come da procedimento)",
           "grams": 1615,
           "tokenId": "acqua_rinfresco",
-          "excludeFromTotal": false
+          "excludeFromTotal": false,
+          "setupNote": {
+            "spirale": "(in 2 riprese: 970g iniziale + 645g bassinage)",
+            "mano": "(in 3 riprese progressive durante le pieghe)"
+          }
         },
         {
           "name": "Criscito Caputo",
@@ -211,36 +317,6 @@
           "excludeFromTotal": true
         }
       ]
-    }
-  ],
-  "steps": [
-    {
-      "title": "Preparazione Biga (24h prima)",
-      "text": "In impastatrice Grilletta IM 5: unire {farina_biga:830}g Saccorosso, {acqua_biga:375}g acqua fredda, {lievito:1.8}g lievito secco. Mescolare a velocità 1 per 2-3 minuti fino a ottenere un impasto 'a stracci' (grumo disomogeneo, no incordatura). Trasferire in contenitore coperto e maturare 24 ore a 16-18°C controllata (cantina/frigo cantina). La biga è pronta quando triplica di volume e presenta struttura spugnosa."
-    },
-    {
-      "title": "Scomposizione Biga",
-      "text": "Inserire tutta la biga matura (~{biga_matura:1205}g) nella vasca e aggiungere {acqua_rinfresco:970}g acqua rinfresco (60% dell'acqua di rinfresco). Avviare a velocità 1 per 3-4 minuti: la biga deve sfaldarsi completamente e amalgamarsi con l'acqua formando una crema omogenea."
-    },
-    {
-      "title": "Riposo Idratazione",
-      "text": "Aggiungere {farina_nuvola:1660}g Nuvola Super, {farina_rinfresco:275}g Saccorosso e {criscito:83}g Criscito. Mescolare a velocità 1-2 per 2 minuti, solo fino a incorporare le farine (impasto disomogeneo ok). STOP macchina: riposo di 20 minuti coperto. Questo favorisce l'idratazione delle farine e migliora l'estensibilità."
-    },
-    {
-      "title": "Incordatura Pro con Bassinage",
-      "text": "Ripartire a velocità 3-4. Aggiungere {sale:64}g sale e {malto:9}g estratto di malto. Incorporare i restanti {acqua_bassinage:645}g acqua A GOCCIA (bassinage) in 8-10 minuti, aspettando che ogni aggiunta venga assorbita. L'impasto deve incordarsi completamente, staccarsi dalle pareti e mostrare superficie liscia e lucida. Temperatura finale TASSATIVA: 23°C (controllare con termometro a sonda). Se necessario, regolare con acqua ghiacciata o temperatura ambiente vasca."
-    },
-    {
-      "title": "Puntata in Massa con Pieghe di Rinforzo",
-      "text": "Trasferire l'impasto in contenitore oliato. Puntata 2 ore a temperatura ambiente (22°C). Eseguire 2 serie di pieghe di rinforzo: prima piega dopo 30 min, seconda dopo 1 ora. Tecnica piega: sollevare delicatamente un lembo dell'impasto e ripiegarlo al centro, ruotare 90° e ripetere 4 volte. Questo redistribuisce i gas e rinforza la maglia glutinica."
-    },
-    {
-      "title": "Staglio Panetti",
-      "text": "Rovesciare delicatamente l'impasto su piano leggermente infarinato. Dividere in panetti da {panetto_peso:285!}g con tarocco. Per ogni panetto: piegare i lembi verso il centro, girare e chiudere bene la chiave sul fondo con movimento rotatorio (pirlatura). La superficie deve essere tesa ma non strappata."
-    },
-    {
-      "title": "Appretto in Cassetta",
-      "text": "Disporre i panetti in cassette da lievitazione oliate, spaziati 5-6 cm. Coprire con coperchio o pellicola. Appretto 4-5 ore a temperatura ambiente (22°C). I panetti sono pronti quando raddoppiano di volume e al test del dito la fossetta si richiude lentamente. Usare entro 1 ora dal termine appretto per massima alveolatura."
     }
   ]
 }

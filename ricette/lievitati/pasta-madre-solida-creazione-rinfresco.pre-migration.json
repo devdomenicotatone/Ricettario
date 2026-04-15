@@ -100,6 +100,32 @@
     }
   ],
   "suspensions": [],
+  "stepsHand": [
+    {
+      "title": "Creazione dello Starter (Giorno 1)",
+      "text": "Per creare il lievito da zero, occorre attirare i lieviti selvaggi. Lavare {uvetta_starter:50}g in un colino con acqua molto calda per eliminare polvere e paraffina. Trasferire in una ciotola pulita, aggiungere {acqua_starter:120}g a temperatura ambiente e lasciare in ammollo per 20 minuti."
+    },
+    {
+      "title": "Frullatura e Primo Impasto",
+      "text": "Frullare grossolanamente l'uvetta insieme alla sua acqua con un mixer a immersione. Aggiungere {farina_manitoba_inizio:100}g e {farina_zero_inizio:50}g. Impastare fino a ottenere un composto uniforme. Inserire in un barattolo di vetro alto e stretto (il composto non deve superare 1/5 dell'altezza). Coprire con una garza umida fermata da un elastico e lasciare a {targetTemp:26!}°C per 48 ore."
+    },
+    {
+      "title": "Il Rinfresco Standard (Proporzione 1:1:0.5)",
+      "text": "Questa è l'operazione base da ripetere. Prelevare {lievito_cuore:150}g dal cuore del lievito (scartando la parte superiore ossidata). In una ciotola, spezzettare il lievito e unire {acqua_rinfresco:75}g e le farine: {farina_manitoba_rinf:100}g e {farina_zero_rinf:50}g. Mescolare schiacciando contro le pareti per far assorbire i liquidi."
+    },
+    {
+      "title": "Cilindratura e Formatura",
+      "text": "Trasferire sul piano. Lavorare energicamente. Aiutarsi con un mattarello: stendere l'impasto in un rettangolo spesso e fare delle pieghe portando i lembi verso il centro. Ripetere l'operazione di stesura e piega (cilindratura) 3-4 volte, finché l'impasto diventa tenace, liscio e compatto. Arrotolare strettamente su se stesso formando un filoncino."
+    },
+    {
+      "title": "Taglio e Riposo",
+      "text": "Praticare una profonda incisione a croce sulla superficie con una lama affilata. Posizionare in un barattolo di vetro stretto e alto (rimuovendo la guarnizione ermetica per far sfiatare i gas). Lasciare maturare a temperatura ambiente o usare secondo le tempistiche della ricetta finale."
+    },
+    {
+      "title": "Il Bagnetto (Manutenzione Straordinaria)",
+      "text": "Da eseguire solo se il lievito odora di formaggio/aceto pungente. Eliminare tutta la crosta esterna prelevando solo il cuore. In una boule, versare {acqua_bagnetto:1000}g a 38°C e farvi cadere {zucchero_bagnetto:10}g sul fondo (SENZA mescolare). Tagliare il lievito a fette, schiacciarle leggermente e immergerle. Lasciare a bagno per 20 minuti. I batteri acetici (antagonisti) si staccheranno per nutrirsi dello zucchero. Infine, strizzare vigorosamente il lievito e procedere immediatamente a un Rinfresco Standard."
+    }
+  ],
   "flourTable": [
     {
       "type": "Manitoba / Tipo 0",
@@ -129,6 +155,27 @@
       "definition": "La parte interna della pasta madre, non a contatto con l'aria e quindi non ossidata, ricca di lieviti attivi."
     }
   ],
+  "variants": [
+    {
+      "id": "mantenimento-frigo",
+      "label": "❄️ Mantenimento in Frigorifero (1 volta a settimana)",
+      "description": "Per gestire il lievito rinfrescandolo solo una volta a settimana, si cambia la proporzione del rinfresco (1:2:1) per fornire più nutrimento in vista del lungo periodo.",
+      "ingredientOverrides": [
+        {
+          "ref": "lievito_cuore",
+          "grams": 75,
+          "note": "(dimezzato per rallentare la fermentazione settimanale)"
+        }
+      ],
+      "branchAfterStep": 4,
+      "altSteps": [
+        {
+          "title": "Riposo iniziale e Frigorifero",
+          "text": "Dopo aver effettuato il taglio a croce, lasciare il barattolo a temperatura ambiente per 1 ora, per far partire la fermentazione. Successivamente, trasferire nella parte meno fredda del frigorifero (4-6°C). Rinfrescare nuovamente dopo 6-7 giorni."
+        }
+      ]
+    }
+  ],
   "alert": "NON lavare mai i barattoli del lievito con detersivi chimici o in lavastoviglie con brillantante. Usa solo acqua caldissima e asciuga perfettamente. I residui di sapone uccideranno la microflora. Inoltre, NON sigillare ermeticamente il barattolo durante la crescita: i gas sviluppati potrebbero farlo esplodere.",
   "proTips": [
     "Usa il naso: un lievito sano e in forza profuma di yogurt bianco, miele o mela verde. Se sa di formaggio stagionato, aceto forte o smalto per unghie, necessita urgentemente di un bagnetto e rinfreschi ravvicinati.",
@@ -153,31 +200,5 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-15T19:29:40.558Z",
   "image": "images/ricette/lievitati/pasta-madre-solida-creazione-rinfresco.webp",
-  "imageAttribution": "📷 Foto: Natalia Olivera — Pexels License via Pexels",
-  "steps": [
-    {
-      "title": "Creazione dello Starter (Giorno 1)",
-      "text": "Per creare il lievito da zero, occorre attirare i lieviti selvaggi. Lavare {uvetta_starter:50}g in un colino con acqua molto calda per eliminare polvere e paraffina. Trasferire in una ciotola pulita, aggiungere {acqua_starter:120}g a temperatura ambiente e lasciare in ammollo per 20 minuti."
-    },
-    {
-      "title": "Frullatura e Primo Impasto",
-      "text": "Frullare grossolanamente l'uvetta insieme alla sua acqua con un mixer a immersione. Aggiungere {farina_manitoba_inizio:100}g e {farina_zero_inizio:50}g. Impastare fino a ottenere un composto uniforme. Inserire in un barattolo di vetro alto e stretto (il composto non deve superare 1/5 dell'altezza). Coprire con una garza umida fermata da un elastico e lasciare a {targetTemp:26!}°C per 48 ore."
-    },
-    {
-      "title": "Il Rinfresco Standard (Proporzione 1:1:0.5)",
-      "text": "Questa è l'operazione base da ripetere. Prelevare {lievito_cuore:150}g dal cuore del lievito (scartando la parte superiore ossidata). In una ciotola, spezzettare il lievito e unire {acqua_rinfresco:75}g e le farine: {farina_manitoba_rinf:100}g e {farina_zero_rinf:50}g. Mescolare schiacciando contro le pareti per far assorbire i liquidi."
-    },
-    {
-      "title": "Cilindratura e Formatura",
-      "text": "Trasferire sul piano. Lavorare energicamente. Aiutarsi con un mattarello: stendere l'impasto in un rettangolo spesso e fare delle pieghe portando i lembi verso il centro. Ripetere l'operazione di stesura e piega (cilindratura) 3-4 volte, finché l'impasto diventa tenace, liscio e compatto. Arrotolare strettamente su se stesso formando un filoncino."
-    },
-    {
-      "title": "Taglio e Riposo",
-      "text": "Praticare una profonda incisione a croce sulla superficie con una lama affilata. Posizionare in un barattolo di vetro stretto e alto (rimuovendo la guarnizione ermetica per far sfiatare i gas). Lasciare maturare a temperatura ambiente o usare secondo le tempistiche della ricetta finale."
-    },
-    {
-      "title": "Il Bagnetto (Manutenzione Straordinaria)",
-      "text": "Da eseguire solo se il lievito odora di formaggio/aceto pungente. Eliminare tutta la crosta esterna prelevando solo il cuore. In una boule, versare {acqua_bagnetto:1000}g a 38°C e farvi cadere {zucchero_bagnetto:10}g sul fondo (SENZA mescolare). Tagliare il lievito a fette, schiacciarle leggermente e immergerle. Lasciare a bagno per 20 minuti. I batteri acetici (antagonisti) si staccheranno per nutrirsi dello zucchero. Infine, strizzare vigorosamente il lievito e procedere immediatamente a un Rinfresco Standard."
-    }
-  ]
+  "imageAttribution": "📷 Foto: Natalia Olivera — Pexels License via Pexels"
 }

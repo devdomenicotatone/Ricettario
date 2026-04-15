@@ -11,75 +11,6 @@
   "totalFlour": 1000,
   "ingredients": [],
   "suspensions": [],
-  "stepsSpiral": [
-    {
-      "title": "Preparazione Biga (pre-impasto)",
-      "text": "Prelevare 200g del mix farine (140g manitoba + {olio_evo_salamoia_e_fini:60}g tipo 0), unire {acqua_biga:120}g acqua tiepida (25-28°C) e {lievito_fresco_biga:3}g lievito fresco sbriciolato. Impastare brevemente a velocità 1 per 3-4 minuti fino a ottenere una palla liscia ma compatta. Formare una pallina, incidere a croce sulla superficie, coprire con pellicola e far lievitare in ambiente controllato a 26°C (forno spento con luce accesa) per 1h30-2h. La biga deve raddoppiare di volume e presentare una struttura alveolata."
-    },
-    {
-      "title": "Impasto Base con Spirale",
-      "text": "Nella vasca della spirale inserire la biga a pezzi, aggiungere il restante mix farine (560g manitoba + 240g tipo 0), {acqua_impasto_finale:600}g acqua fredda 8-10°C, {lievito_fresco_impasto_finale:12}g lievito fresco sbriciolato e {miele:10}g miele. Avviare spirale a velocità 1 per 8 minuti fino a completa amalgamazione. La massa deve risultare ruvida ma omogenea. TEMPERATURA IMPASTO TARGET: 23-24°C massimo."
-    },
-    {
-      "title": "Incordatura e Aggiunta Olio",
-      "text": "Passare a velocità 2 e aggiungere {olio_evo_impasto_finale:50}g olio EVO a filo continuo in 2 minuti. Continuare per altri 6-7 minuti totali a velocità 2 fino a completa incordatura. L'impasto deve staccarsi dalle pareti, risultare liscio, elastico e lucido. Temperatura finale impasto: 24-25°C. Se supera 26°C, raffreddare la vasca con ghiaccio esterno."
-    },
-    {
-      "title": "Aggiunta Sale e Completamento",
-      "text": "Aggiungere {sale_impasto_finale:18}g sale fino e impastare a velocità 1 per 3-4 minuti fino a completo assorbimento. L'impasto deve essere morbido, setoso, leggermente appiccicoso ma gestibile. Totale tempo impasto spirale: 18-20 minuti. Verificare sviluppo glutine con prova velo: stendendo una porzione d'impasto deve formarsi una membrana sottile e trasparente senza strappi."
-    },
-    {
-      "title": "Prima Lievitazione (Puntata)",
-      "text": "Trasferire l'impasto in contenitore oliato capiente (almeno 3 volte il volume), coprire con pellicola a contatto e panno umido. Lievitare a temperatura controllata 26°C per 3-4 ore (in estate 2h30 possono bastare). L'impasto deve TRIPLICARE di volume, risultare gonfio e pieno di bolle in superficie. Test della lievitazione: premendo delicatamente con un dito, l'impronta deve rimanere visibile e risalire lentamente."
-    },
-    {
-      "title": "Stesura in Teglia (facoltativo: Pirlatura intermedia)",
-      "text": "PER FOCACCIA PIÙ DIGERIBILE: rovesciare l'impasto su piano infarinato, desgasare delicatamente con le mani a piatto, formare una palla liscia con pirlatura leggera, coprire e far riposare 15 minuti. Preparare teglia 30x40cm (o due teglie 30x30cm) con abbondante olio EVO sul fondo (circa 20g per teglia). Rovesciare l'impasto al centro della teglia, ungere le mani d'olio e stendere delicatamente dai centro verso i bordi SENZA premere troppo, lasciando bordi più alti. Coprire con pellicola oleata."
-    },
-    {
-      "title": "Appretto e Fossette",
-      "text": "Lasciar riposare in teglia coperto per 40-50 minuti a 26°C. L'impasto deve gonfiarsi visibilmente. Preparare la SALAMOIA: emulsionare vigorosamente {acqua_salamoia_e_fini:100}g acqua + {olio_evo_salamoia_e_fini:60}g olio EVO + {sale_salamoia_e_fini:4}g sale fino fino a ottenere un'emulsione lattiginosa stabile (usare frusta o shaker). Versare metà salamoia sulla superficie della focaccia. Con polpastrelli ben oleati, premere con decisione creando le tipiche FOSSETTE profonde fino quasi a toccare il fondo della teglia. Questo passaggio è FONDAMENTALE: le fossette trattengono olio e creano la texture caratteristica."
-    },
-    {
-      "title": "Finitura Pre-Cottura",
-      "text": "Versare la restante salamoia nelle fossette e su tutta la superficie. Cospargere uniformemente con {sale_salamoia_e_fini_2:8}g sale grosso marino (non troppo: deve dare croccantezza senza salare eccessivamente). Lasciar riposare scoperto 5 minuti per far assorbire la salamoia. La superficie deve apparire lucida, ricca di olio e con fossette ben marcate."
-    }
-  ],
-  "stepsHand": [
-    {
-      "title": "Preparazione Biga Manuale",
-      "text": "In ciotola capiente mescolare 200g mix farine (140g manitoba + {olio_evo_salamoia_e_fini:60}g tipo 0), {acqua_biga:120}g acqua tiepida 28-30°C e 5g lievito fresco sbriciolato. Impastare energicamente a mano per 5-6 minuti sul piano di lavoro: piegare, schiacciare, ruotare fino a ottenere una massa compatta e liscia. Formare una palla, incidere a croce, mettere in ciotola oleata, coprire con pellicola e panno. Lievitare in luogo tiepido (26°C: forno spento con luce accesa o vicino a termosifone) per 1h30-2h fino a raddoppio."
-    },
-    {
-      "title": "Impasto Base a Mano",
-      "text": "In ciotola grande sbriciolare la biga lievitata, aggiungere il restante mix farine (560g manitoba + 240g tipo 0), {lievito_impasto_finale:12}g miele e 5g lievito fresco sbriciolato. Aggiungere 400g acqua tiepida (28-30°C) e mescolare con cucchiaio di legno fino a impasto ruvido. Versare su piano e iniziare a impastare: piegare la massa su se stessa, spingere con palmo, ruotare 90° e ripetere per 8-10 minuti."
-    },
-    {
-      "title": "Aggiunta Acqua Residua e Olio (Bassinage)",
-      "text": "Aggiungere gradualmente i restanti 200g acqua tiepida in 3 riprese, impastando energicamente dopo ogni aggiunta fino a completo assorbimento. L'impasto diventerà molto morbido e appiccicoso: è normale. Continuare a lavorare con tecnica SLAP & FOLD: sollevare l'impasto, sbatterlo sul piano con forza, piegare su se stesso. Ripetere per 5-6 minuti. Aggiungere {olio_evo_impasto_finale:50}g olio EVO a filo, continuando slap & fold per altri 8-10 minuti fino a completa incordatura. L'impasto deve risultare liscio, lucido, elastico."
-    },
-    {
-      "title": "Aggiunta Sale e Sviluppo Finale",
-      "text": "Incorporare {sale_impasto_finale:18}g sale fino con tecnica stretch & fold: distendere l'impasto, ripiegare, ruotare. Ripetere 4-5 volte, poi continuare impasto tradizionale per 5 minuti. Totale tempo impasto a mano: 30-35 minuti. L'impasto deve passare la prova del velo: steso sottile deve formare membrana trasparente senza rompersi."
-    },
-    {
-      "title": "Prima Lievitazione in Massa",
-      "text": "Formare una palla liscia con pirlatura leggera, trasferire in ciotola oleata molto capiente (3 volte il volume impasto), coprire con pellicola aderente e panno umido. Lievitare a 26°C per 3-4 ore fino a TRIPLICAZIONE del volume. In estate possono bastare 2h30-3h. L'impasto deve essere gonfio, soffice al tatto, con superficie ricca di bolle. Test: premendo con dito, l'impronta deve risalire lentamente."
-    },
-    {
-      "title": "Stesura Delicata e Messa in Teglia",
-      "text": "SENZA degasare troppo (altrimenti si perdono le bolle): rovesciare l'impasto su piano leggermente infarinato, praticare una pirlatura molto delicata per dare forma. Opzionale: riposo 10 minuti coperto. Ungere abbondantemente teglia 30x40cm (o due 30x30) con 20g olio EVO. Trasferire l'impasto al centro, ungere le mani e stendere CON DELICATEZZA dai centro verso i bordi, allungando senza strappare. Lasciare bordi leggermente più alti. NON pressare troppo: le bolle devono rimanere. Coprire con pellicola oleata."
-    },
-    {
-      "title": "Appretto e Creazione Fossette",
-      "text": "Lasciar riposare 40-50 minuti a 26°C coperto. L'impasto deve gonfiarsi notevolmente in teglia. Nel frattempo preparare SALAMOIA: in barattolo con coperchio mettere {acqua_salamoia_e_fini:100}g acqua + {olio_evo_salamoia_e_fini:60}g olio EVO + {sale_salamoia_e_fini:4}g sale fino, chiudere e agitare vigorosamente per 1 minuto fino a emulsione lattiginosa stabile. Versare metà salamoia sulla focaccia lievitata. Ungere abbondantemente i polpastrelli e PREMERE con decisione fino quasi a toccare il fondo, creando fossette profonde e ravvicinate. Questa operazione ridistribuisce l'impasto e crea la texture caratteristica della focaccia genovese."
-    },
-    {
-      "title": "Finitura Finale",
-      "text": "Versare la restante salamoia distribuendola nelle fossette e su tutta la superficie. Cospargere uniformemente con {sale_salamoia_e_fini_2:8}g sale grosso marino. Lasciar riposare 5 minuti scoperto: l'olio deve depositarsi nelle fossette creando il caratteristico aspetto lucido. La focaccia è pronta per la cottura."
-    }
-  ],
-  "stepsExtruder": [],
   "stepsCondiment": [],
   "flourTable": [
     {
@@ -185,11 +116,7 @@
         {
           "name": "Farina Manitoba Forte",
           "note": "(W 350-380)",
-          "grams": 700,
-          "setupNote": {
-            "spirale": "(fredda da frigo 4-6°C)",
-            "mano": "(temperatura ambiente 20-22°C)"
-          }
+          "grams": 700
         },
         {
           "name": "Acqua",
@@ -199,11 +126,7 @@
         {
           "name": "Lievito di Birra Fresco",
           "note": "(per biga)",
-          "grams": 3,
-          "setupNote": {
-            "spirale": "(3g totali)",
-            "mano": "(5g se lievitazione più breve)"
-          }
+          "grams": 3
         }
       ]
     },
@@ -218,11 +141,7 @@
         {
           "name": "Acqua",
           "note": "(per impasto)",
-          "grams": 600,
-          "setupNote": {
-            "spirale": "(fredda 8-10°C)",
-            "mano": "(tiepida 28-30°C, in 2 riprese)"
-          }
+          "grams": 600
         },
         {
           "name": "Lievito di Birra Fresco",
@@ -270,6 +189,40 @@
           "grams": 8
         }
       ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Preparazione Biga (pre-impasto)",
+      "text": "Prelevare 200g del mix farine (140g manitoba + {olio_evo_salamoia_e_fini:60}g tipo 0), unire {acqua_biga:120}g acqua tiepida (25-28°C) e {lievito_fresco_biga:3}g lievito fresco sbriciolato. Impastare brevemente a velocità 1 per 3-4 minuti fino a ottenere una palla liscia ma compatta. Formare una pallina, incidere a croce sulla superficie, coprire con pellicola e far lievitare in ambiente controllato a 26°C (forno spento con luce accesa) per 1h30-2h. La biga deve raddoppiare di volume e presentare una struttura alveolata."
+    },
+    {
+      "title": "Impasto Base con Spirale",
+      "text": "Nella vasca della spirale inserire la biga a pezzi, aggiungere il restante mix farine (560g manitoba + 240g tipo 0), {acqua_impasto_finale:600}g acqua fredda 8-10°C, {lievito_fresco_impasto_finale:12}g lievito fresco sbriciolato e {miele:10}g miele. Avviare spirale a velocità 1 per 8 minuti fino a completa amalgamazione. La massa deve risultare ruvida ma omogenea. TEMPERATURA IMPASTO TARGET: 23-24°C massimo."
+    },
+    {
+      "title": "Incordatura e Aggiunta Olio",
+      "text": "Passare a velocità 2 e aggiungere {olio_evo_impasto_finale:50}g olio EVO a filo continuo in 2 minuti. Continuare per altri 6-7 minuti totali a velocità 2 fino a completa incordatura. L'impasto deve staccarsi dalle pareti, risultare liscio, elastico e lucido. Temperatura finale impasto: 24-25°C. Se supera 26°C, raffreddare la vasca con ghiaccio esterno."
+    },
+    {
+      "title": "Aggiunta Sale e Completamento",
+      "text": "Aggiungere {sale_impasto_finale:18}g sale fino e impastare a velocità 1 per 3-4 minuti fino a completo assorbimento. L'impasto deve essere morbido, setoso, leggermente appiccicoso ma gestibile. Totale tempo impasto spirale: 18-20 minuti. Verificare sviluppo glutine con prova velo: stendendo una porzione d'impasto deve formarsi una membrana sottile e trasparente senza strappi."
+    },
+    {
+      "title": "Prima Lievitazione (Puntata)",
+      "text": "Trasferire l'impasto in contenitore oliato capiente (almeno 3 volte il volume), coprire con pellicola a contatto e panno umido. Lievitare a temperatura controllata 26°C per 3-4 ore (in estate 2h30 possono bastare). L'impasto deve TRIPLICARE di volume, risultare gonfio e pieno di bolle in superficie. Test della lievitazione: premendo delicatamente con un dito, l'impronta deve rimanere visibile e risalire lentamente."
+    },
+    {
+      "title": "Stesura in Teglia (facoltativo: Pirlatura intermedia)",
+      "text": "PER FOCACCIA PIÙ DIGERIBILE: rovesciare l'impasto su piano infarinato, desgasare delicatamente con le mani a piatto, formare una palla liscia con pirlatura leggera, coprire e far riposare 15 minuti. Preparare teglia 30x40cm (o due teglie 30x30cm) con abbondante olio EVO sul fondo (circa 20g per teglia). Rovesciare l'impasto al centro della teglia, ungere le mani d'olio e stendere delicatamente dai centro verso i bordi SENZA premere troppo, lasciando bordi più alti. Coprire con pellicola oleata."
+    },
+    {
+      "title": "Appretto e Fossette",
+      "text": "Lasciar riposare in teglia coperto per 40-50 minuti a 26°C. L'impasto deve gonfiarsi visibilmente. Preparare la SALAMOIA: emulsionare vigorosamente {acqua_salamoia_e_fini:100}g acqua + {olio_evo_salamoia_e_fini:60}g olio EVO + {sale_salamoia_e_fini:4}g sale fino fino a ottenere un'emulsione lattiginosa stabile (usare frusta o shaker). Versare metà salamoia sulla superficie della focaccia. Con polpastrelli ben oleati, premere con decisione creando le tipiche FOSSETTE profonde fino quasi a toccare il fondo della teglia. Questo passaggio è FONDAMENTALE: le fossette trattengono olio e creano la texture caratteristica."
+    },
+    {
+      "title": "Finitura Pre-Cottura",
+      "text": "Versare la restante salamoia nelle fossette e su tutta la superficie. Cospargere uniformemente con {sale_salamoia_e_fini_2:8}g sale grosso marino (non troppo: deve dare croccantezza senza salare eccessivamente). Lasciar riposare scoperto 5 minuti per far assorbire la salamoia. La superficie deve apparire lucida, ricca di olio e con fossette ben marcate."
     }
   ]
 }

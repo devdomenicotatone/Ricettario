@@ -47,11 +47,7 @@
           "name": "Acqua",
           "note": "(16-18°C per spirale, 20°C a mano)",
           "grams": 120,
-          "tokenId": "acqua_impasto",
-          "setupNote": {
-            "spirale": "16-18°C (compensazione calore meccanico)",
-            "mano": "20-22°C"
-          }
+          "tokenId": "acqua_impasto"
         },
         {
           "name": "Acqua per Bassinage",
@@ -74,54 +70,6 @@
       "note": "(tostati e spezzettati grossolanamente)",
       "grams": 100,
       "tokenId": "noci"
-    }
-  ],
-  "stepsSpiral": [
-    {
-      "title": "Preparazione del Poolish",
-      "text": "In un contenitore alto e stretto, sciogliere {lievito_poolish:0.5}g di lievito in {acqua_poolish:200}g di acqua a temperatura ambiente. Aggiungere {farina_poolish:200}g di farina Manitoba e mescolare con una forchetta fino a ottenere una pastella liscia e senza grumi. Coprire con pellicola (lasciando un piccolo sfiato) e far maturare a {temp_ambiente:20!}°C per {tempo_poolish:12!} - 14 ore. Il poolish sarà pronto quando sarà raddoppiato, presenterà una superficie ricca di bolle e mostrerà un leggero cedimento al centro."
-    },
-    {
-      "title": "Avvio dell'Impasto",
-      "text": "Versare tutto il poolish maturo nella vasca dell'impastatrice. Aggiungere {farina_impasto:300}g di farina Tipo 0 e {acqua_impasto:120}g di acqua. Avviare la macchina in prima velocità (V1) per circa {tempo_mix_1:5!} minuti, fino a formare la maglia glutinica e pulire le pareti della vasca."
-    },
-    {
-      "title": "Incordatura e Bassinage",
-      "text": "Passare in seconda velocità (V2). Quando l'impasto è tenace, inserire {sale_impasto:12}g di sale. Una volta assorbito il sale, iniziare il bassinage versando {acqua_bassinage:30}g di acqua a filo in più riprese, aspettando che la dose precedente sia completamente assorbita prima di aggiungere la successiva. Temperatura target impasto: {temp_target:25!}°C."
-    },
-    {
-      "title": "Inserimento Sospensioni",
-      "text": "Riportare l'impastatrice in prima velocità (V1) o fermarla. Inserire {noci:100}g di gherigli di noci precedentemente tostati e raffreddati. Impastare per {tempo_sospensioni:1!} - 2 minuti al massimo, giusto il tempo di distribuirli uniformemente senza strappare la maglia glutinica."
-    },
-    {
-      "title": "Puntata e Pieghe",
-      "text": "Trasferire l'impasto in un contenitore leggermente oliato con bordi dritti. Far riposare per {tempo_puntata:45!} minuti a {temp_puntata:24!}°C. Eseguire un giro di pieghe (coil fold) e lasciar raddoppiare in volume (circa {tempo_raddoppio:2!} - 3 ore a seconda della temperatura)."
-    },
-    {
-      "title": "Formatura e Appretto",
-      "text": "Rovesciare l'impasto sul piano spolverato di semola. Fare una pre-forma leggera, attendere {tempo_riposo:15!} minuti, quindi formare la pagnotta (pirlatura). Trasferire in un cestino di lievitazione (banneton) ben infarinato, con la chiusura verso l'alto. Lasciar lievitare (appretto) per circa {tempo_appretto:90!} minuti a temperatura ambiente, fino al test del dito."
-    }
-  ],
-  "stepsHand": [
-    {
-      "title": "Preparazione del Poolish",
-      "text": "In una ciotola, sciogliere {lievito_poolish:0.5}g di lievito in {acqua_poolish:200}g di acqua. Aggiungere {farina_poolish:200}g di farina Manitoba e mescolare vigorosamente. Coprire e lasciar maturare a {temp_ambiente:20!}°C per {tempo_poolish:12!} ore fino alla massima espansione e comparsa di bolle superficiali."
-    },
-    {
-      "title": "Autolisi (Fermentolisi)",
-      "text": "In un'ampia ciotola, versare il poolish, {farina_impasto:300}g di farina Tipo 0 e {acqua_impasto:120}g di acqua. Mescolare grossolanamente con un tarocco o le mani fino a bagnare tutta la farina (nessun grumo secco). Coprire e lasciare in autolisi per {tempo_autolisi:30!} minuti. Questo aiuterà lo sviluppo del glutine a mano."
-    },
-    {
-      "title": "Impastamento e Sale",
-      "text": "Aggiungere all'impasto {sale_impasto:12}g di sale e la restante {acqua_bassinage:30}g di acqua un po' alla volta. Impastare sul banco utilizzando la tecnica dello Slap & Fold (sbatti e piega) per circa {tempo_slap:8!} - 10 minuti, fino a ottenere un impasto liscio ed elastico."
-    },
-    {
-      "title": "Inserimento Noci (Laminazione)",
-      "text": "Stendere l'impasto sul banco leggermente inumidito allargandolo come un velo (laminazione). Cospargere uniformemente {noci:100}g di noci tostate. Ripiegare l'impasto su se stesso a pacchetto per intrappolare le noci all'interno. Riporre in un contenitore oliato."
-    },
-    {
-      "title": "Puntata, Pieghe e Formatura",
-      "text": "Far lievitare a {temp_puntata:24!}°C per circa {tempo_puntata:3!} ore, eseguendo un giro di pieghe (stretch & fold) in ciotola ogni {tempo_pieghe:45!} minuti per le prime due ore. Al raddoppio, rovesciare sul banco, formare la pagnotta e metterla a lievitare nel cestino (appretto) per circa {tempo_appretto:90!} minuti."
     }
   ],
   "flourTable": [
@@ -177,28 +125,6 @@
       "definition": "La seconda e ultima fase di lievitazione, che avviene dopo aver dato la forma al panetto, fino al momento dell'infornata."
     }
   ],
-  "variants": [
-    {
-      "id": "cold-retard",
-      "label": "❄️ Maturazione in Frigo (Appretto a freddo)",
-      "description": "Una volta formata la pagnotta, viene messa in frigo a maturare per 12-16 ore. Sviluppa una crosta più scura, bollosa e un sapore più intenso.",
-      "branchAfterStep": 4,
-      "altSteps": [
-        {
-          "title": "Formatura per il Frigo",
-          "text": "Terminato il raddoppio in massa, formare la pagnotta e inserirla nel cestino infarinato. Lasciar partire la lievitazione a temperatura ambiente per {tempo_partenza:30!} minuti."
-        },
-        {
-          "title": "Maturazione in Frigorifero",
-          "text": "Coprire il cestino con una cuffia di plastica (per non far seccare la pelle) e riporre in frigorifero a {temp_frigo:4!}°C per {tempo_frigo:12!} - 16 ore."
-        },
-        {
-          "title": "Cottura dal Frigo",
-          "text": "Il giorno seguente, preriscaldare il forno. Capovolgere la pagnotta direttamente dal frigo (fredda) sulla pala, incidere e infornare. Lo sbalzo termico favorirà una straordinaria apertura del taglio (oven spring)."
-        }
-      ]
-    }
-  ],
   "alert": "Non aggiungere mai le noci all'inizio dell'impastamento o a velocità alte: i gusci appuntiti trancerebbero la maglia glutinica faticosamente creata, facendo collassare l'impasto e impedendo al pane di svilupparsi in altezza.",
   "proTips": [
     "Tostatura obbligatoria: Tosta le noci in forno a 160°C per 10 minuti e lasciale raffreddare prima di usarle. Questo passaggio evita che i tannini della pellicina rilascino un colore violaceo-grigiastro alla mollica e un retrogusto amaro.",
@@ -223,5 +149,31 @@
   ],
   "_generatedBy": "gemini-3.1",
   "image": "images/ricette/pane/pane-alle-noci-con-poolish.webp",
-  "imageAttribution": "📷 Foto: KATRIN  BOLOVTSOVA — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: KATRIN  BOLOVTSOVA — Pexels License via Pexels",
+  "steps": [
+    {
+      "title": "Preparazione del Poolish",
+      "text": "In un contenitore alto e stretto, sciogliere {lievito_poolish:0.5}g di lievito in {acqua_poolish:200}g di acqua a temperatura ambiente. Aggiungere {farina_poolish:200}g di farina Manitoba e mescolare con una forchetta fino a ottenere una pastella liscia e senza grumi. Coprire con pellicola (lasciando un piccolo sfiato) e far maturare a {temp_ambiente:20!}°C per {tempo_poolish:12!} - 14 ore. Il poolish sarà pronto quando sarà raddoppiato, presenterà una superficie ricca di bolle e mostrerà un leggero cedimento al centro."
+    },
+    {
+      "title": "Avvio dell'Impasto",
+      "text": "Versare tutto il poolish maturo nella vasca dell'impastatrice. Aggiungere {farina_impasto:300}g di farina Tipo 0 e {acqua_impasto:120}g di acqua. Avviare la macchina in prima velocità (V1) per circa {tempo_mix_1:5!} minuti, fino a formare la maglia glutinica e pulire le pareti della vasca."
+    },
+    {
+      "title": "Incordatura e Bassinage",
+      "text": "Passare in seconda velocità (V2). Quando l'impasto è tenace, inserire {sale_impasto:12}g di sale. Una volta assorbito il sale, iniziare il bassinage versando {acqua_bassinage:30}g di acqua a filo in più riprese, aspettando che la dose precedente sia completamente assorbita prima di aggiungere la successiva. Temperatura target impasto: {temp_target:25!}°C."
+    },
+    {
+      "title": "Inserimento Sospensioni",
+      "text": "Riportare l'impastatrice in prima velocità (V1) o fermarla. Inserire {noci:100}g di gherigli di noci precedentemente tostati e raffreddati. Impastare per {tempo_sospensioni:1!} - 2 minuti al massimo, giusto il tempo di distribuirli uniformemente senza strappare la maglia glutinica."
+    },
+    {
+      "title": "Puntata e Pieghe",
+      "text": "Trasferire l'impasto in un contenitore leggermente oliato con bordi dritti. Far riposare per {tempo_puntata:45!} minuti a {temp_puntata:24!}°C. Eseguire un giro di pieghe (coil fold) e lasciar raddoppiare in volume (circa {tempo_raddoppio:2!} - 3 ore a seconda della temperatura)."
+    },
+    {
+      "title": "Formatura e Appretto",
+      "text": "Rovesciare l'impasto sul piano spolverato di semola. Fare una pre-forma leggera, attendere {tempo_riposo:15!} minuti, quindi formare la pagnotta (pirlatura). Trasferire in un cestino di lievitazione (banneton) ben infarinato, con la chiusura verso l'alto. Lasciar lievitare (appretto) per circa {tempo_appretto:90!} minuti a temperatura ambiente, fino al test del dito."
+    }
+  ]
 }

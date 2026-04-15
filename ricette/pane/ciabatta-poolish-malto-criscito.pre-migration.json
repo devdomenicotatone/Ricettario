@@ -47,7 +47,11 @@
           "name": "Acqua (Base)",
           "note": "(10-12°C per spirale, 18-20°C a mano)",
           "grams": 180,
-          "tokenId": "acqua_impasto_base"
+          "tokenId": "acqua_impasto_base",
+          "setupNote": {
+            "spirale": "Fredda di frigo (10-12°C)",
+            "mano": "Fresca (18-20°C)"
+          }
         },
         {
           "name": "Acqua (Bassinage)",
@@ -83,6 +87,51 @@
     }
   ],
   "suspensions": [],
+  "stepsSpiral": [
+    {
+      "title": "Preparazione del Poolish",
+      "text": "In una ciotola, sciogliere {lievito_poolish:0.2}g di lievito secco in {acqua_poolish:150}g di acqua. Aggiungere {farina_poolish:150}g di farina e mescolare fino a ottenere una pastella liscia. Coprire e lasciare maturare a 20°C per circa 12 ore (fino al raddoppio e inizio cedimento)."
+    },
+    {
+      "title": "Avvio dell'Impasto",
+      "text": "Nella vasca della spirale, inserire il poolish maturo, {farina_impasto:350}g di farina, {malto:2.5}g di malto, {criscito:15}g di criscito, {lievito_impasto:0.5}g di lievito secco e {acqua_impasto_base:180}g di acqua fredda. Avviare in V1 per circa 5-7 minuti fino a formare una maglia coesa."
+    },
+    {
+      "title": "Incordatura e Bassinage",
+      "text": "Passare in V2. Aggiungere {sale:10}g di sale. Iniziare il bassinage con i restanti {acqua_bassinage:50}g di acqua a filo, aspettando che ogni dose sia assorbita. Chiudere l'impasto a {temp_target:25!}°C."
+    },
+    {
+      "title": "Puntata e Pieghe",
+      "text": "Trasferire in un contenitore oliato. Lasciar riposare per {puntata_totale:120!} min a 24°C. Eseguire due serie di coil fold a distanza di {intervallo_pieghe:45!} minuti per dare struttura."
+    },
+    {
+      "title": "Formatura e Appretto",
+      "text": "Rovesciare su abbondante semola. Tagliare rettangoli netti col tarocco senza sgonfiare. Disporre su telo infarinato e lasciar lievitare per {appretto_tempo:45!} minuti."
+    }
+  ],
+  "stepsHand": [
+    {
+      "title": "Preparazione del Poolish",
+      "text": "Sciogliere {lievito_poolish:0.2}g di lievito secco in {acqua_poolish:150}g di acqua, aggiungere {farina_poolish:150}g di farina. Coprire e attendere 12 ore a temperatura ambiente."
+    },
+    {
+      "title": "Miscelazione e Riposo",
+      "text": "In ciotola, unire poolish, {farina_impasto:350}g di farina, {malto:2.5}g di malto, {criscito:15}g di criscito, {lievito_impasto:0.5}g di lievito e {acqua_impasto_base:180}g di acqua fresca. Mescolare grossolanamente e lasciar riposare per 20 minuti (autolisi breve)."
+    },
+    {
+      "title": "Sviluppo Glutine",
+      "text": "Aggiungere {sale:10}g di sale. Lavorare con slap & fold. Quando l'impasto prende forza, inserire i {acqua_bassinage:50}g di acqua rimanenti a piccole dosi finché l'impasto non diventa elastico e liscio."
+    },
+    {
+      "title": "Puntata e Coil Folds",
+      "text": "Riposo di {puntata_totale:120!} min con tre serie di coil folds ogni {intervallo_pieghe:30!} minuti per rinforzare la struttura manuale."
+    },
+    {
+      "title": "Staglio e Appretto",
+      "text": "Tagliare le ciabatte su semola, allungandole appena. Lievitazione finale di {appretto_tempo:45!} min coperti da un panno."
+    }
+  ],
+  "stepsExtruder": [],
   "stepsCondiment": [],
   "flourTable": [
     {
@@ -136,27 +185,5 @@
   ],
   "_generatedBy": "gemini-3.1",
   "image": "images/ricette/pane/ciabatta-con-poolish.webp",
-  "imageAttribution": "📷 Foto: Cats Coming — Pexels",
-  "steps": [
-    {
-      "title": "Preparazione del Poolish",
-      "text": "In una ciotola, sciogliere {lievito_poolish:0.2}g di lievito secco in {acqua_poolish:150}g di acqua. Aggiungere {farina_poolish:150}g di farina e mescolare fino a ottenere una pastella liscia. Coprire e lasciare maturare a 20°C per circa 12 ore (fino al raddoppio e inizio cedimento)."
-    },
-    {
-      "title": "Avvio dell'Impasto",
-      "text": "Nella vasca della spirale, inserire il poolish maturo, {farina_impasto:350}g di farina, {malto:2.5}g di malto, {criscito:15}g di criscito, {lievito_impasto:0.5}g di lievito secco e {acqua_impasto_base:180}g di acqua fredda. Avviare in V1 per circa 5-7 minuti fino a formare una maglia coesa."
-    },
-    {
-      "title": "Incordatura e Bassinage",
-      "text": "Passare in V2. Aggiungere {sale:10}g di sale. Iniziare il bassinage con i restanti {acqua_bassinage:50}g di acqua a filo, aspettando che ogni dose sia assorbita. Chiudere l'impasto a {temp_target:25!}°C."
-    },
-    {
-      "title": "Puntata e Pieghe",
-      "text": "Trasferire in un contenitore oliato. Lasciar riposare per {puntata_totale:120!} min a 24°C. Eseguire due serie di coil fold a distanza di {intervallo_pieghe:45!} minuti per dare struttura."
-    },
-    {
-      "title": "Formatura e Appretto",
-      "text": "Rovesciare su abbondante semola. Tagliare rettangoli netti col tarocco senza sgonfiare. Disporre su telo infarinato e lasciar lievitare per {appretto_tempo:45!} minuti."
-    }
-  ]
+  "imageAttribution": "📷 Foto: Cats Coming — Pexels"
 }

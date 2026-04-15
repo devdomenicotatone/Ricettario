@@ -11,6 +11,29 @@
   "totalFlour": 300,
   "ingredients": [],
   "suspensions": [],
+  "stepsExtruder": [],
+  "stepsHand": [
+    {
+      "title": "Cottura Patate (40 min)",
+      "text": "Lavare accuratamente le patate intere con la buccia sotto acqua corrente. Immergerle in una pentola capiente con abbondante acqua FREDDA leggermente salata. Portare a ebollizione e cuocere per 30-40 minuti (dipende dalla grandezza). Fare la prova forchetta: i rebbi devono entrare senza fatica. Scolare e pelare le patate ANCORA CALDE (aiutarsi con un canovaccio). NOTA TECNICA: le patate calde assorbono meno farina e producono gnocchi più soffici. MAI farle raffreddare completamente."
+    },
+    {
+      "title": "Preparazione Impasto (5 min)",
+      "text": "Setacciare 200g di farina sul banco formando una fontana larga. Schiacciare le patate calde direttamente sulla farina con uno schiacciapatate (la buccia resterà all'interno). Aggiungere al centro: uovo leggermente sbattuto (se usato), sale fino, noce moscata (facoltativa). Con le mani iniziare ad amalgamare gli ingredienti dal centro verso l'esterno. Aggiungere la farina restante gradualmente (potrebbero bastare 250-280g totali). Impastare POCHISSIMO: giusto il tempo di ottenere un composto omogeneo, morbido ma non appiccicoso. REGOLA D'ORO: meno si lavora l'impasto, più teneri saranno gli gnocchi. Tempo impasto: max 3-4 minuti."
+    },
+    {
+      "title": "Formatura Gnocchi (15 min)",
+      "text": "Dividere l'impasto in 6-8 porzioni. Coprire le parti non utilizzate con un canovaccio umido. Spolverare il banco con semola rimacinata. Con le punte delle dita (non il palmo), stendere ogni porzione formando filoncini dello spessore di 2 cm. Tagliare a tocchetti di 2-3 cm con un tarocco o coltello. Rigare ogni gnocco: appoggiare il tocchetto sul rigagnocchi (o rebbi di forchetta) e trascinarlo con il pollice esercitando una leggera pressione. Si forma una conchetta con righe esterne. Sistemare gli gnocchi su vassoi con canovaccio infarinato di semola, ben distanziati."
+    },
+    {
+      "title": "Riposo (20-40 min)",
+      "text": "Lasciare gli gnocchi all'aria per 20-40 minuti. La superficie si asciugherà leggermente e manterrà meglio la rigatura durante la cottura. Evitare di cuocere subito: gnocchi troppo umidi si disfano. Se non si cuociono entro 2 ore, congelare su vassoio e poi trasferire in sacchetti (si conservano 3 mesi)."
+    },
+    {
+      "title": "Cottura (2-3 min)",
+      "text": "Portare a ebollizione una pentola capiente con abbondante acqua salata ({sale_impasto:10}g sale per litro). Versare gli gnocchi in piccole quantità (max 200g per volta). Appena vengono a galla (dopo 1-2 minuti) attendere altri 30 secondi e scolare con schiumarola. Trasferire direttamente nel condimento in padella e mantecare 30-60 secondi. NON sciacquare sotto acqua fredda."
+    }
+  ],
   "stepsCondiment": [
     {
       "title": "Sugo al Pomodoro Semplice (15 min)",
@@ -97,7 +120,11 @@
         {
           "name": "Uova Medie",
           "note": "(facoltativo - omettere per gnocchi più delicati)",
-          "grams": 50
+          "grams": 50,
+          "setupNote": {
+            "conUova": "(1 uovo medio (~50g))",
+            "senzaUova": "(omettere e aumentare farina a 350g)"
+          }
         },
         {
           "name": "Sale Fino",
@@ -109,28 +136,6 @@
           "grams": 50
         }
       ]
-    }
-  ],
-  "steps": [
-    {
-      "title": "Cottura Patate (40 min)",
-      "text": "Lavare accuratamente le patate intere con la buccia sotto acqua corrente. Immergerle in una pentola capiente con abbondante acqua FREDDA leggermente salata. Portare a ebollizione e cuocere per 30-40 minuti (dipende dalla grandezza). Fare la prova forchetta: i rebbi devono entrare senza fatica. Scolare e pelare le patate ANCORA CALDE (aiutarsi con un canovaccio). NOTA TECNICA: le patate calde assorbono meno farina e producono gnocchi più soffici. MAI farle raffreddare completamente."
-    },
-    {
-      "title": "Preparazione Impasto (5 min)",
-      "text": "Setacciare 200g di farina sul banco formando una fontana larga. Schiacciare le patate calde direttamente sulla farina con uno schiacciapatate (la buccia resterà all'interno). Aggiungere al centro: uovo leggermente sbattuto (se usato), sale fino, noce moscata (facoltativa). Con le mani iniziare ad amalgamare gli ingredienti dal centro verso l'esterno. Aggiungere la farina restante gradualmente (potrebbero bastare 250-280g totali). Impastare POCHISSIMO: giusto il tempo di ottenere un composto omogeneo, morbido ma non appiccicoso. REGOLA D'ORO: meno si lavora l'impasto, più teneri saranno gli gnocchi. Tempo impasto: max 3-4 minuti."
-    },
-    {
-      "title": "Formatura Gnocchi (15 min)",
-      "text": "Dividere l'impasto in 6-8 porzioni. Coprire le parti non utilizzate con un canovaccio umido. Spolverare il banco con semola rimacinata. Con le punte delle dita (non il palmo), stendere ogni porzione formando filoncini dello spessore di 2 cm. Tagliare a tocchetti di 2-3 cm con un tarocco o coltello. Rigare ogni gnocco: appoggiare il tocchetto sul rigagnocchi (o rebbi di forchetta) e trascinarlo con il pollice esercitando una leggera pressione. Si forma una conchetta con righe esterne. Sistemare gli gnocchi su vassoi con canovaccio infarinato di semola, ben distanziati."
-    },
-    {
-      "title": "Riposo (20-40 min)",
-      "text": "Lasciare gli gnocchi all'aria per 20-40 minuti. La superficie si asciugherà leggermente e manterrà meglio la rigatura durante la cottura. Evitare di cuocere subito: gnocchi troppo umidi si disfano. Se non si cuociono entro 2 ore, congelare su vassoio e poi trasferire in sacchetti (si conservano 3 mesi)."
-    },
-    {
-      "title": "Cottura (2-3 min)",
-      "text": "Portare a ebollizione una pentola capiente con abbondante acqua salata ({sale_impasto:10}g sale per litro). Versare gli gnocchi in piccole quantità (max 200g per volta). Appena vengono a galla (dopo 1-2 minuti) attendere altri 30 secondi e scolare con schiumarola. Trasferire direttamente nel condimento in padella e mantecare 30-60 secondi. NON sciacquare sotto acqua fredda."
     }
   ]
 }

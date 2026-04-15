@@ -17,6 +17,67 @@
       "grams": 200
     }
   ],
+  "stepsSpiral": [
+    {
+      "title": "1. Preparazione Biga (18-24h prima)",
+      "text": "Nella ciotola dell'impastatrice versare {farina_caputo_saccor_biga:900}g di Caputo Saccorosso e {acqua_biga:400}g di acqua fredda (10-12°C). Aggiungere {lievito_secco_biga:3}g di lievito secco. Mescolare a velocità 1 per 2-3 minuti fino a ottenere un impasto 'a stracci' (grumoso, non omogeneo). Trasferire in contenitore chiuso e far maturare 18-24 ore a 18°C (cantina/frigo alto)."
+    },
+    {
+      "title": "2. Spezzamento Biga e Malto",
+      "text": "Inserire nella Grilletta IM5 tutta la biga (circa {biga_di_saccorosso_impasto_finale:1300}g), l'estratto di malto ({malto_impasto_finale:15}g) e il 60% dell'acqua di rinfresco (circa 990g). Azionare a velocità 1 per 3-4 minuti per spezzare la biga e renderla cremosa. L'impasto deve risultare liquido e omogeneo."
+    },
+    {
+      "title": "3. Aggiunta Polveri e Criscito",
+      "text": "Con impastatrice in movimento a velocità 1, aggiungere: {farina_caputo_saccor_impasto_finale:1800}g Saccorosso + {farina_caputo_nuvola_impasto_finale:300}g Nuvola Super + {criscito_impasto_finale:120}g Criscito Caputo. Impastare 3-4 minuti fino a completo assorbimento. L'impasto inizia a strutturarsi ma è ancora morbido."
+    },
+    {
+      "title": "4. Incordatura e Bassinage",
+      "text": "Aumentare a velocità 2-3. Aggiungere il sale ({sale_impasto_finale:75}g) e versare a filo l'acqua rimanente (circa 660g) in tecnica bassinage. Impastare 6-8 minuti fino a maglia liscia, lucida e incordata. Temperatura finale: 23-24°C. Se supera i 25°C, l'impasto è sovrariscaldato."
+    },
+    {
+      "title": "5. Puntata in Massa",
+      "text": "Trasferire l'impasto in contenitore leggermente oliato. Coprire con pellicola. Puntata di 1.5-2 ore a temperatura ambiente (20-22°C). A metà tempo (dopo 45-50 min) eseguire una piega di rinforzo: sollevare i lembi dell'impasto e ripiegare verso il centro (4 pieghe a croce)."
+    },
+    {
+      "title": "6. Staglio Panetti",
+      "text": "Rovesciare l'impasto su banco infarinato con semola rimacinata. Stagliare panetti da 260-270g (circa 18-19 pezzi). Pirlare bene ogni panetto chiudendo il fondo con tecnica a pizzaiolo: formare una sfera tesa, pizzicare la giuntura sul fondo."
+    },
+    {
+      "title": "7. Appretto in Cassetta",
+      "text": "Disporre i panetti in cassette da lievitazione ben distanziati (minimo 5cm tra loro). Coprire con coperchio o pellicola. Appretto di 5-6 ore a temperatura ambiente (20-22°C). I panetti devono raddoppiare di volume, risultare soffici al tatto e non appiccicosi."
+    }
+  ],
+  "stepsHand": [
+    {
+      "title": "1. Preparazione Biga (18-24h prima)",
+      "text": "In una ciotola capiente mescolare {farina_caputo_saccor_biga:900}g Saccorosso, {acqua_biga:400}g acqua fredda (10-12°C) e {lievito_secco_biga:3}g lievito secco. Mescolare con cucchiaio di legno per 2-3 minuti fino a ottenere un composto grumoso 'a stracci'. NON impastare. Coprire e far maturare 18-24 ore a 18°C."
+    },
+    {
+      "title": "2. Spezzamento Biga",
+      "text": "Versare la biga in una madia o grande ciotola. Aggiungere {acqua_impasto_finale:1650}g malto e 500g acqua (50% del totale). Con le mani, spezzare e sciogliere la biga nell'acqua per 5-6 minuti fino a ottenere una crema liquida e omogenea."
+    },
+    {
+      "title": "3. Aggiunta Farine",
+      "text": "Versare {farina_caputo_saccor_impasto_finale:1800}g Saccorosso + {farina_caputo_nuvola_impasto_finale:300}g Nuvola Super + {criscito_impasto_finale:120}g Criscito sulla crema di biga. Iniziare a impastare con movimento circolare dal centro verso l'esterno. Dopo 5 minuti l'impasto inizia a strutturarsi (ancora appiccicoso)."
+    },
+    {
+      "title": "4. Incorporamento Sale e Acqua",
+      "text": "Sciogliere {acqua_impasto_finale:1650}g sale in 500g acqua restante. Versare a riprese sull'impasto continuando a impastare. Tecnica slap and fold: sollevare l'impasto, sbatterlo sul piano, ripiegarlo. Ripetere 10-12 minuti. Aggiungere gli ultimi 650g acqua gradualmente. Impasto liscio, elastico, temperatura 23-24°C."
+    },
+    {
+      "title": "5. Puntata in Massa",
+      "text": "Oliare leggermente un contenitore, adagiare l'impasto. Coprire. Puntata 1.5-2 ore a 20-22°C. A metà tempo eseguire stretch and fold: tirare delicatamente i lembi e ripiegare verso il centro (4 pieghe a croce). Questo rinforza la maglia glutinica."
+    },
+    {
+      "title": "6. Staglio Panetti",
+      "text": "Infarinare il piano con semola rimacinata. Rovesciare l'impasto. Con tarocco tagliare panetti da 260-270g. Pirlare ogni panetto: con mani a coppa, far ruotare sul banco con movimento circolare. Pizzicare la giuntura sul fondo per sigillare."
+    },
+    {
+      "title": "7. Appretto",
+      "text": "Disporre i panetti in cassette infarinate con semola, ben distanziati. Coprire. Lasciar riposare 5-6 ore a 20-22°C. I panetti devono essere gonfi, morbidi, con superficie liscia. Se premuti delicatamente, tornano lentamente in posizione."
+    }
+  ],
+  "stepsExtruder": [],
   "stepsCondiment": [],
   "flourTable": [
     {
@@ -175,7 +236,11 @@
         {
           "name": "Acqua",
           "note": "(in 3 riprese: 50% iniziale, 30% durante incordatura, 20% finale)",
-          "grams": 1650
+          "grams": 1650,
+          "setupNote": {
+            "spirale": "(60% subito nello spezzamento biga, resto a filo in bassinage)",
+            "mano": "(in 3 riprese: 50% iniziale, 30% durante incordatura, 20% finale)"
+          }
         },
         {
           "name": "Criscito Caputo",
@@ -193,36 +258,6 @@
           "grams": 75
         }
       ]
-    }
-  ],
-  "steps": [
-    {
-      "title": "1. Preparazione Biga (18-24h prima)",
-      "text": "Nella ciotola dell'impastatrice versare {farina_caputo_saccor_biga:900}g di Caputo Saccorosso e {acqua_biga:400}g di acqua fredda (10-12°C). Aggiungere {lievito_secco_biga:3}g di lievito secco. Mescolare a velocità 1 per 2-3 minuti fino a ottenere un impasto 'a stracci' (grumoso, non omogeneo). Trasferire in contenitore chiuso e far maturare 18-24 ore a 18°C (cantina/frigo alto)."
-    },
-    {
-      "title": "2. Spezzamento Biga e Malto",
-      "text": "Inserire nella Grilletta IM5 tutta la biga (circa {biga_di_saccorosso_impasto_finale:1300}g), l'estratto di malto ({malto_impasto_finale:15}g) e il 60% dell'acqua di rinfresco (circa 990g). Azionare a velocità 1 per 3-4 minuti per spezzare la biga e renderla cremosa. L'impasto deve risultare liquido e omogeneo."
-    },
-    {
-      "title": "3. Aggiunta Polveri e Criscito",
-      "text": "Con impastatrice in movimento a velocità 1, aggiungere: {farina_caputo_saccor_impasto_finale:1800}g Saccorosso + {farina_caputo_nuvola_impasto_finale:300}g Nuvola Super + {criscito_impasto_finale:120}g Criscito Caputo. Impastare 3-4 minuti fino a completo assorbimento. L'impasto inizia a strutturarsi ma è ancora morbido."
-    },
-    {
-      "title": "4. Incordatura e Bassinage",
-      "text": "Aumentare a velocità 2-3. Aggiungere il sale ({sale_impasto_finale:75}g) e versare a filo l'acqua rimanente (circa 660g) in tecnica bassinage. Impastare 6-8 minuti fino a maglia liscia, lucida e incordata. Temperatura finale: 23-24°C. Se supera i 25°C, l'impasto è sovrariscaldato."
-    },
-    {
-      "title": "5. Puntata in Massa",
-      "text": "Trasferire l'impasto in contenitore leggermente oliato. Coprire con pellicola. Puntata di 1.5-2 ore a temperatura ambiente (20-22°C). A metà tempo (dopo 45-50 min) eseguire una piega di rinforzo: sollevare i lembi dell'impasto e ripiegare verso il centro (4 pieghe a croce)."
-    },
-    {
-      "title": "6. Staglio Panetti",
-      "text": "Rovesciare l'impasto su banco infarinato con semola rimacinata. Stagliare panetti da 260-270g (circa 18-19 pezzi). Pirlare bene ogni panetto chiudendo il fondo con tecnica a pizzaiolo: formare una sfera tesa, pizzicare la giuntura sul fondo."
-    },
-    {
-      "title": "7. Appretto in Cassetta",
-      "text": "Disporre i panetti in cassette da lievitazione ben distanziati (minimo 5cm tra loro). Coprire con coperchio o pellicola. Appretto di 5-6 ore a temperatura ambiente (20-22°C). I panetti devono raddoppiare di volume, risultare soffici al tatto e non appiccicosi."
     }
   ]
 }

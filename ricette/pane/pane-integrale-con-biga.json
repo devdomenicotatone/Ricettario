@@ -47,21 +47,13 @@
           "name": "Acqua",
           "note": "Base",
           "grams": 515,
-          "tokenId": "acqua_impasto",
-          "setupNote": {
-            "spirale": "(6-10°C)",
-            "mano": "(18-20°C)"
-          }
+          "tokenId": "acqua_impasto"
         },
         {
           "name": "Acqua",
           "note": "Bassinage",
           "grams": 100,
-          "tokenId": "acqua_bassinage",
-          "setupNote": {
-            "spirale": "(6-10°C)",
-            "mano": "(18-20°C)"
-          }
+          "tokenId": "acqua_bassinage"
         },
         {
           "name": "Malto d'orzo o Miele",
@@ -73,11 +65,7 @@
           "name": "Lievito di Birra Fresco",
           "note": "(starter per la farina integrale)",
           "grams": 2,
-          "tokenId": "lievito_impasto",
-          "setupNote": {
-            "spirale": "(2g)",
-            "mano": "(3g per compensare minore forza meccanica)"
-          }
+          "tokenId": "lievito_impasto"
         },
         {
           "name": "Sale Fino",
@@ -89,58 +77,6 @@
     }
   ],
   "suspensions": [],
-  "stepsSpiral": [
-    {
-      "title": "Preparazione della Biga (Giorno 1)",
-      "text": "Sciogliere grossolanamente {lievito_biga:3}g di lievito fresco in {acqua_biga:135}g di acqua a temperatura ambiente (18-20°C). Aggiungere {farina_biga:300}g di farina forte e impastare a mano per massimo 1-2 minuti. L'impasto DEVE rimanere grezzo, stracciato e non omogeneo (non formare la maglia glutinica). Riporre in un contenitore alto e stretto, coprire con pellicola forata e lasciare maturare a 18°C per 16-18 ore."
-    },
-    {
-      "title": "Fase Iniziale e Autolisi Breve (Giorno 2)",
-      "text": "Nella vasca della spirale inserire la biga matura (deve presentare un odore pungente ma gradevole, simile allo yogurt), {farina_impasto:700}g di farina integrale, {malto_impasto:5}g di malto d'orzo, {lievito_impasto:2}g di lievito fresco sbriciolato e {acqua_impasto:515}g di acqua fredda. Avviare in prima velocità per 5-6 minuti finché la farina non è completamente idratata. Lasciare riposare in vasca (fermentolisi) per 20 minuti."
-    },
-    {
-      "title": "Incordatura e Bassinage",
-      "text": "Azionare la spirale in seconda velocità. Quando l'impasto inizia a prendere corda e staccarsi dalle pareti, inserire {sale_impasto:20}g di sale. Non appena il sale è assorbito, iniziare ad aggiungere i restanti {acqua_bassinage:100}g di acqua a filo (tecnica del bassinage). Aggiungere l'acqua in 3-4 riprese, aspettando che la dose precedente sia completamente assorbita prima di inserire la successiva. Tempo totale di impasto: circa 12-15 minuti. Temperatura target al termine: {temp_impasto:26!}°C."
-    },
-    {
-      "title": "Puntata e Pieghe (Coil Folds)",
-      "text": "Trasferire l'impasto in un contenitore leggermente oliato con bordi dritti. Effettuare la puntata (prima lievitazione in massa) a temperatura ambiente (24-25°C) per circa 2-2.5 ore. Durante questo periodo, effettuare 2 serie di pieghe di rinforzo (coil folds) a distanza di 45 minuti l'una dall'altra, per dare struttura all'impasto integrale."
-    },
-    {
-      "title": "Staglio e Formatura",
-      "text": "Rovesciare l'impasto sul banco di lavoro leggermente infarinato. Eseguire lo staglio dividendo l'impasto in pezzi da circa {panetto_peso:885!}g ciascuno. Fare una pre-forma leggera (pirlatura morbida) e lasciare riposare sul banco coperto a campana per 20 minuti. Successivamente, formare i filoni o le pagnotte definitive stringendo bene la chiusura."
-    },
-    {
-      "title": "Appretto",
-      "text": "Trasferire le pagnotte in cestini di lievitazione (banneton) ben infarinati con farina di riso o semola, con la chiusura (seam) rivolta verso l'alto. Coprire con un panno o inserire in buste di plastica. Lasciare lievitare a 24-25°C per circa 1.5 - 2 ore, finché premendo leggermente con un dito la pasta torna indietro lentamente (test del dito)."
-    }
-  ],
-  "stepsHand": [
-    {
-      "title": "Preparazione della Biga (Giorno 1)",
-      "text": "Sciogliere {lievito_biga:3}g di lievito in {acqua_biga:135}g di acqua a 18-20°C. Inserire {farina_biga:300}g di farina forte e mescolare con un cucchiaio o a mano per pochissimo tempo (1 minuto). La biga deve apparire come un puzzle di grumi umidi e farina non perfettamente amalgamata. Coprire con pellicola bucherellata e far maturare a 18°C per 16-18 ore."
-    },
-    {
-      "title": "Fermentolisi e Primo Impasto",
-      "text": "In un'ampia ciotola spezzettare finemente la biga matura. Aggiungere {farina_impasto:700}g di farina integrale, {malto_impasto:5}g di malto e {acqua_impasto:515}g di acqua (a circa 18-20°C). Mescolare grossolanamente con un tarocco o le mani fino a far assorbire l'acqua. Coprire e fare un riposo di 30 minuti. Dopo il riposo, aggiungere {lievito_impasto:2}g di lievito sbriciolato e iniziare a impastare pizzicando la pasta."
-    },
-    {
-      "title": "Slap & Fold e Bassinage Manuale",
-      "text": "Aggiungere {sale_impasto:20}g di sale. Trasferire l'impasto sul banco di lavoro nudo e iniziare a impastare con la tecnica dello Slap & Fold (sbattere e ripiegare l'impasto su se stesso) per circa 5-7 minuti. Quando l'impasto prende nervo, iniziare ad aggiungere i {acqua_bassinage:100}g di acqua a piccole gocce, incorporandola completamente con lo Slap & Fold prima di aggiungerne altra. Questo richiederà circa 10-12 minuti di lavoro intenso."
-    },
-    {
-      "title": "Puntata in Massa",
-      "text": "Riporre l'impasto ben chiuso in una ciotola oliata. Lasciare lievitare a temperatura ambiente (24-25°C) per circa 2.5 ore. Date le caratteristiche della lavorazione a mano (che incorda meno rispetto alla spirale), eseguire 3 serie di pieghe in ciotola (stretch & fold) a intervalli di 30, 60 e 90 minuti per massimizzare la forza della maglia glutinica."
-    },
-    {
-      "title": "Staglio e Formatura",
-      "text": "Dividere l'impasto in pezzature da {panetto_peso:885!}g. Pirlare delicatamente per dare tensione alla superficie senza strapparla (la farina integrale è più delicata). Riposo di 20 minuti sul banco coperto, poi procedere con la formatura a filone o palla, assicurandosi di sigillare bene il fondo."
-    },
-    {
-      "title": "Appretto",
-      "text": "Posizionare le forme nei cestini di lievitazione abbondantemente spolverati di semola o farina di riso (cucitura verso l'alto). Coprire per evitare la formazione della crosta e attendere il raddoppio in volume, circa 1.5 - 2 ore a temperatura ambiente."
-    }
-  ],
   "flourTable": [
     {
       "type": "Farina Tipo 0 / Manitoba (per Biga)",
@@ -190,43 +126,6 @@
       "definition": "Tecnica di impastamento manuale francese (sbattere e ripiegare) che sfrutta la forza d'urto per incordare impasti idratati senza l'uso di impastatrici."
     }
   ],
-  "variants": [
-    {
-      "id": "maturazione-frigo",
-      "label": "❄️ Lievitazione in Frigo 18h",
-      "description": "Appretto rallentato in frigorifero per enfatizzare i profumi del grano integrale e ottenere una crosta ricca di blister (bollicine).",
-      "ingredientOverrides": [
-        {
-          "ref": "lievito_impasto",
-          "grams": 0,
-          "note": "(omesso: i lieviti della biga sono sufficienti per una maturazione così lunga)"
-        }
-      ],
-      "branchAfterStep": 0,
-      "altSteps": [
-        {
-          "title": "Fase Iniziale Senza Lievito Aggiunto",
-          "text": "Nella vasca (o ciotola) inserire la biga matura, {farina_impasto:700}g di farina integrale, {malto_impasto:5}g di malto d'orzo e {acqua_impasto:515}g di acqua fredda. Non inserire ulteriore lievito. Impastare fino a idratazione completa della farina."
-        },
-        {
-          "title": "Incordatura e Bassinage",
-          "text": "Quando l'impasto è formato, inserire {sale_impasto:20}g di sale. Aggiungere a filo {acqua_bassinage:100}g di acqua, aspettando il completo assorbimento tra un goccio e l'altro."
-        },
-        {
-          "title": "Puntata in Massa",
-          "text": "Lasciar riposare l'impasto in contenitore a 24-25°C per 2-3 ore. Eseguire 2 o 3 giri di pieghe di rinforzo nella prima ora per strutturare bene la massa."
-        },
-        {
-          "title": "Staglio e Formatura",
-          "text": "Dividere in panetti da {panetto_peso:885!}g, pre-formare, attendere 20 minuti e dare la forma definitiva."
-        },
-        {
-          "title": "Maturazione in Frigo (Retard)",
-          "text": "Inserire i filoni formati nei cestini (banneton), coprire accuratamente con sacchetti di plastica alimentare e riporre in frigorifero a 4-5°C per 14-18 ore. Infornare il giorno successivo cuocendo direttamente dal frigo (non serve riportare a temperatura ambiente)."
-        }
-      ]
-    }
-  ],
   "alert": "⚠️ CRITICITÀ DELLA BIGA: Non impastare MAI la biga fino a renderla liscia. Deve essere slegata e grezza. Se si forma glutine durante la preparazione della biga, fermenterà in modo scorretto sprigionando acidità eccessiva. Inoltre, rispettare rigorosamente la temperatura di 18°C per le 16 ore.",
   "proTips": [
     "La farina integrale assorbe molta acqua ma la cede più facilmente durante l'impastamento rispetto alla farina bianca. Il bassinage deve essere molto lento per non 'lavare' la maglia glutinica.",
@@ -254,5 +153,31 @@
   "_createdAt": "2026-04-05T02:05:44.664Z",
   "image": "images/ricette/pane/pane-integrale-con-biga.webp",
   "imageAttribution": "📷 Foto: Sabine Freiberger — Pexels License via Pexels",
-  "_originalImageUrl": "https://images.pexels.com/photos/36353181/pexels-photo-36353181.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  "_originalImageUrl": "https://images.pexels.com/photos/36353181/pexels-photo-36353181.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+  "steps": [
+    {
+      "title": "Preparazione della Biga (Giorno 1)",
+      "text": "Sciogliere grossolanamente {lievito_biga:3}g di lievito fresco in {acqua_biga:135}g di acqua a temperatura ambiente (18-20°C). Aggiungere {farina_biga:300}g di farina forte e impastare a mano per massimo 1-2 minuti. L'impasto DEVE rimanere grezzo, stracciato e non omogeneo (non formare la maglia glutinica). Riporre in un contenitore alto e stretto, coprire con pellicola forata e lasciare maturare a 18°C per 16-18 ore."
+    },
+    {
+      "title": "Fase Iniziale e Autolisi Breve (Giorno 2)",
+      "text": "Nella vasca della spirale inserire la biga matura (deve presentare un odore pungente ma gradevole, simile allo yogurt), {farina_impasto:700}g di farina integrale, {malto_impasto:5}g di malto d'orzo, {lievito_impasto:2}g di lievito fresco sbriciolato e {acqua_impasto:515}g di acqua fredda. Avviare in prima velocità per 5-6 minuti finché la farina non è completamente idratata. Lasciare riposare in vasca (fermentolisi) per 20 minuti."
+    },
+    {
+      "title": "Incordatura e Bassinage",
+      "text": "Azionare la spirale in seconda velocità. Quando l'impasto inizia a prendere corda e staccarsi dalle pareti, inserire {sale_impasto:20}g di sale. Non appena il sale è assorbito, iniziare ad aggiungere i restanti {acqua_bassinage:100}g di acqua a filo (tecnica del bassinage). Aggiungere l'acqua in 3-4 riprese, aspettando che la dose precedente sia completamente assorbita prima di inserire la successiva. Tempo totale di impasto: circa 12-15 minuti. Temperatura target al termine: {temp_impasto:26!}°C."
+    },
+    {
+      "title": "Puntata e Pieghe (Coil Folds)",
+      "text": "Trasferire l'impasto in un contenitore leggermente oliato con bordi dritti. Effettuare la puntata (prima lievitazione in massa) a temperatura ambiente (24-25°C) per circa 2-2.5 ore. Durante questo periodo, effettuare 2 serie di pieghe di rinforzo (coil folds) a distanza di 45 minuti l'una dall'altra, per dare struttura all'impasto integrale."
+    },
+    {
+      "title": "Staglio e Formatura",
+      "text": "Rovesciare l'impasto sul banco di lavoro leggermente infarinato. Eseguire lo staglio dividendo l'impasto in pezzi da circa {panetto_peso:885!}g ciascuno. Fare una pre-forma leggera (pirlatura morbida) e lasciare riposare sul banco coperto a campana per 20 minuti. Successivamente, formare i filoni o le pagnotte definitive stringendo bene la chiusura."
+    },
+    {
+      "title": "Appretto",
+      "text": "Trasferire le pagnotte in cestini di lievitazione (banneton) ben infarinati con farina di riso o semola, con la chiusura (seam) rivolta verso l'alto. Coprire con un panno o inserire in buste di plastica. Lasciare lievitare a 24-25°C per circa 1.5 - 2 ore, finché premendo leggermente con un dito la pasta torna indietro lentamente (test del dito)."
+    }
+  ]
 }

@@ -10,6 +10,83 @@
   "fermentation": "2-2.5h lievitazione + 30min appretto",
   "totalFlour": 1100,
   "ingredients": [],
+  "stepsSpiral": [
+    {
+      "title": "Preparazione Lievito e Grassi",
+      "text": "Sciogliere il lievito di birra fresco in 100g di acqua fresca (14-18°C) mescolando delicatamente. Portare lo strutto a temperatura ambiente finché risulti morbido ma non fuso (18-20°C). Se usate burro, deve essere plastico, non cremoso."
+    },
+    {
+      "title": "Impasto Base (V1 - 5 minuti)",
+      "text": "Nella vasca dell'impastatrice a spirale versare le due farine, lo zucchero e il miele. Avviare in prima velocità e aggiungere l'acqua con il lievito sciolto. Impastare per 3 minuti, poi aggiungere gradualmente i restanti 400g di acqua fresca (14-18°C). Continuare per altri 2 minuti fino a ottenere un impasto omogeneo ma ancora ruvido. Temperatura impasto: 22-23°C."
+    },
+    {
+      "title": "Incorporamento Grassi (V1 - 3 minuti)",
+      "text": "Con impastatrice in movimento a V1, aggiungere lo strutto morbido a pezzetti. Attendere che sia completamente incorporato (2 minuti), poi aggiungere il sale. Impastare per 1 minuto ulteriore. L'impasto inizia a incordarsi e staccarsi dalle pareti."
+    },
+    {
+      "title": "Incordatura Finale (V2 - 4 minuti)",
+      "text": "Passare in seconda velocità (V2) e impastare per 4 minuti fino a completa incordatura. L'impasto deve risultare liscio, elastico, leggermente lucido per via dello strutto. Temperatura finale: 26-27°C. Test del velo: una piccola porzione deve formare una membrana sottile senza rompersi."
+    },
+    {
+      "title": "Puntata in Massa",
+      "text": "Formare una palla liscia, adagiarla in un contenitore unto con strutto, coprire con pellicola a contatto. Lasciar lievitare a 26-28°C per 2-2.5 ore fino al raddoppio del volume. L'impasto deve risultare soffice e non appiccicoso al tatto."
+    },
+    {
+      "title": "Staglio e Formatura",
+      "text": "Rovesciare l'impasto su piano leggermente unto con strutto. NON aggiungere farina. Dividere in pezzi da 60-80g per rollò e calzoncini, 50g per pizzette. Formare palline lisce con la tecnica della pirlatura: girare la mano a spirale sul piano creando tensione superficiale. Coprire con telo umido e lasciar riposare 10 minuti."
+    },
+    {
+      "title": "Farcitura e Modellatura",
+      "text": "ROLLÒ: stendere il panetto in striscia 15×8cm, adagiare fetta di prosciutto cotto con bastoncino di mozzarella al centro, arrotolare stretto. CALZONCINI: stendere disco Ø 10cm, farcire metà con 1 cucchiaio di passata di pomodoro condita (olio, sale, origano) + cubetti di mozzarella, richiudere a mezzaluna sigillando bene i bordi. PIZZETTE: schiacciare il panetto in disco Ø 8cm, condire con 1 cucchiaino di passata, mozzarella a dadini e origano."
+    },
+    {
+      "title": "Appretto e Finitura",
+      "text": "Disporre i pezzi su teglie con carta forno distanziati 4-5cm. Coprire con pellicola leggermente unta. Lasciar lievitare 30-40 minuti a 28-30°C fino a volume aumentato del 50%. Spennellare delicatamente con tuorlo sbattuto con latte. Cospargere rollò e calzoncini con semi di sesamo."
+    },
+    {
+      "title": "Cottura",
+      "text": "Preriscaldare il forno a 220°C (ventilato 200°C) per almeno 20 minuti. Posizionare la teglia a metà altezza del forno. Infornare per 15-18 minuti per rollò e calzoncini, 12-15 minuti per le pizzette. I prodotti sono cotti quando la superficie è dorata ambrata e il fondo risulta croccante. NON aprire il forno nei primi 10 minuti. A cottura ultimata, lasciar raffreddare su griglia."
+    }
+  ],
+  "stepsHand": [
+    {
+      "title": "Preparazione Lievito e Grassi",
+      "text": "Sciogliere il lievito di birra fresco in 100g di acqua tiepida (28-30°C) con 1 cucchiaino di zucchero. Lasciare attivare 10 minuti fino a comparsa di bollicine. Lo strutto deve essere morbido a temperatura ambiente (18-20°C)."
+    },
+    {
+      "title": "Impasto Iniziale",
+      "text": "Su una spianatoia o in una ciotola capiente versare le farine a fontana. Al centro mettere lo zucchero, il miele e l'acqua con il lievito attivato. Con una forchetta iniziare a incorporare la farina dal centro verso l'esterno. Aggiungere gradualmente i restanti 400g di acqua tiepida (28-30°C) in 3 riprese, impastando con le mani."
+    },
+    {
+      "title": "Incorporamento Grassi",
+      "text": "Quando l'impasto è grossolanamente amalgamato, aggiungere lo strutto a pezzetti. Impastare energicamente per 5 minuti schiacciando e ripiegando l'impasto su se stesso. Aggiungere il sale e continuare a impastare per altri 3-4 minuti. L'impasto diventa più liscio e meno appiccicoso."
+    },
+    {
+      "title": "Lavorazione con Slap & Fold",
+      "text": "Bagnare leggermente le mani con acqua. Sollevare l'impasto e sbatterlo con forza sul piano, poi ripiegarlo su se stesso. Ruotare di 90° e ripetere. Continuare per 8-10 minuti (circa 150-200 slap) fino a ottenere un impasto liscio, elastico, che si stacca dalle mani. Temperatura impasto: 26-27°C."
+    },
+    {
+      "title": "Puntata in Massa",
+      "text": "Formare una palla liscia con tensione superficiale, adagiarla in una ciotola unta con strutto. Coprire con pellicola a contatto o telo umido. Lasciar lievitare a temperatura ambiente (24-26°C) per 2.5-3 ore fino al raddoppio. Fare il test dell'impronta digitale: deve rimanere l'impronta senza rimbalzare."
+    },
+    {
+      "title": "Staglio e Formatura",
+      "text": "Capovolgere delicatamente l'impasto su piano leggermente unto. Sgonfiare con pressione delicata delle mani aperte. Con un tarocco o coltello dividere in pezzi da 60-80g per rollò/calzoncini, 50g per pizzette. Formare palline lisce: prendere un pezzo, portare i bordi verso il centro pizzicandoli, capovolgere e con mano a coppa far girare sul piano creando tensione. Coprire con telo umido, riposo 10 minuti."
+    },
+    {
+      "title": "Farcitura e Modellatura",
+      "text": "ROLLÒ: con matterello stendere panetto in rettangolo 15×8cm (spessore 3-4mm). Adagiare fetta di prosciutto cotto, al centro mettere bastoncino di mozzarella ben strizzata. Arrotolare stretto partendo dal lato lungo, sigillare pizzicando la chiusura. CALZONCINI: stendere disco Ø 10cm, su metà mettere 1 cucchiaio di passata di pomodoro (già condita con olio, sale, origano) e cubetti di mozzarella strizzata. Ripiegare a mezzaluna, sigillare i bordi premendo con i rebbi di una forchetta. PIZZETTE: con le dita schiacciare il panetto in disco Ø 8cm, formare un bordino pizzicando. Condire con passata, mozzarella a dadini e origano."
+    },
+    {
+      "title": "Appretto e Finitura",
+      "text": "Disporre i pezzi su teglie con carta forno distanziati 4-5cm. Coprire con pellicola leggermente unta (senza toccare la superficie). Lasciar lievitare 30-40 minuti a 28-30°C (vicino a fonte di calore) fino a volume aumentato del 50%. Sbattere 1 tuorlo con 30g di latte. Spennellare delicatamente la superficie con pennello morbido. Cospargere rollò e calzoncini con semi di sesamo tostati."
+    },
+    {
+      "title": "Cottura",
+      "text": "Preriscaldare il forno a 220°C (ventilato 200°C) per almeno 20 minuti. Posizionare la teglia a metà altezza del forno. Infornare per 15-18 minuti per rollò e calzoncini, 12-15 minuti per le pizzette. I prodotti sono cotti quando la superficie è dorata ambrata e il fondo risulta croccante. NON aprire il forno nei primi 10 minuti. A cottura ultimata, lasciar raffreddare su griglia."
+    }
+  ],
+  "stepsExtruder": [],
   "stepsCondiment": [],
   "flourTable": [
     {
@@ -118,7 +195,11 @@
         {
           "name": "Acqua",
           "note": "(fresca 14-18°C per controllare temperatura impasto)",
-          "grams": 550
+          "grams": 550,
+          "setupNote": {
+            "spirale": "(fresca 14-18°C per controllare temperatura impasto)",
+            "mano": "(tiepida 28-30°C per favorire lievitazione)"
+          }
         },
         {
           "name": "Lievito di Birra Fresco",
@@ -196,44 +277,6 @@
           "grams": 30
         }
       ]
-    }
-  ],
-  "steps": [
-    {
-      "title": "Preparazione Lievito e Grassi",
-      "text": "Sciogliere il lievito di birra fresco in 100g di acqua fresca (14-18°C) mescolando delicatamente. Portare lo strutto a temperatura ambiente finché risulti morbido ma non fuso (18-20°C). Se usate burro, deve essere plastico, non cremoso."
-    },
-    {
-      "title": "Impasto Base (V1 - 5 minuti)",
-      "text": "Nella vasca dell'impastatrice a spirale versare le due farine, lo zucchero e il miele. Avviare in prima velocità e aggiungere l'acqua con il lievito sciolto. Impastare per 3 minuti, poi aggiungere gradualmente i restanti 400g di acqua fresca (14-18°C). Continuare per altri 2 minuti fino a ottenere un impasto omogeneo ma ancora ruvido. Temperatura impasto: 22-23°C."
-    },
-    {
-      "title": "Incorporamento Grassi (V1 - 3 minuti)",
-      "text": "Con impastatrice in movimento a V1, aggiungere lo strutto morbido a pezzetti. Attendere che sia completamente incorporato (2 minuti), poi aggiungere il sale. Impastare per 1 minuto ulteriore. L'impasto inizia a incordarsi e staccarsi dalle pareti."
-    },
-    {
-      "title": "Incordatura Finale (V2 - 4 minuti)",
-      "text": "Passare in seconda velocità (V2) e impastare per 4 minuti fino a completa incordatura. L'impasto deve risultare liscio, elastico, leggermente lucido per via dello strutto. Temperatura finale: 26-27°C. Test del velo: una piccola porzione deve formare una membrana sottile senza rompersi."
-    },
-    {
-      "title": "Puntata in Massa",
-      "text": "Formare una palla liscia, adagiarla in un contenitore unto con strutto, coprire con pellicola a contatto. Lasciar lievitare a 26-28°C per 2-2.5 ore fino al raddoppio del volume. L'impasto deve risultare soffice e non appiccicoso al tatto."
-    },
-    {
-      "title": "Staglio e Formatura",
-      "text": "Rovesciare l'impasto su piano leggermente unto con strutto. NON aggiungere farina. Dividere in pezzi da 60-80g per rollò e calzoncini, 50g per pizzette. Formare palline lisce con la tecnica della pirlatura: girare la mano a spirale sul piano creando tensione superficiale. Coprire con telo umido e lasciar riposare 10 minuti."
-    },
-    {
-      "title": "Farcitura e Modellatura",
-      "text": "ROLLÒ: stendere il panetto in striscia 15×8cm, adagiare fetta di prosciutto cotto con bastoncino di mozzarella al centro, arrotolare stretto. CALZONCINI: stendere disco Ø 10cm, farcire metà con 1 cucchiaio di passata di pomodoro condita (olio, sale, origano) + cubetti di mozzarella, richiudere a mezzaluna sigillando bene i bordi. PIZZETTE: schiacciare il panetto in disco Ø 8cm, condire con 1 cucchiaino di passata, mozzarella a dadini e origano."
-    },
-    {
-      "title": "Appretto e Finitura",
-      "text": "Disporre i pezzi su teglie con carta forno distanziati 4-5cm. Coprire con pellicola leggermente unta. Lasciar lievitare 30-40 minuti a 28-30°C fino a volume aumentato del 50%. Spennellare delicatamente con tuorlo sbattuto con latte. Cospargere rollò e calzoncini con semi di sesamo."
-    },
-    {
-      "title": "Cottura",
-      "text": "Preriscaldare il forno a 220°C (ventilato 200°C) per almeno 20 minuti. Posizionare la teglia a metà altezza del forno. Infornare per 15-18 minuti per rollò e calzoncini, 12-15 minuti per le pizzette. I prodotti sono cotti quando la superficie è dorata ambrata e il fondo risulta croccante. NON aprire il forno nei primi 10 minuti. A cottura ultimata, lasciar raffreddare su griglia."
     }
   ]
 }

@@ -59,11 +59,7 @@
           "name": "Acqua",
           "note": "(temperatura ambiente 20-22°C)",
           "grams": 290,
-          "tokenId": "acqua_impasto",
-          "setupNote": {
-            "spirale": "(18-20°C)",
-            "mano": "(20-22°C)"
-          }
+          "tokenId": "acqua_impasto"
         },
         {
           "name": "Patate",
@@ -122,74 +118,6 @@
     }
   ],
   "suspensions": [],
-  "stepsSpiral": [
-    {
-      "title": "Preparazione Lievitino",
-      "text": "In una ciotola, sciogliere {lievito_fresco_lievitino:10}g di lievito di birra fresco in {acqua_lievitino:60}g di acqua tiepida (30-32°C). Aggiungere {zucchero_lievitino:5}g di zucchero e {farina_lievitino:30}g di farina tipo 0. Mescolare con un cucchiaio fino a ottenere una pastella densa. Coprire con pellicola e lasciar fermentare 15-20 minuti finché la superficie non presenta bolle visibili e il volume è quasi raddoppiato."
-    },
-    {
-      "title": "Lessare le Patate",
-      "text": "Nel frattempo, lessare {patate_impasto:150}g di patate intere con la buccia in acqua leggermente salata fino a completa cottura (circa 25-30 minuti, devono essere morbidissime). Sbucciarle calde e schiacciarle con uno schiacciapatate (MAI frullatore — si forma una colla). Lasciar raffreddare completamente prima di unirle all'impasto."
-    },
-    {
-      "title": "Impastamento in Spirale — Prima Fase",
-      "text": "Nella vasca della spirale, versare {farina_zero_impasto:270}g di farina tipo 0 e {semola_impasto:250}g di semola rimacinata. Aggiungere il lievitino maturo e le patate schiacciate fredde. Avviare in V1 e versare gradualmente {acqua_impasto:290}g di acqua (18-20°C). Impastare in V1 per 6-8 minuti fino ad assorbimento completo dei liquidi e formazione di un impasto grezzo."
-    },
-    {
-      "title": "Impastamento in Spirale — Seconda Fase",
-      "text": "Aggiungere {sale_impasto:15}g di sale fino. Continuare in V1 per 2 minuti, poi passare in V2 per 3-4 minuti. Quando l'impasto inizia a incordarsi e staccarsi dalle pareti, aggiungere {olio_impasto:45}g di olio EVO a filo, un cucchiaio alla volta. Impastare in V2 per altri 3-4 minuti fino a completo assorbimento dell'olio. L'impasto risulterà morbido, leggermente appiccicoso ma elastico — NON deve essere asciutto e compatto. Temperatura finale impasto: 24-26°C."
-    },
-    {
-      "title": "Puntata — Prima Lievitazione",
-      "text": "Trasferire l'impasto in una ciotola leggermente unta con olio EVO. Eseguire una serie di pieghe a portafoglio direttamente in ciotola: prendere un lembo dell'impasto, tirarlo verso l'alto e ripiegarlo al centro. Ruotare la ciotola di 90° e ripetere per tutti e 4 i lati. Coprire con pellicola a contatto e lasciar lievitare a 26-28°C per circa 2 ore e 30 minuti — 3 ore, fino a quando l'impasto triplica di volume. A metà lievitazione (dopo ~1h 15min) eseguire un secondo giro di pieghe."
-    },
-    {
-      "title": "Preparazione Teglia e Stesura",
-      "text": "Versare metà dell'{olio_condimento:80}g di olio EVO per condimento (circa 40g) in una teglia rotonda da 32-34 cm (o rettangolare 30×40 cm) e spalmare uniformemente sul fondo e i bordi. Rovesciare l'impasto lievitato sulla teglia oliata. Con le dita umide d'olio, stendere l'impasto dal centro verso i bordi con pressione delicata, creando i caratteristici fossette (\"buchi\"). Non schiacciare l'impasto con forza — deve mantenere aria al suo interno. Se l'impasto oppone resistenza, lasciar riposare 10 minuti coperto e riprendere la stesura. L'impasto deve arrivare a coprire tutta la teglia con spessore uniforme di circa 1.5-2 cm."
-    },
-    {
-      "title": "Condimento e Seconda Lievitazione",
-      "text": "Tagliare a metà {pomodorini_condimento:450}g di pomodorini e condirli in una ciotola con un filo d'olio, {sale_grosso_condimento:5}g di sale grosso e {origano_condimento:3}g di origano secco. Disporre i pomodorini sulla focaccia con la parte tagliata rivolta VERSO IL BASSO (premendoli leggermente nella pasta per affondarli nelle fossette). Distribuire {olive_condimento:120}g di olive baresane tra i pomodorini. Irrorare con il restante olio EVO (~40g) e il sughino rilasciato dai pomodorini. Lasciar lievitare la focaccia condita per altri 30-40 minuti, coperta con un canovaccio umido."
-    },
-    {
-      "title": "Infornare",
-      "text": "Infornare la focaccia seguendo le istruzioni della sezione cottura."
-    }
-  ],
-  "stepsHand": [
-    {
-      "title": "Preparazione Lievitino",
-      "text": "In una ciotola, sciogliere {lievito_fresco_lievitino:10}g di lievito di birra fresco in {acqua_lievitino:60}g di acqua tiepida (30-32°C). Aggiungere {zucchero_lievitino:5}g di zucchero e {farina_lievitino:30}g di farina tipo 0. Mescolare con un cucchiaio fino a ottenere una pastella densa. Coprire con pellicola e lasciar fermentare 15-20 minuti finché la superficie non presenta bolle e il volume è quasi raddoppiato."
-    },
-    {
-      "title": "Lessare le Patate",
-      "text": "Nel frattempo, lessare {patate_impasto:150}g di patate intere con la buccia in acqua leggermente salata fino a completa cottura (circa 25-30 minuti). Sbucciarle calde e schiacciarle con uno schiacciapatate (MAI frullatore). Lasciar raffreddare completamente prima di unirle all'impasto."
-    },
-    {
-      "title": "Impastamento a Mano — Idratazione",
-      "text": "Su una spianatoia ampia (meglio su tavolo), disporre a fontana {farina_zero_impasto:270}g di farina tipo 0 e {semola_impasto:250}g di semola rimacinata. Al centro posizionare il lievitino maturo e le patate schiacciate fredde. Iniziare ad amalgamare dal centro con le dita, aggiungendo gradualmente {acqua_impasto:290}g di acqua (20-22°C), un po' alla volta. L'impasto risulterà molto morbido e appiccicoso — è normale, non aggiungere farina."
-    },
-    {
-      "title": "Impastamento a Mano — Incordatura",
-      "text": "Quando i liquidi sono assorbiti, aggiungere {sale_impasto:15}g di sale fino e impastare con tecnica slap & fold: sollevare l'impasto, sbatterlo sul piano e ripiegarlo su se stesso. Ripetere per 5-6 minuti fino a ottenere una certa struttura. Aggiungere quindi {olio_impasto:45}g di olio EVO a piccole dosi, continuando con slap & fold per altri 5-6 minuti. L'impasto non diventerà mai liscio e asciutto come un pane classico — resterà morbido e leggermente unto. Non preoccuparti: le pieghe successive completeranno lo sviluppo del glutine."
-    },
-    {
-      "title": "Pieghe e Puntata",
-      "text": "Trasferire l'impasto in una ciotola leggermente unta d'olio. Eseguire un giro di pieghe a portafoglio: prendere un lembo, tirarlo verso l'alto e ripiegarlo al centro. Ruotare di 90° e ripetere per tutti e 4 i lati. Dare poi 2 pieghe laterali per formare una palla. Pirlare leggermente (rendere liscia la superficie), coprire con pellicola e lasciar lievitare a 26-28°C per circa 3 ore fino a triplicazione del volume. Dopo 1 ora e 30 minuti, eseguire un secondo giro di pieghe delicate."
-    },
-    {
-      "title": "Preparazione Teglia e Stesura",
-      "text": "Versare metà dell'{olio_condimento:80}g di olio EVO per condimento (circa 40g) in una teglia rotonda da 32-34 cm (o rettangolare 30×40 cm) e spalmare su fondo e bordi. Rovesciare l'impasto lievitato sulla teglia oliata. Con le dita umide d'olio, stendere l'impasto dal centro verso i bordi creando le caratteristiche fossette (\"buchi\"). Procedere con delicatezza per non sgonfiare l'impasto. Se oppone resistenza, coprire e lasciar riposare 10 minuti, poi riprendere. L'impasto deve coprire tutta la teglia con spessore di circa 1.5-2 cm."
-    },
-    {
-      "title": "Condimento e Seconda Lievitazione",
-      "text": "Tagliare a metà {pomodorini_condimento:450}g di pomodorini e condirli con un filo d'olio, {sale_grosso_condimento:5}g di sale grosso e {origano_condimento:3}g di origano secco. Disporre i pomodorini sulla focaccia con la parte tagliata rivolta VERSO IL BASSO, premendoli nelle fossette. Distribuire {olive_condimento:120}g di olive baresane tra i pomodorini. Irrorare con il restante olio EVO (~40g) e il sughino dei pomodorini. Lasciar lievitare condita per 30-40 minuti coperta con canovaccio umido."
-    },
-    {
-      "title": "Infornare",
-      "text": "Infornare la focaccia seguendo le istruzioni della sezione cottura."
-    }
-  ],
   "flourTable": [
     {
       "type": "Farina Tipo 0 Media Forza",
@@ -251,55 +179,6 @@
       "definition": "Semola di grano duro macinata due volte, con granulometria fine simile alla farina 00. Conferisce colore dorato, sapore caratteristico e croccantezza alla focaccia pugliese."
     }
   ],
-  "variants": [
-    {
-      "id": "cold-fermentation",
-      "label": "❄️ Maturazione Lenta in Frigo (18-24h)",
-      "description": "Lievitazione in frigorifero per sapore più complesso, maggiore digeribilità e organizzazione comoda (impasti la sera, inforni il giorno dopo).",
-      "ingredientOverrides": [
-        {
-          "ref": "lievito_fresco_lievitino",
-          "grams": 3,
-          "note": "(ridotto per maturazione lunga — oppure 1g secco)"
-        }
-      ],
-      "branchAfterStep": 0,
-      "altSteps": [
-        {
-          "title": "Preparazione Lievitino Ridotto",
-          "text": "In una ciotola, sciogliere {lievito_fresco_lievitino:3}g di lievito di birra fresco in {acqua_lievitino:60}g di acqua tiepida (30-32°C). Aggiungere {zucchero_lievitino:5}g di zucchero e {farina_lievitino:30}g di farina tipo 0. Mescolare e lasciar fermentare 15-20 minuti."
-        },
-        {
-          "title": "Lessare le Patate",
-          "text": "Lessare {patate_impasto:150}g di patate intere con la buccia fino a completa cottura. Sbucciarle calde, schiacciarle con lo schiacciapatate. Lasciar raffreddare completamente."
-        },
-        {
-          "title": "Impastamento",
-          "text": "Procedere con l'impasto come nella ricetta base (spirale o a mano), utilizzando {farina_zero_impasto:270}g di farina tipo 0, {semola_impasto:250}g di semola rimacinata, il lievitino, le patate, {acqua_impasto:290}g di acqua, {sale_impasto:15}g di sale e {olio_impasto:45}g di olio EVO."
-        },
-        {
-          "title": "Pieghe e Avvio Fermentazione",
-          "text": "Eseguire un giro di pieghe a portafoglio in ciotola. Coprire con pellicola e lasciar riposare a temperatura ambiente per 1 ora (l'impasto deve iniziare appena a gonfiarsi)."
-        },
-        {
-          "title": "Maturazione in Frigo",
-          "text": "Trasferire la ciotola in frigorifero (4-6°C) per 18-24 ore. L'impasto maturerà lentamente, sviluppando aromi complessi e maggiore digeribilità."
-        },
-        {
-          "title": "Ripresa e Stesura",
-          "text": "Estrarre l'impasto dal frigo. Versare metà dell'{olio_condimento:80}g di olio EVO in teglia (32-34 cm). Rovesciare l'impasto freddo sulla teglia oliata e stendere delicatamente con le dita unte. L'impasto freddo sarà più rigido: lasciar acclimatare 20-30 minuti coperto, poi completare la stesura creando le fossette."
-        },
-        {
-          "title": "Condimento e Appretto Finale",
-          "text": "Condire con {pomodorini_condimento:450}g di pomodorini tagliati a metà (verso il basso), {olive_condimento:120}g di olive baresane, {sale_grosso_condimento:5}g di sale grosso, {origano_condimento:3}g di origano e il restante olio EVO (~40g). Lasciar lievitare a temperatura ambiente per 60-90 minuti fino a quando l'impasto è visibilmente gonfio e soffice al tatto."
-        },
-        {
-          "title": "Infornare",
-          "text": "Infornare seguendo le istruzioni della sezione cottura."
-        }
-      ]
-    }
-  ],
   "alert": "⚠️ NON usare il frullatore per le patate — le lame rompono le cellule dell'amido trasformandole in una colla gommosa che rovina irreparabilmente la texture della focaccia. Usare SEMPRE uno schiacciapatate. NON aggiungere farina extra durante la lavorazione anche se l'impasto sembra troppo molle: la focaccia barese DEVE essere un impasto morbido e umido, è la sua natura. La farina in eccesso la renderebbe secca e compatta come un pane sbagliato.",
   "proTips": [
     "🫒 Le olive baresane (o \"olive nere di Puglia\") sono olive celline in salamoia, leggermente amarognole e sode — se non le trovi, usa olive Leccino o Taggiasca in salamoia (MAI denocciolate sott'olio, troppo molli). L'oliva con nocciolo tiene meglio la cottura e rilascia meno acqua.",
@@ -329,5 +208,39 @@
   ],
   "_generatedBy": "claude-opus",
   "image": "images/ricette/lievitati/focaccia-barese.webp",
-  "imageAttribution": "📷 Foto: Noemí Jiménez — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: Noemí Jiménez — Pexels License via Pexels",
+  "steps": [
+    {
+      "title": "Preparazione Lievitino",
+      "text": "In una ciotola, sciogliere {lievito_fresco_lievitino:10}g di lievito di birra fresco in {acqua_lievitino:60}g di acqua tiepida (30-32°C). Aggiungere {zucchero_lievitino:5}g di zucchero e {farina_lievitino:30}g di farina tipo 0. Mescolare con un cucchiaio fino a ottenere una pastella densa. Coprire con pellicola e lasciar fermentare 15-20 minuti finché la superficie non presenta bolle visibili e il volume è quasi raddoppiato."
+    },
+    {
+      "title": "Lessare le Patate",
+      "text": "Nel frattempo, lessare {patate_impasto:150}g di patate intere con la buccia in acqua leggermente salata fino a completa cottura (circa 25-30 minuti, devono essere morbidissime). Sbucciarle calde e schiacciarle con uno schiacciapatate (MAI frullatore — si forma una colla). Lasciar raffreddare completamente prima di unirle all'impasto."
+    },
+    {
+      "title": "Impastamento in Spirale — Prima Fase",
+      "text": "Nella vasca della spirale, versare {farina_zero_impasto:270}g di farina tipo 0 e {semola_impasto:250}g di semola rimacinata. Aggiungere il lievitino maturo e le patate schiacciate fredde. Avviare in V1 e versare gradualmente {acqua_impasto:290}g di acqua (18-20°C). Impastare in V1 per 6-8 minuti fino ad assorbimento completo dei liquidi e formazione di un impasto grezzo."
+    },
+    {
+      "title": "Impastamento in Spirale — Seconda Fase",
+      "text": "Aggiungere {sale_impasto:15}g di sale fino. Continuare in V1 per 2 minuti, poi passare in V2 per 3-4 minuti. Quando l'impasto inizia a incordarsi e staccarsi dalle pareti, aggiungere {olio_impasto:45}g di olio EVO a filo, un cucchiaio alla volta. Impastare in V2 per altri 3-4 minuti fino a completo assorbimento dell'olio. L'impasto risulterà morbido, leggermente appiccicoso ma elastico — NON deve essere asciutto e compatto. Temperatura finale impasto: 24-26°C."
+    },
+    {
+      "title": "Puntata — Prima Lievitazione",
+      "text": "Trasferire l'impasto in una ciotola leggermente unta con olio EVO. Eseguire una serie di pieghe a portafoglio direttamente in ciotola: prendere un lembo dell'impasto, tirarlo verso l'alto e ripiegarlo al centro. Ruotare la ciotola di 90° e ripetere per tutti e 4 i lati. Coprire con pellicola a contatto e lasciar lievitare a 26-28°C per circa 2 ore e 30 minuti — 3 ore, fino a quando l'impasto triplica di volume. A metà lievitazione (dopo ~1h 15min) eseguire un secondo giro di pieghe."
+    },
+    {
+      "title": "Preparazione Teglia e Stesura",
+      "text": "Versare metà dell'{olio_condimento:80}g di olio EVO per condimento (circa 40g) in una teglia rotonda da 32-34 cm (o rettangolare 30×40 cm) e spalmare uniformemente sul fondo e i bordi. Rovesciare l'impasto lievitato sulla teglia oliata. Con le dita umide d'olio, stendere l'impasto dal centro verso i bordi con pressione delicata, creando i caratteristici fossette (\"buchi\"). Non schiacciare l'impasto con forza — deve mantenere aria al suo interno. Se l'impasto oppone resistenza, lasciar riposare 10 minuti coperto e riprendere la stesura. L'impasto deve arrivare a coprire tutta la teglia con spessore uniforme di circa 1.5-2 cm."
+    },
+    {
+      "title": "Condimento e Seconda Lievitazione",
+      "text": "Tagliare a metà {pomodorini_condimento:450}g di pomodorini e condirli in una ciotola con un filo d'olio, {sale_grosso_condimento:5}g di sale grosso e {origano_condimento:3}g di origano secco. Disporre i pomodorini sulla focaccia con la parte tagliata rivolta VERSO IL BASSO (premendoli leggermente nella pasta per affondarli nelle fossette). Distribuire {olive_condimento:120}g di olive baresane tra i pomodorini. Irrorare con il restante olio EVO (~40g) e il sughino rilasciato dai pomodorini. Lasciar lievitare la focaccia condita per altri 30-40 minuti, coperta con un canovaccio umido."
+    },
+    {
+      "title": "Infornare",
+      "text": "Infornare la focaccia seguendo le istruzioni della sezione cottura."
+    }
+  ]
 }

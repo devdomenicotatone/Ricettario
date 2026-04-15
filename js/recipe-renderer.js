@@ -37,9 +37,7 @@ export async function renderRecipe(app, { category, slug }) {
     app.innerHTML = buildRecipeHTML(recipe, category);
 
     // ── Init interactive features ──
-    initSetupToggle();
     initDoseCalculator(recipe);
-    initVariantToggle(recipe);
     initMadeToggle(recipe.slug);
 
   } catch (err) {
@@ -62,19 +60,6 @@ function buildRecipeHTML(r, categoryDir) {
     ? `${BASE}${r.image.replace(/^\//, '')}`
     : `${BASE}images/ricette/${categoryDir}/${r.slug}.jpg`;
 
-  // Determina quali step esistono realmente
-  const hasSpiralSteps = (r.stepsSpiral || []).length > 0;
-  const hasExtruderSteps = (r.stepsExtruder || []).length > 0;
-  const hasHandSteps = (r.stepsHand || []).length > 0;
-  const isPasta = (r.category || '').toLowerCase() === 'pasta';
-  const hasMachineSteps = isPasta ? hasExtruderSteps : hasSpiralSteps;
-  const isHandOnly = !hasMachineSteps && hasHandSteps;
-
-  // Hero tag dinamico (nascosto se hand-only)
-  const heroToolTag = isHandOnly
-    ? ''
-    : `<span class="tag tag--tool" id="hero-setup-tag">${isPasta ? fluentEmoji('spaghetti', 18) + ' Pasta' : fluentEmoji('wrench', 18) + ' Impastatrice a spirale'}</span>`;
-
   return `
     <!-- ═══════════ RECIPE HERO ═══════════ -->
     <div class="recipe-hero">
@@ -92,7 +77,6 @@ function buildRecipeHTML(r, categoryDir) {
 
         <div class="recipe-hero__content">
           <div class="recipe-hero__tags reveal">
-            ${heroToolTag}
             <span class="tag tag--category">${catEmoji} ${r.category}</span>
           </div>
           <h1 class="recipe-hero__title reveal reveal-delay-1">${r.title}</h1>
@@ -107,7 +91,6 @@ function buildRecipeHTML(r, categoryDir) {
         ${r.hydration ? `<div class="tech-badge">${fluentEmoji('droplet', 18)} Idratazione: <span class="tech-badge__value">&nbsp;${r.hydration}%</span></div>` : ''}
         ${r.targetTemp ? `<div class="tech-badge">${fluentEmoji('thermometer', 18)} Target Temp: <span class="tech-badge__value">&nbsp;${r.targetTemp}</span></div>` : ''}
         ${r.fermentation ? `<div class="tech-badge">${fluentEmoji('stopwatch', 18)} Lievitazione: <span class="tech-badge__value">&nbsp;${r.fermentation}</span></div>` : ''}
-        ${buildSetupBadge(r)}
         <button class="made-toggle" id="made-toggle" type="button" aria-label="Segna come fatta"></button>
       </div>
     </div>
@@ -119,17 +102,14 @@ function buildRecipeHTML(r, categoryDir) {
 
           <!-- COLONNA SX: Ingredienti -->
           <div>
-            ${buildVariantSelector(r)}
             ${buildIngredientsPanel(r)}
             ${r.suspensions?.length ? buildSuspensionsPanel(r) : ''}
           </div>
 
           <!-- COLONNA DX: Procedimento -->
           <div>
-            ${buildStepsPanel(r, 'stepsSpiral', 'spirale', fluentEmoji('wrench', 18) + ' Spirale', isHandOnly)}
-            ${buildStepsPanel(r, 'stepsExtruder', 'estrusore', fluentEmoji('wrench', 18) + ' Estrusore', isHandOnly)}
-            ${buildStepsPanel(r, 'stepsHand', 'mano', fluentEmoji('wrench', 18) + ' A mano', isHandOnly)}
-            ${buildStepsPanel(r, 'stepsCondiment', 'condimento', fluentEmoji('tomato', 18) + ' Condimento', isHandOnly)}
+            ${buildStepsPanel(r)}
+            ${buildCondimentPanel(r)}
           </div>
 
         </div>
@@ -144,26 +124,14 @@ function buildRecipeHTML(r, categoryDir) {
   `;
 }
 
-// ── Setup Badge ──
-function buildSetupBadge(r) {
-  const hasMultiSetup = (r.stepsSpiral?.length || r.stepsExtruder?.length) && r.stepsHand?.length;
-  if (!hasMultiSetup) return '';
 
-    return `
-    <div class="tech-badge tech-badge--toggle" id="setup-badge" role="button" tabindex="0" aria-label="Cambia setup">
-      ${fluentEmoji('wrench', 18)} Setup: <span class="tech-badge__value" id="setup-badge-value">&nbsp;Impastatrice a spirale</span>
-    </div>`;
-}
 
 // ── Ingredienti (con supporto gruppi) ──
 function buildIngredientRow(ing) {
-  const setupNotes = ing.setupNote
-    ? Object.entries(ing.setupNote).map(([k, v]) => `data-setup-note-${k}="${escHtml(v)}"`).join(' ')
-    : '';
   const excludeAttr = ing.excludeFromTotal ? ' data-exclude-total="true"' : '';
 
   return `<tr${excludeAttr}>
-    <td>${escHtml(ing.name)} ${ing.note ? `<span class="ingredient-note" ${setupNotes}>${escHtml(ing.note)}</span>` : ''}</td>
+    <td>${escHtml(ing.name)} ${ing.note ? `<span class="ingredient-note">${escHtml(ing.note)}</span>` : ''}</td>
     <td class="ingredient-qty">${ing.grams != null ? `${ing.grams}g` : ''}</td>
   </tr>`;
 }
@@ -231,35 +199,39 @@ function buildSuspensionsPanel(r) {
 }
 
 // ── Steps (Procedimento) ──
-function buildStepsPanel(r, key, setupId, label, isHandOnly = false) {
-  const steps = r[key];
+function buildStepsPanel(r) {
+  const steps = r.steps;
   if (!steps?.length) return '';
 
-  // Se è hand-only, il pannello "mano" è il primario e deve essere visibile
-  // Nasconde "mano" SOLO se ci sono altri setup (spirale/estrusore)
-  const shouldHide = setupId === 'mano' && !isHandOnly;
-  const isHidden = shouldHide ? ' style="display: none;"' : '';
-
-  // Determina il branchAfterStep per le varianti (se presenti)
-  const variantBranch = r.variants?.[0]?.branchAfterStep;
-
   return `
-    <div class="recipe-panel reveal reveal-delay-1" data-setup="${setupId}" id="steps-${setupId}"${isHidden}>
+    <div class="recipe-panel reveal reveal-delay-1" id="steps-panel">
       <h2 class="recipe-panel__title">
         <span class="recipe-panel__title-icon">${fluentEmoji('gear', 24)}</span> Procedimento
-        <span class="recipe-panel__title-badge">${label}</span>
       </h2>
-      <ol class="steps-list" data-setup-key="${key}">
-        ${steps.map((s, i) => {
-          const branchBadge = (variantBranch != null && i === variantBranch)
-            ? `<span class="variant-branch-badge">${fluentEmoji('high-voltage', 16)} Punto variante — da qui il procedimento può cambiare</span>`
-            : '';
-          return `<li data-step-index="${i}" class="step-item${i > variantBranch && variantBranch != null ? ' step-after-branch' : ''}">
+      <ol class="steps-list">
+        ${steps.map((s, i) => `<li class="step-item">
             <strong>${escHtml(s.title)}</strong>
-            ${branchBadge}
             <p>${resolveTokens(escHtml(s.text))}</p>
-          </li>`;
-        }).join('')}
+          </li>`).join('')}
+      </ol>
+    </div>`;
+}
+
+// ── Condimento ──
+function buildCondimentPanel(r) {
+  const steps = r.stepsCondiment;
+  if (!steps?.length) return '';
+
+  return `
+    <div class="recipe-panel reveal reveal-delay-2" id="steps-condimento" style="margin-top: 32px;">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon">${fluentEmoji('tomato', 24)}</span> Preparazione Condimento
+      </h2>
+      <ol class="steps-list">
+        ${steps.map((s, i) => `<li class="step-item">
+            <strong>${escHtml(s.title)}</strong>
+            <p>${resolveTokens(escHtml(s.text))}</p>
+          </li>`).join('')}
       </ol>
     </div>`;
 }
@@ -359,68 +331,7 @@ function buildGlossary(r) {
 //  INTERACTIVE FEATURES (post-render)
 // ═══════════════════════════════════════
 
-function initSetupToggle() {
-  const setupBadge = document.getElementById('setup-badge');
-  if (!setupBadge) return;
 
-  const heroTag = document.getElementById('hero-setup-tag');
-  const badgeValue = document.getElementById('setup-badge-value');
-  const stepPanels = document.querySelectorAll('.recipe-panel[data-setup]');
-
-  const SETUP_CONFIG = {
-    spirale: { icon: fluentEmoji('wrench', 18), label: 'Impastatrice a spirale' },
-    estrusore: { icon: fluentEmoji('wrench', 18), label: 'Estrusore con trafila' },
-    mano: { icon: fluentEmoji('wrench', 18), label: 'A mano' },
-  };
-
-  const SETUPS = [];
-  stepPanels.forEach(panel => {
-    const id = panel.getAttribute('data-setup');
-    if (SETUP_CONFIG[id]) SETUPS.push({ id, ...SETUP_CONFIG[id] });
-  });
-
-  if (SETUPS.length <= 1) {
-    setupBadge.style.cursor = 'default';
-    setupBadge.removeAttribute('role');
-    setupBadge.removeAttribute('tabindex');
-    return;
-  }
-
-  let currentIndex = 0;
-
-  const activateSetup = (index) => {
-    currentIndex = index;
-    const config = SETUPS[index];
-
-    stepPanels.forEach(panel => {
-      if (panel.getAttribute('data-setup') === 'condimento') return;
-      panel.style.display = panel.getAttribute('data-setup') === config.id ? '' : 'none';
-    });
-
-    if (heroTag) heroTag.innerHTML = `${config.icon} ${config.label}`;
-    if (badgeValue) badgeValue.innerHTML = `\u00a0${config.label}`;
-
-    document.querySelectorAll('.ingredient-note[data-setup-note-' + config.id + ']').forEach(el => {
-      el.textContent = el.getAttribute('data-setup-note-' + config.id);
-    });
-
-    localStorage.setItem('recipe-setup', config.id);
-  };
-
-  setupBadge.addEventListener('click', () => activateSetup((currentIndex + 1) % SETUPS.length));
-  setupBadge.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      activateSetup((currentIndex + 1) % SETUPS.length);
-    }
-  });
-
-  const savedSetup = localStorage.getItem('recipe-setup');
-  if (savedSetup) {
-    const savedIndex = SETUPS.findIndex(s => s.id === savedSetup);
-    if (savedIndex !== -1) activateSetup(savedIndex);
-  }
-}
 
 function initDoseCalculator(recipe) {
   const doseBadge = document.getElementById('dose-badge');
@@ -515,8 +426,6 @@ function initDoseCalculator(recipe) {
     updateDoses();
   });
 
-  // Ascolta eventi di cambio variante per rieseguire l'aggiornamento dosi
-  doseBadge.addEventListener('variant-changed', () => updateDoses());
 
   updateDoses();
 }
@@ -548,275 +457,7 @@ function updateTotalWeight() {
   totalCell.classList.add('dose-updated');
 }
 
-// ═══════════════════════════════════════
-//  VARIANT TOGGLE (post-render)
-// ═══════════════════════════════════════
 
-function initVariantToggle(recipe) {
-  const variants = recipe.variants;
-  if (!variants?.length) return;
-
-  const toggle = document.getElementById('variant-toggle');
-  if (!toggle) return;
-
-  let activeVariant = null; // null = default, index = variant attiva
-
-  // Mappatura ingredientGroups piatti per override (conserva gruppo)
-  const flatIngredients = recipe.ingredientGroups?.length
-    ? recipe.ingredientGroups.flatMap(g => (g.items || []).map(item => ({ ...item, _groupName: g.group })))
-    : (recipe.ingredients || []);
-
-  toggle.addEventListener('click', () => {
-    const variant = variants[0]; // per ora supportiamo 1 variante
-
-    if (activeVariant === null) {
-      // Attiva la variante
-      activeVariant = 0;
-      toggle.classList.add('variant-selector__toggle--active');
-      toggle.querySelector('.variant-selector__toggle-label').textContent = 'Attiva';
-
-      // Override ingredienti
-      if (variant.ingredientOverrides?.length) {
-        applyIngredientOverrides(variant, flatIngredients, true);
-        updateInlineTokens(variant, true);
-      }
-
-      // Swap step dopo il branch
-      swapStepsAfterBranch(variant, recipe, true);
-
-    } else {
-      // Disattiva la variante → torna al default
-      activeVariant = null;
-      toggle.classList.remove('variant-selector__toggle--active');
-      toggle.querySelector('.variant-selector__toggle-label').textContent = 'Disattivata';
-
-      // Ripristina ingredienti
-      if (variant.ingredientOverrides?.length) {
-        applyIngredientOverrides(variant, flatIngredients, false);
-        updateInlineTokens(variant, false);
-      }
-
-      // Ripristina step
-      swapStepsAfterBranch(variant, recipe, false);
-    }
-
-    // Riesegui il dose calculator per aggiornare con il moltiplicatore corrente
-    const doseBadge = document.getElementById('dose-badge');
-    if (doseBadge) {
-      doseBadge.dispatchEvent(new CustomEvent('variant-changed'));
-    }
-  });
-}
-
-function applyIngredientOverrides(variant, flatIngredients, activate) {
-  const table = document.getElementById('ingredients-table');
-  if (!table) return;
-
-  const rows = table.querySelectorAll('tr:not(.ingredient-section-header)');
-
-  for (const override of variant.ingredientOverrides) {
-    // Trova l'ingrediente nel modello piatto tramite ref (token name)
-    // Il ref deve matchare un token id usato nel testo degli step
-    // Cerchiamo nella riga per data-base value
-    let rowIdx = 0;
-    for (const item of flatIngredients) {
-      if (item.grams == null) continue;
-      if (rowIdx >= rows.length) break;
-
-      const cell = rows[rowIdx]?.querySelector('.ingredient-qty');
-      if (cell) {
-        const currentBase = parseFloat(cell.getAttribute('data-base-original') || cell.getAttribute('data-base') || item.grams);
-
-        // Verifica se questo ingrediente corrisponde al ref dell'override
-        // Usiamo un match sul nome dell'ingrediente (case insensitive)
-        if (matchesRef(item.name, override.ref, item._groupName, item.tokenId)) {
-          if (activate) {
-            // Salva il base originale
-            if (!cell.hasAttribute('data-base-original')) {
-              cell.setAttribute('data-base-original', item.grams);
-            }
-            cell.setAttribute('data-base', override.grams);
-            cell.classList.add('ingredient-overridden');
-
-            // Aggiorna anche la nota se presente
-            const noteEl = rows[rowIdx]?.querySelector('.ingredient-note');
-            if (noteEl && override.note) {
-              if (!noteEl.hasAttribute('data-note-original')) {
-                noteEl.setAttribute('data-note-original', noteEl.textContent);
-              }
-              noteEl.textContent = override.note;
-            }
-          } else {
-            // Ripristina
-            const originalBase = cell.getAttribute('data-base-original');
-            if (originalBase) {
-              cell.setAttribute('data-base', originalBase);
-              cell.removeAttribute('data-base-original');
-            }
-            cell.classList.remove('ingredient-overridden');
-
-            const noteEl = rows[rowIdx]?.querySelector('.ingredient-note');
-            if (noteEl) {
-              const origNote = noteEl.getAttribute('data-note-original');
-              if (origNote) {
-                noteEl.textContent = origNote;
-                noteEl.removeAttribute('data-note-original');
-              }
-            }
-          }
-        }
-      }
-      rowIdx++;
-    }
-  }
-
-  // Aggiorna anche i token inline nel procedimento
-  updateInlineTokens(variant, activate);
-}
-
-function matchesRef(ingredientName, ref, groupName = '', tokenId = '') {
-  // MATCH PRIORITARIO: tokenId esatto (deterministico, zero ambiguità)
-  if (tokenId && tokenId === ref) return true;
-
-  // Se l'ingrediente HA un tokenId ma non corrisponde al ref → NON è questo ingrediente
-  // Il semantic fallback è SOLO per ricette legacy senza tokenId
-  if (tokenId) return false;
-
-  // FALLBACK: match semantico (per ricette senza tokenId)
-  const name = ingredientName.toLowerCase();
-  const r = ref.toLowerCase();
-  const group = groupName.toLowerCase();
-
-  if (name.includes(r) || r.includes(name.split(' ')[0].toLowerCase())) return true;
-
-  const refParts = r.split('_');
-  const keywords = {
-    lievito: ['lievito'], sale: ['sale'], acqua: ['acqua'],
-    farina: ['farina', 'manitoba', 'nuvola', 'saccorosso', 'tipo 0', 'tipo 00'],
-    semola: ['semola'], olio: ['olio', 'evo', 'extravergine'],
-    zucchero: ['zucchero'], burro: ['burro'],
-    uova: ['uova', 'uovo', 'tuorlo', 'tuorli', 'albume'],
-    latte: ['latte'], miele: ['miele'], malto: ['malto'],
-    strutto: ['strutto'], criscito: ['criscito', 'lievito madre'],
-  };
-
-  const groupHints = ['impasto', 'biga', 'poolish', 'rinfresco', 'crema', 'finitura', 'farcitura', 'condimento', 'finale'];
-  const refGroupHint = refParts.find(p => groupHints.includes(p));
-
-  let ingredientMatches = false;
-  for (const part of refParts) {
-    const kws = keywords[part];
-    if (kws && kws.some(kw => name.includes(kw))) { ingredientMatches = true; break; }
-  }
-  if (!ingredientMatches) return false;
-
-  if (refGroupHint && group) return group.includes(refGroupHint);
-  return true;
-}
-
-function updateInlineTokens(variant, activate) {
-  if (!variant.ingredientOverrides) return;
-
-  for (const override of variant.ingredientOverrides) {
-    const inlines = document.querySelectorAll(`.dose-inline[data-token-id="${override.ref}"]`);
-    inlines.forEach(el => {
-      if (activate) {
-        if (!el.hasAttribute('data-base-original')) {
-          el.setAttribute('data-base-original', el.getAttribute('data-base'));
-        }
-        el.setAttribute('data-base', override.grams);
-      } else {
-        const orig = el.getAttribute('data-base-original');
-        if (orig) {
-          el.setAttribute('data-base', orig);
-          el.removeAttribute('data-base-original');
-        }
-      }
-    });
-  }
-}
-
-function swapStepsAfterBranch(variant, recipe, activate) {
-  const branchIdx = variant.branchAfterStep;
-  if (branchIdx == null) return;
-
-  // Trovi tutti i panels di step (spirale, mano, etc.)
-  const stepPanels = document.querySelectorAll('.recipe-panel[data-setup]');
-
-  stepPanels.forEach(panel => {
-    const setupKey = panel.querySelector('.steps-list')?.getAttribute('data-setup-key');
-    if (!setupKey || setupKey === 'stepsCondiment') return;
-
-    const ol = panel.querySelector('.steps-list');
-    if (!ol) return;
-
-    const items = ol.querySelectorAll('.step-item');
-
-    if (activate) {
-      // Nascondi step dopo il branch
-      items.forEach(li => {
-        const idx = parseInt(li.getAttribute('data-step-index'));
-        if (idx > branchIdx) {
-          li.setAttribute('data-original-display', li.style.display || '');
-          li.style.display = 'none';
-        }
-      });
-
-      // Aggiungi gli altSteps
-      if (variant.altSteps?.length) {
-        variant.altSteps.forEach((s, i) => {
-          const li = document.createElement('li');
-          li.className = 'step-item step-variant';
-          li.setAttribute('data-step-index', `v${i}`);
-          li.innerHTML = `<strong>${escHtml(s.title)}</strong><span class="variant-step-badge">${fluentEmoji('droplet', 16)} Variante</span><p>${resolveTokens(escHtml(s.text))}</p>`;
-          ol.appendChild(li);
-        });
-      }
-    } else {
-      // Rimuovi altSteps
-      ol.querySelectorAll('.step-variant').forEach(el => el.remove());
-
-      // Mostra step originali
-      items.forEach(li => {
-        const idx = parseInt(li.getAttribute('data-step-index'));
-        if (idx > branchIdx) {
-          li.style.display = li.getAttribute('data-original-display') || '';
-          li.removeAttribute('data-original-display');
-        }
-      });
-    }
-  });
-}
-
-// ═══════════════════════════════════════
-//  VARIANT SELECTOR BUILDER
-// ═══════════════════════════════════════
-
-function buildVariantSelector(r) {
-  if (!r.variants?.length) return '';
-
-  const v = r.variants[0]; // supporto 1 variante per ora
-  return `
-    <div class="variant-selector reveal" id="variant-selector">
-      <div class="variant-selector__header">
-        <span class="variant-selector__icon">${v.label.split(' ')[0]}</span>
-        <div class="variant-selector__info">
-          <span class="variant-selector__title">${escHtml(v.label.replace(/^\S+\s*/, ''))}</span>
-          <span class="variant-selector__desc">${escHtml(v.description)}</span>
-        </div>
-        <button class="variant-selector__toggle" id="variant-toggle" type="button" aria-label="Attiva variante">
-          <span class="variant-selector__toggle-dot"></span>
-          <span class="variant-selector__toggle-label">Disattivata</span>
-        </button>
-      </div>
-      ${v.ingredientOverrides?.length ? `
-        <div class="variant-selector__changes">
-          <span class="variant-selector__changes-title">${fluentEmoji('warning', 14)} Cambia:</span>
-          ${v.ingredientOverrides.map(o => `<span class="variant-selector__change-chip">${escHtml(o.ref)}: ${o.grams}g ${o.note || ''}</span>`).join('')}
-        </div>
-      ` : ''}
-    </div>`;
-}
 
 // ── Utility ──
 function escHtml(str) {

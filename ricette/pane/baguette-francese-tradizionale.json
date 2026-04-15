@@ -47,21 +47,13 @@
           "name": "Acqua",
           "note": "(Da dividere: base + bassinage)",
           "grams": 240,
-          "tokenId": "acqua_impasto",
-          "setupNote": {
-            "spirale": "(Fredda, 10-12°C)",
-            "mano": "(Fresca, 18-20°C)"
-          }
+          "tokenId": "acqua_impasto"
         },
         {
           "name": "Acqua per Bassinage",
           "note": "(Da aggiungere alla fine)",
           "grams": 30,
-          "tokenId": "acqua_bassinage",
-          "setupNote": {
-            "spirale": "(Fredda di frigo)",
-            "mano": "(A temperatura ambiente)"
-          }
+          "tokenId": "acqua_bassinage"
         },
         {
           "name": "Lievito di Birra Fresco",
@@ -85,63 +77,6 @@
     }
   ],
   "suspensions": [],
-  "stepsSpiral": [
-    {
-      "title": "Preparazione del Poolish",
-      "text": "In un contenitore alto e stretto, sciogliere {lievito_poolish:1}g di lievito in {acqua_poolish:150}g di acqua. Aggiungere {farina_poolish:150}g di farina e mescolare con una forchetta fino a ottenere una crema grezza, senza grumi secchi. Coprire e lasciare a temperatura ambiente (20-22°C) per 2 ore, poi riporre in frigorifero a 4°C per 12-14 ore. Il poolish è pronto quando triplica di volume e presenta un leggero cedimento al centro."
-    },
-    {
-      "title": "Impastamento Iniziale",
-      "text": "Versare tutto il poolish nella vasca dell'impastatrice. Aggiungere {farina_impasto:450}g di farina, {lievito_impasto:3}g di lievito sbriciolato, {malto_impasto:4}g di malto e {acqua_impasto:240}g di acqua (tenendo da parte l'acqua di bassinage). Avviare in prima velocità per 4-5 minuti, fino a formare un impasto coeso."
-    },
-    {
-      "title": "Incordatura e Bassinage",
-      "text": "Passare in seconda velocità. Quando l'impasto inizia a staccarsi dalle pareti, aggiungere {sale_impasto:12}g di sale. Subito dopo, iniziare a inserire i restanti {acqua_bassinage:30}g di acqua a filo (tecnica del bassinage), aspettando che la dose precedente sia stata assorbita prima di aggiungerne altra. Chiudere l'impasto a 24-25°C."
-    },
-    {
-      "title": "Puntata e Pieghe",
-      "text": "Trasferire l'impasto in un mastello leggermente oliato. Praticare una serie di pieghe (coil fold) per dare struttura. Coprire e lasciare lievitare (puntata) a 24°C per circa 2 ore, o fino al raddoppio del volume, praticando un'altra serie di pieghe a metà del tempo."
-    },
-    {
-      "title": "Staglio e Preforma",
-      "text": "Rovesciare l'impasto sul banco leggermente infarinato. Con l'aiuto di un tarocco, dividere l'impasto in 3 pezzature da circa {panetto_peso:340!}g l'una. Pre-formare delicatamente dei cilindri tozzi (senza sgasare eccessivamente). Coprire con un panno e lasciare riposare sul banco per {riposo:20!} minuti per far rilassare la maglia glutinica."
-    },
-    {
-      "title": "Formatura della Baguette",
-      "text": "Prendere un cilindro, appiattirlo leggermente in un rettangolo. Piegare il lembo superiore verso il centro e sigillare col palmo della mano. Piegare il lembo inferiore verso il centro e sigillare. Infine, piegare a metà per il lungo e sigillare la chiusura pizzicando la pasta. Allungare il filone facendolo rotolare con entrambe le mani dal centro verso l'esterno, affinando le punte (devono raggiungere circa {lunghezza:35!} cm, o la misura della vostra teglia)."
-    },
-    {
-      "title": "Appretto nel Couche",
-      "text": "Disporre le baguette su un telo di lino infarinato (couche) o su un canovaccio spesso spolverato di semola, sollevando la stoffa tra una baguette e l'altra per creare dei divisori che ne mantengano la forma in lievitazione. La chiusura (verme) deve stare verso l'alto se poi verranno capovolte, o verso il basso se infornate direttamente. Coprire e far lievitare per 45-60 minuti a 24°C."
-    },
-    {
-      "title": "Taglio (Scarpatura)",
-      "text": "Trasferire delicatamente le baguette su una pala infarinata o su carta forno. Con una lametta da panettiere (inclinata a 30° rispetto alla superficie), praticare 3 o 4 tagli netti, quasi longitudinali. I tagli devono sovrapporsi leggermente: l'inizio di un taglio deve trovarsi parallelo alla fine del precedente. Infornare immediatamente."
-    }
-  ],
-  "stepsHand": [
-    {
-      "title": "Preparazione del Poolish",
-      "text": "In un barattolo capiente sciogliere {lievito_poolish:1}g di lievito in {acqua_poolish:150}g di acqua. Aggiungere {farina_poolish:150}g di farina e mescolare vigorosamente. Lasciare riposare 2 ore a temperatura ambiente e poi 12-14 ore in frigorifero."
-    },
-    {
-      "title": "Miscelazione e Autolisi breve",
-      "text": "In una ciotola capiente, mescolare il poolish maturo con {farina_impasto:450}g di farina, {lievito_impasto:3}g di lievito, {malto_impasto:4}g di malto e {acqua_impasto:240}g di acqua. Impastare grossolanamente a mano solo fino a nascondere la farina asciutta. Coprire e lasciare riposare per 30 minuti (fermentolisi)."
-    },
-    {
-      "title": "Slap & Fold e Bassinage",
-      "text": "Rovesciare l'impasto sul piano di lavoro senza farina. Aggiungere {sale_impasto:12}g di sale e iniziare a impastare con la tecnica dello Slap & Fold (sbattere e ripiegare). Quando l'impasto prende nervo (circa 5-7 minuti), aggiungere i {acqua_bassinage:30}g di acqua rimanente a goccia a goccia, continuando a sbattere l'impasto fino al completo assorbimento."
-    },
-    {
-      "title": "Puntata",
-      "text": "Trasferire l'impasto in una ciotola oliata, fare un giro di pieghe (Stretch & Fold), coprire e lasciar raddoppiare a circa 24°C (ci vorranno circa 2 ore). Eseguire un altro giro di pieghe dopo 45 minuti."
-    },
-    {
-      "title": "Staglio, Formatura e Taglio",
-      "text": "Fai riferimento alla procedura standard: dividere in pezzi da {panetto_peso:340!}g, pre-formare a cilindro, far riposare {riposo:20!} minuti, formare le baguette definitive sigillando bene le chiusure. Far lievitare nel panno (couche) per 45-60 minuti, incidere la superficie con 3-4 tagli quasi paralleli e sovrapposti, e infornare con vapore."
-    }
-  ],
-  "stepsExtruder": [],
   "stepsCondiment": [],
   "flourTable": [
     {
@@ -187,29 +122,6 @@
       "definition": "I tagli praticati con la lametta prima di infornare. Nelle baguette servono a creare i caratteristici 'orecchi' e permettono l'espansione dei gas in cottura."
     }
   ],
-  "variants": [
-    {
-      "id": "cold-retard",
-      "label": "❄️ Maturazione in Frigo (Impasto)",
-      "description": "Per un sapore più rustico e una alveolatura ancora più aperta, l'impasto finale riposa in frigo prima di essere formato.",
-      "ingredientOverrides": [],
-      "branchAfterStep": 3,
-      "altSteps": [
-        {
-          "title": "Maturazione in Frigo",
-          "text": "Dopo la prima ora di puntata a temperatura ambiente (e il primo giro di pieghe), riporre il contenitore ben chiuso in frigorifero a 4°C per 12-16 ore. L'impasto maturerà lentamente."
-        },
-        {
-          "title": "Staglio a Freddo",
-          "text": "Il giorno successivo, rovesciare l'impasto freddo sul piano. Dividerlo direttamente in pezzature da {panetto_peso:340!}g. Lasciar acclimatare i pre-formati a cilindro per 45-60 minuti prima di procedere con la formatura definitiva."
-        },
-        {
-          "title": "Formatura e Cottura",
-          "text": "Procedere con la formatura a filone, l'appretto nel couche (che richiederà un po' più di tempo, circa 60-75 minuti essendo l'impasto ancora fresco), il taglio e la cottura con vapore a 250°C."
-        }
-      ]
-    }
-  ],
   "alert": "Non sgasare eccessivamente l'impasto durante la formatura. I movimenti devono essere decisi ma leggeri. Se schiacciati troppo il panetto, perderete la caratteristica alveolatura irregolare della vera baguette.",
   "proTips": [
     "I tagli sulla baguette non devono essere orizzontali né incrociati. Devono essere quasi paralleli alla lunghezza del filone (angolo di 20-30 gradi) e sovrapporsi nel loro asse verticale per circa 1/3 del taglio precedente.",
@@ -234,5 +146,39 @@
   ],
   "_generatedBy": "gemini-3.1",
   "image": "images/ricette/pane/baguette-francese-tradizionale.webp",
-  "imageAttribution": "📷 Foto: Manish Jain — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: Manish Jain — Pexels License via Pexels",
+  "steps": [
+    {
+      "title": "Preparazione del Poolish",
+      "text": "In un contenitore alto e stretto, sciogliere {lievito_poolish:1}g di lievito in {acqua_poolish:150}g di acqua. Aggiungere {farina_poolish:150}g di farina e mescolare con una forchetta fino a ottenere una crema grezza, senza grumi secchi. Coprire e lasciare a temperatura ambiente (20-22°C) per 2 ore, poi riporre in frigorifero a 4°C per 12-14 ore. Il poolish è pronto quando triplica di volume e presenta un leggero cedimento al centro."
+    },
+    {
+      "title": "Impastamento Iniziale",
+      "text": "Versare tutto il poolish nella vasca dell'impastatrice. Aggiungere {farina_impasto:450}g di farina, {lievito_impasto:3}g di lievito sbriciolato, {malto_impasto:4}g di malto e {acqua_impasto:240}g di acqua (tenendo da parte l'acqua di bassinage). Avviare in prima velocità per 4-5 minuti, fino a formare un impasto coeso."
+    },
+    {
+      "title": "Incordatura e Bassinage",
+      "text": "Passare in seconda velocità. Quando l'impasto inizia a staccarsi dalle pareti, aggiungere {sale_impasto:12}g di sale. Subito dopo, iniziare a inserire i restanti {acqua_bassinage:30}g di acqua a filo (tecnica del bassinage), aspettando che la dose precedente sia stata assorbita prima di aggiungerne altra. Chiudere l'impasto a 24-25°C."
+    },
+    {
+      "title": "Puntata e Pieghe",
+      "text": "Trasferire l'impasto in un mastello leggermente oliato. Praticare una serie di pieghe (coil fold) per dare struttura. Coprire e lasciare lievitare (puntata) a 24°C per circa 2 ore, o fino al raddoppio del volume, praticando un'altra serie di pieghe a metà del tempo."
+    },
+    {
+      "title": "Staglio e Preforma",
+      "text": "Rovesciare l'impasto sul banco leggermente infarinato. Con l'aiuto di un tarocco, dividere l'impasto in 3 pezzature da circa {panetto_peso:340!}g l'una. Pre-formare delicatamente dei cilindri tozzi (senza sgasare eccessivamente). Coprire con un panno e lasciare riposare sul banco per {riposo:20!} minuti per far rilassare la maglia glutinica."
+    },
+    {
+      "title": "Formatura della Baguette",
+      "text": "Prendere un cilindro, appiattirlo leggermente in un rettangolo. Piegare il lembo superiore verso il centro e sigillare col palmo della mano. Piegare il lembo inferiore verso il centro e sigillare. Infine, piegare a metà per il lungo e sigillare la chiusura pizzicando la pasta. Allungare il filone facendolo rotolare con entrambe le mani dal centro verso l'esterno, affinando le punte (devono raggiungere circa {lunghezza:35!} cm, o la misura della vostra teglia)."
+    },
+    {
+      "title": "Appretto nel Couche",
+      "text": "Disporre le baguette su un telo di lino infarinato (couche) o su un canovaccio spesso spolverato di semola, sollevando la stoffa tra una baguette e l'altra per creare dei divisori che ne mantengano la forma in lievitazione. La chiusura (verme) deve stare verso l'alto se poi verranno capovolte, o verso il basso se infornate direttamente. Coprire e far lievitare per 45-60 minuti a 24°C."
+    },
+    {
+      "title": "Taglio (Scarpatura)",
+      "text": "Trasferire delicatamente le baguette su una pala infarinata o su carta forno. Con una lametta da panettiere (inclinata a 30° rispetto alla superficie), praticare 3 o 4 tagli netti, quasi longitudinali. I tagli devono sovrapporsi leggermente: l'inizio di un taglio deve trovarsi parallelo alla fine del precedente. Infornare immediatamente."
+    }
+  ]
 }

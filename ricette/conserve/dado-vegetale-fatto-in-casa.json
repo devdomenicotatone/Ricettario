@@ -83,34 +83,6 @@
     }
   ],
   "suspensions": [],
-  "stepsSpiral": [],
-  "stepsExtruder": [],
-  "stepsHand": [
-    {
-      "title": "Preparazione delle Verdure",
-      "text": "Lavate accuratamente tutte le verdure sotto acqua corrente fredda. Pelate le {carote:200}g di carote e le {patate:150}g di patate. Sbucciate la {cipolla:150}g di cipolla. Eliminate i filamenti più duri dal {sedano:180}g di sedano. Rimuovete il picciolo dai {pomodorini:150}g di pomodorini. Spuntate e tagliate a rondelle le {zucchine:100}g di zucchine. Tagliate tutte le verdure a pezzi di circa 2-3 cm: non occorre che siano perfetti, andranno tutto frullati. Pelate lo {aglio:5}g di aglio e lasciatelo intero. Tenete da parte il {prezzemolo:15}g di prezzemolo."
-    },
-    {
-      "title": "Prima Cottura: Rilascio dei Liquidi",
-      "text": "In una casseruola larga e alta (preferibilmente antiaderente o in acciaio dal fondo spesso), versate i {olio_evo:30}g di olio extravergine di oliva. Aggiungete tutte le verdure tagliate, l'aglio, il prezzemolo e i {sale:300}g di sale fino. Mescolate bene per distribuire il sale uniformemente tra le verdure. Cuocete a fuoco vivace per 7-10 minuti, girando spesso: le verdure salate rilasceranno progressivamente i loro liquidi e il sale si scioglierà completamente. Vedrete formarsi del liquido sul fondo — è normale, è l'acqua di vegetazione. Abbassate la fiamma al minimo, coprite con il coperchio e lasciate cuocere per 50-60 minuti, mescolando ogni 15 minuti, finché tutte le verdure sono completamente morbide e sfatte."
-    },
-    {
-      "title": "Frullatura",
-      "text": "Spegnete il fuoco e lasciate intiepidire 5 minuti. Con un frullatore a immersione (minipimer), frullate il composto direttamente nella casseruola fino a ottenere una crema perfettamente liscia e vellutata, senza grumi. Passate il frullatore più volte in tutte le direzioni. Se preferite una consistenza ancora più fine, potete passare la crema al setaccio fine, ma non è strettamente necessario."
-    },
-    {
-      "title": "Seconda Cottura: Riduzione e Asciugatura",
-      "text": "Rimettete la casseruola sul fuoco bassissimo, senza coperchio. Cuocete mescolando continuamente con una spatola di silicone o un cucchiaio di legno per altri 15-25 minuti, finché il composto si restringe visibilmente e inizia a staccarsi dai bordi della pentola, assumendo una consistenza simile a una polenta densa. Questo passaggio è fondamentale: se il composto è troppo morbido o liquido, i dadi non manterranno la forma. La crema è pronta quando sollevando la spatola ricade a nastro lentamente, non scorre liquida. Attenzione agli schizzi: usate un coperchio a schermo o un guanto da forno."
-    },
-    {
-      "title": "Formatura dei Dadi",
-      "text": "Stendete un foglio di carta da forno su una teglia o un tagliere. Versate il composto caldo sulla carta e livellatelo con una spatola bagnata a formare un rettangolo dello spessore di circa 2-2,5 cm. Coprite con un secondo foglio di carta da forno senza premere troppo per non deformare la superficie. Lasciate raffreddare completamente a temperatura ambiente (circa 1 ora), poi trasferite in freezer per almeno 10-12 ore o tutta la notte, fino a ottenere un blocco solido e compatto. In alternativa, potete versare la crema ancora calda direttamente negli stampini per cubetti di ghiaccio (rivestiti con pellicola trasparente) per avere già la forma del dado."
-    },
-    {
-      "title": "Porzionatura e Conservazione",
-      "text": "Una volta solidificato, estraete il blocco dal freezer. Con un coltello lungo e affilato (o un cutter da cucina), tagliate prima in strisce, poi in cubetti di circa 3×3 cm. Staccate i singoli dadi delicatamente: non saranno durissimi (il sale abbassa il punto di congelamento), ma saranno compatti e lavorabili. Trasferiteli in sacchetti da freezer o in contenitori ermetici, separando i dadi con carta da forno per evitare che si attacchino tra loro. Si conservano in freezer fino a 6 mesi. Per l'utilizzo: aggiungere 1 dado (circa 3×3 cm) ogni 500 ml di acqua per brodo o direttamente in soffritti e zuppe, assaggiando prima di aggiungere ulteriore sale."
-    }
-  ],
   "stepsCondiment": [],
   "flourTable": [],
   "baking": null,
@@ -152,52 +124,6 @@
       "definition": "Tecnica di modellatura del composto ancora caldo in forma rettangolare su carta da forno, per poi ottenere i cubetti tagliando il blocco solidificato. Alternativa agli stampini per cubetti di ghiaccio."
     }
   ],
-  "variants": [
-    {
-      "id": "versione-barattolo-frigo",
-      "label": "🫙 Versione Crema in Barattolo (Frigo)",
-      "description": "Il composto frullato e ridotto viene conservato in vasetti di vetro sterilizzati in frigorifero, senza freezer. Ideale per chi consuma il dado entro 3-4 settimane.",
-      "ingredientOverrides": [],
-      "branchAfterStep": 3,
-      "altSteps": [
-        {
-          "title": "Invasettamento a Caldo",
-          "text": "Invece di formare il blocco, versate la crema ancora bollente direttamente in vasetti di vetro sterilizzati a chiusura ermetica (da 125-250 ml). Riempiteli fino all'orlo, chiudete immediatamente il tappo ermetico e capovolgeteli per 5 minuti per creare il sottovuoto. Lasciate raffreddare completamente a temperatura ambiente. Conservate in frigorifero fino a 20 giorni (un mese se il sottovuoto è perfetto). Una volta aperto, consumate entro 7-10 giorni. Dosi indicative: 1 cucchiaino raso (circa 8-10g) ogni 500 ml di acqua per il brodo."
-        }
-      ]
-    },
-    {
-      "id": "versione-arricchita-umami",
-      "label": "🍄 Versione Arricchita con Funghi e Pomodori Secchi",
-      "description": "Aggiunta di funghi porcini secchi e pomodori secchi per una nota umami profonda, ispirata alla fonte 8. Ideale per brodi intensi e risotti.",
-      "ingredientOverrides": [
-        {
-          "ref": "pomodorini",
-          "grams": 100,
-          "note": "(freschi, ridotti) + 40g pomodori secchi (vedi testo)"
-        }
-      ],
-      "branchAfterStep": 0,
-      "altSteps": [
-        {
-          "title": "Ammollo Funghi e Pomodori Secchi",
-          "text": "Mettete in ammollo 40g di funghi porcini secchi in 300ml di acqua tiepida per 20-30 minuti. In un'altra ciotola, ammollate 40g di pomodori secchi (se non sono già morbidi) per 15 minuti in acqua tiepida. Strizzate bene i funghi conservando l'acqua di ammollo filtrata (ottima da aggiungere alla crema). Tenete da parte funghi e pomodori secchi tritati grossolanamente."
-        },
-        {
-          "title": "Prima Cottura con Verdure e Aromi Secchi",
-          "text": "In una casseruola larga e antiaderente versate i {olio_evo:30}g di olio extravergine. Aggiungete le verdure tagliate ({carote:200}g carote, {sedano:180}g sedano, {cipolla:150}g cipolla, {patate:150}g patate, {zucchine:100}g zucchine, {prezzemolo:15}g prezzemolo, {aglio:5}g aglio) insieme ai funghi e ai pomodori secchi ammollati e strizzati. Aggiungete i {sale:300}g di sale fino. Cuocete a fuoco vivace per 7-10 minuti, poi abbassate, coprite e cuocete per 50-60 minuti. Se il composto asciuga troppo, aggiungete poca acqua di ammollo dei funghi filtrata."
-        },
-        {
-          "title": "Frullatura Arricchita",
-          "text": "Spegnete il fuoco, intiepidite 5 minuti. Frullate con il minipimer fino a crema liscia. Aggiungete, se disponibile, 2-3 cucchiai dell'acqua di ammollo dei funghi filtrata per un sapore più profondo."
-        },
-        {
-          "title": "Riduzione e Formatura",
-          "text": "Rimettete sul fuoco bassissimo senza coperchio per 15-25 minuti mescolando continuamente fino a consistenza densa che si stacca dai bordi. Formate il blocco su carta da forno, coprite, lasciate raffreddare e congelate per 10-12 ore. Tagliate in dadi 3×3 cm e conservate in freezer in sacchetti ermetici."
-        }
-      ]
-    }
-  ],
   "alert": "NON riducete il sale sotto il 25-28% del peso delle verdure pulite: il sale non è solo un condimento ma il principale conservante del dado. Una quantità insufficiente comprometterebbe la sicurezza microbiologica del prodotto (rischio proliferazione batterica) e la consistenza finale (il dado non solidificherà correttamente in freezer). Al contrario, non eccedete oltre il 35%: il dado risulterebbe troppo salato e inutilizzabile. Pesate sempre con una bilancia da cucina — non andate ad occhio.",
   "proTips": [
     "RAPPORTO SALE/VERDURE: il metodo più preciso è pesare le verdure DOPO averle pulite e pelate, poi calcolare il 30% esatto come quantità di sale. Con verdure diverse (zucca, spinaci, bietole) il peso cambia: ricalcolate ogni volta. Una bilancia di precisione è fondamentale.",
@@ -226,5 +152,31 @@
   ],
   "_generatedBy": "claude",
   "image": "images/ricette/conserve/dado-vegetale-fatto-in-casa.webp",
-  "imageAttribution": "📷 Foto: cottonbro studio — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: cottonbro studio — Pexels License via Pexels",
+  "steps": [
+    {
+      "title": "Preparazione delle Verdure",
+      "text": "Lavate accuratamente tutte le verdure sotto acqua corrente fredda. Pelate le {carote:200}g di carote e le {patate:150}g di patate. Sbucciate la {cipolla:150}g di cipolla. Eliminate i filamenti più duri dal {sedano:180}g di sedano. Rimuovete il picciolo dai {pomodorini:150}g di pomodorini. Spuntate e tagliate a rondelle le {zucchine:100}g di zucchine. Tagliate tutte le verdure a pezzi di circa 2-3 cm: non occorre che siano perfetti, andranno tutto frullati. Pelate lo {aglio:5}g di aglio e lasciatelo intero. Tenete da parte il {prezzemolo:15}g di prezzemolo."
+    },
+    {
+      "title": "Prima Cottura: Rilascio dei Liquidi",
+      "text": "In una casseruola larga e alta (preferibilmente antiaderente o in acciaio dal fondo spesso), versate i {olio_evo:30}g di olio extravergine di oliva. Aggiungete tutte le verdure tagliate, l'aglio, il prezzemolo e i {sale:300}g di sale fino. Mescolate bene per distribuire il sale uniformemente tra le verdure. Cuocete a fuoco vivace per 7-10 minuti, girando spesso: le verdure salate rilasceranno progressivamente i loro liquidi e il sale si scioglierà completamente. Vedrete formarsi del liquido sul fondo — è normale, è l'acqua di vegetazione. Abbassate la fiamma al minimo, coprite con il coperchio e lasciate cuocere per 50-60 minuti, mescolando ogni 15 minuti, finché tutte le verdure sono completamente morbide e sfatte."
+    },
+    {
+      "title": "Frullatura",
+      "text": "Spegnete il fuoco e lasciate intiepidire 5 minuti. Con un frullatore a immersione (minipimer), frullate il composto direttamente nella casseruola fino a ottenere una crema perfettamente liscia e vellutata, senza grumi. Passate il frullatore più volte in tutte le direzioni. Se preferite una consistenza ancora più fine, potete passare la crema al setaccio fine, ma non è strettamente necessario."
+    },
+    {
+      "title": "Seconda Cottura: Riduzione e Asciugatura",
+      "text": "Rimettete la casseruola sul fuoco bassissimo, senza coperchio. Cuocete mescolando continuamente con una spatola di silicone o un cucchiaio di legno per altri 15-25 minuti, finché il composto si restringe visibilmente e inizia a staccarsi dai bordi della pentola, assumendo una consistenza simile a una polenta densa. Questo passaggio è fondamentale: se il composto è troppo morbido o liquido, i dadi non manterranno la forma. La crema è pronta quando sollevando la spatola ricade a nastro lentamente, non scorre liquida. Attenzione agli schizzi: usate un coperchio a schermo o un guanto da forno."
+    },
+    {
+      "title": "Formatura dei Dadi",
+      "text": "Stendete un foglio di carta da forno su una teglia o un tagliere. Versate il composto caldo sulla carta e livellatelo con una spatola bagnata a formare un rettangolo dello spessore di circa 2-2,5 cm. Coprite con un secondo foglio di carta da forno senza premere troppo per non deformare la superficie. Lasciate raffreddare completamente a temperatura ambiente (circa 1 ora), poi trasferite in freezer per almeno 10-12 ore o tutta la notte, fino a ottenere un blocco solido e compatto. In alternativa, potete versare la crema ancora calda direttamente negli stampini per cubetti di ghiaccio (rivestiti con pellicola trasparente) per avere già la forma del dado."
+    },
+    {
+      "title": "Porzionatura e Conservazione",
+      "text": "Una volta solidificato, estraete il blocco dal freezer. Con un coltello lungo e affilato (o un cutter da cucina), tagliate prima in strisce, poi in cubetti di circa 3×3 cm. Staccate i singoli dadi delicatamente: non saranno durissimi (il sale abbassa il punto di congelamento), ma saranno compatti e lavorabili. Trasferiteli in sacchetti da freezer o in contenitori ermetici, separando i dadi con carta da forno per evitare che si attacchino tra loro. Si conservano in freezer fino a 6 mesi. Per l'utilizzo: aggiungere 1 dado (circa 3×3 cm) ogni 500 ml di acqua per brodo o direttamente in soffritti e zuppe, assaggiando prima di aggiungere ulteriore sale."
+    }
+  ]
 }

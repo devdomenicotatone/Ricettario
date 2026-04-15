@@ -11,6 +11,24 @@
   "totalFlour": 200,
   "ingredients": [],
   "suspensions": [],
+  "stepsHand": [
+    {
+      "title": "Preparazione Crema di Semolino",
+      "text": "In una pentola capiente versare latte ({latte_intero_composto:500}g), acqua ({acqua_composto:500}g), sale ({sale_fino_composto:2}g) e burro ({burro_composto:40}g). Aggiungere la scorza d'arancia tagliata a strisce larghe con un pelapatate ({scorza_di_arancia_composto:5}g). Portare a bollore mescolando occasionalmente per sciogliere il burro. Quando bolle, rimuovere le strisce di scorza d'arancia con una pinza o un cucchiaio e versare il semolino ({semolino_di_grano_du_composto:200}g) a pioggia mescolando energicamente con una frusta per evitare grumi. Abbassare la fiamma al minimo e cuocere per 4-5 minuti, continuando a mescolare, fino a ottenere una crema densa e compatta. Trasferire immediatamente in una pirofila ampia e coprire con pellicola a contatto per evitare la formazione di pellicola superficiale. Lasciar raffreddare a temperatura ambiente per 20-30 minuti."
+    },
+    {
+      "title": "Preparazione Composto di Ricotta",
+      "text": "Mentre la crema di semolino si raffredda, setacciare la ricotta vaccina ({ricotta_vaccina_composto:350}g) attraverso un colino a maglia fine per eliminare grumi e renderla cremosa. Incidere longitudinalmente il baccello di vaniglia e raschiare i semi con la punta di un coltellino. In una ciotola capiente montare le uova ({uova_medie_composto:220}g, 4 uova medie) con lo zucchero ({zucchero_semolato_composto:250}g) e i semi di vaniglia usando fruste elettriche a velocità media-alta per 5-6 minuti, fino a ottenere una spuma chiara, voluminosa e omogenea (il composto deve triplicare di volume e diventare quasi bianco)."
+    },
+    {
+      "title": "Amalgama e Incorporazione",
+      "text": "Incorporare la ricotta setacciata ({ricotta_vaccina_composto:350}g) nel composto montato di uova e zucchero, mescolando delicatamente con una spatola o con le fruste a bassa velocità per non smontare il composto. Quando la crema di semolino è tiepida (non calda, altrimenti le uova potrebbero coagulare), aggiungerla poco alla volta al composto di ricotta, mescolando con le fruste elettriche a velocità bassa-media. Lavorare fino a ottenere un impasto perfettamente liscio, omogeneo e privo di grumi. La consistenza finale deve essere cremosa e fluida, simile a una pastella per torta."
+    },
+    {
+      "title": "Cottura in Forno",
+      "text": "Imburrare generosamente una tortiera a cerchio apribile da 24 cm di diametro e foderarla con carta forno sul fondo. Versare il composto nella tortiera e livellare la superficie con una spatola. Infornare in forno statico preriscaldato a 200°C per 60 minuti. Dopo 40-50 minuti controllare la colorazione superficiale: se il migliaccio è già ben dorato ma non cotto al centro, coprire con un foglio di alluminio e proseguire la cottura. Il dolce è pronto quando la superficie presenta le caratteristiche crepe (craquelé) e uno stecchino inserito al centro esce asciutto. Spegnere il forno e lasciar raffreddare completamente il migliaccio nella teglia prima di sformarlo (almeno 2-3 ore). Spolverizzare con zucchero a velo prima di servire."
+    }
+  ],
   "baking": {
     "temperature": "200°C",
     "time": "60 minuti",
@@ -146,24 +164,6 @@
           "grams": 30
         }
       ]
-    }
-  ],
-  "steps": [
-    {
-      "title": "Preparazione Crema di Semolino",
-      "text": "In una pentola capiente versare latte ({latte_intero_composto:500}g), acqua ({acqua_composto:500}g), sale ({sale_fino_composto:2}g) e burro ({burro_composto:40}g). Aggiungere la scorza d'arancia tagliata a strisce larghe con un pelapatate ({scorza_di_arancia_composto:5}g). Portare a bollore mescolando occasionalmente per sciogliere il burro. Quando bolle, rimuovere le strisce di scorza d'arancia con una pinza o un cucchiaio e versare il semolino ({semolino_di_grano_du_composto:200}g) a pioggia mescolando energicamente con una frusta per evitare grumi. Abbassare la fiamma al minimo e cuocere per 4-5 minuti, continuando a mescolare, fino a ottenere una crema densa e compatta. Trasferire immediatamente in una pirofila ampia e coprire con pellicola a contatto per evitare la formazione di pellicola superficiale. Lasciar raffreddare a temperatura ambiente per 20-30 minuti."
-    },
-    {
-      "title": "Preparazione Composto di Ricotta",
-      "text": "Mentre la crema di semolino si raffredda, setacciare la ricotta vaccina ({ricotta_vaccina_composto:350}g) attraverso un colino a maglia fine per eliminare grumi e renderla cremosa. Incidere longitudinalmente il baccello di vaniglia e raschiare i semi con la punta di un coltellino. In una ciotola capiente montare le uova ({uova_medie_composto:220}g, 4 uova medie) con lo zucchero ({zucchero_semolato_composto:250}g) e i semi di vaniglia usando fruste elettriche a velocità media-alta per 5-6 minuti, fino a ottenere una spuma chiara, voluminosa e omogenea (il composto deve triplicare di volume e diventare quasi bianco)."
-    },
-    {
-      "title": "Amalgama e Incorporazione",
-      "text": "Incorporare la ricotta setacciata ({ricotta_vaccina_composto:350}g) nel composto montato di uova e zucchero, mescolando delicatamente con una spatola o con le fruste a bassa velocità per non smontare il composto. Quando la crema di semolino è tiepida (non calda, altrimenti le uova potrebbero coagulare), aggiungerla poco alla volta al composto di ricotta, mescolando con le fruste elettriche a velocità bassa-media. Lavorare fino a ottenere un impasto perfettamente liscio, omogeneo e privo di grumi. La consistenza finale deve essere cremosa e fluida, simile a una pastella per torta."
-    },
-    {
-      "title": "Cottura in Forno",
-      "text": "Imburrare generosamente una tortiera a cerchio apribile da 24 cm di diametro e foderarla con carta forno sul fondo. Versare il composto nella tortiera e livellare la superficie con una spatola. Infornare in forno statico preriscaldato a 200°C per 60 minuti. Dopo 40-50 minuti controllare la colorazione superficiale: se il migliaccio è già ben dorato ma non cotto al centro, coprire con un foglio di alluminio e proseguire la cottura. Il dolce è pronto quando la superficie presenta le caratteristiche crepe (craquelé) e uno stecchino inserito al centro esce asciutto. Spegnere il forno e lasciar raffreddare completamente il migliaccio nella teglia prima di sformarlo (almeno 2-3 ore). Spolverizzare con zucchero a velo prima di servire."
     }
   ]
 }

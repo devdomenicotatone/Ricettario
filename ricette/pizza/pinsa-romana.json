@@ -11,79 +11,6 @@
   "totalFlour": 1000,
   "ingredients": [],
   "suspensions": [],
-  "stepsSpiral": [
-    {
-      "title": "Preparazione acqua e mix farine",
-      "text": "Mettere {acqua_impasto:750}g di acqua in frigorifero almeno 2 ore prima (deve essere 10-14°C). In una ciotola mescolare a secco: {farina_media_impasto:900}g farina tipo 0 + {farina_di_riso_impasto:50}g farina di riso + {farina_di_soia_impasto:50}g farina di soia. Questo mix è fondamentale per la texture caratteristica della pinsa: il riso dona croccantezza, la soia migliora l'elasticità e la doratura."
-    },
-    {
-      "title": "Fase 1 - Incordatura base (1a velocità, 5 min)",
-      "text": "Inserire nella planetaria con gancio: mix farine + {lievito_fresco_impasto:2}g lievito di birra fresco sbriciolato + 700g acqua fresca (10-14°C). Impastare 1a velocità per 5 minuti. L'impasto inizierà ad incordarsi lentamente: l'acqua fresca rallenta lo sviluppo del glutine permettendo un assorbimento graduale. Deve risultare molto morbido e appiccicoso, NON aggiungere farina."
-    },
-    {
-      "title": "Fase 2 - Sviluppo glutine (2a velocità, 8-10 min)",
-      "text": "Passare a 2a velocità e impastare 8-10 minuti fino a completa incordatura. Quando l'impasto inizia a staccarsi dalle pareti, aggiungere {sale_impasto:18}g sale + {olio_evo_impasto:20}g olio EVO + 50g acqua fredda restante. Continuare a impastare 2-3 minuti. L'impasto finale deve essere liscio, elastico ma molto morbido e leggermente appiccicoso. Temperatura impasto: 24-26°C massimo."
-    },
-    {
-      "title": "Prima fermentazione (puntata)",
-      "text": "Trasferire l'impasto in contenitore oliato, coprire con pellicola e lasciare a temperatura ambiente (20-22°C) per 2 ore fino al raddoppio. L'impasto deve gonfiarsi visibilmente. Questa fase sviluppa i primi aromi e rende l'impasto più gestibile."
-    },
-    {
-      "title": "Staglio e pirlatura",
-      "text": "Rovesciare l'impasto su piano leggermente infarinato. Dividere in 6 panetti da circa 270-280g ciascuno. Piegare ogni pezzo portando i lembi verso il centro per dare forza, poi capovolgere e pirlare delicatamente su piano SENZA farina per creare tensione superficiale. Non stringere troppo: la pinsa deve rimanere soffice."
-    },
-    {
-      "title": "Maturazione in frigo (24-48h)",
-      "text": "Disporre i panetti in contenitori oliati (o su teglia con olio), coprire con pellicola. Mettere in frigorifero (4°C) per 24-48 ore. Più lunga è la maturazione, più digeribile sarà la pinsa. I panetti raddoppieranno lentamente di volume. Tirare fuori dal frigo 1-2 ore prima di stendere per riportarli a temperatura ambiente."
-    },
-    {
-      "title": "Stesura (tecnica caratteristica)",
-      "text": "Spolverare abbondantemente il piano con semola rimacinata. Prendere un panetto, capovolgerlo sulla semola (parte liscia sotto). Premere delicatamente al centro con le dita, poi allargare con movimenti dall'interno verso l'esterno formando un ovale allungato (circa 25x15 cm). NON usare il mattarello: la pinsa deve avere spessore irregolare (1-1,5 cm al centro, più sottile ai bordi). Trasferire su teglia con carta forno leggermente oliata."
-    },
-    {
-      "title": "Appretto finale (30-45 min)",
-      "text": "Lasciare riposare le pinse stese 30-45 minuti a temperatura ambiente, coperte con un canovaccio umido. Questo rilassamento finale permette all'impasto di gonfiarsi leggermente e facilita la cottura uniforme."
-    }
-  ],
-  "stepsHand": [
-    {
-      "title": "Preparazione acqua e mix farine",
-      "text": "Preparare {acqua_impasto:750}g acqua a 18-20°C (NON ghiacciata per impasto manuale). In una ciotola capiente mescolare: {farina_media_impasto:900}g farina tipo 0 + {farina_di_riso_impasto:50}g farina di riso + {farina_di_soia_impasto:50}g farina di soia. Il mix tri-cereale è la base della pinsa autentica."
-    },
-    {
-      "title": "Fase 1 - Impasto base (10 min a mano)",
-      "text": "Formare una fontana con il mix farine, al centro sbricolare {lievito_fresco_impasto:2}g lievito fresco. Versare 500g acqua al centro e iniziare a incorporare la farina dai bordi verso il centro. Quando inizia a formarsi un impasto grezzo, trasferire su piano e impastare energicamente per 10 minuti con tecnica slap & fold: sollevare l'impasto, sbatterlo sul piano e ripiegarlo su se stesso. L'impasto sarà molto appiccicoso: NON aggiungere farina."
-    },
-    {
-      "title": "Fase 2 - Idratazione graduale (15 min)",
-      "text": "Aggiungere 200g acqua a filo continuando a impastare e piegare. L'impasto diventerà ancora più morbido: continuare con slap & fold per 10 minuti. Aggiungere {sale_impasto:18}g sale + {olio_evo_impasto:20}g olio + 50g acqua finali. Impastare altri 5 minuti fino a completo assorbimento. L'impasto deve essere liscio, molto elastico ma appiccicoso. Se la temperatura supera 26°C, far riposare 10 minuti in ciotola coperta."
-    },
-    {
-      "title": "Prima fermentazione (puntata)",
-      "text": "Trasferire in ciotola oliata, coprire con pellicola. Lasciare a temperatura ambiente 2 ore fino al raddoppio. Durante questo tempo l'impasto acquisisce forza e diventa più gestibile."
-    },
-    {
-      "title": "Pieghe di rinforzo (facoltativo ma consigliato)",
-      "text": "Dopo 1 ora di puntata, eseguire una serie di pieghe: inumidire le mani, sollevare un lembo dell'impasto e ripiegarlo verso il centro, ruotare la ciotola e ripetere 4 volte. Questo rinforza la maglia glutinica senza sgonfiare l'impasto. Coprire e lasciare terminare la puntata."
-    },
-    {
-      "title": "Staglio e pirlatura delicata",
-      "text": "Rovesciare su piano infarinato, dividere in 6 panetti da 270-280g. Per ogni pezzo: allargare leggermente, portare i 4 lembi verso il centro, capovolgere. Pirlare con mani a coppa su piano SENZA farina per creare tensione, ma senza stringere troppo. La pinsa deve rimanere ariosa."
-    },
-    {
-      "title": "Maturazione in frigo (24-48h)",
-      "text": "Disporre i panetti in contenitori oliati, coprire con pellicola. Frigo a 4°C per 24-48 ore. La lunga maturazione sviluppa aromi complessi e rende la pinsa leggerissima. Estrarre dal frigo 1-2 ore prima dell'uso."
-    },
-    {
-      "title": "Stesura manuale caratteristica",
-      "text": "Spolverare abbondantemente il piano con semola rimacinata. Capovolgere un panetto sulla semola. Con le dita premere delicatamente al centro, poi allargare con movimenti delicati dall'interno verso l'esterno formando un ovale irregolare (25x15 cm circa). La pinsa NON deve essere perfetta: spessore variabile (1-1,5 cm al centro, più sottile ai bordi) è caratteristico. Trasferire su teglia oliata con carta forno."
-    },
-    {
-      "title": "Appretto finale (30-45 min)",
-      "text": "Coprire con canovaccio umido, lasciare riposare 30-45 minuti a temperatura ambiente. Le pinse si gonfieranno leggermente e saranno pronte per la farcitura e cottura."
-    }
-  ],
-  "stepsExtruder": [],
   "stepsCondiment": [],
   "flourTable": [
     {
@@ -206,20 +133,12 @@
         {
           "name": "Acqua",
           "note": "(750g totali, fresca 10-14°C, aggiunta in 2 riprese (700g + 50g finali con sale e olio))",
-          "grams": 750,
-          "setupNote": {
-            "spirale": "(750g totali, fresca 10-14°C, aggiunta in 2 riprese (700g + 50g finali con sale e olio))",
-            "mano": "(750g totali a 18-20°C, aggiunta in 3 riprese (500g iniziali + 200g gradualmente + 50g finali))"
-          }
+          "grams": 750
         },
         {
           "name": "Lievito di Birra Fresco",
           "note": "(2g per maturazione lunga 24-48h in frigo)",
-          "grams": 2,
-          "setupNote": {
-            "spirale": "(2g per maturazione lunga 24-48h in frigo)",
-            "mano": "(2g per maturazione lunga 24-48h in frigo)"
-          }
+          "grams": 2
         },
         {
           "name": "Sale Fino",
@@ -237,6 +156,40 @@
           "grams": 50
         }
       ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Preparazione acqua e mix farine",
+      "text": "Mettere {acqua_impasto:750}g di acqua in frigorifero almeno 2 ore prima (deve essere 10-14°C). In una ciotola mescolare a secco: {farina_media_impasto:900}g farina tipo 0 + {farina_di_riso_impasto:50}g farina di riso + {farina_di_soia_impasto:50}g farina di soia. Questo mix è fondamentale per la texture caratteristica della pinsa: il riso dona croccantezza, la soia migliora l'elasticità e la doratura."
+    },
+    {
+      "title": "Fase 1 - Incordatura base (1a velocità, 5 min)",
+      "text": "Inserire nella planetaria con gancio: mix farine + {lievito_fresco_impasto:2}g lievito di birra fresco sbriciolato + 700g acqua fresca (10-14°C). Impastare 1a velocità per 5 minuti. L'impasto inizierà ad incordarsi lentamente: l'acqua fresca rallenta lo sviluppo del glutine permettendo un assorbimento graduale. Deve risultare molto morbido e appiccicoso, NON aggiungere farina."
+    },
+    {
+      "title": "Fase 2 - Sviluppo glutine (2a velocità, 8-10 min)",
+      "text": "Passare a 2a velocità e impastare 8-10 minuti fino a completa incordatura. Quando l'impasto inizia a staccarsi dalle pareti, aggiungere {sale_impasto:18}g sale + {olio_evo_impasto:20}g olio EVO + 50g acqua fredda restante. Continuare a impastare 2-3 minuti. L'impasto finale deve essere liscio, elastico ma molto morbido e leggermente appiccicoso. Temperatura impasto: 24-26°C massimo."
+    },
+    {
+      "title": "Prima fermentazione (puntata)",
+      "text": "Trasferire l'impasto in contenitore oliato, coprire con pellicola e lasciare a temperatura ambiente (20-22°C) per 2 ore fino al raddoppio. L'impasto deve gonfiarsi visibilmente. Questa fase sviluppa i primi aromi e rende l'impasto più gestibile."
+    },
+    {
+      "title": "Staglio e pirlatura",
+      "text": "Rovesciare l'impasto su piano leggermente infarinato. Dividere in 6 panetti da circa 270-280g ciascuno. Piegare ogni pezzo portando i lembi verso il centro per dare forza, poi capovolgere e pirlare delicatamente su piano SENZA farina per creare tensione superficiale. Non stringere troppo: la pinsa deve rimanere soffice."
+    },
+    {
+      "title": "Maturazione in frigo (24-48h)",
+      "text": "Disporre i panetti in contenitori oliati (o su teglia con olio), coprire con pellicola. Mettere in frigorifero (4°C) per 24-48 ore. Più lunga è la maturazione, più digeribile sarà la pinsa. I panetti raddoppieranno lentamente di volume. Tirare fuori dal frigo 1-2 ore prima di stendere per riportarli a temperatura ambiente."
+    },
+    {
+      "title": "Stesura (tecnica caratteristica)",
+      "text": "Spolverare abbondantemente il piano con semola rimacinata. Prendere un panetto, capovolgerlo sulla semola (parte liscia sotto). Premere delicatamente al centro con le dita, poi allargare con movimenti dall'interno verso l'esterno formando un ovale allungato (circa 25x15 cm). NON usare il mattarello: la pinsa deve avere spessore irregolare (1-1,5 cm al centro, più sottile ai bordi). Trasferire su teglia con carta forno leggermente oliata."
+    },
+    {
+      "title": "Appretto finale (30-45 min)",
+      "text": "Lasciare riposare le pinse stese 30-45 minuti a temperatura ambiente, coperte con un canovaccio umido. Questo rilassamento finale permette all'impasto di gonfiarsi leggermente e facilita la cottura uniforme."
     }
   ]
 }

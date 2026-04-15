@@ -22,91 +22,6 @@
       "grams": 375
     }
   ],
-  "stepsSpiral": [
-    {
-      "title": "Preparazione Lievito Madre (Giorno 0)",
-      "text": "Rinfrescare il lievito madre 3 volte consecutive ogni 3-4 ore con rapporto 1:1:0,45 (lievito:farina:acqua). Ultimo rinfresco 12 ore prima dell'impasto. Il lievito è pronto quando ha triplicato il volume, presenta alveoli regolari e galleggia in acqua a 20°C. Temperatura ideale lievito: 28-30°C."
-    },
-    {
-      "title": "Primo Impasto (Mattino Giorno 1)",
-      "text": "Inserire nella spirale: {farina_panettone_for_primo_impasto:1000}g farina panettone + {zucchero_secondo_impasto:235}g acqua a 24-26°C + {lievito_madre_primo_impasto:350}g lievito madre spezzettato. Impastare 3 minuti in prima velocità per amalgamare. Aggiungere {lievito_madre_primo_impasto:350}g zucchero in 2 riprese, continuare 5 minuti in seconda velocità fino a completo assorbimento. Unire {lievito_madre_primo_impasto:350}g tuorli in 3-4 riprese, aspettando ogni volta la completa incordatura (6-8 minuti). Quando l'impasto si stacca dalla vasca, aggiungere {burro_primo_impasto:450}g burro a pezzi (18-20°C) tutto insieme. Impastare in seconda velocità 8-10 minuti fino a completa incorporazione e incordatura perfetta. Temperatura finale impasto: 26-28°C. Verificare con test del velo: l'impasto deve essere elastico e quasi trasparente se stirato."
-    },
-    {
-      "title": "Puntata Primo Impasto",
-      "text": "Trasferire l'impasto in contenitore oliato, coprire con pellicola a contatto. Lievitare a 28-30°C per 12-14 ore fino a triplicatura del volume. L'impasto è pronto quando presenta cupola convessa, alveoli evidenti e si ritrae lentamente se premuto. Se la lievitazione è troppo veloce, abbassare a 26°C. Se troppo lenta, portare a 30°C."
-    },
-    {
-      "title": "Preparazione Emulsione Aromatica",
-      "text": "In una ciotola, emulsionare con frusta: {acqua_secondo_impasto:200}g acqua + {miele_secondo_impasto:37}g miele d'acacia + {pasta_darancia_secondo_impasto:25}g pasta d'arancia + {malto_secondo_impasto:3}g malto diastasico + {vaniglia_bourbon_secondo_impasto:2}g semini di vaniglia. Mescolare fino a completa dissoluzione. Tenere a 20-22°C."
-    },
-    {
-      "title": "Secondo Impasto (Sera Giorno 1)",
-      "text": "Inserire nella spirale tutto il primo impasto lievitato + {farina_panettone_for_secondo_impasto:250}g farina panettone. Impastare 3 minuti in prima velocità per incorporare. Aggiungere metà emulsione aromatica (circa 130g), continuare 2 minuti. Unire {zucchero_secondo_impasto:235}g zucchero in 2 riprese, impastare 5 minuti in seconda velocità. Aggiungere {uova_secondo_impasto:300}g tuorli in 3 riprese, aspettando incordatura (6-8 minuti). Unire restante emulsione aromatica. Quando l'impasto si stacca, aggiungere {burro_secondo_impasto:500}g burro a pezzi. Impastare 10-12 minuti in seconda velocità fino a completa incorporazione. Aggiungere {sale_secondo_impasto:27}g sale, impastare altri 2 minuti. Temperatura finale: 26-28°C. L'impasto deve essere lucido, elastico e setoso."
-    },
-    {
-      "title": "Incorporazione Sospensioni",
-      "text": "Asciugare le pere candite su carta assorbente. Unire all'impasto 875g pere cubettate + 375g cioccolato fondente in pepite. Incorporare delicatamente a mano o con 1-{vaniglia_bourbon_secondo_impasto:2} giri lenti di spirale (30 secondi max) per distribuire uniformemente senza rompere le sospensioni. NON sovraccaricare l'impasto per evitare cascatura in cottura."
-    },
-    {
-      "title": "Staglio e Pirlatura",
-      "text": "Pesare pezzature da 1100g per pirottini da 1kg (altezza 12-14cm). Formare delle boule compatte: capovolgere l'impasto, piegare i lembi verso il centro, capovolgere e pirlare con movimento rotatorio deciso sul banco leggermente infarinato fino ad ottenere tensione superficiale. La pirlatura deve essere energica ma veloce (30 secondi) per non scaldare l'impasto."
-    },
-    {
-      "title": "Riposo e Inserimento in Pirottino",
-      "text": "Lasciar riposare le boule sul banco coperte 20 minuti. Trasferire delicatamente nei pirottini da 1kg imburrati, facendo cadere l'impasto dal centro senza toccare i bordi. NON premere. La superficie deve restare liscia e tesa."
-    },
-    {
-      "title": "Appretto Finale",
-      "text": "Coprire con buste per alimenti gonfiate (creare camera d'aria). Lievitare a 28-30°C e 75-80% umidità per 8-10 ore. Il panettone è pronto quando la cupola supera di 1-2cm il bordo del pirottino e presenta superficie bombata. Test: premere delicatamente la cupola, deve tornare lentamente in posizione. Se affossa, è sovra-lievitato."
-    },
-    {
-      "title": "Scardasso e Preparazione Cottura",
-      "text": "Con lama affilata o scardasso, incidere una croce profonda 1cm sulla superficie (4 tagli da centro verso bordi, 6-7cm lunghezza). Inserire al centro della croce 10g burro freddo a tocchetto. Questo darà la classica scosciatura."
-    }
-  ],
-  "stepsHand": [
-    {
-      "title": "Preparazione Lievito Madre (Giorno 0)",
-      "text": "Rinfrescare il lievito madre 3 volte consecutive ogni 3-4 ore con rapporto 1:1:0,45 (lievito:farina:acqua). Ultimo rinfresco 12 ore prima dell'impasto. Il lievito è pronto quando ha triplicato il volume, presenta alveoli regolari e galleggia in acqua a 20°C. Temperatura ideale lievito: 28-30°C."
-    },
-    {
-      "title": "Primo Impasto a Mano (Mattino Giorno 1)",
-      "text": "Su spianatoia, disporre {farina_panettone_for_primo_impasto:1000}g farina a fontana. Al centro: {zucchero_secondo_impasto:235}g lievito madre spezzettato finemente + {uova_secondo_impasto:300}g acqua a 28-30°C. Amalgamare con le dita partendo dal centro, incorporando gradualmente la farina. Impastare energicamente 10-12 minuti con tecnica slap & fold: sollevare l'impasto, sbatterlo sulla spianatoia, ripiegare su se stesso. Aggiungere {lievito_madre_primo_impasto:350}g zucchero in 3 riprese, continuando a lavorare fino a completo assorbimento (8-10 minuti). Unire {lievito_madre_primo_impasto:350}g tuorli in 4 riprese, impastando tra un'aggiunta e l'altra fino a completa incorporazione (10-12 minuti). Quando l'impasto è liscio ed elastico, aggiungere {burro_primo_impasto:450}g burro ammorbidito cremoso in 4-5 riprese, lavorando energicamente per 15-18 minuti totali. L'impasto finale deve essere liscio, lucido, elastico. Temperatura target: 26-27°C (mano scalda più della spirale, usare acqua più fredda se necessario)."
-    },
-    {
-      "title": "Puntata Primo Impasto",
-      "text": "Formare una boule liscia, trasferire in ciotola oliata, coprire con pellicola a contatto. Lievitare a 28-30°C per 12-14 ore fino a triplicatura del volume. L'impasto è pronto quando presenta cupola convessa, alveoli evidenti e si ritrae lentamente se premuto."
-    },
-    {
-      "title": "Preparazione Emulsione Aromatica",
-      "text": "In una ciotola, emulsionare con frusta: {acqua_secondo_impasto:200}g acqua + {miele_secondo_impasto:37}g miele d'acacia + {pasta_darancia_secondo_impasto:25}g pasta d'arancia + {malto_secondo_impasto:3}g malto diastasico + {vaniglia_bourbon_secondo_impasto:2}g semini di vaniglia. Mescolare fino a completa dissoluzione. Tenere a 20-22°C."
-    },
-    {
-      "title": "Secondo Impasto a Mano (Sera Giorno 1)",
-      "text": "Trasferire tutto il primo impasto lievitato sulla spianatoia. Aggiungere {farina_panettone_for_secondo_impasto:250}g farina panettone, iniziare a impastare con tecnica stretch & fold per incorporare (5-6 minuti). Aggiungere metà emulsione aromatica, continuare a lavorare. Unire {zucchero_secondo_impasto:235}g zucchero in 3 riprese, impastando energicamente tra un'aggiunta e l'altra (10 minuti). Aggiungere {uova_secondo_impasto:300}g tuorli in 4 riprese, lavorare fino a completa incordatura (12-15 minuti). Unire restante emulsione. Quando l'impasto è elastico, incorporare {burro_secondo_impasto:500}g burro ammorbidito in 5-6 riprese, impastando energicamente per 20-25 minuti totali. Aggiungere {sale_secondo_impasto:27}g sale, lavorare altri 3-4 minuti. L'impasto deve essere setoso, lucido, molto elastico. Temperatura finale: 26-27°C. Il lavoro a mano richiede 45-50 minuti totali per il secondo impasto."
-    },
-    {
-      "title": "Incorporazione Sospensioni",
-      "text": "Asciugare le pere candite su carta assorbente. Stendere l'impasto in rettangolo 2cm spessore. Distribuire 875g pere + 375g cioccolato sulla superficie. Ripiegare l'impasto su se stesso a libro, poi formare una boule incorporando delicatamente le sospensioni con movimenti rotatori. NON impastare troppo per evitare di rompere pere e cioccolato."
-    },
-    {
-      "title": "Staglio e Pirlatura",
-      "text": "Pesare pezzature da 1100g per pirottini da 1kg. Formare boule: capovolgere l'impasto, piegare lembi verso centro, capovolgere e pirlare con movimento rotatorio deciso sul banco leggermente infarinato. Pirlatura energica ma veloce (30 secondi) per creare tensione superficiale."
-    },
-    {
-      "title": "Riposo e Inserimento in Pirottino",
-      "text": "Lasciar riposare le boule sul banco coperte 20 minuti. Trasferire delicatamente nei pirottini da 1kg imburrati, facendo cadere l'impasto dal centro senza toccare i bordi. NON premere. Superficie liscia e tesa."
-    },
-    {
-      "title": "Appretto Finale",
-      "text": "Coprire con buste per alimenti gonfiate (creare camera d'aria). Lievitare a 28-30°C e 75-80% umidità per 8-10 ore. Il panettone è pronto quando la cupola supera di 1-2cm il bordo del pirottino. Test: premere delicatamente, deve tornare lentamente in posizione."
-    },
-    {
-      "title": "Scardasso e Preparazione Cottura",
-      "text": "Con lama affilata, incidere una croce profonda 1cm sulla superficie (4 tagli da centro verso bordi, 6-7cm lunghezza). Inserire al centro 10g burro freddo a tocchetto per la scosciatura."
-    }
-  ],
-  "stepsExtruder": [],
   "stepsCondiment": [],
   "flourTable": [
     {
@@ -219,20 +134,12 @@
         {
           "name": "Lievito Madre Solido",
           "note": "(a temperatura 28-30°C)",
-          "grams": 350,
-          "setupNote": {
-            "spirale": "(a temperatura 28-30°C)",
-            "mano": "(a temperatura 28-30°C, spezzettato finemente)"
-          }
+          "grams": 350
         },
         {
           "name": "Acqua",
           "note": "(a 24-26°C)",
-          "grams": 350,
-          "setupNote": {
-            "spirale": "(a 24-26°C)",
-            "mano": "(a 28-30°C, in 2 riprese)"
-          }
+          "grams": 350
         },
         {
           "name": "Zucchero Semolato Fine",
@@ -247,11 +154,7 @@
         {
           "name": "Burro",
           "note": "(a pezzi da 50g, temperatura 18-20°C)",
-          "grams": 450,
-          "setupNote": {
-            "spirale": "(a pezzi da 50g, temperatura 18-20°C)",
-            "mano": "(ammorbidito cremoso, incorporato gradualmente)"
-          }
+          "grams": 450
         }
       ]
     },
@@ -276,11 +179,7 @@
         {
           "name": "Burro",
           "note": "(a pezzi, temperatura 18-20°C)",
-          "grams": 500,
-          "setupNote": {
-            "spirale": "(a pezzi, temperatura 18-20°C)",
-            "mano": "(ammorbidito cremoso)"
-          }
+          "grams": 500
         },
         {
           "name": "Acqua",
@@ -313,6 +212,48 @@
           "grams": 27
         }
       ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Preparazione Lievito Madre (Giorno 0)",
+      "text": "Rinfrescare il lievito madre 3 volte consecutive ogni 3-4 ore con rapporto 1:1:0,45 (lievito:farina:acqua). Ultimo rinfresco 12 ore prima dell'impasto. Il lievito è pronto quando ha triplicato il volume, presenta alveoli regolari e galleggia in acqua a 20°C. Temperatura ideale lievito: 28-30°C."
+    },
+    {
+      "title": "Primo Impasto (Mattino Giorno 1)",
+      "text": "Inserire nella spirale: {farina_panettone_for_primo_impasto:1000}g farina panettone + {zucchero_secondo_impasto:235}g acqua a 24-26°C + {lievito_madre_primo_impasto:350}g lievito madre spezzettato. Impastare 3 minuti in prima velocità per amalgamare. Aggiungere {lievito_madre_primo_impasto:350}g zucchero in 2 riprese, continuare 5 minuti in seconda velocità fino a completo assorbimento. Unire {lievito_madre_primo_impasto:350}g tuorli in 3-4 riprese, aspettando ogni volta la completa incordatura (6-8 minuti). Quando l'impasto si stacca dalla vasca, aggiungere {burro_primo_impasto:450}g burro a pezzi (18-20°C) tutto insieme. Impastare in seconda velocità 8-10 minuti fino a completa incorporazione e incordatura perfetta. Temperatura finale impasto: 26-28°C. Verificare con test del velo: l'impasto deve essere elastico e quasi trasparente se stirato."
+    },
+    {
+      "title": "Puntata Primo Impasto",
+      "text": "Trasferire l'impasto in contenitore oliato, coprire con pellicola a contatto. Lievitare a 28-30°C per 12-14 ore fino a triplicatura del volume. L'impasto è pronto quando presenta cupola convessa, alveoli evidenti e si ritrae lentamente se premuto. Se la lievitazione è troppo veloce, abbassare a 26°C. Se troppo lenta, portare a 30°C."
+    },
+    {
+      "title": "Preparazione Emulsione Aromatica",
+      "text": "In una ciotola, emulsionare con frusta: {acqua_secondo_impasto:200}g acqua + {miele_secondo_impasto:37}g miele d'acacia + {pasta_darancia_secondo_impasto:25}g pasta d'arancia + {malto_secondo_impasto:3}g malto diastasico + {vaniglia_bourbon_secondo_impasto:2}g semini di vaniglia. Mescolare fino a completa dissoluzione. Tenere a 20-22°C."
+    },
+    {
+      "title": "Secondo Impasto (Sera Giorno 1)",
+      "text": "Inserire nella spirale tutto il primo impasto lievitato + {farina_panettone_for_secondo_impasto:250}g farina panettone. Impastare 3 minuti in prima velocità per incorporare. Aggiungere metà emulsione aromatica (circa 130g), continuare 2 minuti. Unire {zucchero_secondo_impasto:235}g zucchero in 2 riprese, impastare 5 minuti in seconda velocità. Aggiungere {uova_secondo_impasto:300}g tuorli in 3 riprese, aspettando incordatura (6-8 minuti). Unire restante emulsione aromatica. Quando l'impasto si stacca, aggiungere {burro_secondo_impasto:500}g burro a pezzi. Impastare 10-12 minuti in seconda velocità fino a completa incorporazione. Aggiungere {sale_secondo_impasto:27}g sale, impastare altri 2 minuti. Temperatura finale: 26-28°C. L'impasto deve essere lucido, elastico e setoso."
+    },
+    {
+      "title": "Incorporazione Sospensioni",
+      "text": "Asciugare le pere candite su carta assorbente. Unire all'impasto 875g pere cubettate + 375g cioccolato fondente in pepite. Incorporare delicatamente a mano o con 1-{vaniglia_bourbon_secondo_impasto:2} giri lenti di spirale (30 secondi max) per distribuire uniformemente senza rompere le sospensioni. NON sovraccaricare l'impasto per evitare cascatura in cottura."
+    },
+    {
+      "title": "Staglio e Pirlatura",
+      "text": "Pesare pezzature da 1100g per pirottini da 1kg (altezza 12-14cm). Formare delle boule compatte: capovolgere l'impasto, piegare i lembi verso il centro, capovolgere e pirlare con movimento rotatorio deciso sul banco leggermente infarinato fino ad ottenere tensione superficiale. La pirlatura deve essere energica ma veloce (30 secondi) per non scaldare l'impasto."
+    },
+    {
+      "title": "Riposo e Inserimento in Pirottino",
+      "text": "Lasciar riposare le boule sul banco coperte 20 minuti. Trasferire delicatamente nei pirottini da 1kg imburrati, facendo cadere l'impasto dal centro senza toccare i bordi. NON premere. La superficie deve restare liscia e tesa."
+    },
+    {
+      "title": "Appretto Finale",
+      "text": "Coprire con buste per alimenti gonfiate (creare camera d'aria). Lievitare a 28-30°C e 75-80% umidità per 8-10 ore. Il panettone è pronto quando la cupola supera di 1-2cm il bordo del pirottino e presenta superficie bombata. Test: premere delicatamente la cupola, deve tornare lentamente in posizione. Se affossa, è sovra-lievitato."
+    },
+    {
+      "title": "Scardasso e Preparazione Cottura",
+      "text": "Con lama affilata o scardasso, incidere una croce profonda 1cm sulla superficie (4 tagli da centro verso bordi, 6-7cm lunghezza). Inserire al centro della croce 10g burro freddo a tocchetto. Questo darà la classica scosciatura."
     }
   ]
 }
