@@ -1,0 +1,223 @@
+{
+  "title": "Pizza Romana Stesa al Matterello",
+  "slug": "pizza-romana-stesa-al-matterello",
+  "emoji": "🍕",
+  "description": "La vera pizza romana: sottile, croccante, senza cornicione, stesa al matterello con biga 24h. Ricetta autentica di Francesca Marcantognini.",
+  "subtitle": "Impasto con biga a 48h, maturazione lenta in frigo, stesura al matterello — la pizza che Roma stava dimenticando",
+  "category": "Pizza",
+  "hydration": 50,
+  "targetTemp": "22-24°C",
+  "fermentation": "Biga 24h a 4°C + Impasto 24h a 4°C + Panetti 24h a 4°C",
+  "totalFlour": 480,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per la Biga (preparare 24h prima)",
+      "items": [
+        {
+          "name": "Farina di Forza",
+          "note": "(W 350, tipo 0 o 00)",
+          "grams": 200,
+          "tokenId": "farina_biga",
+          "excludeFromTotal": false
+        },
+        {
+          "name": "Acqua",
+          "note": "(temperatura ambiente, 20-22°C)",
+          "grams": 100,
+          "tokenId": "acqua_biga",
+          "excludeFromTotal": false
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(1% su farina biga — il frigo a 4°C rallenta la fermentazione)",
+          "grams": 2,
+          "tokenId": "lievito_biga",
+          "excludeFromTotal": false
+        }
+      ]
+    },
+    {
+      "group": "Per l'Impasto Finale",
+      "items": [
+        {
+          "name": "Farina Debole",
+          "note": "(W 180, tipo 00)",
+          "grams": 200,
+          "tokenId": "farina_debole_impasto"
+        },
+        {
+          "name": "Farina Tipo 1",
+          "note": "(W 200-220, semi-integrale)",
+          "grams": 40,
+          "tokenId": "farina_tipo1_impasto"
+        },
+        {
+          "name": "Semola Rimacinata di Grano Duro",
+          "note": "(fine, non semola grossa)",
+          "grams": 40,
+          "tokenId": "semola_impasto"
+        },
+        {
+          "name": "Acqua",
+          "note": "(fresca, 18-20°C)",
+          "grams": 140,
+          "tokenId": "acqua_impasto"
+        },
+        {
+          "name": "Malto d'Orzo in Polvere",
+          "note": "(diastatico, attivo)",
+          "grams": 8,
+          "tokenId": "malto_impasto"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(marino o iodato)",
+          "grams": 8,
+          "tokenId": "sale_impasto"
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(delicato, fruttato leggero)",
+          "grams": 10,
+          "tokenId": "olio_impasto"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Giorno 1 — Preparazione della Biga",
+      "text": "In una ciotola, mescola a mano {farina_biga:200}g di farina W350 con {lievito_biga:2}g di lievito di birra fresco sbriciolato. Aggiungi {acqua_biga:100}g di acqua a temperatura ambiente (20-22°C) e mescola grossolanamente con una forchetta o le mani: la biga NON deve essere liscia, ma ruvida e compatta, con ancora tracce di farina asciutta visibili. È corretto così — è una biga al 50% di idratazione. Trasferisci in un contenitore con coperchio (o copri con pellicola) e riponi in frigorifero a 4°C per 24 ore. La biga è pronta quando appare gonfia, con una struttura alveolata interna e un profumo leggermente acidulo."
+    },
+    {
+      "title": "Giorno 2 — Impasto Finale",
+      "text": "Estrai la biga dal frigo e lasciala acclimatare per 20-30 minuti a temperatura ambiente: deve perdere il freddo eccessivo per favorire l'incordatura. In una ciotola capiente (o nella ciotola di un'impastatrice a gancio), unisci {farina_debole_impasto:200}g di farina W180, {farina_tipo1_impasto:40}g di farina Tipo 1 e {semola_impasto:40}g di semola rimacinata. Aggiungi {malto_impasto:8}g di malto diastatico in polvere alle farine secche e mescola brevemente. Spezza la biga matura a pezzetti direttamente nella ciotola con le farine, poi aggiungine circa 100g di {acqua_impasto:140}g di acqua fresca (18-20°C). Impasta a velocità bassa (V1) per 3-4 minuti fino a ottenere un impasto grezzo ma unito. Aggiungi {sale_impasto:8}g di sale sciolto nella restante acqua (40g) e continua ad impastare per altri 3-4 minuti fino all'assorbimento. Da ultimo, aggiungere {olio_impasto:10}g di olio EVO a filo, aumentando leggermente la velocità (V2), e impastare per 2-3 minuti finché l'impasto non risulta liscio, sodo e non appiccicoso. Temperatura impasto target: 22-24°C. Trasferisci in un contenitore unto con un velo d'olio, copri con pellicola a contatto e riponi in frigorifero a 4°C per 24 ore."
+    },
+    {
+      "title": "Giorno 3 — Staglio e Seconda Maturazione",
+      "text": "Estrai l'impasto dal frigo. Rovescialo sul piano di lavoro leggermente infarinato con semola rimacinata. Con un tarocco, dividi l'impasto in {panetto_peso:180!}g l'uno, ottenendo circa 4 panetti. Pirlatura rapida: arrotonda ogni porzione stringendola sul piano con movimenti circolari, fino a ottenere sfere lisce e tese in superficie. Disponi i panetti in un contenitore con coperchio (o su teglia infarinata coperta con pellicola) e riponi nuovamente in frigorifero a 4°C per altre 24 ore. Questa seconda maturazione dei panetti è fondamentale per sviluppare la struttura glutinica e il profilo aromatico della pizza romana."
+    },
+    {
+      "title": "Giorno 4 — Acclimatamento, Stesura e Cottura",
+      "text": "Estrai i panetti dal frigo e lasciali acclimatare a temperatura ambiente per circa 60 minuti: devono tornare morbidi e rilassati al tatto, non freddi e rigidi. Preriscalda il forno al massimo (280°C), modalità statica, con la pietra refrattaria o la placca metallica all'interno per almeno 45 minuti. Per la stesura: infarina generosamente il piano con semola rimacinata. Prendi un panetto e, con il matterello, stendilo con movimenti decisi e uniformi dal centro verso i bordi, ruotando la sfoglia di 90° ad ogni passata. La pizza romana non ha cornicione — stendi fino ai bordi senza creare bordi rialzati. Lo spessore finale deve essere di 2-3 mm: molto sottile, quasi trasparente in controluce. Condisci la base con salsa di pomodoro stesa finemente (la ricetta tradizionale prevede la salsa verde al prezzemolo, ma anche il classico pomodoro è autentico), poi con la mozzarella o altri condimenti scelti. Inforna sulla pietra refrattaria scottante: a 280°C in forno casalingo, la pizza sarà pronta in circa 4-6 minuti. Cerca le tipiche bruciacchiature sui bordi e sulla base — sono il segno distintivo della pizza romana autentica."
+    }
+  ],
+  "stepsCondiment": [
+    {
+      "title": "Salsa Verde al Prezzemolo (condimento tradizionale)",
+      "text": "Il condimento tradizionale della pizza romana autentica NON è il pomodoro, ma una vivace salsa verde. In un mortaio o con un mixer a immersione, frulla un mazzo di prezzemolo fresco (foglie pulite e asciutte), 1 spicchio d'aglio, 2-3 filetti di acciuga sott'olio, un cucchiaio di capperi dissalati, il succo di mezzo limone e olio EVO q.b. fino a ottenere una salsa liscia ma con un po' di corpo. Aggiusta di sale e pepe. Stendi la salsa verde sulla base stesa al matterello prima della cottura, oppure a crudo sulla pizza appena uscita dal forno. La versione rossa prevede invece una semplice passata di pomodoro condita con sale, olio e origano."
+    }
+  ],
+  "flourTable": [
+    {
+      "type": "Farina di Forza (per la Biga)",
+      "w": "330-380",
+      "brands": "Caputo Nuvola Super, Petra 3 (Molino Quaglia), Lo Conte Manitoba, 5 Stagioni Superiore"
+    },
+    {
+      "type": "Farina Debole (per l'Impasto)",
+      "w": "150-200",
+      "brands": "Caputo Pizzeria (W210, limite inferiore), Molino Grassi Tipo 00, Spadoni Classica, qualsiasi 00 da supermercato per dolci"
+    },
+    {
+      "type": "Farina Tipo 1",
+      "w": "200-240",
+      "brands": "Petra 1 (Molino Quaglia), Mulino Marino Tipo 1, Agugiaro & Figna Tipo 1"
+    },
+    {
+      "type": "Semola Rimacinata di Grano Duro",
+      "w": "n/a",
+      "brands": "De Cecco Semola Rimacinata, Divella Semola, Molino Casillo Senatore Cappelli"
+    }
+  ],
+  "baking": {
+    "temperature": "280°C",
+    "time": "4-6 minuti (forno casalingo statico)",
+    "tips": [
+      "Preriscalda forno + pietra refrattaria (o placca capovolta) per almeno 45 minuti a 280°C: la massa termica accumulata è fondamentale per cuocere la base in modo rapido come nel forno a legna.",
+      "Usa la modalità STATICA, non ventilata: il calore ventilato asciuga troppo velocemente la superficie impedendo il corretto sviluppo della pizza.",
+      "Lancia la pizza direttamente sulla pietra con la pala infarinata di semola. Se non hai la pala, usa un foglio di carta forno che puoi sfilare dopo 2 minuti.",
+      "La pizza romana è cotta quando i bordi mostrano le tipiche bruciacchiature scure irregolari e la base è rigida e croccante al sollevamento con la spatola. NON deve essere pallida.",
+      "Per simulare il forno a legna: negli ultimi 2 minuti, attiva il grill dall'alto per ottenere le bruciacchiature superficiali caratteristiche."
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Biga",
+      "definition": "Pre-impasto rigido (44-50% idratazione) preparato con farina forte, acqua e minima quantità di lievito. Matura lentamente (16-24h) sviluppando acidi organici e aromi complessi che si trasferiscono all'impasto finale."
+    },
+    {
+      "term": "Maturazione in frigo",
+      "definition": "Processo enzimatico lento (a 4°C) che trasforma gli amidi e le proteine della farina in composti più semplici e aromatici. Rallenta la fermentazione batterica ma accelera l'attività proteolitica, rendendo l'impasto più digeribile e saporito."
+    },
+    {
+      "term": "Staglio",
+      "definition": "Operazione di divisione dell'impasto in porzioni di peso preciso (panetti) eseguita con tarocco o coltello senza strappare la maglia glutinica."
+    },
+    {
+      "term": "Pirlatura",
+      "definition": "Tecnica di arrotondamento del panetto: si trascina la sfera sul piano asciutto con movimenti circolari delle mani per creare tensione superficiale e una forma compatta. Per la pizza romana serve una tensione moderata, non eccessiva."
+    },
+    {
+      "term": "Maglia glutinica",
+      "definition": "Rete proteica tridimensionale che si forma durante l'impastamento grazie alle proteine della farina (glutenina e gliadina). Trattiene i gas di fermentazione e dà struttura all'impasto."
+    },
+    {
+      "term": "Incordatura",
+      "definition": "Momento in cui l'impasto raggiunge la sua tensione ottimale: liscio, elastico, si distacca dalle pareti della ciotola. Si verifica toccando l'impasto — non appiccica e ha una superficie setosa."
+    },
+    {
+      "term": "Malto diastatico",
+      "definition": "Malto d'orzo in polvere contenente enzimi attivi (amilasi) che convertono gli amidi in zuccheri semplici, nutrendo il lievito e migliorando la colorazione e la croccantezza della crosta durante la cottura ad alta temperatura."
+    },
+    {
+      "term": "Bassinage",
+      "definition": "Tecnica di aggiunta progressiva dell'acqua finale a filo durante l'impastamento, dopo che la maglia glutinica è già formata. Permette di incorporare acqua extra senza destabilizzare l'impasto."
+    },
+    {
+      "term": "Acclimatamento",
+      "definition": "Periodo di riposo a temperatura ambiente dopo la refrigerazione. Permette all'impasto freddo di ammorbidirsi, riprendere l'attività fermentativa e diventare lavorabile al matterello senza strapparsi."
+    },
+    {
+      "term": "Stesura al matterello",
+      "definition": "Tecnica caratteristica della pizza romana: a differenza della napoletana (stesa a mano con le dita), la romana viene stesa con il matterello su piano infarinato fino a uno spessore di 2-3mm, eliminando il cornicione e ottenendo una base uniformemente sottile e croccante."
+    },
+    {
+      "term": "Pietra refrattaria",
+      "definition": "Lastra di materiale ceramico o cordierite che accumula calore nel forno. Quando la pizza viene adagiata sopra, trasmette immediatamente calore intenso alla base, simulando il pavimento del forno a legna e garantendo croccantezza."
+    }
+  ],
+  "alert": "NON stendere i panetti appena usciti dal frigo: l'impasto freddo è rigido e resistente, e forzare la stesura causerà strappi nella sfoglia o un rimpicciolimento elastico immediato. Rispetta sempre i 60 minuti di acclimatamento. Allo stesso modo, NON aggiungere mai il sale a contatto diretto con il lievito durante l'impastamento: il sale è antimicrobico e inibisce il lievito. Scioglilo sempre nell'acqua residua prima di aggiungerlo.",
+  "proTips": [
+    "Il blend di farine è il segreto della texture unica della romana: la W180 garantisce friabilità, la Tipo 1 aggiunge sapore e digestibilità, la semola dona croccantezza prolungata anche da fredda. Non sostituire con un'unica farina '00 generica' — perderesti la complessità della ricetta.",
+    "Per ottenere le bruciacchiature autentiche in forno casalingo, posiziona la pietra refrattaria sul ripiano più alto del forno negli ultimi 2 minuti di cottura e attiva il grill. In alternativa, usa un cannello da cucina a cottura ultimata sulle zone più chiare del cornicione per replicare l'effetto del forno a legna.",
+    "La pizza romana tradizionale si condisce PRIMA di infornare con la salsa (pomodoro o salsa verde), ma la mozzarella — se usata — va aggiunta solo negli ultimi 90 secondi di cottura per evitare che si bruci e diventi gommosa. La versione storica di Aprilia non prevede nemmeno la mozzarella: solo salsa verde al prezzemolo."
+  ],
+  "imageKeywords": [
+    "roman pizza thin crust matterello",
+    "pizza romana sottile croccante",
+    "thin roman pizza bruciacchiature",
+    "pizza romana tonda matterello stesa",
+    "römische pizza dünn knusprig",
+    "authentic roman pizza wood fired",
+    "pizza romana tradizionale Lazio"
+  ],
+  "tags": [
+    "pizza romana",
+    "biga",
+    "matterello",
+    "lievitazione lenta",
+    "pizza sottile",
+    "Lazio",
+    "Francesca Marcantognini",
+    "pizza croccante",
+    "forno a legna",
+    "ricetta autentica"
+  ],
+  "_generatedBy": "claude",
+  "_createdAt": "2026-04-16T21:48:08.809Z",
+  "image": "images/ricette/pizza/pizza-romana-stesa-al-matterello.webp",
+  "imageAttribution": "📷 Foto: Alejandro Aznar — Pexels License via Pexels"
+}

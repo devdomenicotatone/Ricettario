@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-16T20:01:03.758Z",
-  "totalRecipes": 30,
+  "generatedAt": "2026-04-16T21:49:09.106Z",
+  "totalRecipes": 33,
   "categories": [
     {
       "name": "Condimenti",
@@ -14,7 +14,7 @@
     },
     {
       "name": "Pizza",
-      "count": 4,
+      "count": 7,
       "emoji": "🍕"
     },
     {
@@ -221,6 +221,38 @@
       "_createdAt": "2026-04-15T20:03:44.104Z"
     },
     {
+      "title": "Pizza in Teglia Romana",
+      "slug": "pizza-in-teglia-romana",
+      "category": "Pizza",
+      "categoryDir": "pizza",
+      "emoji": "🍕",
+      "href": "ricette/pizza/pizza-in-teglia-romana.html",
+      "image": "images/ricette/pizza/pizza-in-teglia-romana.webp",
+      "description": "Pizza in teglia romana ad alta idratazione: croccante sotto, soffice e alveolata dentro. Tecnica professionale con maturazione in freddo 24h.",
+      "hydration": "83%",
+      "time": "24h in freddo + 2-3h appretto",
+      "temp": "24-26°C",
+      "tool": "",
+      "_generatedBy": "claude",
+      "_createdAt": "2026-04-16T21:34:52.774Z"
+    },
+    {
+      "title": "Pizza in Teglia Romana ad Alta Idratazione",
+      "slug": "pizza-in-teglia-romana-alta-idratazione",
+      "category": "Pizza",
+      "categoryDir": "pizza",
+      "emoji": "🍕",
+      "href": "ricette/pizza/pizza-in-teglia-romana-alta-idratazione.html",
+      "image": "images/ricette/pizza/pizza-in-teglia-romana-alta-idratazione.webp",
+      "description": "Teglia romana moderna all'85% di idratazione con maturazione 24h in frigo. Alveolatura aperta, base croccante, morso corto.",
+      "hydration": "85%",
+      "time": "40–60 min puntata + 24h in frigo + 4h appretto a 25–26°C",
+      "temp": "24–25°C",
+      "tool": "",
+      "_generatedBy": "claude",
+      "_createdAt": "2026-04-16T21:35:51.898Z"
+    },
+    {
       "title": "Pizza Napoletana Antica Tradizione con Biga e Criscito",
       "slug": "pizza-napoletana-biga-criscito",
       "category": "Pizza",
@@ -251,6 +283,22 @@
       "tool": "",
       "_generatedBy": null,
       "_createdAt": "2026-04-15T20:03:44.105Z"
+    },
+    {
+      "title": "Pizza Romana Stesa al Matterello",
+      "slug": "pizza-romana-stesa-al-matterello",
+      "category": "Pizza",
+      "categoryDir": "pizza",
+      "emoji": "🍕",
+      "href": "ricette/pizza/pizza-romana-stesa-al-matterello.html",
+      "image": "images/ricette/pizza/pizza-romana-stesa-al-matterello.webp",
+      "description": "La vera pizza romana: sottile, croccante, senza cornicione, stesa al matterello con biga 24h. Ricetta autentica di Francesca Marcantognini.",
+      "hydration": "50%",
+      "time": "Biga 24h a 4°C + Impasto 24h a 4°C + Panetti 24h a 4°C",
+      "temp": "22-24°C",
+      "tool": "",
+      "_generatedBy": "claude",
+      "_createdAt": "2026-04-16T21:48:08.809Z"
     },
     {
       "title": "Gnocchi di Patate",
@@ -373,7 +421,7 @@
       "href": "ricette/lievitati/pasta-brioche-artigianale.html",
       "image": "images/ricette/lievitati/pasta-brioche-artigianale.webp",
       "description": "L'impasto base perfetto per brioche sofficissime, trecce e cornetti. Una ricetta professionale ricca di burro e aromi naturali, con lievitazione controllata.",
-      "hydration": "53%",
+      "hydration": "43%",
       "time": "14-18h (inclusa maturazione a freddo)",
       "temp": "25-26°C",
       "tool": "",
