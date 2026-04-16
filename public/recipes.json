@@ -1,7 +1,12 @@
 {
-  "generatedAt": "2026-04-15T19:30:34.976Z",
-  "totalRecipes": 26,
+  "generatedAt": "2026-04-16T16:55:44.910Z",
+  "totalRecipes": 27,
   "categories": [
+    {
+      "name": "Condimenti",
+      "count": 1,
+      "emoji": ""
+    },
     {
       "name": "Pane",
       "count": 6,
@@ -40,6 +45,22 @@
   ],
   "recipes": [
     {
+      "title": "Olio al Basilico Verde Smeraldo",
+      "slug": "olio-al-basilico-verde-smeraldo",
+      "category": "Condimenti",
+      "categoryDir": "condimenti",
+      "emoji": "🌿",
+      "href": "ricette/condimenti/olio-al-basilico-verde-smeraldo.html",
+      "image": "images/ricette/condimenti/olio-al-basilico-verde-smeraldo.webp",
+      "description": "Olio aromatico al basilico con tecnica dello shock termico: colore verde neon, purezza cristallina e sicurezza alimentare totale.",
+      "hydration": null,
+      "time": "—",
+      "temp": "60–70°C (olio durante riscaldamento)",
+      "tool": "",
+      "_generatedBy": "claude",
+      "_createdAt": "2026-04-16T14:32:01.457Z"
+    },
+    {
       "title": "Baguette Francese Tradizionale",
       "slug": "baguette-francese-tradizionale",
       "category": "Pane",
@@ -53,7 +74,7 @@
       "temp": "24-25°C",
       "tool": "",
       "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-01T11:58:21.393Z"
+      "_createdAt": "2026-04-15T20:03:44.098Z"
     },
     {
       "title": "Ciabatta con Poolish, Malto e Criscito",
@@ -69,7 +90,7 @@
       "temp": "24-25°C",
       "tool": "",
       "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-11T00:44:57.894Z"
+      "_createdAt": "2026-04-15T20:03:44.098Z"
     },
     {
       "title": "Pane alle Noci con Poolish",
@@ -85,7 +106,7 @@
       "temp": "25-26°C",
       "tool": "",
       "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-03T21:06:09.485Z"
+      "_createdAt": "2026-04-15T20:03:44.099Z"
     },
     {
       "title": "Pane di Altamura",
@@ -101,7 +122,7 @@
       "temp": "25-26°C",
       "tool": "",
       "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-03T22:13:32.867Z"
+      "_createdAt": "2026-04-15T20:03:44.100Z"
     },
     {
       "title": "Pane Integrale con Biga",
@@ -133,7 +154,7 @@
       "temp": "25-26°C",
       "tool": "",
       "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-01T01:03:32.772Z"
+      "_createdAt": "2026-04-15T20:03:44.101Z"
     },
     {
       "title": "Pinsa Romana",
@@ -149,7 +170,7 @@
       "temp": "24-26°C",
       "tool": "",
       "_generatedBy": null,
-      "_createdAt": "2026-04-01T02:30:22.260Z"
+      "_createdAt": "2026-04-15T20:03:44.103Z"
     },
     {
       "title": "Pizza Contemporanea Canotto",
@@ -165,7 +186,7 @@
       "temp": "23°C",
       "tool": "",
       "_generatedBy": null,
-      "_createdAt": "2026-04-05T01:58:59.344Z"
+      "_createdAt": "2026-04-15T20:03:44.104Z"
     },
     {
       "title": "Pizza Napoletana Antica Tradizione con Biga e Criscito",
@@ -181,7 +202,7 @@
       "temp": "23-24°C",
       "tool": "",
       "_generatedBy": null,
-      "_createdAt": "2026-03-30T20:45:28.688Z"
+      "_createdAt": "2026-04-15T20:03:44.104Z"
     },
     {
       "title": "Pizza Napoletana Verace STG",
@@ -197,7 +218,7 @@
       "temp": "24-26°C",
       "tool": "",
       "_generatedBy": null,
-      "_createdAt": "2026-03-30T20:45:28.689Z"
+      "_createdAt": "2026-04-15T20:03:44.105Z"
     },
     {
       "title": "Gnocchi di Patate",
@@ -213,7 +234,7 @@
       "temp": "28-32°C",
       "tool": "",
       "_generatedBy": null,
-      "_createdAt": "2026-03-30T16:49:24.844Z"
+      "_createdAt": "2026-04-15T20:03:44.102Z"
     },
     {
       "title": "Burger Buns con Biga",
@@ -261,7 +282,7 @@
       "temp": "24-26°C",
       "tool": "",
       "_generatedBy": "claude-opus",
-      "_createdAt": "2026-04-05T00:47:39.206Z"
+      "_createdAt": "2026-04-15T20:03:44.083Z"
     },
     {
       "title": "Impasto Rosticceria Siciliana",
@@ -277,7 +298,7 @@
       "temp": "26-27°C",
       "tool": "",
       "_generatedBy": null,
-      "_createdAt": "2026-04-01T02:38:15.036Z"
+      "_createdAt": "2026-04-15T20:03:44.084Z"
     },
     {
       "title": "Panettone Artigianale Classico",
@@ -309,7 +330,7 @@
       "temp": "26-28°C",
       "tool": "",
       "_generatedBy": null,
-      "_createdAt": "2026-03-30T20:45:28.683Z"
+      "_createdAt": "2026-04-15T20:03:44.086Z"
     },
     {
       "title": "Pasta Brioche Classica",
@@ -325,7 +346,7 @@
       "temp": "24-26°C",
       "tool": "",
       "_generatedBy": null,
-      "_createdAt": "2026-04-01T02:41:38.395Z"
+      "_createdAt": "2026-04-15T20:03:44.096Z"
     },
     {
       "title": "Pasta Madre Solida (Lievito Naturale)",
@@ -357,7 +378,7 @@
       "temp": "20-22°C",
       "tool": "",
       "_generatedBy": null,
-      "_createdAt": "2026-03-30T16:49:24.825Z"
+      "_createdAt": "2026-04-15T20:03:44.077Z"
     },
     {
       "title": "Cartocci alla Crema Siciliani",
@@ -373,7 +394,7 @@
       "temp": "26-27°C",
       "tool": "",
       "_generatedBy": null,
-      "_createdAt": "2026-04-01T02:42:26.340Z"
+      "_createdAt": "2026-04-15T20:03:44.078Z"
     },
     {
       "title": "Migliaccio Napoletano",
@@ -389,7 +410,7 @@
       "temp": "temperatura ambiente",
       "tool": "",
       "_generatedBy": null,
-      "_createdAt": "2026-04-01T02:43:23.325Z"
+      "_createdAt": "2026-04-15T20:03:44.078Z"
     },
     {
       "title": "Focaccia di Recco IGP",
@@ -405,7 +426,7 @@
       "temp": "20-22°C",
       "tool": "",
       "_generatedBy": null,
-      "_createdAt": "2026-03-30T16:49:24.830Z"
+      "_createdAt": "2026-04-15T20:03:44.079Z"
     },
     {
       "title": "Focaccia Genovese (Fügassa)",
@@ -421,7 +442,7 @@
       "temp": "24-26°C",
       "tool": "",
       "_generatedBy": null,
-      "_createdAt": "2026-04-01T02:46:08.266Z"
+      "_createdAt": "2026-04-15T20:03:44.081Z"
     },
     {
       "title": "Focaccia Genovese Classica",
@@ -437,7 +458,7 @@
       "temp": "24-26°C",
       "tool": "",
       "_generatedBy": null,
-      "_createdAt": "2026-03-30T20:45:28.678Z"
+      "_createdAt": "2026-04-15T20:03:44.080Z"
     },
     {
       "title": "Dado Vegetale Fatto in Casa",
@@ -453,7 +474,7 @@
       "temp": "n/a",
       "tool": "",
       "_generatedBy": "claude",
-      "_createdAt": "2026-04-05T00:40:09.254Z"
+      "_createdAt": "2026-04-15T20:03:44.076Z"
     }
   ]
 }

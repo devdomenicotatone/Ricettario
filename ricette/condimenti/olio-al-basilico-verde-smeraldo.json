@@ -1,0 +1,141 @@
+{
+  "title": "Olio al Basilico Verde Smeraldo",
+  "slug": "olio-al-basilico-verde-smeraldo",
+  "emoji": "🌿",
+  "description": "Olio aromatico al basilico con tecnica dello shock termico: colore verde neon, purezza cristallina e sicurezza alimentare totale.",
+  "subtitle": "Tecnica dello shock termico e filtraggio fine mesh per un olio di finitura professionale",
+  "category": "Condimenti",
+  "hydration": 0,
+  "targetTemp": "60–70°C (olio durante riscaldamento)",
+  "fermentation": "—",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per l'Olio Aromatico",
+      "items": [
+        {
+          "name": "Foglie di Basilico Genovese",
+          "note": "(solo foglie, no gambi — varietà Genovese DOP per il verde più brillante, o mix 80% Genovese + 20% Basilico Viola per tono più profondo)",
+          "grams": 50,
+          "tokenId": "basilico"
+        },
+        {
+          "name": "Olio EVO delicato",
+          "note": "(varietà Ligure o del Garda — fruttato leggero, bassa percezione amara/piccante per non coprire il basilico)",
+          "grams": 184,
+          "tokenId": "olio_evo"
+        }
+      ]
+    },
+    {
+      "group": "Per la Decorazione Finale",
+      "items": [
+        {
+          "name": "Rametto di Basilico Viola fresco",
+          "note": "(lavato e asciugato perfettamente — solo per effetto estetico visivo nell'oliera trasparente)",
+          "grams": 5,
+          "tokenId": "basilico_viola_deco"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "1. Shock Termico — Fissaggio della Clorofilla",
+      "text": "Porta a bollore una pentola d'acqua non salata. Nel frattempo prepara una ciotola capiente con abbondante acqua fredda e ghiaccio. Tuffa i {basilico:50}g di foglie di basilico nell'acqua bollente per soli 2 secondi — non di più: l'obiettivo è 'congelare' enzimaticamente la clorofilla, non cuocere le foglie. Trasferiscile immediatamente con un colino o schiumarola nella ciotola di acqua e ghiaccio. Lascia raffreddare completamente per almeno 30 secondi. Questo passaggio è la chiave del colore verde neon: blocca l'enzima clorofillasi che altrimenti degrada il pigmento verde in feofitina marrone."
+    },
+    {
+      "title": "2. Asciugatura Maniacale",
+      "text": "Scola le foglie di basilico e tamponale con più strati di carta assorbente o un canovaccio pulito, premendo delicatamente ma con decisione. Ripeti finché le foglie sono visibilmente asciutte al tatto. Attenzione: qualsiasi residuo d'acqua nell'olio creerà un'emulsione torbida, accelererà l'irrancidimento e rappresenta un rischio biologico (formazione di Clostridium botulinum in preparazioni oleose con erbe fresche). L'asciugatura deve essere ossessiva."
+    },
+    {
+      "title": "3. Frullatura ed Estrazione a Caldo",
+      "text": "Metti le foglie di basilico asciutte nel bicchiere del mixer (o frullatore a immersione) insieme a {olio_evo:184}g di olio EVO delicato. Frulla alla massima potenza per 30–60 secondi: il calore meccanico e la rottura cellulare liberano la clorofilla e i composti aromatici nell'olio. Trasferisci il composto verde in un pentolino a fondo spesso. Scalda a fuoco dolcissimo mescolando continuamente con una spatola. Monitora la temperatura con il termometro: il target è {temperatura_riscaldamento:65!}°C (range accettabile 60–70°C). NON superare i {temperatura_max:80!}°C: sopra questa soglia i composti aromatici volatili evaporano e il basilico acquisisce un sapore di 'erba cotta' irreversibile. Appena raggiunti i 65°C, togli immediatamente dal fuoco."
+    },
+    {
+      "title": "4. Filtraggio Fine Mesh — La Tecnica da Laboratorio",
+      "text": "Prepara la postazione di filtraggio: inserisci una ciotola di raccolta dentro una ciotola più grande riempita di ghiaccio — il freddo solidifica rapidamente le particelle e ferma ogni ulteriore ossidazione. Posiziona il setaccio in acciaio inox 325 o 400 mesh sopra la ciotola di raccolta fredda. Quando il composto si è leggermente assestato e la temperatura scende intorno a 45–50°C, versalo lentamente sul setaccio: a questa temperatura l'olio è ancora fluido e passa agevolmente attraverso le maglie microscopiche. FONDAMENTALE: non premere mai il fondo con un cucchiaio. Lascia filtrare per gravità per 10–20 minuti. Pressare rompe le particelle solide spingendole nel filtrato, rendendo l'olio torbido — l'effetto opposto a quello desiderato. L'olio raccolto deve risultare verde brillante e limpido."
+    },
+    {
+      "title": "5. Travaso e Tocco Estetico Finale",
+      "text": "Lava e asciuga accuratamente l'oliera trasparente (perfetta per valorizzare il colore). Travasa l'olio ormai freddo nell'oliera. Inserisci delicatamente il {basilico_viola_deco:5}g di rametto di basilico viola fresco — precedentemente lavato e asciugato in modo maniacale come il basilico verde — per il contrasto cromatico: il viola galleggerà nel verde smeraldo per un effetto visivo d'impatto. Chiudi l'oliera, etichetta con la data di produzione e riponi in luogo fresco, al buio. Consumare entro 3–4 settimane."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "baking": null,
+  "glossary": [
+    {
+      "term": "Shock Termico",
+      "definition": "Tecnica di sbollentatura brevissima (2 secondi) seguita da immersione immediata in acqua ghiacciata. Blocca l'enzima clorofillasi che degrada la clorofilla verde in feofitina marrone, preservando il colore brillante."
+    },
+    {
+      "term": "Clorofilla",
+      "definition": "Pigmento verde presente nelle foglie. È termolabile e sensibile alla luce: degrada in feofitina (marrone) per calore eccessivo, luce UV o ossidazione. Lo shock termico e la conservazione al buio la proteggono."
+    },
+    {
+      "term": "Clorofillasi",
+      "definition": "Enzima presente nelle cellule vegetali che degrada la clorofilla. Viene inattivato dal calore (sbollentatura), bloccare questo enzima è lo scopo principale dello shock termico."
+    },
+    {
+      "term": "Feofitina",
+      "definition": "Derivato della degradazione della clorofilla, di colore marrone-olivastro. Si forma quando la clorofilla perde il magnesio per effetto del calore eccessivo, degli acidi o dell'ossidazione."
+    },
+    {
+      "term": "Filtraggio per Gravità",
+      "definition": "Tecnica di filtraggio che sfrutta solo la forza di gravità senza alcuna pressione meccanica. Garantisce la massima limpidezza del liquido filtrato perché le particelle solide non vengono schiacciate attraverso le maglie del filtro."
+    },
+    {
+      "term": "Mesh (325–400)",
+      "definition": "Unità di misura della finezza di una rete o setaccio: indica il numero di maglie per pollice lineare. Un setaccio 400 mesh ha maglie da circa 37 micron — praticamente invisibili a occhio nudo — e trattiene anche le particelle colloidi."
+    },
+    {
+      "term": "Bassinage",
+      "definition": "(Non applicato in questa ricetta) Tecnica di aggiunta progressiva di liquido durante l'impastamento. Citata per contesto tecnico."
+    },
+    {
+      "term": "Olio di Finitura",
+      "definition": "Olio aromatico usato crudo come tocco finale a freddo sul piatto, mai per cottura. Preserva i composti aromatici volatili che il calore distruggerebbe."
+    },
+    {
+      "term": "Estrazione a Caldo",
+      "definition": "Riscaldamento moderato dell'olio con l'erba frullata a 60–70°C per favorire la migrazione dei pigmenti liposolubili e dei composti aromatici nell'olio, aumentando resa cromatica e aromatica rispetto all'estrazione a freddo."
+    },
+    {
+      "term": "Botulino (rischio)",
+      "definition": "Clostridium botulinum è un batterio anaerobio che in preparazioni oleose con erbe fresche e tracce d'acqua può produrre tossine mortali. La corretta asciugatura del basilico e la conservazione breve (max 4 settimane in frigo) sono misure di sicurezza fondamentali."
+    }
+  ],
+  "alert": "⚠️ SICUREZZA ALIMENTARE — RISCHIO BOTULINO: Gli oli aromatizzati con erbe fresche sono ambienti ideali per Clostridium botulinum (anaerobiosi, pH neutro, presenza di acqua residua). Asciuga il basilico in modo maniacale prima dell'infusione e conserva SEMPRE in frigorifero. NON lasciare mai a temperatura ambiente per più di qualche ora. Consuma entro 3–4 settimane al massimo. NON superare i 70°C durante il riscaldamento: sopra gli 80°C il basilico cuoce, l'aroma vira su 'erba cotta' e il colore tende al marrone. NON pressare durante il filtraggio: si rompe la purezza ottica del prodotto finale.",
+  "proTips": [
+    "Per il verde più intenso possibile, usa foglie di basilico appena raccolte la mattina (massimo contenuto di clorofilla) e processa entro 2 ore dalla raccolta. Le foglie ossidate o appassite danno sempre un verde più spento, indipendentemente dalla tecnica.",
+    "Se vuoi un olio ancora più verde e stabile nel tempo, aggiungi 2–3 foglie di prezzemolo fresco sbollentate insieme al basilico: il prezzemolo ha una clorofilla più resistente al calore e 'rinforza' visivamente il colore senza alterare l'aroma percepibile in piccole quantità.",
+    "Per servizio da ristorante: versa l'olio verde filtrato in siringhe da pasticceria o squeeze bottle da 50ml, tappate e conservate in frigo. Ogni utilizzo sarà preciso e igienico. Alla lettura del piatto, porta la squeeze bottle a temperatura ambiente per 10 minuti prima dell'uso: il freddo rende l'olio viscoso e difficile da dosare con precisione."
+  ],
+  "imageKeywords": [
+    "basil infused olive oil green",
+    "homemade herb oil finishing",
+    "green basil oil dropper bottle",
+    "olio al basilico verde smeraldo",
+    "basil oil burrata plating",
+    "aromatic green herb oil photography",
+    "Basilikumöl grün hausgemacht"
+  ],
+  "tags": [
+    "olio aromatico",
+    "basilico",
+    "condimento",
+    "olio di finitura",
+    "tecnica clorofilla",
+    "shock termico",
+    "senza glutine",
+    "vegan",
+    "cucina stellata"
+  ],
+  "_generatedBy": "claude",
+  "_createdAt": "2026-04-16T14:32:01.457Z",
+  "image": "images/ricette/condimenti/olio-al-basilico-verde-smeraldo.webp",
+  "imageAttribution": "📷 Foto: Ron Lach — Pexels License via Pexels"
+}
