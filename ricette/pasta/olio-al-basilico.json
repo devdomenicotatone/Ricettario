@@ -1,0 +1,128 @@
+{
+  "title": "Olio al Basilico",
+  "slug": "olio-al-basilico",
+  "emoji": "🌿",
+  "description": "Olio aromatico dal colore verde brillante, ottenuto tramite sbianchitura e decantazione. Perfetto per guarnire piatti gourmet, insalate e pasta.",
+  "subtitle": "Tecnica professionale di estrazione a caldo e decantazione con sac à poche",
+  "category": "Pasta",
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per l'Estrazione a Caldo",
+      "items": [
+        {
+          "name": "Olio Extravergine di Oliva",
+          "note": "(delicato o di vinaccioli per sapore neutro)",
+          "grams": 250,
+          "tokenId": "olio_estrazione"
+        },
+        {
+          "name": "Basilico Fresco",
+          "note": "(solo foglie intatte, preferibilmente Genovese)",
+          "grams": 150,
+          "tokenId": "basilico_foglie"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(esalta il sapore e aiuta l'emulsione)",
+          "grams": 2,
+          "tokenId": "sale_fino"
+        }
+      ]
+    },
+    {
+      "group": "Materiale di Servizio (per Sbianchitura e Shock Termico)",
+      "items": [
+        {
+          "name": "Acqua",
+          "note": "(per la bollitura)",
+          "grams": 1000,
+          "tokenId": "acqua_bollitura"
+        },
+        {
+          "name": "Acqua",
+          "note": "(freddissima, per lo shock termico)",
+          "grams": 500,
+          "tokenId": "acqua_fredda_shock"
+        },
+        {
+          "name": "Ghiaccio",
+          "note": "(a cubetti)",
+          "grams": 500,
+          "tokenId": "ghiaccio_shock"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [],
+  "stepsCondiment": [
+    {
+      "title": "Mondatura e Sbianchitura",
+      "text": "Lavare accuratamente le foglie di basilico per eliminare residui di terra. Portare a bollore {acqua_bollitura:1000}g di acqua in una pentola capiente. Immergere {basilico_foglie:150}g di foglie per esattamente {tempo_sbianchitura:5!} secondi. Questa rapidissima operazione (sbianchitura) fissa la clorofilla, garantendo che l'olio finale mantenga un colore verde brillante e non annerisca."
+    },
+    {
+      "title": "Shock Termico e Asciugatura",
+      "text": "Scolare immediatamente il basilico con l'aiuto di una schiumarola e tuffarlo in una ciotola preparata in precedenza con {acqua_fredda_shock:500}g di acqua e {ghiaccio_shock:500}g. Lasciare in immersione per {tempo_shock:2!} minuti per bloccare istantaneamente la cottura. Scolare le foglie, strizzarle con forza tra le mani e stenderle su strati di carta assorbente. Tamponare fino a rimuovere ogni traccia di umidità residua."
+    },
+    {
+      "title": "Emulsione ed Estrazione",
+      "text": "Inserire il basilico perfettamente asciugato nel bicchiere di un frullatore potente (o usare un frullatore a immersione ad alti giri). Aggiungere {olio_estrazione:250}g di olio e {sale_fino:2}g di sale. Frullare alla massima velocità per {tempo_frullatura:4!} minuti fino a ottenere una crema finissima. L'attrito meccanico inizierà già a scaldare dolcemente l'olio, favorendo l'estrazione degli oli essenziali."
+    },
+    {
+      "title": "Riscaldamento (Pasteurizzazione Rapida)",
+      "text": "Trasferire l'emulsione in un pentolino. Scaldare a fuoco dolcissimo per {tempo_cottura:3!} minuti, mantenendo il liquido intorno ai 60°C. Questo passaggio tecnico è cruciale per due motivi: fa evaporare le micro-gocce di acqua fisiologica del basilico abbattendo i rischi batterici e intensifica esponenzialmente il profilo aromatico dell'olio."
+    },
+    {
+      "title": "Decantazione Gravitazionale",
+      "text": "Filtrare il liquido ancora caldo attraverso un'etamina o un colino a maglie finissime rivestito di garza, senza premere eccessivamente la purea per non intorbidire l'olio. Per ottenere un risultato limpido e cristallino: versare l'olio filtrato in una sac à poche e appenderla in verticale per circa {tempo_decantazione:2!} ore. L'acqua e i sedimenti scenderanno sul fondo della punta. Tagliare pochissimo la punta per far defluire lo scarto, raccogliendo solo l'olio puro sovrastante in una bottiglia sterilizzata."
+    }
+  ],
+  "flourTable": [],
+  "glossary": [
+    {
+      "term": "Sbianchitura",
+      "definition": "Breve scottatura in acqua bollente (pochi secondi) che serve a bloccare gli enzimi responsabili dell'ossidazione, fissando il colore verde acceso degli ortaggi o delle erbe aromatiche."
+    },
+    {
+      "term": "Shock Termico",
+      "definition": "Immersione rapida di un alimento caldo in acqua e ghiaccio per abbassarne istantaneamente la temperatura, fermando la cottura e stabilizzando i pigmenti."
+    },
+    {
+      "term": "Decantazione",
+      "definition": "Processo fisico di separazione di un liquido dai suoi sedimenti sfruttando la forza di gravità. Le parti più dense e pesanti (acqua e frammenti solidi) si depositano sul fondo."
+    },
+    {
+      "term": "Etamina",
+      "definition": "Tessuto di cotone o lino a trama molto fitta utilizzato in ambito professionale per filtrare salse, brodi o oli, trattenendo le impurità più microscopiche."
+    },
+    {
+      "term": "Clorofilla",
+      "definition": "Pigmento responsabile della colorazione verde delle foglie. È termosensibile: cotture prolungate la degradano facendola virare verso un verde-oliva scuro."
+    }
+  ],
+  "alert": "Non conservare mai un olio aromatizzato a freddo con foglie di basilico fresche (non scottate) per più di 48 ore fuori dal frigo. L'acqua naturale contenuta nella foglia cruda, immersa in un ambiente anaerobico come l'olio, crea l'habitat perfetto per lo sviluppo del pericoloso botulino. Sbianchire ed eliminare l'acqua è l'unico metodo sicuro.",
+  "proTips": [
+    "Per ottenere un colore verde fluo brillante quasi 'innaturale', tipico dell'alta ristorazione, puoi aggiungere un 10% di foglie di spinacino fresco durante la sbianchitura. Non altererà in alcun modo il sapore ma aumenterà esponenzialmente la carica di clorofilla.",
+    "La tecnica della sac à poche appesa è il segreto dei ristoranti stellati: essendo l'acqua più pesante dell'olio, si separerà in modo netto scendendo esattamente nella punta. Tagliando un millimetro, spurgherai il sistema ottenendo un olio perfetto senza dover ricorrere a centrifughe costose.",
+    "Non buttare la purea di basilico avanzata nel setaccio: conservala in un vasetto coperta da un velo d'olio e usala entro 3-4 giorni per insaporire un sugo di pomodoro o mantecare un risotto."
+  ],
+  "imageKeywords": [
+    "basil infused olive oil",
+    "bright green herb oil drops",
+    "gourmet plating green oil",
+    "olio al basilico fatto in casa",
+    "basilikumöl selber machen"
+  ],
+  "tags": [
+    "Condimenti",
+    "Olio Aromatizzato",
+    "Gourmet",
+    "Estrazione a caldo",
+    "Basilico"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "_createdAt": "2026-04-16T17:47:35.066Z",
+  "image": "images/ricette/pasta/olio-al-basilico.webp",
+  "imageAttribution": "📷 Foto: Daniela Elena Tentis — Pexels License via Pexels"
+}

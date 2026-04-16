@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-16T16:55:44.910Z",
-  "totalRecipes": 27,
+  "generatedAt": "2026-04-16T17:47:51.457Z",
+  "totalRecipes": 28,
   "categories": [
     {
       "name": "Condimenti",
@@ -19,7 +19,7 @@
     },
     {
       "name": "Pasta",
-      "count": 1,
+      "count": 2,
       "emoji": "🍝"
     },
     {
@@ -235,6 +235,22 @@
       "tool": "",
       "_generatedBy": null,
       "_createdAt": "2026-04-15T20:03:44.102Z"
+    },
+    {
+      "title": "Olio al Basilico",
+      "slug": "olio-al-basilico",
+      "category": "Pasta",
+      "categoryDir": "pasta",
+      "emoji": "🌿",
+      "href": "ricette/pasta/olio-al-basilico.html",
+      "image": "images/ricette/pasta/olio-al-basilico.webp",
+      "description": "Olio aromatico dal colore verde brillante, ottenuto tramite sbianchitura e decantazione. Perfetto per guarnire piatti gourmet, insalate e pasta.",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-16T17:47:35.066Z"
     },
     {
       "title": "Burger Buns con Biga",

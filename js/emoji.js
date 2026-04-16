@@ -34,6 +34,7 @@ const EMOJI_MAP = {
   'flatbread': 'flatbread',
   'shortcake': 'shortcake',
   'canned-food': 'canned-food',
+  'herb': 'herb',
 
   // Homepage/strumenti
   'star': 'star',
@@ -68,6 +69,7 @@ export const CATEGORY_FLUENT = {
   Dolci: 'cookie',
   Focaccia: 'flatbread',
   Conserve: 'canned-food',
+  Condimenti: 'herb',
 };
 
 /**

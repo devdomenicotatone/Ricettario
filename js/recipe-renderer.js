@@ -60,6 +60,8 @@ function buildRecipeHTML(r, categoryDir) {
     ? `${BASE}${r.image.replace(/^\//, '')}`
     : `${BASE}images/ricette/${categoryDir}/${r.slug}.jpg`;
 
+  const isValidBadge = (v) => v && String(v).trim() !== '' && !['n/a', 'nessuna', '0'].includes(String(v).trim().toLowerCase());
+
   return `
     <!-- ═══════════ RECIPE HERO ═══════════ -->
     <div class="recipe-hero">
@@ -88,9 +90,9 @@ function buildRecipeHTML(r, categoryDir) {
     <!-- ═══════════ TECH BADGES ═══════════ -->
     <div class="container" style="padding-top: 40px;">
       <div class="tech-badges reveal">
-        ${r.hydration ? `<div class="tech-badge">${fluentEmoji('droplet', 18)} Idratazione: <span class="tech-badge__value">&nbsp;${r.hydration}%</span></div>` : ''}
-        ${r.targetTemp ? `<div class="tech-badge">${fluentEmoji('thermometer', 18)} Target Temp: <span class="tech-badge__value">&nbsp;${r.targetTemp}</span></div>` : ''}
-        ${r.fermentation ? `<div class="tech-badge">${fluentEmoji('stopwatch', 18)} Lievitazione: <span class="tech-badge__value">&nbsp;${r.fermentation}</span></div>` : ''}
+        ${isValidBadge(r.hydration) ? `<div class="tech-badge">${fluentEmoji('droplet', 18)} Idratazione: <span class="tech-badge__value">&nbsp;${r.hydration}%</span></div>` : ''}
+        ${isValidBadge(r.targetTemp) ? `<div class="tech-badge">${fluentEmoji('thermometer', 18)} Target Temp: <span class="tech-badge__value">&nbsp;${r.targetTemp}</span></div>` : ''}
+        ${isValidBadge(r.fermentation) ? `<div class="tech-badge">${fluentEmoji('stopwatch', 18)} Lievitazione: <span class="tech-badge__value">&nbsp;${r.fermentation}</span></div>` : ''}
         <button class="made-toggle" id="made-toggle" type="button" aria-label="Segna come fatta"></button>
       </div>
     </div>
