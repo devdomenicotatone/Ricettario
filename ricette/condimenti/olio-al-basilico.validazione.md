@@ -5,7 +5,7 @@
 **Fonti consultate:** 10
 
 ### 📊 Dettagli
-- Tempi fonti: 20min, 1h 15min, 5min, 24min, variabile, 25min, 5min
+- Tempi fonti: 20min, 1h 15min, 5min, 24min, variabile (più tempo di asciugatura), 25min, 5min
 - Tempo Claude: 
 
 ### 📰 Fonti

@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-04-16T17:47:51.457Z",
-  "totalRecipes": 28,
+  "generatedAt": "2026-04-16T18:22:39.237Z",
+  "totalRecipes": 29,
   "categories": [
     {
       "name": "Condimenti",
-      "count": 1,
+      "count": 3,
       "emoji": ""
     },
     {
@@ -19,7 +19,7 @@
     },
     {
       "name": "Pasta",
-      "count": 2,
+      "count": 1,
       "emoji": "🍝"
     },
     {
@@ -45,6 +45,22 @@
   ],
   "recipes": [
     {
+      "title": "Olio al Basilico",
+      "slug": "olio-al-basilico",
+      "category": "Condimenti",
+      "categoryDir": "condimenti",
+      "emoji": "🌿",
+      "href": "ricette/condimenti/olio-al-basilico.html",
+      "image": "images/ricette/condimenti/olio-al-basilico.webp",
+      "description": "Olio aromatico al basilico dal colore verde brillante intenso. Tecnica professionale di sbianchitura per estrarre la clorofilla e garantire una conservazione si",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-16T18:09:17.355Z"
+    },
+    {
       "title": "Olio al Basilico Verde Smeraldo",
       "slug": "olio-al-basilico-verde-smeraldo",
       "category": "Condimenti",
@@ -59,6 +75,22 @@
       "tool": "",
       "_generatedBy": "claude",
       "_createdAt": "2026-04-16T14:32:01.457Z"
+    },
+    {
+      "title": "Olio Extravergine Aromatizzato",
+      "slug": "olio-extravergine-aromatizzato",
+      "category": "Condimenti",
+      "categoryDir": "condimenti",
+      "emoji": "🌿",
+      "href": "ricette/condimenti/olio-extravergine-aromatizzato.html",
+      "image": "images/ricette/condimenti/olio-extravergine-aromatizzato.webp",
+      "description": "Olio extravergine di oliva infuso a freddo con aglio, rosmarino e scorza di limone. Una preparazione tecnica essenziale per condire bruschette, focacce e carni.",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-16T18:16:57.771Z"
     },
     {
       "title": "Baguette Francese Tradizionale",
@@ -235,22 +267,6 @@
       "tool": "",
       "_generatedBy": null,
       "_createdAt": "2026-04-15T20:03:44.102Z"
-    },
-    {
-      "title": "Olio al Basilico",
-      "slug": "olio-al-basilico",
-      "category": "Pasta",
-      "categoryDir": "pasta",
-      "emoji": "🌿",
-      "href": "ricette/pasta/olio-al-basilico.html",
-      "image": "images/ricette/pasta/olio-al-basilico.webp",
-      "description": "Olio aromatico dal colore verde brillante, ottenuto tramite sbianchitura e decantazione. Perfetto per guarnire piatti gourmet, insalate e pasta.",
-      "hydration": null,
-      "time": null,
-      "temp": null,
-      "tool": "",
-      "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-16T17:47:35.066Z"
     },
     {
       "title": "Burger Buns con Biga",

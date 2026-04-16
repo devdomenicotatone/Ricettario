@@ -1,0 +1,116 @@
+{
+  "title": "Olio Extravergine Aromatizzato",
+  "slug": "olio-extravergine-aromatizzato",
+  "emoji": "🌿",
+  "description": "Olio extravergine di oliva infuso a freddo con aglio, rosmarino e scorza di limone. Una preparazione tecnica essenziale per condire bruschette, focacce e carni.",
+  "subtitle": "Tecnica di infusione lipidica a freddo e stabilizzazione aromatica",
+  "category": "Condimenti",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per l'Infusione",
+      "items": [
+        {
+          "name": "Olio Extravergine di Oliva",
+          "note": "(fruttato delicato)",
+          "grams": 500,
+          "tokenId": "olio_evo"
+        },
+        {
+          "name": "Aglio Fresco",
+          "note": "(sbucciato e privato dell'anima)",
+          "grams": 15,
+          "tokenId": "aglio_fresco"
+        },
+        {
+          "name": "Rosmarino",
+          "note": "(rametti freschi)",
+          "grams": 10,
+          "tokenId": "rosmarino_fresco"
+        },
+        {
+          "name": "Scorza di Limone",
+          "note": "(non trattato, solo parte gialla)",
+          "grams": 10,
+          "tokenId": "scorza_limone"
+        },
+        {
+          "name": "Pepe Nero",
+          "note": "(in grani interi)",
+          "grams": 5,
+          "tokenId": "pepe_grani"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Sanificazione e asciugatura",
+      "text": "Lavare accuratamente {rosmarino_fresco:10}g di rosmarino e il limone. Questo passaggio è critico: asciugare gli ingredienti in modo maniacale con carta assorbente. Qualsiasi residuo d'acqua trasferito nell'olio favorisce la proliferazione batterica. Ricavare {scorza_limone:10}g di scorza prestando massima attenzione a non asportare l'albedo (la parte bianca amarognola)."
+    },
+    {
+      "title": "Attivazione degli aromi",
+      "text": "Prendere {aglio_fresco:15}g di aglio, tagliarlo a metà e rimuovere l'anima interna per rendere il profilo aromatico più elegante. Schiacciarlo leggermente con la lama del coltello. In un mortaio, pestare grossolanamente {pepe_grani:5}g di pepe nero in grani per spezzare l'involucro esterno e liberare gli oli essenziali."
+    },
+    {
+      "title": "Infusione a freddo",
+      "text": "In una bottiglia o vaso di vetro precedentemente sterilizzato e asciuttissimo, inserire gli aromi preparati. Versare lentamente {olio_evo:500}g di olio extravergine di oliva fino a sommergere completamente e abbondantemente tutti gli ingredienti solidi. L'esposizione degli aromi all'aria causa ossidazione."
+    },
+    {
+      "title": "Maturazione e filtraggio",
+      "text": "Chiudere ermeticamente il contenitore. Riporre in un luogo fresco, al riparo da fonti di luce e di calore per {tempo_riposo:14!} giorni, agitando delicatamente ogni {intervallo_agitazione:2!} giorni. Trascorso il tempo, è caldamente consigliato filtrare l'olio con un colino a maglie fini per rimuovere gli elementi freschi e prolungare la conservabilità del prodotto."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "baking": {
+    "temperature": "220°C",
+    "time": "5-7 minuti",
+    "tips": [
+      "Per accompagnare l'olio, tostare fette di pane casereccio (tipo Altamura o Toscano) su pietra refrattaria.g",
+      "Aggiungere l'olio aromatizzato RIGOROSAMENTE A CRUDO sul pane caldo appena sfornato: il calore del pane volatilizzerà gli oli essenziali esaltandone i profumi, senza rovinare le caratteristiche nutrizionali dell'EVO."
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Albedo",
+      "definition": "La parte spugnosa e bianca situata tra la scorza esterna (flavedo) e la polpa degli agrumi; è responsabile dei sentori amari indesiderati."
+    },
+    {
+      "term": "Infusione a freddo",
+      "definition": "Tecnica chimico-fisica che sfrutta i grassi (lipidi) come solventi naturali per estrarre a temperatura ambiente i composti aromatici idrofobi da erbe e spezie."
+    },
+    {
+      "term": "Olio EVO",
+      "definition": "Olio Extra Vergine di Oliva, ottenuto esclusivamente tramite estrazione meccanica a freddo (sotto i 27°C) dalle olive, con acidità libera inferiore a 0.8%."
+    }
+  ],
+  "alert": "ATTENZIONE AL BOTULINO: L'inserimento di ingredienti freschi (aglio, rosmarino) in olio crea un ambiente anaerobico ideale per il Clostridium botulinum, poiché questi ingredienti contengono acqua. Se usate aromi freschi e non filtrate l'olio, conservatelo IN FRIGORIFERO (si addenserà, basterà lasciarlo a temperatura ambiente prima dell'uso) e consumatelo entro 7-10 giorni. Per conservazioni prolungate a temperatura ambiente (mesi), utilizzate ESCLUSIVAMENTE aglio disidratato ed erbe aromatiche essiccate.",
+  "proTips": [
+    "Metodo di estrazione rapida (Microonde): Per abbattere i tempi e ridurre parte dell'umidità interna degli aromi freschi, inserire olio e aromi in un barattolo adatto e scaldare al microonde (max potenza) per 1 minuto. In alternativa, scaldare a bagnomaria senza superare i 60°C. Lasciar raffreddare completamente prima di chiudere.",
+    "Scelta dell'Olio Base: Non usate un olio pugliese o toscano dai sentori eccessivamente pungenti (carciofo/mandorla amara), sovrasterebbe la delicatezza del limone. Optate per un olio ligure (Taggiasca) o del Garda dai toni fruttati e dolci."
+  ],
+  "imageKeywords": [
+    "herb infused olive oil bottle",
+    "flavored olive oil with garlic and rosemary",
+    "olio aromatizzato fatto in casa",
+    "knoblauchöl und kräuter",
+    "gourmet olive oil infusion dark background"
+  ],
+  "tags": [
+    "condimenti",
+    "infusione",
+    "olio-evo",
+    "aromi",
+    "tecniche-base"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "_createdAt": "2026-04-16T18:16:57.771Z",
+  "image": "images/ricette/condimenti/olio-extravergine-aromatizzato.webp",
+  "imageAttribution": "📷 Foto: Ron Lach — Pexels License via Pexels"
+}
