@@ -1,20 +1,20 @@
 # Qualità: Olio al Basilico Verde Smeraldo
 
-## 🟢 Score Finale: 85/100
+## 🟢 Score Finale: 100/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 0 warning |
-| Gemini | 85/100 | 🟡 Da migliorare |
+| Gemini | 100/100 | 🟢 Buona |
 
-Ricetta tecnicamente eccellente per la gestione della clorofilla e l'estrazione aromatica, con spiegazioni scientifiche ineccepibili. Tuttavia, presenta criticità importanti a livello di sicurezza alimentare (rischio botulino) nella fase di imbottigliamento e conservazione che devono essere corrette.
+Ricetta tecnicamente impeccabile e scritta con un livello di dettaglio professionale. Gestione eccellente della chimica degli alimenti (fissaggio della clorofilla) e massima precisione nella prevenzione dei rischi biologici (Clostridium botulinum) per le infusioni a freddo/tiepido.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| ❌ | Coerenza | Grave contraddizione sulla sicurezza alimentare (Rischio Botulino). Al punto 5 del procedimento si indica di conservare l'olio in 'luogo fresco, al buio' per 3-4 settimane. Tuttavia, l'ALERT (correttamente) intima di conservare 'SEMPRE in frigorifero' e 'NON lasciare mai a temperatura ambiente'. Il termine 'luogo fresco' in gastronomia indica comunemente una dispensa (15-18°C), che è fatale per questo tipo di preparazione. | Modificare il punto 5 sostituendo 'riponi in luogo fresco, al buio' in 'riponi ESCLUSIVAMENTE in frigorifero', per allinearlo all'ALERT di sicurezza alimentare. |
-| ⚠️ | Setup | L'inserimento del rametto di basilico viola FRESCO (punto 5) per la conservazione di 3-4 settimane reintroduce acqua libera (aw) all'interno dell'olio. Anche se 'asciugato maniacalmente' all'esterno, la foglia fresca contiene la sua acqua di vegetazione naturale. Questo vanifica la sicurezza ottenuta con lo shock termico e l'infusione a caldo dell'olio principale, aumentando drasticamente il rischio di botulino durante le settimane di stoccaggio. | Specificare nel punto 5 o nell'ALERT che il rametto fresco decorativo va inserito SOLO se l'olio viene consumato entro 48-72 ore. Se si intende conservarlo per 3-4 settimane in frigo, l'olio deve essere imbottigliato puro e filtrato, senza aggiunte di materiale biologico crudo. |
+| 💡 | Dosi | Verifica idratazione (obbligatoria): Farina totale = 0g, Acqua totale = 0g. Essendo un condimento a base esclusivamente grassa, il calcolo (0/0) conferma il valore dichiarato dello 0%. | Nessuna correzione necessaria. Valore corretto per la categoria merceologica. |
+| 💡 | Tempi | Nei PRO TIPS si suggerisce di portare la squeeze bottle a temperatura ambiente per 10 minuti prima dell'uso per renderlo fluido. L'olio EVO, conservato a 4°C in frigorifero (come correttamente indicato per la sicurezza alimentare), tende a cristallizzare/solidificare parzialmente. A seconda della cultivar, 10 minuti potrebbero essere insufficienti. | Suggerimento: ampliare il tempo indicato nei Pro Tips scrivendo 'porta la squeeze bottle a temperatura ambiente per 10-20 minuti (a seconda della temperatura della sala), finché l'olio non torna perfettamente fluido dopo la cristallizzazione da frigo'. |
 
 ---
-*Generato: 2026-04-16T17:44:38.275Z | Pipeline: Schema → Gemini*
+*Generato: 2026-04-16T18:48:22.290Z | Pipeline: Schema → Gemini*

@@ -5,7 +5,7 @@
   "description": "Cornetti sfogliati all'italiana con biga, sfogliatura a 3 pieghe e lievitazione lenta in frigo. Ricetta professionale con procedimento dettagliato.",
   "subtitle": "Lievitato sfogliato italiano — Biga 8-10h, sfogliatura a 3 giri, maturazione in frigo 12haaaaaaa",
   "category": "Lievitati",
-  "hydration": 47,
+  "hydration": 53,
   "targetTemp": "22-24°C",
   "fermentation": "~24h totali (biga 8-10h + puntata 1h + frigo 12h)",
   "totalFlour": 500,
@@ -247,7 +247,7 @@
   "steps": [
     {
       "title": "Preparazione Biga (Sera Prima — 8-10h)",
-      "text": "In una ciotola, versare {farina_biga:100}g di farina Manitoba, {acqua_biga:45}g di acqua a temperatura ambiente e {lievito_biga:1}g di lievito di birra fresco sbriciolato. Impastare brevemente con le mani (1-2 minuti) fino a ottenere un panetto ruvido e compatto — la biga NON deve essere liscia né elastica. Coprire con pellicola a contatto e lasciar maturare a temperatura ambiente (18-20°C) per 8-10 ore. La biga sarà pronta quando sarà raddoppiata di volume e presenterà una superficie leggermente bombata con screpolature."
+      "text": "In una ciotola, versare {farina_biga:100}g di farina Manitoba, {acqua_biga:45}g di acqua a temperatura ambiente e {lievito_biga:1}g di lievito di birra fresco sbriciolato. Impastare brevemente con le mani (1-2 minuti) fino a ottenere un panetto ruvido e compatto — la biga NON deve essere liscia né elastica. Coprire con pellicola a contatto e lasciar maturare a temperatura ambiente (18-20°C) per 8-10 ore. La biga sarà pronta quando avrà triplicato di volume e presenterà una superficie leggermente bombata con screpolature."
     },
     {
       "title": "Impasto in Spirale — Prima Fase",
@@ -287,7 +287,7 @@
     },
     {
       "title": "Appretto Finale (Lievitazione Pre-Cottura)",
-      "text": "Far lievitare i cornetti in un ambiente caldo e umido a 26-28°C (forno spento con luce accesa e una ciotola di acqua calda sul fondo) per 3-4 ore, fino a che non avranno quasi triplicato di volume. I cornetti pronti devono 'tremolare' se si muove la teglia, apparire gonfi e leggeri. NON superare mai i 30°C o il burro si scioglierà compromettendo la sfogliatura."
+      "text": "Far lievitare i cornetti in un ambiente caldo e umido a 26-28°C (forno spento con luce accesa e una ciotola di acqua calda sul fondo) per {appretto:90!}-{appretto_max:120!} minuti, fino a che non avranno quasi triplicato di volume. I cornetti pronti devono 'tremolare' se si muove la teglia, apparire gonfi e leggeri. NON superare mai i 30°C o il burro si scioglierà compromettendo la sfogliatura."
     },
     {
       "title": "Doratura e Cottura",

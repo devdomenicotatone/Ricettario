@@ -1,25 +1,19 @@
 # Qualità: Olio al Basilico
 
-## 🔴 Score Finale: 53/100
+## 🟢 Score Finale: 100/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
-| Schema | ❌ Fail | 3 errori, 0 warning |
-| Gemini | 98/100 | 🟢 Buona |
+| Schema | ✅ Pass | 0 errori, 0 warning |
+| Gemini | 100/100 | 🟢 Buona |
 
-Ricetta tecnicamente ineccepibile e di livello professionale. Le tecniche di estrazione termica (50°C), il fissaggio della clorofilla e l'uso del sac à poche per la decantazione dell'acqua residua dimostrano grande competenza tecnologica e profonda attenzione alla sicurezza alimentare (prevenzione botulino).
-
-## 🔍 Schema Validation
-
-- ❌ Campo obbligatorio mancante: "hydration" — Idratazione % (0 per dolci/pasta senza calcolo)
-- ❌ Campo obbligatorio mancante: "totalFlour" — Farina totale in grammi (base per ricalcolo dosi, 0 per ricette senza farina)
-- ❌ Campo obbligatorio mancante: "suspensions" — Condimenti/sospensioni (vuoto se non applicabile)
+Ricetta eccezionale, scritta con rigoroso criterio tecnico. Ottima la gestione della sicurezza alimentare (rischio botulino) e professionali i dettagli su sbianchitura, frizione termica e decantazione.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| 💡 | Setup | Nel passaggio 6 viene indicata una 'bottiglietta di vetro precedentemente sterilizzata'. Poiché al passaggio 3 viene giustamente enfatizzata l'importanza dell'assenza di umidità per prevenire il botulino, è fondamentale che anche il contenitore finale non presenti condensa derivante dalla sterilizzazione. | Aggiungere la specifica che la bottiglia deve essere 'perfettamente asciutta' (es. sterilizzata in forno e non bollita, oppure asciugata accuratamente) al passaggio 6. |
+| 💡 | Setup | Il trucco del sac à poche per la decantazione è da veri professionisti. Tuttavia, se il 'luogo fresco' è troppo freddo (es. frigorifero o sotto i 12°C), l'olio EVO inizierà a cristallizzare e solidificare, impedendo alle micro-gocce d'acqua di scendere sul fondo per gravità. | Nello step 6, specificare 'appenderlo a temperatura ambiente (circa 18-20°C)' o 'in un luogo fresco ma non in frigorifero' per facilitare la decantazione prima del trasferimento in bottiglia. |
 
 ---
-*Generato: 2026-04-16T18:10:09.370Z | Pipeline: Schema → Gemini*
+*Generato: 2026-04-16T18:44:45.204Z | Pipeline: Schema → Gemini*

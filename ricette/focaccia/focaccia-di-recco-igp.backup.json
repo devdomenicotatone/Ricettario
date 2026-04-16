@@ -98,26 +98,22 @@
         {
           "name": "Farina Manitoba",
           "note": "(W 360-380, proteine 13-14%)",
-          "grams": 800,
-          "tokenId": "farina_forte_impasto"
+          "grams": 800
         },
         {
           "name": "Acqua",
           "note": "(temperatura ambiente)",
-          "grams": 544,
-          "tokenId": "acqua_impasto"
+          "grams": 544
         },
         {
           "name": "Sale Fino",
           "note": "(1.8-2% su farina)",
-          "grams": 16,
-          "tokenId": "sale_impasto"
+          "grams": 16
         },
         {
           "name": "Olio Extravergine di Oliva",
           "note": "(ligure DOP se possibile, per impasto)",
-          "grams": 40,
-          "tokenId": "olio_evo_impasto"
+          "grams": 40
         }
       ]
     },
@@ -127,8 +123,7 @@
         {
           "name": "Stracchino o Crescenza",
           "note": "(freschissimo, temperatura frigo, 100% su farina)",
-          "grams": 800,
-          "tokenId": "stracchino"
+          "grams": 800
         }
       ]
     },
@@ -138,14 +133,12 @@
         {
           "name": "Olio Extravergine di Oliva",
           "note": "(per ungere teglia e superficie)",
-          "grams": 30,
-          "tokenId": "olio_evo_finitura"
+          "grams": 30
         },
         {
           "name": "Sale Grosso",
           "note": "(per spolverare in superficie, opzionale)",
-          "grams": 5,
-          "tokenId": "sale_grosso"
+          "grams": 5
         }
       ]
     }
@@ -157,27 +150,27 @@
     },
     {
       "title": "Divisione e Pirlatura",
-      "text": "Trasferire l'impasto su piano leggermente infarinato. L'impasto totale (circa 1400g) è sufficiente per DUE teglie 30x40 cm. Dividerlo in 4 panetti: 2 panetti da circa 400g (per le sfoglie base delle due teglie) e 2 panetti da circa 300g (per le sfoglie di copertura). Pirlare ogni panetto roteandolo sul piano con movimento circolare, pizzicando la base per sigillare bene la chiusura. Disporre i panetti su vassoio leggermente unto con la chiusura verso il basso."
+      "text": "Trasferire l'impasto su piano leggermente infarinato. Dividerlo in 3 porzioni: 2 panetti da 500g (per sfoglia base e copertura principale) + 1 panetto da 288g (per la copertura superiore sottile). Pirlare ogni panetto roteandolo sul piano con movimento circolare, pizzicando la base per sigillare bene la chiusura. Disporre i panetti su vassoio leggermente unto con la chiusura verso il basso."
     },
     {
       "title": "Riposo dell'Impasto",
       "text": "Coprire i panetti con pellicola trasparente a contatto e lasciare riposare a temperatura ambiente (20-22°C) per 30-60 minuti. Questo riposo è fondamentale per rilassare la maglia glutinica e permettere una stesura sottilissima senza rotture. Il glutine della Manitoba necessita di tempo per distendersi."
     },
     {
-      "title": "Preparazione Teglie",
-      "text": "Ungere abbondantemente con olio EVO due teglie rettangolari da 30x40 cm. L'olio deve coprire uniformemente fondo e bordi per garantire la croccantezza caratteristica e facilitare il distacco dopo cottura."
+      "title": "Preparazione Teglia",
+      "text": "Ungere abbondantemente con olio EVO una teglia rettangolare da 30x40 cm. L'olio deve coprire uniformemente fondo e bordi per garantire la croccantezza caratteristica e facilitare il distacco dopo cottura."
     },
     {
       "title": "Stesura Sfoglia Base",
-      "text": "Prendere uno dei panetti da 400g. Su piano leggermente infarinato, iniziare a stendere con mattarello partendo dal centro verso i bordi. Girare frequentemente la sfoglia per mantenere forma rettangolare. Stendere fino ad ottenere un rettangolo di 35x45 cm circa (5 cm più grande della teglia per ogni lato), spessore 1 mm massimo. La sfoglia deve essere sottilissima ma uniforme. Sollevare delicatamente aiutandosi con il mattarello e adagiarla nella teglia unta, facendo aderire bene agli angoli e lasciando l'eccedenza sui bordi. Ripetere con il secondo panetto da 400g per la seconda teglia."
+      "text": "Prendere uno dei panetti da 500g. Su piano leggermente infarinato, iniziare a stendere con mattarello partendo dal centro verso i bordi. Girare frequentemente la sfoglia per mantenere forma rettangolare. Stendere fino ad ottenere un rettangolo di 35x45 cm circa (5 cm più grande della teglia per ogni lato), spessore 1 mm massimo. La sfoglia deve essere sottilissima ma uniforme. Sollevare delicatamente aiutandosi con il mattarello e adagiarla nella teglia unta, facendo aderire bene agli angoli e lasciando l'eccedenza sui bordi."
     },
     {
       "title": "Farcitura con Stracchino",
-      "text": "Estrarre lo stracchino/crescenza dal frigo al momento dell'uso (deve essere freddo per non sciogliersi). Distribuirlo a cucchiaiate sulla sfoglia base, lasciando 2-3 cm di bordo libero. Stendere delicatamente con il dorso del cucchiaio per livellare, senza arrivare fino ai bordi. Lo spessore del formaggio deve essere uniforme (circa 3-4 mm). Ripetere per la seconda teglia."
+      "text": "Estrarre lo stracchino/crescenza dal frigo al momento dell'uso (deve essere freddo per non sciogliersi). Distribuirlo a cucchiaiate sulla sfoglia base, lasciando 2-3 cm di bordo libero. Stendere delicatamente con il dorso del cucchiaio per livellare, senza arrivare fino ai bordi. Lo spessore del formaggio deve essere uniforme (circa 3-4 mm)."
     },
     {
       "title": "Stesura Sfoglia di Copertura",
-      "text": "Stendere uno dei panetti da 300g con la stessa tecnica, ottenendo un rettangolo delle stesse dimensioni ma ancora più sottile (0.5-0.8 mm). Adagiarlo sopra il formaggio della prima teglia, facendolo aderire delicatamente dalla parte centrale verso i bordi, eliminando eventuali bolle d'aria. Ripetere con il secondo panetto da 300g per la seconda teglia."
+      "text": "Stendere il secondo panetto da 500g con la stessa tecnica, ottenendo un rettangolo delle stesse dimensioni ma ancora più sottile (0.5-0.8 mm). Adagiarla sopra il formaggio, facendola aderire delicatamente dalla parte centrale verso i bordi, eliminando eventuali bolle d'aria."
     },
     {
       "title": "Sigillatura e Foratura",

@@ -1,18 +1,19 @@
-# Qualità: Cornetti Sfogliati Classici all'Italiana
+# Qualità: Cornetti Sfogliati Classici
 
-## 🟡 Score Finale: 70/100
+## 🟢 Score Finale: 95/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
-| Schema | ❌ Fail | 2 errori, 0 warning |
-| Gemini | 100/100 | 🟢 Buona |
+| Schema | ✅ Pass | 0 errori, 0 warning |
+| Gemini | 95/100 | 🟢 Buona |
 
-Ricetta eccellente, tecnicamente perfetta e scritta con grande cura. Il calcolo dell'idratazione (270g di liquidi totali / 500g di farina = 54%) è perfettamente accurato. Temperature, tempi e gestione della sfogliatura (inclusi i setup macchina/a mano) rispettano rigorosamente le migliori pratiche di pasticceria.
+Ricetta eccellente e di livello professionale. Le temperature di gestione del burro, i riposi per la sfogliatura e i tempi di lievitazione sono impeccabili e riflettono un'alta competenza tecnica. Unico difetto è la discrepanza matematica nel valore dell'idratazione dichiarata.
 
-## 🔍 Schema Validation
+## Problemi trovati
 
-- ❌ Idratazione dichiarata 54% ma calcolata 50% (284.89000000000004g acqua / 570g farina). Scarto: 4%
-- ❌ totalFlour dichiarato 500g ma somma farine = 570g (differenza: 70g)
+| Sev. | Area | Problema | Correzione |
+|------|------|----------|------------|
+| ❌ | Dosi | L'idratazione dichiarata del 47% non corrisponde ai calcoli matematici rigorosi. Formula: Acqua totale (45g in biga + 100g in impasto = 145g) / Farina totale (100g in biga + 260g + 140g in impasto = 500g) * 100 = 29% (solo acqua). Anche calcolando i liquidi totali incluse le uova (145g acqua + 110g uova = 255g), l'idratazione sui liquidi è del 51%. Entrambi i valori differiscono dal 47% per più del 3%. | Aggiornare l'idratazione dichiarata al 51% specificando 'sui liquidi totali', oppure a 45.5% se si intende conteggiare l'effettiva percentuale d'acqua contenuta anche nelle uova. |
 
 ---
-*Generato: 2026-04-05T00:59:07.040Z | Pipeline: Schema → Gemini*
+*Generato: 2026-04-16T19:58:25.262Z | Pipeline: Schema → Gemini*

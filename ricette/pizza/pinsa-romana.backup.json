@@ -8,7 +8,7 @@
   "hydration": 75,
   "targetTemp": "24-26°C",
   "fermentation": "24-48h",
-  "totalFlour": 1050,
+  "totalFlour": 1000,
   "ingredients": [],
   "suspensions": [],
   "stepsCondiment": [],
@@ -118,50 +118,42 @@
         {
           "name": "Farina di Frumento Tipo 0",
           "note": "(W 260-280, media forza)",
-          "grams": 900,
-          "tokenId": "farina_media_impasto"
+          "grams": 900
         },
         {
           "name": "Farina di Riso",
           "note": "(preferibilmente semi-integrale)",
-          "grams": 50,
-          "tokenId": "farina_di_riso_impasto"
+          "grams": 50
         },
         {
           "name": "Farina di Soia",
           "note": "(tostata, migliora croccantezza)",
-          "grams": 50,
-          "tokenId": "farina_di_soia_impasto"
+          "grams": 50
         },
         {
           "name": "Acqua",
           "note": "(750g totali, fresca 10-14°C, aggiunta in 2 riprese (700g + 50g finali con sale e olio))",
-          "grams": 750,
-          "tokenId": "acqua_impasto"
+          "grams": 750
         },
         {
           "name": "Lievito di Birra Fresco",
           "note": "(2g per maturazione lunga 24-48h in frigo)",
-          "grams": 2,
-          "tokenId": "lievito_fresco_impasto"
+          "grams": 2
         },
         {
           "name": "Sale Fino",
           "note": "(aggiunto a fine impasto)",
-          "grams": 18,
-          "tokenId": "sale_impasto"
+          "grams": 18
         },
         {
           "name": "Olio Extravergine d'Oliva",
           "note": "(preferibilmente delicato)",
-          "grams": 20,
-          "tokenId": "olio_evo_impasto"
+          "grams": 20
         },
         {
           "name": "Semola di Grano Duro Rimacinata",
           "note": "(per spolverare durante stesura)",
-          "grams": 50,
-          "tokenId": "semola_rimacinata_impasto"
+          "grams": 50
         }
       ]
     }
@@ -181,11 +173,11 @@
     },
     {
       "title": "Prima fermentazione (puntata)",
-      "text": "Trasferire l'impasto in contenitore oliato, coprire con pellicola e lasciare a temperatura ambiente (20-22°C) per 2 ore per innescare la lievitazione prima dello staglio. L'impasto inizierà a gonfiarsi leggermente. Questa fase sviluppa i primi aromi e rende l'impasto più gestibile."
+      "text": "Trasferire l'impasto in contenitore oliato, coprire con pellicola e lasciare a temperatura ambiente (20-22°C) per 2 ore fino al raddoppio. L'impasto deve gonfiarsi visibilmente. Questa fase sviluppa i primi aromi e rende l'impasto più gestibile."
     },
     {
       "title": "Staglio e pirlatura",
-      "text": "Rovesciare l'impasto su piano leggermente infarinato. Dividere in 6 panetti da circa 295-300g ciascuno. Piegare ogni pezzo portando i lembi verso il centro per dare forza, poi capovolgere e pirlare delicatamente su piano SENZA farina per creare tensione superficiale. Non stringere troppo: la pinsa deve rimanere soffice."
+      "text": "Rovesciare l'impasto su piano leggermente infarinato. Dividere in 6 panetti da circa 270-280g ciascuno. Piegare ogni pezzo portando i lembi verso il centro per dare forza, poi capovolgere e pirlare delicatamente su piano SENZA farina per creare tensione superficiale. Non stringere troppo: la pinsa deve rimanere soffice."
     },
     {
       "title": "Maturazione in frigo (24-48h)",

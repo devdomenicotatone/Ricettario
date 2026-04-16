@@ -1,20 +1,20 @@
 # Qualità: Focaccia di Recco IGP
 
-## 🟡 Score Finale: 75/100
+## 🟢 Score Finale: 95/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 0 warning |
-| Gemini | 75/100 | 🟡 Da migliorare |
+| Gemini | 95/100 | 🟢 Buona |
 
-Ricetta tecnicamente corretta per idratazione (esattamente al 68%), temperature e tecnica di stesura senza lievito. Presenta però un grave errore logico-matematico nella divisione dei panetti, con una porzione di impasto che 'scompare' durante l'assemblaggio.
+Ricetta strutturata in modo eccellente. Il calcolo dell'idratazione (544g / 800g = 68%) e i pesi dei panetti (totale 1400g diviso perfettamente) sono esatti. Da rivedere solo la quantità di formaggio per un risultato più ricco e fedele alla tradizione.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| ❌ | Dosi | Errore matematico nel peso totale dell'impasto: la somma degli ingredienti (800g farina + 544g acqua + 16g sale + 40g olio) genera 1400g di impasto. Tuttavia, nei passaggi 3 e 13, si divide l'impasto in 500g + 500g + 288g, che sommano a 1288g. Mancano all'appello 112g di impasto. | Ricalcolare il peso dei panetti in modo che la loro somma corrisponda a 1400g (es. indicare quanti panetti e per quante teglie). |
-| ❌ | Coerenza | Il terzo panetto da 288g (citato nei passaggi 3 e 13) scompare nel resto del procedimento. Nei passaggi di stesura e farcitura (6-8 e 16-18) vengono utilizzati solo i due panetti da 500g, lasciando il terzo panetto completamente inutilizzato. | Correggere il procedimento spiegando l'utilizzo di tutto l'impasto. (Nota tecnica: 1400g di impasto sono troppi per una sola teglia 30x40cm; solitamente servono circa 300g per la base e 250g per la copertura. Si consiglia di ricalcolare la ricetta per indicare la preparazione di due teglie 30x40). |
+| ⚠️ | Dosi | La quantità di stracchino (800g totali) equivale a soli 400g per ciascuna teglia 30x40 cm. Per ottenere l'abbondante ripieno cremoso tipico della Focaccia di Recco e riempire adeguatamente l'area della teglia, la dose risulta piuttosto povera rispetto allo standard. | Aumentare lo stracchino ad almeno 1200-1600g totali (600-800g per teglia). |
+| 💡 | Setup | Al punto 9 si suggerisce di 'praticare dei buchi con le dita'. La tecnica tradizionale della Focaccia di Recco prevede invece di 'pizzicare e strappare' leggermente la sfoglia superiore per creare veri e propri fori aperti e irregolari (occhi), garantendo che non si richiudano in cottura e facciano fuoriuscire il formaggio. | Modificare la descrizione al punto 9 suggerendo di pizzicare e strappare delicatamente la pasta per creare fori larghi 1-2 cm. |
 
 ---
-*Generato: 2026-04-01T01:56:23.926Z | Pipeline: Schema → Gemini*
+*Generato: 2026-04-16T19:43:07.686Z | Pipeline: Schema → Gemini*

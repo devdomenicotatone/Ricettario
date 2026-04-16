@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-16T18:22:39.237Z",
-  "totalRecipes": 29,
+  "generatedAt": "2026-04-16T20:01:03.758Z",
+  "totalRecipes": 30,
   "categories": [
     {
       "name": "Condimenti",
@@ -24,7 +24,7 @@
     },
     {
       "name": "Lievitati",
-      "count": 8,
+      "count": 9,
       "emoji": "🥐"
     },
     {
@@ -202,7 +202,7 @@
       "temp": "24-26°C",
       "tool": "",
       "_generatedBy": null,
-      "_createdAt": "2026-04-15T20:03:44.103Z"
+      "_createdAt": "2026-04-16T19:39:15.177Z"
     },
     {
       "title": "Pizza Contemporanea Canotto",
@@ -293,7 +293,7 @@
       "href": "ricette/lievitati/cornetti-sfogliati-classici.html",
       "image": "images/ricette/lievitati/cornetti-sfogliati-classici.webp",
       "description": "Cornetti sfogliati all'italiana con biga, sfogliatura a 3 pieghe e lievitazione lenta in frigo. Ricetta professionale con procedimento dettagliato.",
-      "hydration": "53%",
+      "hydration": "47%",
       "time": "~24h totali (biga 8-10h + puntata 1h + frigo 12h)",
       "temp": "22-24°C",
       "tool": "",
@@ -365,6 +365,22 @@
       "_createdAt": "2026-04-15T20:03:44.086Z"
     },
     {
+      "title": "Pasta Brioche Artigianale",
+      "slug": "pasta-brioche-artigianale",
+      "category": "Lievitati",
+      "categoryDir": "lievitati",
+      "emoji": "🥐",
+      "href": "ricette/lievitati/pasta-brioche-artigianale.html",
+      "image": "images/ricette/lievitati/pasta-brioche-artigianale.webp",
+      "description": "L'impasto base perfetto per brioche sofficissime, trecce e cornetti. Una ricetta professionale ricca di burro e aromi naturali, con lievitazione controllata.",
+      "hydration": "53%",
+      "time": "14-18h (inclusa maturazione a freddo)",
+      "temp": "25-26°C",
+      "tool": "",
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-16T20:00:36.244Z"
+    },
+    {
       "title": "Pasta Brioche Classica",
       "slug": "pasta-brioche-classica",
       "category": "Lievitati",
@@ -372,13 +388,13 @@
       "emoji": "🥐",
       "href": "ricette/lievitati/pasta-brioche-classica.html",
       "image": "images/ricette/lievitati/pasta-brioche-classica.webp",
-      "description": "Impasto base per brioche, cornetti e trecce dolci con tecnica professionale francese. Idratazione 52%, lievitazione 3-4h.",
-      "hydration": "52%",
-      "time": "3-4h + 2h appretto",
-      "temp": "24-26°C",
+      "description": "Pasta brioche classica all'italiana: impasto ricco di uova, burro e aromi agrumati. Soffice, profumata, ideale per brioche, treccine e cornetti dolci.",
+      "hydration": "54%",
+      "time": "3–5h a T.A. oppure 1h + 12–16h in frigo",
+      "temp": "24–26°C",
       "tool": "",
-      "_generatedBy": null,
-      "_createdAt": "2026-04-15T20:03:44.096Z"
+      "_generatedBy": "claude",
+      "_createdAt": "2026-04-16T19:51:32.202Z"
     },
     {
       "title": "Pasta Madre Solida (Lievito Naturale)",
@@ -458,7 +474,7 @@
       "temp": "20-22°C",
       "tool": "",
       "_generatedBy": null,
-      "_createdAt": "2026-04-15T20:03:44.079Z"
+      "_createdAt": "2026-04-16T19:42:33.236Z"
     },
     {
       "title": "Focaccia Genovese (Fügassa)",

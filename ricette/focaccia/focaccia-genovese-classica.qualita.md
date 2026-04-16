@@ -1,28 +1,37 @@
 # Qualità: Focaccia Genovese Classica
 
-## 🟡 Score Finale: 72/100
+## 🟢 Score Finale: 85/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
-| Schema | ✅ Pass | 0 errori, 1 warning |
-| Claude | 72/100 | 🟡 Da migliorare |
+| Schema | ✅ Pass | 0 errori, 14 warning |
+| Gemini | 85/100 | 🟡 Da migliorare |
 
-Ricetta di focaccia genovese tecnicamente valida ma con errori nei calcoli delle farine per la biga e presenza di riferimenti template non risolti. L'idratazione effettiva è 72% non 75%. Il contenuto di sale è al limite superiore. Setup e procedimento sono appropriati, temperature e tempi di cottura corretti per forno casalingo.
+La ricetta ha un'ottima struttura tecnica su tempistiche e temperature. Tuttavia, è presente un'incoerenza critica tra i raggruppamenti degli ingredienti e il procedimento reale che rende la biga inattuabile se si legge solo la lista. L'idratazione reale calcolata è del 72% (720g acqua / 1000g farina), ma rientra nel margine di tolleranza rispetto al 75% dichiarato.
 
 ## 🔍 Schema Validation
 
-- ⚠️ Categoria "Focaccia" senza sezione cottura (bakingSection/cookingSection)
+- ⚠️ Idratazione dichiarata 75% vs calcolata 73% (scarto 2%)
+- ⚠️ Ingrediente "Farina Manitoba Forte" nel gruppo "Per la Biga" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Acqua" nel gruppo "Per la Biga" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Lievito di Birra Fresco" nel gruppo "Per la Biga" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Farina Tipo 0 Media Forza" nel gruppo "Per l'Impasto Finale" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Acqua" nel gruppo "Per l'Impasto Finale" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Lievito di Birra Fresco" nel gruppo "Per l'Impasto Finale" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Olio Extravergine d'Oliva Ligure DOP" nel gruppo "Per l'Impasto Finale" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Miele o Zucchero" nel gruppo "Per l'Impasto Finale" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Sale Fino Marino" nel gruppo "Per l'Impasto Finale" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Acqua" nel gruppo "Per la Salamoia e Finitura" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Olio Extravergine d'Oliva" nel gruppo "Per la Salamoia e Finitura" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Sale Fino" nel gruppo "Per la Salamoia e Finitura" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Sale Grosso Marino" nel gruppo "Per la Salamoia e Finitura" senza tokenId — il calcolatore dosi non funzionerà correttamente
 
 ## Problemi trovati
 
-| Sev. | Area | Problema | Correzione | Fonte |
-|------|------|----------|------------|-------|
-| ❌ | Dosi | Errore grave nel calcolo delle farine per la biga: il testo indica '200g del mix farine (140g manitoba + 60g tipo 0)' ma 140+60=200g, mentre dovrebbe essere proporzionale a 700g+300g=1000g totali | Correggere: per 200g biga servono 140g manitoba + 60g tipo 0, quindi rimangono 560g manitoba + 240g tipo 0 per l'impasto finale | 🔵 Claude |
-| ❌ | Coerenza | Riferimenti a variabili template nel testo: '{olio_evo_salamoia_e_fini:60}', '{acqua_biga:120}', '{lievito_fresco_biga:3}' ecc. dovrebbero essere sostituiti con i valori numerici | Sostituire tutti i riferimenti template con i valori effettivi degli ingredienti | 🔵 Claude |
-| ⚠️ | Dosi | L'idratazione dichiarata 75% non corrisponde al calcolo: (120+600)g acqua / 1000g farina = 72% effettivo | Correggere l'idratazione dichiarata a 72% oppure aggiustare le dosi d'acqua a 750g totali | 🔵 Claude |
-| ⚠️ | Dosi | Il sale totale è 18g+4g+8g=30g su 1000g farina = 3%, superiore al range tipico 2-2.5% | Considerare di ridurre il sale grosso di finitura a 5-6g per avere un totale di 2.7% | 🔵 Claude |
-| ⚠️ | Coerenza | Nel punto 7, c'è un riferimento errato '{sale_salamoia_e_fini_2:8}' che dovrebbe essere semplicemente il sale grosso marino da 8g | Sostituire con il valore corretto '8g sale grosso marino' | 🔵 Claude |
-| 💡 | Tempi | Il tempo totale dichiarato '5-6h' sembra sottostimato: biga 1,5-2h + puntata 3-4h + appretto 40min = 5,25-6,75h | Aggiornare a '5,5-7h totali' per maggiore precisione | 🔵 Claude |
+| Sev. | Area | Problema | Correzione |
+|------|------|----------|------------|
+| ❌ | Gruppi | La sezione 'Per la Biga' negli ingredienti elenca tutti i 700g di Farina Manitoba assieme a soli 120g di acqua, indicando un pre-impasto con un'idratazione impossibile del 17%. Questo contraddice il Punto 2 del procedimento, che richiede di usare solo 200g di un mix di farine. | Ristrutturare i gruppi ingredienti: dividere le farine in modo coerente col procedimento (es. 140g Manitoba + 60g Tipo 0 nella Biga, e 560g Manitoba + 240g Tipo 0 nell'Impasto) oppure creare un gruppo unico 'Mix Farine'. |
+| ⚠️ | Coerenza | Nel Punto 2 del procedimento, per indicare i 60g di farina Tipo 0 da inserire nella biga, è stato inserito per errore il token relativo all'olio della salamoia: '{olio_evo_salamoia_e_fini:60}g tipo 0'. | Correggere il testo rimuovendo il token errato e inserendo '60g' (o un token dedicato alla farina Tipo 0) per evitare che il calcolatore sballi le dosi della farina scalando l'olio. |
 
 ---
-*Generato: 2026-03-30T21:42:55.146Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-04-16T19:45:59.378Z | Pipeline: Schema → Gemini*
