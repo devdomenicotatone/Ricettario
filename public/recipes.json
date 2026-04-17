@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-04-17T16:19:29.864Z",
-  "totalRecipes": 33,
+  "generatedAt": "2026-04-17T18:19:55.112Z",
+  "totalRecipes": 36,
   "categories": [
     {
       "name": "Condimenti",
-      "count": 3,
+      "count": 5,
       "emoji": ""
     },
     {
@@ -19,7 +19,7 @@
     },
     {
       "name": "Pasta",
-      "count": 1,
+      "count": 2,
       "emoji": "🍝"
     },
     {
@@ -44,6 +44,22 @@
     }
   ],
   "recipes": [
+    {
+      "title": "Marinatura alla Menta e Aceto",
+      "slug": "marinatura-menta-aceto-verdure-grigliate",
+      "category": "Condimenti",
+      "categoryDir": "condimenti",
+      "emoji": "🌿",
+      "href": "ricette/condimenti/marinatura-menta-aceto-verdure-grigliate.html",
+      "image": "images/ricette/condimenti/marinatura-menta-aceto-verdure-grigliate.webp",
+      "description": "L'emulsione balsamica ispirata alla tradizione ebraico-romana, perfetta per zucchine e melanzane alla brace.",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-17T18:05:00.000Z"
+    },
     {
       "title": "Olio al Basilico",
       "slug": "olio-al-basilico",
@@ -91,6 +107,22 @@
       "tool": "",
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-16T18:16:57.771Z"
+    },
+    {
+      "title": "Salmoriglio Siciliano",
+      "slug": "salmoriglio-siciliano-tradizionale",
+      "category": "Condimenti",
+      "categoryDir": "condimenti",
+      "emoji": "🍋",
+      "href": "ricette/condimenti/salmoriglio-siciliano-tradizionale.html",
+      "image": "images/ricette/condimenti/salmoriglio-siciliano-tradizionale.webp",
+      "description": "L'autentica emulsione siciliana a base di olio EVO, limone, aglio e origano. La salsa a crudo perfetta per marinare e condire carni, pesci e verdure alla grigli",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-17T17:21:21.505Z"
     },
     {
       "title": "Baguette Francese Tradizionale",
@@ -315,6 +347,22 @@
       "tool": "",
       "_generatedBy": null,
       "_createdAt": "2026-04-15T20:03:44.102Z"
+    },
+    {
+      "title": "Polenta Concia alla Valdostana",
+      "slug": "polenta-concia-valdostana",
+      "category": "Pasta",
+      "categoryDir": "pasta",
+      "emoji": "🌽",
+      "href": "ricette/pasta/polenta-concia-valdostana.html",
+      "image": "images/ricette/pasta/polenta-concia-valdostana.webp",
+      "description": "La vera ricetta della Polenta Concia: un abbraccio cremoso di farina di mais bramata, arricchita con abbondante burro di alpeggio, Fontina DOP e Toma Piemontese",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-17T17:50:23.207Z"
     },
     {
       "title": "Burger Buns con Biga",
