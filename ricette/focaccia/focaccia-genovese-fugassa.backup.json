@@ -111,44 +111,37 @@
         {
           "name": "Farina 00 Media Forza",
           "note": "(W 260–280, proteine 11-12%)",
-          "grams": 400,
-          "tokenId": "farina_media_impasto"
+          "grams": 400
         },
         {
           "name": "Farina Manitoba Forte",
           "note": "(W 380–420, proteine 13-14%)",
-          "grams": 250,
-          "tokenId": "farina_forte_impasto"
+          "grams": 250
         },
         {
           "name": "Acqua",
           "note": "(fredda 16-18°C per controllare temperatura finale)",
-          "grams": 335,
-          "tokenId": "acqua_impasto"
+          "grams": 335
         },
         {
           "name": "Sale Fino",
           "note": "(13 g nell'impasto)",
-          "grams": 13,
-          "tokenId": "sale_impasto"
+          "grams": 13
         },
         {
           "name": "Malto Diastasico",
           "note": "(o 1 cucchiaino miele se non disponibile)",
-          "grams": 10,
-          "tokenId": "malto_impasto"
+          "grams": 10
         },
         {
           "name": "Lievito di Birra Fresco",
           "note": "(18 g per lievitazione controllata 3-4 ore)",
-          "grams": 18,
-          "tokenId": "lievito_fresco_impasto"
+          "grams": 18
         },
         {
           "name": "Olio Extravergine d'Oliva Ligure DOP",
           "note": "(nell'impasto, preferire taggiasco o riviera)",
-          "grams": 30,
-          "tokenId": "olio_evo_impasto"
+          "grams": 30
         }
       ]
     },
@@ -158,30 +151,22 @@
         {
           "name": "Olio Extravergine d'Oliva",
           "note": "(per ungere le 2 teglie 30×40 cm)",
-          "grams": 30,
-          "tokenId": "olio_teglie_condimento",
-          "excludeFromTotal": true
+          "grams": 30
         },
         {
           "name": "Olio Extravergine d'Oliva",
           "note": "(per condire la superficie prima di infornare)",
-          "grams": 60,
-          "tokenId": "olio_superficie",
-          "excludeFromTotal": true
+          "grams": 60
         },
         {
           "name": "Sale Fino",
           "note": "(per salamoia)",
-          "grams": 10,
-          "tokenId": "sale_condimento",
-          "excludeFromTotal": true
+          "grams": 10
         },
         {
           "name": "Acqua",
           "note": "(per salamoia, temperatura ambiente)",
-          "grams": 200,
-          "tokenId": "acqua_condimento",
-          "excludeFromTotal": true
+          "grams": 200
         }
       ]
     }
@@ -201,7 +186,7 @@
     },
     {
       "title": "Emulsione Olio (5 min, V1→V2)",
-      "text": "Versare l'olio EVO ({olio_evo_impasto:30} g) a filo. Continuare 3 minuti a V1 fino a completo assorbimento. Passare a V2 (velocità media) per 2 minuti: l'impasto deve staccarsi dalle pareti, risultare liscio, elastico e lucido. Temperatura finale: 25-26°C MAX."
+      "text": "Versare l'olio EVO ({olio_evo_impasto:30} g) a filo. Continuare 3 minuti a V1 fino a completa assorbimento. Passare a V2 (velocità media) per 2 minuti: l'impasto deve staccarsi dalle pareti, risultare liscio, elastico e lucido. Temperatura finale: 25-26°C MAX."
     },
     {
       "title": "Puntata in Massa (30 min, 26-28°C)",

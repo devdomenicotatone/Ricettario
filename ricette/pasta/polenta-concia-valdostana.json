@@ -5,10 +5,10 @@
   "description": "La vera ricetta della Polenta Concia: un abbraccio cremoso di farina di mais bramata, arricchita con abbondante burro di alpeggio, Fontina DOP e Toma Piemontese.",
   "subtitle": "Comfort food alpino per eccellenza, mantecato rigorosamente fuori dal fuoco per una cremosità perfetta",
   "category": "Pasta",
-  "hydration": 0,
+  "hydration": 400,
   "targetTemp": "",
   "fermentation": "",
-  "totalFlour": 0,
+  "totalFlour": 400,
   "ingredients": [],
   "ingredientGroups": [
     {

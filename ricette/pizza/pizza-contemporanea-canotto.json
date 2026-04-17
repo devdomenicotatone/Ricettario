@@ -190,8 +190,15 @@
         {
           "name": "Acqua rinfresco",
           "note": "(da inserire in più riprese come da procedimento)",
-          "grams": 1615,
+          "grams": 970,
           "tokenId": "acqua_rinfresco",
+          "excludeFromTotal": false
+        },
+        {
+          "name": "Acqua bassinage",
+          "note": "(da inserire a goccia)",
+          "grams": 645,
+          "tokenId": "acqua_bassinage",
           "excludeFromTotal": false
         },
         {

@@ -4,7 +4,7 @@
   "emoji": "🫒",
   "description": "Focaccia barese tradizionale con semola, patate, pomodorini e olive: croccante sotto, soffice dentro, profumo di Puglia.",
   "subtitle": "L'originale pugliese con semola rimacinata, patate lesse, pomodorini schiacciati e olive baresane",
-  "category": "Lievitati",
+  "category": "Focaccia",
   "hydration": 64,
   "targetTemp": "24-26°C",
   "fermentation": "~3h a temperatura ambiente",
@@ -212,7 +212,7 @@
     "lievitati"
   ],
   "_generatedBy": "claude-opus",
-  "image": "images/ricette/lievitati/focaccia-barese.webp",
+  "image": "images/ricette/focaccia/focaccia-barese.webp",
   "imageAttribution": "📷 Foto: Noemí Jiménez — Pexels License via Pexels",
   "steps": [
     {
@@ -225,7 +225,7 @@
     },
     {
       "title": "Impastamento in Spirale — Prima Fase",
-      "text": "Nella vasca della spirale, versare {farina_zero_impasto:270}g di farina tipo 0 e {semola_impasto:250}g di semola rimacinata. Aggiungere il lievitino maturo e le patate schiacciate fredde. Avviare in V1 e versare gradualmente {acqua_impasto:290}g di acqua (18-20°C). Impastare in V1 per 6-8 minuti fino ad assorbimento completo dei liquidi e formazione di un impasto grezzo."
+      "text": "Nella vasca della spirale, versare {farina_zero_impasto:270}g di farina tipo 0 e {semola_impasto:250}g di semola rimacinata. Aggiungere il lievitino maturo e le patate schiacciate fredde. Avviare in V1 e versare gradualmente {acqua_impasto:290}g di acqua (20-22°C). Impastare in V1 per 6-8 minuti fino ad assorbimento completo dei liquidi e formazione di un impasto grezzo."
     },
     {
       "title": "Impastamento in Spirale — Seconda Fase",

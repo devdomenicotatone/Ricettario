@@ -8,7 +8,7 @@
   "hydration": 76,
   "targetTemp": "24-25°C",
   "fermentation": "~18h",
-  "totalFlour": 500,
+  "totalFlour": 510,
   "ingredients": [],
   "ingredientGroups": [
     {
@@ -29,7 +29,7 @@
         {
           "name": "Lievito di Birra Secco",
           "note": "(dosaggio lento per maturazione perfetta)",
-          "grams": 1,
+          "grams": 0.2,
           "tokenId": "lievito_poolish"
         }
       ]

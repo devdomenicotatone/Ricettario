@@ -1,28 +1,20 @@
 # Qualità: Focaccia Genovese (Fügassa)
 
-## 🟢 Score Finale: 85/100
+## 🟢 Score Finale: 90/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
-| Schema | ❌ Fail | 1 errori, 11 warning |
-| Gemini | 100/100 | 🟢 Buona |
+| Schema | ✅ Pass | 0 errori, 0 warning |
+| Gemini | 90/100 | 🟢 Buona |
 
-Ricetta eccellente e tecnicamente impeccabile. Il calcolo dell'idratazione (335g acqua / 650g farina totale = 51.5%) è corretto e coerente con la vera focaccia ligure. Tempi, temperature e tecniche (incluso l'uso del mattarello per la prima stesura e la salamoia) sono perfettamente fedeli alla tradizione.
+Ricetta eccellente e altamente professionale. Idratazione calcolata perfettamente (335g/650g = 51.5%), così come la calibratura del peso dell'impasto rispetto all'area delle teglie. Ottima la gestione delle tempistiche e della salamoia. Da correggere unicamente l'ordine di inserimento tra sale e lievito in macchina.
 
-## 🔍 Schema Validation
+## Problemi trovati
 
-- ❌ Idratazione dichiarata 51.5% ma calcolata 82% (solo acqua) (535g acqua / 650g farina). Scarto: 30.5%
-- ⚠️ Ingrediente "Farina 00 Media Forza" nel gruppo "Per l'Impasto" senza tokenId — il calcolatore dosi non funzionerà correttamente
-- ⚠️ Ingrediente "Farina Manitoba Forte" nel gruppo "Per l'Impasto" senza tokenId — il calcolatore dosi non funzionerà correttamente
-- ⚠️ Ingrediente "Acqua" nel gruppo "Per l'Impasto" senza tokenId — il calcolatore dosi non funzionerà correttamente
-- ⚠️ Ingrediente "Sale Fino" nel gruppo "Per l'Impasto" senza tokenId — il calcolatore dosi non funzionerà correttamente
-- ⚠️ Ingrediente "Malto Diastasico" nel gruppo "Per l'Impasto" senza tokenId — il calcolatore dosi non funzionerà correttamente
-- ⚠️ Ingrediente "Lievito di Birra Fresco" nel gruppo "Per l'Impasto" senza tokenId — il calcolatore dosi non funzionerà correttamente
-- ⚠️ Ingrediente "Olio Extravergine d'Oliva Ligure DOP" nel gruppo "Per l'Impasto" senza tokenId — il calcolatore dosi non funzionerà correttamente
-- ⚠️ Ingrediente "Olio Extravergine d'Oliva" nel gruppo "Per il Condimento" senza tokenId — il calcolatore dosi non funzionerà correttamente
-- ⚠️ Ingrediente "Olio Extravergine d'Oliva" nel gruppo "Per il Condimento" senza tokenId — il calcolatore dosi non funzionerà correttamente
-- ⚠️ Ingrediente "Sale Fino" nel gruppo "Per il Condimento" senza tokenId — il calcolatore dosi non funzionerà correttamente
-- ⚠️ Ingrediente "Acqua" nel gruppo "Per il Condimento" senza tokenId — il calcolatore dosi non funzionerà correttamente
+| Sev. | Area | Problema | Correzione |
+|------|------|----------|------------|
+| ⚠️ | Coerenza | L'ordine di inserimento nell'impastatrice è invertito: il sale viene inserito allo Step 3 e il lievito fresco allo Step 4. Aggiungere il lievito fresco sbriciolato (senza acqua) su un impasto già parzialmente incordato e contenente sale ostacola la dispersione omogenea dei lieviti. | Invertire gli inserimenti: inserire il lievito sbriciolato allo Step 2 (con la prima acqua), e spostare l'inserimento del sale allo Step 4 (o fine Step 3) insieme agli ultimi 35g di acqua (bassinage). |
+| 💡 | Coerenza | Allo Step 11 è indicato 'Versare al centro {olio_superficie:30} g olio + 100 g salamoia' ma il testo parla al singolare ('Scoprire la focaccia'). Sebbene le dosi matematicamente corrispondano alla metà dei totali (ci sono 2 teglie), la stesura può risultare ambigua. | Specificare esplicitamente: 'Per ogni teglia, versare al centro 30 g di olio e 100 g di salamoia' per guidare meglio l'utente. |
 
 ---
-*Generato: 2026-04-16T19:47:42.128Z | Pipeline: Schema → Gemini*
+*Generato: 2026-04-17T23:45:39.988Z | Pipeline: Schema → Gemini*
