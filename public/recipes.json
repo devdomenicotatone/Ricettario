@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-16T21:49:09.106Z",
+  "generatedAt": "2026-04-17T16:19:29.864Z",
   "totalRecipes": 33,
   "categories": [
     {
@@ -106,7 +106,7 @@
       "temp": "24-25°C",
       "tool": "",
       "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-15T20:03:44.098Z"
+      "_createdAt": "2026-04-17T16:19:29.858Z"
     },
     {
       "title": "Ciabatta con Poolish, Malto e Criscito",
@@ -470,11 +470,11 @@
       "image": "images/ricette/dolci/cantuccini-di-prato.webp",
       "description": "Biscotti tradizionali toscani con mandorle e doppia cottura, friabili e croccanti, perfetti da inzuppare nel Vin Santo",
       "hydration": null,
-      "time": "nessuna (impasto chimico)",
+      "time": "nessuna",
       "temp": "20-22°C",
       "tool": "",
       "_generatedBy": null,
-      "_createdAt": "2026-04-15T20:03:44.077Z"
+      "_createdAt": "2026-04-17T15:55:48.344Z"
     },
     {
       "title": "Cartocci alla Crema Siciliani",
