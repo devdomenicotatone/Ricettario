@@ -92,6 +92,11 @@
     "MIX FARINE personalizzabile: puoi sostituire parte della tipo 0 con tipo 1 o semi-integrale (max 20%) per più sapore rustico. Oppure usare mix pronti 'Pinsa Romana' che hanno già le proporzioni ottimali.",
     "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
   ],
+  "storage": [
+    "Le basi di Pinsa precotte, una volta raffreddate completamente a temperatura ambiente, si conservano in frigorifero per 3-4 giorni avvolte in pellicola alimentare o in sacchetti per alimenti. Per una conservazione prolungata, congelarle singolarmente ben sigillate: manterranno la loro qualità fino a 3 mesi.",
+    "La Pinsa cotta e condita avanzata va conservata in un contenitore ermetico in frigorifero per un massimo di 2 giorni. Si sconsiglia di congelarla se condita con ingredienti freschi ad alto contenuto d'acqua (es. mozzarella fresca, pomodorini), i quali rilascerebbero liquidi compromettendo la struttura in fase di scongelamento.",
+    "Per la rigenerazione, preriscaldare il forno statico a 200°C. Infornare la Pinsa (sia da frigo che la base da freezer, senza scongelare) direttamente sulla griglia per 5-8 minuti. Questo shock termico riattiva il lievito e ripristina la croccantezza esterna e la morbidezza interna, evitando l'effetto 'biscottato' del riscaldamento a basse temperature."
+  ],
   "imageKeywords": [
     "pinsa romana pizza",
     "roman style pinsa",

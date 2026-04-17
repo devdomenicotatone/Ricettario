@@ -120,6 +120,7 @@ function buildRecipeHTML(r, categoryDir) {
         ${buildAlert(r)}
         ${buildBaking(r)}
         ${buildProTips(r)}
+        ${buildStorage(r)}
         ${buildGlossary(r)}
       </div>
     </section>
@@ -308,6 +309,20 @@ function buildProTips(r) {
       </h2>
       <ul class="baking-tips" style="list-style: none; padding: 0;">
         ${r.proTips.map(t => `<li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">${fluentEmoji('light-bulb', 16)} ${escHtml(t)}</li>`).join('')}
+      </ul>
+    </div>`;
+}
+
+// ── Conservazione ──
+function buildStorage(r) {
+  if (!r.storage?.length) return '';
+  return `
+    <div class="recipe-panel reveal" style="margin-top: 32px;">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon">${fluentEmoji('package', 24)}</span> Conservazione
+      </h2>
+      <ul class="baking-tips" style="list-style: none; padding: 0;">
+        ${r.storage.map(t => `<li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">${fluentEmoji('package', 16)} ${escHtml(t)}</li>`).join('')}
       </ul>
     </div>`;
 }

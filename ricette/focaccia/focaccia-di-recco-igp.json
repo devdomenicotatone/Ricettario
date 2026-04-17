@@ -69,6 +69,11 @@
     "Temperatura del formaggio: lo stracchino/crescenza deve essere freddo di frigo fino al momento dell'uso. Se troppo caldo, inizia a fondere durante l'assemblaggio e rende difficile la chiusura.",
     "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
   ],
+  "storage": [
+    "La Focaccia di Recco va consumata preferibilmente appena sfornata. Se avanzata, conservarla in frigorifero per massimo 24 ore, avvolta in carta da forno e poi in un sacchetto di carta per alimenti per assorbire l'umidità del formaggio e preservare parzialmente la fragranza, evitando contenitori ermetici che la renderebbero molle.",
+    "Si sconsiglia vivamente il congelamento della focaccia cotta: la struttura della crescenza verrebbe compromessa, rilasciando siero durante lo scongelamento e rendendo la sfoglia irrimediabilmente umida e gommosa, perdendo ogni caratteristica di croccantezza.",
+    "Per rigenerare la focaccia conservata in frigo, preriscaldare il forno statico a 200°C. Infornare la focaccia direttamente sulla griglia o su una teglia rovente per 3-5 minuti, fino a quando la sfoglia tornerà dorata e croccante. L'uso del microonde è assolutamente da evitare."
+  ],
   "image": "images/ricette/focaccia/focaccia-di-recco-igp.webp",
   "imageKeywords": [
     "focaccia recco cheese",

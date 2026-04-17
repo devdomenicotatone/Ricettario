@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-17T18:19:55.112Z",
+  "generatedAt": "2026-04-17T18:58:48.097Z",
   "totalRecipes": 36,
   "categories": [
     {
@@ -86,7 +86,7 @@
       "image": "images/ricette/condimenti/olio-al-basilico-verde-smeraldo.webp",
       "description": "Olio aromatico al basilico con tecnica dello shock termico: colore verde neon, purezza cristallina e sicurezza alimentare totale.",
       "hydration": null,
-      "time": "—",
+      "time": null,
       "temp": "60–70°C (olio durante riscaldamento)",
       "tool": "",
       "_generatedBy": "claude",

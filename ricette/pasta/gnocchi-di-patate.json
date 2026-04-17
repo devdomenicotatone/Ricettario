@@ -63,6 +63,11 @@
     "Congela gli gnocchi crudi su vassoio infarinato per 2 ore, poi trasferisci in sacchetti: si conservano 3 mesi e si cuociono ancora congelati (1 minuto in più).",
     "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
   ],
+  "storage": [
+    "CONSERVAZIONE A CRUDO (BREVE TERMINE): Per conservare gli gnocchi crudi per massimo 12-24 ore, disponeteli ben distanziati su un vassoio spolverato abbondantemente con semola rimacinata (assorbe meglio l'umidità rispetto alla farina 00). Coprite con pellicola alimentare e riponete nella parte più fredda del frigorifero. Questa tecnica previene l'annerimento dell'impasto e impedisce che gli gnocchi diventino collosi e si attacchino tra loro.",
+    "CONGELAMENTO (LUNGO TERMINE): Per una conservazione fino a 3 mesi, è essenziale il metodo di congelamento rapido individuale (IQF). Disponete gli gnocchi crudi su un vassoio infarinato, senza che si tocchino, e congelateli per circa 2 ore. Una volta solidificati, trasferiteli in sacchetti per freezer o contenitori ermetici. CUCINATELI DIRETTAMENTE DA CONGELATI in acqua bollente salata; non scongelateli mai prima della cottura per evitare che si sfaldino completamente.",
+    "CONSERVAZIONE E RIGENERAZIONE DA COTTI: Gli gnocchi già cotti e conditi possono essere conservati in frigorifero per 1-2 giorni in un contenitore ermetico. Per rigenerarli al meglio, saltateli in padella a fuoco moderato con il loro sugo, aggiungendo eventualmente un cucchiaio d'acqua o brodo per reidratarli. Se si tratta di gnocchi gratinati, rigenerateli in forno statico a 160°C per circa 10-15 minuti, fino a che non saranno nuovamente caldi e filanti."
+  ],
   "image": "images/ricette/pasta/gnocchi-di-patate.webp",
   "imageKeywords": [
     "italian potato gnocchi",
