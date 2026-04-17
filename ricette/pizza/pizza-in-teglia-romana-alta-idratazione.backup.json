@@ -81,7 +81,7 @@
     },
     {
       "title": "7. Staglio e Formatura Pagnotte",
-      "text": "Dopo 24 ore, estrarre il cassone dal frigo. Con l'ausilio di un tarocco oliato, stagliare l'impasto: con queste dosi si ottiene una pagnotta da {panetto_peso:1200!}g per la teglia 60×40 cm e avanza impasto sufficiente per una teglietta più piccola. Non sgasare: effettuare una formatura delicata dando tensione alla superficie senza rompere i gas di fermentazione già formati. Riporre le pagnotte in cassette singole oliate e sigillare."
+      "text": "Dopo 24 ore, estrarre il cassone dal frigo. Con l'ausilio di un tarocco oliato, stagliare l'impasto in pagnotte da {panetto_peso:1200!}g cadauna (pezzatura standard per teglia 60×40 cm). Non sgasare: effettuare una formatura delicata dando tensione alla superficie senza rompere i gas di fermentazione già formati. Riporre le pagnotte in cassette singole oliate o in cassetta 60×40 cm (tre pagnotti per cassetta), sigillare."
     },
     {
       "title": "8. Appretto (Secondo Riposo)",
@@ -89,7 +89,7 @@
     },
     {
       "title": "9. Stesura in Teglia",
-      "text": "Oliare generosamente il fondo della teglia in ferro blu 60×40 cm a temperatura ambiente. Rovesciare la cassetta direttamente sul banco e poi trasferire delicatamente la pagnotta sulla teglia. Con le dita aperte e la tecnica a pressione dall'interno verso l'esterno, stendere l'impasto fino a coprire tutta la teglia. Procedere in più riprese se l'impasto oppone resistenza (glutine in tensione): lasciarlo riposare 5 minuti coperto e riprendere la stesura. Non usare il mattarello — si perderebbero tutti i gas di fermentazione. L'impasto steso sulla teglia deve presentare visibili bolle in superficie."
+      "text": "Oliare generosamente il fondo della teglia in ferro blu 60×40 cm. Rovesciare la cassetta direttamente sul banco e poi trasferire delicatamente la pagnotta sulla teglia. Con le dita aperte e la tecnica a pressione dall'interno verso l'esterno, stendere l'impasto fino a coprire tutta la teglia. Procedere in più riprese se l'impasto oppone resistenza (glutine in tensione): lasciarlo riposare 5 minuti coperto e riprendere la stesura. Non usare il mattarello — si perderebbero tutti i gas di fermentazione. L'impasto steso sulla teglia deve presentare visibili bolle in superficie."
     },
     {
       "title": "10. Condimento e Cottura",
@@ -122,7 +122,7 @@
     "temperature": "270–280°C",
     "time": "12–18 minuti",
     "tips": [
-      "Per ottenere la crosticina croccante alla base, preriscaldare il forno con una pietra refrattaria già dentro per almeno 30 minuti, quindi appoggiare la teglia in ferro blu direttamente sulla pietra calda: il calore immediato garantisce la doratura dal basso fin dai primi secondi di cottura",
+      "Preriscaldare il forno con la teglia in ferro blu già dentro per almeno 30 minuti: la teglia calda garantisce la crosticina croccante alla base fin dai primi secondi di cottura",
       "Forni casalinghi senza controllo separato platea/cielo: posizionare la teglia sul fondo del forno (a diretto contatto con la resistenza inferiore) per i primi 8 minuti, poi spostarla a metà per dorare la superficie",
       "La base è cotta correttamente quando, sollevando un angolo con una spatola, si vede un fondo dorato e croccante — non bianco o pallido",
       "Per cottura con condimenti umidi (mozzarella fresca, pomodoro abbondante), cuocere la base in bianco per 8–10 minuti prima di aggiungere i condimenti: si evita l'effetto 'vapore' che rende la base gommosa",
