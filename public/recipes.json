@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-17T23:46:21.468Z",
-  "totalRecipes": 36,
+  "generatedAt": "2026-04-18T00:11:02.815Z",
+  "totalRecipes": 38,
   "categories": [
     {
       "name": "Condimenti",
@@ -9,7 +9,7 @@
     },
     {
       "name": "Pane",
-      "count": 6,
+      "count": 7,
       "emoji": "🥖"
     },
     {
@@ -19,7 +19,7 @@
     },
     {
       "name": "Pasta",
-      "count": 2,
+      "count": 3,
       "emoji": "🍝"
     },
     {
@@ -155,6 +155,22 @@
       "tool": "",
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-17T23:38:44.546Z"
+    },
+    {
+      "title": "Pane ai Cereali e Semi",
+      "slug": "pane-ai-cereali-semi",
+      "category": "Pane",
+      "categoryDir": "pane",
+      "emoji": "🌾",
+      "href": "ricette/pane/pane-ai-cereali-semi.html",
+      "image": "images/ricette/pane/pane-ai-cereali-semi.webp",
+      "description": "Un pane dal sapore rustico e intenso, arricchito con un mix di cereali e semi. Crosta croccante e mollica morbida, ideale per colazioni e bruschette.",
+      "hydration": "68%",
+      "time": "18-24h",
+      "temp": "24-25°C",
+      "tool": "",
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-18T00:04:36.289Z"
     },
     {
       "title": "Pane alle Noci con Poolish",
@@ -334,6 +350,22 @@
     },
     {
       "title": "Gnocchi di Patate",
+      "slug": "gnocchi-di-patate-v2",
+      "category": "Pasta",
+      "categoryDir": "pasta",
+      "emoji": "🥔",
+      "href": "ricette/pasta/gnocchi-di-patate-v2.html",
+      "image": "images/ricette/pasta/gnocchi-di-patate-v2.webp",
+      "description": "Gnocchi di patate fatti in casa: soffici, leggeri e perfettamente rigati. Ricetta classica italiana con patate, farina, uovo e il segreto della lavorazione mini",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "_generatedBy": "claude-opus",
+      "_createdAt": "2026-04-18T00:10:40.501Z"
+    },
+    {
+      "title": "Gnocchi di Patate",
       "slug": "gnocchi-di-patate",
       "category": "Pasta",
       "categoryDir": "pasta",
@@ -357,7 +389,7 @@
       "href": "ricette/pasta/polenta-concia-valdostana.html",
       "image": "images/ricette/pasta/polenta-concia-valdostana.webp",
       "description": "La vera ricetta della Polenta Concia: un abbraccio cremoso di farina di mais bramata, arricchita con abbondante burro di alpeggio, Fontina DOP e Toma Piemontese",
-      "hydration": null,
+      "hydration": "400%",
       "time": null,
       "temp": null,
       "tool": "",
@@ -554,7 +586,7 @@
       "temp": "24-26°C",
       "tool": "",
       "_generatedBy": "claude-opus",
-      "_createdAt": "2026-04-17T23:46:21.446Z"
+      "_createdAt": "2026-04-17T23:47:16.967Z"
     },
     {
       "title": "Focaccia di Recco IGP",
