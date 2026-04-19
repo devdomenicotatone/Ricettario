@@ -1,0 +1,134 @@
+{
+  "title": "Burro Maître d'Hôtel",
+  "slug": "burro-maitre-d-hotel",
+  "emoji": "🧈",
+  "description": "Il classico burro composto francese: un'emulsione perfetta di burro a pomata, prezzemolo fresco e succo di limone. Ideale per esaltare carni alla griglia e pesci.",
+  "subtitle": "Burro aromatizzato classico per carni e pesci",
+  "category": "Condimenti",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per il Burro Composto",
+      "items": [
+        {
+          "name": "Burro di centrifuga",
+          "note": "(82% grassi, consistenza a pomata)",
+          "grams": 200,
+          "tokenId": "burro_pomata"
+        },
+        {
+          "name": "Prezzemolo fresco",
+          "note": "(solo foglie, tritate finemente)",
+          "grams": 30,
+          "tokenId": "prezzemolo_fresco"
+        },
+        {
+          "name": "Succo di limone",
+          "note": "(spremuto fresco e filtrato)",
+          "grams": 20,
+          "tokenId": "succo_limone"
+        },
+        {
+          "name": "Aglio fresco",
+          "note": "(ridotto in purea, opzionale per sprint aromatico)",
+          "grams": 3,
+          "tokenId": "aglio_purea"
+        },
+        {
+          "name": "Sale fino marino",
+          "note": "",
+          "grams": 3,
+          "tokenId": "sale_fino"
+        },
+        {
+          "name": "Pepe bianco",
+          "note": "(macinato al momento)",
+          "grams": 1,
+          "tokenId": "pepe_bianco"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Ammorbidimento e lavorazione del burro",
+      "text": "Lasciare ammorbidire {burro_pomata:200}g di burro a temperatura ambiente fino a raggiungere la consistenza 'a pomata' (circa 20°C). Trasferirlo in una ciotola capiente e lavorarlo vigorosamente con una spatola morbida (marisa) fino a renderlo completamente liscio, cremoso e privo di grumi. Non fonderlo mai."
+    },
+    {
+      "title": "Preparazione degli aromi",
+      "text": "Lavare e asciugare perfettamente il prezzemolo. Tritare finemente al coltello le foglie per ricavare {prezzemolo_fresco:30}g di trito (evitare i gambi). Ridurre {aglio_purea:3}g di aglio in una pasta impalpabile schiacciandolo con la lama del coltello. Filtrare con un colino a maglie strette {succo_limone:20}g di succo di limone per eliminare polpa e semi."
+    },
+    {
+      "title": "Creazione dell'emulsione",
+      "text": "Incorporare al burro cremoso il prezzemolo tritato, l'aglio in purea, {sale_fino:3}g di sale e {pepe_bianco:1}g di pepe bianco. Mescolare per distribuire uniformemente gli aromi. Aggiungere il succo di limone a filo, in due o tre riprese, lavorando continuamente ed energicamente con la spatola. Questo passaggio è cruciale per creare un'emulsione stabile ed evitare che la parte liquida acida si separi dalla parte grassa."
+    },
+    {
+      "title": "Formatura del cilindro (Boudin)",
+      "text": "Trasferire il composto ottenuto al centro di un foglio di carta forno (o pellicola alimentare). Con l'aiuto di un tarocco flessibile o delle mani, modellare un panetto allungato. Avvolgere la carta attorno al burro e far rotolare il cilindro sul piano di lavoro, stringendo contemporaneamente le estremità a 'caramella', fino a formare un cilindro compatto e regolare (boudin) di circa 3-4 cm di diametro."
+    },
+    {
+      "title": "Cristallizzazione e servizio",
+      "text": "Riporre il cilindro in frigorifero per almeno {tempo_riposo:120!} minuti. Questo tempo è necessario per permettere ai grassi del burro di ricristallizzare, stabilizzando la forma e permettendo agli oli essenziali delle erbe di fondersi col grasso. Al momento del servizio, scartare il cilindro e tagliare a rondelle spesse 5-8 mm. Posizionare i medaglioni di burro freddo direttamente sulla carne o sul pesce caldi appena prima di servire."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "glossary": [
+    {
+      "term": "Burro a pomata",
+      "definition": "Stato fisico del burro lasciato a temperatura ambiente (circa 18-20°C). Assume la plasticità e la consistenza di una crema morbida, lavorabile con la spatola, senza che la sua struttura chimica fonda."
+    },
+    {
+      "term": "Burro composto",
+      "definition": "Preparazione classica, tipica della gastronomia francese (Beurre Composé), ottenuta incorporando erbe, spezie, liquidi o altri aromi all'interno di una base di burro ammorbidito."
+    },
+    {
+      "term": "Emulsione (a freddo)",
+      "definition": "Dispersione meccanica di un liquido a base acquosa (il succo di limone) all'interno di una matrice grassa solida o semisolida (il burro), che crea una struttura stabile e omogenea."
+    },
+    {
+      "term": "Cristallizzazione",
+      "definition": "Fase di riposo a bassa temperatura (in frigorifero o abbattitore) in cui i legami dei grassi del burro si solidificano nuovamente, bloccando gli aromi e l'acqua in sospensione."
+    },
+    {
+      "term": "Boudin",
+      "definition": "Termine francese che indica la forma a cilindro allungato (simile a un salsicciotto) data al burro composto per facilitarne il porzionamento a rondelle."
+    }
+  ],
+  "alert": "Non sciogliere MAI il burro (né a bagnomaria, né al microonde) per velocizzare i tempi. Il burro fuso perde la sua struttura reticolare e non sarà in grado di incorporare il succo di limone, facendolo inesorabilmente 'impazzire' (netta separazione tra grasso e liquidi).",
+  "proTips": [
+    "L'asciugatura del prezzemolo è critica: l'acqua in eccesso sulle foglie compromette l'emulsione e riduce drasticamente il tempo di conservazione, favorendo l'ossidazione.",
+    "Usa rigorosamente pepe bianco invece del pepe nero: essendo invisibile nel burro, manterrà il colore della preparazione pulito ed elegante senza puntini grigiastri.",
+    "Per un taglio dei medaglioni liscio e perfetto senza sbriciolare il panetto, passa la lama liscia del coltello in acqua molto calda e asciugala rapidamente prima di ogni taglio."
+  ],
+  "storage": [
+    "Conservazione in frigo: Avvolto strettamente nella sua carta forno e poi in un foglio di alluminio o pellicola (il burro assorbe gli odori del frigo molto velocemente), si conserva fino a 7-10 giorni.",
+    "Congelamento: È possibile congelare il cilindro intero o, ancora meglio, già tagliato a rondelle separate da piccoli foglietti di carta forno. Si conserva fino a 3 mesi in freezer. Utilizzare la rondella ancora congelata ponendola direttamente sulla bistecca rovente."
+  ],
+  "imageKeywords": [
+    "maitre d'hotel butter",
+    "herb compound butter",
+    "garlic herb butter log",
+    "burro aromatizzato prezzemolo",
+    "kraeuterbutter",
+    "steak butter medallions",
+    "beurre compose"
+  ],
+  "tags": [
+    "burro composto",
+    "condimenti francesi",
+    "maitre d'hotel",
+    "salse per carne",
+    "burro aromatizzato",
+    "senza glutine"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "_createdAt": "2026-04-19T20:32:57.188Z",
+  "image": "images/ricette/condimenti/burro-maitre-d-hotel.webp",
+  "imageAttribution": "📷 Foto: Mi Butter SA — Pexels License via Pexels"
+}

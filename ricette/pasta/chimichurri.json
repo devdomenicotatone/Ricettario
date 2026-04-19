@@ -1,0 +1,170 @@
+{
+  "title": "Chimichurri",
+  "slug": "chimichurri",
+  "emoji": "🌿",
+  "description": "Salsa chimichurri argentina: prezzemolo, aglio, origano, peperoncino, aceto e olio EVO. Perfetta per carni alla griglia e asado.",
+  "subtitle": "La salsa verde argentina per eccellenza — condimento crudo a base di erbe fresche, aglio e aceto",
+  "category": "Pasta",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per il Chimichurri",
+      "items": [
+        {
+          "name": "Prezzemolo Fresco",
+          "note": "(solo foglie, lavato e asciugato)",
+          "grams": 30,
+          "tokenId": "prezzemolo"
+        },
+        {
+          "name": "Aglio Fresco",
+          "note": "(3 spicchi medi, circa 12g)",
+          "grams": 12,
+          "tokenId": "aglio"
+        },
+        {
+          "name": "Origano Secco",
+          "note": "(di buona qualità, preferibilmente siciliano o greco)",
+          "grams": 8,
+          "tokenId": "origano"
+        },
+        {
+          "name": "Timo Secco",
+          "note": "(facoltativo ma tradizionale)",
+          "grams": 3,
+          "tokenId": "timo"
+        },
+        {
+          "name": "Peperoncino Secco",
+          "note": "(piccante, 2 piccoli o 1 medio, sbriciolato)",
+          "grams": 3,
+          "tokenId": "peperoncino"
+        },
+        {
+          "name": "Cumino in Polvere",
+          "note": "(facoltativo, per la variante più speziata)",
+          "grams": 2,
+          "tokenId": "cumino"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(marino integrale)",
+          "grams": 5,
+          "tokenId": "sale"
+        },
+        {
+          "name": "Pepe Nero",
+          "note": "(macinato fresco al momento)",
+          "grams": 2,
+          "tokenId": "pepe_nero"
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(fruttato medio, non troppo amaro)",
+          "grams": 75,
+          "tokenId": "olio_evo"
+        },
+        {
+          "name": "Aceto di Vino Bianco",
+          "note": "(acidità 6%, a temperatura ambiente)",
+          "grams": 25,
+          "tokenId": "aceto"
+        },
+        {
+          "name": "Acqua",
+          "note": "(a temperatura ambiente, per regolare la fluidità)",
+          "grams": 55,
+          "tokenId": "acqua"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Preparazione del Prezzemolo",
+      "text": "Lavare accuratamente {prezzemolo:30}g di prezzemolo fresco in acqua fredda corrente. Asciugarlo tamponando con un canovaccio pulito o usando una centrifuga per insalata — l'acqua residua diluirebbe la salsa. Sfogliare eliminando i gambi più grossi (si possono usare i gambi sottili vicino alle foglie). Disporre le foglie su un tagliere di legno e tritare FINEMENTE al coltello, con taglio netto e deciso — non schiacciare. Il prezzemolo va tritato, mai frullato: il frullatore ossida le foglie e rende la salsa amara e scura."
+    },
+    {
+      "title": "Preparazione dell'Aglio e del Peperoncino",
+      "text": "Sbucciare {aglio:12}g di aglio fresco (circa 3 spicchi medi). Rimuovere l'anima verde interna se presente — è la parte più indigesta e dal sapore acre. Tritare l'aglio il più finemente possibile al coltello o con una mezzaluna. Sbriciolate a mano {peperoncino:3}g di peperoncino secco, eliminando i semi interni se si desidera una piccantezza più moderata."
+    },
+    {
+      "title": "Assemblaggio delle Spezie Secche",
+      "text": "In una ciotola capiente (vetro o ceramica, evitare plastica che assorbe odori), versare {origano:8}g di origano secco, {timo:3}g di timo secco, il peperoncino sbriciolato, {cumino:2}g di cumino in polvere, {sale:5}g di sale fino e {pepe_nero:2}g di pepe nero macinato fresco. Mescolare brevemente con un cucchiaio per amalgamare le spezie secche."
+    },
+    {
+      "title": "Unione degli Ingredienti Freschi e Liquidi",
+      "text": "Aggiungere l'aglio tritato e il prezzemolo tritato alla ciotola con le spezie. Versare {aceto:25}g di aceto di vino bianco e {acqua:55}g di acqua a temperatura ambiente — l'acqua serve a rendere la salsa più fluida e a bilanciare l'acidità dell'aceto. Se si preferisce un chimichurri più concentrato e intenso, ridurre o eliminare l'acqua. Per ultimo, versare a filo {olio_evo:75}g di olio extravergine d'oliva mescolando con un cucchiaio di legno."
+    },
+    {
+      "title": "Riposo e Maturazione",
+      "text": "Mescolare tutti gli ingredienti accuratamente fino a ottenere un composto uniforme, eterogeneo ma ben amalgamato. Coprire la ciotola con pellicola a contatto o un piattino e lasciare riposare a temperatura ambiente per ALMENO 60 minuti prima di servire. Il riposo è fondamentale: permette all'origano e al timo di reidratarsi, all'aglio di rilasciare i suoi aromi nell'olio e all'aceto di amalgamarsi con gli altri ingredienti. Dopo il riposo, assaggiare e correggere di sale, aceto o peperoncino secondo gusto. Servire a temperatura ambiente, mai freddo da frigo — il freddo compatta l'olio e spegne gli aromi."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "baking": null,
+  "glossary": [
+    {
+      "term": "Chimichurri",
+      "definition": "Salsa cruda argentina a base di prezzemolo, aglio, origano, aceto e olio. Accompagna tradizionalmente le carni grigliate (asado). Esiste nella variante verde (classica) e roja (con peperone rosso e paprika)."
+    },
+    {
+      "term": "Trinciatura al coltello",
+      "definition": "Tecnica di taglio manuale che preserva la struttura cellulare delle erbe aromatiche, evitando ossidazione e rilascio eccessivo di clorofilla — a differenza del frullatore che surriscalda e ossida."
+    },
+    {
+      "term": "Maturazione a temperatura ambiente",
+      "definition": "Riposo della salsa senza refrigerazione per permettere lo scambio aromatico tra ingredienti secchi e liquidi. Nel chimichurri, l'origano e il timo si reidratano assorbendo aceto e acqua."
+    },
+    {
+      "term": "Bassinage aromatico",
+      "definition": "In questo contesto, l'aggiunta graduale dell'olio a filo nella salsa per creare un'emulsione parziale stabile con l'aceto — simile al principio della vinaigrette."
+    },
+    {
+      "term": "Anima dell'aglio",
+      "definition": "Il germoglio verde centrale dello spicchio d'aglio, più ricco di allicina. Va rimosso perché è più indigesto e conferisce un retrogusto acre e persistente."
+    }
+  ],
+  "alert": "NON frullare mai il chimichurri con un mixer o frullatore a immersione. Le lame ad alta velocità ossidano il prezzemolo, rilasciano clorofilla in eccesso e rendono la salsa amara, scura e di consistenza troppo omogenea — il chimichurri autentico DEVE avere texture rustica e granulosa, con i pezzi di prezzemolo e aglio ben visibili. Inoltre, non usare olio dal sapore troppo intenso o amaro (cultivar Coratina pura, per esempio): coprirebbe il profilo aromatico delle erbe.",
+  "proTips": [
+    "Per un chimichurri ancora più autentico in stile argentino, sostituisci l'aceto di vino bianco con aceto di mele (stesso peso): l'acidità è leggermente più morbida e rotonda, perfetta con le carni rosse alla griglia.",
+    "Prepara il chimichurri almeno 4-6 ore prima dell'uso, o meglio il giorno prima: la maturazione in frigo per una notte intera trasforma radicalmente il profilo aromatico, rendendo l'aglio meno pungente e l'origano più integrato.",
+    "Per variare con la versione 'chimichurri rojo', aggiungi 15g di peperone rosso disidratato (o paprika dolce affumicata) e un pomodoro secco tritato finemente: ottieni una variante più dolce e affumicata, perfetta con il pollo."
+  ],
+  "storage": [
+    "IN FRIGO: Conservare in un barattolo di vetro a chiusura ermetica, con un velo d'olio in superficie che protegga dall'ossidazione. Si mantiene perfettamente per 7-10 giorni a 4°C. Prima dell'uso, estrarre dal frigo almeno 30 minuti prima per riportare a temperatura ambiente e mescolare bene — l'olio solidificato a freddo deve tornare fluido.",
+    "FREEZER: Si può congelare in vaschette per cubetti di ghiaccio per ottenere porzioni da 20-25g cadauna. Congelare per massimo 2-3 mesi. Scongelare a temperatura ambiente (mai al microonde) per circa 20 minuti. L'aroma del prezzemolo si attenua leggermente con il congelamento, ma resta più che accettabile.",
+    "ATTENZIONE: Non rabboccare mai ingredienti freschi in un chimichurri già maturo di più giorni — prepara piuttosto una nuova dose. L'aggiunta di prezzemolo fresco a una base già ossidata crea un contrasto sgradevole di sapore e colore."
+  ],
+  "imageKeywords": [
+    "chimichurri sauce fresh herbs",
+    "argentinian chimichurri parsley",
+    "chimichurri salsa verde argentina",
+    "grilled steak chimichurri sauce",
+    "homemade chimichurri bowl",
+    "chimichurri Soße argentinisch",
+    "salsa chimichurri ricetta originale",
+    "fresh herb sauce olive oil garlic"
+  ],
+  "tags": [
+    "chimichurri",
+    "salsa argentina",
+    "condimento",
+    "senza cottura",
+    "asado",
+    "erbe fresche",
+    "prezzemolo",
+    "aglio",
+    "aceto"
+  ],
+  "_generatedBy": "claude-opus",
+  "_createdAt": "2026-04-19T20:31:01.182Z",
+  "image": "images/ricette/pasta/chimichurri.webp",
+  "imageAttribution": "📷 Foto: Gera Cejas — Pexels License via Pexels"
+}

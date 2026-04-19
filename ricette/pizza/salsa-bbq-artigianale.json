@@ -1,0 +1,184 @@
+{
+  "title": "Salsa BBQ Artigianale",
+  "slug": "salsa-bbq-artigianale",
+  "emoji": "🔥",
+  "description": "Ricetta professionale per l'autentica Salsa Barbecue americana. Un equilibrio chimico perfetto tra componente zuccherina, spinta acida, note affumicate e spezie.",
+  "subtitle": "Condimento denso a base agrodolce, ideale per carni, lievitati e topping pizza",
+  "category": "Pizza",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Base Aromatica (Soffritto)",
+      "items": [
+        {
+          "name": "Cipolla Dorata",
+          "note": "(finemente tritata)",
+          "grams": 50,
+          "tokenId": "cipolla_bbq"
+        },
+        {
+          "name": "Olio Extravergine di Oliva",
+          "note": "(spremuto a freddo)",
+          "grams": 15,
+          "tokenId": "olio_soffritto_bbq"
+        },
+        {
+          "name": "Aglio Fresco",
+          "note": "(1 spicchio intero sbucciato)",
+          "grams": 5,
+          "tokenId": "aglio_bbq"
+        }
+      ]
+    },
+    {
+      "group": "Corpo e Liquidi",
+      "items": [
+        {
+          "name": "Ketchup",
+          "note": "(di alta qualità, senza addensanti artificiali)",
+          "grams": 275,
+          "tokenId": "ketchup_bbq"
+        },
+        {
+          "name": "Acqua",
+          "note": "(temperatura ambiente)",
+          "grams": 80,
+          "tokenId": "acqua_bbq"
+        },
+        {
+          "name": "Aceto di Mele",
+          "note": "(non filtrato)",
+          "grams": 45,
+          "tokenId": "aceto_bbq"
+        },
+        {
+          "name": "Salsa Worcestershire",
+          "note": "(originale)",
+          "grams": 20,
+          "tokenId": "worcester_bbq"
+        }
+      ]
+    },
+    {
+      "group": "Zuccheri e Spezie",
+      "items": [
+        {
+          "name": "Melassa Scura",
+          "note": "(sostituibile con miele di castagno)",
+          "grams": 60,
+          "tokenId": "melassa_bbq"
+        },
+        {
+          "name": "Zucchero di Canna Grezzo",
+          "note": "(tipo Muscovado o Demerara)",
+          "grams": 60,
+          "tokenId": "zucchero_canna_bbq"
+        },
+        {
+          "name": "Senape",
+          "note": "(in pasta tipo Digione o in polvere)",
+          "grams": 20,
+          "tokenId": "senape_bbq"
+        },
+        {
+          "name": "Paprika Affumicata",
+          "note": "(Pimentón de la Vera dolce)",
+          "grams": 8,
+          "tokenId": "paprika_bbq"
+        },
+        {
+          "name": "Peperoncino in polvere",
+          "note": "(o Cayenna)",
+          "grams": 2,
+          "tokenId": "peperoncino_bbq"
+        },
+        {
+          "name": "Sale fino",
+          "note": "(marino)",
+          "grams": 2,
+          "tokenId": "sale_bbq"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [],
+  "stepsCondiment": [
+    {
+      "title": "Soffritto e Base Aromatica",
+      "text": "In una casseruola dal fondo spesso, versare {olio_soffritto_bbq:15}g di Olio Extravergine di Oliva e scaldare a fiamma dolce. Inserire {cipolla_bbq:50}g di cipolla dorata tritata finemente e {aglio_bbq:5}g (lo spicchio schiacciato ma intero). Far 'sudare' il composto per circa 5-7 minuti: la cipolla deve diventare traslucida rilasciando i suoi zuccheri senza attivare una vera e propria reazione di Maillard (non deve bruciare o imbrunire eccessivamente)."
+    },
+    {
+      "title": "Tostatura delle Spezie",
+      "text": "Rimuovere lo spicchio d'aglio. Aggiungere direttamente nel grasso caldo {paprika_bbq:8}g di paprika affumicata, {peperoncino_bbq:2}g di peperoncino in polvere e {senape_bbq:20}g di senape. Tostare le spezie per circa 60 secondi mescolando energicamente con una marisa: questo shock termico è essenziale per disciogliere i composti liposolubili e sprigionare gli oli essenziali delle spezie."
+    },
+    {
+      "title": "Deglassatura e Fase Zuccherina",
+      "text": "Arrestare la tostatura deglassando il fondo con {aceto_bbq:45}g di aceto di mele e {worcester_bbq:20}g di salsa Worcestershire. Subito dopo, incorporare {melassa_bbq:60}g di melassa scura, mescolando accuratamente per farla sciogliere completamente nei liquidi caldi."
+    },
+    {
+      "title": "Costruzione del Corpo",
+      "text": "Aggiungere nella casseruola {ketchup_bbq:275}g di ketchup, {acqua_bbq:80}g di acqua, {zucchero_canna_bbq:60}g di zucchero di canna e {sale_bbq:2}g di sale fino. Amalgamare il tutto con una frusta in acciaio per disperdere uniformemente gli zuccheri e prevenire grumi."
+    },
+    {
+      "title": "Riduzione e Stabilizzazione",
+      "text": "Portare la salsa a leggero bollore, quindi abbassare la fiamma al minimo assoluto. Far sobbollire (riduzione) per circa 15-20 minuti, mescolando di tanto in tanto per evitare che gli zuccheri caramellino sul fondo. La salsa sarà pronta quando velerà il dorso di un cucchiaio. Spegnere il fuoco e frullare con un mixer ad immersione se si desidera una texture vellutata e omogenea. Ricordare che raffreddandosi, grazie alla pectina del pomodoro e alla cristallizzazione degli zuccheri, la salsa aumenterà notevolmente la sua viscosità."
+    }
+  ],
+  "flourTable": [],
+  "glossary": [
+    {
+      "term": "Sudare (cottura)",
+      "definition": "Tecnica che consiste nel cuocere dolcemente un vegetale (come la cipolla) in un grasso a fiamma bassa, per fargli espellere la propria acqua di vegetazione facendolo ammorbidire senza fargli prendere colore."
+    },
+    {
+      "term": "Deglassare",
+      "definition": "Versare un liquido (vino, aceto, brodo) in un tegame rovente per staccare dal fondo i residui caramellati della cottura precedente, ricchi di sapore."
+    },
+    {
+      "term": "Riduzione",
+      "definition": "Processo di addensamento di una salsa tramite evaporazione prolungata dei liquidi a fuoco basso, che concentra zuccheri e sapori."
+    },
+    {
+      "term": "Melassa",
+      "definition": "Sottoprodotto della centrifugazione dello zucchero di canna. Apporta un colore scuro, una leggera nota amara e un profilo aromatico intenso simile alla liquirizia e al caramello bruciato."
+    },
+    {
+      "term": "Reazione di Maillard",
+      "definition": "Complessa serie di reazioni chimiche tra aminoacidi e zuccheri riducenti ad alte temperature, responsabile dell'imbrunimento e dello sviluppo di aromi complessi."
+    }
+  ],
+  "alert": "Attenzione alla temperatura durante la tostatura iniziale delle spezie: la paprika brucia facilmente (sopra i 130°C) sviluppando note amarognole e sgradevoli che comprometterebbero in modo irreversibile l'intero lotto di salsa.",
+  "proTips": [
+    "La melassa scura è il segreto dell'autentica BBQ sauce americana: fornisce profondità, colore e quella nota leggermente ferroso-amara che contrasta il dolce del ketchup. Se introvabile, usare miele di castagno denso.",
+    "Il pH finale della salsa è fondamentale. L'aceto di mele crudo, unito alla componente acida del pomodoro, abbassa il pH creando un ambiente ostile ai batteri e allungando notevolmente la shelf-life in frigorifero.",
+    "Per una variante più strutturata, potete sostituire l'acqua con birra stout o caffè espresso lungo: questo stratagemma tecnico aumenterà le note tostate della salsa."
+  ],
+  "storage": [
+    "Conservazione in frigo: Travasare la salsa ancora calda in barattoli di vetro preventivamente sterilizzati. Chiudere ermeticamente. Si conserverà per oltre 2 mesi a +4°C grazie all'alto tenore di aceto e zuccheri.",
+    "Congelamento: Non è consigliato né necessario congelare la salsa BBQ, poiché i cristalli di ghiaccio andrebbero a spezzare l'emulsione, rendendola acquosa una volta rigenerata."
+  ],
+  "imageKeywords": [
+    "homemade bbq sauce",
+    "barbecue sauce bowl",
+    "american bbq dip",
+    "salsa barbecue artigianale",
+    "dark sticky barbecue sauce"
+  ],
+  "tags": [
+    "condimento",
+    "barbecue",
+    "bbq",
+    "salsa",
+    "americano",
+    "agrodolce"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "_createdAt": "2026-04-19T20:31:05.239Z",
+  "image": "images/ricette/pizza/salsa-bbq-artigianale.webp",
+  "imageAttribution": "📷 Foto: Meraj Kazi — Pexels License via Pexels"
+}

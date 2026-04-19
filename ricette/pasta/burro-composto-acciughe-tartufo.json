@@ -1,0 +1,141 @@
+{
+  "title": "Burro Composto: Acciughe e Limone o Tartufo Nero",
+  "slug": "burro-composto-acciughe-tartufo",
+  "emoji": "🧈",
+  "description": "Tecnica professionale per realizzare burri aromatizzati a pomata (Maître d'Hôtel style). Ideali per mantecare paste fresche, risotti o per crostini caldi.",
+  "subtitle": "Emulsione a freddo di grassi nobili per l'esaltazione dei composti aromatici lipofili",
+  "category": "Pasta",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Versione 1: Burro alle Acciughe e Limone",
+      "items": [
+        {
+          "name": "Burro di centrifuga",
+          "note": "(min. 82% m.g., a pomata)",
+          "grams": 200,
+          "tokenId": "burro_acciughe"
+        },
+        {
+          "name": "Filetti di acciuga",
+          "note": "(sott'olio, ben scolati)",
+          "grams": 30,
+          "tokenId": "acciughe_filetti"
+        },
+        {
+          "name": "Scorza di limone",
+          "note": "(non trattata, grattugiata)",
+          "grams": 3,
+          "tokenId": "scorza_limone"
+        },
+        {
+          "name": "Pepe nero",
+          "note": "(macinato fresco)",
+          "grams": 1,
+          "tokenId": "pepe_nero"
+        }
+      ]
+    },
+    {
+      "group": "Versione 2: Burro al Tartufo",
+      "items": [
+        {
+          "name": "Burro di centrifuga",
+          "note": "(min. 82% m.g., a pomata)",
+          "grams": 200,
+          "tokenId": "burro_tartufo"
+        },
+        {
+          "name": "Tartufo nero fresco",
+          "note": "(Tuber aestivum o melanosporum)",
+          "grams": 40,
+          "tokenId": "tartufo_fresco"
+        },
+        {
+          "name": "Sale fino",
+          "note": "(marino)",
+          "grams": 2,
+          "tokenId": "sale_fino"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Ammorbidimento a Pomata",
+      "text": "Estrarre dal frigorifero {burro_acciughe:200}g di burro per la versione alle acciughe e/o {burro_tartufo:200}g per la versione al tartufo. Lasciare a temperatura ambiente (circa 20-22°C) per 1-2 ore, finché non raggiunge la classica consistenza 'a pomata' (cedevole al tatto ma senza perdita di struttura). Lavorare energicamente in una ciotola con una marisa in silicone fino a inglobare aria e renderlo liscio e spumoso."
+    },
+    {
+      "title": "Aromatizzazione: Acciughe e Limone",
+      "text": "Asciugare accuratamente {acciughe_filetti:30}g di acciughe con carta assorbente. Tritarle finemente al coltello fino a ridurle in pasta (in alternativa, per una consistenza serica, emulsionare con un minipimer). Incorporare la pasta al burro ammorbidito, unendo {scorza_limone:3}g di scorza di limone e {pepe_nero:1}g di pepe. Amalgamare con movimenti circolari continui."
+    },
+    {
+      "title": "Aromatizzazione: Tartufo Nero",
+      "text": "Pulire delicatamente {tartufo_fresco:40}g di tartufo con uno spazzolino per rimuovere eventuali residui di terra. Grattugiarlo finemente (usando una microplane per massimizzare la superficie di contatto coi grassi). Unirlo al secondo panetto di burro insieme a {sale_fino:2}g di sale fino, indispensabile per fungere da catalizzatore dei sapori terrosi del tartufo. Mescolare fino a distribuzione omogenea."
+    },
+    {
+      "title": "Cilindratura e Cristallizzazione",
+      "text": "Disporre i due composti separatamente su fogli di carta forno o pellicola alimentare. Arrotolare strettamente modellando dei cilindri dal diametro di 3-4 cm. Ruotare le estremità 'a caramella' applicando tensione per compattare il burro ed eliminare eventuali sacche d'aria interne. Riporre in frigorifero per almeno {tempo_riposo:60!} minuti per consentire ai grassi di ri-cristallizzare e agli oli essenziali di infondere la massa lipidica."
+    }
+  ],
+  "stepsCondiment": [
+    {
+      "title": "Utilizzo per Mantecatura (Tagliolini o Risotti)",
+      "text": "Cuocere la pasta al dente. A fuoco spento, aggiungere 20-25g di burro composto rigorosamente FREDDO di frigo per ogni porzione, insieme a un mestolino di acqua di cottura ricca di amidi. Eseguire la mantecatura meccanica (saltando o mescolando energicamente): lo shock termico tra il burro freddo e l'acqua calda, unito all'amido, creerà un'emulsione cremosa perfetta senza separazione dei grassi."
+    }
+  ],
+  "flourTable": [],
+  "glossary": [
+    {
+      "term": "Burro a pomata",
+      "definition": "Stato fisico del burro mantenuto a circa 20-22°C. Si presenta malleabile, cremoso e facilmente lavorabile senza che la sua emulsione acqua-grasso si sia rotta (come avviene fondendolo)."
+    },
+    {
+      "term": "Cristallizzazione",
+      "definition": "Il processo termico inverso (raffreddamento) in cui i reticoli di grasso del burro si solidificano nuovamente, catturando e stabilizzando i composti aromatici aggiunti."
+    },
+    {
+      "term": "Lipofilo",
+      "definition": "Sostanza (come le molecole aromatiche del tartufo) che ha la capacità di sciogliersi, legarsi e sprigionare il suo massimo potenziale all'interno dei grassi."
+    },
+    {
+      "term": "Mantecatura",
+      "definition": "Azione meccanica finale che sfrutta grassi a bassa temperatura e amidi per creare una crema omogenea (emulsione) che lega la pasta o il riso."
+    }
+  ],
+  "alert": "Non fondere MAI il burro (es. al microonde o a bagnomaria) per accelerare il processo di ammorbidimento. Raggiunti i 30°C, l'emulsione naturale del burro si rompe separando i grassi dal latticello (siero), rovinando irrimediabilmente la texture finale del burro composto.",
+  "proTips": [
+    "Il tartufo sprigiona i suoi aromi per osmosi lipidica: prepara il burro al tartufo 24-48 ore prima dell'utilizzo. Il grasso farà da estrattore naturale decuplicando l'intensità del profumo.",
+    "Per la variante alle acciughe, l'uso del coltello anziché del mixer preserva una leggera testura rustica che risulta eccezionale se spalmata su crostini caldi di pane a lievitazione naturale.",
+    "Utilizza sempre burro ottenuto da panna di centrifuga, che possiede un sapore più pulito e una struttura migliore rispetto al burro da affioramento (spesso sottoprodotto del Parmigiano)."
+  ],
+  "storage": [
+    "Conservazione a breve termine: in frigorifero, avvolto strettamente nella pellicola a contatto per bloccare l'ossidazione, per massimo 7-10 giorni.",
+    "Conservazione a lungo termine: congelabile in freezer per 3-4 mesi. È raccomandato tagliare i cilindri a rondelle da 15-20g prima di congelarli, in modo da prelevare solo la dose necessaria e utilizzarla direttamente da congelata in padella calda (favorendo così l'emulsione per shock termico)."
+  ],
+  "imageKeywords": [
+    "homemade compound butter",
+    "anchovy butter roll",
+    "fresh truffle butter",
+    "compound butter curls food photography",
+    "burro aromatizzato",
+    "Trüffelbutter"
+  ],
+  "tags": [
+    "burro composto",
+    "condimento",
+    "acciughe",
+    "tartufo",
+    "mantecatura",
+    "tecniche di base"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "_createdAt": "2026-04-19T20:32:53.898Z",
+  "image": "images/ricette/pasta/burro-composto-acciughe-tartufo.webp",
+  "imageAttribution": "📷 Foto: Antoni Shkraba Studio — Pexels License via Pexels"
+}

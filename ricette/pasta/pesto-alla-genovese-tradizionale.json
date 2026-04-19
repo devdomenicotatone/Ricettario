@@ -1,0 +1,152 @@
+{
+  "title": "Pesto alla Genovese Tradizionale",
+  "slug": "pesto-alla-genovese-tradizionale",
+  "emoji": "🌿",
+  "description": "La ricetta autentica del Pesto Ligure al mortaio. Proporzioni bilanciate per un'emulsione a freddo verde smeraldo, ricca di oli essenziali e senza ossidazione.",
+  "subtitle": "Emulsione a freddo al mortaio di marmo",
+  "category": "Pasta",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per il Pesto al Mortaio",
+      "items": [
+        {
+          "name": "Basilico Genovese DOP",
+          "note": "(solo foglie piccole, integre e asciutte)",
+          "grams": 50,
+          "tokenId": "basilico_pesto"
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(Ligure DOP, cultivar Taggiasca, dolce e non pizzichino)",
+          "grams": 80,
+          "tokenId": "olio_pesto"
+        },
+        {
+          "name": "Parmigiano Reggiano DOP",
+          "note": "(stagionato 24-30 mesi)",
+          "grams": 45,
+          "tokenId": "parmigiano_pesto"
+        },
+        {
+          "name": "Pecorino Sardo DOP",
+          "note": "(Fiore Sardo)",
+          "grams": 20,
+          "tokenId": "pecorino_pesto"
+        },
+        {
+          "name": "Pinoli Italiani",
+          "note": "(prima scelta)",
+          "grams": 15,
+          "tokenId": "pinoli_pesto"
+        },
+        {
+          "name": "Aglio",
+          "note": "(preferibilmente di Vessalico, privato dell'anima)",
+          "grams": 5,
+          "tokenId": "aglio_pesto"
+        },
+        {
+          "name": "Sale Grosso Marino",
+          "note": "(funge da abrasivo meccanico)",
+          "grams": 3,
+          "tokenId": "sale_pesto"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Cottura e Mantecatura della Pasta",
+      "text": "Questa preparazione è concepita per condire circa 500!g di pasta (formati ideali: trofie, trenette, gnocchi o testaroli). Cuocere la pasta in abbondante acqua bollente salata. Al momento di scolare, conservare in una tazza l'acqua di cottura ricca di amidi. Trasferire la pasta scolata in una zuppiera fredda (o appena intiepidita). Aggiungere il pesto e stemperare delicatamente con un cucchiaio di acqua di cottura per creare una crema setosa che avvolgerà perfettamente il carboidrato. Non avvicinare mai il pesto al fuoco diretto."
+    }
+  ],
+  "stepsCondiment": [
+    {
+      "title": "Mondatura a Secco",
+      "text": "Pulire delicatamente {basilico_pesto:50}g di foglie di Basilico Genovese con un panno morbido appena inumidito, oppure sciacquarle velocissimamente in acqua ghiacciata e tamponarle tamponandole dolcemente. La foglia deve risultare perfettamente integra e asciutta: la rottura prematura delle venature o lo stress meccanico prima del mortaio causa un'immediata ossidazione."
+    },
+    {
+      "title": "La Base Abrasiva",
+      "text": "In un mortaio di marmo freddo, inserire {aglio_pesto:5}g di aglio (tagliato a metà e rigorosamente privato dell'anima verde interna) e {sale_pesto:3}g di sale grosso marino. Iniziare a pestare con un pestello in legno (l'ideale è il legno di ulivo) eseguendo movimenti di percussione verticale, fino a ridurre l'aglio in una pomata omogenea. Il sale grosso è fondamentale: la sua struttura cristallina agirà da macina naturale per i passaggi successivi."
+    },
+    {
+      "title": "Crema di Pinoli",
+      "text": "Aggiungere i {pinoli_pesto:15}g di pinoli nel mortaio e continuare a pestare. L'obiettivo è ottenere una pasta grezza ma uniforme. I grassi rilasciati dai pinoli inizieranno a legare il composto, fungendo da base stabilizzante essenziale per la futura emulsione."
+    },
+    {
+      "title": "Estrazione degli Olii Essenziali",
+      "text": "Unire le foglie di basilico a più riprese. Ora la tecnica cambia: passare dalla percussione a un movimento rotatorio continuo e dolce, premendo il pestello contro le pareti del mortaio e strisciandolo. Le foglie non vanno frantumate violentemente, ma letteralmente 'stracciate' contro la rugosità del marmo. Solo in questo modo rilasceranno i loro preziosi olii essenziali senza annerire. Continuare a roteare fino a ottenere un liquido denso, profumato e di un verde scuro brillante."
+    },
+    {
+      "title": "Emulsione Finale",
+      "text": "È il momento di inserire i grassi per completare l'emulsione a freddo. Aggiungere {parmigiano_pesto:45}g di Parmigiano Reggiano e {pecorino_pesto:20}g di Pecorino Sardo, alternandoli versando a filo i {olio_pesto:80}g di Olio EVO Ligure. Continuare il lento movimento rotatorio per amalgamare i formaggi e l'olio con l'acqua di vegetazione rilasciata dal basilico. Il pesto è pronto quando risulta perfettamente cremoso, lucido e omogeneo."
+    }
+  ],
+  "flourTable": [],
+  "baking": {
+    "temperature": "100°C",
+    "time": "Secondo formato pasta",
+    "tips": [
+      "Il pesto non va MAI cotto o scaldato in padella",
+      "Mantecare la pasta in una zuppiera fredda",
+      "Usare poca acqua di cottura ricca di amidi per regolare la densità del pesto"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Anima dell'aglio",
+      "definition": "Il germoglio interno dello spicchio. Rimuoverlo rende l'aglio crudo nettamente più digeribile, abbassando le note piccanti sulfuree che coprirebbero il basilico."
+    },
+    {
+      "term": "Emulsione a freddo",
+      "definition": "Processo meccanico che lega liquidi acquosi (acqua di vegetazione) e lipidi (olio, pinoli, formaggi) senza l'uso di calore, preservando volatili aromatici e colore."
+    },
+    {
+      "term": "Fiore Sardo",
+      "definition": "Pecorino DOP prodotto in Sardegna a latte crudo. Insieme al Parmigiano, garantisce la nota sapida e pungente indispensabile nell'equilibrio della ricetta ligure."
+    },
+    {
+      "term": "Aglio di Vessalico",
+      "definition": "Varietà ligure di aglio, coltivata nell'omonimo comune. Celebre per il suo sapore dolce, delicato e l'alta tollerabilità."
+    },
+    {
+      "term": "Ossidazione",
+      "definition": "Imbrunimento enzimatico (diventa nero) che colpisce il basilico se frullato ad alta temperatura o schiacciato in malo modo. Altera il colore e fa virare il sapore verso l'amaro."
+    }
+  ],
+  "alert": "NON USARE LAME CALDE E NON CUOCERE IL PESTO. Se si è costretti a usare un frullatore invece del mortaio, è tassativo mettere boccale e lame in freezer per 30 minuti prima dell'uso e frullare a impulsi brevi (pulse) per evitare il surriscaldamento. Il calore cuoce il basilico, innescando l'ossidazione: il colore virerà dal verde brillante al verde palude/nero e il sapore diventerà fastidiosamente amaro. Inoltre, non saltare mai la pasta col pesto in padella.",
+  "proTips": [
+    "La scelta dell'Olio Extravergine è cruciale: un olio toscano, umbro o pugliese, tendenzialmente troppo piccante e fruttato, coprirebbe la delicatezza del basilico. Utilizzare rigorosamente un olio ligure dolce (come quello da cultivar Taggiasca).",
+    "Il sale grosso nel mortaio non ha solo funzione sapida: la sua rigida struttura cristallina agisce da micro-lama abrasiva aiutando a stracciare le fibre del basilico con precisione, agevolando l'estrazione degli aromi.",
+    "Trucco per la ristorazione o per chi usa il mixer: per un pesto dal verde inossidabile, sbollentare 1/3 delle foglie di basilico per 3-5 secondi esatti in acqua bollente e immergerle subito in acqua e ghiaccio per bloccare gli enzimi (polifenolossidasi) prima di frullarle col resto degli ingredienti."
+  ],
+  "storage": [
+    "Conservazione in frigo: trasferire il pesto in un barattolo di vetro, appiattire la superficie e coprire con un sottile strato di Olio EVO per isolarlo dall'ossigeno. Chiudere ermeticamente. Si mantiene verde e profumato per 3-4 giorni.",
+    "Congelamento: porzionare il pesto nei classici contenitori per cubetti di ghiaccio o in piccoli vasetti di vetro. Una volta congelato, si conserva per 2-3 mesi. Scongelare lentamente in frigorifero o unire il cubetto direttamente alla pasta calda in zuppiera con un cucchiaio di acqua di cottura."
+  ],
+  "imageKeywords": [
+    "authentic pesto alla genovese mortar",
+    "homemade fresh green pesto sauce",
+    "pesto ligure mortaio di marmo",
+    "basilikum pesto italienisch",
+    "fresh basil sauce pasta top view"
+  ],
+  "tags": [
+    "Condimenti",
+    "Salse",
+    "Liguria",
+    "Senza Cottura",
+    "Tradizione Ligure",
+    "Vegetariano"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "_createdAt": "2026-04-19T20:27:46.793Z",
+  "image": "images/ricette/pasta/pesto-alla-genovese-tradizionale.webp",
+  "imageAttribution": "📷 Immagine esistente"
+}

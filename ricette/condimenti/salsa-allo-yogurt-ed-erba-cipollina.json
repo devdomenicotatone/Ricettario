@@ -1,0 +1,147 @@
+{
+  "title": "Salsa allo Yogurt ed Erba Cipollina",
+  "slug": "salsa-allo-yogurt-ed-erba-cipollina",
+  "emoji": "🌿",
+  "description": "Salsa fresca e cremosa a base di yogurt greco, erba cipollina e limone. Pronta in 10 minuti, perfetta per carni, pesce e verdure.",
+  "subtitle": "Salsa fredda no-cook — pronta in 10 minuti",
+  "category": "Condimenti",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per la Salsa",
+      "items": [
+        {
+          "name": "Yogurt Greco Intero",
+          "note": "(al naturale, senza zuccheri aggiunti, preferibilmente 10% grassi)",
+          "grams": 200,
+          "tokenId": "yogurt_greco"
+        },
+        {
+          "name": "Olio Extravergine di Oliva",
+          "note": "(fruttato leggero, in emulsione)",
+          "grams": 20,
+          "tokenId": "olio_evo"
+        },
+        {
+          "name": "Succo di Limone",
+          "note": "(appena spremuto, limone bio)",
+          "grams": 15,
+          "tokenId": "succo_limone"
+        },
+        {
+          "name": "Scorza di Limone Bio",
+          "note": "(grattugiata finemente, solo la parte gialla)",
+          "grams": 3,
+          "tokenId": "scorza_limone"
+        },
+        {
+          "name": "Erba Cipollina Fresca",
+          "note": "(tagliata finemente con forbici o mezzaluna)",
+          "grams": 10,
+          "tokenId": "erba_cipollina"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(da aggiungere a piacere, preferibilmente sale marino fino)",
+          "grams": 2,
+          "tokenId": "sale"
+        },
+        {
+          "name": "Pepe Nero",
+          "note": "(macinato fresco al momento)",
+          "grams": 1,
+          "tokenId": "pepe_nero"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [],
+  "stepsCondiment": [
+    {
+      "title": "Preparazione dello Yogurt Base",
+      "text": "Prendi una ciotola capiente e versaci {yogurt_greco:200}g di yogurt greco intero al naturale. Lo yogurt greco è la scelta tecnica corretta: ha una percentuale di siero già drenata in partenza, il che garantisce una consistenza densa e cremosa che non 'piange' acqua sul piatto. Se usi yogurt normale (non greco), ti troverai con una salsa liquida e non strutturata. Lascia lo yogurt a temperatura ambiente per 10 minuti prima di lavorarlo: a freddo da frigorifero risulta più difficile da amalgamare."
+    },
+    {
+      "title": "Emulsione Olio e Limone",
+      "text": "In un piccolo contenitore separato, unisci {olio_evo:20}g di olio extravergine di oliva e {succo_limone:15}g di succo di limone appena spremuto. Sbatti energicamente con una forchetta per pochi secondi fino a ottenere una mini-emulsione temporanea. Incorporare l'olio già emulsionato con il limone — e non direttamente a filo nello yogurt — permette di distribuirlo in modo uniforme senza creare 'laghi' di grasso in superficie. Il succo di limone svolge anche una funzione tecnica: la sua acidità stabilizza la salsa e ne prolunga la freschezza."
+    },
+    {
+      "title": "Aggiunta della Scorza e delle Erbe",
+      "text": "Grattugia finemente {scorza_limone:3}g di scorza di limone bio (solo la parte gialla esterna, mai il bianco amaro) direttamente nello yogurt. La scorza apporta gli oli essenziali del limone — molto più aromatici del solo succo — e dà profondità alla salsa. Prendi poi {erba_cipollina:10}g di erba cipollina fresca: non usare il coltello ma taglia i fili con le forbici direttamente sulla ciotola, in modo da non schiacciare le cellule vegetali e perdere i succhi aromatici. L'erba cipollina deve essere fresca e di colore verde brillante: quella secca è un surrogato accettabile solo in emergenza."
+    },
+    {
+      "title": "Condimento Finale e Amalgama",
+      "text": "Aggiungi l'emulsione olio-limone preparata in precedenza allo yogurt. Condisci con {sale:2}g di sale fino marino e {pepe_nero:1}g di pepe nero macinato fresco al momento. Mescola con un cucchiaio o una spatola in silicone con movimenti circolari dal basso verso l'alto — non frustare energicamente per non smontare la struttura densa dello yogurt e non incorporare eccessive bolle d'aria. Assaggia e regola l'acidità (altro succo di limone), la sapidità (sale) e l'intensità erbacea secondo il gusto. La salsa deve risultare densa, lucida e perfettamente amalgamata."
+    },
+    {
+      "title": "Riposo e Presentazione",
+      "text": "Copri la ciotola con pellicola a contatto (la pellicola deve toccare la superficie della salsa per evitare ossidazione e formazione di pellicina) e riponi in frigorifero per almeno 20-30 minuti prima di servire. Questo riposo è fondamentale: permette all'erba cipollina di cedere i propri aromi allo yogurt e alle componenti di amalgamarsi in modo coeso. Al momento del servizio, mescola brevemente, trasferisci nella salsiera e decora con qualche filo di erba cipollina intera e un giro d'olio EVO in superficie per lucentezza visiva."
+    }
+  ],
+  "flourTable": [],
+  "baking": null,
+  "glossary": [
+    {
+      "term": "Yogurt Greco",
+      "definition": "Yogurt ottenuto per colatura (straining) del siero in eccesso attraverso una tela. Ha consistenza più densa, maggior contenuto proteico e sapore più acido rispetto allo yogurt normale. Ideale per salse che devono mantenere la struttura."
+    },
+    {
+      "term": "Emulsione",
+      "definition": "Miscela stabile di due liquidi normalmente immiscibili (in questo caso olio e succo di limone/acqua) ottenuta tramite agitazione meccanica. È stabile solo temporaneamente senza un emulsionante (come la lecitina). In questa salsa, la struttura proteica dello yogurt aiuta a mantenerla coesa."
+    },
+    {
+      "term": "Scorza (Zest)",
+      "definition": "Lo strato esterno colorato della buccia degli agrumi, ricco di oli essenziali e composti aromatici. Va grattugiata solo nella parte colorata: il bianco interno (albedo) è amaro e astringente."
+    },
+    {
+      "term": "Pellicola a Contatto",
+      "definition": "Tecnica di copertura in cui la pellicola trasparente viene adagiata direttamente sulla superficie del prodotto, eliminando l'aria tra la pellicola e il cibo. Previene ossidazione, formazione di pellicine e assorbimento di odori estranei."
+    },
+    {
+      "term": "Stabilizzazione per Acidità",
+      "definition": "L'acidità del limone (pH 2-2.5) abbassando il pH dell'ambiente abbatte la carica batterica e rallenta i processi di degradazione, prolungando la shelf-life della salsa in frigo."
+    }
+  ],
+  "alert": "NON usare erba cipollina secca in polvere al posto di quella fresca: il risultato organolettico è completamente diverso e la salsa perde la sua caratteristica freschezza erbacea. Allo stesso modo, NON usare yogurt bianco normale non greco se vuoi una salsa densa: il contenuto di siero elevato renderebbe la preparazione liquida e acquosa entro pochi minuti dalla preparazione.",
+  "proTips": [
+    "Per una versione ancora più ricca e rotonda, sostituisci fino al 30% dello yogurt greco con panna acida (sour cream o crème fraîche): il grasso aggiuntivo ammorbidisce l'acidità e dona una texture vellutata — tecnica usata in molte cucine dell'Europa orientale per le salse di accompagnamento alle carni.",
+    "Se vuoi estrarre il massimo aroma dall'erba cipollina, lasciala 'marinare' 5 minuti in olio EVO a temperatura ambiente prima di aggiungerla allo yogurt: gli oli essenziali delle erbe si sciolgono meglio in un mezzo grasso che in ambiente acquoso come lo yogurt.",
+    "Per un profilo aromatico più complesso senza alterare la semplicità della ricetta, aggiungi una punta di aglio in polvere (NON aglio fresco crudo, troppo aggressivo e difficile da dosare) oppure una piccola quantità di senape di Digione (3-4g): la senape funge anche da emulsionante naturale, rendendo la salsa ancora più stabile e lucida."
+  ],
+  "storage": [
+    "Conserva la salsa in frigo in un contenitore ermetico con pellicola a contatto sulla superficie: si mantiene fresca fino a 48-72 ore. Oltre questo termine, l'erba cipollina inizia a ossidarsi (colore giallo-brunastro) e il limone tende ad 'ammazzare' la vivacità aromatica.",
+    "NON congelare: lo yogurt greco in congelamento subisce una separazione irreversibile dei grassi e delle proteine — al momento dello scongelamento la texture risulterà granulosa, acquosa e inutilizzabile come salsa.",
+    "Prima di servire la salsa conservata in frigo, tirala fuori 10 minuti prima e mescola bene: i grassi dell'olio EVO si solidificano parzialmente a temperature basse. Se la salsa appare troppo densa, aggiungi 1-2 gocce di succo di limone fresco e mescola per ripristinare la consistenza ottimale."
+  ],
+  "imageKeywords": [
+    "yogurt dipping sauce chives fresh herbs",
+    "greek yogurt sauce bowl olive oil",
+    "creamy yogurt condiment green herbs",
+    "salsa allo yogurt erba cipollina",
+    "tzatziki style yogurt dip",
+    "homemade yogurt sauce lemon zest",
+    "Joghurt Dip Schnittlauch frisch",
+    "white creamy dipping sauce fresh herbs food photography"
+  ],
+  "tags": [
+    "salsa",
+    "yogurt greco",
+    "erba cipollina",
+    "no-cook",
+    "condimento",
+    "fresco",
+    "vegetariano",
+    "gluten-free",
+    "limone",
+    "accompagnamento"
+  ],
+  "_generatedBy": "claude",
+  "_createdAt": "2026-04-19T20:45:45.094Z",
+  "image": "images/ricette/condimenti/salsa-allo-yogurt-ed-erba-cipollina.webp",
+  "imageAttribution": "📷 Foto: Kyle Killam — Pexels License via Pexels"
+}

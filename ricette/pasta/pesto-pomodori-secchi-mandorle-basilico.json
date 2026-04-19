@@ -1,0 +1,142 @@
+{
+  "title": "Pesto di Pomodori Secchi, Mandorle e Basilico",
+  "slug": "pesto-pomodori-secchi-mandorle-basilico",
+  "emoji": "🍅",
+  "description": "Pesto rustico siciliano con pomodori secchi sott'olio, mandorle e basilico fresco. Condimento versatile per pasta, bruschette e crostini.",
+  "subtitle": "Condimento crudo a base di pomodori secchi sott'olio con mandorle e basilico — lavorazione al mixer",
+  "category": "Pasta",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per il Pesto",
+      "items": [
+        {
+          "name": "Pomodori Secchi Sott'Olio",
+          "note": "(ben sgocciolati, di qualità — preferire calabresi o siciliani)",
+          "grams": 150,
+          "tokenId": "pomodori_secchi"
+        },
+        {
+          "name": "Mandorle Pelate",
+          "note": "(non tostate, meglio se siciliane di Avola)",
+          "grams": 45,
+          "tokenId": "mandorle"
+        },
+        {
+          "name": "Basilico Fresco",
+          "note": "(solo foglie, lavate e asciugate tamponando)",
+          "grams": 15,
+          "tokenId": "basilico"
+        },
+        {
+          "name": "Pecorino Romano DOP",
+          "note": "(grattugiato finemente)",
+          "grams": 20,
+          "tokenId": "pecorino"
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(delicato, monocultivar taggiasca o nocellara — a crudo)",
+          "grams": 45,
+          "tokenId": "olio_evo"
+        },
+        {
+          "name": "Aglio",
+          "note": "(1 piccolo spicchio, privato dell'anima)",
+          "grams": 3,
+          "tokenId": "aglio"
+        },
+        {
+          "name": "Pepe Nero",
+          "note": "(macinato fresco al momento)",
+          "grams": 1,
+          "tokenId": "pepe"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Preparazione delle Mandorle",
+      "text": "Versare {mandorle:45}g di mandorle pelate nel bicchiere del mixer (o nel mortaio, per un risultato più artigianale). Frullare a impulsi brevi di 2-3 secondi per 15-20 secondi totali, fino ad ottenere una granella finissima tendente alla farina, senza arrivare a una crema oleosa. Se le mandorle risultano particolarmente dure, metterle a bagno in acqua a temperatura ambiente per 30 minuti e poi scolarle e asciugarle — si frulleranno più facilmente e il pesto risulterà più cremoso."
+    },
+    {
+      "title": "Aggiunta dei Pomodori Secchi",
+      "text": "Sgocciolare con cura {pomodori_secchi:150}g di pomodori secchi sott'olio, strizzandoli leggermente tra le dita per eliminare l'eccesso di olio di conserva. Aggiungerli nel mixer sopra la granella di mandorle. Frullare a impulsi di 3-4 secondi per circa 20 secondi, fino a sminuzzare grossolanamente i pomodori. Non cercare un composto liscio: il pesto deve restare rustico e granuloso."
+    },
+    {
+      "title": "Incorporamento degli Aromi e del Formaggio",
+      "text": "Unire nel mixer {basilico:15}g di foglie di basilico fresco (lavate e perfettamente asciutte — l'umidità residua accelera l'ossidazione), {aglio:3}g di aglio privato dell'anima centrale (per un gusto più delicato), {pecorino:20}g di pecorino romano grattugiato e {pepe:1}g di pepe nero macinato fresco. Frullare nuovamente a impulsi per 15-20 secondi."
+    },
+    {
+      "title": "Emulsione con Olio EVO e Regolazione",
+      "text": "Con il mixer in funzione a velocità bassa e costante, versare a filo {olio_evo:45}g di olio extravergine d'oliva. Frullare per 10-15 secondi massimo: il pesto deve risultare una crema grossolana, leggermente granulosa, non completamente liscia. Assaggiare e regolare: i pomodori secchi sott'olio sono già molto sapidi, quindi generalmente non serve aggiungere sale. Se la consistenza è troppo densa, aggiungere un ulteriore filo d'olio EVO (5-10g) e dare un ultimo impulso. Trasferire immediatamente in un vasetto di vetro sterilizzato, livellare la superficie e coprire con un velo d'olio per sigillare dall'aria."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "baking": null,
+  "glossary": [
+    {
+      "term": "Anima dell'aglio",
+      "definition": "Il germoglio verde interno allo spicchio d'aglio. Ricco di allicina, è responsabile del retrogusto amaro e della scarsa digeribilità. Si rimuove tagliando lo spicchio a metà ed estraendo il filo verde con la punta di un coltello."
+    },
+    {
+      "term": "Frullare a impulsi",
+      "definition": "Tecnica di lavorazione al mixer dove si aziona il motore per 2-4 secondi e poi si ferma, ripetendo l'operazione. Evita il surriscaldamento delle lame (che ossiderebbe il basilico) e permette un controllo preciso della granulometria finale."
+    },
+    {
+      "term": "A filo",
+      "definition": "Tecnica di aggiunta di un liquido (olio, acqua) versandolo in un filo sottile e continuo mentre il mixer è in funzione. Favorisce una corretta emulsione e un'incorporazione graduale senza separazione delle fasi."
+    },
+    {
+      "term": "Ossidazione",
+      "definition": "Reazione chimica tra le molecole aromatiche del basilico e l'ossigeno dell'aria, che causa inscurimento e perdita di aroma. Si contrasta lavorando velocemente, mantenendo gli ingredienti freddi e sigillando con olio in superficie."
+    },
+    {
+      "term": "Sgocciolatura",
+      "definition": "Operazione di eliminazione dell'olio di conserva in eccesso dai pomodori secchi sott'olio. Fondamentale per calibrare la consistenza finale del pesto ed evitare un condimento troppo unto."
+    }
+  ],
+  "alert": "NON frullare a velocità continua per più di 20-30 secondi alla volta: le lame del mixer scaldano gli ingredienti rapidamente, ossidando il basilico (che diventa scuro e amaro) e surriscaldando l'olio (che perde le note fruttate). Lavora SEMPRE a impulsi brevi. Inoltre, NON aggiungere sale prima di aver assaggiato: i pomodori secchi sott'olio sono già molto sapidi e il pecorino apporta ulteriore salinità.",
+  "proTips": [
+    "Per un pesto dal colore verde brillante e più stabile nel tempo, aggiungi 2-3 cubetti di ghiaccio nel mixer insieme al basilico: il freddo rallenta drasticamente l'ossidazione enzimatica e mantiene il colore vivace per giorni.",
+    "Tosta leggermente le mandorle in padella a secco per 3-4 minuti a fuoco medio (fino a doratura appena percettibile) prima di frullarle: sviluppi le note aromatiche di nocciola che si sposano magnificamente con la dolcezza concentrata dei pomodori secchi.",
+    "Se usi pomodori secchi NON sott'olio (quelli venduti in busta), falli rinvenire 30 minuti in acqua tiepida, poi scolali bene e aumenta l'olio EVO a 60-70g per compensare la mancanza dell'olio di conserva."
+  ],
+  "storage": [
+    "In frigorifero: trasferisci il pesto in un vasetto di vetro sterilizzato, livella bene la superficie e copri con uno strato di 3-4mm di olio EVO a sigillo. Chiudi ermeticamente. Si conserva 7-10 giorni a 4°C. Ad ogni utilizzo, rilivella con olio la superficie esposta.",
+    "In freezer: distribuisci il pesto negli stampi per cubetti di ghiaccio in silicone (circa 20-25g per cubetto), congela per 4-6 ore scoperto, poi trasferisci i cubetti in un sacchetto gelo sottovuoto. Si conserva 3 mesi a -18°C. Ogni cubetto condisce circa 80-100g di pasta.",
+    "Rigenerazione: scongela il cubetto di pesto direttamente nella padella con la pasta appena scolata (tenendo da parte 1-2 cucchiai di acqua di cottura calda). Il calore residuo della pasta scioglie il pesto e l'amido dell'acqua di cottura aiuta l'emulsione. Mai scaldare il pesto nel microonde o in padella da solo — perderebbe colore e aroma."
+  ],
+  "imageKeywords": [
+    "sun dried tomato pesto",
+    "pesto pomodori secchi mandorle",
+    "sundried tomato almond basil pesto",
+    "italian red pesto jar",
+    "homemade tomato pesto pasta",
+    "pesto rosso italienisch",
+    "sun dried tomato spread bruschetta",
+    "red pesto sauce food photography"
+  ],
+  "tags": [
+    "pesto",
+    "pomodori secchi",
+    "mandorle",
+    "basilico",
+    "condimento",
+    "senza cottura",
+    "cucina siciliana",
+    "pasta condimento",
+    "salsa cruda"
+  ],
+  "_generatedBy": "claude-opus",
+  "_createdAt": "2026-04-19T20:28:35.471Z",
+  "image": "images/ricette/pasta/pesto-pomodori-secchi-mandorle-basilico.webp",
+  "imageAttribution": "📷 Foto: Andrés  Góngora — Pexels License via Pexels"
+}
