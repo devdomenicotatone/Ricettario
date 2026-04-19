@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-04-19T21:09:13.335Z",
+  "generatedAt": "2026-04-19T21:28:37.331Z",
   "totalRecipes": 55,
   "categories": [
     {
       "name": "Condimenti",
-      "count": 14,
+      "count": 16,
       "emoji": ""
     },
     {
@@ -19,7 +19,7 @@
     },
     {
       "name": "Pasta",
-      "count": 10,
+      "count": 8,
       "emoji": "🍝"
     },
     {
@@ -61,6 +61,22 @@
       "_createdAt": "2026-04-19T20:50:36.106Z"
     },
     {
+      "title": "Burro Composto: Acciughe e Limone o Tartufo Nero",
+      "slug": "burro-composto-acciughe-tartufo",
+      "category": "Condimenti",
+      "categoryDir": "condimenti",
+      "emoji": "🧈",
+      "href": "ricette/condimenti/burro-composto-acciughe-tartufo.html",
+      "image": "images/ricette/condimenti/burro-composto-acciughe-tartufo.webp",
+      "description": "Tecnica professionale per realizzare burri aromatizzati a pomata (Maître d'Hôtel style). Ideali per mantecare paste fresche, risotti o per crostini caldi.",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-19T20:32:53.898Z"
+    },
+    {
       "title": "Burro Maître d'Hôtel",
       "slug": "burro-maitre-d-hotel",
       "category": "Condimenti",
@@ -75,6 +91,22 @@
       "tool": "",
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-19T20:32:57.188Z"
+    },
+    {
+      "title": "Caesar Dressing",
+      "slug": "caesar-dressing",
+      "category": "Condimenti",
+      "categoryDir": "condimenti",
+      "emoji": "🥗",
+      "href": "ricette/condimenti/caesar-dressing.html",
+      "image": "images/ricette/condimenti/caesar-dressing.webp",
+      "description": "Caesar dressing artigianale con tuorlo, acciughe, senape di Digione e Parmigiano Reggiano DOP. Emulsione classica per la vera Caesar Salad.",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "_generatedBy": "claude-opus",
+      "_createdAt": "2026-04-19T20:32:20.490Z"
     },
     {
       "title": "Dressing al Miele e Senape",
@@ -523,38 +555,6 @@
       "tool": "",
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-19T20:25:39.290Z"
-    },
-    {
-      "title": "Burro Composto: Acciughe e Limone o Tartufo Nero",
-      "slug": "burro-composto-acciughe-tartufo",
-      "category": "Pasta",
-      "categoryDir": "pasta",
-      "emoji": "🧈",
-      "href": "ricette/pasta/burro-composto-acciughe-tartufo.html",
-      "image": "images/ricette/pasta/burro-composto-acciughe-tartufo.webp",
-      "description": "Tecnica professionale per realizzare burri aromatizzati a pomata (Maître d'Hôtel style). Ideali per mantecare paste fresche, risotti o per crostini caldi.",
-      "hydration": null,
-      "time": null,
-      "temp": null,
-      "tool": "",
-      "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-19T20:32:53.898Z"
-    },
-    {
-      "title": "Caesar Dressing",
-      "slug": "caesar-dressing",
-      "category": "Pasta",
-      "categoryDir": "pasta",
-      "emoji": "🥗",
-      "href": "ricette/pasta/caesar-dressing.html",
-      "image": "images/ricette/pasta/caesar-dressing.webp",
-      "description": "Caesar dressing artigianale con tuorlo, acciughe, senape di Digione e Parmigiano Reggiano DOP. Emulsione classica per la vera Caesar Salad.",
-      "hydration": null,
-      "time": null,
-      "temp": null,
-      "tool": "",
-      "_generatedBy": "claude-opus",
-      "_createdAt": "2026-04-19T20:32:20.490Z"
     },
     {
       "title": "Chimichurri",

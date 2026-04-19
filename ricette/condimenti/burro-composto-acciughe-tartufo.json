@@ -4,7 +4,7 @@
   "emoji": "🧈",
   "description": "Tecnica professionale per realizzare burri aromatizzati a pomata (Maître d'Hôtel style). Ideali per mantecare paste fresche, risotti o per crostini caldi.",
   "subtitle": "Emulsione a freddo di grassi nobili per l'esaltazione dei composti aromatici lipofili",
-  "category": "Pasta",
+  "category": "Condimenti",
   "hydration": 0,
   "targetTemp": "",
   "fermentation": "",
@@ -136,6 +136,6 @@
   ],
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-19T20:32:53.898Z",
-  "image": "images/ricette/pasta/burro-composto-acciughe-tartufo.webp",
+  "image": "images/ricette/condimenti/burro-composto-acciughe-tartufo.webp",
   "imageAttribution": "📷 Foto: Antoni Shkraba Studio — Pexels License via Pexels"
 }

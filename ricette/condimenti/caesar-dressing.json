@@ -4,7 +4,7 @@
   "emoji": "🥗",
   "description": "Caesar dressing artigianale con tuorlo, acciughe, senape di Digione e Parmigiano Reggiano DOP. Emulsione classica per la vera Caesar Salad.",
   "subtitle": "Emulsione classica all'italiana — tuorlo, acciughe, senape e Parmigiano Reggiano DOP",
-  "category": "Pasta",
+  "category": "Condimenti",
   "hydration": 0,
   "targetTemp": "",
   "fermentation": "",
@@ -166,6 +166,6 @@
   ],
   "_generatedBy": "claude-opus",
   "_createdAt": "2026-04-19T20:32:20.490Z",
-  "image": "images/ricette/pasta/caesar-dressing.webp",
+  "image": "images/ricette/condimenti/caesar-dressing.webp",
   "imageAttribution": "📷 Foto: Gundula Vogel — Pexels License via Pexels"
 }
