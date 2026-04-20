@@ -4,7 +4,7 @@
   "emoji": "🌿",
   "description": "La ricetta autentica del Pesto Ligure al mortaio. Proporzioni bilanciate per un'emulsione a freddo verde smeraldo, ricca di oli essenziali e senza ossidazione.",
   "subtitle": "Emulsione a freddo al mortaio di marmo",
-  "category": "Pasta",
+  "category": "Condimenti",
   "hydration": 0,
   "targetTemp": "",
   "fermentation": "",
@@ -147,6 +147,6 @@
   ],
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-19T20:27:46.793Z",
-  "image": "images/ricette/pasta/pesto-alla-genovese-tradizionale.webp",
+  "image": "images/ricette/condimenti/pesto-alla-genovese-tradizionale.webp",
   "imageAttribution": "📷 Immagine esistente"
 }

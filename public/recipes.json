@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-04-19T21:28:37.331Z",
+  "generatedAt": "2026-04-20T13:18:36.710Z",
   "totalRecipes": 55,
   "categories": [
     {
       "name": "Condimenti",
-      "count": 16,
+      "count": 22,
       "emoji": ""
     },
     {
@@ -14,12 +14,12 @@
     },
     {
       "name": "Pizza",
-      "count": 8,
+      "count": 7,
       "emoji": "🍕"
     },
     {
       "name": "Pasta",
-      "count": 8,
+      "count": 3,
       "emoji": "🍝"
     },
     {
@@ -59,6 +59,22 @@
       "tool": "",
       "_generatedBy": "claude",
       "_createdAt": "2026-04-19T20:50:36.106Z"
+    },
+    {
+      "title": "Besciamella Classica",
+      "slug": "besciamella-classica",
+      "category": "Condimenti",
+      "categoryDir": "condimenti",
+      "emoji": "🥛",
+      "href": "ricette/condimenti/besciamella-classica.html",
+      "image": "images/ricette/condimenti/besciamella-classica.webp",
+      "description": "La ricetta professionale e infallibile per la classica besciamella. Proporzioni auree (roux 1:1) per una salsa madre liscia, vellutata e priva di grumi.",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-19T20:25:39.290Z"
     },
     {
       "title": "Burro Composto: Acciughe e Limone o Tartufo Nero",
@@ -107,6 +123,22 @@
       "tool": "",
       "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-19T20:32:20.490Z"
+    },
+    {
+      "title": "Chimichurri",
+      "slug": "chimichurri",
+      "category": "Condimenti",
+      "categoryDir": "condimenti",
+      "emoji": "🌿",
+      "href": "ricette/condimenti/chimichurri.html",
+      "image": "images/ricette/condimenti/chimichurri.webp",
+      "description": "Salsa chimichurri argentina: prezzemolo, aglio, origano, peperoncino, aceto e olio EVO. Perfetta per carni alla griglia e asado.",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "_generatedBy": "claude-opus",
+      "_createdAt": "2026-04-19T20:31:01.182Z"
     },
     {
       "title": "Dressing al Miele e Senape",
@@ -221,6 +253,38 @@
       "_createdAt": "2026-04-16T18:16:57.771Z"
     },
     {
+      "title": "Pesto alla Genovese Tradizionale",
+      "slug": "pesto-alla-genovese-tradizionale",
+      "category": "Condimenti",
+      "categoryDir": "condimenti",
+      "emoji": "🌿",
+      "href": "ricette/condimenti/pesto-alla-genovese-tradizionale.html",
+      "image": "images/ricette/condimenti/pesto-alla-genovese-tradizionale.webp",
+      "description": "La ricetta autentica del Pesto Ligure al mortaio. Proporzioni bilanciate per un'emulsione a freddo verde smeraldo, ricca di oli essenziali e senza ossidazione.",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-19T20:27:46.793Z"
+    },
+    {
+      "title": "Pesto di Pomodori Secchi, Mandorle e Basilico",
+      "slug": "pesto-pomodori-secchi-mandorle-basilico",
+      "category": "Condimenti",
+      "categoryDir": "condimenti",
+      "emoji": "🍅",
+      "href": "ricette/condimenti/pesto-pomodori-secchi-mandorle-basilico.html",
+      "image": "images/ricette/condimenti/pesto-pomodori-secchi-mandorle-basilico.webp",
+      "description": "Pesto rustico siciliano con pomodori secchi sott'olio, mandorle e basilico fresco. Condimento versatile per pasta, bruschette e crostini.",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "_generatedBy": "claude-opus",
+      "_createdAt": "2026-04-19T20:28:35.471Z"
+    },
+    {
       "title": "Salmoriglio Siciliano",
       "slug": "salmoriglio-siciliano-tradizionale",
       "category": "Condimenti",
@@ -253,6 +317,22 @@
       "_createdAt": "2026-04-19T20:45:45.094Z"
     },
     {
+      "title": "Salsa BBQ Artigianale",
+      "slug": "salsa-bbq-artigianale",
+      "category": "Condimenti",
+      "categoryDir": "condimenti",
+      "emoji": "🔥",
+      "href": "ricette/condimenti/salsa-bbq-artigianale.html",
+      "image": "images/ricette/condimenti/salsa-bbq-artigianale.webp",
+      "description": "Ricetta professionale per l'autentica Salsa Barbecue americana. Un equilibrio chimico perfetto tra componente zuccherina, spinta acida, note affumicate e spezie",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-19T20:31:05.239Z"
+    },
+    {
       "title": "Salsa Bernese",
       "slug": "salsa-bernese",
       "category": "Condimenti",
@@ -267,6 +347,22 @@
       "tool": "",
       "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-19T20:31:37.726Z"
+    },
+    {
+      "title": "Salsa e Coulis di Pomodoro Fresco",
+      "slug": "coulis-salsa-pomodoro-fresco",
+      "category": "Condimenti",
+      "categoryDir": "condimenti",
+      "emoji": "🍅",
+      "href": "ricette/condimenti/coulis-salsa-pomodoro-fresco.html",
+      "image": "images/ricette/condimenti/coulis-salsa-pomodoro-fresco.webp",
+      "description": "Ricetta professionale per salsa e coulis di pomodoro fresco. Tecnica del concassé e setacciatura per una texture vellutata e un sapore intenso.",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-19T20:25:45.908Z"
     },
     {
       "title": "Salsa Teriyaki Originale",
@@ -525,54 +621,6 @@
       "_createdAt": "2026-04-16T21:48:08.809Z"
     },
     {
-      "title": "Salsa BBQ Artigianale",
-      "slug": "salsa-bbq-artigianale",
-      "category": "Pizza",
-      "categoryDir": "pizza",
-      "emoji": "🔥",
-      "href": "ricette/pizza/salsa-bbq-artigianale.html",
-      "image": "images/ricette/pizza/salsa-bbq-artigianale.webp",
-      "description": "Ricetta professionale per l'autentica Salsa Barbecue americana. Un equilibrio chimico perfetto tra componente zuccherina, spinta acida, note affumicate e spezie",
-      "hydration": null,
-      "time": null,
-      "temp": null,
-      "tool": "",
-      "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-19T20:31:05.239Z"
-    },
-    {
-      "title": "Besciamella Classica",
-      "slug": "besciamella-classica",
-      "category": "Pasta",
-      "categoryDir": "pasta",
-      "emoji": "🥛",
-      "href": "ricette/pasta/besciamella-classica.html",
-      "image": "images/ricette/pasta/besciamella-classica.webp",
-      "description": "La ricetta professionale e infallibile per la classica besciamella. Proporzioni auree (roux 1:1) per una salsa madre liscia, vellutata e priva di grumi.",
-      "hydration": null,
-      "time": null,
-      "temp": null,
-      "tool": "",
-      "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-19T20:25:39.290Z"
-    },
-    {
-      "title": "Chimichurri",
-      "slug": "chimichurri",
-      "category": "Pasta",
-      "categoryDir": "pasta",
-      "emoji": "🌿",
-      "href": "ricette/pasta/chimichurri.html",
-      "image": "images/ricette/pasta/chimichurri.webp",
-      "description": "Salsa chimichurri argentina: prezzemolo, aglio, origano, peperoncino, aceto e olio EVO. Perfetta per carni alla griglia e asado.",
-      "hydration": null,
-      "time": null,
-      "temp": null,
-      "tool": "",
-      "_generatedBy": "claude-opus",
-      "_createdAt": "2026-04-19T20:31:01.182Z"
-    },
-    {
       "title": "Gnocchi di Patate",
       "slug": "gnocchi-di-patate-v2",
       "category": "Pasta",
@@ -605,38 +653,6 @@
       "_createdAt": "2026-04-17T22:22:23.262Z"
     },
     {
-      "title": "Pesto alla Genovese Tradizionale",
-      "slug": "pesto-alla-genovese-tradizionale",
-      "category": "Pasta",
-      "categoryDir": "pasta",
-      "emoji": "🌿",
-      "href": "ricette/pasta/pesto-alla-genovese-tradizionale.html",
-      "image": "images/ricette/pasta/pesto-alla-genovese-tradizionale.webp",
-      "description": "La ricetta autentica del Pesto Ligure al mortaio. Proporzioni bilanciate per un'emulsione a freddo verde smeraldo, ricca di oli essenziali e senza ossidazione.",
-      "hydration": null,
-      "time": null,
-      "temp": null,
-      "tool": "",
-      "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-19T20:27:46.793Z"
-    },
-    {
-      "title": "Pesto di Pomodori Secchi, Mandorle e Basilico",
-      "slug": "pesto-pomodori-secchi-mandorle-basilico",
-      "category": "Pasta",
-      "categoryDir": "pasta",
-      "emoji": "🍅",
-      "href": "ricette/pasta/pesto-pomodori-secchi-mandorle-basilico.html",
-      "image": "images/ricette/pasta/pesto-pomodori-secchi-mandorle-basilico.webp",
-      "description": "Pesto rustico siciliano con pomodori secchi sott'olio, mandorle e basilico fresco. Condimento versatile per pasta, bruschette e crostini.",
-      "hydration": null,
-      "time": null,
-      "temp": null,
-      "tool": "",
-      "_generatedBy": "claude-opus",
-      "_createdAt": "2026-04-19T20:28:35.471Z"
-    },
-    {
       "title": "Polenta Concia alla Valdostana",
       "slug": "polenta-concia-valdostana",
       "category": "Pasta",
@@ -651,22 +667,6 @@
       "tool": "",
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-17T17:50:23.207Z"
-    },
-    {
-      "title": "Salsa e Coulis di Pomodoro Fresco",
-      "slug": "coulis-salsa-pomodoro-fresco",
-      "category": "Pasta",
-      "categoryDir": "pasta",
-      "emoji": "🍅",
-      "href": "ricette/pasta/coulis-salsa-pomodoro-fresco.html",
-      "image": "images/ricette/pasta/coulis-salsa-pomodoro-fresco.webp",
-      "description": "Ricetta professionale per salsa e coulis di pomodoro fresco. Tecnica del concassé e setacciatura per una texture vellutata e un sapore intenso.",
-      "hydration": null,
-      "time": null,
-      "temp": null,
-      "tool": "",
-      "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-19T20:25:45.908Z"
     },
     {
       "title": "Burger Buns con Biga",

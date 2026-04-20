@@ -4,7 +4,7 @@
   "emoji": "🌿",
   "description": "Salsa chimichurri argentina: prezzemolo, aglio, origano, peperoncino, aceto e olio EVO. Perfetta per carni alla griglia e asado.",
   "subtitle": "La salsa verde argentina per eccellenza — condimento crudo a base di erbe fresche, aglio e aceto",
-  "category": "Pasta",
+  "category": "Condimenti",
   "hydration": 0,
   "targetTemp": "",
   "fermentation": "",
@@ -165,6 +165,6 @@
   ],
   "_generatedBy": "claude-opus",
   "_createdAt": "2026-04-19T20:31:01.182Z",
-  "image": "images/ricette/pasta/chimichurri.webp",
+  "image": "images/ricette/condimenti/chimichurri.webp",
   "imageAttribution": "📷 Foto: Gera Cejas — Pexels License via Pexels"
 }

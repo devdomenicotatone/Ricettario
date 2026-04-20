@@ -4,7 +4,7 @@
   "emoji": "🍅",
   "description": "Pesto rustico siciliano con pomodori secchi sott'olio, mandorle e basilico fresco. Condimento versatile per pasta, bruschette e crostini.",
   "subtitle": "Condimento crudo a base di pomodori secchi sott'olio con mandorle e basilico — lavorazione al mixer",
-  "category": "Pasta",
+  "category": "Condimenti",
   "hydration": 0,
   "targetTemp": "",
   "fermentation": "",
@@ -137,6 +137,6 @@
   ],
   "_generatedBy": "claude-opus",
   "_createdAt": "2026-04-19T20:28:35.471Z",
-  "image": "images/ricette/pasta/pesto-pomodori-secchi-mandorle-basilico.webp",
+  "image": "images/ricette/condimenti/pesto-pomodori-secchi-mandorle-basilico.webp",
   "imageAttribution": "📷 Foto: Andrés  Góngora — Pexels License via Pexels"
 }

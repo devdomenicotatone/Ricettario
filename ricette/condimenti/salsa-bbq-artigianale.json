@@ -4,7 +4,7 @@
   "emoji": "🔥",
   "description": "Ricetta professionale per l'autentica Salsa Barbecue americana. Un equilibrio chimico perfetto tra componente zuccherina, spinta acida, note affumicate e spezie.",
   "subtitle": "Condimento denso a base agrodolce, ideale per carni, lievitati e topping pizza",
-  "category": "Pizza",
+  "category": "Condimenti",
   "hydration": 0,
   "targetTemp": "",
   "fermentation": "",
@@ -179,6 +179,6 @@
   ],
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-19T20:31:05.239Z",
-  "image": "images/ricette/pizza/salsa-bbq-artigianale.webp",
+  "image": "images/ricette/condimenti/salsa-bbq-artigianale.webp",
   "imageAttribution": "📷 Foto: Meraj Kazi — Pexels License via Pexels"
 }

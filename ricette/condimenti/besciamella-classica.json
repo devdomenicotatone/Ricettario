@@ -4,7 +4,7 @@
   "emoji": "🥛",
   "description": "La ricetta professionale e infallibile per la classica besciamella. Proporzioni auree (roux 1:1) per una salsa madre liscia, vellutata e priva di grumi.",
   "subtitle": "La salsa madre vellutata con metodo tradizionale a roux biondo",
-  "category": "Pasta",
+  "category": "Condimenti",
   "hydration": 0,
   "targetTemp": "",
   "fermentation": "",
@@ -118,6 +118,6 @@
   ],
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-19T20:25:39.290Z",
-  "image": "images/ricette/pasta/besciamella-classica.webp",
+  "image": "images/ricette/condimenti/besciamella-classica.webp",
   "imageAttribution": "📷 Foto: foxy tati — Pexels License via Pexels"
 }

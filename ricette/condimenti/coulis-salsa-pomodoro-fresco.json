@@ -4,7 +4,7 @@
   "emoji": "🍅",
   "description": "Ricetta professionale per salsa e coulis di pomodoro fresco. Tecnica del concassé e setacciatura per una texture vellutata e un sapore intenso.",
   "subtitle": "Preparazione classica: sbianchitura, concassè e setacciatura a maglia fine",
-  "category": "Pasta",
+  "category": "Condimenti",
   "hydration": 0,
   "targetTemp": "",
   "fermentation": "",
@@ -134,6 +134,6 @@
   ],
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-19T20:25:45.908Z",
-  "image": "images/ricette/pasta/coulis-salsa-pomodoro-fresco.webp",
+  "image": "images/ricette/condimenti/coulis-salsa-pomodoro-fresco.webp",
   "imageAttribution": "📷 Foto: Willians Huerta — Pexels License via Pexels"
 }
