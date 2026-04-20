@@ -56,47 +56,47 @@
   "suspensions": [],
   "steps": [
     {
-      "title": "1. Preparazione e Caricamento Vasca",
+      "title": "Preparazione e Caricamento Vasca",
       "text": "Inserire nella vasca dell'impastatrice a spirale tutte le farine: {farina_costiera:800}g di Farina Costiera ORO e {farina_fibra2:200}g di Farina ORO Fibra 2. Aggiungere il {lievito_fresco:7}g di lievito di birra fresco sbriciolato direttamente sulle farine — in questo modo il lievito inizia a idratarsi gradualmente senza venire a contatto diretto con il sale."
     },
     {
-      "title": "2. Prima Idratazione — Fase Base (80% Acqua)",
+      "title": "Prima Idratazione — Fase Base (80% Acqua)",
       "text": "Calcolare l'80% dell'acqua totale: {acqua_totale:850}g totali, quindi versare {acqua_base:680}g di acqua fredda da frigo (4–6°C) nelle farine. Avviare la spirale a velocità media (100–120 RPM). Lavorare fino a completa incordatura: l'impasto deve staccarsi nettamente dalle pareti della vasca e aggrapparsi alla spirale, risultando liscio e compatto. Questa fase richiede circa 8–10 minuti. L'acqua fredda è essenziale per mantenere la temperatura dell'impasto sotto controllo durante la lavorazione meccanica."
     },
     {
-      "title": "3. Bassinage — Aggiunta Acqua Residua (20%)",
+      "title": "Bassinage — Aggiunta Acqua Residua (20%)",
       "text": "Con la macchina in movimento, portare la velocità ad alta (180–220 RPM). Versare i restanti {acqua_bassinage:170}g di acqua fredda a filo, in 4–5 aggiunte progressive, attendendo che ogni aggiunta venga completamente assorbita prima di versare la successiva. L'impasto deve sempre 'riprendere corda' tra un'aggiunta e l'altra: se si presenta lucido e sciolto, attendere ancora prima di procedere. Contestualmente all'ultima quota di acqua, aggiungere i {sale:25}g di sale marino fino. Aspettare che il sale venga assorbito e che l'impasto riprenda consistenza e tensione."
     },
     {
-      "title": "4. Inserimento Olio",
+      "title": "Inserimento Olio",
       "text": "Quando l'impasto ha ripreso piena incordatura dopo il sale, inserire i {olio_evo:25}g di olio extravergine di oliva a filo, mantenendo la velocità alta (180–220 RPM). L'olio deve essere aggiunto lentamente: versarlo troppo velocemente causerebbe la rottura della maglia glutinica. L'impasto è pronto quando riprende la corda, risulta setoso, lucido e si stacca completamente dalle pareti. Verificare la temperatura dell'impasto con il termometro a sonda: deve essere compresa tra 24°C e 25°C. Temperature superiori ai 26°C accelererebbero eccessivamente la fermentazione nelle ore successive."
     },
     {
-      "title": "5. Puntata a Temperatura Ambiente",
+      "title": "Puntata a Temperatura Ambiente",
       "text": "Trasferire l'impasto in un cassone oliato e coprire con coperchio o pellicola. Far puntare a temperatura ambiente (22–24°C) per 40–60 minuti. In questa fase la massa inizia la fermentazione e sviluppa la prima forza strutturale. Non effettuare pieghe durante la puntata: la teglia romana moderna si basa su un impasto che acquisisce forza principalmente in frigorifero."
     },
     {
-      "title": "6. Maturazione in Frigo 24h",
+      "title": "Maturazione in Frigo 24h",
       "text": "Riporre il cassone sigillato in cella frigorifera (o frigorifero domestico) a 4°C per 24 ore. La maturazione a freddo consente agli enzimi di scomporre gli amidi complessi, sviluppando aromi profondi e migliorando la digeribilità dell'impasto. La maglia glutinica si consolida lentamente senza perdere estensibilità, garantendo la caratteristica alveolatura aperta della teglia romana."
     },
     {
-      "title": "7. Staglio e Formatura Pagnotte",
+      "title": "Staglio e Formatura Pagnotte",
       "text": "Dopo 24 ore, estrarre il cassone dal frigo. Con l'ausilio di un tarocco oliato, stagliare l'impasto in pagnotte da {panetto_peso:1200!}g cadauna (pezzatura standard per teglia 60×40 cm). Non sgasare: effettuare una formatura delicata dando tensione alla superficie senza rompere i gas di fermentazione già formati. Riporre le pagnotte in cassette singole oliate o in cassetta 60×40 cm (tre pagnotti per cassetta), sigillare."
     },
     {
-      "title": "8. Appretto (Secondo Riposo)",
+      "title": "Appretto (Secondo Riposo)",
       "text": "Lasciare le cassette a temperatura ambiente (25–26°C) per circa 4 ore fino al raddoppio del volume. La pagnotta è pronta per la stesura quando, premendo delicatamente con un dito, la fossetta torna su lentamente (segno di giusta maturazione). Se la fossetta rimane impressa, l'impasto è maturo al limite — stendere subito. Se risale immediatamente, attendere ancora."
     },
     {
-      "title": "9. Stesura in Teglia",
+      "title": "Stesura in Teglia",
       "text": "Oliare generosamente il fondo della teglia in ferro blu 60×40 cm. Rovesciare la cassetta direttamente sul banco e poi trasferire delicatamente la pagnotta sulla teglia. Con le dita aperte e la tecnica a pressione dall'interno verso l'esterno, stendere l'impasto fino a coprire tutta la teglia. Procedere in più riprese se l'impasto oppone resistenza (glutine in tensione): lasciarlo riposare 5 minuti coperto e riprendere la stesura. Non usare il mattarello — si perderebbero tutti i gas di fermentazione. L'impasto steso sulla teglia deve presentare visibili bolle in superficie."
     },
     {
-      "title": "10. Condimento e Cottura",
+      "title": "Condimento e Cottura",
       "text": "Condire secondo preferenza (salsa di pomodoro, mozzarella, farciture) avendo cura di non appesantire eccessivamente per non bloccare lo sviluppo in forno. Cuocere in forno elettrico statico con pietra refrattaria o direttamente sulla teglia a 270–280°C (massimo per forni casalinghi), impostando calore prevalente dalla platea (resistenza inferiore al 70–80%) e calore ridotto dal cielo (resistenza superiore al 10–20%). Cuocere per 12–18 minuti, controllando la base: la pizza in teglia romana è cotta quando il fondo presenta una crosticina dorata uniforme e croccante. Nei forni di casa senza controllo separato delle resistenze, posizionare la teglia sul fondo del forno nei primi 8 minuti, poi spostarla a metà per completare la doratura in superficie."
     },
     {
-      "title": "11. Rigenerazione (Opzionale)",
+      "title": "Rigenerazione (Opzionale)",
       "text": "La teglia romana può essere cotta, lasciata raffreddare completamente e rigenerata in forno a 280°C per 4–6 minuti prima del servizio. Questa tecnica professionale garantisce la massima croccantezza alla base. Gli impasti cotti possono essere abbattuti in positivo (+4°C) o in negativo (-18°C) e stoccati per ottimizzare la produzione."
     }
   ],

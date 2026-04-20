@@ -120,39 +120,39 @@
   "suspensions": [],
   "steps": [
     {
-      "title": "1. Marinatura aromi (2–4h prima)",
+      "title": "Marinatura aromi (2–4h prima)",
       "text": "In una ciotolina, unire {miele_marinatura:15}g di miele d'acacia, {rum_marinatura:18}g di rum, {scorza_limone:5}g di scorza di limone grattugiata, {scorza_arancia:5}g di scorza d'arancia grattugiata e {vaniglia_marinatura:5}g di estratto di vaniglia (o i semi di una bacca). Mescolare bene con un cucchiaino fino a ottenere un composto omogeneo e profumato. Coprire con pellicola e lasciare marinare a temperatura ambiente per almeno 2h, idealmente 4h. Questo passaggio è fondamentale: gli aromi si amalgamano e si potenziano a vicenda, trasferendo all'impasto una fragranza molto più complessa rispetto all'aggiunta diretta."
     },
     {
-      "title": "2. Attivazione lievito e primo assemblaggio",
+      "title": "Attivazione lievito e primo assemblaggio",
       "text": "Nella ciotola della planetaria munita di gancio, versare le due farine setacciate insieme: {farina_0_impasto:300}g di Farina Tipo 0 e {farina_manitoba_impasto:200}g di Manitoba. Sciogliere {lievito_fresco:10}g di lievito di birra fresco direttamente in {latte_impasto:90}g di latte intero a temperatura ambiente (20–22°C), mescolando con una forchetta fino a completo scioglimento. Aggiungere {zucchero_impasto:80}g di zucchero semolato alle farine e mescolare brevemente. Versare il latte con lievito a filo nella ciotola con le farine, con la planetaria a velocità 1 (minima). Lasciare assorbire completamente prima di procedere: circa 2–3 minuti."
     },
     {
-      "title": "3. Incorporazione uova (a filo, progressiva)",
+      "title": "Incorporazione uova (a filo, progressiva)",
       "text": "Con la planetaria in funzione a velocità 1–2, aggiungere {uova_impasto:180}g di uova (circa 3 uova grandi) una alla volta, versandole sgusciate in una tazzina e aggiungendole all'impasto solo quando la precedente è stata completamente assorbita. Attendere circa 2–3 minuti tra un'aggiunta e l'altra. Dopo l'ultima uova, unire immediatamente il mix di aromi marinati (miele, rum, scorze, vaniglia). Lasciare lavorare la planetaria a velocità 2 per altri 5 minuti: l'impasto apparirà disomogeneo, sgretolato e parzialmente appiccicoso — è normale in questa fase."
     },
     {
-      "title": "4. Incordatura",
+      "title": "Incordatura",
       "text": "Portare la velocità della planetaria a 3–4 e lavorare l'impasto per 10–15 minuti, fino a quando si stacca nettamente dalle pareti della ciotola e si incorda saldamente al gancio. L'impasto dovrà risultare liscio, lucido e ben strutturato: se sollevando il gancio cade a cascata e poi si ricompone elasticamente, l'incordatura è corretta. Solo a questo punto aggiungere {sale_impasto:10}g di sale fino, aumentare momentaneamente la velocità a 4–5 per 2 minuti per incorporarlo completamente."
     },
     {
-      "title": "5. Inserimento burro a freddo (en beurrage progressivo)",
+      "title": "Inserimento burro a freddo (en beurrage progressivo)",
       "text": "Verificare che il burro sia morbido e plastico ma NON fuso (20–22°C): deve cedere alla pressione del dito senza rompersi in pezzi. Abbassare la velocità a 2 e aggiungere {burro_impasto:90}g di burro tagliato a cubetti di circa 2–3 cm, pochissimi cubetti alla volta (3–4 pezzi per volta). Attendere il completo assorbimento di ogni aggiunta prima di procedere con la successiva: l'impasto potrebbe sembrare che si 'smonti' temporaneamente — è fisiologico. Una volta inserito tutto il burro, portare a velocità 4–5 e lavorare per ulteriori 8–10 minuti fino a ottenere un impasto molto liscio, unto, lucido e che si stacca completamente dalle pareti. Temperatura impasto finale target: 24–26°C."
     },
     {
-      "title": "6. Pirlatura e puntata",
+      "title": "Pirlatura e puntata",
       "text": "Rovesciare l'impasto sul piano di lavoro (non infarinare, al massimo usare un filo d'olio). L'impasto potrebbe risultare appiccicoso: non aggiungere farina. Eseguire 2–3 pieghe tipo slap & fold delicato: sollevare un lembo esterno dell'impasto, portarlo verso il centro, ruotare di 90° e ripetere. Aiutandosi con un tarocco, pirlare l'impasto in modo da ottenere una sfera liscia e tesa (boule). Trasferire in una ciotola leggermente oleata, coprire con pellicola a contatto e lasciare in puntata: OPZIONE A (T.A.): 2–3h a 24–26°C fino al raddoppio. OPZIONE B (frigo): 30 minuti a T.A., poi in frigo a 4–5°C per 12–16h per maggiore complessità aromatica e maneggiabilità dell'impasto freddo."
     },
     {
-      "title": "7. Staglio e formatura",
+      "title": "Staglio e formatura",
       "text": "Rovesciare l'impasto lievitato sul piano di lavoro leggermente infarinato e sgonfiarlo delicatamente con le mani. (Se si è usata l'opzione frigo, lasciare acclimatare 30–45 minuti prima di procedere.) Con il tarocco, ricavare 18 pezzi da circa {panetto_peso:50!}g ciascuno (peso pre-cottura). Per ogni pezzetto: appiattire leggermente con il palmo, portare i bordi verso il centro, capovolgere e pirlare sul piano con movimento circolare della mano a coppa, esercitando una leggera pressione verso il basso fino a ottenere sfere lisce e tese. Disporre sulla leccarda rivestita di carta forno, ben distanziate (almeno 5 cm): si espanderanno in cottura."
     },
     {
-      "title": "8. Appretto (seconda lievitazione)",
+      "title": "Appretto (seconda lievitazione)",
       "text": "Coprire le brioche con pellicola leggermente oleata o con un telo umido senza che tocchi la superficie. Lasciare in appretto a 26–28°C per 60–90 minuti (se lievitazione a T.A.) oppure 90–120 minuti (se si è usata la maturazione in frigo): le brioche devono raddoppiare di volume, apparire gonfie e traballanti al tocco leggero della teglia. Non forzare la lievitazione con fonti di calore dirette."
     },
     {
-      "title": "9. Doratura e cottura",
+      "title": "Doratura e cottura",
       "text": "Preriscaldare il forno in modalità statica a 180°C per almeno 20 minuti. In una tazzina, sbattere {tuorlo_doratura:20}g di tuorlo con {panna_doratura:20}g di panna fresca fino a ottenere un'emulsione omogenea. Spennellare delicatamente la superficie di ogni brioche con la doratura, cercando di non far colare il composto sui lati (impedirebbe la lievitazione laterale in forno). Infornare a 180°C in modalità statica, posizione centrale, per 18–20 minuti, fino a doratura uniforme e profonda (colore nocciola). Le brioche sono cotte quando il fondo risulta sodo e bussandolo si sente un suono 'vuoto'. Sfornare e trasferire su griglia per il raffreddamento."
     }
   ],
