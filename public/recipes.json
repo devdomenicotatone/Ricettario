@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-20T23:26:52.056Z",
-  "totalRecipes": 55,
+  "generatedAt": "2026-04-22T20:40:15.519Z",
+  "totalRecipes": 56,
   "categories": [
     {
       "name": "Pane",
@@ -14,7 +14,7 @@
     },
     {
       "name": "Focaccia",
-      "count": 4,
+      "count": 5,
       "emoji": "🫓"
     },
     {
@@ -267,6 +267,22 @@
       "tool": "",
       "_generatedBy": "claude",
       "_createdAt": "2026-04-16T21:48:08.809Z"
+    },
+    {
+      "title": "Calzone di Cipolla Barese",
+      "slug": "calzone-cipolla-barese-pugliese",
+      "category": "Focaccia",
+      "categoryDir": "focaccia",
+      "emoji": "🥧",
+      "href": "ricette/focaccia/calzone-cipolla-barese-pugliese.html",
+      "image": "images/ricette/focaccia/calzone-cipolla-barese-pugliese.webp",
+      "description": "L'autentica ricetta pugliese del calzone di cipolla: impasto fragrante all'olio e vino bianco, farcito con sponsali dolci, olive, acciughe e uvetta.",
+      "hydration": "30%",
+      "time": null,
+      "temp": "22-24°C",
+      "tool": "",
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-22T20:39:25.883Z"
     },
     {
       "title": "Focaccia Barese",
