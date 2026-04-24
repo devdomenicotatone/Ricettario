@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-04-22T20:40:15.519Z",
-  "totalRecipes": 56,
+  "generatedAt": "2026-04-23T22:01:33.385Z",
+  "totalRecipes": 57,
   "categories": [
     {
       "name": "Pane",
-      "count": 7,
+      "count": 8,
       "emoji": "🥖"
     },
     {
@@ -155,6 +155,22 @@
       "tool": "",
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-17T22:22:09.255Z"
+    },
+    {
+      "title": "Treccia di Pane all'Olio",
+      "slug": "treccia-di-pane-olio",
+      "category": "Pane",
+      "categoryDir": "pane",
+      "emoji": "🥖",
+      "href": "ricette/pane/treccia-di-pane-olio.html",
+      "image": "images/ricette/pane/treccia-di-pane-olio.webp",
+      "description": "Una classica treccia di pane morbida e fragrante, arricchita con olio extravergine. Perfetta per accompagnare i pasti o per la colazione.",
+      "hydration": "56%",
+      "time": "~3.5h",
+      "temp": "25-26°C",
+      "tool": "",
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-23T22:00:37.889Z"
     },
     {
       "title": "Pinsa Romana",

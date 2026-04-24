@@ -5,6 +5,7 @@
   "description": "L'autentica ricetta pugliese del calzone di cipolla: impasto fragrante all'olio e vino bianco, farcito con sponsali dolci, olive, acciughe e uvetta.",
   "subtitle": "Torta salata tradizionale con pasta all'olio e vino e ripieno di sponsali",
   "category": "Focaccia",
+  "hydration": 30,
   "targetTemp": "22-24°C",
   "fermentation": "",
   "totalFlour": 500,
@@ -113,7 +114,7 @@
     },
     {
       "title": "Farcitura e chiusura",
-      "text": "Versare all'interno il ripieno di cipolle precedentemente preparato e raffreddato, distribuendolo in modo uniforme. Stendere la seconda metà dell'impasto e adagiarla sopra il ripieno per chiudere il calzone. Suddividere l'impasto indicativamente in 60% per la base (circa 370g) e 40% per il coperchio (circa 250g), in modo da avere pasta sufficiente per foderare la teglia e farla risalire sui bordi. Sigillare i bordi arrotolando la pasta in eccesso della base verso l'interno, effettuando una 'pizzicatura' per chiudere ermeticamente."
+      "text": "Versare all'interno il ripieno di cipolle precedentemente preparato e raffreddato, distribuendolo in modo uniforme. Stendere la seconda metà dell'impasto e adagiarla sopra il ripieno per chiudere il calzone. Sigillare i bordi arrotolando la pasta in eccesso della base verso l'interno, effettuando una 'pizzicatura' per chiudere ermeticamente."
     },
     {
       "title": "Finitura prima della cottura",
@@ -131,7 +132,7 @@
     },
     {
       "title": "Integrazione dei sapori",
-      "text": "Rimuovere il coperchio e aggiungere {pomodori_ripieno:150}g di pomodorini pelati schiacciati, {olive_ripieno:80}g di olive nere denocciolate, {uvetta_ripieno:40}g di uvetta (precedentemente ammollata e strizzata) e {acciughe_ripieno:20}g di filetti di acciughe spezzettati. Alzare leggermente la fiamma per asciugare i liquidi in eccesso per altri {tempo_riduzione:10!} minuti. Il ripieno completamente cotto e asciugato deve pesare indicativamente 700-800g: assicurarsi che sia ben compattato prima di farcire il calzone. Spegnere e lasciar raffreddare COMPLETAMENTE prima di utilizzare il ripieno."
+      "text": "Rimuovere il coperchio e aggiungere {pomodori_ripieno:150}g di pomodorini pelati schiacciati, {olive_ripieno:80}g di olive nere denocciolate, {uvetta_ripieno:40}g di uvetta (precedentemente ammollata e strizzata) e {acciughe_ripieno:20}g di filetti di acciughe spezzettati. Alzare leggermente la fiamma per asciugare i liquidi in eccesso per altri {tempo_riduzione:10!} minuti. Spegnere e lasciar raffreddare COMPLETAMENTE prima di utilizzare il ripieno."
     }
   ],
   "flourTable": [
