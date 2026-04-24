@@ -2,8 +2,8 @@
   "title": "Salsa Bernese",
   "slug": "salsa-bernese",
   "emoji": "🧈",
-  "description": "Salsa Bernese classica: emulsione calda di tuorli e burro chiarificato con riduzione di aceto, vino bianco, scalogno e dragoncello. Ricetta professionale.",
-  "subtitle": "Emulsione calda a bagnomaria con riduzione aromatica di aceto, vino bianco, scalogno e dragoncello",
+  "description": "Salsa bernese classica francese: emulsione calda di tuorli e burro chiarificato, aromatizzata con riduzione di aceto, vino bianco, scalogno e dragoncello.",
+  "subtitle": "Emulsione calda a bagnomaria con riduzione aromatica di aceto, vino bianco, scalogno e dragoncello fresco",
   "category": "Condimenti",
   "hydration": 0,
   "targetTemp": "",
@@ -12,49 +12,37 @@
   "ingredients": [],
   "ingredientGroups": [
     {
-      "group": "Per la Riduzione Aromatica (Gastrique)",
+      "group": "Per la Riduzione Aromatica",
       "items": [
         {
           "name": "Aceto di Vino Bianco",
           "note": "(acidità 6%)",
-          "grams": 75,
+          "grams": 60,
           "tokenId": "aceto_riduzione"
         },
         {
           "name": "Vino Bianco Secco",
-          "note": "(fermo, non aromatico)",
-          "grams": 75,
+          "note": "(non aromatico)",
+          "grams": 60,
           "tokenId": "vino_riduzione"
         },
         {
-          "name": "Acqua",
-          "note": "(temperatura ambiente)",
-          "grams": 70,
-          "tokenId": "acqua_riduzione"
-        },
-        {
           "name": "Scalogno",
-          "note": "(tritato finemente)",
+          "note": "(fresco, tritato finissimo)",
           "grams": 30,
           "tokenId": "scalogno_riduzione"
         },
         {
           "name": "Dragoncello Fresco",
-          "note": "(solo gambi, senza foglie)",
+          "note": "(gambi e foglie, per infusione)",
           "grams": 8,
-          "tokenId": "dragoncello_gambi_riduzione"
+          "tokenId": "dragoncello_riduzione"
         },
         {
-          "name": "Cerfoglio Fresco",
-          "note": "(solo gambi)",
-          "grams": 3,
-          "tokenId": "cerfoglio_gambi_riduzione"
-        },
-        {
-          "name": "Pepe Bianco in Grani",
-          "note": "(leggermente schiacciato al mortaio)",
+          "name": "Pepe Nero",
+          "note": "(in grani, leggermente pestato)",
           "grams": 1.5,
-          "tokenId": "pepe_grani_riduzione"
+          "tokenId": "pepe_riduzione"
         }
       ]
     },
@@ -63,15 +51,27 @@
       "items": [
         {
           "name": "Tuorli d'Uovo",
-          "note": "(freschissimi, cat. A — circa 3 tuorli grandi)",
+          "note": "(freschissimi, grandi, ~20g cad.)",
           "grams": 60,
           "tokenId": "tuorli_emulsione"
         },
         {
           "name": "Burro Chiarificato",
-          "note": "(oppure burro intero chiarificato in casa — vedi step)",
-          "grams": 230,
-          "tokenId": "burro_chiarificato_emulsione"
+          "note": "(oppure burro fuso e schiumato)",
+          "grams": 240,
+          "tokenId": "burro_emulsione"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "",
+          "grams": 2,
+          "tokenId": "sale_emulsione"
+        },
+        {
+          "name": "Succo di Limone",
+          "note": "(fresco, facoltativo per bilanciare)",
+          "grams": 5,
+          "tokenId": "limone_emulsione"
         }
       ]
     },
@@ -80,33 +80,15 @@
       "items": [
         {
           "name": "Dragoncello Fresco",
-          "note": "(solo foglie, tritato finemente)",
-          "grams": 6,
-          "tokenId": "dragoncello_foglie_finitura"
+          "note": "(solo foglie, tritato finissimo)",
+          "grams": 5,
+          "tokenId": "dragoncello_finitura"
         },
         {
           "name": "Cerfoglio Fresco",
-          "note": "(solo foglie, tritato finemente)",
-          "grams": 3,
-          "tokenId": "cerfoglio_foglie_finitura"
-        },
-        {
-          "name": "Sale Fino",
-          "note": "(regolazione finale)",
+          "note": "(facoltativo, tritato finissimo)",
           "grams": 2,
-          "tokenId": "sale_finitura"
-        },
-        {
-          "name": "Pepe Bianco Macinato",
-          "note": "(macinato fresco al momento)",
-          "grams": 0.5,
-          "tokenId": "pepe_bianco_finitura"
-        },
-        {
-          "name": "Succo di Limone",
-          "note": "(facoltativo, per correggere l'acidità)",
-          "grams": 5,
-          "tokenId": "limone_finitura"
+          "tokenId": "cerfoglio_finitura"
         }
       ]
     }
@@ -114,28 +96,24 @@
   "suspensions": [],
   "steps": [
     {
-      "title": "Chiarificazione del Burro (se non usi burro già chiarificato)",
-      "text": "Tagliare {burro_chiarificato_emulsione:230}g di burro a tocchetti e scioglierlo in un pentolino a fuoco bassissimo senza mai farlo sfrigolare. Quando è completamente fuso e in superficie si forma una schiuma bianca (caseina), eliminala con un cucchiaio. Filtrare il liquido dorato attraverso un colino a maglie fitte foderato con garza alimentare, lasciando sul fondo il siero lattiginoso. Si otterranno circa 190-200g di burro chiarificato limpido. Tenerlo tiepido (circa 55-60°C) — non deve essere bollente né freddo."
+      "title": "Preparazione del burro chiarificato",
+      "text": "Se non si dispone di burro chiarificato già pronto, tagliare {burro_emulsione:240}g di burro a tocchetti e scioglierlo in un pentolino a fiamma bassissima. Quando è completamente fuso, schiumare con un cucchiaio la schiuma bianca di caseina che affiora in superficie. Filtrare lentamente attraverso un colino a maglie fittissime (o garza alimentare), trattenendo il deposito lattiginoso sul fondo. Il liquido dorato limpido è il burro chiarificato. Tenerlo tiepido a circa {temperatura_burro:55!}–{temperatura_burro_max:60!}°C — non deve essere bollente né freddo: troppo caldo cuoce i tuorli, troppo freddo non emulsiona."
     },
     {
-      "title": "Preparazione della Riduzione Aromatica (Gastrique)",
-      "text": "Schiacciare {pepe_grani_riduzione:1.5}g di pepe bianco in grani con il dorso di un coltello o in un mortaio — devono rompersi grossolanamente, non polverizzarsi. Tritare finemente {scalogno_riduzione:30}g di scalogno. Tagliare a metà i gambi di {dragoncello_gambi_riduzione:8}g di dragoncello e {cerfoglio_gambi_riduzione:3}g di cerfoglio (riservare le foglie per la finitura). In un pentolino a fondo spesso, versare {aceto_riduzione:75}g di aceto di vino bianco, {vino_riduzione:75}g di vino bianco secco e {acqua_riduzione:70}g di acqua. Aggiungere lo scalogno tritato, i gambi delle erbe aromatiche e il pepe schiacciato. Portare a ebollizione su fuoco medio, poi abbassare a fuoco dolce e lasciar sobbollire per 10-12 minuti, fino a ridurre il liquido a circa 2-3 cucchiai (30-40ml). La riduzione deve essere concentrata e molto aromatica."
+      "title": "Preparazione della riduzione aromatica",
+      "text": "Tritare finissimamente {scalogno_riduzione:30}g di scalogno. Pestare grossolanamente {pepe_riduzione:1.5}g di pepe nero in grani con il fondo di un pentolino o con un mortaio. Separare i gambi dalle foglie di {dragoncello_riduzione:8}g di dragoncello: i gambi vanno nella riduzione (più aroma, meno frammenti), le foglie tritatele grossolanamente e aggiungetele al pentolino. Versare in un pentolino piccolo {aceto_riduzione:60}g di aceto di vino bianco e {vino_riduzione:60}g di vino bianco secco. Aggiungere scalogno, pepe pestato e dragoncello. Portare a bollore su fiamma media, poi abbassare a fuoco dolce e lasciar sobbollire per {tempo_riduzione:10!}–{tempo_riduzione_max:12!} minuti, finché il liquido si sarà ridotto a circa 2 cucchiai scarsi (circa 25-30ml). La riduzione deve essere scura, concentrata e intensamente profumata. Filtrare attraverso un colino a maglie fitte, premendo bene con il dorso di un cucchiaio per estrarre tutto l'aroma. Scartare i solidi. Lasciar raffreddare la riduzione per almeno {tempo_raffreddamento:5!} minuti — deve essere tiepida o a temperatura ambiente, mai bollente quando incontra i tuorli."
     },
     {
-      "title": "Filtraggio e Raffreddamento della Riduzione",
-      "text": "Filtrare la riduzione attraverso un colino a maglie fitte in una ciotola, premendo bene sullo scalogno e le erbe per estrarne tutto il sapore. Scartare i solidi. Lasciar raffreddare completamente la riduzione — questo è FONDAMENTALE: se si aggiungono i tuorli alla riduzione calda, coagulano immediatamente. La riduzione può essere preparata anche il giorno prima e conservata in frigo coperta."
+      "title": "Montatura dei tuorli con la riduzione",
+      "text": "Portare a leggero bollore una pentola con 5-6 cm d'acqua per il bagnomaria. L'acqua NON deve mai toccare il fondo della ciotola superiore. In una ciotola di acciaio inox (o rame non stagnato) versare {tuorli_emulsione:60}g di tuorli (3 tuorli grandi) e la riduzione filtrata e tiepida. Aggiungere {sale_emulsione:2}g di sale fino. Appoggiare la ciotola sulla pentola d'acqua, assicurandosi che il fuoco sia al minimo: il bagnomaria deve sobbollire appena, non ribollire violentemente. Sbattere energicamente con una frusta a mano, con movimenti rapidi a '8', per {tempo_montatura:3!}–{tempo_montatura_max:5!} minuti. Il composto deve trasformarsi in una crema chiara, spumosa e densa — la consistenza di uno zabaione ben montato. Se si vede il fondo della ciotola tra un colpo di frusta e l'altro, i tuorli sono cotti troppo. In caso di dubbio, sollevare periodicamente la ciotola dal bagnomaria per qualche secondo e continuare a sbattere fuori dal calore."
     },
     {
-      "title": "Montatura dei Tuorli a Bagnomaria",
-      "text": "Preparare il bagnomaria: portare a leggero fremito (80-85°C) una pentola d'acqua — l'acqua NON deve bollire vigorosamente. In una ciotola in acciaio inox (o rame, ideale per la conduzione termica), versare la riduzione filtrata e fredda. Aggiungere {tuorli_emulsione:60}g di tuorli (circa 3 tuorli grandi). Sbattere energicamente con una frusta a mano per 30 secondi fuori dal fuoco, fino a ottenere un composto omogeneo. Posizionare la ciotola sulla pentola a bagnomaria — il fondo della ciotola NON deve toccare l'acqua. Sbattere continuamente con la frusta con movimenti ampi e veloci. I tuorli inizieranno a gonfiarsi, schiarirsi e addensarsi. Ci vorranno 4-6 minuti. Il composto è pronto quando: raggiunge la consistenza di una crema spessa; lascia il segno della frusta (ribbon stage); il colore è giallo pallido e spumoso. In questa fase la temperatura del composto deve essere 65-68°C — MAI superare i 72°C o i tuorli si scramblano. Se hai dubbi, allontana periodicamente la ciotola dal bagnomaria per 10 secondi continuando a sbattere."
+      "title": "Emulsione con il burro chiarificato",
+      "text": "Con la ciotola ANCORA sul bagnomaria a fuoco minimo, iniziare a versare {burro_emulsione:240}g di burro chiarificato tiepido a filo sottilissimo, pochissimo alla volta — le prime aggiunte sono le più delicate: versare mezzo cucchiaio alla volta e incorporare completamente prima di aggiungere il successivo. Dopo i primi 50-60g, l'emulsione prende corpo e si può procedere con un filo più costante, senza mai smettere di sbattere con la frusta. L'intera operazione richiede circa {tempo_emulsione:5!}–{tempo_emulsione_max:8!} minuti. Se la salsa appare troppo densa o inizia a 'granare', aggiungere un cucchiaino di acqua tiepida e continuare a sbattere: l'acqua stabilizza l'emulsione. La salsa finita deve avere la consistenza di una maionese morbida, lucida e vellutata, di colore giallo pallido. Togliere immediatamente dal bagnomaria."
     },
     {
-      "title": "Emulsione con il Burro Chiarificato",
-      "text": "Togliere la ciotola dal bagnomaria e posizionarla su un canovaccio arrotolato per stabilità. Il burro chiarificato deve essere TIEPIDO (55-60°C) — non bollente (romperebbe l'emulsione) né freddo (non si emulsionerebbe). Iniziare a versare il burro chiarificato A FILO SOTTILISSIMO, poche gocce alla volta all'inizio, sbattendo costantemente con la frusta. Questo passaggio iniziale è CRITICO: le prime 2-3 cucchiaiate di burro devono essere incorporate molto lentamente, goccia a goccia, esattamente come per una maionese. Mano a mano che l'emulsione prende corpo e diventa cremosa, si può accelerare leggermente il filo di burro, continuando sempre a sbattere. Se la salsa sembra troppo densa e fatica ad accogliere altro burro, aggiungere mezzo cucchiaino di acqua tiepida per stabilizzarla, poi riprendere con il burro. Incorporare tutto il burro chiarificato: la salsa finale deve avere la consistenza di una maionese densa, colore giallo pallido, lucida e vellutata."
-    },
-    {
-      "title": "Finitura e Aggiustamento",
-      "text": "Aggiungere {dragoncello_foglie_finitura:6}g di foglie di dragoncello e {cerfoglio_foglie_finitura:3}g di foglie di cerfoglio, entrambi tritati finissimi. Regolare con {sale_finitura:2}g di sale fino e {pepe_bianco_finitura:0.5}g di pepe bianco macinato fresco. Assaggiare: se la salsa risulta troppo grassa o piatta, correggere con {limone_finitura:5}g di succo di limone fresco per dare una nota acida di equilibrio. Mescolare delicatamente con una spatola. La salsa è pronta per essere servita SUBITO. Resa finale: circa 350-380g di salsa."
+      "title": "Finitura e servizio",
+      "text": "Trasferire la salsa in una ciotola pulita. Aggiungere {limone_emulsione:5}g di succo di limone fresco (facoltativo, bilancia la grassezza del burro con una nota acida). Incorporare {dragoncello_finitura:5}g di dragoncello fresco tritato finissimo e, se disponibile, {cerfoglio_finitura:2}g di cerfoglio fresco tritato. Mescolare delicatamente con una spatola. Assaggiare e regolare di sale se necessario. Servire immediatamente, tiepida (circa {temperatura_servizio:45!}–{temperatura_servizio_max:55!}°C), accanto a carni rosse alla griglia, filetto di manzo, uova in camicia o asparagi. La salsa bernese NON va mai riscaldata a fuoco diretto: se deve attendere, tenere la ciotola coperta a bagnomaria spento con acqua appena tiepida."
     }
   ],
   "stepsCondiment": [],
@@ -143,71 +121,68 @@
   "baking": null,
   "glossary": [
     {
-      "term": "Riduzione (Gastrique)",
-      "definition": "Concentrazione di un liquido (aceto, vino, fondo) mediante ebollizione prolungata per intensificarne sapori e aromi. Nella Bernese, la riduzione aromatica è la base acida e saporita su cui si costruisce l'emulsione."
-    },
-    {
       "term": "Burro chiarificato",
-      "definition": "Burro privato della caseina (proteine) e del siero di latte tramite fusione lenta e filtraggio. Contiene quasi esclusivamente materia grassa (99.5%), ha un punto di fumo più alto e conferisce una texture più setosa alle emulsioni."
+      "definition": "Burro privato di acqua e caseina per fusione lenta e filtraggio. Ha un punto di fumo più alto (~250°C) e dona lucidità e stabilità alle emulsioni calde."
     },
     {
-      "term": "Emulsione calda",
-      "definition": "Sospensione stabile di grassi (burro) in una fase acquosa (riduzione + tuorli) ottenuta a caldo. A differenza della maionese (emulsione fredda), richiede il bagnomaria per attivare le proteine dei tuorli come emulsionante."
+      "term": "Riduzione",
+      "definition": "Tecnica che consiste nel far evaporare un liquido a fuoco dolce per concentrarne sapore e aromi. Nella bernese si riduce aceto+vino con aromi a circa 1/4 del volume iniziale."
     },
     {
       "term": "Bagnomaria",
-      "definition": "Tecnica di cottura indiretta: la ciotola con il preparato è sospesa sopra acqua calda senza toccarla. Garantisce un trasferimento di calore dolce e uniforme, ideale per tuorli e cioccolato che non tollerano il calore diretto."
+      "definition": "Metodo di cottura indiretta: la ciotola con la preparazione viene posta sopra una pentola di acqua in leggera ebollizione, senza contatto diretto con la fiamma. Garantisce una temperatura dolce e controllata (~75-80°C), fondamentale per le emulsioni calde a base di tuorli."
     },
     {
-      "term": "Ribbon stage",
-      "definition": "Stadio in cui un composto montato (tuorli, uova) cade dalla frusta formando un nastro (ribbon) che resta visibile sulla superficie per qualche secondo prima di riassorbirsi. Indica la corretta incorporazione di aria."
+      "term": "Emulsione calda",
+      "definition": "Dispersione stabile di grasso (burro) in una fase acquosa (tuorli + riduzione) ottenuta per aggiunta graduale a caldo e sbattimento meccanico. A differenza della maionese (emulsione fredda), richiede controllo preciso della temperatura."
     },
     {
-      "term": "Bassinage (nella salsa)",
-      "definition": "Aggiunta di piccole quantità di acqua tiepida durante l'emulsione per stabilizzarla quando diventa troppo densa o rischia di separarsi. Funziona riequilibrando il rapporto grasso/acqua."
+      "term": "Bassinage (nella bernese)",
+      "definition": "Aggiunta di acqua tiepida a cucchiaini durante l'emulsione per stabilizzare la salsa se diventa troppo densa o tende a separarsi."
     },
     {
-      "term": "Scramblare (tuorli scramblati)",
-      "definition": "Coagulazione irreversibile delle proteine dell'uovo per eccesso di calore (oltre 72-75°C). Il composto perde la consistenza cremosa e si formano grumi solidi — la salsa è irrecuperabile."
+      "term": "Caseina",
+      "definition": "Proteina del latte presente nel burro intero. Viene rimossa nella chiarificazione perché brucia a basse temperature e opacizza le emulsioni."
     },
     {
-      "term": "Cerfoglio",
-      "definition": "Erba aromatica della famiglia delle Apiaceae (Anthriscus cerefolium), dal sapore delicato che ricorda anice e prezzemolo. Classico compagno del dragoncello nella cucina francese, va aggiunto sempre a crudo o a fine cottura."
+      "term": "Dragoncello (Artemisia dracunculus)",
+      "definition": "Erba aromatica fondamentale della cucina francese, dal sapore leggermente anisato e pepato. È l'aroma caratteristico che distingue la salsa bernese dalla salsa olandese."
     }
   ],
-  "alert": "NON superare MAI i 72°C durante la montatura dei tuorli a bagnomaria: oltre questa temperatura le proteine coagulano irreversibilmente e si formano grumi (tuorli scramblati) che rendono la salsa irrecuperabile. Se hai dubbi, allontana la ciotola dal fuoco ogni 30 secondi. Altro errore fatale: versare il burro chiarificato troppo velocemente all'inizio dell'emulsione — le prime cucchiaiate devono essere aggiunte GOCCIA A GOCCIA, esattamente come per una maionese. Un filo troppo generoso nelle prime fasi rompe l'emulsione prima che si formi.",
+  "alert": "NON aggiungere il burro caldo tutto insieme ai tuorli: l'emulsione si spezza irrimediabilmente. Le prime aggiunte devono essere di mezzo cucchiaio alla volta. Se la salsa si separa (appare oleosa e granulosa), togliere dal fuoco, aggiungere un cucchiaio di acqua ghiacciata e sbattere vigorosamente — spesso si recupera. NON portare mai i tuorli oltre i 75°C: coagulano e formano grumi irreversibili. Se vedete filamenti solidi nella salsa, è troppo tardi: dovrete filtrare e ripartire con nuovi tuorli.",
   "proTips": [
-    "Se l'emulsione si rompe (il burro si separa in chiazze oleose), versa un cucchiaio di acqua ghiacciata in una ciotola pulita, aggiungi un cucchiaio della salsa rotta e sbatti energicamente. Quando l'emulsione riprende, aggiungi gradualmente il resto della salsa rotta continuando a sbattere. Funziona nel 90% dei casi.",
-    "Prepara la riduzione aromatica il giorno prima e conservala in frigo: i sapori si concentrano ulteriormente e avrai la certezza che sia completamente fredda quando la unisci ai tuorli.",
-    "Per una finitura professionale da ristorante, passa la salsa finita attraverso un colino a maglie fitte prima di aggiungere le erbe tritate — otterrai una consistenza assolutamente vellutata e priva di qualsiasi grumo microscopico."
+    "Per una bernese a prova di errore, usate un termometro a sonda nel bagnomaria: la temperatura dell'acqua non deve mai superare gli 80°C e quella della crema di tuorli i 68°C. Questo margine vi permette di lavorare con calma senza rischio di coagulazione.",
+    "Il segreto degli chef francesi: aggiungere un cucchiaio d'acqua fredda ai tuorli PRIMA di iniziare la cottura a bagnomaria. Questa piccola riserva d'acqua rallenta la coagulazione delle proteine e dà un margine di sicurezza enorme durante l'emulsione.",
+    "Per un aroma di dragoncello più elegante e meno 'erbaceo', usate i gambi nella riduzione (più aroma volatile) e le foglie solo nella finitura a crudo (più freschezza). Evitate il dragoncello essiccato: ha un profilo aromatico completamente diverso e spesso amaro."
   ],
   "storage": [
-    "La salsa Bernese va servita idealmente SUBITO dopo la preparazione: è un'emulsione calda instabile che non ama né il freddo né il riscaldamento. Può essere mantenuta tiepida per massimo 30-45 minuti in un thermos preriscaldato o in una ciotola coperta a bagnomaria spento (acqua a 50°C).",
-    "Se avanza, conservare in frigo in contenitore ermetico per massimo 24 ore. Per rigenerare: portarla a temperatura ambiente, poi scioglierla MOLTO delicatamente a bagnomaria (acqua a 50-55°C, mai di più) sbattendo costantemente con la frusta. Aggiungere qualche goccia di acqua tiepida se necessario per riemulsionare.",
-    "NON congelare: il ciclo gelo-disgelo rompe irreversibilmente l'emulsione dei tuorli, restituendo una salsa granulosa e separata, impossibile da recuperare."
+    "La salsa bernese è un'emulsione calda instabile: va servita entro 30-45 minuti dalla preparazione. Non è una salsa da conservare. Se deve attendere, tenerla in ciotola coperta a bagnomaria spento con acqua a 45-50°C, mescolando ogni 10 minuti.",
+    "In frigorifero la bernese si solidifica e si separa irrimediabilmente al riscaldamento diretto. Se volete prepararla in anticipo (max 2 ore), conservatela in un thermos preriscaldato con acqua calda: mantiene la temperatura ideale senza alterare l'emulsione.",
+    "La riduzione aromatica (aceto, vino, scalogno filtrati) può essere preparata fino a 2 giorni prima e conservata in frigo in un barattolino di vetro. Questo permette di dimezzare i tempi al momento del servizio: basterà temperarla, montare i tuorli e procedere con l'emulsione."
   ],
   "imageKeywords": [
     "bearnaise sauce",
     "sauce béarnaise close up",
-    "hollandaise bearnaise butter sauce",
-    "salsa bernese piatto",
-    "creamy french sauce steak",
-    "béarnaise Sauce Rezept",
-    "eggs benedict hollandaise",
-    "classic french sauce tarragon"
+    "bearnaise steak sauce",
+    "french butter sauce tarragon",
+    "salsa bernese",
+    "bernaise soße",
+    "creamy egg yolk sauce bowl",
+    "classic french sauce plating"
   ],
   "tags": [
-    "salsa-bernese",
-    "emulsione-calda",
-    "cucina-francese",
-    "burro-chiarificato",
+    "salsa bernese",
+    "béarnaise",
+    "emulsione calda",
+    "bagnomaria",
+    "burro chiarificato",
     "dragoncello",
-    "salsa-classica",
-    "accompagnamento-carne",
-    "bagnomaria"
+    "salsa francese",
+    "condimento carne",
+    "cucina classica"
   ],
   "_generatedBy": "claude-opus",
-  "_createdAt": "2026-04-19T20:31:37.726Z",
+  "_createdAt": "2026-04-24T13:07:57.640Z",
   "image": "images/ricette/condimenti/salsa-bernese.webp",
-  "imageAttribution": "📷 Foto: Shameel mukkath — Pexels License via Pexels"
+  "imageAttribution": "📷 Immagine esistente"
 }

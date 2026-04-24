@@ -5,7 +5,7 @@
 **Fonti consultate:** 7
 
 ### 📊 Dettagli
-- Tempi fonti: 20min, 20 minuti, 5min, 1h 20min, 10min, 15min, 10min
+- Tempi fonti: 20min, 20 minuti, 5min, 1h 20min, 10min, 00h 35min, 10min
 - Tempo Claude: 
 
 ### 📰 Fonti
@@ -19,7 +19,7 @@
    https://www.cookist.it/salsa-bernese-la-ricetta/
 5. **dissapore.com** — Dati strutturati (8 ingredienti)
    https://www.dissapore.com/ricette/salsa-bernese/
-6. **aiafood.com** — Estrazione HTML (8 ingredienti)
-   https://www.aiafood.com/en/recipes/bernese-sauce-the-original-recipe/
+6. **nonnapaperina.it** — Dati strutturati (7 ingredienti)
+   https://www.nonnapaperina.it/2010/06/salsa-bernese-leggera/
 7. **downshiftology.com** — Dati strutturati (9 ingredienti)
    https://downshiftology.com/recipes/bearnaise-sauce/

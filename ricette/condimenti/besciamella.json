@@ -1,0 +1,130 @@
+{
+  "title": "Besciamella",
+  "slug": "besciamella",
+  "emoji": "🥛",
+  "description": "Besciamella classica italiana: roux biondo e latte caldo per una salsa vellutata perfetta per lasagne, cannelloni e gratinati.",
+  "subtitle": "Salsa madre della cucina italiana — rapporto classico 1:1:10 (burro:farina:latte)",
+  "category": "Condimenti",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 100,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per la Besciamella",
+      "items": [
+        {
+          "name": "Latte Intero Fresco",
+          "note": "(a temperatura ambiente o appena tiepido)",
+          "grams": 1000,
+          "tokenId": "latte"
+        },
+        {
+          "name": "Burro",
+          "note": "(non salato, di alta qualità)",
+          "grams": 100,
+          "tokenId": "burro"
+        },
+        {
+          "name": "Farina 00",
+          "note": "(debole, W 150–180 — da pasticceria)",
+          "grams": 100,
+          "tokenId": "farina_00"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "",
+          "grams": 5,
+          "tokenId": "sale"
+        },
+        {
+          "name": "Noce Moscata",
+          "note": "(da grattugiare al momento)",
+          "grams": 1,
+          "tokenId": "noce_moscata"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Preparazione del latte",
+      "text": "Versare {latte:1000}g di latte intero in un pentolino e portarlo a temperatura appena sotto il bollore (circa {temperatura_latte:70!}°C): deve fumare leggermente ma non bollire. Aggiungere {sale:5}g di sale fino e mescolare per scioglierlo completamente. Tenere in caldo a fuoco minimo. Il latte caldo è fondamentale per evitare shock termico con il roux e la conseguente formazione di grumi."
+    },
+    {
+      "title": "Preparazione del roux biondo",
+      "text": "In una casseruola a fondo spesso (acciaio inox o rame stagnato), sciogliere {burro:100}g di burro a fuoco dolce senza farlo friggere né colorare. Appena completamente fuso, togliere dal fuoco per {tempo_pausa:30!} secondi, poi aggiungere in una volta sola {farina_00:100}g di farina 00 setacciata. Rimettere sul fuoco basso e mescolare vigorosamente con una frusta a mano per {tempo_roux:2!}-{tempo_roux_max:3!} minuti, fino a ottenere un composto liscio e omogeneo di colore biondo paglierino. Non colorare troppo il roux: per la besciamella serve un roux bianco-biondo, mai nocciola. La cottura del roux è essenziale per eliminare il sapore crudo della farina."
+    },
+    {
+      "title": "Incorporazione del latte e cottura della besciamella",
+      "text": "Togliere la casseruola dal fuoco e versare un primo mestolo di latte caldo sul roux, mescolando energicamente con la frusta. Si formerà un composto molto denso: è normale. Rimettere sul fuoco medio-basso e continuare ad aggiungere il latte caldo a filo, un mestolo alla volta, mescolando costantemente e attendendo che ogni aggiunta sia completamente assorbita prima di versare la successiva. I primi 3-4 mestoli sono i più critici: mescolare con forza per prevenire i grumi. Una volta incorporato circa metà del latte, si può versare il resto in modo più generoso, sempre mescolando. Proseguire la cottura a fuoco medio-basso per {tempo_cottura:8!}-{tempo_cottura_max:10!} minuti totali, mescolando costantemente toccando fondo e bordi della casseruola. La besciamella è pronta quando vela il dorso del cucchiaio: tracciare una linea col dito sul dorso del cucchiaio immerso — se la linea resta netta e non cola, la consistenza è perfetta. A fuoco spento, grattugiare {noce_moscata:1}g di noce moscata fresca direttamente nella salsa e mescolare per distribuirla uniformemente."
+    },
+    {
+      "title": "Finitura e accorgimenti anti-pellicina",
+      "text": "Se la besciamella non viene utilizzata immediatamente, coprire la superficie a contatto con pellicola trasparente (la pellicola deve toccare direttamente la salsa, senza aria interposta). Questo impedisce la formazione della pellicina superficiale. Se si notano piccoli grumi nonostante la cura, passare rapidamente la besciamella con un colino a maglia fine o frullare con un minipimer a immersione per {tempo_frullatura:15!}-{tempo_frullatura_max:20!} secondi. La resa finale è di circa {resa:1150!}g di besciamella vellutata, pronta per lasagne, cannelloni, gratin, crespelle e timballi."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [
+    {
+      "type": "Farina 00 Debole",
+      "w": "150-180",
+      "brands": "Caputo Chef's Flour, Mulino Marino 00, Le 5 Stagioni 00 Classica"
+    }
+  ],
+  "baking": null,
+  "glossary": [
+    {
+      "term": "Roux",
+      "definition": "Base di cucina ottenuta cuocendo parti uguali (in peso) di burro e farina. Può essere bianco (1-2 min), biondo (2-3 min) o bruno (5+ min) a seconda del grado di tostatura. Per la besciamella si usa il roux bianco-biondo."
+    },
+    {
+      "term": "Velare il cucchiaio (nappe)",
+      "definition": "Test classico di densità: la salsa è pronta quando ricopre il dorso di un cucchiaio in modo uniforme e una linea tracciata col dito resta netta senza che la salsa ricoli."
+    },
+    {
+      "term": "Shock termico",
+      "definition": "Brusco cambio di temperatura che in cucina causa la formazione di grumi quando un liquido freddo incontra un roux bollente. Si previene usando latte caldo."
+    },
+    {
+      "term": "Pellicola a contatto",
+      "definition": "Tecnica di copertura in cui la pellicola trasparente viene adagiata direttamente sulla superficie della salsa calda, eliminando l'aria e impedendo la formazione della pellicina (pelle superficiale da essiccamento)."
+    }
+  ],
+  "alert": "NON versare mai tutto il latte in una volta sola nel roux — si formerebbero grumi impossibili da sciogliere. I primi mestoli devono essere aggiunti LENTAMENTE, uno alla volta, mescolando con energia. Inoltre, NON alzare mai la fiamma per 'accelerare': la besciamella richiede fuoco dolce-medio, altrimenti attacca sul fondo e prende sapore di bruciato.",
+  "proTips": [
+    "Per una besciamella ancora più vellutata, setaccia la farina prima di aggiungerla al burro fuso: eliminerai eventuali micro-grumi già alla partenza e il roux risulterà perfettamente liscio.",
+    "Se la besciamella risulta troppo densa, aggiungi latte caldo un cucchiaio alla volta mescolando. Se troppo liquida, prosegui la cottura a fuoco basso per 2-3 minuti mescolando: si addenserà naturalmente. La consistenza ideale dipende dall'uso: più fluida per lasagne (il forno la addenserà), più densa per crespelle e cannelloni.",
+    "Per un profilo aromatico più complesso (alla francese), infondere nel latte un foglia di alloro, 2-3 grani di pepe nero e mezza cipolla puntata con 2 chiodi di garofano. Scaldare per 10 minuti, filtrare e procedere come da ricetta."
+  ],
+  "storage": [
+    "In frigorifero: conservare in un contenitore ermetico con pellicola a contatto sulla superficie per un massimo di 3 giorni a 4°C. Prima del riutilizzo, riscaldare a fuoco dolce aggiungendo un goccio di latte caldo e mescolando con la frusta fino a ripristinare la consistenza cremosa.",
+    "In freezer: porzionare la besciamella fredda in sacchetti per alimenti o contenitori rigidi (lasciando 1 cm di spazio per l'espansione) e congelare a -18°C per un massimo di 2 mesi. Scongelare in frigorifero per 12 ore, poi riscaldare in un pentolino a fuoco dolce mescolando costantemente. Se risulta granulosa dopo lo scongelamento, frullare 10 secondi con il minipimer per riemulsionare.",
+    "Trucco del ristorante: se devi preparare la besciamella in anticipo per una lasagna, cuocila leggermente più liquida del normale (riduci la cottura di 2 minuti). L'assemblaggio e il passaggio in forno la addensiranno alla consistenza perfetta."
+  ],
+  "imageKeywords": [
+    "bechamel sauce wooden spoon",
+    "besciamella italiana cremosa",
+    "white sauce roux preparation",
+    "homemade bechamel sauce pot",
+    "creamy bechamel lasagna",
+    "Béchamelsauce kochen",
+    "salsa bianca vellutata"
+  ],
+  "tags": [
+    "besciamella",
+    "bechamel",
+    "salsa madre",
+    "roux",
+    "condimento base",
+    "lasagne",
+    "salsa bianca",
+    "cucina italiana"
+  ],
+  "_generatedBy": "claude-opus",
+  "_createdAt": "2026-04-24T13:05:07.661Z",
+  "image": "images/ricette/condimenti/besciamella.webp",
+  "imageAttribution": "📷 Foto: jianwei zhu — Pexels License via Pexels"
+}

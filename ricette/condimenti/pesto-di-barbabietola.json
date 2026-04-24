@@ -1,0 +1,150 @@
+{
+  "title": "Pesto di Barbabietola",
+  "slug": "pesto-di-barbabietola",
+  "emoji": "🩷",
+  "description": "Pesto di barbabietola rossa con pinoli e parmigiano: crema vegetale vibrante e versatile per condire pasta, bruschette e risotti.",
+  "subtitle": "Crema di rapa rossa con pinoli tostati, Parmigiano Reggiano e basilico fresco",
+  "category": "Condimenti",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per il Pesto",
+      "items": [
+        {
+          "name": "Barbabietole Precotte",
+          "note": "(rosse, sottovuoto o fresche cotte)",
+          "grams": 350,
+          "tokenId": "barbabietola"
+        },
+        {
+          "name": "Pinoli",
+          "note": "(da tostare in padella)",
+          "grams": 25,
+          "tokenId": "pinoli"
+        },
+        {
+          "name": "Parmigiano Reggiano DOP",
+          "note": "(grattugiato fine, stagionatura 24 mesi)",
+          "grams": 50,
+          "tokenId": "parmigiano"
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(fruttato leggero, cultivar Taggiasca o Leccino)",
+          "grams": 70,
+          "tokenId": "olio_evo"
+        },
+        {
+          "name": "Basilico Fresco",
+          "note": "(5-8 foglie)",
+          "grams": 5,
+          "tokenId": "basilico"
+        },
+        {
+          "name": "Succo di Limone",
+          "note": "(mezzo limone, circa 15g)",
+          "grams": 15,
+          "tokenId": "succo_limone"
+        },
+        {
+          "name": "Aglio",
+          "note": "(mezzo spicchio, privato dell'anima — facoltativo)",
+          "grams": 2,
+          "tokenId": "aglio"
+        },
+        {
+          "name": "Sale Grosso",
+          "note": "(marino integrale)",
+          "grams": 3,
+          "tokenId": "sale"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Tostatura dei pinoli",
+      "text": "Versare {pinoli:25}g di pinoli in una padella antiaderente a fondo freddo. Accendere a fiamma medio-bassa e tostare per {tempo_tostatura:3!}-{tempo_tostatura_max:4!} minuti, muovendo continuamente la padella con piccoli colpi di polso. I pinoli devono risultare uniformemente dorati e profumati, MAI scuri o bruciati. Trasferire immediatamente su un piattino freddo per bloccare la cottura residua e lasciar raffreddare completamente."
+    },
+    {
+      "title": "Preparazione della barbabietola",
+      "text": "Scolare le barbabietole precotte ({barbabietola:350}g) dal loro liquido e tamponarle con carta assorbente per rimuovere l'umidità superficiale — questo passaggio è fondamentale per ottenere un pesto denso e non acquoso. Tagliare a tocchetti grossolani di circa 2 cm. Se si utilizza l'aglio, sbucciare {aglio:2}g (mezzo spicchio), tagliarlo a metà ed eliminare con la punta del coltello l'anima verde centrale (il germoglio è la parte più indigesta e dal sapore pungente)."
+    },
+    {
+      "title": "Assemblaggio nel mixer",
+      "text": "Raccogliere nel boccale di un frullatore a lama (o nel bicchiere alto del minipimer) i tocchetti di barbabietola, i pinoli tostati e raffreddati, {parmigiano:50}g di Parmigiano Reggiano grattugiato fine, {basilico:5}g di foglie di basilico fresco (solo le foglie, senza gambi), {succo_limone:15}g di succo di limone appena spremuto, il mezzo spicchio d'aglio preparato e {sale:3}g di sale grosso."
+    },
+    {
+      "title": "Frullatura e emulsione con olio",
+      "text": "Azionare le lame a velocità media. Dopo i primi {tempo_frullata_iniziale:10!} secondi di frullatura grossolana, iniziare a versare {olio_evo:70}g di olio extravergine d'oliva A FILO attraverso il foro del coperchio (o lungo il bordo del bicchiere se si usa il minipimer). La tecnica del filo è identica a quella della maionese: l'olio deve emulsionarsi progressivamente con la barbabietola. Frullare complessivamente per {tempo_frullatura:40!}-{tempo_frullatura_max:60!} secondi, fermandosi a metà per raschiare le pareti del boccale con una spatola. Il risultato finale deve essere una crema vellutata, omogenea, di un rosa-magenta intenso e brillante."
+    },
+    {
+      "title": "Aggiustamento e confezionamento",
+      "text": "Assaggiare il pesto e regolare: se risulta troppo dolce, aggiungere un filo di succo di limone; se troppo acido, bilanciare con un pizzico di parmigiano in più. Trasferire il pesto in un barattolo di vetro sterilizzato a chiusura ermetica, livellare la superficie con il dorso di un cucchiaio e coprire con un velo di olio extravergine (circa 1 cm) per creare un sigillo protettivo contro l'ossidazione. Chiudere e conservare in frigorifero."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "baking": null,
+  "glossary": [
+    {
+      "term": "Tostatura a secco",
+      "definition": "Cottura di frutta secca o semi in padella senza grassi aggiunti, a fiamma bassa, per sviluppare aromi e croccantezza attraverso la reazione di Maillard."
+    },
+    {
+      "term": "Emulsione",
+      "definition": "Dispersione stabile di due liquidi normalmente immiscibili (olio e parte acquosa della barbabietola), ottenuta versando l'olio a filo durante la frullatura: le microgocce d'olio si distribuiscono uniformemente nella fase acquosa."
+    },
+    {
+      "term": "Anima dell'aglio",
+      "definition": "Germoglio verde centrale dello spicchio d'aglio. Va sempre rimosso perché contiene composti solforati concentrati che rendono il sapore pungente e aggressivo, oltre a risultare indigesto."
+    },
+    {
+      "term": "Sigillo d'olio",
+      "definition": "Strato di olio EVO versato sulla superficie del pesto nel barattolo per impedire il contatto con l'aria, rallentando ossidazione e imbrunimento. Tecnica tradizionale per conserve e pesti artigianali."
+    },
+    {
+      "term": "Bassinage (in contesto salse)",
+      "definition": "Aggiunta graduale di un liquido (qui l'olio) a filo durante la lavorazione per favorire un'emulsione stabile, evitando che la miscela si separi per eccesso di grasso improvviso."
+    }
+  ],
+  "alert": "NON usare barbabietole crude: contengono acido ossalico e geosmine in concentrazioni che rendono il pesto terroso e sgradevole. Usare SEMPRE barbabietole precotte (al vapore, al forno o sottovuoto). NON frullare troppo a lungo (>90 secondi continuativi): il calore delle lame ossida i pigmenti della betanina e il pesto vira verso il marrone. Procedere a impulsi brevi con pause.",
+  "proTips": [
+    "Per un colore ancora più vibrante e stabile, aggiungi un cucchiaino di aceto di mele (5g) al posto di parte del succo di limone: l'ambiente acido stabilizza la betanina, il pigmento rosso della barbabietola, impedendo che il pesto imbrunisca nelle prime ore.",
+    "Se vuoi una versione più ricca e complessa, sostituisci metà dei pinoli con noci tostate: il tannino della noce bilancia la dolcezza naturale della barbabietola e aggiunge una nota amarognola elegante.",
+    "Per un pesto ancora più vellutato, passa le barbabietole al setaccio fine prima di frullare con gli altri ingredienti: eliminerai le fibre più grossolane ottenendo una texture da crema pasticcera."
+  ],
+  "storage": [
+    "In frigorifero: conservare in barattolo di vetro sterilizzato, con sigillo d'olio in superficie, per un massimo di 3-4 giorni. Ogni volta che si preleva del pesto, ricreare il sigillo d'olio.",
+    "In freezer: porzionare il pesto in stampi per cubetti di ghiaccio da ~25g ciascuno, congelare senza sigillo d'olio (non serve sotto zero), poi trasferire i cubetti in sacchetti gelo. Si conserva fino a 3 mesi a -18°C.",
+    "Rigenerazione da freezer: scongelare il cubetto di pesto direttamente nella padella con la pasta appena scolata (fuoco spento), aggiungendo un filo d'olio EVO a crudo e un cucchiaio di acqua di cottura calda per riattivare la cremosità. NON riscaldare il pesto a fuoco vivo: i pigmenti si degradano sopra i 60°C."
+  ],
+  "imageKeywords": [
+    "beetroot pesto",
+    "beet pesto pasta pink sauce",
+    "pesto di barbabietola rossa",
+    "rote bete pesto italienisch",
+    "homemade beetroot dip vibrant",
+    "pink pesto jar pine nuts",
+    "beetroot sauce fresh basil parmesan"
+  ],
+  "tags": [
+    "pesto",
+    "barbabietola",
+    "rapa rossa",
+    "condimento",
+    "vegetariano",
+    "senza cottura",
+    "salsa veloce",
+    "crema vegetale"
+  ],
+  "_generatedBy": "claude-opus",
+  "_createdAt": "2026-04-24T13:07:44.327Z",
+  "image": "images/ricette/condimenti/pesto-di-barbabietola.webp",
+  "imageAttribution": "📷 Foto: Nadin Sh — Pexels License via Pexels"
+}
