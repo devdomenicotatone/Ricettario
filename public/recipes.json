@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-24T14:35:53.639Z",
-  "totalRecipes": 71,
+  "generatedAt": "2026-04-24T23:22:02.390Z",
+  "totalRecipes": 73,
   "categories": [
     {
       "name": "Pane",
@@ -39,7 +39,7 @@
     },
     {
       "name": "Condimenti",
-      "count": 34,
+      "count": 36,
       "emoji": "🌿"
     }
   ],
@@ -859,6 +859,38 @@
       "tool": "",
       "_generatedBy": "claude",
       "_createdAt": "2026-04-16T14:32:01.457Z"
+    },
+    {
+      "title": "Olio al Cavolo Viola",
+      "slug": "olio-al-cavolo-viola-condimento",
+      "category": "Condimenti",
+      "categoryDir": "condimenti",
+      "emoji": "🫙",
+      "href": "ricette/condimenti/olio-al-cavolo-viola-condimento.html",
+      "image": "images/ricette/condimenti/olio-al-cavolo-viola-condimento.webp",
+      "description": "Un condimento artigianale brillante e croccante: cavolo viola macerato a freddo e conservato in olio extravergine. Perfetto per insalate, crostoni e carni.",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-24T23:21:43.378Z"
+    },
+    {
+      "title": "Olio al Peperone Crusco o Paprika Dolce",
+      "slug": "olio-peperone-crusco-paprika",
+      "category": "Condimenti",
+      "categoryDir": "condimenti",
+      "emoji": "🌶️",
+      "href": "ricette/condimenti/olio-peperone-crusco-paprika.html",
+      "image": "images/ricette/condimenti/olio-peperone-crusco-paprika.webp",
+      "description": "Condimento artigianale lucano dal colore rosso rubino e dal profumo affumicato. Ideale per insaporire focacce, pasta, bruschette o per l'uso a crudo.",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-24T23:00:17.531Z"
     },
     {
       "title": "Olio Extravergine Aromatizzato",
