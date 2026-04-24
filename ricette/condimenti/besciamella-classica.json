@@ -52,9 +52,7 @@
     {
       "title": "Mise en place e Preparazione",
       "text": "Essendo la besciamella un condimento e una salsa di base, il suo intero procedimento è dettagliato nella sezione sottostante dedicata ai condimenti. È fondamentale preparare e pesare in anticipo tutti gli ingredienti (mise en place) per non dover interrompere il processo di mescolamento sul fuoco, fase critica per evitare la formazione di grumi."
-    }
-  ],
-  "stepsCondiment": [
+    },
     {
       "title": "Riscaldamento del Latte",
       "text": "In un pentolino a parte, scaldare {latte_intero:1000}g di latte intero fino a raggiungere una temperatura di circa 60-70°C (deve essere ben caldo ma non raggiungere il bollore). Aggiungere {sale_fino:5}g di sale fino e {noce_moscata:1}g di noce moscata grattugiata, mescolando leggermente per favorirne lo scioglimento."
@@ -72,6 +70,7 @@
       "text": "Continuare a mescolare costantemente, assicurandosi di raggiungere bene i bordi e il fondo della casseruola, per circa 8-10 minuti. La besciamella sarà pronta quando la consistenza risulterà vellutata e in grado di 'velare il cucchiaio' (passando un dito sul dorso del cucchiaio sporco di salsa, la scia lasciata deve rimanere netta e i lembi non devono ricongiungersi)."
     }
   ],
+  "stepsCondiment": [],
   "flourTable": [
     {
       "type": "Farina Tipo 00 (Debole)",

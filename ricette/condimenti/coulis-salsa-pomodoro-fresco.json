@@ -64,9 +64,7 @@
     {
       "title": "Preparazione dei Pomodori (Sbianchitura e Concassé)",
       "text": "Lavare accuratamente i {pomodori_freschi:1000}g di pomodori freschi. Rimuovere il picciolo e incidere una leggera croce sul fondo di ognuno. Tuffarli in acqua bollente per esattamente {tempo_sbianchitura:1!} minuto. Scolarli immediatamente e trasferirli in una bacinella con acqua e ghiaccio per bloccare la cottura. Procedere alla spellatura, tagliarli in quarti e rimuovere i semi e l'acqua di vegetazione. Ridurre la polpa a cubetti."
-    }
-  ],
-  "stepsCondiment": [
+    },
     {
       "title": "Fondo Aromatico",
       "text": "In una casseruola dal fondo spesso, versare {olio_evo:35}g di olio extravergine di oliva. Aggiungere {aglio_spicchio:5}g di aglio e {cipolla_dorata:40}g di cipolla tritata finemente. Lasciar sudare a fuoco dolcissimo per circa {tempo_sudatura:5!} minuti, evitando che gli zuccheri della cipolla caramellizzino eccessivamente o prendano colore scuro."
@@ -80,6 +78,7 @@
       "text": "A cottura ultimata, passare il sugo al passaverdure con disco a maglia fine. Per un coulis di alta ristorazione (texture setosa), passare ulteriormente il composto al colino cinese (chinois). A fuoco spento, immergere {basilico_fresco:10}g di basilico nel coulis caldo, lasciandolo in infusione per rilasciare gli oli essenziali."
     }
   ],
+  "stepsCondiment": [],
   "flourTable": [],
   "baking": {
     "temperature": "Fuoco dolce (sobbollitura)",

@@ -60,8 +60,7 @@
     }
   ],
   "suspensions": [],
-  "steps": [],
-  "stepsCondiment": [
+  "steps": [
     {
       "title": "Preparazione dello Yogurt Base",
       "text": "Prendi una ciotola capiente e versaci {yogurt_greco:200}g di yogurt greco intero al naturale. Lo yogurt greco è la scelta tecnica corretta: ha una percentuale di siero già drenata in partenza, il che garantisce una consistenza densa e cremosa che non 'piange' acqua sul piatto. Se usi yogurt normale (non greco), ti troverai con una salsa liquida e non strutturata. Lascia lo yogurt a temperatura ambiente per 10 minuti prima di lavorarlo: a freddo da frigorifero risulta più difficile da amalgamare."
@@ -83,6 +82,7 @@
       "text": "Copri la ciotola con pellicola a contatto (la pellicola deve toccare la superficie della salsa per evitare ossidazione e formazione di pellicina) e riponi in frigorifero per almeno 20-30 minuti prima di servire. Questo riposo è fondamentale: permette all'erba cipollina di cedere i propri aromi allo yogurt e alle componenti di amalgamarsi in modo coeso. Al momento del servizio, mescola brevemente, trasferisci nella salsiera e decora con qualche filo di erba cipollina intera e un giro d'olio EVO in superficie per lucentezza visiva."
     }
   ],
+  "stepsCondiment": [],
   "flourTable": [],
   "baking": null,
   "glossary": [

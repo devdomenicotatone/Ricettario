@@ -78,8 +78,7 @@
     }
   ],
   "suspensions": [],
-  "steps": [],
-  "stepsCondiment": [
+  "steps": [
     {
       "title": "Preparazione dell'uovo sodo",
       "text": "Immergere l'uovo intero in acqua fredda, portare a ebollizione e cuocere per 9 minuti esatti. Raffreddarlo sotto acqua corrente fredda, sgusciarlo e separare il tuorlo dall'albume. Tenere da parte solo il {tuorlo_sodo:18}g di tuorlo. L'albume non viene utilizzato in questa ricetta."
@@ -113,6 +112,7 @@
       "text": "Coprire la ciotola con pellicola a contatto diretto con la superficie della salsa (per impedire l'ossidazione del prezzemolo) e far riposare in frigorifero almeno 30 minuti prima di servire: il riposo permette ai sapori di amalgamarsi. Servire a temperatura ambiente, trasferita in una salsiera. Accompagna tradizionalmente il Gran Bollito Misto Piemontese (testina, lingua, muscolo, gallina, cotechino), ma è eccellente anche con uova sode, carne cruda battuta al coltello, polenta grigliata e verdure bollite."
     }
   ],
+  "stepsCondiment": [],
   "flourTable": [],
   "baking": null,
   "glossary": [

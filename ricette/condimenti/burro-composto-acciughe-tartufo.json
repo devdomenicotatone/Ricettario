@@ -81,14 +81,13 @@
     {
       "title": "Cilindratura e Cristallizzazione",
       "text": "Disporre i due composti separatamente su fogli di carta forno o pellicola alimentare. Arrotolare strettamente modellando dei cilindri dal diametro di 3-4 cm. Ruotare le estremità 'a caramella' applicando tensione per compattare il burro ed eliminare eventuali sacche d'aria interne. Riporre in frigorifero per almeno {tempo_riposo:60!} minuti per consentire ai grassi di ri-cristallizzare e agli oli essenziali di infondere la massa lipidica."
-    }
-  ],
-  "stepsCondiment": [
+    },
     {
       "title": "Utilizzo per Mantecatura (Tagliolini o Risotti)",
       "text": "Cuocere la pasta al dente. A fuoco spento, aggiungere 20-25g di burro composto rigorosamente FREDDO di frigo per ogni porzione, insieme a un mestolino di acqua di cottura ricca di amidi. Eseguire la mantecatura meccanica (saltando o mescolando energicamente): lo shock termico tra il burro freddo e l'acqua calda, unito all'amido, creerà un'emulsione cremosa perfetta senza separazione dei grassi."
     }
   ],
+  "stepsCondiment": [],
   "flourTable": [],
   "glossary": [
     {

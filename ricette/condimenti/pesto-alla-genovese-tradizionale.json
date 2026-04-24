@@ -62,12 +62,6 @@
   "suspensions": [],
   "steps": [
     {
-      "title": "Cottura e Mantecatura della Pasta",
-      "text": "Questa preparazione è concepita per condire circa 500!g di pasta (formati ideali: trofie, trenette, gnocchi o testaroli). Cuocere la pasta in abbondante acqua bollente salata. Al momento di scolare, conservare in una tazza l'acqua di cottura ricca di amidi. Trasferire la pasta scolata in una zuppiera fredda (o appena intiepidita). Aggiungere il pesto e stemperare delicatamente con un cucchiaio di acqua di cottura per creare una crema setosa che avvolgerà perfettamente il carboidrato. Non avvicinare mai il pesto al fuoco diretto."
-    }
-  ],
-  "stepsCondiment": [
-    {
       "title": "Mondatura a Secco",
       "text": "Pulire delicatamente {basilico_pesto:50}g di foglie di Basilico Genovese con un panno morbido appena inumidito, oppure sciacquarle velocissimamente in acqua ghiacciata e tamponarle tamponandole dolcemente. La foglia deve risultare perfettamente integra e asciutta: la rottura prematura delle venature o lo stress meccanico prima del mortaio causa un'immediata ossidazione."
     },
@@ -86,8 +80,13 @@
     {
       "title": "Emulsione Finale",
       "text": "È il momento di inserire i grassi per completare l'emulsione a freddo. Aggiungere {parmigiano_pesto:45}g di Parmigiano Reggiano e {pecorino_pesto:20}g di Pecorino Sardo, alternandoli versando a filo i {olio_pesto:80}g di Olio EVO Ligure. Continuare il lento movimento rotatorio per amalgamare i formaggi e l'olio con l'acqua di vegetazione rilasciata dal basilico. Il pesto è pronto quando risulta perfettamente cremoso, lucido e omogeneo."
+    },
+    {
+      "title": "Cottura e Mantecatura della Pasta",
+      "text": "Questa preparazione è concepita per condire circa {pasta:500}g di pasta (formati ideali: trofie, trenette, gnocchi o testaroli). Cuocere la pasta in abbondante acqua bollente salata. Al momento di scolare, conservare in una tazza l'acqua di cottura ricca di amidi. Trasferire la pasta scolata in una zuppiera fredda (o appena intiepidita). Aggiungere il pesto e stemperare delicatamente con un cucchiaio di acqua di cottura per creare una crema setosa che avvolgerà perfettamente il carboidrato. Non avvicinare mai il pesto al fuoco diretto."
     }
   ],
+  "stepsCondiment": [],
   "flourTable": [],
   "baking": {
     "temperature": "100°C",

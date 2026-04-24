@@ -106,8 +106,7 @@
     }
   ],
   "suspensions": [],
-  "steps": [],
-  "stepsCondiment": [
+  "steps": [
     {
       "title": "Soffritto e Base Aromatica",
       "text": "In una casseruola dal fondo spesso, versare {olio_soffritto_bbq:15}g di Olio Extravergine di Oliva e scaldare a fiamma dolce. Inserire {cipolla_bbq:50}g di cipolla dorata tritata finemente e {aglio_bbq:5}g (lo spicchio schiacciato ma intero). Far 'sudare' il composto per circa 5-7 minuti: la cipolla deve diventare traslucida rilasciando i suoi zuccheri senza attivare una vera e propria reazione di Maillard (non deve bruciare o imbrunire eccessivamente)."
@@ -129,6 +128,7 @@
       "text": "Portare la salsa a leggero bollore, quindi abbassare la fiamma al minimo assoluto. Far sobbollire (riduzione) per circa 15-20 minuti, mescolando di tanto in tanto per evitare che gli zuccheri caramellino sul fondo. La salsa sarà pronta quando velerà il dorso di un cucchiaio. Spegnere il fuoco e frullare con un mixer ad immersione se si desidera una texture vellutata e omogenea. Ricordare che raffreddandosi, grazie alla pectina del pomodoro e alla cristallizzazione degli zuccheri, la salsa aumenterà notevolmente la sua viscosità."
     }
   ],
+  "stepsCondiment": [],
   "flourTable": [],
   "glossary": [
     {
