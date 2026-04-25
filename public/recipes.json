@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-24T23:22:02.390Z",
-  "totalRecipes": 73,
+  "generatedAt": "2026-04-24T23:45:34.149Z",
+  "totalRecipes": 76,
   "categories": [
     {
       "name": "Pane",
@@ -39,7 +39,7 @@
     },
     {
       "name": "Condimenti",
-      "count": 36,
+      "count": 39,
       "emoji": "🌿"
     }
   ],
@@ -861,17 +861,17 @@
       "_createdAt": "2026-04-16T14:32:01.457Z"
     },
     {
-      "title": "Olio al Cavolo Viola",
+      "title": "Olio al Cavolo Viola (Elettrico)",
       "slug": "olio-al-cavolo-viola-condimento",
       "category": "Condimenti",
       "categoryDir": "condimenti",
-      "emoji": "🫙",
+      "emoji": "🔮",
       "href": "ricette/condimenti/olio-al-cavolo-viola-condimento.html",
       "image": "images/ricette/condimenti/olio-al-cavolo-viola-condimento.webp",
-      "description": "Un condimento artigianale brillante e croccante: cavolo viola macerato a freddo e conservato in olio extravergine. Perfetto per insalate, crostoni e carni.",
+      "description": "Olio di finitura professionale dal colore viola vibrante e dalla purezza ottica assoluta. La perfetta terza variante cromatica da affiancare all'olio al basilic",
       "hydration": null,
       "time": null,
-      "temp": null,
+      "temp": "60-65°C",
       "tool": "",
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T23:21:43.378Z"
@@ -891,6 +891,54 @@
       "tool": "",
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T23:00:17.531Z"
+    },
+    {
+      "title": "Olio alla Carota e Zenzero (Arancio Fluo)",
+      "slug": "olio-carota-zenzero",
+      "category": "Condimenti",
+      "categoryDir": "condimenti",
+      "emoji": "🥕",
+      "href": "ricette/condimenti/olio-carota-zenzero.html",
+      "image": "images/ricette/condimenti/olio-carota-zenzero.webp",
+      "description": "Condimento professionale dal colore arancio fluo vibrante e purezza ottica assoluta. La freschezza agrumata dello zenzero incontra la dolcezza della carota in u",
+      "hydration": null,
+      "time": null,
+      "temp": "70°C",
+      "tool": "",
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-24T23:37:26.093Z"
+    },
+    {
+      "title": "Olio alla Curcuma o Zafferano",
+      "slug": "olio-curcuma-zafferano",
+      "category": "Condimenti",
+      "categoryDir": "condimenti",
+      "emoji": "🫙",
+      "href": "ricette/condimenti/olio-curcuma-zafferano.html",
+      "image": "images/ricette/condimenti/olio-curcuma-zafferano.webp",
+      "description": "Olio aromatizzato artigianale estratto a freddo. Un condimento funzionale dal colore brillante e profilo aromatico terroso o floreale, ideale a crudo.",
+      "hydration": null,
+      "time": "7 giorni",
+      "temp": null,
+      "tool": "",
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-24T23:44:45.379Z"
+    },
+    {
+      "title": "Olio Aromatizzato all'Aglio Nero e Carbone Vegetale",
+      "slug": "olio-aglio-nero-carbone-vegetale",
+      "category": "Condimenti",
+      "categoryDir": "condimenti",
+      "emoji": "🧄",
+      "href": "ricette/condimenti/olio-aglio-nero-carbone-vegetale.html",
+      "image": "images/ricette/condimenti/olio-aglio-nero-carbone-vegetale.webp",
+      "description": "Condimento tecnico e scenografico dal colore nero profondo, ideale per esaltare pizze gourmet e piatti d'alta cucina con note umami e balsamiche.",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-24T23:44:59.842Z"
     },
     {
       "title": "Olio Extravergine Aromatizzato",
