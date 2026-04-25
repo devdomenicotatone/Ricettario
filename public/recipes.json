@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-24T23:45:34.149Z",
+  "generatedAt": "2026-04-25T00:26:07.591Z",
   "totalRecipes": 76,
   "categories": [
     {
@@ -851,7 +851,7 @@
       "categoryDir": "condimenti",
       "emoji": "🌿",
       "href": "ricette/condimenti/olio-al-basilico-verde-smeraldo.html",
-      "image": "images/ricette/condimenti/olio-al-basilico-verde-smeraldo.webp",
+      "image": "images/ricette/condimenti/olio-verde-smeraldo-pro.png",
       "description": "Olio aromatico al basilico con tecnica dello shock termico: colore verde neon, purezza cristallina e sicurezza alimentare totale.",
       "hydration": null,
       "time": null,
@@ -893,6 +893,22 @@
       "_createdAt": "2026-04-24T23:00:17.531Z"
     },
     {
+      "title": "Olio all'Aglio Nero (Nero Ossidiana)",
+      "slug": "olio-aglio-nero-carbone-vegetale",
+      "category": "Condimenti",
+      "categoryDir": "condimenti",
+      "emoji": "🧄",
+      "href": "ricette/condimenti/olio-aglio-nero-carbone-vegetale.html",
+      "image": "images/ricette/condimenti/olio-aglio-nero-carbone-vegetale.webp",
+      "description": "Condimento tecnico e scenografico dal colore nero profondo, ideale per esaltare pizze gourmet e piatti d'alta cucina con note umami e balsamiche.",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-24T23:44:59.842Z"
+    },
+    {
       "title": "Olio alla Carota e Zenzero (Arancio Fluo)",
       "slug": "olio-carota-zenzero",
       "category": "Condimenti",
@@ -923,22 +939,6 @@
       "tool": "",
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T23:44:45.379Z"
-    },
-    {
-      "title": "Olio Aromatizzato all'Aglio Nero e Carbone Vegetale",
-      "slug": "olio-aglio-nero-carbone-vegetale",
-      "category": "Condimenti",
-      "categoryDir": "condimenti",
-      "emoji": "🧄",
-      "href": "ricette/condimenti/olio-aglio-nero-carbone-vegetale.html",
-      "image": "images/ricette/condimenti/olio-aglio-nero-carbone-vegetale.webp",
-      "description": "Condimento tecnico e scenografico dal colore nero profondo, ideale per esaltare pizze gourmet e piatti d'alta cucina con note umami e balsamiche.",
-      "hydration": null,
-      "time": null,
-      "temp": null,
-      "tool": "",
-      "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-24T23:44:59.842Z"
     },
     {
       "title": "Olio Extravergine Aromatizzato",
