@@ -170,5 +170,30 @@
       "title": "Cottura in Forno",
       "text": "Imburrare generosamente una tortiera a cerchio apribile da 24 cm di diametro e foderarla con carta forno sul fondo. Versare il composto nella tortiera e livellare la superficie con una spatola. Infornare in forno statico preriscaldato a 200°C per 60 minuti. Dopo 40-50 minuti controllare la colorazione superficiale: se il migliaccio è già ben dorato ma non cotto al centro, coprire con un foglio di alluminio e proseguire la cottura. Il dolce è pronto quando la superficie presenta le caratteristiche crepe (craquelé) e uno stecchino inserito al centro esce asciutto. Spegnere il forno e lasciar raffreddare completamente il migliaccio nella teglia prima di sformarlo (almeno 2-3 ore). Spolverizzare con zucchero a velo prima di servire."
     }
-  ]
+  ],
+  "sensoryProfile": {
+    "summary": "Il Migliaccio Napoletano si presenta come un dolce dal carattere vellutato e avvolgente, con una struttura densa e cremosa conferita dal semolino di grano duro e dalla ricotta vaccina setacciata. Al naso domina un bouquet delicato di vaniglia e agrume, con la scorza d'arancia che infonde una nota aromatica fresca e leggermente floreale durante la cottura; in bocca la dolcezza è protagonista assoluta, bilanciata da una sottile lattosità e da una piacevole persistenza aromatica che richiama i grandi dessert della tradizione partenopea.",
+    "axes": [
+      {
+        "label": "Dolcezza",
+        "value": 9
+      },
+      {
+        "label": "Cremosità & Setosità",
+        "value": 8
+      },
+      {
+        "label": "Intensità Aromatica (Vaniglia/Agrume)",
+        "value": 7
+      },
+      {
+        "label": "Struttura & Compattezza",
+        "value": 7
+      },
+      {
+        "label": "Acidità Lattica (Ricotta)",
+        "value": 3
+      }
+    ]
+  }
 }

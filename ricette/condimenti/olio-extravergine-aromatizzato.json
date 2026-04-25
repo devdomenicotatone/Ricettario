@@ -117,5 +117,30 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-16T18:16:57.771Z",
   "image": "images/ricette/condimenti/olio-extravergine-aromatizzato.webp",
-  "imageAttribution": "📷 Foto: Ron Lach — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: Ron Lach — Pexels License via Pexels",
+  "sensoryProfile": {
+    "summary": "Un olio extravergine aromatizzato di raffinata eleganza, costruito su un'infusione a freddo di 14 giorni che consente una cessione lenta e progressiva degli oli essenziali. Al naso si percepisce un bouquet armonioso dove il rosmarino resinoso dialoga con la freschezza agrumata della scorza di limone e la nota pungente e speziata del pepe nero appena pestato; l'aglio, privato dell'anima, conferisce profondità senza aggression. In bocca il fruttato delicato dell'EVO di base sostiene un finale lungo e bilanciato, con una piccantezza gentile e un'intensità aromatica di livello medio-alto.",
+    "axes": [
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Piccantezza",
+        "value": 4
+      },
+      {
+        "label": "Fruttato",
+        "value": 6
+      },
+      {
+        "label": "Amarezza",
+        "value": 2
+      },
+      {
+        "label": "Freschezza Citrica",
+        "value": 7
+      }
+    ]
+  }
 }

@@ -184,5 +184,30 @@
       "title": "Appretto",
       "text": "Trasferire le pagnotte in cestini di lievitazione (banneton) ben infarinati con farina di riso o semola, con la chiusura (seam) rivolta verso l'alto. Coprire con un panno o inserire in buste di plastica. Lasciare lievitare a 24-25°C per circa 1.5 - 2 ore, finché premendo leggermente con un dito la pasta torna indietro lentamente (test del dito)."
     }
-  ]
+  ],
+  "sensoryProfile": {
+    "summary": "Un pane integrale di grande carattere e complessità aromatica, costruito su una biga di 16-18 ore che conferisce profondità lattico-acetica e una mollica dalla struttura aperta ma compatta, tipica delle farine integrali ricche di crusca. L'idratazione spinta al 75% con bassinage, unita alla cottura in due fasi con vapore iniziale e forno a spiffero finale, garantisce una crosta sonora e caramellata con un interno umido e tenace. Al palato si rivela avvolgente, con note di cereale integrale tostate, una leggera acidità yogurtosa di fondo e una dolcezza mielata sottile lasciata dal malto d'orzo.",
+    "axes": [
+      {
+        "label": "Croccantezza Crosta",
+        "value": 9
+      },
+      {
+        "label": "Alveolatura",
+        "value": 5
+      },
+      {
+        "label": "Acidità (Complessità Lattico-Acetica)",
+        "value": 7
+      },
+      {
+        "label": "Umidità Mollica",
+        "value": 7
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 8
+      }
+    ]
+  }
 }

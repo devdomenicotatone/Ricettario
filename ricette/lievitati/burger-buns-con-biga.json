@@ -262,5 +262,30 @@
       "title": "Appretto (seconda lievitazione) e Finitura",
       "text": "Coprire le teglie con pellicola alimentare leggermente oliata (non a contatto diretto, creare una cupola) o un canovaccio umido. Lasciare lievitare a 26-28°C per 50-70 minuti: i buns devono crescere del 50-60%, risultare gonfi e soffici al tatto ma non raddoppiati (altrimenti collassano in cottura). Nel frattempo, preparare la doratura: sbattere {tuorlo_doratura:18}g di tuorlo con {latte_doratura:20}g di latte intero. A lievitazione completata, spennellare delicatamente i buns con la doratura usando un pennello morbido a movimenti leggerissimi per non sgonfiare la superficie. Cospargere subito con {sesamo_finitura:15}g di semi di sesamo, premendo leggermente con le dita per farli aderire."
     }
-  ]
+  ],
+  "sensoryProfile": {
+    "summary": "Un burger bun di scuola artigianale, costruito sulla complessità fermentativa della biga a 18-20 ore: la mollica si presenta ariosa ma compatta, con una texture vellutata e leggermente filante grazie alla doppia quota di grassi (burro e olio EVO) e alla ricchezza di uovo e latte intero. La crosta, laccata dalla doratura tuorlo-latte e impreziosita dal sesamo tostato, offre una cedevolezza burrosa con un finale dolce-latteo di grande pulizia e persistenza.",
+    "axes": [
+      {
+        "label": "Sofficità Mollica",
+        "value": 9
+      },
+      {
+        "label": "Complessità Aromatica (Biga)",
+        "value": 8
+      },
+      {
+        "label": "Dolcezza",
+        "value": 7
+      },
+      {
+        "label": "Croccantezza Crosta",
+        "value": 3
+      },
+      {
+        "label": "Ricchezza (Grassezza)",
+        "value": 7
+      }
+    ]
+  }
 }

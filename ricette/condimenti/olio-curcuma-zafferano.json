@@ -104,5 +104,30 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-24T23:44:45.379Z",
   "image": "images/ricette/condimenti/olio-curcuma-zafferano.webp",
-  "imageAttribution": "📷 Foto: Aadrea Essentials — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: Aadrea Essentials — Pexels License via Pexels",
+  "sensoryProfile": {
+    "summary": "Un olio infuso dalla doppia anima: la versione alla curcuma si presenta come un 'oro liquido' dal fruttato delicato e leggero, con note terrose e resinose di radice che si integrano armoniosamente con la dolcezza erbacea della Taggiasca o del Garda. La variante allo zafferano vira verso una complessità aromatica di rara finezza, con sentori mielati, metallici e floreali che fluttuano in un olio di purezza ottica assoluta. In entrambi i casi, la lunga macerazione a freddo (7+ giorni con stimolazione termica a 35°C) garantisce un'estrazione profonda dei composti liposolubili senza ossidazione, producendo un condimento di grande persistenza gustativa e cromatica.",
+    "axes": [
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Fruttato (Base EVO)",
+        "value": 4
+      },
+      {
+        "label": "Terroso/Speziato",
+        "value": 9
+      },
+      {
+        "label": "Amarezza",
+        "value": 3
+      },
+      {
+        "label": "Persistenza",
+        "value": 8
+      }
+    ]
+  }
 }

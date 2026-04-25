@@ -132,5 +132,30 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-24T13:06:15.634Z",
   "image": "images/ricette/condimenti/salsa-alle-noci.webp",
-  "imageAttribution": "📷 Foto: Eden FC — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: Eden FC — Pexels License via Pexels",
+  "sensoryProfile": {
+    "summary": "Una salsa dall'anima ligure e dal carattere avvolgente: la sbollentatura delle noci ne smussa l'astringenza tannica, lasciando emergere una grassezza vellutata e una profondità aromatica nocciolata. Il Parmigiano a 24 mesi conferisce una sapidità umami ben strutturata, mentre la maggiorana fresca e l'aglio deanimato regalano un soffio erbaceo che alleggerisce il corpo opulento della crema. L'emulsione olio-latte-mollica crea una texture sericea e persistente, elegante nella sua semplicità artigianale.",
+    "axes": [
+      {
+        "label": "Grassezza & Cremosità",
+        "value": 9
+      },
+      {
+        "label": "Sapidità (Umami)",
+        "value": 7
+      },
+      {
+        "label": "Amarezza Tannica",
+        "value": 3
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 6
+      },
+      {
+        "label": "Persistenza Retrolfattiva",
+        "value": 8
+      }
+    ]
+  }
 }

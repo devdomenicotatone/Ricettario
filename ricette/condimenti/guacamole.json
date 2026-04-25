@@ -169,5 +169,30 @@
   "_generatedBy": "claude",
   "_createdAt": "2026-04-19T20:30:21.184Z",
   "image": "images/ricette/condimenti/guacamole.webp",
-  "imageAttribution": "📷 Foto: RDNE Stock project — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: RDNE Stock project — Pexels License via Pexels",
+  "sensoryProfile": {
+    "summary": "Un guacamole dalla struttura cremosa e irregolare, dominato dalla grassezza vellutata dell'avocado Hass maturo, vivacizzata da un'acidità brillante e citrica del lime fresco. Il jalapeño privato dei semi conferisce una piccantezza moderata e pulita, mentre il coriandolo e la cipolla bianca aggiungono complessità aromatica fresca e pungente; l'olio extravergine di varietà delicata arrotonda il finale con una nota fruttata leggera.",
+    "axes": [
+      {
+        "label": "Grassezza & Cremosità",
+        "value": 9
+      },
+      {
+        "label": "Acidità",
+        "value": 7
+      },
+      {
+        "label": "Piccantezza",
+        "value": 4
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 6
+      },
+      {
+        "label": "Freschezza Vegetale",
+        "value": 8
+      }
+    ]
+  }
 }

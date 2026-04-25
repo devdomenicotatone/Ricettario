@@ -1,0 +1,290 @@
+{
+  "title": "Burger Buns con Biga",
+  "slug": "burger-buns-con-biga",
+  "emoji": "🍔",
+  "description": "Panini da hamburger soffici e aromatici con biga a lunga maturazione, crosta dorata ai semi di sesamo. Ricetta professionale con tecnica artigianale.",
+  "subtitle": "Panini briochati da burger con pre-impasto a lunga maturazione — crosta sottile, mollica soffice e filante",
+  "category": "Lievitati",
+  "hydration": 59,
+  "targetTemp": "24-26°C",
+  "fermentation": "~18-20h biga + 2-2.5h puntata + 1h appretto",
+  "totalFlour": 500,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per la Biga (18-20h)",
+      "items": [
+        {
+          "name": "Farina Manitoba",
+          "note": "(W 340-380)",
+          "grams": 100,
+          "tokenId": "farina_biga"
+        },
+        {
+          "name": "Acqua",
+          "note": "(temperatura ambiente, 20-22°C)",
+          "grams": 45,
+          "tokenId": "acqua_biga"
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(microdose per maturazione lunga)",
+          "grams": 0.2,
+          "tokenId": "lievito_fresco_biga"
+        }
+      ]
+    },
+    {
+      "group": "Per l'Impasto Finale",
+      "items": [
+        {
+          "name": "Farina Manitoba",
+          "note": "(W 340-380)",
+          "grams": 200,
+          "tokenId": "farina_manitoba_impasto"
+        },
+        {
+          "name": "Farina Tipo 00",
+          "note": "(W 250-270)",
+          "grams": 200,
+          "tokenId": "farina_00_impasto"
+        },
+        {
+          "name": "Latte Intero",
+          "note": "(a temperatura ambiente, 20°C)",
+          "grams": 240,
+          "tokenId": "latte_impasto"
+        },
+        {
+          "name": "Uovo Intero",
+          "note": "(circa 1 medio, a temperatura ambiente)",
+          "grams": 55,
+          "tokenId": "uovo_impasto"
+        },
+        {
+          "name": "Miele di Acacia",
+          "note": "(dolcificante naturale e umettante)",
+          "grams": 15,
+          "tokenId": "miele_impasto"
+        },
+        {
+          "name": "Zucchero Semolato",
+          "note": "(per struttura e colore crosta)",
+          "grams": 25,
+          "tokenId": "zucchero_impasto"
+        },
+        {
+          "name": "Burro",
+          "note": "(morbido, a pomata, 18-20°C)",
+          "grams": 30,
+          "tokenId": "burro_impasto"
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(delicato, non fruttato)",
+          "grams": 25,
+          "tokenId": "olio_impasto"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(marino integrale)",
+          "grams": 12,
+          "tokenId": "sale_impasto"
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(2g spirale / 3g a mano — la biga fornisce già forza lievitante)",
+          "grams": 2,
+          "tokenId": "lievito_fresco_impasto"
+        }
+      ]
+    },
+    {
+      "group": "Per la Finitura",
+      "items": [
+        {
+          "name": "Tuorlo d'Uovo",
+          "note": "(per doratura)",
+          "grams": 18,
+          "tokenId": "tuorlo_doratura"
+        },
+        {
+          "name": "Latte Intero",
+          "note": "(per doratura)",
+          "grams": 20,
+          "tokenId": "latte_doratura"
+        },
+        {
+          "name": "Semi di Sesamo",
+          "note": "(bianchi, o misti bianchi e neri)",
+          "grams": 15,
+          "tokenId": "sesamo_finitura"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "baking": {
+    "temperature": "180°C statico",
+    "time": "14-18 minuti",
+    "tips": [
+      "Forno STATICO obbligatorio — il ventilato secca la crosta e impedisce una lievitazione uniforme nei panini morbidi",
+      "Preriscaldare il forno a 180°C per almeno 20 minuti prima di infornare",
+      "Posizionare la teglia nel ripiano medio-basso del forno",
+      "NON aprire il forno nei primi 10 minuti — i buns stanno completando l'oven spring",
+      "I buns sono pronti quando la crosta è dorata uniforme (colore nocciola chiaro) e suonano leggermente cavi battendo sotto. La temperatura interna ideale è 88-92°C al cuore",
+      "Sfornare e lasciar raffreddare su una griglia per almeno 20 minuti — tagliare i buns caldi genera una mollica gommosa",
+      "Se si desidera una crosta più lucida, dare una seconda passata di doratura dopo 8 minuti di cottura (aprire velocemente il forno)"
+    ]
+  },
+  "flourTable": [
+    {
+      "type": "Farina Manitoba (W 340-380) — per biga e impasto",
+      "w": "340-380",
+      "brands": "Caputo Manitoba Oro, Molino Grassi Manitoba, Le 5 Stagioni Manitoba, Dallagiovanna Superiore"
+    },
+    {
+      "type": "Farina Tipo 00 (W 250-270) — per impasto finale",
+      "w": "250-270",
+      "brands": "Caputo Nuvola, Molino Grassi 00, Dallagiovanna Classica, Le 5 Stagioni Oro"
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Biga",
+      "definition": "Pre-impasto rigido con idratazione del 44-50%, maturazione lunga (16-24h). Conferisce struttura alveolare, profumo complesso e maggiore conservabilità rispetto all'impasto diretto."
+    },
+    {
+      "term": "Incordatura",
+      "definition": "Fase in cui la maglia glutinica è completamente sviluppata: l'impasto si stacca dalle pareti della ciotola/vasca e si attorciglia attorno al gancio. Si verifica con il test della finestra (windowpane test)."
+    },
+    {
+      "term": "Test della finestra (Windowpane test)",
+      "definition": "Verifica dello sviluppo del glutine: si stacca un pezzetto di impasto e lo si stira tra le dita. Se forma un velo sottile e traslucido senza rompersi, la maglia glutinica è ben sviluppata."
+    },
+    {
+      "term": "Pirlatura",
+      "definition": "Tecnica di arrotondamento: si fa ruotare l'impasto porzionato sul piano sotto le mani a coppa per creare tensione superficiale. La chiusura resta sotto, la superficie diventa tesa e liscia."
+    },
+    {
+      "term": "Puntata",
+      "definition": "Prima lievitazione dell'impasto in massa, dopo l'impastamento. Permette lo sviluppo della struttura alveolare e la fermentazione iniziale."
+    },
+    {
+      "term": "Appretto",
+      "definition": "Seconda e ultima lievitazione dopo la formatura dei panetti. Avviene direttamente nella forma finale (su teglia o in stampo) prima della cottura."
+    },
+    {
+      "term": "Staglio",
+      "definition": "Operazione di porzionatura dell'impasto in pezzi del peso desiderato, eseguita dopo la puntata e prima della formatura."
+    },
+    {
+      "term": "Slap & Fold",
+      "definition": "Tecnica di impastamento manuale: l'impasto viene sollevato, sbattuto energicamente sul piano di lavoro e ripiegato su se stesso. Molto efficace per impasti molli e appiccicosi."
+    },
+    {
+      "term": "Stretch & Fold",
+      "definition": "Piega di rinforzo eseguita in ciotola durante la puntata: si afferra un lembo dell'impasto, si stira verso l'alto e si ripiega al centro, ripetendo per tutti e 4 i lati. Rinforza la maglia glutinica senza impastare."
+    },
+    {
+      "term": "Bassinage",
+      "definition": "Tecnica di aggiunta graduale di liquidi (acqua, olio) durante l'impastamento, a filo sottile, per permettere un migliore assorbimento senza spezzare la maglia glutinica."
+    },
+    {
+      "term": "Oven spring",
+      "definition": "Espansione rapida dell'impasto nei primi minuti di cottura in forno, dovuta all'evaporazione dell'acqua e all'espansione dei gas della fermentazione."
+    },
+    {
+      "term": "Doratura (egg wash)",
+      "definition": "Miscela di tuorlo d'uovo e latte spennellata sulla superficie dei panini prima della cottura per ottenere una crosta lucida e dorata di colore uniforme."
+    }
+  ],
+  "alert": "⚠️ NON aggiungere farina durante l'impastamento manuale, anche se l'impasto sembra troppo appiccicoso — i grassi (burro e olio) lo renderanno più gestibile una volta assorbiti. Aggiungere farina altera le proporzioni, produce buns secchi e compatti invece che soffici. NON spennellare la doratura con mano pesante: i buns lievitati sono delicatissimi, un colpo di pennello troppo energico sgonfia la superficie e produce panini piatti con crosta irregolare.",
+  "proTips": [
+    "Per buns da competizione, sostituire 5g di zucchero con 5g di malto diastatico in polvere: migliora la reazione di Maillard donando un colore dorato più profondo e un profumo più complesso, e aiuta la crosta a restare morbida anche il giorno dopo.",
+    "Per una mollica ancora più soffice e filante stile brioche americana, aumentare il burro a 50g e il tuorlo a 2, riducendo il latte di 30g. L'impasto sarà più ricco ma richiederà 3-4 minuti in più di incordatura.",
+    "I buns si congelano perfettamente: dopo il raffreddamento completo, chiudere in sacchetti per freezer eliminando tutta l'aria. Si scongelano in 15 minuti a temperatura ambiente o 30 secondi in microonde. Per ripristinare la crosta, 2 minuti in forno a 160°C."
+  ],
+  "storage": [
+    "Per una conservazione a breve termine (2-3 giorni), riporre i buns completamente freddi in un sacchetto di carta per alimenti a temperatura ambiente. Evitare il frigorifero, che accelera la retrogradazione degli amidi, rendendo la mollica gommosa e secca.",
+    "Per la conservazione a lungo termine (fino a 3 mesi), si consiglia il congelamento. Tagliare i panini a metà una volta freddi, avvolgerli singolarmente in pellicola alimentare o, idealmente, sigillarli sottovuoto per preservarne l'umidità e prevenire le bruciature da freddo, quindi riporli in un sacchetto per congelatore.",
+    "Per rigenerare i buns e ripristinare la sofficità originale, scaldare le metà (anche direttamente da congelate) in forno a 160°C per 5-7 minuti. In alternativa, per un risultato professionale prima della farcitura, tostare la superficie del taglio su una piastra calda per 1-2 minuti: questo creerà una barriera croccante che limiterà l'assorbimento dei liquidi del condimento."
+  ],
+  "imageKeywords": [
+    "homemade burger buns sesame seeds",
+    "brioche hamburger buns golden",
+    "fresh baked burger rolls",
+    "panini hamburger fatti in casa",
+    "soft burger buns close up",
+    "Hamburger Brötchen sesam",
+    "artisan burger buns bakery"
+  ],
+  "tags": [
+    "burger buns",
+    "panini hamburger",
+    "biga",
+    "lievitati",
+    "panificazione",
+    "brioche salata",
+    "pre-impasto",
+    "sesamo"
+  ],
+  "_generatedBy": "claude-opus",
+  "_createdAt": "2026-04-05T01:36:05.142Z",
+  "image": "images/ricette/lievitati/burger-buns-con-biga.webp",
+  "imageAttribution": "📷 Foto: Nadin Sh — Pexels License via Pexels",
+  "steps": [
+    {
+      "title": "Preparazione Biga (sera prima)",
+      "text": "In una ciotola, sciogliere {lievito_fresco_biga:0.2}g di lievito di birra fresco in {acqua_biga:45}g di acqua a temperatura ambiente (20-22°C). Versare {farina_biga:100}g di farina Manitoba e mescolare grossolanamente con un cucchiaio o con le mani per 1-2 minuti. NON impastare a fondo: la biga deve risultare un panetto ruvido, sbricioloso e compatto, non liscio. Coprire con pellicola a contatto e lasciare maturare 18-20 ore a 16-18°C (ambiente fresco o cantina). In estate, maturare 1 ora a temperatura ambiente poi trasferire in frigo; il mattino dopo estrarre 1 ora prima dell'uso. A maturazione, la biga avrà raddoppiato il volume con superficie leggermente cupolare e profumo acidulo-alcolico."
+    },
+    {
+      "title": "Inserimento Ingredienti Secchi e Biga",
+      "text": "Nella vasca della spirale, versare {farina_manitoba_impasto:200}g di farina Manitoba e {farina_00_impasto:200}g di farina Tipo 00. Spezzettare la biga matura in 5-6 pezzi e aggiungerla alle farine insieme a {zucchero_impasto:25}g di zucchero semolato e {miele_impasto:15}g di miele. Avviare in V1 (velocità 1) per amalgamare a secco per 1 minuto."
+    },
+    {
+      "title": "Aggiunta Liquidi e Incordatura",
+      "text": "Con la spirale in V1, versare a filo {latte_impasto:240}g di latte intero (16-18°C) alternandolo con {uovo_impasto:55}g di uovo sbattuto. Aggiungere {lievito_fresco_impasto:2}g di lievito di birra fresco sbriciolato. Lavorare in V1 per 5 minuti fino ad ottenere un impasto omogeneo. Passare in V2 e lavorare per 6-8 minuti fino a incordatura: l'impasto deve staccarsi dalle pareti e attorcigliarsi al gancio formando un velo sottile (test della finestra)."
+    },
+    {
+      "title": "Aggiunta Grassi e Sale",
+      "text": "Tornare in V1 e aggiungere {sale_impasto:12}g di sale. Lavorare 1 minuto. Aggiungere {olio_impasto:25}g di olio EVO a filo sottile, attendere il completo assorbimento (2-3 minuti in V1). Poi aggiungere {burro_impasto:30}g di burro morbido in 3 porzioni, una alla volta, aspettando che ogni porzione sia completamente assorbita prima di aggiungere la successiva. Passare in V2 per 3-4 minuti finali. L'impasto finito deve essere liscio, lucido, elastico e leggermente appiccicoso. Temperatura target: 24-26°C."
+    },
+    {
+      "title": "Puntata (prima lievitazione)",
+      "text": "Trasferire l'impasto su un piano leggermente oliato, eseguire una pirlatura formando una sfera tesa. Porre in una ciotola leggermente oliata, coprire con pellicola o piatto e lasciare lievitare a 26-28°C per 2-2,5 ore, o fino a raddoppio del volume. A metà lievitazione (dopo 1 ora) eseguire una delicata piega a tre ripiegando l'impasto su se stesso per rinforzare la struttura glutinica."
+    },
+    {
+      "title": "Staglio e Formatura",
+      "text": "Ribaltare delicatamente l'impasto sul piano di lavoro leggermente infarinato. Sgonfiare con dolcezza premendo con i polpastrelli. Dividere in {panetto_peso:95!}g ciascuno (si ottengono circa 9-10 buns). Per ogni pezzo: ripiegare i lembi verso il centro, capovolgere con la chiusura sotto e pirlare sul piano facendo ruotare la pallina con le mani a coppa fino a ottenere una sfera tesa e regolare. Disporre le palline su una o due teglie rivestite di carta forno, distanziandole almeno 5 cm l'una dall'altra. Schiacciare leggermente con il palmo della mano fino a ottenere dischi di circa 8-9 cm di diametro e 2,5 cm di altezza."
+    },
+    {
+      "title": "Appretto (seconda lievitazione) e Finitura",
+      "text": "Coprire le teglie con pellicola alimentare leggermente oliata (non a contatto diretto, creare una cupola) o un canovaccio umido. Lasciare lievitare a 26-28°C per 50-70 minuti: i buns devono crescere del 50-60%, risultare gonfi e soffici al tatto ma non raddoppiati (altrimenti collassano in cottura). Nel frattempo, preparare la doratura: sbattere {tuorlo_doratura:18}g di tuorlo con {latte_doratura:20}g di latte intero. A lievitazione completata, spennellare delicatamente i buns con la doratura usando un pennello morbido a movimenti leggerissimi per non sgonfiare la superficie. Cospargere subito con {sesamo_finitura:15}g di semi di sesamo, premendo leggermente con le dita per farli aderire."
+    }
+  ],
+  "sensoryProfile": {
+    "axes": [
+      {
+        "label": "Sofficità Mollica",
+        "value": 9
+      },
+      {
+        "label": "Doratura & Maillard",
+        "value": 8
+      },
+      {
+        "label": "Ricchezza & Burrosità",
+        "value": 7
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Croccantezza Crosta",
+        "value": 3
+      }
+    ]
+  }
+}

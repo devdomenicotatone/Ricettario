@@ -1,0 +1,140 @@
+{
+  "title": "Olio alla Carota e Zenzero (Arancio Fluo)",
+  "slug": "olio-carota-zenzero",
+  "emoji": "🥕",
+  "description": "Condimento professionale dal colore arancio fluo vibrante e purezza ottica assoluta. La freschezza agrumata dello zenzero incontra la dolcezza della carota in un'estrazione lipidica a bassa temperatura.",
+  "subtitle": "Sbianchitura e decantazione a freddo per estrazione lipidica limpida",
+  "category": "Condimenti",
+  "hydration": 0,
+  "targetTemp": "70°C",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per l'Estrazione",
+      "items": [
+        {
+          "name": "Olio Extravergine di Oliva",
+          "note": "(Cultivar delicata o semi di vinacciolo. Resa netta finale: ~220-250g)",
+          "grams": 350,
+          "tokenId": "olio_base"
+        },
+        {
+          "name": "Carote fresche",
+          "note": "(Pulite e sbucciate)",
+          "grams": 150,
+          "tokenId": "carote_fresche"
+        },
+        {
+          "name": "Zenzero fresco",
+          "note": "(Radice sbucciata)",
+          "grams": 20,
+          "tokenId": "zenzero_fresco"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Mondatura e Sbianchitura",
+      "text": "Lavare e sbucciare le {carote_fresche:150}g. Sbollentarle intere in acqua bollente per 1 minuto, poi scolarle immediatamente in una boule di acqua e ghiaccio (shock termico). Questa sbianchitura rompe le membrane cellulari e fissa i pigmenti arancioni, permettendo un'estrazione massiva senza alte temperature. Asciugarle meticolosamente e tagliarle a lamelle. Pelare i {zenzero_fresco:20}g di zenzero con un cucchiaio e affettarli finemente."
+    },
+    {
+      "title": "Frullatura a Freddo",
+      "text": "Inserire carote e zenzero in un blender ad alta velocità. Aggiungere l'{olio_base:350}g di olio. Frullare alla massima potenza per circa {tempo_frullatura:2!} minuti, fino ad ottenere un'emulsione liscia, omogenea e di colore arancio acceso."
+    },
+    {
+      "title": "Estrazione Lipidica a 70°C",
+      "text": "Trasferire il composto in un pentolino. Scaldare a fuoco dolcissimo portando l'olio a {temperatura_estrazione:70!}°C. Non superare questa soglia: a temperature superiori a 80°C lo zenzero perde le note agrumate e fresche, assumendo un sapore di 'cotto/legnoso', e la carota inizia a friggere opacizzando l'olio. Mantenere l'infusione a 70°C per {tempo_estrazione:40!} minuti, mescolando delicatamente."
+    },
+    {
+      "title": "Filtrazione Iniziale",
+      "text": "Foderare un colino a maglie fini con una stamigna (etamine) o carta filtro da caffè, posizionandolo sopra una boule di vetro. Versare il composto caldo e lasciare colare l'olio per gravità senza schiacciare i residui solidi."
+    },
+    {
+      "title": "Decantazione a Freddo per Trasparenza Assoluta",
+      "text": "Per ottenere la purezza ottica al 100%, l'acqua vegetale deve essere separata. Versa l'olio filtrato in un contenitore alto e stretto (es. un misurino graduato) e riponilo in frigorifero per 24 ore. L'acqua (più pesante) si depositerà sul fondo, mentre l'olio puro galleggerà. Trascorse le 24 ore, preleva solo l'olio arancio fluo in superficie utilizzando una siringa sterile, scartando l'acqua residua sul fondo."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "baking": {
+    "temperature": "70°C",
+    "time": "40 minuti",
+    "tips": [
+      "Usare un termometro a sonda: mantenere l'olio a 70°C è il segreto per estrarre l'arancio fluo del beta-carotene senza cuocere lo zenzero.",
+      "Evitare assolutamente lo sfrigolio (micro-frittura) per non opacizzare il risultato finale."
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Estrazione lipidica",
+      "definition": "Processo che sfrutta i grassi (in questo caso l'olio) come solventi per estrarre e catturare le molecole aromatiche e i pigmenti liposolubili (come il beta-carotene) da un ingrediente solido."
+    },
+    {
+      "term": "Gingerolo",
+      "definition": "Il principale composto bioattivo dello zenzero fresco, responsabile del suo sapore pungente e piccante, che si solubilizza perfettamente nei grassi."
+    },
+    {
+      "term": "Etamine",
+      "definition": "Panno di cotone a trama finissima o filtro professionale a sacchetto (superbag) utilizzato per chiarificare liquidi e trattenere anche le micro-sospensioni."
+    }
+  ],
+  "alert": "⚠️ SICUREZZA BOTULINO: La decantazione a freddo rimuove meccanicamente l'acqua residua, ma trattandosi di vegetali freschi estratti a bassa temperatura (70°C), questo olio aromatizzato non è microbiologicamente stabile a temperatura ambiente. DEVE essere conservato sempre in frigorifero e consumato entro 2-3 settimane per scongiurare la proliferazione del botulino.",
+  "proTips": [
+    "Abbinamento da Ristorante (Il Consiglio dello Chef): Prova questo olio 'Arancio Fluo' per guarnire uno Spaghetto al Pomodoro Giallo. Il tono su tono creerà una profondità di colore elegantissima, mentre le note fresche dello zenzero 'puliranno' perfettamente la dolcezza del pomodoro giallo.",
+    "Non buttare la purea di carota e zenzero rimasta nel filtro! Essiccala a 60°C in forno o nell'essiccatore per creare una polvere aromatica sapida, ideale per spolverare pesci crudi o tartare."
+  ],
+  "storage": [
+    "L'olio filtrato e privato della sua parte acquosa si conserva in frigorifero, all'interno di un biberon (squeeze bottle) o contenitore di vetro scuro, per circa 2-3 settimane.",
+    "Per una conservazione prolungata (fino a 3 mesi), è possibile congelare l'olio in stampi per cubetti di ghiaccio, scongelando all'occorrenza la singola dose."
+  ],
+  "imageKeywords": [
+    "carrot infused oil",
+    "orange herb oil",
+    "gourmet plated oil drop",
+    "olio di carota",
+    "karottenöl",
+    "ginger infused oil glass bottle"
+  ],
+  "tags": [
+    "condimenti",
+    "olio aromatizzato",
+    "carote",
+    "zenzero",
+    "estrazione",
+    "gourmet",
+    "vegano"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "_createdAt": "2026-04-24T23:37:26.093Z",
+  "image": "images/ricette/condimenti/olio-carota-zenzero.webp",
+  "imageAttribution": "📷 Foto: RDNE Stock project — Pexels License via Pexels",
+  "_originalImageUrl": "https://images.pexels.com/photos/5737246/pexels-photo-5737246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+  "sensoryProfile": {
+    "axes": [
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Piccantezza (Zenzero)",
+        "value": 6
+      },
+      {
+        "label": "Fruttato/Dolcezza Vegetale",
+        "value": 7
+      },
+      {
+        "label": "Purezza Ottica & Fluidità",
+        "value": 9
+      },
+      {
+        "label": "Amarezza",
+        "value": 2
+      }
+    ]
+  }
+}

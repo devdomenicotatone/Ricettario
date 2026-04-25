@@ -147,5 +147,30 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-24T13:05:21.348Z",
   "image": "images/ricette/condimenti/salsa-verde-tradizionale.webp",
-  "imageAttribution": "📷 Foto: Los Muertos Crew — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: Los Muertos Crew — Pexels License via Pexels",
+  "sensoryProfile": {
+    "summary": "Una salsa verde tradizionale di grande carattere, dove la freschezza erbacea del prezzemolo dialoga con la sapidità intensa delle acciughe e dei capperi in un equilibrio antico e raffinato. L'aceto di vino bianco imprime una vivace acidità che taglia la grassezza dell'olio extravergine, mentre i tuorli sodi e la mollica ammollata conferiscono corpo e una morbidezza vellutata al palato. Un condimento di persistenza notevole, austero e profondo, degno della migliore tradizione piemontese.",
+    "axes": [
+      {
+        "label": "Sapidità (Umami)",
+        "value": 8
+      },
+      {
+        "label": "Acidità",
+        "value": 7
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 9
+      },
+      {
+        "label": "Grassezza / Corpo",
+        "value": 6
+      },
+      {
+        "label": "Amaro Erbaceo",
+        "value": 5
+      }
+    ]
+  }
 }

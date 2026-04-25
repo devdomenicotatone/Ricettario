@@ -111,37 +111,44 @@
         {
           "name": "Farina 00 Media Forza",
           "note": "(W 260–280, proteine 11-12%)",
-          "grams": 400
+          "grams": 400,
+          "tokenId": "farina_media_impasto"
         },
         {
           "name": "Farina Manitoba Forte",
           "note": "(W 380–420, proteine 13-14%)",
-          "grams": 250
+          "grams": 250,
+          "tokenId": "farina_forte_impasto"
         },
         {
           "name": "Acqua",
           "note": "(fredda 16-18°C per controllare temperatura finale)",
-          "grams": 335
+          "grams": 335,
+          "tokenId": "acqua_impasto"
         },
         {
           "name": "Sale Fino",
           "note": "(13 g nell'impasto)",
-          "grams": 13
+          "grams": 13,
+          "tokenId": "sale_impasto"
         },
         {
           "name": "Malto Diastasico",
           "note": "(o 1 cucchiaino miele se non disponibile)",
-          "grams": 10
+          "grams": 10,
+          "tokenId": "malto_impasto"
         },
         {
           "name": "Lievito di Birra Fresco",
           "note": "(18 g per lievitazione controllata 3-4 ore)",
-          "grams": 18
+          "grams": 18,
+          "tokenId": "lievito_fresco_impasto"
         },
         {
           "name": "Olio Extravergine d'Oliva Ligure DOP",
           "note": "(nell'impasto, preferire taggiasco o riviera)",
-          "grams": 30
+          "grams": 30,
+          "tokenId": "olio_evo_impasto"
         }
       ]
     },
@@ -151,22 +158,30 @@
         {
           "name": "Olio Extravergine d'Oliva",
           "note": "(per ungere le 2 teglie 30×40 cm)",
-          "grams": 30
+          "grams": 30,
+          "tokenId": "olio_teglie_condimento",
+          "excludeFromTotal": true
         },
         {
           "name": "Olio Extravergine d'Oliva",
           "note": "(per condire la superficie prima di infornare)",
-          "grams": 60
+          "grams": 60,
+          "tokenId": "olio_superficie",
+          "excludeFromTotal": true
         },
         {
           "name": "Sale Fino",
           "note": "(per salamoia)",
-          "grams": 10
+          "grams": 10,
+          "tokenId": "sale_condimento",
+          "excludeFromTotal": true
         },
         {
           "name": "Acqua",
           "note": "(per salamoia, temperatura ambiente)",
-          "grams": 200
+          "grams": 200,
+          "tokenId": "acqua_condimento",
+          "excludeFromTotal": true
         }
       ]
     }
@@ -186,7 +201,7 @@
     },
     {
       "title": "Emulsione Olio (5 min, V1→V2)",
-      "text": "Versare l'olio EVO ({olio_evo_impasto:30} g) a filo. Continuare 3 minuti a V1 fino a completa assorbimento. Passare a V2 (velocità media) per 2 minuti: l'impasto deve staccarsi dalle pareti, risultare liscio, elastico e lucido. Temperatura finale: 25-26°C MAX."
+      "text": "Versare l'olio EVO ({olio_evo_impasto:30} g) a filo. Continuare 3 minuti a V1 fino a completo assorbimento. Passare a V2 (velocità media) per 2 minuti: l'impasto deve staccarsi dalle pareti, risultare liscio, elastico e lucido. Temperatura finale: 25-26°C MAX."
     },
     {
       "title": "Puntata in Massa (30 min, 26-28°C)",
@@ -212,5 +227,29 @@
       "title": "Foratura e Condimento Finale (tecnica dei 3 dita)",
       "text": "Scoprire la focaccia. Spolverizzare con un velo di farina. Con 3 dita (indice-medio-anulare) INCLINATE (non perpendicolari), affondare creando i tipici buchi profondi fino quasi al fondo. Distanza tra buchi: 1 cm. Spingere le dita leggermente verso i bordi durante la foratura. Ruotare la teglia per forare uniformemente anche i lati. Versare al centro {olio_superficie:30} g olio + 100 g salamoia. Spargere delicatamente con mano piatta riempiendo tutti i buchi. NON coprire. Riposo finale: 40-45 minuti."
     }
-  ]
+  ],
+  "sensoryProfile": {
+    "axes": [
+      {
+        "label": "Croccantezza Crosta",
+        "value": 7
+      },
+      {
+        "label": "Umidità Mollica",
+        "value": 8
+      },
+      {
+        "label": "Sapidità (Salamoia)",
+        "value": 7
+      },
+      {
+        "label": "Fruttato Oleoso (EVO)",
+        "value": 9
+      },
+      {
+        "label": "Alveolatura",
+        "value": 6
+      }
+    ]
+  }
 }

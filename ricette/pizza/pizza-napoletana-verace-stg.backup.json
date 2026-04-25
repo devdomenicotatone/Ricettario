@@ -1,0 +1,236 @@
+{
+  "title": "Pizza Napoletana Verace STG",
+  "slug": "pizza-napoletana-verace-stg",
+  "emoji": "🍕",
+  "description": "La vera pizza napoletana con metodo tradizionale, idratazione 65% e lievitazione controllata 8-24h. Ricetta completa con procedimento spirale e a mano.",
+  "subtitle": "La vera pizza napoletana con metodo tradizionale, idratazione 65% e lievitazione controllata 8-24h",
+  "category": "Pizza",
+  "hydration": 65,
+  "targetTemp": "24-26°C",
+  "fermentation": "8-24h (controllata)",
+  "totalFlour": 1000,
+  "ingredients": [],
+  "suspensions": [],
+  "stepsCondiment": [
+    {
+      "title": "Preparazione Pomodoro per Pizza Napoletana",
+      "text": "Scolare 400g di pomodori pelati San Marzano DOP, eliminare i semi in eccesso. Schiacciare grossolanamente con una forchetta o frullare brevemente (texture rustica). Condire con 4-{sale_impasto:28}g di sale fino, mescolare. NON aggiungere olio o basilico alla passata cruda (si brucerebbero in cottura). Conservare in frigorifero fino all'uso."
+    },
+    {
+      "title": "Condimento Base Pizza Margherita",
+      "text": "Stendere la pizza, distribuire 80-100g di pomodoro con movimento a spirale, lasciando libero il cornicione (1.5cm dal bordo). Tagliare 80-100g di fiordilatte (o mozzarella per pizza) ben sgocciolato a listarelle. Dopo 60-90 secondi di cottura (quando il pomodoro inizia a bollire), aggiungere velocemente la mozzarella. Infornare altri 60-90 secondi. A pizza cotta, aggiungere basilico fresco spezzettato e filo d'olio EVO a crudo."
+    },
+    {
+      "title": "Condimento Pizza Marinara",
+      "text": "Stendere 80-100g di pomodoro sulla pizza. Aggiungere 2-3 spicchi d'aglio tagliati a lamelle sottili, origano secco (1 pizzico), sale fino. Infornare per 90-120 secondi. A cottura completata, aggiungere basilico fresco e abbondante olio EVO. La marinara NON prevede mozzarella."
+    }
+  ],
+  "flourTable": [
+    {
+      "type": "Farina Tipo 0",
+      "w": "280-320",
+      "brands": "Caputo Pizzeria (Classica o Rossa), Molino Dallagiovanna Re Mida, Molino Vigevano Petra 3"
+    },
+    {
+      "type": "Farina Tipo 00",
+      "w": "260-300",
+      "brands": "Caputo Cuoco (Blu), Le 5 Stagioni Nuvola Super, Molino Grassi Europa 00"
+    },
+    {
+      "type": "Mix Tipo 0 + Manitoba (70/30)",
+      "w": "300-350",
+      "brands": "Tipo 0 Caputo Pizzeria + Manitoba Molino Vigevano (30%)"
+    }
+  ],
+  "baking": {
+    "temperature": "280°C (MAX forno casalingo)",
+    "time": "6-8 minuti (pietra refrattaria preriscaldata)",
+    "tips": [
+      "Preriscaldare forno + pietra refrattaria per ALMENO 45-60 minuti a temperatura massima (280°C ventilato o 300°C statico se disponibile)",
+      "Usare ESCLUSIVAMENTE pietra refrattaria o piastra in acciaio spessa (1cm minimo). Le teglie normali NON funzionano per la napoletana",
+      "Infornare su ripiano più BASSO del forno (la pietra deve essere vicinissima alla resistenza inferiore)",
+      "NON aprire il forno durante i primi 4 minuti. La pizza cuoce per conduzione (pietra) + irraggiamento (volta)",
+      "Ruotare la pizza a metà cottura (3-4 minuti) solo se si notano dorature irregolari",
+      "Creare vapore: spruzzare 50ml d'acqua sulle pareti del forno (NON sulla pizza) nei primi 30 secondi per favorire lo sviluppo del cornicione",
+      "Pizza cotta perfettamente: cornicione dorato con macchie leopardate scure, disco centrale asciutto (non gommoso), base inferiore rigida ma non bruciata"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Autolisi",
+      "definition": "Riposo dell'impasto con farina e acqua (senza lievito e sale) per 20-60 minuti. Favorisce l'idratazione completa delle proteine e lo sviluppo naturale del glutine, riducendo i tempi di impastamento."
+    },
+    {
+      "term": "Incordatura",
+      "definition": "Fase dell'impastamento in cui la maglia glutinica inizia a formarsi e l'impasto si avvolge attorno al gancio della spirale o inizia a 'tirare' se lavorato a mano. Segno di corretta struttura."
+    },
+    {
+      "term": "Puntata",
+      "definition": "Primo riposo dell'impasto in massa (non diviso) dopo l'impastamento. Durante la puntata avviene la prima fermentazione e lo sviluppo di aromi. Durata variabile: 1-3 ore a temperatura ambiente."
+    },
+    {
+      "term": "Staglio",
+      "definition": "Divisione dell'impasto in pezzi di peso specifico (panetti) dopo la puntata. Si usa un tarocco (spatola metallica) per tagliare senza strappare la maglia glutinica."
+    },
+    {
+      "term": "Pirlatura",
+      "definition": "Tecnica per formare palline compatte e lisce dopo lo staglio. Consiste nel far ruotare il panetto sul banco con movimento circolare del palmo, creando tensione superficiale senza rompere la struttura interna."
+    },
+    {
+      "term": "Appretto",
+      "definition": "Secondo e ultimo riposo dei panetti già formati (dopo la pirlatura) prima della stesura. Durante l'appretto i panetti lievitano fino a triplicare di volume. Durata: 6-24 ore a seconda della temperatura e quantità di lievito."
+    },
+    {
+      "term": "Maglia Glutinica",
+      "definition": "Struttura tridimensionale formata dalle proteine del grano (gliadina + glutenina) a contatto con acqua e lavorazione meccanica. Conferisce elasticità, estensibilità e capacità di trattenere i gas della fermentazione."
+    },
+    {
+      "term": "Slap & Fold (Schiaffo e Piega)",
+      "definition": "Tecnica di impastamento manuale per impasti molto idratati. Consiste nel sollevare l'impasto, sbatterlo energicamente sul banco e ripiegarlo su se stesso. Sviluppa la maglia glutinica senza aggiunta di farina."
+    },
+    {
+      "term": "Stretch & Fold (Stira e Piega)",
+      "definition": "Tecnica di rinforzo dell'impasto durante la puntata. Si allungano i bordi dell'impasto e si ripiegano verso il centro per tutta la circonferenza. Si ripete ogni 30-40 minuti per 3-4 volte. Aumenta forza e struttura senza lavorazione aggressiva."
+    },
+    {
+      "term": "Idratazione",
+      "definition": "Percentuale di acqua rispetto al peso della farina (es. 650g acqua su 1000g farina = 65%). Determina la consistenza dell'impasto: più alta = impasto morbido e alveolatura aperta."
+    },
+    {
+      "term": "Cornicione",
+      "definition": "Bordo rialzato della pizza napoletana (1.5-2cm), ricco di alveoli. Si ottiene lasciando intatta questa porzione durante la stesura, senza schiacciarla. In cottura si gonfia per il vapore interno."
+    },
+    {
+      "term": "Macchie Leopardate",
+      "definition": "Caratteristiche bruciature scure sul cornicione della pizza napoletana, segno di cottura ad altissima temperatura (>400°C nei forni a legna professionali). Indicano caramellizzazione degli zuccheri e reazione di Maillard."
+    },
+    {
+      "term": "Temperatura Finale dell'Impasto",
+      "definition": "Temperatura che l'impasto raggiunge a fine lavorazione. Per la pizza napoletana: 24-26°C ideale. Si controlla con termometro a sonda. Influenza velocità di lievitazione e sviluppo aromi."
+    },
+    {
+      "term": "W (Forza della Farina)",
+      "definition": "Indice alveografico che misura la resistenza della farina alla lavorazione. Per pizza napoletana: W 260-320. Valori più alti = maggiore assorbimento acqua e tenuta in lievitazioni lunghe."
+    }
+  ],
+  "alert": "⚠️ ERRORI FATALI DA EVITARE: NON stendere la pizza col mattarello (distrugge la maglia glutinica e schiaccia le bolle d'aria, risultato: pizza piatta e gommosa). NON schiacciare o toccare il cornicione durante la stesura (deve restare alto e pieno di alveoli). NON infornare senza preriscaldare la pietra per almeno 45 minuti (il fondo resterebbe crudo e molliccio). NON usare mozzarella troppo umida o fiordilatte non sgocciolato (pizza acquosa). NON aggiungere troppo pomodoro o condimenti (peso max 200g totali, altrimenti il disco centrale si affloscia). La pizza napoletana è un equilibrio delicato: idratazione alta + lievitazione lunga + cottura rapida ad alta temperatura. Alterare uno di questi fattori compromette il risultato finale.",
+  "proTips": [
+    "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato.",
+    "TECNICA STESURA PRO: Dopo aver schiacciato il panetto al centro, passa le mani sotto il disco e fallo ruotare come un 'volante', allargandolo per gravità e forza centrifuga. Questa tecnica (usata dai pizzaioli napoletani) evita di strappare la maglia e mantiene distribuzione uniforme dello spessore. Il disco deve essere traslucido al centro (3-4mm), mai bucato."
+  ],
+  "storage": [
+    "Conservare la pizza cotta avanzata in frigorifero per un massimo di 48 ore, avvolta in pellicola alimentare o in un contenitore ermetico. Per restituire croccantezza alla base, rigenerare le fette in una padella rovente per 2-3 minuti oppure in forno ventilato a 180°C per circa 5 minuti.",
+    "Per una conservazione a lungo termine, congelare la pizza cotta e completamente raffreddata. Avvolgere le fette singolarmente in pellicola trasparente e poi in foglio di alluminio, o utilizzare un sistema sottovuoto per preservarne al meglio le qualità organolettiche fino a 2 mesi. Rigenerare direttamente da congelato in forno statico preriscaldato a 200°C per 10-12 minuti.",
+    "I panetti di impasto crudo possono essere conservati in frigorifero a 4°C, in un contenitore ermetico leggermente unto, fino a 48 ore per completare la maturazione. Per il congelamento, congelare i panetti singolarmente e poi riporli in un sacchetto gelo; scongelare in frigorifero per 12-24 ore prima dell'utilizzo."
+  ],
+  "imageKeywords": [
+    "pizza napoletana verace",
+    "authentic neapolitan pizza",
+    "vera pizza napoletana",
+    "echte neapolitanische pizza",
+    "stg neapolitan pizza",
+    "traditional napoli pizza"
+  ],
+  "tags": [
+    "pizza napoletana",
+    "STG",
+    "lievitazione lunga",
+    "idratazione 65%",
+    "cornicione",
+    "spirale",
+    "a mano",
+    "metodo tradizionale"
+  ],
+  "image": "images/ricette/pizza/pizza-napoletana-verace-stg.webp",
+  "ingredientGroups": [
+    {
+      "group": "Per l'Impasto",
+      "items": [
+        {
+          "name": "Farina Tipo 0 o 00 Media-Alta Forza",
+          "note": "(W 280-320, 12-13% proteine)",
+          "grams": 1000
+        },
+        {
+          "name": "Acqua",
+          "note": "(fresca 14-18°C per controllare temperatura impasto)",
+          "grams": 650
+        },
+        {
+          "name": "Sale Marino Fino",
+          "note": "(2.5-3% su farina)",
+          "grams": 28
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(1-2g per lievitazione 24h)",
+          "grams": 2
+        },
+        {
+          "name": "Zucchero Semolato",
+          "note": "(opzionale, favorisce doratura)",
+          "grams": 5
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(opzionale, non previsto dal disciplinare STG)",
+          "grams": 15
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Fase 1: Scioglimento Sale e Idratazione Base",
+      "text": "Versare in vasca l'acqua FRESCA (14-18°C) con il sale marino e lo zucchero. Avviare spirale a velocità 1 per 1 minuto per sciogliere completamente. Aggiungere 2/3 della farina (circa {acqua_impasto:650}g) e mescolare in prima velocità per 3-4 minuti fino a ottenere un composto grossolano."
+    },
+    {
+      "title": "Fase 2: Incorporamento Lievito",
+      "text": "Sbricciare il lievito fresco sulla superficie dell'impasto. Aggiungere la farina rimanente (350g) gradualmente in 2-3 riprese. Continuare a impastare in prima velocità per altri 5-6 minuti. L'impasto inizia a incordarsi."
+    },
+    {
+      "title": "Fase 3: Sviluppo Maglia Glutinica",
+      "text": "Passare in seconda velocità per 8-10 minuti. L'impasto deve staccarsi completamente dalle pareti della vasca, risultare liscio, elastico e brillante. Temperatura finale target: 24-26°C. Se si aggiunge olio EVO, farlo negli ultimi 2 minuti di impastamento in seconda velocità."
+    },
+    {
+      "title": "Fase 4: Puntata in Massa",
+      "text": "Formare una palla compatta, trasferire in contenitore unto leggermente d'olio. Coprire con pellicola a contatto e panno umido. Lasciare a riposo a temperatura ambiente (20-22°C) per 2-3 ore fino al primo raddoppio. Se la temperatura ambiente è oltre 25°C, ridurre a 1.5-2 ore."
+    },
+    {
+      "title": "Fase 5: Staglio e Pirlatura",
+      "text": "Rovesciare l'impasto su piano leggermente infarinato. Dividere con tarocco in panetti da 250-280g (per pizze Ø 30-32cm). Pirlare ogni panetto con movimento circolare sul banco, creando tensione superficiale senza strappare la maglia glutinica. La pirlatura corretta crea una superficie liscia e tesa."
+    },
+    {
+      "title": "Fase 6: Appretto Finale",
+      "text": "Disporre i panetti in cassetta da lievitazione leggermente unta, distanziati 5-6cm. Coprire con coperchio o pellicola. Lievitazione controllata: a) 6-8 ore a temperatura ambiente (20-22°C) oppure b) 18-24 ore in frigorifero (4°C), poi 2-3 ore di rinvenimento a temperatura ambiente prima dell'uso. I panetti devono triplicare di volume."
+    },
+    {
+      "title": "Fase 7: Stesura Tradizionale con Cornicione",
+      "text": "Preparare piano di lavoro con abbondante semola di grano duro. Prendere un panetto, infarinare leggermente. Partendo dal centro, schiacciare con i polpastrelli verso l'esterno, ruotando di 90° ogni passaggio. LASCIARE intatto un bordo di 1.5-2cm (cornicione). Non usare il mattarello. Stendere fino a Ø 30-32cm, disco centrale 3-4mm, cornicione 1-2cm."
+    }
+  ],
+  "sensoryProfile": {
+    "axes": [
+      {
+        "label": "Sviluppo Cornicione (Alveolatura)",
+        "value": 9
+      },
+      {
+        "label": "Croccantezza Base",
+        "value": 7
+      },
+      {
+        "label": "Estensibilità / Tenacia al Morso",
+        "value": 8
+      },
+      {
+        "label": "Complessità Aromatica (Maillard + Lievitazione)",
+        "value": 8
+      },
+      {
+        "label": "Umidità Disco Centrale",
+        "value": 6
+      }
+    ]
+  }
+}

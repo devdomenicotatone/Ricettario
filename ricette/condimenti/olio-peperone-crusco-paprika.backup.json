@@ -111,7 +111,7 @@
     "L'Olio ai cruschi è perfetto per lucidare a fine cottura la superficie di una Focaccia pugliese o per mantecare una pasta aglio, olio e peperoncino."
   ],
   "storage": [
-    "Per prevenire l'ossidazione e preservare il colore rosso brillante e le note aromatiche fresche, conserva l'olio in frigorifero all'interno di una bottiglia di vetro scuro.",
+    "Per prevenire l'ossidazione e preservare il colore rosso brillante e le note aromatiche fresche, conserva l'olio in frigorifero all'interno di una bottiglia di vetro scuro. Assicurarsi che la bottiglia di vetro sia stata perfettamente asciugata (preferibilmente in forno) per eliminare ogni traccia di umidità residua prima dell'imbottigliamento.",
     "L'olio potrebbe solidificare in frigo a causa delle basse temperature; riportalo a temperatura ambiente per 15-20 minuti prima dell'uso per ripristinarne la fluidità ottimale. Consumare preferibilmente entro 3-4 settimane per godere appieno dei profumi e mantenere totale sicurezza alimentare."
   ],
   "imageKeywords": [
@@ -134,5 +134,29 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-24T23:00:17.531Z",
   "image": "images/ricette/condimenti/olio-peperone-crusco-paprika.webp",
-  "imageAttribution": "📷 Foto: monicore — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: monicore — Pexels License via Pexels",
+  "sensoryProfile": {
+    "axes": [
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Dolcezza",
+        "value": 7
+      },
+      {
+        "label": "Fruttato",
+        "value": 8
+      },
+      {
+        "label": "Piccantezza",
+        "value": 2
+      },
+      {
+        "label": "Persistenza",
+        "value": 7
+      }
+    ]
+  }
 }

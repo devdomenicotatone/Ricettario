@@ -127,5 +127,30 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-24T12:53:22.833Z",
   "image": "images/ricette/condimenti/pesto-rucola-artigianale.webp",
-  "imageAttribution": "📷 Foto: Elimira Lotti — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: Elimira Lotti — Pexels License via Pexels",
+  "sensoryProfile": {
+    "summary": "Un pesto di rucola dal carattere deciso e vibrante, dove l'amarezza erbacea e pepata della rucola dialoga con la sapidità umami stratificata del Parmigiano 24 mesi e del Pecorino Romano. La tecnica dello shock termico preserva la clorofilla e le note verdi pungenti, mentre l'emulsione a freddo con olio fruttato leggero conferisce una grassezza vellutata che avvolge il palato con lunga persistenza aromatica.",
+    "axes": [
+      {
+        "label": "Amarezza Erbacea",
+        "value": 8
+      },
+      {
+        "label": "Sapidità (Umami)",
+        "value": 8
+      },
+      {
+        "label": "Piccantezza Pepata",
+        "value": 6
+      },
+      {
+        "label": "Grassezza",
+        "value": 7
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 9
+      }
+    ]
+  }
 }

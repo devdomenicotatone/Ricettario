@@ -185,5 +185,30 @@
       "title": "Taglio (Scarpatura)",
       "text": "Trasferire delicatamente le baguette su una pala infarinata o su carta forno. Con una lametta da panettiere (inclinata a 30° rispetto alla superficie), praticare 3 o 4 tagli netti, quasi longitudinali. I tagli devono sovrapporsi leggermente: l'inizio di un taglio deve trovarsi parallelo alla fine del precedente. Infornare immediatamente."
     }
-  ]
+  ],
+  "sensoryProfile": {
+    "summary": "Una baguette di scuola classica francese, costruita su un poolish a maturazione lenta che conferisce profondità aromatica e una mollica aperta e traslucida. La cottura ad alta temperatura con vapore saturo — seguita da asciugatura a spiffero — genera una crosta sottile, fragile e straordinariamente croccante, con note di tostatura dorata e un finale leggermente acidulo lasciato dalla fermentazione del pre-impasto. Il sale al 2% e il malto calibrano sapidità e doratura, completando un profilo sensoriale di grande equilibrio e tensione tecnica.",
+    "axes": [
+      {
+        "label": "Croccantezza Crosta",
+        "value": 9
+      },
+      {
+        "label": "Alveolatura Mollica",
+        "value": 8
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Acidità Percepita",
+        "value": 5
+      },
+      {
+        "label": "Sapidità",
+        "value": 6
+      }
+    ]
+  }
 }

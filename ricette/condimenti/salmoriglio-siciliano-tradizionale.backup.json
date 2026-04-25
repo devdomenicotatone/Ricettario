@@ -1,0 +1,155 @@
+{
+  "title": "Salmoriglio Siciliano",
+  "slug": "salmoriglio-siciliano-tradizionale",
+  "emoji": "🍋",
+  "description": "L'autentica emulsione siciliana a base di olio EVO, limone, aglio e origano. La salsa a crudo perfetta per marinare e condire carni, pesci e verdure alla griglia.",
+  "subtitle": "Emulsione aromatica a freddo per cotture alla brace",
+  "category": "Condimenti",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per l'Emulsione",
+      "items": [
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(fruttato medio)",
+          "grams": 150,
+          "tokenId": "olio_evo"
+        },
+        {
+          "name": "Succo di Limone",
+          "note": "(fresco e filtrato)",
+          "grams": 60,
+          "tokenId": "succo_limone"
+        },
+        {
+          "name": "Acqua",
+          "note": "(calda, ~40°C)",
+          "grams": 30,
+          "tokenId": "acqua_calda"
+        },
+        {
+          "name": "Prezzemolo Fresco",
+          "note": "(tritato finemente)",
+          "grams": 10,
+          "tokenId": "prezzemolo_fresco"
+        },
+        {
+          "name": "Aglio",
+          "note": "(1 spicchio grande privato dell'anima)",
+          "grams": 5,
+          "tokenId": "aglio_fresco"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "",
+          "grams": 4,
+          "tokenId": "sale_fino"
+        },
+        {
+          "name": "Origano Secco",
+          "note": "(preferibilmente siciliano o di Pantelleria)",
+          "grams": 3,
+          "tokenId": "origano_secco"
+        },
+        {
+          "name": "Pepe Nero",
+          "note": "(macinato fresco)",
+          "grams": 1,
+          "tokenId": "pepe_nero"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Preparazione della base aromatica",
+      "text": "Mondare e tritare finemente al coltello {prezzemolo_fresco:10}g di prezzemolo fresco e {aglio_fresco:5}g di aglio, assicurandosi di tagliare lo spicchio a metà per rimuovere l'anima interna (il germoglio verde) per renderlo più digeribile a crudo. In una ciotola capiente, unire il trito con {origano_secco:3}g di origano secco, {sale_fino:4}g di sale fino e {pepe_nero:1}g di pepe nero macinato al momento."
+    },
+    {
+      "title": "Attivazione degli oli essenziali",
+      "text": "Spremere i limoni e filtrare con un colino per eliminare polpa e semi, ricavandone {succo_limone:60}g. Aggiungere nella ciotola con il trito e gli aromi il succo di limone e {acqua_calda:30}g di acqua calda a circa {temperatura_acqua:40!}°C. L'uso dell'acqua calda è un passaggio tecnico fondamentale: aiuterà a sciogliere immediatamente il sale e a reidratare l'origano, estraendone al massimo gli oli essenziali. Mescolare vigorosamente con una frusta a mano per far sprigionare i profumi."
+    },
+    {
+      "title": "Formazione dell'emulsione",
+      "text": "Continuando a sbattere energicamente con la frusta a mano, incorporare {olio_evo:150}g di olio extravergine d'oliva versandolo a filo. L'azione meccanica costante romperà l'olio in minuscole goccioline disperdendole nella fase acquosa acida, creando un'emulsione opaca, densa e omogenea. Lasciar riposare il salmoriglio a temperatura ambiente per almeno {tempo_riposo:30!} minuti prima dell'utilizzo per permettere ai sapori di amalgamarsi e stabilizzarsi."
+    },
+    {
+      "title": "Applicazione termica",
+      "text": "Non versare il salmoriglio sul pesce durante la grigliatura. Il momento perfetto è immediatamente dopo aver rimosso i tranci dal fuoco. Adagia il pesce sul piatto e irrora generosamente: il calore residuo (senza la fiamma diretta) attiverà gli aromi del prezzemolo e dell'aglio senza bruciarli, permettendo alle fibre del pesce di riassorbire l'umidità persa in cottura."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "glossary": [
+    {
+      "term": "Emulsione",
+      "definition": "Dispersione temporaneamente stabile di un liquido in un altro liquido con il quale è normalmente immiscibile (come olio e succo di limone/acqua). Si ottiene frantumando i grassi tramite l'azione meccanica di una frusta."
+    },
+    {
+      "term": "Anima dell'aglio",
+      "definition": "Il piccolo germoglio interno allo spicchio d'aglio. Rimuoverlo è una tecnica essenziale nelle preparazioni a crudo per attenuare l'odore pungente e facilitare la digestione."
+    }
+  ],
+  "alert": "ATTENZIONE: NON usare mai un frullatore a immersione (minipimer) o un mixer elettrico per emulsionare questa salsa. L'alta velocità delle lame in acciaio rompe violentemente i polifenoli dell'olio extravergine d'oliva, innescando una rapida ossidazione che renderà l'intero salmoriglio irrimediabilmente amaro. L'uso della frusta a mano è obbligatorio.",
+  "proTips": [
+    "L'acqua calda è il vero 'segreto' delle antiche trattorie siciliane: oltre a estrarre i profumi dell'origano, tempera l'eccessiva pungenza del limone e previene la coagulazione precoce dell'olio, rendendo l'emulsione più stabile nel tempo.",
+    "Invece di spennellare in cottura (che rischia di bruciare il prezzemolo e rendere l'olio amaro), usa la tecnica del \"Riposo Coperto\". Dopo aver condito il pesce appena sfornato, copri il piatto con un coperchio o della stagnola per 60-90 secondi. Questo creerà una camera di vapore aromatico che renderà il tuo pesce spada tenero come il burro.",
+    "Per marinare carni dal sapore molto forte (come le costate di manzo), potete aggiungere al trito iniziale un peperoncino rosso piccante sminuzzato al posto del pepe nero."
+  ],
+  "storage": [
+    "Conservare il salmoriglio in frigorifero, all'interno di un barattolo di vetro a chiusura ermetica, per un massimo di 4-5 giorni. Essendo un'emulsione instabile, tenderà a separarsi: prima di ogni utilizzo, lasciare il contenitore a temperatura ambiente per 10 minuti e agitarlo energicamente per ripristinare la consistenza corretta.",
+    "Per una conservazione prolungata (fino a 3 mesi), è possibile congelare il salmoriglio. Si consiglia di versarlo negli stampi per il ghiaccio e, una volta solidificati i cubetti, trasferirli in un sacchetto per sottovuoto. Scongelare la dose desiderata in frigorifero e ri-emulsionare con una frusta prima di servire.",
+    "Una tecnica professionale per preservare al meglio la freschezza aromatica consiste nel preparare l'emulsione base di olio, limone, acqua e origano. L'aglio fresco, tritato finemente, va aggiunto solo al momento dell'utilizzo per evitare che il suo sapore diventi troppo pungente durante la conservazione e per garantire il massimo del profumo."
+  ],
+  "imageKeywords": [
+    "salmoriglio sauce",
+    "sicilian lemon olive oil dressing",
+    "salmoriglio siciliano",
+    "italian herb marinade",
+    "mediterranean green sauce",
+    "emulsione olio limone"
+  ],
+  "tags": [
+    "condimento",
+    "salsa a crudo",
+    "sicilia",
+    "grigliata",
+    "senza glutine",
+    "vegano",
+    "barbecue"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "_createdAt": "2026-04-17T17:21:21.505Z",
+  "image": "images/ricette/condimenti/salmoriglio-siciliano-tradizionale.webp",
+  "imageAttribution": "📷 Foto: Los Muertos Crew — Pexels License via Pexels",
+  "sensoryProfile": {
+    "axes": [
+      {
+        "label": "Acidità",
+        "value": 8
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 9
+      },
+      {
+        "label": "Fruttato (Olio EVO)",
+        "value": 7
+      },
+      {
+        "label": "Piccantezza",
+        "value": 3
+      },
+      {
+        "label": "Sapidità",
+        "value": 5
+      }
+    ]
+  }
+}

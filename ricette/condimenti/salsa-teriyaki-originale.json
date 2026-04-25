@@ -131,5 +131,30 @@
   "_generatedBy": "claude",
   "_createdAt": "2026-04-19T20:48:00.508Z",
   "image": "images/ricette/condimenti/salsa-teriyaki-originale.webp",
-  "imageAttribution": "📷 Foto: Nano Erdozain — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: Nano Erdozain — Pexels License via Pexels",
+  "sensoryProfile": {
+    "summary": "Una salsa teriyaki classica e bilanciata, frutto di una riduzione lenta e controllata che concentra gli zuccheri del mirin e dello zucchero semolato in una glassa densa e lucente. Al palato si apre con una dolcezza caramellata e avvolgente, sostenuta da una sapidità umami profonda e persistente della salsa di soia shoyu, mentre le note alcoliche del sake evaporano lasciando un fondo floreale e leggermente vinoso. La consistenza nappante e la lunga persistenza retrolfattiva ne fanno un condimento di grande carattere e complessità.",
+    "axes": [
+      {
+        "label": "Sapidità (Umami)",
+        "value": 9
+      },
+      {
+        "label": "Dolcezza",
+        "value": 8
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 7
+      },
+      {
+        "label": "Acidità",
+        "value": 2
+      },
+      {
+        "label": "Persistenza",
+        "value": 9
+      }
+    ]
+  }
 }

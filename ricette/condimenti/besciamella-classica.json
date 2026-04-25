@@ -118,5 +118,30 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-19T20:25:39.290Z",
   "image": "images/ricette/condimenti/besciamella-classica.webp",
-  "imageAttribution": "📷 Foto: foxy tati — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: foxy tati — Pexels License via Pexels",
+  "sensoryProfile": {
+    "summary": "Una besciamella classica dal carattere avvolgente e latteo, costruita su un roux biondo che conferisce una nota tostata delicata e biscottata. La texture è vellutata e collante, con una persistenza burrosa medio-lunga e un finale speziato e pungente donato dalla noce moscata grattugiata fresca. L'equilibrio tra grassezza e sapidità è calibrato con precisione artigianale.",
+    "axes": [
+      {
+        "label": "Grassezza",
+        "value": 8
+      },
+      {
+        "label": "Sapidità (Umami)",
+        "value": 4
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 5
+      },
+      {
+        "label": "Vellutezza / Viscosità",
+        "value": 9
+      },
+      {
+        "label": "Note Tostate (Maillard)",
+        "value": 4
+      }
+    ]
+  }
 }

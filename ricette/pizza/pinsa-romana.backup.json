@@ -8,7 +8,7 @@
   "hydration": 75,
   "targetTemp": "24-26°C",
   "fermentation": "24-48h",
-  "totalFlour": 1000,
+  "totalFlour": 1050,
   "ingredients": [],
   "suspensions": [],
   "stepsCondiment": [],
@@ -92,6 +92,11 @@
     "MIX FARINE personalizzabile: puoi sostituire parte della tipo 0 con tipo 1 o semi-integrale (max 20%) per più sapore rustico. Oppure usare mix pronti 'Pinsa Romana' che hanno già le proporzioni ottimali.",
     "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
   ],
+  "storage": [
+    "Le basi di Pinsa precotte, una volta raffreddate completamente a temperatura ambiente, si conservano in frigorifero per 3-4 giorni avvolte in pellicola alimentare o in sacchetti per alimenti. Per una conservazione prolungata, congelarle singolarmente ben sigillate: manterranno la loro qualità fino a 3 mesi.",
+    "La Pinsa cotta e condita avanzata va conservata in un contenitore ermetico in frigorifero per un massimo di 2 giorni. Si sconsiglia di congelarla se condita con ingredienti freschi ad alto contenuto d'acqua (es. mozzarella fresca, pomodorini), i quali rilascerebbero liquidi compromettendo la struttura in fase di scongelamento.",
+    "Per la rigenerazione, preriscaldare il forno statico a 200°C. Infornare la Pinsa (sia da frigo che la base da freezer, senza scongelare) direttamente sulla griglia per 5-8 minuti. Questo shock termico riattiva il lievito e ripristina la croccantezza esterna e la morbidezza interna, evitando l'effetto 'biscottato' del riscaldamento a basse temperature."
+  ],
   "imageKeywords": [
     "pinsa romana pizza",
     "roman style pinsa",
@@ -118,42 +123,50 @@
         {
           "name": "Farina di Frumento Tipo 0",
           "note": "(W 260-280, media forza)",
-          "grams": 900
+          "grams": 900,
+          "tokenId": "farina_media_impasto"
         },
         {
           "name": "Farina di Riso",
           "note": "(preferibilmente semi-integrale)",
-          "grams": 50
+          "grams": 50,
+          "tokenId": "farina_di_riso_impasto"
         },
         {
           "name": "Farina di Soia",
           "note": "(tostata, migliora croccantezza)",
-          "grams": 50
+          "grams": 50,
+          "tokenId": "farina_di_soia_impasto"
         },
         {
           "name": "Acqua",
           "note": "(750g totali, fresca 10-14°C, aggiunta in 2 riprese (700g + 50g finali con sale e olio))",
-          "grams": 750
+          "grams": 750,
+          "tokenId": "acqua_impasto"
         },
         {
           "name": "Lievito di Birra Fresco",
           "note": "(2g per maturazione lunga 24-48h in frigo)",
-          "grams": 2
+          "grams": 2,
+          "tokenId": "lievito_fresco_impasto"
         },
         {
           "name": "Sale Fino",
           "note": "(aggiunto a fine impasto)",
-          "grams": 18
+          "grams": 18,
+          "tokenId": "sale_impasto"
         },
         {
           "name": "Olio Extravergine d'Oliva",
           "note": "(preferibilmente delicato)",
-          "grams": 20
+          "grams": 20,
+          "tokenId": "olio_evo_impasto"
         },
         {
           "name": "Semola di Grano Duro Rimacinata",
           "note": "(per spolverare durante stesura)",
-          "grams": 50
+          "grams": 50,
+          "tokenId": "semola_rimacinata_impasto"
         }
       ]
     }
@@ -173,11 +186,11 @@
     },
     {
       "title": "Prima fermentazione (puntata)",
-      "text": "Trasferire l'impasto in contenitore oliato, coprire con pellicola e lasciare a temperatura ambiente (20-22°C) per 2 ore fino al raddoppio. L'impasto deve gonfiarsi visibilmente. Questa fase sviluppa i primi aromi e rende l'impasto più gestibile."
+      "text": "Trasferire l'impasto in contenitore oliato, coprire con pellicola e lasciare a temperatura ambiente (20-22°C) per 2 ore per innescare la lievitazione prima dello staglio. L'impasto inizierà a gonfiarsi leggermente. Questa fase sviluppa i primi aromi e rende l'impasto più gestibile."
     },
     {
       "title": "Staglio e pirlatura",
-      "text": "Rovesciare l'impasto su piano leggermente infarinato. Dividere in 6 panetti da circa 270-280g ciascuno. Piegare ogni pezzo portando i lembi verso il centro per dare forza, poi capovolgere e pirlare delicatamente su piano SENZA farina per creare tensione superficiale. Non stringere troppo: la pinsa deve rimanere soffice."
+      "text": "Rovesciare l'impasto su piano leggermente infarinato. Dividere in 6 panetti da circa 295-300g ciascuno. Piegare ogni pezzo portando i lembi verso il centro per dare forza, poi capovolgere e pirlare delicatamente su piano SENZA farina per creare tensione superficiale. Non stringere troppo: la pinsa deve rimanere soffice."
     },
     {
       "title": "Maturazione in frigo (24-48h)",
@@ -191,5 +204,29 @@
       "title": "Appretto finale (30-45 min)",
       "text": "Lasciare riposare le pinse stese 30-45 minuti a temperatura ambiente, coperte con un canovaccio umido. Questo rilassamento finale permette all'impasto di gonfiarsi leggermente e facilita la cottura uniforme."
     }
-  ]
+  ],
+  "sensoryProfile": {
+    "axes": [
+      {
+        "label": "Croccantezza Crosta",
+        "value": 9
+      },
+      {
+        "label": "Alveolatura",
+        "value": 8
+      },
+      {
+        "label": "Leggerezza & Digeribilità",
+        "value": 9
+      },
+      {
+        "label": "Umidità Mollica",
+        "value": 7
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 8
+      }
+    ]
+  }
 }

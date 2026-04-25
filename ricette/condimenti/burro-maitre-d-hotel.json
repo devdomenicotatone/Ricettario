@@ -130,5 +130,30 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-19T20:32:57.188Z",
   "image": "images/ricette/condimenti/burro-maitre-d-hotel.webp",
-  "imageAttribution": "📷 Foto: Mi Butter SA — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: Mi Butter SA — Pexels License via Pexels",
+  "sensoryProfile": {
+    "summary": "Un burro composto di scuola classica francese, dove la ricchezza lattea del burro di centrifuga all'82% di grassi incontra la freschezza erbacea del prezzemolo e la vivacità citrica del limone. Al palato si rivela avvolgente e fondente, con una progressione aromatica che va dal grasso-cremoso all'erbaceo-agrumato, chiudendo con un lieve calore del pepe bianco e uno sprint pungente dell'aglio.",
+    "axes": [
+      {
+        "label": "Grassezza/Untuosità",
+        "value": 9
+      },
+      {
+        "label": "Acidità Citrica",
+        "value": 6
+      },
+      {
+        "label": "Intensità Aromatica Erbacea",
+        "value": 7
+      },
+      {
+        "label": "Sapidità",
+        "value": 5
+      },
+      {
+        "label": "Piccantezza/Pungenza",
+        "value": 3
+      }
+    ]
+  }
 }

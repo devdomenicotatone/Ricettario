@@ -99,7 +99,7 @@
   "flourTable": [],
   "baking": {
     "temperature": "140°C",
-    "time": "90-120 minuti",
+    "time": "120 minuti",
     "tips": [
       "In questa specifica preparazione, l'uso del forno ventilato è consigliato per favorire la rapida evaporazione dell'acqua di vegetazione.",
       "Se il forno tende a scaldare molto, abbassare a 130°C e prolungare la cottura di 30 minuti."
@@ -147,5 +147,29 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-24T14:35:19.869Z",
   "image": "images/ricette/conserve/pomodorini-confit-sottolio.webp",
-  "imageAttribution": "📷 Foto: Ivan Vi — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: Ivan Vi — Pexels License via Pexels",
+  "sensoryProfile": {
+    "axes": [
+      {
+        "label": "Dolcezza Concentrata",
+        "value": 9
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Acidità Residua",
+        "value": 4
+      },
+      {
+        "label": "Grassezza/Untuosità",
+        "value": 9
+      },
+      {
+        "label": "Sapidità (Umami)",
+        "value": 7
+      }
+    ]
+  }
 }

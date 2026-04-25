@@ -183,5 +183,30 @@
       "title": "Porzionatura e Conservazione",
       "text": "Una volta solidificato, estraete il blocco dal freezer. Con un coltello lungo e affilato (o un cutter da cucina), tagliate prima in strisce, poi in cubetti di circa 3×3 cm. Staccate i singoli dadi delicatamente: non saranno durissimi (il sale abbassa il punto di congelamento), ma saranno compatti e lavorabili. Trasferiteli in sacchetti da freezer o in contenitori ermetici, separando i dadi con carta da forno per evitare che si attacchino tra loro. Si conservano in freezer fino a 6 mesi. Per l'utilizzo: aggiungere 1 dado (circa 3×3 cm) ogni 500 ml di acqua per brodo o direttamente in soffritti e zuppe, assaggiando prima di aggiungere ulteriore sale."
     }
-  ]
+  ],
+  "sensoryProfile": {
+    "summary": "Un dado vegetale artigianale dalla straordinaria intensità sapida, dove la concentrazione osmotica del sale marino (300g su ~950g di verdure, ratio 31.5%) esalta e condensa ogni nota aromatica delle verdure. Al naso emergono sentori di soffritto maturo, prezzemolo erbaceo e pomodoro concentrato; in bocca domina un umami vegetale profondo e persistente, con una dolcezza di fondo garantita da carote, cipolle dorate e zucchine, bilanciata dalla nota acetica e fresca del sedano. La doppia cottura con riduzione finale porta a una complessità aromatica da reazione di Maillard leggera, conferendo corpo e lunghezza gustativa.",
+    "axes": [
+      {
+        "label": "Sapidità (Umami)",
+        "value": 10
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Dolcezza Vegetale",
+        "value": 6
+      },
+      {
+        "label": "Concentrazione / Persistenza",
+        "value": 9
+      },
+      {
+        "label": "Freschezza Erbacea",
+        "value": 4
+      }
+    ]
+  }
 }

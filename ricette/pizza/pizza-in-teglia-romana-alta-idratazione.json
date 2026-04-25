@@ -214,5 +214,30 @@
   "_generatedBy": "claude",
   "_createdAt": "2026-04-16T21:35:51.898Z",
   "image": "images/ricette/pizza/pizza-in-teglia-romana-alta-idratazione.webp",
-  "imageAttribution": "📷 Foto: Anna Guerrero — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: Anna Guerrero — Pexels License via Pexels",
+  "sensoryProfile": {
+    "summary": "Una pizza in teglia romana di straordinaria complessità strutturale: l'idratazione all'85% con bassinage e la maturazione a freddo di 24 ore regalano un'alveolatura aperta e irregolare, quasi briosa, con una mollica eterea e umida che contrasta magistralmente con una base croccante e caramellata. Al naso, la fermentazione enzimatica prolungata a 4°C sviluppa note profonde di cereale integrale, burro di grano e una lieve acidità lattica che eleva il profilo aromatico ben oltre la media. In bocca, la masticazione è piacevolmente elastica ma mai tenace, con una sapidità calibrata al 2,5% su farina che sostiene l'insieme senza dominare, lasciando una persistenza aromatica lunga e pulita.",
+    "axes": [
+      {
+        "label": "Croccantezza della Base",
+        "value": 9
+      },
+      {
+        "label": "Alveolatura Aperta",
+        "value": 9
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Umidità della Mollica",
+        "value": 8
+      },
+      {
+        "label": "Acidità / Note Lattiche",
+        "value": 5
+      }
+    ]
+  }
 }

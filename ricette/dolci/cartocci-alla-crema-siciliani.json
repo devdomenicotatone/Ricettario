@@ -225,5 +225,30 @@
       "title": "Frittura in olio — 170-175°C",
       "text": "Scaldare abbondante olio di semi di arachidi in una pentola alta fino a 170-175°C (controllare con termometro). Friggere i cartocci CON i cannelli per 3-4 minuti, girandoli delicatamente, fino a doratura uniforme. Scolare su carta assorbente, lasciar raffreddare 1-2 minuti e sfilare i cannelli con delicatezza ruotandoli."
     }
-  ]
+  ],
+  "sensoryProfile": {
+    "summary": "I Cartocci alla Crema Siciliani si presentano come una pasticceria fritta di grande carattere: la pasta lievitata a bassa idratazione (45%), arricchita di strutto e uovo, sviluppa in frittura a 170-175°C una crosta dorata e fragrante con spiccate note di Maillard, avvolgendo un cuore cedevole e leggermente briochato. La farcitura — sia essa la crema pasticcera al limone, densa e vellutata, o la ricotta setacciata con gocce di fondente — esalta la dolcezza strutturale dell'impasto bilanciandola con una grassezza piena e avvolgente. Il profilo complessivo è quello di un dolce opulento, festivo e sensorialmente appagante, dove la croccantezza esterna dialoga con la cremosità del ripieno in un contrasto di texture tipicamente siculo.",
+    "axes": [
+      {
+        "label": "Croccantezza Esterna",
+        "value": 8
+      },
+      {
+        "label": "Dolcezza",
+        "value": 8
+      },
+      {
+        "label": "Grassezza/Untuosità",
+        "value": 7
+      },
+      {
+        "label": "Cremosità del Ripieno",
+        "value": 9
+      },
+      {
+        "label": "Intensità Aromatica (Maillard + Limone)",
+        "value": 7
+      }
+    ]
+  }
 }

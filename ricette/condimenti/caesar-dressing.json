@@ -167,5 +167,30 @@
   "_generatedBy": "claude-opus",
   "_createdAt": "2026-04-19T20:32:20.490Z",
   "image": "images/ricette/condimenti/caesar-dressing.webp",
-  "imageAttribution": "📷 Foto: Gundula Vogel — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: Gundula Vogel — Pexels License via Pexels",
+  "sensoryProfile": {
+    "summary": "Un Caesar Dressing di scuola classica, strutturato attorno a un'emulsione ricca e avvolgente dove la grassezza dell'olio extravergine e del tuorlo incontra un umami profondo e stratificato — acciughe, Worcestershire, Parmigiano 24 mesi — che si dispiega in un lungo finale sapido e persistente. L'acidità brillante del limone fresco e dell'aceto bilancia la componente grassa con precisione chirurgica, mentre l'aglio crudo e la senape di Digione conferiscono nervo e pungenza, tenendo viva la tensione gustativa sino all'ultimo.",
+    "axes": [
+      {
+        "label": "Sapidità (Umami)",
+        "value": 9
+      },
+      {
+        "label": "Grassezza / Cremosità",
+        "value": 8
+      },
+      {
+        "label": "Acidità",
+        "value": 7
+      },
+      {
+        "label": "Pungenza (Aglio & Senape)",
+        "value": 6
+      },
+      {
+        "label": "Persistenza Aromatica",
+        "value": 9
+      }
+    ]
+  }
 }

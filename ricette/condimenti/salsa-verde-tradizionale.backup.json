@@ -1,0 +1,175 @@
+{
+  "title": "Salsa Verde Tradizionale",
+  "slug": "salsa-verde-tradizionale",
+  "emoji": "🌿",
+  "description": "La ricetta professionale della classica salsa verde (bagnet verd), perfetta per accompagnare bolliti, carni e crostini. Con uova sode e un'emulsione perfetta a base d'olio EVO.",
+  "subtitle": "L'emulsione piemontese a freddo con prezzemolo, acciughe e capperi",
+  "category": "Condimenti",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per la Salsa Verde",
+      "items": [
+        {
+          "name": "Prezzemolo Fresco",
+          "note": "(solo le foglie, pesate pulite)",
+          "grams": 100,
+          "tokenId": "prezzemolo_fresco"
+        },
+        {
+          "name": "Mollica di Pane Raffermo",
+          "note": "(tipo casereccio o pancarré senza crosta)",
+          "grams": 40,
+          "tokenId": "mollica_pane"
+        },
+        {
+          "name": "Aceto di Vino Bianco",
+          "note": "(acidità 6%)",
+          "grams": 40,
+          "tokenId": "aceto_vino_bianco"
+        },
+        {
+          "name": "Tuorli d'Uovo",
+          "note": "(sodi)",
+          "grams": 30,
+          "tokenId": "tuorli_sodi"
+        },
+        {
+          "name": "Filetti di Acciuga",
+          "note": "(sott'olio sgocciolati o sotto sale ben puliti)",
+          "grams": 15,
+          "tokenId": "filetti_acciuga"
+        },
+        {
+          "name": "Capperi Sotto Sale",
+          "note": "(ben dissalati)",
+          "grams": 10,
+          "tokenId": "capperi_dissalati"
+        },
+        {
+          "name": "Aglio",
+          "note": "(privato dell'anima interna)",
+          "grams": 5,
+          "tokenId": "aglio_pulito"
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(fruttato leggero/medio)",
+          "grams": 120,
+          "tokenId": "olio_evo"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(regolarsi all'assaggio)",
+          "grams": 2,
+          "tokenId": "sale_fino"
+        },
+        {
+          "name": "Pepe Nero",
+          "note": "(macinato fresco)",
+          "grams": 1,
+          "tokenId": "pepe_nero"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Cottura delle uova e lavaggio erbe",
+      "text": "Immergere le uova in un pentolino di acqua fredda, portare a ebollizione e cuocere per {tempo_uova:9!} minuti esatti. Raffreddarle immediatamente in acqua ghiacciata per fermare la cottura. Sgusciarle, prelevare {tuorli_sodi:30}g di tuorli e tenerli da parte. Nel frattempo, lavare accuratamente in acqua ghiacciata {prezzemolo_fresco:100}g di foglie di prezzemolo. Asciugarle in modo maniacale utilizzando una centrifuga per insalate e tamponandole poi con carta assorbente: il prezzemolo deve essere perfettamente asciutto per non ossidare la salsa."
+    },
+    {
+      "title": "Macerazione della mollica",
+      "text": "In una piccola boule, sbriciolare {mollica_pane:40}g di pane raffermo. Irrorare uniformemente con {aceto_vino_bianco:40}g. Mescolare e lasciare macerare per circa 10 minuti affinché l'aceto venga completamente assorbito dalla struttura del pane. Se necessario, strizzare leggermente l'eccesso di liquido."
+    },
+    {
+      "title": "Preparazione della base aromatica",
+      "text": "Sciacquare ripetutamente sotto acqua fredda {capperi_dissalati:10}g per eliminare il sale in eccesso, poi asciugarli accuratamente. Prendere {aglio_pulito:5}g (circa 1 spicchio), tagliarlo a metà longitudinalmente e rimuovere il germoglio centrale (l'anima) per garantire maggiore digeribilità. Preparare {filetti_acciuga:15}g sgocciolandoli dal loro olio di conservazione."
+    },
+    {
+      "title": "Tritatura a freddo",
+      "text": "Inserire nel cutter (o in un tritatutto precedentemente raffreddato in frigorifero) il prezzemolo, l'aglio, i capperi, le acciughe, la mollica acetata e i tuorli sodi. Frullare a scatti brevi (pulsazioni) per evitare di surriscaldare le lame, il che renderebbe il prezzemolo scuro e amaro. Continuare fino a ottenere una grana fine ma rustica. In alternativa, per i puristi, eseguire questa operazione rigorosamente al coltello o con la mezzaluna su un tagliere."
+    },
+    {
+      "title": "Emulsione finale",
+      "text": "Trasferire il trito in una ciotola (se si è usato il cutter). Iniziare a versare {olio_evo:120}g a filo molto sottile, mescolando energicamente con una frusta a mano o un cucchiaio per creare l'emulsione tra i liquidi, l'olio e l'uovo (che funge da legante). Aggiustare con {sale_fino:2}g (valutando prima la sapidità portata dalle acciughe) e {pepe_nero:1}g. Coprire con pellicola a contatto e far riposare in frigorifero per almeno un paio d'ore prima del servizio."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "glossary": [
+    {
+      "term": "Anima dell'aglio",
+      "definition": "Il germoglio verde o biancastro all'interno dello spicchio d'aglio. Rimuoverlo rende l'aglio crudo meno aggressivo e più digeribile."
+    },
+    {
+      "term": "Dissalatura",
+      "definition": "Operazione che consiste nel rimuovere il sale di conservazione (da capperi o acciughe) tramite ammollo o risciacquo in acqua dolce."
+    },
+    {
+      "term": "Emulsione",
+      "definition": "Dispersione di un liquido in un altro (come olio e acqua/aceto) tenuta insieme da un agente emulsionante, in questo caso le lecitine presenti nel tuorlo d'uovo."
+    },
+    {
+      "term": "Ossidazione",
+      "definition": "Il processo per cui il prezzemolo, tagliato e a contatto con aria o calore (lame surriscaldate), annerisce perdendo il suo colore verde brillante."
+    }
+  ],
+  "alert": "MAI frullare il prezzemolo con lame calde o a velocità continua prolungata nel mixer: l'attrito meccanico cuoce gli oli essenziali, rendendo la salsa di un verde spento, quasi marrone, e conferendo un retrogusto amaro metallico.",
+  "proTips": [
+    "Il segreto per un colore verde smeraldo perfetto è asciugare completamente il prezzemolo dopo averlo lavato. La minima presenza di acqua residua accelera l'ossidazione.",
+    "Usa un olio extravergine dal fruttato leggero o medio (es. Ligure o del Garda): un olio pugliese o toscano troppo piccante e amaro coprirebbe la delicatezza degli altri ingredienti.",
+    "La texture tradizionale (bagnet verd) prevede l'uso della mezzaluna. Se usi il mixer, raffredda il boccale e le lame in frigo prima di iniziare per mantenere le temperature bassissime."
+  ],
+  "storage": [
+    "Conservare in frigorifero all'interno di un vasetto di vetro ermetico per 4-5 giorni, avendo cura di livellare la superficie e coprirla costantemente con un filo d'olio EVO per bloccare il contatto con l'ossigeno.",
+    "Il congelamento è fortemente sconsigliato: l'acqua delle erbe cristallizza e l'emulsione si separa (l'olio si slega), rovinando irrimediabilmente sia la texture che il profilo aromatico."
+  ],
+  "imageKeywords": [
+    "italian salsa verde",
+    "bagnet verd piemontese",
+    "green parsley sauce with boiled meat",
+    "salsa verde tradizionale",
+    "homemade salsa verde dip"
+  ],
+  "tags": [
+    "Salsa Verde",
+    "Piemontese",
+    "Condimento a freddo",
+    "Bollito",
+    "Senza cottura"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "_createdAt": "2026-04-24T13:05:21.348Z",
+  "image": "images/ricette/condimenti/salsa-verde-tradizionale.webp",
+  "imageAttribution": "📷 Foto: Los Muertos Crew — Pexels License via Pexels",
+  "sensoryProfile": {
+    "axes": [
+      {
+        "label": "Intensità Erbacea",
+        "value": 9
+      },
+      {
+        "label": "Acidità",
+        "value": 7
+      },
+      {
+        "label": "Sapidità (Umami)",
+        "value": 8
+      },
+      {
+        "label": "Grassezza",
+        "value": 6
+      },
+      {
+        "label": "Persistenza Aromatica",
+        "value": 8
+      }
+    ]
+  }
+}

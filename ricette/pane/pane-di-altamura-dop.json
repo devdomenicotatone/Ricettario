@@ -169,5 +169,30 @@
       "title": "Appretto (Seconda Lievitazione)",
       "text": "Posizionare i pani formati su una teglia infarinata di abbondante semola, o in cestini di lievitazione (banneton), con la chiusura verso il basso. Coprire con un panno di cotone e lasciare lievitare per 60-90 minuti a 24°C, finché l'impasto risulterà soffice al tocco (prova del dito: deve tornare su lentamente)."
     }
-  ]
+  ],
+  "sensoryProfile": {
+    "summary": "Il Pane di Altamura si presenta con una crosta ambrata e sonora, frutto di una cottura trifasica spinta fino a 250°C su pietra refrattaria, che esalta le note tostate e la reazione di Maillard tipiche della semola rimacinata. La mollica, compatta e a grana fine come da tradizione pugliese, rivela una masticabilità tenace e una dolcezza cerealicola profonda, sostenuta dalla biga a 16 ore e dal miele di acacia. La complessità aromatica è quella di un pane maturo e completo: fruttato lattico in sottofondo, con un finale lungo e avvolgente.",
+    "axes": [
+      {
+        "label": "Croccantezza Crosta",
+        "value": 9
+      },
+      {
+        "label": "Sapore di Grano (Semola)",
+        "value": 9
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Alveolatura",
+        "value": 4
+      },
+      {
+        "label": "Umidità Mollica",
+        "value": 5
+      }
+    ]
+  }
 }

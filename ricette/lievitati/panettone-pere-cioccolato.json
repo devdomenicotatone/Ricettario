@@ -260,5 +260,30 @@
       "title": "Scardasso e Preparazione Cottura",
       "text": "Con lama affilata o scardasso, incidere una croce profonda 1cm sulla superficie (4 tagli da centro verso bordi, 6-7cm lunghezza). Inserire al centro della croce 10g burro freddo a tocchetto. Questo darà la classica scosciatura."
     }
-  ]
+  ],
+  "sensoryProfile": {
+    "summary": "Un panettone di straordinaria complessità organolettica, dove la ricchezza burrosa e la dolcezza vellutata dei tuorli (650g totali) si intrecciano con le note fruttate della pera candita e l'amarezza nobile del cioccolato fondente. La lunga fermentazione con lievito madre (12-14 ore di puntata + 8-10 ore di appretto) conferisce una profondità acida calibrata e un'alveolatura aperta e irregolare, mentre l'emulsione aromatica di vaniglia Bourbon, miele d'acacia e pasta d'arancia eleva la persistenza olfattiva a livelli da grand cru della pasticceria italiana.",
+    "axes": [
+      {
+        "label": "Sofficità & Alveolatura",
+        "value": 9
+      },
+      {
+        "label": "Dolcezza & Ricchezza",
+        "value": 9
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 9
+      },
+      {
+        "label": "Acidità (Lievito Madre)",
+        "value": 4
+      },
+      {
+        "label": "Persistenza Gustativa",
+        "value": 8
+      }
+    ]
+  }
 }

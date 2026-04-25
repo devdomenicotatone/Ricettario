@@ -1,0 +1,191 @@
+{
+  "title": "Ciabatta con Poolish, Malto e Criscito",
+  "slug": "ciabatta-poolish-malto-criscito",
+  "emoji": "🥖",
+  "description": "Versione evoluta della ciabatta: l'aggiunta di malto diastasico garantisce una crosta bruna e croccante, mentre il criscito dona la complessità aromatica del lievito madre.",
+  "subtitle": "Alta idratazione (76%) con pre-fermento liquido, malto diastasico e criscito",
+  "category": "Pane",
+  "hydration": 76,
+  "targetTemp": "24-25°C",
+  "fermentation": "~18h",
+  "totalFlour": 510,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per il Poolish (Maturazione 12h)",
+      "items": [
+        {
+          "name": "Farina Tipo 0",
+          "note": "(W 280-300)",
+          "grams": 150,
+          "tokenId": "farina_poolish"
+        },
+        {
+          "name": "Acqua",
+          "note": "(temperatura ambiente 20-22°C)",
+          "grams": 150,
+          "tokenId": "acqua_poolish"
+        },
+        {
+          "name": "Lievito di Birra Secco",
+          "note": "(dosaggio lento per maturazione perfetta)",
+          "grams": 0.2,
+          "tokenId": "lievito_poolish"
+        }
+      ]
+    },
+    {
+      "group": "Per l'Impasto Finale",
+      "items": [
+        {
+          "name": "Farina Tipo 0",
+          "note": "(W 280-300)",
+          "grams": 350,
+          "tokenId": "farina_impasto"
+        },
+        {
+          "name": "Acqua (Base)",
+          "note": "(10-12°C per spirale, 18-20°C a mano)",
+          "grams": 180,
+          "tokenId": "acqua_impasto_base"
+        },
+        {
+          "name": "Acqua (Bassinage)",
+          "note": "(aggiunta a filo a fine impasto)",
+          "grams": 50,
+          "tokenId": "acqua_bassinage"
+        },
+        {
+          "name": "Lievito di Birra Secco",
+          "note": "(piccola spinta finale)",
+          "grams": 0.5,
+          "tokenId": "lievito_impasto"
+        },
+        {
+          "name": "Malto Diastasico",
+          "note": "(per spinta enzimatica e colore)",
+          "grams": 2.5,
+          "tokenId": "malto"
+        },
+        {
+          "name": "Criscito (Lievito Madre Ess.)",
+          "note": "(per aroma e digeribilità)",
+          "grams": 15,
+          "tokenId": "criscito"
+        },
+        {
+          "name": "Sale fino",
+          "note": "(2% sulla farina totale)",
+          "grams": 10,
+          "tokenId": "sale"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "stepsCondiment": [],
+  "flourTable": [
+    {
+      "type": "Farina Tipo 0 (Media Forza)",
+      "w": "280-320",
+      "brands": "Petra 3, Caputo Nuvola, Garofalo W260"
+    }
+  ],
+  "baking": {
+    "temperature": "250°C",
+    "time": "25-30 minuti",
+    "tips": [
+      "Preriscaldare bene la pietra refrattaria.",
+      "Vapore massiccio nei primi 12 minuti (fondamentale per l'azione del malto).",
+      "Abbassare a 220°C e togliere il vapore per la seconda metà della cottura.",
+      "Ultimi 5 minuti a spiffero per una crosta croccante."
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Malto Diastasico",
+      "definition": "Farina di cereali germinati ricca di enzimi che trasformano gli amidi in zuccheri, alimentando i lieviti e migliorando il colore della crosta."
+    },
+    {
+      "term": "Criscito",
+      "definition": "Lievito madre naturale essiccato che conferisce il sapore tipico della fermentazione naturale e migliora la conservabilità del pane."
+    },
+    {
+      "term": "Bassinage",
+      "definition": "Aggiunta graduale di acqua a fine impasto per raggiungere alte idratazioni senza perdere l'incordatura."
+    }
+  ],
+  "alert": "L'aggiunta di malto diastasico accelera la fermentazione. Monitora visivamente l'impasto: se le temperature ambientali sono alte, i tempi di appretto potrebbero ridursi rispetto ai 45 minuti canonici.",
+  "proTips": [
+    "Usa solo semola rimacinata per lo spolvero: non viene assorbita e crea lo stacco tipico della ciabatta.",
+    "Il criscito agisce come miglioratore aromatico: la ciabatta profumerà di pane antico anche se usiamo il lievito di birra.",
+    "Non pirlare o manipolare i pezzi tagliati: il segreto dell'alveolo grande è il taglio netto del glutine."
+  ],
+  "storage": [
+    "Per la conservazione a breve termine (fino a 2-3 giorni), avvolgere la ciabatta in un sacchetto di carta per alimenti o in un canovaccio di cotone. Questo permette alla crosta di 'respirare', mantenendola croccante e rallentando il raffermamento della mollica. Evitare il frigorifero, che accelera la retrogradazione degli amidi.",
+    "Per la congelazione, attendere il completo raffreddamento del pane, tagliarlo a fette o porzioni e avvolgerlo strettamente prima in pellicola alimentare, poi inserirlo in un sacchetto da freezer. Consumare entro 2-3 mesi. Questo doppio imballaggio previene la disidratazione e il 'freezer burn'.",
+    "Per rigenerare la fragranza, riscaldare il forno a 180°C. Se il pane è a temperatura ambiente, infornare per 5-7 minuti. Se congelato, infornare direttamente (senza scongelare) per 10-15 minuti. Questo shock termico ripristina la croccantezza esterna e la morbidezza interna."
+  ],
+  "imageKeywords": [
+    "ciabatta bread open crumb",
+    "artisan bread malt diastatic",
+    "poolish bread recipe",
+    "high hydration ciabatta"
+  ],
+  "tags": [
+    "alta idratazione",
+    "poolish",
+    "malto diastasico",
+    "criscito",
+    "pane italiano"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "image": "images/ricette/pane/ciabatta-con-poolish.webp",
+  "imageAttribution": "📷 Foto: Cats Coming — Pexels",
+  "steps": [
+    {
+      "title": "Preparazione del Poolish",
+      "text": "In una ciotola, sciogliere {lievito_poolish:0.2}g di lievito secco in {acqua_poolish:150}g di acqua. Aggiungere {farina_poolish:150}g di farina e mescolare fino a ottenere una pastella liscia. Coprire e lasciare maturare a 20°C per circa 12 ore (fino al raddoppio e inizio cedimento)."
+    },
+    {
+      "title": "Avvio dell'Impasto",
+      "text": "Nella vasca della spirale, inserire il poolish maturo, {farina_impasto:350}g di farina, {malto:2.5}g di malto, {criscito:15}g di criscito, {lievito_impasto:0.5}g di lievito secco e {acqua_impasto_base:180}g di acqua fredda. Avviare in V1 per circa 5-7 minuti fino a formare una maglia coesa."
+    },
+    {
+      "title": "Incordatura e Bassinage",
+      "text": "Passare in V2. Aggiungere {sale:10}g di sale. Iniziare il bassinage con i restanti {acqua_bassinage:50}g di acqua a filo, aspettando che ogni dose sia assorbita. Chiudere l'impasto a {temp_target:25!}°C."
+    },
+    {
+      "title": "Puntata e Pieghe",
+      "text": "Trasferire in un contenitore oliato. Lasciar riposare per {puntata_totale:120!} min a 24°C. Eseguire due serie di coil fold a distanza di {intervallo_pieghe:45!} minuti per dare struttura."
+    },
+    {
+      "title": "Formatura e Appretto",
+      "text": "Rovesciare su abbondante semola. Tagliare rettangoli netti col tarocco senza sgonfiare. Disporre su telo infarinato e lasciar lievitare per {appretto_tempo:45!} minuti."
+    }
+  ],
+  "sensoryProfile": {
+    "axes": [
+      {
+        "label": "Croccantezza Crosta",
+        "value": 9
+      },
+      {
+        "label": "Alveolatura",
+        "value": 8
+      },
+      {
+        "label": "Acidità",
+        "value": 5
+      },
+      {
+        "label": "Umidità Mollica",
+        "value": 7
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 8
+      }
+    ]
+  }
+}

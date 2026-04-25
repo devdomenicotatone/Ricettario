@@ -233,5 +233,30 @@
       "title": "Scarpatura e Cottura",
       "text": "Lasciare i panettoni a temperatura ambiente per 15-30 minuti per far formare una pellicola superficiale (pelle). Praticare un'incisione a croce (scarpatura) con una lametta e posizionare una noce di burro al centro. Infornare."
     }
-  ]
+  ],
+  "sensoryProfile": {
+    "summary": "Un panettone artigianale di straordinaria complessità, costruito su una struttura a doppio impasto con lievito madre rinfrescato tre volte, che conferisce una acidità lattica finissima e un'alveolatura aperta e setosa. La generosa quota di burro (450g totali) e tuorli (300g totali) regala una mollica burrosa e fondente, mentre l'emulsione aromatica di vaniglia, miele di acacia e pasta d'arancia eleva il profilo olfattivo verso note floreal-citrine di rara persistenza. La cottura a valvola aperta e il raffreddamento capovolto garantiscono una struttura asciutta e verticale, con una crosta sottile e lacca di Maillard moderata.",
+    "axes": [
+      {
+        "label": "Alveolatura & Leggerezza",
+        "value": 9
+      },
+      {
+        "label": "Ricchezza Burrosa (Grassezza)",
+        "value": 9
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Acidità Lattica (Lievito Madre)",
+        "value": 5
+      },
+      {
+        "label": "Dolcezza",
+        "value": 7
+      }
+    ]
+  }
 }

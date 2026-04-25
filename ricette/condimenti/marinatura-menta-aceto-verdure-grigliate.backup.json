@@ -1,0 +1,160 @@
+{
+  "title": "Marinatura alla Menta e Aceto",
+  "slug": "marinatura-menta-aceto-verdure-grigliate",
+  "emoji": "🌿",
+  "description": "L'emulsione balsamica ispirata alla tradizione ebraico-romana, perfetta per zucchine e melanzane alla brace.",
+  "subtitle": "Marinatura aromatica a base di olio EVO, aceto e menta",
+  "category": "Condimenti",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per la Concia",
+      "items": [
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(fruttato leggero o delicato)",
+          "grams": 100,
+          "tokenId": "olio_evo_verdure"
+        },
+        {
+          "name": "Aceto di Mele",
+          "note": "(o aceto di vino bianco delicato)",
+          "grams": 30,
+          "tokenId": "aceto_mele"
+        },
+        {
+          "name": "Acqua",
+          "note": "(calda, ~40°C)",
+          "grams": 20,
+          "tokenId": "acqua_calda_verdure"
+        },
+        {
+          "name": "Menta Fresca",
+          "note": "(foglie intere o spezzettate a mano)",
+          "grams": 5,
+          "tokenId": "menta_fresca"
+        },
+        {
+          "name": "Basilico Fresco",
+          "note": "(spezzettato a mano)",
+          "grams": 3,
+          "tokenId": "basilico_fresco"
+        },
+        {
+          "name": "Aglio",
+          "note": "(1 spicchio intero schiacciato)",
+          "grams": 5,
+          "tokenId": "aglio_intero"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "",
+          "grams": 3,
+          "tokenId": "sale_fino_verdure"
+        },
+        {
+          "name": "Zucchero",
+          "note": "(un pizzico per bilanciare l'acidità)",
+          "grams": 2,
+          "tokenId": "zucchero_pizzico"
+        },
+        {
+          "name": "Pepe Nero",
+          "note": "(macinato fresco)",
+          "grams": 1,
+          "tokenId": "pepe_nero_verdure"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Preparazione della base acida",
+      "text": "In una ciotola, unire {aceto_mele:30}g di aceto, {acqua_calda_verdure:20}g di acqua calda, {sale_fino_verdure:3}g di sale e {zucchero_pizzico:2}g di zucchero. Mescolare fino al completo scioglimento dei cristalli. Aggiungere {aglio_intero:5}g di aglio schiacciato e {pepe_nero_verdure:1}g di pepe."
+    },
+    {
+      "title": "Emulsione e aromatizzazione",
+      "text": "Versare a filo {olio_evo_verdure:100}g di olio extravergine d'oliva sbattendo vigorosamente con una frusta a mano. Una volta ottenuta un'emulsione stabile, aggiungere {menta_fresca:5}g di menta e {basilico_fresco:3}g di basilico spezzettati a mano per evitare l'ossidazione delle foglie."
+    },
+    {
+      "title": "Condimento a strati",
+      "text": "Man mano che le verdure (zucchine, melanzane, peperoni, funghi) vengono rimosse dalla brace, disporle in una pirofila creando degli strati. Irrorare ogni strato con l'emulsione mentre le verdure sono ancora bollenti per favorire l'assorbimento degli aromi."
+    },
+    {
+      "title": "Riposo e stabilizzazione",
+      "text": "Lasciare riposare le verdure condite a temperatura ambiente per almeno 30-60 minuti. Questo tempo permette alla componente acida dell'aceto di ammorbidire le fibre vegetali e alla menta di sprigionare il suo potere rinfrescante."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "glossary": [
+    {
+      "term": "Concia",
+      "definition": "Tecnica di condimento del Sud Italia che prevede l'uso di aceto, olio ed erbe fresche per marinare verdure cotte, garantendone sapore e conservazione."
+    },
+    {
+      "term": "Vinaigrette",
+      "definition": "Emulsione instabile di una parte acida (aceto) e una parte grassa (olio), utilizzata per condire a crudo vegetali o carni bianche."
+    }
+  ],
+  "alert": "ATTENZIONE: Non tritare l'aglio se desideri un aroma delicato. Lasciandolo intero e schiacciato, potrai rimuoverlo prima di servire, evitando che il suo sapore sovrasti la dolcezza naturale di peperoni e funghi.",
+  "proTips": [
+    "Per i funghi grigliati: immergili nell'emulsione subito dopo la cottura, poiché tendono ad asciugarsi più velocemente di zucchine e melanzane.",
+    "L'aceto di mele è preferibile a quello di vino perché risulta più delicato e meno aggressivo sul palato, ideale per non coprire il sentore di affumicato della brace.",
+    "Se avanzano, queste verdure sono ancora più buone il giorno dopo, poiché la 'concia' agisce come una marinatura profonda."
+  ],
+  "storage": [
+    "Conservare la marinatura in frigorifero all'interno di un vasetto di vetro a chiusura ermetica per un massimo di 10-14 giorni. L'olio EVO tenderà a solidificare a causa delle basse temperature: per ripristinare la fluidità, è sufficiente lasciare il contenitore a temperatura ambiente per 30 minuti e agitare vigorosamente prima dell'uso per riemulsionare gli ingredienti.",
+    "Per una conservazione a lungo termine (fino a 3 mesi), congelare la marinatura versandola negli stampi per il ghiaccio. Una volta solidificati, trasferire i cubetti in un sacchetto per sottovuoto o in un contenitore per freezer. Scongelare la dose desiderata in frigorifero o a temperatura ambiente, agitando bene prima di condire per ricreare l'emulsione.",
+    "Un accorgimento tecnico per preservare un colore più brillante della menta durante la conservazione è quello di sbollentare le foglie per 15 secondi in acqua bollente e raffreddarle immediatamente in acqua e ghiaccio. Questo shock termico fissa la clorofilla e rallenta il processo di ossidazione enzimatica."
+  ],
+  "imageKeywords": [
+    "marinated grilled vegetables",
+    "zucchine alla scapece",
+    "mint and vinegar dressing",
+    "verdure grigliate marinate",
+    "mediterranean vegetable condiment"
+  ],
+  "tags": [
+    "verdure",
+    "grigliata",
+    "vegano",
+    "senza glutine",
+    "contorno",
+    "mediterraneo"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "_createdAt": "2026-04-17T18:05:00.000Z",
+  "image": "images/ricette/condimenti/marinatura-menta-aceto-verdure-grigliate.webp",
+  "imageAttribution": "📷 Foto: Julia Filirovska — Pexels License via Pexels",
+  "_originalImageUrl": "https://images.pexels.com/photos/8250283/pexels-photo-8250283.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+  "sensoryProfile": {
+    "axes": [
+      {
+        "label": "Acidità",
+        "value": 7
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Fruttato",
+        "value": 6
+      },
+      {
+        "label": "Dolcezza",
+        "value": 2
+      },
+      {
+        "label": "Grassezza",
+        "value": 7
+      }
+    ]
+  }
+}

@@ -184,5 +184,30 @@
       "title": "Il Bagnetto (Manutenzione Straordinaria)",
       "text": "Da eseguire solo se il lievito odora di formaggio/aceto pungente. Eliminare tutta la crosta esterna prelevando solo il cuore. In una boule, versare {acqua_bagnetto:1000}g a 38°C e farvi cadere {zucchero_bagnetto:10}g sul fondo (SENZA mescolare). Tagliare il lievito a fette, schiacciarle leggermente e immergerle. Lasciare a bagno per 20 minuti. I batteri acetici (antagonisti) si staccheranno per nutrirsi dello zucchero. Infine, strizzare vigorosamente il lievito e procedere immediatamente a un Rinfresco Standard."
     }
-  ]
+  ],
+  "sensoryProfile": {
+    "summary": "Una pasta madre solida al 50% di idratazione che si presenta come un ecosistema microbico bilanciato, forgiato dalla cilindratura ripetuta e dalla selezione varietale delle farine ad alto W. Al naso, una complessità lattico-acetica contenuta, con sentori di crosta di pane e note fruttate residue dell'uvetta starter. In bocca — metaforicamente parlando sul prodotto finito che da essa deriverà — promette una struttura glutinica tenace, un'alveolatura regolare e una spinta fermentativa potente ma disciplinata, con acidità orientata verso i lattici grazie al bagnetto opzionale.",
+    "axes": [
+      {
+        "label": "Forza Fermentativa",
+        "value": 9
+      },
+      {
+        "label": "Acidità Lattica",
+        "value": 6
+      },
+      {
+        "label": "Acidità Acetica",
+        "value": 4
+      },
+      {
+        "label": "Tenacia Glutinica",
+        "value": 9
+      },
+      {
+        "label": "Stabilità & Gestibilità",
+        "value": 8
+      }
+    ]
+  }
 }

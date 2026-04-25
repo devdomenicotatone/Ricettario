@@ -1,0 +1,230 @@
+{
+  "title": "Pane ai Cereali e Semi",
+  "slug": "pane-ai-cereali-semi",
+  "emoji": "🌾",
+  "description": "Un pane dal sapore rustico e intenso, arricchito con un mix di cereali e semi. Crosta croccante e mollica morbida, ideale per colazioni e bruschette.",
+  "subtitle": "Impasto diretto a media idratazione (68%) con maturazione a freddo",
+  "category": "Pane",
+  "hydration": 68,
+  "targetTemp": "24-25°C",
+  "fermentation": "18-24h",
+  "totalFlour": 1000,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per l'Impasto Base",
+      "items": [
+        {
+          "name": "Farina Tipo 1",
+          "note": "(W 280-300)",
+          "grams": 600,
+          "tokenId": "farina_base"
+        },
+        {
+          "name": "Farina Integrale di Grano Tenero",
+          "note": "(Forte, W >280)",
+          "grams": 300,
+          "tokenId": "farina_integrale"
+        },
+        {
+          "name": "Farina di Farro o Segale",
+          "note": "(Integrale o semintegrale)",
+          "grams": 100,
+          "tokenId": "farina_speciale"
+        },
+        {
+          "name": "Acqua",
+          "note": "(18-20°C)",
+          "grams": 600,
+          "tokenId": "acqua_base"
+        },
+        {
+          "name": "Acqua per bassinage",
+          "note": "(Fredda, 10-12°C)",
+          "grams": 80,
+          "tokenId": "acqua_bassinage"
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(0.5% su farina totale)",
+          "grams": 5,
+          "tokenId": "lievito_fresco"
+        },
+        {
+          "name": "Malto d'Orzo",
+          "note": "(In sciroppo o pasta)",
+          "grams": 10,
+          "tokenId": "malto"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(2.2% su farina totale)",
+          "grams": 22,
+          "tokenId": "sale_impasto"
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(A filo)",
+          "grams": 30,
+          "tokenId": "olio_evo"
+        }
+      ]
+    },
+    {
+      "group": "Sospensioni e Decorazione",
+      "items": [
+        {
+          "name": "Mix di semi per l'impasto",
+          "note": "(Girasole, lino, zucca, sesamo)",
+          "grams": 120,
+          "tokenId": "semi_impasto"
+        },
+        {
+          "name": "Mix di semi per la copertura",
+          "note": "(Per la crosta)",
+          "grams": 30,
+          "tokenId": "semi_copertura"
+        }
+      ]
+    }
+  ],
+  "suspensions": [
+    {
+      "name": "Mix di semi per l'impasto",
+      "note": "(Girasole, lino, zucca, sesamo)",
+      "grams": 120
+    }
+  ],
+  "steps": [
+    {
+      "title": "Miscelazione iniziale",
+      "text": "Nella vasca dell'impastatrice versare {farina_base:600}g di farina tipo 1, {farina_integrale:300}g di farina integrale, {farina_speciale:100}g di farina di farro o segale. Aggiungere il lievito sbriciolato ({lievito_fresco:5}g), il malto ({malto:10}g) e l'acqua di base ({acqua_base:600}g). Avviare la macchina in prima velocità per 5 minuti, fino a formare un impasto grezzo ma coeso."
+    },
+    {
+      "title": "Sviluppo del glutine e Bassinage",
+      "text": "Quando la maglia glutinica inizia a prendere struttura (l'impasto si stacca dal fondo della vasca), inserire il sale ({sale_impasto:22}g) e iniziare il bassinage aggiungendo l'acqua rimanente a filo ({acqua_bassinage:80}g), aspettando che ogni dose venga assorbita prima di versare la successiva. Passare in seconda velocità per circa 5-7 minuti fino al raggiungimento di una perfetta incordatura."
+    },
+    {
+      "title": "Inserimento dei grassi e delle sospensioni",
+      "text": "Riportare l'impastatrice in prima velocità e versare l'olio extravergine d'oliva ({olio_evo:30}g) a filo lentamente. Quando l'olio è completamente assorbito e l'impasto risulta setoso, aggiungere i semi misti ({semi_impasto:120}g). Fare girare la macchina per non più di 1-2 minuti al minimo, giusto il tempo di distribuire le sospensioni uniformemente. La temperatura dell'impasto dovrebbe essere intorno ai {targetTemp:24!}°C."
+    },
+    {
+      "title": "Puntata e Maturazione a freddo",
+      "text": "Trasferire l'impasto in un contenitore leggermente oliato con bordi dritti. Lasciare riposare a temperatura ambiente (22-24°C) per 2 ore, effettuando una serie di pieghe di rinforzo (stretch & fold) dopo i primi 45 minuti. Successivamente, sigillare il contenitore e riporlo in frigorifero a 4°C per un periodo di 16-18 ore per la maturazione."
+    },
+    {
+      "title": "Staglio, Formatura e Copertura",
+      "text": "Il giorno seguente, estrarre l'impasto dal frigorifero e lasciarlo acclimatare per 1 ora a temperatura ambiente. Rovesciare sul piano di lavoro e dividere in pezzi dal peso desiderato (es. pagnotte da circa {panetto_peso:850!}g). Eseguire una pirlatura leggera e coprire a campana per 20 minuti. Procedere con la formatura a filone o a palla (boule). Spennellare delicatamente la superficie con un velo d'acqua e rotolare la parte superiore nei semi rimanenti ({semi_copertura:30}g) per farli aderire alla crosta."
+    },
+    {
+      "title": "Appretto",
+      "text": "Riporre la pagnotta formata in un cestino di lievitazione (banneton) ben spolverato con farina di riso, tenendo la chiusura (seam) rivolta verso l'alto. Lasciare lievitare a temperatura ambiente (22-24°C) per circa 1.5 - 2 ore. Eseguire la prova del dito per verificare la corretta lievitazione: l'impasto deve cedere dolcemente e tornare indietro lentamente."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [
+    {
+      "type": "Tipo 1 (Base)",
+      "w": "280-300",
+      "brands": "Molino Pasini, Petra, Caputo"
+    },
+    {
+      "type": "Integrale (Rinforzo)",
+      "w": "280-320",
+      "brands": "Molino Quaglia, Marino, Dalla Giovanna"
+    }
+  ],
+  "baking": {
+    "temperature": "230°C",
+    "time": "40-45 minuti",
+    "tips": [
+      "Preriscaldare il forno in modalità statica con pietra refrattaria per almeno 45 minuti a 250°C.",
+      "Praticare dei tagli sulla superficie (scarpatura) prima di infornare.",
+      "Infornare e abbassare a 230°C. Inserire vapore abbondante per i primi 15 minuti.",
+      "Togliere il vapore, abbassare a 200°C e cuocere per altri 20 minuti.",
+      "Negli ultimi 10 minuti di cottura, aprire leggermente lo sportello del forno (a spiffero) per far asciugare bene la mollica e rendere la crosta croccante."
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Bassinage",
+      "definition": "Tecnica che prevede l'inserimento di una percentuale d'acqua (solitamente il 10-20% del totale) a filo solo dopo che la maglia glutinica si è formata, permettendo alte idratazioni senza collassare l'impasto."
+    },
+    {
+      "term": "Incordatura",
+      "definition": "Stato in cui l'impasto acquisisce elasticità e tenacia, staccandosi dalle pareti dell'impastatrice grazie alla perfetta formazione del reticolo glutinico."
+    },
+    {
+      "term": "Stretch & fold",
+      "definition": "Tecnica di pieghe eseguita in ciotola: si prende un lembo di impasto, lo si tira delicatamente verso l'alto per estenderlo e lo si ripiega al centro. Rinforza la maglia glutinica."
+    },
+    {
+      "term": "Puntata",
+      "definition": "Prima fase di lievitazione dell'impasto in massa (tutto intero), fondamentale per lo sviluppo dei profumi e la fermentazione lattica/acetica."
+    },
+    {
+      "term": "Appretto",
+      "definition": "Seconda fase di lievitazione che avviene dopo lo staglio e la formatura, durante la quale i singoli panetti raggiungono il volume ottimale per la cottura."
+    },
+    {
+      "term": "Pirlatura",
+      "definition": "Arrotondamento dell'impasto con le mani sul banco da lavoro, ruotandolo e spingendo i bordi verso il basso per creare tensione superficiale."
+    }
+  ],
+  "alert": "ATTENZIONE: Non inserire MAI i semi misti all'inizio dell'impastamento o a velocità elevate. I bordi appuntiti dei semi lacererebbero il reticolo glutinico in formazione, compromettendo irrimediabilmente lo sviluppo del pane in cottura.",
+  "proTips": [
+    "Tostare leggermente i semi (soprattutto girasole e zucca) in padella per qualche minuto prima di utilizzarli per esaltarne gli oli essenziali e il sapore.",
+    "Per una mollica ancora più idratata, puoi mettere i semi in ammollo in acqua per 2 ore prima dell'utilizzo: in questo modo eviterai che assorbano l'acqua dell'impasto, mantenendo il prodotto finito più morbido a lungo.",
+    "L'uso del malto d'orzo non serve a dolcificare, ma nutre i lieviti nelle lunghe maturazioni in frigo e garantisce una crosta bruna e dal colore intenso."
+  ],
+  "storage": [
+    "A temperatura ambiente: conservare la pagnotta intera avvolta in un canovaccio di lino o cotone o in un sacchetto di carta. Mantiene la freschezza per 3-4 giorni. Evitare la plastica che fa perdere la croccantezza.",
+    "In congelatore: è possibile tagliare il pane a fette e congelarlo in appositi sacchetti ben chiusi per un massimo di 2 mesi. Le fette possono essere rigenerate mettendole direttamente nel tostapane o in forno caldo per pochi minuti."
+  ],
+  "imageKeywords": [
+    "multigrain bread homemade",
+    "artisan seed bread loaf",
+    "rustic whole wheat seeded bread",
+    "pane ai cereali",
+    "körnerbrot frisch",
+    "crusty artisanal bread boule",
+    "sourdough with seeds crumb"
+  ],
+  "tags": [
+    "cereali",
+    "lievito-di-birra",
+    "semi",
+    "impasto-diretto",
+    "maturazione-frigo",
+    "pane-rustico",
+    "integrale"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "_createdAt": "2026-04-18T00:04:36.289Z",
+  "image": "images/ricette/pane/pane-ai-cereali-semi.webp",
+  "imageAttribution": "📷 Foto: Andrea Prochilo — Pexels License via Pexels",
+  "sensoryProfile": {
+    "axes": [
+      {
+        "label": "Croccantezza Crosta",
+        "value": 9
+      },
+      {
+        "label": "Alveolatura",
+        "value": 6
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Sapore di Grano/Rusticità",
+        "value": 9
+      },
+      {
+        "label": "Umidità Mollica",
+        "value": 6
+      }
+    ]
+  }
+}

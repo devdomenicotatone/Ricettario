@@ -148,5 +148,30 @@
   "_generatedBy": "claude-opus",
   "_createdAt": "2026-04-19T20:31:44.570Z",
   "image": "images/ricette/condimenti/vinaigrette-classica-e-citronette.webp",
-  "imageAttribution": "📷 Foto: Nadin Sh — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: Nadin Sh — Pexels License via Pexels",
+  "sensoryProfile": {
+    "summary": "Un dittico di condimenti classici dalla struttura emulsionata elegante e pulita. La vinaigrette offre un profilo acido-fruttato pungente, dove l'aceto di vino bianco (rapporto 1:3 con l'olio) domina con vivacità, sorretto dalla grassezza avvolgente di un EVO delicato come Taggiasca o Leccino. La citronette, con il suo succo di limone fresco, vira verso una acidità più luminosa e agrumata, con una persistenza olfattiva fresca e floreale che la rende percettivamente più leggera e verticale. Entrambe le preparazioni mantengono una sapidità misurata e un finale leggermente pungente conferito dal pepe nero macinato al momento.",
+    "axes": [
+      {
+        "label": "Acidità",
+        "value": 8
+      },
+      {
+        "label": "Fruttato (EVO)",
+        "value": 6
+      },
+      {
+        "label": "Grassezza / Corpo",
+        "value": 7
+      },
+      {
+        "label": "Sapidità",
+        "value": 3
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 5
+      }
+    ]
+  }
 }

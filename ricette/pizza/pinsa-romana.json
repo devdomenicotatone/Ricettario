@@ -204,5 +204,30 @@
       "title": "Appretto finale (30-45 min)",
       "text": "Lasciare riposare le pinse stese 30-45 minuti a temperatura ambiente, coperte con un canovaccio umido. Questo rilassamento finale permette all'impasto di gonfiarsi leggermente e facilita la cottura uniforme."
     }
-  ]
+  ],
+  "sensoryProfile": {
+    "summary": "La Pinsa Romana si presenta con una struttura alveolare aperta e irregolare, frutto dell'idratazione al 75% e della maturazione fredda prolungata (24-48h) che sviluppa una complessità aromatica di fermentazione lenta, con note lattiche e cerealicole profonde. Il blend di farine (riso + soia) conferisce una croccantezza perimetrale distintiva e una leggerezza strutturale superiore alla pizza tradizionale, mentre il centro mantiene una sofficità umida e quasi cremosa al morso. Un profilo raffinato e tecnicamente bilanciato, dove la digeribilità percepita diventa essa stessa carattere organolettico.",
+    "axes": [
+      {
+        "label": "Croccantezza Crosta",
+        "value": 9
+      },
+      {
+        "label": "Alveolatura",
+        "value": 8
+      },
+      {
+        "label": "Sofficità Mollica",
+        "value": 8
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 7
+      },
+      {
+        "label": "Leggerezza/Digeribilità",
+        "value": 9
+      }
+    ]
+  }
 }

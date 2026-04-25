@@ -247,5 +247,30 @@
       "title": "Infornare",
       "text": "Infornare la focaccia seguendo le istruzioni della sezione cottura."
     }
-  ]
+  ],
+  "sensoryProfile": {
+    "summary": "Una focaccia barese di grande personalità e struttura: la generosa quota di semola rimacinata (46% sul totale farine) e la patata lessa conferiscono una mollica umida, soffice e profumata, con una masticabilità avvolgente e un fondo croccante e ambrato ottenuto dalla cottura ad altissima temperatura (250-270°C) con abbondante olio EVO. Il topping di pomodorini ciliegino affondati, olive baresane in salamoia e origano secco disegna un profilo aromatico mediterraneo intenso, con una sapidità decisa e una succosità che penetra nell'impasto durante la cottura, bilanciando la grassezza strutturale dell'olio.",
+    "axes": [
+      {
+        "label": "Croccantezza del Fondo",
+        "value": 9
+      },
+      {
+        "label": "Sofficità & Umidità Mollica",
+        "value": 8
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Sapidità (Sale + Olive + Pomodoro)",
+        "value": 7
+      },
+      {
+        "label": "Alveolatura & Leggerezza",
+        "value": 6
+      }
+    ]
+  }
 }

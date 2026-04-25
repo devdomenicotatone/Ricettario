@@ -137,5 +137,30 @@
       "title": "Cottura (2-3 min)",
       "text": "Portare a ebollizione una pentola capiente con abbondante acqua salata ({sale_impasto:10}g sale per litro). Versare gli gnocchi in piccole quantità (max 200g per volta). Appena vengono a galla (dopo 1-2 minuti) attendere altri 30 secondi e scolare con schiumarola. Trasferire direttamente nel condimento in padella e mantecare 30-60 secondi. NON sciacquare sotto acqua fredda."
     }
-  ]
+  ],
+  "sensoryProfile": {
+    "summary": "Gnocchi di patate dalla texture avvolgente e vellutata, con una tenacia al morso volutamente contenuta grazie alla lavorazione minima dell'impasto. Il sapore neutro e latteo delle patate farinose emerge con delicatezza, creando una base ricettiva e assorbente per qualsiasi condimento. La rigatura superficiale garantisce una presa ottimale del sugo, mentre il profilo aromatico rimane pulito, con lievi note terrose e amidacee.",
+    "axes": [
+      {
+        "label": "Morbidezza & Sofficità",
+        "value": 9
+      },
+      {
+        "label": "Tenacia al Morso",
+        "value": 3
+      },
+      {
+        "label": "Sapore di Patata",
+        "value": 8
+      },
+      {
+        "label": "Assorbenza Condimento",
+        "value": 8
+      },
+      {
+        "label": "Leggerezza (Struttura)",
+        "value": 7
+      }
+    ]
+  }
 }

@@ -215,5 +215,30 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-16T20:00:36.244Z",
   "image": "images/ricette/lievitati/pasta-brioche-artigianale.webp",
-  "imageAttribution": "📷 Foto: Backen.de — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: Backen.de — Pexels License via Pexels",
+  "sensoryProfile": {
+    "summary": "Una brioche artigianale di raffinata eleganza burrosa, dove il grasso del burro (30% sul peso della farina) costruisce una mollica setosa e filante dal carattere spiccatamente viennoiserie. Il bouquet aromatico è complesso e avvolgente: la macerazione notturna di vaniglia, scorze agrumarie e rum crea un'onda olfattiva persistente che si fonde con le note di Maillard della superficie dorata. La dolcezza è generosa ma bilanciata dalla sapidità del sale e dalla freschezza degli agrumi, regalando un finale lungo e suadente.",
+    "axes": [
+      {
+        "label": "Sofficità della Mollica",
+        "value": 9
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 9
+      },
+      {
+        "label": "Dolcezza",
+        "value": 7
+      },
+      {
+        "label": "Croccantezza della Crosta",
+        "value": 4
+      },
+      {
+        "label": "Ricchezza Burrosa (Grassezza)",
+        "value": 9
+      }
+    ]
+  }
 }

@@ -184,5 +184,30 @@
   "_generatedBy": "claude-opus",
   "_createdAt": "2026-04-24T13:07:57.640Z",
   "image": "images/ricette/condimenti/salsa-bernese.webp",
-  "imageAttribution": "📷 Immagine esistente"
+  "imageAttribution": "📷 Immagine esistente",
+  "sensoryProfile": {
+    "summary": "La Salsa Bernese si presenta come un'emulsione burrosa di straordinaria opulenza, in cui la grassezza avvolgente del burro chiarificato (240g su ~407g totali, pari al ~59% della massa) è sapientemente bilanciata da una riduzione acida concentrata di aceto e vino bianco. Il dragoncello domina il bouquet aromatico con le sue note aniciate e ferrose, sostenuto dal pepe nero e dal cerfoglio in un finale erbaceo persistente e raffinato. La texture è vellutata, quasi sericea, con una persistenza gustativa lunga che lascia il palato in uno stato di piacevole sazietà.",
+    "axes": [
+      {
+        "label": "Grassezza & Untuosità",
+        "value": 9
+      },
+      {
+        "label": "Acidità",
+        "value": 6
+      },
+      {
+        "label": "Intensità Aromatica Erbacea",
+        "value": 8
+      },
+      {
+        "label": "Sapidità (Umami)",
+        "value": 4
+      },
+      {
+        "label": "Persistenza",
+        "value": 8
+      }
+    ]
+  }
 }

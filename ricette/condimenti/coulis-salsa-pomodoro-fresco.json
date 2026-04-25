@@ -134,5 +134,30 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-19T20:25:45.908Z",
   "image": "images/ricette/condimenti/coulis-salsa-pomodoro-fresco.webp",
-  "imageAttribution": "📷 Foto: Willians Huerta — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: Willians Huerta — Pexels License via Pexels",
+  "sensoryProfile": {
+    "summary": "Un coulis di pomodoro fresco dalla texture setosa e luminosa, che esprime tutta la dolcezza concentrata dei San Marzano maturi, bilanciata da una vivace acidità naturale sapientemente addomesticata dallo zucchero semolato. Il fondo aromatico di cipolla e aglio sudati a fuoco dolcissimo costruisce una base avvolgente, mentre il basilico in infusione finale deposita un bouquet erbaceo fresco e volatile di grande eleganza. La sobbollitura prolungata concentra gli zuccheri naturali e riduce l'acqua di vegetazione, conferendo corpo, persistenza e una sapidità umami di matrice vegetale pulita.",
+    "axes": [
+      {
+        "label": "Acidità",
+        "value": 5
+      },
+      {
+        "label": "Dolcezza",
+        "value": 6
+      },
+      {
+        "label": "Sapidità (Umami)",
+        "value": 7
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Persistenza",
+        "value": 7
+      }
+    ]
+  }
 }

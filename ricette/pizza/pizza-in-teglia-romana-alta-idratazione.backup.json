@@ -81,7 +81,7 @@
     },
     {
       "title": "Staglio e Formatura Pagnotte",
-      "text": "Dopo 24 ore, estrarre il cassone dal frigo. Con l'ausilio di un tarocco oliato, stagliare l'impasto in pagnotte da {panetto_peso:1200!}g cadauna (pezzatura standard per teglia 60×40 cm). Non sgasare: effettuare una formatura delicata dando tensione alla superficie senza rompere i gas di fermentazione già formati. Riporre le pagnotte in cassette singole oliate o in cassetta 60×40 cm (tre pagnotti per cassetta), sigillare."
+      "text": "Dopo 24 ore, estrarre il cassone dal frigo. Con l'ausilio di un tarocco oliato, stagliare l'impasto: con queste dosi si ottiene una pagnotta da {panetto_peso:1200!}g per la teglia 60×40 cm e avanza impasto sufficiente per una teglietta più piccola. Non sgasare: effettuare una formatura delicata dando tensione alla superficie senza rompere i gas di fermentazione già formati. Riporre le pagnotte in cassette singole oliate e sigillare."
     },
     {
       "title": "Appretto (Secondo Riposo)",
@@ -89,7 +89,7 @@
     },
     {
       "title": "Stesura in Teglia",
-      "text": "Oliare generosamente il fondo della teglia in ferro blu 60×40 cm. Rovesciare la cassetta direttamente sul banco e poi trasferire delicatamente la pagnotta sulla teglia. Con le dita aperte e la tecnica a pressione dall'interno verso l'esterno, stendere l'impasto fino a coprire tutta la teglia. Procedere in più riprese se l'impasto oppone resistenza (glutine in tensione): lasciarlo riposare 5 minuti coperto e riprendere la stesura. Non usare il mattarello — si perderebbero tutti i gas di fermentazione. L'impasto steso sulla teglia deve presentare visibili bolle in superficie."
+      "text": "Oliare generosamente il fondo della teglia in ferro blu 60×40 cm a temperatura ambiente. Rovesciare la cassetta direttamente sul banco e poi trasferire delicatamente la pagnotta sulla teglia. Con le dita aperte e la tecnica a pressione dall'interno verso l'esterno, stendere l'impasto fino a coprire tutta la teglia. Procedere in più riprese se l'impasto oppone resistenza (glutine in tensione): lasciarlo riposare 5 minuti coperto e riprendere la stesura. Non usare il mattarello — si perderebbero tutti i gas di fermentazione. L'impasto steso sulla teglia deve presentare visibili bolle in superficie."
     },
     {
       "title": "Condimento e Cottura",
@@ -122,7 +122,7 @@
     "temperature": "270–280°C",
     "time": "12–18 minuti",
     "tips": [
-      "Preriscaldare il forno con la teglia in ferro blu già dentro per almeno 30 minuti: la teglia calda garantisce la crosticina croccante alla base fin dai primi secondi di cottura",
+      "Per ottenere la crosticina croccante alla base, preriscaldare il forno con una pietra refrattaria già dentro per almeno 30 minuti, quindi appoggiare la teglia in ferro blu direttamente sulla pietra calda: il calore immediato garantisce la doratura dal basso fin dai primi secondi di cottura",
       "Forni casalinghi senza controllo separato platea/cielo: posizionare la teglia sul fondo del forno (a diretto contatto con la resistenza inferiore) per i primi 8 minuti, poi spostarla a metà per dorare la superficie",
       "La base è cotta correttamente quando, sollevando un angolo con una spatola, si vede un fondo dorato e croccante — non bianco o pallido",
       "Per cottura con condimenti umidi (mozzarella fresca, pomodoro abbondante), cuocere la base in bianco per 8–10 minuti prima di aggiungere i condimenti: si evita l'effetto 'vapore' che rende la base gommosa",
@@ -185,6 +185,11 @@
     "Per ottimizzare la produzione in ottica professionale (o per preparare le basi in anticipo a casa): cuocere le teglie al 70–80% della cottura totale, abbatterle rapidamente e conservarle in freezer fino a 30 giorni. Al momento del servizio, rigenerare in forno a 280°C per 6–8 minuti direttamente da congelato — la base risulterà come appena sfornata.",
     "La percentuale di Farina Tipo 2 (20% del totale) non è decorativa: il suo contenuto di crusca e fibre ritarda lievemente il reticolo glutinico, contribuendo al morso corto caratteristico e aggiungendo note aromatiche di grano più complesse rispetto a un impasto in purezza con Tipo 0. Aumentarla oltre il 30% comprometterebbe la tenuta dell'alta idratazione."
   ],
+  "storage": [
+    "Per la conservazione a breve termine (massimo 2-3 giorni), lasciar raffreddare completamente la pizza a temperatura ambiente per evitare la condensa. Avvolgere le fette in carta stagnola e riporle in frigorifero. Per rigenerarla, scaldare in forno ventilato pre-riscaldato a 190°C per 5-7 minuti direttamente sulla griglia: questo riattiva l'amido e ripristina la croccantezza della base senza seccare il condimento.",
+    "Per il congelamento, la tecnica ottimale è la pre-cottura della base ('in bianco' o solo con pomodoro) fino a 3/4 di cottura. Una volta fredda, avvolgerla ermeticamente in più strati di pellicola alimentare o, idealmente, sigillarla sottovuoto, e conservare in freezer fino a 3 mesi. Al momento dell'uso, condire la base ancora congelata e terminare la cottura in forno alla massima temperatura (240-250°C) per un risultato fragrante come appena sfornata.",
+    "In alternativa al prodotto finito, è possibile congelare i panetti crudi dopo la maturazione in frigo. Ungerli leggermente d'olio, disporli su un vassoio e congelarli rapidamente ('flash-freezing'), poi trasferirli in sacchetti gelo individuali ben chiusi. Per l'utilizzo, scongelare lentamente in frigorifero per 12-18 ore e lasciare a temperatura ambiente per le successive 2-3 ore prima della stesura; questo preserverà la maglia glutinica e la capacità di sviluppo dell'alveolatura."
+  ],
   "imageKeywords": [
     "roman pan pizza high hydration crispy",
     "pizza al taglio teglia romana alveolata",
@@ -209,5 +214,29 @@
   "_generatedBy": "claude",
   "_createdAt": "2026-04-16T21:35:51.898Z",
   "image": "images/ricette/pizza/pizza-in-teglia-romana-alta-idratazione.webp",
-  "imageAttribution": "📷 Foto: Anna Guerrero — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: Anna Guerrero — Pexels License via Pexels",
+  "sensoryProfile": {
+    "axes": [
+      {
+        "label": "Croccantezza Crosta",
+        "value": 9
+      },
+      {
+        "label": "Alveolatura",
+        "value": 9
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Umidità Mollica",
+        "value": 7
+      },
+      {
+        "label": "Leggerezza/Digeribilità",
+        "value": 9
+      }
+    ]
+  }
 }

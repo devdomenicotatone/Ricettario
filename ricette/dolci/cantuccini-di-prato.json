@@ -175,5 +175,30 @@
       "title": "Raffreddamento Finale",
       "text": "Sfornare i cantuccini e lasciarli raffreddare completamente su una gratella. Appena sfornati sembreranno molto duri, ma dopo 2-3 ore raggiungeranno la consistenza perfetta: croccanti fuori, leggermente morbidi dentro. Conservare in contenitore ermetico per 3-4 settimane."
     }
-  ]
+  ],
+  "sensoryProfile": {
+    "summary": "I Cantuccini di Prato si presentano con una struttura secca e friabile, frutto della doppia cottura che ne esalta la croccantezza caratteristica. Al naso, le scorze di agrumi e il Marsala costruiscono un bouquet aromatico caldo e speziato, mentre le mandorle con pellicina, tostate in cottura, aggiungono profondità e una lieve nota amaricante. In bocca, la dolcezza decisa dello zucchero semolato — presente al 25% sull'impasto totale — bilancia la sapidità minerale delle mandorle, con un finale persistente e asciutto che invita tradizionalmente all'abbinamento con il Vin Santo.",
+    "axes": [
+      {
+        "label": "Croccantezza",
+        "value": 9
+      },
+      {
+        "label": "Dolcezza",
+        "value": 8
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 7
+      },
+      {
+        "label": "Amarezza (mandorle/pellicina)",
+        "value": 4
+      },
+      {
+        "label": "Secchezza/Asciuttezza",
+        "value": 9
+      }
+    ]
+  }
 }

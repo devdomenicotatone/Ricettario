@@ -163,5 +163,30 @@
       "title": "Formatura e Appretto",
       "text": "Rovesciare su abbondante semola. Tagliare rettangoli netti col tarocco senza sgonfiare. Disporre su telo infarinato e lasciar lievitare per {appretto_tempo:45!} minuti."
     }
-  ]
+  ],
+  "sensoryProfile": {
+    "summary": "Una ciabatta di rara complessità strutturale e aromatica: il lungo poolish da 12 ore, sostenuto dal criscito e dal malto diastasico, costruisce una matrice fermentativa stratificata che si traduce in una mollica traslucida, ad alveolatura irregolare e pronunciata, con note acidule delicate e un bouquet che spazia dal lattico al cereale tostato. La crosta, forgiata a 250°C con vapore abbondante, è fragrante e sonora, con riflessi dorati profondi offerti dalla reazione di Maillard amplificata dal malto, mentre il finale è lungo, leggermente sapido e sorprendentemente digeribile.",
+    "axes": [
+      {
+        "label": "Croccantezza Crosta",
+        "value": 9
+      },
+      {
+        "label": "Alveolatura",
+        "value": 9
+      },
+      {
+        "label": "Acidità",
+        "value": 5
+      },
+      {
+        "label": "Umidità Mollica",
+        "value": 8
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 8
+      }
+    ]
+  }
 }

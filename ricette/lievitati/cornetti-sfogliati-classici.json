@@ -298,5 +298,30 @@
       "title": "Doratura e Cottura",
       "text": "Mescolare {tuorlo_finitura:18}g di tuorlo d'uovo con {panna_finitura:25}g di panna fresca. Pennellare delicatamente i cornetti con un pennello morbido, senza premere (sono fragilissimi). Infornare immediatamente."
     }
-  ]
+  ],
+  "sensoryProfile": {
+    "summary": "Un cornetto sfogliato di scuola classica, che si rivela al naso con note burroso-lattiche di grande persistenza, sostenute da un fondo dolce di vaniglia e miele. Al morso, la sfoglia cede con una croccantezza secca e stratificata, lasciando poi spazio a una mollica alveolata, leggera e umida, con una dolcezza misurata e ben bilanciata dalla sapidità. La biga a lunga maturazione conferisce una complessità aromatica sottile ma distintiva, lontana dalla piattezza dei lievitati diretti.",
+    "axes": [
+      {
+        "label": "Sfogliatura & Stratificazione",
+        "value": 9
+      },
+      {
+        "label": "Dolcezza",
+        "value": 6
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Leggerezza & Alveolatura",
+        "value": 7
+      },
+      {
+        "label": "Intensità Burrosa",
+        "value": 9
+      }
+    ]
+  }
 }

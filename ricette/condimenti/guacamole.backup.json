@@ -1,0 +1,197 @@
+{
+  "title": "Guacamole",
+  "slug": "guacamole",
+  "emoji": "🥑",
+  "description": "Salsa guacamole messicana originale con avocado maturo, lime, cipolla, pomodoro e coriandolo. Perfetta per nachos, tacos e aperitivi.",
+  "subtitle": "Salsa di avocado fresca e cremosa — tecnica del mortaio o della forchetta",
+  "category": "Condimenti",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per la Salsa",
+      "items": [
+        {
+          "name": "Avocado Hass",
+          "note": "(maturo al tatto — cedevole sotto pressione, polpa cremosa verde-gialla, senza macchie nere interne)",
+          "grams": 450,
+          "tokenId": "avocado"
+        },
+        {
+          "name": "Succo di Lime Fresco",
+          "note": "(spremuto al momento, non in bottiglia — acidità brillante fondamentale per anti-ossidazione)",
+          "grams": 30,
+          "tokenId": "succo_lime"
+        },
+        {
+          "name": "Cipolla Bianca",
+          "note": "(o scalogno per una nota più delicata — tritata finissima)",
+          "grams": 40,
+          "tokenId": "cipolla"
+        },
+        {
+          "name": "Pomodoro Ramato",
+          "note": "(privato di semi e acqua di vegetazione — cubetti da 5 mm)",
+          "grams": 80,
+          "tokenId": "pomodoro"
+        },
+        {
+          "name": "Peperoncino Jalapeño Fresco",
+          "note": "(verde o rosso — privato dei semi per una piccantezza moderata, o sostituibile con 1 peperoncino dolce)",
+          "grams": 15,
+          "tokenId": "peperoncino"
+        },
+        {
+          "name": "Coriandolo Fresco",
+          "note": "(solo foglie, tritate grossolanamente — facoltativo, sostituibile con prezzemolo piatto)",
+          "grams": 5,
+          "tokenId": "coriandolo"
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(leggero e fruttato — varietà delicata come Leccino o Frantoio)",
+          "grams": 15,
+          "tokenId": "olio_evo"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(sale marino fine — da aggiungere progressivamente)",
+          "grams": 5,
+          "tokenId": "sale"
+        },
+        {
+          "name": "Pepe Nero",
+          "note": "(macinato fresco al momento — facoltativo)",
+          "grams": 1,
+          "tokenId": "pepe"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Preparazione Avocado",
+      "text": "Selezionate {avocado:450}g di avocado Hass (peso lordo con nocciolo e buccia — resa polpa netta circa 300-310g). Un avocado correttamente maturo cede sotto leggera pressione del pollice senza collassare. Tagliate ogni avocado a metà seguendo il solco longitudinale, ruotate le due metà in senso opposto per aprirle, quindi rimuovete il nocciolo con un colpo deciso della lama di un coltello pesante oppure con un cucchiaio. Scavate la polpa lungo la buccia con un cucchiaio da cucina, estraendo il più possibile senza portare le parti verdi scure a contatto con la buccia. Trasferite immediatamente la polpa nel mortaio o in una ciotola capiente — l'esposizione all'aria ossida velocemente la polpa, quindi lavorate senza pause."
+    },
+    {
+      "title": "Pestaggio Base e Acidificazione",
+      "text": "Versate subito {succo_lime:30}g di succo di lime fresco sulla polpa. Questo passaggio è doppiamente critico: il succo di lime abbassa il pH impedendo l'ossidazione enzimatica (imbrunimento) e apporta la nota acida caratteristica. Se lavorate nel mortaio: pestate con il pestello in movimenti circolari partendo dal basso, con pressione regolare — circa 2-3 minuti. L'obiettivo è una consistenza cremosa ma non completamente liscia: il guacamole autentico mantiene qualche piccolo grumo. Se lavorate nella ciotola: schiacciate con una forchetta robusta o uno schiacciapatate con fori larghi, sempre in movimenti circolari. Aggiungete {sale:5}g di sale fino in questa fase e {pepe:1}g di pepe nero macinato fresco, incorporando progressivamente."
+    },
+    {
+      "title": "Preparazione degli Aromi",
+      "text": "Mentre l'avocado riposa acidificato, preparate gli aromi. CIPOLLA: pelate e tritate {cipolla:40}g di cipolla bianca finissima (2-3 mm) con un coltello affilato. Per una nota più dolce sostituite con la stessa quantità di scalogno. Se la cipolla risulta troppo pungente al gusto crudo, ammorbiditela in acqua fredda per 5 minuti, poi asciugatela. PEPERONCINO: tagliate {peperoncino:15}g di jalapeño fresco a metà per il lungo, eliminate tutti i semi con un cucchiaino (i semi concentrano la capsaicina), quindi tritate finissimo con il coltello. Per una versione più piccante lasciate qualche seme. POMODORO: tagliate a spicchi {pomodoro:80}g di pomodoro ramato, eliminate con le dita i semi e tutta l'acqua di vegetazione — questo passaggio è fondamentale per evitare che la salsa diventi acquosa — e riducete la polpa in cubetti regolari da 5 mm. CORIANDOLO: tritate grossolanamente {coriandolo:5}g di foglie fresche, scartando i gambi più duri."
+    },
+    {
+      "title": "Assemblaggio e Regolazione",
+      "text": "Unite alla base di avocado la cipolla tritata e il peperoncino, mescolando con una spatola o il pestello per incorporarli uniformemente. Aggiungete {olio_evo:15}g di olio extravergine d'oliva a filo, lavorando in circolo per emulsionare leggermente la salsa e conferirle un aspetto più lucido e rotondo al palato. Incorporate i cubetti di pomodoro con movimenti delicati dal basso verso l'alto per non romperli — devono rimanere interi come 'sospensione' nella crema. Aggiungete il coriandolo tritato, tenendone una piccola parte per la finitura. Assaggiate e regolate: se serve più acidità, aggiungete qualche goccia di lime; se la cipolla copre, bilanciate con un pizzico di sale. La consistenza finale deve essere cremosa con texture irregolare — NON un purée liscio."
+    },
+    {
+      "title": "Riposo e Servizio",
+      "text": "Coprite la superficie del guacamole a contatto diretto con pellicola alimentare (eliminando ogni bolla d'aria) oppure con il nocciolo dell'avocado immerso nella salsa — questo trucco sfrutta i tannini del nocciolo per rallentare l'ossidazione. Fate riposare in frigorifero almeno 10-15 minuti prima di servire: il riposo permette agli aromi di amalgamarsi e alla cipolla di ammorbidirsi. Al momento del servizio, rifinite con i cubetti di pomodoro tenuti da parte, qualche foglia di coriandolo fresca e, se gradito, un filo di olio extravergine. Servite nella ciotola di ceramica o nel mortaio stesso, accompagnando con nachos, tortilla chips, crudité di verdure o tacos."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "baking": {
+    "temperature": "",
+    "time": "",
+    "tips": []
+  },
+  "glossary": [
+    {
+      "term": "Avocado Hass",
+      "definition": "Varietà più diffusa di avocado, con buccia scura e rugosa a maturità. La polpa è cremosa e burrosa, con alto contenuto di grassi monoinsaturi. È la varietà ideale per il guacamole per la sua consistenza e sapore."
+    },
+    {
+      "term": "Ossidazione enzimatica",
+      "definition": "Reazione chimica che provoca l'imbrunimento della polpa di avocado a contatto con l'ossigeno, mediata dall'enzima polifenolossidasi. Il succo di lime (acido ascorbico + abbassamento pH) inibisce questa reazione."
+    },
+    {
+      "term": "Bassinage",
+      "definition": "Tecnica di aggiunta progressiva di liquido (qui il lime o l'olio) per ottenere una emulsione stabile e una consistenza controllata, evitando che la salsa diventi troppo liquida o troppo asciutta."
+    },
+    {
+      "term": "Consistenza rustica",
+      "definition": "Nel guacamole autentico, la consistenza non deve essere completamente liscia come un purée. I piccoli grumi di avocado sono intenzionali e caratteristici della versione tradizionale messicana."
+    },
+    {
+      "term": "Sospensione",
+      "definition": "Elementi solidi (cubetti di pomodoro, pezzi di cipolla) distribuiti in una base cremosa senza sciogliersi. Nel guacamole il pomodoro è una sospensione che deve rimanere integra nella crema di avocado."
+    },
+    {
+      "term": "pH e anti-ossidazione",
+      "definition": "Il succo di lime abbassa il pH della salsa (aumenta l'acidità), rallentando l'attività degli enzimi responsabili dell'imbrunimento. È la tecnica più efficace — e più gustosa — per mantenere il guacamole verde."
+    },
+    {
+      "term": "Mortaio",
+      "definition": "Strumento tradizionale (molcajete in Messico, in pietra vulcanica o granito) per pestare e amalgamare gli ingredienti. Rispetto alla forchetta, il mortaio sviluppa gli oli essenziali della cipolla e del peperoncino in modo più uniforme, donando alla salsa una complessità aromatica superiore."
+    }
+  ],
+  "alert": "NON usare il frullatore o il mixer per preparare il guacamole: la lavorazione meccanica incorpora aria, ossida rapidamente la polpa, e trasforma la salsa in una crema omogena priva di texture — perdendo completamente il carattere autentico del piatto. Stesso errore: aggiungere il pomodoro troppo presto o non eliminarne i semi, che rilasciano acqua di vegetazione rendendo la salsa liquida e insipida. Infine, non usare avocado non maturo: risulterà fibroso, amaro e impossibile da schiacciare uniformemente.",
+  "proTips": [
+    "Per verificare la maturità ottimale dell'avocado senza aprirlo: rimuovete il picciolo con le dita. Se si stacca facilmente rivelando un verde brillante sotto, è pronto. Se il colore è marrone scuro, l'avocado è troppo maturo; se il picciolo resiste, è ancora acerbo. Questo è il test dei produttori messicani.",
+    "Per conservare il guacamole avanzato senza che annerisca: stendete uno strato sottile di succo di lime sulla superficie, coprite con pellicola a contatto diretto (zero aria) e riponete in frigorifero. Riemergerete uno strato superficiale leggermente ossidato che mescolate via prima di servire — il resto sarà perfetto fino a 24 ore.",
+    "Il coriandolo è divisivo a causa di una variante genetica del recettore olfattivo OR6A2 che lo fa percepire come 'sapone' a circa il 15% della popolazione. In questo caso, sostituitelo con prezzemolo piatto fresco in uguale quantità — apporta freschezza erbacea senza la nota pungente."
+  ],
+  "storage": [
+    "FRIGO — max 24 ore: trasferite il guacamole in un contenitore ermetico piccolo (meglio riempirlo quasi completamente per ridurre lo spazio d'aria), stendete uno strato di succo di lime in superficie, coprite con pellicola a contatto diretto e chiudete il coperchio. Oltre le 24 ore la consistenza e il colore degradano irrimediabilmente.",
+    "CONGELAMENTO — non raccomandato nella versione con pomodoro fresco: il pomodoro e la cipolla crudi rilasciano acqua allo scongelamento, rendendo la salsa acquosa e separata. Se dovete congelare, preparate una versione base (solo avocado + lime + sale), congelate in porzioni sottovuoto, e aggiungete gli altri ingredienti freschi al momento dello scongelamento.",
+    "RIGENERAZIONE: estraete dal frigo 10 minuti prima di servire per portarlo a temperatura ambiente. Mescolate bene, assaggiate e aggiustate con qualche goccia di lime fresco e un pizzico di sale — la refrigerazione attenua le note aromatiche. Se la superficie è leggermente imbrunita, rimuovete e scartate solo lo strato ossidato: sotto il guacamole sarà ancora perfetto."
+  ],
+  "imageKeywords": [
+    "homemade guacamole fresh avocado",
+    "guacamole dip nachos bowl",
+    "mexican avocado salsa lime coriander",
+    "guacamole ciotola avocado fresco",
+    "avocado dip verde cremoso",
+    "Guacamole Dip mexikanisch",
+    "fresh green avocado spread food photography",
+    "guacamole molcajete stone bowl"
+  ],
+  "tags": [
+    "guacamole",
+    "avocado",
+    "salsa",
+    "messicano",
+    "condimento",
+    "senza cottura",
+    "vegetariano",
+    "vegano",
+    "aperitivo",
+    "gluten-free",
+    "nachos",
+    "tacos"
+  ],
+  "_generatedBy": "claude",
+  "_createdAt": "2026-04-19T20:30:21.184Z",
+  "image": "images/ricette/condimenti/guacamole.webp",
+  "imageAttribution": "📷 Foto: RDNE Stock project — Pexels License via Pexels",
+  "sensoryProfile": {
+    "axes": [
+      {
+        "label": "Cremosità",
+        "value": 9
+      },
+      {
+        "label": "Acidità",
+        "value": 7
+      },
+      {
+        "label": "Piccantezza",
+        "value": 4
+      },
+      {
+        "label": "Freschezza Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Grassezza",
+        "value": 7
+      }
+    ]
+  }
+}

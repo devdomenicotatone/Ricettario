@@ -75,7 +75,8 @@
   ],
   "storage": [
     "Essendo privo di acqua ed estratto a caldo, questo olio si conserva a lungo. Tienilo in una bottiglia di vetro scuro (se non in uso) al riparo dalla luce solare diretta che sbiadirebbe i pigmenti termosensibili.",
-    "Per la massima sicurezza e per prevenire l'ossidazione aromatica, conservare in frigorifero a 4°C. La conservazione in dispensa fresca (max 18°C) per 3-4 mesi è possibile solo se si è assolutamente certi della completa e totale disidratazione del cavolo (consistenza rigida e fragilissima)."
+    "Per la massima sicurezza e per prevenire l'ossidazione aromatica, conservare in frigorifero a 4°C. La conservazione in dispensa fresca (max 18°C) per 3-4 mesi è possibile solo se si è assolutamente certi della completa e totale disidratazione del cavolo (consistenza rigida e fragilissima).",
+    "Poiché l'olio EVO a 4°C tende a solidificare, ricordati di estrarlo dal frigorifero e riportarlo a temperatura ambiente prima dell'utilizzo per renderlo nuovamente fluido e dosabile."
   ],
   "imageKeywords": [
     "purple cabbage infused oil",
@@ -97,5 +98,29 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-24T23:21:43.378Z",
   "image": "images/ricette/condimenti/olio-al-cavolo-viola-condimento.webp",
-  "imageAttribution": "📷 Foto: Atlantic Ambience — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: Atlantic Ambience — Pexels License via Pexels",
+  "sensoryProfile": {
+    "axes": [
+      {
+        "label": "Intensità Cromatica",
+        "value": 9
+      },
+      {
+        "label": "Fruttato/Erbaceo",
+        "value": 6
+      },
+      {
+        "label": "Amarezza",
+        "value": 5
+      },
+      {
+        "label": "Piccantezza",
+        "value": 2
+      },
+      {
+        "label": "Persistenza Aromatica",
+        "value": 4
+      }
+    ]
+  }
 }

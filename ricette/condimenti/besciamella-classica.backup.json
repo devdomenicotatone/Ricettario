@@ -1,0 +1,146 @@
+{
+  "title": "Besciamella Classica",
+  "slug": "besciamella-classica",
+  "emoji": "🥛",
+  "description": "La ricetta professionale e infallibile per la classica besciamella. Proporzioni auree (roux 1:1) per una salsa madre liscia, vellutata e priva di grumi.",
+  "subtitle": "La salsa madre vellutata con metodo tradizionale a roux biondo",
+  "category": "Condimenti",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per la Besciamella",
+      "items": [
+        {
+          "name": "Latte Intero",
+          "note": "(fresco)",
+          "grams": 1000,
+          "tokenId": "latte_intero"
+        },
+        {
+          "name": "Burro",
+          "note": "(di centrifuga, dolce)",
+          "grams": 100,
+          "tokenId": "burro_besciamella"
+        },
+        {
+          "name": "Farina Tipo 00",
+          "note": "(debole, W 150-170)",
+          "grams": 100,
+          "tokenId": "farina_roux"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(q.b.)",
+          "grams": 5,
+          "tokenId": "sale_fino"
+        },
+        {
+          "name": "Noce Moscata",
+          "note": "(grattugiata fresca)",
+          "grams": 1,
+          "tokenId": "noce_moscata"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Mise en place e Preparazione",
+      "text": "Essendo la besciamella un condimento e una salsa di base, il suo intero procedimento è dettagliato nella sezione sottostante dedicata ai condimenti. È fondamentale preparare e pesare in anticipo tutti gli ingredienti (mise en place) per non dover interrompere il processo di mescolamento sul fuoco, fase critica per evitare la formazione di grumi."
+    },
+    {
+      "title": "Riscaldamento del Latte",
+      "text": "In un pentolino a parte, scaldare {latte_intero:1000}g di latte intero fino a raggiungere una temperatura di circa 60-70°C (deve essere ben caldo ma non raggiungere il bollore). Aggiungere {sale_fino:5}g di sale fino e {noce_moscata:1}g di noce moscata grattugiata, mescolando leggermente per favorirne lo scioglimento."
+    },
+    {
+      "title": "Realizzazione del Roux Biondo",
+      "text": "In una casseruola capiente, preferibilmente in acciaio dal fondo spesso, far fondere dolcemente {burro_besciamella:100}g di burro a fiamma molto bassa, prestando attenzione a non farlo scurire o friggere eccessivamente. Non appena fuso, incorporare in un solo colpo {farina_roux:100}g di farina. Mescolare vigorosamente e ininterrottamente con una frusta a mano per 2-3 minuti. Il composto dovrà dorarsi leggermente e sprigionare un profumo tostato simile a quello dei biscotti."
+    },
+    {
+      "title": "Incorporamento dei Liquidi",
+      "text": "Spostare temporaneamente la casseruola dal fuoco diretto per abbassare lo shock termico. Versare un solo mestolo del latte caldo sul roux e stemperare energicamente con la frusta. Una volta che questa prima parte di liquido è stata completamente assorbita creando una pasta liscia, riprendere ad aggiungere il restante latte a filo, continuando a sbattere vigorosamente. Rimettere la casseruola sul fuoco a fiamma medio-bassa."
+    },
+    {
+      "title": "Cottura e Addensamento",
+      "text": "Continuare a mescolare costantemente, assicurandosi di raggiungere bene i bordi e il fondo della casseruola, per circa 8-10 minuti. La besciamella sarà pronta quando la consistenza risulterà vellutata e in grado di 'velare il cucchiaio' (passando un dito sul dorso del cucchiaio sporco di salsa, la scia lasciata deve rimanere netta e i lembi non devono ricongiungersi)."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [
+    {
+      "type": "Farina Tipo 00 (Debole)",
+      "w": "150-170",
+      "brands": "Caputo Pasticceria, Molino Spadoni, Barilla"
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Roux",
+      "definition": "Composto base di burro fuso e farina cotti insieme in proporzione 1:1, utilizzato come addensante universale per salse e vellutate."
+    },
+    {
+      "term": "Velare il cucchiaio",
+      "definition": "Termine tecnico che indica la corretta densità di una salsa: immergendo un cucchiaio, la salsa deve ricoprirne il dorso creando una patina omogenea che non scivola via immediatamente."
+    },
+    {
+      "term": "Pellicola a contatto",
+      "definition": "Tecnica che consiste nell'applicare la pellicola alimentare direttamente a contatto con la superficie di creme o salse ancora calde, impedendo all'aria di ossidare lo strato superiore e formare la fastidiosa pellicina."
+    }
+  ],
+  "alert": "NON versare mai latte freddo di frigorifero direttamente sul roux bollente, né unire il latte tutto in una volta. Lo shock termico e la mancata gradualità sono le cause principali (e spesso irreversibili) della formazione di grumi. Se per errore dovessero formarsi, il frullatore a immersione è l'unica ancora di salvezza per recuperare la salsa.",
+  "proTips": [
+    "La proporzione aurea per una besciamella media è 1:1:10 (es. 100g burro, 100g farina, 1000g latte). Se necessiti di una besciamella più fluida (ottima per lasagne che andranno cotte a lungo e che assorbiranno liquidi), scendi a 80g di burro e 80g di farina per litro di latte.",
+    "Utilizza burro di centrifuga anziché di affioramento: ha una percentuale minore di acqua e sieroproteine, garantendo un roux più stabile e un sapore della salsa nettamente più pulito."
+  ],
+  "storage": [
+    "Se non viene utilizzata immediatamente, trasferire la besciamella in un contenitore largo e basso (per velocizzare il raffreddamento) e coprire immediatamente con pellicola trasparente a contatto. Questo eviterà la formazione della spessa crosta superficiale.",
+    "Si conserva in frigorifero per 2-3 giorni. Può anche essere congelata per un mese; al momento dell'utilizzo, lasciarla scongelare in frigo e rigenerarla scaldandola leggermente con una frusta, aggiungendo 1-2 cucchiai di latte caldo per ripristinarne l'emulsione e la setosità."
+  ],
+  "imageKeywords": [
+    "bechamel sauce",
+    "white sauce preparation",
+    "roux butter flour",
+    "besciamella italiana",
+    "creamy sauce cooking whisk"
+  ],
+  "tags": [
+    "salsa-madre",
+    "condimento",
+    "besciamella",
+    "roux",
+    "salsa-bianca"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "_createdAt": "2026-04-19T20:25:39.290Z",
+  "image": "images/ricette/condimenti/besciamella-classica.webp",
+  "imageAttribution": "📷 Foto: foxy tati — Pexels License via Pexels",
+  "sensoryProfile": {
+    "axes": [
+      {
+        "label": "Cremosità & Vellutatura",
+        "value": 9
+      },
+      {
+        "label": "Sapidità (Umami)",
+        "value": 4
+      },
+      {
+        "label": "Grassezza Lattica",
+        "value": 8
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 5
+      },
+      {
+        "label": "Note di Tostatura (Roux)",
+        "value": 4
+      }
+    ]
+  }
+}

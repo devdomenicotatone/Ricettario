@@ -5,7 +5,7 @@
   "description": "L'impasto base perfetto per brioche sofficissime, trecce e cornetti. Una ricetta professionale ricca di burro e aromi naturali, con lievitazione controllata.",
   "subtitle": "Impasto base soffice al burro e mix aromatico agrumato",
   "category": "Lievitati",
-  "hydration": 53,
+  "hydration": 43,
   "targetTemp": "25-26°C",
   "fermentation": "14-18h (inclusa maturazione a freddo)",
   "totalFlour": 500,
@@ -191,6 +191,11 @@
     "Utilizzate uova e latte freddi di frigorifero: l'impastatrice sviluppa calore meccanico e rischia di far superare all'impasto i 26°C sciogliendo il burro prematuramente.",
     "Per una finitura 'da pasticceria', spennellate una seconda volta con l'uovo subito prima di infornare."
   ],
+  "storage": [
+    "Una volta cotta, la Pasta Brioche si conserva a temperatura ambiente per 2-3 giorni, avvolta in un sacchetto di carta per preservarne la fragranza. Per una conservazione prolungata (fino a 2 mesi), congelarla da fredda, intera o a fette, sigillandola in un sacchetto per alimenti dopo averla avvolta in pellicola.",
+    "L'impasto crudo può essere conservato in frigorifero a 4°C, coperto ermeticamente con pellicola a contatto, per un massimo di 48 ore; questa maturazione a freddo ne affinerà gli aromi. In alternativa, è possibile congelarlo dopo la prima lievitazione per un utilizzo entro 1 mese, sgonfiandolo e porzionandolo in sacchetti adatti.",
+    "Per rigenerare la brioche e ripristinare la sua iconica sofficità e il profumo agrumato, riscaldarla in forno preriscaldato a 150°C per 5-8 minuti. Le fette congelate possono essere rigenerate direttamente in tostapane a bassa potenza o in una padella calda per pochi istanti per lato."
+  ],
   "imageKeywords": [
     "homemade brioche bread",
     "fresh baked brioche buns",
@@ -210,5 +215,29 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-16T20:00:36.244Z",
   "image": "images/ricette/lievitati/pasta-brioche-artigianale.webp",
-  "imageAttribution": "📷 Foto: Backen.de — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: Backen.de — Pexels License via Pexels",
+  "sensoryProfile": {
+    "axes": [
+      {
+        "label": "Sofficità Mollica",
+        "value": 9
+      },
+      {
+        "label": "Ricchezza Burrosa",
+        "value": 9
+      },
+      {
+        "label": "Dolcezza",
+        "value": 7
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Doratura (Maillard)",
+        "value": 6
+      }
+    ]
+  }
 }

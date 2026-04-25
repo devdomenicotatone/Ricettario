@@ -1,0 +1,197 @@
+{
+  "title": "Pane di Altamura",
+  "slug": "pane-di-altamura-dop",
+  "emoji": "🥖",
+  "description": "La ricetta tradizionale pugliese con 100% semola rimacinata. Crosta spessa e croccante, mollica giallo oro e un profumo inconfondibile.",
+  "subtitle": "Impasto di semola al 67% di idratazione con pre-impasto (metodo indiretto)",
+  "category": "Pane",
+  "hydration": 67,
+  "targetTemp": "25-26°C",
+  "fermentation": "18-20h",
+  "totalFlour": 900,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per la Biga (Pre-impasto)",
+      "items": [
+        {
+          "name": "Semola di Grano Duro Rimacinata",
+          "note": "(W 200-250)",
+          "grams": 150,
+          "tokenId": "semola_biga"
+        },
+        {
+          "name": "Acqua",
+          "note": "(temperatura ambiente, 20°C)",
+          "grams": 70,
+          "tokenId": "acqua_biga"
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(2% sulla farina della biga)",
+          "grams": 3,
+          "tokenId": "lievito_biga"
+        }
+      ]
+    },
+    {
+      "group": "Per l'Impasto Finale",
+      "items": [
+        {
+          "name": "Semola di Grano Duro Rimacinata",
+          "note": "(W 200-250)",
+          "grams": 750,
+          "tokenId": "semola_impasto"
+        },
+        {
+          "name": "Acqua (1ª parte per autolisi)",
+          "note": "(fredda per spirale, fresca a mano)",
+          "grams": 450,
+          "tokenId": "acqua_prima_parte"
+        },
+        {
+          "name": "Acqua (Bassinage)",
+          "note": "(aggiunta finale a filo)",
+          "grams": 80,
+          "tokenId": "acqua_bassinage"
+        },
+        {
+          "name": "Miele di Acacia",
+          "note": "(o malto diastatico)",
+          "grams": 10,
+          "tokenId": "miele_impasto"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(2.2% su totale)",
+          "grams": 20,
+          "tokenId": "sale_impasto"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "stepsCondiment": [],
+  "flourTable": [
+    {
+      "type": "Semola Rimacinata di Grano Duro",
+      "w": "200-250",
+      "brands": "Selezione Casillo, De Cecco, La Molisana, Mulino Caputo"
+    }
+  ],
+  "baking": {
+    "temperature": "250°C",
+    "time": "50-55 minuti",
+    "tips": [
+      "Preriscaldare la pietra refrattaria per 45 minuti a 250°C.",
+      "Primi 15 minuti a 250°C con vapore (pentolino d'acqua sul fondo).",
+      "Abbassare a 220°C per 20 minuti rimuovendo il vapore.",
+      "Ultimi 15-20 minuti a 200°C con il forno 'a spiffero' (sportello leggermente aperto bloccato con un cucchiaio di legno) per asciugare la crosta."
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Biga",
+      "definition": "Pre-impasto rustico e sodo a bassa idratazione (circa 45-50%), usato per donare aromi complessi e struttura, simulando parzialmente l'azione del lievito madre."
+    },
+    {
+      "term": "Fermentolisi",
+      "definition": "Variante dell'autolisi classica dove l'impasto riposa insieme a un prefermento già attivo, migliorando maglia glutinica e assorbimento senza surriscaldare."
+    },
+    {
+      "term": "Bassinage",
+      "definition": "Tecnica che prevede l'aggiunta di parte dell'acqua (solitamente il 20% finale) solo dopo aver già formato la maglia glutinica, permettendo idratazioni più alte."
+    },
+    {
+      "term": "Slap & Fold",
+      "definition": "Tecnica manuale per impasti umidi: si sbatte l'impasto sul banco e lo si ripiega su se stesso, intrappolando aria e rafforzando il glutine."
+    },
+    {
+      "term": "Spiffero (Cottura in fessura)",
+      "definition": "Tecnica usata a fine cottura lasciando il forno leggermente aperto per far uscire il vapore e ottenere una crosta più spessa e croccante."
+    }
+  ],
+  "alert": "⚠️ NON usare mai farina di grano tenero (Tipo 0 o 00). Il vero Pane di Altamura DOP richiede esclusivamente semola rimacinata di grano duro. Attenzione all'impastamento: il glutine della semola è tenace ma più corto e fragile rispetto al grano tenero, se impastato troppo a lungo si 'strappa' e l'impasto collassa.",
+  "proTips": [
+    "Per la VERA versione DOP: Sostituisci la biga con 225g di Lievito Madre solido (circa 150g farina + 75g acqua), rinfrescato e giunto al raddoppio. Aggiungilo allo step di Chiusura Impasto. Usa 800g di semola nell'impasto e regola l'acqua aggiunta a circa 560g, così l'acqua totale (560g + 75g dal LM) sarà 635g, mantenendo l'idratazione intorno al 67%.",
+    "Taglio pre-infornata: Il pane di Altamura non prevede i classici tagli a lama (scarificazione). La forma accavallata o sovrapposta si aprirà naturalmente in cottura seguendo le linee di piegatura.",
+    "Conservazione: Grazie alla semola di grano duro, un pane di Altamura ben cotto e asciugato in fessura si mantiene fragrante per 5-7 giorni se conservato in un sacchetto di carta o avvolto in un canovaccio."
+  ],
+  "storage": [
+    "Per conservare la fragranza fino a 3-4 giorni, avvolgere il pane in un canovaccio di cotone pulito e riporlo in un sacchetto di carta. Evitare la plastica, che ammorbidisce la crosta e favorisce le muffe. Tenere la parte tagliata rivolta verso il basso su un tagliere per limitarne l'ossidazione.",
+    "Per il congelamento a lungo termine (fino a 2 mesi), tagliare il pane a fette una volta completamente freddo. Separare le fette con carta forno, inserirle in un sacchetto per congelatore e rimuovere più aria possibile prima di sigillare. Questo metodo previene la formazione di brina e permette di scongelare solo le porzioni necessarie.",
+    "Per rigenerare il pane e ripristinare la croccantezza, passare le fette (anche congelate) in forno statico a 180-200°C per 5-7 minuti. In alternativa, una padella calda senza condimenti per un paio di minuti per lato restituirà una crosta fragrante e un interno morbido."
+  ],
+  "imageKeywords": [
+    "pane di altamura",
+    "durum wheat bread",
+    "semolina bread",
+    "traditional italian bread puglia",
+    "rustic sourdough loaf",
+    "hartweizengrieß brot"
+  ],
+  "tags": [
+    "Pane DOP",
+    "Puglia",
+    "Semola",
+    "Crosta Croccante",
+    "Lievitati"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "image": "images/ricette/pane/pane-di-altamura-dop.webp",
+  "imageAttribution": "📷 Foto: Lidya Kohen — Pexels License via Pexels",
+  "steps": [
+    {
+      "title": "Preparazione della Biga (Giorno 1)",
+      "text": "In una ciotola, sciogliere {lievito_biga:3}g di lievito fresco in {acqua_biga:70}g di acqua. Aggiungere {semola_biga:150}g di semola rimacinata. Impastare in modo grezzo e veloce con le mani, giusto il tempo di far assorbire l'acqua. Non creare maglia glutinica: deve risultare uno spezzatino ruvido. Coprire non ermeticamente e lasciare maturare a 18-20°C per 14-16 ore."
+    },
+    {
+      "title": "Autolisi (Giorno 2)",
+      "text": "Nella vasca dell'impastatrice inserire {semola_impasto:750}g di semola rimacinata e {acqua_prima_parte:450}g di acqua (la 1ª parte). Mescolare in 1ª velocità per 2-3 minuti, finché la farina è tutta idratata. Spegnere, coprire la vasca e fare un riposo in autolisi di 45-60 minuti. Questo step è fondamentale per la semola, ne migliora l'estensibilità."
+    },
+    {
+      "title": "Chiusura Impasto",
+      "text": "Aggiungere alla massa in autolisi la biga matura spezzettata e {miele_impasto:10}g di miele. Avviare la spirale in 1ª velocità per 5-6 minuti per incorporare il pre-impasto. La semola incorda prima del grano tenero ma scalda anche più velocemente: monitorare la temperatura."
+    },
+    {
+      "title": "Bassinage e Sale",
+      "text": "Quando l'impasto è liscio e aggrappato al gancio, inserire {sale_impasto:20}g di sale. Passare in 2ª velocità e iniziare ad aggiungere i {acqua_bassinage:80}g di acqua rimanente a filo, in 3-4 riprese (bassinage), aspettando che la dose precedente sia assorbita. Chiudere l'impasto a 25-26°C."
+    },
+    {
+      "title": "Puntata (Prima Lievitazione)",
+      "text": "Trasferire l'impasto sul banco, dare una piega di rinforzo (slap & fold) e pirlando formare una palla. Riporre in un contenitore oliato con i bordi dritti. Coprire e lasciar lievitare a temperatura ambiente (24-25°C) per circa 90 minuti, o fino a un aumento del 50% del volume iniziale."
+    },
+    {
+      "title": "Staglio e Formatura Tradizionale",
+      "text": "Rovesciare l'impasto sul banco spolverato di semola. Dividere la massa in due panetti da circa {panetto_peso:765!}g ciascuno. Pre-formare a palla e lasciare riposare 20 minuti coperti a campana. Per la formatura classica accavallata (u sckuanète): schiacciare leggermente il panetto a disco spesso, prendere il lembo superiore e ripiegarlo verso il centro, poi prendere il lembo inferiore e sovrapporlo a quello superiore, sigillando i bordi laterali."
+    },
+    {
+      "title": "Appretto (Seconda Lievitazione)",
+      "text": "Posizionare i pani formati su una teglia infarinata di abbondante semola, o in cestini di lievitazione (banneton), con la chiusura verso il basso. Coprire con un panno di cotone e lasciare lievitare per 60-90 minuti a 24°C, finché l'impasto risulterà soffice al tocco (prova del dito: deve tornare su lentamente)."
+    }
+  ],
+  "sensoryProfile": {
+    "axes": [
+      {
+        "label": "Croccantezza Crosta",
+        "value": 9
+      },
+      {
+        "label": "Sapore di Grano Duro",
+        "value": 9
+      },
+      {
+        "label": "Alveolatura",
+        "value": 5
+      },
+      {
+        "label": "Acidità",
+        "value": 4
+      },
+      {
+        "label": "Umidità Mollica",
+        "value": 6
+      }
+    ]
+  }
+}

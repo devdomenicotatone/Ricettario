@@ -240,5 +240,30 @@
       "title": "Cottura",
       "text": "Preriscaldare il forno a 220°C (ventilato 200°C) per almeno 20 minuti. Posizionare la teglia a metà altezza del forno. Infornare per 15-18 minuti per rollò e calzoncini, 12-15 minuti per le pizzette. I prodotti sono cotti quando la superficie è dorata ambrata e il fondo risulta croccante. NON aprire il forno nei primi 10 minuti. A cottura ultimata, lasciar raffreddare su griglia."
     }
-  ]
+  ],
+  "sensoryProfile": {
+    "summary": "Un lievitato da rosticceria di scuola siciliana che si distingue per una crosta lucida e ambrata, resa ancor più seducente dalla spennellatura all'uovo e dalla copertura di sesamo tostato. L'impasto, ricco di strutto e zucchero (10% su farina), esprime una mollica soffice, filante e leggermente dolce, con una persistenza aromatica calda e burrosa che avvolge le farciture sapide. La bassa idratazione (50%) e la tecnica di incordatura spinta garantiscono una struttura compatta ma cedevole al morso, tipica dei grandi prodotti da banco siciliani.",
+    "axes": [
+      {
+        "label": "Doratura & Reazione di Maillard",
+        "value": 9
+      },
+      {
+        "label": "Morbidezza della Mollica",
+        "value": 8
+      },
+      {
+        "label": "Dolcezza dell'Impasto",
+        "value": 7
+      },
+      {
+        "label": "Croccantezza della Crosta",
+        "value": 6
+      },
+      {
+        "label": "Sapidità & Complessità della Farcitura",
+        "value": 7
+      }
+    ]
+  }
 }

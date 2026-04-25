@@ -7,7 +7,7 @@
   "category": "Condimenti",
   "hydration": 0,
   "targetTemp": "60–70°C (olio durante riscaldamento)",
-  "fermentation": "—",
+  "fermentation": "",
   "totalFlour": 0,
   "ingredients": [],
   "ingredientGroups": [
@@ -56,11 +56,11 @@
     },
     {
       "title": "Filtraggio Fine Mesh — La Tecnica da Laboratorio",
-      "text": "Prepara la postazione di filtraggio: inserisci una ciotola di raccolta dentro una ciotola più grande riempita di ghiaccio — il freddo solidifica rapidamente le particelle e ferma ogni ulteriore ossidazione. Posiziona il setaccio in acciaio inox 325 o 400 mesh sopra la ciotola di raccolta fredda. Quando il composto si è leggermente assestato e la temperatura scende intorno a 45–50°C, versalo lentamente sul setaccio: a questa temperatura l'olio è ancora fluido e passa agevolmente attraverso le maglie microscopiche. FONDAMENTALE: non premere mai il fondo con un cucchiaio. Lascia filtrare per gravità per 10–20 minuti. Pressare rompe le particelle solide spingendole nel filtrato, rendendo l'olio torbido — l'effetto opposto a quello desiderato. L'olio raccolto deve risultare verde brillante e limpido."
+      "text": "Prepara la postazione di filtraggio: inserisci una ciotola di raccolta dentro una ciotola più grande riempita di ghiaccio — il freddo solidifica rapidamente le particelle e ferma ogni ulteriore ossidazione. Posiziona il setaccio in acciaio inox 325 o 400 mesh sopra la ciotola di raccolta fredda (in alternativa, un colino a maglie fini foderato con un filtro da caffè in carta o una superbag/etamina). Quando il composto si è leggermente assestato e la temperatura scende intorno a 45–50°C, versalo lentamente sul setaccio: a questa temperatura l'olio è ancora fluido e passa agevolmente attraverso le maglie microscopiche. FONDAMENTALE: non premere mai il fondo con un cucchiaio. Lascia filtrare per gravità per 10–20 minuti. Pressare rompe le particelle solide spingendole nel filtrato, rendendo l'olio torbido — l'effetto opposto a quello desiderato. L'olio raccolto deve risultare verde brillante e limpido."
     },
     {
       "title": "Travaso e Tocco Estetico Finale",
-      "text": "Lava e asciuga accuratamente l'oliera trasparente (perfetta per valorizzare il colore). Travasa l'olio ormai freddo nell'oliera. Inserisci delicatamente il {basilico_viola_deco:5}g di rametto di basilico viola fresco — precedentemente lavato e asciugato in modo maniacale come il basilico verde — per il contrasto cromatico: il viola galleggerà nel verde smeraldo per un effetto visivo d'impatto. Chiudi l'oliera, etichetta con la data di produzione e riponi in luogo fresco, al buio. Consumare entro 3–4 settimane."
+      "text": "Lava e asciuga accuratamente l'oliera trasparente (perfetta per valorizzare il colore). Travasa l'olio ormai freddo nell'oliera. Inserisci delicatamente il {basilico_viola_deco:5}g di rametto di basilico viola fresco — precedentemente lavato e asciugato in modo maniacale come il basilico verde — per il contrasto cromatico: il viola galleggerà nel verde smeraldo per un effetto visivo d'impatto. ⚠️ ATTENZIONE: se inserisci il rametto fresco, l'olio va consumato tassativamente entro 2-4 giorni al massimo. Chiudi l'oliera, etichetta con la data di produzione e riponi in frigorifero. Consumare entro 3–4 settimane (solo se senza rametto fresco)."
     }
   ],
   "stepsCondiment": [],
@@ -108,11 +108,16 @@
       "definition": "Clostridium botulinum è un batterio anaerobio che in preparazioni oleose con erbe fresche e tracce d'acqua può produrre tossine mortali. La corretta asciugatura del basilico e la conservazione breve (max 4 settimane in frigo) sono misure di sicurezza fondamentali."
     }
   ],
-  "alert": "⚠️ SICUREZZA ALIMENTARE — RISCHIO BOTULINO: Gli oli aromatizzati con erbe fresche sono ambienti ideali per Clostridium botulinum (anaerobiosi, pH neutro, presenza di acqua residua). Asciuga il basilico in modo maniacale prima dell'infusione e conserva SEMPRE in frigorifero. NON lasciare mai a temperatura ambiente per più di qualche ora. Consuma entro 3–4 settimane al massimo. NON superare i 70°C durante il riscaldamento: sopra gli 80°C il basilico cuoce, l'aroma vira su 'erba cotta' e il colore tende al marrone. NON pressare durante il filtraggio: si rompe la purezza ottica del prodotto finale.",
+  "alert": "⚠️ SICUREZZA ALIMENTARE — RISCHIO BOTULINO: Gli oli aromatizzati con erbe fresche sono ambienti ideali per Clostridium botulinum (anaerobiosi, pH neutro, presenza di acqua residua). Asciuga il basilico in modo maniacale prima dell'infusione e conserva SEMPRE in frigorifero. NON lasciare mai a temperatura ambiente per più di qualche ora. Consuma entro 3–4 settimane al massimo (senza rametto fresco). Se inserisci un rametto di erba fresca nell'olio finito, consuma tassativamente entro 2-4 giorni. NON superare i 70°C durante il riscaldamento: sopra gli 80°C il basilico cuoce, l'aroma vira su 'erba cotta' e il colore tende al marrone. NON pressare durante il filtraggio: si rompe la purezza ottica del prodotto finale.",
   "proTips": [
     "Per il verde più intenso possibile, usa foglie di basilico appena raccolte la mattina (massimo contenuto di clorofilla) e processa entro 2 ore dalla raccolta. Le foglie ossidate o appassite danno sempre un verde più spento, indipendentemente dalla tecnica.",
     "Se vuoi un olio ancora più verde e stabile nel tempo, aggiungi 2–3 foglie di prezzemolo fresco sbollentate insieme al basilico: il prezzemolo ha una clorofilla più resistente al calore e 'rinforza' visivamente il colore senza alterare l'aroma percepibile in piccole quantità.",
     "Per servizio da ristorante: versa l'olio verde filtrato in siringhe da pasticceria o squeeze bottle da 50ml, tappate e conservate in frigo. Ogni utilizzo sarà preciso e igienico. Alla lettura del piatto, porta la squeeze bottle a temperatura ambiente per 10 minuti prima dell'uso: il freddo rende l'olio viscoso e difficile da dosare con precisione."
+  ],
+  "storage": [
+    "Per preservare il colore smeraldo e prevenire l'ossidazione, conservare l'olio in frigorifero all'interno di una bottiglia di vetro scuro, riempita al massimo per ridurre il contatto con l'aria. Si manterrà ottimale per 1-2 settimane. L'olio potrebbe solidificare a causa del freddo; è sufficiente riportarlo a temperatura ambiente per 15-20 minuti prima dell'uso per ripristinarne la fluidità.",
+    "Per una conservazione a lungo termine (fino a 6 mesi), la tecnica migliore è il congelamento. Versare l'olio negli stampi per cubetti di ghiaccio in silicone. Una volta solidificati, trasferire i cubetti in un sacchetto per sottovuoto o per freezer, eliminando quanta più aria possibile. Questo metodo preserva perfettamente colore e aroma e permette un utilizzo porzionato.",
+    "La rigenerazione di questo prodotto consiste unicamente nello scongelamento. Prelevare i cubetti necessari e lasciarli scongelare a temperatura ambiente o in frigorifero. Evitare assolutamente l'uso del microonde o di fonti di calore dirette, che cuocerebbero il basilico alterando irrimediabilmente il colore brillante e il sapore fresco."
   ],
   "imageKeywords": [
     "basil infused olive oil green",
@@ -136,6 +141,30 @@
   ],
   "_generatedBy": "claude",
   "_createdAt": "2026-04-16T14:32:01.457Z",
-  "image": "images/ricette/condimenti/olio-al-basilico-verde-smeraldo.webp",
-  "imageAttribution": "📷 Foto: Ron Lach — Pexels License via Pexels"
+  "image": "images/ricette/condimenti/olio-verde-smeraldo-pro.png",
+  "imageAttribution": "Generata da AI (Antigravity)",
+  "sensoryProfile": {
+    "axes": [
+      {
+        "label": "Fruttato Verde (Erbaceo)",
+        "value": 9
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Amarezza",
+        "value": 2
+      },
+      {
+        "label": "Piccantezza",
+        "value": 1
+      },
+      {
+        "label": "Limpidezza/Purezza Sensoriale",
+        "value": 9
+      }
+    ]
+  }
 }

@@ -147,5 +147,30 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-24T14:35:19.869Z",
   "image": "images/ricette/conserve/pomodorini-confit-sottolio.webp",
-  "imageAttribution": "📷 Foto: Ivan Vi — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: Ivan Vi — Pexels License via Pexels",
+  "sensoryProfile": {
+    "summary": "Un concentrato di dolcezza mediterranea e profondità aromatica: la lenta cottura confit a 140°C per 120 minuti trasforma i datterini in gemme candite, dove la caramellizzazione degli zuccheri ridotti (15g su 1kg di frutto già maturo) si fonde con le note eteree di timo e origano. Immersi in 400g di olio extravergine a freddo, i pomodorini sviluppano una persistenza olfattiva lunga e suadente, con un finale di aglio in camicia che aggiunge rotondità senza invadenza. La struttura è morbida e fondente, con una concentrazione umami che ricorda i pomodori secchi di alta gamma, bilanciata da una dolcezza naturale amplificata dalla reazione di Maillard.",
+    "axes": [
+      {
+        "label": "Dolcezza & Caramellizzazione",
+        "value": 8
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 9
+      },
+      {
+        "label": "Concentrazione Umami",
+        "value": 7
+      },
+      {
+        "label": "Acidità Residua",
+        "value": 4
+      },
+      {
+        "label": "Persistenza Gustativa",
+        "value": 8
+      }
+    ]
+  }
 }

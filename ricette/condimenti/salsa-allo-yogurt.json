@@ -137,5 +137,30 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-24T13:07:59.331Z",
   "image": "images/ricette/condimenti/salsa-allo-yogurt.webp",
-  "imageAttribution": "📷 Foto: Shameel mukkath — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: Shameel mukkath — Pexels License via Pexels",
+  "sensoryProfile": {
+    "summary": "Una salsa dallo straordinario equilibrio acido-lattico, dove la vivacità del succo e della scorza di limone dialoga con la cremosità compatta dello yogurt greco intero. Il bouquet aromatico, dominato dalla freschezza volatile della menta e dall'intensità pungente dell'aglio privato dell'anima, si integra in un profilo sensoriale pulito e persistente, reso rotondo dall'emulsione vellutata con l'olio extravergine fruttato. La fase di maturazione a freddo amplifica la coesione aromatica, regalando una texture lucida e una lunghezza gustativa elegantemente agrumata.",
+    "axes": [
+      {
+        "label": "Acidità",
+        "value": 8
+      },
+      {
+        "label": "Freschezza Aromatica",
+        "value": 9
+      },
+      {
+        "label": "Cremosità / Grassezza",
+        "value": 6
+      },
+      {
+        "label": "Piccantezza / Pungenza",
+        "value": 4
+      },
+      {
+        "label": "Persistenza Gustativa",
+        "value": 6
+      }
+    ]
+  }
 }

@@ -270,5 +270,30 @@
   "_generatedBy": "claude",
   "_createdAt": "2026-04-16T19:51:32.202Z",
   "image": "images/ricette/lievitati/pasta-brioche-classica.webp",
-  "imageAttribution": "📷 Foto: Suzy Hazelwood — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: Suzy Hazelwood — Pexels License via Pexels",
+  "sensoryProfile": {
+    "summary": "Una brioche di scuola classica francese, dalla mollica setosa e burrosa, con una complessità aromatica stratificata che intreccia agrumi freschi, vaniglia Bourbon e rum scuro in una marinatura pre-impasto che ne esalta la profondità olfattiva. La doratura al tuorlo e panna conferisce una crosta fine e lucida color nocciola, con una dolcezza ben calibrata dal sale e bilanciata dalla struttura glutinica di una blend Manitoba/T0 ad alta forza, capace di sostenere un impasto ricco e idratato al 54%.",
+    "axes": [
+      {
+        "label": "Sofficità Mollica",
+        "value": 9
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 9
+      },
+      {
+        "label": "Dolcezza",
+        "value": 7
+      },
+      {
+        "label": "Ricchezza Burrosa",
+        "value": 7
+      },
+      {
+        "label": "Croccantezza Crosta",
+        "value": 4
+      }
+    ]
+  }
 }

@@ -1,0 +1,161 @@
+{
+  "title": "Pesto di Zucchine a Freddo",
+  "slug": "pesto-di-zucchine",
+  "emoji": "🥒",
+  "description": "Una crema verde brillante e vellutata, realizzata rigorosamente a freddo per mantenere inalterati colori, sapori e proprietà nutrizionali delle zucchine e del basilico.",
+  "subtitle": "Emulsione a freddo con tecnica di spurgatura osmotica",
+  "category": "Condimenti",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per il Pesto",
+      "items": [
+        {
+          "name": "Zucchine",
+          "note": "(varietà scura o romanesca, sode e senza semi centrali)",
+          "grams": 250,
+          "tokenId": "zucchine"
+        },
+        {
+          "name": "Olio Extravergine di Oliva",
+          "note": "(fruttato leggero, per non coprire il sapore)",
+          "grams": 100,
+          "tokenId": "olio_evo"
+        },
+        {
+          "name": "Parmigiano Reggiano DOP",
+          "note": "(stagionatura 24-30 mesi, grattugiato finemente)",
+          "grams": 40,
+          "tokenId": "parmigiano"
+        },
+        {
+          "name": "Pecorino Romano DOP",
+          "note": "(grattugiato finemente)",
+          "grams": 30,
+          "tokenId": "pecorino"
+        },
+        {
+          "name": "Pinoli",
+          "note": "(di prima scelta, crudi o leggermente tostati a freddo)",
+          "grams": 35,
+          "tokenId": "pinoli"
+        },
+        {
+          "name": "Basilico Fresco",
+          "note": "(foglie giovani, pulite a secco)",
+          "grams": 10,
+          "tokenId": "basilico"
+        },
+        {
+          "name": "Aglio",
+          "note": "(privato dell'anima centrale per maggiore digeribilità)",
+          "grams": 3,
+          "tokenId": "aglio"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(per l'osmosi delle zucchine)",
+          "grams": 2,
+          "tokenId": "sale"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Preparazione e Spurgatura",
+      "text": "Lavare e mondare le {zucchine:250}g di zucchine, rimuovendo le estremità. Utilizzando una grattugia a fori larghi, ridurre l'ortaggio in scaglie. Raccogliere la polpa in un colino a maglie strette posizionato sopra una ciotola, aggiungere i {sale:2}g di sale fino e mescolare accuratamente. Lasciar riposare per {tempo_riposo:20!} minuti: questo processo innesca l'osmosi, permettendo alle zucchine di espellere l'acqua di vegetazione che annacquerebbe l'emulsione."
+    },
+    {
+      "title": "Strizzatura Meccanica",
+      "text": "Trascorso il tempo di riposo, trasferire la polpa di zucchine al centro di un canovaccio di cotone pulito (privo di odori di detersivo). Arrotolare il canovaccio e strizzare energicamente il composto con le mani fino a far fuoriuscire tutto il liquido residuo. Le zucchine dovranno risultare il più asciutte e compatte possibile."
+    },
+    {
+      "title": "Assemblaggio nel Mixer",
+      "text": "In un mixer dotato di lame in acciaio (idealmente raffreddato in freezer per 30 minuti), inserire la polpa di zucchine strizzata, i {pinoli:35}g, l'{aglio:3}g privato dell'anima, i {parmigiano:40}g di Parmigiano Reggiano, i {pecorino:30}g di Pecorino Romano e le foglie di {basilico:10}g pulite esclusivamente con un panno asciutto per non rovinare gli oli essenziali."
+    },
+    {
+      "title": "Emulsione a Freddo",
+      "text": "Azionare il mixer a intermittenza (funzione pulse), frullando per pochissimi secondi alla volta. Mentre le lame girano, versare gradualmente i {olio_evo:100}g di olio extravergine di oliva a filo. Fermarsi di tanto in tanto per pulire i bordi con una spatola di silicone. Frullare fino a ottenere una crema liscia e omogenea, ma che mantenga una texture leggermente rustica tipica del pesto artigianale."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "glossary": [
+    {
+      "term": "Osmosi",
+      "definition": "Fenomeno chimico-fisico per cui il sale estrae i liquidi (acqua di vegetazione) dalle cellule vegetali della zucchina, concentrandone il sapore e riducendo l'umidità del pesto."
+    },
+    {
+      "term": "Emulsione",
+      "definition": "Dispersione omogenea di due liquidi non miscibili (in questo caso l'acqua residua delle verdure e l'olio EVO), stabilizzata meccanicamente e dalle proteine dei formaggi."
+    },
+    {
+      "term": "Ossidazione",
+      "definition": "Alterazione cromatica e aromatica causata dal contatto con l'ossigeno o dal calore delle lame. Rende il pesto scuro e il basilico amaro."
+    },
+    {
+      "term": "Pulse",
+      "definition": "Funzione a impulsi del mixer (accensione e spegnimento rapido) che impedisce alle lame di surriscaldarsi durante l'attrito continuo."
+    }
+  ],
+  "alert": "MAI frullare il pesto in modo continuo per lunghi periodi. L'attrito prolungato surriscalda le lame, cuocendo letteralmente il basilico (che diventerà nero e amaro) e provocando la separazione (stracciatura) dei grassi del formaggio, restituendo un condimento untuoso e slegato.",
+  "proTips": [
+    "Shock termico: Metti il boccale e le lame del mixer nel congelatore per 30 minuti prima di iniziare. Il freddo fisserà il verde della clorofilla garantendo un colore brillante degno di uno chef.",
+    "Tostatura della frutta secca: Se desideri un sapore più rotondo, tosta i pinoli in padella senza grassi per un paio di minuti finché non rilasciano i loro oli essenziali, ma assicurati che siano COMPLETAMENTE freddi prima di frullarli.",
+    "Scelta delle materie prime: Se le zucchine presentano una parte centrale bianca molto spugnosa e ricca di semi, eliminatela prima di grattugiarle. Utilizzate solo la parte verde ed esterna più soda."
+  ],
+  "storage": [
+    "In frigorifero: si conserva in un vasetto di vetro a chiusura ermetica fino a 3-4 giorni. Ricordate di livellare la superficie e coprirla con un velo d'olio EVO per creare una barriera contro l'ossigeno.",
+    "In congelatore: dura fino a 3 mesi. Il metodo migliore è congelarlo nelle vaschette per i cubetti di ghiaccio: una volta induriti, trasferite i cubetti in un sacchetto gelo per avere porzioni monouso da sciogliere direttamente in padella con l'acqua della pasta."
+  ],
+  "imageKeywords": [
+    "fresh zucchini pesto",
+    "green homemade pesto",
+    "courgette pesto glass jar",
+    "pesto di zucchine",
+    "zucchini pesto pasta sauce",
+    "frisches zucchini pesto"
+  ],
+  "tags": [
+    "pesto",
+    "zucchine",
+    "condimenti",
+    "senza cottura",
+    "salsa",
+    "vegetariano"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "_createdAt": "2026-04-24T12:54:03.100Z",
+  "image": "images/ricette/condimenti/pesto-di-zucchine.webp",
+  "imageAttribution": "📷 Foto: Jana Ohajdova — Pexels License via Pexels",
+  "sensoryProfile": {
+    "axes": [
+      {
+        "label": "Grassezza",
+        "value": 8
+      },
+      {
+        "label": "Sapidità (Umami)",
+        "value": 7
+      },
+      {
+        "label": "Freschezza Vegetale",
+        "value": 7
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 5
+      },
+      {
+        "label": "Persistenza",
+        "value": 6
+      }
+    ]
+  }
+}

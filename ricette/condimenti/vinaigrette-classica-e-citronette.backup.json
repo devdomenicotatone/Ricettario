@@ -1,0 +1,176 @@
+{
+  "title": "Vinaigrette Classica e Citronette",
+  "slug": "vinaigrette-classica-e-citronette",
+  "emoji": "🥗",
+  "description": "Due emulsioni fredde fondamentali: vinaigrette con aceto e citronette con limone. Rapporto 3:1 olio/acido, pronte in 5 minuti.",
+  "subtitle": "Le due salse madri fredde della cucina italiana — emulsioni instabili a base di olio e acido",
+  "category": "Condimenti",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per la Vinaigrette",
+      "items": [
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(cultivar delicata, es. Taggiasca o Leccino)",
+          "grams": 120,
+          "tokenId": "olio_evo_vinaigrette"
+        },
+        {
+          "name": "Aceto di Vino Bianco",
+          "note": "(acidità 6-7%)",
+          "grams": 40,
+          "tokenId": "aceto_vinaigrette"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(marino integrale)",
+          "grams": 2,
+          "tokenId": "sale_vinaigrette"
+        },
+        {
+          "name": "Pepe Nero",
+          "note": "(macinato fresco al momento)",
+          "grams": 1,
+          "tokenId": "pepe_vinaigrette"
+        }
+      ]
+    },
+    {
+      "group": "Per la Citronette",
+      "items": [
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(cultivar delicata, es. Taggiasca o Leccino)",
+          "grams": 90,
+          "tokenId": "olio_evo_citronette"
+        },
+        {
+          "name": "Succo di Limone",
+          "note": "(fresco, filtrato — circa 2 limoni medi)",
+          "grams": 45,
+          "tokenId": "succo_limone_citronette"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(marino integrale)",
+          "grams": 2,
+          "tokenId": "sale_citronette"
+        },
+        {
+          "name": "Pepe Nero",
+          "note": "(macinato fresco al momento)",
+          "grams": 1,
+          "tokenId": "pepe_citronette"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Preparazione della Vinaigrette",
+      "text": "Versare {aceto_vinaigrette:40}g di aceto di vino bianco in una ciotola capiente (o un barattolo in vetro con tappo). Aggiungere {sale_vinaigrette:2}g di sale fino e mescolare energicamente con una frusta a molla piatta (o una normale frusta a mano) fino a completo scioglimento del sale nell'aceto — circa 30 secondi. Il sale si scioglie nell'acido ma NON nell'olio: questo passaggio è fondamentale."
+    },
+    {
+      "title": "Emulsione della Vinaigrette",
+      "text": "Aggiungere {olio_evo_vinaigrette:120}g di olio extravergine d'oliva a filo sottile, continuando a frustare con energia costante e movimenti circolari rapidi. L'obiettivo è creare un'emulsione omogenea e leggermente cremosa, dove olio e aceto non risultino separati. Completare con {pepe_vinaigrette:1}g di pepe nero macinato al momento e dare un'ultima frustata. Resa finale: circa 160g di vinaigrette."
+    },
+    {
+      "title": "Preparazione della Citronette",
+      "text": "Spremere i limoni e filtrare il succo con un colino a maglie strette per eliminare semi e polpa. Versare {succo_limone_citronette:45}g di succo di limone filtrato in una ciotola capiente (o un bicchiere alto e stretto se si usa il mixer a immersione). Aggiungere {sale_citronette:2}g di sale fino e mescolare con la frusta fino a completo scioglimento."
+    },
+    {
+      "title": "Emulsione della Citronette",
+      "text": "Versare a filo {olio_evo_citronette:90}g di olio extravergine d'oliva, frustando energicamente per 1-2 minuti. In alternativa, utilizzare un mixer a immersione nel bicchiere alto: immergere e frullare per circa 2 minuti fino a ottenere un'emulsione liscia, cremosa e leggermente densa. Completare con {pepe_citronette:1}g di pepe nero macinato fresco e mescolare. Resa finale: circa 135g di citronette."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "baking": null,
+  "glossary": [
+    {
+      "term": "Emulsione instabile",
+      "definition": "Miscela temporanea di due liquidi immiscibili (olio e acido acquoso) ottenuta per agitazione meccanica. A differenza di una maionese (emulsione stabile con lecitina del tuorlo), vinaigrette e citronette tendono a separarsi col tempo e vanno riemulsionate prima dell'uso."
+    },
+    {
+      "term": "Frusta a molla piatta",
+      "definition": "Frusta da cucina con fili piatti a spirale invece che a goccia. Ideale per emulsionare piccoli volumi di liquido in ciotole basse, garantendo un'incorporazione d'aria più efficiente."
+    },
+    {
+      "term": "Rapporto olio:acido",
+      "definition": "Proporzione fondamentale delle emulsioni fredde. Per la vinaigrette classica italiana il rapporto è 3:1 (3 parti di olio, 1 di aceto). Per la citronette è circa 2:1, perché il limone è meno acido dell'aceto e il sapore risulta più delicato."
+    },
+    {
+      "term": "Filtrazione del succo",
+      "definition": "Passaggio del succo di agrumi attraverso un colino a maglie strette per eliminare semi, polpa e filamenti. Essenziale per ottenere un'emulsione liscia e senza residui."
+    },
+    {
+      "term": "A filo",
+      "definition": "Tecnica di aggiunta graduale di un liquido (tipicamente olio) in un flusso sottile e costante, mentre si mescola energicamente. Permette una migliore emulsione perché le gocce d'olio vengono frammentate uniformemente nella fase acquosa."
+    }
+  ],
+  "alert": "NON aggiungere il sale direttamente nell'olio: il sale non si scioglie nei grassi e rimarrebbe in granuli, dando un condimento disomogeneo. Il sale va SEMPRE sciolto prima nella componente acida (aceto o succo di limone). Allo stesso modo, NON usare un olio dal gusto troppo intenso o piccante (cultivar Coratina, Moraiolo forte): coprirebbe l'equilibrio acido-grasso.",
+  "proTips": [
+    "Per una vinaigrette più stabile e leggermente piccante, aggiungi 3-4g (1 cucchiaino raso) di senape di Digione all'aceto prima di emulsionare: la lecitina e le mucillagini della senape fungono da emulsionante naturale e rallentano la separazione.",
+    "La citronette si presta a infinite varianti: aggiungi scorza di limone grattugiata (solo la parte gialla) per un aroma più intenso, oppure erba cipollina sminuzzata finemente per una nota fresca ed erbacea.",
+    "Se l'emulsione si separa durante l'uso, non scartarla: basta agitare energicamente il barattolo chiuso per 15-20 secondi oppure dare un colpo di mixer a immersione e torna perfettamente cremosa."
+  ],
+  "storage": [
+    "Conservare entrambe le salse in un barattolo di vetro con tappo a vite ermetico, in frigorifero a 4°C, per un massimo di 3-4 giorni. L'olio EVO tende a solidificarsi parzialmente in frigo: è normale e non indica deterioramento.",
+    "Prima dell'uso, estrarre dal frigo 10-15 minuti in anticipo per riportare l'olio a consistenza fluida, poi agitare energicamente il barattolo o riemulsionare con frusta/mixer per ripristinare la cremosità.",
+    "NON congelare: il congelamento rompe irreversibilmente l'emulsione e altera il sapore dell'olio extravergine. Preparare sempre in piccole quantità fresche è la scelta migliore."
+  ],
+  "imageKeywords": [
+    "vinaigrette dressing bowl",
+    "lemon citronette sauce",
+    "homemade salad dressing olive oil",
+    "french vinaigrette whisk",
+    "emulsion dressing glass jar",
+    "citronette al limone condimento",
+    "Salatdressing Essig Öl"
+  ],
+  "tags": [
+    "vinaigrette",
+    "citronette",
+    "emulsione fredda",
+    "condimento",
+    "salsa base",
+    "insalata",
+    "olio extravergine",
+    "limone",
+    "aceto"
+  ],
+  "_generatedBy": "claude-opus",
+  "_createdAt": "2026-04-19T20:31:44.570Z",
+  "image": "images/ricette/condimenti/vinaigrette-classica-e-citronette.webp",
+  "imageAttribution": "📷 Foto: Nadin Sh — Pexels License via Pexels",
+  "sensoryProfile": {
+    "axes": [
+      {
+        "label": "Acidità",
+        "value": 8
+      },
+      {
+        "label": "Fruttato (EVO)",
+        "value": 6
+      },
+      {
+        "label": "Piccantezza",
+        "value": 3
+      },
+      {
+        "label": "Sapidità",
+        "value": 3
+      },
+      {
+        "label": "Emulsionabilità",
+        "value": 7
+      }
+    ]
+  }
+}

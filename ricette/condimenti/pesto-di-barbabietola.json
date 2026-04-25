@@ -146,5 +146,30 @@
   "_generatedBy": "claude-opus",
   "_createdAt": "2026-04-24T13:07:44.327Z",
   "image": "images/ricette/condimenti/pesto-di-barbabietola.webp",
-  "imageAttribution": "📷 Foto: Nadin Sh — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: Nadin Sh — Pexels License via Pexels",
+  "sensoryProfile": {
+    "summary": "Un pesto dalle tinte magenta-viola di grande impatto visivo e gustativo, dove la dolcezza terrosa e quasi zuccherina della barbabietola domina il palato con eleganza. Il Parmigiano Reggiano 24 mesi e i pinoli tostati costruiscono un fondo umami e burroso di notevole persistenza, mentre il succo di limone dona una vivace scossa acida che bilancia la grassezza dell'EVO Taggiasca. Il basilico aggiunge una nota erbacea fresca che chiude il bouquet con leggerezza e freschezza aromatica.",
+    "axes": [
+      {
+        "label": "Dolcezza Terrosa",
+        "value": 8
+      },
+      {
+        "label": "Acidità",
+        "value": 5
+      },
+      {
+        "label": "Umami & Sapidità",
+        "value": 7
+      },
+      {
+        "label": "Grassezza & Untuosità",
+        "value": 6
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 7
+      }
+    ]
+  }
 }

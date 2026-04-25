@@ -227,5 +227,30 @@
       "title": "Foratura e Condimento Finale (tecnica dei 3 dita)",
       "text": "Scoprire la focaccia. Spolverizzare con un velo di farina. Con 3 dita (indice-medio-anulare) INCLINATE (non perpendicolari), affondare creando i tipici buchi profondi fino quasi al fondo. Distanza tra buchi: 1 cm. Spingere le dita leggermente verso i bordi durante la foratura. Ruotare la teglia per forare uniformemente anche i lati. Versare al centro {olio_superficie:30} g olio + 100 g salamoia. Spargere delicatamente con mano piatta riempiendo tutti i buchi. NON coprire. Riposo finale: 40-45 minuti."
     }
-  ]
+  ],
+  "sensoryProfile": {
+    "summary": "Una focaccia genovese dalla struttura tecnica impeccabile: la salamoia generosa (200 g acqua + olio EVO in superficie) garantisce una mollica umida e un'alveolatura aperta, mentre la cottura statica a 230°C per 15 minuti produce una crosta dorata-ambrata dal carattere Maillard pronunciato ma non aggressivo. L'olio extravergine ligure DOP — presente nell'impasto, in teglia e in superficie per un totale di 120 g extra — domina il profilo aromatico con le sue note fruttate e leggere di mandorla verde, bilanciate da una sapidità decisa conferita dalla doppia dose di sale (13 g impasto + 10 g salamoia). La piega a tre e la doppia lievitazione strutturata conferiscono una tenacia al morso tipicamente genovese, soffice ma risoluta.",
+    "axes": [
+      {
+        "label": "Croccantezza Crosta",
+        "value": 7
+      },
+      {
+        "label": "Umidità Mollica",
+        "value": 8
+      },
+      {
+        "label": "Sapidità",
+        "value": 8
+      },
+      {
+        "label": "Intensità Aromatica (Olio EVO)",
+        "value": 9
+      },
+      {
+        "label": "Alveolatura",
+        "value": 6
+      }
+    ]
+  }
 }

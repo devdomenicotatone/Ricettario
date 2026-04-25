@@ -254,5 +254,30 @@
       "title": "Appretto in Cassetta",
       "text": "Disporre i panetti in cassette da lievitazione oliate, spaziati 5-6 cm. Coprire con coperchio o pellicola. Appretto 4-5 ore a temperatura ambiente (22°C). I panetti sono pronti quando raddoppiano di volume e al test del dito la fossetta si richiude lentamente. Usare entro 1 ora dal termine appretto per massima alveolatura."
     }
-  ]
+  ],
+  "sensoryProfile": {
+    "summary": "Una pizza contemporanea di straordinaria complessità strutturale, frutto di una doppia fermentazione biga-lievito madre che sviluppa una acidità lattica fine e avvolgente, mai aggressiva. Il cornicione 'canotto', gonfio e pronunciato, rivela un'alveolatura aperta e irregolare, con una mollica eterea quasi impalpabile che contrasta una crosta sottile e scattante, segnata da una leopardatura intensa generata dalla reazione di Maillard a 470°C. La complessità aromatica è il vero tratto distintivo: note di cereale fermentato, sentori di crosta di pane appena sfornato e una leggera acidità yogurt si fondono in un finale lungo e persistente.",
+    "axes": [
+      {
+        "label": "Alveolatura Canotto",
+        "value": 10
+      },
+      {
+        "label": "Croccantezza Crosta",
+        "value": 8
+      },
+      {
+        "label": "Acidità Fermentativa",
+        "value": 7
+      },
+      {
+        "label": "Umidità Mollica",
+        "value": 8
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 9
+      }
+    ]
+  }
 }

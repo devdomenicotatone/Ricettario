@@ -5,7 +5,7 @@
   "description": "Cornetti sfogliati all'italiana con biga, sfogliatura a 3 pieghe e lievitazione lenta in frigo. Ricetta professionale con procedimento dettagliato.",
   "subtitle": "Lievitato sfogliato italiano — Biga 8-10h, sfogliatura a 3 giri, maturazione in frigo 12haaaaaaa",
   "category": "Lievitati",
-  "hydration": 53,
+  "hydration": 47,
   "targetTemp": "22-24°C",
   "fermentation": "~24h totali (biga 8-10h + puntata 1h + frigo 12h)",
   "totalFlour": 500,
@@ -219,6 +219,11 @@
     "Rifilare SEMPRE i bordi dell'impasto sfogliato prima del taglio: i bordi schiacciati dal mattarello hanno gli strati sigillati e non si apriranno in cottura, producendo cornetti con le estremità compatte. I ritagli possono essere sovrapposti (mai impastati!) e usati per girelle o pain au chocolat di seconda scelta.",
     "Per una sfogliatura professionale, dopo ogni piega eseguire un 'quarto di giro' (ruotare l'impasto di 90°) prima di riporre in frigo. Questo garantisce che la stesura successiva avvenga perpendicolare alla precedente, distribuendo la tensione in modo uniforme e creando strati regolari."
   ],
+  "storage": [
+    "Per una qualità ottimale, congela i cornetti dopo la formatura ma prima dell'ultima lievitazione. Disponili su un vassoio, congela per 1-2 ore (IQF), poi trasferiscili in un sacchetto per congelatore ben sigillato, dove si conserveranno perfettamente fino a 2 mesi. Per cuocerli, scongela e fai lievitare per 12 ore in frigorifero, più 2-3 ore a temperatura ambiente prima di infornare.",
+    "I cornetti già cotti vanno conservati a temperatura ambiente (mai in frigo, che accelera il raffermamento) in un sacchetto di carta per massimo 24 ore. Per una conservazione più lunga (fino a 1 mese), congelali da completamente freddi, avvolgendoli singolarmente nella pellicola e poi riponendoli in un contenitore ermetico per proteggerli dall'umidità e dalle bruciature da freddo.",
+    "La rigenerazione è fondamentale: riscalda i cornetti (sia da temperatura ambiente che da congelati) in forno ventilato preriscaldato a 160°C per 5-8 minuti. Questo procedimento riattiva il burro della sfogliatura, restituendo una fragranza e una croccantezza esterna quasi identiche al prodotto appena sfornato. Evitare assolutamente il microonde."
+  ],
   "imageKeywords": [
     "italian cornetti sfogliati pastry",
     "homemade croissant flaky layers",
@@ -247,7 +252,7 @@
   "steps": [
     {
       "title": "Preparazione Biga (Sera Prima — 8-10h)",
-      "text": "In una ciotola, versare {farina_biga:100}g di farina Manitoba, {acqua_biga:45}g di acqua a temperatura ambiente e {lievito_biga:1}g di lievito di birra fresco sbriciolato. Impastare brevemente con le mani (1-2 minuti) fino a ottenere un panetto ruvido e compatto — la biga NON deve essere liscia né elastica. Coprire con pellicola a contatto e lasciar maturare a temperatura ambiente (18-20°C) per 8-10 ore. La biga sarà pronta quando avrà triplicato di volume e presenterà una superficie leggermente bombata con screpolature."
+      "text": "In una ciotola, versare {farina_biga:100}g di farina Manitoba, {acqua_biga:45}g di acqua a temperatura ambiente e {lievito_biga:1}g di lievito di birra fresco sbriciolato. Impastare brevemente con le mani (1-2 minuti) fino a ottenere un panetto ruvido e compatto — la biga NON deve essere liscia né elastica. Coprire con pellicola a contatto e lasciar maturare a temperatura ambiente (18-20°C) per 8-10 ore. La biga sarà pronta quando sarà raddoppiata di volume e presenterà una superficie leggermente bombata con screpolature."
     },
     {
       "title": "Impasto in Spirale — Prima Fase",
@@ -287,11 +292,35 @@
     },
     {
       "title": "Appretto Finale (Lievitazione Pre-Cottura)",
-      "text": "Far lievitare i cornetti in un ambiente caldo e umido a 26-28°C (forno spento con luce accesa e una ciotola di acqua calda sul fondo) per {appretto:90!}-{appretto_max:120!} minuti, fino a che non avranno quasi triplicato di volume. I cornetti pronti devono 'tremolare' se si muove la teglia, apparire gonfi e leggeri. NON superare mai i 30°C o il burro si scioglierà compromettendo la sfogliatura."
+      "text": "Far lievitare i cornetti in un ambiente caldo e umido a 26-28°C (forno spento con luce accesa e una ciotola di acqua calda sul fondo) per 3-4 ore, fino a che non avranno quasi triplicato di volume. I cornetti pronti devono 'tremolare' se si muove la teglia, apparire gonfi e leggeri. NON superare mai i 30°C o il burro si scioglierà compromettendo la sfogliatura."
     },
     {
       "title": "Doratura e Cottura",
       "text": "Mescolare {tuorlo_finitura:18}g di tuorlo d'uovo con {panna_finitura:25}g di panna fresca. Pennellare delicatamente i cornetti con un pennello morbido, senza premere (sono fragilissimi). Infornare immediatamente."
     }
-  ]
+  ],
+  "sensoryProfile": {
+    "axes": [
+      {
+        "label": "Sfogliatura (Leggerezza)",
+        "value": 9
+      },
+      {
+        "label": "Dolcezza Bilanciata",
+        "value": 6
+      },
+      {
+        "label": "Burrositá e Ricchezza",
+        "value": 9
+      },
+      {
+        "label": "Croccantezza Crosta",
+        "value": 8
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 7
+      }
+    ]
+  }
 }

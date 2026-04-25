@@ -1,0 +1,208 @@
+{
+  "title": "Pane alle Noci con Poolish",
+  "slug": "pane-alle-noci-con-poolish",
+  "emoji": "🍞",
+  "description": "Pane rustico artigianale a lievitazione mista: la croccantezza delle noci tostate incontra gli aromi complessi di un prefermento liquido di 12 ore.",
+  "subtitle": "Metodo indiretto con poolish al 100% di idratazione",
+  "category": "Pane",
+  "hydration": 70,
+  "targetTemp": "25-26°C",
+  "fermentation": "12h (prefermento) + 4-5h (impasto)",
+  "totalFlour": 500,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per il Poolish (12-14 ore prima)",
+      "items": [
+        {
+          "name": "Farina Manitoba",
+          "note": "(W 350-380)",
+          "grams": 200,
+          "tokenId": "farina_poolish"
+        },
+        {
+          "name": "Acqua",
+          "note": "(20°C)",
+          "grams": 200,
+          "tokenId": "acqua_poolish"
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(0.25% sulla farina del poolish)",
+          "grams": 0.5,
+          "tokenId": "lievito_poolish"
+        }
+      ]
+    },
+    {
+      "group": "Per l'Impasto Finale",
+      "items": [
+        {
+          "name": "Farina Tipo 0",
+          "note": "(W 260-280)",
+          "grams": 300,
+          "tokenId": "farina_impasto"
+        },
+        {
+          "name": "Acqua",
+          "note": "(16-18°C per spirale, 20°C a mano)",
+          "grams": 120,
+          "tokenId": "acqua_impasto"
+        },
+        {
+          "name": "Acqua per Bassinage",
+          "note": "(fredda di frigo, da aggiungere alla fine)",
+          "grams": 30,
+          "tokenId": "acqua_bassinage"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(2.4% sulla farina totale)",
+          "grams": 12,
+          "tokenId": "sale_impasto"
+        }
+      ]
+    }
+  ],
+  "suspensions": [
+    {
+      "name": "Gherigli di Noci",
+      "note": "(tostati e spezzettati grossolanamente)",
+      "grams": 100,
+      "tokenId": "noci"
+    }
+  ],
+  "flourTable": [
+    {
+      "type": "Farina per Poolish",
+      "w": "350-380",
+      "brands": "Caputo Manitoba, Petra 5063, Molino Spadoni Gran Mugnaio"
+    },
+    {
+      "type": "Farina per Impasto",
+      "w": "260-280",
+      "brands": "Caputo Nuvola, Petra 1, Molino Grassi Tipo 0 Media"
+    }
+  ],
+  "baking": {
+    "temperature": "250°C",
+    "time": "40-45 minuti",
+    "tips": [
+      "Preriscaldare il forno con pietra refrattaria (o pentola in ghisa) per almeno 45 minuti a 250°C.",
+      "Praticare un taglio profondo longitudinale sulla pagnotta prima di infornare.",
+      "Cuocere con vapore (pentolino d'acqua o coperchio in ghisa) per i primi 15 minuti a 250°C.",
+      "Togliere il vapore, abbassare a 220°C per 15 minuti.",
+      "Ultimi 10-15 minuti a 200°C con lo sportello socchiuso (a fessura) per far asciugare la mollica."
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Poolish",
+      "definition": "Prefermento liquido a base di acqua e farina in pari peso (100% idratazione) e pochissimo lievito. Dona al pane estensibilità, croccantezza e aromi lattici/dolciastri."
+    },
+    {
+      "term": "Bassinage",
+      "definition": "Tecnica che consiste nell'aggiungere una parte dell'acqua (solitamente il 10-20%) solo dopo che il glutine si è completamente formato, per non destrutturarlo."
+    },
+    {
+      "term": "Incordatura",
+      "definition": "Il momento in cui la maglia glutinica è completamente formata: l'impasto diventa liscio, elastico e si stacca dalle pareti della vasca."
+    },
+    {
+      "term": "Slap & Fold",
+      "definition": "Tecnica di impastamento manuale: si solleva l'impasto, lo si sbatte con forza sul banco e lo si ripiega su se stesso. Ottima per impasti idratati."
+    },
+    {
+      "term": "Laminazione",
+      "definition": "Stesura dell'impasto sul piano di lavoro fino a formare un velo sottile. Perfetta per inserire inclusioni (noci, olive) in modo omogeneo senza stressare il glutine."
+    },
+    {
+      "term": "Puntata",
+      "definition": "La prima fase di lievitazione in massa dell'impasto, dal termine dell'impastamento fino alla divisione/formatura."
+    },
+    {
+      "term": "Appretto",
+      "definition": "La seconda e ultima fase di lievitazione, che avviene dopo aver dato la forma al panetto, fino al momento dell'infornata."
+    }
+  ],
+  "alert": "Non aggiungere mai le noci all'inizio dell'impastamento o a velocità alte: i gusci appuntiti trancerebbero la maglia glutinica faticosamente creata, facendo collassare l'impasto e impedendo al pane di svilupparsi in altezza.",
+  "proTips": [
+    "Tostatura obbligatoria: Tosta le noci in forno a 160°C per 10 minuti e lasciale raffreddare prima di usarle. Questo passaggio evita che i tannini della pellicina rilascino un colore violaceo-grigiastro alla mollica e un retrogusto amaro.",
+    "Bagnare le noci: Se non vuoi tostarle, mettile a bagno in acqua tiepida per 20 minuti, poi scolale bene. Questo impedirà alle noci secche di assorbire l'acqua destinata all'impasto.",
+    "Per capire quando il poolish è maturo al punto giusto, osserva il centro: quando inizia a formarsi una lievissima fossetta (leggero collasso), è al picco della sua forza e va usato immediatamente."
+  ],
+  "storage": [
+    "Per preservare la fragranza della crosta e la morbidezza della mollica, conservare il pane a temperatura ambiente per 2-3 giorni, avvolto in un sacchetto di carta per alimenti o in un panno di cotone pulito. Evitare la plastica, che ammorbidisce la crosta, e il frigorifero, che accelera il processo di raffermamento (retrogradazione degli amidi).",
+    "Per una conservazione a lungo termine (fino a 2 mesi), si consiglia di congelare il pane già affettato. Avvolgere le fette in pellicola alimentare a stretto contatto e poi inserirle in un sacchetto gelo per alimenti. Questa doppia barriera protegge dall'ustione da freddo e previene l'ossidazione dei grassi contenuti nelle noci.",
+    "Per rigenerare il pane e restituirgli la croccantezza originaria, inumidire leggermente la superficie con poca acqua e scaldarlo in forno statico preriscaldato a 180°C per 5-7 minuti. Le singole fette congelate possono essere rigenerate direttamente in tostapane o in una padella calda senza aggiunta di grassi."
+  ],
+  "imageKeywords": [
+    "walnut bread loaf",
+    "artisan walnut bread sourdough",
+    "pane alle noci",
+    "crusty bread with walnuts inside",
+    "nussbrot",
+    "sliced walnut bread rustic"
+  ],
+  "tags": [
+    "poolish",
+    "pane",
+    "noci",
+    "lievitati",
+    "metodo indiretto",
+    "croccante"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "image": "images/ricette/pane/pane-alle-noci-con-poolish.webp",
+  "imageAttribution": "📷 Foto: KATRIN  BOLOVTSOVA — Pexels License via Pexels",
+  "steps": [
+    {
+      "title": "Preparazione del Poolish",
+      "text": "In un contenitore alto e stretto, sciogliere {lievito_poolish:0.5}g di lievito in {acqua_poolish:200}g di acqua a temperatura ambiente. Aggiungere {farina_poolish:200}g di farina Manitoba e mescolare con una forchetta fino a ottenere una pastella liscia e senza grumi. Coprire con pellicola (lasciando un piccolo sfiato) e far maturare a {temp_ambiente:20!}°C per {tempo_poolish:12!} - 14 ore. Il poolish sarà pronto quando sarà raddoppiato, presenterà una superficie ricca di bolle e mostrerà un leggero cedimento al centro."
+    },
+    {
+      "title": "Avvio dell'Impasto",
+      "text": "Versare tutto il poolish maturo nella vasca dell'impastatrice. Aggiungere {farina_impasto:300}g di farina Tipo 0 e {acqua_impasto:120}g di acqua. Avviare la macchina in prima velocità (V1) per circa {tempo_mix_1:5!} minuti, fino a formare la maglia glutinica e pulire le pareti della vasca."
+    },
+    {
+      "title": "Incordatura e Bassinage",
+      "text": "Passare in seconda velocità (V2). Quando l'impasto è tenace, inserire {sale_impasto:12}g di sale. Una volta assorbito il sale, iniziare il bassinage versando {acqua_bassinage:30}g di acqua a filo in più riprese, aspettando che la dose precedente sia completamente assorbita prima di aggiungere la successiva. Temperatura target impasto: {temp_target:25!}°C."
+    },
+    {
+      "title": "Inserimento Sospensioni",
+      "text": "Riportare l'impastatrice in prima velocità (V1) o fermarla. Inserire {noci:100}g di gherigli di noci precedentemente tostati e raffreddati. Impastare per {tempo_sospensioni:1!} - 2 minuti al massimo, giusto il tempo di distribuirli uniformemente senza strappare la maglia glutinica."
+    },
+    {
+      "title": "Puntata e Pieghe",
+      "text": "Trasferire l'impasto in un contenitore leggermente oliato con bordi dritti. Far riposare per {tempo_puntata:45!} minuti a {temp_puntata:24!}°C. Eseguire un giro di pieghe (coil fold) e lasciar raddoppiare in volume (circa {tempo_raddoppio:2!} - 3 ore a seconda della temperatura)."
+    },
+    {
+      "title": "Formatura e Appretto",
+      "text": "Rovesciare l'impasto sul piano spolverato di semola. Fare una pre-forma leggera, attendere {tempo_riposo:15!} minuti, quindi formare la pagnotta (pirlatura). Trasferire in un cestino di lievitazione (banneton) ben infarinato, con la chiusura verso l'alto. Lasciar lievitare (appretto) per circa {tempo_appretto:90!} minuti a temperatura ambiente, fino al test del dito."
+    }
+  ],
+  "sensoryProfile": {
+    "axes": [
+      {
+        "label": "Croccantezza Crosta",
+        "value": 9
+      },
+      {
+        "label": "Alveolatura",
+        "value": 7
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Acidità (Fermentazione)",
+        "value": 6
+      },
+      {
+        "label": "Sapidità e Struttura",
+        "value": 7
+      }
+    ]
+  }
+}

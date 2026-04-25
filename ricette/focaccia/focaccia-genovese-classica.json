@@ -229,5 +229,30 @@
       "title": "Finitura Pre-Cottura",
       "text": "Versare la restante salamoia nelle fossette e su tutta la superficie. Cospargere uniformemente con {sale_salamoia_e_fini_2:8}g sale grosso marino (non troppo: deve dare croccantezza senza salare eccessivamente). Lasciar riposare scoperto 5 minuti per far assorbire la salamoia. La superficie deve apparire lucida, ricca di olio e con fossette ben marcate."
     }
-  ]
+  ],
+  "sensoryProfile": {
+    "summary": "Una focaccia genovese di grande carattere e complessità: la biga a lunga fermentazione regala una profondità aromatica fermentativa equilibrata, mentre la doppia dose di olio EVO Ligure DOP — in impasto e in salamoia — conferisce una grassezza avvolgente e un fruttato intenso. La cottura a 220°C con vapore iniziale garantisce una crosta dorata e croccante che contrasta magnificamente con una mollica umida, aperta e quasi cremosa, segnata da fossette profonde che trattengono l'emulsione olio-acqua.",
+    "axes": [
+      {
+        "label": "Croccantezza Crosta",
+        "value": 8
+      },
+      {
+        "label": "Alveolatura Mollica",
+        "value": 8
+      },
+      {
+        "label": "Umidità e Grassezza",
+        "value": 9
+      },
+      {
+        "label": "Acidità / Complessità Fermentativa",
+        "value": 6
+      },
+      {
+        "label": "Sapidità Percepita",
+        "value": 7
+      }
+    ]
+  }
 }
