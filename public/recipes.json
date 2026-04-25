@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-25T00:26:07.591Z",
-  "totalRecipes": 76,
+  "generatedAt": "2026-04-25T10:30:51.039Z",
+  "totalRecipes": 75,
   "categories": [
     {
       "name": "Pane",
@@ -39,7 +39,7 @@
     },
     {
       "name": "Condimenti",
-      "count": 39,
+      "count": 38,
       "emoji": "🌿"
     }
   ],
@@ -827,22 +827,6 @@
       "tool": "",
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-17T18:05:00.000Z"
-    },
-    {
-      "title": "Olio al Basilico",
-      "slug": "olio-al-basilico",
-      "category": "Condimenti",
-      "categoryDir": "condimenti",
-      "emoji": "🌿",
-      "href": "ricette/condimenti/olio-al-basilico.html",
-      "image": "images/ricette/condimenti/olio-al-basilico.webp",
-      "description": "Olio aromatico al basilico dal colore verde brillante intenso. Tecnica professionale di sbianchitura per estrarre la clorofilla e garantire una conservazione si",
-      "hydration": null,
-      "time": null,
-      "temp": null,
-      "tool": "",
-      "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-16T18:09:17.355Z"
     },
     {
       "title": "Olio al Basilico Verde Smeraldo",
