@@ -187,26 +187,27 @@
   "image": "images/ricette/condimenti/salsa-verde-piemontese-bagnet-verd.webp",
   "imageAttribution": "📷 Foto: DΛVΞ GΛRCIΛ — Pexels License via Pexels",
   "sensoryProfile": {
+    "summary": "Il Bagnet Verd si presenta come una salsa verde di straordinaria complessità: un attacco erbaceo e pungente del prezzemolo fresco cede rapidamente a una sapidità marina profonda, data dall'intreccio di acciughe sotto sale e capperi dissalati, mentre la mollica ammollata nell'aceto e il tuorlo sodo conferiscono corpo e rotondità emulsionata. L'acidità vivace dell'aceto di vino bianco (6%) funge da spina dorsale strutturale, bilanciata dalla grassezza vellutata dell'EVO fruttato leggero. Un profilo sensoriale verticale, austero e territoriale, fedele alla tradizione piemontese del bollito.",
     "axes": [
       {
         "label": "Sapidità (Umami)",
-        "value": 8
+        "value": 9
       },
       {
         "label": "Acidità",
         "value": 7
       },
       {
-        "label": "Intensità Aromatica",
-        "value": 9
+        "label": "Intensità Aromatica Erbacea",
+        "value": 8
       },
       {
-        "label": "Grassezza",
+        "label": "Grassezza & Corpo",
         "value": 6
       },
       {
-        "label": "Persistenza",
-        "value": 8
+        "label": "Piccantezza & Pungenza",
+        "value": 5
       }
     ]
   }

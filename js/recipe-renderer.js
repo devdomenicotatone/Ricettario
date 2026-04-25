@@ -29,7 +29,7 @@ export async function renderRecipe(app, { category, slug }) {
     const recipe = await res.json();
 
     // ── Update page metadata ──
-    document.title = `${recipe.title} — Il Ricettario`;
+    document.title = `${recipe.title} — Ricettario Lab`;
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) metaDesc.setAttribute('content', recipe.description || '');
 
@@ -245,7 +245,7 @@ function buildCondimentPanel(r) {
     </div>`;
 }
 
-// ── Profilo Sensoriale (Chart.js) ──
+// ── Dati Tecnici & Sensoriali ──
 function buildSensoryProfile(r) {
   if (!r.sensoryProfile || !r.sensoryProfile.axes || r.sensoryProfile.axes.length === 0) return '';
   
@@ -264,13 +264,65 @@ function buildSensoryProfile(r) {
     </div>
   ` : '';
 
+  let nutritionHtml = '';
+  if (r.nutrition && r.nutrition.macros) {
+      const carbs = r.nutrition.macros.carbs || 0;
+      const prot = r.nutrition.macros.protein || 0;
+      const fat = r.nutrition.macros.fat || 0;
+      const total = carbs + prot + fat;
+      const pctCarbs = total > 0 ? (carbs / total) * 100 : 0;
+      const pctProt = total > 0 ? (prot / total) * 100 : 0;
+      const pctFat = total > 0 ? (fat / total) * 100 : 0;
+      
+      nutritionHtml = `
+      <style>details > summary::-webkit-details-marker { display: none; }</style>
+      <details style="margin-top: 32px; border-top: 1px solid rgba(212, 165, 116, 0.2); padding-top: 24px; text-align: center;">
+        <summary style="cursor: pointer; font-size: 12px; font-weight: 600; color: var(--text-primary); text-transform: uppercase; letter-spacing: 1px; list-style: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; user-select: none; outline: none; padding: 10px 20px; border-radius: 30px; background: rgba(212, 165, 116, 0.1); border: 1px solid rgba(212, 165, 116, 0.3); transition: all 0.2s ease;">
+          <i data-lucide="microscope" style="width: 16px; height: 16px; color: var(--accent);"></i> Analisi Nutrizionale
+        </summary>
+        
+        <div style="margin-top: 24px; text-align: left; animation: fadeIn 0.3s ease;">
+          <div style="display: flex; align-items: flex-end; margin-bottom: 12px;">
+              <span style="font-size: 32px; font-weight: 800; color: var(--text-primary); line-height: 1;">${r.nutrition.kcal_per_100g}</span>
+              <span style="font-size: 14px; font-weight: 600; color: var(--text-muted); margin-left: 4px; padding-bottom: 2px;">Kcal</span>
+          </div>
+
+          <div style="display: flex; height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 12px; background: rgba(0,0,0,0.05);">
+            <div style="width: ${pctCarbs}%; background: #A8774A;" title="Carboidrati"></div>
+            <div style="width: ${pctProt}%; background: #5C3D18;" title="Proteine"></div>
+            <div style="width: ${pctFat}%; background: #E8C89E;" title="Grassi"></div>
+          </div>
+
+          <div style="display: flex; gap: 16px; font-size: 13px; font-weight: 500; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #A8774A;"></div>
+              <span style="color: var(--text-secondary);">Carboidrati <strong style="color: var(--text-primary);">${carbs}g</strong></span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #5C3D18;"></div>
+              <span style="color: var(--text-secondary);">Proteine <strong style="color: var(--text-primary);">${prot}g</strong></span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #E8C89E;"></div>
+              <span style="color: var(--text-secondary);">Grassi <strong style="color: var(--text-primary);">${fat}g</strong></span>
+            </div>
+          </div>
+
+          <p style="margin: 16px 0 0 0; font-size: 11px; color: var(--text-muted); line-height: 1.4;">
+            <em>Disclaimer: Valori medi calcolati tramite database USDA per l'intera ricetta. Considerano il calo peso da evaporazione. I valori effettivi possono variare in base ai marchi commerciali usati.</em>
+          </p>
+        </div>
+      </details>
+      `;
+  }
+
   return `
     <div class="recipe-panel sensory-panel reveal" style="margin-top: 40px;">
       <h2 class="recipe-panel__title" style="cursor:pointer; display:flex; justify-content:space-between; align-items:center;" 
           data-labels="${escHtml(JSON.stringify(labels))}" 
           data-values="${escHtml(JSON.stringify(values))}" 
           onclick="toggleSensoryChart(this)">
-        <span><span class="recipe-panel__title-icon">${fluentEmoji('star', 24)}</span> Profilo Sensoriale</span>
+        <span><span class="recipe-panel__title-icon">${fluentEmoji('star', 24)}</span> Dati Tecnici & Sensoriali</span>
         <i data-lucide="chevron-down" class="sensory-chevron" style="transition: transform 0.3s;"></i>
       </h2>
       <div class="sensory-chart-container" style="display:none; position:relative; width:100%; max-width:600px; margin: 16px auto 0; padding: 32px 24px; background: var(--bg-elevated); border: 1px solid rgba(212, 165, 116, 0.2); border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.03);">
@@ -286,6 +338,7 @@ function buildSensoryProfile(r) {
         </div>
 
         ${summaryHtml}
+        ${nutritionHtml}
 
       </div>
     </div>
