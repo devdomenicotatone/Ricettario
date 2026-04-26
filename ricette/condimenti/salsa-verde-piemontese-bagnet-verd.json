@@ -187,36 +187,36 @@
   "image": "images/ricette/condimenti/salsa-verde-piemontese-bagnet-verd.webp",
   "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
-    "summary": "Il Bagnet Verd si presenta come una salsa di straordinaria complessità aromatica: il prezzemolo domina con la sua erbaceità fresca e leggermente amaricante, mentre le acciughe dissalate e i capperi costruiscono un substrato umami profondo e salino di grande persistenza. L'aceto di vino bianco, trattenuto nella mollica ammollata, dona una vivace acidità che bilancia la rotondità dell'olio extravergine ligure, con il tuorlo sodo a legare il tutto in una tessitura cremosa e avvolgente.",
+    "summary": "Il Bagnet Verd si presenta come una salsa di straordinaria complessità: l'attacco è netto e vegetale, dominato dalla clorofilla pungente del prezzemolo fresco, subito sostenuto da una sapidità profonda e marina delle acciughe e dei capperi che costruisce un umami persistente e avvolgente. Il tuorlo sodo e la mollica ammollata nell'aceto conferiscono corpo e una rotondità grassa che bilancia l'acidità tagliente dell'aceto, mentre l'olio extravergine lega tutto in una tessitura cremosa, densa e vellutata dal lungo finale aromatico di aglio e pepe.",
     "axes": [
       {
-        "label": "Erbaceità / Freschezza",
-        "value": 9
+        "label": "Sapidità / Umami",
+        "value": 8
       },
       {
         "label": "Acidità / Pungenza",
         "value": 7
       },
       {
-        "label": "Sapidità / Umami",
-        "value": 8
+        "label": "Cremosità / Densità",
+        "value": 7
       },
       {
-        "label": "Untuosità / Corpo",
-        "value": 6
+        "label": "Dolcezza / Rotondità",
+        "value": 3
       },
       {
-        "label": "Complessità Aromatica",
-        "value": 8
+        "label": "Intensità Aromatica",
+        "value": 9
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 312,
+    "kcal_per_100g": 418,
     "macros": {
-      "carbs": 9,
-      "protein": 5,
-      "fat": 27
+      "carbs": 7,
+      "protein": 4,
+      "fat": 41
     }
   },
   "_originalImageUrl": ""

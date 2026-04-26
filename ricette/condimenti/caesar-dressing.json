@@ -169,36 +169,36 @@
   "image": "images/ricette/condimenti/caesar-dressing.webp",
   "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
-    "summary": "Un dressing di straordinaria complessità e coerenza stilistica: l'emulsione di tuorlo e olio extravergine costruisce una base vellutata e avvolgente, su cui si innestano le note saline e iodate delle acciughe, l'umami profondo del Parmigiano 24 mesi e la piccantezza pungente dell'aglio crudo. L'acidità vibrante del limone fresco e dell'aceto di vino bianco bilancia il grasso con precisione chirurgica, mentre la senape di Digione agisce da emulsionante e da nota mustard in retrogusto. La Worcestershire aggiunge una sfumatura fermentata e leggermente dolce che completa un profilo olfattivo-gustativo di grande lunghezza e persistenza.",
+    "summary": "Un dressing di straordinaria complessità e struttura: l'umami profondo delle acciughe si fonde con la sapidità cristallina del Parmigiano Reggiano 24 mesi, creando una sinfonia ricca e avvolgente. L'acidità vivace del limone e dell'aceto di vino bianco taglia con precisione la cremosità dell'emulsione olio-tuorlo, mentre aglio, senape di Digione e Worcestershire tessono uno sfondo aromatico pungente e di grande persistenza. Il finale è lungo, vellutato e leggermente piccante, con una rotondità che bilancia magistralmente la componente acida.",
     "axes": [
       {
         "label": "Sapidità / Umami",
         "value": 9
       },
       {
-        "label": "Acidità / Freschezza",
+        "label": "Acidità / Pungenza",
         "value": 7
       },
       {
-        "label": "Cremosità / Corpo",
+        "label": "Cremosità / Densità",
         "value": 8
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 3
       },
       {
         "label": "Intensità Aromatica",
-        "value": 8
-      },
-      {
-        "label": "Piccantezza / Pungenza",
-        "value": 5
+        "value": 9
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 498,
+    "kcal_per_100g": 468,
     "macros": {
-      "carbs": 3,
-      "protein": 8,
-      "fat": 48
+      "carbs": 4,
+      "protein": 9,
+      "fat": 45
     }
   },
   "_originalImageUrl": ""

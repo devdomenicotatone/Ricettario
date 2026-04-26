@@ -176,34 +176,34 @@
   "image": "images/ricette/pane/treccia-di-pane-olio.webp",
   "imageAttribution": "📷 Foto: Cats Coming — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una treccia dal carattere morbido e avvolgente, dove la grassezza delicata dell'olio extravergine si fonde con le note dolci del miele di acacia, regalando una mollica soffice e filante. La crosta, lucida e ambrata grazie alla spennellatura al latte, offre una leggera resistenza prima di cedere, arricchita dal registro tostato e nocciolato dei semi di sesamo. Un pane di grande equilibrio, a tendenza morbida, con una struttura alveolare fine e regolare sostenuta dal blend di farine di media-alta forza.",
+    "summary": "Una treccia dal carattere avvolgente e mediterraneo: la crosta si presenta dorata e leggermente croccante, impreziosita dal profumo nocciolato dei semi di sesamo tostati. La mollica è soffice e a grana fine, con una struttura raccolta e uniforme tipica degli impasti arricchiti con olio, che dona una masticabilità piacevole e una sensazione burrosa e rotonda al palato. La complessità fermentativa rimane misurata, con note ceralicole dolci in primo piano grazie al contributo del miele di acacia, mentre l'olio extravergine delicato lascia un retrogusto fruttato e gentile.",
     "axes": [
       {
-        "label": "Morbidezza della Mollica",
-        "value": 8
+        "label": "Croccantezza Crosta",
+        "value": 5
       },
       {
-        "label": "Croccantezza della Crosta",
+        "label": "Alveolatura Mollica",
+        "value": 3
+      },
+      {
+        "label": "Complessità Fermentativa",
         "value": 4
-      },
-      {
-        "label": "Complessità Aromatica",
-        "value": 6
       },
       {
         "label": "Sapidità",
         "value": 5
       },
       {
-        "label": "Intensità della Nota Grassa (Olio + Sesamo)",
+        "label": "Note Tostate / Cerealicole",
         "value": 7
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 298,
+    "kcal_per_100g": 295,
     "macros": {
-      "carbs": 47,
+      "carbs": 48,
       "protein": 8,
       "fat": 7
     }

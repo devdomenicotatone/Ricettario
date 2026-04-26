@@ -231,34 +231,34 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Una focaccia di straordinaria complessità artigianale: la biga lunga conferisce una profondità fermentativa e un bouquet di sentori lattici e cerealicoli che si fondono con le note fruttate e pepate dell'olio EVO Ligure DOP. In bocca l'alveolatura aperta e la mollica setosa contrastano magnificamente con la crosta dorata e le fossette caramellizzate, mentre la salamoia emulsionata regala una succulenza persistente e una salinità marina calibrata che invita al secondo assaggio.",
+    "summary": "Una focaccia genovese di grande carattere, costruita su una biga ben sviluppata che regala una complessità aromatica fermentativa elegante e una mollica aperta, quasi traslucida. La salamoia abbondante penetra nelle fossette creando quella tensione golosa tra crosta ambrata e croccante e un interno che si scioglie in bocca, mentre l'olio extravergine ligure DOP firma il profilo con note fruttate delicate e un finale lievemente amaro. La sapidità, bilanciata tra sale fino nell'impasto, sale nella salamoia e sale grosso in superficie, è decisa ma mai aggressiva, perfettamente integrata con la dolcezza residua del miele e la rotondità dell'olio.",
     "axes": [
       {
-        "label": "Croccantezza della Crosta",
+        "label": "Croccantezza Esterna",
         "value": 8
       },
       {
-        "label": "Sofficità e Apertura Alveolare",
-        "value": 9
-      },
-      {
-        "label": "Intensità Aromatica (Fermentazione + EVO)",
-        "value": 8
-      },
-      {
-        "label": "Sapidità e Percezione Marina",
+        "label": "Scioglievolezza Impasto",
         "value": 7
       },
       {
-        "label": "Succulenza / Untuosità (Salamoia)",
+        "label": "Sapidità / Umami",
+        "value": 8
+      },
+      {
+        "label": "Equilibrio Condimento-Impasto",
         "value": 9
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 8
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 282,
+    "kcal_per_100g": 272,
     "macros": {
-      "carbs": 42,
+      "carbs": 38,
       "protein": 7,
       "fat": 9
     }

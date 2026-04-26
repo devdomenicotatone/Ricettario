@@ -164,27 +164,27 @@
   "image": "images/ricette/pasta/gnocchi-di-patate-v2.webp",
   "imageAttribution": "📷 Foto: Demian Spinetta — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Gnocchi di struttura vellutata e anima soffice, dove la patata rossa farinosa dona una dolcezza terrosa e amidacea di grande pulizia. Il profilo è avvolgente e delicato, con una leggera nota speziata dalla noce moscata grattugiata fresca che alleggerisce la rotondità dell'uovo. La semola rimacinata in superficie garantisce una tenuta in cottura precisa, con una pelle sottile che cede al morso rivelando un cuore morbido e fondente.",
+    "summary": "Gli gnocchi di patate rosse farinose si presentano con una struttura interna soffice e cedevole, capace tuttavia di opporre una piacevole resistenza iniziale al morso grazie alla breve mantecatura finale. La superficie rugosa conferita dalla rigatura e dalla semola di spolveratura garantisce un'eccellente adesione ai condimenti, mentre il profilo cerealicolo rimane delicatamente in sottofondo, lasciando spazio alla dolcezza amidacea della patata. L'elasticità è volutamente contenuta — frutto di una lavorazione breve e di una farina debole — restituendo una masticabilità morbida e avvolgente, quasi fondente.",
     "axes": [
       {
-        "label": "Sofficità / Leggerezza",
-        "value": 8
+        "label": "Tenuta al Morso",
+        "value": 5
       },
       {
-        "label": "Dolcezza Amidacea",
+        "label": "Ruvidezza Superficie",
         "value": 7
       },
       {
-        "label": "Tenuta Strutturale",
-        "value": 6
+        "label": "Elasticità / Masticabilità",
+        "value": 4
       },
       {
-        "label": "Complessità Aromatica",
+        "label": "Sapore Cerealicolo",
         "value": 3
       },
       {
-        "label": "Intensità Sapida",
-        "value": 4
+        "label": "Assorbimento Condimento",
+        "value": 8
       }
     ]
   },

@@ -206,28 +206,36 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "La Pinsa Romana si presenta con una struttura alveolare aperta e irregolare, frutto dell'idratazione al 75% e della maturazione fredda prolungata (24-48h) che sviluppa una complessità aromatica di fermentazione lenta, con note lattiche e cerealicole profonde. Il blend di farine (riso + soia) conferisce una croccantezza perimetrale distintiva e una leggerezza strutturale superiore alla pizza tradizionale, mentre il centro mantiene una sofficità umida e quasi cremosa al morso. Un profilo raffinato e tecnicamente bilanciato, dove la digeribilità percepita diventa essa stessa carattere organolettico.",
+    "summary": "La Pinsa Romana si presenta con una struttura alveolata aperta e irregolare, frutto della lunga maturazione a freddo e dell'alta idratazione al 75%. Al naso emergono note fermentate delicate, quasi lattiche, con un sottofondo cerealicolo pulito dato dal blend di farine. In bocca la contrapposizione tra la crosta croccante — esaltata dalla farina di riso e soia — e un interno nuvolare e soffice rappresenta il tratto distintivo identitario di questo prodotto.",
     "axes": [
       {
-        "label": "Croccantezza Crosta",
+        "label": "Croccantezza della Crosta",
         "value": 9
       },
       {
-        "label": "Alveolatura",
+        "label": "Sofficità dell'Alveolatura",
         "value": 8
       },
       {
-        "label": "Sofficità Mollica",
-        "value": 8
-      },
-      {
-        "label": "Complessità Aromatica",
+        "label": "Complessità Aromatica Fermentativa",
         "value": 7
       },
       {
-        "label": "Leggerezza/Digeribilità",
+        "label": "Intensità Sapida",
+        "value": 4
+      },
+      {
+        "label": "Leggerezza / Digeribilità Percepita",
         "value": 9
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 242,
+    "macros": {
+      "carbs": 44,
+      "protein": 8,
+      "fat": 3
+    }
   }
 }

@@ -177,36 +177,36 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "I Cantuccini di Prato si presentano con una struttura marcatamente croccante e friabile, densa di mandorle intere dalla pellicina leggermente tostata, che conferiscono note di frutta secca e un retrogusto amarognolo elegante. Il profilo aromatico è vivace e agrumato, dove la scorza di arancia e limone dialoga con il Marsala in un intreccio di fiori bianchi e frutta candita. La dolcezza sostanziale è bilanciata da una sapidità di fondo e da una secchezza caratteristica, che rende questi biscotti vocazionalmente abbinati a vini da meditazione come il Vin Santo.",
+    "summary": "I Cantuccini di Prato si presentano con una struttura secca e marcatamente croccante, frutto della doppia cottura che ne asciuga completamente l'umidità interna. Al palato la dolcezza è generosa e ben sostenuta, bilanciata dalla nota tostata delle mandorle con pellicina e dal profumo agrumato di arancia e limone che si sprigiona con eleganza. Il corpo è pieno e persistente, con un finale leggermente amaricante conferito dalla pellicina delle mandorle e da un delicato retrogusto di Marsala.",
     "axes": [
       {
-        "label": "Dolcezza",
-        "value": 8
-      },
-      {
-        "label": "Croccantezza / Durezza Strutturale",
-        "value": 9
-      },
-      {
-        "label": "Intensità Aromatica (Agrumi & Mandorla)",
+        "label": "Dolcezza Percepita",
         "value": 7
       },
       {
-        "label": "Grassezza / Untuosità",
+        "label": "Friabilità / Croccantezza",
+        "value": 9
+      },
+      {
+        "label": "Umidità / Cremosità",
         "value": 2
       },
       {
-        "label": "Secchezza / Asciuttezza",
-        "value": 9
+        "label": "Intensità Aromatica",
+        "value": 7
+      },
+      {
+        "label": "Ricchezza / Corpo",
+        "value": 7
       }
     ]
   },
   "nutrition": {
     "kcal_per_100g": 438,
     "macros": {
-      "carbs": 62,
-      "protein": 9,
-      "fat": 15
+      "carbs": 58,
+      "protein": 10,
+      "fat": 17
     }
   }
 }

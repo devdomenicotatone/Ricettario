@@ -232,7 +232,7 @@
   "_generatedBy": "claude-opus",
   "_createdAt": "2026-04-05T01:36:05.142Z",
   "image": "images/ricette/lievitati/burger-buns-con-biga.webp",
-  "imageAttribution": "📷 Foto: Nadin Sh — Pexels License via Pexels",
+  "imageAttribution": "📷 Foto: Brian  Chávez — Pexels License via Pexels",
   "steps": [
     {
       "title": "Preparazione Biga (sera prima)",
@@ -264,28 +264,37 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Un burger bun di scuola artigianale, costruito sulla complessità fermentativa della biga a 18-20 ore: la mollica si presenta ariosa ma compatta, con una texture vellutata e leggermente filante grazie alla doppia quota di grassi (burro e olio EVO) e alla ricchezza di uovo e latte intero. La crosta, laccata dalla doratura tuorlo-latte e impreziosita dal sesamo tostato, offre una cedevolezza burrosa con un finale dolce-latteo di grande pulizia e persistenza.",
+    "summary": "Un lievitato da forno di scuola classica, caratterizzato da una mollica soffice e leggermente filante con alveolatura fine e regolare, frutto della doppia fermentazione con biga a lunga maturazione. Al naso emerge una nota lattica e burrosa con un fondo acidulo-alcolico elegante ceduto dalla biga; in bocca la dolcezza calibrata di miele e zucchero è bilanciata dalla rotondità dei grassi emulsionati (burro e olio EVO), con una crosta sottile, dorata e leggermente croccante impreziosita dal sesamo tostato.",
     "axes": [
       {
-        "label": "Sofficità Mollica",
+        "label": "Sofficità / Leggerezza della Mollica",
         "value": 9
       },
       {
-        "label": "Complessità Aromatica (Biga)",
-        "value": 8
-      },
-      {
-        "label": "Dolcezza",
+        "label": "Complessità Aromatica (Biga + Fermentazione)",
         "value": 7
       },
       {
-        "label": "Croccantezza Crosta",
-        "value": 3
+        "label": "Dolcezza Percepita",
+        "value": 6
       },
       {
-        "label": "Ricchezza (Grassezza)",
+        "label": "Croccantezza della Crosta",
+        "value": 4
+      },
+      {
+        "label": "Ricchezza e Rotondità dei Grassi",
         "value": 7
       }
     ]
-  }
+  },
+  "nutrition": {
+    "kcal_per_100g": 298,
+    "macros": {
+      "carbs": 46,
+      "protein": 9,
+      "fat": 8
+    }
+  },
+  "_originalImageUrl": "https://images.pexels.com/photos/15378135/pexels-photo-15378135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 }

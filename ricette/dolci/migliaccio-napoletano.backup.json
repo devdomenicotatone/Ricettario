@@ -172,28 +172,36 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Il Migliaccio Napoletano si presenta come un dolce dal carattere vellutato e avvolgente, con una struttura densa e cremosa conferita dal semolino di grano duro e dalla ricotta vaccina setacciata. Al naso domina un bouquet delicato di vaniglia e agrume, con la scorza d'arancia che infonde una nota aromatica fresca e leggermente floreale durante la cottura; in bocca la dolcezza è protagonista assoluta, bilanciata da una sottile lattosità e da una piacevole persistenza aromatica che richiama i grandi dessert della tradizione partenopea.",
+    "summary": "Il Migliaccio Napoletano si presenta come un dolce di struttura densa e compatta, con una texture vellutata e fondente al palato, dove la granulometria fine del semolino si fonde armoniosamente con la cremosità lattea della ricotta. Al naso emerge un bouquet avvolgente di vaniglia bourbon e agrumi, con la scorza d'arancia che regala una nota fresca e aromatica su un fondo dolce e burroso. In bocca la dolcezza pronunciata dello zucchero è bilanciata dalla leggera acidità della ricotta vaccina e dalla sapidità di fondo, conferendo profondità e persistenza gusto-olfattiva tipica della pasticceria partenopea.",
     "axes": [
       {
         "label": "Dolcezza",
-        "value": 9
-      },
-      {
-        "label": "Cremosità & Setosità",
         "value": 8
       },
       {
-        "label": "Intensità Aromatica (Vaniglia/Agrume)",
+        "label": "Cremosità / Struttura",
+        "value": 9
+      },
+      {
+        "label": "Intensità Aromatica (Vaniglia & Agrumi)",
         "value": 7
       },
       {
-        "label": "Struttura & Compattezza",
-        "value": 7
-      },
-      {
-        "label": "Acidità Lattica (Ricotta)",
+        "label": "Leggerezza / Aerosità",
         "value": 3
+      },
+      {
+        "label": "Persistenza Gusto-Olfattiva",
+        "value": 7
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 218,
+    "macros": {
+      "carbs": 28,
+      "protein": 7,
+      "fat": 7
+    }
   }
 }

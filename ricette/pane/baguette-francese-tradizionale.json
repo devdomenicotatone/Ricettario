@@ -187,27 +187,27 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Una baguette di scuola francese classica, costruita su un poolish a lunga maturazione che conferisce complessità aromatica: sentori di lievito maturo, note lattiche leggere e un fondo di cereale tostato emergono da una crosta fine e croccante. La mollica è aperta, alveolata in modo irregolare con pareti traslucide, mentre l'equilibrio tra la sapidità del 2% di sale e la dolcezza residua del malto d'orzo regala una persistenza gustativa lunga e appagante.",
+    "summary": "Una baguette di rara eleganza artigianale: la crosta si manifesta con una croccantezza cristallina e sonora, frutto dell'idratazione al 70% e della cottura con vapore saturo. Il poolish a maturazione lenta (12-14h) conferisce una complessità fermentativa spiccata, con sentori lattici delicati e una leggera nota acetica. La mollica si presenta aperta e irregolare, con alveoli pronunciati e una texture setosa, mentre le note cerealicole tostate della farina tipo 0 chiudono un profilo armonioso e persistente.",
     "axes": [
       {
-        "label": "Croccantezza della Crosta",
+        "label": "Croccantezza Crosta",
         "value": 9
       },
       {
-        "label": "Apertura Alveolare",
+        "label": "Alveolatura Mollica",
         "value": 8
       },
       {
-        "label": "Complessità Aromatica",
-        "value": 7
+        "label": "Complessità Fermentativa",
+        "value": 8
       },
       {
         "label": "Sapidità",
-        "value": 6
+        "value": 5
       },
       {
-        "label": "Leggerezza / Idratazione",
-        "value": 8
+        "label": "Note Tostate / Cerealicole",
+        "value": 7
       }
     ]
   },

@@ -227,32 +227,32 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Il cartoccio siciliano si presenta come un guscio fritto dall'anima soffice e dalla crosta dorata e croccante, avvolgente al morso con una nota burrosa e leggermente salina che bilancia la dolcezza della farcitura. La crema pasticcera al limone dona freschezza agrumata e vellutata, mentre la versione alla ricotta con gocce di fondente evoca la tradizione della cassata, con un contrasto di grassezza lattica e amaricante del cioccolato. Il profilo complessivo è golosamente strutturato, ricco di contrasti texturali e aromatici tipici della pasticceria fritta siciliana.",
+    "summary": "I Cartocci alla Crema Siciliani si presentano con una struttura esterna dorata e leggermente croccante, frutto della frittura in olio di arachidi a temperatura controllata, che cede immediatamente a un interno soffice e avvolgente. La dolcezza è generosa e ben calibrata, sostenuta dalla crema pasticcera al limone o dalla ricotta zuccherata con gocce di cioccolato, che donano una cremosità avvolgente e un finale persistente. Il profilo aromatico è vivace, con note di vaniglia, agrumi e burro fritto, mentre la ricchezza complessiva del boccone risulta piena e soddisfacente, tipica della grande tradizione dolciaria siciliana.",
     "axes": [
       {
-        "label": "Dolcezza",
+        "label": "Dolcezza Percepita",
         "value": 8
       },
       {
-        "label": "Croccantezza / Friabilità",
-        "value": 7
+        "label": "Friabilità / Croccantezza",
+        "value": 5
       },
       {
-        "label": "Ricchezza / Untuosità",
+        "label": "Umidità / Cremosità",
         "value": 8
       },
       {
-        "label": "Freschezza Aromatica (Limone/Lattico)",
-        "value": 6
+        "label": "Intensità Aromatica",
+        "value": 7
       },
       {
-        "label": "Struttura e Complessità",
-        "value": 7
+        "label": "Ricchezza / Corpo",
+        "value": 9
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 318,
+    "kcal_per_100g": 320,
     "macros": {
       "carbs": 38,
       "protein": 7,

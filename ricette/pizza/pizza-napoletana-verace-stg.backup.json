@@ -210,28 +210,36 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "La Pizza Napoletana Verace STG si presenta con un cornicione pronunciato, alveolato e soffice, frutto di un'idratazione al 65% e di una lievitazione lenta fino a 24 ore con lievito minimo (2g/kg). La cottura su pietra refrattaria a 280°C genera la caratteristica 'leopardatura' — macchie scure di caramellizzazione di Maillard — e una crosta sottile e fragrante, mentre il disco centrale rimane morbido e umido per effetto del pomodoro San Marzano DOP. L'equilibrio tra acidità del pomodoro, sapidità del sale al 2.8% e la nota erbacea dell'olio EVO a crudo restituisce un profilo olfattivo complesso, pulito e di grande persistenza.",
+    "summary": "La Pizza Napoletana Verace STG si presenta con un cornicione alveolato e pronunciato, caratterizzato da una crosta sottile e croccante all'esterno e una mollica soffice e umida all'interno, con inconfondibili macchie leopardate. Al naso, dominano le note di pasta fermentata con sfumature lattiche e di cereale tostato; in bocca l'impasto è elastico, leggero e leggermente acidulo, bilanciato dalla dolcezza dei pomodori San Marzano DOP e dalla cremosità della fiordilatte. La lunga lievitazione a freddo conferisce profondità aromatica e alta digeribilità, tratti distintivi di un'autentica napoletana.",
     "axes": [
       {
-        "label": "Sviluppo Cornicione (Alveolatura)",
+        "label": "Sviluppo Alveolare (Leggerezza)",
+        "value": 9
+      },
+      {
+        "label": "Intensità Aromatica (Fermentazione)",
         "value": 8
       },
       {
-        "label": "Croccantezza / Leopardatura Crosta",
-        "value": 7
-      },
-      {
-        "label": "Umidità Disco Centrale",
-        "value": 7
-      },
-      {
-        "label": "Acidità (Pomodoro + Fermentazione)",
+        "label": "Croccantezza della Crosta",
         "value": 6
       },
       {
-        "label": "Complessità Aromatica",
-        "value": 8
+        "label": "Elasticità / Estensibilità",
+        "value": 9
+      },
+      {
+        "label": "Acidità Percepita",
+        "value": 4
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 249,
+    "macros": {
+      "carbs": 38,
+      "protein": 9,
+      "fat": 6
+    }
   }
 }

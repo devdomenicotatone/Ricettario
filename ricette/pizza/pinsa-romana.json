@@ -206,34 +206,34 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "La Pinsa Romana si presenta con una struttura alveolata aperta e irregolare, frutto della lunga maturazione a freddo e dell'alta idratazione al 75%. Al naso emergono note fermentate delicate, quasi lattiche, con un sottofondo cerealicolo pulito dato dal blend di farine. In bocca la contrapposizione tra la crosta croccante — esaltata dalla farina di riso e soia — e un interno nuvolare e soffice rappresenta il tratto distintivo identitario di questo prodotto.",
+    "summary": "La Pinsa Romana si presenta come un'esperienza olfattiva e tattile di raffinata complessità: il mix tripartito di farine — frumento, riso e soia tostata — genera una crosta esterna dalla doratura irregolare e fragrante, con note tostate e una croccantezza che cede a un interno alveolato, aereo e straordinariamente soffice. La lunga maturazione a freddo (24-48 ore) con lievitazione minima regala una profondità aromatica lattica e leggermente acidula, esaltata dall'olio extravergine delicato in chiusura. L'equilibrio strutturale tra impasto e condimento è, per definizione storica della pinsa, volutamente sbilanciato verso la base: il topping rimane leggero, lasciando che sia l'impasto il vero protagonista del morso.",
     "axes": [
       {
-        "label": "Croccantezza della Crosta",
+        "label": "Croccantezza Esterna",
         "value": 9
       },
       {
-        "label": "Sofficità dell'Alveolatura",
+        "label": "Scioglievolezza Impasto",
         "value": 8
       },
       {
-        "label": "Complessità Aromatica Fermentativa",
-        "value": 7
+        "label": "Sapidità / Umami",
+        "value": 5
       },
       {
-        "label": "Intensità Sapida",
-        "value": 4
+        "label": "Equilibrio Condimento-Impasto",
+        "value": 6
       },
       {
-        "label": "Leggerezza / Digeribilità Percepita",
-        "value": 9
+        "label": "Complessità Aromatica",
+        "value": 8
       }
     ]
   },
   "nutrition": {
     "kcal_per_100g": 242,
     "macros": {
-      "carbs": 44,
+      "carbs": 43,
       "protein": 8,
       "fat": 3
     }

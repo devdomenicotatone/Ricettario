@@ -165,28 +165,36 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Una ciabatta di rara complessità strutturale e aromatica: il lungo poolish da 12 ore, sostenuto dal criscito e dal malto diastasico, costruisce una matrice fermentativa stratificata che si traduce in una mollica traslucida, ad alveolatura irregolare e pronunciata, con note acidule delicate e un bouquet che spazia dal lattico al cereale tostato. La crosta, forgiata a 250°C con vapore abbondante, è fragrante e sonora, con riflessi dorati profondi offerti dalla reazione di Maillard amplificata dal malto, mentre il finale è lungo, leggermente sapido e sorprendentemente digeribile.",
+    "summary": "Una ciabatta di carattere e complessità artigianale: la lunga maturazione del poolish regala note lattiche e leggere sfumature di cereale tostato, mentre il criscito aggiunge una sottile acidità che pulisce il palato. La mollica è aperta e alveolata, quasi traslucida, con una crosta sottile e croccante che cede con quel caratteristico 'schiocco' da pane ben cotto — il malto diastasico ne esalta la doratura e la profondità aromatica.",
     "axes": [
-      {
-        "label": "Croccantezza Crosta",
-        "value": 9
-      },
-      {
-        "label": "Alveolatura",
-        "value": 9
-      },
-      {
-        "label": "Acidità",
-        "value": 5
-      },
-      {
-        "label": "Umidità Mollica",
-        "value": 8
-      },
       {
         "label": "Complessità Aromatica",
         "value": 8
+      },
+      {
+        "label": "Croccantezza della Crosta",
+        "value": 9
+      },
+      {
+        "label": "Apertura Alveolare",
+        "value": 9
+      },
+      {
+        "label": "Acidità Percepita",
+        "value": 4
+      },
+      {
+        "label": "Digeribilità",
+        "value": 8
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 258,
+    "macros": {
+      "carbs": 51,
+      "protein": 8,
+      "fat": 1
+    }
   }
 }

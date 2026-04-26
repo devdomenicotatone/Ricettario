@@ -145,36 +145,36 @@
   "image": "images/ricette/condimenti/pesto-di-pistacchi-artigianale.webp",
   "imageAttribution": "📷 Foto: Ron Lach — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Un pesto di straordinaria eleganza cromatica, verde smeraldo brillante, dove la dolcezza burrosa e resinosa del pistacchio di Sicilia domina il palato con autorevolezza prima di cedere a una sapidità complessa e bilanciata dal duo Parmigiano-Pecorino. La scorza di limone e il basilico disegnano un finale aromatico fresco e luminoso, mentre la tecnica dell'emulsione con acqua ghiacciata conferisce una texture vellutata e una persistenza gustativa sorprendentemente lunga.",
+    "summary": "Un pesto di grande carattere e raffinata eleganza siciliana: l'attacco è ricco e burroso, dominato dalla dolcezza naturale del pistacchio di Bronte che si fonde con la sapidità intensa e persistente del Parmigiano e del Pecorino. La scorza di limone introduce una vivace nota agrumata e leggermente pungente che bilancia la cremosità dell'emulsione olio-acqua, mentre il basilico fresco e l'aglio privato dell'anima regalano un bouquet aromatico verde e delicato, mai aggressivo.",
     "axes": [
       {
-        "label": "Intensità Aromatica",
+        "label": "Sapidità / Umami",
         "value": 8
       },
       {
-        "label": "Sapidità / Umami",
-        "value": 7
+        "label": "Acidità / Pungenza",
+        "value": 4
       },
       {
-        "label": "Cremosità / Texture",
-        "value": 9
+        "label": "Cremosità / Densità",
+        "value": 8
       },
       {
-        "label": "Freschezza Erbacea & Agrumata",
+        "label": "Dolcezza / Rotondità",
         "value": 6
       },
       {
-        "label": "Persistenza Gusto-Olfattiva",
-        "value": 8
+        "label": "Intensità Aromatica",
+        "value": 7
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 548,
+    "kcal_per_100g": 498,
     "macros": {
       "carbs": 8,
-      "protein": 13,
-      "fat": 50
+      "protein": 11,
+      "fat": 45
     }
   }
 }

@@ -186,36 +186,36 @@
   "image": "images/ricette/condimenti/salsa-bernese.webp",
   "imageAttribution": "📷 Immagine esistente",
   "sensoryProfile": {
-    "summary": "La Salsa Bernese si presenta come un'emulsione burrosa di straordinaria eleganza, dal colore giallo paglierino luminoso e dalla texture vellutata e avvolgente. Al naso domina il dragoncello fresco con le sue note erbacee-anisate, sostenute da un fondo acidulo e agrumato della riduzione di aceto e vino bianco. In bocca l'opulenza del burro chiarificato si bilancia con la vivace acidità della riduzione e la complessità aromatica delle erbe, lasciando un finale lungo, fresco e leggermente pepato.",
+    "summary": "La Salsa Bernese si presenta come un'emulsione burrosa di straordinaria eleganza, dominata da una cremosità vellutata e avvolgente che riveste il palato con persistenza lussuosa. Il dragoncello fresco imprime una firma aromatica erbacea e anicata di grande finezza, intrecciata con le note acide e vinose della riduzione che bilanciano con maestria la ricchezza del burro chiarificato. Il finale è lungo, sapido e aromatico, con una punta di pungenza del pepe e dello scalogno che sorregge la struttura senza mai sopraffare.",
     "axes": [
       {
-        "label": "Ricchezza Burrosa",
+        "label": "Sapidità / Umami",
+        "value": 6
+      },
+      {
+        "label": "Acidità / Pungenza",
+        "value": 5
+      },
+      {
+        "label": "Cremosità / Densità",
         "value": 9
       },
       {
-        "label": "Acidità / Vivacità",
-        "value": 7
+        "label": "Dolcezza / Rotondità",
+        "value": 5
       },
       {
-        "label": "Intensità Aromatica Erbacea",
-        "value": 8
-      },
-      {
-        "label": "Piccantezza / Speziatura",
-        "value": 3
-      },
-      {
-        "label": "Complessità Strutturale",
+        "label": "Intensità Aromatica",
         "value": 8
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 542,
+    "kcal_per_100g": 618,
     "macros": {
       "carbs": 2,
       "protein": 4,
-      "fat": 57
+      "fat": 65
     }
   }
 }

@@ -149,28 +149,36 @@
   "image": "images/ricette/condimenti/pesto-alla-siciliana.webp",
   "imageAttribution": "📷 Foto: Enzo Iorio — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Un pesto dalla personalità solare e mediterranea, dove la dolcezza acidula dei pomodori ramati maturi dialoga con la cremosità lattea della ricotta vaccina in un abbraccio vellutato. Le mandorle pelate conferiscono una profondità burrosa e tostata, mentre il Parmigiano 24 mesi eleva l'umami verso note sapide e persistenti. Il basilico fresco, trattato con delicatezza a freddo, garantisce una vivacità erbacea luminosa che sorregge l'intera struttura aromatica.",
+    "summary": "Un pesto dalla personalità solare e mediterranea, dove la dolcezza acidula dei pomodori ramati maturi si intreccia con la cremosità lattea della ricotta e la profondità sapida del Parmigiano stagionato. Le mandorle conferiscono una struttura rustica e una nota tostata che dialoga con il verde aromatico del basilico, mentre l'olio extravergine lega il tutto in un'emulsione vellutata e avvolgente. Il carattere è rotondo e goloso, con un finale persistente che bilancia grassezza e freschezza vegetale.",
     "axes": [
-      {
-        "label": "Cremosità & Struttura",
-        "value": 8
-      },
-      {
-        "label": "Acidità (Pomodoro)",
-        "value": 6
-      },
-      {
-        "label": "Sapidità (Umami)",
-        "value": 7
-      },
       {
         "label": "Intensità Aromatica",
         "value": 7
       },
       {
-        "label": "Dolcezza",
-        "value": 5
+        "label": "Cremosità / Struttura",
+        "value": 8
+      },
+      {
+        "label": "Acidità / Freschezza",
+        "value": 6
+      },
+      {
+        "label": "Sapidità / Umami",
+        "value": 7
+      },
+      {
+        "label": "Percezione di Grassezza",
+        "value": 7
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 218,
+    "macros": {
+      "carbs": 6,
+      "protein": 7,
+      "fat": 18
+    }
   }
 }

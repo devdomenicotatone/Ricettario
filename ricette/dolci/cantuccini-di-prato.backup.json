@@ -177,28 +177,36 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "I Cantuccini di Prato si presentano con una struttura secca e friabile, frutto della doppia cottura che ne esalta la croccantezza caratteristica. Al naso, le scorze di agrumi e il Marsala costruiscono un bouquet aromatico caldo e speziato, mentre le mandorle con pellicina, tostate in cottura, aggiungono profondità e una lieve nota amaricante. In bocca, la dolcezza decisa dello zucchero semolato — presente al 25% sull'impasto totale — bilancia la sapidità minerale delle mandorle, con un finale persistente e asciutto che invita tradizionalmente all'abbinamento con il Vin Santo.",
+    "summary": "I Cantuccini di Prato si presentano con una struttura marcatamente croccante e friabile, densa di mandorle intere dalla pellicina leggermente tostata, che conferiscono note di frutta secca e un retrogusto amarognolo elegante. Il profilo aromatico è vivace e agrumato, dove la scorza di arancia e limone dialoga con il Marsala in un intreccio di fiori bianchi e frutta candita. La dolcezza sostanziale è bilanciata da una sapidità di fondo e da una secchezza caratteristica, che rende questi biscotti vocazionalmente abbinati a vini da meditazione come il Vin Santo.",
     "axes": [
-      {
-        "label": "Croccantezza",
-        "value": 9
-      },
       {
         "label": "Dolcezza",
         "value": 8
       },
       {
-        "label": "Intensità Aromatica",
+        "label": "Croccantezza / Durezza Strutturale",
+        "value": 9
+      },
+      {
+        "label": "Intensità Aromatica (Agrumi & Mandorla)",
         "value": 7
       },
       {
-        "label": "Amarezza (mandorle/pellicina)",
-        "value": 4
+        "label": "Grassezza / Untuosità",
+        "value": 2
       },
       {
-        "label": "Secchezza/Asciuttezza",
+        "label": "Secchezza / Asciuttezza",
         "value": 9
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 438,
+    "macros": {
+      "carbs": 62,
+      "protein": 9,
+      "fat": 15
+    }
   }
 }

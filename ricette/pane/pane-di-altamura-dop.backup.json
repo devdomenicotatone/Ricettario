@@ -171,28 +171,36 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Il Pane di Altamura si presenta con una crosta ambrata e sonora, frutto di una cottura trifasica spinta fino a 250°C su pietra refrattaria, che esalta le note tostate e la reazione di Maillard tipiche della semola rimacinata. La mollica, compatta e a grana fine come da tradizione pugliese, rivela una masticabilità tenace e una dolcezza cerealicola profonda, sostenuta dalla biga a 16 ore e dal miele di acacia. La complessità aromatica è quella di un pane maturo e completo: fruttato lattico in sottofondo, con un finale lungo e avvolgente.",
+    "summary": "Il Pane di Altamura si presenta con una crosta ambrata e croccante, dal profilo aromatico caldo e complesso: note di grano duro tostato, sentori di cereale integrale e una leggera sfumatura fermentativa lasciata dalla biga maturata a freddo. La mollica è densa, elastica e umida, con una masticabilità persistente e una dolcezza naturale della semola rimacinata bilanciata da una sapidità ben calibrata.",
     "axes": [
       {
-        "label": "Croccantezza Crosta",
+        "label": "Croccantezza della Crosta",
         "value": 9
       },
       {
-        "label": "Sapore di Grano (Semola)",
-        "value": 9
-      },
-      {
-        "label": "Complessità Aromatica",
+        "label": "Intensità Aromatica (Grano/Fermentazione)",
         "value": 8
       },
       {
-        "label": "Alveolatura",
+        "label": "Alveolatura e Leggerezza della Mollica",
         "value": 4
       },
       {
-        "label": "Umidità Mollica",
-        "value": 5
+        "label": "Sapidità e Complessità Gustativa",
+        "value": 6
+      },
+      {
+        "label": "Masticabilità e Struttura",
+        "value": 8
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 268,
+    "macros": {
+      "carbs": 54,
+      "protein": 9,
+      "fat": 1
+    }
   }
 }

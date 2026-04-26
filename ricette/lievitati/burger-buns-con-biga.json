@@ -264,36 +264,36 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Un lievitato da forno di scuola classica, caratterizzato da una mollica soffice e leggermente filante con alveolatura fine e regolare, frutto della doppia fermentazione con biga a lunga maturazione. Al naso emerge una nota lattica e burrosa con un fondo acidulo-alcolico elegante ceduto dalla biga; in bocca la dolcezza calibrata di miele e zucchero è bilanciata dalla rotondità dei grassi emulsionati (burro e olio EVO), con una crosta sottile, dorata e leggermente croccante impreziosita dal sesamo tostato.",
+    "summary": "Un burger bun di struttura elegante e bilanciata: la biga a lunga maturazione conferisce una complessità aromatica fermentativa di raro equilibrio, con note lattiche e leggermente acidule che dialogano con la dolcezza discreta del miele e dello zucchero. La mollica si presenta soffice, a grana fine e regolare, con una scioglievolezza vellutata determinata dalla doppia componente grassa di burro e olio EVO, mentre la crosta dorata e i semi di sesamo aggiungono un contrasto texturale e toastato di grande piacevolezza.",
     "axes": [
       {
-        "label": "Sofficità / Leggerezza della Mollica",
+        "label": "Sofficezza / Alveolatura",
         "value": 9
       },
       {
-        "label": "Complessità Aromatica (Biga + Fermentazione)",
+        "label": "Scioglievolezza",
+        "value": 8
+      },
+      {
+        "label": "Ricchezza Burrosa / Lattica",
         "value": 7
       },
       {
         "label": "Dolcezza Percepita",
-        "value": 6
+        "value": 5
       },
       {
-        "label": "Croccantezza della Crosta",
-        "value": 4
-      },
-      {
-        "label": "Ricchezza e Rotondità dei Grassi",
-        "value": 7
+        "label": "Complessità Aromatica",
+        "value": 8
       }
     ]
   },
   "nutrition": {
     "kcal_per_100g": 298,
     "macros": {
-      "carbs": 46,
+      "carbs": 44,
       "protein": 9,
-      "fat": 8
+      "fat": 9
     }
   },
   "_originalImageUrl": "https://images.pexels.com/photos/15378135/pexels-photo-15378135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"

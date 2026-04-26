@@ -182,27 +182,27 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Un pane di carattere e complessità artigianale, dove la lunga maturazione del poolish sviluppa note lattico-acide delicate e una profondità aromatica di lievito maturo. Le noci tostate introducono un registro grasso e amaricante in perfetto contrasto con la crosta caramellata e croccante, mentre la mollica si presenta alveolata, leggermente elastica e con una persistenza retronasale di cereale fermentato e frutta secca. Un pane da meditazione, equilibrato tra rusticità e tecnica.",
+    "summary": "Un pane di carattere deciso e aristocratico, dove la lunga maturazione del poolish regala una mollica aperta e profumata, con note lattiche e leggermente acetiche di grande finezza. I gherigli di noci tostati introducono un contrasto grasso e amaro che dialoga splendidamente con la crosta spessa e scura, ottenuta dalla cottura ad alta temperatura su pietra. Il finale è lungo, cerealicolo e leggermente tannico, con una sapidità equilibrata che invita al morso successivo.",
     "axes": [
       {
-        "label": "Croccantezza della Crosta",
+        "label": "Croccantezza Crosta",
         "value": 9
       },
       {
-        "label": "Complessità Aromatica (Fermentazione)",
+        "label": "Alveolatura Mollica",
+        "value": 7
+      },
+      {
+        "label": "Complessità Fermentativa",
         "value": 8
       },
       {
-        "label": "Intensità delle Noci (Amaro/Grasso)",
-        "value": 7
-      },
-      {
-        "label": "Acidità Lattica",
+        "label": "Sapidità",
         "value": 5
       },
       {
-        "label": "Alveolatura e Leggerezza della Mollica",
-        "value": 7
+        "label": "Note Tostate / Cerealicole",
+        "value": 8
       }
     ]
   },

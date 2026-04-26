@@ -138,36 +138,36 @@
   "image": "images/ricette/condimenti/burro-composto-acciughe-tartufo.webp",
   "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
-    "summary": "Un condimento di grande raffinatezza tecnica che declina il grasso nobile del burro di centrifuga in due registri distinti: quello marino-agrumato delle acciughe, pungente e vibrante, con note iodate che si fondono alla freschezza citrica del limone; e quello terrigno-miceliare del tartufo nero, profondo e avvolgente, capace di permeare la massa lipidica con oli aromatici volatili di straordinaria persistenza. In entrambe le versioni, la cremosità burrosa fa da fil rouge, garantendo una struttura emulsionante eccellente per mantecature di precisione.",
+    "summary": "Un burro composto dalle due anime distinte ma egualmente seducenti: nella versione alle acciughe e limone, la massa lipidica rivela una sapidità intensa e marina, bilanciata dalla vivacità agrumata della scorza e da un finale pepato che prolunga la persistenza. Nella versione al tartufo nero, il grasso del burro di centrifuga diventa vettore privilegiato dei composti aromatici sulfurei e terrosi del fungo ipogeo, creando una cremosità avvolgente di straordinaria profondità. Entrambe le versioni condividono una struttura densa e vellutata — frutto della cristallizzazione dei grassi butirici — con un'intensità aromatica che si libera progressivamente al contatto con il calore.",
     "axes": [
-      {
-        "label": "Intensità Aromatica",
-        "value": 9
-      },
-      {
-        "label": "Grassezza / Untuosità",
-        "value": 9
-      },
       {
         "label": "Sapidità / Umami",
         "value": 8
       },
       {
-        "label": "Acidità / Freschezza Citrica",
+        "label": "Acidità / Pungenza",
         "value": 4
       },
       {
-        "label": "Complessità Terrosa (Tartufo)",
-        "value": 8
+        "label": "Cremosità / Densità",
+        "value": 9
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 4
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 9
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 698,
+    "kcal_per_100g": 658,
     "macros": {
       "carbs": 1,
       "protein": 4,
-      "fat": 76
+      "fat": 72
     }
   },
   "_originalImageUrl": ""

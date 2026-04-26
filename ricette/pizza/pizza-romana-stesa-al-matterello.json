@@ -273,36 +273,36 @@
   "image": "images/ricette/pizza/pizza-romana-stesa-al-matterello.webp",
   "imageAttribution": "📷 Foto: Alejandro Aznar — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una pizza romana stesa al matterello che si distingue per la sua sfoglia sottilissima e croccante, quasi friabile al morso, con un profilo aromatico complesso guidato dalla lunga maturazione bifasica della biga a 72+ ore. Il naso rivela note di cereale tostato, leggera acidità lattica e un fondo di malto che arricchisce la percezione gusto-olfattiva; in bocca domina la croccantezza secca, con un retrogusto minerale e leggermente erbaceo conferito dall'olio EVO e dalla semola rimacinata.",
+    "summary": "Una pizza di straordinaria tensione texturale: la sfoglia stesa al matterello a 2-3 mm rivela una croccantezza quasi cracker, secca e friabile, frutto della bassa idratazione al 50% e della doppia maturazione in freddo. La salsa verde al prezzemolo, con le acciughe, i capperi e il limone, innesta un profilo olfattivo erbaceo-marino di grande personalità, dove la salinità iodata delle acciughe dialoga con la vivacità agrumata del limone in un equilibrio audace e pungente. La complessità fermentativa della biga a 24h aggiunge un sottofondo leggermente acidulo e tostato che sorregge tutto il sistema aromatico, conferendo alla pizza una profondità gustativa tipica delle grandi tradizioni panarie romane.",
     "axes": [
       {
-        "label": "Croccantezza / Friabilità",
-        "value": 10
+        "label": "Croccantezza Esterna",
+        "value": 9
       },
       {
-        "label": "Complessità Aromatica (Fermentazione)",
+        "label": "Scioglievolezza Impasto",
+        "value": 3
+      },
+      {
+        "label": "Sapidità / Umami",
         "value": 8
       },
       {
-        "label": "Idratazione / Morbidezza",
-        "value": 2
+        "label": "Equilibrio Condimento-Impasto",
+        "value": 7
       },
       {
-        "label": "Intensità del Condimento",
-        "value": 6
-      },
-      {
-        "label": "Spinta al Morso (Masticabilità)",
-        "value": 3
+        "label": "Complessità Aromatica",
+        "value": 8
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 268,
+    "kcal_per_100g": 248,
     "macros": {
-      "carbs": 48,
-      "protein": 8,
-      "fat": 4
+      "carbs": 38,
+      "protein": 7,
+      "fat": 7
     }
   }
 }

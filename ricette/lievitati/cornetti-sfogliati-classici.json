@@ -300,26 +300,26 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Un cornetto sfogliato di scuola classica, che si rivela al naso con note burrosa-lattiche di grande eleganza, arricchite da un delicato filo di vaniglia e miele millefiori. In bocca la texture è il vero protagonista: strati croccanti e friabili in superficie cedono a un interno soffice e alveolato, con una dolcezza misurata e un finale lungo, burroso e leggermente caramellato dalla doratura. La biga conferisce una complessità fermentativa sottile che eleva il profilo aromatico ben oltre il semplice brioche.",
+    "summary": "Un cornetto sfogliato di rara eleganza, che si rivela al palato con una stratificazione croccante e dorata all'esterno che cede a un cuore soffice, filante e arioso, frutto di una biga matura e di una sfogliatura a tre pieghe con burro di qualità bavarese. Il profilo aromatico è ricco e complesso: note lattiche e tostate di burro si intrecciano con sfumature floreali di vaniglia e miele millefiori, mentre la dolcezza — calibrata ma presente — invita al secondo morso senza mai stancare. La scioglievolezza è quella tipica dei grandi lievitati sfogliati da pasticceria, dove il grasso si fonde dolcemente con il calore del palato rivelando una struttura alveolata fine e regolare.",
     "axes": [
       {
-        "label": "Sfogliatura & Struttura Lamellare",
-        "value": 9
-      },
-      {
-        "label": "Ricchezza Burrosa & Aromaticità",
+        "label": "Sofficezza / Alveolatura",
         "value": 8
       },
       {
-        "label": "Dolcezza Equilibrata",
-        "value": 6
+        "label": "Scioglievolezza",
+        "value": 9
       },
       {
-        "label": "Complessità Fermentativa (Biga)",
-        "value": 7
+        "label": "Ricchezza Burrosa / Lattica",
+        "value": 9
       },
       {
-        "label": "Leggerezza & Alveolatura",
+        "label": "Dolcezza Percepita",
+        "value": 5
+      },
+      {
+        "label": "Complessità Aromatica",
         "value": 8
       }
     ]
@@ -328,7 +328,7 @@
     "kcal_per_100g": 412,
     "macros": {
       "carbs": 42,
-      "protein": 7,
+      "protein": 8,
       "fat": 24
     }
   }

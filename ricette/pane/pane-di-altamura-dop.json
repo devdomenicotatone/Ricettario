@@ -171,32 +171,32 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Il Pane di Altamura si presenta con una crosta ambrata e croccante, dal profilo aromatico caldo e complesso: note di grano duro tostato, sentori di cereale integrale e una leggera sfumatura fermentativa lasciata dalla biga maturata a freddo. La mollica è densa, elastica e umida, con una masticabilità persistente e una dolcezza naturale della semola rimacinata bilanciata da una sapidità ben calibrata.",
+    "summary": "Il Pane di Altamura si presenta con una crosta ambrata e robusta, esito di una cottura progressiva su pietra refrattaria con gestione sapiente del vapore, che regala una sontuosa croccantezza e un'intensa nota tostata di semola. La mollica, gialla e setosa per la ricchezza di carotenoidi del grano duro rimacinato, mostra un'alveolatura regolare e mediamente aperta, sostenuta dall'autolisi e dalla struttura glutinica tipica della semola. La biga maturata 14-16 ore a bassa temperatura conferisce una complessità fermentativa elegante e misurata, con sentori lattici e una leggera acidità di fondo che si fondono armoniosamente con la sapidità calibrata del sale al 2.2%.",
     "axes": [
       {
-        "label": "Croccantezza della Crosta",
+        "label": "Croccantezza Crosta",
         "value": 9
       },
       {
-        "label": "Intensità Aromatica (Grano/Fermentazione)",
-        "value": 8
+        "label": "Alveolatura Mollica",
+        "value": 5
       },
       {
-        "label": "Alveolatura e Leggerezza della Mollica",
-        "value": 4
+        "label": "Complessità Fermentativa",
+        "value": 7
       },
       {
-        "label": "Sapidità e Complessità Gustativa",
+        "label": "Sapidità",
         "value": 6
       },
       {
-        "label": "Masticabilità e Struttura",
-        "value": 8
+        "label": "Note Tostate / Cerealicole",
+        "value": 9
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 268,
+    "kcal_per_100g": 272,
     "macros": {
       "carbs": 54,
       "protein": 9,

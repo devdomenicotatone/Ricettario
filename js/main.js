@@ -226,8 +226,10 @@ function getHomepageHTML() {
 }
 
 // ═══════════════════════════════════════
-//  CATEGORY RENDERER
+//  CATEGORY RENDERER — Pro Isotope Grid
 // ═══════════════════════════════════════
+
+const ITEMS_PER_PAGE = 12;
 
 const CATEGORY_META = {
   pane:      { name: 'Pane',      emoji: 'baguette-bread', title: 'Pane Artigianale',           desc: 'Ricette di pane ad alta idratazione — ciabatta, filone, baguette e pane speciale.' },
@@ -237,6 +239,18 @@ const CATEGORY_META = {
   focaccia:  { name: 'Focaccia',  emoji: 'flatbread',       title: 'Focaccia Artigianale',       desc: 'Focacce ad alta idratazione — genovese, barese, pugliese e varianti creative.' },
   dolci:     { name: 'Dolci',     emoji: 'shortcake',       title: 'Dolci e Pasticceria',        desc: 'Dolci tradizionali, frolle, biscotti e pasticceria artigianale.' },
   conserve:  { name: 'Conserve',  emoji: 'canned-food',     title: 'Conserve e Preparazioni',    desc: 'Conserve fatte in casa — dadi vegetali, salse, sottoli e preparazioni base.' },
+  condimenti: { name: 'Condimenti', emoji: 'herb', title: 'Condimenti', desc: 'Salse, pesti e condimenti artigianali per ogni piatto.' },
+};
+
+// State reattivo per la pagina categoria
+let catState = {
+  allRecipes: [],
+  filteredRecipes: [],
+  displayedCount: ITEMS_PER_PAGE,
+  viewMode: 'grid', // 'grid' | 'list'
+  sortType: 'az',
+  searchQuery: '',
+  categoryDir: '',
 };
 
 async function renderCategory(app, { category }) {
@@ -249,7 +263,18 @@ async function renderCategory(app, { category }) {
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.setAttribute('content', meta.desc);
 
-  // Struttura HTML della pagina categoria
+  // Reset state
+  catState = {
+    allRecipes: [],
+    filteredRecipes: [],
+    displayedCount: ITEMS_PER_PAGE,
+    viewMode: localStorage.getItem('catViewMode') || 'grid',
+    sortType: 'az',
+    searchQuery: '',
+    categoryDir: category,
+  };
+
+  // Struttura HTML con toolbar aggiornata
   app.innerHTML = `
     <section class="category-hero" id="category-hero">
       <div class="category-hero__content">
@@ -269,78 +294,62 @@ async function renderCategory(app, { category }) {
           <span class="breadcrumb__current">${meta.name}</span>
         </nav>
 
-        <div class="category-toolbar">
+        <div class="category-toolbar" id="category-toolbar">
           <div class="category-toolbar__search">
             <span class="category-toolbar__search-icon"><i data-lucide="search" style="width:16px;height:16px"></i></span>
             <input type="text" class="category-toolbar__search-input" id="category-search"
               placeholder="Cerca tra le ricette di ${meta.name.toLowerCase()}...">
           </div>
+          <div class="category-toolbar__results" id="results-counter"></div>
           <div class="category-toolbar__sort">
             <button class="category-toolbar__sort-btn active" data-sort="az">A-Z</button>
             <button class="category-toolbar__sort-btn" data-sort="hydration">${fluentEmoji('droplet', 14)} Idratazione</button>
           </div>
-        </div>
-
-        <div class="category-grid" id="category-grid">
-          <div class="category-empty">
-            <div class="category-empty__icon">⏳</div>
-            <p>Caricamento ricette...</p>
+          <div class="category-toolbar__views">
+            <button class="view-toggle-btn ${catState.viewMode === 'grid' ? 'active' : ''}" data-view="grid" aria-label="Vista griglia">
+              <i data-lucide="grid-3x3" style="width:16px;height:16px"></i>
+            </button>
+            <button class="view-toggle-btn ${catState.viewMode === 'list' ? 'active' : ''}" data-view="list" aria-label="Vista lista">
+              <i data-lucide="list" style="width:16px;height:16px"></i>
+            </button>
           </div>
         </div>
+
+        <div class="category-grid ${catState.viewMode === 'list' ? 'category-grid--list' : ''}" id="category-grid">
+          ${buildSkeletonCards(6)}
+        </div>
+
+        <div id="load-more-container"></div>
       </div>
     </main>
   `;
 
-  // Carica ricette e renderizza
+  if (typeof lucide !== 'undefined') lucide.createIcons();
+
+  // Carica ricette
   try {
     const resp = await fetch(`${BASE}recipes.json`);
     const data = await resp.json();
-    const allRecipes = data.recipes.filter(r => r.categoryDir === category || r.category === meta.name);
+    catState.allRecipes = data.recipes.filter(r => r.categoryDir === category || r.category === meta.name);
+    catState.allRecipes.sort((a, b) => (a.title || '').localeCompare(b.title || '', 'it'));
+    catState.filteredRecipes = [...catState.allRecipes];
 
-    // Hero con immagine della prima ricetta che ha un'immagine
-    const heroRecipe = allRecipes.find(r => r.image);
+    // Hero image
+    const heroRecipe = catState.allRecipes.find(r => r.image);
     if (heroRecipe) {
       const heroEl = document.getElementById('category-hero');
       if (heroEl) heroEl.style.backgroundImage = `url('${BASE}${heroRecipe.image}')`;
     }
 
-    // Contatore
+    // Contatore hero
     const countEl = document.getElementById('recipe-count');
-    if (countEl) countEl.innerHTML = `${fluentEmoji('bullseye', 16)} ${allRecipes.length} ricett${allRecipes.length === 1 ? 'a' : 'e'}`;
+    if (countEl) countEl.innerHTML = `${fluentEmoji('bullseye', 16)} ${catState.allRecipes.length} ricett${catState.allRecipes.length === 1 ? 'a' : 'e'}`;
 
-    // Render griglia
-    const grid = document.getElementById('category-grid');
-    renderCategoryGrid(grid, allRecipes, category);
+    // Render iniziale
+    updateCategoryView();
 
-    // Search
-    const searchInput = document.getElementById('category-search');
-    if (searchInput) {
-      searchInput.addEventListener('input', () => {
-        const query = searchInput.value.toLowerCase().trim();
-        const cards = grid.querySelectorAll('.category-card');
-        cards.forEach(card => {
-          const title = card.dataset.title || '';
-          card.style.display = (!query || title.includes(query)) ? '' : 'none';
-        });
-      });
-    }
-
-    // Sort
-    const sortBtns = app.querySelectorAll('.category-toolbar__sort-btn');
-    sortBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        sortBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const sortType = btn.dataset.sort;
-        let sorted = [...allRecipes];
-        if (sortType === 'az') {
-          sorted.sort((a, b) => (a.title || '').localeCompare(b.title || '', 'it'));
-        } else if (sortType === 'hydration') {
-          sorted.sort((a, b) => (parseInt(b.hydration) || 0) - (parseInt(a.hydration) || 0));
-        }
-        renderCategoryGrid(grid, sorted, category);
-      });
-    });
+    // Event listeners
+    initCategoryListeners(app);
 
     initReveal();
     applyMadeBadgesToCards();
@@ -351,24 +360,110 @@ async function renderCategory(app, { category }) {
   }
 }
 
-function renderCategoryGrid(grid, recipes, categoryDir) {
+function initCategoryListeners(app) {
+  // Search con debounce
+  const searchInput = document.getElementById('category-search');
+  let searchTimer;
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(() => {
+        catState.searchQuery = searchInput.value.toLowerCase().trim();
+        catState.displayedCount = ITEMS_PER_PAGE;
+        applyCategoryFilters();
+        updateCategoryView();
+      }, 150);
+    });
+  }
+
+  // Sort
+  const sortBtns = app.querySelectorAll('.category-toolbar__sort-btn');
+  sortBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      sortBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      catState.sortType = btn.dataset.sort;
+      catState.displayedCount = ITEMS_PER_PAGE;
+      applyCategoryFilters();
+      updateCategoryView();
+    });
+  });
+
+  // View toggle
+  const viewBtns = app.querySelectorAll('.view-toggle-btn');
+  viewBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      viewBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      catState.viewMode = btn.dataset.view;
+      localStorage.setItem('catViewMode', catState.viewMode);
+      const grid = document.getElementById('category-grid');
+      if (grid) {
+        grid.classList.toggle('category-grid--list', catState.viewMode === 'list');
+      }
+    });
+  });
+}
+
+function applyCategoryFilters() {
+  let result = [...catState.allRecipes];
+
+  // Filter by search
+  if (catState.searchQuery) {
+    result = result.filter(r => {
+      const title = (r.title || '').toLowerCase();
+      const desc = (r.description || '').toLowerCase();
+      return title.includes(catState.searchQuery) || desc.includes(catState.searchQuery);
+    });
+  }
+
+  // Sort
+  if (catState.sortType === 'az') {
+    result.sort((a, b) => (a.title || '').localeCompare(b.title || '', 'it'));
+  } else if (catState.sortType === 'hydration') {
+    result.sort((a, b) => (parseInt(b.hydration) || 0) - (parseInt(a.hydration) || 0));
+  }
+
+  catState.filteredRecipes = result;
+}
+
+function updateCategoryView() {
+  const grid = document.getElementById('category-grid');
+  const loadMoreContainer = document.getElementById('load-more-container');
   if (!grid) return;
 
-  if (recipes.length === 0) {
+  const { filteredRecipes, displayedCount, categoryDir } = catState;
+  const visible = filteredRecipes.slice(0, displayedCount);
+  const totalFiltered = filteredRecipes.length;
+
+  // Results counter
+  const counter = document.getElementById('results-counter');
+  if (counter) {
+    if (catState.searchQuery) {
+      counter.innerHTML = `<strong>${totalFiltered}</strong> risultat${totalFiltered === 1 ? 'o' : 'i'}`;
+    } else {
+      counter.innerHTML = `<strong>${Math.min(displayedCount, totalFiltered)}</strong> di <strong>${totalFiltered}</strong>`;
+    }
+  }
+
+  // Empty state
+  if (totalFiltered === 0) {
     grid.innerHTML = `
       <div class="category-empty" style="grid-column: 1 / -1">
         <div class="category-empty__icon"><i data-lucide="search" style="width:32px;height:32px"></i></div>
         <p>Nessuna ricetta trovata</p>
       </div>`;
+    if (loadMoreContainer) loadMoreContainer.innerHTML = '';
+    if (typeof lucide !== 'undefined') lucide.createIcons();
     return;
   }
 
-  grid.innerHTML = recipes.map((r, index) => {
-    const delay = Math.min(index * 0.05, 1.5);
+  // Render visible cards
+  grid.innerHTML = visible.map((r, index) => {
     const spaHref = `${BASE}ricette/${r.categoryDir || categoryDir}/${r.slug}`;
     return `
-      <a href="${spaHref}" class="category-card slide-up-enter" data-link
-         style="animation-delay: ${delay}s" data-title="${(r.title || '').toLowerCase()}" 
+      <a href="${spaHref}" class="category-card" data-link
+         data-title="${(r.title || '').toLowerCase()}"
          data-hydration="${parseInt(r.hydration) || 0}">
         <div class="category-card__image-wrapper">
           ${r.image ? buildPicture(`${BASE}${r.image}`, r.title, 'category-card__image', 'lazy') : ''}
@@ -383,6 +478,55 @@ function renderCategoryGrid(grid, recipes, categoryDir) {
         </div>
       </a>`;
   }).join('');
+
+  // Load More
+  if (loadMoreContainer) {
+    if (displayedCount < totalFiltered) {
+      const remaining = totalFiltered - displayedCount;
+      const pct = Math.round((displayedCount / totalFiltered) * 100);
+      loadMoreContainer.innerHTML = `
+        <div class="load-more-wrapper">
+          <button class="load-more-btn" id="load-more-btn">
+            <span>Carica altre ${Math.min(remaining, ITEMS_PER_PAGE)} ricette</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="load-more-progress">${displayedCount} di ${totalFiltered} ricette</div>
+          <div class="load-more-bar"><div class="load-more-bar__fill" style="width: ${pct}%"></div></div>
+        </div>`;
+      document.getElementById('load-more-btn')?.addEventListener('click', () => {
+        catState.displayedCount += ITEMS_PER_PAGE;
+        updateCategoryView();
+        // Smooth scroll to show new cards
+        setTimeout(() => {
+          const allCards = grid.querySelectorAll('.category-card');
+          const newFirstCard = allCards[displayedCount]; // first new card
+          if (newFirstCard) {
+            newFirstCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }, 100);
+        applyMadeBadgesToCards();
+      });
+    } else {
+      loadMoreContainer.innerHTML = '';
+    }
+  }
+
+  if (typeof lucide !== 'undefined') lucide.createIcons();
+  applyMadeBadgesToCards();
+}
+
+function buildSkeletonCards(count) {
+  return Array.from({ length: count }, () => `
+    <div class="category-card category-card--skeleton">
+      <div class="category-card__image-wrapper"></div>
+      <div class="category-card__body">
+        <div class="skeleton-line skeleton-line--title"></div>
+        <div class="skeleton-line skeleton-line--desc"></div>
+      </div>
+    </div>`).join('');
 }
 
 // ═══════════════════════════════════════

@@ -187,28 +187,36 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Una baguette di scuola classica francese, costruita su un poolish a maturazione lenta che conferisce profondità aromatica e una mollica aperta e traslucida. La cottura ad alta temperatura con vapore saturo — seguita da asciugatura a spiffero — genera una crosta sottile, fragile e straordinariamente croccante, con note di tostatura dorata e un finale leggermente acidulo lasciato dalla fermentazione del pre-impasto. Il sale al 2% e il malto calibrano sapidità e doratura, completando un profilo sensoriale di grande equilibrio e tensione tecnica.",
+    "summary": "Una baguette di scuola francese classica, costruita su un poolish a lunga maturazione che conferisce complessità aromatica: sentori di lievito maturo, note lattiche leggere e un fondo di cereale tostato emergono da una crosta fine e croccante. La mollica è aperta, alveolata in modo irregolare con pareti traslucide, mentre l'equilibrio tra la sapidità del 2% di sale e la dolcezza residua del malto d'orzo regala una persistenza gustativa lunga e appagante.",
     "axes": [
       {
-        "label": "Croccantezza Crosta",
+        "label": "Croccantezza della Crosta",
         "value": 9
       },
       {
-        "label": "Alveolatura Mollica",
+        "label": "Apertura Alveolare",
         "value": 8
       },
       {
         "label": "Complessità Aromatica",
-        "value": 8
-      },
-      {
-        "label": "Acidità Percepita",
-        "value": 5
+        "value": 7
       },
       {
         "label": "Sapidità",
         "value": 6
+      },
+      {
+        "label": "Leggerezza / Idratazione",
+        "value": 8
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 268,
+    "macros": {
+      "carbs": 53,
+      "protein": 9,
+      "fat": 1
+    }
   }
 }

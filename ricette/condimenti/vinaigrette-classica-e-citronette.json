@@ -150,32 +150,32 @@
   "image": "images/ricette/condimenti/vinaigrette-classica-e-citronette.webp",
   "imageAttribution": "📷 Foto: Nadin Sh — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Un dittico di emulsioni classiche che si distinguono per eleganza e pulizia aromatica. La Vinaigrette esprime una vena acida decisa e penetrante, bilanciata dalla rotondità fruttata di un olio in cultivar delicata, con un finale pungente di pepe fresco. La Citronette, più luminosa e floreale, offre una acidità citrica vibrante e agrumata, più morbida in retrogusto rispetto all'aceto, con una texture emulsionata leggermente più cremosa grazie alla maggiore concentrazione lipidica relativa.",
+    "summary": "Un duo di condimenti dall'anima mediterranea: la vinaigrette si presenta con una nota acida netta e tagliente, sostenuta dalla sapidità del sale marino e addolcita dalla rotondità fruttata dell'olio Taggiasca o Leccino. La citronette offre invece una pungenza citrica più fresca e luminosa, con un'acidità volatile e agrumata che si fonde in un'emulsione lievemente cremosa, dove il pepe nero macinato al momento aggiunge una firma aromatica speziata e persistente. Entrambe le preparazioni si distinguono per un'intensità aromatica elegante e per una dolcezza residua quasi assente, in favore di un profilo secco, pulito e verticale.",
     "axes": [
       {
-        "label": "Acidità / Vivacità",
-        "value": 8
-      },
-      {
-        "label": "Corpo / Rotondità Lipidica",
-        "value": 7
-      },
-      {
-        "label": "Intensità Aromatica",
+        "label": "Sapidità / Umami",
         "value": 5
       },
       {
-        "label": "Piccantezza / Speziatura",
+        "label": "Acidità / Pungenza",
+        "value": 8
+      },
+      {
+        "label": "Cremosità / Densità",
+        "value": 4
+      },
+      {
+        "label": "Dolcezza / Rotondità",
         "value": 3
       },
       {
-        "label": "Persistenza / Lunghezza",
-        "value": 6
+        "label": "Intensità Aromatica",
+        "value": 7
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 558,
+    "kcal_per_100g": 548,
     "macros": {
       "carbs": 2,
       "protein": 0,

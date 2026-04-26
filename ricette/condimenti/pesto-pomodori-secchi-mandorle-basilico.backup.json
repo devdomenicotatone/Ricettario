@@ -140,28 +140,36 @@
   "image": "images/ricette/condimenti/pesto-pomodori-secchi-mandorle-basilico.webp",
   "imageAttribution": "📷 Foto: Andrés  Góngora — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Un pesto dal carattere mediterraneo intenso e stratificato: l'umami profondo dei pomodori secchi calabresi domina il palato con una sapidità marcata, sostenuta dal pecorino romano. Le mandorle di Avola donano una base burrosa e leggermente dolce, mentre il basilico fresco apporta una nota erbacea luminosa che bilancia la concentrazione del pomodoro. La texture volutamente rustica e granulosa conferisce persistenza e masticabilità, rendendo questo condimento un racconto sensoriale del Sud Italia.",
+    "summary": "Un pesto dal carattere mediterraneo deciso e avvolgente, dove la concentrazione umami dei pomodori secchi calabresi domina con autorevolezza, temperata dalla dolcezza burrosa delle mandorle di Avola. Il basilico fresco porta verticalità aromatica e un tocco erbaceo-mentolato, mentre il pecorino romano regala una sapidità graffiante e persistente che si fonde elegantemente con la rotondità fruttata dell'olio taggiasca. La texture volutamente rustica e granulosa offre una masticabilità soddisfacente, rendendo questo condimento tanto gustoso quanto visivamente artigianale.",
     "axes": [
       {
-        "label": "Sapidità (Umami)",
+        "label": "Intensità Aromatica",
         "value": 9
       },
       {
-        "label": "Intensità Aromatica",
-        "value": 8
+        "label": "Sapidità / Umami",
+        "value": 9
       },
       {
-        "label": "Dolcezza Fruttata",
-        "value": 5
+        "label": "Dolcezza Bilanciatrice",
+        "value": 4
       },
       {
-        "label": "Acidità",
-        "value": 6
-      },
-      {
-        "label": "Grassezza & Cremosità",
+        "label": "Grassezza / Untuosità",
         "value": 7
+      },
+      {
+        "label": "Freschezza Erbacea",
+        "value": 6
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 412,
+    "macros": {
+      "carbs": 14,
+      "protein": 10,
+      "fat": 34
+    }
   }
 }

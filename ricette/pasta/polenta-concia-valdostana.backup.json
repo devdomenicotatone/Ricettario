@@ -164,28 +164,36 @@
   "image": "images/ricette/pasta/polenta-concia-valdostana.webp",
   "imageAttribution": "📷 Foto: Alex Favali — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una preparazione montanara di straordinaria ricchezza tattile e gustativa: la polenta bramata, cotta lentamente per 50 minuti, sviluppa una struttura granulosa e avvolgente che si fonde con la colata grassa e filante di Fontina DOP, Toma semistagionata e burro di centrifuga all'82%. Il profilo è dominato da una cremosità quasi opulenta, con note lattiche fermentate di media intensità e una sapidità ben calibrata, chiusa da un soffio speziato di pepe fresco. La gratinatura opzionale aggiunge la sola nota croccante in un paesaggio altrimenti morbido e avvolgente.",
+    "summary": "Una polenta di grande carattere montano, avvolgente e profonda: la grana bramata macinata a pietra regala una texture rustica e corposa, mentre la triplice mantecatura con Fontina DOP, Toma Piemontese e burro di centrifuga costruisce un tessuto caseario straordinariamente filante e grasso. Al naso emergono note lattiche fermentate, sentori di fieno alpino e burro noisette; in bocca il sapore è lungo, sapido e persistente, con un finale pepato che taglia la ricchezza lipidica donando equilibrio.",
     "axes": [
       {
-        "label": "Cremosità & Filanza",
+        "label": "Untuosità / Ricchezza Lipidica",
         "value": 9
       },
       {
-        "label": "Sapidità & Umami Lattico",
+        "label": "Sapidità / Intensità Casearia",
         "value": 8
       },
       {
-        "label": "Corpo & Densità",
+        "label": "Rusticità / Corposità della Grana",
         "value": 8
       },
       {
-        "label": "Complessità Aromatica",
-        "value": 6
+        "label": "Filanza / Cremosità",
+        "value": 9
       },
       {
-        "label": "Croccantezza Superficiale",
+        "label": "Speziatura / Complessità Aromatica",
         "value": 4
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 198,
+    "macros": {
+      "carbs": 16,
+      "protein": 7,
+      "fat": 12
+    }
   }
 }

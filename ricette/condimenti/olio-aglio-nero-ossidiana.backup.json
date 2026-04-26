@@ -1,6 +1,6 @@
 {
   "title": "Olio all'Aglio Nero (Nero Ossidiana)",
-  "slug": "olio-aglio-nero-carbone-vegetale",
+  "slug": "olio-aglio-nero-ossidiana",
   "emoji": "🧄",
   "description": "Condimento tecnico e scenografico dal colore nero profondo, ideale per esaltare pizze gourmet e piatti d'alta cucina con note umami e balsamiche.",
   "subtitle": "Estrazione a temperatura controllata e sospensione microparticellare",
@@ -127,31 +127,40 @@
   ],
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-24T23:44:59.842Z",
-  "image": "images/ricette/condimenti/olio-aglio-nero-carbone-vegetale.webp",
-  "imageAttribution": "📷 Foto: Pixabay — Pexels License via Pexels",
+  "image": "images/ricette/condimenti/olio-aglio-nero-ossidiana.webp",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
-    "summary": "Un condimento di rara complessità oscura: l'aglio nero fermentato domina con note di umami profondo, balsamico e quasi boisé, mentre il carbone vegetale conferisce una neutralità minerale che amplifica la percezione visiva e tattile. Il rosmarino e l'origano tessono un filo aromatico mediterraneo persistente, bilanciato da una piccantezza sussurrata del peperoncino e da una grassezza vellutata dell'EVO fruttato leggero. Un olio da intingolo contemplativo, dalla personalità quasi alchemica.",
+    "summary": "Un olio dalla personalità oscura e affascinante: il nero ossidiana del carbone vegetale in sospensione crea un impatto visivo immediato e teatrale. Al naso, l'aglio nero fermentato dona note profonde di umami, aceto balsamico e frutti scuri che si intrecciano con le resine alpine del rosmarino e la dolce speziatura dell'origano. In bocca si rivela sorprendentemente morbido e avvolgente, con un retrogusto lungo di liquirizia, tabacco dolce e un calore sottile lasciato dal peperoncino.",
     "axes": [
       {
-        "label": "Intensità Umami (Aglio Nero)",
+        "label": "Intensità Aromatica",
         "value": 9
       },
       {
-        "label": "Complessità Aromatica",
+        "label": "Complessità Umami",
         "value": 8
       },
       {
-        "label": "Piccantezza",
+        "label": "Piccantezza / Calore",
         "value": 3
       },
       {
-        "label": "Amarezza",
+        "label": "Amaro / Erbaceo",
         "value": 5
       },
       {
-        "label": "Persistenza Retrolfattiva",
-        "value": 9
+        "label": "Impatto Visivo (Cromatico)",
+        "value": 10
       }
     ]
-  }
+  },
+  "nutrition": {
+    "kcal_per_100g": 868,
+    "macros": {
+      "carbs": 3,
+      "protein": 1,
+      "fat": 96
+    }
+  },
+  "_originalImageUrl": ""
 }

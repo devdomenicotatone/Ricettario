@@ -256,36 +256,36 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Una pizza di struttura maestosa e architettura aerea: il cornicione 'canotto' si impone con una crosta sottile e croccante che cede a una mollica alveolata, quasi eterea, frutto della lunga fermentazione in biga e del bassinage spinto. Al naso emergono note lattiche complesse, sentori di cereale fermentato e un sottofondo di malto tostato che annuncia la leopardatura dorata. In bocca la texture è un perfetto contrasto tra la friabilità della base e la sofficità interna, con una sapidità equilibrata e una persistente nota acido-fermentativa che pulisce il palato.",
+    "summary": "Una pizza di straordinaria complessità strutturale: il cornicione 'canotto', sviluppato grazie alla doppia fermentazione biga 24h e all'impasto ad alta idratazione (72%), offre una crosta esterna croccante e segnata da una leopardatura intensa, mentre l'interno si rivela incredibilmente aereo, soffice e scioglievole. Il bouquet aromatico è profondo e articolato — note lattico-fermentate della biga matura si intrecciano con sentori di grano antico, cereale tostato e un leggero fondo acidulo conferito dal Criscito — mentre la sapidità è calibrata con precisione chirurgica al 2.3%, esaltando ogni sfumatura senza coprire la dolcezza naturale dell'impasto.",
     "axes": [
       {
-        "label": "Alveolatura / Leggerezza",
+        "label": "Croccantezza Esterna",
         "value": 9
       },
       {
-        "label": "Complessità Fermentativa",
+        "label": "Scioglievolezza Impasto",
         "value": 9
       },
       {
-        "label": "Croccantezza della Base",
-        "value": 8
-      },
-      {
-        "label": "Sapidità",
+        "label": "Sapidità / Umami",
         "value": 6
       },
       {
-        "label": "Estensibilità / Elasticità dell'Impasto",
-        "value": 8
+        "label": "Equilibrio Condimento-Impasto",
+        "value": 7
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 9
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 248,
+    "kcal_per_100g": 258,
     "macros": {
-      "carbs": 49,
+      "carbs": 50,
       "protein": 8,
-      "fat": 1
+      "fat": 2
     }
   }
 }

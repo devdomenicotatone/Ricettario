@@ -217,28 +217,36 @@
   "image": "images/ricette/lievitati/pasta-brioche-artigianale.webp",
   "imageAttribution": "📷 Foto: Backen.de — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una brioche artigianale di raffinata eleganza burrosa, dove il grasso del burro (30% sul peso della farina) costruisce una mollica setosa e filante dal carattere spiccatamente viennoiserie. Il bouquet aromatico è complesso e avvolgente: la macerazione notturna di vaniglia, scorze agrumarie e rum crea un'onda olfattiva persistente che si fonde con le note di Maillard della superficie dorata. La dolcezza è generosa ma bilanciata dalla sapidità del sale e dalla freschezza degli agrumi, regalando un finale lungo e suadente.",
+    "summary": "Una brioche artigianale di grande eleganza, con un profilo aromatico stratificato dove la vaniglia e le scorze agrumati si intrecciano con la nota calda e suadente del rum, creando una complessità degna di una viennoiserie d'autore. La struttura è soffice e filante, con una mollica alveolata e setosa impreziosita dalla ricchezza del burro a pomata, mentre la doratura al tuorlo e panna regala una crosta lucida, sottile e caramellata. Il finale è dolce, burroso e persistente, con un retrogusto floreale di miele d'acacia che si prolunga piacevolmente.",
     "axes": [
       {
-        "label": "Sofficità della Mollica",
+        "label": "Sofficità & Leggerezza",
         "value": 9
       },
       {
-        "label": "Complessità Aromatica",
+        "label": "Intensità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Ricchezza Burrosa",
         "value": 9
       },
       {
-        "label": "Dolcezza",
+        "label": "Dolcezza Bilanciata",
         "value": 7
       },
       {
-        "label": "Croccantezza della Crosta",
-        "value": 4
-      },
-      {
-        "label": "Ricchezza Burrosa (Grassezza)",
-        "value": 9
+        "label": "Complessità Citrus-Speziata",
+        "value": 8
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 362,
+    "macros": {
+      "carbs": 44,
+      "protein": 8,
+      "fat": 16
+    }
   }
 }

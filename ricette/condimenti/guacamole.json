@@ -171,36 +171,36 @@
   "image": "images/ricette/condimenti/guacamole.webp",
   "imageAttribution": "📷 Foto: RDNE Stock project — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Un guacamole dal carattere avvolgente e mediterraneo, dove la cremosità burrosa dell'avocado Hass maturo si fonde con la vivacità citrica del lime fresco e la rotondità dell'olio extravergine. Il naso è erbaceo e fresco, con accenni di coriandolo e una lieve nota piccante di jalapeño che si dissolve nel finish lungo e grasso. La texture volutamente rustica, con frammenti di pomodoro e cipolla tritata, conferisce dinamismo ad ogni boccone.",
+    "summary": "Un guacamole di struttura avvolgente e voluttuosa, dove la cremosità burrosa dell'avocado Hass maturo domina il palato con una rotondità grassa e persistente. Il lime fresco taglia con precisione chirurgica la ricchezza lipidica, regalando una vivacità acida brillante, mentre il jalapeño introduce una pungenza moderata e progressiva che si sviluppa nel retro-palato. L'olio extravergine amplifica la texture e arrotonda l'insieme, lasciando un finale lungo e aromatico dominato dal coriandolo e da una piacevole mineralità salina.",
     "axes": [
       {
-        "label": "Cremosità / Grassezza",
-        "value": 9
+        "label": "Sapidità / Umami",
+        "value": 5
       },
       {
-        "label": "Acidità / Brillantezza Citrica",
-        "value": 7
-      },
-      {
-        "label": "Piccantezza",
-        "value": 3
-      },
-      {
-        "label": "Intensità Aromatica Erbacea",
+        "label": "Acidità / Pungenza",
         "value": 6
       },
       {
-        "label": "Struttura / Complessità Testiturale",
+        "label": "Cremosità / Densità",
+        "value": 9
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 4
+      },
+      {
+        "label": "Intensità Aromatica",
         "value": 7
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 168,
+    "kcal_per_100g": 172,
     "macros": {
       "carbs": 7,
       "protein": 2,
-      "fat": 14
+      "fat": 15
     }
   }
 }

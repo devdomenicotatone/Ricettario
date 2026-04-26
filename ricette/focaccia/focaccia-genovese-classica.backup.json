@@ -231,28 +231,36 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Una focaccia genovese di grande carattere e complessità: la biga a lunga fermentazione regala una profondità aromatica fermentativa equilibrata, mentre la doppia dose di olio EVO Ligure DOP — in impasto e in salamoia — conferisce una grassezza avvolgente e un fruttato intenso. La cottura a 220°C con vapore iniziale garantisce una crosta dorata e croccante che contrasta magnificamente con una mollica umida, aperta e quasi cremosa, segnata da fossette profonde che trattengono l'emulsione olio-acqua.",
+    "summary": "Una focaccia di straordinaria complessità artigianale: la biga lunga conferisce una profondità fermentativa e un bouquet di sentori lattici e cerealicoli che si fondono con le note fruttate e pepate dell'olio EVO Ligure DOP. In bocca l'alveolatura aperta e la mollica setosa contrastano magnificamente con la crosta dorata e le fossette caramellizzate, mentre la salamoia emulsionata regala una succulenza persistente e una salinità marina calibrata che invita al secondo assaggio.",
     "axes": [
       {
-        "label": "Croccantezza Crosta",
+        "label": "Croccantezza della Crosta",
         "value": 8
       },
       {
-        "label": "Alveolatura Mollica",
-        "value": 8
-      },
-      {
-        "label": "Umidità e Grassezza",
+        "label": "Sofficità e Apertura Alveolare",
         "value": 9
       },
       {
-        "label": "Acidità / Complessità Fermentativa",
-        "value": 6
+        "label": "Intensità Aromatica (Fermentazione + EVO)",
+        "value": 8
       },
       {
-        "label": "Sapidità Percepita",
+        "label": "Sapidità e Percezione Marina",
         "value": 7
+      },
+      {
+        "label": "Succulenza / Untuosità (Salamoia)",
+        "value": 9
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 282,
+    "macros": {
+      "carbs": 42,
+      "protein": 7,
+      "fat": 9
+    }
   }
 }

@@ -167,30 +167,39 @@
   "_generatedBy": "claude-opus",
   "_createdAt": "2026-04-19T20:32:20.490Z",
   "image": "images/ricette/condimenti/caesar-dressing.webp",
-  "imageAttribution": "📷 Foto: Gundula Vogel — Pexels License via Pexels",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
-    "summary": "Un Caesar Dressing di scuola classica, strutturato attorno a un'emulsione ricca e avvolgente dove la grassezza dell'olio extravergine e del tuorlo incontra un umami profondo e stratificato — acciughe, Worcestershire, Parmigiano 24 mesi — che si dispiega in un lungo finale sapido e persistente. L'acidità brillante del limone fresco e dell'aceto bilancia la componente grassa con precisione chirurgica, mentre l'aglio crudo e la senape di Digione conferiscono nervo e pungenza, tenendo viva la tensione gustativa sino all'ultimo.",
+    "summary": "Un dressing di straordinaria complessità e coerenza stilistica: l'emulsione di tuorlo e olio extravergine costruisce una base vellutata e avvolgente, su cui si innestano le note saline e iodate delle acciughe, l'umami profondo del Parmigiano 24 mesi e la piccantezza pungente dell'aglio crudo. L'acidità vibrante del limone fresco e dell'aceto di vino bianco bilancia il grasso con precisione chirurgica, mentre la senape di Digione agisce da emulsionante e da nota mustard in retrogusto. La Worcestershire aggiunge una sfumatura fermentata e leggermente dolce che completa un profilo olfattivo-gustativo di grande lunghezza e persistenza.",
     "axes": [
       {
-        "label": "Sapidità (Umami)",
+        "label": "Sapidità / Umami",
         "value": 9
       },
       {
-        "label": "Grassezza / Cremosità",
-        "value": 8
-      },
-      {
-        "label": "Acidità",
+        "label": "Acidità / Freschezza",
         "value": 7
       },
       {
-        "label": "Pungenza (Aglio & Senape)",
-        "value": 6
+        "label": "Cremosità / Corpo",
+        "value": 8
       },
       {
-        "label": "Persistenza Aromatica",
-        "value": 9
+        "label": "Intensità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Piccantezza / Pungenza",
+        "value": 5
       }
     ]
-  }
+  },
+  "nutrition": {
+    "kcal_per_100g": 498,
+    "macros": {
+      "carbs": 3,
+      "protein": 8,
+      "fat": 48
+    }
+  },
+  "_originalImageUrl": ""
 }

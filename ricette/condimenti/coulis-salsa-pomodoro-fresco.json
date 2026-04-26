@@ -136,34 +136,34 @@
   "image": "images/ricette/condimenti/coulis-salsa-pomodoro-fresco.webp",
   "imageAttribution": "📷 Foto: Willians Huerta — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Un coulis luminoso e vellutato, dalla tonalità rosso-arancio accesa, che rivela al naso un bouquet mediterraneo dove la dolcezza matura del San Marzano dialoga con le note erbacee e anesate del basilico in infusione. In bocca la texture setosa avvolge il palato con un equilibrio armonico tra acidità brillante, dolcezza naturale del pomodoro calibrata dallo zucchero, e la rotondità grassa dell'EVO che porta persistenza e lunghezza.",
+    "summary": "Un coulis di pomodoro fresco di grande eleganza, dove la polpa di San Marzano matura esprime una vivace acidità brillante perfettamente bilanciata dalla dolcezza naturale del vegetale e dallo zucchero calibratore. Il fondo aromatico di cipolla dorata e aglio costruisce una base umami raffinata, mentre l'infusione finale di basilico fresco regala un bouquet aromatico mediterraneo intenso e persistente, con sentori erbacei e floreali che si fondono in un profilo complessivo di fresca vivacità e profondità.",
     "axes": [
       {
-        "label": "Intensità Aromatica",
-        "value": 8
-      },
-      {
-        "label": "Acidità / Freschezza",
+        "label": "Sapidità / Umami",
         "value": 7
       },
       {
-        "label": "Dolcezza / Maturità",
-        "value": 6
+        "label": "Acidità / Pungenza",
+        "value": 7
       },
       {
-        "label": "Struttura & Corpo",
+        "label": "Cremosità / Densità",
         "value": 5
       },
       {
-        "label": "Setosità / Texture",
-        "value": 9
+        "label": "Dolcezza / Rotondità",
+        "value": 5
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 68,
+    "kcal_per_100g": 72,
     "macros": {
-      "carbs": 6,
+      "carbs": 7,
       "protein": 1,
       "fat": 4
     }

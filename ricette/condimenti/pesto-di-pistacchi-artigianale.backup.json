@@ -145,28 +145,36 @@
   "image": "images/ricette/condimenti/pesto-di-pistacchi-artigianale.webp",
   "imageAttribution": "📷 Foto: Ron Lach — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Un pesto di straordinaria finezza artigianale, dove la dolcezza burrosa e resinosa del pistacchio siciliano domina il palato con eleganza, supportata da una grassezza avvolgente e ben bilanciata dall'olio EVO a bassa fruttatura. La doppia sapidità di Parmigiano e Pecorino costruisce un umami persistente e complesso, mentre la scorza di limone e il basilico fresco — protetti dallo shock termico dell'acqua ghiacciata — regalano una vivacità agrumata e erbacea che pulisce il finale con precisione millimetrica. La rimozione della pellicina e dell'anima dell'aglio rivela una ricerca tecnica orientata alla purezza e alla rotondità del profilo.",
+    "summary": "Un pesto di straordinaria eleganza cromatica, verde smeraldo brillante, dove la dolcezza burrosa e resinosa del pistacchio di Sicilia domina il palato con autorevolezza prima di cedere a una sapidità complessa e bilanciata dal duo Parmigiano-Pecorino. La scorza di limone e il basilico disegnano un finale aromatico fresco e luminoso, mentre la tecnica dell'emulsione con acqua ghiacciata conferisce una texture vellutata e una persistenza gustativa sorprendentemente lunga.",
     "axes": [
       {
-        "label": "Dolcezza e Fruttato (Pistacchio)",
+        "label": "Intensità Aromatica",
         "value": 8
       },
       {
-        "label": "Sapidità / Umami (Formaggi DOP)",
-        "value": 8
-      },
-      {
-        "label": "Grassezza ed Avvolgenza",
+        "label": "Sapidità / Umami",
         "value": 7
       },
       {
-        "label": "Vivacità Agrumata-Erbacea",
+        "label": "Cremosità / Texture",
+        "value": 9
+      },
+      {
+        "label": "Freschezza Erbacea & Agrumata",
         "value": 6
       },
       {
-        "label": "Amarezza",
-        "value": 2
+        "label": "Persistenza Gusto-Olfattiva",
+        "value": 8
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 548,
+    "macros": {
+      "carbs": 8,
+      "protein": 13,
+      "fat": 50
+    }
   }
 }

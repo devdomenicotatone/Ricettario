@@ -165,34 +165,34 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Una ciabatta di carattere e complessità artigianale: la lunga maturazione del poolish regala note lattiche e leggere sfumature di cereale tostato, mentre il criscito aggiunge una sottile acidità che pulisce il palato. La mollica è aperta e alveolata, quasi traslucida, con una crosta sottile e croccante che cede con quel caratteristico 'schiocco' da pane ben cotto — il malto diastasico ne esalta la doratura e la profondità aromatica.",
+    "summary": "Una ciabatta di grande personalità, dove la lunga maturazione del poolish (12 ore) si sposa con le note acetiche e lattiche del criscito, regalando una complessità fermentativa profonda e avvolgente. La mollica si presenta con un'alveolatura ampia e irregolare, umida e setosa, frutto dell'idratazione spinta al 76% e della tecnica del bassinage, mentre la crosta — costruita a 250°C con vapore massiccio e finale a spiffero — promette una croccantezza sonora e persistente. Il malto diastasico aggiunge un bel registro tostato-caramellato che amplifica le note cerealicole della farina di tipo 0 ad alta forza, chiudendo su un finale lungo e minerale.",
     "axes": [
       {
-        "label": "Complessità Aromatica",
-        "value": 8
-      },
-      {
-        "label": "Croccantezza della Crosta",
+        "label": "Croccantezza Crosta",
         "value": 9
       },
       {
-        "label": "Apertura Alveolare",
-        "value": 9
-      },
-      {
-        "label": "Acidità Percepita",
-        "value": 4
-      },
-      {
-        "label": "Digeribilità",
+        "label": "Alveolatura Mollica",
         "value": 8
+      },
+      {
+        "label": "Complessità Fermentativa",
+        "value": 8
+      },
+      {
+        "label": "Sapidità",
+        "value": 5
+      },
+      {
+        "label": "Note Tostate / Cerealicole",
+        "value": 7
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 258,
+    "kcal_per_100g": 248,
     "macros": {
-      "carbs": 51,
+      "carbs": 49,
       "protein": 8,
       "fat": 1
     }

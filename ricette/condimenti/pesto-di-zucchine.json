@@ -135,36 +135,36 @@
   "image": "images/ricette/condimenti/pesto-di-zucchine.webp",
   "imageAttribution": "📷 Foto: Jana Ohajdova — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Un pesto di grande eleganza vegetale, dove la freschezza erbacea delle zucchine romanesca — depurata magistralmente dall'acqua di vegetazione — si intreccia con la grassezza avvolgente dell'olio extravergine in un'emulsione di rara pulizia aromatica. Il basilico giovane regala un tocco balsamico-mentolato di sottofondo, mentre il blend Parmigiano-Pecorino costruisce una sapidità complessa e stratificata che persiste lungamente in chiusura. La texture è cremosa ma rustica, con i pinoli che introducono una presenza burrosa e una lieve ruvidità granulare particolarmente appagante.",
+    "summary": "Un pesto dalla personalità verde e vibrante, dove la delicatezza acquosa delle zucchine spurgata si fonde con la sapidità decisa del Parmigiano e del Pecorino Romano in un equilibrio di rara eleganza. La texture è cremosa ma volutamente rustica, animata dalla nota resinosa e burrosa dei pinoli e dal tocco aromatico del basilico fresco, che dona una chiusura erbacea e fresca. L'olio extravergine a frutto leggero avvolge il tutto in un'emulsione setosa, tenendo a freno l'aglio depotenziato in un ruolo di sottofondo appena percettibile.",
     "axes": [
+      {
+        "label": "Sapidità / Umami",
+        "value": 7
+      },
+      {
+        "label": "Acidità / Pungenza",
+        "value": 2
+      },
+      {
+        "label": "Cremosità / Densità",
+        "value": 7
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 5
+      },
       {
         "label": "Intensità Aromatica",
         "value": 6
-      },
-      {
-        "label": "Sapidità / Umami",
-        "value": 8
-      },
-      {
-        "label": "Grassezza / Untuosità",
-        "value": 9
-      },
-      {
-        "label": "Freschezza Vegetale",
-        "value": 7
-      },
-      {
-        "label": "Persistenza Retrolfattiva",
-        "value": 7
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 412,
+    "kcal_per_100g": 318,
     "macros": {
       "carbs": 4,
-      "protein": 9,
-      "fat": 40
+      "protein": 7,
+      "fat": 30
     }
   }
 }

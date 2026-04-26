@@ -134,36 +134,36 @@
   "image": "images/ricette/condimenti/salsa-alle-noci.webp",
   "imageAttribution": "📷 Foto: Eden FC — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una salsa di grande personalità e finezza artigianale, dal colore avorio caldo e dalla texture vellutata e avvolgente. Al naso si apre su note burroso-lattiche e di noce fresca, con un tocco erbaceo floreale della maggiorana che alleggerisce la struttura grassa. In bocca è cremosa, con una sapidità ben calibrata dal Parmigiano e un finale lungo, lievemente resinoso e amaricante, dove la pulizia dei tannini delle noci sbollentate lascia un retrogusto netto e persistente.",
+    "summary": "La salsa alle noci si presenta come un condimento di straordinaria complessità e persistenza aromatica, dove il carattere burroso e tannicamente raffinato dei gherigli sbollentati si intreccia con la sapidità cristallina del Parmigiano Reggiano 24 mesi e la nota agreste della maggiorana fresca. La mollica ammollata nel latte intero conferisce una cremosità setosa e avvolgente, mentre l'olio ligure DOP — delicato e floreale — lega l'emulsione in una texture vellutata color avorio di grande eleganza. Il retrogusto è lungo, con un lieve residuo erbaceo e una dolcezza lattiginosa che bilancia perfettamente la pungenza dell'aglio privato dell'anima.",
     "axes": [
       {
-        "label": "Intensità Aromatica",
+        "label": "Sapidità / Umami",
         "value": 7
       },
       {
-        "label": "Grassezza / Untuosità",
+        "label": "Acidità / Pungenza",
+        "value": 2
+      },
+      {
+        "label": "Cremosità / Densità",
         "value": 9
       },
       {
-        "label": "Sapidità",
-        "value": 6
+        "label": "Dolcezza / Rotondità",
+        "value": 4
       },
       {
-        "label": "Amaricante / Tannicità",
-        "value": 3
-      },
-      {
-        "label": "Cremosità / Struttura",
-        "value": 9
+        "label": "Intensità Aromatica",
+        "value": 8
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 468,
+    "kcal_per_100g": 498,
     "macros": {
-      "carbs": 9,
+      "carbs": 10,
       "protein": 12,
-      "fat": 42
+      "fat": 44
     }
   }
 }

@@ -182,28 +182,36 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Un pane di carattere e complessità aromatica elevata, dove la lunga maturazione del poolish sviluppa note lattiche e leggermene acide che si intrecciano con il profumo burroso e tostato dei gherigli di noce. La crosta, cotta ad alta temperatura con vapore iniziale e successiva asciugatura, si presenta croccante e caramellata, mentre la mollica — sostenuta da un'idratazione del 70% e da una maglia glutinica ben sviluppata — risulta elastica, umida e generosamente alveolata. Un pane da meditazione, con una persistenza aromatica lunga e avvolgente.",
+    "summary": "Un pane di carattere e complessità artigianale, dove la lunga maturazione del poolish sviluppa note lattico-acide delicate e una profondità aromatica di lievito maturo. Le noci tostate introducono un registro grasso e amaricante in perfetto contrasto con la crosta caramellata e croccante, mentre la mollica si presenta alveolata, leggermente elastica e con una persistenza retronasale di cereale fermentato e frutta secca. Un pane da meditazione, equilibrato tra rusticità e tecnica.",
     "axes": [
       {
-        "label": "Croccantezza Crosta",
+        "label": "Croccantezza della Crosta",
         "value": 9
       },
       {
-        "label": "Alveolatura Mollica",
+        "label": "Complessità Aromatica (Fermentazione)",
+        "value": 8
+      },
+      {
+        "label": "Intensità delle Noci (Amaro/Grasso)",
         "value": 7
       },
       {
-        "label": "Complessità Aromatica",
-        "value": 9
+        "label": "Acidità Lattica",
+        "value": 5
       },
       {
-        "label": "Acidità (Note Fermentative)",
-        "value": 6
-      },
-      {
-        "label": "Umidità Mollica",
+        "label": "Alveolatura e Leggerezza della Mollica",
         "value": 7
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 278,
+    "macros": {
+      "carbs": 42,
+      "protein": 9,
+      "fat": 8
+    }
   }
 }

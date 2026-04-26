@@ -229,36 +229,36 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "La Fügassa si presenta con una crosta dorata ambrata, quasi laccata dall'olio EVO ligure, che cede sotto i denti rivelando una mollica alveolata, umida e tenace grazie al blend di farina media forza e Manitoba. La salamoia penetrata nei tipici buchi conferisce una sapidità marina decisa, mentre l'olio taggiasco avvolge il palato con note fruttate e una lieve vena erbacea, lasciando un finale lungo e persistente di cereale cotto e olive verdi.",
+    "summary": "La Focaccia Genovese si presenta con una crosta dorata ambrata di fine croccantezza, che cede al morso rivelando un interno soffice, alveolato e generosamente oleoso. La salamoia penetrata nei caratteristici buchi conferisce una sapidità calibrata e persistente, mentre l'olio EVO ligure di cultivar Taggiasca apporta note fruttate delicate, sentori di mandorla verde e un finale leggermente erbaceo di grande eleganza. L'equilibrio tra la ricchezza del condimento e la struttura dell'impasto — sostenuta dal blend 00/Manitoba — è il tratto distintivo di questa preparazione, espressione autentica della tradizione boulangère ligure.",
     "axes": [
       {
-        "label": "Sapidità",
-        "value": 8
-      },
-      {
-        "label": "Untuosità / Ricchezza Lipidica",
-        "value": 9
-      },
-      {
-        "label": "Croccantezza della Crosta",
+        "label": "Croccantezza Esterna",
         "value": 7
       },
       {
-        "label": "Struttura Alveolare / Leggerezza",
-        "value": 6
+        "label": "Scioglievolezza Impasto",
+        "value": 8
       },
       {
-        "label": "Intensità Aromatica (EVO + Malto)",
-        "value": 8
+        "label": "Sapidità / Umami",
+        "value": 7
+      },
+      {
+        "label": "Equilibrio Condimento-Impasto",
+        "value": 9
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 7
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 295,
+    "kcal_per_100g": 282,
     "macros": {
-      "carbs": 42,
+      "carbs": 38,
       "protein": 7,
-      "fat": 10
+      "fat": 11
     }
   },
   "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",

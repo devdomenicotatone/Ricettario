@@ -136,27 +136,27 @@
   "image": "images/ricette/condimenti/olio-peperone-crusco-rosso-rubino.webp",
   "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
-    "summary": "Un olio da condimento di straordinaria eleganza cromatica, dal rosso rubino brillante e trasparente, che rivela al naso note dolci di peperone essiccato, paprica fresca e un fondo avvolgente di frutta secca tostata. Al palato l'ingresso è morbido e avvolgente, con una dolcezza vegetale persistente e una leggera speziatura calda che si prolunga in un finale pulito, quasi privo di piccantezza, con il corpo opulento e fruttato dell'olio extravergine lucano-pugliese in perfetto equilibrio.",
+    "summary": "Un olio dal carattere luminoso e avvolgente, che si presenta con un rosso rubino intenso e una texture setosa di grande eleganza. Al naso domina un bouquet di peperone dolce essiccato, con note terrose e lievemente fruttate che evocano il sole del Meridione; in bocca la dolcezza rotonda del capsico si fonde armoniosamente con la struttura grassa dell'olio EVO, lasciando un finale pulito e persistente. La sapidità è contenuta ma presente, mentre l'intensità aromatica si rivela la firma dominante di questo condimento artigianale.",
     "axes": [
       {
-        "label": "Intensità Aromatica",
-        "value": 8
-      },
-      {
-        "label": "Dolcezza Vegetale",
-        "value": 7
-      },
-      {
-        "label": "Speziatura / Calore",
+        "label": "Sapidità / Umami",
         "value": 3
       },
       {
-        "label": "Corpo e Untuosità",
-        "value": 9
+        "label": "Acidità / Pungenza",
+        "value": 2
       },
       {
-        "label": "Limpidezza e Finezza",
-        "value": 9
+        "label": "Cremosità / Densità",
+        "value": 6
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 6
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
       }
     ]
   },

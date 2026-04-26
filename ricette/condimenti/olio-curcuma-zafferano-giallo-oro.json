@@ -106,36 +106,36 @@
   "image": "images/ricette/condimenti/olio-curcuma-zafferano-giallo-oro.webp",
   "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
-    "summary": "Un olio extravergine di altissima qualità trasformato in un condimento aromatico dalla personalità luminosa e speziata. Nella versione alla curcuma, il naso rivela note terrose, resinose e leggermente amare con un sottofondo caldo di zenzero; in bocca l'ingresso è suadente e burroso, seguito da un finale persistente e leggermente pungente. La variante allo zafferano offre invece un profilo più floreale ed etereo, con rimandi di miele, fieno secco e un'elegante mineralità che si fonde con il fruttato leggero della cultivar prescelta.",
+    "summary": "Un olio di straordinaria eleganza cromatica, dal giallo oro intenso e luminoso, che svela al naso un bouquet speziato terroso con note di curcuma fresca, rizoma e sottofondo resinoso dell'oliva taggiasca o gardesana. In bocca l'attacco è morbido e avvolgente, con il fruttato delicato dell'EVO che funge da vettore armonico per la nota calda, lievemente amara e pepata della curcuma; il finale è lungo, con un leggero pizzicore che si asciuga pulito. Nella variante allo zafferano, il profilo si nobilita ulteriormente: il metallico floreale dei pistilli si sposa con la grassezza dell'olio in una texture sensoriale preziosa e quasi iodata.",
     "axes": [
       {
-        "label": "Intensità Aromatica",
-        "value": 8
+        "label": "Sapidità / Umami",
+        "value": 3
       },
       {
-        "label": "Amaro & Piccante",
+        "label": "Acidità / Pungenza",
+        "value": 4
+      },
+      {
+        "label": "Cremosità / Densità",
         "value": 6
       },
       {
-        "label": "Fruttato dell'Olio Base",
-        "value": 5
+        "label": "Dolcezza / Rotondità",
+        "value": 3
       },
       {
-        "label": "Complessità Speziata",
-        "value": 7
-      },
-      {
-        "label": "Persistenza Retrolfattiva",
+        "label": "Intensità Aromatica",
         "value": 8
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 862,
+    "kcal_per_100g": 868,
     "macros": {
-      "carbs": 4,
-      "protein": 1,
-      "fat": 95
+      "carbs": 2,
+      "protein": 0,
+      "fat": 96
     }
   },
   "_originalImageUrl": ""

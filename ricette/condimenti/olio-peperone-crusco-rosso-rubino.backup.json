@@ -1,6 +1,6 @@
 {
-  "title": "Olio al Peperone Crusco o Paprika Dolce",
-  "slug": "olio-peperone-crusco-paprika",
+  "title": "Olio al Peperone Crusco o Paprika Dolce (Rosso Rubino)",
+  "slug": "olio-peperone-crusco-rosso-rubino",
   "emoji": "🌶️",
   "description": "Condimento artigianale lucano dal colore rosso rubino e dal profumo affumicato. Ideale per insaporire focacce, pasta, bruschette o per l'uso a crudo.",
   "subtitle": "Tecnica di estrazione a caldo e shock termico per oli aromatizzati",
@@ -133,31 +133,40 @@
   ],
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-24T23:00:17.531Z",
-  "image": "images/ricette/condimenti/olio-peperone-crusco-paprika.webp",
-  "imageAttribution": "📷 Foto: monicore — Pexels License via Pexels",
+  "image": "images/ricette/condimenti/olio-peperone-crusco-rosso-rubino.webp",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
-    "summary": "Un olio di straordinaria eleganza cromatica, rosso rubino brillante, che esprime tutta la dolcezza calda e suadente del peperone di Senise IGP. Al naso si apre con note fruttate di peperone maturo, leggera tostatura da Maillard della frittura flash, e il fondo erbaceo dell'olio EVO lucano. In bocca è avvolgente e dolce, con una piccantezza quasi assente, una persistenza aromatica intensa e una grassezza setosa bilanciata dalla delicatezza dell'estrazione a freddo controllata a 65°C.",
+    "summary": "Un olio da condimento di straordinaria eleganza cromatica, dal rosso rubino brillante e trasparente, che rivela al naso note dolci di peperone essiccato, paprica fresca e un fondo avvolgente di frutta secca tostata. Al palato l'ingresso è morbido e avvolgente, con una dolcezza vegetale persistente e una leggera speziatura calda che si prolunga in un finale pulito, quasi privo di piccantezza, con il corpo opulento e fruttato dell'olio extravergine lucano-pugliese in perfetto equilibrio.",
     "axes": [
-      {
-        "label": "Dolcezza Fruttata",
-        "value": 9
-      },
-      {
-        "label": "Piccantezza",
-        "value": 2
-      },
       {
         "label": "Intensità Aromatica",
         "value": 8
       },
       {
-        "label": "Grassezza & Corpo",
+        "label": "Dolcezza Vegetale",
         "value": 7
       },
       {
-        "label": "Note di Tostatura",
-        "value": 5
+        "label": "Speziatura / Calore",
+        "value": 3
+      },
+      {
+        "label": "Corpo e Untuosità",
+        "value": 9
+      },
+      {
+        "label": "Limpidezza e Finezza",
+        "value": 9
       }
     ]
-  }
+  },
+  "nutrition": {
+    "kcal_per_100g": 842,
+    "macros": {
+      "carbs": 3,
+      "protein": 1,
+      "fat": 93
+    }
+  },
+  "_originalImageUrl": ""
 }

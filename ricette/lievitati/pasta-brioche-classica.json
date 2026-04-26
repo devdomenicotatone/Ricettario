@@ -272,36 +272,36 @@
   "image": "images/ricette/lievitati/pasta-brioche-classica.webp",
   "imageAttribution": "📷 Foto: Suzy Hazelwood — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una brioche classica di grande eleganza artigianale, dal profilo aromatico complesso e avvolgente grazie alla marinatura di rum, scorze agrumose e vaniglia bourbon. Al palato si rivela un equilibrio magistrale tra la ricchezza burrosa, la dolcezza misurata dello zucchero e del miele d'acacia, con una mollica soffice e filante sostenuta da una struttura proteica robusta (blend di Tipo 0 e Manitoba). La doratura al tuorlo e panna regala una crosta sottile, lacca e profumata che esalta il contrasto con l'interno nuvola.",
+    "summary": "Una brioche di scuola classica francese, in cui la ricchezza del burro e delle uova si intreccia con una marinatura aromatica elaborata — rum scuro, scorze agrumiate e vaniglia — che conferisce profondità olfattiva raramente riscontrabile nelle versioni domestiche. Al palato si rivela soffice e alveolata, con una scioglievolezza generosa sostenuta dalla buona percentuale di grassi (burro e tuorli), mentre la dolcezza rimane equilibrata e mai stucchevole grazie all'azione bilanciante del sale e degli agrumi. La maturazione fredda facoltativa amplifica ulteriormente la complessità aromatica, avvicinando questo lievitato alle migliori brioche da laboratorio artigianale.",
     "axes": [
       {
-        "label": "Ricchezza Burrosa",
+        "label": "Sofficezza / Alveolatura",
         "value": 8
+      },
+      {
+        "label": "Scioglievolezza",
+        "value": 7
+      },
+      {
+        "label": "Ricchezza Burrosa / Lattica",
+        "value": 7
+      },
+      {
+        "label": "Dolcezza Percepita",
+        "value": 6
       },
       {
         "label": "Complessità Aromatica",
         "value": 9
-      },
-      {
-        "label": "Dolcezza Equilibrata",
-        "value": 7
-      },
-      {
-        "label": "Sofficità della Mollica",
-        "value": 9
-      },
-      {
-        "label": "Croccantezza della Crosta",
-        "value": 3
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 342,
+    "kcal_per_100g": 348,
     "macros": {
-      "carbs": 46,
-      "protein": 8,
-      "fat": 12
+      "carbs": 45,
+      "protein": 9,
+      "fat": 13
     }
   }
 }

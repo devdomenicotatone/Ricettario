@@ -216,32 +216,32 @@
   "image": "images/ricette/pizza/pizza-in-teglia-romana-alta-idratazione.webp",
   "imageAttribution": "📷 Foto: Anna Guerrero — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una teglia romana di scuola classica, che si esprime con una crosta inferiore straordinariamente croccante e friabile, contrapposta a una mollica aperta, ariosa e quasi alveolata come una ciabatta. L'alta idratazione (85%) e la maturazione a freddo di 24 ore conferiscono una complessità aromatica profonda, con sentori di cereale fermentato, lieve acidità lattica e una nota burrosa data dal germe di grano pressato a freddo. La componente di Tipo 2 apporta un retrogusto integrale e terroso che bilancia la leggerezza strutturale, mentre l'olio EVO chiude il profilo con una rotondità grassa e fruttata persistente.",
+    "summary": "Una teglia romana di grande personalità, che si distingue per la sua base croccante e dorata — quasi friabile al morso — contrapposta a un cuore di mollica alveolata, setosa e scioglievole, frutto dell'alta idratazione all'85% e della lunga maturazione a freddo di 24 ore. Il blend di farina Tipo 0 con germe vitale e Tipo 2 macinata a pietra regala una complessità aromatica di rara profondità: sentori cerealicoli integri, note lattiche e di fermentazione controllata si intrecciano in un bouquet rustico ed elegante al tempo stesso. L'equilibrio tra condimento e impasto è strutturalmente solido, con una base capace di sostenere farciture generose senza cedere, mentre la sapidità — calibrata al 2,5% di sale — sostiene l'umami senza mai sopraffare.",
     "axes": [
       {
-        "label": "Croccantezza della Base",
+        "label": "Croccantezza Esterna",
         "value": 9
       },
       {
-        "label": "Alveolatura / Leggerezza della Mollica",
-        "value": 9
-      },
-      {
-        "label": "Complessità Aromatica (Fermentazione)",
+        "label": "Scioglievolezza Impasto",
         "value": 8
       },
       {
-        "label": "Sapidità",
-        "value": 5
+        "label": "Sapidità / Umami",
+        "value": 7
       },
       {
-        "label": "Persistenza Gustativa",
-        "value": 7
+        "label": "Equilibrio Condimento-Impasto",
+        "value": 8
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 9
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 231,
+    "kcal_per_100g": 229,
     "macros": {
       "carbs": 42,
       "protein": 7,

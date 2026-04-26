@@ -231,36 +231,36 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Una pizza napoletana di grande complessità strutturale, dove la doppia fermentazione — biga a lunga maturazione e criscito — costruisce un profilo aromatico profondo, con note lattiche e di cereale tostato che si fondono in un cornicione aereo e leopardato. Al palato, la texture è il suo punto di forza: alveolatura aperta e irregolare, crosta fragrante che cede a un cuore morbido e quasi cremoso, con una sapidità calibrata e una dolcezza sottile donata dall'estratto di malto diastasico. Il retrogusto è lungo, leggermente acidulo ma elegante, tipico delle grandi pizze a fermentazione indiretta.",
+    "summary": "Una pizza napoletana di straordinaria complessità, costruita su una doppia fermentazione biga-criscito che regala al cornicione un profumo di grano maturo, note lattiche e una sottile acidità nobile. L'impasto, grazie alla Nuvola Super e all'elevata idratazione al 68%, si scioglie in bocca con una leggerezza quasi eterea, mentre la cottura ad altissima temperatura sviluppa quella leopardatura carbone-zolfo che è firma del grande forno a legna. L'equilibrio tra il condimento e la base è calibrato con precisione artigianale: l'impasto è protagonista, non semplice supporto.",
     "axes": [
       {
-        "label": "Complessità Aromatica",
-        "value": 9
-      },
-      {
-        "label": "Struttura e Alveolatura",
-        "value": 9
-      },
-      {
-        "label": "Acidità Lattica",
-        "value": 6
-      },
-      {
-        "label": "Croccantezza del Cornicione",
+        "label": "Croccantezza Esterna",
         "value": 8
       },
       {
-        "label": "Sapidità e Bilanciamento",
+        "label": "Scioglievolezza Impasto",
+        "value": 9
+      },
+      {
+        "label": "Sapidità / Umami",
         "value": 7
+      },
+      {
+        "label": "Equilibrio Condimento-Impasto",
+        "value": 8
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 9
       }
     ]
   },
   "nutrition": {
     "kcal_per_100g": 249,
     "macros": {
-      "carbs": 49,
+      "carbs": 46,
       "protein": 8,
-      "fat": 1
+      "fat": 2
     }
   }
 }

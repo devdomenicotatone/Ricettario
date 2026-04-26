@@ -139,26 +139,26 @@
   "image": "images/ricette/condimenti/salsa-allo-yogurt.webp",
   "imageAttribution": "📷 Foto: Shameel mukkath — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una salsa fresca e avvolgente, dove l'acidità lattica dello yogurt greco si intreccia con le note agrumate del limone in un equilibrio preciso e raffinato. Il filo di olio extravergine conferisce rotondità e una texture vellutata, mentre la matrice aromatica di erbe fresche, aglio e scorza di limone regala profondità e persistenza. Un condimento dal carattere mediterraneo vivace, pulito e di grande versatilità.",
+    "summary": "Una salsa di grande freschezza e vivacità, dominata dalla viva acidità lattica dello yogurt greco esaltata dal succo e dalla scorza di limone, con una pungenza discreta dell'aglio che si fonde armoniosamente nel riposo. La texture è vellutata e coesa, quasi cremosa, grazie all'emulsione a freddo con l'olio extravergine, mentre il bouquet aromatico delle erbe fresche — menta, erba cipollina o aneto — conferisce una nota verde e balsamica di notevole eleganza. Il finale è lungo, fresco e pulito, con una rotondità delicata che bilancia la spinta acida senza appesantire.",
     "axes": [
       {
-        "label": "Acidità / Freschezza",
+        "label": "Sapidità / Umami",
+        "value": 5
+      },
+      {
+        "label": "Acidità / Pungenza",
         "value": 8
       },
       {
-        "label": "Aromaticità Erbacea",
+        "label": "Cremosità / Densità",
         "value": 7
       },
       {
-        "label": "Cremosità / Corpo",
-        "value": 6
+        "label": "Dolcezza / Rotondità",
+        "value": 3
       },
       {
-        "label": "Pungenza / Speziatura",
-        "value": 4
-      },
-      {
-        "label": "Persistenza Aromatica",
+        "label": "Intensità Aromatica",
         "value": 7
       }
     ]

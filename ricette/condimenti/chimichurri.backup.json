@@ -168,28 +168,36 @@
   "image": "images/ricette/condimenti/chimichurri.webp",
   "imageAttribution": "📷 Foto: Gera Cejas — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Un chimichurri di carattere vivace e mediterraneo, dove la freschezza erbacea del prezzemolo tritato a coltello dialoga con la pungenza dell'aglio e il calore del peperoncino secco. L'aceto di vino bianco impone una spalla acida netta e pulizia al palato, mentre l'olio extravergine avvolge il tutto con una grassezza rotonda e fruttata. La maturazione di 60 minuti esalta la complessità aromatica delle erbe secche reidratate, regalando una persistenza lunga e speziata.",
+    "summary": "Un chimichurri dal carattere deciso e mediterraneo, dove la freschezza erbacea del prezzemolo tritato a coltello dialoga con la pungenza dell'aglio e il calore persistente del peperoncino. L'olio extravergine di oliva fruttato costruisce una base vellutata e avvolgente, bilanciata dall'acidità tagliente dell'aceto di vino bianco, mentre origano e timo secchi apportano profondità aromatica e complessità speziata. Il cumino introduce una nota terrosa e orientale che arrotonda il profilo, rendendo la salsa vibrante, multi-strato e di grande persistenza.",
     "axes": [
       {
         "label": "Intensità Aromatica",
         "value": 9
       },
       {
-        "label": "Acidità",
+        "label": "Acidità / Freschezza",
         "value": 7
       },
       {
         "label": "Piccantezza",
-        "value": 5
-      },
-      {
-        "label": "Fruttato/Erbaceo",
-        "value": 8
-      },
-      {
-        "label": "Grassezza",
         "value": 6
+      },
+      {
+        "label": "Struttura Grassa / Corposità",
+        "value": 7
+      },
+      {
+        "label": "Complessità Speziata",
+        "value": 8
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 318,
+    "macros": {
+      "carbs": 5,
+      "protein": 2,
+      "fat": 32
+    }
   }
 }

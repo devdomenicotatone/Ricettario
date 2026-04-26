@@ -145,26 +145,26 @@
   "image": "images/ricette/condimenti/salsa-allo-yogurt-ed-erba-cipollina.webp",
   "imageAttribution": "📷 Foto: Kyle Killam — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una salsa fresca e avvolgente, dal profilo lattico-acido ben equilibrato, dove la cremosità densa dello yogurt greco si fonde con la vivacità agrumata del limone e la nota erbacea pungente dell'erba cipollina. L'olio extravergine arrotonda il profilo con una morbidezza fruttata e dona lucentezza alla struttura. Il finale è pulito, leggermente piccante per il pepe, con una persistenza aromatica elegante dominata dagli oli essenziali della scorza di limone.",
+    "summary": "Una salsa dalla struttura densa e vellutata, in cui la freschezza lattea dello yogurt greco si intreccia con la vivacità agrumata del limone, sia in succo che in scorza, regalando una pungenza gentile e persistente. L'erba cipollina introduce una nota erbacea e leggermente alliacea che anima il palato, mentre l'olio extravergine arrotonda e lega il tutto con una presenza grassa discreta ma percepibile. Il finale è pulito, fresco e di media lunghezza, con un accento salino equilibrato e una complessità aromatica superiore alla semplicità degli ingredienti.",
     "axes": [
       {
-        "label": "Acidità / Freschezza",
-        "value": 7
-      },
-      {
-        "label": "Cremosità / Struttura",
-        "value": 8
-      },
-      {
-        "label": "Intensità Erbacea",
-        "value": 6
-      },
-      {
-        "label": "Grassezza / Morbidezza",
+        "label": "Sapidità / Umami",
         "value": 5
       },
       {
-        "label": "Complessità Aromatica",
+        "label": "Acidità / Pungenza",
+        "value": 7
+      },
+      {
+        "label": "Cremosità / Densità",
+        "value": 8
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 3
+      },
+      {
+        "label": "Intensità Aromatica",
         "value": 7
       }
     ]

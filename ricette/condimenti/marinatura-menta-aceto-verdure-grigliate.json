@@ -134,36 +134,36 @@
   "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "_originalImageUrl": "",
   "sensoryProfile": {
-    "summary": "Una marinatura vivace e aromatica, in cui la freschezza pungente della menta dialoga con la delicata acidità dell'aceto di mele, sostenuta da un corpo oleoso vellutato. L'aglio schiacciato conferisce profondità senza aggredire, mentre il basilico aggiunge una nota erbacea dolce che arrotonda il profilo. Il pizzico di zucchero bilancia l'acidità con eleganza, rendendo questa concia versatile e avvolgente.",
+    "summary": "Una marinatura dal carattere vivace e mediterraneo, dove la pungenza brillante dell'aceto di mele dialoga con la freschezza mentolata e la rotondità avvolgente dell'olio extravergine. Il profilo aromatico è dinamico e stratificato: l'aglio schiacciato conferisce profondità umami, mentre basilico e menta regalano una persistenza erbacea e rinfrescante di grande eleganza. Il pizzico di zucchero funge da trait d'union, smussando gli spigoli acidi e donando armonia complessiva.",
     "axes": [
       {
-        "label": "Acidità / Freschezza",
+        "label": "Sapidità / Umami",
+        "value": 6
+      },
+      {
+        "label": "Acidità / Pungenza",
         "value": 7
       },
       {
-        "label": "Intensità Aromatica Erbacea",
-        "value": 8
-      },
-      {
-        "label": "Corpo Oleoso / Untuosità",
-        "value": 9
-      },
-      {
-        "label": "Pungenza / Piccantezza",
-        "value": 4
+        "label": "Cremosità / Densità",
+        "value": 6
       },
       {
         "label": "Dolcezza / Rotondità",
         "value": 3
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 598,
+    "kcal_per_100g": 571,
     "macros": {
-      "carbs": 3,
-      "protein": 0,
-      "fat": 64
+      "carbs": 4,
+      "protein": 1,
+      "fat": 59
     }
   }
 }

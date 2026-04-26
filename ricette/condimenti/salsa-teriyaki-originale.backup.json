@@ -133,28 +133,36 @@
   "image": "images/ricette/condimenti/salsa-teriyaki-originale.webp",
   "imageAttribution": "📷 Foto: Nano Erdozain — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una salsa teriyaki classica e bilanciata, frutto di una riduzione lenta e controllata che concentra gli zuccheri del mirin e dello zucchero semolato in una glassa densa e lucente. Al palato si apre con una dolcezza caramellata e avvolgente, sostenuta da una sapidità umami profonda e persistente della salsa di soia shoyu, mentre le note alcoliche del sake evaporano lasciando un fondo floreale e leggermente vinoso. La consistenza nappante e la lunga persistenza retrolfattiva ne fanno un condimento di grande carattere e complessità.",
+    "summary": "Una salsa teriyaki di scuola classica giapponese, densa e lucente, che seduce con un equilibrio magistrale tra la sapidità intensa dello shoyu, la dolcezza caramellata del mirin e la rotondità eterea del sake ridotto. Al naso emergono note di soia tostata, caramello scuro e un lieve sentore alcolico evoluto; in bocca la texture nappante avvolge il palato con una persistenza umami prolungata e un finale dolce-salato armonico.",
     "axes": [
       {
-        "label": "Sapidità (Umami)",
+        "label": "Intensità Umami",
         "value": 9
       },
       {
-        "label": "Dolcezza",
-        "value": 8
-      },
-      {
-        "label": "Complessità Aromatica",
+        "label": "Dolcezza / Caramellizzazione",
         "value": 7
       },
       {
-        "label": "Acidità",
-        "value": 2
+        "label": "Sapidità (Salinità)",
+        "value": 8
       },
       {
-        "label": "Persistenza",
-        "value": 9
+        "label": "Viscosità / Corpo",
+        "value": 8
+      },
+      {
+        "label": "Acidità / Freschezza",
+        "value": 2
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 228,
+    "macros": {
+      "carbs": 42,
+      "protein": 5,
+      "fat": 0
+    }
   }
 }

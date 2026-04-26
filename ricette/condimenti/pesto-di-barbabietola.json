@@ -148,36 +148,36 @@
   "image": "images/ricette/condimenti/pesto-di-barbabietola.webp",
   "imageAttribution": "📷 Foto: Nadin Sh — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Un condimento dalla personalità decisa e cromaticamente magnetica: il magenta intenso della barbabietola si apre su note terrose e dolci-acidule, bilanciate dalla sapidità umami del Parmigiano 24 mesi e dalla grassezza setosa dell'EVO Taggiasca. I pinoli tostati introducono una texture croccante in contrasto con la vellutatura della crema, mentre il basilico e il limone regalano una chiusura aromatica fresca e persistente che pulisce il palato.",
+    "summary": "Un condimento dalla personalità cromatica e gustativa sorprendente: la barbabietola domina con la sua dolcezza terrosa e il suo carattere avvolgente, equilibrata dalla spinta acida del limone e dalla sapidità minerale del Parmigiano Reggiano 24 mesi. I pinoli tostati introducono una nota burrosa e tostata che arricchisce la tessitura, mentre il basilico e l'aglio regalano un'eco aromatica fresca e pungente sul finale. La texture è vellutata e densa, con un'emulsione setosa che lascia in bocca una persistenza lunga e rotonda.",
     "axes": [
       {
-        "label": "Dolcezza (Beet Sugar)",
-        "value": 7
-      },
-      {
-        "label": "Acidità / Freschezza Citrica",
-        "value": 5
-      },
-      {
         "label": "Sapidità / Umami",
+        "value": 6
+      },
+      {
+        "label": "Acidità / Pungenza",
+        "value": 4
+      },
+      {
+        "label": "Cremosità / Densità",
+        "value": 8
+      },
+      {
+        "label": "Dolcezza / Rotondità",
         "value": 7
       },
       {
         "label": "Intensità Aromatica",
-        "value": 6
-      },
-      {
-        "label": "Cremosità / Corpo",
-        "value": 8
+        "value": 7
       }
     ]
   },
   "nutrition": {
     "kcal_per_100g": 218,
     "macros": {
-      "carbs": 10,
+      "carbs": 9,
       "protein": 5,
-      "fat": 17
+      "fat": 18
     }
   }
 }

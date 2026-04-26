@@ -116,12 +116,12 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-19T20:32:19.935Z",
   "image": "images/ricette/condimenti/dressing-miele-senape.webp",
-  "imageAttribution": "📷 Foto: Caio Niceas — Pexels License via Pexels",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
-    "summary": "Un dressing dalla struttura emulsionata elegante e bilanciata, dove la pungenza floreale della Senape di Digione dialoga con la dolcezza delicata del miele di acacia in un gioco tensivo ben orchestrato. L'aceto di mele apporta una acidità fresca e fruttata che alleggerisce la struttura grassa dell'olio extravergine, mentre il pepe nero macinato fresco firma il finale con una speziatura vivace e persistente. La texture è vellutata e avvolgente, con una persistenza aromatica di media-alta intensità.",
+    "summary": "Un dressing dall'equilibrio elegante e dinamico, dove la dolcezza floreale del miele di acacia dialoga con la pungenza decisa della senape di Digione e la freschezza acidula dell'aceto di mele. L'olio extravergine delicato avvolge il palato con una texture vellutata e cremosa, mentre il pepe nero fresco porta un finale caldo e leggermente piccante. Un condimento versatile, dalla struttura emulsionata stabile e dal profilo aromatico complesso.",
     "axes": [
       {
-        "label": "Acidità",
+        "label": "Acidità / Freschezza",
         "value": 7
       },
       {
@@ -129,17 +129,26 @@
         "value": 6
       },
       {
-        "label": "Pungenza (Senape/Pepe)",
-        "value": 7
+        "label": "Pungenza / Speziatura",
+        "value": 6
       },
       {
-        "label": "Grassezza ed Emulsione",
+        "label": "Corpo / Untuosità",
         "value": 8
       },
       {
-        "label": "Complessità Aromatica",
-        "value": 6
+        "label": "Stabilità Emulsione",
+        "value": 8
       }
     ]
-  }
+  },
+  "nutrition": {
+    "kcal_per_100g": 418,
+    "macros": {
+      "carbs": 18,
+      "protein": 1,
+      "fat": 38
+    }
+  },
+  "_originalImageUrl": ""
 }

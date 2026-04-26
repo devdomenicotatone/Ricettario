@@ -164,36 +164,36 @@
   "image": "images/ricette/pasta/polenta-concia-valdostana.webp",
   "imageAttribution": "📷 Foto: Alex Favali — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una polenta di grande carattere montano, avvolgente e profonda: la grana bramata macinata a pietra regala una texture rustica e corposa, mentre la triplice mantecatura con Fontina DOP, Toma Piemontese e burro di centrifuga costruisce un tessuto caseario straordinariamente filante e grasso. Al naso emergono note lattiche fermentate, sentori di fieno alpino e burro noisette; in bocca il sapore è lungo, sapido e persistente, con un finale pepato che taglia la ricchezza lipidica donando equilibrio.",
+    "summary": "Una polenta concia di grande carattere montano: la grana grossa della bramata macinata a pietra conferisce una tessitura rustica e viva, mentre la mantecatura a fuoco spento con Fontina DOP, Toma Piemontese e burro di centrifuga avvolge ogni granulo in una crema burrosa, filante e avvolgente. Al palato domina un intenso sapore cerealicolo dorato, scandito dalla grassezza nobile dei formaggi d'alpeggio e da una persistenza lunga, calda e quasi tattile, con il pepe nero che richiama con eleganza la rusticità della tradizione valdostana.",
     "axes": [
       {
-        "label": "Untuosità / Ricchezza Lipidica",
-        "value": 9
+        "label": "Tenuta al Morso",
+        "value": 6
       },
       {
-        "label": "Sapidità / Intensità Casearia",
+        "label": "Ruvidezza Superficie",
+        "value": 7
+      },
+      {
+        "label": "Elasticità / Masticabilità",
+        "value": 5
+      },
+      {
+        "label": "Sapore Cerealicolo",
         "value": 8
       },
       {
-        "label": "Rusticità / Corposità della Grana",
-        "value": 8
-      },
-      {
-        "label": "Filanza / Cremosità",
+        "label": "Assorbimento Condimento",
         "value": 9
-      },
-      {
-        "label": "Speziatura / Complessità Aromatica",
-        "value": 4
       }
     ]
   },
   "nutrition": {
     "kcal_per_100g": 198,
     "macros": {
-      "carbs": 16,
+      "carbs": 18,
       "protein": 7,
-      "fat": 12
+      "fat": 11
     }
   }
 }

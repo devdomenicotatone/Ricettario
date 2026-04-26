@@ -149,36 +149,36 @@
   "image": "images/ricette/conserve/pomodorini-confit-sottolio.webp",
   "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
-    "summary": "Un concentrato di sole mediterraneo: i datterini confit rivelano una dolcezza matura e caramellata bilanciata da una sapidità elegante, con note erbacee di timo e origano che si intrecciano a un fondo vanigliato di aglio in camicia. La testura è fondente e voluttuosa, avvolta dalla rotondità fruttata dell'olio extravergine, con una persistenza aromatica lunga e avvolgente tipica delle grandi conserve artigianali.",
+    "summary": "Un concentrato di sole mediterraneo: i pomodorini confit rivelano una complessità dolce-sapida straordinaria, con la caramellizzazione degli zuccheri che si intreccia a una vena erbacea di timo e origano. L'olio extravergine avvolge tutto in una texture vellutata e persistente, mentre l'aglio in camicia cede le sue note più gentili e rotonde, senza mai sopraffare. Un profilo aromatico di grande intensità, tipico di una conserva artigianale di alto livello.",
     "axes": [
       {
-        "label": "Dolcezza Caramellata",
-        "value": 7
-      },
-      {
-        "label": "Intensità Aromatica Erbacea",
+        "label": "Sapidità / Umami",
         "value": 8
       },
       {
-        "label": "Acidità Residua",
+        "label": "Acidità / Pungenza",
         "value": 4
       },
       {
-        "label": "Struttura Oleosa / Untuosità",
-        "value": 9
+        "label": "Cremosità / Densità",
+        "value": 7
       },
       {
-        "label": "Concentrazione Umami",
-        "value": 8
+        "label": "Dolcezza / Rotondità",
+        "value": 6
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 9
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 210,
+    "kcal_per_100g": 198,
     "macros": {
       "carbs": 7,
       "protein": 1,
-      "fat": 19
+      "fat": 18
     }
   },
   "_originalImageUrl": ""

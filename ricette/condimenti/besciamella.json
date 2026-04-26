@@ -128,32 +128,32 @@
   "image": "images/ricette/condimenti/besciamella.webp",
   "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
-    "summary": "Una besciamella classica dal carattere avvolgente e vellutato, con una struttura cremosa e setosa che rivela la cura del roux biondo-paglierino. Al naso emerge la delicatezza del latte intero fresco, sostenuta da un soffio caldo e aromatico di noce moscata appena grattugiata. In bocca è equilibrata, con una sapidità misurata e una persistenza lattica morbida e rassicurante.",
+    "summary": "Una besciamella classica di scuola francese, dal carattere avvolgente e setoso: la componente lattica domina con una dolcezza burrosa e rotonda, sostenuta da una sapidità misurata che ne esalta la profondità. La noce moscata fresca introduce una nota aromatica speziata e leggermente pungente che alleggerisce la densità del roux cotto, conferendo complessità e distinzione a un profilo altrimenti morbido e ricco.",
     "axes": [
       {
-        "label": "Cremosità / Vellutatura",
+        "label": "Sapidità / Umami",
+        "value": 4
+      },
+      {
+        "label": "Acidità / Pungenza",
+        "value": 2
+      },
+      {
+        "label": "Cremosità / Densità",
         "value": 9
       },
       {
+        "label": "Dolcezza / Rotondità",
+        "value": 6
+      },
+      {
         "label": "Intensità Aromatica",
-        "value": 4
-      },
-      {
-        "label": "Sapidità",
         "value": 5
-      },
-      {
-        "label": "Struttura / Densità",
-        "value": 7
-      },
-      {
-        "label": "Nota Speziata (Noce Moscata)",
-        "value": 4
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 118,
+    "kcal_per_100g": 117,
     "macros": {
       "carbs": 8,
       "protein": 4,

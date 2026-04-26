@@ -200,34 +200,34 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Un pane di carattere meridionale, dove la complessità fermentativa della biga a lunga maturazione si fonde con la dolcezza minerale della semola rimacinata, regalando una crosta ambrata e croccante con note di frutto secco tostato. La mollica si presenta alveolata in modo irregolare, elastica e umida, con una persistente acidità lattica delicata che bilancia la sapidità del sale. Il profilo aromatico è ricco e stratificato: cereale, nocciola, lieve sentore di grano duro, con un finale lungo e leggermente burroso.",
+    "summary": "Un pane di grande personalità meridionale, dove la biga maturata 18 ore dialoga con la semola rimacinata in un equilibrio magistrale: la crosta, sviluppata in cottura scalare con vapore iniziale, si presenta croccante e ambrata, con riflessi dorati e note di grano tostato di straordinaria profondità. La mollica, idratata al 75% e sostenuta dalla maglia glutinica della semola forte, offre un'alveolatura irregolare e aperta, umida al tatto, con una masticabilità tenace e vellutata tipica del grano duro. La fermentazione lenta con prefermento confere complessità aromatica, con sentori di nocciola, crosta di pane antico e un lieve retrogusto lattico che si prolunga nel finale.",
     "axes": [
       {
-        "label": "Croccantezza della Crosta",
+        "label": "Croccantezza Crosta",
         "value": 9
       },
       {
-        "label": "Complessità Aromatica (Fermentativa)",
-        "value": 8
-      },
-      {
-        "label": "Acidità Percepita",
-        "value": 4
-      },
-      {
-        "label": "Alveolatura e Leggerezza della Mollica",
+        "label": "Alveolatura Mollica",
         "value": 7
+      },
+      {
+        "label": "Complessità Fermentativa",
+        "value": 8
       },
       {
         "label": "Sapidità",
         "value": 6
+      },
+      {
+        "label": "Note Tostate / Cerealicole",
+        "value": 9
       }
     ]
   },
   "nutrition": {
     "kcal_per_100g": 258,
     "macros": {
-      "carbs": 52,
+      "carbs": 50,
       "protein": 9,
       "fat": 1
     }

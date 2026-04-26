@@ -167,36 +167,36 @@
   "image": "images/ricette/condimenti/pesto-di-fave-maro.webp",
   "imageAttribution": "📷 Foto: Shameel mukkath — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Il Marò si presenta come una crema rustica di vivace verde smeraldo, dal profilo olfattivo erbaceo e fresco dominato dalla fava giovane, con note mentolate che spiccano pulite e una sottile eco alliacea ben integrata. In bocca la texture granulosamente vellutata lascia spazio a una sapidità calibrata conferita dal doppio formaggio, mentre la rotondità dell'EVO ligure avvolge e bilancia la nota vegetale quasi amaricante della fava. Il finale è lungo, fresco e leggermente piccante grazie al pepe, con persistenza latteo-minerale del pecorino.",
+    "summary": "Il Marò si presenta come un condimento di straordinaria freschezza vegetale, dove la dolcezza erbacea delle fave novelle si intreccia con la sapidità decisa del Pecorino Romano e la rotondità del Parmigiano stagionato. La menta apporta una vivace nota aromatica e lievemente mentolata che alleggerisce e punteggia il profilo, mentre l'aglio privato dell'anima garantisce una pungenza controllata e raffinata. L'olio extravergine Taggiasca avvolge il tutto con morbidezza fruttata, donando una cremosità rustica e una persistenza lunga e pulita.",
     "axes": [
-      {
-        "label": "Intensità Erbacea / Verde",
-        "value": 9
-      },
       {
         "label": "Sapidità / Umami",
         "value": 7
       },
       {
-        "label": "Cremosità / Struttura",
-        "value": 6
+        "label": "Acidità / Pungenza",
+        "value": 4
       },
       {
-        "label": "Freschezza Aromatica (Menta–Aglio)",
-        "value": 8
+        "label": "Cremosità / Densità",
+        "value": 7
       },
       {
-        "label": "Amaro Vegetale",
+        "label": "Dolcezza / Rotondità",
         "value": 5
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 298,
+    "kcal_per_100g": 248,
     "macros": {
-      "carbs": 11,
-      "protein": 10,
-      "fat": 24
+      "carbs": 9,
+      "protein": 8,
+      "fat": 20
     }
   }
 }

@@ -262,36 +262,36 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Un panettone di straordinaria complessità aromatica, dove la ricchezza burrosa e la dolcezza vellutata dei tuorli si intrecciano con le note fruttate e leggermente acidule delle pere candite e l'intensità amaricante del cioccolato fondente. La struttura alveolare, sostenuta da una lunga lievitazione naturale, dona una mollica filante, umida e setosa, mentre i sentori di vaniglia Bourbon, miele d'acacia e pasta d'arancia costruiscono un bouquet aromatico avvolgente e persistente di rara eleganza.",
+    "summary": "Un panettone di straordinaria complessità aromatica, dove la profondità burrosa e lattica del grand impasto viennese si intreccia con le note fruttate delle pere candite e l'amarezza elegante del cioccolato fondente. La struttura alveo­lare, sostenuta da una farina di grande forza e da una lievitazione madre rigorosa, restituisce una sofficezza eterea e una scioglievolezza quasi impalpabile al palato. Il finale è lungo, caldo, con richiami di vaniglia Bourbon, miele d'acacia e scorza d'arancia che si dispiegano in ondate successive.",
     "axes": [
       {
-        "label": "Ricchezza Burrosa & Grassezza",
+        "label": "Sofficezza / Alveolatura",
         "value": 9
       },
       {
-        "label": "Dolcezza & Complessità Aromatica",
+        "label": "Scioglievolezza",
         "value": 8
       },
       {
-        "label": "Intensità del Cioccolato (Amarezza)",
-        "value": 6
-      },
-      {
-        "label": "Leggerezza & Alveolatura",
-        "value": 8
-      },
-      {
-        "label": "Persistenza Aromatica (Finale)",
+        "label": "Ricchezza Burrosa / Lattica",
         "value": 9
+      },
+      {
+        "label": "Dolcezza Percepita",
+        "value": 7
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 10
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 398,
+    "kcal_per_100g": 388,
     "macros": {
       "carbs": 44,
       "protein": 7,
-      "fat": 21
+      "fat": 20
     }
   }
 }

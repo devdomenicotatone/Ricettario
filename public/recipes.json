@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-26T19:26:35.924Z",
-  "totalRecipes": 75,
+  "generatedAt": "2026-04-26T20:34:30.526Z",
+  "totalRecipes": 74,
   "categories": [
     {
       "name": "Pane",
@@ -39,7 +39,7 @@
     },
     {
       "name": "Condimenti",
-      "count": 38,
+      "count": 37,
       "emoji": "🌿"
     }
   ],
@@ -60,7 +60,7 @@
       "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-25T23:15:22.124Z"
+      "_createdAt": "2026-04-26T20:32:21.923Z"
     },
     {
       "title": "Ciabatta con Poolish, Malto e Criscito",
@@ -78,7 +78,7 @@
       "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-25T23:16:56.821Z"
+      "_createdAt": "2026-04-26T20:33:44.362Z"
     },
     {
       "title": "Pane ai Cereali e Semi",
@@ -348,7 +348,7 @@
       "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": "claude-opus",
-      "_createdAt": "2026-04-26T18:45:33.911Z"
+      "_createdAt": "2026-04-26T20:34:15.421Z"
     },
     {
       "title": "Focaccia di Recco IGP",
@@ -366,7 +366,7 @@
       "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-26T18:57:44.263Z"
+      "_createdAt": "2026-04-26T20:34:25.601Z"
     },
     {
       "title": "Focaccia Genovese (Fügassa)",
@@ -618,7 +618,7 @@
       "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-25T23:16:35.775Z"
+      "_createdAt": "2026-04-26T20:33:23.446Z"
     },
     {
       "title": "Cartocci alla Crema Siciliani",
@@ -636,7 +636,7 @@
       "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-25T23:16:43.709Z"
+      "_createdAt": "2026-04-26T20:33:31.694Z"
     },
     {
       "title": "Migliaccio Napoletano",
@@ -690,7 +690,7 @@
       "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": "claude",
-      "_createdAt": "2026-04-25T23:17:12.387Z"
+      "_createdAt": "2026-04-26T20:34:00.783Z"
     },
     {
       "title": "Pomodorini Confit Sott'olio",
@@ -745,24 +745,6 @@
       "hasStorage": true,
       "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-24T13:05:07.661Z"
-    },
-    {
-      "title": "Besciamella Classica",
-      "slug": "besciamella-classica",
-      "category": "Condimenti",
-      "categoryDir": "condimenti",
-      "emoji": "🥛",
-      "href": "ricette/condimenti/besciamella-classica.html",
-      "image": "images/ricette/condimenti/besciamella-classica.webp",
-      "description": "La ricetta professionale e infallibile per la classica besciamella. Proporzioni auree (roux 1:1) per una salsa madre liscia, vellutata e priva di grumi.",
-      "hydration": null,
-      "time": null,
-      "temp": null,
-      "tool": "",
-      "hasSensory": true,
-      "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-19T20:25:39.290Z"
     },
     {
       "title": "Burro Composto: Acciughe e Limone o Tartufo Nero",

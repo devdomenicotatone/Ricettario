@@ -114,35 +114,35 @@
   "image": "images/ricette/conserve/burro-chiarificato.webp",
   "imageAttribution": "📷 Foto: Felicity Tai — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Il burro chiarificato si presenta come un grasso puro di straordinaria pulizia organolettica: note burroso-lattiche concentrate, con sentori di nocciola tostata delicata e un lieve floreale tipico del grasso butirrico centrifugato di qualità. In bocca offre una tessitura setosa e fondente, priva di qualsiasi residuo acquoso, con una persistenza lunga e avvolgente e una sapidità naturale quasi assente.",
+    "summary": "Il burro chiarificato si presenta con un profilo aromatico intenso e puro, dominato da note di nocciola tostata e latticini concentrati, frutto della rimozione delle proteine del siero. La texture è straordinariamente vellutata e oleosa, con una densità grassa assoluta che riveste il palato con persistenza lunga e avvolgente. L'assenza di acqua e caseine elimina qualsiasi nota acida o salina, lasciando emergere unicamente la rotondità burrosa e la complessità aromatica del grasso butirrico puro.",
     "axes": [
       {
-        "label": "Intensità Aromatica",
-        "value": 7
+        "label": "Sapidità / Umami",
+        "value": 2
       },
       {
-        "label": "Purezza / Limpidezza",
+        "label": "Acidità / Pungenza",
+        "value": 1
+      },
+      {
+        "label": "Cremosità / Densità",
         "value": 10
       },
       {
-        "label": "Untuosità / Corpo",
-        "value": 9
+        "label": "Dolcezza / Rotondità",
+        "value": 7
       },
       {
-        "label": "Nota Tostata (Nocciola)",
-        "value": 4
-      },
-      {
-        "label": "Residuo Proteico / Lattico",
-        "value": 1
+        "label": "Intensità Aromatica",
+        "value": 8
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 876,
+    "kcal_per_100g": 897,
     "macros": {
       "carbs": 0,
-      "protein": 1,
+      "protein": 0,
       "fat": 99
     }
   },

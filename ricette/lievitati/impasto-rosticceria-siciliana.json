@@ -242,35 +242,35 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Un lievitato da rosticceria di tradizione sicula, dalla crosta ambrata e lucida per la spennellatura al tuorlo, con una mollica soffice e leggermente burrosa grazie allo strutto. Al naso emergono note dolci di miele e sesamo tostato, con un fondo sapido e aromatico dell'origano e della mozzarella fusa; in bocca la texture è morbida e cedevole, con un finale ricco, umami e persistente.",
+    "summary": "Una rosticceria siciliana dal carattere vivace e goloso: l'impasto, ricco di strutto e miele, si distingue per una mollica soffice e ben alveolata che si scioglie in bocca con una piacevole untuosità. La doratura ambrata garantita dalla spennellatura al tuorlo e dai semi di sesamo introduce una nota croccante in contrasto con il cuore fondente di mozzarella, mentre le note aromatiche di origano, prosciutto e pomodoro costruiscono una complessità mediterranea autentica e avvolgente.",
     "axes": [
       {
-        "label": "Sofficezza / Leggerezza",
+        "label": "Sofficezza / Alveolatura",
         "value": 8
       },
       {
-        "label": "Ricchezza di Grassi (Untuosità)",
+        "label": "Scioglievolezza",
         "value": 7
       },
       {
-        "label": "Dolcezza",
+        "label": "Ricchezza Burrosa / Lattica",
+        "value": 7
+      },
+      {
+        "label": "Dolcezza Percepita",
         "value": 5
       },
       {
-        "label": "Sapidità / Complessità Aromatica",
-        "value": 7
-      },
-      {
-        "label": "Croccantezza della Crosta",
-        "value": 6
+        "label": "Complessità Aromatica",
+        "value": 8
       }
     ]
   },
   "nutrition": {
     "kcal_per_100g": 278,
     "macros": {
-      "carbs": 31,
-      "protein": 11,
+      "carbs": 30,
+      "protein": 12,
       "fat": 12
     }
   },

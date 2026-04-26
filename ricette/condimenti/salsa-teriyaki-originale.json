@@ -133,32 +133,32 @@
   "image": "images/ricette/condimenti/salsa-teriyaki-originale.webp",
   "imageAttribution": "📷 Foto: Nano Erdozain — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una salsa teriyaki di scuola classica giapponese, densa e lucente, che seduce con un equilibrio magistrale tra la sapidità intensa dello shoyu, la dolcezza caramellata del mirin e la rotondità eterea del sake ridotto. Al naso emergono note di soia tostata, caramello scuro e un lieve sentore alcolico evoluto; in bocca la texture nappante avvolge il palato con una persistenza umami prolungata e un finale dolce-salato armonico.",
+    "summary": "La Salsa Teriyaki Originale si presenta come un condimento dalla personalità decisa e stratificata: l'attacco è dominato da una sapidità profonda e umami persistente, ceduta dalla shoyu, perfettamente bilanciata dalla dolcezza sciropposa del mirin e dello zucchero caramellizzato durante la riduzione. Il naso rivela note calde di melassa, salsa di soia tostata e sake volatile, con una persistenza aromatica lunga e avvolgente che richiama la lacca giapponese nella sua complessità. La texture finale è densa, nappante e seducente, con una rotondità che arrotonda ogni spigolo sapido conferendo un finale lungo e piacevolmente dolce-salato.",
     "axes": [
       {
-        "label": "Intensità Umami",
+        "label": "Sapidità / Umami",
         "value": 9
       },
       {
-        "label": "Dolcezza / Caramellizzazione",
+        "label": "Acidità / Pungenza",
+        "value": 2
+      },
+      {
+        "label": "Cremosità / Densità",
+        "value": 8
+      },
+      {
+        "label": "Dolcezza / Rotondità",
         "value": 7
       },
       {
-        "label": "Sapidità (Salinità)",
+        "label": "Intensità Aromatica",
         "value": 8
-      },
-      {
-        "label": "Viscosità / Corpo",
-        "value": 8
-      },
-      {
-        "label": "Acidità / Freschezza",
-        "value": 2
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 228,
+    "kcal_per_100g": 218,
     "macros": {
       "carbs": 42,
       "protein": 5,

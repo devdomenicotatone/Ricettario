@@ -114,36 +114,36 @@
   "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "_originalImageUrl": "",
   "sensoryProfile": {
-    "summary": "Un olio dalla veste visiva straordinaria, arancio fiammante e trasparente come un cristallo liquido. Al naso si apre con una vivace nota terrosa e dolce di carota fresca, immediatamente sorretta da un guizzo agrumato e pungente dello zenzero che stimola la salivazione. In bocca l'ingresso è morbido e avvolgente, con un finale caldo e leggermente piccante che si prolunga con eleganza.",
+    "summary": "Un olio dalla personalità solare e vibrante: l'attacco è marcato dalle note terrose e dolci della carota, subito animate dalla pungenza fresca e agrumata dello zenzero che si apre in un lungo finale speziato. La texture è setosa e fluida, con una densità appena superiore all'olio base grazie ai composti liposolubili estratti, mentre il colore arancio fluo anticipa al naso un'intensità aromatica sorprendente, dove il beta-carotene e i gingeroli si intrecciano in un profilo elegante e contemporaneo.",
     "axes": [
       {
-        "label": "Intensità Aromatica",
-        "value": 7
+        "label": "Sapidità / Umami",
+        "value": 2
       },
       {
-        "label": "Piccantezza / Pungenza Zenzero",
+        "label": "Acidità / Pungenza",
         "value": 6
       },
       {
-        "label": "Dolcezza Vegetale (Carota)",
+        "label": "Cremosità / Densità",
+        "value": 4
+      },
+      {
+        "label": "Dolcezza / Rotondità",
         "value": 5
       },
       {
-        "label": "Corpo e Untuosità",
+        "label": "Intensità Aromatica",
         "value": 8
-      },
-      {
-        "label": "Freschezza / Note Agrumate",
-        "value": 6
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 862,
+    "kcal_per_100g": 848,
     "macros": {
       "carbs": 1,
       "protein": 0,
-      "fat": 96
+      "fat": 94
     }
   }
 }

@@ -141,31 +141,40 @@
   ],
   "_generatedBy": "claude",
   "_createdAt": "2026-04-16T14:32:01.457Z",
-  "image": "images/ricette/condimenti/olio-verde-smeraldo-pro.png",
-  "imageAttribution": "Generata da AI (Antigravity)",
+  "image": "images/ricette/condimenti/olio-al-basilico-verde-smeraldo.webp",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
-    "summary": "Un olio al basilico di straordinaria precisione tecnica, dove la gestione millimetrica della temperatura (65°C) e lo shock termico in acqua ghiacciata preservano intatta la clorofilla, regalando un verde smeraldo luminoso e un profilo aromatico fresco, erbaceo e floreale di rara intensità. La scelta di un EVO ligure o del Garda — fruttato leggero, quasi neutro — lascia al basilico Genovese DOP il ruolo assoluto di protagonista, con una grassezza setosa e avvolgente che trasporta i composti volatili del basiliico senza mai sopraffarli. La piccantezza è volutamente contenuta, la dolcezza vegetale domina il palato con una persistenza aromatica lunga e pulita.",
+    "summary": "Un olio al basilico di straordinaria vivacità cromatica, verde smeraldo neon, che esprime al naso un bouquet erbaceo fresco e nitido con note di anice, menta e foglia verde appena colta. In bocca l'ingresso è setoso e avvolgente, grazie alla base di olio EVO delicato ligure/del Garda, con una persistenza aromatica pulita e floreale; il retrogusto è privo di amarezza e piccantezza eccessive, lasciando una sensazione di freschezza vegetale elegante e lunga.",
     "axes": [
       {
-        "label": "Intensità Aromatica (Basilico)",
+        "label": "Intensità Aromatica Erbacea",
         "value": 9
       },
       {
-        "label": "Fruttato dell'Olio",
+        "label": "Fruttato dell'Olio Base",
         "value": 3
       },
       {
-        "label": "Piccantezza / Amarezza",
+        "label": "Amaro / Piccante",
         "value": 2
       },
       {
-        "label": "Dolcezza Vegetale",
-        "value": 7
+        "label": "Limpidezza & Brillantezza Cromatica",
+        "value": 10
       },
       {
-        "label": "Limpidezza & Persistenza",
-        "value": 9
+        "label": "Persistenza Gustativa",
+        "value": 7
       }
     ]
-  }
+  },
+  "nutrition": {
+    "kcal_per_100g": 807,
+    "macros": {
+      "carbs": 1,
+      "protein": 1,
+      "fat": 90
+    }
+  },
+  "_originalImageUrl": ""
 }

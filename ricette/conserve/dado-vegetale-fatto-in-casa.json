@@ -185,27 +185,27 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Un concentrato vegetale di grande carattere, in cui la spiccata sapidità del sale integrale dialoga con le note dolci di carota e cipolla, bilanciate dalla freschezza erbacea del prezzemolo e dalla lieve acidità dei pomodorini. Al palato si percepisce una tessitura densa e vellutata, con un finale lungo e persistente di umami vegetale, arricchito da un filo di fruttato dell'olio extravergine. La cottura prolungata favorisce una concentrazione aromatica intensa, con sentori tostati sullo sfondo e una complessità che ricorda un fondo di cucina artigianale.",
+    "summary": "Un dado vegetale casalingo dalla personalità decisa e avvolgente: la sapidità marcata del sale integrale domina il palato, sostenuta da una profonda nota umami data dal concentrato di carota, sedano e pomodorino. La consistenza è densa e pastosa, quasi gelatinosa, con un bouquet aromatico erbaceo-vegetale in cui il prezzemolo fresco e l'aglio dialogano con la dolcezza naturale delle carote e delle patate. Il finale è lungo, rotondo e leggermente acidulo per la presenza dei pomodorini maturi.",
     "axes": [
       {
-        "label": "Sapidità",
-        "value": 10
+        "label": "Sapidità / Umami",
+        "value": 9
       },
       {
-        "label": "Intensità Aromatica",
+        "label": "Acidità / Pungenza",
+        "value": 4
+      },
+      {
+        "label": "Cremosità / Densità",
         "value": 8
       },
       {
-        "label": "Dolcezza Vegetale",
-        "value": 5
+        "label": "Dolcezza / Rotondità",
+        "value": 4
       },
       {
-        "label": "Acidità",
-        "value": 3
-      },
-      {
-        "label": "Concentrazione Umami",
-        "value": 9
+        "label": "Intensità Aromatica",
+        "value": 7
       }
     ]
   },

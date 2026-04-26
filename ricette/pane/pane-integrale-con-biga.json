@@ -186,35 +186,35 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Un pane integrale di carattere deciso e rustico, dove la lunga maturazione della biga regala sentori fermentativi complessi — note acide di yogurt e frutta secca — perfettamente bilanciate dalla dolcezza cerealicola della farina integrale. La crosta, sviluppata ad alta temperatura con vapore iniziale, si presenta croccante e profumata di tostato, mentre la mollica è umida, alveolata in modo irregolare e dotata di una persistente mineralità terrosa. La gestione del bassinage e delle coil folds conferisce struttura ed elasticità, con un finale leggermente burroso e un morso pienamente soddisfacente.",
+    "summary": "Un pane integrale di grande carattere e profondità: la lunga maturazione della biga a 18°C sviluppa note lattiche e acetiche eleganti, che si fondono con la rustica complessità della farina integrale. Al naso emerge un bouquet cerealicolo ricco e avvolgente, con sentori di crusca tostata e una lieve nota di yogurt; in bocca la crosta croccante e caramellata dialoga con una mollica compatta ma morbida, dall'alveolatura irregolare e ben sviluppata per la sua idratazione al 75%. La sapidità è calibrata e sostenuta, capace di esaltare le note terrose del grano integrale senza mai sovrastarle.",
     "axes": [
+      {
+        "label": "Croccantezza Crosta",
+        "value": 9
+      },
+      {
+        "label": "Alveolatura Mollica",
+        "value": 6
+      },
       {
         "label": "Complessità Fermentativa",
         "value": 8
       },
       {
-        "label": "Croccantezza della Crosta",
-        "value": 9
-      },
-      {
-        "label": "Acidità Percepita",
+        "label": "Sapidità",
         "value": 6
       },
       {
-        "label": "Dolcezza Cerealicola",
-        "value": 4
-      },
-      {
-        "label": "Struttura della Mollica",
-        "value": 7
+        "label": "Note Tostate / Cerealicole",
+        "value": 9
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 228,
+    "kcal_per_100g": 248,
     "macros": {
-      "carbs": 43,
-      "protein": 8,
+      "carbs": 46,
+      "protein": 9,
       "fat": 2
     }
   }

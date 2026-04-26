@@ -119,34 +119,34 @@
   "image": "images/ricette/condimenti/olio-extravergine-aromatizzato-verde-dorato.webp",
   "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
-    "summary": "Un olio extravergine aromatizzato di straordinaria eleganza, in cui la base fruttata delicata dell'EVO funge da tela su cui si dispiegano aromi erbacei di rosmarino, note agrumate di limone e un finale speziato di pepe nero. L'aglio privato dell'anima conferisce profondità senza aggressività, lasciando una persistenza aromatica lunga e raffinata. La tecnica a freddo preserva l'integrità di ogni componente volatile, restituendo un condimento di grande coerenza e complessità.",
+    "summary": "Un olio di rara eleganza, dove la freschezza erbacea del rosmarino si intreccia con la vivacità agrumata della scorza di limone su un fondo morbido e fruttato dell'extravergine di partenza. L'aglio privato dell'anima conferisce profondità senza aggressività, mentre il pepe nero spezzato introduce una pungenza calibrata che allunga il finale. Un condimento di grande complessità aromatica, equilibrato nella sua rotondità e capace di esaltare ogni preparazione a crudo.",
     "axes": [
       {
-        "label": "Intensità Aromatica",
-        "value": 8
+        "label": "Sapidità / Umami",
+        "value": 3
       },
       {
-        "label": "Freschezza Agrumata",
-        "value": 7
-      },
-      {
-        "label": "Pungenza / Speziatura",
+        "label": "Acidità / Pungenza",
         "value": 5
       },
       {
-        "label": "Corpo e Untuosità",
-        "value": 9
+        "label": "Cremosità / Densità",
+        "value": 8
       },
       {
-        "label": "Erbaceità Resinosa",
-        "value": 7
+        "label": "Dolcezza / Rotondità",
+        "value": 4
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
       }
     ]
   },
   "nutrition": {
     "kcal_per_100g": 882,
     "macros": {
-      "carbs": 1,
+      "carbs": 0,
       "protein": 0,
       "fat": 98
     }

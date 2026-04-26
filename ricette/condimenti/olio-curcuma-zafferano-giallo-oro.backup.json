@@ -1,6 +1,6 @@
 {
-  "title": "Olio alla Curcuma o Zafferano",
-  "slug": "olio-curcuma-zafferano",
+  "title": "Olio alla Curcuma o Zafferano (Giallo Oro)",
+  "slug": "olio-curcuma-zafferano-giallo-oro",
   "emoji": "🫙",
   "description": "Olio aromatizzato artigianale estratto a freddo. Un condimento funzionale dal colore brillante e profilo aromatico terroso o floreale, ideale a crudo.",
   "subtitle": "Estrazione a freddo per macerazione lipidica",
@@ -103,31 +103,40 @@
   ],
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-24T23:44:45.379Z",
-  "image": "images/ricette/condimenti/olio-curcuma-zafferano.webp",
-  "imageAttribution": "📷 Foto: Aadrea Essentials — Pexels License via Pexels",
+  "image": "images/ricette/condimenti/olio-curcuma-zafferano-giallo-oro.webp",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
-    "summary": "Un olio infuso dalla doppia anima: la versione alla curcuma si presenta come un 'oro liquido' dal fruttato delicato e leggero, con note terrose e resinose di radice che si integrano armoniosamente con la dolcezza erbacea della Taggiasca o del Garda. La variante allo zafferano vira verso una complessità aromatica di rara finezza, con sentori mielati, metallici e floreali che fluttuano in un olio di purezza ottica assoluta. In entrambi i casi, la lunga macerazione a freddo (7+ giorni con stimolazione termica a 35°C) garantisce un'estrazione profonda dei composti liposolubili senza ossidazione, producendo un condimento di grande persistenza gustativa e cromatica.",
+    "summary": "Un olio extravergine di altissima qualità trasformato in un condimento aromatico dalla personalità luminosa e speziata. Nella versione alla curcuma, il naso rivela note terrose, resinose e leggermente amare con un sottofondo caldo di zenzero; in bocca l'ingresso è suadente e burroso, seguito da un finale persistente e leggermente pungente. La variante allo zafferano offre invece un profilo più floreale ed etereo, con rimandi di miele, fieno secco e un'elegante mineralità che si fonde con il fruttato leggero della cultivar prescelta.",
     "axes": [
       {
         "label": "Intensità Aromatica",
         "value": 8
       },
       {
-        "label": "Fruttato (Base EVO)",
-        "value": 4
+        "label": "Amaro & Piccante",
+        "value": 6
       },
       {
-        "label": "Terroso/Speziato",
-        "value": 9
+        "label": "Fruttato dell'Olio Base",
+        "value": 5
       },
       {
-        "label": "Amarezza",
-        "value": 3
+        "label": "Complessità Speziata",
+        "value": 7
       },
       {
-        "label": "Persistenza",
+        "label": "Persistenza Retrolfattiva",
         "value": 8
       }
     ]
-  }
+  },
+  "nutrition": {
+    "kcal_per_100g": 862,
+    "macros": {
+      "carbs": 4,
+      "protein": 1,
+      "fat": 95
+    }
+  },
+  "_originalImageUrl": ""
 }

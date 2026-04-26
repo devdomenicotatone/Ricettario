@@ -140,36 +140,36 @@
   "image": "images/ricette/condimenti/pesto-pomodori-secchi-mandorle-basilico.webp",
   "imageAttribution": "📷 Foto: Andrés  Góngora — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Un pesto dal carattere mediterraneo deciso e avvolgente, dove la concentrazione umami dei pomodori secchi calabresi domina con autorevolezza, temperata dalla dolcezza burrosa delle mandorle di Avola. Il basilico fresco porta verticalità aromatica e un tocco erbaceo-mentolato, mentre il pecorino romano regala una sapidità graffiante e persistente che si fonde elegantemente con la rotondità fruttata dell'olio taggiasca. La texture volutamente rustica e granulosa offre una masticabilità soddisfacente, rendendo questo condimento tanto gustoso quanto visivamente artigianale.",
+    "summary": "Un pesto di carattere mediterraneo intenso e avvolgente, dove la concentrazione umami dei pomodori secchi dialoga con la sapidità affilata del Pecorino Romano, creando una base gustativa profonda e persistente. Le mandorle di Avola apportano una cremosità granulosa e una dolcezza oleosa che bilancia la pungenza dell'aglio e del pepe, mentre il basilico fresco regala una nota aromatica erbacea e floreale di grande freschezza. L'olio extravergine taggiasca o nocellara lega il tutto con eleganza, donando rotondità e lunghezza al finale.",
     "axes": [
-      {
-        "label": "Intensità Aromatica",
-        "value": 9
-      },
       {
         "label": "Sapidità / Umami",
         "value": 9
       },
       {
-        "label": "Dolcezza Bilanciatrice",
-        "value": 4
+        "label": "Acidità / Pungenza",
+        "value": 5
       },
       {
-        "label": "Grassezza / Untuosità",
+        "label": "Cremosità / Densità",
         "value": 7
       },
       {
-        "label": "Freschezza Erbacea",
-        "value": 6
+        "label": "Dolcezza / Rotondità",
+        "value": 4
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 412,
+    "kcal_per_100g": 368,
     "macros": {
-      "carbs": 14,
-      "protein": 10,
-      "fat": 34
+      "carbs": 12,
+      "protein": 9,
+      "fat": 31
     }
   }
 }

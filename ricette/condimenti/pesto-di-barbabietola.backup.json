@@ -148,28 +148,36 @@
   "image": "images/ricette/condimenti/pesto-di-barbabietola.webp",
   "imageAttribution": "📷 Foto: Nadin Sh — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Un pesto dalle tinte magenta-viola di grande impatto visivo e gustativo, dove la dolcezza terrosa e quasi zuccherina della barbabietola domina il palato con eleganza. Il Parmigiano Reggiano 24 mesi e i pinoli tostati costruiscono un fondo umami e burroso di notevole persistenza, mentre il succo di limone dona una vivace scossa acida che bilancia la grassezza dell'EVO Taggiasca. Il basilico aggiunge una nota erbacea fresca che chiude il bouquet con leggerezza e freschezza aromatica.",
+    "summary": "Un condimento dalla personalità decisa e cromaticamente magnetica: il magenta intenso della barbabietola si apre su note terrose e dolci-acidule, bilanciate dalla sapidità umami del Parmigiano 24 mesi e dalla grassezza setosa dell'EVO Taggiasca. I pinoli tostati introducono una texture croccante in contrasto con la vellutatura della crema, mentre il basilico e il limone regalano una chiusura aromatica fresca e persistente che pulisce il palato.",
     "axes": [
       {
-        "label": "Dolcezza Terrosa",
-        "value": 8
+        "label": "Dolcezza (Beet Sugar)",
+        "value": 7
       },
       {
-        "label": "Acidità",
+        "label": "Acidità / Freschezza Citrica",
         "value": 5
       },
       {
-        "label": "Umami & Sapidità",
+        "label": "Sapidità / Umami",
         "value": 7
-      },
-      {
-        "label": "Grassezza & Untuosità",
-        "value": 6
       },
       {
         "label": "Intensità Aromatica",
-        "value": 7
+        "value": 6
+      },
+      {
+        "label": "Cremosità / Corpo",
+        "value": 8
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 218,
+    "macros": {
+      "carbs": 10,
+      "protein": 5,
+      "fat": 17
+    }
   }
 }

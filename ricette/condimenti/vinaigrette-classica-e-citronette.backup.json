@@ -150,28 +150,36 @@
   "image": "images/ricette/condimenti/vinaigrette-classica-e-citronette.webp",
   "imageAttribution": "📷 Foto: Nadin Sh — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Un dittico di condimenti classici dalla struttura emulsionata elegante e pulita. La vinaigrette offre un profilo acido-fruttato pungente, dove l'aceto di vino bianco (rapporto 1:3 con l'olio) domina con vivacità, sorretto dalla grassezza avvolgente di un EVO delicato come Taggiasca o Leccino. La citronette, con il suo succo di limone fresco, vira verso una acidità più luminosa e agrumata, con una persistenza olfattiva fresca e floreale che la rende percettivamente più leggera e verticale. Entrambe le preparazioni mantengono una sapidità misurata e un finale leggermente pungente conferito dal pepe nero macinato al momento.",
+    "summary": "Un dittico di emulsioni classiche che si distinguono per eleganza e pulizia aromatica. La Vinaigrette esprime una vena acida decisa e penetrante, bilanciata dalla rotondità fruttata di un olio in cultivar delicata, con un finale pungente di pepe fresco. La Citronette, più luminosa e floreale, offre una acidità citrica vibrante e agrumata, più morbida in retrogusto rispetto all'aceto, con una texture emulsionata leggermente più cremosa grazie alla maggiore concentrazione lipidica relativa.",
     "axes": [
       {
-        "label": "Acidità",
+        "label": "Acidità / Vivacità",
         "value": 8
       },
       {
-        "label": "Fruttato (EVO)",
-        "value": 6
-      },
-      {
-        "label": "Grassezza / Corpo",
+        "label": "Corpo / Rotondità Lipidica",
         "value": 7
-      },
-      {
-        "label": "Sapidità",
-        "value": 3
       },
       {
         "label": "Intensità Aromatica",
         "value": 5
+      },
+      {
+        "label": "Piccantezza / Speziatura",
+        "value": 3
+      },
+      {
+        "label": "Persistenza / Lunghezza",
+        "value": 6
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 558,
+    "macros": {
+      "carbs": 2,
+      "protein": 0,
+      "fat": 62
+    }
   }
 }

@@ -249,26 +249,26 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "La Focaccia Barese si presenta come un'espressione autentica e golosa della panificazione pugliese: una base dorata e croccante nel fondo, soffice e alveolata all'interno grazie alla sinergia tra semola rimacinata e patate lesse, con un profumo avvolgente di olio extravergine d'oliva e origano. Al palato domina una ricchezza grassa e sapida, bilanciata dall'acidità viva dei pomodorini caramellati e dalla nota amarognola e fermentata delle olive baresane. Il risultato è un prodotto di grande complessità rustica, con idratazione elevata (64%) e struttura alveolare generosa.",
+    "summary": "Una focaccia barese di grande personalità, dove la semola rimacinata di grano duro dialoga con le patate per regalare un interno straordinariamente soffice e umido, quasi burroso al palato. Il fondo si presenta con una crosta dorata e croccante, benedetta dall'olio EVO pugliese che permea ogni strato con la sua nota fruttata e leggermente amara. I pomodorini caramellati a rovescio e le olive baresane in salamoia costruiscono un ecosistema aromatico mediterraneo complesso, dove sapidità, acidità e profumo di origano si intrecciano in un equilibrio autentico e territorialmente preciso.",
     "axes": [
       {
-        "label": "Croccantezza del Fondo",
-        "value": 9
-      },
-      {
-        "label": "Sofficità della Mollica",
+        "label": "Croccantezza Esterna",
         "value": 8
       },
       {
-        "label": "Intensità Grassa (Olio EVO)",
+        "label": "Scioglievolezza Impasto",
         "value": 9
       },
       {
-        "label": "Acidità / Freschezza (Pomodorini)",
-        "value": 7
+        "label": "Sapidità / Umami",
+        "value": 8
       },
       {
-        "label": "Sapidità Complessiva",
+        "label": "Equilibrio Condimento-Impasto",
+        "value": 9
+      },
+      {
+        "label": "Complessità Aromatica",
         "value": 8
       }
     ]
@@ -278,7 +278,7 @@
     "macros": {
       "carbs": 33,
       "protein": 6,
-      "fat": 10
+      "fat": 9
     }
   },
   "_originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Focaccia_Barese.jpg"

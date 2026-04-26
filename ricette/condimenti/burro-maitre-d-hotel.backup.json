@@ -132,28 +132,36 @@
   "image": "images/ricette/condimenti/burro-maitre-d-hotel.webp",
   "imageAttribution": "📷 Foto: Mi Butter SA — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Un burro composto di scuola classica francese, dove la ricchezza lattea del burro di centrifuga all'82% di grassi incontra la freschezza erbacea del prezzemolo e la vivacità citrica del limone. Al palato si rivela avvolgente e fondente, con una progressione aromatica che va dal grasso-cremoso all'erbaceo-agrumato, chiudendo con un lieve calore del pepe bianco e uno sprint pungente dell'aglio.",
+    "summary": "Il Burro Maître d'Hôtel si presenta come un condimento classico di grande eleganza brassicale: la base lattica e burrosa del centrifuga di alta qualità (82% m.g.) si fonde con la clorofilla erbacea del prezzemolo fresco e la vivacità citrica del limone, creando un profilo aromatico complesso e bilanciato. Al palato, la texture cremosa e fondente libera progressivamente note di erbe fresche, un accenno pungente di aglio e una finale acidula che pulisce il palato, rendendo questo burro composto un partner ideale per esaltare carni alla griglia e pesci nobili.",
     "axes": [
       {
-        "label": "Grassezza/Untuosità",
-        "value": 9
-      },
-      {
-        "label": "Acidità Citrica",
-        "value": 6
-      },
-      {
-        "label": "Intensità Aromatica Erbacea",
+        "label": "Intensità Aromatica",
         "value": 7
       },
       {
-        "label": "Sapidità",
-        "value": 5
+        "label": "Acidità / Freschezza Citrica",
+        "value": 6
       },
       {
-        "label": "Piccantezza/Pungenza",
+        "label": "Untuosità / Corpo Grasso",
+        "value": 9
+      },
+      {
+        "label": "Piccantezza / Sprint Alliaceo",
         "value": 3
+      },
+      {
+        "label": "Complessità Erbacea",
+        "value": 8
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 686,
+    "macros": {
+      "carbs": 2,
+      "protein": 1,
+      "fat": 75
+    }
   }
 }

@@ -100,26 +100,26 @@
   "image": "images/ricette/condimenti/olio-cavolo-viola-elettrico.webp",
   "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
-    "summary": "Un olio di finitura dall'eleganza cromatica sorprendente, con una tonalità viola-porpora che vira verso il blu elettrico in funzione del pH del palato. Al naso si percepisce una delicata nota erbacea e leggermente terrosa del cavolo disidratato, integrata nella rotondità fruttata dell'olio EVO. In bocca è setoso e avvolgente, con un lieve retrogusto amarognolo-crucifero che chiude in modo pulito e persistente.",
+    "summary": "Un olio dai toni viola-indaco profondi, che si presenta al naso con note erbacee fresche di cavolo, leggere venature terrose e una sfumatura leggermente sulfurea propria delle brassicacee, sostenute dalla base fruttata delicata dell'EVO. In bocca la texture è fluida e setosa, con una sapidità vegetale discreta e una pungenza lieve in chiusura; il calore dolce dell'estrazione ha esaltato la dispersione pigmentante conservando una certa vivacità aromatica. È un condimento tecnico ed evocativo, pensato per la finitura cromatica e aromatica più che per la struttura grassa.",
     "axes": [
       {
-        "label": "Intensità Cromatica",
-        "value": 9
-      },
-      {
-        "label": "Aromaticità Erbacea",
-        "value": 5
-      },
-      {
-        "label": "Rotondità/Grassezza",
-        "value": 8
-      },
-      {
-        "label": "Amaro/Piccante",
+        "label": "Sapidità / Umami",
         "value": 3
       },
       {
-        "label": "Persistenza Gusto-Olfattiva",
+        "label": "Acidità / Pungenza",
+        "value": 3
+      },
+      {
+        "label": "Cremosità / Densità",
+        "value": 5
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 2
+      },
+      {
+        "label": "Intensità Aromatica",
         "value": 6
       }
     ]

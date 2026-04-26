@@ -149,36 +149,36 @@
   "image": "images/ricette/condimenti/salsa-verde-tradizionale.webp",
   "imageAttribution": "📷 Foto: Los Muertos Crew — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una salsa verde di grande carattere e complessità, dove la freschezza erbacea e pungente del prezzemolo dialoga con la sapidità umami di acciughe e capperi, bilanciata dalla rotondità dei tuorli sodi e dall'opulenza dell'olio extravergine. L'aceto di vino bianco introduce una vivace spalla acida che sveglia il palato, mentre l'aglio privato dell'anima conferisce profondità senza eccedere. Il risultato è un condimento dal profilo stratificato, rustico ma raffinato, con un lungo finale sapido-erbaceo.",
+    "summary": "Una salsa verde di grande carattere e complessità, dove la freschezza erbacea e leggermente amara del prezzemolo si intreccia con la sapidità profonda delle acciughe e dei capperi in un equilibrio dinamico e avvolgente. L'aceto di vino bianco conferisce una vivace pungenza che dialoga con la rotondità dell'olio extravergine e la struttura legante dei tuorli sodi, creando una texture densa, vellutata e mai monocorde. L'aglio privato dell'anima garantisce un fondo aromatico presente ma elegante, mentre il riposo in frigorifero affina e amalgama tutte le componenti in un profilo finale armonioso e persistente.",
     "axes": [
       {
-        "label": "Intensità Erbacea (Prezzemolo)",
-        "value": 9
-      },
-      {
-        "label": "Sapidità & Umami (Acciughe/Capperi)",
+        "label": "Sapidità / Umami",
         "value": 8
       },
       {
-        "label": "Acidità (Aceto di Vino Bianco)",
+        "label": "Acidità / Pungenza",
         "value": 7
       },
       {
-        "label": "Struttura Grassa & Corpo (EVO + Tuorli)",
-        "value": 8
+        "label": "Cremosità / Densità",
+        "value": 7
       },
       {
-        "label": "Pungenza Aromatica (Aglio/Pepe)",
-        "value": 5
+        "label": "Dolcezza / Rotondità",
+        "value": 2
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 9
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 412,
+    "kcal_per_100g": 362,
     "macros": {
-      "carbs": 7,
+      "carbs": 8,
       "protein": 5,
-      "fat": 40
+      "fat": 34
     }
   }
 }

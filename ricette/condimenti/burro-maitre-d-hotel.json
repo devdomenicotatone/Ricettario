@@ -130,29 +130,29 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-19T20:32:57.188Z",
   "image": "images/ricette/condimenti/burro-maitre-d-hotel.webp",
-  "imageAttribution": "📷 Foto: Mi Butter SA — Pexels License via Pexels",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
-    "summary": "Il Burro Maître d'Hôtel si presenta come un condimento classico di grande eleganza brassicale: la base lattica e burrosa del centrifuga di alta qualità (82% m.g.) si fonde con la clorofilla erbacea del prezzemolo fresco e la vivacità citrica del limone, creando un profilo aromatico complesso e bilanciato. Al palato, la texture cremosa e fondente libera progressivamente note di erbe fresche, un accenno pungente di aglio e una finale acidula che pulisce il palato, rendendo questo burro composto un partner ideale per esaltare carni alla griglia e pesci nobili.",
+    "summary": "Il Burro Maître d'Hôtel si presenta come un condimento classico di grande eleganza e precisione tecnica: la base burrosa di centrifuga, ricca e avvolgente, cede al palato con una cremosità setosa e una rotondità lattea propria dei grassi nobilmente cristallizzati. Il prezzemolo fresco infonde una nota erbacea vivace e persistente, mentre il succo di limone introduce una pungenza citrina che bilancia con raffinata tensione la ricchezza del grasso, completata dallo sprint aromatico dell'aglio e dalla piccantezza delicata del pepe bianco macinato al momento.",
     "axes": [
       {
-        "label": "Intensità Aromatica",
-        "value": 7
+        "label": "Sapidità / Umami",
+        "value": 5
       },
       {
-        "label": "Acidità / Freschezza Citrica",
+        "label": "Acidità / Pungenza",
         "value": 6
       },
       {
-        "label": "Untuosità / Corpo Grasso",
+        "label": "Cremosità / Densità",
         "value": 9
       },
       {
-        "label": "Piccantezza / Sprint Alliaceo",
-        "value": 3
+        "label": "Dolcezza / Rotondità",
+        "value": 5
       },
       {
-        "label": "Complessità Erbacea",
-        "value": 8
+        "label": "Intensità Aromatica",
+        "value": 7
       }
     ]
   },
@@ -163,5 +163,6 @@
       "protein": 1,
       "fat": 75
     }
-  }
+  },
+  "_originalImageUrl": ""
 }

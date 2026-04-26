@@ -172,34 +172,34 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Il Migliaccio Napoletano si presenta come un dolce di struttura densa e compatta, con una texture vellutata e fondente al palato, dove la granulometria fine del semolino si fonde armoniosamente con la cremosità lattea della ricotta. Al naso emerge un bouquet avvolgente di vaniglia bourbon e agrumi, con la scorza d'arancia che regala una nota fresca e aromatica su un fondo dolce e burroso. In bocca la dolcezza pronunciata dello zucchero è bilanciata dalla leggera acidità della ricotta vaccina e dalla sapidità di fondo, conferendo profondità e persistenza gusto-olfattiva tipica della pasticceria partenopea.",
+    "summary": "Il Migliaccio Napoletano si presenta al palato come un dolce dalla struttura setosa e quasi custard-like, dove la dolcezza avvolgente dello zucchero si fonde armoniosamente con la cremosità della ricotta e la compattezza vellutata del semolino cotto nel latte. Le note aromatiche sono eleganti e stratificate: la vaniglia offre un fondo caldo e burroso, mentre la scorza d'arancia dona una vivacità agrumata che alleggerisce il corpo deciso. La superficie leggermente caramellata con il suo craquelé introduce una piacevole tensione testuale tra l'esterno dorato e l'interno morbido, quasi fondente.",
     "axes": [
       {
-        "label": "Dolcezza",
+        "label": "Dolcezza Percepita",
+        "value": 7
+      },
+      {
+        "label": "Friabilità / Croccantezza",
+        "value": 2
+      },
+      {
+        "label": "Umidità / Cremosità",
         "value": 8
       },
       {
-        "label": "Cremosità / Struttura",
-        "value": 9
+        "label": "Intensità Aromatica",
+        "value": 5
       },
       {
-        "label": "Intensità Aromatica (Vaniglia & Agrumi)",
-        "value": 7
-      },
-      {
-        "label": "Leggerezza / Aerosità",
-        "value": 3
-      },
-      {
-        "label": "Persistenza Gusto-Olfattiva",
-        "value": 7
+        "label": "Ricchezza / Corpo",
+        "value": 8
       }
     ]
   },
   "nutrition": {
     "kcal_per_100g": 218,
     "macros": {
-      "carbs": 28,
+      "carbs": 31,
       "protein": 7,
       "fat": 7
     }

@@ -30,7 +30,7 @@
         },
         {
           "name": "Lievito di Birra Fresco",
-          "note": "(1% su farina biga — il frigo a 4°C rallenta la fermentazione)",
+          "note": "(1% su farina biga — fermentazione 16-18h a 18°C)",
           "grams": 2,
           "tokenId": "lievito_biga",
           "excludeFromTotal": false
@@ -83,13 +83,60 @@
           "tokenId": "olio_impasto"
         }
       ]
+    },
+    {
+      "group": "Per la Salsa Verde",
+      "items": [
+        {
+          "name": "Prezzemolo Fresco",
+          "note": "(foglie pulite e asciutte, 1 mazzo)",
+          "grams": 30,
+          "tokenId": "prezzemolo_salsa"
+        },
+        {
+          "name": "Aglio",
+          "note": "(1 spicchio)",
+          "grams": 5,
+          "tokenId": "aglio_salsa"
+        },
+        {
+          "name": "Filetti di Acciuga Sott'olio",
+          "note": "(2-3 filetti)",
+          "grams": 10,
+          "tokenId": "acciughe_salsa"
+        },
+        {
+          "name": "Capperi Dissalati",
+          "note": "(1 cucchiaio)",
+          "grams": 10,
+          "tokenId": "capperi_salsa"
+        },
+        {
+          "name": "Succo di Limone",
+          "note": "(mezzo limone)",
+          "grams": 15,
+          "tokenId": "limone_salsa"
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(q.b. per la salsa)",
+          "grams": 20,
+          "tokenId": "olio_salsa"
+        },
+        {
+          "name": "Sale e Pepe",
+          "note": "(a piacere)",
+          "grams": 2,
+          "tokenId": "sale_pepe_salsa"
+        }
+      ]
     }
   ],
   "suspensions": [],
   "steps": [
     {
       "title": "Giorno 1 — Preparazione della Biga",
-      "text": "In una ciotola, mescola a mano {farina_biga:200}g di farina W350 con {lievito_biga:2}g di lievito di birra fresco sbriciolato. Aggiungi {acqua_biga:100}g di acqua a temperatura ambiente (20-22°C) e mescola grossolanamente con una forchetta o le mani: la biga NON deve essere liscia, ma ruvida e compatta, con ancora tracce di farina asciutta visibili. È corretto così — è una biga al 50% di idratazione. Trasferisci in un contenitore con coperchio (o copri con pellicola) e riponi in frigorifero a 4°C per 24 ore. La biga è pronta quando appare gonfia, con una struttura alveolata interna e un profumo leggermente acidulo."
+      "text": "In una ciotola, mescola a mano {farina_biga:200}g di farina W350 con {lievito_biga:2}g di lievito di birra fresco sbriciolato. Aggiungi {acqua_biga:100}g di acqua a temperatura ambiente (20-22°C) e mescola grossolanamente con una forchetta o le mani: la biga NON deve essere liscia, ma ruvida e compatta, con ancora tracce di farina asciutta visibili. È corretto così — è una biga al 50% di idratazione. Trasferisci in un contenitore con coperchio (o copri con pellicola) e lascia fermentare a 18°C per 16-18 ore. La biga è pronta quando appare gonfia, con una struttura alveolata interna e un profumo leggermente acidulo."
     },
     {
       "title": "Giorno 2 — Impasto Finale",

@@ -136,28 +136,36 @@
   "image": "images/ricette/condimenti/coulis-salsa-pomodoro-fresco.webp",
   "imageAttribution": "📷 Foto: Willians Huerta — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Un coulis di pomodoro fresco dalla texture setosa e luminosa, che esprime tutta la dolcezza concentrata dei San Marzano maturi, bilanciata da una vivace acidità naturale sapientemente addomesticata dallo zucchero semolato. Il fondo aromatico di cipolla e aglio sudati a fuoco dolcissimo costruisce una base avvolgente, mentre il basilico in infusione finale deposita un bouquet erbaceo fresco e volatile di grande eleganza. La sobbollitura prolungata concentra gli zuccheri naturali e riduce l'acqua di vegetazione, conferendo corpo, persistenza e una sapidità umami di matrice vegetale pulita.",
+    "summary": "Un coulis luminoso e vellutato, dalla tonalità rosso-arancio accesa, che rivela al naso un bouquet mediterraneo dove la dolcezza matura del San Marzano dialoga con le note erbacee e anesate del basilico in infusione. In bocca la texture setosa avvolge il palato con un equilibrio armonico tra acidità brillante, dolcezza naturale del pomodoro calibrata dallo zucchero, e la rotondità grassa dell'EVO che porta persistenza e lunghezza.",
     "axes": [
-      {
-        "label": "Acidità",
-        "value": 5
-      },
-      {
-        "label": "Dolcezza",
-        "value": 6
-      },
-      {
-        "label": "Sapidità (Umami)",
-        "value": 7
-      },
       {
         "label": "Intensità Aromatica",
         "value": 8
       },
       {
-        "label": "Persistenza",
+        "label": "Acidità / Freschezza",
         "value": 7
+      },
+      {
+        "label": "Dolcezza / Maturità",
+        "value": 6
+      },
+      {
+        "label": "Struttura & Corpo",
+        "value": 5
+      },
+      {
+        "label": "Setosità / Texture",
+        "value": 9
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 68,
+    "macros": {
+      "carbs": 6,
+      "protein": 1,
+      "fat": 4
+    }
   }
 }

@@ -210,34 +210,34 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "La Pizza Napoletana Verace STG si presenta con un cornicione alveolato e pronunciato, caratterizzato da una crosta sottile e croccante all'esterno e una mollica soffice e umida all'interno, con inconfondibili macchie leopardate. Al naso, dominano le note di pasta fermentata con sfumature lattiche e di cereale tostato; in bocca l'impasto è elastico, leggero e leggermente acidulo, bilanciato dalla dolcezza dei pomodori San Marzano DOP e dalla cremosità della fiordilatte. La lunga lievitazione a freddo conferisce profondità aromatica e alta digeribilità, tratti distintivi di un'autentica napoletana.",
+    "summary": "La Pizza Napoletana Verace STG si presenta con un cornicione pronunciato, aereo e leggermente bruciato in superficie — le caratteristiche 'macchie leopardate' — frutto di una lievitazione lenta a 24 ore e di una cottura violenta su pietra refrattaria. Al palato, il disco centrale cedevole e umido contrasta magnificamente con il bordo croccante-alveolato, mentre la triade pomodoro San Marzano DOP, fiordilatte e basilico fresco disegna un profilo aromatico di rara pulizia e autenticità campana. La fermentazione prolungata conferisce all'impasto profondità lattico-acetica, esaltando l'umami minerale del sale marino e la nota fruttata dell'olio EVO a crudo.",
     "axes": [
       {
-        "label": "Sviluppo Alveolare (Leggerezza)",
-        "value": 9
+        "label": "Croccantezza Esterna",
+        "value": 7
       },
       {
-        "label": "Intensità Aromatica (Fermentazione)",
+        "label": "Scioglievolezza Impasto",
         "value": 8
       },
       {
-        "label": "Croccantezza della Crosta",
-        "value": 6
+        "label": "Sapidità / Umami",
+        "value": 8
       },
       {
-        "label": "Elasticità / Estensibilità",
+        "label": "Equilibrio Condimento-Impasto",
         "value": 9
       },
       {
-        "label": "Acidità Percepita",
-        "value": 4
+        "label": "Complessità Aromatica",
+        "value": 8
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 249,
+    "kcal_per_100g": 238,
     "macros": {
-      "carbs": 38,
+      "carbs": 34,
       "protein": 9,
       "fat": 6
     }

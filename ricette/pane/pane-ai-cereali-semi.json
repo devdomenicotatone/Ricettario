@@ -204,34 +204,34 @@
   "image": "images/ricette/pane/pane-ai-cereali-semi.webp",
   "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
-    "summary": "Un pane di carattere rustico e autentico, in cui la complessità aromatica delle farine integrali e di farro si fonde con le note tostate e burroso-oleose dei semi in crosta. La mollica, aperta e leggermente alveolata, offre una masticazione soddisfacente e persistente, mentre la crosta croccante rivela sentori di cereale caramellato e miele grazie al malto d'orzo. L'olio extravergine d'oliva aggiunge rotondità e una sfumatura erbacea che bilancia l'acidità delicata della lunga maturazione a freddo.",
+    "summary": "Un pane di grande carattere e sostanza: la crosta, ricca di semi tostati, offre una croccantezza sonora e profumata, con note di noce, sesamo e lino che si fondono in un registro cerealicolo complesso e avvolgente. La mollica, moderatamente alveolata e ben idratata, rivela una texture densa ma elastica, frutto di una lunga maturazione a freddo che dona una sottile complessità fermentativa pulita e mai aggressiva. La sapidità è ben calibrata e il malto d'orzo aggiunge una morbida rotondità dolce-tostata che lega armoniosamente tutte le componenti.",
     "axes": [
       {
-        "label": "Intensità Aromatica",
-        "value": 8
-      },
-      {
-        "label": "Croccantezza della Crosta",
+        "label": "Croccantezza Crosta",
         "value": 9
       },
       {
-        "label": "Rusticità / Complessità Cerealicola",
-        "value": 8
+        "label": "Alveolatura Mollica",
+        "value": 5
       },
       {
-        "label": "Dolcezza Percepita",
-        "value": 3
-      },
-      {
-        "label": "Struttura e Masticabilità",
+        "label": "Complessità Fermentativa",
         "value": 7
+      },
+      {
+        "label": "Sapidità",
+        "value": 6
+      },
+      {
+        "label": "Note Tostate / Cerealicole",
+        "value": 9
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 258,
+    "kcal_per_100g": 278,
     "macros": {
-      "carbs": 38,
+      "carbs": 42,
       "protein": 9,
       "fat": 7
     }

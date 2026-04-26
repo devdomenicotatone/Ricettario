@@ -272,28 +272,36 @@
   "image": "images/ricette/lievitati/pasta-brioche-classica.webp",
   "imageAttribution": "📷 Foto: Suzy Hazelwood — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una brioche di scuola classica francese, dalla mollica setosa e burrosa, con una complessità aromatica stratificata che intreccia agrumi freschi, vaniglia Bourbon e rum scuro in una marinatura pre-impasto che ne esalta la profondità olfattiva. La doratura al tuorlo e panna conferisce una crosta fine e lucida color nocciola, con una dolcezza ben calibrata dal sale e bilanciata dalla struttura glutinica di una blend Manitoba/T0 ad alta forza, capace di sostenere un impasto ricco e idratato al 54%.",
+    "summary": "Una brioche classica di grande eleganza artigianale, dal profilo aromatico complesso e avvolgente grazie alla marinatura di rum, scorze agrumose e vaniglia bourbon. Al palato si rivela un equilibrio magistrale tra la ricchezza burrosa, la dolcezza misurata dello zucchero e del miele d'acacia, con una mollica soffice e filante sostenuta da una struttura proteica robusta (blend di Tipo 0 e Manitoba). La doratura al tuorlo e panna regala una crosta sottile, lacca e profumata che esalta il contrasto con l'interno nuvola.",
     "axes": [
       {
-        "label": "Sofficità Mollica",
-        "value": 9
+        "label": "Ricchezza Burrosa",
+        "value": 8
       },
       {
         "label": "Complessità Aromatica",
         "value": 9
       },
       {
-        "label": "Dolcezza",
+        "label": "Dolcezza Equilibrata",
         "value": 7
       },
       {
-        "label": "Ricchezza Burrosa",
-        "value": 7
+        "label": "Sofficità della Mollica",
+        "value": 9
       },
       {
-        "label": "Croccantezza Crosta",
-        "value": 4
+        "label": "Croccantezza della Crosta",
+        "value": 3
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 342,
+    "macros": {
+      "carbs": 46,
+      "protein": 8,
+      "fat": 12
+    }
   }
 }

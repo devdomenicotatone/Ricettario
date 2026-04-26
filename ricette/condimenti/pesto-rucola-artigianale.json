@@ -129,36 +129,36 @@
   "image": "images/ricette/condimenti/pesto-rucola-artigianale.webp",
   "imageAttribution": "📷 Foto: Elimira Lotti — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Un pesto di carattere deciso e selvatico, dominato dalla nota erbacea pungente della rucola che dialoga con la salinità tagliente del Pecorino Romano e la profondità umami del Parmigiano 24 mesi. La texture è volutamente materica e granulosa, con l'olio EVO fruttato che avvolge il palato in una emulsione densa e persistente, lasciando un finale lungo, leggermente amaro e pepato.",
+    "summary": "Un pesto di rucola dal carattere deciso e selvaggio, dove la nota pepata e leggermente amara della rucola dialoga con la sapidità affilata del Pecorino Romano e la profondità umami del Parmigiano 24 mesi. La texture è densa e materica, con la grassezza avvolgente dell'olio EVO che arrotonda gli spigoli aromatici senza sopraffare la vivacità erbacea del verde, mentre i pinoli tostati regalano un finale morbido e burroso di grande eleganza.",
     "axes": [
       {
-        "label": "Intensità Aromatica (Erbacea/Pungente)",
-        "value": 9
-      },
-      {
-        "label": "Grassezza & Untuosità",
+        "label": "Sapidità / Umami",
         "value": 8
       },
       {
-        "label": "Sapidità (Sale + Formaggi)",
-        "value": 8
-      },
-      {
-        "label": "Amarezza (Rucola + EVO)",
+        "label": "Acidità / Pungenza",
         "value": 7
       },
       {
-        "label": "Granulosità / Texture Materica",
-        "value": 6
+        "label": "Cremosità / Densità",
+        "value": 7
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 3
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 9
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 548,
+    "kcal_per_100g": 612,
     "macros": {
-      "carbs": 3,
+      "carbs": 4,
       "protein": 9,
-      "fat": 55
+      "fat": 61
     }
   }
 }

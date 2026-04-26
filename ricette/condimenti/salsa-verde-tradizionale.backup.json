@@ -149,28 +149,36 @@
   "image": "images/ricette/condimenti/salsa-verde-tradizionale.webp",
   "imageAttribution": "📷 Foto: Los Muertos Crew — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una salsa verde tradizionale di grande carattere, dove la freschezza erbacea del prezzemolo dialoga con la sapidità intensa delle acciughe e dei capperi in un equilibrio antico e raffinato. L'aceto di vino bianco imprime una vivace acidità che taglia la grassezza dell'olio extravergine, mentre i tuorli sodi e la mollica ammollata conferiscono corpo e una morbidezza vellutata al palato. Un condimento di persistenza notevole, austero e profondo, degno della migliore tradizione piemontese.",
+    "summary": "Una salsa verde di grande carattere e complessità, dove la freschezza erbacea e pungente del prezzemolo dialoga con la sapidità umami di acciughe e capperi, bilanciata dalla rotondità dei tuorli sodi e dall'opulenza dell'olio extravergine. L'aceto di vino bianco introduce una vivace spalla acida che sveglia il palato, mentre l'aglio privato dell'anima conferisce profondità senza eccedere. Il risultato è un condimento dal profilo stratificato, rustico ma raffinato, con un lungo finale sapido-erbaceo.",
     "axes": [
       {
-        "label": "Sapidità (Umami)",
-        "value": 8
-      },
-      {
-        "label": "Acidità",
-        "value": 7
-      },
-      {
-        "label": "Intensità Aromatica",
+        "label": "Intensità Erbacea (Prezzemolo)",
         "value": 9
       },
       {
-        "label": "Grassezza / Corpo",
-        "value": 6
+        "label": "Sapidità & Umami (Acciughe/Capperi)",
+        "value": 8
       },
       {
-        "label": "Amaro Erbaceo",
+        "label": "Acidità (Aceto di Vino Bianco)",
+        "value": 7
+      },
+      {
+        "label": "Struttura Grassa & Corpo (EVO + Tuorli)",
+        "value": 8
+      },
+      {
+        "label": "Pungenza Aromatica (Aglio/Pepe)",
         "value": 5
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 412,
+    "macros": {
+      "carbs": 7,
+      "protein": 5,
+      "fat": 40
+    }
   }
 }

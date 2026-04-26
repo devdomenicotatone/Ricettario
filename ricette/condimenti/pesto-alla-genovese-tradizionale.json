@@ -149,27 +149,27 @@
   "image": "images/ricette/condimenti/pesto-alla-genovese-tradizionale.webp",
   "imageAttribution": "📷 Immagine esistente",
   "sensoryProfile": {
-    "summary": "Un pesto di straordinaria complessità aromatica, dove la freschezza erbacea e floreale del basilico genovese DOP si intreccia con la grassezza avvolgente dell'olio taggiasca e la sapidità intensa dei formaggi stagionati. La tessitura è cremosa e vellutata, con una luminosità verde smeraldo che tradisce la maestria dell'estrazione a freddo al mortaio. Il finale è lungo, con note lattiche, pungenti di aglio addomesticato e una sottile resina di pinolo che persiste con eleganza.",
+    "summary": "Un pesto di straordinaria eleganza artigianale: l'attacco è dominato dalla freschezza erbacea e floreale del basilico genovese DOP, i cui oli essenziali estratti a freddo al mortaio dispiegano una complessità aromatica difficilmente replicabile. Il corpo è ricco e avvolgente, sostenuto dall'emulsione perfetta tra l'olio taggiasca — dolce e burroso — e la sapidità profonda e persistente del Parmigiano 24 mesi e del Fiore Sardo, quest'ultimo capace di donare una nota leggermente piccante e lattica. Il finale è lungo, con richiami all'aglio ben integrato e ai pinoli che aggiungono una dolcezza oleaginosa e una texture vellutata di rara piacevolezza.",
     "axes": [
       {
-        "label": "Intensità Aromatica (Basilico & Erbaceo)",
-        "value": 9
-      },
-      {
-        "label": "Grassezza & Untuosità (Olio + Formaggi)",
+        "label": "Sapidità / Umami",
         "value": 8
       },
       {
-        "label": "Sapidità & Umami (Parmigiano + Pecorino)",
-        "value": 8
-      },
-      {
-        "label": "Pungenza & Alliaceo (Aglio di Vessalico)",
+        "label": "Acidità / Pungenza",
         "value": 4
       },
       {
-        "label": "Struttura & Persistenza (Pinoli + Emulsione)",
-        "value": 7
+        "label": "Cremosità / Densità",
+        "value": 8
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 5
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 9
       }
     ]
   },
@@ -177,7 +177,7 @@
     "kcal_per_100g": 498,
     "macros": {
       "carbs": 4,
-      "protein": 12,
+      "protein": 13,
       "fat": 47
     }
   }

@@ -213,7 +213,7 @@
   ],
   "_generatedBy": "claude-opus",
   "image": "images/ricette/focaccia/focaccia-barese.webp",
-  "imageAttribution": "📷 Foto: Noemí Jiménez — Pexels License via Pexels",
+  "imageAttribution": "📷 Foto: Simona.IT — CC BY-SA via Openverse",
   "steps": [
     {
       "title": "Preparazione Lievitino",
@@ -249,28 +249,37 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Una focaccia barese di grande personalità e struttura: la generosa quota di semola rimacinata (46% sul totale farine) e la patata lessa conferiscono una mollica umida, soffice e profumata, con una masticabilità avvolgente e un fondo croccante e ambrato ottenuto dalla cottura ad altissima temperatura (250-270°C) con abbondante olio EVO. Il topping di pomodorini ciliegino affondati, olive baresane in salamoia e origano secco disegna un profilo aromatico mediterraneo intenso, con una sapidità decisa e una succosità che penetra nell'impasto durante la cottura, bilanciando la grassezza strutturale dell'olio.",
+    "summary": "La Focaccia Barese si presenta come un'espressione autentica e golosa della panificazione pugliese: una base dorata e croccante nel fondo, soffice e alveolata all'interno grazie alla sinergia tra semola rimacinata e patate lesse, con un profumo avvolgente di olio extravergine d'oliva e origano. Al palato domina una ricchezza grassa e sapida, bilanciata dall'acidità viva dei pomodorini caramellati e dalla nota amarognola e fermentata delle olive baresane. Il risultato è un prodotto di grande complessità rustica, con idratazione elevata (64%) e struttura alveolare generosa.",
     "axes": [
       {
         "label": "Croccantezza del Fondo",
         "value": 9
       },
       {
-        "label": "Sofficità & Umidità Mollica",
+        "label": "Sofficità della Mollica",
         "value": 8
       },
       {
-        "label": "Intensità Aromatica",
-        "value": 8
+        "label": "Intensità Grassa (Olio EVO)",
+        "value": 9
       },
       {
-        "label": "Sapidità (Sale + Olive + Pomodoro)",
+        "label": "Acidità / Freschezza (Pomodorini)",
         "value": 7
       },
       {
-        "label": "Alveolatura & Leggerezza",
-        "value": 6
+        "label": "Sapidità Complessiva",
+        "value": 8
       }
     ]
-  }
+  },
+  "nutrition": {
+    "kcal_per_100g": 248,
+    "macros": {
+      "carbs": 33,
+      "protein": 6,
+      "fat": 10
+    }
+  },
+  "_originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Focaccia_Barese.jpg"
 }

@@ -208,36 +208,36 @@
   "image": "images/ricette/pizza/pizza-in-teglia-romana.webp",
   "imageAttribution": "📷 Foto: Milton Das — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una pizza in teglia romana di scuola classica, che esprime con autorevolezza il connubio tra struttura alveolare aperta e croccantezza del fondo. Al naso emergono note di fermentazione lenta e complessa — pasta acida, cereale tostato, sentori di malto — mentre al palato la masticazione rivela un'alternanza precisa tra la friabilità della crosta inferiore, caramellizzata dall'olio in teglia, e la sofficità quasi cotonosa della mollica. La lunga maturazione in freddo conferisce profondità aromatica e una digeribilità nettamente superiore alla media, con un retrogusto pulito e persistente.",
+    "summary": "La Pizza in Teglia Romana si presenta come un capolavoro di texture contrastanti: una base fragrante e croccante, quasi fritta nell'olio EVO della teglia, cede il passo a una mollica alta, leggera e alveolata che si scioglie in bocca con grazia. La lunga maturazione in freddo di 18-24 ore regala un profilo aromatico di rara complessità, con note di fermentazione lattica, sentori di cereale tostato e un retrogusto dolce-minerale che persiste elegantemente. L'equilibrio tra il pomodoro acidulo, la mozzarella fondente e la struttura dell'impasto ad alta idratazione crea un insieme armonico e soddisfacente, dove nessun elemento prevarica l'altro.",
     "axes": [
       {
-        "label": "Alveolatura / Leggerezza",
+        "label": "Croccantezza Esterna",
         "value": 9
       },
       {
-        "label": "Croccantezza del Fondo",
+        "label": "Scioglievolezza Impasto",
         "value": 8
       },
       {
-        "label": "Complessità Aromatica (Fermentazione)",
+        "label": "Sapidità / Umami",
+        "value": 7
+      },
+      {
+        "label": "Equilibrio Condimento-Impasto",
         "value": 8
       },
       {
-        "label": "Sapidità Equilibrata",
-        "value": 6
-      },
-      {
-        "label": "Estensibilità / Struttura Glutinica",
+        "label": "Complessità Aromatica",
         "value": 9
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 238,
+    "kcal_per_100g": 231,
     "macros": {
-      "carbs": 42,
+      "carbs": 34,
       "protein": 7,
-      "fat": 5
+      "fat": 6
     }
   }
 }

@@ -149,36 +149,36 @@
   "image": "images/ricette/condimenti/pesto-alla-siciliana.webp",
   "imageAttribution": "📷 Foto: Enzo Iorio — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Un pesto dalla personalità solare e mediterranea, dove la dolcezza acidula dei pomodori ramati maturi si intreccia con la cremosità lattea della ricotta e la profondità sapida del Parmigiano stagionato. Le mandorle conferiscono una struttura rustica e una nota tostata che dialoga con il verde aromatico del basilico, mentre l'olio extravergine lega il tutto in un'emulsione vellutata e avvolgente. Il carattere è rotondo e goloso, con un finale persistente che bilancia grassezza e freschezza vegetale.",
+    "summary": "Un pesto dalla personalità solare e mediterranea: l'acidità viva e carnosa del pomodoro ramato dialoga con la nota lattica e vellutata della ricotta, mentre il Parmigiano stagionato porta una sapidità profonda e persistente. Le mandorle tostate aggiungono struttura e una rotondità oleosa, il basilico fresco firma il finale con un'esplosione aromatica verde e leggermente anice-ata, sostenuta dal filo di olio extravergine fruttato.",
     "axes": [
-      {
-        "label": "Intensità Aromatica",
-        "value": 7
-      },
-      {
-        "label": "Cremosità / Struttura",
-        "value": 8
-      },
-      {
-        "label": "Acidità / Freschezza",
-        "value": 6
-      },
       {
         "label": "Sapidità / Umami",
         "value": 7
       },
       {
-        "label": "Percezione di Grassezza",
-        "value": 7
+        "label": "Acidità / Pungenza",
+        "value": 6
+      },
+      {
+        "label": "Cremosità / Densità",
+        "value": 8
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 4
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 218,
+    "kcal_per_100g": 242,
     "macros": {
-      "carbs": 6,
+      "carbs": 5,
       "protein": 7,
-      "fat": 18
+      "fat": 21
     }
   }
 }

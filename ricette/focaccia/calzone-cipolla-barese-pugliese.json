@@ -200,27 +200,27 @@
   "image": "images/ricette/focaccia/calzone-cipolla-barese-pugliese.webp",
   "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
-    "summary": "Il Calzone di Cipolla Barese si presenta come un gioiello della pasticceria salata pugliese: la pasta friabile e dorata, ottenuta dall'emulsione di olio e vino bianco, cede sotto il coltello rivelando un ripieno di straordinaria complessità agrodolce. Le cipolle sponsali, lungamente appassite, offrono una dolcezza profonda e carezzevole, sapientemente contrappuntata dalla sapidità marina delle acciughe e delle olive nere baresane, mentre l'uvetta sultanina introduce tocchi fruttati e zuccherini di rara eleganza. Un piatto di grande carattere territoriale, caldo, avvolgente e di persistenza gustativa notevole.",
+    "summary": "Il Calzone di Cipolla Barese si presenta come un gioiello della tradizione pugliese: la pasta friabile all'olio e vino bianco cede sotto il coltello con un croccante secco e pulito, rivelando un ripieno avvolgente dove la dolcezza degli sponsali appassiti dialoga con la nota iodata delle acciughe, la grassezza delle olive leccino e il tocco agrodolce dell'uvetta sultanina. Il profilo aromatico è di straordinaria complessità: sentori di cipolla caramellata, frutto maturo, umami marino e un fondo speziato di pepe nero si fondono in un equilibrio dolce-salato tipicamente meridionale. La struttura dell'impasto, pur essendo senza lievito, garantisce una masticazione piacevolmente burrosa e scioglievole al palato, mentre la lunga cottura a doppia posizione conferisce alla calotta una doratura profonda e invitante.",
     "axes": [
       {
-        "label": "Dolcezza (uvetta + cipolle caramellate)",
+        "label": "Croccantezza Esterna",
+        "value": 8
+      },
+      {
+        "label": "Scioglievolezza Impasto",
         "value": 7
       },
       {
-        "label": "Sapidità / Umami (acciughe + olive + sale)",
+        "label": "Sapidità / Umami",
         "value": 8
       },
       {
-        "label": "Friabilità della Pasta (olio+vino, senza lievito)",
+        "label": "Equilibrio Condimento-Impasto",
         "value": 9
       },
       {
-        "label": "Complessità Aromatica (agrodolce, speziato, marino)",
-        "value": 8
-      },
-      {
-        "label": "Struttura / Corpo del Ripieno (densità, succulenza)",
-        "value": 6
+        "label": "Complessità Aromatica",
+        "value": 9
       }
     ]
   },

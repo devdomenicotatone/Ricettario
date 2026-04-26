@@ -200,28 +200,36 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Un pane di grande carattere e struttura, dove la biga a lunga maturazione (16-18h) regala una complessità aromatica profonda con note di grano fermentato e sentori lattici. La semola rimacinata ad alto contenuto proteico conferisce una mollica soda, gialla e umida, con una masticazione tenace e soddisfacente. La crosta, sviluppata in forno a 250°C con vapore e poi asciugata a spiffero, si presenta dorata, croccante e sonora, esaltata dal malto diastatico che ne intensifica la colorazione e la dolcezza caramellata.",
+    "summary": "Un pane di carattere meridionale, dove la complessità fermentativa della biga a lunga maturazione si fonde con la dolcezza minerale della semola rimacinata, regalando una crosta ambrata e croccante con note di frutto secco tostato. La mollica si presenta alveolata in modo irregolare, elastica e umida, con una persistente acidità lattica delicata che bilancia la sapidità del sale. Il profilo aromatico è ricco e stratificato: cereale, nocciola, lieve sentore di grano duro, con un finale lungo e leggermente burroso.",
     "axes": [
       {
-        "label": "Croccantezza Crosta",
+        "label": "Croccantezza della Crosta",
         "value": 9
       },
       {
-        "label": "Alveolatura Mollica",
-        "value": 6
-      },
-      {
-        "label": "Complessità Aromatica",
+        "label": "Complessità Aromatica (Fermentativa)",
         "value": 8
       },
       {
-        "label": "Umidità Mollica",
+        "label": "Acidità Percepita",
+        "value": 4
+      },
+      {
+        "label": "Alveolatura e Leggerezza della Mollica",
         "value": 7
       },
       {
-        "label": "Sapore di Grano",
-        "value": 9
+        "label": "Sapidità",
+        "value": 6
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 258,
+    "macros": {
+      "carbs": 52,
+      "protein": 9,
+      "fat": 1
+    }
   }
 }

@@ -135,36 +135,36 @@
   "image": "images/ricette/condimenti/maionese.webp",
   "imageAttribution": "📷 Foto: Stacy Spensley — CC BY 2.0 via Wikimedia",
   "sensoryProfile": {
-    "summary": "Una maionese classica dal profilo grasso e vellutato, costruita sull'equilibrio tra la ricchezza lipidica dell'olio di girasole e la vivace acidità del limone con l'aceto. La struttura è densa e lucida, con una cremosità avvolgente e una nota lievemente pungente sul finale che pulisce il palato. L'utilizzo di olio di semi garantisce neutralità aromatica, lasciando emergere la mineralità dei tuorli freschi e la freschezza agrumata.",
+    "summary": "Una maionese classica che si esprime con una cremosità avvolgente e una densità strutturata, frutto dell'emulsione perfetta tra tuorlo e olio di semi. Al palato emerge una piacevole acidità bilanciata dal limone fresco e dall'aceto, che conferisce vivacità senza aggredire, mentre la sapidità del sale esalta la rotondità lipidica dell'insieme. L'intensità aromatica è contenuta e pulita, dominata dalla nota oleosa neutra del girasole con un sottofondo agrumato che prolunga il finale.",
     "axes": [
       {
-        "label": "Untuosità / Ricchezza Grassa",
-        "value": 9
+        "label": "Sapidità / Umami",
+        "value": 5
       },
       {
-        "label": "Acidità (Limone + Aceto)",
+        "label": "Acidità / Pungenza",
         "value": 6
       },
       {
-        "label": "Struttura / Densità Emulsione",
-        "value": 8
+        "label": "Cremosità / Densità",
+        "value": 9
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 4
       },
       {
         "label": "Intensità Aromatica",
-        "value": 3
-      },
-      {
-        "label": "Sapidità / Equilibrio Salino",
-        "value": 5
+        "value": 4
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 680,
+    "kcal_per_100g": 698,
     "macros": {
       "carbs": 1,
       "protein": 2,
-      "fat": 75
+      "fat": 77
     }
   },
   "_originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/70/Homemade_mayonnaise_%284059871654%29.jpg"

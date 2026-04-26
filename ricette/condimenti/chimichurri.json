@@ -168,35 +168,35 @@
   "image": "images/ricette/condimenti/chimichurri.webp",
   "imageAttribution": "📷 Foto: Gera Cejas — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Un chimichurri dal carattere deciso e mediterraneo, dove la freschezza erbacea del prezzemolo tritato a coltello dialoga con la pungenza dell'aglio e il calore persistente del peperoncino. L'olio extravergine di oliva fruttato costruisce una base vellutata e avvolgente, bilanciata dall'acidità tagliente dell'aceto di vino bianco, mentre origano e timo secchi apportano profondità aromatica e complessità speziata. Il cumino introduce una nota terrosa e orientale che arrotonda il profilo, rendendo la salsa vibrante, multi-strato e di grande persistenza.",
+    "summary": "Un chimichurri di carattere deciso e vibrante, dove la pungenza erbacea del prezzemolo fresco si intreccia con la potenza dell'aglio e il calore del peperoncino in un abbraccio speziato e aromatico. L'aceto di vino bianco taglia con precisione la grassezza dell'olio extravergine, regalando una freschezza acida che pulisce il palato, mentre origano e timo secchi apportano profondità mediterranea e una complessità aromatica che si svela pienamente dopo il riposo. La texture è eterogenea e fluida, con una densità media che ne facilita l'utilizzo come condimento da versare o spennellare.",
     "axes": [
       {
-        "label": "Intensità Aromatica",
-        "value": 9
-      },
-      {
-        "label": "Acidità / Freschezza",
-        "value": 7
-      },
-      {
-        "label": "Piccantezza",
+        "label": "Sapidità / Umami",
         "value": 6
       },
       {
-        "label": "Struttura Grassa / Corposità",
-        "value": 7
+        "label": "Acidità / Pungenza",
+        "value": 8
       },
       {
-        "label": "Complessità Speziata",
-        "value": 8
+        "label": "Cremosità / Densità",
+        "value": 4
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 2
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 9
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 318,
+    "kcal_per_100g": 312,
     "macros": {
       "carbs": 5,
-      "protein": 2,
+      "protein": 1,
       "fat": 32
     }
   }

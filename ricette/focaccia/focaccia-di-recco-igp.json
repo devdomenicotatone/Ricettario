@@ -194,36 +194,36 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Una sfoglia di straordinaria sottigliezza e leggerezza, croccante e dorata all'esterno con caratteristiche bolle dorate, che cede a un cuore filante e cremoso di crescenza. Il profilo aromatico è elegante: note lattiche fresche e leggermente acidule del formaggio si fondono con la fragranza erbacea e fruttata dell'olio extravergine ligure, mentre la cottura ad alta temperatura regala profumi di crosta caramellata e grano tostato. Un equilibrio magistrale tra semplicità degli ingredienti e complessità tecnica, dove la texture è il vero protagonista.",
+    "summary": "La Focaccia di Recco IGP si presenta come un'esperienza sensoriale di rara purezza: sfoglie impalpabili di pasta non lievitata, tese al limite della trasparenza, custodiscono un cuore di crescenza che in cottura diventa crema fluente e latticamente intensa. Al primo morso la crosta cede con uno scricchiolio secco e dorato, lasciando immediatamente spazio a una fondente colata di formaggio fresco dalle note acidule e burroso-latticine, armonizzata dall'amaro fruttato dell'olio EVO ligure. La complessità aromatica, pur nella sua apparente semplicità, è sorprendente: sentori di pasta cotta a secco, fondo minerale del sale, persistenza grassa e voluttuosa che si chiude pulita grazie all'alta temperatura di cottura.",
     "axes": [
       {
-        "label": "Croccantezza della Sfoglia",
+        "label": "Croccantezza Esterna",
         "value": 9
       },
       {
-        "label": "Cremosità / Filanza del Formaggio",
-        "value": 9
+        "label": "Scioglievolezza Impasto",
+        "value": 8
       },
       {
-        "label": "Sapidità",
-        "value": 6
-      },
-      {
-        "label": "Intensità Aromatica (lattico + EVO)",
+        "label": "Sapidità / Umami",
         "value": 7
       },
       {
-        "label": "Leggerezza / Sottigliezza della Struttura",
-        "value": 10
+        "label": "Equilibrio Condimento-Impasto",
+        "value": 9
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 7
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 298,
+    "kcal_per_100g": 268,
     "macros": {
       "carbs": 28,
-      "protein": 11,
-      "fat": 15
+      "protein": 10,
+      "fat": 13
     }
   }
 }

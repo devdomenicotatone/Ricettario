@@ -130,36 +130,36 @@
   "image": "images/ricette/condimenti/olio-aglio-nero-ossidiana.webp",
   "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
-    "summary": "Un olio dalla personalità oscura e affascinante: il nero ossidiana del carbone vegetale in sospensione crea un impatto visivo immediato e teatrale. Al naso, l'aglio nero fermentato dona note profonde di umami, aceto balsamico e frutti scuri che si intrecciano con le resine alpine del rosmarino e la dolce speziatura dell'origano. In bocca si rivela sorprendentemente morbido e avvolgente, con un retrogusto lungo di liquirizia, tabacco dolce e un calore sottile lasciato dal peperoncino.",
+    "summary": "Un olio dalla personalità oscura e magnetica: l'aglio nero fermentato dispiega note profonde di umami balsamico, richiami di melassa e tamarindo, sostenuti da una pungenza aromatica del rosmarino e un calore sottile del peperoncino. Il carbone vegetale non interviene sul gusto ma regala una texture vellutata e una presenza visiva di straordinario impatto, mentre l'origano secco chiude con un finale erbaceo mediterraneo. Un condimento di carattere assoluto, pensato per segnare il piatto tanto alla vista quanto al palato.",
     "axes": [
       {
-        "label": "Intensità Aromatica",
-        "value": 9
-      },
-      {
-        "label": "Complessità Umami",
+        "label": "Sapidità / Umami",
         "value": 8
       },
       {
-        "label": "Piccantezza / Calore",
-        "value": 3
-      },
-      {
-        "label": "Amaro / Erbaceo",
+        "label": "Acidità / Pungenza",
         "value": 5
       },
       {
-        "label": "Impatto Visivo (Cromatico)",
-        "value": 10
+        "label": "Cremosità / Densità",
+        "value": 6
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 4
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 9
       }
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 868,
+    "kcal_per_100g": 848,
     "macros": {
-      "carbs": 3,
+      "carbs": 2,
       "protein": 1,
-      "fat": 96
+      "fat": 93
     }
   },
   "_originalImageUrl": ""
