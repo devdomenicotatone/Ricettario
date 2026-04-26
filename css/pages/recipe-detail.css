@@ -638,6 +638,252 @@
     .dose-inline.dose-updated {
         animation: dose-pulse 0.4s ease;
     }
+
+    /* ── Panel spacing helper ── */
+    .recipe-panel--spaced {
+        margin-top: 32px;
+    }
+
+    /* ═══════════════════════════════════════
+       SENSORY PANEL — Dati Tecnici & Sensoriali
+       ═══════════════════════════════════════ */
+
+    .sensory-panel__header {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sensory-chevron {
+        transition: transform 0.3s ease;
+    }
+
+    .sensory-chart-container {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        margin: var(--space-md) auto 0;
+        padding: 32px 24px;
+        background: var(--color-surface-2);
+        border: 1px solid color-mix(in oklch, var(--color-accent) 20%, transparent);
+        border-radius: var(--radius-lg);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+    }
+
+    .sensory-dominant {
+        text-align: center;
+        margin-bottom: var(--space-md);
+    }
+
+    .sensory-dominant__badge {
+        display: inline-block;
+        padding: 6px 12px;
+        background: color-mix(in oklch, var(--color-accent) 15%, transparent);
+        border: 1px solid color-mix(in oklch, var(--color-accent) 40%, transparent);
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--color-accent);
+    }
+
+    .sensory-canvas-wrap {
+        position: relative;
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    /* ── Sensory Note (degustazione) ── */
+    .sensory-note {
+        margin-top: 24px;
+        padding: var(--space-md);
+        background: var(--color-surface-2);
+        border-radius: var(--radius-sm);
+        border-left: 4px solid var(--color-accent);
+    }
+
+    .sensory-note__title {
+        margin: 0 0 8px 0;
+        font-size: 14px;
+        color: var(--color-text-secondary);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .sensory-note__text {
+        margin: 0;
+        font-family: var(--font-display);
+        font-style: italic;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: var(--color-text);
+    }
+
+    /* ═══════════════════════════════════════
+       NUTRITION TOGGLE — Analisi Nutrizionale
+       ═══════════════════════════════════════ */
+
+    details > summary::-webkit-details-marker { display: none; }
+
+    .nutrition-toggle {
+        margin-top: 32px;
+        border-top: 1px solid color-mix(in oklch, var(--color-accent) 20%, transparent);
+        padding-top: 24px;
+        text-align: center;
+    }
+
+    .nutrition-toggle__btn {
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--color-text);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        list-style: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        user-select: none;
+        outline: none;
+        padding: 10px 20px;
+        border-radius: 30px;
+        background: color-mix(in oklch, var(--color-accent) 10%, transparent);
+        border: 1px solid color-mix(in oklch, var(--color-accent) 30%, transparent);
+        transition: all 0.2s ease;
+
+        &:hover {
+            background: color-mix(in oklch, var(--color-accent) 18%, transparent);
+            border-color: color-mix(in oklch, var(--color-accent) 50%, transparent);
+        }
+    }
+
+    .nutrition-toggle__icon {
+        width: 16px;
+        height: 16px;
+        color: var(--color-accent);
+    }
+
+    .nutrition-content {
+        margin-top: 24px;
+        text-align: left;
+        animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(6px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .nutrition-kcal {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 12px;
+    }
+
+    .nutrition-kcal__value {
+        font-size: 32px;
+        font-weight: 800;
+        color: var(--color-text);
+        line-height: 1;
+    }
+
+    .nutrition-kcal__unit {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--color-text-muted);
+        margin-left: 4px;
+        padding-bottom: 2px;
+    }
+
+    .nutrition-bar {
+        display: flex;
+        height: 8px;
+        border-radius: 4px;
+        overflow: hidden;
+        margin-bottom: 12px;
+        background: color-mix(in oklch, var(--color-text) 5%, transparent);
+    }
+
+    .nutrition-bar__segment--carbs { background: #A8774A; }
+    .nutrition-bar__segment--prot  { background: #5C3D18; }
+    .nutrition-bar__segment--fat   { background: #E8C89E; }
+
+    .nutrition-legend {
+        display: flex;
+        gap: 16px;
+        font-size: 13px;
+        font-weight: 500;
+        flex-wrap: wrap;
+    }
+
+    .nutrition-legend__item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        & span { color: var(--color-text-secondary); }
+        & strong { color: var(--color-text); }
+    }
+
+    .nutrition-legend__dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+    }
+
+    .nutrition-legend__dot--carbs { background: #A8774A; }
+    .nutrition-legend__dot--prot  { background: #5C3D18; }
+    .nutrition-legend__dot--fat   { background: #E8C89E; }
+
+    .nutrition-disclaimer {
+        margin: 16px 0 0 0;
+        font-size: 11px;
+        color: var(--color-text-muted);
+        line-height: 1.4;
+    }
+
+    /* ═══════════════════════════════════════
+       TIP LIST & GLOSSARY — Shared components
+       ═══════════════════════════════════════ */
+
+    .tip-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .tip-item {
+        padding: 6px 0;
+        border-bottom: 1px solid var(--border-subtle);
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    .glossary-list {
+        margin: 0;
+        padding: 0;
+    }
+
+    .glossary-term {
+        font-weight: 600;
+        color: var(--color-text);
+        margin-top: 12px;
+    }
+
+    .glossary-def {
+        margin: 4px 0 0 0;
+        color: var(--color-text-secondary);
+        font-size: 0.92rem;
+    }
+
+    .flour-table__w {
+        color: var(--color-accent);
+        font-weight: 600;
+    }
 }
 
 /* ── View Transitions (SPA navigation) ── */

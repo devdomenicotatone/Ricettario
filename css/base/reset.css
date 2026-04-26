@@ -91,4 +91,9 @@
             top: var(--space-sm);
         }
     }
+
+    /* Utility: JS-driven visibility toggle */
+    .hidden {
+        display: none !important;
+    }
 }

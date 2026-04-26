@@ -139,7 +139,7 @@
   ],
   "_generatedBy": "gemini-3.1",
   "image": "images/ricette/pane/pane-di-altamura-dop.webp",
-  "imageAttribution": "📷 Foto: Lidya Kohen — Pexels License via Pexels",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "steps": [
     {
       "title": "Preparazione della Biga (Giorno 1)",
@@ -202,5 +202,6 @@
       "protein": 9,
       "fat": 1
     }
-  }
+  },
+  "_originalImageUrl": ""
 }

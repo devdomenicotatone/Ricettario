@@ -24,8 +24,9 @@ import { initRouter, registerRenderers, initReveal, BASE } from './router.js';
 import { renderRecipe } from './recipe-renderer.js';
 import { buildPicture } from './image-utils.js';
 import { applyMadeBadgesToCards } from './recipe-bookmarks.js';
-import { fluentEmoji, categoryEmoji, CATEGORY_FLUENT } from './emoji.js';
+import { fluentEmoji, categoryEmoji, CATEGORY_FLUENT, refreshIcons } from './emoji.js';
 import { initLogoIntro } from './logo-intro-v2b.js';
+import { CATEGORIES, CATEGORY_ORDER as CAT_ORDER } from './categories.js';
 
 // ── Logo Intro: inietta subito (pre-render) ──
 initLogoIntro();
@@ -231,16 +232,7 @@ function getHomepageHTML() {
 
 const ITEMS_PER_PAGE = 12;
 
-const CATEGORY_META = {
-  pane:      { name: 'Pane',      emoji: 'baguette-bread', title: 'Pane Artigianale',           desc: 'Ricette di pane ad alta idratazione — ciabatta, filone, baguette e pane speciale.' },
-  pizza:     { name: 'Pizza',     emoji: 'pizza',           title: 'Pizza Artigianale',          desc: 'Pizze con lievitazione lunga — napoletana, in teglia, canotto e pinsa romana.' },
-  pasta:     { name: 'Pasta',     emoji: 'spaghetti',       title: 'Pasta Fresca',               desc: 'Pasta fresca fatta in casa — trafilata, ripiena e formati speciali.' },
-  lievitati: { name: 'Lievitati', emoji: 'croissant',       title: 'Lievitati Dolci e Salati',   desc: 'Brioche, cornetti, panettone, burger buns e rosticceria.' },
-  focaccia:  { name: 'Focaccia',  emoji: 'flatbread',       title: 'Focaccia Artigianale',       desc: 'Focacce ad alta idratazione — genovese, barese, pugliese e varianti creative.' },
-  dolci:     { name: 'Dolci',     emoji: 'shortcake',       title: 'Dolci e Pasticceria',        desc: 'Dolci tradizionali, frolle, biscotti e pasticceria artigianale.' },
-  conserve:  { name: 'Conserve',  emoji: 'canned-food',     title: 'Conserve e Preparazioni',    desc: 'Conserve fatte in casa — dadi vegetali, salse, sottoli e preparazioni base.' },
-  condimenti: { name: 'Condimenti', emoji: 'herb', title: 'Condimenti', desc: 'Salse, pesti e condimenti artigianali per ogni piatto.' },
-};
+const CATEGORY_META = CATEGORIES;
 
 // State reattivo per la pagina categoria
 let catState = {
@@ -324,7 +316,7 @@ async function renderCategory(app, { category }) {
     </main>
   `;
 
-  if (typeof lucide !== 'undefined') lucide.createIcons();
+  refreshIcons();
 
   // Carica ricette
   try {
@@ -454,7 +446,7 @@ function updateCategoryView() {
         <p>Nessuna ricetta trovata</p>
       </div>`;
     if (loadMoreContainer) loadMoreContainer.innerHTML = '';
-    if (typeof lucide !== 'undefined') lucide.createIcons();
+    refreshIcons();
     return;
   }
 
@@ -514,7 +506,7 @@ function updateCategoryView() {
     }
   }
 
-  if (typeof lucide !== 'undefined') lucide.createIcons();
+  refreshIcons();
   applyMadeBadgesToCards();
 }
 
@@ -598,16 +590,11 @@ function initCarousels() {
   const carouselsContainer = document.getElementById('recipe-carousels');
   if (!carouselsContainer) return;
 
-  // Ordine predefinito — le categorie qui appaiono per prime, in quest'ordine
-  const CATEGORY_ORDER = [
-    { key: 'Pasta', emoji: 'spaghetti', dir: 'pasta' },
-    { key: 'Pane', emoji: 'baguette-bread', dir: 'pane' },
-    { key: 'Pizza', emoji: 'pizza', dir: 'pizza' },
-    { key: 'Lievitati', emoji: 'croissant', dir: 'lievitati' },
-    { key: 'Dolci', emoji: 'cookie', dir: 'dolci' },
-    { key: 'Focaccia', emoji: 'flatbread', dir: 'focaccia' },
-    { key: 'Conserve', emoji: 'canned-food', dir: 'conserve' },
-  ];
+  // Ordine predefinito dalla single source of truth
+  const CATEGORY_ORDER = CAT_ORDER.map(key => {
+    const cat = CATEGORIES[key];
+    return { key: cat.name, emoji: cat.emoji, dir: key };
+  });
 
   fetch(`${BASE}recipes.json`)
     .then(r => r.json())
@@ -666,12 +653,12 @@ function setupSearch() {
 
     allCards.forEach(card => {
       const title = card.dataset.title || card.textContent.toLowerCase();
-      card.style.display = (!query || title.includes(query)) ? '' : 'none';
+      card.classList.toggle('hidden', !!(query && !title.includes(query)));
     });
 
     allRows.forEach(row => {
-      const visibleCards = row.querySelectorAll('.recipe-card--compact:not([style*="display: none"])');
-      row.style.display = visibleCards.length > 0 ? '' : 'none';
+      const visibleCards = row.querySelectorAll('.recipe-card--compact:not(.hidden)');
+      row.classList.toggle('hidden', visibleCards.length === 0);
     });
   });
 

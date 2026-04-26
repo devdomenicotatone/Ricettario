@@ -6,7 +6,7 @@
 import { BASE } from './router.js';
 import { buildHeroPicture } from './image-utils.js';
 import { initMadeToggle } from './recipe-bookmarks.js';
-import { fluentEmoji, categoryEmoji, CATEGORY_FLUENT } from './emoji.js';
+import { fluentEmoji, categoryEmoji, CATEGORY_FLUENT, refreshIcons } from './emoji.js';
 
 /**
  * Renderizza una ricetta completa nel container #app.
@@ -39,11 +39,10 @@ export async function renderRecipe(app, { category, slug }) {
     // ── Init interactive features ──
     initDoseCalculator(recipe);
     initMadeToggle(recipe.slug);
+    initSensoryChart();
     
     // Inizializza le icone Lucide per il nuovo DOM
-    if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
-    }
+    refreshIcons();
 
   } catch (err) {
     app.innerHTML = `
@@ -63,7 +62,7 @@ function buildRecipeHTML(r, categoryDir) {
   const catEmoji = categoryEmoji(r.category, 22);
   const imagePath = r.image
     ? `${BASE}${r.image.replace(/^\//, '')}`
-    : `${BASE}images/ricette/${categoryDir}/${r.slug}.jpg`;
+    : `${BASE}images/ricette/${categoryDir}/${r.slug}.webp`;
 
   const isValidBadge = (v) => v && String(v).trim() !== '' && !['n/a', 'nessuna', '0'].includes(String(v).trim().toLowerCase());
 
@@ -249,18 +248,13 @@ function buildCondimentPanel(r) {
 function buildSensoryProfile(r) {
   if (!r.sensoryProfile || !r.sensoryProfile.axes || r.sensoryProfile.axes.length === 0) return '';
   
-  const labels = r.sensoryProfile.axes.map(a => a.label);
-  const values = r.sensoryProfile.axes.map(a => a.value);
-  
   // Trova il tratto dominante
   const dominant = r.sensoryProfile.axes.reduce((prev, curr) => (curr.value > prev.value) ? curr : prev, r.sensoryProfile.axes[0]);
   
   const summaryHtml = r.sensoryProfile.summary ? `
-    <div style="margin-top: 24px; padding: 16px; background: var(--bg-elevated); border-radius: 8px; border-left: 4px solid var(--accent);">
-      <h4 style="margin: 0 0 8px 0; font-size: 14px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px;">Note di Degustazione</h4>
-      <p style="margin: 0; font-family: 'Playfair Display', serif; font-style: italic; font-size: 16px; line-height: 1.6; color: var(--text-primary);">
-        "${escHtml(r.sensoryProfile.summary)}"
-      </p>
+    <div class="sensory-note">
+      <h4 class="sensory-note__title">Note di Degustazione</h4>
+      <p class="sensory-note__text">"${escHtml(r.sensoryProfile.summary)}"</p>
     </div>
   ` : '';
 
@@ -275,40 +269,39 @@ function buildSensoryProfile(r) {
       const pctFat = total > 0 ? (fat / total) * 100 : 0;
       
       nutritionHtml = `
-      <style>details > summary::-webkit-details-marker { display: none; }</style>
-      <details style="margin-top: 32px; border-top: 1px solid rgba(212, 165, 116, 0.2); padding-top: 24px; text-align: center;">
-        <summary style="cursor: pointer; font-size: 12px; font-weight: 600; color: var(--text-primary); text-transform: uppercase; letter-spacing: 1px; list-style: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; user-select: none; outline: none; padding: 10px 20px; border-radius: 30px; background: rgba(212, 165, 116, 0.1); border: 1px solid rgba(212, 165, 116, 0.3); transition: all 0.2s ease;">
-          <i data-lucide="microscope" style="width: 16px; height: 16px; color: var(--accent);"></i> Analisi Nutrizionale
+      <details class="nutrition-toggle">
+        <summary class="nutrition-toggle__btn">
+          <i data-lucide="microscope" class="nutrition-toggle__icon"></i> Analisi Nutrizionale
         </summary>
         
-        <div style="margin-top: 24px; text-align: left; animation: fadeIn 0.3s ease;">
-          <div style="display: flex; align-items: flex-end; margin-bottom: 12px;">
-              <span style="font-size: 32px; font-weight: 800; color: var(--text-primary); line-height: 1;">${r.nutrition.kcal_per_100g}</span>
-              <span style="font-size: 14px; font-weight: 600; color: var(--text-muted); margin-left: 4px; padding-bottom: 2px;">Kcal</span>
+        <div class="nutrition-content">
+          <div class="nutrition-kcal">
+              <span class="nutrition-kcal__value">${r.nutrition.kcal_per_100g}</span>
+              <span class="nutrition-kcal__unit">Kcal</span>
           </div>
 
-          <div style="display: flex; height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 12px; background: rgba(0,0,0,0.05);">
-            <div style="width: ${pctCarbs}%; background: #A8774A;" title="Carboidrati"></div>
-            <div style="width: ${pctProt}%; background: #5C3D18;" title="Proteine"></div>
-            <div style="width: ${pctFat}%; background: #E8C89E;" title="Grassi"></div>
+          <div class="nutrition-bar">
+            <div class="nutrition-bar__segment nutrition-bar__segment--carbs" style="width: ${pctCarbs}%;" title="Carboidrati"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--prot" style="width: ${pctProt}%;" title="Proteine"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--fat" style="width: ${pctFat}%;" title="Grassi"></div>
           </div>
 
-          <div style="display: flex; gap: 16px; font-size: 13px; font-weight: 500; flex-wrap: wrap;">
-            <div style="display: flex; align-items: center; gap: 6px;">
-              <div style="width: 8px; height: 8px; border-radius: 50%; background: #A8774A;"></div>
-              <span style="color: var(--text-secondary);">Carboidrati <strong style="color: var(--text-primary);">${carbs}g</strong></span>
+          <div class="nutrition-legend">
+            <div class="nutrition-legend__item">
+              <div class="nutrition-legend__dot nutrition-legend__dot--carbs"></div>
+              <span>Carboidrati <strong>${carbs}g</strong></span>
             </div>
-            <div style="display: flex; align-items: center; gap: 6px;">
-              <div style="width: 8px; height: 8px; border-radius: 50%; background: #5C3D18;"></div>
-              <span style="color: var(--text-secondary);">Proteine <strong style="color: var(--text-primary);">${prot}g</strong></span>
+            <div class="nutrition-legend__item">
+              <div class="nutrition-legend__dot nutrition-legend__dot--prot"></div>
+              <span>Proteine <strong>${prot}g</strong></span>
             </div>
-            <div style="display: flex; align-items: center; gap: 6px;">
-              <div style="width: 8px; height: 8px; border-radius: 50%; background: #E8C89E;"></div>
-              <span style="color: var(--text-secondary);">Grassi <strong style="color: var(--text-primary);">${fat}g</strong></span>
+            <div class="nutrition-legend__item">
+              <div class="nutrition-legend__dot nutrition-legend__dot--fat"></div>
+              <span>Grassi <strong>${fat}g</strong></span>
             </div>
           </div>
 
-          <p style="margin: 16px 0 0 0; font-size: 11px; color: var(--text-muted); line-height: 1.4;">
+          <p class="nutrition-disclaimer">
             <em>Disclaimer: Valori medi calcolati tramite database USDA per l'intera ricetta. Considerano il calo peso da evaporazione. I valori effettivi possono variare in base ai marchi commerciali usati.</em>
           </p>
         </div>
@@ -316,24 +309,31 @@ function buildSensoryProfile(r) {
       `;
   }
 
+  // Salva dati chart per uso via closure (no data-attributes)
+  const chartData = {
+    labels: r.sensoryProfile.axes.map(a => a.label),
+    values: r.sensoryProfile.axes.map(a => a.value),
+  };
+  // Registra dati globalmente con un ID unico
+  const chartId = `sensory_${Date.now()}`;
+  window.__sensoryChartData = window.__sensoryChartData || {};
+  window.__sensoryChartData[chartId] = chartData;
+
   return `
-    <div class="recipe-panel sensory-panel reveal" style="margin-top: 40px;">
-      <h2 class="recipe-panel__title" style="cursor:pointer; display:flex; justify-content:space-between; align-items:center;" 
-          data-labels="${escHtml(JSON.stringify(labels))}" 
-          data-values="${escHtml(JSON.stringify(values))}" 
-          onclick="toggleSensoryChart(this)">
+    <div class="recipe-panel sensory-panel reveal recipe-panel--spaced">
+      <h2 class="recipe-panel__title sensory-panel__header" id="sensory-header" data-chart-id="${chartId}">
         <span><span class="recipe-panel__title-icon">${fluentEmoji('star', 24)}</span> Dati Tecnici & Sensoriali</span>
-        <i data-lucide="chevron-down" class="sensory-chevron" style="transition: transform 0.3s;"></i>
+        <i data-lucide="chevron-down" class="sensory-chevron"></i>
       </h2>
-      <div class="sensory-chart-container" style="display:none; position:relative; width:100%; max-width:600px; margin: 16px auto 0; padding: 32px 24px; background: var(--bg-elevated); border: 1px solid rgba(212, 165, 116, 0.2); border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.03);">
+      <div class="sensory-chart-container" id="sensory-chart-container" style="display:none;">
         
-        <div style="text-align: center; margin-bottom: 16px;">
-          <span style="display: inline-block; padding: 6px 12px; background: rgba(212, 165, 116, 0.15); border: 1px solid rgba(212, 165, 116, 0.4); border-radius: 20px; font-size: 13px; font-weight: 600; color: var(--accent);">
+        <div class="sensory-dominant">
+          <span class="sensory-dominant__badge">
             👑 Tratto Dominante: ${escHtml(dominant.label)} (${dominant.value}/10)
           </span>
         </div>
 
-        <div style="position:relative; width:100%; max-width:450px; margin: 0 auto;">
+        <div class="sensory-canvas-wrap">
           <canvas id="sensoryChart"></canvas>
         </div>
 
@@ -350,7 +350,7 @@ function buildFlourTable(r) {
   if (!r.flourTable?.length) return '';
 
   return `
-    <div class="recipe-panel reveal" style="margin-top: 40px;">
+    <div class="recipe-panel reveal recipe-panel--spaced">
       <h2 class="recipe-panel__title">
         <span class="recipe-panel__title-icon">${fluentEmoji('flatbread', 24)}</span> Consigli Farine & Marchi
       </h2>
@@ -360,14 +360,14 @@ function buildFlourTable(r) {
           ${r.flourTable.map(f => `
             <tr>
               <td>${escHtml(f.type)}</td>
-              <td style="color: var(--color-accent); font-weight: 600;">${escHtml(f.w || '-')}</td>
+              <td class="flour-table__w">${escHtml(f.w || '-')}</td>
               <td>${escHtml(f.brands || '')}</td>
             </tr>
           `).join('')}
         </tbody>
       </table>
 
-      <div class="pro-tip-box" style="margin-top: 16px;">
+      <div class="pro-tip-box">
         <p><strong>${fluentEmoji('light-bulb', 18)} PRO TIP:</strong> La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato.</p>
       </div>
     </div>`;
@@ -377,7 +377,7 @@ function buildFlourTable(r) {
 function buildAlert(r) {
   if (!r.alert) return '';
   return `
-    <div class="alert alert--danger reveal" style="margin-top: 32px;">
+    <div class="alert alert--danger reveal recipe-panel--spaced">
       <span class="alert__icon">${fluentEmoji('prohibited', 28)}</span>
       <div class="alert__content">
         <strong>ALERT PROFESSIONALE</strong>
@@ -391,16 +391,16 @@ function buildBaking(r) {
   if (!r.baking) return '';
   const b = r.baking;
   return `
-    <div class="recipe-panel reveal" style="margin-top: 32px;">
+    <div class="recipe-panel reveal recipe-panel--spaced">
       <h2 class="recipe-panel__title">
         <span class="recipe-panel__title-icon">${fluentEmoji('fire', 24)}</span> Cottura
       </h2>
-      <div class="tech-badges" style="margin-bottom: 16px;">
+      <div class="tech-badges">
         ${b.temperature ? `<div class="tech-badge">${fluentEmoji('thermometer', 18)} Temperatura: <span class="tech-badge__value">&nbsp;${escHtml(b.temperature)}</span></div>` : ''}
         ${b.time ? `<div class="tech-badge">${fluentEmoji('stopwatch', 18)} Tempo: <span class="tech-badge__value">&nbsp;${escHtml(b.time)}</span></div>` : ''}
       </div>
-      ${b.tips?.length ? `<ul class="baking-tips" style="list-style: none; padding: 0;">
-        ${b.tips.map(t => `<li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">${fluentEmoji('light-bulb', 16)} ${escHtml(t)}</li>`).join('')}
+      ${b.tips?.length ? `<ul class="tip-list">
+        ${b.tips.map(t => `<li class="tip-item">${fluentEmoji('light-bulb', 16)} ${escHtml(t)}</li>`).join('')}
       </ul>` : ''}
     </div>`;
 }
@@ -409,12 +409,12 @@ function buildBaking(r) {
 function buildProTips(r) {
   if (!r.proTips?.length) return '';
   return `
-    <div class="recipe-panel reveal" style="margin-top: 32px;">
+    <div class="recipe-panel reveal recipe-panel--spaced">
       <h2 class="recipe-panel__title">
         <span class="recipe-panel__title-icon">${fluentEmoji('light-bulb', 24)}</span> Pro Tips
       </h2>
-      <ul class="baking-tips" style="list-style: none; padding: 0;">
-        ${r.proTips.map(t => `<li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">${fluentEmoji('light-bulb', 16)} ${escHtml(t)}</li>`).join('')}
+      <ul class="tip-list">
+        ${r.proTips.map(t => `<li class="tip-item">${fluentEmoji('light-bulb', 16)} ${escHtml(t)}</li>`).join('')}
       </ul>
     </div>`;
 }
@@ -423,12 +423,12 @@ function buildProTips(r) {
 function buildStorage(r) {
   if (!r.storage?.length) return '';
   return `
-    <div class="recipe-panel reveal" style="margin-top: 32px;">
+    <div class="recipe-panel reveal recipe-panel--spaced">
       <h2 class="recipe-panel__title">
         <span class="recipe-panel__title-icon">${fluentEmoji('package', 24)}</span> Conservazione
       </h2>
-      <ul class="baking-tips" style="list-style: none; padding: 0;">
-        ${r.storage.map(t => `<li style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle);">${fluentEmoji('package', 16)} ${escHtml(t)}</li>`).join('')}
+      <ul class="tip-list">
+        ${r.storage.map(t => `<li class="tip-item">${fluentEmoji('package', 16)} ${escHtml(t)}</li>`).join('')}
       </ul>
     </div>`;
 }
@@ -437,14 +437,14 @@ function buildStorage(r) {
 function buildGlossary(r) {
   if (!r.glossary?.length) return '';
   return `
-    <div class="recipe-panel reveal" style="margin-top: 32px;">
+    <div class="recipe-panel reveal recipe-panel--spaced">
       <h2 class="recipe-panel__title">
         <span class="recipe-panel__title-icon">${fluentEmoji('open-book', 24)}</span> Glossario
       </h2>
-      <dl class="glossary-list" style="margin: 0; padding: 0;">
+      <dl class="glossary-list">
         ${r.glossary.map(g => `
-          <dt style="font-weight: 600; color: var(--color-text); margin-top: 12px;">${escHtml(g.term)}</dt>
-          <dd style="margin: 4px 0 0 0; color: var(--color-text-secondary); font-size: 0.92rem;">${escHtml(g.definition)}</dd>
+          <dt class="glossary-term">${escHtml(g.term)}</dt>
+          <dd class="glossary-def">${escHtml(g.definition)}</dd>
         `).join('')}
       </dl>
     </div>`;
@@ -520,9 +520,9 @@ function initDoseCalculator(recipe) {
       const dataBaseAttr = cell.getAttribute('data-base');
       const dynamicBase = dataBaseAttr !== null ? parseFloat(dataBaseAttr) : baseGrams;
       cell.textContent = formatGrams(dynamicBase * multiplier);
+      cell.getAnimations().forEach(a => a.cancel());
       cell.classList.remove('dose-updated');
-      void cell.offsetWidth;
-      cell.classList.add('dose-updated');
+      requestAnimationFrame(() => cell.classList.add('dose-updated'));
     });
 
     // Aggiorna tutti i token inline nel procedimento (escluso i fissi)
@@ -530,9 +530,9 @@ function initDoseCalculator(recipe) {
       const base = parseFloat(el.getAttribute('data-base'));
       if (!isNaN(base)) {
         el.textContent = formatDoseInline(base * multiplier);
+        el.getAnimations().forEach(a => a.cancel());
         el.classList.remove('dose-updated');
-        void el.offsetWidth;
-        el.classList.add('dose-updated');
+        requestAnimationFrame(() => el.classList.add('dose-updated'));
       }
     });
 
@@ -608,105 +608,123 @@ function formatDoseInline(val) {
   return `${Math.round(val * 100) / 100}`;
 }
 
-window.toggleSensoryChart = function(headerEl) {
-    const container = headerEl.nextElementSibling;
-    const chevron = headerEl.querySelector('.sensory-chevron');
-    
-    if (container.style.display === 'none') {
-        container.style.display = 'block';
-        chevron.style.transform = 'rotate(180deg)';
-        
-        // Init chart if not already
-        if (window.Chart) {
-            let existingChart = Chart.getChart("sensoryChart");
-            if (existingChart) {
-                existingChart.destroy();
-            }
-            const labelsStr = headerEl.getAttribute('data-labels');
-            const valuesStr = headerEl.getAttribute('data-values');
-            const ctx = document.getElementById('sensoryChart').getContext('2d');
-            const labels = JSON.parse(labelsStr.replace(/&quot;/g, '"'));
-            const values = JSON.parse(valuesStr.replace(/&quot;/g, '"'));
-            
-            // Spezza le label lunghe su più righe per i dispositivi mobili
-            const isMobile = window.innerWidth < 600;
-            const formattedLabels = labels.map(l => {
-                if (isMobile && l.includes(' ')) {
-                    return l.split(' ');
-                }
-                return l;
-            });
-                
-            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-            const color = isDark ? 'rgba(212, 165, 116, 0.8)' : 'rgba(184, 129, 58, 0.8)'; // Brand color
-            const bgColor = isDark ? 'rgba(212, 165, 116, 0.2)' : 'rgba(184, 129, 58, 0.2)';
-            const gridColor = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)';
-            const textColor = isDark ? '#94a3b8' : '#64748b';
+/**
+ * Inizializza il toggle del pannello sensoriale con Chart.js lazy-loaded.
+ * Usa addEventListener (no onclick inline) e closure per i dati (no data-attributes JSON).
+ */
+function initSensoryChart() {
+  const header = document.getElementById('sensory-header');
+  if (!header) return;
 
-            new Chart(ctx, {
-                type: 'radar',
-                data: {
-                    labels: formattedLabels,
-                    datasets: [{
-                        label: 'Valore',
-                        data: values,
-                        backgroundColor: bgColor,
-                        borderColor: color,
-                        pointBackgroundColor: color,
-                        pointBorderColor: '#fff',
-                        pointHoverBackgroundColor: '#fff',
-                        pointHoverBorderColor: color,
-                        borderWidth: 2,
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: true,
-                    layout: {
-                        padding: isMobile ? 10 : 20
-                    },
-                    scales: {
-                        r: {
-                            min: 0,
-                            max: 10,
-                            angleLines: { color: gridColor },
-                            grid: { color: gridColor },
-                            pointLabels: {
-                                color: textColor,
-                                font: { 
-                                    family: 'Inter', 
-                                    size: isMobile ? 10 : 12, 
-                                    weight: '500' 
-                                }
-                            },
-                            ticks: {
-                                display: false, // Nasconde i numeri sull'asse
-                                stepSize: 2
-                            }
-                        }
-                    },
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: {
-                            backgroundColor: isDark ? '#1e293b' : '#fff',
-                            titleColor: isDark ? '#f8fafc' : '#0f172a',
-                            bodyColor: isDark ? '#cbd5e1' : '#475569',
-                            borderColor: isDark ? '#334155' : '#e2e8f0',
-                            borderWidth: 1,
-                            padding: 10,
-                            displayColors: false,
-                            callbacks: {
-                                label: function(context) {
-                                    return context.formattedValue + ' / 10';
-                                }
-                            }
-                        }
-                    }
-                }
-            });
+  const container = document.getElementById('sensory-chart-container');
+  const chevron = header.querySelector('.sensory-chevron');
+  if (!container || !chevron) return;
+
+  // Recupera dati via closure registrata in buildSensoryProfile
+  const chartId = header.getAttribute('data-chart-id');
+  const chartData = window.__sensoryChartData?.[chartId];
+  if (!chartData) return;
+
+  let chartInstance = null;
+
+  header.addEventListener('click', async () => {
+    const isHidden = container.style.display === 'none' || !container.style.display;
+
+    if (isHidden) {
+      container.style.display = 'block';
+      chevron.style.transform = 'rotate(180deg)';
+
+      // Lazy-load Chart.js on first open
+      if (!window.Chart) {
+        try {
+          const module = await import('https://cdn.jsdelivr.net/npm/chart.js@4/+esm');
+          window.Chart = module.Chart;
+          // Registra i componenti necessari per il radar chart
+          const { RadarController, RadialLinearScale, PointElement, LineElement, Filler, Tooltip } = module;
+          window.Chart.register(RadarController, RadialLinearScale, PointElement, LineElement, Filler, Tooltip);
+        } catch (err) {
+          console.error('Errore caricamento Chart.js:', err);
+          return;
         }
+      }
+
+      // Distruggi chart esistente se presente
+      if (chartInstance) {
+        chartInstance.destroy();
+        chartInstance = null;
+      }
+
+      const ctx = document.getElementById('sensoryChart')?.getContext('2d');
+      if (!ctx) return;
+
+      const { labels, values } = chartData;
+
+      // Spezza le label lunghe su più righe per i dispositivi mobili
+      const isMobile = window.innerWidth < 600;
+      const formattedLabels = labels.map(l => {
+        if (isMobile && l.includes(' ')) return l.split(' ');
+        return l;
+      });
+
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const color = isDark ? 'rgba(212, 165, 116, 0.8)' : 'rgba(184, 129, 58, 0.8)';
+      const bgColor = isDark ? 'rgba(212, 165, 116, 0.2)' : 'rgba(184, 129, 58, 0.2)';
+      const gridColor = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)';
+      const textColor = isDark ? '#94a3b8' : '#64748b';
+
+      chartInstance = new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels: formattedLabels,
+          datasets: [{
+            label: 'Valore',
+            data: values,
+            backgroundColor: bgColor,
+            borderColor: color,
+            pointBackgroundColor: color,
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: color,
+            borderWidth: 2,
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          layout: { padding: isMobile ? 10 : 20 },
+          scales: {
+            r: {
+              min: 0,
+              max: 10,
+              angleLines: { color: gridColor },
+              grid: { color: gridColor },
+              pointLabels: {
+                color: textColor,
+                font: { family: 'Inter', size: isMobile ? 10 : 12, weight: '500' }
+              },
+              ticks: { display: false, stepSize: 2 }
+            }
+          },
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              backgroundColor: isDark ? '#1e293b' : '#fff',
+              titleColor: isDark ? '#f8fafc' : '#0f172a',
+              bodyColor: isDark ? '#cbd5e1' : '#475569',
+              borderColor: isDark ? '#334155' : '#e2e8f0',
+              borderWidth: 1,
+              padding: 10,
+              displayColors: false,
+              callbacks: {
+                label: (context) => context.formattedValue + ' / 10'
+              }
+            }
+          }
+        }
+      });
     } else {
-        container.style.display = 'none';
-        chevron.style.transform = 'rotate(0deg)';
+      container.style.display = 'none';
+      chevron.style.transform = 'rotate(0deg)';
     }
-};
+  });
+}

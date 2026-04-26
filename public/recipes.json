@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-26T20:34:30.526Z",
+  "generatedAt": "2026-04-26T21:32:06.977Z",
   "totalRecipes": 74,
   "categories": [
     {
@@ -114,7 +114,7 @@
       "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-25T23:19:47.641Z"
+      "_createdAt": "2026-04-26T20:36:55.143Z"
     },
     {
       "title": "Pane di Altamura",
@@ -132,7 +132,7 @@
       "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-25T23:19:55.021Z"
+      "_createdAt": "2026-04-26T21:32:06.955Z"
     },
     {
       "title": "Pane Integrale con Biga",
@@ -168,7 +168,7 @@
       "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-25T23:20:08.871Z"
+      "_createdAt": "2026-04-26T20:37:20.271Z"
     },
     {
       "title": "Treccia di Pane all'Olio",
@@ -204,7 +204,7 @@
       "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-25T23:21:54.146Z"
+      "_createdAt": "2026-04-26T20:39:03.873Z"
     },
     {
       "title": "Pizza Contemporanea Canotto",
@@ -222,7 +222,7 @@
       "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-25T23:22:02.310Z"
+      "_createdAt": "2026-04-26T20:39:13.190Z"
     },
     {
       "title": "Pizza in Teglia Romana",
@@ -276,7 +276,7 @@
       "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-25T23:22:27.531Z"
+      "_createdAt": "2026-04-26T20:39:38.651Z"
     },
     {
       "title": "Pizza Napoletana Verace STG",
@@ -294,7 +294,7 @@
       "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-25T23:22:34.821Z"
+      "_createdAt": "2026-04-26T20:39:47.260Z"
     },
     {
       "title": "Pizza Romana Stesa al Matterello",
@@ -384,7 +384,7 @@
       "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-26T13:28:40.259Z"
+      "_createdAt": "2026-04-26T20:34:34.209Z"
     },
     {
       "title": "Focaccia Genovese Classica",
@@ -402,7 +402,7 @@
       "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-25T23:17:49.881Z"
+      "_createdAt": "2026-04-26T20:34:42.762Z"
     },
     {
       "title": "Gnocchi di Patate",
@@ -438,7 +438,7 @@
       "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-25T23:18:02.065Z"
+      "_createdAt": "2026-04-26T20:35:00.025Z"
     },
     {
       "title": "Polenta Concia alla Valdostana",
@@ -510,7 +510,7 @@
       "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-26T15:41:30.999Z"
+      "_createdAt": "2026-04-26T20:35:15.563Z"
     },
     {
       "title": "Panettone Artigianale Classico",
@@ -546,7 +546,7 @@
       "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-25T23:20:24.068Z"
+      "_createdAt": "2026-04-26T20:37:35.140Z"
     },
     {
       "title": "Pasta Brioche Artigianale",
@@ -654,7 +654,7 @@
       "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-25T23:18:42.887Z"
+      "_createdAt": "2026-04-26T20:35:42.830Z"
     },
     {
       "title": "Burro Chiarificato",

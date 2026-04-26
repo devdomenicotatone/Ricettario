@@ -77,7 +77,7 @@ export function applyMadeBadgesToCards() {
   allCards.forEach(card => {
     const href = card.getAttribute('href') || '';
     // Estrai slug dall'href: .../ricette/pane/ciabatta-poolish → ciabatta-poolish
-    const slug = href.split('/').filter(Boolean).pop();
+    const slug = new URL(href, location.origin).pathname.split('/').filter(Boolean).pop();
 
     if (slug && madeSet.has(slug)) {
       // Aggiungi badge solo se non esiste già

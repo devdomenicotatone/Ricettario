@@ -32,6 +32,7 @@ export function buildPicture(src, alt, cssClass = '', loading = 'lazy') {
 
   return `<picture>
   <source srcset="${avif}" type="image/avif">
+  <source srcset="${webp}" type="image/webp">
   <img src="${webp}" alt="${alt}"${cls}${load}>
 </picture>`;
 }
@@ -48,6 +49,7 @@ export function buildHeroPicture(src, alt) {
 
   return `<picture class="recipe-hero__picture">
   <source srcset="${avif}" type="image/avif">
+  <source srcset="${webp}" type="image/webp">
   <img src="${webp}" alt="${alt}" class="recipe-hero__img">
 </picture>`;
 }

@@ -58,19 +58,12 @@ export function fluentEmoji(name, size = 20, extraClass = '') {
   return `<img src="${BASE}images/emoji/${file}.png" width="${size}" height="${size}" alt="" class="${cls}" loading="lazy">`;
 }
 
+import { CATEGORY_EMOJI_MAP } from './categories.js';
+
 /**
- * Mappa categorie → emoji Fluent
+ * Mappa categorie → emoji Fluent (derivata da categories.js)
  */
-export const CATEGORY_FLUENT = {
-  Pane: 'baguette-bread',
-  Pasta: 'spaghetti',
-  Pizza: 'pizza',
-  Lievitati: 'croissant',
-  Dolci: 'cookie',
-  Focaccia: 'flatbread',
-  Conserve: 'canned-food',
-  Condimenti: 'herb',
-};
+export const CATEGORY_FLUENT = CATEGORY_EMOJI_MAP;
 
 /**
  * Shorthand per emoji categoria
@@ -78,4 +71,12 @@ export const CATEGORY_FLUENT = {
 export function categoryEmoji(category, size = 20) {
   const name = CATEGORY_FLUENT[category];
   return name ? fluentEmoji(name, size) : '';
+}
+
+/**
+ * Wrapper sicuro per lucide.createIcons().
+ * Centralizza il check "typeof lucide !== 'undefined'" in un solo posto.
+ */
+export function refreshIcons() {
+  if (typeof lucide !== 'undefined') lucide.createIcons();
 }
