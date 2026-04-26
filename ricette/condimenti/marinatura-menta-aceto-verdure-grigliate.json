@@ -134,28 +134,36 @@
   "imageAttribution": "📷 Foto: Julia Filirovska — Pexels License via Pexels",
   "_originalImageUrl": "https://images.pexels.com/photos/8250283/pexels-photo-8250283.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   "sensoryProfile": {
-    "summary": "Una marinatura erbacea e brillante, dominata dal menolo fresco della menta che dialoga con le note fruttate e delicate dell'aceto di mele. L'olio extravergine a fruttato leggero funge da vettore aromatico elegante, sostenuto da una sapidità misurata e da un'acidità vivace ma bilanciata dal tocco dolce dello zucchero. Il riposo a caldo esalta la cessione degli aromi e crea una persistenza aromatica pulita e rinfrescante.",
+    "summary": "Una marinatura vivace e aromatica, in cui la freschezza pungente della menta dialoga con la delicata acidità dell'aceto di mele, sostenuta da un corpo oleoso vellutato. L'aglio schiacciato conferisce profondità senza aggredire, mentre il basilico aggiunge una nota erbacea dolce che arrotonda il profilo. Il pizzico di zucchero bilancia l'acidità con eleganza, rendendo questa concia versatile e avvolgente.",
     "axes": [
+      {
+        "label": "Acidità / Freschezza",
+        "value": 7
+      },
       {
         "label": "Intensità Aromatica Erbacea",
         "value": 8
       },
       {
-        "label": "Acidità",
-        "value": 6
+        "label": "Corpo Oleoso / Untuosità",
+        "value": 9
       },
       {
-        "label": "Fruttato (Olio/Aceto)",
-        "value": 5
-      },
-      {
-        "label": "Sapidità (Umami)",
+        "label": "Pungenza / Piccantezza",
         "value": 4
       },
       {
-        "label": "Dolcezza",
-        "value": 2
+        "label": "Dolcezza / Rotondità",
+        "value": 3
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 598,
+    "macros": {
+      "carbs": 3,
+      "protein": 0,
+      "fat": 64
+    }
   }
 }

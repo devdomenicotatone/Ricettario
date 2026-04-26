@@ -114,28 +114,36 @@
   "image": "images/ricette/conserve/burro-chiarificato.webp",
   "imageAttribution": "📷 Foto: Adrianna CA — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Il burro chiarificato ottenuto per fusione a bagnomaria rivela una purezza grassa straordinaria: al naso si presenta con note lattiche concentrate, burrose e leggermente nocciolate, frutto della gentile separazione delle proteine del siero. In bocca domina una grassezza avvolgente, setosa e prolungata, priva di qualsiasi nota acida o proteica disturbante, con una pulizia palatale che ne esalta la vocazione di grasso da cottura ad alto punto di fumo.",
+    "summary": "Il burro chiarificato si presenta come un grasso puro di straordinaria pulizia organolettica: note burroso-lattiche concentrate, con sentori di nocciola tostata delicata e un lieve floreale tipico del grasso butirrico centrifugato di qualità. In bocca offre una tessitura setosa e fondente, priva di qualsiasi residuo acquoso, con una persistenza lunga e avvolgente e una sapidità naturale quasi assente.",
     "axes": [
       {
-        "label": "Grassezza & Untuosità",
+        "label": "Intensità Aromatica",
+        "value": 7
+      },
+      {
+        "label": "Purezza / Limpidezza",
         "value": 10
       },
       {
-        "label": "Purezza & Limpidezza",
+        "label": "Untuosità / Corpo",
         "value": 9
       },
       {
-        "label": "Intensità Aromatica Lattica",
-        "value": 6
+        "label": "Nota Tostata (Nocciola)",
+        "value": 4
       },
       {
-        "label": "Residuo Proteico (Caseina/Siero)",
+        "label": "Residuo Proteico / Lattico",
         "value": 1
-      },
-      {
-        "label": "Note di Tostatura (Maillard)",
-        "value": 2
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 876,
+    "macros": {
+      "carbs": 0,
+      "protein": 1,
+      "fat": 99
+    }
   }
 }

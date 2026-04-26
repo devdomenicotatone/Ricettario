@@ -128,28 +128,36 @@
   "image": "images/ricette/condimenti/besciamella.webp",
   "imageAttribution": "📷 Foto: jianwei zhu — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una besciamella classica di scuola francese, costruita su un roux bianco-biondo con rapporto 1:10 (legante/liquido), che restituisce una texture vellutata e avvolgente, priva di spigoli gustativi. Il profilo è dominato dalla grassezza lattea del burro intero e dalla morbidezza caseosa del latte fresco, con la noce moscata a firmare il finale con una nota speziata calda e leggermente resinosa. La sapidità è contenuta e bilanciata, pensata per integrarsi in preparazioni composite come lasagne o gratin.",
+    "summary": "Una besciamella classica dal carattere avvolgente e vellutato, con una struttura cremosa e setosa che rivela la cura del roux biondo-paglierino. Al naso emerge la delicatezza del latte intero fresco, sostenuta da un soffio caldo e aromatico di noce moscata appena grattugiata. In bocca è equilibrata, con una sapidità misurata e una persistenza lattica morbida e rassicurante.",
     "axes": [
       {
-        "label": "Grassezza",
-        "value": 8
-      },
-      {
-        "label": "Sapidità",
-        "value": 4
+        "label": "Cremosità / Vellutatura",
+        "value": 9
       },
       {
         "label": "Intensità Aromatica",
+        "value": 4
+      },
+      {
+        "label": "Sapidità",
         "value": 5
       },
       {
-        "label": "Densità/Corpo",
+        "label": "Struttura / Densità",
         "value": 7
       },
       {
-        "label": "Dolcezza Lattica",
-        "value": 6
+        "label": "Nota Speziata (Noce Moscata)",
+        "value": 4
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 118,
+    "macros": {
+      "carbs": 8,
+      "protein": 4,
+      "fat": 8
+    }
   }
 }

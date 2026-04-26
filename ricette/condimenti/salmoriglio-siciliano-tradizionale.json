@@ -129,28 +129,36 @@
   "image": "images/ricette/condimenti/salmoriglio-siciliano-tradizionale.webp",
   "imageAttribution": "📷 Foto: Los Muertos Crew — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Il Salmoriglio Siciliano si presenta come un'emulsione rustica e vibrante, dove la vivida acidità del limone fresco dialoga con la grassezza avvolgente di un olio extravergine fruttato medio, sorretta da un bouquet mediterraneo di origano di Pantelleria e prezzemolo crudo. Al palato domina una freschezza agrumata tagliente e persistente, temperata dalla rotondità oleosa e arricchita da sentori erbacei e speziati che evolvono con eleganza nel finale. La tecnica dell'acqua calda a 40°C amplifica l'estrazione degli oli essenziali dell'origano, conferendo alla salsa una complessità aromatica superiore alla sua semplicità compositiva.",
+    "summary": "Il Salmoriglio Siciliano si presenta come un'emulsione vivace e luminosa, dal profilo olfattivo netto e mediterraneo: l'agrumato pungente del limone fresco dialoga con la nota erbacea del prezzemolo e il timbro campestre dell'origano di Pantelleria. In bocca è vibrante e sapido, con una grassezza vellutata dell'olio EVO che bilancia l'acidità tagliente del succo citrico, lasciando un finale aromatico persistente con lievi rimandi piccanti di aglio e pepe.",
     "axes": [
       {
-        "label": "Acidità",
-        "value": 9
-      },
-      {
-        "label": "Intensità Aromatica",
+        "label": "Acidità / Freschezza Citrica",
         "value": 8
       },
       {
-        "label": "Fruttato (Olio EVO)",
+        "label": "Intensità Aromatica Erbacea",
+        "value": 7
+      },
+      {
+        "label": "Struttura Grassa / Untuosità",
+        "value": 7
+      },
+      {
+        "label": "Sapidità / Persistenza Salina",
         "value": 6
       },
       {
-        "label": "Piccantezza/Pungenza",
+        "label": "Piccantezza / Speziatura",
         "value": 4
-      },
-      {
-        "label": "Grassezza",
-        "value": 7
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 492,
+    "macros": {
+      "carbs": 4,
+      "protein": 1,
+      "fat": 53
+    }
   }
 }

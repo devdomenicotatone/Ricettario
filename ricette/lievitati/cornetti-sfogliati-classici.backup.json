@@ -300,26 +300,27 @@
     }
   ],
   "sensoryProfile": {
+    "summary": "Un cornetto sfogliato di scuola classica, che si rivela al naso con note burroso-lattiche di grande persistenza, sostenute da un fondo dolce di vaniglia e miele. Al morso, la sfoglia cede con una croccantezza secca e stratificata, lasciando poi spazio a una mollica alveolata, leggera e umida, con una dolcezza misurata e ben bilanciata dalla sapidità. La biga a lunga maturazione conferisce una complessità aromatica sottile ma distintiva, lontana dalla piattezza dei lievitati diretti.",
     "axes": [
       {
-        "label": "Sfogliatura (Leggerezza)",
+        "label": "Sfogliatura & Stratificazione",
         "value": 9
       },
       {
-        "label": "Dolcezza Bilanciata",
+        "label": "Dolcezza",
         "value": 6
       },
       {
-        "label": "Burrositá e Ricchezza",
-        "value": 9
-      },
-      {
-        "label": "Croccantezza Crosta",
+        "label": "Complessità Aromatica",
         "value": 8
       },
       {
-        "label": "Complessità Aromatica",
+        "label": "Leggerezza & Alveolatura",
         "value": 7
+      },
+      {
+        "label": "Intensità Burrosa",
+        "value": 9
       }
     ]
   }

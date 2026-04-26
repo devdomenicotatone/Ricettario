@@ -200,26 +200,27 @@
   "image": "images/ricette/focaccia/calzone-cipolla-barese-pugliese.webp",
   "imageAttribution": "📷 Foto: Daria Andrievskaya — Pexels License via Pexels",
   "sensoryProfile": {
+    "summary": "Il Calzone di Cipolla Barese si presenta come una preparazione di straordinaria complessità agrodolce, dove la dolcezza caramellata degli sponsali cotti lentamente per 50 minuti si intreccia con la sapidità pungente delle acciughe e delle olive baresane in un equilibrio tipicamente pugliese. L'impasto senza lievito, ricco di olio EVO e vino bianco con idratazione totale del 54% (270g liquidi su 500g farina), offre una texture friabile e quasi biscottata, mentre la cottura a 200°C per 45-50 minuti con posizionamento differenziato garantisce una crosta ben dorata e un fondo croccante. Le note agrodolci dell'uvetta sultanina e il profilo umami delle acciughe creano un finale lungo e persistente, caratteristico della tradizione gastronomica barese.",
     "axes": [
       {
-        "label": "Friabilità della Sfoglia",
+        "label": "Croccantezza/Friabilità Crosta",
         "value": 9
       },
       {
-        "label": "Dolcezza Agrodolce (Cipolla/Uvetta)",
+        "label": "Complessità Agrodolce",
         "value": 8
       },
       {
-        "label": "Sapidità Umami (Acciughe/Olive)",
-        "value": 8
-      },
-      {
-        "label": "Complessità Aromatica",
-        "value": 9
-      },
-      {
-        "label": "Succulenza del Ripieno",
+        "label": "Sapidità (Umami)",
         "value": 7
+      },
+      {
+        "label": "Aromaticità (Vino/Cipolla/EVO)",
+        "value": 8
+      },
+      {
+        "label": "Umidità del Ripieno",
+        "value": 6
       }
     ]
   }

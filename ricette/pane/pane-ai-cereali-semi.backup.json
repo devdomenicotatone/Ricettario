@@ -204,26 +204,27 @@
   "image": "images/ricette/pane/pane-ai-cereali-semi.webp",
   "imageAttribution": "📷 Foto: Andrea Prochilo — Pexels License via Pexels",
   "sensoryProfile": {
+    "summary": "Un pane ai cereali di carattere deciso e rustico, con una crosta spessa e croccante impreziosita da semi tostati in cottura, e una mollica umida a media alveolatura con note terrose e nocciolate donate dal blend di farine integrali e di farro/segale. La lunga maturazione a freddo sviluppa una complessità aromatica profonda, con sentori di grano fermentato, malto e una sapidità ben calibrata che si fonde con la grassezza vellutata dell'olio extravergine.",
     "axes": [
       {
         "label": "Croccantezza Crosta",
         "value": 9
       },
       {
-        "label": "Alveolatura",
-        "value": 6
+        "label": "Alveolatura Mollica",
+        "value": 5
       },
       {
         "label": "Complessità Aromatica",
         "value": 8
       },
       {
-        "label": "Sapore di Grano/Rusticità",
-        "value": 9
-      },
-      {
         "label": "Umidità Mollica",
         "value": 6
+      },
+      {
+        "label": "Rusticità Cerealicola",
+        "value": 9
       }
     ]
   }

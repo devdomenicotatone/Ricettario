@@ -139,14 +139,15 @@
     }
   ],
   "sensoryProfile": {
+    "summary": "Gnocchi di patate dalla texture avvolgente e vellutata, con una tenacia al morso volutamente contenuta grazie alla lavorazione minima dell'impasto. Il sapore neutro e latteo delle patate farinose emerge con delicatezza, creando una base ricettiva e assorbente per qualsiasi condimento. La rigatura superficiale garantisce una presa ottimale del sugo, mentre il profilo aromatico rimane pulito, con lievi note terrose e amidacee.",
     "axes": [
       {
-        "label": "Sofficità",
+        "label": "Morbidezza & Sofficità",
         "value": 9
       },
       {
         "label": "Tenacia al Morso",
-        "value": 4
+        "value": 3
       },
       {
         "label": "Sapore di Patata",
@@ -154,11 +155,11 @@
       },
       {
         "label": "Assorbenza Condimento",
-        "value": 7
+        "value": 8
       },
       {
-        "label": "Leggerezza",
-        "value": 8
+        "label": "Leggerezza (Struttura)",
+        "value": 7
       }
     ]
   }

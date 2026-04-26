@@ -139,28 +139,36 @@
   "image": "images/ricette/condimenti/salsa-allo-yogurt.webp",
   "imageAttribution": "📷 Foto: Shameel mukkath — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una salsa dallo straordinario equilibrio acido-lattico, dove la vivacità del succo e della scorza di limone dialoga con la cremosità compatta dello yogurt greco intero. Il bouquet aromatico, dominato dalla freschezza volatile della menta e dall'intensità pungente dell'aglio privato dell'anima, si integra in un profilo sensoriale pulito e persistente, reso rotondo dall'emulsione vellutata con l'olio extravergine fruttato. La fase di maturazione a freddo amplifica la coesione aromatica, regalando una texture lucida e una lunghezza gustativa elegantemente agrumata.",
+    "summary": "Una salsa fresca e avvolgente, dove l'acidità lattica dello yogurt greco si intreccia con le note agrumate del limone in un equilibrio preciso e raffinato. Il filo di olio extravergine conferisce rotondità e una texture vellutata, mentre la matrice aromatica di erbe fresche, aglio e scorza di limone regala profondità e persistenza. Un condimento dal carattere mediterraneo vivace, pulito e di grande versatilità.",
     "axes": [
       {
-        "label": "Acidità",
+        "label": "Acidità / Freschezza",
         "value": 8
       },
       {
-        "label": "Freschezza Aromatica",
-        "value": 9
+        "label": "Aromaticità Erbacea",
+        "value": 7
       },
       {
-        "label": "Cremosità / Grassezza",
+        "label": "Cremosità / Corpo",
         "value": 6
       },
       {
-        "label": "Piccantezza / Pungenza",
+        "label": "Pungenza / Speziatura",
         "value": 4
       },
       {
-        "label": "Persistenza Gustativa",
-        "value": 6
+        "label": "Persistenza Aromatica",
+        "value": 7
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 118,
+    "macros": {
+      "carbs": 5,
+      "protein": 6,
+      "fat": 9
+    }
   }
 }

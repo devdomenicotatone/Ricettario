@@ -171,28 +171,36 @@
   "image": "images/ricette/condimenti/guacamole.webp",
   "imageAttribution": "📷 Foto: RDNE Stock project — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Un guacamole dalla struttura cremosa e irregolare, dominato dalla grassezza vellutata dell'avocado Hass maturo, vivacizzata da un'acidità brillante e citrica del lime fresco. Il jalapeño privato dei semi conferisce una piccantezza moderata e pulita, mentre il coriandolo e la cipolla bianca aggiungono complessità aromatica fresca e pungente; l'olio extravergine di varietà delicata arrotonda il finale con una nota fruttata leggera.",
+    "summary": "Un guacamole dal carattere avvolgente e mediterraneo, dove la cremosità burrosa dell'avocado Hass maturo si fonde con la vivacità citrica del lime fresco e la rotondità dell'olio extravergine. Il naso è erbaceo e fresco, con accenni di coriandolo e una lieve nota piccante di jalapeño che si dissolve nel finish lungo e grasso. La texture volutamente rustica, con frammenti di pomodoro e cipolla tritata, conferisce dinamismo ad ogni boccone.",
     "axes": [
       {
-        "label": "Grassezza & Cremosità",
+        "label": "Cremosità / Grassezza",
         "value": 9
       },
       {
-        "label": "Acidità",
+        "label": "Acidità / Brillantezza Citrica",
         "value": 7
       },
       {
         "label": "Piccantezza",
-        "value": 4
+        "value": 3
       },
       {
-        "label": "Intensità Aromatica",
+        "label": "Intensità Aromatica Erbacea",
         "value": 6
       },
       {
-        "label": "Freschezza Vegetale",
-        "value": 8
+        "label": "Struttura / Complessità Testiturale",
+        "value": 7
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 168,
+    "macros": {
+      "carbs": 7,
+      "protein": 2,
+      "fat": 14
+    }
   }
 }

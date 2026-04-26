@@ -194,28 +194,36 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "La Focaccia di Recco IGP si presenta come un'esperienza sensoriale di straordinaria eleganza rustica: la sfoglia sottilissima (≤1mm), cotta a temperature estreme di 260-280°C in soli 8-12 minuti, sviluppa una crosta fragilissima e scattante con bolle di Maillard irregolari e profumate, mentre il cuore di stracchino fresco fonde in una colata lattea, acidula e avvolgente. Il profilo organolettico è dominato dal contrasto ternico-testiturale tra la sfoglia croccante e il formaggio filante, con la nota grassa e fruttata dell'olio EVO ligure a fare da filo conduttore aromatico.",
+    "summary": "Una sfoglia di straordinaria sottigliezza e leggerezza, croccante e dorata all'esterno con caratteristiche bolle dorate, che cede a un cuore filante e cremoso di crescenza. Il profilo aromatico è elegante: note lattiche fresche e leggermente acidule del formaggio si fondono con la fragranza erbacea e fruttata dell'olio extravergine ligure, mentre la cottura ad alta temperatura regala profumi di crosta caramellata e grano tostato. Un equilibrio magistrale tra semplicità degli ingredienti e complessità tecnica, dove la texture è il vero protagonista.",
     "axes": [
       {
-        "label": "Croccantezza Sfoglia",
+        "label": "Croccantezza della Sfoglia",
         "value": 9
       },
       {
-        "label": "Cremosità & Filanza Formaggio",
+        "label": "Cremosità / Filanza del Formaggio",
         "value": 9
-      },
-      {
-        "label": "Acidità Lattica",
-        "value": 7
       },
       {
         "label": "Sapidità",
-        "value": 5
+        "value": 6
       },
       {
-        "label": "Fruttato Oleoso (EVO)",
-        "value": 6
+        "label": "Intensità Aromatica (lattico + EVO)",
+        "value": 7
+      },
+      {
+        "label": "Leggerezza / Sottigliezza della Struttura",
+        "value": 10
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 298,
+    "macros": {
+      "carbs": 28,
+      "protein": 11,
+      "fat": 15
+    }
   }
 }

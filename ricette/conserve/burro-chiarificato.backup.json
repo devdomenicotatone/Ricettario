@@ -114,26 +114,27 @@
   "image": "images/ricette/conserve/burro-chiarificato.webp",
   "imageAttribution": "📷 Foto: Adrianna CA — Pexels License via Pexels",
   "sensoryProfile": {
+    "summary": "Il burro chiarificato ottenuto per fusione a bagnomaria rivela una purezza grassa straordinaria: al naso si presenta con note lattiche concentrate, burrose e leggermente nocciolate, frutto della gentile separazione delle proteine del siero. In bocca domina una grassezza avvolgente, setosa e prolungata, priva di qualsiasi nota acida o proteica disturbante, con una pulizia palatale che ne esalta la vocazione di grasso da cottura ad alto punto di fumo.",
     "axes": [
       {
-        "label": "Purezza Lipidica",
+        "label": "Grassezza & Untuosità",
         "value": 10
       },
       {
-        "label": "Intensità Aromatica Burrosa",
-        "value": 8
-      },
-      {
-        "label": "Limpidezza (Assenza Solidi)",
+        "label": "Purezza & Limpidezza",
         "value": 9
       },
       {
-        "label": "Residuo Proteico (Caseina)",
+        "label": "Intensità Aromatica Lattica",
+        "value": 6
+      },
+      {
+        "label": "Residuo Proteico (Caseina/Siero)",
         "value": 1
       },
       {
-        "label": "Punto di Fumo Elevato",
-        "value": 9
+        "label": "Note di Tostatura (Maillard)",
+        "value": 2
       }
     ]
   }

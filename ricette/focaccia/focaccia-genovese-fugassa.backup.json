@@ -229,6 +229,7 @@
     }
   ],
   "sensoryProfile": {
+    "summary": "Una focaccia genovese dalla struttura tecnica impeccabile: la salamoia generosa (200 g acqua + olio EVO in superficie) garantisce una mollica umida e un'alveolatura aperta, mentre la cottura statica a 230°C per 15 minuti produce una crosta dorata-ambrata dal carattere Maillard pronunciato ma non aggressivo. L'olio extravergine ligure DOP — presente nell'impasto, in teglia e in superficie per un totale di 120 g extra — domina il profilo aromatico con le sue note fruttate e leggere di mandorla verde, bilanciate da una sapidità decisa conferita dalla doppia dose di sale (13 g impasto + 10 g salamoia). La piega a tre e la doppia lievitazione strutturata conferiscono una tenacia al morso tipicamente genovese, soffice ma risoluta.",
     "axes": [
       {
         "label": "Croccantezza Crosta",
@@ -239,11 +240,11 @@
         "value": 8
       },
       {
-        "label": "Sapidità (Salamoia)",
-        "value": 7
+        "label": "Sapidità",
+        "value": 8
       },
       {
-        "label": "Fruttato Oleoso (EVO)",
+        "label": "Intensità Aromatica (Olio EVO)",
         "value": 9
       },
       {

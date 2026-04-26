@@ -194,26 +194,27 @@
     }
   ],
   "sensoryProfile": {
+    "summary": "La Focaccia di Recco IGP si presenta come un'esperienza sensoriale di straordinaria eleganza rustica: la sfoglia sottilissima (≤1mm), cotta a temperature estreme di 260-280°C in soli 8-12 minuti, sviluppa una crosta fragilissima e scattante con bolle di Maillard irregolari e profumate, mentre il cuore di stracchino fresco fonde in una colata lattea, acidula e avvolgente. Il profilo organolettico è dominato dal contrasto ternico-testiturale tra la sfoglia croccante e il formaggio filante, con la nota grassa e fruttata dell'olio EVO ligure a fare da filo conduttore aromatico.",
     "axes": [
       {
         "label": "Croccantezza Sfoglia",
         "value": 9
       },
       {
-        "label": "Cremosità Farcitura",
+        "label": "Cremosità & Filanza Formaggio",
         "value": 9
       },
       {
-        "label": "Sapidità (Umami)",
+        "label": "Acidità Lattica",
         "value": 7
       },
       {
-        "label": "Fruttato Oleoso",
-        "value": 7
+        "label": "Sapidità",
+        "value": 5
       },
       {
-        "label": "Leggerezza/Sottilezza",
-        "value": 9
+        "label": "Fruttato Oleoso (EVO)",
+        "value": 6
       }
     ]
   }

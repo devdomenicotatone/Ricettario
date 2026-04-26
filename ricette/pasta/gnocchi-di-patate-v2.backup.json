@@ -164,26 +164,27 @@
   "image": "images/ricette/pasta/gnocchi-di-patate-v2.webp",
   "imageAttribution": "📷 Foto: Demian Spinetta — Pexels License via Pexels",
   "sensoryProfile": {
+    "summary": "Gnocchi di straordinaria delicatezza, dove la patata rossa farinosa esprime un'anima amidacea avvolgente e vellutata, senza cedere alla gommosità. La farina debole W150–180, aggiunta con parsimonia e lavorata brevemente, garantisce una tenacia al morso minima e una texture che si scioglie in bocca, mentre la semola di rimacinata conferisce una rugosità superficiale preziosa per l'aggrappo del condimento. Note calde di noce moscata appena grattugiata emergono in sottofondo, come spezia di supporto a un profilo aromatico sobrio e terragno.",
     "axes": [
       {
         "label": "Morbidezza al Morso",
-        "value": 8
+        "value": 9
       },
       {
-        "label": "Tenacia (Struttura)",
-        "value": 5
+        "label": "Ruvidezza Superficiale",
+        "value": 6
       },
       {
         "label": "Sapore di Patata",
         "value": 8
       },
       {
-        "label": "Assorbenza Sugo",
+        "label": "Assorbenza del Sugo",
         "value": 7
       },
       {
-        "label": "Leggerezza (Non Colloso)",
-        "value": 7
+        "label": "Tenacia / Elasticità",
+        "value": 2
       }
     ]
   }

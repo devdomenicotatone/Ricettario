@@ -114,26 +114,27 @@
   "imageAttribution": "📷 Foto: RDNE Stock project — Pexels License via Pexels",
   "_originalImageUrl": "https://images.pexels.com/photos/5737246/pexels-photo-5737246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   "sensoryProfile": {
+    "summary": "Un olio infuso di straordinaria precisione tecnica, che si presenta al naso con un bouquet vivace di carota fresca e zenzero agrumato, affiancato dalla tenue fruttatura dell'extravergine di base. In bocca, la dolcezza naturale dei carotenoidi estratti a bassa temperatura si fonde con la speziatura pungente e fresca dello zenzero, in un finale persistente e pulito. La meticolosa decantazione a freddo restituisce una limpidezza ottica quasi assoluta, con un colore arancio fluo che ne esalta la raffinatezza visiva.",
     "axes": [
-      {
-        "label": "Intensità Aromatica",
-        "value": 8
-      },
       {
         "label": "Piccantezza (Zenzero)",
         "value": 6
       },
       {
-        "label": "Fruttato/Dolcezza Vegetale",
+        "label": "Dolcezza (Beta-Carotene)",
         "value": 7
       },
       {
-        "label": "Purezza Ottica & Fluidità",
-        "value": 9
+        "label": "Fruttato dell'Olio Base",
+        "value": 5
       },
       {
-        "label": "Amarezza",
-        "value": 2
+        "label": "Intensità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Limpidezza/Purezza Ottica",
+        "value": 9
       }
     ]
   }

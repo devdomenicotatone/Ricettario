@@ -227,6 +227,7 @@
     }
   ],
   "sensoryProfile": {
+    "summary": "I Cartocci alla Crema Siciliani si presentano come una pasticceria fritta di grande carattere: la pasta lievitata a bassa idratazione (45%), arricchita di strutto e uovo, sviluppa in frittura a 170-175°C una crosta dorata e fragrante con spiccate note di Maillard, avvolgendo un cuore cedevole e leggermente briochato. La farcitura — sia essa la crema pasticcera al limone, densa e vellutata, o la ricotta setacciata con gocce di fondente — esalta la dolcezza strutturale dell'impasto bilanciandola con una grassezza piena e avvolgente. Il profilo complessivo è quello di un dolce opulento, festivo e sensorialmente appagante, dove la croccantezza esterna dialoga con la cremosità del ripieno in un contrasto di texture tipicamente siculo.",
     "axes": [
       {
         "label": "Croccantezza Esterna",
@@ -234,18 +235,18 @@
       },
       {
         "label": "Dolcezza",
-        "value": 9
-      },
-      {
-        "label": "Morbidezza/Sofficità Interna",
         "value": 8
       },
       {
-        "label": "Ricchezza Grassa",
+        "label": "Grassezza/Untuosità",
+        "value": 7
+      },
+      {
+        "label": "Cremosità del Ripieno",
         "value": 9
       },
       {
-        "label": "Complessità Aromatica",
+        "label": "Intensità Aromatica (Maillard + Limone)",
         "value": 7
       }
     ]

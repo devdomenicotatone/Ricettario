@@ -149,28 +149,36 @@
   "image": "images/ricette/condimenti/pesto-alla-genovese-tradizionale.webp",
   "imageAttribution": "📷 Immagine esistente",
   "sensoryProfile": {
-    "summary": "Un pesto di straordinaria complessità olfattiva, dove il verde erbaceo e floreale del Basilico Genovese DOP si intreccia con la ricchezza lattea e sapida dei formaggi stagionati. L'olio Taggiasca conferisce una base burrosa e fruttata di eccezionale dolcezza, mentre l'aglio de-animato cede calore senza aggressione. La tessitura è setosa, avvolgente, con una persistenza aromatica lunga e una grassezza nobile che richiama la tradizione ligure nella sua espressione più autentica.",
+    "summary": "Un pesto di straordinaria complessità aromatica, dove la freschezza erbacea e floreale del basilico genovese DOP si intreccia con la grassezza avvolgente dell'olio taggiasca e la sapidità intensa dei formaggi stagionati. La tessitura è cremosa e vellutata, con una luminosità verde smeraldo che tradisce la maestria dell'estrazione a freddo al mortaio. Il finale è lungo, con note lattiche, pungenti di aglio addomesticato e una sottile resina di pinolo che persiste con eleganza.",
     "axes": [
       {
-        "label": "Intensità Aromatica (Basilico)",
+        "label": "Intensità Aromatica (Basilico & Erbaceo)",
         "value": 9
       },
       {
-        "label": "Sapidità (Umami)",
+        "label": "Grassezza & Untuosità (Olio + Formaggi)",
         "value": 8
       },
       {
-        "label": "Grassezza & Untuosità",
+        "label": "Sapidità & Umami (Parmigiano + Pecorino)",
         "value": 8
       },
       {
-        "label": "Piccantezza / Pungenza",
-        "value": 3
+        "label": "Pungenza & Alliaceo (Aglio di Vessalico)",
+        "value": 4
       },
       {
-        "label": "Amarezza",
-        "value": 2
+        "label": "Struttura & Persistenza (Pinoli + Emulsione)",
+        "value": 7
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 498,
+    "macros": {
+      "carbs": 4,
+      "protein": 12,
+      "fat": 47
+    }
   }
 }

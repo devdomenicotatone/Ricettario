@@ -210,26 +210,27 @@
     }
   ],
   "sensoryProfile": {
+    "summary": "La Pizza Napoletana Verace STG si presenta con un cornicione pronunciato, alveolato e soffice, frutto di un'idratazione al 65% e di una lievitazione lenta fino a 24 ore con lievito minimo (2g/kg). La cottura su pietra refrattaria a 280°C genera la caratteristica 'leopardatura' — macchie scure di caramellizzazione di Maillard — e una crosta sottile e fragrante, mentre il disco centrale rimane morbido e umido per effetto del pomodoro San Marzano DOP. L'equilibrio tra acidità del pomodoro, sapidità del sale al 2.8% e la nota erbacea dell'olio EVO a crudo restituisce un profilo olfattivo complesso, pulito e di grande persistenza.",
     "axes": [
       {
         "label": "Sviluppo Cornicione (Alveolatura)",
-        "value": 9
+        "value": 8
       },
       {
-        "label": "Croccantezza Base",
+        "label": "Croccantezza / Leopardatura Crosta",
         "value": 7
       },
       {
-        "label": "Estensibilità / Tenacia al Morso",
-        "value": 8
-      },
-      {
-        "label": "Complessità Aromatica (Maillard + Lievitazione)",
-        "value": 8
-      },
-      {
         "label": "Umidità Disco Centrale",
+        "value": 7
+      },
+      {
+        "label": "Acidità (Pomodoro + Fermentazione)",
         "value": 6
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 8
       }
     ]
   }

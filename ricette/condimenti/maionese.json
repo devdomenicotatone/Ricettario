@@ -135,28 +135,36 @@
   "image": "images/ricette/condimenti/maionese.webp",
   "imageAttribution": "📷 Foto: Kei Scampa — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una maionese classica dalla struttura emulsionata densa e vellutata, costruita su una base di olio di semi di girasole dal profilo lipidico neutro e avvolgente. L'acidità del succo di limone fresco e dell'aceto di vino bianco conferisce una vivace nota citrina e vinosa che bilancia la grassezza, mentre i tuorli apportano una ricchezza cremosa e un sottile umami. Il pepe nero macinato fresco aggiunge un tocco speziato finale, lasciando una persistenza morbida e pulita al palato.",
+    "summary": "Una maionese classica dal profilo grasso e vellutato, costruita sull'equilibrio tra la ricchezza lipidica dell'olio di girasole e la vivace acidità del limone con l'aceto. La struttura è densa e lucida, con una cremosità avvolgente e una nota lievemente pungente sul finale che pulisce il palato. L'utilizzo di olio di semi garantisce neutralità aromatica, lasciando emergere la mineralità dei tuorli freschi e la freschezza agrumata.",
     "axes": [
       {
-        "label": "Grassezza",
+        "label": "Untuosità / Ricchezza Grassa",
         "value": 9
       },
       {
-        "label": "Acidità",
+        "label": "Acidità (Limone + Aceto)",
         "value": 6
       },
       {
-        "label": "Sapidità (Umami)",
-        "value": 4
-      },
-      {
-        "label": "Cremosità / Struttura",
-        "value": 9
+        "label": "Struttura / Densità Emulsione",
+        "value": 8
       },
       {
         "label": "Intensità Aromatica",
         "value": 3
+      },
+      {
+        "label": "Sapidità / Equilibrio Salino",
+        "value": 5
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 680,
+    "macros": {
+      "carbs": 1,
+      "protein": 2,
+      "fat": 75
+    }
   }
 }

@@ -138,26 +138,27 @@
   "image": "images/ricette/condimenti/burro-composto-acciughe-tartufo.webp",
   "imageAttribution": "📷 Foto: Antoni Shkraba Studio — Pexels License via Pexels",
   "sensoryProfile": {
+    "summary": "Un burro composto di straordinaria finezza tecnica, dove la massa lipidica ad alto tenore di grassi (82%+) funge da vettore privilegiato per aromi di rara intensità. Nella versione alle acciughe, la sapidità iodata e la nota citrica della scorza creano una tensione gustativa brillante e persistente; in quella al tartufo, la risoluzione iperaromatica del Tuber si fonde con la dolcezza burrosa in un abbraccio avvolgente e terroso. Entrambe le versioni esprimono una grassezza setosa e una persistenza aromatica che si protrae ben oltre il morso.",
     "axes": [
       {
-        "label": "Grassezza (Burrosità)",
+        "label": "Intensità Umami/Sapidità",
         "value": 9
       },
       {
-        "label": "Umami (Sapidità)",
+        "label": "Grassezza e Untuosità",
+        "value": 9
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 9
+      },
+      {
+        "label": "Acidità/Freschezza Citrica",
+        "value": 5
+      },
+      {
+        "label": "Persistenza Retrolfattiva",
         "value": 8
-      },
-      {
-        "label": "Intensità Aromatica",
-        "value": 9
-      },
-      {
-        "label": "Acidità / Freschezza Citrica",
-        "value": 4
-      },
-      {
-        "label": "Complessità Terrigna",
-        "value": 7
       }
     ]
   }

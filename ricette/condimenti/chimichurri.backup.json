@@ -168,6 +168,7 @@
   "image": "images/ricette/condimenti/chimichurri.webp",
   "imageAttribution": "📷 Foto: Gera Cejas — Pexels License via Pexels",
   "sensoryProfile": {
+    "summary": "Un chimichurri di carattere vivace e mediterraneo, dove la freschezza erbacea del prezzemolo tritato a coltello dialoga con la pungenza dell'aglio e il calore del peperoncino secco. L'aceto di vino bianco impone una spalla acida netta e pulizia al palato, mentre l'olio extravergine avvolge il tutto con una grassezza rotonda e fruttata. La maturazione di 60 minuti esalta la complessità aromatica delle erbe secche reidratate, regalando una persistenza lunga e speziata.",
     "axes": [
       {
         "label": "Intensità Aromatica",

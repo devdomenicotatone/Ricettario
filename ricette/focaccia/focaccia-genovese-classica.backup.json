@@ -231,6 +231,7 @@
     }
   ],
   "sensoryProfile": {
+    "summary": "Una focaccia genovese di grande carattere e complessità: la biga a lunga fermentazione regala una profondità aromatica fermentativa equilibrata, mentre la doppia dose di olio EVO Ligure DOP — in impasto e in salamoia — conferisce una grassezza avvolgente e un fruttato intenso. La cottura a 220°C con vapore iniziale garantisce una crosta dorata e croccante che contrasta magnificamente con una mollica umida, aperta e quasi cremosa, segnata da fossette profonde che trattengono l'emulsione olio-acqua.",
     "axes": [
       {
         "label": "Croccantezza Crosta",
@@ -238,19 +239,19 @@
       },
       {
         "label": "Alveolatura Mollica",
-        "value": 7
+        "value": 8
       },
       {
-        "label": "Untuosità/Sapidità",
+        "label": "Umidità e Grassezza",
         "value": 9
       },
       {
-        "label": "Complessità Aromatica",
-        "value": 7
+        "label": "Acidità / Complessità Fermentativa",
+        "value": 6
       },
       {
-        "label": "Umidità Mollica",
-        "value": 8
+        "label": "Sapidità Percepita",
+        "value": 7
       }
     ]
   }

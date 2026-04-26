@@ -300,28 +300,36 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Un cornetto sfogliato di scuola classica, che si rivela al naso con note burroso-lattiche di grande persistenza, sostenute da un fondo dolce di vaniglia e miele. Al morso, la sfoglia cede con una croccantezza secca e stratificata, lasciando poi spazio a una mollica alveolata, leggera e umida, con una dolcezza misurata e ben bilanciata dalla sapidità. La biga a lunga maturazione conferisce una complessità aromatica sottile ma distintiva, lontana dalla piattezza dei lievitati diretti.",
+    "summary": "Un cornetto sfogliato di scuola classica, che si rivela al naso con note burrosa-lattiche di grande eleganza, arricchite da un delicato filo di vaniglia e miele millefiori. In bocca la texture è il vero protagonista: strati croccanti e friabili in superficie cedono a un interno soffice e alveolato, con una dolcezza misurata e un finale lungo, burroso e leggermente caramellato dalla doratura. La biga conferisce una complessità fermentativa sottile che eleva il profilo aromatico ben oltre il semplice brioche.",
     "axes": [
       {
-        "label": "Sfogliatura & Stratificazione",
+        "label": "Sfogliatura & Struttura Lamellare",
         "value": 9
       },
       {
-        "label": "Dolcezza",
-        "value": 6
-      },
-      {
-        "label": "Complessità Aromatica",
+        "label": "Ricchezza Burrosa & Aromaticità",
         "value": 8
       },
       {
-        "label": "Leggerezza & Alveolatura",
+        "label": "Dolcezza Equilibrata",
+        "value": 6
+      },
+      {
+        "label": "Complessità Fermentativa (Biga)",
         "value": 7
       },
       {
-        "label": "Intensità Burrosa",
-        "value": 9
+        "label": "Leggerezza & Alveolatura",
+        "value": 8
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 412,
+    "macros": {
+      "carbs": 42,
+      "protein": 7,
+      "fat": 24
+    }
   }
 }

@@ -172,26 +172,27 @@
     }
   ],
   "sensoryProfile": {
+    "summary": "Il Migliaccio Napoletano si presenta come un dolce dal carattere vellutato e avvolgente, con una struttura densa e cremosa conferita dal semolino di grano duro e dalla ricotta vaccina setacciata. Al naso domina un bouquet delicato di vaniglia e agrume, con la scorza d'arancia che infonde una nota aromatica fresca e leggermente floreale durante la cottura; in bocca la dolcezza è protagonista assoluta, bilanciata da una sottile lattosità e da una piacevole persistenza aromatica che richiama i grandi dessert della tradizione partenopea.",
     "axes": [
       {
         "label": "Dolcezza",
-        "value": 8
-      },
-      {
-        "label": "Cremosità & Morbidezza",
         "value": 9
       },
       {
-        "label": "Complessità Aromatica",
+        "label": "Cremosità & Setosità",
+        "value": 8
+      },
+      {
+        "label": "Intensità Aromatica (Vaniglia/Agrume)",
         "value": 7
       },
       {
-        "label": "Struttura & Consistenza",
-        "value": 6
+        "label": "Struttura & Compattezza",
+        "value": 7
       },
       {
-        "label": "Intensità Lattiero-Casearia",
-        "value": 8
+        "label": "Acidità Lattica (Ricotta)",
+        "value": 3
       }
     ]
   }

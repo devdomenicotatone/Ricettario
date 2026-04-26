@@ -164,22 +164,23 @@
   "image": "images/ricette/condimenti/salsa-cocktail-rosa-artigianale.webp",
   "imageAttribution": "📷 Foto: Nadin Sh — Pexels License via Pexels",
   "sensoryProfile": {
+    "summary": "Una salsa cocktail di struttura opulenta e complessità stratificata: l'emulsione setosa della maionese artigianale incontra la dolcezza agrodolce del ketchup, mentre il Cognac invecchiato e la Worcestershire costruiscono un fondo umami di notevole profondità. La panna semi-montata alleggerisce il corpo grasso, conferendo una texture vellutata e quasi aerea, con un finale leggermente piccante firmato dal Tabasco che prolunga la persistenza senza mai sovrastare l'equilibrio complessivo.",
     "axes": [
       {
         "label": "Grassezza & Cremosità",
         "value": 9
       },
       {
-        "label": "Dolcezza",
-        "value": 6
-      },
-      {
-        "label": "Acidità & Freschezza",
-        "value": 5
-      },
-      {
-        "label": "Umami & Complessità",
+        "label": "Dolcezza Agrodolce",
         "value": 7
+      },
+      {
+        "label": "Sapidità (Umami)",
+        "value": 7
+      },
+      {
+        "label": "Acidità",
+        "value": 5
       },
       {
         "label": "Piccantezza",

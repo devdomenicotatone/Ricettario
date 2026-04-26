@@ -227,28 +227,36 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "I Cartocci alla Crema Siciliani si presentano come una pasticceria fritta di grande carattere: la pasta lievitata a bassa idratazione (45%), arricchita di strutto e uovo, sviluppa in frittura a 170-175°C una crosta dorata e fragrante con spiccate note di Maillard, avvolgendo un cuore cedevole e leggermente briochato. La farcitura — sia essa la crema pasticcera al limone, densa e vellutata, o la ricotta setacciata con gocce di fondente — esalta la dolcezza strutturale dell'impasto bilanciandola con una grassezza piena e avvolgente. Il profilo complessivo è quello di un dolce opulento, festivo e sensorialmente appagante, dove la croccantezza esterna dialoga con la cremosità del ripieno in un contrasto di texture tipicamente siculo.",
+    "summary": "Il cartoccio siciliano si presenta come un guscio fritto dall'anima soffice e dalla crosta dorata e croccante, avvolgente al morso con una nota burrosa e leggermente salina che bilancia la dolcezza della farcitura. La crema pasticcera al limone dona freschezza agrumata e vellutata, mentre la versione alla ricotta con gocce di fondente evoca la tradizione della cassata, con un contrasto di grassezza lattica e amaricante del cioccolato. Il profilo complessivo è golosamente strutturato, ricco di contrasti texturali e aromatici tipici della pasticceria fritta siciliana.",
     "axes": [
-      {
-        "label": "Croccantezza Esterna",
-        "value": 8
-      },
       {
         "label": "Dolcezza",
         "value": 8
       },
       {
-        "label": "Grassezza/Untuosità",
+        "label": "Croccantezza / Friabilità",
         "value": 7
       },
       {
-        "label": "Cremosità del Ripieno",
-        "value": 9
+        "label": "Ricchezza / Untuosità",
+        "value": 8
       },
       {
-        "label": "Intensità Aromatica (Maillard + Limone)",
+        "label": "Freschezza Aromatica (Limone/Lattico)",
+        "value": 6
+      },
+      {
+        "label": "Struttura e Complessità",
         "value": 7
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 318,
+    "macros": {
+      "carbs": 38,
+      "protein": 7,
+      "fat": 15
+    }
   }
 }

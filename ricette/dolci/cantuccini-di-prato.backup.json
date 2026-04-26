@@ -177,6 +177,7 @@
     }
   ],
   "sensoryProfile": {
+    "summary": "I Cantuccini di Prato si presentano con una struttura secca e friabile, frutto della doppia cottura che ne esalta la croccantezza caratteristica. Al naso, le scorze di agrumi e il Marsala costruiscono un bouquet aromatico caldo e speziato, mentre le mandorle con pellicina, tostate in cottura, aggiungono profondità e una lieve nota amaricante. In bocca, la dolcezza decisa dello zucchero semolato — presente al 25% sull'impasto totale — bilancia la sapidità minerale delle mandorle, con un finale persistente e asciutto che invita tradizionalmente all'abbinamento con il Vin Santo.",
     "axes": [
       {
         "label": "Croccantezza",
@@ -191,12 +192,12 @@
         "value": 7
       },
       {
-        "label": "Tostatura (Maillard)",
-        "value": 6
+        "label": "Amarezza (mandorle/pellicina)",
+        "value": 4
       },
       {
-        "label": "Friabilità",
-        "value": 5
+        "label": "Secchezza/Asciuttezza",
+        "value": 9
       }
     ]
   }

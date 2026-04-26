@@ -128,11 +128,8 @@
   "image": "images/ricette/condimenti/besciamella.webp",
   "imageAttribution": "📷 Foto: jianwei zhu — Pexels License via Pexels",
   "sensoryProfile": {
+    "summary": "Una besciamella classica di scuola francese, costruita su un roux bianco-biondo con rapporto 1:10 (legante/liquido), che restituisce una texture vellutata e avvolgente, priva di spigoli gustativi. Il profilo è dominato dalla grassezza lattea del burro intero e dalla morbidezza caseosa del latte fresco, con la noce moscata a firmare il finale con una nota speziata calda e leggermente resinosa. La sapidità è contenuta e bilanciata, pensata per integrarsi in preparazioni composite come lasagne o gratin.",
     "axes": [
-      {
-        "label": "Cremosità & Vellutatura",
-        "value": 9
-      },
       {
         "label": "Grassezza",
         "value": 8
@@ -143,11 +140,15 @@
       },
       {
         "label": "Intensità Aromatica",
-        "value": 4
+        "value": 5
       },
       {
-        "label": "Note di Tostatura (Roux)",
-        "value": 3
+        "label": "Densità/Corpo",
+        "value": 7
+      },
+      {
+        "label": "Dolcezza Lattica",
+        "value": 6
       }
     ]
   }

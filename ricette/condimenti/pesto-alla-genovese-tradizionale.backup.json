@@ -149,13 +149,10 @@
   "image": "images/ricette/condimenti/pesto-alla-genovese-tradizionale.webp",
   "imageAttribution": "📷 Immagine esistente",
   "sensoryProfile": {
+    "summary": "Un pesto di straordinaria complessità olfattiva, dove il verde erbaceo e floreale del Basilico Genovese DOP si intreccia con la ricchezza lattea e sapida dei formaggi stagionati. L'olio Taggiasca conferisce una base burrosa e fruttata di eccezionale dolcezza, mentre l'aglio de-animato cede calore senza aggressione. La tessitura è setosa, avvolgente, con una persistenza aromatica lunga e una grassezza nobile che richiama la tradizione ligure nella sua espressione più autentica.",
     "axes": [
       {
-        "label": "Intensità Aromatica",
-        "value": 10
-      },
-      {
-        "label": "Grassezza & Cremosità",
+        "label": "Intensità Aromatica (Basilico)",
         "value": 9
       },
       {
@@ -163,12 +160,16 @@
         "value": 8
       },
       {
-        "label": "Freschezza Erbacea",
-        "value": 9
+        "label": "Grassezza & Untuosità",
+        "value": 8
       },
       {
-        "label": "Piccantezza & Pungenza",
+        "label": "Piccantezza / Pungenza",
         "value": 3
+      },
+      {
+        "label": "Amarezza",
+        "value": 2
       }
     ]
   }

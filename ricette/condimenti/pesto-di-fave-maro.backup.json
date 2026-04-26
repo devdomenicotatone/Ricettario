@@ -167,6 +167,7 @@
   "image": "images/ricette/condimenti/pesto-di-fave-maro.webp",
   "imageAttribution": "📷 Foto: Shameel mukkath — Pexels License via Pexels",
   "sensoryProfile": {
+    "summary": "Il Marò si presenta come un condimento di straordinaria vitalità cromatica e aromatica: la crudità delle fave fresche pelate dona una grassezza vegetale succosa e una dolcezza erbacea primavera, immediatamente bilanciata dalla sapidità pungente del Pecorino Romano e dalla nota lattea più rotonda del Parmigiano. La menta fresca introduce una ventata mentolata e quasi balsamica che taglia la densità oleosa dell'EVO ligure, mentre l'aglio depurato dell'anima resta presente ma discreto, conferendo profondità senza aggressività. La texture volutamente granulosa — marchio autentico del pestaggio al mortaio — garantisce una persistenza lunga e multistrato, dove la rusticità materica si fonde con l'eleganza aromatica.",
     "axes": [
       {
         "label": "Freschezza Vegetale",
@@ -177,16 +178,16 @@
         "value": 7
       },
       {
-        "label": "Grassezza",
+        "label": "Intensità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Grassezza/Untuosità",
         "value": 6
       },
       {
-        "label": "Intensità Aromatica",
-        "value": 7
-      },
-      {
-        "label": "Rusticità Texture",
-        "value": 8
+        "label": "Dolcezza",
+        "value": 5
       }
     ]
   }

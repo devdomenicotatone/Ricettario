@@ -186,25 +186,26 @@
     }
   ],
   "sensoryProfile": {
+    "summary": "Una pasta madre solida al 50% di idratazione che si presenta come un ecosistema microbico bilanciato, forgiato dalla cilindratura ripetuta e dalla selezione varietale delle farine ad alto W. Al naso, una complessità lattico-acetica contenuta, con sentori di crosta di pane e note fruttate residue dell'uvetta starter. In bocca — metaforicamente parlando sul prodotto finito che da essa deriverà — promette una struttura glutinica tenace, un'alveolatura regolare e una spinta fermentativa potente ma disciplinata, con acidità orientata verso i lattici grazie al bagnetto opzionale.",
     "axes": [
       {
-        "label": "Acidità Lattica/Acetica",
-        "value": 6
-      },
-      {
-        "label": "Forza Glutinica (W)",
+        "label": "Forza Fermentativa",
         "value": 9
       },
       {
-        "label": "Attività Fermentativa",
-        "value": 7
+        "label": "Acidità Lattica",
+        "value": 6
       },
       {
-        "label": "Idratazione (50%)",
-        "value": 3
+        "label": "Acidità Acetica",
+        "value": 4
       },
       {
-        "label": "Complessità Aromatica",
+        "label": "Tenacia Glutinica",
+        "value": 9
+      },
+      {
+        "label": "Stabilità & Gestibilità",
         "value": 8
       }
     ]

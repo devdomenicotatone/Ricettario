@@ -138,28 +138,36 @@
   "image": "images/ricette/condimenti/burro-composto-acciughe-tartufo.webp",
   "imageAttribution": "📷 Foto: Antoni Shkraba Studio — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Un burro composto di straordinaria finezza tecnica, dove la massa lipidica ad alto tenore di grassi (82%+) funge da vettore privilegiato per aromi di rara intensità. Nella versione alle acciughe, la sapidità iodata e la nota citrica della scorza creano una tensione gustativa brillante e persistente; in quella al tartufo, la risoluzione iperaromatica del Tuber si fonde con la dolcezza burrosa in un abbraccio avvolgente e terroso. Entrambe le versioni esprimono una grassezza setosa e una persistenza aromatica che si protrae ben oltre il morso.",
+    "summary": "Un condimento di grande raffinatezza tecnica che declina il grasso nobile del burro di centrifuga in due registri distinti: quello marino-agrumato delle acciughe, pungente e vibrante, con note iodate che si fondono alla freschezza citrica del limone; e quello terrigno-miceliare del tartufo nero, profondo e avvolgente, capace di permeare la massa lipidica con oli aromatici volatili di straordinaria persistenza. In entrambe le versioni, la cremosità burrosa fa da fil rouge, garantendo una struttura emulsionante eccellente per mantecature di precisione.",
     "axes": [
       {
-        "label": "Intensità Umami/Sapidità",
+        "label": "Intensità Aromatica",
         "value": 9
       },
       {
-        "label": "Grassezza e Untuosità",
+        "label": "Grassezza / Untuosità",
         "value": 9
       },
       {
-        "label": "Complessità Aromatica",
-        "value": 9
+        "label": "Sapidità / Umami",
+        "value": 8
       },
       {
-        "label": "Acidità/Freschezza Citrica",
-        "value": 5
+        "label": "Acidità / Freschezza Citrica",
+        "value": 4
       },
       {
-        "label": "Persistenza Retrolfattiva",
+        "label": "Complessità Terrosa (Tartufo)",
         "value": 8
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 698,
+    "macros": {
+      "carbs": 1,
+      "protein": 4,
+      "fat": 76
+    }
   }
 }

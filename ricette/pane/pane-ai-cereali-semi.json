@@ -204,28 +204,36 @@
   "image": "images/ricette/pane/pane-ai-cereali-semi.webp",
   "imageAttribution": "📷 Foto: Andrea Prochilo — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Un pane ai cereali di carattere deciso e rustico, con una crosta spessa e croccante impreziosita da semi tostati in cottura, e una mollica umida a media alveolatura con note terrose e nocciolate donate dal blend di farine integrali e di farro/segale. La lunga maturazione a freddo sviluppa una complessità aromatica profonda, con sentori di grano fermentato, malto e una sapidità ben calibrata che si fonde con la grassezza vellutata dell'olio extravergine.",
+    "summary": "Un pane di carattere rustico e autentico, in cui la complessità aromatica delle farine integrali e di farro si fonde con le note tostate e burroso-oleose dei semi in crosta. La mollica, aperta e leggermente alveolata, offre una masticazione soddisfacente e persistente, mentre la crosta croccante rivela sentori di cereale caramellato e miele grazie al malto d'orzo. L'olio extravergine d'oliva aggiunge rotondità e una sfumatura erbacea che bilancia l'acidità delicata della lunga maturazione a freddo.",
     "axes": [
       {
-        "label": "Croccantezza Crosta",
-        "value": 9
-      },
-      {
-        "label": "Alveolatura Mollica",
-        "value": 5
-      },
-      {
-        "label": "Complessità Aromatica",
+        "label": "Intensità Aromatica",
         "value": 8
       },
       {
-        "label": "Umidità Mollica",
-        "value": 6
+        "label": "Croccantezza della Crosta",
+        "value": 9
       },
       {
-        "label": "Rusticità Cerealicola",
-        "value": 9
+        "label": "Rusticità / Complessità Cerealicola",
+        "value": 8
+      },
+      {
+        "label": "Dolcezza Percepita",
+        "value": 3
+      },
+      {
+        "label": "Struttura e Masticabilità",
+        "value": 7
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 258,
+    "macros": {
+      "carbs": 38,
+      "protein": 9,
+      "fat": 7
+    }
   }
 }

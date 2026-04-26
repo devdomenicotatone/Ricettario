@@ -200,28 +200,36 @@
   "image": "images/ricette/focaccia/calzone-cipolla-barese-pugliese.webp",
   "imageAttribution": "📷 Foto: Daria Andrievskaya — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Il Calzone di Cipolla Barese si presenta come una preparazione di straordinaria complessità agrodolce, dove la dolcezza caramellata degli sponsali cotti lentamente per 50 minuti si intreccia con la sapidità pungente delle acciughe e delle olive baresane in un equilibrio tipicamente pugliese. L'impasto senza lievito, ricco di olio EVO e vino bianco con idratazione totale del 54% (270g liquidi su 500g farina), offre una texture friabile e quasi biscottata, mentre la cottura a 200°C per 45-50 minuti con posizionamento differenziato garantisce una crosta ben dorata e un fondo croccante. Le note agrodolci dell'uvetta sultanina e il profilo umami delle acciughe creano un finale lungo e persistente, caratteristico della tradizione gastronomica barese.",
+    "summary": "Il Calzone di Cipolla Barese si presenta come un gioiello della pasticceria salata pugliese: la pasta friabile e dorata, ottenuta dall'emulsione di olio e vino bianco, cede sotto il coltello rivelando un ripieno di straordinaria complessità agrodolce. Le cipolle sponsali, lungamente appassite, offrono una dolcezza profonda e carezzevole, sapientemente contrappuntata dalla sapidità marina delle acciughe e delle olive nere baresane, mentre l'uvetta sultanina introduce tocchi fruttati e zuccherini di rara eleganza. Un piatto di grande carattere territoriale, caldo, avvolgente e di persistenza gustativa notevole.",
     "axes": [
       {
-        "label": "Croccantezza/Friabilità Crosta",
-        "value": 9
-      },
-      {
-        "label": "Complessità Agrodolce",
-        "value": 8
-      },
-      {
-        "label": "Sapidità (Umami)",
+        "label": "Dolcezza (uvetta + cipolle caramellate)",
         "value": 7
       },
       {
-        "label": "Aromaticità (Vino/Cipolla/EVO)",
+        "label": "Sapidità / Umami (acciughe + olive + sale)",
         "value": 8
       },
       {
-        "label": "Umidità del Ripieno",
+        "label": "Friabilità della Pasta (olio+vino, senza lievito)",
+        "value": 9
+      },
+      {
+        "label": "Complessità Aromatica (agrodolce, speziato, marino)",
+        "value": 8
+      },
+      {
+        "label": "Struttura / Corpo del Ripieno (densità, succulenza)",
         "value": 6
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 268,
+    "macros": {
+      "carbs": 28,
+      "protein": 5,
+      "fat": 14
+    }
   }
 }

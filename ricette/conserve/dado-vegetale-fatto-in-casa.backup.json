@@ -185,26 +185,27 @@
     }
   ],
   "sensoryProfile": {
+    "summary": "Un dado vegetale artigianale dalla straordinaria intensità sapida, dove la concentrazione osmotica del sale marino (300g su ~950g di verdure, ratio 31.5%) esalta e condensa ogni nota aromatica delle verdure. Al naso emergono sentori di soffritto maturo, prezzemolo erbaceo e pomodoro concentrato; in bocca domina un umami vegetale profondo e persistente, con una dolcezza di fondo garantita da carote, cipolle dorate e zucchine, bilanciata dalla nota acetica e fresca del sedano. La doppia cottura con riduzione finale porta a una complessità aromatica da reazione di Maillard leggera, conferendo corpo e lunghezza gustativa.",
     "axes": [
       {
         "label": "Sapidità (Umami)",
-        "value": 9
+        "value": 10
       },
       {
         "label": "Intensità Aromatica",
         "value": 8
       },
       {
-        "label": "Concentrazione Vegetale",
+        "label": "Dolcezza Vegetale",
+        "value": 6
+      },
+      {
+        "label": "Concentrazione / Persistenza",
         "value": 9
       },
       {
-        "label": "Dolcezza Naturale",
-        "value": 5
-      },
-      {
-        "label": "Persistenza Gustativa",
-        "value": 8
+        "label": "Freschezza Erbacea",
+        "value": 4
       }
     ]
   }

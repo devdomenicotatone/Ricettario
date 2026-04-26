@@ -176,14 +176,14 @@
   "image": "images/ricette/pane/treccia-di-pane-olio.webp",
   "imageAttribution": "📷 Foto: Cats Coming — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una treccia di carattere artigianale e personalità avvolgente: l'olio extravergine e il miele di acacia donano una mollica tenera, profumata e leggermente setosa al palato, mentre la spennellatura di latte garantisce una crosta sottile, dorata e cedevole al morso. I semi di sesamo introducono una nota tostata e burrosa in chiusura, conferendo complessità a una preparazione equilibrata e di grande accessibilità sensoriale.",
+    "summary": "Una treccia dal carattere morbido e avvolgente, dove la grassezza delicata dell'olio extravergine si fonde con le note dolci del miele di acacia, regalando una mollica soffice e filante. La crosta, lucida e ambrata grazie alla spennellatura al latte, offre una leggera resistenza prima di cedere, arricchita dal registro tostato e nocciolato dei semi di sesamo. Un pane di grande equilibrio, a tendenza morbida, con una struttura alveolare fine e regolare sostenuta dal blend di farine di media-alta forza.",
     "axes": [
       {
-        "label": "Morbidezza Mollica",
+        "label": "Morbidezza della Mollica",
         "value": 8
       },
       {
-        "label": "Croccantezza Crosta",
+        "label": "Croccantezza della Crosta",
         "value": 4
       },
       {
@@ -191,13 +191,21 @@
         "value": 6
       },
       {
-        "label": "Alveolatura",
+        "label": "Sapidità",
         "value": 5
       },
       {
-        "label": "Persistenza Gustativa",
-        "value": 6
+        "label": "Intensità della Nota Grassa (Olio + Sesamo)",
+        "value": 7
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 298,
+    "macros": {
+      "carbs": 47,
+      "protein": 8,
+      "fat": 7
+    }
   }
 }

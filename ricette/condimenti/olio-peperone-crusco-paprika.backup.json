@@ -136,26 +136,27 @@
   "image": "images/ricette/condimenti/olio-peperone-crusco-paprika.webp",
   "imageAttribution": "📷 Foto: monicore — Pexels License via Pexels",
   "sensoryProfile": {
+    "summary": "Un olio di straordinaria eleganza cromatica, rosso rubino brillante, che esprime tutta la dolcezza calda e suadente del peperone di Senise IGP. Al naso si apre con note fruttate di peperone maturo, leggera tostatura da Maillard della frittura flash, e il fondo erbaceo dell'olio EVO lucano. In bocca è avvolgente e dolce, con una piccantezza quasi assente, una persistenza aromatica intensa e una grassezza setosa bilanciata dalla delicatezza dell'estrazione a freddo controllata a 65°C.",
     "axes": [
       {
-        "label": "Intensità Aromatica",
-        "value": 8
-      },
-      {
-        "label": "Dolcezza",
-        "value": 7
-      },
-      {
-        "label": "Fruttato",
-        "value": 8
+        "label": "Dolcezza Fruttata",
+        "value": 9
       },
       {
         "label": "Piccantezza",
         "value": 2
       },
       {
-        "label": "Persistenza",
+        "label": "Intensità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Grassezza & Corpo",
         "value": 7
+      },
+      {
+        "label": "Note di Tostatura",
+        "value": 5
       }
     ]
   }

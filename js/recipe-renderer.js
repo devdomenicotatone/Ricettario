@@ -627,66 +627,83 @@ window.toggleSensoryChart = function(headerEl) {
             const ctx = document.getElementById('sensoryChart').getContext('2d');
             const labels = JSON.parse(labelsStr.replace(/&quot;/g, '"'));
             const values = JSON.parse(valuesStr.replace(/&quot;/g, '"'));
+            
+            // Spezza le label lunghe su più righe per i dispositivi mobili
+            const isMobile = window.innerWidth < 600;
+            const formattedLabels = labels.map(l => {
+                if (isMobile && l.includes(' ')) {
+                    return l.split(' ');
+                }
+                return l;
+            });
                 
-                const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-                const color = isDark ? 'rgba(212, 165, 116, 0.8)' : 'rgba(184, 129, 58, 0.8)'; // Brand color
-                const bgColor = isDark ? 'rgba(212, 165, 116, 0.2)' : 'rgba(184, 129, 58, 0.2)';
-                const gridColor = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)';
-                const textColor = isDark ? '#94a3b8' : '#64748b';
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const color = isDark ? 'rgba(212, 165, 116, 0.8)' : 'rgba(184, 129, 58, 0.8)'; // Brand color
+            const bgColor = isDark ? 'rgba(212, 165, 116, 0.2)' : 'rgba(184, 129, 58, 0.2)';
+            const gridColor = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)';
+            const textColor = isDark ? '#94a3b8' : '#64748b';
 
-                new Chart(ctx, {
-                    type: 'radar',
-                    data: {
-                        labels: labels,
-                        datasets: [{
-                            label: 'Valore',
-                            data: values,
-                            backgroundColor: bgColor,
-                            borderColor: color,
-                            pointBackgroundColor: color,
-                            pointBorderColor: '#fff',
-                            pointHoverBackgroundColor: '#fff',
-                            pointHoverBorderColor: color,
-                            borderWidth: 2,
-                        }]
+            new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: formattedLabels,
+                    datasets: [{
+                        label: 'Valore',
+                        data: values,
+                        backgroundColor: bgColor,
+                        borderColor: color,
+                        pointBackgroundColor: color,
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: color,
+                        borderWidth: 2,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    layout: {
+                        padding: isMobile ? 10 : 20
                     },
-                    options: {
-                        responsive: true,
-                        scales: {
-                            r: {
-                                min: 0,
-                                max: 10,
-                                angleLines: { color: gridColor },
-                                grid: { color: gridColor },
-                                pointLabels: {
-                                    color: textColor,
-                                    font: { family: 'Inter', size: 12, weight: '500' }
-                                },
-                                ticks: {
-                                    display: false, // Nasconde i numeri sull'asse
-                                    stepSize: 2
+                    scales: {
+                        r: {
+                            min: 0,
+                            max: 10,
+                            angleLines: { color: gridColor },
+                            grid: { color: gridColor },
+                            pointLabels: {
+                                color: textColor,
+                                font: { 
+                                    family: 'Inter', 
+                                    size: isMobile ? 10 : 12, 
+                                    weight: '500' 
                                 }
+                            },
+                            ticks: {
+                                display: false, // Nasconde i numeri sull'asse
+                                stepSize: 2
                             }
-                        },
-                        plugins: {
-                            legend: { display: false },
-                            tooltip: {
-                                backgroundColor: isDark ? '#1e293b' : '#fff',
-                                titleColor: isDark ? '#f8fafc' : '#0f172a',
-                                bodyColor: isDark ? '#cbd5e1' : '#475569',
-                                borderColor: isDark ? '#334155' : '#e2e8f0',
-                                borderWidth: 1,
-                                padding: 10,
-                                displayColors: false,
-                                callbacks: {
-                                    label: function(context) {
-                                        return context.formattedValue + ' / 10';
-                                    }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: isDark ? '#1e293b' : '#fff',
+                            titleColor: isDark ? '#f8fafc' : '#0f172a',
+                            bodyColor: isDark ? '#cbd5e1' : '#475569',
+                            borderColor: isDark ? '#334155' : '#e2e8f0',
+                            borderWidth: 1,
+                            padding: 10,
+                            displayColors: false,
+                            callbacks: {
+                                label: function(context) {
+                                    return context.formattedValue + ' / 10';
                                 }
                             }
                         }
                     }
-                });
+                }
+            });
         }
     } else {
         container.style.display = 'none';

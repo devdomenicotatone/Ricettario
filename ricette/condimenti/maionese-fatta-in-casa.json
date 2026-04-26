@@ -118,28 +118,36 @@
   "image": "images/ricette/condimenti/maionese-fatta-in-casa.webp",
   "imageAttribution": "📷 Foto: Click Jeth — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una maionese classica dalla struttura emulsionata salda e vellutata, dove la grassezza avvolgente dell'olio di semi — dal profilo neutro — lascia emergere con nitidezza la vivace acidità del limone e dell'aceto. La senape di Digione firma un filo pungente e aromatico di sottofondo, mentre la sapidità ben calibrata chiude il palato con persistenza pulita e rotonda.",
+    "summary": "Una maionese casalinga dal profilo cremoso e avvolgente, con una struttura emulsionata densa e vellutata che rivela subito la qualità dell'uovo fresco. Al palato emerge una piacevole acidità bilanciata dal connubio limone-aceto, mentre la senape di Digione dona un sottofondo leggermente pungente e aromatico che complessa il profilo. L'olio di girasole garantisce una base neutra e pulita, lasciando che le note citate brillino senza interferenze grasse pesanti.",
     "axes": [
       {
-        "label": "Grassezza",
+        "label": "Cremosità / Corpo",
         "value": 9
       },
       {
-        "label": "Acidità",
-        "value": 6
-      },
-      {
-        "label": "Sapidità (Umami)",
-        "value": 4
-      },
-      {
-        "label": "Persistenza",
-        "value": 6
+        "label": "Acidità Bilanciata",
+        "value": 7
       },
       {
         "label": "Intensità Aromatica",
+        "value": 4
+      },
+      {
+        "label": "Piccantezza / Pungenza",
         "value": 3
+      },
+      {
+        "label": "Sapidità",
+        "value": 5
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 681,
+    "macros": {
+      "carbs": 1,
+      "protein": 2,
+      "fat": 75
+    }
   }
 }

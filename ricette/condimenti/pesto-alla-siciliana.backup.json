@@ -149,26 +149,27 @@
   "image": "images/ricette/condimenti/pesto-alla-siciliana.webp",
   "imageAttribution": "📷 Foto: Enzo Iorio — Pexels License via Pexels",
   "sensoryProfile": {
+    "summary": "Un pesto dalla personalità solare e mediterranea, dove la dolcezza acidula dei pomodori ramati maturi dialoga con la cremosità lattea della ricotta vaccina in un abbraccio vellutato. Le mandorle pelate conferiscono una profondità burrosa e tostata, mentre il Parmigiano 24 mesi eleva l'umami verso note sapide e persistenti. Il basilico fresco, trattato con delicatezza a freddo, garantisce una vivacità erbacea luminosa che sorregge l'intera struttura aromatica.",
     "axes": [
       {
-        "label": "Cremosità",
+        "label": "Cremosità & Struttura",
         "value": 8
+      },
+      {
+        "label": "Acidità (Pomodoro)",
+        "value": 6
       },
       {
         "label": "Sapidità (Umami)",
         "value": 7
       },
       {
-        "label": "Freschezza Erbacea",
-        "value": 7
-      },
-      {
-        "label": "Fruttato-Acidulo",
-        "value": 6
-      },
-      {
         "label": "Intensità Aromatica",
         "value": 7
+      },
+      {
+        "label": "Dolcezza",
+        "value": 5
       }
     ]
   }

@@ -176,26 +176,27 @@
   "image": "images/ricette/pane/treccia-di-pane-olio.webp",
   "imageAttribution": "📷 Foto: Cats Coming — Pexels License via Pexels",
   "sensoryProfile": {
+    "summary": "Una treccia di carattere artigianale e personalità avvolgente: l'olio extravergine e il miele di acacia donano una mollica tenera, profumata e leggermente setosa al palato, mentre la spennellatura di latte garantisce una crosta sottile, dorata e cedevole al morso. I semi di sesamo introducono una nota tostata e burrosa in chiusura, conferendo complessità a una preparazione equilibrata e di grande accessibilità sensoriale.",
     "axes": [
       {
-        "label": "Morbidezza Crosta",
-        "value": 7
+        "label": "Morbidezza Mollica",
+        "value": 8
       },
       {
-        "label": "Sofficità Mollica",
-        "value": 8
+        "label": "Croccantezza Crosta",
+        "value": 4
       },
       {
         "label": "Complessità Aromatica",
         "value": 6
       },
       {
-        "label": "Sapidità Equilibrata",
+        "label": "Alveolatura",
         "value": 5
       },
       {
-        "label": "Colorazione (Maillard)",
-        "value": 7
+        "label": "Persistenza Gustativa",
+        "value": 6
       }
     ]
   }

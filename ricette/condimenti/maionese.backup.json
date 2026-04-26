@@ -135,6 +135,7 @@
   "image": "images/ricette/condimenti/maionese.webp",
   "imageAttribution": "📷 Foto: Kei Scampa — Pexels License via Pexels",
   "sensoryProfile": {
+    "summary": "Una maionese classica dalla struttura emulsionata densa e vellutata, costruita su una base di olio di semi di girasole dal profilo lipidico neutro e avvolgente. L'acidità del succo di limone fresco e dell'aceto di vino bianco conferisce una vivace nota citrina e vinosa che bilancia la grassezza, mentre i tuorli apportano una ricchezza cremosa e un sottile umami. Il pepe nero macinato fresco aggiunge un tocco speziato finale, lasciando una persistenza morbida e pulita al palato.",
     "axes": [
       {
         "label": "Grassezza",
@@ -142,7 +143,7 @@
       },
       {
         "label": "Acidità",
-        "value": 5
+        "value": 6
       },
       {
         "label": "Sapidità (Umami)",
@@ -153,8 +154,8 @@
         "value": 9
       },
       {
-        "label": "Dolcezza",
-        "value": 2
+        "label": "Intensità Aromatica",
+        "value": 3
       }
     ]
   }

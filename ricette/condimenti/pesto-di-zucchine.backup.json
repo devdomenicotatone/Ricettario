@@ -135,6 +135,7 @@
   "image": "images/ricette/condimenti/pesto-di-zucchine.webp",
   "imageAttribution": "📷 Foto: Jana Ohajdova — Pexels License via Pexels",
   "sensoryProfile": {
+    "summary": "Un pesto di zucchine a freddo dalla personalità gentile e vegetale, dove la grassezza avvolgente dell'olio extravergine a frutto leggero dialoga con la sapidità decisa del doppio formaggio stagionato. La spurgatura osmotica e la strizzatura meccanica garantiscono una texture cremosa e mai acquosa, con un finale erbaceo e aromatico lasciato intatto dalla lavorazione a bassa temperatura.",
     "axes": [
       {
         "label": "Grassezza",
@@ -146,15 +147,15 @@
       },
       {
         "label": "Freschezza Vegetale",
-        "value": 7
+        "value": 6
       },
       {
         "label": "Intensità Aromatica",
         "value": 5
       },
       {
-        "label": "Persistenza",
-        "value": 6
+        "label": "Acidità",
+        "value": 2
       }
     ]
   }

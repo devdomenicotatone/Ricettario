@@ -182,25 +182,26 @@
     }
   ],
   "sensoryProfile": {
+    "summary": "Un pane di carattere e complessità aromatica elevata, dove la lunga maturazione del poolish sviluppa note lattiche e leggermene acide che si intrecciano con il profumo burroso e tostato dei gherigli di noce. La crosta, cotta ad alta temperatura con vapore iniziale e successiva asciugatura, si presenta croccante e caramellata, mentre la mollica — sostenuta da un'idratazione del 70% e da una maglia glutinica ben sviluppata — risulta elastica, umida e generosamente alveolata. Un pane da meditazione, con una persistenza aromatica lunga e avvolgente.",
     "axes": [
       {
         "label": "Croccantezza Crosta",
         "value": 9
       },
       {
-        "label": "Alveolatura",
+        "label": "Alveolatura Mollica",
         "value": 7
       },
       {
         "label": "Complessità Aromatica",
-        "value": 8
+        "value": 9
       },
       {
-        "label": "Acidità (Fermentazione)",
+        "label": "Acidità (Note Fermentative)",
         "value": 6
       },
       {
-        "label": "Sapidità e Struttura",
+        "label": "Umidità Mollica",
         "value": 7
       }
     ]

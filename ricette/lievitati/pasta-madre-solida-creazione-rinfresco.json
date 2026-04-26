@@ -186,28 +186,36 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Una pasta madre solida al 50% di idratazione che si presenta come un ecosistema microbico bilanciato, forgiato dalla cilindratura ripetuta e dalla selezione varietale delle farine ad alto W. Al naso, una complessità lattico-acetica contenuta, con sentori di crosta di pane e note fruttate residue dell'uvetta starter. In bocca — metaforicamente parlando sul prodotto finito che da essa deriverà — promette una struttura glutinica tenace, un'alveolatura regolare e una spinta fermentativa potente ma disciplinata, con acidità orientata verso i lattici grazie al bagnetto opzionale.",
+    "summary": "Una pasta madre solida al 50% di idratazione si presenta come un lievito compatto e tenace, dal profilo olfattivo complesso e in evoluzione: note lattiche fresche di yogurt e burro si intrecciano con una lieve acidità acetica di sottofondo, rivelando una fermentazione ben equilibrata. In bocca, se assaggiata, offre una marcata sapidità acida con retrogusto minerale e cerealicolo, espressione diretta della sua ricca microflora batterica e della struttura glutinica sviluppata attraverso la cilindratura. La sua forza lievitante e la tenacia della maglia glutinica rappresentano le qualità tecniche dominanti.",
     "axes": [
       {
-        "label": "Forza Fermentativa",
-        "value": 9
+        "label": "Acidità Lattica (Freschezza)",
+        "value": 7
       },
       {
-        "label": "Acidità Lattica",
-        "value": 6
-      },
-      {
-        "label": "Acidità Acetica",
+        "label": "Acidità Acetica (Pungenza)",
         "value": 4
       },
       {
-        "label": "Tenacia Glutinica",
+        "label": "Forza Lievitante (Attività)",
+        "value": 8
+      },
+      {
+        "label": "Tenacia Glutinica (Struttura)",
         "value": 9
       },
       {
-        "label": "Stabilità & Gestibilità",
-        "value": 8
+        "label": "Complessità Aromatica",
+        "value": 6
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 248,
+    "macros": {
+      "carbs": 48,
+      "protein": 8,
+      "fat": 1
+    }
   }
 }

@@ -208,13 +208,14 @@
   "image": "images/ricette/pizza/pizza-in-teglia-romana.webp",
   "imageAttribution": "📷 Foto: Milton Das — Pexels License via Pexels",
   "sensoryProfile": {
+    "summary": "Una teglia romana di scuola classica, eseguita con rigore tecnico: l'idratazione all'83% gestita con bassinage e autolisi, unita alla maturazione in freddo di 18–24 ore, restituisce una mollica generosamente alveolata, leggera e profumata di fermentazione lenta. Il fondo, cotto in doppia fase su ripiano basso a 260°C con olio abbondante, raggiunge una croccantezza pronunciata e una colorazione dorata che evoca note di Maillard tostato, mentre l'interno rimane umido e soffice. Un lievitato di grande personalità, digeribile e aromaticamente complesso, dove la struttura è il vero protagonista.",
     "axes": [
       {
-        "label": "Croccantezza Base",
+        "label": "Croccantezza Fondo",
         "value": 9
       },
       {
-        "label": "Alveolatura",
+        "label": "Alveolatura Mollica",
         "value": 9
       },
       {
@@ -226,8 +227,8 @@
         "value": 7
       },
       {
-        "label": "Leggerezza/Digeribilità",
-        "value": 8
+        "label": "Acidità / Note Fermentative",
+        "value": 6
       }
     ]
   }

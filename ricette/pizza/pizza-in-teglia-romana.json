@@ -208,28 +208,36 @@
   "image": "images/ricette/pizza/pizza-in-teglia-romana.webp",
   "imageAttribution": "📷 Foto: Milton Das — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una teglia romana di scuola classica, eseguita con rigore tecnico: l'idratazione all'83% gestita con bassinage e autolisi, unita alla maturazione in freddo di 18–24 ore, restituisce una mollica generosamente alveolata, leggera e profumata di fermentazione lenta. Il fondo, cotto in doppia fase su ripiano basso a 260°C con olio abbondante, raggiunge una croccantezza pronunciata e una colorazione dorata che evoca note di Maillard tostato, mentre l'interno rimane umido e soffice. Un lievitato di grande personalità, digeribile e aromaticamente complesso, dove la struttura è il vero protagonista.",
+    "summary": "Una pizza in teglia romana di scuola classica, che esprime con autorevolezza il connubio tra struttura alveolare aperta e croccantezza del fondo. Al naso emergono note di fermentazione lenta e complessa — pasta acida, cereale tostato, sentori di malto — mentre al palato la masticazione rivela un'alternanza precisa tra la friabilità della crosta inferiore, caramellizzata dall'olio in teglia, e la sofficità quasi cotonosa della mollica. La lunga maturazione in freddo conferisce profondità aromatica e una digeribilità nettamente superiore alla media, con un retrogusto pulito e persistente.",
     "axes": [
       {
-        "label": "Croccantezza Fondo",
+        "label": "Alveolatura / Leggerezza",
         "value": 9
       },
       {
-        "label": "Alveolatura Mollica",
-        "value": 9
-      },
-      {
-        "label": "Complessità Aromatica",
+        "label": "Croccantezza del Fondo",
         "value": 8
       },
       {
-        "label": "Umidità Mollica",
-        "value": 7
+        "label": "Complessità Aromatica (Fermentazione)",
+        "value": 8
       },
       {
-        "label": "Acidità / Note Fermentative",
+        "label": "Sapidità Equilibrata",
         "value": 6
+      },
+      {
+        "label": "Estensibilità / Struttura Glutinica",
+        "value": 9
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 238,
+    "macros": {
+      "carbs": 42,
+      "protein": 7,
+      "fat": 5
+    }
   }
 }

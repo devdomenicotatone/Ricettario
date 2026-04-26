@@ -226,26 +226,27 @@
   "image": "images/ricette/pizza/pizza-romana-stesa-al-matterello.webp",
   "imageAttribution": "📷 Foto: Alejandro Aznar — Pexels License via Pexels",
   "sensoryProfile": {
+    "summary": "Una pizza romana stesa al matterello di straordinaria precisione tecnica: la biga a 72 ore su farina W350 e la doppia maturazione in freddo costruiscono un profilo aromatico complesso, acidulo e profondo, mentre l'idratazione contenuta al 50% e la stesura a 2-3 mm garantiscono una croccantezza strutturale quasi biscottata. La semola rimacinata in impasto e le bruciacchiature a 280°C su pietra refrattaria esaltano le note tostate e la rigidità della base, con il malto diastatico che accelera la reazione di Maillard regalando colore e profumo di crosta caramellata.",
     "axes": [
       {
-        "label": "Croccantezza",
+        "label": "Croccantezza della Base",
         "value": 10
       },
       {
-        "label": "Complessità Aromatica",
+        "label": "Complessità Aromatica (Fermentazione)",
         "value": 9
       },
       {
-        "label": "Leggerezza/Sottigliezza",
-        "value": 9
+        "label": "Estensibilità / Tenacia al Morso",
+        "value": 4
       },
       {
-        "label": "Acidità (Fermentazione)",
-        "value": 7
+        "label": "Note Tostate (Maillard)",
+        "value": 8
       },
       {
-        "label": "Alveolatura",
-        "value": 2
+        "label": "Leggerezza / Alveolatura",
+        "value": 3
       }
     ]
   }

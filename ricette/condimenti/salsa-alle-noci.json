@@ -134,28 +134,36 @@
   "image": "images/ricette/condimenti/salsa-alle-noci.webp",
   "imageAttribution": "📷 Foto: Eden FC — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una salsa dall'anima ligure e dal carattere avvolgente: la sbollentatura delle noci ne smussa l'astringenza tannica, lasciando emergere una grassezza vellutata e una profondità aromatica nocciolata. Il Parmigiano a 24 mesi conferisce una sapidità umami ben strutturata, mentre la maggiorana fresca e l'aglio deanimato regalano un soffio erbaceo che alleggerisce il corpo opulento della crema. L'emulsione olio-latte-mollica crea una texture sericea e persistente, elegante nella sua semplicità artigianale.",
+    "summary": "Una salsa di grande personalità e finezza artigianale, dal colore avorio caldo e dalla texture vellutata e avvolgente. Al naso si apre su note burroso-lattiche e di noce fresca, con un tocco erbaceo floreale della maggiorana che alleggerisce la struttura grassa. In bocca è cremosa, con una sapidità ben calibrata dal Parmigiano e un finale lungo, lievemente resinoso e amaricante, dove la pulizia dei tannini delle noci sbollentate lascia un retrogusto netto e persistente.",
     "axes": [
       {
-        "label": "Grassezza & Cremosità",
-        "value": 9
-      },
-      {
-        "label": "Sapidità (Umami)",
+        "label": "Intensità Aromatica",
         "value": 7
       },
       {
-        "label": "Amarezza Tannica",
-        "value": 3
+        "label": "Grassezza / Untuosità",
+        "value": 9
       },
       {
-        "label": "Intensità Aromatica",
+        "label": "Sapidità",
         "value": 6
       },
       {
-        "label": "Persistenza Retrolfattiva",
-        "value": 8
+        "label": "Amaricante / Tannicità",
+        "value": 3
+      },
+      {
+        "label": "Cremosità / Struttura",
+        "value": 9
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 468,
+    "macros": {
+      "carbs": 9,
+      "protein": 12,
+      "fat": 42
+    }
   }
 }

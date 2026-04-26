@@ -100,26 +100,27 @@
   "image": "images/ricette/condimenti/olio-al-cavolo-viola-condimento.webp",
   "imageAttribution": "📷 Foto: Atlantic Ambience — Pexels License via Pexels",
   "sensoryProfile": {
+    "summary": "Un olio di finitura dalla natura eterea e cromaticamente magnetica, in cui la componente aromatica del cavolo viola si esprime in modo sussurrato e vegetale, senza mai sopraffare la delicatezza dell'EVO base. Al palato, la grassezza setosa domina la scena, lasciando un finale pulitissimo con un lieve accento terroso-solfureo tipico delle brassicacee. Un condimento concettuale e visivo prima ancora che gustativo, dove l'impatto estetico del pigmento antocianico è il vero protagonista della degustazione.",
     "axes": [
       {
-        "label": "Intensità Cromatica",
-        "value": 9
+        "label": "Intensità Aromatica",
+        "value": 4
       },
       {
-        "label": "Fruttato/Erbaceo",
-        "value": 6
+        "label": "Grassezza",
+        "value": 8
       },
       {
         "label": "Amarezza",
+        "value": 3
+      },
+      {
+        "label": "Fruttato",
         "value": 5
       },
       {
-        "label": "Piccantezza",
-        "value": 2
-      },
-      {
-        "label": "Persistenza Aromatica",
-        "value": 4
+        "label": "Impatto Cromatico",
+        "value": 9
       }
     ]
   }

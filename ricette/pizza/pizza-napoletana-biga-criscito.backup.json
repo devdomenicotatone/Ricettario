@@ -231,25 +231,26 @@
     }
   ],
   "sensoryProfile": {
+    "summary": "Una pizza napoletana di straordinaria complessità strutturale, costruita su un doppio sistema fermentativo biga-criscito che conferisce profondità aromatica quasi brettanomyces-like, con note lattiche, cereali tostati e una sottile mineralità. Il cornicione, frutto di una biga a 18-24 ore e di una cottura ad alte temperature (430-480°C), esprime una leopardatura marcata e una crosta croccante che cede a una mollica alveolata, eterea e umida. L'equilibrio tra la tenacia del Saccorosso (W 330-350) e la leggerezza della Nuvola Super genera un morso che è al tempo stesso sostenuto e impalpabile, con una persistenza aromatica lunga e avvolgente.",
     "axes": [
       {
         "label": "Alveolatura Cornicione",
         "value": 9
       },
       {
-        "label": "Croccantezza / Leopardatura",
+        "label": "Croccantezza Crosta / Leopardatura",
         "value": 9
       },
       {
-        "label": "Complessità Aromatica",
+        "label": "Complessità Aromatica Fermentativa",
         "value": 10
       },
       {
-        "label": "Estensibilità Impasto",
+        "label": "Umidità e Leggerezza Mollica",
         "value": 8
       },
       {
-        "label": "Acidità Percepita",
+        "label": "Tenacia al Morso (Struttura Glutinica)",
         "value": 7
       }
     ]

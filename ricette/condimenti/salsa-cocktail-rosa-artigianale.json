@@ -164,28 +164,36 @@
   "image": "images/ricette/condimenti/salsa-cocktail-rosa-artigianale.webp",
   "imageAttribution": "📷 Foto: Nadin Sh — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una salsa cocktail di struttura opulenta e complessità stratificata: l'emulsione setosa della maionese artigianale incontra la dolcezza agrodolce del ketchup, mentre il Cognac invecchiato e la Worcestershire costruiscono un fondo umami di notevole profondità. La panna semi-montata alleggerisce il corpo grasso, conferendo una texture vellutata e quasi aerea, con un finale leggermente piccante firmato dal Tabasco che prolunga la persistenza senza mai sovrastare l'equilibrio complessivo.",
+    "summary": "Una salsa cocktail di scuola classica, dalla struttura cremosa e avvolgente, dove la ricchezza lipidica della maionese artigianale si fonde con la dolcezza acidula del ketchup in un equilibrio rosa-corallo luminoso. Al naso emerge una complessità aromatica elegante: note di frutto del pomodoro, un soffio etereo di Cognac e una punta speziata di Worcestershire che costruisce profondità umami. In bocca la texture è vellutata e ariosa grazie alla panna semi-montata, con un finale leggermente piccante e persistente donato dal Tabasco e dalla senape di Digione.",
     "axes": [
       {
-        "label": "Grassezza & Cremosità",
+        "label": "Cremosità & Struttura Emulsionata",
         "value": 9
       },
       {
-        "label": "Dolcezza Agrodolce",
+        "label": "Complessità Aromatica (Cognac/Umami)",
         "value": 7
       },
       {
-        "label": "Sapidità (Umami)",
-        "value": 7
+        "label": "Dolcezza Bilanciata (Ketchup/Panna)",
+        "value": 6
       },
       {
-        "label": "Acidità",
+        "label": "Acidità & Freschezza Citrica",
         "value": 5
       },
       {
-        "label": "Piccantezza",
-        "value": 3
+        "label": "Piccantezza & Persistenza Speziata",
+        "value": 4
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 412,
+    "macros": {
+      "carbs": 9,
+      "protein": 2,
+      "fat": 39
+    }
   }
 }

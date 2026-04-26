@@ -242,25 +242,26 @@
     }
   ],
   "sensoryProfile": {
+    "summary": "Un lievitato da rosticceria di scuola siciliana che si distingue per una crosta lucida e ambrata, resa ancor più seducente dalla spennellatura all'uovo e dalla copertura di sesamo tostato. L'impasto, ricco di strutto e zucchero (10% su farina), esprime una mollica soffice, filante e leggermente dolce, con una persistenza aromatica calda e burrosa che avvolge le farciture sapide. La bassa idratazione (50%) e la tecnica di incordatura spinta garantiscono una struttura compatta ma cedevole al morso, tipica dei grandi prodotti da banco siciliani.",
     "axes": [
       {
-        "label": "Sofficità Mollica",
+        "label": "Doratura & Reazione di Maillard",
+        "value": 9
+      },
+      {
+        "label": "Morbidezza della Mollica",
         "value": 8
       },
       {
-        "label": "Doratura e Croccantezza",
+        "label": "Dolcezza dell'Impasto",
         "value": 7
       },
       {
-        "label": "Ricchezza e Sapidità",
-        "value": 8
-      },
-      {
-        "label": "Dolcezza Impasto",
+        "label": "Croccantezza della Crosta",
         "value": 6
       },
       {
-        "label": "Complessità Aromatica",
+        "label": "Sapidità & Complessità della Farcitura",
         "value": 7
       }
     ]

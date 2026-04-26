@@ -216,28 +216,36 @@
   "image": "images/ricette/pizza/pizza-in-teglia-romana-alta-idratazione.webp",
   "imageAttribution": "📷 Foto: Anna Guerrero — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una pizza in teglia romana di straordinaria complessità strutturale: l'idratazione all'85% con bassinage e la maturazione a freddo di 24 ore regalano un'alveolatura aperta e irregolare, quasi briosa, con una mollica eterea e umida che contrasta magistralmente con una base croccante e caramellata. Al naso, la fermentazione enzimatica prolungata a 4°C sviluppa note profonde di cereale integrale, burro di grano e una lieve acidità lattica che eleva il profilo aromatico ben oltre la media. In bocca, la masticazione è piacevolmente elastica ma mai tenace, con una sapidità calibrata al 2,5% su farina che sostiene l'insieme senza dominare, lasciando una persistenza aromatica lunga e pulita.",
+    "summary": "Una teglia romana di scuola classica, che si esprime con una crosta inferiore straordinariamente croccante e friabile, contrapposta a una mollica aperta, ariosa e quasi alveolata come una ciabatta. L'alta idratazione (85%) e la maturazione a freddo di 24 ore conferiscono una complessità aromatica profonda, con sentori di cereale fermentato, lieve acidità lattica e una nota burrosa data dal germe di grano pressato a freddo. La componente di Tipo 2 apporta un retrogusto integrale e terroso che bilancia la leggerezza strutturale, mentre l'olio EVO chiude il profilo con una rotondità grassa e fruttata persistente.",
     "axes": [
       {
         "label": "Croccantezza della Base",
         "value": 9
       },
       {
-        "label": "Alveolatura Aperta",
+        "label": "Alveolatura / Leggerezza della Mollica",
         "value": 9
       },
       {
-        "label": "Complessità Aromatica",
+        "label": "Complessità Aromatica (Fermentazione)",
         "value": 8
       },
       {
-        "label": "Umidità della Mollica",
-        "value": 8
-      },
-      {
-        "label": "Acidità / Note Lattiche",
+        "label": "Sapidità",
         "value": 5
+      },
+      {
+        "label": "Persistenza Gustativa",
+        "value": 7
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 231,
+    "macros": {
+      "carbs": 42,
+      "protein": 7,
+      "fat": 3
+    }
   }
 }

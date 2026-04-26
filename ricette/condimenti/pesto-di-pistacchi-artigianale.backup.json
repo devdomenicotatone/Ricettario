@@ -145,26 +145,27 @@
   "image": "images/ricette/condimenti/pesto-di-pistacchi-artigianale.webp",
   "imageAttribution": "📷 Foto: Ron Lach — Pexels License via Pexels",
   "sensoryProfile": {
+    "summary": "Un pesto di straordinaria finezza artigianale, dove la dolcezza burrosa e resinosa del pistacchio siciliano domina il palato con eleganza, supportata da una grassezza avvolgente e ben bilanciata dall'olio EVO a bassa fruttatura. La doppia sapidità di Parmigiano e Pecorino costruisce un umami persistente e complesso, mentre la scorza di limone e il basilico fresco — protetti dallo shock termico dell'acqua ghiacciata — regalano una vivacità agrumata e erbacea che pulisce il finale con precisione millimetrica. La rimozione della pellicina e dell'anima dell'aglio rivela una ricerca tecnica orientata alla purezza e alla rotondità del profilo.",
     "axes": [
       {
-        "label": "Intensità Aromatica",
+        "label": "Dolcezza e Fruttato (Pistacchio)",
         "value": 8
       },
       {
-        "label": "Grassezza & Cremosità",
+        "label": "Sapidità / Umami (Formaggi DOP)",
+        "value": 8
+      },
+      {
+        "label": "Grassezza ed Avvolgenza",
         "value": 7
       },
       {
-        "label": "Sapidità (Umami)",
-        "value": 7
+        "label": "Vivacità Agrumata-Erbacea",
+        "value": 6
       },
       {
         "label": "Amarezza",
         "value": 2
-      },
-      {
-        "label": "Freschezza & Acidità",
-        "value": 5
       }
     ]
   }

@@ -229,28 +229,36 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Una focaccia genovese dalla struttura tecnica impeccabile: la salamoia generosa (200 g acqua + olio EVO in superficie) garantisce una mollica umida e un'alveolatura aperta, mentre la cottura statica a 230°C per 15 minuti produce una crosta dorata-ambrata dal carattere Maillard pronunciato ma non aggressivo. L'olio extravergine ligure DOP — presente nell'impasto, in teglia e in superficie per un totale di 120 g extra — domina il profilo aromatico con le sue note fruttate e leggere di mandorla verde, bilanciate da una sapidità decisa conferita dalla doppia dose di sale (13 g impasto + 10 g salamoia). La piega a tre e la doppia lievitazione strutturata conferiscono una tenacia al morso tipicamente genovese, soffice ma risoluta.",
+    "summary": "La Fügassa si presenta con una crosta dorata ambrata, quasi laccata dall'olio EVO ligure, che cede sotto i denti rivelando una mollica alveolata, umida e tenace grazie al blend di farina media forza e Manitoba. La salamoia penetrata nei tipici buchi conferisce una sapidità marina decisa, mentre l'olio taggiasco avvolge il palato con note fruttate e una lieve vena erbacea, lasciando un finale lungo e persistente di cereale cotto e olive verdi.",
     "axes": [
-      {
-        "label": "Croccantezza Crosta",
-        "value": 7
-      },
-      {
-        "label": "Umidità Mollica",
-        "value": 8
-      },
       {
         "label": "Sapidità",
         "value": 8
       },
       {
-        "label": "Intensità Aromatica (Olio EVO)",
+        "label": "Untuosità / Ricchezza Lipidica",
         "value": 9
       },
       {
-        "label": "Alveolatura",
+        "label": "Croccantezza della Crosta",
+        "value": 7
+      },
+      {
+        "label": "Struttura Alveolare / Leggerezza",
         "value": 6
+      },
+      {
+        "label": "Intensità Aromatica (EVO + Malto)",
+        "value": 8
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 295,
+    "macros": {
+      "carbs": 42,
+      "protein": 7,
+      "fat": 10
+    }
   }
 }

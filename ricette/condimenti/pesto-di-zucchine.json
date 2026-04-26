@@ -135,28 +135,36 @@
   "image": "images/ricette/condimenti/pesto-di-zucchine.webp",
   "imageAttribution": "📷 Foto: Jana Ohajdova — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Un pesto di zucchine a freddo dalla personalità gentile e vegetale, dove la grassezza avvolgente dell'olio extravergine a frutto leggero dialoga con la sapidità decisa del doppio formaggio stagionato. La spurgatura osmotica e la strizzatura meccanica garantiscono una texture cremosa e mai acquosa, con un finale erbaceo e aromatico lasciato intatto dalla lavorazione a bassa temperatura.",
+    "summary": "Un pesto di grande eleganza vegetale, dove la freschezza erbacea delle zucchine romanesca — depurata magistralmente dall'acqua di vegetazione — si intreccia con la grassezza avvolgente dell'olio extravergine in un'emulsione di rara pulizia aromatica. Il basilico giovane regala un tocco balsamico-mentolato di sottofondo, mentre il blend Parmigiano-Pecorino costruisce una sapidità complessa e stratificata che persiste lungamente in chiusura. La texture è cremosa ma rustica, con i pinoli che introducono una presenza burrosa e una lieve ruvidità granulare particolarmente appagante.",
     "axes": [
       {
-        "label": "Grassezza",
-        "value": 8
-      },
-      {
-        "label": "Sapidità (Umami)",
-        "value": 7
-      },
-      {
-        "label": "Freschezza Vegetale",
+        "label": "Intensità Aromatica",
         "value": 6
       },
       {
-        "label": "Intensità Aromatica",
-        "value": 5
+        "label": "Sapidità / Umami",
+        "value": 8
       },
       {
-        "label": "Acidità",
-        "value": 2
+        "label": "Grassezza / Untuosità",
+        "value": 9
+      },
+      {
+        "label": "Freschezza Vegetale",
+        "value": 7
+      },
+      {
+        "label": "Persistenza Retrolfattiva",
+        "value": 7
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 412,
+    "macros": {
+      "carbs": 4,
+      "protein": 9,
+      "fat": 40
+    }
   }
 }

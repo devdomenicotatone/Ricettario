@@ -139,28 +139,36 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Gnocchi di patate dalla texture avvolgente e vellutata, con una tenacia al morso volutamente contenuta grazie alla lavorazione minima dell'impasto. Il sapore neutro e latteo delle patate farinose emerge con delicatezza, creando una base ricettiva e assorbente per qualsiasi condimento. La rigatura superficiale garantisce una presa ottimale del sugo, mentre il profilo aromatico rimane pulito, con lievi note terrose e amidacee.",
+    "summary": "Gli gnocchi di patate si presentano con una texture avvolgente e vellutata, dal cuore morbido e cedevole con una leggera resistenza esterna conferita dalla rigatura. Al palato emergono note terrose e dolci della patata farinosa, con un fondo amidaceo pulito e una struttura delicata che si presta magnificamente all'abbraccio di condimenti saporiti.",
     "axes": [
       {
-        "label": "Morbidezza & Sofficità",
+        "label": "Morbidezza / Sofficità",
         "value": 9
       },
       {
-        "label": "Tenacia al Morso",
+        "label": "Struttura Amidacea",
+        "value": 7
+      },
+      {
+        "label": "Sapidità",
+        "value": 4
+      },
+      {
+        "label": "Complessità Aromatica",
         "value": 3
       },
       {
-        "label": "Sapore di Patata",
-        "value": 8
-      },
-      {
-        "label": "Assorbenza Condimento",
-        "value": 8
-      },
-      {
-        "label": "Leggerezza (Struttura)",
-        "value": 7
+        "label": "Tenuta in Cottura",
+        "value": 6
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 132,
+    "macros": {
+      "carbs": 27,
+      "protein": 3,
+      "fat": 1
+    }
   }
 }

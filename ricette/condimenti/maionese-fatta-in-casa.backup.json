@@ -118,6 +118,7 @@
   "image": "images/ricette/condimenti/maionese-fatta-in-casa.webp",
   "imageAttribution": "📷 Foto: Click Jeth — Pexels License via Pexels",
   "sensoryProfile": {
+    "summary": "Una maionese classica dalla struttura emulsionata salda e vellutata, dove la grassezza avvolgente dell'olio di semi — dal profilo neutro — lascia emergere con nitidezza la vivace acidità del limone e dell'aceto. La senape di Digione firma un filo pungente e aromatico di sottofondo, mentre la sapidità ben calibrata chiude il palato con persistenza pulita e rotonda.",
     "axes": [
       {
         "label": "Grassezza",
@@ -133,11 +134,11 @@
       },
       {
         "label": "Persistenza",
-        "value": 7
+        "value": 6
       },
       {
-        "label": "Dolcezza",
-        "value": 2
+        "label": "Intensità Aromatica",
+        "value": 3
       }
     ]
   }

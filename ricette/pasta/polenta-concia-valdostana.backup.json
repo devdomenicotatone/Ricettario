@@ -164,26 +164,27 @@
   "image": "images/ricette/pasta/polenta-concia-valdostana.webp",
   "imageAttribution": "📷 Foto: Alex Favali — Pexels License via Pexels",
   "sensoryProfile": {
+    "summary": "Una preparazione montanara di straordinaria ricchezza tattile e gustativa: la polenta bramata, cotta lentamente per 50 minuti, sviluppa una struttura granulosa e avvolgente che si fonde con la colata grassa e filante di Fontina DOP, Toma semistagionata e burro di centrifuga all'82%. Il profilo è dominato da una cremosità quasi opulenta, con note lattiche fermentate di media intensità e una sapidità ben calibrata, chiusa da un soffio speziato di pepe fresco. La gratinatura opzionale aggiunge la sola nota croccante in un paesaggio altrimenti morbido e avvolgente.",
     "axes": [
       {
         "label": "Cremosità & Filanza",
         "value": 9
       },
       {
-        "label": "Sapidità (Umami)",
+        "label": "Sapidità & Umami Lattico",
         "value": 8
       },
       {
-        "label": "Grassezza",
-        "value": 9
-      },
-      {
-        "label": "Croccantezza Superficiale",
-        "value": 5
+        "label": "Corpo & Densità",
+        "value": 8
       },
       {
         "label": "Complessità Aromatica",
-        "value": 7
+        "value": 6
+      },
+      {
+        "label": "Croccantezza Superficiale",
+        "value": 4
       }
     ]
   }

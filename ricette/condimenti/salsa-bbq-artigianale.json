@@ -182,14 +182,14 @@
   "image": "images/ricette/condimenti/salsa-bbq-artigianale.webp",
   "imageAttribution": "📷 Foto: Meraj Kazi — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una salsa BBQ artigianale dalla struttura densa e vellutata, dove la dolcezza profonda della melassa e del muscovado si intreccia con le note affumicate della paprika e la punta acetica dell'aceto di mele in un equilibrio reattivo e persistente. Il soffritto 'sudato' e la tostatura a secco delle spezie costruiscono uno strato umami di rara complessità, mentre la Worcestershire amplifica il retro-gusto con richiami fermentati e speziati. Il calore del cayenna è presente ma educato, funzionale a dare nervo senza sovrastare il corpo dolce-affumicato.",
+    "summary": "Una salsa BBQ artigianale di grande complessità olfattiva, dove le note affumicate della paprika Pimentón si intrecciano con la profondità balsamica della melassa scura e le sfumature fermentate dell'aceto di mele non filtrato. Al palato si rivela un equilibrio dinamico tra dolcezza caramellata e acidità vivace, con un finale persistente di calore moderato e speziatura terrosa. La texture vellutata, costruita sulla pectina naturale del pomodoro, avvolge il palato con elegante densità.",
     "axes": [
       {
         "label": "Dolcezza",
         "value": 8
       },
       {
-        "label": "Acidità",
+        "label": "Acidità / Vivacità",
         "value": 6
       },
       {
@@ -197,13 +197,21 @@
         "value": 7
       },
       {
-        "label": "Piccantezza",
+        "label": "Piccantezza / Calore",
         "value": 3
       },
       {
-        "label": "Complessità Umami",
+        "label": "Corpo / Viscosità",
         "value": 8
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 148,
+    "macros": {
+      "carbs": 32,
+      "protein": 1,
+      "fat": 2
+    }
   }
 }

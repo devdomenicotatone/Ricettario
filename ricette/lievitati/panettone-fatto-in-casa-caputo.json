@@ -235,28 +235,36 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Un panettone artigianale di straordinaria complessità, costruito su una struttura a doppio impasto con lievito madre rinfrescato tre volte, che conferisce una acidità lattica finissima e un'alveolatura aperta e setosa. La generosa quota di burro (450g totali) e tuorli (300g totali) regala una mollica burrosa e fondente, mentre l'emulsione aromatica di vaniglia, miele di acacia e pasta d'arancia eleva il profilo olfattivo verso note floreal-citrine di rara persistenza. La cottura a valvola aperta e il raffreddamento capovolto garantiscono una struttura asciutta e verticale, con una crosta sottile e lacca di Maillard moderata.",
+    "summary": "Un panettone artigianale di grande complessità e raffinatezza: la lunga fermentazione con lievito madre conferisce una profondità aromatica intensa con note lattiche e leggermente acidule, bilanciate dalla dolcezza burrosa e dalla rotondità della vaniglia e dell'arancia candita. La mollica si presenta straordinariamente alveolata, filante e setosa, con una persistenza gustativa lunga e avvolgente tipica dei grandi lievitati d'autore.",
     "axes": [
       {
-        "label": "Alveolatura & Leggerezza",
+        "label": "Sofficità / Sviluppo Alveolare",
         "value": 9
       },
       {
-        "label": "Ricchezza Burrosa (Grassezza)",
+        "label": "Ricchezza Aromatica (Vaniglia, Arancia, Note Lattiche)",
         "value": 9
-      },
-      {
-        "label": "Complessità Aromatica",
-        "value": 8
-      },
-      {
-        "label": "Acidità Lattica (Lievito Madre)",
-        "value": 5
       },
       {
         "label": "Dolcezza",
         "value": 7
+      },
+      {
+        "label": "Sapidità / Equilibrio Salino",
+        "value": 4
+      },
+      {
+        "label": "Burrositá / Untuosità",
+        "value": 8
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 385,
+    "macros": {
+      "carbs": 52,
+      "protein": 8,
+      "fat": 16
+    }
   }
 }

@@ -182,26 +182,27 @@
   "image": "images/ricette/condimenti/salsa-bbq-artigianale.webp",
   "imageAttribution": "📷 Foto: Meraj Kazi — Pexels License via Pexels",
   "sensoryProfile": {
+    "summary": "Una salsa BBQ artigianale dalla struttura densa e vellutata, dove la dolcezza profonda della melassa e del muscovado si intreccia con le note affumicate della paprika e la punta acetica dell'aceto di mele in un equilibrio reattivo e persistente. Il soffritto 'sudato' e la tostatura a secco delle spezie costruiscono uno strato umami di rara complessità, mentre la Worcestershire amplifica il retro-gusto con richiami fermentati e speziati. Il calore del cayenna è presente ma educato, funzionale a dare nervo senza sovrastare il corpo dolce-affumicato.",
     "axes": [
       {
         "label": "Dolcezza",
-        "value": 9
+        "value": 8
       },
       {
         "label": "Acidità",
-        "value": 7
+        "value": 6
       },
       {
-        "label": "Affumicato & Complessità Aromatica",
-        "value": 8
+        "label": "Intensità Affumicata",
+        "value": 7
       },
       {
         "label": "Piccantezza",
         "value": 3
       },
       {
-        "label": "Sapidità (Umami)",
-        "value": 7
+        "label": "Complessità Umami",
+        "value": 8
       }
     ]
   }

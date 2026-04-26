@@ -130,13 +130,14 @@
   "image": "images/ricette/condimenti/olio-aglio-nero-carbone-vegetale.webp",
   "imageAttribution": "📷 Foto: Pixabay — Pexels License via Pexels",
   "sensoryProfile": {
+    "summary": "Un condimento di rara complessità oscura: l'aglio nero fermentato domina con note di umami profondo, balsamico e quasi boisé, mentre il carbone vegetale conferisce una neutralità minerale che amplifica la percezione visiva e tattile. Il rosmarino e l'origano tessono un filo aromatico mediterraneo persistente, bilanciato da una piccantezza sussurrata del peperoncino e da una grassezza vellutata dell'EVO fruttato leggero. Un olio da intingolo contemplativo, dalla personalità quasi alchemica.",
     "axes": [
       {
-        "label": "Umami (Aglio Nero)",
+        "label": "Intensità Umami (Aglio Nero)",
         "value": 9
       },
       {
-        "label": "Intensità Aromatica",
+        "label": "Complessità Aromatica",
         "value": 8
       },
       {
@@ -145,11 +146,11 @@
       },
       {
         "label": "Amarezza",
-        "value": 6
+        "value": 5
       },
       {
-        "label": "Fruttato (EVO)",
-        "value": 4
+        "label": "Persistenza Retrolfattiva",
+        "value": 9
       }
     ]
   }

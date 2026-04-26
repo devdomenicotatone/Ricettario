@@ -262,26 +262,27 @@
     }
   ],
   "sensoryProfile": {
+    "summary": "Un panettone di straordinaria complessità organolettica, dove la ricchezza burrosa e la dolcezza vellutata dei tuorli (650g totali) si intrecciano con le note fruttate della pera candita e l'amarezza nobile del cioccolato fondente. La lunga fermentazione con lievito madre (12-14 ore di puntata + 8-10 ore di appretto) conferisce una profondità acida calibrata e un'alveolatura aperta e irregolare, mentre l'emulsione aromatica di vaniglia Bourbon, miele d'acacia e pasta d'arancia eleva la persistenza olfattiva a livelli da grand cru della pasticceria italiana.",
     "axes": [
       {
         "label": "Sofficità & Alveolatura",
         "value": 9
       },
       {
-        "label": "Dolcezza",
-        "value": 8
-      },
-      {
-        "label": "Ricchezza Burrosa",
+        "label": "Dolcezza & Ricchezza",
         "value": 9
       },
       {
         "label": "Complessità Aromatica",
-        "value": 8
+        "value": 9
       },
       {
-        "label": "Intensità Frutta & Cacao",
-        "value": 7
+        "label": "Acidità (Lievito Madre)",
+        "value": 4
+      },
+      {
+        "label": "Persistenza Gustativa",
+        "value": 8
       }
     ]
   }

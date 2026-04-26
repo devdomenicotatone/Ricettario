@@ -264,26 +264,27 @@
     }
   ],
   "sensoryProfile": {
+    "summary": "Un burger bun di scuola artigianale, costruito sulla complessità fermentativa della biga a 18-20 ore: la mollica si presenta ariosa ma compatta, con una texture vellutata e leggermente filante grazie alla doppia quota di grassi (burro e olio EVO) e alla ricchezza di uovo e latte intero. La crosta, laccata dalla doratura tuorlo-latte e impreziosita dal sesamo tostato, offre una cedevolezza burrosa con un finale dolce-latteo di grande pulizia e persistenza.",
     "axes": [
       {
         "label": "Sofficità Mollica",
         "value": 9
       },
       {
-        "label": "Doratura & Maillard",
+        "label": "Complessità Aromatica (Biga)",
         "value": 8
       },
       {
-        "label": "Ricchezza & Burrosità",
+        "label": "Dolcezza",
         "value": 7
-      },
-      {
-        "label": "Complessità Aromatica",
-        "value": 8
       },
       {
         "label": "Croccantezza Crosta",
         "value": 3
+      },
+      {
+        "label": "Ricchezza (Grassezza)",
+        "value": 7
       }
     ]
   }

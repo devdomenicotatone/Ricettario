@@ -164,28 +164,36 @@
   "image": "images/ricette/pasta/gnocchi-di-patate-v2.webp",
   "imageAttribution": "📷 Foto: Demian Spinetta — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Gnocchi di straordinaria delicatezza, dove la patata rossa farinosa esprime un'anima amidacea avvolgente e vellutata, senza cedere alla gommosità. La farina debole W150–180, aggiunta con parsimonia e lavorata brevemente, garantisce una tenacia al morso minima e una texture che si scioglie in bocca, mentre la semola di rimacinata conferisce una rugosità superficiale preziosa per l'aggrappo del condimento. Note calde di noce moscata appena grattugiata emergono in sottofondo, come spezia di supporto a un profilo aromatico sobrio e terragno.",
+    "summary": "Gnocchi di struttura vellutata e anima soffice, dove la patata rossa farinosa dona una dolcezza terrosa e amidacea di grande pulizia. Il profilo è avvolgente e delicato, con una leggera nota speziata dalla noce moscata grattugiata fresca che alleggerisce la rotondità dell'uovo. La semola rimacinata in superficie garantisce una tenuta in cottura precisa, con una pelle sottile che cede al morso rivelando un cuore morbido e fondente.",
     "axes": [
       {
-        "label": "Morbidezza al Morso",
-        "value": 9
-      },
-      {
-        "label": "Ruvidezza Superficiale",
-        "value": 6
-      },
-      {
-        "label": "Sapore di Patata",
+        "label": "Sofficità / Leggerezza",
         "value": 8
       },
       {
-        "label": "Assorbenza del Sugo",
+        "label": "Dolcezza Amidacea",
         "value": 7
       },
       {
-        "label": "Tenacia / Elasticità",
-        "value": 2
+        "label": "Tenuta Strutturale",
+        "value": 6
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 3
+      },
+      {
+        "label": "Intensità Sapida",
+        "value": 4
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 142,
+    "macros": {
+      "carbs": 28,
+      "protein": 4,
+      "fat": 1
+    }
   }
 }

@@ -144,25 +144,26 @@
   "image": "images/ricette/condimenti/olio-verde-smeraldo-pro.png",
   "imageAttribution": "Generata da AI (Antigravity)",
   "sensoryProfile": {
+    "summary": "Un olio al basilico di straordinaria precisione tecnica, dove la gestione millimetrica della temperatura (65°C) e lo shock termico in acqua ghiacciata preservano intatta la clorofilla, regalando un verde smeraldo luminoso e un profilo aromatico fresco, erbaceo e floreale di rara intensità. La scelta di un EVO ligure o del Garda — fruttato leggero, quasi neutro — lascia al basilico Genovese DOP il ruolo assoluto di protagonista, con una grassezza setosa e avvolgente che trasporta i composti volatili del basiliico senza mai sopraffarli. La piccantezza è volutamente contenuta, la dolcezza vegetale domina il palato con una persistenza aromatica lunga e pulita.",
     "axes": [
       {
-        "label": "Fruttato Verde (Erbaceo)",
+        "label": "Intensità Aromatica (Basilico)",
         "value": 9
       },
       {
-        "label": "Intensità Aromatica",
-        "value": 8
+        "label": "Fruttato dell'Olio",
+        "value": 3
       },
       {
-        "label": "Amarezza",
+        "label": "Piccantezza / Amarezza",
         "value": 2
       },
       {
-        "label": "Piccantezza",
-        "value": 1
+        "label": "Dolcezza Vegetale",
+        "value": 7
       },
       {
-        "label": "Limpidezza/Purezza Sensoriale",
+        "label": "Limpidezza & Persistenza",
         "value": 9
       }
     ]

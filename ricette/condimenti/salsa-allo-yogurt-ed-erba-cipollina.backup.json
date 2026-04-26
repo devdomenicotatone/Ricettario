@@ -145,26 +145,27 @@
   "image": "images/ricette/condimenti/salsa-allo-yogurt-ed-erba-cipollina.webp",
   "imageAttribution": "📷 Foto: Kyle Killam — Pexels License via Pexels",
   "sensoryProfile": {
+    "summary": "Una salsa dal profilo sensoriale fresco e vibrante, dove la cremosità densa dello yogurt greco si intreccia con una vivace acidità citrica e note erbacee delicate. L'emulsione con l'olio EVO conferisce setosità e lunghezza gustativa, mentre la scorza di limone bio innalza la complessità aromatica ben oltre il solo succo, regalando una persistenza agrumata elegante e pulita.",
     "axes": [
       {
         "label": "Acidità",
         "value": 7
       },
       {
-        "label": "Cremosità",
-        "value": 9
-      },
-      {
-        "label": "Freschezza Erbacea",
+        "label": "Cremosità / Grassezza",
         "value": 8
       },
       {
-        "label": "Grassezza",
-        "value": 5
+        "label": "Intensità Erbacea",
+        "value": 6
       },
       {
-        "label": "Persistenza Aromatica",
-        "value": 6
+        "label": "Complessità Aromatica",
+        "value": 7
+      },
+      {
+        "label": "Sapidità (Umami)",
+        "value": 3
       }
     ]
   }
