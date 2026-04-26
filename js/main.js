@@ -17,7 +17,6 @@ import '../css/components/footer.css';
 import '../css/pages/recipe-detail.css';
 import '../css/components/category-page.css';
 import '../css/utilities/animations.css';
-import '../css/components/logo-intro.css';
 
 // ── SPA Router ──
 import { initRouter, registerRenderers, initReveal, BASE } from './router.js';
@@ -27,6 +26,9 @@ import { applyMadeBadgesToCards } from './recipe-bookmarks.js';
 import { fluentEmoji, categoryEmoji, CATEGORY_FLUENT, refreshIcons } from './emoji.js';
 import { initLogoIntro } from './logo-intro-v2b.js';
 import { CATEGORIES, CATEGORY_ORDER as CAT_ORDER } from './categories.js';
+
+/* global __RECIPES_HASH__ */
+const RECIPE_CACHE_BUST = typeof __RECIPES_HASH__ !== 'undefined' ? `?v=${__RECIPES_HASH__}` : '';
 
 // ── Logo Intro: inietta subito (pre-render) ──
 initLogoIntro();
@@ -320,7 +322,7 @@ async function renderCategory(app, { category }) {
 
   // Carica ricette
   try {
-    const resp = await fetch(`${BASE}recipes.json`);
+    const resp = await fetch(`${BASE}recipes.json${RECIPE_CACHE_BUST}`);
     const data = await resp.json();
     catState.allRecipes = data.recipes.filter(r => r.categoryDir === category || r.category === meta.name);
     catState.allRecipes.sort((a, b) => (a.title || '').localeCompare(b.title || '', 'it'));
@@ -596,7 +598,7 @@ function initCarousels() {
     return { key: cat.name, emoji: cat.emoji, dir: key };
   });
 
-  fetch(`${BASE}recipes.json`)
+  fetch(`${BASE}recipes.json${RECIPE_CACHE_BUST}`)
     .then(r => r.json())
     .then(data => {
       carouselsContainer.innerHTML = '';

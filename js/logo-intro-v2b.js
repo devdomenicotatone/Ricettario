@@ -298,6 +298,9 @@ export function initLogoIntro() {
     return;
   }
 
+  // Lazy-load CSS intro (449 righe / 17KB) — solo quando serve
+  import('../css/components/logo-intro.css');
+
   const inject = () => {
     document.body.insertAdjacentHTML('afterbegin', createIntroHTML_V2B());
     setupIntroLifecycle();

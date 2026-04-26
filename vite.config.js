@@ -1,10 +1,33 @@
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
-import { cpSync, existsSync } from 'fs';
+import { cpSync, existsSync, readFileSync, readdirSync, statSync } from 'fs';
+import { createHash } from 'crypto';
+
+// Calcola hash dei JSON ricette per cache busting
+function hashRecipeDir(dir) {
+    if (!existsSync(dir)) return 'dev';
+    const hash = createHash('md5');
+    const walk = (d) => {
+        for (const f of readdirSync(d)) {
+            const p = resolve(d, f);
+            if (statSync(p).isDirectory()) walk(p);
+            else if (f.endsWith('.json')) hash.update(readFileSync(p));
+        }
+    };
+    walk(dir);
+    return hash.digest('hex').slice(0, 8);
+}
+
+const recipesHash = hashRecipeDir(resolve(__dirname, 'ricette'));
 
 export default defineConfig({
     // Base path per GitHub Pages — cambia col nome del tuo repo
     base: '/Ricettario/',
+
+    // Cache busting: hash dei JSON ricette esposto come costante globale
+    define: {
+        __RECIPES_HASH__: JSON.stringify(recipesHash),
+    },
 
     build: {
         outDir: 'dist',
