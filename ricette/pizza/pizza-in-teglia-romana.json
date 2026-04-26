@@ -57,7 +57,7 @@
   "steps": [
     {
       "title": "Autolisi — Idratazione della Farina",
-      "text": "In una ciotola capiente (o nella vasca della planetaria), versa {farina:500}g di farina tipo 0 W 300–330 e {acqua_totale:415}g di acqua fredda (4–6°C) per circa il 55%, ovvero circa 230g. Mescola grossolanamente con un cucchiaio o a mano fino a bagnare tutta la farina: non serve un impasto liscio, basta che non ci sia farina secca. Copri con pellicola e lascia riposare 30 minuti a temperatura ambiente. Questo passaggio — detto fermentolisi quando il lievito è già presente, o autolisi se la farina incontra solo acqua — idrata il glutine e semplifica enormemente l'incordatura successiva."
+      "text": "In una ciotola capiente (o nella vasca della planetaria), versa {farina:500}g di farina tipo 0 W 300–330 e {acqua_totale:415}g di acqua fredda (4–6°C) per circa il 55% dell'acqua totale, ovvero circa 230g. Mescola grossolanamente con un cucchiaio o a mano fino a bagnare tutta la farina: non serve un impasto liscio, basta che non ci sia farina secca. Copri con pellicola e lascia riposare 30 minuti a temperatura ambiente. Questo passaggio — detto fermentolisi quando il lievito è già presente, o autolisi se la farina incontra solo acqua — idrata il glutine e semplifica enormemente l'incordatura successiva."
     },
     {
       "title": "Incorporo del Lievito e Bassinage",
@@ -81,11 +81,11 @@
     },
     {
       "title": "Stesura in Teglia",
-      "text": "Ungi generosamente una teglia 30×40 cm con olio EVO (non lesinare: l'olio in abbondanza favorisce la croccantezza del fondo). Rovescia delicatamente l'impasto nella teglia. Con i polpastrelli unti, allarga l'impasto partendo dal centro verso i bordi, con movimenti dolci e orizzontali — mai premere verso il basso con il palmo piatto. Se l'impasto resiste e si ritira, coprilo e lascialo riposare 10–15 minuti: si rilasserà da solo. Non usare mattarello: distruggeresti tutta l'alveolatura. L'impasto deve riempire la teglia uniformemente senza strappi."
+      "text": "Ungi generosamente una teglia 30×40 cm con olio EVO (non lesinare: l'olio in abbondanza favorisce la croccantezza del fondo). Rovescia delicatamente l'impasto nella teglia fredda. Con i polpastrelli unti, allarga l'impasto partendo dal centro verso i bordi, con movimenti dolci e orizzontali — mai premere verso il basso con il palmo piatto. Se l'impasto resiste e si ritira, coprilo e lascialo riposare 10–15 minuti: si rilasserà da solo. Non usare mattarello: distruggeresti tutta l'alveolatura. L'impasto deve riempire la teglia uniformemente senza strappi."
     },
     {
       "title": "Doppia Cottura — Prima Fase (Base)",
-      "text": "Preriscalda il forno statico con la teglia vuota (o una pietra refrattaria sul ripiano basso) a 250–260°C per almeno 40–45 minuti. Condisci la pizza con pomodoro schiacciato a mano (o fiordilatte se fai una bianca), senza esagerare col peso. Inforna sul ripiano più basso del forno e cuoci 12–15 minuti, fino a quando il bordo inizia a colorarsi e il fondo è dorato e croccante. La prima cottura fissa la struttura dell'impasto."
+      "text": "Preriscalda il forno statico con una pietra refrattaria posizionata sul ripiano basso a 250–260°C per almeno 40–45 minuti. Condisci la pizza con pomodoro schiacciato a mano (o fiordilatte se fai una bianca), senza esagerare col peso. Appoggia la teglia direttamente sulla pietra refrattaria e cuoci 12–15 minuti, fino a quando il bordo inizia a colorarsi e il fondo è dorato e croccante. La prima cottura fissa la struttura dell'impasto."
     },
     {
       "title": "Doppia Cottura — Seconda Fase (Topping)",
@@ -114,9 +114,9 @@
     "temperature": "250–260°C",
     "time": "12–15 min (prima cottura) + 3–5 min (con topping)",
     "tips": [
-      "Preriscalda il forno statico (MAI ventilato) a 250–260°C per almeno 40–45 minuti con la teglia dentro o con pietra refrattaria sul ripiano basso",
+      "Preriscalda il forno statico (MAI ventilato) a 250–260°C per almeno 40–45 minuti con la pietra refrattaria sul ripiano basso",
       "Olio abbondante nella teglia: non è un errore, è tecnica — favorisce la croccantezza del fondo e impedisce l'attaccamento",
-      "Prima cottura sempre sul ripiano PIÙ BASSO per scaldare il fondo; seconda cottura sul ripiano medio-alto per gratinare i topping",
+      "Prima cottura sempre sul ripiano PIÙ BASSO (appoggiando la teglia sulla pietra refrattaria) per scaldare il fondo; seconda cottura sul ripiano medio-alto per gratinare i topping",
       "Il fondo è cotto quando, sollevando un angolo con una spatola, risulta dorato e rigido — non pallido e cedevole",
       "Mozzarella: strizzala bene 30 minuti prima in un colino. Il siero in eccesso renderebbe la superficie acquosa",
       "Dopo aver sfornato, trasferisci SEMPRE su una griglia: non lasciare la pizza nella teglia o il vapore intrappolato ammorbidisce il fondo"
@@ -174,7 +174,7 @@
   ],
   "alert": "NON usare farine deboli (W < 260) per questo impasto: con 83% di idratazione e 24h di maturazione, una farina debole non sviluppa la maglia glutinica necessaria e l'impasto diventa una poltiglia ingestibile. Allo stesso modo, NON abbreviare la maturazione in freddo a meno di 12 ore: la teglia romana non è una pizza veloce — la sua leggerezza e digeribilità dipendono dalla lentezza del processo.",
   "proTips": [
-    "La teglia NON è piatta come sembra: per ottenere il fondo perfettamente croccante, scalda la teglia vuota in forno durante il preriscaldamento. Quando versi l'impasto su una teglia già caldissima, il fondo inizia a cuocere immediatamente dal primo contatto — è la tecnica delle pizzerie al taglio romane.",
+    "Per ottenere il fondo perfettamente croccante, posiziona una pietra refrattaria sul ripiano basso del forno durante il preriscaldamento e appoggia la teglia direttamente su di essa: il calore diretto dal basso garantisce una spinta termica immediata sul fondo, replicando la tecnica delle pizzerie al taglio romane — in totale sicurezza.",
     "Se la tua cucina è calda (>25°C), usa acqua ancora più fredda (2–4°C dal congelatore in parte ghiacciata) e riduci la puntata a temperatura ambiente a soli 30 minuti prima del frigo. La temperatura dell'impasto non deve mai superare i 26°C prima di entrare in frigo, altrimenti la maturazione diventa incontrollabile.",
     "Per un'alveolatura ancora più pronunciata, sostituisci il 20% della farina (100g) con Tipo 1 o semola rimacinata (50g + 50g): le fibre rallentano leggermente il glutine, creando alveoli più grandi e irregolari e un profilo aromatico più complesso."
   ],

@@ -118,30 +118,39 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-19T20:25:39.290Z",
   "image": "images/ricette/condimenti/besciamella-classica.webp",
-  "imageAttribution": "📷 Foto: foxy tati — Pexels License via Pexels",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
-    "summary": "Una besciamella classica dal carattere avvolgente e latteo, costruita su un roux biondo che conferisce una nota tostata delicata e biscottata. La texture è vellutata e collante, con una persistenza burrosa medio-lunga e un finale speziato e pungente donato dalla noce moscata grattugiata fresca. L'equilibrio tra grassezza e sapidità è calibrato con precisione artigianale.",
+    "summary": "Una besciamella classica dal profilo latteo e burroso di grande eleganza, con una base aromatica discreta conferita dalla noce moscata grattugiata fresca. La tostatura del roux biondo introduce una nota calda e biscottata che bilancia la dolcezza del latte intero, mentre la consistenza vellutata e l'equilibrio sal-grasso definiscono una salsa di grande finezza tecnica.",
     "axes": [
       {
-        "label": "Grassezza",
+        "label": "Ricchezza Lattica & Burrosa",
         "value": 8
       },
       {
-        "label": "Sapidità (Umami)",
+        "label": "Intensità Aromatica (Noce Moscata)",
         "value": 4
       },
       {
-        "label": "Intensità Aromatica",
+        "label": "Note Tostate (Roux Biondo)",
         "value": 5
       },
       {
-        "label": "Vellutezza / Viscosità",
-        "value": 9
+        "label": "Sapidità",
+        "value": 3
       },
       {
-        "label": "Note Tostate (Maillard)",
-        "value": 4
+        "label": "Cremosità & Corpo",
+        "value": 8
       }
     ]
-  }
+  },
+  "nutrition": {
+    "kcal_per_100g": 118,
+    "macros": {
+      "carbs": 8,
+      "protein": 3,
+      "fat": 8
+    }
+  },
+  "_originalImageUrl": ""
 }

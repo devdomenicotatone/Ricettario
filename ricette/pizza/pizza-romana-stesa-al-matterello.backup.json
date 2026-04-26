@@ -226,28 +226,36 @@
   "image": "images/ricette/pizza/pizza-romana-stesa-al-matterello.webp",
   "imageAttribution": "📷 Foto: Alejandro Aznar — Pexels License via Pexels",
   "sensoryProfile": {
-    "summary": "Una pizza romana stesa al matterello di straordinaria precisione tecnica: la biga a 72 ore su farina W350 e la doppia maturazione in freddo costruiscono un profilo aromatico complesso, acidulo e profondo, mentre l'idratazione contenuta al 50% e la stesura a 2-3 mm garantiscono una croccantezza strutturale quasi biscottata. La semola rimacinata in impasto e le bruciacchiature a 280°C su pietra refrattaria esaltano le note tostate e la rigidità della base, con il malto diastatico che accelera la reazione di Maillard regalando colore e profumo di crosta caramellata.",
+    "summary": "Una pizza romana stesa al matterello che si distingue per la sua sfoglia sottilissima e croccante, quasi friabile al morso, con un profilo aromatico complesso guidato dalla lunga maturazione bifasica della biga a 72+ ore. Il naso rivela note di cereale tostato, leggera acidità lattica e un fondo di malto che arricchisce la percezione gusto-olfattiva; in bocca domina la croccantezza secca, con un retrogusto minerale e leggermente erbaceo conferito dall'olio EVO e dalla semola rimacinata.",
     "axes": [
       {
-        "label": "Croccantezza della Base",
+        "label": "Croccantezza / Friabilità",
         "value": 10
       },
       {
         "label": "Complessità Aromatica (Fermentazione)",
-        "value": 9
-      },
-      {
-        "label": "Estensibilità / Tenacia al Morso",
-        "value": 4
-      },
-      {
-        "label": "Note Tostate (Maillard)",
         "value": 8
       },
       {
-        "label": "Leggerezza / Alveolatura",
+        "label": "Idratazione / Morbidezza",
+        "value": 2
+      },
+      {
+        "label": "Intensità del Condimento",
+        "value": 6
+      },
+      {
+        "label": "Spinta al Morso (Masticabilità)",
         "value": 3
       }
     ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 268,
+    "macros": {
+      "carbs": 48,
+      "protein": 8,
+      "fat": 4
+    }
   }
 }

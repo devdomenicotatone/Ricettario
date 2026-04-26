@@ -59,7 +59,7 @@
         {
           "name": "Olio Extravergine di Oliva",
           "note": "(cultivar ligure o del Garda, fruttato leggero)",
-          "grams": 80,
+          "grams": 160,
           "tokenId": "olio_evo"
         },
         {
@@ -185,12 +185,12 @@
   "_generatedBy": "claude",
   "_createdAt": "2026-04-19T20:50:36.106Z",
   "image": "images/ricette/condimenti/salsa-verde-piemontese-bagnet-verd.webp",
-  "imageAttribution": "📷 Foto: DΛVΞ GΛRCIΛ — Pexels License via Pexels",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
-    "summary": "Il Bagnet Verd si presenta come una salsa erbacea di grande personalità, dove la freschezza vegetale del prezzemolo dialoga in modo raffinato con la sapidità marina delle acciughe e la nota pungente-acidula dell'aceto. Il tuorlo sodo e la mollica ammollata conferiscono una rotondità cremosa che bilancia l'intensità complessiva, mentre l'olio extravergine avvolge il palato con un finale fruttato e leggermente amaro, di grande persistenza.",
+    "summary": "Il Bagnet Verd si presenta come una salsa di straordinaria complessità aromatica: il prezzemolo domina con la sua erbaceità fresca e leggermente amaricante, mentre le acciughe dissalate e i capperi costruiscono un substrato umami profondo e salino di grande persistenza. L'aceto di vino bianco, trattenuto nella mollica ammollata, dona una vivace acidità che bilancia la rotondità dell'olio extravergine ligure, con il tuorlo sodo a legare il tutto in una tessitura cremosa e avvolgente.",
     "axes": [
       {
-        "label": "Intensità Erbacea",
+        "label": "Erbaceità / Freschezza",
         "value": 9
       },
       {
@@ -198,15 +198,15 @@
         "value": 7
       },
       {
-        "label": "Sapidità Umami",
+        "label": "Sapidità / Umami",
         "value": 8
       },
       {
-        "label": "Cremosità / Corpo",
+        "label": "Untuosità / Corpo",
         "value": 6
       },
       {
-        "label": "Persistenza Aromatica",
+        "label": "Complessità Aromatica",
         "value": 8
       }
     ]
@@ -214,9 +214,10 @@
   "nutrition": {
     "kcal_per_100g": 312,
     "macros": {
-      "carbs": 8,
+      "carbs": 9,
       "protein": 5,
       "fat": 27
     }
-  }
+  },
+  "_originalImageUrl": ""
 }

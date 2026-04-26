@@ -133,7 +133,7 @@
   "_generatedBy": "claude-opus",
   "_createdAt": "2026-04-24T13:05:46.127Z",
   "image": "images/ricette/condimenti/maionese.webp",
-  "imageAttribution": "📷 Foto: Kei Scampa — Pexels License via Pexels",
+  "imageAttribution": "📷 Foto: Stacy Spensley — CC BY 2.0 via Wikimedia",
   "sensoryProfile": {
     "summary": "Una maionese classica dal profilo grasso e vellutato, costruita sull'equilibrio tra la ricchezza lipidica dell'olio di girasole e la vivace acidità del limone con l'aceto. La struttura è densa e lucida, con una cremosità avvolgente e una nota lievemente pungente sul finale che pulisce il palato. L'utilizzo di olio di semi garantisce neutralità aromatica, lasciando emergere la mineralità dei tuorli freschi e la freschezza agrumata.",
     "axes": [
@@ -166,5 +166,6 @@
       "protein": 2,
       "fat": 75
     }
-  }
+  },
+  "_originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/70/Homemade_mayonnaise_%284059871654%29.jpg"
 }

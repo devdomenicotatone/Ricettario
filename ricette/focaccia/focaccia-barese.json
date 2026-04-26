@@ -213,7 +213,7 @@
   ],
   "_generatedBy": "claude-opus",
   "image": "images/ricette/focaccia/focaccia-barese.webp",
-  "imageAttribution": "📷 Foto: Noemí Jiménez — Pexels License via Pexels",
+  "imageAttribution": "📷 Foto: Simona.IT — CC BY-SA via Openverse",
   "steps": [
     {
       "title": "Preparazione Lievitino",
@@ -280,5 +280,6 @@
       "protein": 6,
       "fat": 10
     }
-  }
+  },
+  "_originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Focaccia_Barese.jpg"
 }

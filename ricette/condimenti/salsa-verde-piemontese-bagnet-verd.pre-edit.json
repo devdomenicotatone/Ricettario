@@ -59,7 +59,7 @@
         {
           "name": "Olio Extravergine di Oliva",
           "note": "(cultivar ligure o del Garda, fruttato leggero)",
-          "grams": 160,
+          "grams": 161,
           "tokenId": "olio_evo"
         },
         {
@@ -100,12 +100,12 @@
       "text": "Il metodo artigianale prevede la tritatura al coltello su tagliere di legno. Tritare finemente le foglie di prezzemolo con l'aglio usando un coltello a lama larga ben affilato, con movimento a mezzaluna. Aggiungere sul tagliere le acciughe e i capperi e continuare a tritare tutto insieme fino ad ottenere un trito omogeneo e fine. Trasferire in una ciotola. Aggiungere la mollica strizzata e il tuorlo sodo setacciato attraverso un colino a maglie fini: in questo modo si incorpora in modo uniforme senza grumi. Mescolare con un cucchiaio o una forchetta fino ad avere un composto uniforme."
     },
     {
-      "title": "Metodo con frullatore (alternativa moderna)",
+      "title": "b. Metodo con frullatore (alternativa moderna)",
       "text": "In alternativa alla tritatura al coltello, versare nel bicchiere del frullatore a immersione (o nel boccale di un mini tritatutto): il prezzemolo, l'aglio privato dell'anima, le acciughe, i capperi, la mollica strizzata e il tuorlo sodo. Frullare a impulsi brevi (5-6 scatti da 3 secondi) fino ad ottenere un composto cremoso ma ancora con texture: la salsa NON deve essere completamente liscia. Il frullatore tende a ossidare il prezzemolo; preferire quindi il coltello se si vuole un verde brillante."
     },
     {
       "title": "Emulsione con l'olio",
-      "text": "Versare lentamente i {olio_evo:160}g di olio extravergine a filo sul composto, mescolando energicamente con una forchetta o una piccola frusta. L'obiettivo è ottenere una salsa cremosa, densa ma fluente — simile a una vinaigrette spessa, non a una maionese. Aggiustare la consistenza: se troppo densa, aggiungere qualche goccia di olio in più; se troppo liquida, aggiungere un altro po' di mollica precedentemente strizzata. Assaggiare e correggere con {sale:2}g di sale fino e {pepe:1}g di pepe nero macinato fresco, ricordando che le acciughe e i capperi contribuiscono già alla sapidità."
+      "text": "Versare lentamente i {olio_evo:80}g di olio extravergine a filo sul composto, mescolando energicamente con una forchetta o una piccola frusta. L'obiettivo è ottenere una salsa cremosa, densa ma fluente — simile a una vinaigrette spessa, non a una maionese. Aggiustare la consistenza: se troppo densa, aggiungere qualche goccia di olio in più; se troppo liquida, aggiungere un altro po' di mollica precedentemente strizzata. Assaggiare e correggere con {sale:2}g di sale fino e {pepe:1}g di pepe nero macinato fresco, ricordando che le acciughe e i capperi contribuiscono già alla sapidità."
     },
     {
       "title": "Riposo e servizio",

@@ -147,7 +147,7 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-24T14:35:19.869Z",
   "image": "images/ricette/conserve/pomodorini-confit-sottolio.webp",
-  "imageAttribution": "📷 Foto: Ivan Vi — Pexels License via Pexels",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
     "summary": "Un concentrato di sole mediterraneo: i datterini confit rivelano una dolcezza matura e caramellata bilanciata da una sapidità elegante, con note erbacee di timo e origano che si intrecciano a un fondo vanigliato di aglio in camicia. La testura è fondente e voluttuosa, avvolta dalla rotondità fruttata dell'olio extravergine, con una persistenza aromatica lunga e avvolgente tipica delle grandi conserve artigianali.",
     "axes": [
@@ -180,5 +180,6 @@
       "protein": 1,
       "fat": 19
     }
-  }
+  },
+  "_originalImageUrl": ""
 }

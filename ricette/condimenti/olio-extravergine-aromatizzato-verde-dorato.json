@@ -1,6 +1,6 @@
 {
-  "title": "Olio Extravergine Aromatizzato",
-  "slug": "olio-extravergine-aromatizzato",
+  "title": "Olio Extravergine Aromatizzato (Verde Dorato)",
+  "slug": "olio-extravergine-aromatizzato-verde-dorato",
   "emoji": "🌿",
   "description": "Olio extravergine di oliva infuso a freddo con aglio, rosmarino e scorza di limone. Una preparazione tecnica essenziale per condire bruschette, focacce e carni.",
   "subtitle": "Tecnica di infusione lipidica a freddo e stabilizzazione aromatica",
@@ -116,8 +116,8 @@
   ],
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-16T18:16:57.771Z",
-  "image": "images/ricette/condimenti/olio-extravergine-aromatizzato.webp",
-  "imageAttribution": "📷 Foto: Ron Lach — Pexels License via Pexels",
+  "image": "images/ricette/condimenti/olio-extravergine-aromatizzato-verde-dorato.webp",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
     "summary": "Un olio extravergine aromatizzato di straordinaria eleganza, in cui la base fruttata delicata dell'EVO funge da tela su cui si dispiegano aromi erbacei di rosmarino, note agrumate di limone e un finale speziato di pepe nero. L'aglio privato dell'anima conferisce profondità senza aggressività, lasciando una persistenza aromatica lunga e raffinata. La tecnica a freddo preserva l'integrità di ogni componente volatile, restituendo un condimento di grande coerenza e complessità.",
     "axes": [
@@ -150,5 +150,6 @@
       "protein": 0,
       "fat": 98
     }
-  }
+  },
+  "_originalImageUrl": ""
 }

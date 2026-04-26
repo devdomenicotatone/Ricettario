@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-25T10:30:51.039Z",
+  "generatedAt": "2026-04-26T19:26:35.924Z",
   "totalRecipes": 75,
   "categories": [
     {
@@ -57,8 +57,10 @@
       "time": "~18h",
       "temp": "24-25°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-17T22:21:01.018Z"
+      "_createdAt": "2026-04-25T23:15:22.124Z"
     },
     {
       "title": "Ciabatta con Poolish, Malto e Criscito",
@@ -73,8 +75,10 @@
       "time": "~18h",
       "temp": "24-25°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-17T23:38:44.546Z"
+      "_createdAt": "2026-04-25T23:16:56.821Z"
     },
     {
       "title": "Pane ai Cereali e Semi",
@@ -89,6 +93,8 @@
       "time": "18-24h",
       "temp": "24-25°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-18T00:04:36.289Z"
     },
@@ -105,8 +111,10 @@
       "time": "12h (prefermento) + 4-5h (impasto)",
       "temp": "25-26°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-17T22:21:31.528Z"
+      "_createdAt": "2026-04-25T23:19:47.641Z"
     },
     {
       "title": "Pane di Altamura",
@@ -121,8 +129,10 @@
       "time": "18-20h",
       "temp": "25-26°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-17T22:21:43.423Z"
+      "_createdAt": "2026-04-25T23:19:55.021Z"
     },
     {
       "title": "Pane Integrale con Biga",
@@ -137,6 +147,8 @@
       "time": "16h (biga) + 4-5h (impasto)",
       "temp": "25-26°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-05T02:05:44.664Z"
     },
@@ -153,8 +165,10 @@
       "time": "~22h",
       "temp": "25-26°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-17T22:22:09.255Z"
+      "_createdAt": "2026-04-25T23:20:08.871Z"
     },
     {
       "title": "Treccia di Pane all'Olio",
@@ -169,6 +183,8 @@
       "time": "~3.5h",
       "temp": "25-26°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-23T22:00:37.889Z"
     },
@@ -185,8 +201,10 @@
       "time": "24-48h",
       "temp": "24-26°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-17T22:22:56.072Z"
+      "_createdAt": "2026-04-25T23:21:54.146Z"
     },
     {
       "title": "Pizza Contemporanea Canotto",
@@ -201,8 +219,10 @@
       "time": "24h biga + 6-7h rinfresco",
       "temp": "23°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-17T23:34:26.411Z"
+      "_createdAt": "2026-04-25T23:22:02.310Z"
     },
     {
       "title": "Pizza in Teglia Romana",
@@ -217,6 +237,8 @@
       "time": "24h in freddo + 2-3h appretto",
       "temp": "24-26°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "claude",
       "_createdAt": "2026-04-16T21:34:52.774Z"
     },
@@ -233,6 +255,8 @@
       "time": "40–60 min puntata + 24h in frigo + 4h appretto a 25–26°C",
       "temp": "24–25°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "claude",
       "_createdAt": "2026-04-16T21:35:51.898Z"
     },
@@ -249,8 +273,10 @@
       "time": "24-30h totali (biga 18-24h + appretto 5-6h)",
       "temp": "23-24°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-20T22:33:35.419Z"
+      "_createdAt": "2026-04-25T23:22:27.531Z"
     },
     {
       "title": "Pizza Napoletana Verace STG",
@@ -265,8 +291,10 @@
       "time": "8-24h (controllata)",
       "temp": "24-26°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-17T22:24:27.623Z"
+      "_createdAt": "2026-04-25T23:22:34.821Z"
     },
     {
       "title": "Pizza Romana Stesa al Matterello",
@@ -281,6 +309,8 @@
       "time": "Biga 24h a 4°C + Impasto 24h a 4°C + Panetti 24h a 4°C",
       "temp": "22-24°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "claude",
       "_createdAt": "2026-04-16T21:48:08.809Z"
     },
@@ -297,6 +327,8 @@
       "time": null,
       "temp": "22-24°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-22T20:39:25.883Z"
     },
@@ -313,8 +345,10 @@
       "time": "~3h a temperatura ambiente",
       "temp": "24-26°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "claude-opus",
-      "_createdAt": "2026-04-17T23:47:16.967Z"
+      "_createdAt": "2026-04-26T18:45:33.911Z"
     },
     {
       "title": "Focaccia di Recco IGP",
@@ -329,8 +363,10 @@
       "time": "30-60 min riposo",
       "temp": "20-22°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-17T22:17:58.087Z"
+      "_createdAt": "2026-04-26T18:57:44.263Z"
     },
     {
       "title": "Focaccia Genovese (Fügassa)",
@@ -345,8 +381,10 @@
       "time": "3-4 ore totali",
       "temp": "24-26°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-17T23:44:59.346Z"
+      "_createdAt": "2026-04-26T13:28:40.259Z"
     },
     {
       "title": "Focaccia Genovese Classica",
@@ -361,8 +399,10 @@
       "time": "5-6h totali (biga 1,5-2h + impasto 3-4h + appretto 40min)",
       "temp": "24-26°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-17T22:18:16.070Z"
+      "_createdAt": "2026-04-25T23:17:49.881Z"
     },
     {
       "title": "Gnocchi di Patate",
@@ -377,6 +417,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-18T00:10:40.501Z"
     },
@@ -393,8 +435,10 @@
       "time": "nessuna (riposo 20-40 min)",
       "temp": "28-32°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-17T22:22:23.262Z"
+      "_createdAt": "2026-04-25T23:18:02.065Z"
     },
     {
       "title": "Polenta Concia alla Valdostana",
@@ -409,6 +453,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-17T17:50:23.207Z"
     },
@@ -425,6 +471,8 @@
       "time": "~18-20h biga + 2-2.5h puntata + 1h appretto",
       "temp": "24-26°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-05T01:36:05.142Z"
     },
@@ -441,6 +489,8 @@
       "time": "~24h totali (biga 8-10h + puntata 1h + frigo 12h)",
       "temp": "22-24°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-05T01:25:46.208Z"
     },
@@ -457,8 +507,10 @@
       "time": "2-2.5h lievitazione + 30min appretto",
       "temp": "26-27°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-17T22:19:35.763Z"
+      "_createdAt": "2026-04-26T15:41:30.999Z"
     },
     {
       "title": "Panettone Artigianale Classico",
@@ -473,6 +525,8 @@
       "time": "24-36h",
       "temp": "26-28°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-15T19:19:48.291Z"
     },
@@ -489,8 +543,10 @@
       "time": "24-36h totali (primo impasto 12-14h, secondo 8-10h)",
       "temp": "26-28°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-17T22:20:01.377Z"
+      "_createdAt": "2026-04-25T23:20:24.068Z"
     },
     {
       "title": "Pasta Brioche Artigianale",
@@ -505,6 +561,8 @@
       "time": "14-18h (inclusa maturazione a freddo)",
       "temp": "25-26°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-16T20:00:36.244Z"
     },
@@ -521,6 +579,8 @@
       "time": "3–5h a T.A. oppure 1h + 12–16h in frigo",
       "temp": "24–26°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "claude",
       "_createdAt": "2026-04-16T19:51:32.202Z"
     },
@@ -537,6 +597,8 @@
       "time": "4-24h",
       "temp": "26-28°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-15T19:29:40.558Z"
     },
@@ -553,8 +615,10 @@
       "time": "nessuna",
       "temp": "20-22°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-17T22:17:16.185Z"
+      "_createdAt": "2026-04-25T23:16:35.775Z"
     },
     {
       "title": "Cartocci alla Crema Siciliani",
@@ -569,8 +633,10 @@
       "time": "~2-3h totali",
       "temp": "26-27°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-17T22:17:33.685Z"
+      "_createdAt": "2026-04-25T23:16:43.709Z"
     },
     {
       "title": "Migliaccio Napoletano",
@@ -585,8 +651,10 @@
       "time": "Nessuna fermentazione richiesta",
       "temp": "temperatura ambiente",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-17T22:17:46.399Z"
+      "_createdAt": "2026-04-25T23:18:42.887Z"
     },
     {
       "title": "Burro Chiarificato",
@@ -601,6 +669,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-24T13:09:48.168Z"
     },
@@ -617,8 +687,10 @@
       "time": "n/a",
       "temp": "n/a",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "claude",
-      "_createdAt": "2026-04-17T22:17:04.611Z"
+      "_createdAt": "2026-04-25T23:17:12.387Z"
     },
     {
       "title": "Pomodorini Confit Sott'olio",
@@ -633,6 +705,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T14:35:19.869Z"
     },
@@ -649,6 +723,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "claude",
       "_createdAt": "2026-04-19T20:50:36.106Z"
     },
@@ -665,6 +741,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-24T13:05:07.661Z"
     },
@@ -681,6 +759,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-19T20:25:39.290Z"
     },
@@ -697,6 +777,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-19T20:32:53.898Z"
     },
@@ -713,6 +795,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-19T20:32:57.188Z"
     },
@@ -729,6 +813,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-19T20:32:20.490Z"
     },
@@ -745,6 +831,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-19T20:31:01.182Z"
     },
@@ -761,6 +849,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-19T20:32:19.935Z"
     },
@@ -777,6 +867,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "claude",
       "_createdAt": "2026-04-19T20:30:21.184Z"
     },
@@ -793,6 +885,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-24T13:05:46.127Z"
     },
@@ -809,6 +903,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-19T20:24:16.978Z"
     },
@@ -825,6 +921,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-17T18:05:00.000Z"
     },
@@ -835,108 +933,122 @@
       "categoryDir": "condimenti",
       "emoji": "🌿",
       "href": "ricette/condimenti/olio-al-basilico-verde-smeraldo.html",
-      "image": "images/ricette/condimenti/olio-verde-smeraldo-pro.png",
+      "image": "images/ricette/condimenti/olio-al-basilico-verde-smeraldo.webp",
       "description": "Olio aromatico al basilico con tecnica dello shock termico: colore verde neon, purezza cristallina e sicurezza alimentare totale.",
       "hydration": null,
       "time": null,
       "temp": "60–70°C (olio durante riscaldamento)",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "claude",
       "_createdAt": "2026-04-16T14:32:01.457Z"
     },
     {
       "title": "Olio al Cavolo Viola (Elettrico)",
-      "slug": "olio-al-cavolo-viola-condimento",
+      "slug": "olio-cavolo-viola-elettrico",
       "category": "Condimenti",
       "categoryDir": "condimenti",
       "emoji": "🔮",
-      "href": "ricette/condimenti/olio-al-cavolo-viola-condimento.html",
-      "image": "images/ricette/condimenti/olio-al-cavolo-viola-condimento.webp",
+      "href": "ricette/condimenti/olio-cavolo-viola-elettrico.html",
+      "image": "images/ricette/condimenti/olio-cavolo-viola-elettrico.webp",
       "description": "Olio di finitura professionale dal colore viola vibrante e dalla purezza ottica assoluta. La perfetta terza variante cromatica da affiancare all'olio al basilic",
       "hydration": null,
       "time": null,
       "temp": "60-65°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T23:21:43.378Z"
     },
     {
-      "title": "Olio al Peperone Crusco o Paprika Dolce",
-      "slug": "olio-peperone-crusco-paprika",
+      "title": "Olio al Peperone Crusco o Paprika Dolce (Rosso Rubino)",
+      "slug": "olio-peperone-crusco-rosso-rubino",
       "category": "Condimenti",
       "categoryDir": "condimenti",
       "emoji": "🌶️",
-      "href": "ricette/condimenti/olio-peperone-crusco-paprika.html",
-      "image": "images/ricette/condimenti/olio-peperone-crusco-paprika.webp",
+      "href": "ricette/condimenti/olio-peperone-crusco-rosso-rubino.html",
+      "image": "images/ricette/condimenti/olio-peperone-crusco-rosso-rubino.webp",
       "description": "Condimento artigianale lucano dal colore rosso rubino e dal profumo affumicato. Ideale per insaporire focacce, pasta, bruschette o per l'uso a crudo.",
       "hydration": null,
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T23:00:17.531Z"
     },
     {
       "title": "Olio all'Aglio Nero (Nero Ossidiana)",
-      "slug": "olio-aglio-nero-carbone-vegetale",
+      "slug": "olio-aglio-nero-ossidiana",
       "category": "Condimenti",
       "categoryDir": "condimenti",
       "emoji": "🧄",
-      "href": "ricette/condimenti/olio-aglio-nero-carbone-vegetale.html",
-      "image": "images/ricette/condimenti/olio-aglio-nero-carbone-vegetale.webp",
+      "href": "ricette/condimenti/olio-aglio-nero-ossidiana.html",
+      "image": "images/ricette/condimenti/olio-aglio-nero-ossidiana.webp",
       "description": "Condimento tecnico e scenografico dal colore nero profondo, ideale per esaltare pizze gourmet e piatti d'alta cucina con note umami e balsamiche.",
       "hydration": null,
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T23:44:59.842Z"
     },
     {
       "title": "Olio alla Carota e Zenzero (Arancio Fluo)",
-      "slug": "olio-carota-zenzero",
+      "slug": "olio-carota-zenzero-arancio-fluo",
       "category": "Condimenti",
       "categoryDir": "condimenti",
       "emoji": "🥕",
-      "href": "ricette/condimenti/olio-carota-zenzero.html",
-      "image": "images/ricette/condimenti/olio-carota-zenzero.webp",
+      "href": "ricette/condimenti/olio-carota-zenzero-arancio-fluo.html",
+      "image": "images/ricette/condimenti/olio-carota-zenzero-arancio-fluo.webp",
       "description": "Condimento professionale dal colore arancio fluo vibrante e purezza ottica assoluta. La freschezza agrumata dello zenzero incontra la dolcezza della carota in u",
       "hydration": null,
       "time": null,
       "temp": "70°C",
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T23:37:26.093Z"
     },
     {
-      "title": "Olio alla Curcuma o Zafferano",
-      "slug": "olio-curcuma-zafferano",
+      "title": "Olio alla Curcuma o Zafferano (Giallo Oro)",
+      "slug": "olio-curcuma-zafferano-giallo-oro",
       "category": "Condimenti",
       "categoryDir": "condimenti",
       "emoji": "🫙",
-      "href": "ricette/condimenti/olio-curcuma-zafferano.html",
-      "image": "images/ricette/condimenti/olio-curcuma-zafferano.webp",
+      "href": "ricette/condimenti/olio-curcuma-zafferano-giallo-oro.html",
+      "image": "images/ricette/condimenti/olio-curcuma-zafferano-giallo-oro.webp",
       "description": "Olio aromatizzato artigianale estratto a freddo. Un condimento funzionale dal colore brillante e profilo aromatico terroso o floreale, ideale a crudo.",
       "hydration": null,
       "time": "7 giorni",
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T23:44:45.379Z"
     },
     {
-      "title": "Olio Extravergine Aromatizzato",
-      "slug": "olio-extravergine-aromatizzato",
+      "title": "Olio Extravergine Aromatizzato (Verde Dorato)",
+      "slug": "olio-extravergine-aromatizzato-verde-dorato",
       "category": "Condimenti",
       "categoryDir": "condimenti",
       "emoji": "🌿",
-      "href": "ricette/condimenti/olio-extravergine-aromatizzato.html",
-      "image": "images/ricette/condimenti/olio-extravergine-aromatizzato.webp",
+      "href": "ricette/condimenti/olio-extravergine-aromatizzato-verde-dorato.html",
+      "image": "images/ricette/condimenti/olio-extravergine-aromatizzato-verde-dorato.webp",
       "description": "Olio extravergine di oliva infuso a freddo con aglio, rosmarino e scorza di limone. Una preparazione tecnica essenziale per condire bruschette, focacce e carni.",
       "hydration": null,
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-16T18:16:57.771Z"
     },
@@ -953,6 +1065,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-19T20:27:46.793Z"
     },
@@ -969,6 +1083,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T12:58:25.630Z"
     },
@@ -985,6 +1101,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-24T13:07:44.327Z"
     },
@@ -1001,6 +1119,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-24T13:09:52.619Z"
     },
@@ -1017,6 +1137,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T12:56:21.494Z"
     },
@@ -1033,6 +1155,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-19T20:28:35.471Z"
     },
@@ -1049,6 +1173,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T12:53:22.833Z"
     },
@@ -1065,6 +1191,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T12:54:03.100Z"
     },
@@ -1081,6 +1209,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-17T17:21:21.505Z"
     },
@@ -1097,6 +1227,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T13:06:15.634Z"
     },
@@ -1113,6 +1245,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "claude",
       "_createdAt": "2026-04-19T20:45:45.094Z"
     },
@@ -1129,6 +1263,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T13:07:59.331Z"
     },
@@ -1145,6 +1281,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-19T20:31:05.239Z"
     },
@@ -1161,6 +1299,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-24T13:07:57.640Z"
     },
@@ -1177,6 +1317,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T13:06:31.160Z"
     },
@@ -1193,6 +1335,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-19T20:25:45.908Z"
     },
@@ -1209,6 +1353,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "claude",
       "_createdAt": "2026-04-19T20:48:00.508Z"
     },
@@ -1225,6 +1371,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T13:05:21.348Z"
     },
@@ -1241,6 +1389,8 @@
       "time": null,
       "temp": null,
       "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
       "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-19T20:31:44.570Z"
     }

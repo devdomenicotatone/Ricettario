@@ -118,7 +118,7 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-19T20:25:39.290Z",
   "image": "images/ricette/condimenti/besciamella-classica.webp",
-  "imageAttribution": "📷 Foto: foxy tati — Pexels License via Pexels",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
     "summary": "Una besciamella classica dal profilo latteo e burroso di grande eleganza, con una base aromatica discreta conferita dalla noce moscata grattugiata fresca. La tostatura del roux biondo introduce una nota calda e biscottata che bilancia la dolcezza del latte intero, mentre la consistenza vellutata e l'equilibrio sal-grasso definiscono una salsa di grande finezza tecnica.",
     "axes": [
@@ -151,5 +151,6 @@
       "protein": 3,
       "fat": 8
     }
-  }
+  },
+  "_originalImageUrl": ""
 }

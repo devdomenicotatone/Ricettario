@@ -116,7 +116,7 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-19T20:24:16.978Z",
   "image": "images/ricette/condimenti/maionese-fatta-in-casa.webp",
-  "imageAttribution": "📷 Foto: Click Jeth — Pexels License via Pexels",
+  "imageAttribution": "📷 Foto: jules — CC BY 2.0 via Wikimedia",
   "sensoryProfile": {
     "summary": "Una maionese casalinga dal profilo cremoso e avvolgente, con una struttura emulsionata densa e vellutata che rivela subito la qualità dell'uovo fresco. Al palato emerge una piacevole acidità bilanciata dal connubio limone-aceto, mentre la senape di Digione dona un sottofondo leggermente pungente e aromatico che complessa il profilo. L'olio di girasole garantisce una base neutra e pulita, lasciando che le note citate brillino senza interferenze grasse pesanti.",
     "axes": [
@@ -149,5 +149,6 @@
       "protein": 2,
       "fat": 75
     }
-  }
+  },
+  "_originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Mayonnaise_%281%29.jpg"
 }

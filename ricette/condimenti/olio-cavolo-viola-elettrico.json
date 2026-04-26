@@ -1,6 +1,6 @@
 {
   "title": "Olio al Cavolo Viola (Elettrico)",
-  "slug": "olio-al-cavolo-viola-condimento",
+  "slug": "olio-cavolo-viola-elettrico",
   "emoji": "🔮",
   "description": "Olio di finitura professionale dal colore viola vibrante e dalla purezza ottica assoluta. La perfetta terza variante cromatica da affiancare all'olio al basilico e al peperone crusco.",
   "subtitle": "Tecnica di disidratazione ed estrazione a caldo per oli di finitura limpidi",
@@ -97,8 +97,8 @@
   ],
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-24T23:21:43.378Z",
-  "image": "images/ricette/condimenti/olio-al-cavolo-viola-condimento.webp",
-  "imageAttribution": "📷 Foto: Atlantic Ambience — Pexels License via Pexels",
+  "image": "images/ricette/condimenti/olio-cavolo-viola-elettrico.webp",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
     "summary": "Un olio di finitura dall'eleganza cromatica sorprendente, con una tonalità viola-porpora che vira verso il blu elettrico in funzione del pH del palato. Al naso si percepisce una delicata nota erbacea e leggermente terrosa del cavolo disidratato, integrata nella rotondità fruttata dell'olio EVO. In bocca è setoso e avvolgente, con un lieve retrogusto amarognolo-crucifero che chiude in modo pulito e persistente.",
     "axes": [
@@ -131,5 +131,6 @@
       "protein": 1,
       "fat": 91
     }
-  }
+  },
+  "_originalImageUrl": ""
 }

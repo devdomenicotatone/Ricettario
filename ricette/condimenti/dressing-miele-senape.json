@@ -116,7 +116,7 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-19T20:32:19.935Z",
   "image": "images/ricette/condimenti/dressing-miele-senape.webp",
-  "imageAttribution": "📷 Foto: Caio Niceas — Pexels License via Pexels",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
     "summary": "Un dressing dall'equilibrio elegante e dinamico, dove la dolcezza floreale del miele di acacia dialoga con la pungenza decisa della senape di Digione e la freschezza acidula dell'aceto di mele. L'olio extravergine delicato avvolge il palato con una texture vellutata e cremosa, mentre il pepe nero fresco porta un finale caldo e leggermente piccante. Un condimento versatile, dalla struttura emulsionata stabile e dal profilo aromatico complesso.",
     "axes": [
@@ -149,5 +149,6 @@
       "protein": 1,
       "fat": 38
     }
-  }
+  },
+  "_originalImageUrl": ""
 }

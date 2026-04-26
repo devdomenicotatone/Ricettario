@@ -202,7 +202,7 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-18T00:04:36.289Z",
   "image": "images/ricette/pane/pane-ai-cereali-semi.webp",
-  "imageAttribution": "📷 Foto: Andrea Prochilo — Pexels License via Pexels",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
     "summary": "Un pane di carattere rustico e autentico, in cui la complessità aromatica delle farine integrali e di farro si fonde con le note tostate e burroso-oleose dei semi in crosta. La mollica, aperta e leggermente alveolata, offre una masticazione soddisfacente e persistente, mentre la crosta croccante rivela sentori di cereale caramellato e miele grazie al malto d'orzo. L'olio extravergine d'oliva aggiunge rotondità e una sfumatura erbacea che bilancia l'acidità delicata della lunga maturazione a freddo.",
     "axes": [
@@ -235,5 +235,6 @@
       "protein": 9,
       "fat": 7
     }
-  }
+  },
+  "_originalImageUrl": ""
 }

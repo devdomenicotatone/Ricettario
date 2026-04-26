@@ -198,7 +198,7 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-22T20:39:25.883Z",
   "image": "images/ricette/focaccia/calzone-cipolla-barese-pugliese.webp",
-  "imageAttribution": "📷 Foto: Daria Andrievskaya — Pexels License via Pexels",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
     "summary": "Il Calzone di Cipolla Barese si presenta come un gioiello della pasticceria salata pugliese: la pasta friabile e dorata, ottenuta dall'emulsione di olio e vino bianco, cede sotto il coltello rivelando un ripieno di straordinaria complessità agrodolce. Le cipolle sponsali, lungamente appassite, offrono una dolcezza profonda e carezzevole, sapientemente contrappuntata dalla sapidità marina delle acciughe e delle olive nere baresane, mentre l'uvetta sultanina introduce tocchi fruttati e zuccherini di rara eleganza. Un piatto di grande carattere territoriale, caldo, avvolgente e di persistenza gustativa notevole.",
     "axes": [
@@ -231,5 +231,6 @@
       "protein": 5,
       "fat": 14
     }
-  }
+  },
+  "_originalImageUrl": ""
 }
