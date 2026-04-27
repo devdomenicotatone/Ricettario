@@ -19,6 +19,7 @@ export const CATEGORIES = {
   dolci:      { name: 'Dolci',      emoji: 'shortcake',      title: 'Dolci e Pasticceria',        desc: 'Dolci tradizionali, frolle, biscotti e pasticceria artigianale.' },
   conserve:   { name: 'Conserve',   emoji: 'canned-food',    title: 'Conserve e Preparazioni',    desc: 'Conserve fatte in casa — dadi vegetali, salse, sottoli e preparazioni base.' },
   condimenti: { name: 'Condimenti', emoji: 'herb',           title: 'Condimenti',                 desc: 'Salse, pesti e condimenti artigianali per ogni piatto.' },
+  secondi_piatti: { name: 'Secondi Piatti', emoji: 'fork-and-knife', title: 'Secondi Piatti', desc: 'Esplora ricette complete e saporite per i tuoi secondi piatti: carne, pesce, legumi e verdure.' },
 };
 
 /**
@@ -26,7 +27,7 @@ export const CATEGORIES = {
  * Chiavi dello stesso oggetto CATEGORIES.
  */
 export const CATEGORY_ORDER = [
-  'pasta', 'pane', 'pizza', 'lievitati', 'dolci', 'focaccia', 'conserve', 'condimenti',
+  'pasta', 'pane', 'pizza', 'lievitati', 'dolci', 'focaccia', 'conserve', 'condimenti', 'secondi_piatti',
 ];
 
 /**
