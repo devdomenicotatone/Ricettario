@@ -1,0 +1,225 @@
+{
+  "title": "Fumetto di Crostacei",
+  "slug": "fumetto-di-crostacei",
+  "emoji": "🦐",
+  "description": "Fumetto di crostacei fatto in casa: brodo concentrato da carapaci e teste, base insostituibile per risotti, zuppe e salse di pesce.",
+  "subtitle": "Brodo concentrato di crostacei — base aromatica fondamentale della cucina marinara",
+  "category": "Condimenti",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per il Fumetto",
+      "items": [
+        {
+          "name": "Carapaci e Teste di Crostacei",
+          "note": "(gamberi, mazzancolle, scampi — lavati e sgocciolati)",
+          "grams": 1000,
+          "tokenId": "carapaci_crostacei"
+        },
+        {
+          "name": "Acqua Fredda",
+          "note": "(non clorata, possibilmente filtrata)",
+          "grams": 1200,
+          "tokenId": "acqua"
+        },
+        {
+          "name": "Cipolla Dorata",
+          "note": "(media, circa 100g)",
+          "grams": 100,
+          "tokenId": "cipolla"
+        },
+        {
+          "name": "Carota",
+          "note": "(media)",
+          "grams": 100,
+          "tokenId": "carota"
+        },
+        {
+          "name": "Sedano",
+          "note": "(gambo con foglie)",
+          "grams": 80,
+          "tokenId": "sedano"
+        },
+        {
+          "name": "Vino Bianco Secco",
+          "note": "(Vermentino, Falanghina o simile — non aromatico)",
+          "grams": 150,
+          "tokenId": "vino_bianco"
+        },
+        {
+          "name": "Pomodorini",
+          "note": "(o 1 cucchiaio di concentrato di pomodoro)",
+          "grams": 80,
+          "tokenId": "pomodorini"
+        },
+        {
+          "name": "Aglio",
+          "note": "(1 spicchio, in camicia)",
+          "grams": 5,
+          "tokenId": "aglio"
+        },
+        {
+          "name": "Prezzemolo",
+          "note": "(gambi e ciuffo)",
+          "grams": 10,
+          "tokenId": "prezzemolo"
+        },
+        {
+          "name": "Pepe Nero in Grani",
+          "note": "(5-6 grani, leggermente schiacciati)",
+          "grams": 2,
+          "tokenId": "pepe_grani"
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(delicato, non troppo fruttato)",
+          "grams": 20,
+          "tokenId": "olio_evo"
+        },
+        {
+          "name": "Sale Grosso Marino",
+          "note": "(q.b. — circa 5-8g)",
+          "grams": 6,
+          "tokenId": "sale_grosso"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Preparazione degli ingredienti",
+      "text": "Raccogliere {carapaci_crostacei:1000}g di carapaci e teste di crostacei misti (gamberi, mazzancolle, scampi). Sciacquarli rapidamente sotto acqua corrente fredda per eliminare eventuali residui, poi scolarli bene in un colapasta. Pelare la cipolla e tagliarla a cubetti grossolani ({cipolla:100}g). Pelare la carota e tagliarla a rondelle spesse ({carota:100}g). Tagliare il sedano a pezzi di circa 2 cm ({sedano:80}g). Tagliare i pomodorini a metà ({pomodorini:80}g). Schiacciare leggermente lo spicchio d'aglio ({aglio:5}g) con il dorso del coltello lasciandolo in camicia. Tenere da parte i gambi e il ciuffo di prezzemolo ({prezzemolo:10}g) separati: i gambi andranno in cottura, il ciuffo servirà eventualmente come aroma finale."
+    },
+    {
+      "title": "Tostatura dei carapaci",
+      "text": "Versare {olio_evo:20}g di olio extravergine d'oliva in un tegame capiente a fondo spesso (acciaio o ghisa smaltata, almeno 4 litri di capienza). Scaldare a fiamma medio-alta fino a quando l'olio inizia appena a fumare. Aggiungere tutti i carapaci e le teste e lasciarli rosolare senza mescolare per 2-3 minuti: devono prendere un colore arancione-rossiccio intenso. Con un cucchiaio di legno o un pestello, SCHIACCIARE bene le teste e i carapaci contro il fondo del tegame per rompere i gusci e far fuoriuscire i succhi interni e il corallo. Questa operazione è fondamentale per estrarre il massimo del sapore. Continuare a tostare e schiacciare per altri 2-3 minuti, per un totale di circa {tempo_tostatura:5!} minuti."
+    },
+    {
+      "title": "Soffritto e sfumatura al vino",
+      "text": "Aggiungere ai carapaci tostati la cipolla, la carota, il sedano, l'aglio in camicia e i gambi di prezzemolo. Mescolare bene e far insaporire per {tempo_soffritto:3!} minuti a fiamma media, lasciando appassire leggermente le verdure. Sfumare con {vino_bianco:150}g di vino bianco secco. Alzare leggermente la fiamma e lasciar evaporare completamente la parte alcolica per 2-3 minuti, mescolando di tanto in tanto. Quando il profumo acre dell'alcol sarà scomparso, aggiungere i pomodorini tagliati a metà. Mescolare e far rosolare per un altro minuto."
+    },
+    {
+      "title": "Cottura del fumetto",
+      "text": "Versare {acqua:1200}g di acqua fredda nel tegame. Aggiungere {pepe_grani:2}g di pepe nero in grani leggermente schiacciati e {sale_grosso:6}g di sale grosso marino. Portare a bollore dolce, poi ABBASSARE immediatamente la fiamma al minimo: il fumetto deve sobbollire appena, mai bollire vigorosamente. Un'ebollizione troppo forte renderebbe il brodo torbido e amaro. Cuocere a coperchio semi-aperto per {tempo_cottura:35!} minuti. Durante la cottura, rimuovere con una schiumarola l'eventuale schiuma grigia o impurità che affiora in superficie (soprattutto nei primi 10 minuti). Non mescolare eccessivamente."
+    },
+    {
+      "title": "Filtratura e raffreddamento",
+      "text": "Spegnere il fuoco e lasciar riposare 5 minuti. Posizionare un colino chinois (o un colino a maglie finissime) su una ciotola capiente. Versare il contenuto del tegame nel colino, premendo energicamente i carapaci e le verdure con il dorso di un cucchiaio o con un mestolo per estrarre fino all'ultima goccia di sapore. Scartare il residuo solido. Per un risultato cristallino, filtrare una seconda volta attraverso un telo di mussola (etamine) o un colino foderato con garza a trama fitta. Il fumetto ottenuto avrà un colore ambrato-rossiccio, un profumo intenso di mare e un sapore concentrato. Assaggiare e regolare di sale se necessario. Lasciare raffreddare a temperatura ambiente, poi abbattere in frigorifero il prima possibile."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "baking": null,
+  "glossary": [
+    {
+      "term": "Fumetto",
+      "definition": "Brodo concentrato ottenuto dalla cottura breve di scarti di pesce o crostacei (carapaci, teste, lische) con verdure aromatiche. Si distingue dal brodo classico per il tempo di cottura ridotto (30-45 min) e il gusto più pulito e intenso."
+    },
+    {
+      "term": "Carapace",
+      "definition": "L'esoscheletro rigido dei crostacei — la corazza che ricopre testa e corpo di gamberi, scampi, aragoste. Contiene composti aromatici liposolubili e il pigmento astaxantina, responsabile del colore rosso del fumetto."
+    },
+    {
+      "term": "Chinois",
+      "definition": "Colino conico a maglie molto fitte, usato in cucina professionale per filtrare brodi, salse e fondi ottenendo un liquido limpido e privo di particelle solide."
+    },
+    {
+      "term": "Tostatura dei carapaci",
+      "definition": "Rosolatura a fuoco vivo dei gusci di crostacei schiacciandoli contro il fondo della pentola. Provoca la reazione di Maillard sui gusci, sviluppando composti aromatici complessi e un sapore più profondo rispetto alla semplice bollitura."
+    },
+    {
+      "term": "Sfumatura",
+      "definition": "Tecnica di deglassatura con un liquido (solitamente vino) versato su un fondo di cottura caldo per sciogliere i succhi caramellizzati sul fondo della pentola e incorporarli nel preparato."
+    },
+    {
+      "term": "Sobbollire",
+      "definition": "Mantenere un liquido appena sotto il punto di ebollizione (85-95°C), con piccole bollicine che salgono lentamente in superficie. Essenziale per brodi limpidi: l'ebollizione violenta emulsiona i grassi e rende il liquido torbido."
+    },
+    {
+      "term": "Schiumatura",
+      "definition": "Rimozione con una schiumarola della schiuma e delle impurità proteiche che affiorano in superficie durante le prime fasi di ebollizione di un brodo o fumetto."
+    },
+    {
+      "term": "Mussola / Etamine",
+      "definition": "Tessuto a trama molto fitta usato per filtrare liquidi in cucina, ottenendo una limpidezza superiore rispetto al colino metallico."
+    },
+    {
+      "term": "Corallo",
+      "definition": "Massa cremosa arancione-rossa contenuta nelle teste dei crostacei: è composta da uova, epatopancreas e liquidi interni. È il principale responsabile della ricchezza e dell'intensità aromatica del fumetto."
+    }
+  ],
+  "alert": "NON bollire mai il fumetto a fuoco alto: un'ebollizione violenta emulsiona i grassi dei carapaci rendendo il brodo torbido, amaro e con sentori sgradevoli. Il fumetto DEVE sobbollire dolcemente, con piccole bollicine che salgono appena. Inoltre, non prolungare la cottura oltre i 40-45 minuti: a differenza di un brodo di carne, una cottura troppo lunga estrae tannini e composti amari dai gusci dei crostacei, rovinando il risultato.",
+  "proTips": [
+    "Congelare le teste e i carapaci ogni volta che si sgusciano gamberi o scampi: accumulare in sacchetti da freezer fino a raggiungere 1 kg. I carapaci congelati funzionano esattamente come quelli freschi per il fumetto.",
+    "Per un fumetto ancora più concentrato e saporito, dopo la filtratura riportare il liquido a fuoco dolce e ridurlo di un terzo (da ~800ml a ~500ml). Si ottiene una 'essenza di crostacei' potentissima, perfetta per mantecature e salse.",
+    "Prima della tostatura, asciugare bene i carapaci con carta assorbente: l'umidità residua impedisce la reazione di Maillard e si ottiene una bollitura anziché una rosolatura, con grande perdita di sapore."
+  ],
+  "storage": [
+    "In frigorifero: conservare in barattoli di vetro ermetici o contenitori in acciaio per un massimo di 2-3 giorni a 4°C. Se dopo il raffreddamento in superficie si forma un velo di grasso, NON rimuoverlo: protegge il fumetto dall'ossidazione fino al momento dell'uso.",
+    "Congelamento: versare il fumetto in stampi per cubetti di ghiaccio o in sacchetti sottovuoto da 200-250ml (dosi d'uso). Congelare a -18°C per un massimo di 2 mesi. Etichettare sempre con la data. Per uso professionale, abbattere a -30°C e conservare fino a 3 mesi.",
+    "Rigenerazione: scongelare a bagnomaria o direttamente in padella/pentola a fuoco basso senza portare a ebollizione violenta. I cubetti surgelati possono essere aggiunti direttamente al risotto o alla salsa in cottura senza scongelamento preventivo."
+  ],
+  "imageKeywords": [
+    "shellfish stock homemade",
+    "shrimp broth pot",
+    "fumetto di crostacei",
+    "prawn bisque preparation",
+    "seafood broth clear golden",
+    "Krustentierfond kochen",
+    "brodo di gamberi fatto in casa",
+    "crustacean stock straining"
+  ],
+  "tags": [
+    "fumetto",
+    "crostacei",
+    "brodo",
+    "base",
+    "gamberi",
+    "scampi",
+    "preparazione base",
+    "senza glutine"
+  ],
+  "_generatedBy": "claude-opus",
+  "_createdAt": "2026-04-27T08:28:19.026Z",
+  "image": "images/ricette/condimenti/fumetto-di-crostacei.webp",
+  "imageAttribution": "📷 Foto: Caricata manualmente",
+  "_originalImageUrl": "",
+  "sensoryProfile": {
+    "summary": "Un fumetto di straordinaria profondità marina, dal colore ambrato-rossiccio e dalla trasparenza cristallina. Al naso si apre con note intense di crostacei tostati, iodio e mare, sostenute da sfumature aromatiche di prezzemolo e pepe; il vino bianco apporta una freschezza agrumata che bilancia la ricchezza delle teste e dei carapaci schiacciati. In bocca è avvolgente e concentrato, con un umami persistente e lungo, una leggera acidità che ne sgrassа il sorso e una rotondità ben integrata grazie alla dolcezza naturale delle verdure del soffritto.",
+    "axes": [
+      {
+        "label": "Sapidità / Umami",
+        "value": 9
+      },
+      {
+        "label": "Acidità / Pungenza",
+        "value": 4
+      },
+      {
+        "label": "Cremosità / Densità",
+        "value": 5
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 3
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 18,
+    "macros": {
+      "carbs": 1,
+      "protein": 2,
+      "fat": 1
+    }
+  }
+}

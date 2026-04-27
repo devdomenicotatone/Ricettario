@@ -162,7 +162,7 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-24T13:06:31.160Z",
   "image": "images/ricette/condimenti/salsa-cocktail-rosa-artigianale.webp",
-  "imageAttribution": "📷 Foto: Nadin Sh — Pexels License via Pexels",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
     "summary": "La Salsa Cocktail si presenta come un condimento dal carattere avvolgente e complesso, dove la morbidezza burrosa della maionese artigianale incontra la dolcezza agrodolce del ketchup e le note calde e fruttate del Cognac invecchiato. Il palato è subito sedotto da un'acidità gentile ma precisa — tutelata dal limone, dall'aceto e dalla senape di Digione — che bilancia la ricchezza lipidica, mentre la salsa Worcestershire e il Tabasco disegnano un sottofondo umami e lievemente piccante di raffinata eleganza. La panna semi-montata integrata a freddo conferisce una texture vellutata e aerea, trasformando questa salsa in un'esperienza sensoriale di spiccata rotondità e persistenza aromatica.",
     "axes": [
@@ -195,5 +195,6 @@
       "protein": 2,
       "fat": 48
     }
-  }
+  },
+  "_originalImageUrl": ""
 }

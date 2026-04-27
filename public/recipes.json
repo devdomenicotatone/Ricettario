@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-26T21:32:06.977Z",
-  "totalRecipes": 74,
+  "generatedAt": "2026-04-27T08:54:31.284Z",
+  "totalRecipes": 77,
   "categories": [
     {
       "name": "Pane",
@@ -39,7 +39,7 @@
     },
     {
       "name": "Condimenti",
-      "count": 37,
+      "count": 40,
       "emoji": "🌿"
     }
   ],
@@ -819,6 +819,42 @@
       "_createdAt": "2026-04-19T20:31:01.182Z"
     },
     {
+      "title": "Crema al Parmigiano",
+      "slug": "crema-al-parmigiano",
+      "category": "Condimenti",
+      "categoryDir": "condimenti",
+      "emoji": "🧀",
+      "href": "ricette/condimenti/crema-al-parmigiano.html",
+      "image": "images/ricette/condimenti/crema-al-parmigiano.webp",
+      "description": "Una salsa vellutata e avvolgente a base di Parmigiano Reggiano, creata tramite emulsione su base roux. Ideale per arricchire paste, tortellini o secondi piatti.",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-27T08:28:55.207Z"
+    },
+    {
+      "title": "Crema di Peperoni",
+      "slug": "crema-di-peperoni",
+      "category": "Condimenti",
+      "categoryDir": "condimenti",
+      "emoji": "🫑",
+      "href": "ricette/condimenti/crema-di-peperoni.html",
+      "image": "images/ricette/condimenti/crema-di-peperoni.webp",
+      "description": "Salsa vellutata ed emulsionata a base di peperoni dolci stufati, ideale per mantecare primi piatti, risotti o accompagnare lievitati rustici.",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "hasSensory": false,
+      "hasStorage": true,
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-27T08:49:54.940Z"
+    },
+    {
       "title": "Dressing al Miele e Senape",
       "slug": "dressing-miele-senape",
       "category": "Condimenti",
@@ -835,6 +871,24 @@
       "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-19T20:32:19.935Z"
+    },
+    {
+      "title": "Fumetto di Crostacei",
+      "slug": "fumetto-di-crostacei",
+      "category": "Condimenti",
+      "categoryDir": "condimenti",
+      "emoji": "🦐",
+      "href": "ricette/condimenti/fumetto-di-crostacei.html",
+      "image": "images/ricette/condimenti/fumetto-di-crostacei.webp",
+      "description": "Fumetto di crostacei fatto in casa: brodo concentrato da carapaci e teste, base insostituibile per risotti, zuppe e salse di pesce.",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "hasSensory": true,
+      "hasStorage": true,
+      "_generatedBy": "claude-opus",
+      "_createdAt": "2026-04-27T08:28:19.026Z"
     },
     {
       "title": "Guacamole",

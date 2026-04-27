@@ -47,7 +47,7 @@
     },
     {
       "title": "Raffreddamento e solidificazione",
-      "text": "Lasciare il barattolo aperto a temperatura ambiente fino a completo raffreddamento (circa {raffreddamento:60!} minuti). Il burro chiarificato passerà da liquido dorato a solido cremoso di colore giallo intenso. Una volta raggiunta la temperatura ambiente, chiudere con un coperchio a vite e conservare in frigorifero. La resa finale sarà di circa {resa:400!}g — pari all'80% del burro di partenza: il restante 20% è acqua e proteine del latte eliminate."
+      "text": "Lasciare il barattolo aperto a temperatura ambiente fino a completo intiepidimento (circa {raffreddamento:60!} minuti). Per una solidificazione completa e rapida, trasferire il barattolo in frigorifero dopo il primo intiepidimento a temperatura ambiente: il grasso butirrico puro cristallizza completamente in frigorifero in tempi più certi rispetto alla sola temperatura ambiente, che potrebbe non essere sufficiente per raggiungere la fase solida. Il burro chiarificato passerà da liquido dorato a solido cremoso di colore giallo intenso. Chiudere con un coperchio a vite e conservare in frigorifero. La resa finale sarà di circa {resa:400!}g — pari all'80% del burro di partenza: il restante 20% è acqua e proteine del latte eliminate."
     }
   ],
   "stepsCondiment": [],
