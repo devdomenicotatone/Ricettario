@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-27T08:54:31.284Z",
-  "totalRecipes": 77,
+  "generatedAt": "2026-04-27T17:43:07.767Z",
+  "totalRecipes": 78,
   "categories": [
     {
       "name": "Pane",
@@ -39,7 +39,7 @@
     },
     {
       "name": "Condimenti",
-      "count": 40,
+      "count": 41,
       "emoji": "🌿"
     }
   ],
@@ -849,7 +849,7 @@
       "time": null,
       "temp": null,
       "tool": "",
-      "hasSensory": false,
+      "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-27T08:49:54.940Z"
@@ -1231,6 +1231,24 @@
       "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T12:54:03.100Z"
+    },
+    {
+      "title": "Purè di Patate",
+      "slug": "pure-di-patate",
+      "category": "Condimenti",
+      "categoryDir": "condimenti",
+      "emoji": "🥔",
+      "href": "ricette/condimenti/pure-di-patate.html",
+      "image": "images/ricette/condimenti/pure-di-patate.webp",
+      "description": "Purè di patate classico italiano: cremoso, vellutato e senza grumi. Ricetta tecnica con patate farinose, burro e latte caldo.",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "hasSensory": false,
+      "hasStorage": true,
+      "_generatedBy": "claude-opus",
+      "_createdAt": "2026-04-27T17:39:31.547Z"
     },
     {
       "title": "Salmoriglio Siciliano",

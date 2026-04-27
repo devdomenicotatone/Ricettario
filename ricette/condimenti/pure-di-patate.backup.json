@@ -1,0 +1,154 @@
+{
+  "title": "Purè di Patate",
+  "slug": "pure-di-patate",
+  "emoji": "🥔",
+  "description": "Purè di patate classico italiano: cremoso, vellutato e senza grumi. Ricetta tecnica con patate farinose, burro e latte caldo.",
+  "subtitle": "Contorno classico italiano — patate schiacciate mantecate con burro e latte caldo",
+  "category": "Condimenti",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per il Purè",
+      "items": [
+        {
+          "name": "Patate Farinose",
+          "note": "(a pasta gialla, vecchie e di media pezzatura)",
+          "grams": 1000,
+          "tokenId": "patate"
+        },
+        {
+          "name": "Latte Intero Fresco",
+          "note": "(da scaldare prima dell'uso, non bollente)",
+          "grams": 220,
+          "tokenId": "latte"
+        },
+        {
+          "name": "Burro",
+          "note": "(di qualità, a temperatura ambiente)",
+          "grams": 60,
+          "tokenId": "burro"
+        },
+        {
+          "name": "Parmigiano Reggiano",
+          "note": "(grattugiato fine, 24+ mesi — facoltativo)",
+          "grams": 30,
+          "tokenId": "parmigiano"
+        },
+        {
+          "name": "Sale Grosso",
+          "note": "(per l'acqua di cottura)",
+          "grams": 10,
+          "tokenId": "sale_grosso"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(per la regolazione finale)",
+          "grams": 5,
+          "tokenId": "sale_fino"
+        },
+        {
+          "name": "Noce Moscata",
+          "note": "(grattugiata fresca al momento)",
+          "grams": 1,
+          "tokenId": "noce_moscata"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Selezione e lavaggio delle patate",
+      "text": "Scegliere {patate:1000}g di patate farinose a pasta gialla, possibilmente vecchie e della stessa dimensione — questo garantisce una cottura uniforme. Lavarle accuratamente sotto acqua corrente per eliminare ogni residuo di terra. NON sbucciarle: si cuociono con la buccia per evitare che assorbano troppa acqua durante la lessatura, il che renderebbe il purè acquoso e insipido."
+    },
+    {
+      "title": "Lessatura delle patate",
+      "text": "Disporre le patate intere (se molto grandi, dividerle a metà) in una pentola capiente e coprirle abbondantemente con acqua fredda. Aggiungere {sale_grosso:10}g di sale grosso. Portare a ebollizione a fuoco medio-alto, poi abbassare a fuoco medio e cuocere con coperchio per circa {tempo_cottura:40!} minuti dal bollore. Il tempo varia in base alla pezzatura: le patate sono cotte quando uno stecchino le attraversa senza resistenza, ma senza che si sfaldino. Scolarle e lasciarle nel colapasta per 2-3 minuti — devono restare ben calde."
+    },
+    {
+      "title": "Sbucciatura e passatura",
+      "text": "Sbucciare le patate ancora calde (aiutandosi con un canovaccio pulito per non scottarsi) e passarle IMMEDIATAMENTE allo schiacciapatate a fori fini, raccogliendo la polpa direttamente in una casseruola dal fondo spesso. È fondamentale lavorarle calde: le patate fredde rilasciano amido in eccesso e diventano collose e gommose. In alternativa allo schiacciapatate si può usare un passaverdure con disco fine. MAI usare il frullatore a immersione o il mixer: si spezza la struttura dell'amido e il purè diventa colla."
+    },
+    {
+      "title": "Asciugatura della polpa",
+      "text": "Porre la casseruola con le patate schiacciate su fuoco bassissimo e mescolare con una spatola di legno per {asciugatura:2!}-{asciugatura_max:3!} minuti. Questa operazione è cruciale: fa evaporare l'umidità residua e permette al purè di assorbire meglio burro e latte senza diventare troppo liquido. Si noterà un leggero velo di vapore che sale dalla polpa."
+    },
+    {
+      "title": "Mantecatura con burro",
+      "text": "Togliere la casseruola dal fuoco e aggiungere {burro:60}g di burro tagliato a pezzetti piccoli direttamente sulla polpa calda. Mescolare energicamente con una frusta o una spatola fino a completo scioglimento e incorporamento. Il burro va aggiunto PRIMA del latte: il grasso riveste i granuli di amido e crea quella setosità inconfondibile del purè ben fatto. Lavorare con movimenti decisi ma senza eccedere."
+    },
+    {
+      "title": "Incorporamento del latte caldo",
+      "text": "Nel frattempo, scaldare a parte {latte:220}g di latte intero fresco fino a quando è ben caldo ma NON bollente (circa {temp_latte:70!}°C). Il latte freddo da frigo è vietato: raffredda il composto e compromette la cremosità. Rimettere la casseruola su fuoco bassissimo e versare il latte a filo, poco alla volta, mescolando continuamente con la frusta. Incorporare fino a raggiungere la consistenza desiderata — il purè deve risultare cremoso e vellutato, deve scorrere morbidamente dal cucchiaio ma non essere liquido. Se si preferisce un purè più sodo, usare leggermente meno latte."
+    },
+    {
+      "title": "Regolazione finale e servizio",
+      "text": "Aggiungere {sale_fino:5}g di sale fino, assaggiare e regolare. Grattugiare direttamente sulla casseruola una punta generosa di {noce_moscata:1}g di noce moscata fresca — deve profumare delicatamente, non sovrastare. Chi lo desidera, incorporare {parmigiano:30}g di Parmigiano Reggiano grattugiato fine, mescolando con la frusta fino a completo scioglimento. Dare un ultimo giro di frusta energico per incorporare aria e rendere il purè ancora più soffice. Servire immediatamente: il purè è al massimo appena fatto, caldo e fumante."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "baking": null,
+  "glossary": [
+    {
+      "term": "Patate farinose",
+      "definition": "Varietà di patate ad alto contenuto di amido (es. Kennebec, Agria, a pasta gialla 'vecchie'). In cottura si sfaldano facilmente e producono un purè asciutto e soffice, a differenza delle patate cerose (novelle, a pasta soda) che risultano collose."
+    },
+    {
+      "term": "Schiacciapatate",
+      "definition": "Utensile a leva con piastra forata che pressa le patate cotte producendo vermicelli di polpa senza rompere eccessivamente i granuli di amido. Preferibile al passaverdure per un purè dalla grana più definita."
+    },
+    {
+      "term": "Passaverdure",
+      "definition": "Utensile a manovella con dischi intercambiabili che setaccia la polpa delle patate. Produce un purè molto fine e uniforme, adatto a chi vuole una consistenza ultra-vellutata."
+    },
+    {
+      "term": "Mantecatura",
+      "definition": "Tecnica di incorporazione di grassi (burro, olio, formaggi) in un composto caldo tramite mescolamento energico. Crea un'emulsione stabile che dona cremosità e corpo al purè."
+    },
+    {
+      "term": "Patate vecchie",
+      "definition": "Patate raccolte a maturazione completa e conservate per alcune settimane/mesi. Hanno meno acqua e più amido rispetto alle patate novelle, ideali per purè, gnocchi e fritture."
+    }
+  ],
+  "alert": "NON usare MAI il frullatore a immersione, il mixer o il robot da cucina per schiacciare le patate: le lame rompono i granuli di amido rilasciando amilosio in eccesso, trasformando il purè in una massa collosa e gommosa, irrecuperabile. Usare esclusivamente schiacciapatate o passaverdure. Inoltre, NON aggiungere mai il latte freddo di frigorifero — raffredda la polpa e impedisce una corretta emulsione con il burro.",
+  "proTips": [
+    "Cuocere le patate con la buccia è il segreto per un purè asciutto: la pelle protegge la polpa dall'assorbimento eccessivo di acqua. Se le sbucciate prima, assorbiranno fino al 15% di acqua in più e il purè risulterà slavato.",
+    "Se il purè risulta leggermente granuloso, passarlo rapidamente al setaccio fine con una spatola dopo la prima schiacciatura — si ottiene una consistenza da ristorazione senza rischiare la gelificazione da frullatore.",
+    "Per un purè ancora più ricco, sostituire 50-60g di latte con la stessa quantità di panna fresca liquida (35% di grassi): il risultato sarà più avvolgente e si manterrà cremoso più a lungo nel piatto."
+  ],
+  "storage": [
+    "In frigorifero: conservare in contenitore ermetico per massimo 2 giorni. Il purè tende ad asciugarsi e addensarsi: rigenerarlo in casseruola a fuoco bassissimo aggiungendo 2-3 cucchiai di latte caldo e una noce di burro, mescolando con la frusta fino a ripristinare la cremosità.",
+    "In freezer: si può congelare in porzioni da 200-250g in sacchetti sottovuoto o contenitori rigidi per massimo 1 mese, ma la consistenza post-scongelamento sarà leggermente inferiore. Scongelare in frigo per 12h, poi rigenerare in casseruola con latte caldo.",
+    "A bagnomaria: se si deve servire il purè dopo 30-60 minuti dalla preparazione, tenerlo in una ciotola coperta a pellicola a contatto, posta sopra una pentola di acqua calda. Mescolare ogni 10 minuti e aggiungere un goccio di latte caldo se si addensa."
+  ],
+  "imageKeywords": [
+    "mashed potatoes creamy",
+    "homemade mashed potatoes butter",
+    "purée de pommes de terre",
+    "kartoffelpüree klassisch",
+    "purè di patate cremoso",
+    "creamy potato puree side dish",
+    "fluffy mashed potatoes plate",
+    "italian mashed potatoes parmesan"
+  ],
+  "tags": [
+    "purè",
+    "patate",
+    "contorno",
+    "comfort food",
+    "senza glutine",
+    "classico italiano",
+    "cremoso",
+    "burro"
+  ],
+  "_generatedBy": "claude-opus",
+  "_createdAt": "2026-04-27T17:39:31.547Z",
+  "image": "images/ricette/condimenti/pure-di-patate.webp",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
+  "_originalImageUrl": ""
+}
