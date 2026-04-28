@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-28T19:22:52.278Z",
-  "totalRecipes": 79,
+  "generatedAt": "2026-04-28T21:21:08.912Z",
+  "totalRecipes": 81,
   "categories": [
     {
       "name": "Pane",
@@ -9,7 +9,7 @@
     },
     {
       "name": "Pizza",
-      "count": 7,
+      "count": 9,
       "emoji": "🍕"
     },
     {
@@ -264,6 +264,42 @@
       "hasStorage": true,
       "_generatedBy": "claude",
       "_createdAt": "2026-04-16T21:35:51.898Z"
+    },
+    {
+      "title": "Pizza Margherita Verace — Disciplinare AVPN",
+      "slug": "pizza-margherita-verace-disciplinare-avpn",
+      "category": "Pizza",
+      "categoryDir": "pizza",
+      "emoji": "🍕",
+      "href": "ricette/pizza/pizza-margherita-verace-disciplinare-avpn.html",
+      "image": "images/ricette/pizza/pizza-margherita-verace-disciplinare-avpn.webp",
+      "description": "La Pizza Margherita secondo il disciplinare internazionale AVPN 2024: impasto diretto senza grassi né zuccheri, farina W 250-320, lievitazione 12-24 ore. Pomodo",
+      "hydration": "58%",
+      "time": "12-24h a T.A.",
+      "temp": "20-22°C",
+      "tool": "",
+      "hasSensory": false,
+      "hasStorage": true,
+      "_generatedBy": "antigravity-opus",
+      "_createdAt": "2026-04-28T23:01:00.000Z"
+    },
+    {
+      "title": "Pizza Marinara Napoletana Verace",
+      "slug": "pizza-marinara-napoletana-verace",
+      "category": "Pizza",
+      "categoryDir": "pizza",
+      "emoji": "🍕",
+      "href": "ricette/pizza/pizza-marinara-napoletana-verace.html",
+      "image": "images/ricette/pizza/pizza-marinara-napoletana-verace.webp",
+      "description": "La Pizza Marinara secondo il disciplinare AVPN 2024: pomodoro pelato San Marzano, aglio, origano e olio extravergine d'oliva. Impasto diretto, lievitazione 12-2",
+      "hydration": "58%",
+      "time": "12-24h a T.A.",
+      "temp": "20-22°C",
+      "tool": "",
+      "hasSensory": false,
+      "hasStorage": true,
+      "_generatedBy": "antigravity-opus",
+      "_createdAt": "2026-04-28T22:56:00.000Z"
     },
     {
       "title": "Pizza Napoletana Antica Tradizione con Biga e Criscito",
