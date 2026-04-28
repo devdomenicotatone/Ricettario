@@ -184,7 +184,7 @@
   "_generatedBy": "claude-opus",
   "_createdAt": "2026-04-24T13:07:57.640Z",
   "image": "images/ricette/condimenti/salsa-bernese.webp",
-  "imageAttribution": "📷 Immagine esistente",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
     "summary": "La Salsa Bernese si presenta come un'emulsione burrosa di straordinaria eleganza, dominata da una cremosità vellutata e avvolgente che riveste il palato con persistenza lussuosa. Il dragoncello fresco imprime una firma aromatica erbacea e anicata di grande finezza, intrecciata con le note acide e vinose della riduzione che bilanciano con maestria la ricchezza del burro chiarificato. Il finale è lungo, sapido e aromatico, con una punta di pungenza del pepe e dello scalogno che sorregge la struttura senza mai sopraffare.",
     "axes": [
@@ -217,5 +217,6 @@
       "protein": 4,
       "fat": 65
     }
-  }
+  },
+  "_originalImageUrl": ""
 }
