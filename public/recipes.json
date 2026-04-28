@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-28T21:21:08.912Z",
+  "generatedAt": "2026-04-28T21:46:16.368Z",
   "totalRecipes": 81,
   "categories": [
     {
@@ -278,25 +278,25 @@
       "time": "12-24h a T.A.",
       "temp": "20-22°C",
       "tool": "",
-      "hasSensory": false,
+      "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": "antigravity-opus",
       "_createdAt": "2026-04-28T23:01:00.000Z"
     },
     {
-      "title": "Pizza Marinara Napoletana Verace",
-      "slug": "pizza-marinara-napoletana-verace",
+      "title": "Pizza Marinara Verace — Disciplinare AVPN",
+      "slug": "pizza-marinara-verace-disciplinare-avpn",
       "category": "Pizza",
       "categoryDir": "pizza",
       "emoji": "🍕",
-      "href": "ricette/pizza/pizza-marinara-napoletana-verace.html",
+      "href": "ricette/pizza/pizza-marinara-verace-disciplinare-avpn.html",
       "image": "images/ricette/pizza/pizza-marinara-napoletana-verace.webp",
       "description": "La Pizza Marinara secondo il disciplinare AVPN 2024: pomodoro pelato San Marzano, aglio, origano e olio extravergine d'oliva. Impasto diretto, lievitazione 12-2",
       "hydration": "58%",
       "time": "12-24h a T.A.",
       "temp": "20-22°C",
       "tool": "",
-      "hasSensory": false,
+      "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": "antigravity-opus",
       "_createdAt": "2026-04-28T22:56:00.000Z"
