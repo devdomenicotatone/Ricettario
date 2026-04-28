@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-28T16:19:20.013Z",
-  "totalRecipes": 78,
+  "generatedAt": "2026-04-28T18:29:14.536Z",
+  "totalRecipes": 79,
   "categories": [
     {
       "name": "Pane",
@@ -34,7 +34,7 @@
     },
     {
       "name": "Conserve",
-      "count": 3,
+      "count": 4,
       "emoji": "🫙"
     },
     {
@@ -119,7 +119,7 @@
       "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": "gemini-3.1",
-      "_createdAt": "2026-04-28T12:30:00.959Z"
+      "_createdAt": "2026-04-28T18:29:14.516Z"
     },
     {
       "title": "Pane di Altamura",
@@ -695,7 +695,25 @@
       "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": "claude",
-      "_createdAt": "2026-04-26T20:34:00.783Z"
+      "_createdAt": "2026-04-28T17:56:23.656Z"
+    },
+    {
+      "title": "Dado Vegetale Granulare",
+      "slug": "dado-vegetale-granulare",
+      "category": "Conserve",
+      "categoryDir": "conserve",
+      "emoji": "🥕",
+      "href": "ricette/conserve/dado-vegetale-granulare.html",
+      "image": "images/ricette/conserve/dado-vegetale-granulare.webp",
+      "description": "Dado vegetale granulare fatto in casa: un concentrato naturale di verdure essiccate, senza glutammato e conservanti artificiali. Perfetto per insaporire brodi e",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "hasSensory": false,
+      "hasStorage": true,
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-04-28T17:57:50.584Z"
     },
     {
       "title": "Pomodorini Confit Sott'olio",

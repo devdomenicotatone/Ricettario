@@ -157,7 +157,7 @@
   ],
   "_generatedBy": "claude",
   "image": "images/ricette/conserve/dado-vegetale-fatto-in-casa.webp",
-  "imageAttribution": "📷 Foto: cottonbro studio — Pexels License via Pexels",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "steps": [
     {
       "title": "Preparazione delle Verdure",
@@ -216,5 +216,6 @@
       "protein": 2,
       "fat": 4
     }
-  }
+  },
+  "_originalImageUrl": ""
 }

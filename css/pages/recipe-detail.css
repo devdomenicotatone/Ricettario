@@ -96,6 +96,35 @@
         object-position: center 30%;
     }
 
+    /* ═══════════════════════════════════════════════════
+       WIDE SCREEN — Hero proporzionale al viewport
+       Su schermi larghi, l'immagine viene croppata troppo 
+       se il hero resta a min-height fissi.
+       Soluzione: aspect-ratio fissa una proporzione minima,
+       così più è largo il viewport → più alto diventa il hero.
+       ═══════════════════════════════════════════════════ */
+    @media (min-width: 1200px) {
+        .recipe-hero:has(.recipe-hero__picture) {
+            aspect-ratio: 21 / 8;
+            min-height: 480px;
+        }
+    }
+
+    @media (min-width: 1600px) {
+        .recipe-hero:has(.recipe-hero__picture) {
+            aspect-ratio: 21 / 9;
+            min-height: 520px;
+        }
+    }
+
+    @media (min-width: 2000px) {
+        .recipe-hero:has(.recipe-hero__picture) {
+            aspect-ratio: 21 / 10;
+            min-height: 580px;
+        }
+    }
+
+
     /* Navbar bianca quando c'è hero con picture (non scrollata) */
     body:has(.recipe-hero__picture) .navbar:not(.scrolled) {
         & .navbar__logo {
