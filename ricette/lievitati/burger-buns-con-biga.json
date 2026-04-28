@@ -7,7 +7,7 @@
   "category": "Lievitati",
   "hydration": 59,
   "targetTemp": "24-26°C",
-  "fermentation": "~18-20h biga + 2-2.5h puntata + 1h appretto",
+  "fermentation": "~21-24h totali",
   "totalFlour": 500,
   "ingredients": [],
   "ingredientGroups": [
@@ -232,7 +232,7 @@
   "_generatedBy": "claude-opus",
   "_createdAt": "2026-04-05T01:36:05.142Z",
   "image": "images/ricette/lievitati/burger-buns-con-biga.webp",
-  "imageAttribution": "📷 Foto: Brian  Chávez — Pexels License via Pexels",
+  "imageAttribution": "📷 Foto: Ahmed Kadri — Pexels License via Pexels",
   "steps": [
     {
       "title": "Preparazione Biga (sera prima)",
@@ -296,5 +296,5 @@
       "fat": 9
     }
   },
-  "_originalImageUrl": "https://images.pexels.com/photos/15378135/pexels-photo-15378135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  "_originalImageUrl": "https://images.pexels.com/photos/27394028/pexels-photo-27394028.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 }

@@ -35,6 +35,7 @@ const EMOJI_MAP = {
   'shortcake': 'shortcake',
   'canned-food': 'canned-food',
   'herb': 'herb',
+  'fork-and-knife': 'fork-and-knife',
 
   // Homepage/strumenti
   'star': 'star',

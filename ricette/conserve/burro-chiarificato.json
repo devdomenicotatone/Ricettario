@@ -112,7 +112,7 @@
   "_generatedBy": "claude-opus",
   "_createdAt": "2026-04-24T13:09:48.168Z",
   "image": "images/ricette/conserve/burro-chiarificato.webp",
-  "imageAttribution": "📷 Foto: Oleg Bor — CC BY-SA 4.0 via Wikimedia",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
     "summary": "Il burro chiarificato si presenta con un profilo aromatico intenso e puro, dominato da note di nocciola tostata e latticini concentrati, frutto della rimozione delle proteine del siero. La texture è straordinariamente vellutata e oleosa, con una densità grassa assoluta che riveste il palato con persistenza lunga e avvolgente. L'assenza di acqua e caseine elimina qualsiasi nota acida o salina, lasciando emergere unicamente la rotondità burrosa e la complessità aromatica del grasso butirrico puro.",
     "axes": [
@@ -146,5 +146,5 @@
       "fat": 99
     }
   },
-  "_originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Sliced_clarified_butter.png"
+  "_originalImageUrl": ""
 }
