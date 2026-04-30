@@ -31,7 +31,7 @@
     },
     {
       "title": "Fusione a bagnomaria",
-      "text": "Riempire un pentolino capiente per metà con acqua e portare a leggero bollore. Posizionare sopra una ciotola in acciaio o vetro resistente al calore, assicurandosi che il fondo non tocchi l'acqua. Versare i cubetti di burro nella ciotola e abbassare la fiamma al minimo. Lasciare fondere lentamente senza mescolare per {tempo_fusione:40!}-{tempo_fusione_max:60!} minuti. La temperatura del burro non deve mai superare i {temp_max:90!}°C. La fusione lenta e indiretta è fondamentale: il calore diretto rischia di brunire le proteine sul fondo e dare gusto amaro."
+      "text": "Riempire un pentolino capiente per metà con acqua e portare a leggero bollore. Posizionare sopra una ciotola in acciaio o vetro resistente al calore, assicurandosi che il fondo non tocchi l'acqua. Versare i cubetti di burro nella ciotola e abbassare la fiamma al minimo. Lasciare fondere lentamente senza mescolare per {tempo_fusione:40!}-{tempo_fusione_max:60!} minuti. La temperatura del burro non deve mai superare gli {temp_max:90!}°C. La fusione lenta e indiretta è fondamentale: il calore diretto rischia di brunire le proteine sul fondo e dare gusto amaro."
     },
     {
       "title": "Separazione delle tre fasi",
