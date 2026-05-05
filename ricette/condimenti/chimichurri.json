@@ -166,7 +166,7 @@
   "_generatedBy": "claude-opus",
   "_createdAt": "2026-04-19T20:31:01.182Z",
   "image": "images/ricette/condimenti/chimichurri.webp",
-  "imageAttribution": "📷 Foto: Gera Cejas — Pexels License via Pexels",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "sensoryProfile": {
     "summary": "Un chimichurri di carattere deciso e vibrante, dove la pungenza erbacea del prezzemolo fresco si intreccia con la potenza dell'aglio e il calore del peperoncino in un abbraccio speziato e aromatico. L'aceto di vino bianco taglia con precisione la grassezza dell'olio extravergine, regalando una freschezza acida che pulisce il palato, mentre origano e timo secchi apportano profondità mediterranea e una complessità aromatica che si svela pienamente dopo il riposo. La texture è eterogenea e fluida, con una densità media che ne facilita l'utilizzo come condimento da versare o spennellare.",
     "axes": [
@@ -199,5 +199,6 @@
       "protein": 1,
       "fat": 32
     }
-  }
+  },
+  "_originalImageUrl": ""
 }
