@@ -161,7 +161,7 @@
   "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "_originalImageUrl": "",
   "sensoryProfile": {
-    "summary": "Un dado granulare di straordinaria intensità aromatica e sapidità dominante, dove la massiccia quota di sale (quasi un terzo del peso totale) plasma ogni percezione gustativa verso una sapidità potente e avvolgente. Al naso emergono note di orto essiccato, con sentori erbacei di prezzemolo e basilico, una punta resinosa del rosmarino e una dolcezza di fondo conferita da carote e cipolle caramellizzate durante la riduzione in forno. La tessitura granulare e asciutta esclude qualsiasi cremosità, mentre la concentrazione da essiccazione amplifica l'umami naturale delle verdure e dei pomodorini.",
+    "summary": "Un dado granulare di straordinaria concentrazione: al naso si apre con un bouquet erbaceo intenso di prezzemolo, basilico e rosmarino su un fondo terragno di sedano e carota cotta. In bocca domina una sapidità possente e avvolgente, tipica di un prodotto in cui il sale è al contempo conservante e amplificatore aromatico, con una nota umami profonda data dalla riduzione e tostatura delle verdure. Il finale è lungo, leggermente dolce per gli zuccheri caramellizzati di carote e cipolle, con una punta pungente dell'aglio che chiude il cerchio aromatico.",
     "axes": [
       {
         "label": "Sapidità / Umami",
@@ -173,11 +173,11 @@
       },
       {
         "label": "Cremosità / Densità",
-        "value": 2
+        "value": 6
       },
       {
         "label": "Dolcezza / Rotondità",
-        "value": 3
+        "value": 4
       },
       {
         "label": "Intensità Aromatica",
@@ -186,7 +186,7 @@
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 185,
+    "kcal_per_100g": 198,
     "macros": {
       "carbs": 22,
       "protein": 4,

@@ -167,7 +167,7 @@
   "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
   "_originalImageUrl": "",
   "sensoryProfile": {
-    "summary": "Un condimento di grande personalità, dove la dolcezza affumicata e vellutata della melanzana arrosto dialoga con la nota tostata e oleosa della tahina in un abbraccio profondo e avvolgente. L'acidità brillante del limone fresco taglia con eleganza la densità della crema, mentre l'aglio in sottofondo e la paprika regalano una chiusura speziata e persistente. La menta in guarnizione introduce un contrappunto aromatico fresco e inaspettato, che eleva il profilo complessivo verso una complessità tipicamente levantina.",
+    "summary": "Il Babaganoush si presenta come una crema avvolgente e profonda, dominata da una nota affumicata e terrosa della melanzana arrostita, sostenuta dalla mineralità tostata della tahina e da un vivace slancio acido del limone fresco. Al palato si rivela rotondo e vellutato, con un finale lungo in cui l'aglio, il pepe nero e la paprika intessono un bouquet aromatico speziato e mediterraneo. La menta fresca in guarnizione dona un tocco erbaceo e balsamico che alleggerisce e impreziosisce l'insieme.",
     "axes": [
       {
         "label": "Sapidità / Umami",
@@ -175,7 +175,7 @@
       },
       {
         "label": "Acidità / Pungenza",
-        "value": 5
+        "value": 6
       },
       {
         "label": "Cremosità / Densità",
@@ -183,7 +183,7 @@
       },
       {
         "label": "Dolcezza / Rotondità",
-        "value": 5
+        "value": 4
       },
       {
         "label": "Intensità Aromatica",

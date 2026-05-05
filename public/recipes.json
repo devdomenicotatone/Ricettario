@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-05T20:59:39.003Z",
+  "generatedAt": "2026-05-05T21:11:33.084Z",
   "totalRecipes": 82,
   "categories": [
     {
@@ -551,7 +551,7 @@
       "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-28T12:06:00.805Z"
+      "_createdAt": "2026-05-05T21:11:33.062Z"
     },
     {
       "title": "Panettone Artigianale Classico",
@@ -746,7 +746,7 @@
       "time": null,
       "temp": null,
       "tool": "",
-      "hasSensory": false,
+      "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-28T17:57:50.584Z"
@@ -782,7 +782,7 @@
       "time": null,
       "temp": null,
       "tool": "",
-      "hasSensory": false,
+      "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-05-05T20:37:39.421Z"

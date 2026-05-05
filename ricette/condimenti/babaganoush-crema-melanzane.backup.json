@@ -165,5 +165,38 @@
   "_createdAt": "2026-05-05T20:37:39.421Z",
   "image": "images/ricette/condimenti/babaganoush-crema-melanzane.webp",
   "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
-  "_originalImageUrl": ""
+  "_originalImageUrl": "",
+  "sensoryProfile": {
+    "summary": "Un condimento di grande personalità, dove la dolcezza affumicata e vellutata della melanzana arrosto dialoga con la nota tostata e oleosa della tahina in un abbraccio profondo e avvolgente. L'acidità brillante del limone fresco taglia con eleganza la densità della crema, mentre l'aglio in sottofondo e la paprika regalano una chiusura speziata e persistente. La menta in guarnizione introduce un contrappunto aromatico fresco e inaspettato, che eleva il profilo complessivo verso una complessità tipicamente levantina.",
+    "axes": [
+      {
+        "label": "Sapidità / Umami",
+        "value": 6
+      },
+      {
+        "label": "Acidità / Pungenza",
+        "value": 5
+      },
+      {
+        "label": "Cremosità / Densità",
+        "value": 7
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 5
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 112,
+    "macros": {
+      "carbs": 7,
+      "protein": 3,
+      "fat": 8
+    }
+  }
 }
