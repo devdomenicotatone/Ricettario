@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-05T10:24:08.071Z",
-  "totalRecipes": 81,
+  "generatedAt": "2026-05-05T20:59:39.003Z",
+  "totalRecipes": 82,
   "categories": [
     {
       "name": "Pane",
@@ -39,7 +39,7 @@
     },
     {
       "name": "Condimenti",
-      "count": 40,
+      "count": 41,
       "emoji": "🌿"
     },
     {
@@ -209,7 +209,7 @@
       "hasSensory": true,
       "hasStorage": true,
       "_generatedBy": null,
-      "_createdAt": "2026-04-26T20:39:03.873Z"
+      "_createdAt": "2026-05-05T20:17:38.146Z"
     },
     {
       "title": "Pizza Contemporanea Canotto",
@@ -768,6 +768,24 @@
       "hasStorage": true,
       "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T14:35:19.869Z"
+    },
+    {
+      "title": "Babaganoush",
+      "slug": "babaganoush-crema-melanzane",
+      "category": "Condimenti",
+      "categoryDir": "condimenti",
+      "emoji": "🍆",
+      "href": "ricette/condimenti/babaganoush-crema-melanzane.html",
+      "image": "images/ricette/condimenti/babaganoush-crema-melanzane.webp",
+      "description": "L'autentico caviale di melanzane mediorientale: una crema rustica dal sentore affumicato, arricchita con tahina, limone e aglio. Consistenza artigianale garanti",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "hasSensory": false,
+      "hasStorage": true,
+      "_generatedBy": "gemini-3.1",
+      "_createdAt": "2026-05-05T20:37:39.421Z"
     },
     {
       "title": "Besciamella",
