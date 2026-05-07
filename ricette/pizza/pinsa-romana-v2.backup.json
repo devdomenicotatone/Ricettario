@@ -1,0 +1,224 @@
+{
+  "title": "Pinsa Romana",
+  "slug": "pinsa-romana-v2",
+  "emoji": "🫓",
+  "description": "Pinsa Romana autentica con mix di farine speciali, alta idratazione e lunga maturazione in frigo. Croccante fuori, alveolata e leggerissima dentro.",
+  "subtitle": "Impasto ad alta idratazione con farina per pinsa, lunga maturazione in freddo 24-72h",
+  "category": "Pizza",
+  "hydration": 75,
+  "targetTemp": "22-24°C",
+  "fermentation": "24-72h in frigo (maturazione a freddo)",
+  "totalFlour": 1000,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per l'Impasto",
+      "items": [
+        {
+          "name": "Farina per Pinsa",
+          "note": "(mix certificato farina di frumento, riso e soia — es. Di Marco, Molino Pordenone, GZ Pinsa)",
+          "grams": 1000,
+          "tokenId": "farina_pinsa"
+        },
+        {
+          "name": "Acqua",
+          "note": "(fredda di frigorifero, 4-6°C)",
+          "grams": 750,
+          "tokenId": "acqua_totale"
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(in alternativa 3-4g lievito secco per maturazione >48h)",
+          "grams": 5,
+          "tokenId": "lievito_fresco"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(sale marino fino)",
+          "grams": 20,
+          "tokenId": "sale"
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(EVO di qualità, aggiunto a fine impasto)",
+          "grams": 20,
+          "tokenId": "olio_evo"
+        }
+      ]
+    },
+    {
+      "group": "Per la Lavorazione",
+      "items": [
+        {
+          "name": "Semola di Grano Duro Rimacinata",
+          "note": "(per spolverare il piano e i panielli)",
+          "grams": 30,
+          "tokenId": "semola_spolvero",
+          "excludeFromTotal": true
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Preparazione dell'acqua e della farina",
+      "text": "Metti {acqua_totale:750}g di acqua in frigorifero almeno 2 ore prima di iniziare: dovrà essere molto fredda (4-6°C). Questo è fondamentale per tenere la temperatura dell'impasto sotto controllo durante la lavorazione, evitando una fermentazione precoce. Pesa e tieni pronta la {farina_pinsa:1000}g di farina per pinsa in una ciotola ampia."
+    },
+    {
+      "title": "Scioglimento del lievito e primo impasto",
+      "text": "Preleva circa {acqua_totale:750}g di acqua fredda dal frigo (tieni da parte i restanti 50g per il bassinage finale). Sbriciola o sciogli il {lievito_fresco:5}g di lievito di birra fresco direttamente nella farina per pinsa, mescolando brevemente. Aggiungi l'acqua fredda a più riprese, mescolando con le mani o con una spatola a uncino fino a incorporarla tutta. Lavora in ciotola: l'impasto risulterà grezzo, ruvido e appiccicoso — è normale. Non aggiungere farina extra. Questa fase dura circa 5-7 minuti."
+    },
+    {
+      "title": "Incorporazione di sale e olio (bassinage finale)",
+      "text": "Aggiungi il {sale:20}g di sale sull'impasto e i restanti 50g di acqua fredda a filo, poco alla volta, continuando a lavorare con le mani in ciotola fino ad assorbimento completo (circa 3-4 minuti). Poi aggiungi il {olio_evo:20}g di olio EVO a filo, lavorando ancora per 2-3 minuti fino a completo assorbimento. L'impasto si presenterà più liscio, coeso ma ancora molto idratato e leggermente appiccicoso."
+    },
+    {
+      "title": "Pieghe di rinforzo e struttura",
+      "text": "Trasferisci l'impasto su un piano di lavoro leggermente infarinato con poca farina per pinsa. Esegui una serie di pieghe a libro (stretch & fold): prendi il bordo dell'impasto, allungalo verso l'alto e ripiegalo verso il centro. Ruota di 90° e ripeti per tutti e quattro i lati. Ripeti il ciclo per 2-3 volte consecutive fino a ottenere una massa più tesa e compatta. Forma una palla, con la chiusura verso il basso, e trasferiscila in una ciotola oliata con la superficie liscia rivolta verso l'alto."
+    },
+    {
+      "title": "Prima lievitazione a temperatura ambiente",
+      "text": "Copri la ciotola con pellicola alimentare e lascia riposare a temperatura ambiente (circa {temperatura:22!}°C) per circa {riposo_ta:120!} minuti, fino a che l'impasto non sia chiaramente gonfiato (non necessariamente raddoppiato, la struttura è ancora aperta). La farina di riso e soia rallenta la fermentazione rispetto a una farina normale: non aver fretta."
+    },
+    {
+      "title": "Maturazione in frigorifero",
+      "text": "Trasferisci la ciotola coperta in frigorifero per un minimo di {maturazione_h:24!} ore, fino a un massimo di {maturazione_max:72!} ore a temperatura controllata (4-6°C). Più lunga è la maturazione, più la pinsa sarà digeribile, profumata e alveolata. La media ottimale è 48h. Durante questo periodo puoi eseguire 1-2 serie di stretch & fold direttamente in ciotola nelle prime 2 ore."
+    },
+    {
+      "title": "Staglio e formatura dei panielli",
+      "text": "Estrai l'impasto dal frigo almeno {riposo_pre_stesura:60!} minuti prima della cottura per un leggero temperaggio. Rovescia delicatamente su un piano spolverato con {semola_spolvero:30}g di semola di grano duro rimacinata. Con un tarocco o raschietto, dividi l'impasto in 6 panielli da circa {panetto_peso:300!}g ciascuno. Per ogni paniello: effettua una piega portando il lembo verso il centro da tutti i lati, poi capovolgilo con la chiusura verso il basso e rotolagli delicatamente per dare una forma ovale-allungata. Adagia i panielli su un vassoio cosparso di semola, coprili con pellicola o un telo e lasciali riposare (appretto) a temperatura ambiente per altri {appretto:60!}-{appretto_max:90!} minuti."
+    },
+    {
+      "title": "Stesura della pinsa",
+      "text": "Preriscalda il forno alla massima temperatura (240-270°C, statico) con la pietra refrattaria o la teglia capovolta all'interno per almeno 45-60 minuti. Prendi un paniello e posalo sulla semola. Con i polpastrelli, partendo dal centro, allargalo delicatamente verso l'esterno con movimenti decisi ma senza schiacciare i bordi. La pinsa ha la tipica forma ovale-allungata e irregolare. Deve essere sottile al centro (3-4mm) e con i bordi più pronunciati (cornicione). NON usare il mattarello: distruggerebbe l'alveolatura."
+    },
+    {
+      "title": "Cottura",
+      "text": "Trasferisci la pinsa stesa sulla pietra refrattaria (o teglia rovente) usando una pala infarinata di semola. Per la pinsa bianca (base): cuoci a {temp_cottura:260!}°C per circa {tempo_cottura:12!}-{tempo_cottura_max:15!} minuti fino a che il fondo sia ben colorato e croccante e il cornicione sia dorato. Per pinsa con topping: condisci con i tuoi ingredienti e rimetti in forno per gli ultimi 3-5 minuti. La pinsa è pronta quando il fondo suona vuoto se bussato e il cornicione è ambrato con piccole bolle bruciacchiate."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [
+    {
+      "type": "Farina per Pinsa Certificata (mix frumento + riso + soia)",
+      "w": "280-320 (mix bilanciato)",
+      "brands": "Di Marco Pinsa Romana, Molino Pordenone Pinsa Romana, Agugiaro & Figna Pinsa Expert, GZ Pinsa GialloZafferano"
+    },
+    {
+      "type": "Farina Tipo 0 (alternativa base impasto casalingo)",
+      "w": "260-280",
+      "brands": "Caputo Classica, Garofalo Tipo 0, Lo Conte Le Farine Magiche"
+    },
+    {
+      "type": "Farina di Riso (componente mix casalingo)",
+      "w": "N/D (amidacea, non glutinosa)",
+      "brands": "Alce Nero, Riso Scotti, qualsiasi marca fine"
+    },
+    {
+      "type": "Farina di Soia Decorticata (componente mix casalingo)",
+      "w": "N/D (proteica, non glutinosa)",
+      "brands": "Baule Volante, Probios, Germinal Bio"
+    }
+  ],
+  "baking": {
+    "temperature": "260-270°C",
+    "time": "12-15 minuti (base bianca); aggiungere 3-5 min con topping",
+    "tips": [
+      "Preriscalda il forno con pietra refrattaria o teglia capovolta per ALMENO 45-60 minuti a temperatura massima: è il segreto della croccantezza del fondo",
+      "Usa il forno in modalità STATICA per tutta la cottura: il ventilato asciuga troppo rapidamente il cornicione prima che si formi l'alveolatura",
+      "Posiziona la teglia/pietra nel ripiano più basso del forno per una trasmissione del calore ottimale al fondo della pinsa",
+      "Per riconoscere la cottura perfetta: il fondo deve essere dorato-ambrato e suonare vuoto se picchiettato; il cornicione deve avere macchie brunite irregolari tipiche",
+      "Se hai un forno con funzione grill: negli ultimi 2 minuti attivalo per gratinare la superficie senza seccare il fondo",
+      "Temperatura reale minima consigliata: 240°C — al di sotto la pinsa non sviluppa croccantezza e risulta gommosa"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Farina per Pinsa",
+      "definition": "Mix di farine proprietario certificato, composto da farina di frumento (base strutturale), farina di riso (croccantezza, bassa assorbenza di grassi) e farina di soia (proteine, colore dorato). Ha alta capacità di assorbimento dell'acqua e maturazione lenta."
+    },
+    {
+      "term": "Alta idratazione",
+      "definition": "Impasto con rapporto acqua/farina superiore al 70%. Genera alveolatura aperta e struttura leggera, ma richiede tecnica nella lavorazione. La pinsa raggiunge tipicamente il 70-80% di idratazione."
+    },
+    {
+      "term": "Bassinage",
+      "definition": "Tecnica di aggiunta dell'acqua in più riprese: si versa una parte dell'acqua all'inizio e il residuo (10-15%) solo dopo l'incordatura iniziale, permettendo alla maglia glutinica di strutturarsi prima di ricevere ulteriore idratazione."
+    },
+    {
+      "term": "Maturazione a freddo",
+      "definition": "Processo di riposo dell'impasto in frigorifero a 4-6°C per 24-72 ore. Rallenta la fermentazione e lascia lavorare gli enzimi (proteasi e amilasi) che degradano le proteine complesse e gli zuccheri, rendendo il prodotto più digeribile e aromatico."
+    },
+    {
+      "term": "Stretch & fold",
+      "definition": "Serie di pieghe in ciotola o sul piano: si allunga delicatamente il lembo dell'impasto verso l'alto e lo si ripiega su se stesso. Rinforza la maglia glutinica senza stressare eccessivamente l'impasto, ideale per alte idratazioni."
+    },
+    {
+      "term": "Staglio",
+      "definition": "Divisione dell'impasto maturo in porzioni singole (panielli) del peso desiderato, eseguita con tarocco o raschietto per non stracciare la maglia glutinica."
+    },
+    {
+      "term": "Appretto",
+      "definition": "Seconda e ultima lievitazione dei panielli già formati, a temperatura ambiente, prima della stesura e cottura. Per la pinsa dura tipicamente 60-90 minuti dopo l'uscita dal frigo."
+    },
+    {
+      "term": "Paniello",
+      "definition": "Singola porzione di impasto, già stagliata e formata a sfera o ovale, pronta per l'appretto e poi la stesura."
+    },
+    {
+      "term": "Incordatura",
+      "definition": "Sviluppo della maglia glutinica durante l'impastamento: l'impasto diventa elastico, teso e non si straccia. Si verifica quando l'impasto 'incorda' attorno al gancio o alle mani senza appiccicolarsi eccessivamente."
+    },
+    {
+      "term": "Pietra refrattaria",
+      "definition": "Lastra di materiale refrattario (argilla, cordierite) posizionata in forno che accumula calore e lo cede rapidamente al fondo della pinsa, simulando il pavimento del forno professionale. Garantisce croccantezza e cottura uniforme."
+    },
+    {
+      "term": "Cornicione",
+      "definition": "Bordo esterno della pinsa (o pizza), più alto e alveolato rispetto al centro. Nella pinsa deve essere pronunciato, croccante fuori e morbido-alveolato all'interno."
+    },
+    {
+      "term": "Oven spring",
+      "definition": "Rapido rigonfiamento dell'impasto nei primi minuti di cottura, causato dall'esplosione dei gas di lievitazione a contatto con il calore del forno. Un forno ben caldo e statico massimizza questo effetto."
+    }
+  ],
+  "alert": "NON usare il mattarello per stendere la pinsa: distrugge completamente l'alveolatura creata durante le 24-72 ore di maturazione, rendendo il prodotto piatto e gommoso. Stendi sempre con i polpastrelli partendo dal centro. Allo stesso modo, NON saltare la maturazione in frigo: senza di essa la pinsa risulta pesante, poco digeribile e priva del caratteristico profumo. La fase in freddo NON è opzionale.",
+  "proTips": [
+    "Per un risultato ancora più autentico, puoi ricreare il mix farina per pinsa in casa: usa 850g farina 0 (W 280), 100g farina di riso finissima e 50g farina di soia decorticata. Le proporzioni si avvicinano molto ai mix professionali certificati.",
+    "Se il tuo forno non supera i 230°C, preriscalda in modalità grill per i primi 5 minuti con la pietra all'interno, poi abbassa a 230°C statico per la cottura normale. Questo trucco porta la pietra a temperature significativamente più alte."
+  ],
+  "storage": [
+    "IMPASTO CRUDO: i panielli già stagliati si conservano in frigo per un massimo di 72h dalla fine dell'impastamento, coperti singolarmente con pellicola. Oltre questo tempo il lievito si esaurisce e la maglia glutinica si degrada.",
+    "PINSA GIÀ COTTA E CONDITA: conserva in frigorifero per 24-48h avvolta in pellicola. Per rigenerare: scalda in forno statico a 200°C per 5-7 minuti direttamente sulla griglia — recupera gran parte della croccantezza originale. NON usare il microonde: rende la pinsa gommosa.",
+    "CONGELAMENTO: la pinsa cotta (solo base bianca, senza topping) si congela ottimamente. Lascia raffreddare completamente, avvolgi singolarmente in pellicola + sacchetto per freezer. Conserva fino a 2 mesi. Rigenera direttamente da congelato in forno a 220°C per 8-10 minuti su pietra o griglia."
+  ],
+  "imageKeywords": [
+    "roman pinsa crispy flatbread",
+    "pinsa romana homemade baked",
+    "italian pinsa wood oven rustic",
+    "pinsa romana pizza al forno",
+    "crispy oval flatbread toppings",
+    "pinsa romana fatta in casa",
+    "römische Pinsa knusprig hausgemacht",
+    "artisan italian flatbread food photography"
+  ],
+  "tags": [
+    "pinsa",
+    "pinsa romana",
+    "pizza romana",
+    "alta idratazione",
+    "farina di riso",
+    "farina di soia",
+    "maturazione in frigo",
+    "lievitati",
+    "pizza fatta in casa",
+    "lievito di birra",
+    "croccante",
+    "lunga lievitazione"
+  ],
+  "_generatedBy": "claude",
+  "_createdAt": "2026-05-07T09:14:09.751Z",
+  "image": "images/ricette/pizza/pinsa-romana-v2.webp",
+  "imageAttribution": "📷 Foto: Ensahequ — CC BY-SA via Openverse"
+}
