@@ -9,7 +9,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && node scripts/deploy-ghpages.js"
+    "deploy": "vite build && node scripts/generate-og.js && node scripts/deploy-ghpages.js",
+    "generate-og": "node scripts/generate-og.js"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
