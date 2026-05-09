@@ -47,7 +47,7 @@ function truncateDesc(desc, maxLen = 160) {
 function buildOgHtml({ title, description, url, image, type = 'article' }) {
     const fullTitle = `${escAttr(title)} — ${SITE_NAME}`;
     const desc = escAttr(truncateDesc(description));
-    const imgUrl = image ? `${SITE_URL}/${image.replace(/^\//, '')}` : `${SITE_URL}/images/og/homepage.png`;
+    const imgUrl = image ? `${SITE_URL}/${image.replace(/^\//, '')}` : `${SITE_URL}/images/og/homepage.webp`;
 
     return `<!DOCTYPE html>
 <html lang="it">
@@ -63,8 +63,6 @@ function buildOgHtml({ title, description, url, image, type = 'article' }) {
     <meta property="og:description" content="${desc}">
     <meta property="og:url" content="${escAttr(url)}">
     <meta property="og:image" content="${escAttr(imgUrl)}">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="${SITE_NAME}">
     <meta property="og:locale" content="it_IT">
 
