@@ -1,0 +1,82 @@
+{
+  "versione": 1,
+  "nota": "Registry dei dispositivi di cottura. È l'unica fonte: chi ha bisogno di diametri, capienze o tempi di inerzia legge da qui. Aggiungere un apparecchio = aggiungere una voce, senza toccare il codice. Il campo `famiglia` decide quale modulo di comportamento si applica (oggi esiste solo kamado).",
+  "default": "kamado_medio",
+  "dispositivi": [
+    {
+      "id": "kamado_piccolo",
+      "famiglia": "kamado",
+      "nome": "Kamado piccolo",
+      "pollici": 13.5,
+      "griglia_cm": 34,
+      "modelli": [
+        "Kamado Joe Joe Jr",
+        "Kamado Joe MiniMax",
+        "Big Green Egg MiniMax",
+        "Big Green Egg Small"
+      ],
+      "carbone_cestello_kg": 1.5,
+      "consumo_kg_h": { "bassa": 0.25, "alta": 0.9 },
+      "stabilizzazione_min": [10, 12],
+      "margine_sotto_target_c": 10,
+      "recupero_sovratemperatura_min": [15, 25],
+      "transizione_bassa_alta_min": [8, 12],
+      "scottatura_s_per_lato": [45, 60],
+      "zona_fredda": "piccola",
+      "note": [
+        "Poca massa ceramica: sale in fretta e recupera prima degli altri, ma supera il target con la stessa facilità.",
+        "Braci vicine alla griglia: la scottatura è più violenta e più corta. La griglia rialzata conta più che sui modelli grandi.",
+        "La zona indiretta è stretta: invece di spostare il pezzo nella zona fredda, si ruota di 180° a metà cottura."
+      ]
+    },
+    {
+      "id": "kamado_medio",
+      "famiglia": "kamado",
+      "nome": "Kamado medio",
+      "pollici": 18,
+      "griglia_cm": 46,
+      "modelli": [
+        "Kamado Joe Classic",
+        "Big Green Egg Large",
+        "Monolith Classic",
+        "Primo Oval Large"
+      ],
+      "carbone_cestello_kg": 3.5,
+      "consumo_kg_h": { "bassa": 0.35, "alta": 1.4 },
+      "stabilizzazione_min": [14, 18],
+      "margine_sotto_target_c": 15,
+      "recupero_sovratemperatura_min": [25, 40],
+      "transizione_bassa_alta_min": [12, 16],
+      "scottatura_s_per_lato": [60, 90],
+      "zona_fredda": "media",
+      "note": [
+        "È la misura di riferimento del calcolatore: i coefficienti di base sono tarati qui.",
+        "Con il deflettore a mezzaluna si ottiene una vera doppia zona: il pezzo si sposta invece di ruotare."
+      ]
+    },
+    {
+      "id": "kamado_grande",
+      "famiglia": "kamado",
+      "nome": "Kamado grande",
+      "pollici": 24,
+      "griglia_cm": 61,
+      "modelli": [
+        "Kamado Joe Big Joe",
+        "Big Green Egg XLarge",
+        "Monolith Le Chef XL"
+      ],
+      "carbone_cestello_kg": 6,
+      "consumo_kg_h": { "bassa": 0.5, "alta": 2.0 },
+      "stabilizzazione_min": [20, 25],
+      "margine_sotto_target_c": 20,
+      "recupero_sovratemperatura_min": [30, 50],
+      "transizione_bassa_alta_min": [15, 20],
+      "scottatura_s_per_lato": [60, 90],
+      "zona_fredda": "ampia",
+      "note": [
+        "Molta massa ceramica: tiene la temperatura per ore senza interventi, ma se supera il target il recupero è lungo. È il modello in cui stabilizzare sotto e salire conta di più.",
+        "Per una singola bistecca è sovradimensionato: lo stesso risultato con più carbone e più attesa."
+      ]
+    }
+  ]
+}

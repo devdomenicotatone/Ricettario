@@ -1,0 +1,97 @@
+/* ============================================
+   PROMO COTTURA — la scheda in homepage che porta al calcolatore
+
+   Sta in un componente a parte, importato da main.js, perché deve essere
+   nel bundle principale: il CSS del calcolatore (css/pages/cottura.css)
+   viaggia in un chunk caricato solo su quella pagina, e qui non arriverebbe.
+   ============================================ */
+
+@layer components {
+    .promo-cottura {
+        display: block;
+        padding: var(--space-xl);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-lg);
+        background: var(--color-surface-2);
+        background-image: var(--gradient-card);
+        text-decoration: none;
+        color: inherit;
+        transition: border-color var(--transition-fast), transform var(--transition-fast),
+            box-shadow var(--transition-fast);
+
+        &:hover {
+            border-color: var(--border-accent);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-card-hover);
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--color-accent);
+            outline-offset: 3px;
+        }
+    }
+
+    .promo-cottura__icona {
+        display: grid;
+        place-items: center;
+        width: 64px;
+        height: 64px;
+        border-radius: var(--radius-md);
+        background: var(--glow-accent);
+        margin-bottom: var(--space-md);
+    }
+
+    .promo-cottura__label {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+        margin-bottom: var(--space-xs);
+    }
+
+    .promo-cottura__titolo {
+        font-family: var(--font-display);
+        font-size: clamp(1.5rem, 5vw, 2rem);
+        line-height: 1.15;
+        color: var(--color-text);
+        margin-bottom: var(--space-sm);
+    }
+
+    .promo-cottura__desc {
+        font-size: 0.98rem;
+        line-height: 1.65;
+        color: var(--color-text-secondary);
+        max-width: 62ch;
+    }
+
+    .promo-cottura__azione {
+        display: inline-block;
+        margin-top: var(--space-lg);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--color-accent);
+
+        .promo-cottura:hover & {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+    }
+
+    @media (min-width: 720px) {
+        .promo-cottura {
+            padding: var(--space-2xl);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .promo-cottura {
+            transition: none;
+
+            &:hover {
+                transform: none;
+            }
+        }
+    }
+}

@@ -44,6 +44,15 @@ function matchRoute(pathname) {
     return { type: 'category', params: { category: catMatch[1] } };
   }
 
+  // Calcolatore cottura: cottura/ oppure cottura/<slug-configurazione>
+  // Lo slug serve alle pagine pre-generate (fiorentina-4cm-kamado); la
+  // configurazione libera viaggia in query string, che il renderer legge da
+  // window.location.
+  const cotturaMatch = path.match(/^cottura(?:\/([^/]+?))?(?:\.html)?$/);
+  if (cotturaMatch) {
+    return { type: 'cottura', params: { config: cotturaMatch[1] || null } };
+  }
+
   // Fallback → homepage
   return { type: 'home', params: {} };
 }
@@ -55,7 +64,9 @@ async function navigateTo(url, pushState = true) {
   const fullUrl = new URL(url, window.location.origin);
 
   if (pushState) {
-    history.pushState(null, '', fullUrl.pathname);
+    // La query string va conservata: il calcolatore di cottura ci tiene la
+    // configurazione, e troncarla renderebbe i link non ricaricabili.
+    history.pushState(null, '', fullUrl.pathname + fullUrl.search);
   }
 
   const route = matchRoute(fullUrl.pathname);

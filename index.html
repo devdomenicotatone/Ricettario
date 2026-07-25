@@ -62,6 +62,8 @@
 
             <ul class="navbar__links" id="nav-links">
                 <li><a href="#ricette" data-nav-section="ricette" class="active">Ricette</a></li>
+                <!-- Route vera, non un'ancora: il router la intercetta come link interno -->
+                <li><a href="/Ricettario/cottura/">Cottura</a></li>
                 <li><a href="#strumenti" data-nav-section="strumenti">Strumenti</a></li>
                 <li><a href="#chi-sono" data-nav-section="chi-sono">Chi Sono</a></li>
             </ul>
@@ -126,6 +128,27 @@
 
                 <!-- Caroselli per categoria — popolati dinamicamente da recipes.json -->
                 <div id="recipe-carousels"></div>
+            </div>
+        </section>
+
+        <!-- ═══════════ CALCOLATORE COTTURA ═══════════ -->
+        <section class="section" id="cottura">
+            <div class="container container--narrow">
+                <a class="promo-cottura reveal" href="/Ricettario/cottura/">
+                    <span class="promo-cottura__icona">
+                        <img src="/Ricettario/images/emoji/thermometer.png" width="40" height="40" alt=""
+                            class="fluent-emoji">
+                    </span>
+                    <span class="promo-cottura__label">Strumento interattivo</span>
+                    <h2 class="promo-cottura__titolo">Calcolatore di cottura su kamado</h2>
+                    <p class="promo-cottura__desc">
+                        Inserisci taglio, spessore e cottura desiderata: ne esce un piano a fasi con i tempi, la
+                        temperatura di estrazione calcolata sul carryover, la gestione delle valvole e quanto
+                        carbone serve. Tarato sui kamado in ceramica nelle tre misure standard, non su un
+                        barbecue generico.
+                    </p>
+                    <span class="promo-cottura__azione">Apri il calcolatore →</span>
+                </a>
             </div>
         </section>
 

@@ -1,0 +1,773 @@
+{
+  "versione": 1,
+  "nota": "Profili dei tagli. `curva_tempo` è un RIFERIMENTO a una curva in coefficienti.js, non una copia dei numeri: se ogni taglio di manzo si portasse dietro la sua tabella, ricalibrare dopo una cottura reale significherebbe modificarne sei, e le sei copie divergerebbero. `ingombro_cm` è la dimensione massima del pezzo sulla griglia, confrontata con `griglia_cm` del dispositivo.",
+  "tagli": [
+    {
+      "id": "fiorentina",
+      "nome": "Fiorentina / T-bone",
+      "famiglia": "bistecca",
+      "specie": "manzo",
+      "grasso": "marezzato",
+      "parametro_dominante": "spessore",
+      "curva_tempo": "manzo_indiretta",
+      "spessore": {
+        "min": 3,
+        "max": 8,
+        "default": 4.5
+      },
+      "peso": {
+        "min": 0.8,
+        "max": 2,
+        "default": 1.2
+      },
+      "con_osso": "sempre",
+      "muscoli_multipli": true,
+      "ingombro_cm": 30,
+      "divisibile": false,
+      "metodo_consigliato": "reverse_sear",
+      "metodi_ammessi": [
+        "reverse_sear",
+        "diretta",
+        "indiretta_lenta"
+      ],
+      "temperature_cuore": {
+        "al_sangue": 50,
+        "media_al_sangue": 54,
+        "media": 58,
+        "media_ben_cotta": 63,
+        "ben_cotta": 70
+      },
+      "cotture_ammesse": [
+        "al_sangue",
+        "media_al_sangue",
+        "media",
+        "media_ben_cotta",
+        "ben_cotta"
+      ],
+      "soglia_sicurezza": null,
+      "motivo_soglia": null,
+      "gestione_grasso": {
+        "bordo_grasso": true,
+        "rotazione_su_bordi": true
+      },
+      "porzioni_g_per_persona": 450,
+      "note_specifiche": [
+        "Sono due muscoli con masse diverse: il filetto, più piccolo, corre avanti di 3-5 °C rispetto al controfiletto. Orienta il lato del filetto verso la zona meno calda.",
+        "Sonda il controfiletto nel punto più spesso, in orizzontale, lontano dall'osso: l'osso conduce diversamente e restituisce letture false.",
+        "Oltre i 4 cm conviene cuocerla in piedi sui tre bordi invece che sulle due facce: le facce restano asciutte fino alla scottatura e il lardello ha il tempo di fondere."
+      ],
+      "errori_comuni": [
+        "Sondare vicino all'osso e credere di essere più avanti di quanto si è.",
+        "Scottarla partendo da fredda: la crosta arriva prima che il cuore si muova, e in mezzo resta cruda."
+      ]
+    },
+    {
+      "id": "costata",
+      "nome": "Costata con osso",
+      "famiglia": "bistecca",
+      "specie": "manzo",
+      "grasso": "marezzato",
+      "parametro_dominante": "spessore",
+      "curva_tempo": "manzo_indiretta",
+      "spessore": {
+        "min": 2.5,
+        "max": 7,
+        "default": 3.5
+      },
+      "peso": {
+        "min": 0.5,
+        "max": 1.4,
+        "default": 0.8
+      },
+      "con_osso": "sempre",
+      "muscoli_multipli": false,
+      "ingombro_cm": 28,
+      "divisibile": false,
+      "metodo_consigliato": "reverse_sear",
+      "metodi_ammessi": [
+        "reverse_sear",
+        "diretta",
+        "indiretta_lenta"
+      ],
+      "temperature_cuore": {
+        "al_sangue": 50,
+        "media_al_sangue": 54,
+        "media": 58,
+        "media_ben_cotta": 63,
+        "ben_cotta": 70
+      },
+      "cotture_ammesse": [
+        "al_sangue",
+        "media_al_sangue",
+        "media",
+        "media_ben_cotta",
+        "ben_cotta"
+      ],
+      "soglia_sicurezza": null,
+      "motivo_soglia": null,
+      "gestione_grasso": {
+        "bordo_grasso": true,
+        "rotazione_su_bordi": true
+      },
+      "porzioni_g_per_persona": 400,
+      "note_specifiche": [
+        "Un muscolo solo e ben marezzato: perdona più della fiorentina ed è il taglio giusto per prendere le misure a un kamado nuovo.",
+        "La vena di grasso centrale fonde intorno ai 55 °C: sotto i 54 al cuore resta gommosa."
+      ],
+      "errori_comuni": [
+        "Tagliarla troppo sottile: sotto i 2,5 cm non c'è margine tra crosta e cuore."
+      ]
+    },
+    {
+      "id": "tomahawk",
+      "nome": "Tomahawk",
+      "famiglia": "bistecca",
+      "specie": "manzo",
+      "grasso": "marezzato",
+      "parametro_dominante": "spessore",
+      "curva_tempo": "manzo_indiretta",
+      "spessore": {
+        "min": 4,
+        "max": 8,
+        "default": 5
+      },
+      "peso": {
+        "min": 0.8,
+        "max": 1.8,
+        "default": 1.2
+      },
+      "con_osso": "sempre",
+      "muscoli_multipli": false,
+      "ingombro_cm": 42,
+      "divisibile": false,
+      "metodo_consigliato": "reverse_sear",
+      "metodi_ammessi": [
+        "reverse_sear",
+        "indiretta_lenta"
+      ],
+      "temperature_cuore": {
+        "al_sangue": 50,
+        "media_al_sangue": 54,
+        "media": 58,
+        "media_ben_cotta": 63,
+        "ben_cotta": 70
+      },
+      "cotture_ammesse": [
+        "al_sangue",
+        "media_al_sangue",
+        "media",
+        "media_ben_cotta",
+        "ben_cotta"
+      ],
+      "soglia_sicurezza": null,
+      "motivo_soglia": null,
+      "gestione_grasso": {
+        "bordo_grasso": true,
+        "rotazione_su_bordi": true
+      },
+      "porzioni_g_per_persona": 600,
+      "note_specifiche": [
+        "Il manico d'osso porta l'ingombro oltre i 40 cm: su una griglia da 34 cm non si appoggia in piano.",
+        "L'osso lungo non aggiunge sapore, aggiunge peso da pagare. È scenografia, non tecnica."
+      ],
+      "errori_comuni": [
+        "Sondare vicino all'osso della costola.",
+        "Trattarlo come una costata: lo spessore tipico è il doppio, e il tempo cresce più che in proporzione."
+      ]
+    },
+    {
+      "id": "controfiletto",
+      "nome": "Controfiletto disossato",
+      "famiglia": "bistecca",
+      "specie": "manzo",
+      "grasso": "medio",
+      "parametro_dominante": "spessore",
+      "curva_tempo": "manzo_indiretta",
+      "spessore": {
+        "min": 2,
+        "max": 5,
+        "default": 3
+      },
+      "peso": {
+        "min": 0.25,
+        "max": 0.8,
+        "default": 0.4
+      },
+      "con_osso": "mai",
+      "muscoli_multipli": false,
+      "ingombro_cm": 20,
+      "divisibile": false,
+      "metodo_consigliato": "diretta",
+      "metodi_ammessi": [
+        "diretta",
+        "reverse_sear"
+      ],
+      "temperature_cuore": {
+        "al_sangue": 50,
+        "media_al_sangue": 54,
+        "media": 58,
+        "media_ben_cotta": 63,
+        "ben_cotta": 70
+      },
+      "cotture_ammesse": [
+        "al_sangue",
+        "media_al_sangue",
+        "media",
+        "media_ben_cotta",
+        "ben_cotta"
+      ],
+      "soglia_sicurezza": null,
+      "motivo_soglia": null,
+      "gestione_grasso": {
+        "bordo_grasso": true,
+        "rotazione_su_bordi": false
+      },
+      "porzioni_g_per_persona": 300,
+      "note_specifiche": [
+        "Ha un bordo di grasso su un solo lato: qualche minuto in piedi su quel bordo prima di tutto il resto.",
+        "Sotto i 3 cm il reverse sear non serve: la diretta fa lo stesso lavoro in un quarto del tempo."
+      ],
+      "errori_comuni": [
+        "Lasciare il bordo di grasso bianco e gommoso perché non è mai stato a contatto con la griglia."
+      ]
+    },
+    {
+      "id": "filetto",
+      "nome": "Filetto intero",
+      "famiglia": "intero",
+      "specie": "manzo",
+      "grasso": "magro",
+      "parametro_dominante": "peso",
+      "curva_tempo": "manzo_arrosto",
+      "spessore": {
+        "min": 5,
+        "max": 8,
+        "default": 6
+      },
+      "peso": {
+        "min": 0.8,
+        "max": 2.5,
+        "default": 1.5
+      },
+      "con_osso": "mai",
+      "muscoli_multipli": false,
+      "ingombro_cm": 45,
+      "divisibile": true,
+      "metodo_consigliato": "reverse_sear",
+      "metodi_ammessi": [
+        "reverse_sear",
+        "indiretta_lenta"
+      ],
+      "temperature_cuore": {
+        "al_sangue": 50,
+        "media_al_sangue": 54,
+        "media": 58,
+        "media_ben_cotta": 63,
+        "ben_cotta": 70
+      },
+      "cotture_ammesse": [
+        "al_sangue",
+        "media_al_sangue",
+        "media",
+        "media_ben_cotta"
+      ],
+      "soglia_sicurezza": null,
+      "motivo_soglia": null,
+      "gestione_grasso": {
+        "bordo_grasso": false,
+        "rotazione_su_bordi": false
+      },
+      "porzioni_g_per_persona": 200,
+      "motivo_cotture_escluse": "Ben cotta non è tra le opzioni, e non è una questione di sicurezza. Il filetto non ha né grasso interno né collagene: oltre i 63 °C non diventa \"più cotto\", diventa asciutto e stopposo, e non c'è tecnica che lo rimedi. È il taglio più caro del manzo e portarlo oltre significa pagare per rovinarlo. Se ti serve carne ben cotta, un taglio marezzato costa meno e regge molto meglio.",
+      "note_specifiche": [
+        "Taglio magrissimo: sopra i 58 °C diventa asciutto e non c'è grasso che lo salvi.",
+        "È rastremato: la punta sottile arriva a temperatura molto prima. Legala o piegala sotto, oppure accetta due gradi di cottura nello stesso pezzo.",
+        "Intero supera i 45 cm: su griglie piccole va diviso in due tronchetti."
+      ],
+      "errori_comuni": [
+        "Affumicarlo come un brisket: su carne così magra e delicata il fumo copre tutto."
+      ]
+    },
+    {
+      "id": "picanha",
+      "nome": "Picanha",
+      "famiglia": "intero",
+      "specie": "manzo",
+      "grasso": "medio",
+      "parametro_dominante": "peso",
+      "curva_tempo": "manzo_arrosto",
+      "spessore": {
+        "min": 4,
+        "max": 7,
+        "default": 5
+      },
+      "peso": {
+        "min": 0.8,
+        "max": 1.8,
+        "default": 1.2
+      },
+      "con_osso": "mai",
+      "muscoli_multipli": false,
+      "ingombro_cm": 28,
+      "divisibile": true,
+      "metodo_consigliato": "reverse_sear",
+      "metodi_ammessi": [
+        "reverse_sear",
+        "diretta",
+        "indiretta_lenta"
+      ],
+      "temperature_cuore": {
+        "al_sangue": 50,
+        "media_al_sangue": 54,
+        "media": 58,
+        "media_ben_cotta": 63,
+        "ben_cotta": 70
+      },
+      "cotture_ammesse": [
+        "al_sangue",
+        "media_al_sangue",
+        "media",
+        "media_ben_cotta",
+        "ben_cotta"
+      ],
+      "soglia_sicurezza": null,
+      "motivo_soglia": null,
+      "gestione_grasso": {
+        "bordo_grasso": true,
+        "rotazione_su_bordi": false
+      },
+      "porzioni_g_per_persona": 300,
+      "note_specifiche": [
+        "La cappa di grasso è il taglio: va incisa a griglia senza arrivare alla carne, e tenuta verso l'alto in indiretta perché coli sulla carne.",
+        "Alternativa alla cottura intera: tagliarla in fette spesse nel senso delle fibre e cuocerle come bistecche."
+      ],
+      "errori_comuni": [
+        "Togliere la cappa di grasso perché sembra troppa.",
+        "Tagliarla nel verso sbagliato: le fibre girano, e la direzione cambia tra la punta e la parte larga."
+      ]
+    },
+    {
+      "id": "roast_beef",
+      "nome": "Roast beef",
+      "famiglia": "arrosto",
+      "specie": "manzo",
+      "grasso": "medio",
+      "parametro_dominante": "peso",
+      "curva_tempo": "manzo_arrosto",
+      "spessore": {
+        "min": 6,
+        "max": 12,
+        "default": 8
+      },
+      "peso": {
+        "min": 1,
+        "max": 3,
+        "default": 1.5
+      },
+      "con_osso": "opzionale",
+      "muscoli_multipli": false,
+      "ingombro_cm": 32,
+      "divisibile": false,
+      "metodo_consigliato": "reverse_sear",
+      "metodi_ammessi": [
+        "reverse_sear",
+        "indiretta_lenta"
+      ],
+      "temperature_cuore": {
+        "al_sangue": 50,
+        "media_al_sangue": 54,
+        "media": 58,
+        "media_ben_cotta": 63,
+        "ben_cotta": 70
+      },
+      "cotture_ammesse": [
+        "al_sangue",
+        "media_al_sangue",
+        "media",
+        "media_ben_cotta"
+      ],
+      "soglia_sicurezza": null,
+      "motivo_soglia": null,
+      "gestione_grasso": {
+        "bordo_grasso": true,
+        "rotazione_su_bordi": false
+      },
+      "porzioni_g_per_persona": 200,
+      "motivo_cotture_escluse": "Ben cotta non è prevista: un roast beef si affetta sottile e si mangia rosato, è quello il piatto. Portato a 70 °C al cuore diventa un arrosto grigio — buono, ma un'altra cosa, e per quella ci sono tagli più adatti e meno costosi.",
+      "note_specifiche": [
+        "Legalo a cilindro regolare: un pezzo di sezione costante cuoce uniforme, uno irregolare no, e nessun calcolo può rimediare.",
+        "Il carryover su un pezzo da 2 kg vale 5 °C: estrarlo al target significa mangiarlo un grado di cottura più avanti."
+      ],
+      "errori_comuni": [
+        "Affettarlo caldo: il riposo su un arrosto è proporzionale alla massa, non cinque minuti come per una bistecca."
+      ]
+    },
+    {
+      "id": "arista",
+      "nome": "Arista di maiale",
+      "famiglia": "arrosto",
+      "specie": "maiale",
+      "grasso": "magro",
+      "parametro_dominante": "peso",
+      "curva_tempo": "maiale_arrosto",
+      "camera_ammessa": [
+        130,
+        160
+      ],
+      "spessore": {
+        "min": 6,
+        "max": 12,
+        "default": 8
+      },
+      "peso": {
+        "min": 1,
+        "max": 3,
+        "default": 1.5
+      },
+      "con_osso": "opzionale",
+      "muscoli_multipli": false,
+      "ingombro_cm": 35,
+      "divisibile": true,
+      "metodo_consigliato": "indiretta_lenta",
+      "metodi_ammessi": [
+        "indiretta_lenta",
+        "reverse_sear"
+      ],
+      "temperature_cuore": {
+        "media": 63,
+        "media_ben_cotta": 68,
+        "ben_cotta": 74
+      },
+      "cotture_ammesse": [
+        "media",
+        "media_ben_cotta",
+        "ben_cotta"
+      ],
+      "soglia_sicurezza": 63,
+      "motivo_soglia": "Sul maiale in pezzo intero la soglia di sicurezza è 63 °C al cuore. Sotto quella temperatura il tempo di permanenza non è sufficiente ad abbattere i patogeni, e non è una questione di gusto: è il motivo per cui l'opzione non c'è. A 63 °C il maiale resta rosato e succoso — il grigio dell'arista di una volta arriva dai 75 °C in su.",
+      "gestione_grasso": {
+        "bordo_grasso": true,
+        "rotazione_su_bordi": false
+      },
+      "porzioni_g_per_persona": 220,
+      "note_specifiche": [
+        "La lonza è magra: a 63 °C è succosa, a 72 è cartone. Qui il carryover conta più che sul manzo.",
+        "Se ha la cotenna, va incisa e serve una fase finale ad alta temperatura per farla scoppiettare."
+      ],
+      "errori_comuni": [
+        "Cuocerla \"per sicurezza\" fino a 75 °C: è la ragione per cui l'arista ha la fama di essere asciutta."
+      ]
+    },
+    {
+      "id": "costine",
+      "nome": "Costine di maiale",
+      "famiglia": "low_and_slow",
+      "specie": "maiale",
+      "grasso": "grasso",
+      "parametro_dominante": "peso",
+      "curva_tempo": null,
+      "spessore": {
+        "min": 3,
+        "max": 6,
+        "default": 4
+      },
+      "peso": {
+        "min": 0.8,
+        "max": 2.5,
+        "default": 1.2
+      },
+      "con_osso": "sempre",
+      "muscoli_multipli": false,
+      "ingombro_cm": 40,
+      "divisibile": true,
+      "metodo_consigliato": "low_and_slow",
+      "metodi_ammessi": [
+        "low_and_slow"
+      ],
+      "temperature_cuore": {
+        "ben_cotta": 93
+      },
+      "cotture_ammesse": [
+        "ben_cotta"
+      ],
+      "soglia_sicurezza": null,
+      "motivo_soglia": null,
+      "gestione_grasso": {
+        "bordo_grasso": false,
+        "rotazione_su_bordi": false
+      },
+      "porzioni_g_per_persona": 500,
+      "low_and_slow": {
+        "durata_fissa_h": [
+          4,
+          6
+        ],
+        "temperatura_camera": [
+          110,
+          120
+        ],
+        "target_finale": 93,
+        "criterio": "l'osso si scopre e la costina si piega senza rompersi",
+        "stallo": null,
+        "stagnola_ammessa": true
+      },
+      "note_specifiche": [
+        "Il rack intero supera i 40 cm: su griglie piccole va tagliato in due o messo in verticale su un rib rack.",
+        "Non si va a temperatura ma a cedimento: 93 °C è un'indicazione, il test è che la carne si stacchi dall'osso senza sfaldarsi.",
+        "Togli la membrana sul lato osso: non si scioglie e blocca sia il rub sia il fumo."
+      ],
+      "errori_comuni": [
+        "Il fumo per tutta la cottura: dopo le prime due o tre ore la superficie non assorbe più, e il resto diventa amaro.",
+        "\"Fall off the bone\" come obiettivo: quello è oltre cottura. La costina giusta si morde, non si disintegra."
+      ]
+    },
+    {
+      "id": "pollo_intero",
+      "nome": "Pollo intero",
+      "famiglia": "intero",
+      "specie": "pollo",
+      "grasso": "magro",
+      "parametro_dominante": "peso",
+      "curva_tempo": "pollo_arrosto",
+      "camera_ammessa": [
+        160,
+        180
+      ],
+      "spessore": {
+        "min": 8,
+        "max": 14,
+        "default": 10
+      },
+      "peso": {
+        "min": 1,
+        "max": 2.2,
+        "default": 1.4
+      },
+      "con_osso": "sempre",
+      "muscoli_multipli": true,
+      "ingombro_cm": 28,
+      "divisibile": true,
+      "metodo_consigliato": "indiretta_lenta",
+      "metodi_ammessi": [
+        "indiretta_lenta",
+        "reverse_sear"
+      ],
+      "temperature_cuore": {
+        "ben_cotta": 74
+      },
+      "cotture_ammesse": [
+        "ben_cotta"
+      ],
+      "soglia_sicurezza": 74,
+      "motivo_soglia": "Sul pollame non esiste il grado di cottura: 74 °C al cuore del petto è la soglia sotto la quale la carne non è sicura, per il rischio Salmonella e Campylobacter. Non è prudenza eccessiva ed è l'unico punto del calcolatore in cui la sicurezza vince anche sul carryover: la temperatura di estrazione non scende mai sotto i 74 °C, anche se l'aritmetica lo consentirebbe.",
+      "gestione_grasso": {
+        "bordo_grasso": false,
+        "rotazione_su_bordi": false
+      },
+      "porzioni_g_per_persona": 400,
+      "note_specifiche": [
+        "Petto e coscia vogliono temperature diverse: 74 °C il petto, 80-82 la coscia. Sonda il petto e accetta che la coscia vada oltre — al contrario non funziona.",
+        "In verticale (a lattina) il calore gira intorno e la pelle si asciuga da tutti i lati: su kamado piccoli è anche l'unico modo di farlo stare comodo."
+      ],
+      "errori_comuni": [
+        "Sondare la coscia e credere che il petto sia pronto.",
+        "Cuocerlo a bassa temperatura per tenerlo morbido: la pelle esce molle e gommosa. Il pollo vuole almeno 160-180 °C."
+      ]
+    },
+    {
+      "id": "agnello",
+      "nome": "Agnello",
+      "famiglia": "arrosto",
+      "specie": "agnello",
+      "grasso": "medio",
+      "parametro_dominante": "peso",
+      "curva_tempo": "agnello_arrosto",
+      "spessore": {
+        "min": 4,
+        "max": 10,
+        "default": 6
+      },
+      "peso": {
+        "min": 0.8,
+        "max": 2.5,
+        "default": 1.2
+      },
+      "con_osso": "opzionale",
+      "muscoli_multipli": false,
+      "ingombro_cm": 30,
+      "divisibile": true,
+      "metodo_consigliato": "reverse_sear",
+      "metodi_ammessi": [
+        "reverse_sear",
+        "indiretta_lenta"
+      ],
+      "temperature_cuore": {
+        "al_sangue": 52,
+        "media_al_sangue": 56,
+        "media": 60,
+        "media_ben_cotta": 65,
+        "ben_cotta": 72
+      },
+      "cotture_ammesse": [
+        "al_sangue",
+        "media_al_sangue",
+        "media",
+        "media_ben_cotta",
+        "ben_cotta"
+      ],
+      "soglia_sicurezza": null,
+      "motivo_soglia": null,
+      "gestione_grasso": {
+        "bordo_grasso": true,
+        "rotazione_su_bordi": false
+      },
+      "porzioni_g_per_persona": 350,
+      "note_specifiche": [
+        "Il grasso dell'agnello è quello che dà il sapore forte: renderlo bene lo addolcisce, lasciarlo crudo lo esalta.",
+        "Le temperature sono un paio di gradi più alte del manzo per lo stesso risultato percepito."
+      ],
+      "errori_comuni": [
+        "Legno da affumicatura pesante: l'agnello ha già un sapore suo e il fumo forte gli si mette contro."
+      ]
+    },
+    {
+      "id": "brisket",
+      "nome": "Brisket",
+      "famiglia": "low_and_slow",
+      "specie": "manzo",
+      "grasso": "grasso",
+      "parametro_dominante": "peso",
+      "curva_tempo": null,
+      "spessore": {
+        "min": 5,
+        "max": 12,
+        "default": 8
+      },
+      "peso": {
+        "min": 2,
+        "max": 7,
+        "default": 5
+      },
+      "con_osso": "mai",
+      "muscoli_multipli": true,
+      "ingombro_cm": 50,
+      "divisibile": true,
+      "metodo_consigliato": "low_and_slow",
+      "metodi_ammessi": [
+        "low_and_slow"
+      ],
+      "temperature_cuore": {
+        "ben_cotta": 96
+      },
+      "cotture_ammesse": [
+        "ben_cotta"
+      ],
+      "soglia_sicurezza": null,
+      "motivo_soglia": null,
+      "gestione_grasso": {
+        "bordo_grasso": true,
+        "rotazione_su_bordi": false
+      },
+      "porzioni_g_per_persona": 400,
+      "low_and_slow": {
+        "minuti_per_kg": [
+          110,
+          150
+        ],
+        "temperatura_camera": [
+          107,
+          121
+        ],
+        "target_finale": 96,
+        "criterio": "la sonda entra come nel burro, senza resistenza",
+        "stallo": {
+          "da": 65,
+          "a": 74,
+          "durata_min": [
+            60,
+            240
+          ]
+        },
+        "stagnola_ammessa": true
+      },
+      "note_specifiche": [
+        "Due muscoli con grassi diversi (point e flat) che cuociono a velocità diverse: il flat si asciuga prima. Sonda il flat.",
+        "Lo stallo tra i 65 e i 74 °C può durare quattro ore: non è il kamado che si è spento, è l'acqua che evapora. Da qui la stagnola, che qui è tecnica corretta e non scorciatoia.",
+        "Un packer intero supera i 50 cm: su una griglia da 34 cm non ci sta, e va comprato già diviso."
+      ],
+      "errori_comuni": [
+        "Aumentare la temperatura durante lo stallo per \"sbloccarlo\": si asciuga il flat e non si guadagna niente.",
+        "Andare a orologio invece che a cedimento: il brisket è pronto quando la sonda entra libera, e l'ora in cui succede non si può prevedere."
+      ]
+    },
+    {
+      "id": "pulled_pork",
+      "nome": "Pulled pork",
+      "famiglia": "low_and_slow",
+      "specie": "maiale",
+      "grasso": "grasso",
+      "parametro_dominante": "peso",
+      "curva_tempo": null,
+      "spessore": {
+        "min": 8,
+        "max": 15,
+        "default": 10
+      },
+      "peso": {
+        "min": 1.5,
+        "max": 5,
+        "default": 3
+      },
+      "con_osso": "opzionale",
+      "muscoli_multipli": false,
+      "ingombro_cm": 28,
+      "divisibile": true,
+      "metodo_consigliato": "low_and_slow",
+      "metodi_ammessi": [
+        "low_and_slow"
+      ],
+      "temperature_cuore": {
+        "ben_cotta": 95
+      },
+      "cotture_ammesse": [
+        "ben_cotta"
+      ],
+      "soglia_sicurezza": null,
+      "motivo_soglia": null,
+      "gestione_grasso": {
+        "bordo_grasso": true,
+        "rotazione_su_bordi": false
+      },
+      "porzioni_g_per_persona": 250,
+      "low_and_slow": {
+        "minuti_per_kg": [
+          140,
+          190
+        ],
+        "temperatura_camera": [
+          107,
+          121
+        ],
+        "target_finale": 95,
+        "criterio": "l'osso si sfila con due dita e la carne si sfilaccia da sola",
+        "stallo": {
+          "da": 68,
+          "a": 75,
+          "durata_min": [
+            60,
+            180
+          ]
+        },
+        "stagnola_ammessa": true
+      },
+      "note_specifiche": [
+        "È il taglio più indulgente del barbecue: molto collagene e molto grasso, difficile da rovinare per eccesso di cottura.",
+        "Ci sta anche su una griglia piccola, ma dieci-dodici ore chiedono più carbone di quanto ne tenga un cestello piccolo: preventiva un rabbocco a caldo."
+      ],
+      "errori_comuni": [
+        "Sfilacciarlo appena estratto: il riposo in borsa termica di un'ora fa la differenza tra sfilacciato e asciutto.",
+        "Fidarsi dei minuti/kg fino all'ultimo grado: sul low & slow servono a organizzare la giornata, non a decidere quando è pronto."
+      ]
+    }
+  ]
+}

@@ -14,6 +14,7 @@ import '../css/components/recipe-card.css';
 import '../css/components/filter-bar.css';
 import '../css/components/category-carousel.css';
 import '../css/components/tool-spotlight.css';
+import '../css/components/cottura-promo.css';
 import '../css/components/footer.css';
 import '../css/pages/recipe-detail.css';
 import '../css/components/category-page.css';
@@ -57,6 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
     home: renderHomepage,
     recipe: renderRecipe,
     category: renderCategory,
+    // Import dinamico: il calcolatore di cottura si porta dietro i profili dei
+    // tagli, i coefficienti e il suo CSS. Chi apre una ricetta di pane non
+    // scarica niente di tutto questo. Stessa scelta fatta per Chart.js.
+    cottura: async (app, params) => {
+      const { renderCottura } = await import('./cottura/pagina.js');
+      return renderCottura(app, params);
+    },
   });
 
   initRouter();

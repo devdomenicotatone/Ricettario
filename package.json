@@ -10,9 +10,10 @@
     "build": "vite build",
     "preview": "vite preview",
     "build:recipes": "node scripts/build-recipes.js",
+    "build:cottura": "node scripts/build-cottura.js",
     "generate-og": "node scripts/generate-og.js",
     "verifica": "node scripts/verifica-build.js",
-    "check": "npm run build:recipes && vite build && npm run generate-og && npm run verifica",
+    "check": "npm run build:recipes && npm run build:cottura && vite build && npm run generate-og && npm run verifica",
     "deploy": "npm run check && node scripts/deploy-ghpages.js"
   },
   "devDependencies": {
