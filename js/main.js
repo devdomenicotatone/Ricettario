@@ -245,10 +245,22 @@ let catState = {
 };
 
 async function renderCategory(app, { category }) {
-  const meta = CATEGORY_META[category] || {
-    name: category, emoji: 'spaghetti',
-    title: category, desc: `Tutte le ricette di ${category}.`,
-  };
+  const meta = CATEGORY_META[category];
+
+  // Categoria non dichiarata: prima veniva inventata una pagina vuota col nome
+  // preso dall'URL (es. "pasta" dopo che la categoria è stata rimossa, ma
+  // anche qualunque refuso). Meglio dirlo, e offrire una via d'uscita.
+  if (!meta) {
+    document.title = 'Categoria non trovata — Ricettario Lab';
+    app.innerHTML = `
+      <div class="container" style="padding: 120px 0; text-align: center;">
+        <h1>${fluentEmoji('prohibited', 28)} Categoria non trovata</h1>
+        <p style="color: var(--color-text-muted);">La categoria "${category}" non esiste (o non esiste più).</p>
+        <p><a href="${BASE}#ricette" data-link>← Vedi tutte le ricette</a></p>
+      </div>`;
+    refreshIcons();
+    return;
+  }
 
   document.title = `${meta.title} — Il Ricettario`;
   const metaDesc = document.querySelector('meta[name="description"]');

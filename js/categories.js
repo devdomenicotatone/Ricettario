@@ -17,8 +17,7 @@
 export const CATEGORIES = {
   pane:       { name: 'Pane',       dir: 'pane',       emoji: 'baguette-bread', unicode: '🥖', title: 'Pane Artigianale',           desc: 'Ricette di pane ad alta idratazione — ciabatta, filone, baguette e pane speciale.' },
   pizza:      { name: 'Pizza',      dir: 'pizza',      emoji: 'pizza',          unicode: '🍕', title: 'Pizza Artigianale',          desc: 'Pizze con lievitazione lunga — napoletana, in teglia, canotto e pinsa romana.' },
-  pasta:      { name: 'Pasta',      dir: 'pasta',      emoji: 'spaghetti',      unicode: '🍝', title: 'Pasta Fresca',               desc: 'Pasta fresca fatta in casa — trafilata, ripiena e formati speciali.' },
-  primi:      { name: 'Primi',      dir: 'primi',      emoji: 'tomato',         unicode: '🥣', title: 'Primi Piatti',               desc: 'Primi piatti della tradizione — polenta, zuppe e piatti unici caldi.' },
+  primi:      { name: 'Primi',      dir: 'primi',      emoji: 'tomato',         unicode: '🥣', title: 'Primi Piatti',               desc: 'Primi piatti della tradizione — gnocchi, polenta, zuppe e piatti unici caldi.' },
   lievitati:  { name: 'Lievitati',  dir: 'lievitati',  emoji: 'croissant',      unicode: '🥐', title: 'Lievitati Dolci e Salati',   desc: 'Brioche, cornetti, panettone, burger buns e rosticceria.' },
   focaccia:   { name: 'Focaccia',   dir: 'focaccia',   emoji: 'flatbread',      unicode: '🫓', title: 'Focaccia Artigianale',       desc: 'Focacce ad alta idratazione — genovese, barese, pugliese e varianti creative.' },
   dolci:      { name: 'Dolci',      dir: 'dolci',      emoji: 'shortcake',      unicode: '🍪', title: 'Dolci e Pasticceria',        desc: 'Dolci tradizionali, frolle, biscotti e pasticceria artigianale.' },
@@ -32,7 +31,7 @@ export const CATEGORIES = {
  * Chiavi dello stesso oggetto CATEGORIES.
  */
 export const CATEGORY_ORDER = [
-  'pasta', 'primi', 'pane', 'pizza', 'lievitati', 'dolci', 'focaccia', 'conserve', 'condimenti', 'secondi_piatti',
+  'primi', 'pane', 'pizza', 'lievitati', 'dolci', 'focaccia', 'conserve', 'condimenti', 'secondi_piatti',
 ];
 
 /**
