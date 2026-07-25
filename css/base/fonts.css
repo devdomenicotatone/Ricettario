@@ -1,0 +1,42 @@
+/* ============================================
+   FONT LOCALI — nessuna richiesta a terze parti
+   ============================================
+
+   Prima Inter e Playfair Display arrivavano da fonts.googleapis.com con un
+   <link rel="stylesheet">: render-blocking, due connessioni esterne prima
+   ancora di disegnare qualcosa, e l'IP dei visitatori inviato a Google.
+
+   Qui ci sono i soli file variabili del subset latin: coprono tutti gli
+   accenti usati dal sito (à, è, ù, ö, ü, ×), che stanno in U+0000-00FF.
+
+   Entrambi i font sono SIL Open Font License 1.1, che consente l'hosting
+   diretto: https://openfontlicense.org
+   Per rigenerarli: vedi la sezione "Font" nel README.
+*/
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400 900;
+    font-display: swap;
+    src: url('/Ricettario/fonts/inter-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: 700 900;
+    font-display: swap;
+    src: url('/Ricettario/fonts/playfair-display-italic-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700 900;
+    font-display: swap;
+    src: url('/Ricettario/fonts/playfair-display-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

@@ -3,6 +3,7 @@
    ============================================ */
 
 // ── CSS Imports (design system) ──
+import '../css/base/fonts.css';
 import '../css/base/tokens.css';
 import '../css/base/reset.css';
 import '../css/layout/container.css';

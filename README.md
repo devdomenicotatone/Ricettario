@@ -11,11 +11,16 @@ Sito statico pubblicato su GitHub Pages:
 ## Stack
 
 - **Vite 6** per build e dev server
-- **JavaScript vanilla**, ES modules — **zero dipendenze di runtime**
+- **JavaScript vanilla**, ES modules
 - **CSS con design token in OKLCH**, doppio tema chiaro/scuro
 - Router SPA scritto a mano (`js/router.js`) con View Transitions API
 - Le pagine vengono **pre-renderizzate staticamente** in fase di build: i
   crawler leggono contenuto vero, la SPA si avvia sopra
+
+Il sito non fa **nessuna richiesta a terze parti**: font, icone e Chart.js
+sono serviti dal dominio. Chart.js è l'unica dipendenza, importata
+dinamicamente e quindi in un chunk a parte: si scarica solo quando si apre
+il pannello sensoriale di una ricetta.
 
 ## Avvio
 
@@ -101,6 +106,19 @@ se trova:
 - URL nella sitemap che non corrispondono a nessuna pagina
 - file di lavoro o PDF sorgente finiti nel deploy
 - `dist/` sopra i 60 MB, segno che è rientrato qualcosa di grosso
+
+## Font
+
+Inter e Playfair Display sono in `public/fonts/`, dichiarati in
+`css/base/fonts.css`. Sono i file **variabili del solo subset latin**: coprono
+tutti gli accenti usati dal sito (à, è, ù, ö, ü, ×), che stanno in U+0000–00FF.
+In tutto 122 KB per tre file, contro due connessioni esterne render-blocking.
+
+Entrambi i font sono sotto SIL Open Font License 1.1, che consente l'hosting
+diretto. Per aggiornarli, riscarica da Google Fonts i blocchi `@font-face` con
+`unicode-range` che inizia per `U+0000-00FF` e sostituisci i `.woff2`,
+tenendo gli stessi nomi (sono referenziati anche dai `<link rel="preload">`
+in `index.html`).
 
 ## Deploy
 

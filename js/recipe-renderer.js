@@ -611,6 +611,9 @@ function formatDoseInline(val) {
  * Inizializza il toggle del pannello sensoriale con Chart.js lazy-loaded.
  * Usa addEventListener (no onclick inline) e closure per i dati (no data-attributes JSON).
  */
+/** Chart.js, caricato una volta sola e condiviso fra le ricette visitate. */
+let ChartLib = null;
+
 function initSensoryChart() {
   const header = document.getElementById('sensory-header');
   if (!header) return;
@@ -633,14 +636,17 @@ function initSensoryChart() {
       container.style.display = 'block';
       chevron.style.transform = 'rotate(180deg)';
 
-      // Lazy-load Chart.js on first open
-      if (!window.Chart) {
+      // Chart.js si carica solo qui, alla prima apertura del pannello.
+      // L'import dinamico di un pacchetto locale finisce in un chunk separato:
+      // resta pigro come prima, ma senza dipendere da un CDN a runtime.
+      // Importando i singoli componenti invece del bundle "auto" si porta
+      // dietro solo ciò che serve al radar.
+      if (!ChartLib) {
         try {
-          const module = await import('https://cdn.jsdelivr.net/npm/chart.js@4/+esm');
-          window.Chart = module.Chart;
-          // Registra i componenti necessari per il radar chart
-          const { RadarController, RadialLinearScale, PointElement, LineElement, Filler, Tooltip } = module;
-          window.Chart.register(RadarController, RadialLinearScale, PointElement, LineElement, Filler, Tooltip);
+          const { Chart, RadarController, RadialLinearScale, PointElement, LineElement, Filler, Tooltip } =
+            await import('chart.js');
+          Chart.register(RadarController, RadialLinearScale, PointElement, LineElement, Filler, Tooltip);
+          ChartLib = Chart;
         } catch (err) {
           console.error('Errore caricamento Chart.js:', err);
           return;
@@ -671,7 +677,7 @@ function initSensoryChart() {
       const gridColor = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)';
       const textColor = isDark ? '#94a3b8' : '#64748b';
 
-      chartInstance = new Chart(ctx, {
+      chartInstance = new ChartLib(ctx, {
         type: 'radar',
         data: {
           labels: formattedLabels,

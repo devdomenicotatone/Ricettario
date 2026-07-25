@@ -10,6 +10,10 @@
         /* Tipografia */
         --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
         --font-display: 'Playfair Display', Georgia, serif;
+        /* Alias: alcuni componenti usano --font-body, che non era mai stata
+           definita. La dichiarazione risultava invalida e il font veniva
+           ereditato dal padre — funzionava per caso. */
+        --font-body: var(--font-ui);
 
         /* Spacing Scale */
         --space-2xs: 0.125rem;
