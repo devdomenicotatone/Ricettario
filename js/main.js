@@ -25,7 +25,8 @@ import { buildPicture } from './image-utils.js';
 import { applyMadeBadgesToCards } from './recipe-bookmarks.js';
 import { fluentEmoji, categoryEmoji, CATEGORY_FLUENT, refreshIcons } from './emoji.js';
 import { initLogoIntro } from './logo-intro-v2b.js';
-import { CATEGORIES, CATEGORY_ORDER as CAT_ORDER } from './categories.js';
+import { CATEGORIES, CATEGORIES_BY_DIR, CATEGORY_ORDER as CAT_ORDER } from './categories.js';
+import { isValidBadge } from './recipe-meta.js';
 
 /* global __RECIPES_HASH__ */
 const RECIPE_CACHE_BUST = typeof __RECIPES_HASH__ !== 'undefined' ? `?v=${__RECIPES_HASH__}` : '';
@@ -43,6 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // === FOOTER (persistente) ===
   const yearEl = document.getElementById('current-year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // === ICONE (anche quelle del footer, che sta fuori da #app) ===
+  refreshIcons();
+
+  // === HOMEPAGE: fotografa il markup servito, prima che il router lo sostituisca ===
+  captureHomeFromDom();
 
   // === REGISTRA RENDERERS & AVVIA ROUTER ===
   registerRenderers({
@@ -120,113 +127,101 @@ function initHamburger() {
 // ═══════════════════════════════════════
 
 /**
- * Renderizza la homepage. Se il contenuto HTML è già inline (primo caricamento),
- * lo mantiene e aggiunge solo la logica interattiva. Se è una navigazione SPA,
- * ricostruisce il contenuto.
+ * Unica fonte del markup della homepage: index.html.
+ *
+ * Prima esisteva anche una copia in JS (`getHomepageHTML`) che il router usava
+ * per ricostruire la home dopo una navigazione SPA. Le due versioni erano già
+ * divergute — titolo, sottotitolo e schede strumenti diversi — quindi il testo
+ * cambiava a seconda di come ci si arrivava. Ora la home viene fotografata dal
+ * DOM servito, ed è anche la pagina che i crawler indicizzano.
  */
-async function renderHomepage(app /*, params */) {
-  // Resetta metadata
-  document.title = 'Il Ricettario';
-  const metaDesc = document.querySelector('meta[name="description"]');
-  if (metaDesc) metaDesc.setAttribute('content', 'Il Ricettario — Ricette artigianali ottimizzate per i miei strumenti.');
+let homeSnapshot = null;
 
-  // Se il contenuto homepage non è presente (navigazione SPA), ricostruiscilo
+/**
+ * I path relativi del markup servito (es. "images/emoji/fire.png") valgono solo
+ * a BASE. Reiniettandoli da una route profonda si romperebbero: li rendo assoluti.
+ */
+function absolutizeUrls(root) {
+  const base = new URL(BASE, window.location.origin);
+  const absolutize = (value) =>
+    !value || /^([a-z]+:|\/\/|\/|#)/i.test(value) ? value : new URL(value, base).pathname;
+
+  root.querySelectorAll('[src], [href], [srcset]').forEach(el => {
+    ['src', 'href'].forEach(attr => {
+      const value = el.getAttribute(attr);
+      if (value) el.setAttribute(attr, absolutize(value));
+    });
+    // srcset è una lista "url descrittore, url descrittore"
+    const srcset = el.getAttribute('srcset');
+    if (srcset) {
+      el.setAttribute('srcset', srcset.split(',').map(part => {
+        const [url, ...rest] = part.trim().split(/\s+/);
+        return [absolutize(url), ...rest].join(' ');
+      }).join(', '));
+    }
+  });
+}
+
+function buildSnapshot(appEl, title, description) {
+  const clone = appEl.cloneNode(true);
+  absolutizeUrls(clone);
+  return { html: clone.innerHTML, title, description };
+}
+
+/** Cattura la home se è quella attualmente servita (non lo è sulle pagine ricetta). */
+function captureHomeFromDom() {
+  const app = document.getElementById('app');
+  if (!app?.querySelector('#ricette')) return;
+  homeSnapshot = buildSnapshot(
+    app,
+    document.title,
+    document.querySelector('meta[name="description"]')?.getAttribute('content') || ''
+  );
+}
+
+/**
+ * Se l'utente è atterrato direttamente su una ricetta, il markup della home non
+ * è mai passato dal DOM: lo prendo da index.html, che resta l'unica fonte.
+ */
+async function getHomeSnapshot() {
+  if (homeSnapshot) return homeSnapshot;
+  const res = await fetch(BASE);
+  const doc = new DOMParser().parseFromString(await res.text(), 'text/html');
+  const app = doc.getElementById('app');
+  if (!app) throw new Error('index.html non contiene #app');
+  homeSnapshot = buildSnapshot(
+    app,
+    doc.title,
+    doc.querySelector('meta[name="description"]')?.getAttribute('content') || ''
+  );
+  return homeSnapshot;
+}
+
+async function renderHomepage(app /*, params */) {
+  // Se il markup è già quello servito non tocco nulla: niente reflow inutile.
   if (!app.querySelector('#ricette')) {
-    // Fetch recipes.json e ricostruisci
-    app.innerHTML = getHomepageHTML();
+    try {
+      const snap = await getHomeSnapshot();
+      app.innerHTML = snap.html;
+    } catch (err) {
+      console.error('Impossibile ricostruire la homepage:', err);
+      window.location.assign(BASE);
+      return;
+    }
   }
 
-  // Init caroselli e search
+  const snap = homeSnapshot;
+  if (snap) {
+    document.title = snap.title;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', snap.description);
+  }
+
+  refreshIcons();
   initCarousels();
   initReveal();
 }
 
-function getHomepageHTML() {
-  return `
-    <!-- ═══════════ HERO ═══════════ -->
-    <section class="hero" id="home">
-      <div class="hero__content">
-        <div class="hero__badge reveal">${fluentEmoji('fire', 24)} Laboratorio Artigianale</div>
-        <h1 class="hero__title reveal reveal-delay-1">Il mio<br><span>Ricettario</span></h1>
-        <p class="hero__subtitle reveal reveal-delay-2">Pane, lievitati e pasta — ricette replicabili, parametri reali.</p>
-        <div class="hero__search reveal reveal-delay-3" id="recipe-search">
-          <svg class="hero__search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
-          </svg>
-          <input type="text" class="hero__search-input" id="search-input"
-            placeholder="Cerca ricette, ingredienti, setup..." aria-label="Cerca ricette">
-          <kbd class="hero__search-kbd">/</kbd>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="ricette">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-header__label">Le mie ricette</div>
-          <h2 class="section-header__title">Ricette Testate & Documentate</h2>
-          <p class="section-header__desc">Ogni ricetta è stata perfezionata con dosi precise, parametri tecnici e note dettagliate per risultati replicabili al 100%.</p>
-        </div>
-        <div id="recipe-carousels"></div>
-      </div>
-    </section>
-
-    <section class="section tools-section" id="strumenti">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-header__label">Il mio setup</div>
-          <h2 class="section-header__title">Strumenti del Mestiere</h2>
-          <p class="section-header__desc">Ogni ricetta è tarata specificamente per questi strumenti. Hardware serio per risultati seri.</p>
-        </div>
-
-        <div class="tool-spotlight reveal">
-          <div class="tool-spotlight__image-wrapper">
-            ${buildPicture(`${BASE}images/strumenti/famag-grilletta.png`, 'Famag Grilletta', 'tool-spotlight__image', 'lazy')}
-            <span class="tool-spotlight__badge">${fluentEmoji('star', 22)} Impasti</span>
-          </div>
-          <div class="tool-spotlight__info">
-            <h3 class="tool-spotlight__name">Famag Grilletta <span>IM 5/230 HH</span></h3>
-            <p class="tool-spotlight__desc">Impastatrice a spirale professionale. 10 velocità, capacità 5 kg, vasca da 7L. Fino al 95% idratazione. Made in Italy.</p>
-            <div class="tool-spotlight__specs">
-              <div class="spec-card reveal"><div class="spec-card__icon">${fluentEmoji('high-voltage', 32)}</div><div class="spec-card__label">Motore</div><div class="spec-card__value">Brushless 0.5 HP</div></div>
-              <div class="spec-card reveal reveal-delay-1"><div class="spec-card__icon">${fluentEmoji('bullseye', 32)}</div><div class="spec-card__label">Velocità</div><div class="spec-card__value">10 (90–320 RPM)</div></div>
-              <div class="spec-card reveal reveal-delay-2"><div class="spec-card__icon">${fluentEmoji('package', 32)}</div><div class="spec-card__label">Capacità</div><div class="spec-card__value">5 kg / 7 litri</div></div>
-              <div class="spec-card reveal reveal-delay-3"><div class="spec-card__icon">${fluentEmoji('droplet', 32)}</div><div class="spec-card__label">Idr. Max</div><div class="spec-card__value">Fino al 95%</div></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="tool-spotlight reveal">
-          <div class="tool-spotlight__image-wrapper">
-            ${buildPicture(`${BASE}images/strumenti/philips-serie-7000.jpg`, 'Philips Serie 7000', 'tool-spotlight__image', 'lazy')}
-            <span class="tool-spotlight__badge">${fluentEmoji('house', 22)} Pasta Home</span>
-          </div>
-          <div class="tool-spotlight__info">
-            <h3 class="tool-spotlight__name">Philips <span>Serie 7000</span></h3>
-            <p class="tool-spotlight__desc">Macchina per la pasta automatica. Pesatura integrata, 8 trafile, fino a 8 porzioni. Pasta in < 10 min.</p>
-            <div class="tool-spotlight__specs">
-              <div class="spec-card reveal"><div class="spec-card__icon">${fluentEmoji('high-voltage', 32)}</div><div class="spec-card__label">Potenza</div><div class="spec-card__value">200 W</div></div>
-              <div class="spec-card reveal reveal-delay-1"><div class="spec-card__icon">${fluentEmoji('balance-scale', 32)}</div><div class="spec-card__label">Capacità</div><div class="spec-card__value">800g / 8 porz.</div></div>
-              <div class="spec-card reveal reveal-delay-2"><div class="spec-card__icon">${fluentEmoji('spaghetti', 32)}</div><div class="spec-card__label">Trafile</div><div class="spec-card__value">8 incluse</div></div>
-              <div class="spec-card reveal reveal-delay-3"><div class="spec-card__icon">${fluentEmoji('stopwatch', 32)}</div><div class="spec-card__label">Tempo</div><div class="spec-card__value">< 10 min</div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="chi-sono">
-      <div class="container container--narrow">
-        <div class="section-header reveal">
-          <div class="section-header__label">About</div>
-          <h2 class="section-header__title">Chi Sono</h2>
-          <p class="section-header__desc">Appassionato di panificazione artigianale, pasta fresca e impasti ad alta idratazione. Ogni ricetta è documentata con precisione tecnica per risultati replicabili al 100%.</p>
-        </div>
-      </div>
-    </section>
-  `;
-}
 
 // ═══════════════════════════════════════
 //  CATEGORY RENDERER — Pro Isotope Grid
@@ -234,7 +229,8 @@ function getHomepageHTML() {
 
 const ITEMS_PER_PAGE = 12;
 
-const CATEGORY_META = CATEGORIES;
+// La route porta la cartella (es. "secondi-piatti"), non la chiave del registry.
+const CATEGORY_META = CATEGORIES_BY_DIR;
 
 // State reattivo per la pagina categoria
 let catState = {
@@ -462,8 +458,8 @@ function updateCategoryView() {
         <div class="category-card__image-wrapper">
           ${r.image ? buildPicture(`${BASE}${r.image}`, r.title, 'category-card__image', 'lazy') : ''}
           <div class="category-card__meta">
-            ${r.hydration ? `<span class="category-card__tag">${fluentEmoji('droplet', 14)} ${r.hydration}</span>` : ''}
-            ${r.time ? `<span class="category-card__tag">${fluentEmoji('stopwatch', 14)} ${r.time}</span>` : ''}
+            ${isValidBadge(r.hydration) ? `<span class="category-card__tag">${fluentEmoji('droplet', 14)} ${r.hydration}</span>` : ''}
+            ${isValidBadge(r.time) ? `<span class="category-card__tag">${fluentEmoji('stopwatch', 14)} ${r.time}</span>` : ''}
           </div>
         </div>
         <div class="category-card__body">
@@ -553,8 +549,8 @@ function buildCarouselRow(container, catKey, catEmoji, catDir, recipes) {
             <div class="recipe-card--compact__body">
               <h4 class="recipe-card--compact__title">${r.title}</h4>
               <div class="recipe-card--compact__meta">
-                ${r.hydration ? `<span class="recipe-card--compact__tag">${fluentEmoji('droplet', 16)} ${r.hydration}</span>` : ''}
-                ${r.time ? `<span>${fluentEmoji('stopwatch', 16)} ${r.time}</span>` : ''}
+                ${isValidBadge(r.hydration) ? `<span class="recipe-card--compact__tag">${fluentEmoji('droplet', 16)} ${r.hydration}</span>` : ''}
+                ${isValidBadge(r.time) ? `<span>${fluentEmoji('stopwatch', 16)} ${r.time}</span>` : ''}
               </div>
             </div>
           </a>`;
@@ -595,7 +591,7 @@ function initCarousels() {
   // Ordine predefinito dalla single source of truth
   const CATEGORY_ORDER = CAT_ORDER.map(key => {
     const cat = CATEGORIES[key];
-    return { key: cat.name, emoji: cat.emoji, dir: key };
+    return { key: cat.name, emoji: cat.emoji, dir: cat.dir };
   });
 
   fetch(`${BASE}recipes.json${RECIPE_CACHE_BUST}`)

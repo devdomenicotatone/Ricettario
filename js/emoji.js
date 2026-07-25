@@ -5,6 +5,7 @@
  */
 
 import { BASE } from './router.js';
+import { createIcons } from './icons.js';
 
 const EMOJI_MAP = {
   // Sezioni ricetta
@@ -75,9 +76,9 @@ export function categoryEmoji(category, size = 20) {
 }
 
 /**
- * Wrapper sicuro per lucide.createIcons().
- * Centralizza il check "typeof lucide !== 'undefined'" in un solo posto.
+ * Rigenera le icone inline dopo aver iniettato nuovo markup.
+ * Le icone non arrivano più da un CDN: vedi js/icons.js.
  */
 export function refreshIcons() {
-  if (typeof lucide !== 'undefined') lucide.createIcons();
+  createIcons();
 }

@@ -1,6 +1,6 @@
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
-import { cpSync, existsSync, readFileSync, readdirSync, statSync } from 'fs';
+import { cpSync, existsSync, readFileSync, readdirSync, statSync, rmSync } from 'fs';
 import { createHash } from 'crypto';
 
 // Calcola hash dei JSON ricette per cache busting
@@ -73,7 +73,23 @@ export default defineConfig({
             },
         },
 
-        // Plugin 2: Copia i JSON delle ricette in dist/ durante la build
+        // Plugin 2: Tiene i PDF fuori dal deploy
+        // public/pdf/ è materiale sorgente (~173 MB), è nel .gitignore proprio
+        // perché non deve finire su GitHub, e nessuna pagina lo referenzia.
+        // Ma Vite copia tutto public/ in dist/, e deploy-ghpages.js pubblica
+        // dist/: senza questo, i PDF finivano online a ogni deploy.
+        {
+            name: 'exclude-public-pdf',
+            closeBundle() {
+                const pdfDir = resolve(__dirname, 'dist', 'pdf');
+                if (existsSync(pdfDir)) {
+                    rmSync(pdfDir, { recursive: true, force: true });
+                    console.log('🚫 Esclusi i PDF sorgente da dist/');
+                }
+            },
+        },
+
+        // Plugin 3: Copia i JSON delle ricette in dist/ durante la build
         {
             name: 'copy-recipe-json',
             closeBundle() {
@@ -85,6 +101,9 @@ export default defineConfig({
                         filter: (source) => {
                             // Copia solo le directory e i file .json
                             if (source.includes('.') && !source.endsWith('.json')) return false;
+                            // …ma non i backup: sono file di lavoro, e finivano
+                            // pubblicati a URL raggiungibili (~914 KB).
+                            if (/\.(backup|pre-edit)\.json$/.test(source)) return false;
                             return true;
                         },
                     });

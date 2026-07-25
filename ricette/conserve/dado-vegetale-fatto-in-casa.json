@@ -6,8 +6,8 @@
   "subtitle": "Conserva artigianale a base di verdure fresche — tecnica cottura-riduzione e conservazione in freezer",
   "category": "Conserve",
   "hydration": 0,
-  "targetTemp": "n/a",
-  "fermentation": "n/a",
+  "targetTemp": "",
+  "fermentation": "",
   "totalFlour": 0,
   "ingredients": [],
   "ingredientGroups": [

@@ -7,6 +7,7 @@ import { BASE } from './router.js';
 import { buildHeroPicture } from './image-utils.js';
 import { initMadeToggle } from './recipe-bookmarks.js';
 import { fluentEmoji, categoryEmoji, CATEGORY_FLUENT, refreshIcons } from './emoji.js';
+import { isValidBadge } from './recipe-meta.js';
 
 /**
  * Renderizza una ricetta completa nel container #app.
@@ -63,8 +64,6 @@ function buildRecipeHTML(r, categoryDir) {
   const imagePath = r.image
     ? `${BASE}${r.image.replace(/^\//, '')}`
     : `${BASE}images/ricette/${categoryDir}/${r.slug}.webp`;
-
-  const isValidBadge = (v) => v && String(v).trim() !== '' && !['n/a', 'nessuna', '0'].includes(String(v).trim().toLowerCase());
 
   return `
     <!-- ═══════════ RECIPE HERO ═══════════ -->

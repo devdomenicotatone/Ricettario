@@ -1,21 +1,28 @@
 /**
- * GENERATE-OG.JS — Social Card HTML Generator (Post-Build)
- * 
- * Genera file HTML statici con meta tag Open Graph + Twitter Card
- * per ogni ricetta e ogni pagina categoria.
- * 
- * I crawler social (WhatsApp, Facebook, Telegram, Twitter/X, LinkedIn)
- * NON eseguono JavaScript, quindi leggono i meta tag dall'HTML statico.
- * Gli utenti umani vengono reindirizzati alla SPA tramite un JS redirect.
- * 
+ * GENERATE-OG.JS — Pre-rendering statico + SEO (post-build)
+ *
+ * Per ogni ricetta e ogni categoria genera una pagina HTML completa a partire
+ * da dist/index.html, con:
+ *   - meta Open Graph / Twitter Card specifici
+ *   - <link rel="canonical">
+ *   - JSON-LD schema.org (Recipe / CollectionPage)
+ *   - il contenuto della ricetta già renderizzato dentro #app
+ *
+ * Il contenuto pre-renderizzato non è un dettaglio estetico: Google pretende
+ * che i dati strutturati corrispondano a contenuto visibile. Marcare una
+ * ricetta con JSON-LD su una pagina vuota è una violazione, non un vantaggio.
+ * Per lo stesso motivo qui non c'è più il redirect JS immediato che c'era
+ * prima: rendeva le pagine ricetta non indicizzabili, perché i crawler lo
+ * seguono e consolidano tutto sulla homepage.
+ *
+ * La SPA si avvia normalmente (gli asset sono quelli di dist/index.html) e
+ * sostituisce il contenuto pre-renderizzato appena il router parte.
+ *
  * Eseguire DOPO `vite build` e PRIMA di `deploy-ghpages.js`.
- * 
- * Flusso:
- *   vite build → generate-og.js → deploy-ghpages.js
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
-import { join, resolve } from 'path';
+import { join } from 'path';
 
 const PROJECT_DIR = process.cwd();
 const DIST_DIR = join(PROJECT_DIR, 'dist');
@@ -23,7 +30,7 @@ const SITE_URL = 'https://devdomenicotatone.github.io/Ricettario';
 const SITE_NAME = 'Ricettario Lab';
 const BASE_PATH = '/Ricettario';
 
-// ── Utility: Escape HTML per evitare XSS nei meta tag ──
+// ── Escape ──
 function escAttr(str) {
     if (!str) return '';
     return String(str)
@@ -33,34 +40,304 @@ function escAttr(str) {
         .replace(/>/g, '&gt;');
 }
 
+const escHtml = escAttr;
+
+/**
+ * Toglie i blocchi JSON-LD già presenti. Serve perché il template è
+ * dist/index.html, che questo stesso script riscrive alla fine: senza
+ * ripulire, una seconda esecuzione senza rebuild duplicherebbe i dati
+ * strutturati su ogni pagina.
+ */
+function stripJsonLd(html) {
+    return html.replace(/[ \t]*<script type="application\/ld\+json">[\s\S]*?<\/script>\n?/g, '');
+}
+
+/** Il JSON-LD va in uno <script>: neutralizza solo la chiusura del tag. */
+function jsonLdSafe(obj) {
+    return JSON.stringify(obj, null, 2).replace(/</g, '\\u003c');
+}
+
 // ── Tronca descrizione a ~160 caratteri (standard OG) ──
 function truncateDesc(desc, maxLen = 160) {
     if (!desc || desc.length <= maxLen) return desc || '';
     return desc.slice(0, maxLen - 1).replace(/\s+\S*$/, '') + '…';
 }
 
+/** Gli step contengono token `{acqua:750}` per il calcolatore dosi: qui vale il numero. */
+function resolveTokens(text) {
+    return String(text || '').replace(/\{([a-z_]+):(\d+\.?\d*)(!)?\}/g, (_, __, value) => value);
+}
+
+function absUrl(path) {
+    if (!path) return null;
+    return `${SITE_URL}/${String(path).replace(/^\//, '')}`;
+}
+
 /**
- * Genera un file HTML con meta OG + redirect SPA.
- * - I crawler leggono og:title, og:description, og:image
- * - Gli utenti umani vengono reindirizzati alla SPA
+ * Converte durate in linguaggio naturale in ISO 8601, o null se il formato
+ * non è riconosciuto con certezza. Sui range prende il minimo: è il tempo
+ * minimo per portare a casa la ricetta, non il caso peggiore.
+ * Es: "24-72h in frigo" → PT24H | "20-25 minuti" → PT20M | "~3.5h" → PT3H30M
  */
-function buildOgHtml({ title, description, url, image, type = 'article' }) {
-    const fullTitle = `${escAttr(title)} — ${SITE_NAME}`;
-    const desc = escAttr(truncateDesc(description));
-    const imgUrl = image ? `${SITE_URL}/${image.replace(/^\//, '')}` : `${SITE_URL}/images/og/homepage.webp`;
+function toIsoDuration(text) {
+    if (!text) return null;
+    const s = String(text).toLowerCase();
+    const m = s.match(/(\d+(?:[.,]\d+)?)\s*(?:[-–]\s*\d+(?:[.,]\d+)?\s*)?(h\b|ore|ora|min\b|minuti|minuto)/);
+    if (!m) return null;
+    const value = parseFloat(m[1].replace(',', '.'));
+    if (!Number.isFinite(value) || value <= 0) return null;
+    const isHours = /^(h|ore|ora)$/.test(m[2]);
+    if (!isHours) return `PT${Math.round(value)}M`;
+    const hours = Math.floor(value);
+    const minutes = Math.round((value - hours) * 60);
+    return minutes ? `PT${hours}H${minutes}M` : `PT${hours}H`;
+}
 
-    return `<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${fullTitle}</title>
-    <meta name="description" content="${desc}">
+/** Appiattisce ingredientGroups/ingredients in righe "1000 g Farina (nota)". */
+function flatIngredients(src) {
+    const groups = src.ingredientGroups?.length
+        ? src.ingredientGroups.flatMap(g => g.items || [])
+        : (src.ingredients || []);
+    return groups.filter(i => i && i.name);
+}
 
-    <!-- Open Graph — Social Sharing Card -->
+function ingredientLine(ing) {
+    const qty = ing.grams != null ? `${ing.grams} g ` : '';
+    const note = ing.note ? ` ${ing.note}` : '';
+    return `${qty}${ing.name}${note}`.trim();
+}
+
+/** Peso totale dell'impasto, escludendo ciò che il renderer esclude. */
+function totalWeight(src) {
+    const items = flatIngredients(src).filter(i => !i.excludeFromTotal && typeof i.grams === 'number');
+    if (!items.length) return null;
+    const sum = items.reduce((t, i) => t + i.grams, 0);
+    return sum > 0 ? `circa ${Math.round(sum)} g di impasto` : null;
+}
+
+// ═══════════════════════════════════════
+//  JSON-LD
+// ═══════════════════════════════════════
+
+function recipeJsonLd(recipe, src, url) {
+    const ld = {
+        '@context': 'https://schema.org',
+        '@type': 'Recipe',
+        name: recipe.title,
+        description: src.description || recipe.description || '',
+        url,
+        author: { '@type': 'Organization', name: SITE_NAME },
+        publisher: { '@type': 'Organization', name: SITE_NAME },
+        recipeCategory: recipe.category,
+        inLanguage: 'it-IT',
+    };
+
+    const img = absUrl(recipe.image || src.image);
+    if (img) ld.image = [img];
+
+    if (recipe._createdAt) ld.datePublished = String(recipe._createdAt).slice(0, 10);
+    if (src.tags?.length) ld.keywords = src.tags.join(', ');
+
+    const ingredients = flatIngredients(src).map(ingredientLine);
+    if (ingredients.length) ld.recipeIngredient = ingredients;
+
+    const steps = (src.steps || []).filter(s => s && s.text);
+    if (steps.length) {
+        ld.recipeInstructions = steps.map((s, i) => ({
+            '@type': 'HowToStep',
+            position: i + 1,
+            ...(s.title ? { name: s.title } : {}),
+            text: resolveTokens(s.text),
+        }));
+    }
+
+    const yield_ = totalWeight(src);
+    if (yield_) ld.recipeYield = yield_;
+
+    const cook = toIsoDuration(src.baking?.time);
+    if (cook) ld.cookTime = cook;
+    const total = toIsoDuration(src.fermentation) || cook;
+    if (total) ld.totalTime = total;
+
+    // I valori nutrizionali del progetto sono per 100 g: lo dichiaro esplicitamente,
+    // altrimenti Google li interpreterebbe come "per porzione".
+    if (src.nutrition?.kcal_per_100g) {
+        const n = src.nutrition;
+        ld.nutrition = {
+            '@type': 'NutritionInformation',
+            servingSize: '100 g',
+            calories: `${n.kcal_per_100g} kcal`,
+            ...(n.macros?.carbs != null ? { carbohydrateContent: `${n.macros.carbs} g` } : {}),
+            ...(n.macros?.protein != null ? { proteinContent: `${n.macros.protein} g` } : {}),
+            ...(n.macros?.fat != null ? { fatContent: `${n.macros.fat} g` } : {}),
+        };
+    }
+
+    return ld;
+}
+
+function categoryJsonLd(cat, catRecipes, url) {
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        name: `${cat.name} — ${SITE_NAME}`,
+        url,
+        inLanguage: 'it-IT',
+        isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: `${SITE_URL}/` },
+        mainEntity: {
+            '@type': 'ItemList',
+            numberOfItems: catRecipes.length,
+            itemListElement: catRecipes.map((r, i) => ({
+                '@type': 'ListItem',
+                position: i + 1,
+                name: r.title,
+                url: `${SITE_URL}/ricette/${r.categoryDir}/${r.slug}/`,
+            })),
+        },
+    };
+}
+
+function breadcrumbJsonLd(trail) {
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: trail.map((t, i) => ({
+            '@type': 'ListItem',
+            position: i + 1,
+            name: t.name,
+            item: t.url,
+        })),
+    };
+}
+
+// ═══════════════════════════════════════
+//  PRE-RENDERING DEL CONTENUTO
+// ═══════════════════════════════════════
+
+/**
+ * Markup statico della ricetta, con le stesse classi della SPA così da non
+ * mostrare contenuto non stilizzato nella frazione di secondo prima che il
+ * router prenda il controllo.
+ */
+function prerenderRecipe(recipe, src, catDir) {
+    const ingredients = flatIngredients(src);
+    const steps = (src.steps || []).filter(s => s && s.text);
+    const img = absUrl(recipe.image || src.image);
+
+    const badges = [
+        src.hydration ? `<div class="tech-badge">Idratazione: <span class="tech-badge__value">${escHtml(src.hydration)}%</span></div>` : '',
+        src.targetTemp ? `<div class="tech-badge">Target Temp: <span class="tech-badge__value">${escHtml(src.targetTemp)}</span></div>` : '',
+        src.fermentation ? `<div class="tech-badge">Lievitazione: <span class="tech-badge__value">${escHtml(src.fermentation)}</span></div>` : '',
+    ].join('');
+
+    return `
+      <div class="recipe-hero">
+        ${img ? `<picture class="recipe-hero__picture"><img src="${escAttr(img)}" alt="${escAttr(recipe.title)}" class="recipe-hero__img"></picture>` : ''}
+        <div class="container">
+          <nav class="breadcrumb">
+            <a href="${BASE_PATH}/">Home</a>
+            <span class="breadcrumb__separator">›</span>
+            <a href="${BASE_PATH}/ricette/${escAttr(catDir)}/">${escHtml(recipe.category)}</a>
+            <span class="breadcrumb__separator">›</span>
+            <span>${escHtml(recipe.title)}</span>
+          </nav>
+          <div class="recipe-hero__content">
+            <h1 class="recipe-hero__title">${escHtml(recipe.title)}</h1>
+            <p class="recipe-hero__subtitle">${escHtml(src.subtitle || src.description || '')}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" style="padding-top: 40px;">
+        <div class="tech-badges">${badges}</div>
+      </div>
+
+      <section class="recipe-content">
+        <div class="container">
+          <div class="recipe-layout">
+            <div>
+              <div class="recipe-panel">
+                <h2 class="recipe-panel__title">Ingredienti</h2>
+                <table class="ingredients-table">
+                  ${ingredients.map(i => `<tr><td>${escHtml(i.name)}${i.note ? ` <span class="ingredient-note">${escHtml(i.note)}</span>` : ''}</td><td class="ingredient-qty">${i.grams != null ? `${i.grams}g` : ''}</td></tr>`).join('')}
+                </table>
+              </div>
+            </div>
+            <div>
+              <div class="recipe-panel">
+                <h2 class="recipe-panel__title">Procedimento</h2>
+                <ol class="steps-list">
+                  ${steps.map(s => `<li class="step-item"><strong>${escHtml(s.title || '')}</strong><p>${escHtml(resolveTokens(s.text))}</p></li>`).join('')}
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>`;
+}
+
+function prerenderCategory(cat, catRecipes, catDir) {
+    return `
+      <section class="category-hero">
+        <div class="category-hero__content">
+          <h1 class="category-hero__title">${escHtml(cat.name)}</h1>
+          <p class="category-hero__subtitle">${escHtml(`Tutte le ricette di ${cat.name.toLowerCase()} del Ricettario Lab.`)}</p>
+          <div class="category-hero__count">${catRecipes.length} ricett${catRecipes.length === 1 ? 'a' : 'e'}</div>
+        </div>
+      </section>
+      <main class="section">
+        <div class="container">
+          <nav class="breadcrumb">
+            <a href="${BASE_PATH}/">Home</a>
+            <span class="breadcrumb__separator">›</span>
+            <span class="breadcrumb__current">${escHtml(cat.name)}</span>
+          </nav>
+          <div class="category-grid">
+            ${catRecipes.map(r => `
+              <a href="${BASE_PATH}/ricette/${escAttr(catDir)}/${escAttr(r.slug)}/" class="category-card">
+                <div class="category-card__body">
+                  <h2 class="category-card__title">${escHtml(r.title)}</h2>
+                  ${r.description ? `<p class="category-card__desc">${escHtml(r.description)}</p>` : ''}
+                </div>
+              </a>`).join('')}
+          </div>
+        </div>
+      </main>`;
+}
+
+// ═══════════════════════════════════════
+//  COMPOSIZIONE DELLA PAGINA
+// ═══════════════════════════════════════
+
+/**
+ * Costruisce una pagina partendo da dist/index.html: sostituisce i meta,
+ * inietta canonical e JSON-LD, e rimpiazza il contenuto di #app.
+ * Usare il template reale invece di un HTML scritto a mano tiene navbar,
+ * footer e riferimenti agli asset con hash sempre allineati alla build.
+ */
+function buildPage(template, { title, description, url, image, jsonLd, appHtml, type = 'article' }) {
+    const fullTitle = `${title} — ${SITE_NAME}`;
+    const desc = truncateDesc(description);
+    const imgUrl = absUrl(image) || `${SITE_URL}/images/og/homepage.webp`;
+
+    let html = template;
+
+    // via i meta della homepage: li riscrivo per questa pagina
+    html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${escAttr(fullTitle)}</title>`);
+    html = html.replace(/[ \t]*<meta\s+name="description"[\s\S]*?>\n?/, '');
+    html = html.replace(/[ \t]*<meta\s+property="og:[\s\S]*?>\n?/g, '');
+    html = html.replace(/[ \t]*<meta\s+name="twitter:[\s\S]*?>\n?/g, '');
+    html = html.replace(/[ \t]*<link\s+rel="canonical"[\s\S]*?>\n?/g, '');
+    html = stripJsonLd(html);
+
+    const head = `
+    <meta name="description" content="${escAttr(desc)}">
+    <link rel="canonical" href="${escAttr(url)}">
+
+    <!-- Open Graph -->
     <meta property="og:type" content="${type}">
     <meta property="og:title" content="${escAttr(title)}">
-    <meta property="og:description" content="${desc}">
+    <meta property="og:description" content="${escAttr(desc)}">
     <meta property="og:url" content="${escAttr(url)}">
     <meta property="og:image" content="${escAttr(imgUrl)}">
     <meta property="og:site_name" content="${SITE_NAME}">
@@ -69,124 +346,169 @@ function buildOgHtml({ title, description, url, image, type = 'article' }) {
     <!-- Twitter / X Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${escAttr(title)}">
-    <meta name="twitter:description" content="${desc}">
+    <meta name="twitter:description" content="${escAttr(desc)}">
     <meta name="twitter:image" content="${escAttr(imgUrl)}">
 
-    <!-- SPA Redirect: i crawler non eseguono JS, gli utenti sì -->
-    <script>
-        sessionStorage.setItem('spa-redirect', window.location.pathname + window.location.search + window.location.hash);
-        window.location.replace('${BASE_PATH}/');
-    </script>
-</head>
-<body>
-    <!-- Fallback noscript per utenti senza JS -->
-    <noscript>
-        <meta http-equiv="refresh" content="0;url=${BASE_PATH}/">
-        <p>Stai per essere reindirizzato a <a href="${BASE_PATH}/">Ricettario Lab</a>.</p>
-    </noscript>
-</body>
-</html>
-`;
-}
+${jsonLd.map(ld => `    <script type="application/ld+json">\n${jsonLdSafe(ld)}\n    </script>`).join('\n')}
+</head>`;
 
-/**
- * Mappa categorie del JSON alle directory (normalizzazione slug)
- */
-const CATEGORY_DIR_MAP = {
-    'Pane': 'pane',
-    'Pizza': 'pizza',
-    'Pasta': 'pasta',
-    'Focaccia': 'focaccia',
-    'Lievitati': 'lievitati',
-    'Dolci': 'dolci',
-    'Conserve': 'conserve',
-    'Condimenti': 'condimenti',
-    'Secondi Piatti': 'secondi-piatti',
-};
+    html = html.replace('</head>', head);
+    html = html.replace(
+        /(<div id="app">)[\s\S]*?(<\/div><!-- \/#app -->)/,
+        (_, open, close) => `${open}\n${appHtml}\n    ${close}`
+    );
+
+    return html;
+}
 
 // ═══════════════════════════════════════
 //  MAIN
 // ═══════════════════════════════════════
 
-async function generate() {
-    console.log('🔗 Generazione Social Card HTML (Open Graph)...\n');
+function generate() {
+    console.log('🔗 Pre-rendering pagine statiche + SEO...\n');
 
-    // ── Carica recipes.json ──
-    const recipesPath = join(DIST_DIR, 'recipes.json');
-    if (!existsSync(recipesPath)) {
-        // Fallback: cerca in public/
-        const publicPath = join(PROJECT_DIR, 'public', 'recipes.json');
-        if (!existsSync(publicPath)) {
-            console.error('❌ recipes.json non trovato né in dist/ né in public/');
-            process.exit(1);
-        }
+    const templatePath = join(DIST_DIR, 'index.html');
+    if (!existsSync(templatePath)) {
+        console.error('❌ dist/index.html non trovato: esegui prima `vite build`.');
+        process.exit(1);
+    }
+    const template = readFileSync(templatePath, 'utf8');
+
+    if (!/<div id="app">[\s\S]*?<\/div><!-- \/#app -->/.test(template)) {
+        console.error('❌ dist/index.html non contiene i marker #app: template incompatibile.');
+        process.exit(1);
     }
 
-    const data = JSON.parse(readFileSync(recipesPath, 'utf8'));
-    const { recipes, categories } = data;
+    const recipesPath = join(DIST_DIR, 'recipes.json');
+    if (!existsSync(recipesPath)) {
+        console.error('❌ dist/recipes.json non trovato: esegui prima `npm run build:recipes` e `vite build`.');
+        process.exit(1);
+    }
+    const { recipes, categories } = JSON.parse(readFileSync(recipesPath, 'utf8'));
 
+    const sitemap = [{ loc: `${SITE_URL}/`, priority: '1.0' }];
     let recipeCount = 0;
     let categoryCount = 0;
+    let missingSource = 0;
 
-    // ── 1. Genera HTML per ogni RICETTA ──
+    // ── 1. Pagine RICETTA ──
     for (const recipe of recipes) {
-        const catDir = recipe.categoryDir || CATEGORY_DIR_MAP[recipe.category] || recipe.category.toLowerCase().replace(/\s+/g, '-');
+        const catDir = recipe.categoryDir;
         const slug = recipe.slug;
-
-        if (!slug) {
-            console.warn(`   ⚠ Ricetta senza slug: "${recipe.title}" — skip`);
+        if (!slug || !catDir) {
+            console.warn(`   ⚠ "${recipe.title}": slug o categoria mancante — skip`);
             continue;
         }
 
-        const outDir = join(DIST_DIR, 'ricette', catDir, slug);
-        const outFile = join(outDir, 'index.html');
+        const srcPath = join(DIST_DIR, 'ricette', catDir, `${slug}.json`);
+        if (!existsSync(srcPath)) {
+            console.warn(`   ⚠ ${catDir}/${slug}: JSON sorgente assente in dist — pagina senza JSON-LD`);
+            missingSource++;
+            continue;
+        }
+        const src = JSON.parse(readFileSync(srcPath, 'utf8'));
 
-        // Non sovrascrivere se esiste già un file HTML (es. da Vite)
-        // NOTA: sovrascriviamo sempre perché il 404.html redirect non ha i meta OG
-        mkdirSync(outDir, { recursive: true });
-
-        const html = buildOgHtml({
+        const url = `${SITE_URL}/ricette/${catDir}/${slug}/`;
+        const html = buildPage(template, {
             title: recipe.title,
             description: recipe.description,
-            url: `${SITE_URL}/ricette/${catDir}/${slug}`,
+            url,
             image: recipe.image,
             type: 'article',
+            appHtml: prerenderRecipe(recipe, src, catDir),
+            jsonLd: [
+                recipeJsonLd(recipe, src, url),
+                breadcrumbJsonLd([
+                    { name: 'Home', url: `${SITE_URL}/` },
+                    { name: recipe.category, url: `${SITE_URL}/ricette/${catDir}/` },
+                    { name: recipe.title, url },
+                ]),
+            ],
         });
 
-        writeFileSync(outFile, html, 'utf8');
+        const outDir = join(DIST_DIR, 'ricette', catDir, slug);
+        mkdirSync(outDir, { recursive: true });
+        writeFileSync(join(outDir, 'index.html'), html, 'utf8');
+        sitemap.push({ loc: url, lastmod: recipe._createdAt?.slice(0, 10), priority: '0.8' });
         recipeCount++;
     }
 
-    // ── 2. Genera HTML per ogni CATEGORIA ──
+    // ── 2. Pagine CATEGORIA ──
     for (const cat of categories) {
-        const catDir = CATEGORY_DIR_MAP[cat.name] || cat.name.toLowerCase().replace(/\s+/g, '-');
         const catRecipes = recipes.filter(r => r.category === cat.name);
+        const catDir = catRecipes[0]?.categoryDir;
+        if (!catDir) {
+            console.warn(`   ⚠ categoria "${cat.name}" senza ricette — skip`);
+            continue;
+        }
 
-        // Usa l'immagine della prima ricetta della categoria come OG image
-        const firstWithImage = catRecipes.find(r => r.image);
-
-        const outDir = join(DIST_DIR, 'ricette', catDir);
-        const outFile = join(outDir, 'index.html');
-
-        mkdirSync(outDir, { recursive: true });
-
-        const html = buildOgHtml({
+        const url = `${SITE_URL}/ricette/${catDir}/`;
+        const html = buildPage(template, {
             title: `${cat.name} — ${cat.count} Ricette`,
             description: `Esplora ${cat.count} ricette di ${cat.name.toLowerCase()} nel Ricettario Lab — parametri tecnici, dosi precise e risultati replicabili.`,
-            url: `${SITE_URL}/ricette/${catDir}/`,
-            image: firstWithImage?.image || null,
+            url,
+            image: catRecipes.find(r => r.image)?.image || null,
             type: 'website',
+            appHtml: prerenderCategory(cat, catRecipes, catDir),
+            jsonLd: [
+                categoryJsonLd(cat, catRecipes, url),
+                breadcrumbJsonLd([
+                    { name: 'Home', url: `${SITE_URL}/` },
+                    { name: cat.name, url },
+                ]),
+            ],
         });
 
-        writeFileSync(outFile, html, 'utf8');
+        mkdirSync(join(DIST_DIR, 'ricette', catDir), { recursive: true });
+        writeFileSync(join(DIST_DIR, 'ricette', catDir, 'index.html'), html, 'utf8');
+        sitemap.push({ loc: url, priority: '0.6' });
         categoryCount++;
     }
 
-    // ── Report finale ──
-    console.log(`   📄 ${recipeCount} pagine ricetta generate`);
-    console.log(`   📂 ${categoryCount} pagine categoria generate`);
-    console.log(`   📊 Totale: ${recipeCount + categoryCount} file HTML con meta OG\n`);
-    console.log('✅ Social card HTML generati con successo!\n');
+    // ── 3. Homepage: canonical + JSON-LD WebSite ──
+    let home = stripJsonLd(template.replace(/[ \t]*<link\s+rel="canonical"[\s\S]*?>\n?/g, ''));
+    home = home.replace('</head>', `    <link rel="canonical" href="${SITE_URL}/">
+    <script type="application/ld+json">
+${jsonLdSafe({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: SITE_NAME,
+        url: `${SITE_URL}/`,
+        inLanguage: 'it-IT',
+        description: 'Ricette artigianali documentate con precisione tecnica — pane, pizza, pasta e lievitati.',
+    })}
+    </script>
+</head>`);
+    writeFileSync(templatePath, home, 'utf8');
+
+    // ── 4. sitemap.xml ──
+    const urlset = sitemap.map(u => [
+        '  <url>',
+        `    <loc>${escAttr(u.loc)}</loc>`,
+        u.lastmod ? `    <lastmod>${u.lastmod}</lastmod>` : null,
+        `    <priority>${u.priority}</priority>`,
+        '  </url>',
+    ].filter(Boolean).join('\n')).join('\n');
+
+    writeFileSync(join(DIST_DIR, 'sitemap.xml'),
+        `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urlset}\n</urlset>\n`,
+        'utf8');
+
+    // ── 5. robots.txt ──
+    // Nota: su un project site GitHub Pages il robots.txt valido è quello alla
+    // radice del dominio (devdomenicotatone.github.io/robots.txt), non questo.
+    // Resta utile come documentazione e diventa efficace con un dominio custom.
+    writeFileSync(join(DIST_DIR, 'robots.txt'),
+        `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`,
+        'utf8');
+
+    console.log(`   📄 ${recipeCount} pagine ricetta (JSON-LD Recipe + contenuto pre-renderizzato)`);
+    console.log(`   📂 ${categoryCount} pagine categoria (JSON-LD CollectionPage)`);
+    if (missingSource) console.log(`   ⚠  ${missingSource} ricette saltate: JSON sorgente assente`);
+    console.log(`   🗺  sitemap.xml — ${sitemap.length} URL`);
+    console.log(`   🤖 robots.txt`);
+    console.log('\n✅ Pre-rendering completato.\n');
 }
 
 generate();
