@@ -6,7 +6,7 @@
     "subtitle":  "L\u0027originale pugliese con semola rimacinata, patate lesse, pomodorini schiacciati e olive baresane",
     "category":  "Focaccia",
     "hydration":  64,
-    "targetTemp":  "24-26Â°C",
+    "targetTemp":  "24-26°C",
     "fermentation":  "~3h T.A.",
     "totalFlour":  550,
     "ingredients":  [
@@ -24,7 +24,7 @@
                                                },
                                                {
                                                    "name":  "Acqua Tiepida",
-                                                   "note":  "(30-32Â°C)",
+                                                   "note":  "(30-32°C)",
                                                    "grams":  60,
                                                    "tokenId":  "acqua_lievitino"
                                                },
@@ -59,7 +59,7 @@
                                                },
                                                {
                                                    "name":  "Acqua",
-                                                   "note":  "(temperatura ambiente 20-22Â°C)",
+                                                   "note":  "(temperatura ambiente 20-22°C)",
                                                    "grams":  290,
                                                    "tokenId":  "acqua_impasto"
                                                },
@@ -88,7 +88,7 @@
                                  "items":  [
                                                {
                                                    "name":  "Pomodorini Ciliegino",
-                                                   "note":  "(o datterini, tagliati a metÃ )",
+                                                   "note":  "(o datterini, tagliati a metà)",
                                                    "grams":  450,
                                                    "tokenId":  "pomodorini_condimento"
                                                },
@@ -135,13 +135,13 @@
                        }
                    ],
     "baking":  {
-                   "temperature":  "250-270Â°C statico",
+                   "temperature":  "250-270°C statico",
                    "time":  "25-30 minuti",
                    "tips":  [
-                                "Preriscaldare il forno alla MASSIMA temperatura (250-270Â°C) in modalitÃ  STATICA per almeno 30 minuti â€” mai ventilato, che secca la superficie e impedisce la giusta idratazione",
+                                "Preriscaldare il forno alla MASSIMA temperatura (250-270°C) in modalità STATICA per almeno 30 minuti â€” mai ventilato, che secca la superficie e impedisce la giusta idratazione",
                                 "Posizionare la teglia nella parte BASSA del forno per i primi 15 minuti (per croccantezza del fondo), poi spostare al centro per altri 10-15 minuti (per doratura uniforme)",
-                                "La focaccia Ã¨ pronta quando il bordo Ã¨ color ambrato scuro, la superficie Ã¨ lucida d\u0027olio e i pomodorini sono leggermente caramellati",
-                                "Se il fondo non Ã¨ abbastanza croccante, negli ultimi 3-4 minuti appoggiare la teglia direttamente sulla base del forno (senza griglia)",
+                                "La focaccia è pronta quando il bordo è color ambrato scuro, la superficie è lucida d\u0027olio e i pomodorini sono leggermente caramellati",
+                                "Se il fondo non è abbastanza croccante, negli ultimi 3-4 minuti appoggiare la teglia direttamente sulla base del forno (senza griglia)",
                                 "Sfornare e lasciar riposare 5 minuti in teglia, poi trasferire su una gratella per evitare che il fondo ammorbidisca con il vapore residuo"
                             ]
                },
@@ -168,7 +168,7 @@
                      },
                      {
                          "term":  "Incordatura",
-                         "definition":  "Fase dell\u0027impastamento in cui la maglia glutinica si Ã¨ formata: l\u0027impasto si stacca dalle pareti, Ã¨ elastico e si puÃ² tirare in una membrana sottile (test della finestra)."
+                         "definition":  "Fase dell\u0027impastamento in cui la maglia glutinica si è formata: l\u0027impasto si stacca dalle pareti, è elastico e si può tirare in una membrana sottile (test della finestra)."
                      },
                      {
                          "term":  "Fossette",
@@ -176,23 +176,23 @@
                      },
                      {
                          "term":  "Bassinage",
-                         "definition":  "Tecnica di aggiunta graduale di liquidi (acqua o olio) a un impasto giÃ  parzialmente formato, per raggiungere alta idratazione senza compromettere la struttura glutinica."
+                         "definition":  "Tecnica di aggiunta graduale di liquidi (acqua o olio) a un impasto già parzialmente formato, per raggiungere alta idratazione senza compromettere la struttura glutinica."
                      },
                      {
                          "term":  "Semola rimacinata",
                          "definition":  "Semola di grano duro macinata due volte, con granulometria fine simile alla farina 00. Conferisce colore dorato, sapore caratteristico e croccantezza alla focaccia pugliese."
                      }
                  ],
-    "alert":  "âš ï¸ NON usare il frullatore per le patate â€” le lame rompono le cellule dell\u0027amido trasformandole in una colla gommosa che rovina irreparabilmente la texture della focaccia. Usare SEMPRE uno schiacciapatate. NON aggiungere farina extra durante la lavorazione anche se l\u0027impasto sembra troppo molle: la focaccia barese DEVE essere un impasto morbido e umido, Ã¨ la sua natura. La farina in eccesso la renderebbe secca e compatta come un pane sbagliato.",
+    "alert":  "âš ï¸ NON usare il frullatore per le patate â€” le lame rompono le cellule dell\u0027amido trasformandole in una colla gommosa che rovina irreparabilmente la texture della focaccia. Usare SEMPRE uno schiacciapatate. NON aggiungere farina extra durante la lavorazione anche se l\u0027impasto sembra troppo molle: la focaccia barese DEVE essere un impasto morbido e umido, è la sua natura. La farina in eccesso la renderebbe secca e compatta come un pane sbagliato.",
     "proTips":  [
                     "ðŸ«’ Le olive baresane (o \"olive nere di Puglia\") sono olive celline in salamoia, leggermente amarognole e sode â€” se non le trovi, usa olive Leccino o Taggiasca in salamoia (MAI denocciolate sott\u0027olio, troppo molli). L\u0027oliva con nocciolo tiene meglio la cottura e rilascia meno acqua.",
-                    "ðŸ… I pomodorini vanno premuti con la parte tagliata VERSO IL BASSO nelle fossette: cosÃ¬ rilasciano il sugo direttamente nell\u0027impasto durante la cottura, creando le caratteristiche \"pozze\" rosse tipiche della focaccia barese. Condiscili 15-20 minuti prima con olio e sale per farli insaporire.",
-                    "ðŸ¥” Le patate sono il segreto della morbidezza interna: assorbono umiditÃ  e la rilasciano lentamente, mantenendo la focaccia soffice anche il giorno dopo. Usane di tipo farinose (Kennebec, Agria) e mai acquose (tipo novelle). Il peso indicato Ã¨ da crude â€” da cotte perderanno circa il 15%."
+                    "ðŸ… I pomodorini vanno premuti con la parte tagliata VERSO IL BASSO nelle fossette: così rilasciano il sugo direttamente nell\u0027impasto durante la cottura, creando le caratteristiche \"pozze\" rosse tipiche della focaccia barese. Condiscili 15-20 minuti prima con olio e sale per farli insaporire.",
+                    "ðŸ¥” Le patate sono il segreto della morbidezza interna: assorbono umidità e la rilasciano lentamente, mantenendo la focaccia soffice anche il giorno dopo. Usane di tipo farinose (Kennebec, Agria) e mai acquose (tipo novelle). Il peso indicato è da crude â€” da cotte perderanno circa il 15%."
                 ],
     "storage":  [
-                    "Per conservare la Focaccia Barese fino a 2 giorni, avvolgerla, una volta completamente fredda, in un sacchetto di carta per pane o in un canovaccio pulito. Evitare contenitori ermetici e frigorifero a temperatura ambiente, che intrappolerebbero l\u0027umiditÃ  del pomodoro e della patata rendendo la base molle e accelerando il raffermamento.",
-                    "Per il congelamento (durata ottimale 2-3 mesi), tagliare la focaccia fredda in porzioni, avvolgerle singolarmente con pellicola alimentare a contatto e inserirle in un sacchetto gelo. La tecnica superiore Ã¨ il sottovuoto, che previene la bruciatura da freddo (freezer burn) e preserva intatti gli aromi dell\u0027olio, dei pomodori e delle olive.",
-                    "La rigenerazione ideale avviene in forno statico preriscaldato a 180Â°C. Disporre le porzioni (anche direttamente da congelate) su una griglia per 7-10 minuti. Questo metodo garantisce che il calore asciughi l\u0027eccesso di umiditÃ , ripristinando la croccantezza della base e dei bordi mantenendo l\u0027interno soffice e fragrante."
+                    "Per conservare la Focaccia Barese fino a 2 giorni, avvolgerla, una volta completamente fredda, in un sacchetto di carta per pane o in un canovaccio pulito. Evitare contenitori ermetici e frigorifero a temperatura ambiente, che intrappolerebbero l\u0027umidità del pomodoro e della patata rendendo la base molle e accelerando il raffermamento.",
+                    "Per il congelamento (durata ottimale 2-3 mesi), tagliare la focaccia fredda in porzioni, avvolgerle singolarmente con pellicola alimentare a contatto e inserirle in un sacchetto gelo. La tecnica superiore è il sottovuoto, che previene la bruciatura da freddo (freezer burn) e preserva intatti gli aromi dell\u0027olio, dei pomodori e delle olive.",
+                    "La rigenerazione ideale avviene in forno statico preriscaldato a 180°C. Disporre le porzioni (anche direttamente da congelate) su una griglia per 7-10 minuti. Questo metodo garantisce che il calore asciughi l\u0027eccesso di umidità, ripristinando la croccantezza della base e dei bordi mantenendo l\u0027interno soffice e fragrante."
                 ],
     "imageKeywords":  [
                           "focaccia barese tomatoes olives",
@@ -221,7 +221,7 @@
     "steps":  [
                   {
                       "title":  "Preparazione Lievitino",
-                      "text":  "In una ciotola, sciogliere {lievito_fresco_lievitino:10}g di lievito di birra fresco in {acqua_lievitino:60}g di acqua tiepida (30-32Â°C). Aggiungere {zucchero_lievitino:5}g di zucchero e {farina_lievitino:30}g di farina tipo 0. Mescolare con un cucchiaio fino a ottenere una pastella densa. Coprire con pellicola e lasciar fermentare 15-20 minuti finchÃ© la superficie non presenta bolle visibili e il volume Ã¨ quasi raddoppiato."
+                      "text":  "In una ciotola, sciogliere {lievito_fresco_lievitino:10}g di lievito di birra fresco in {acqua_lievitino:60}g di acqua tiepida (30-32°C). Aggiungere {zucchero_lievitino:5}g di zucchero e {farina_lievitino:30}g di farina tipo 0. Mescolare con un cucchiaio fino a ottenere una pastella densa. Coprire con pellicola e lasciar fermentare 15-20 minuti finché la superficie non presenta bolle visibili e il volume è quasi raddoppiato."
                   },
                   {
                       "title":  "Lessare le Patate",
@@ -229,23 +229,23 @@
                   },
                   {
                       "title":  "Impastamento in Spirale â€” Prima Fase",
-                      "text":  "Nella vasca della spirale, versare {farina_zero_impasto:270}g di farina tipo 0 e {semola_impasto:250}g di semola rimacinata. Aggiungere il lievitino maturo e le patate schiacciate fredde. Avviare in V1 e versare gradualmente {acqua_impasto:290}g di acqua (20-22Â°C). Impastare in V1 per 6-8 minuti fino ad assorbimento completo dei liquidi e formazione di un impasto grezzo."
+                      "text":  "Nella vasca della spirale, versare {farina_zero_impasto:270}g di farina tipo 0 e {semola_impasto:250}g di semola rimacinata. Aggiungere il lievitino maturo e le patate schiacciate fredde. Avviare in V1 e versare gradualmente {acqua_impasto:290}g di acqua (20-22°C). Impastare in V1 per 6-8 minuti fino ad assorbimento completo dei liquidi e formazione di un impasto grezzo."
                   },
                   {
                       "title":  "Impastamento in Spirale â€” Seconda Fase",
-                      "text":  "Aggiungere {sale_impasto:15}g di sale fino. Continuare in V1 per 2 minuti, poi passare in V2 per 3-4 minuti. Quando l\u0027impasto inizia a incordarsi e staccarsi dalle pareti, aggiungere {olio_impasto:45}g di olio EVO a filo, un cucchiaio alla volta. Impastare in V2 per altri 3-4 minuti fino a completo assorbimento dell\u0027olio. L\u0027impasto risulterÃ  morbido, leggermente appiccicoso ma elastico â€” NON deve essere asciutto e compatto. Temperatura finale impasto: 24-26Â°C."
+                      "text":  "Aggiungere {sale_impasto:15}g di sale fino. Continuare in V1 per 2 minuti, poi passare in V2 per 3-4 minuti. Quando l\u0027impasto inizia a incordarsi e staccarsi dalle pareti, aggiungere {olio_impasto:45}g di olio EVO a filo, un cucchiaio alla volta. Impastare in V2 per altri 3-4 minuti fino a completo assorbimento dell\u0027olio. L\u0027impasto risulterà morbido, leggermente appiccicoso ma elastico â€” NON deve essere asciutto e compatto. Temperatura finale impasto: 24-26°C."
                   },
                   {
                       "title":  "Puntata â€” Prima Lievitazione",
-                      "text":  "Trasferire l\u0027impasto in una ciotola leggermente unta con olio EVO. Eseguire una serie di pieghe a portafoglio direttamente in ciotola: prendere un lembo dell\u0027impasto, tirarlo verso l\u0027alto e ripiegarlo al centro. Ruotare la ciotola di 90Â° e ripetere per tutti e 4 i lati. Coprire con pellicola a contatto e lasciar lievitare a 26-28Â°C per circa 2 ore e 30 minuti â€” 3 ore, fino a quando l\u0027impasto triplica di volume. A metÃ  lievitazione (dopo ~1h 15min) eseguire un secondo giro di pieghe."
+                      "text":  "Trasferire l\u0027impasto in una ciotola leggermente unta con olio EVO. Eseguire una serie di pieghe a portafoglio direttamente in ciotola: prendere un lembo dell\u0027impasto, tirarlo verso l\u0027alto e ripiegarlo al centro. Ruotare la ciotola di 90° e ripetere per tutti e 4 i lati. Coprire con pellicola a contatto e lasciar lievitare a 26-28°C per circa 2 ore e 30 minuti â€” 3 ore, fino a quando l\u0027impasto triplica di volume. A metà lievitazione (dopo ~1h 15min) eseguire un secondo giro di pieghe."
                   },
                   {
                       "title":  "Preparazione Teglia e Stesura",
-                      "text":  "Versare metÃ  dell\u0027{olio_condimento:80}g di olio EVO per condimento (circa 40g) in una teglia rotonda da 32-34 cm (o rettangolare 30Ã—40 cm) e spalmare uniformemente sul fondo e i bordi. Rovesciare l\u0027impasto lievitato sulla teglia oliata. Con le dita umide d\u0027olio, stendere l\u0027impasto dal centro verso i bordi con pressione delicata, creando i caratteristici fossette (\"buchi\"). Non schiacciare l\u0027impasto con forza â€” deve mantenere aria al suo interno. Se l\u0027impasto oppone resistenza, lasciar riposare 10 minuti coperto e riprendere la stesura. L\u0027impasto deve arrivare a coprire tutta la teglia con spessore uniforme di circa 1.5-2 cm."
+                      "text":  "Versare metà dell\u0027{olio_condimento:80}g di olio EVO per condimento (circa 40g) in una teglia rotonda da 32-34 cm (o rettangolare 30Ã—40 cm) e spalmare uniformemente sul fondo e i bordi. Rovesciare l\u0027impasto lievitato sulla teglia oliata. Con le dita umide d\u0027olio, stendere l\u0027impasto dal centro verso i bordi con pressione delicata, creando i caratteristici fossette (\"buchi\"). Non schiacciare l\u0027impasto con forza â€” deve mantenere aria al suo interno. Se l\u0027impasto oppone resistenza, lasciar riposare 10 minuti coperto e riprendere la stesura. L\u0027impasto deve arrivare a coprire tutta la teglia con spessore uniforme di circa 1.5-2 cm."
                   },
                   {
                       "title":  "Condimento e Seconda Lievitazione",
-                      "text":  "Tagliare a metÃ  {pomodorini_condimento:450}g di pomodorini e condirli in una ciotola con un filo d\u0027olio, {sale_grosso_condimento:5}g di sale grosso e {origano_condimento:3}g di origano secco. Disporre i pomodorini sulla focaccia con la parte tagliata rivolta VERSO IL BASSO (premendoli leggermente nella pasta per affondarli nelle fossette). Distribuire {olive_condimento:120}g di olive baresane tra i pomodorini. Irrorare con il restante olio EVO (~40g) e il sughino rilasciato dai pomodorini. Lasciar lievitare la focaccia condita per altri 30-40 minuti, coperta con un canovaccio umido."
+                      "text":  "Tagliare a metà {pomodorini_condimento:450}g di pomodorini e condirli in una ciotola con un filo d\u0027olio, {sale_grosso_condimento:5}g di sale grosso e {origano_condimento:3}g di origano secco. Disporre i pomodorini sulla focaccia con la parte tagliata rivolta VERSO IL BASSO (premendoli leggermente nella pasta per affondarli nelle fossette). Distribuire {olive_condimento:120}g di olive baresane tra i pomodorini. Irrorare con il restante olio EVO (~40g) e il sughino rilasciato dai pomodorini. Lasciar lievitare la focaccia condita per altri 30-40 minuti, coperta con un canovaccio umido."
                   },
                   {
                       "title":  "Infornare",
@@ -253,7 +253,7 @@
                   }
               ],
     "sensoryProfile":  {
-                           "summary":  "Una focaccia barese di grande personalitÃ , dove la semola rimacinata di grano duro dialoga con le patate per regalare un interno straordinariamente soffice e umido, quasi burroso al palato. Il fondo si presenta con una crosta dorata e croccante, benedetta dall\u0027olio EVO pugliese che permea ogni strato con la sua nota fruttata e leggermente amara. I pomodorini caramellati a rovescio e le olive baresane in salamoia costruiscono un ecosistema aromatico mediterraneo complesso, dove sapiditÃ , aciditÃ  e profumo di origano si intrecciano in un equilibrio autentico e territorialmente preciso.",
+                           "summary":  "Una focaccia barese di grande personalità, dove la semola rimacinata di grano duro dialoga con le patate per regalare un interno straordinariamente soffice e umido, quasi burroso al palato. Il fondo si presenta con una crosta dorata e croccante, benedetta dall\u0027olio EVO pugliese che permea ogni strato con la sua nota fruttata e leggermente amara. I pomodorini caramellati a rovescio e le olive baresane in salamoia costruiscono un ecosistema aromatico mediterraneo complesso, dove sapidità, acidità e profumo di origano si intrecciano in un equilibrio autentico e territorialmente preciso.",
                            "axes":  [
                                         {
                                             "label":  "Croccantezza Esterna",
@@ -264,7 +264,7 @@
                                             "value":  9
                                         },
                                         {
-                                            "label":  "SapiditÃ  / Umami",
+                                            "label":  "Sapidità / Umami",
                                             "value":  8
                                         },
                                         {
@@ -272,7 +272,7 @@
                                             "value":  9
                                         },
                                         {
-                                            "label":  "ComplessitÃ  Aromatica",
+                                            "label":  "Complessità Aromatica",
                                             "value":  8
                                         }
                                     ]

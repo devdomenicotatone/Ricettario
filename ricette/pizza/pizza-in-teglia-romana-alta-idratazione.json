@@ -6,7 +6,7 @@
     "subtitle":  "Impasto diretto ad alta idratazione con tecnica bassinage e maturazione a freddo 24h",
     "category":  "Pizza",
     "hydration":  85,
-    "targetTemp":  "24â€“25Â°C",
+    "targetTemp":  "24â€“25°C",
     "fermentation":  "~29h totali",
     "totalFlour":  1000,
     "ingredients":  [
@@ -30,7 +30,7 @@
                                                },
                                                {
                                                    "name":  "Acqua Fredda",
-                                                   "note":  "(da frigo, 4â€“6Â°C â€” bassinage: 680g base + 170g a filo)",
+                                                   "note":  "(da frigo, 4â€“6°C â€” bassinage: 680g base + 170g a filo)",
                                                    "grams":  850,
                                                    "tokenId":  "acqua_totale"
                                                },
@@ -65,43 +65,43 @@
                   },
                   {
                       "title":  "Prima Idratazione â€” Fase Base (80% Acqua)",
-                      "text":  "Calcolare l\u002780% dell\u0027acqua totale: {acqua_totale:850}g totali, quindi versare {acqua_base:680}g di acqua fredda da frigo (4â€“6Â°C) nelle farine. Avviare la spirale a velocitÃ  media (100â€“120 RPM). Lavorare fino a completa incordatura: l\u0027impasto deve staccarsi nettamente dalle pareti della vasca e aggrapparsi alla spirale, risultando liscio e compatto. Questa fase richiede circa 8â€“10 minuti. L\u0027acqua fredda Ã¨ essenziale per mantenere la temperatura dell\u0027impasto sotto controllo durante la lavorazione meccanica."
+                      "text":  "Calcolare l\u002780% dell\u0027acqua totale: {acqua_totale:850}g totali, quindi versare {acqua_base:680}g di acqua fredda da frigo (4â€“6°C) nelle farine. Avviare la spirale a velocità media (100â€“120 RPM). Lavorare fino a completa incordatura: l\u0027impasto deve staccarsi nettamente dalle pareti della vasca e aggrapparsi alla spirale, risultando liscio e compatto. Questa fase richiede circa 8â€“10 minuti. L\u0027acqua fredda è essenziale per mantenere la temperatura dell\u0027impasto sotto controllo durante la lavorazione meccanica."
                   },
                   {
                       "title":  "Bassinage â€” Aggiunta Acqua Residua (20%)",
-                      "text":  "Con la macchina in movimento, portare la velocitÃ  ad alta (180â€“220 RPM). Versare i restanti {acqua_bassinage:170}g di acqua fredda a filo, in 4â€“5 aggiunte progressive, attendendo che ogni aggiunta venga completamente assorbita prima di versare la successiva. L\u0027impasto deve sempre \u0027riprendere corda\u0027 tra un\u0027aggiunta e l\u0027altra: se si presenta lucido e sciolto, attendere ancora prima di procedere. Contestualmente all\u0027ultima quota di acqua, aggiungere i {sale:25}g di sale marino fino. Aspettare che il sale venga assorbito e che l\u0027impasto riprenda consistenza e tensione."
+                      "text":  "Con la macchina in movimento, portare la velocità ad alta (180â€“220 RPM). Versare i restanti {acqua_bassinage:170}g di acqua fredda a filo, in 4â€“5 aggiunte progressive, attendendo che ogni aggiunta venga completamente assorbita prima di versare la successiva. L\u0027impasto deve sempre \u0027riprendere corda\u0027 tra un\u0027aggiunta e l\u0027altra: se si presenta lucido e sciolto, attendere ancora prima di procedere. Contestualmente all\u0027ultima quota di acqua, aggiungere i {sale:25}g di sale marino fino. Aspettare che il sale venga assorbito e che l\u0027impasto riprenda consistenza e tensione."
                   },
                   {
                       "title":  "Inserimento Olio",
-                      "text":  "Quando l\u0027impasto ha ripreso piena incordatura dopo il sale, inserire i {olio_evo:25}g di olio extravergine di oliva a filo, mantenendo la velocitÃ  alta (180â€“220 RPM). L\u0027olio deve essere aggiunto lentamente: versarlo troppo velocemente causerebbe la rottura della maglia glutinica. L\u0027impasto Ã¨ pronto quando riprende la corda, risulta setoso, lucido e si stacca completamente dalle pareti. Verificare la temperatura dell\u0027impasto con il termometro a sonda: deve essere compresa tra 24Â°C e 25Â°C. Temperature superiori ai 26Â°C accelererebbero eccessivamente la fermentazione nelle ore successive."
+                      "text":  "Quando l\u0027impasto ha ripreso piena incordatura dopo il sale, inserire i {olio_evo:25}g di olio extravergine di oliva a filo, mantenendo la velocità alta (180â€“220 RPM). L\u0027olio deve essere aggiunto lentamente: versarlo troppo velocemente causerebbe la rottura della maglia glutinica. L\u0027impasto è pronto quando riprende la corda, risulta setoso, lucido e si stacca completamente dalle pareti. Verificare la temperatura dell\u0027impasto con il termometro a sonda: deve essere compresa tra 24°C e 25°C. Temperature superiori ai 26°C accelererebbero eccessivamente la fermentazione nelle ore successive."
                   },
                   {
                       "title":  "Puntata a Temperatura Ambiente",
-                      "text":  "Trasferire l\u0027impasto in un cassone oliato e coprire con coperchio o pellicola. Far puntare a temperatura ambiente (22â€“24Â°C) per 40â€“60 minuti. In questa fase la massa inizia la fermentazione e sviluppa la prima forza strutturale. Non effettuare pieghe durante la puntata: la teglia romana moderna si basa su un impasto che acquisisce forza principalmente in frigorifero."
+                      "text":  "Trasferire l\u0027impasto in un cassone oliato e coprire con coperchio o pellicola. Far puntare a temperatura ambiente (22â€“24°C) per 40â€“60 minuti. In questa fase la massa inizia la fermentazione e sviluppa la prima forza strutturale. Non effettuare pieghe durante la puntata: la teglia romana moderna si basa su un impasto che acquisisce forza principalmente in frigorifero."
                   },
                   {
                       "title":  "Maturazione in Frigo 24h",
-                      "text":  "Riporre il cassone sigillato in cella frigorifera (o frigorifero domestico) a 4Â°C per 24 ore. La maturazione a freddo consente agli enzimi di scomporre gli amidi complessi, sviluppando aromi profondi e migliorando la digeribilitÃ  dell\u0027impasto. La maglia glutinica si consolida lentamente senza perdere estensibilitÃ , garantendo la caratteristica alveolatura aperta della teglia romana."
+                      "text":  "Riporre il cassone sigillato in cella frigorifera (o frigorifero domestico) a 4°C per 24 ore. La maturazione a freddo consente agli enzimi di scomporre gli amidi complessi, sviluppando aromi profondi e migliorando la digeribilità dell\u0027impasto. La maglia glutinica si consolida lentamente senza perdere estensibilità, garantendo la caratteristica alveolatura aperta della teglia romana."
                   },
                   {
                       "title":  "Staglio e Formatura Pagnotte",
-                      "text":  "Dopo 24 ore, estrarre il cassone dal frigo. Con l\u0027ausilio di un tarocco oliato, stagliare l\u0027impasto: con queste dosi si ottiene una pagnotta da {panetto_peso:1200!}g per la teglia 60Ã—40 cm e avanza impasto sufficiente per una teglietta piÃ¹ piccola. Non sgasare: effettuare una formatura delicata dando tensione alla superficie senza rompere i gas di fermentazione giÃ  formati. Riporre le pagnotte in cassette singole oliate e sigillare."
+                      "text":  "Dopo 24 ore, estrarre il cassone dal frigo. Con l\u0027ausilio di un tarocco oliato, stagliare l\u0027impasto: con queste dosi si ottiene una pagnotta da {panetto_peso:1200!}g per la teglia 60Ã—40 cm e avanza impasto sufficiente per una teglietta più piccola. Non sgasare: effettuare una formatura delicata dando tensione alla superficie senza rompere i gas di fermentazione già formati. Riporre le pagnotte in cassette singole oliate e sigillare."
                   },
                   {
                       "title":  "Appretto (Secondo Riposo)",
-                      "text":  "Lasciare le cassette a temperatura ambiente (25â€“26Â°C) per circa 4 ore fino al raddoppio del volume. La pagnotta Ã¨ pronta per la stesura quando, premendo delicatamente con un dito, la fossetta torna su lentamente (segno di giusta maturazione). Se la fossetta rimane impressa, l\u0027impasto Ã¨ maturo al limite â€” stendere subito. Se risale immediatamente, attendere ancora."
+                      "text":  "Lasciare le cassette a temperatura ambiente (25â€“26°C) per circa 4 ore fino al raddoppio del volume. La pagnotta è pronta per la stesura quando, premendo delicatamente con un dito, la fossetta torna su lentamente (segno di giusta maturazione). Se la fossetta rimane impressa, l\u0027impasto è maturo al limite â€” stendere subito. Se risale immediatamente, attendere ancora."
                   },
                   {
                       "title":  "Stesura in Teglia",
-                      "text":  "Oliare generosamente il fondo della teglia in ferro blu 60Ã—40 cm a temperatura ambiente. Rovesciare la cassetta direttamente sul banco e poi trasferire delicatamente la pagnotta sulla teglia. Con le dita aperte e la tecnica a pressione dall\u0027interno verso l\u0027esterno, stendere l\u0027impasto fino a coprire tutta la teglia. Procedere in piÃ¹ riprese se l\u0027impasto oppone resistenza (glutine in tensione): lasciarlo riposare 5 minuti coperto e riprendere la stesura. Non usare il mattarello â€” si perderebbero tutti i gas di fermentazione. L\u0027impasto steso sulla teglia deve presentare visibili bolle in superficie."
+                      "text":  "Oliare generosamente il fondo della teglia in ferro blu 60Ã—40 cm a temperatura ambiente. Rovesciare la cassetta direttamente sul banco e poi trasferire delicatamente la pagnotta sulla teglia. Con le dita aperte e la tecnica a pressione dall\u0027interno verso l\u0027esterno, stendere l\u0027impasto fino a coprire tutta la teglia. Procedere in più riprese se l\u0027impasto oppone resistenza (glutine in tensione): lasciarlo riposare 5 minuti coperto e riprendere la stesura. Non usare il mattarello â€” si perderebbero tutti i gas di fermentazione. L\u0027impasto steso sulla teglia deve presentare visibili bolle in superficie."
                   },
                   {
                       "title":  "Condimento e Cottura",
-                      "text":  "Condire secondo preferenza (salsa di pomodoro, mozzarella, farciture) avendo cura di non appesantire eccessivamente per non bloccare lo sviluppo in forno. Cuocere in forno elettrico statico con pietra refrattaria o direttamente sulla teglia a 270â€“280Â°C (massimo per forni casalinghi), impostando calore prevalente dalla platea (resistenza inferiore al 70â€“80%) e calore ridotto dal cielo (resistenza superiore al 10â€“20%). Cuocere per 12â€“18 minuti, controllando la base: la pizza in teglia romana Ã¨ cotta quando il fondo presenta una crosticina dorata uniforme e croccante. Nei forni di casa senza controllo separato delle resistenze, posizionare la teglia sul fondo del forno nei primi 8 minuti, poi spostarla a metÃ  per completare la doratura in superficie."
+                      "text":  "Condire secondo preferenza (salsa di pomodoro, mozzarella, farciture) avendo cura di non appesantire eccessivamente per non bloccare lo sviluppo in forno. Cuocere in forno elettrico statico con pietra refrattaria o direttamente sulla teglia a 270â€“280°C (massimo per forni casalinghi), impostando calore prevalente dalla platea (resistenza inferiore al 70â€“80%) e calore ridotto dal cielo (resistenza superiore al 10â€“20%). Cuocere per 12â€“18 minuti, controllando la base: la pizza in teglia romana è cotta quando il fondo presenta una crosticina dorata uniforme e croccante. Nei forni di casa senza controllo separato delle resistenze, posizionare la teglia sul fondo del forno nei primi 8 minuti, poi spostarla a metà per completare la doratura in superficie."
                   },
                   {
                       "title":  "Rigenerazione (Opzionale)",
-                      "text":  "La teglia romana puÃ² essere cotta, lasciata raffreddare completamente e rigenerata in forno a 280Â°C per 4â€“6 minuti prima del servizio. Questa tecnica professionale garantisce la massima croccantezza alla base. Gli impasti cotti possono essere abbattuti in positivo (+4Â°C) o in negativo (-18Â°C) e stoccati per ottimizzare la produzione."
+                      "text":  "La teglia romana può essere cotta, lasciata raffreddare completamente e rigenerata in forno a 280°C per 4â€“6 minuti prima del servizio. Questa tecnica professionale garantisce la massima croccantezza alla base. Gli impasti cotti possono essere abbattuti in positivo (+4°C) o in negativo (-18°C) e stoccati per ottimizzare la produzione."
                   }
               ],
     "stepsCondiment":  [
@@ -125,12 +125,12 @@
                        }
                    ],
     "baking":  {
-                   "temperature":  "270â€“280Â°C",
+                   "temperature":  "270â€“280°C",
                    "time":  "12â€“18 minuti",
                    "tips":  [
-                                "Per ottenere la crosticina croccante alla base, preriscaldare il forno con una pietra refrattaria giÃ  dentro per almeno 30 minuti, quindi appoggiare la teglia in ferro blu direttamente sulla pietra calda: il calore immediato garantisce la doratura dal basso fin dai primi secondi di cottura",
-                                "Forni casalinghi senza controllo separato platea/cielo: posizionare la teglia sul fondo del forno (a diretto contatto con la resistenza inferiore) per i primi 8 minuti, poi spostarla a metÃ  per dorare la superficie",
-                                "La base Ã¨ cotta correttamente quando, sollevando un angolo con una spatola, si vede un fondo dorato e croccante â€” non bianco o pallido",
+                                "Per ottenere la crosticina croccante alla base, preriscaldare il forno con una pietra refrattaria già dentro per almeno 30 minuti, quindi appoggiare la teglia in ferro blu direttamente sulla pietra calda: il calore immediato garantisce la doratura dal basso fin dai primi secondi di cottura",
+                                "Forni casalinghi senza controllo separato platea/cielo: posizionare la teglia sul fondo del forno (a diretto contatto con la resistenza inferiore) per i primi 8 minuti, poi spostarla a metà per dorare la superficie",
+                                "La base è cotta correttamente quando, sollevando un angolo con una spatola, si vede un fondo dorato e croccante â€” non bianco o pallido",
                                 "Per cottura con condimenti umidi (mozzarella fresca, pomodoro abbondante), cuocere la base in bianco per 8â€“10 minuti prima di aggiungere i condimenti: si evita l\u0027effetto \u0027vapore\u0027 che rende la base gommosa",
                                 "Forno statico obbligatorio durante la cottura: il ventilato crea circolazione d\u0027aria che ostacola l\u0027oven spring e secca superficialmente l\u0027impasto prima che si sviluppi"
                             ]
@@ -142,7 +142,7 @@
                      },
                      {
                          "term":  "Bassinage",
-                         "definition":  "Tecnica di aggiunta progressiva dell\u0027acqua residua (20â€“25%) a filo durante l\u0027impastamento ad alta velocitÃ , dopo la prima incordatura. Permette di incorporare quantitÃ  d\u0027acqua elevate senza rompere la maglia glutinica."
+                         "definition":  "Tecnica di aggiunta progressiva dell\u0027acqua residua (20â€“25%) a filo durante l\u0027impastamento ad alta velocità, dopo la prima incordatura. Permette di incorporare quantità d\u0027acqua elevate senza rompere la maglia glutinica."
                      },
                      {
                          "term":  "Incordatura",
@@ -154,54 +154,54 @@
                      },
                      {
                          "term":  "Maturazione a Freddo",
-                         "definition":  "Processo enzimatico lento a 4Â°C che degrada gli amidi complessi, migliora la digeribilitÃ  e sviluppa aromi complessi. Distinto dalla lievitazione (attivitÃ  del lievito), avviene anche in assenza di CO2 significativa."
+                         "definition":  "Processo enzimatico lento a 4°C che degrada gli amidi complessi, migliora la digeribilità e sviluppa aromi complessi. Distinto dalla lievitazione (attività del lievito), avviene anche in assenza di CO2 significativa."
                      },
                      {
                          "term":  "Staglio",
-                         "definition":  "Operazione di divisione della massa in porzioni di peso preciso (qui 1200g). Il tarocco oliato evita di stressare eccessivamente il glutine giÃ  sviluppato."
+                         "definition":  "Operazione di divisione della massa in porzioni di peso preciso (qui 1200g). Il tarocco oliato evita di stressare eccessivamente il glutine già sviluppato."
                      },
                      {
                          "term":  "Appretto",
-                         "definition":  "Secondo e definitivo riposo dopo lo staglio e la formatura delle pagnotte. Dura 4 ore a 25â€“26Â°C: l\u0027impasto raddoppia e raggiunge la maturitÃ  fermentativa ottimale per la stesura."
+                         "definition":  "Secondo e definitivo riposo dopo lo staglio e la formatura delle pagnotte. Dura 4 ore a 25â€“26°C: l\u0027impasto raddoppia e raggiunge la maturità fermentativa ottimale per la stesura."
                      },
                      {
                          "term":  "Morso Corto",
-                         "definition":  "Caratteristica organolettica della teglia romana cotta: la masticazione Ã¨ breve e leggera, senza resistenza eccessiva. Si ottiene con la giusta forza della farina (entro W300) e un\u0027adeguata maturazione enzimatica."
+                         "definition":  "Caratteristica organolettica della teglia romana cotta: la masticazione è breve e leggera, senza resistenza eccessiva. Si ottiene con la giusta forza della farina (entro W300) e un\u0027adeguata maturazione enzimatica."
                      },
                      {
                          "term":  "Platea e Cielo",
-                         "definition":  "Terminologia del forno professionale: la platea Ã¨ la resistenza inferiore (suolo del forno), il cielo Ã¨ la resistenza superiore. Per la teglia romana: platea al 70â€“80%, cielo al 10% per garantire base croccante senza bruciare la superficie."
+                         "definition":  "Terminologia del forno professionale: la platea è la resistenza inferiore (suolo del forno), il cielo è la resistenza superiore. Per la teglia romana: platea al 70â€“80%, cielo al 10% per garantire base croccante senza bruciare la superficie."
                      },
                      {
                          "term":  "Rigenerazione",
-                         "definition":  "Tecnica professionale che prevede di cuocere le basi di pizza, farle raffreddare e ripassarle in forno caldo (280Â°C, 4â€“6 min) prima del servizio. Garantisce la massima croccantezza e permette una gestione efficiente della produzione."
+                         "definition":  "Tecnica professionale che prevede di cuocere le basi di pizza, farle raffreddare e ripassarle in forno caldo (280°C, 4â€“6 min) prima del servizio. Garantisce la massima croccantezza e permette una gestione efficiente della produzione."
                      },
                      {
                          "term":  "Oven Spring",
-                         "definition":  "Rapido sviluppo del volume dell\u0027impasto nei primi minuti di cottura, causato dalla dilatazione termica dei gas di fermentazione e dall\u0027attivitÃ  del lievito prima che le proteine coagulino. Per la teglia romana Ã¨ essenziale per ottenere l\u0027alveolatura aperta caratteristica."
+                         "definition":  "Rapido sviluppo del volume dell\u0027impasto nei primi minuti di cottura, causato dalla dilatazione termica dei gas di fermentazione e dall\u0027attività del lievito prima che le proteine coagulino. Per la teglia romana è essenziale per ottenere l\u0027alveolatura aperta caratteristica."
                      },
                      {
                          "term":  "Teglia in Ferro Blu",
                          "definition":  "Teglia in lamiera di ferro blu, ossidata in superficie per evitare la ruggine. Conduce il calore in modo uniforme e diretto, garantendo la crosticina dorata e croccante tipica della teglia romana. Richiede una \u0027prima stagionatura\u0027 (condimento con olio e passaggi in forno prima del primo utilizzo)."
                      }
                  ],
-    "alert":  "NON aggiungere l\u0027olio prima del sale: l\u0027olio crea una pellicola idrofoba intorno alle proteine della farina che impedisce al sale di distribuirsi uniformemente nella maglia glutinica. L\u0027ordine corretto Ã¨ sempre: incordatura â†’ bassinage â†’ sale â†’ (ripresa corda) â†’ olio. Inoltre, NON superare i 26Â°C di temperatura finale dell\u0027impasto: temperature piÃ¹ alte accelerano la fermentazione in modo incontrollato, rischiando di far collassare la maglia glutinica durante le 24h di freddo.",
+    "alert":  "NON aggiungere l\u0027olio prima del sale: l\u0027olio crea una pellicola idrofoba intorno alle proteine della farina che impedisce al sale di distribuirsi uniformemente nella maglia glutinica. L\u0027ordine corretto è sempre: incordatura â†’ bassinage â†’ sale â†’ (ripresa corda) â†’ olio. Inoltre, NON superare i 26°C di temperatura finale dell\u0027impasto: temperature più alte accelerano la fermentazione in modo incontrollato, rischiando di far collassare la maglia glutinica durante le 24h di freddo.",
     "proTips":  [
-                    "Il test del velo (windowpane test) Ã¨ il tuo miglior alleato: al termine dell\u0027impastamento, prelevare un pezzetto di impasto e stenderlo delicatamente tra le dita fino a formare una membrana semitrasparente senza strapparsi. Se si strappa immediatamente, la maglia glutinica non Ã¨ ancora sviluppata â€” continuare a impastare ad alta velocitÃ  per altri 2â€“3 minuti.",
-                    "Per ottimizzare la produzione in ottica professionale (o per preparare le basi in anticipo a casa): cuocere le teglie al 70â€“80% della cottura totale, abbatterle rapidamente e conservarle in freezer fino a 30 giorni. Al momento del servizio, rigenerare in forno a 280Â°C per 6â€“8 minuti direttamente da congelato â€” la base risulterÃ  come appena sfornata.",
-                    "La percentuale di Farina Tipo 2 (20% del totale) non Ã¨ decorativa: il suo contenuto di crusca e fibre ritarda lievemente il reticolo glutinico, contribuendo al morso corto caratteristico e aggiungendo note aromatiche di grano piÃ¹ complesse rispetto a un impasto in purezza con Tipo 0. Aumentarla oltre il 30% comprometterebbe la tenuta dell\u0027alta idratazione."
+                    "Il test del velo (windowpane test) è il tuo miglior alleato: al termine dell\u0027impastamento, prelevare un pezzetto di impasto e stenderlo delicatamente tra le dita fino a formare una membrana semitrasparente senza strapparsi. Se si strappa immediatamente, la maglia glutinica non è ancora sviluppata â€” continuare a impastare ad alta velocità per altri 2â€“3 minuti.",
+                    "Per ottimizzare la produzione in ottica professionale (o per preparare le basi in anticipo a casa): cuocere le teglie al 70â€“80% della cottura totale, abbatterle rapidamente e conservarle in freezer fino a 30 giorni. Al momento del servizio, rigenerare in forno a 280°C per 6â€“8 minuti direttamente da congelato â€” la base risulterà come appena sfornata.",
+                    "La percentuale di Farina Tipo 2 (20% del totale) non è decorativa: il suo contenuto di crusca e fibre ritarda lievemente il reticolo glutinico, contribuendo al morso corto caratteristico e aggiungendo note aromatiche di grano più complesse rispetto a un impasto in purezza con Tipo 0. Aumentarla oltre il 30% comprometterebbe la tenuta dell\u0027alta idratazione."
                 ],
     "storage":  [
-                    "Per la conservazione a breve termine (massimo 2-3 giorni), lasciar raffreddare completamente la pizza a temperatura ambiente per evitare la condensa. Avvolgere le fette in carta stagnola e riporle in frigorifero. Per rigenerarla, scaldare in forno ventilato pre-riscaldato a 190Â°C per 5-7 minuti direttamente sulla griglia: questo riattiva l\u0027amido e ripristina la croccantezza della base senza seccare il condimento.",
-                    "Per il congelamento, la tecnica ottimale Ã¨ la pre-cottura della base (\u0027in bianco\u0027 o solo con pomodoro) fino a 3/4 di cottura. Una volta fredda, avvolgerla ermeticamente in piÃ¹ strati di pellicola alimentare o, idealmente, sigillarla sottovuoto, e conservare in freezer fino a 3 mesi. Al momento dell\u0027uso, condire la base ancora congelata e terminare la cottura in forno alla massima temperatura (240-250Â°C) per un risultato fragrante come appena sfornata.",
-                    "In alternativa al prodotto finito, Ã¨ possibile congelare i panetti crudi dopo la maturazione in frigo. Ungerli leggermente d\u0027olio, disporli su un vassoio e congelarli rapidamente (\u0027flash-freezing\u0027), poi trasferirli in sacchetti gelo individuali ben chiusi. Per l\u0027utilizzo, scongelare lentamente in frigorifero per 12-18 ore e lasciare a temperatura ambiente per le successive 2-3 ore prima della stesura; questo preserverÃ  la maglia glutinica e la capacitÃ  di sviluppo dell\u0027alveolatura."
+                    "Per la conservazione a breve termine (massimo 2-3 giorni), lasciar raffreddare completamente la pizza a temperatura ambiente per evitare la condensa. Avvolgere le fette in carta stagnola e riporle in frigorifero. Per rigenerarla, scaldare in forno ventilato pre-riscaldato a 190°C per 5-7 minuti direttamente sulla griglia: questo riattiva l\u0027amido e ripristina la croccantezza della base senza seccare il condimento.",
+                    "Per il congelamento, la tecnica ottimale è la pre-cottura della base (\u0027in bianco\u0027 o solo con pomodoro) fino a 3/4 di cottura. Una volta fredda, avvolgerla ermeticamente in più strati di pellicola alimentare o, idealmente, sigillarla sottovuoto, e conservare in freezer fino a 3 mesi. Al momento dell\u0027uso, condire la base ancora congelata e terminare la cottura in forno alla massima temperatura (240-250°C) per un risultato fragrante come appena sfornata.",
+                    "In alternativa al prodotto finito, è possibile congelare i panetti crudi dopo la maturazione in frigo. Ungerli leggermente d\u0027olio, disporli su un vassoio e congelarli rapidamente (\u0027flash-freezing\u0027), poi trasferirli in sacchetti gelo individuali ben chiusi. Per l\u0027utilizzo, scongelare lentamente in frigorifero per 12-18 ore e lasciare a temperatura ambiente per le successive 2-3 ore prima della stesura; questo preserverà la maglia glutinica e la capacità di sviluppo dell\u0027alveolatura."
                 ],
     "imageKeywords":  [
                           "roman pan pizza high hydration crispy",
                           "pizza al taglio teglia romana alveolata",
                           "italian sheet pan pizza golden crust",
                           "teglia romana trancio croccante",
-                          "rÃ¶mische Blech Pizza knusprig",
+                          "römische Blech Pizza knusprig",
                           "focaccia style pizza tray bubbles",
                           "pizza in teglia slice close up"
                       ],
@@ -222,7 +222,7 @@
     "image":  "images/ricette/pizza/pizza-in-teglia-romana-alta-idratazione.webp",
     "imageAttribution":  "ðŸ“· Foto: Anna Guerrero â€” Pexels License via Pexels",
     "sensoryProfile":  {
-                           "summary":  "Una teglia romana di grande personalitÃ , che si distingue per la sua base croccante e dorata â€” quasi friabile al morso â€” contrapposta a un cuore di mollica alveolata, setosa e scioglievole, frutto dell\u0027alta idratazione all\u002785% e della lunga maturazione a freddo di 24 ore. Il blend di farina Tipo 0 con germe vitale e Tipo 2 macinata a pietra regala una complessitÃ  aromatica di rara profonditÃ : sentori cerealicoli integri, note lattiche e di fermentazione controllata si intrecciano in un bouquet rustico ed elegante al tempo stesso. L\u0027equilibrio tra condimento e impasto Ã¨ strutturalmente solido, con una base capace di sostenere farciture generose senza cedere, mentre la sapiditÃ  â€” calibrata al 2,5% di sale â€” sostiene l\u0027umami senza mai sopraffare.",
+                           "summary":  "Una teglia romana di grande personalità, che si distingue per la sua base croccante e dorata â€” quasi friabile al morso â€” contrapposta a un cuore di mollica alveolata, setosa e scioglievole, frutto dell\u0027alta idratazione all\u002785% e della lunga maturazione a freddo di 24 ore. Il blend di farina Tipo 0 con germe vitale e Tipo 2 macinata a pietra regala una complessità aromatica di rara profondità: sentori cerealicoli integri, note lattiche e di fermentazione controllata si intrecciano in un bouquet rustico ed elegante al tempo stesso. L\u0027equilibrio tra condimento e impasto è strutturalmente solido, con una base capace di sostenere farciture generose senza cedere, mentre la sapidità â€” calibrata al 2,5% di sale â€” sostiene l\u0027umami senza mai sopraffare.",
                            "axes":  [
                                         {
                                             "label":  "Croccantezza Esterna",
@@ -233,7 +233,7 @@
                                             "value":  8
                                         },
                                         {
-                                            "label":  "SapiditÃ  / Umami",
+                                            "label":  "Sapidità / Umami",
                                             "value":  7
                                         },
                                         {
@@ -241,7 +241,7 @@
                                             "value":  8
                                         },
                                         {
-                                            "label":  "ComplessitÃ  Aromatica",
+                                            "label":  "Complessità Aromatica",
                                             "value":  9
                                         }
                                     ]

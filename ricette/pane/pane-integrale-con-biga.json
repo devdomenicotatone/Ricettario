@@ -6,7 +6,7 @@
     "subtitle":  "Impasto indiretto ad alta idratazione con farina integrale e malto",
     "category":  "Pane",
     "hydration":  75,
-    "targetTemp":  "25-26Â°C",
+    "targetTemp":  "25-26°C",
     "fermentation":  "~20-21h totali",
     "totalFlour":  1000,
     "ingredients":  [
@@ -14,7 +14,7 @@
                     ],
     "ingredientGroups":  [
                              {
-                                 "group":  "Per la Biga (16-18 ore a 18Â°C)",
+                                 "group":  "Per la Biga (16-18 ore a 18°C)",
                                  "items":  [
                                                {
                                                    "name":  "Farina Tipo 0 o Manitoba",
@@ -24,7 +24,7 @@
                                                },
                                                {
                                                    "name":  "Acqua",
-                                                   "note":  "(18-20Â°C)",
+                                                   "note":  "(18-20°C)",
                                                    "grams":  135,
                                                    "tokenId":  "acqua_biga"
                                                },
@@ -94,14 +94,14 @@
                        }
                    ],
     "baking":  {
-                   "temperature":  "250Â°C",
+                   "temperature":  "250°C",
                    "time":  "45-50 minuti",
                    "tips":  [
-                                "Preriscaldare il forno statico a 250Â°C con pentolino d\u0027acqua sul fondo o pietra refrattaria per almeno 45 min.",
-                                "Ribaltare il pane dal cestino alla pala/teglia, praticare il taglio (scoring) con lametta a 45Â° lungo tutta la superficie.",
-                                "Infornare a 250Â°C con vapore per i primi 15 minuti.",
-                                "Rimuovere il vapore (togliere il pentolino), abbassare a 200Â°C e cuocere per altri 25 minuti.",
-                                "Ultimi 10 minuti: sportello a fessura (forno a spiffero) per far uscire l\u0027umiditÃ  e garantire una crosta croccante."
+                                "Preriscaldare il forno statico a 250°C con pentolino d\u0027acqua sul fondo o pietra refrattaria per almeno 45 min.",
+                                "Ribaltare il pane dal cestino alla pala/teglia, praticare il taglio (scoring) con lametta a 45° lungo tutta la superficie.",
+                                "Infornare a 250°C con vapore per i primi 15 minuti.",
+                                "Rimuovere il vapore (togliere il pentolino), abbassare a 200°C e cuocere per altri 25 minuti.",
+                                "Ultimi 10 minuti: sportello a fessura (forno a spiffero) per far uscire l\u0027umidità e garantire una crosta croccante."
                             ]
                },
     "glossary":  [
@@ -119,7 +119,7 @@
                      },
                      {
                          "term":  "Appretto",
-                         "definition":  "Seconda fase di lievitazione, avviene dopo che l\u0027impasto Ã¨ stato diviso e formato. Precede la cottura."
+                         "definition":  "Seconda fase di lievitazione, avviene dopo che l\u0027impasto è stato diviso e formato. Precede la cottura."
                      },
                      {
                          "term":  "Coil Folds",
@@ -130,16 +130,16 @@
                          "definition":  "Tecnica di impastamento manuale francese (sbattere e ripiegare) che sfrutta la forza d\u0027urto per incordare impasti idratati senza l\u0027uso di impastatrici."
                      }
                  ],
-    "alert":  "âš ï¸ CRITICITÃ€ DELLA BIGA: Non impastare MAI la biga fino a renderla liscia. Deve essere slegata e grezza. Se si forma glutine durante la preparazione della biga, fermenterÃ  in modo scorretto sprigionando aciditÃ  eccessiva. Inoltre, rispettare rigorosamente la temperatura di 18Â°C per le 16 ore.",
+    "alert":  "âš ï¸ CRITICITÃ€ DELLA BIGA: Non impastare MAI la biga fino a renderla liscia. Deve essere slegata e grezza. Se si forma glutine durante la preparazione della biga, fermenterà in modo scorretto sprigionando acidità eccessiva. Inoltre, rispettare rigorosamente la temperatura di 18°C per le 16 ore.",
     "proTips":  [
-                    "La farina integrale assorbe molta acqua ma la cede piÃ¹ facilmente durante l\u0027impastamento rispetto alla farina bianca. Il bassinage deve essere molto lento per non \u0027lavare\u0027 la maglia glutinica.",
-                    "Il malto (o miele) Ã¨ fondamentale negli impasti indiretti (con biga) in quanto la fermentazione lunga consuma molti zuccheri; il malto garantisce nutrimento residuo per una bella reazione di Maillard (crosta dorata in cottura).",
-                    "Per capire quando il pane Ã¨ cotto, bussare con le nocche sul fondo della pagnotta: deve suonare vuoto come un tamburo. La temperatura al cuore deve essere attorno ai 96-98Â°C."
+                    "La farina integrale assorbe molta acqua ma la cede più facilmente durante l\u0027impastamento rispetto alla farina bianca. Il bassinage deve essere molto lento per non \u0027lavare\u0027 la maglia glutinica.",
+                    "Il malto (o miele) è fondamentale negli impasti indiretti (con biga) in quanto la fermentazione lunga consuma molti zuccheri; il malto garantisce nutrimento residuo per una bella reazione di Maillard (crosta dorata in cottura).",
+                    "Per capire quando il pane è cotto, bussare con le nocche sul fondo della pagnotta: deve suonare vuoto come un tamburo. La temperatura al cuore deve essere attorno ai 96-98°C."
                 ],
     "storage":  [
                     "Per preservare la fragranza e la croccantezza della crosta per i primi 3-4 giorni, conservare il pane a temperatura ambiente, avvolto in un sacchetto di carta o in un panno di cotone. Evitare contenitori di plastica e il frigorifero, che accelerano il processo di raffermamento e la perdita di croccantezza.",
-                    "Per una conservazione a lungo termine (fino a 2-3 mesi), si consiglia di congelare il pane il giorno stesso della produzione, una volta completamente freddo. Affettarlo prima di congelarlo permette un utilizzo piÃ¹ pratico. Avvolgere le fette o il pane intero prima in pellicola alimentare e poi in un sacchetto gelo ermetico per evitare bruciature da freddo e disidratazione.",
-                    "Per rigenerare il pane e restituirgli una consistenza simile al \u0027come appena sfornato\u0027, riscaldare il forno a 180Â°C. Inumidire leggermente la superficie del pane con acqua e infornare per 5-10 minuti. Le fette congelate possono essere rigenerate direttamente in tostapane o in una padella calda."
+                    "Per una conservazione a lungo termine (fino a 2-3 mesi), si consiglia di congelare il pane il giorno stesso della produzione, una volta completamente freddo. Affettarlo prima di congelarlo permette un utilizzo più pratico. Avvolgere le fette o il pane intero prima in pellicola alimentare e poi in un sacchetto gelo ermetico per evitare bruciature da freddo e disidratazione.",
+                    "Per rigenerare il pane e restituirgli una consistenza simile al \u0027come appena sfornato\u0027, riscaldare il forno a 180°C. Inumidire leggermente la superficie del pane con acqua e infornare per 5-10 minuti. Le fette congelate possono essere rigenerate direttamente in tostapane o in una padella calda."
                 ],
     "imageKeywords":  [
                           "whole wheat artisan bread",
@@ -166,19 +166,19 @@
     "steps":  [
                   {
                       "title":  "Preparazione della Biga (Giorno 1)",
-                      "text":  "Sciogliere grossolanamente {lievito_biga:3}g di lievito fresco in {acqua_biga:135}g di acqua a temperatura ambiente (18-20Â°C). Aggiungere {farina_biga:300}g di farina forte e impastare a mano per massimo 1-2 minuti. L\u0027impasto DEVE rimanere grezzo, stracciato e non omogeneo (non formare la maglia glutinica). Riporre in un contenitore alto e stretto, coprire con pellicola forata e lasciare maturare a 18Â°C per 16-18 ore."
+                      "text":  "Sciogliere grossolanamente {lievito_biga:3}g di lievito fresco in {acqua_biga:135}g di acqua a temperatura ambiente (18-20°C). Aggiungere {farina_biga:300}g di farina forte e impastare a mano per massimo 1-2 minuti. L\u0027impasto DEVE rimanere grezzo, stracciato e non omogeneo (non formare la maglia glutinica). Riporre in un contenitore alto e stretto, coprire con pellicola forata e lasciare maturare a 18°C per 16-18 ore."
                   },
                   {
                       "title":  "Fase Iniziale e Autolisi Breve (Giorno 2)",
-                      "text":  "Nella vasca della spirale inserire la biga matura (deve presentare un odore pungente ma gradevole, simile allo yogurt), {farina_impasto:700}g di farina integrale, {malto_impasto:5}g di malto d\u0027orzo, {lievito_impasto:2}g di lievito fresco sbriciolato e {acqua_impasto:515}g di acqua fredda. Avviare in prima velocitÃ  per 5-6 minuti finchÃ© la farina non Ã¨ completamente idratata. Lasciare riposare in vasca (fermentolisi) per 20 minuti."
+                      "text":  "Nella vasca della spirale inserire la biga matura (deve presentare un odore pungente ma gradevole, simile allo yogurt), {farina_impasto:700}g di farina integrale, {malto_impasto:5}g di malto d\u0027orzo, {lievito_impasto:2}g di lievito fresco sbriciolato e {acqua_impasto:515}g di acqua fredda. Avviare in prima velocità per 5-6 minuti finché la farina non è completamente idratata. Lasciare riposare in vasca (fermentolisi) per 20 minuti."
                   },
                   {
                       "title":  "Incordatura e Bassinage",
-                      "text":  "Azionare la spirale in seconda velocitÃ . Quando l\u0027impasto inizia a prendere corda e staccarsi dalle pareti, inserire {sale_impasto:20}g di sale. Non appena il sale Ã¨ assorbito, iniziare ad aggiungere i restanti {acqua_bassinage:100}g di acqua a filo (tecnica del bassinage). Aggiungere l\u0027acqua in 3-4 riprese, aspettando che la dose precedente sia completamente assorbita prima di inserire la successiva. Tempo totale di impasto: circa 12-15 minuti. Temperatura target al termine: {temp_impasto:26!}Â°C."
+                      "text":  "Azionare la spirale in seconda velocità. Quando l\u0027impasto inizia a prendere corda e staccarsi dalle pareti, inserire {sale_impasto:20}g di sale. Non appena il sale è assorbito, iniziare ad aggiungere i restanti {acqua_bassinage:100}g di acqua a filo (tecnica del bassinage). Aggiungere l\u0027acqua in 3-4 riprese, aspettando che la dose precedente sia completamente assorbita prima di inserire la successiva. Tempo totale di impasto: circa 12-15 minuti. Temperatura target al termine: {temp_impasto:26!}°C."
                   },
                   {
                       "title":  "Puntata e Pieghe (Coil Folds)",
-                      "text":  "Trasferire l\u0027impasto in un contenitore leggermente oliato con bordi dritti. Effettuare la puntata (prima lievitazione in massa) a temperatura ambiente (24-25Â°C) per circa 2-2.5 ore. Durante questo periodo, effettuare 2 serie di pieghe di rinforzo (coil folds) a distanza di 45 minuti l\u0027una dall\u0027altra, per dare struttura all\u0027impasto integrale."
+                      "text":  "Trasferire l\u0027impasto in un contenitore leggermente oliato con bordi dritti. Effettuare la puntata (prima lievitazione in massa) a temperatura ambiente (24-25°C) per circa 2-2.5 ore. Durante questo periodo, effettuare 2 serie di pieghe di rinforzo (coil folds) a distanza di 45 minuti l\u0027una dall\u0027altra, per dare struttura all\u0027impasto integrale."
                   },
                   {
                       "title":  "Staglio e Formatura",
@@ -186,11 +186,11 @@
                   },
                   {
                       "title":  "Appretto",
-                      "text":  "Trasferire le pagnotte in cestini di lievitazione (banneton) ben infarinati con farina di riso o semola, con la chiusura (seam) rivolta verso l\u0027alto. Coprire con un panno o inserire in buste di plastica. Lasciare lievitare a 24-25Â°C per circa 1.5 - 2 ore, finchÃ© premendo leggermente con un dito la pasta torna indietro lentamente (test del dito)."
+                      "text":  "Trasferire le pagnotte in cestini di lievitazione (banneton) ben infarinati con farina di riso o semola, con la chiusura (seam) rivolta verso l\u0027alto. Coprire con un panno o inserire in buste di plastica. Lasciare lievitare a 24-25°C per circa 1.5 - 2 ore, finché premendo leggermente con un dito la pasta torna indietro lentamente (test del dito)."
                   }
               ],
     "sensoryProfile":  {
-                           "summary":  "Un pane integrale di grande carattere e profonditÃ : la lunga maturazione della biga a 18Â°C sviluppa note lattiche e acetiche eleganti, che si fondono con la rustica complessitÃ  della farina integrale. Al naso emerge un bouquet cerealicolo ricco e avvolgente, con sentori di crusca tostata e una lieve nota di yogurt; in bocca la crosta croccante e caramellata dialoga con una mollica compatta ma morbida, dall\u0027alveolatura irregolare e ben sviluppata per la sua idratazione al 75%. La sapiditÃ  Ã¨ calibrata e sostenuta, capace di esaltare le note terrose del grano integrale senza mai sovrastarle.",
+                           "summary":  "Un pane integrale di grande carattere e profondità: la lunga maturazione della biga a 18°C sviluppa note lattiche e acetiche eleganti, che si fondono con la rustica complessità della farina integrale. Al naso emerge un bouquet cerealicolo ricco e avvolgente, con sentori di crusca tostata e una lieve nota di yogurt; in bocca la crosta croccante e caramellata dialoga con una mollica compatta ma morbida, dall\u0027alveolatura irregolare e ben sviluppata per la sua idratazione al 75%. La sapidità è calibrata e sostenuta, capace di esaltare le note terrose del grano integrale senza mai sovrastarle.",
                            "axes":  [
                                         {
                                             "label":  "Croccantezza Crosta",
@@ -201,11 +201,11 @@
                                             "value":  6
                                         },
                                         {
-                                            "label":  "ComplessitÃ  Fermentativa",
+                                            "label":  "Complessità Fermentativa",
                                             "value":  8
                                         },
                                         {
-                                            "label":  "SapiditÃ ",
+                                            "label":  "Sapidità",
                                             "value":  6
                                         },
                                         {

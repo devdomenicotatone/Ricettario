@@ -6,7 +6,7 @@
     "subtitle":  "Impasto arricchito a incordatura progressiva â€” 18 pezzi da 50 g",
     "category":  "Lievitati",
     "hydration":  54,
-    "targetTemp":  "24â€“26Â°C",
+    "targetTemp":  "24â€“26°C",
     "fermentation":  "3-5h T.A. / 12-16h frigo",
     "totalFlour":  500,
     "ingredients":  [
@@ -71,7 +71,7 @@
                                                },
                                                {
                                                    "name":  "Latte Intero Fresco",
-                                                   "note":  "(a temperatura ambiente, 20â€“22Â°C)",
+                                                   "note":  "(a temperatura ambiente, 20â€“22°C)",
                                                    "grams":  90,
                                                    "tokenId":  "latte_impasto"
                                                },
@@ -95,7 +95,7 @@
                                                },
                                                {
                                                    "name":  "Burro",
-                                                   "note":  "(82% m.g., morbido ma ancora plastico â€” 20â€“22Â°C, non sciolto)",
+                                                   "note":  "(82% m.g., morbido ma ancora plastico â€” 20â€“22°C, non sciolto)",
                                                    "grams":  90,
                                                    "tokenId":  "burro_impasto"
                                                }
@@ -112,7 +112,7 @@
                                                },
                                                {
                                                    "name":  "Panna Fresca Liquida",
-                                                   "note":  "(35% m.g., oppure latte intero per doratura piÃ¹ chiara)",
+                                                   "note":  "(35% m.g., oppure latte intero per doratura più chiara)",
                                                    "grams":  20,
                                                    "tokenId":  "panna_doratura"
                                                }
@@ -125,39 +125,39 @@
     "steps":  [
                   {
                       "title":  "Marinatura aromi (2â€“4h prima)",
-                      "text":  "In una ciotolina, unire {miele_marinatura:15}g di miele d\u0027acacia, {rum_marinatura:18}g di rum, {scorza_limone:5}g di scorza di limone grattugiata, {scorza_arancia:5}g di scorza d\u0027arancia grattugiata e {vaniglia_marinatura:5}g di estratto di vaniglia (o i semi di una bacca). Mescolare bene con un cucchiaino fino a ottenere un composto omogeneo e profumato. Coprire con pellicola e lasciare marinare a temperatura ambiente per almeno 2h, idealmente 4h. Questo passaggio Ã¨ fondamentale: gli aromi si amalgamano e si potenziano a vicenda, trasferendo all\u0027impasto una fragranza molto piÃ¹ complessa rispetto all\u0027aggiunta diretta."
+                      "text":  "In una ciotolina, unire {miele_marinatura:15}g di miele d\u0027acacia, {rum_marinatura:18}g di rum, {scorza_limone:5}g di scorza di limone grattugiata, {scorza_arancia:5}g di scorza d\u0027arancia grattugiata e {vaniglia_marinatura:5}g di estratto di vaniglia (o i semi di una bacca). Mescolare bene con un cucchiaino fino a ottenere un composto omogeneo e profumato. Coprire con pellicola e lasciare marinare a temperatura ambiente per almeno 2h, idealmente 4h. Questo passaggio è fondamentale: gli aromi si amalgamano e si potenziano a vicenda, trasferendo all\u0027impasto una fragranza molto più complessa rispetto all\u0027aggiunta diretta."
                   },
                   {
                       "title":  "Attivazione lievito e primo assemblaggio",
-                      "text":  "Nella ciotola della planetaria munita di gancio, versare le due farine setacciate insieme: {farina_0_impasto:300}g di Farina Tipo 0 e {farina_manitoba_impasto:200}g di Manitoba. Sciogliere {lievito_fresco:10}g di lievito di birra fresco direttamente in {latte_impasto:90}g di latte intero a temperatura ambiente (20â€“22Â°C), mescolando con una forchetta fino a completo scioglimento. Aggiungere {zucchero_impasto:80}g di zucchero semolato alle farine e mescolare brevemente. Versare il latte con lievito a filo nella ciotola con le farine, con la planetaria a velocitÃ  1 (minima). Lasciare assorbire completamente prima di procedere: circa 2â€“3 minuti."
+                      "text":  "Nella ciotola della planetaria munita di gancio, versare le due farine setacciate insieme: {farina_0_impasto:300}g di Farina Tipo 0 e {farina_manitoba_impasto:200}g di Manitoba. Sciogliere {lievito_fresco:10}g di lievito di birra fresco direttamente in {latte_impasto:90}g di latte intero a temperatura ambiente (20â€“22°C), mescolando con una forchetta fino a completo scioglimento. Aggiungere {zucchero_impasto:80}g di zucchero semolato alle farine e mescolare brevemente. Versare il latte con lievito a filo nella ciotola con le farine, con la planetaria a velocità 1 (minima). Lasciare assorbire completamente prima di procedere: circa 2â€“3 minuti."
                   },
                   {
                       "title":  "Incorporazione uova (a filo, progressiva)",
-                      "text":  "Con la planetaria in funzione a velocitÃ  1â€“2, aggiungere {uova_impasto:180}g di uova (circa 3 uova grandi) una alla volta, versandole sgusciate in una tazzina e aggiungendole all\u0027impasto solo quando la precedente Ã¨ stata completamente assorbita. Attendere circa 2â€“3 minuti tra un\u0027aggiunta e l\u0027altra. Dopo l\u0027ultima uova, unire immediatamente il mix di aromi marinati (miele, rum, scorze, vaniglia). Lasciare lavorare la planetaria a velocitÃ  2 per altri 5 minuti: l\u0027impasto apparirÃ  disomogeneo, sgretolato e parzialmente appiccicoso â€” Ã¨ normale in questa fase."
+                      "text":  "Con la planetaria in funzione a velocità 1â€“2, aggiungere {uova_impasto:180}g di uova (circa 3 uova grandi) una alla volta, versandole sgusciate in una tazzina e aggiungendole all\u0027impasto solo quando la precedente è stata completamente assorbita. Attendere circa 2â€“3 minuti tra un\u0027aggiunta e l\u0027altra. Dopo l\u0027ultima uova, unire immediatamente il mix di aromi marinati (miele, rum, scorze, vaniglia). Lasciare lavorare la planetaria a velocità 2 per altri 5 minuti: l\u0027impasto apparirà disomogeneo, sgretolato e parzialmente appiccicoso â€” è normale in questa fase."
                   },
                   {
                       "title":  "Incordatura",
-                      "text":  "Portare la velocitÃ  della planetaria a 3â€“4 e lavorare l\u0027impasto per 10â€“15 minuti, fino a quando si stacca nettamente dalle pareti della ciotola e si incorda saldamente al gancio. L\u0027impasto dovrÃ  risultare liscio, lucido e ben strutturato: se sollevando il gancio cade a cascata e poi si ricompone elasticamente, l\u0027incordatura Ã¨ corretta. Solo a questo punto aggiungere {sale_impasto:10}g di sale fino, aumentare momentaneamente la velocitÃ  a 4â€“5 per 2 minuti per incorporarlo completamente."
+                      "text":  "Portare la velocità della planetaria a 3â€“4 e lavorare l\u0027impasto per 10â€“15 minuti, fino a quando si stacca nettamente dalle pareti della ciotola e si incorda saldamente al gancio. L\u0027impasto dovrà risultare liscio, lucido e ben strutturato: se sollevando il gancio cade a cascata e poi si ricompone elasticamente, l\u0027incordatura è corretta. Solo a questo punto aggiungere {sale_impasto:10}g di sale fino, aumentare momentaneamente la velocità a 4â€“5 per 2 minuti per incorporarlo completamente."
                   },
                   {
                       "title":  "Inserimento burro a freddo (en beurrage progressivo)",
-                      "text":  "Verificare che il burro sia morbido e plastico ma NON fuso (20â€“22Â°C): deve cedere alla pressione del dito senza rompersi in pezzi. Abbassare la velocitÃ  a 2 e aggiungere {burro_impasto:90}g di burro tagliato a cubetti di circa 2â€“3 cm, pochissimi cubetti alla volta (3â€“4 pezzi per volta). Attendere il completo assorbimento di ogni aggiunta prima di procedere con la successiva: l\u0027impasto potrebbe sembrare che si \u0027smonti\u0027 temporaneamente â€” Ã¨ fisiologico. Una volta inserito tutto il burro, portare a velocitÃ  4â€“5 e lavorare per ulteriori 8â€“10 minuti fino a ottenere un impasto molto liscio, unto, lucido e che si stacca completamente dalle pareti. Temperatura impasto finale target: 24â€“26Â°C."
+                      "text":  "Verificare che il burro sia morbido e plastico ma NON fuso (20â€“22°C): deve cedere alla pressione del dito senza rompersi in pezzi. Abbassare la velocità a 2 e aggiungere {burro_impasto:90}g di burro tagliato a cubetti di circa 2â€“3 cm, pochissimi cubetti alla volta (3â€“4 pezzi per volta). Attendere il completo assorbimento di ogni aggiunta prima di procedere con la successiva: l\u0027impasto potrebbe sembrare che si \u0027smonti\u0027 temporaneamente â€” è fisiologico. Una volta inserito tutto il burro, portare a velocità 4â€“5 e lavorare per ulteriori 8â€“10 minuti fino a ottenere un impasto molto liscio, unto, lucido e che si stacca completamente dalle pareti. Temperatura impasto finale target: 24â€“26°C."
                   },
                   {
                       "title":  "Pirlatura e puntata",
-                      "text":  "Rovesciare l\u0027impasto sul piano di lavoro (non infarinare, al massimo usare un filo d\u0027olio). L\u0027impasto potrebbe risultare appiccicoso: non aggiungere farina. Eseguire 2â€“3 pieghe tipo slap \u0026 fold delicato: sollevare un lembo esterno dell\u0027impasto, portarlo verso il centro, ruotare di 90Â° e ripetere. Aiutandosi con un tarocco, pirlare l\u0027impasto in modo da ottenere una sfera liscia e tesa (boule). Trasferire in una ciotola leggermente oleata, coprire con pellicola a contatto e lasciare in puntata: OPZIONE A (T.A.): 2â€“3h a 24â€“26Â°C fino al raddoppio. OPZIONE B (frigo): 30 minuti a T.A., poi in frigo a 4â€“5Â°C per 12â€“16h per maggiore complessitÃ  aromatica e maneggiabilitÃ  dell\u0027impasto freddo."
+                      "text":  "Rovesciare l\u0027impasto sul piano di lavoro (non infarinare, al massimo usare un filo d\u0027olio). L\u0027impasto potrebbe risultare appiccicoso: non aggiungere farina. Eseguire 2â€“3 pieghe tipo slap \u0026 fold delicato: sollevare un lembo esterno dell\u0027impasto, portarlo verso il centro, ruotare di 90° e ripetere. Aiutandosi con un tarocco, pirlare l\u0027impasto in modo da ottenere una sfera liscia e tesa (boule). Trasferire in una ciotola leggermente oleata, coprire con pellicola a contatto e lasciare in puntata: OPZIONE A (T.A.): 2â€“3h a 24â€“26°C fino al raddoppio. OPZIONE B (frigo): 30 minuti a T.A., poi in frigo a 4â€“5°C per 12â€“16h per maggiore complessità aromatica e maneggiabilità dell\u0027impasto freddo."
                   },
                   {
                       "title":  "Staglio e formatura",
-                      "text":  "Rovesciare l\u0027impasto lievitato sul piano di lavoro leggermente infarinato e sgonfiarlo delicatamente con le mani. (Se si Ã¨ usata l\u0027opzione frigo, lasciare acclimatare 30â€“45 minuti prima di procedere.) Con il tarocco, ricavare 18 pezzi da circa {panetto_peso:50!}g ciascuno (peso pre-cottura). Per ogni pezzetto: appiattire leggermente con il palmo, portare i bordi verso il centro, capovolgere e pirlare sul piano con movimento circolare della mano a coppa, esercitando una leggera pressione verso il basso fino a ottenere sfere lisce e tese. Disporre sulla leccarda rivestita di carta forno, ben distanziate (almeno 5 cm): si espanderanno in cottura."
+                      "text":  "Rovesciare l\u0027impasto lievitato sul piano di lavoro leggermente infarinato e sgonfiarlo delicatamente con le mani. (Se si è usata l\u0027opzione frigo, lasciare acclimatare 30â€“45 minuti prima di procedere.) Con il tarocco, ricavare 18 pezzi da circa {panetto_peso:50!}g ciascuno (peso pre-cottura). Per ogni pezzetto: appiattire leggermente con il palmo, portare i bordi verso il centro, capovolgere e pirlare sul piano con movimento circolare della mano a coppa, esercitando una leggera pressione verso il basso fino a ottenere sfere lisce e tese. Disporre sulla leccarda rivestita di carta forno, ben distanziate (almeno 5 cm): si espanderanno in cottura."
                   },
                   {
                       "title":  "Appretto (seconda lievitazione)",
-                      "text":  "Coprire le brioche con pellicola leggermente oleata o con un telo umido senza che tocchi la superficie. Lasciare in appretto a 26â€“28Â°C per 60â€“90 minuti (se lievitazione a T.A.) oppure 90â€“120 minuti (se si Ã¨ usata la maturazione in frigo): le brioche devono raddoppiare di volume, apparire gonfie e traballanti al tocco leggero della teglia. Non forzare la lievitazione con fonti di calore dirette."
+                      "text":  "Coprire le brioche con pellicola leggermente oleata o con un telo umido senza che tocchi la superficie. Lasciare in appretto a 26â€“28°C per 60â€“90 minuti (se lievitazione a T.A.) oppure 90â€“120 minuti (se si è usata la maturazione in frigo): le brioche devono raddoppiare di volume, apparire gonfie e traballanti al tocco leggero della teglia. Non forzare la lievitazione con fonti di calore dirette."
                   },
                   {
                       "title":  "Doratura e cottura",
-                      "text":  "Preriscaldare il forno in modalitÃ  statica a 180Â°C per almeno 20 minuti. In una tazzina, sbattere {tuorlo_doratura:20}g di tuorlo con {panna_doratura:20}g di panna fresca fino a ottenere un\u0027emulsione omogenea. Spennellare delicatamente la superficie di ogni brioche con la doratura, cercando di non far colare il composto sui lati (impedirebbe la lievitazione laterale in forno). Infornare a 180Â°C in modalitÃ  statica, posizione centrale, per 18â€“20 minuti, fino a doratura uniforme e profonda (colore nocciola). Le brioche sono cotte quando il fondo risulta sodo e bussandolo si sente un suono \u0027vuoto\u0027. Sfornare e trasferire su griglia per il raffreddamento."
+                      "text":  "Preriscaldare il forno in modalità statica a 180°C per almeno 20 minuti. In una tazzina, sbattere {tuorlo_doratura:20}g di tuorlo con {panna_doratura:20}g di panna fresca fino a ottenere un\u0027emulsione omogenea. Spennellare delicatamente la superficie di ogni brioche con la doratura, cercando di non far colare il composto sui lati (impedirebbe la lievitazione laterale in forno). Infornare a 180°C in modalità statica, posizione centrale, per 18â€“20 minuti, fino a doratura uniforme e profonda (colore nocciola). Le brioche sono cotte quando il fondo risulta sodo e bussandolo si sente un suono \u0027vuoto\u0027. Sfornare e trasferire su griglia per il raffreddamento."
                   }
               ],
     "stepsCondiment":  [
@@ -181,13 +181,13 @@
                        }
                    ],
     "baking":  {
-                   "temperature":  "180Â°C",
+                   "temperature":  "180°C",
                    "time":  "18â€“20 minuti",
                    "tips":  [
                                 "Forno STATICO: non ventilato. Il ventilato asciuga la crosta troppo rapidamente impedendo l\u0027oven spring laterale",
                                 "Posizione: griglia CENTRALE del forno per cottura uniforme sopra e sotto",
-                                "Temperatura interna target: 88â€“92Â°C al cuore (termometro a sonda per risultato professionale)",
-                                "Se la superficie dora troppo velocemente (dopo 12 min giÃ  scura), coprire con un foglio di carta stagnola lasca",
+                                "Temperatura interna target: 88â€“92°C al cuore (termometro a sonda per risultato professionale)",
+                                "Se la superficie dora troppo velocemente (dopo 12 min già scura), coprire con un foglio di carta stagnola lasca",
                                 "Raffreddare su griglia: mai su piano freddo o in teglia, per evitare condensa sul fondo"
                             ]
                },
@@ -218,7 +218,7 @@
                      },
                      {
                          "term":  "Appretto",
-                         "definition":  "Seconda e ultima lievitazione dei pezzi giÃ  formati e disposti in teglia, prima della cottura. Determina il volume finale del prodotto."
+                         "definition":  "Seconda e ultima lievitazione dei pezzi già formati e disposti in teglia, prima della cottura. Determina il volume finale del prodotto."
                      },
                      {
                          "term":  "Tarocco",
@@ -226,7 +226,7 @@
                      },
                      {
                          "term":  "Maturazione in frigo",
-                         "definition":  "Riposo prolungato dell\u0027impasto a 4â€“5Â°C per 12â€“24h: rallenta la lievitazione e favorisce reazioni enzimatiche che sviluppano aromi complessi e migliorano la struttura."
+                         "definition":  "Riposo prolungato dell\u0027impasto a 4â€“5°C per 12â€“24h: rallenta la lievitazione e favorisce reazioni enzimatiche che sviluppano aromi complessi e migliorano la struttura."
                      },
                      {
                          "term":  "Doratura",
@@ -234,23 +234,23 @@
                      },
                      {
                          "term":  "Oven spring",
-                         "definition":  "Rapida espansione del lievitato nei primi minuti in forno, causata dall\u0027accelerazione delle fermentazioni per effetto del calore prima che il glutine si fissi. Cruciale per la sofficitÃ  finale."
+                         "definition":  "Rapida espansione del lievitato nei primi minuti in forno, causata dall\u0027accelerazione delle fermentazioni per effetto del calore prima che il glutine si fissi. Cruciale per la sofficità finale."
                      },
                      {
                          "term":  "Impasto arricchito",
-                         "definition":  "Impasto lievitato che contiene grassi (burro), zuccheri e uova in quantitÃ  significativa. Questi ingredienti rallentano la lievitazione e richiedono tecniche specifiche di inserimento progressivo."
+                         "definition":  "Impasto lievitato che contiene grassi (burro), zuccheri e uova in quantità significativa. Questi ingredienti rallentano la lievitazione e richiedono tecniche specifiche di inserimento progressivo."
                      }
                  ],
-    "alert":  "NON aggiungere il burro all\u0027inizio o troppo presto nell\u0027impasto, prima che la maglia glutinica sia completamente sviluppata (incordatura). I grassi rivestono le proteine della farina e impediscono la formazione del glutine: se si aggiunge il burro troppo presto, si otterrÃ  un impasto che non incorda mai, friabile e privo di struttura. Aspettare SEMPRE che l\u0027impasto sia liscio, elastico e ben incordato al gancio PRIMA di iniziare il beurrage progressivo.",
+    "alert":  "NON aggiungere il burro all\u0027inizio o troppo presto nell\u0027impasto, prima che la maglia glutinica sia completamente sviluppata (incordatura). I grassi rivestono le proteine della farina e impediscono la formazione del glutine: se si aggiunge il burro troppo presto, si otterrà un impasto che non incorda mai, friabile e privo di struttura. Aspettare SEMPRE che l\u0027impasto sia liscio, elastico e ben incordato al gancio PRIMA di iniziare il beurrage progressivo.",
     "proTips":  [
-                    "MARINATURA AROMI: preparare il mix di miele, rum, scorze e vaniglia il giorno prima e tenerlo in frigorifero: l\u0027infusione prolungata (12â€“24h) intensifica ulteriormente il profilo aromatico, rendendo le brioche notevolmente piÃ¹ profumate rispetto a una marinatura veloce di 2h.",
-                    "TEMPERATURA DEL BURRO â€” il dettaglio che fa la differenza: il burro deve essere a 20â€“22Â°C, plastico ma non fuso. Un trucco professionale: lavorarlo brevemente tra le mani fino a renderlo malleabile come pasta pongo prima di inserirlo a cubetti. Se il burro Ã¨ troppo freddo l\u0027impasto si smonterÃ ; se Ã¨ fuso, la brioche risulterÃ  unta e piatta.",
-                    "MATURAZIONE IN FRIGO per la massima sofficitÃ : dopo la puntata, coprire l\u0027impasto con pellicola e lasciarlo in frigo tutta la notte (12â€“16h a 4Â°C). Il mattino dopo l\u0027impasto freddo Ã¨ molto piÃ¹ maneggevole, si taglia e si pirlano le palline con precisione senza che si appiccichi, e il risultato finale Ã¨ una brioche con alveolatura piÃ¹ fine, sapore piÃ¹ ricco e durata maggiore (2â€“3 giorni soffice anzichÃ© 1)."
+                    "MARINATURA AROMI: preparare il mix di miele, rum, scorze e vaniglia il giorno prima e tenerlo in frigorifero: l\u0027infusione prolungata (12â€“24h) intensifica ulteriormente il profilo aromatico, rendendo le brioche notevolmente più profumate rispetto a una marinatura veloce di 2h.",
+                    "TEMPERATURA DEL BURRO â€” il dettaglio che fa la differenza: il burro deve essere a 20â€“22°C, plastico ma non fuso. Un trucco professionale: lavorarlo brevemente tra le mani fino a renderlo malleabile come pasta pongo prima di inserirlo a cubetti. Se il burro è troppo freddo l\u0027impasto si smonterà; se è fuso, la brioche risulterà unta e piatta.",
+                    "MATURAZIONE IN FRIGO per la massima sofficità: dopo la puntata, coprire l\u0027impasto con pellicola e lasciarlo in frigo tutta la notte (12â€“16h a 4°C). Il mattino dopo l\u0027impasto freddo è molto più maneggevole, si taglia e si pirlano le palline con precisione senza che si appiccichi, e il risultato finale è una brioche con alveolatura più fine, sapore più ricco e durata maggiore (2â€“3 giorni soffice anziché 1)."
                 ],
     "storage":  [
-                    "Per una conservazione a breve termine (2-3 giorni), riponete le brioche cotte e completamente raffreddate in un sacchetto di plastica per alimenti ben chiuso o in un contenitore ermetico a temperatura ambiente. Evitate il frigorifero che ne accelera il raffermamento. Per ripristinare la fragranza, riscaldatele in forno a 160Â°C per 5-7 minuti.",
-                    "Il congelamento Ã¨ la tecnica ideale per una conservazione prolungata (fino a 2 mesi). Una volta cotte e raffreddate, avvolgete singolarmente le brioche nella pellicola trasparente e poi inseritele in un sacchetto gelo. Scongelate a temperatura ambiente per circa un\u0027ora e rigenerate in forno a 160Â°C per 8-10 minuti per un risultato pari al prodotto appena sfornato.",
-                    "Per avere brioche fresche su richiesta, Ã¨ possibile congelare l\u0027impasto crudo dopo la prima lievitazione. Sgonfiate l\u0027impasto, porzionatelo nel formato desiderato, congelatelo rapidamente su un vassoio e poi trasferitelo in un sacchetto gelo (fino a 1 mese). Per l\u0027utilizzo, scongelate in frigorifero per una notte, fate acclimatare a temperatura ambiente, lasciate lievitare fino al raddoppio e procedete con la cottura come da ricetta."
+                    "Per una conservazione a breve termine (2-3 giorni), riponete le brioche cotte e completamente raffreddate in un sacchetto di plastica per alimenti ben chiuso o in un contenitore ermetico a temperatura ambiente. Evitate il frigorifero che ne accelera il raffermamento. Per ripristinare la fragranza, riscaldatele in forno a 160°C per 5-7 minuti.",
+                    "Il congelamento è la tecnica ideale per una conservazione prolungata (fino a 2 mesi). Una volta cotte e raffreddate, avvolgete singolarmente le brioche nella pellicola trasparente e poi inseritele in un sacchetto gelo. Scongelate a temperatura ambiente per circa un\u0027ora e rigenerate in forno a 160°C per 8-10 minuti per un risultato pari al prodotto appena sfornato.",
+                    "Per avere brioche fresche su richiesta, è possibile congelare l\u0027impasto crudo dopo la prima lievitazione. Sgonfiate l\u0027impasto, porzionatelo nel formato desiderato, congelatelo rapidamente su un vassoio e poi trasferitelo in un sacchetto gelo (fino a 1 mese). Per l\u0027utilizzo, scongelate in frigorifero per una notte, fate acclimatare a temperatura ambiente, lasciate lievitare fino al raddoppio e procedete con la cottura come da ricetta."
                 ],
     "imageKeywords":  [
                           "homemade brioche buns golden brown",
@@ -259,7 +259,7 @@
                           "brioche dolce colazione italiana",
                           "freshly baked sweet bread rolls",
                           "brioche bread closeup fluffy crumb",
-                          "italienisches Brioche GebÃ¤ck frisch gebacken"
+                          "italienisches Brioche Gebäck frisch gebacken"
                       ],
     "tags":  [
                  "brioche",
@@ -278,7 +278,7 @@
     "image":  "images/ricette/lievitati/pasta-brioche-classica.webp",
     "imageAttribution":  "ðŸ“· Foto: Suzy Hazelwood â€” Pexels License via Pexels",
     "sensoryProfile":  {
-                           "summary":  "Una brioche di scuola classica francese, in cui la ricchezza del burro e delle uova si intreccia con una marinatura aromatica elaborata â€” rum scuro, scorze agrumiate e vaniglia â€” che conferisce profonditÃ  olfattiva raramente riscontrabile nelle versioni domestiche. Al palato si rivela soffice e alveolata, con una scioglievolezza generosa sostenuta dalla buona percentuale di grassi (burro e tuorli), mentre la dolcezza rimane equilibrata e mai stucchevole grazie all\u0027azione bilanciante del sale e degli agrumi. La maturazione fredda facoltativa amplifica ulteriormente la complessitÃ  aromatica, avvicinando questo lievitato alle migliori brioche da laboratorio artigianale.",
+                           "summary":  "Una brioche di scuola classica francese, in cui la ricchezza del burro e delle uova si intreccia con una marinatura aromatica elaborata â€” rum scuro, scorze agrumiate e vaniglia â€” che conferisce profondità olfattiva raramente riscontrabile nelle versioni domestiche. Al palato si rivela soffice e alveolata, con una scioglievolezza generosa sostenuta dalla buona percentuale di grassi (burro e tuorli), mentre la dolcezza rimane equilibrata e mai stucchevole grazie all\u0027azione bilanciante del sale e degli agrumi. La maturazione fredda facoltativa amplifica ulteriormente la complessità aromatica, avvicinando questo lievitato alle migliori brioche da laboratorio artigianale.",
                            "axes":  [
                                         {
                                             "label":  "Sofficezza / Alveolatura",
@@ -297,7 +297,7 @@
                                             "value":  6
                                         },
                                         {
-                                            "label":  "ComplessitÃ  Aromatica",
+                                            "label":  "Complessità Aromatica",
                                             "value":  9
                                         }
                                     ]

@@ -6,7 +6,7 @@
   "subtitle": "Metodo indiretto con poolish al 100% di idratazione",
   "category": "Pane",
   "hydration": 70,
-  "targetTemp": "25-26Â°C",
+  "targetTemp": "25-26°C",
   "fermentation": "~16-17h totali",
   "totalFlour": 500,
   "ingredients": [],
@@ -22,7 +22,7 @@
         },
         {
           "name": "Acqua",
-          "note": "(20Â°C)",
+          "note": "(20°C)",
           "grams": 200,
           "tokenId": "acqua_poolish"
         },
@@ -45,7 +45,7 @@
         },
         {
           "name": "Acqua",
-          "note": "(16-18Â°C per spirale, 20Â°C a mano)",
+          "note": "(16-18°C per spirale, 20°C a mano)",
           "grams": 120,
           "tokenId": "acqua_impasto"
         },
@@ -85,28 +85,28 @@
     }
   ],
   "baking": {
-    "temperature": "250Â°C",
+    "temperature": "250°C",
     "time": "40-45 minuti",
     "tips": [
-      "Preriscaldare il forno con pietra refrattaria (o pentola in ghisa) per almeno 45 minuti a 250Â°C.",
+      "Preriscaldare il forno con pietra refrattaria (o pentola in ghisa) per almeno 45 minuti a 250°C.",
       "Praticare un taglio profondo longitudinale sulla pagnotta prima di infornare.",
-      "Cuocere con vapore (pentolino d'acqua o coperchio in ghisa) per i primi 15 minuti a 250Â°C.",
-      "Togliere il vapore, abbassare a 220Â°C per 15 minuti.",
-      "Ultimi 10-15 minuti a 200Â°C con lo sportello socchiuso (a fessura) per far asciugare la mollica."
+      "Cuocere con vapore (pentolino d'acqua o coperchio in ghisa) per i primi 15 minuti a 250°C.",
+      "Togliere il vapore, abbassare a 220°C per 15 minuti.",
+      "Ultimi 10-15 minuti a 200°C con lo sportello socchiuso (a fessura) per far asciugare la mollica."
     ]
   },
   "glossary": [
     {
       "term": "Poolish",
-      "definition": "Prefermento liquido a base di acqua e farina in pari peso (100% idratazione) e pochissimo lievito. Dona al pane estensibilitÃ , croccantezza e aromi lattici/dolciastri."
+      "definition": "Prefermento liquido a base di acqua e farina in pari peso (100% idratazione) e pochissimo lievito. Dona al pane estensibilità, croccantezza e aromi lattici/dolciastri."
     },
     {
       "term": "Bassinage",
-      "definition": "Tecnica che consiste nell'aggiungere una parte dell'acqua (solitamente il 10-20%) solo dopo che il glutine si Ã¨ completamente formato, per non destrutturarlo."
+      "definition": "Tecnica che consiste nell'aggiungere una parte dell'acqua (solitamente il 10-20%) solo dopo che il glutine si è completamente formato, per non destrutturarlo."
     },
     {
       "term": "Incordatura",
-      "definition": "Il momento in cui la maglia glutinica Ã¨ completamente formata: l'impasto diventa liscio, elastico e si stacca dalle pareti della vasca."
+      "definition": "Il momento in cui la maglia glutinica è completamente formata: l'impasto diventa liscio, elastico e si stacca dalle pareti della vasca."
     },
     {
       "term": "Slap & Fold",
@@ -125,16 +125,16 @@
       "definition": "La seconda e ultima fase di lievitazione, che avviene dopo aver dato la forma al panetto, fino al momento dell'infornata."
     }
   ],
-  "alert": "Non aggiungere mai le noci all'inizio dell'impastamento o a velocitÃ  alte: i gusci appuntiti trancerebbero la maglia glutinica faticosamente creata, facendo collassare l'impasto e impedendo al pane di svilupparsi in altezza.",
+  "alert": "Non aggiungere mai le noci all'inizio dell'impastamento o a velocità alte: i gusci appuntiti trancerebbero la maglia glutinica faticosamente creata, facendo collassare l'impasto e impedendo al pane di svilupparsi in altezza.",
   "proTips": [
-    "Tostatura obbligatoria: Tosta le noci in forno a 160Â°C per 10 minuti e lasciale raffreddare prima di usarle. Questo passaggio evita che i tannini della pellicina rilascino un colore violaceo-grigiastro alla mollica e un retrogusto amaro.",
-    "Bagnare le noci: Se non vuoi tostarle, mettile a bagno in acqua tiepida per 20 minuti, poi scolale bene. Questo impedirÃ  alle noci secche di assorbire l'acqua destinata all'impasto.",
-    "Per capire quando il poolish Ã¨ maturo al punto giusto, osserva il centro: quando inizia a formarsi una lievissima fossetta (leggero collasso), Ã¨ al picco della sua forza e va usato immediatamente."
+    "Tostatura obbligatoria: Tosta le noci in forno a 160°C per 10 minuti e lasciale raffreddare prima di usarle. Questo passaggio evita che i tannini della pellicina rilascino un colore violaceo-grigiastro alla mollica e un retrogusto amaro.",
+    "Bagnare le noci: Se non vuoi tostarle, mettile a bagno in acqua tiepida per 20 minuti, poi scolale bene. Questo impedirà alle noci secche di assorbire l'acqua destinata all'impasto.",
+    "Per capire quando il poolish è maturo al punto giusto, osserva il centro: quando inizia a formarsi una lievissima fossetta (leggero collasso), è al picco della sua forza e va usato immediatamente."
   ],
   "storage": [
     "Per preservare la fragranza della crosta e la morbidezza della mollica, conservare il pane a temperatura ambiente per 2-3 giorni, avvolto in un sacchetto di carta per alimenti o in un panno di cotone pulito. Evitare la plastica, che ammorbidisce la crosta, e il frigorifero, che accelera il processo di raffermamento (retrogradazione degli amidi).",
-    "Per una conservazione a lungo termine (fino a 2 mesi), si consiglia di congelare il pane giÃ  affettato. Avvolgere le fette in pellicola alimentare a stretto contatto e poi inserirle in un sacchetto gelo per alimenti. Questa doppia barriera protegge dall'ustione da freddo e previene l'ossidazione dei grassi contenuti nelle noci.",
-    "Per rigenerare il pane e restituirgli la croccantezza originaria, inumidire leggermente la superficie con poca acqua e scaldarlo in forno statico preriscaldato a 180Â°C per 5-7 minuti. Le singole fette congelate possono essere rigenerate direttamente in tostapane o in una padella calda senza aggiunta di grassi."
+    "Per una conservazione a lungo termine (fino a 2 mesi), si consiglia di congelare il pane già affettato. Avvolgere le fette in pellicola alimentare a stretto contatto e poi inserirle in un sacchetto gelo per alimenti. Questa doppia barriera protegge dall'ustione da freddo e previene l'ossidazione dei grassi contenuti nelle noci.",
+    "Per rigenerare il pane e restituirgli la croccantezza originaria, inumidire leggermente la superficie con poca acqua e scaldarlo in forno statico preriscaldato a 180°C per 5-7 minuti. Le singole fette congelate possono essere rigenerate direttamente in tostapane o in una padella calda senza aggiunta di grassi."
   ],
   "imageKeywords": [
     "walnut bread loaf",
@@ -158,23 +158,23 @@
   "steps": [
     {
       "title": "Preparazione del Poolish",
-      "text": "In un contenitore alto e stretto, sciogliere {lievito_poolish:0.5}g di lievito in {acqua_poolish:200}g di acqua a temperatura ambiente. Aggiungere {farina_poolish:200}g di farina Manitoba e mescolare con una forchetta fino a ottenere una pastella liscia e senza grumi. Coprire con pellicola (lasciando un piccolo sfiato) e far maturare a {temp_ambiente:20!}Â°C per {tempo_poolish:12!} - 14 ore. Il poolish sarÃ  pronto quando sarÃ  raddoppiato, presenterÃ  una superficie ricca di bolle e mostrerÃ  un leggero cedimento al centro."
+      "text": "In un contenitore alto e stretto, sciogliere {lievito_poolish:0.5}g di lievito in {acqua_poolish:200}g di acqua a temperatura ambiente. Aggiungere {farina_poolish:200}g di farina Manitoba e mescolare con una forchetta fino a ottenere una pastella liscia e senza grumi. Coprire con pellicola (lasciando un piccolo sfiato) e far maturare a {temp_ambiente:20!}°C per {tempo_poolish:12!} - 14 ore. Il poolish sarà pronto quando sarà raddoppiato, presenterà una superficie ricca di bolle e mostrerà un leggero cedimento al centro."
     },
     {
       "title": "Avvio dell'Impasto",
-      "text": "Versare tutto il poolish maturo nella vasca dell'impastatrice. Aggiungere {farina_impasto:300}g di farina Tipo 0 e {acqua_impasto:120}g di acqua. Avviare la macchina in prima velocitÃ  (V1) per circa {tempo_mix_1:5!} minuti, fino a formare la maglia glutinica e pulire le pareti della vasca."
+      "text": "Versare tutto il poolish maturo nella vasca dell'impastatrice. Aggiungere {farina_impasto:300}g di farina Tipo 0 e {acqua_impasto:120}g di acqua. Avviare la macchina in prima velocità (V1) per circa {tempo_mix_1:5!} minuti, fino a formare la maglia glutinica e pulire le pareti della vasca."
     },
     {
       "title": "Incordatura e Bassinage",
-      "text": "Passare in seconda velocitÃ  (V2). Quando l'impasto Ã¨ tenace, inserire {sale_impasto:12}g di sale. Una volta assorbito il sale, iniziare il bassinage versando {acqua_bassinage:30}g di acqua a filo in piÃ¹ riprese, aspettando che la dose precedente sia completamente assorbita prima di aggiungere la successiva. Temperatura target impasto: {temp_target:25!}Â°C."
+      "text": "Passare in seconda velocità (V2). Quando l'impasto è tenace, inserire {sale_impasto:12}g di sale. Una volta assorbito il sale, iniziare il bassinage versando {acqua_bassinage:30}g di acqua a filo in più riprese, aspettando che la dose precedente sia completamente assorbita prima di aggiungere la successiva. Temperatura target impasto: {temp_target:25!}°C."
     },
     {
       "title": "Inserimento Sospensioni",
-      "text": "Riportare l'impastatrice in prima velocitÃ  (V1) o fermarla. Inserire {noci:100}g di gherigli di noci precedentemente tostati e raffreddati. Impastare per {tempo_sospensioni:1!} - 2 minuti al massimo, giusto il tempo di distribuirli uniformemente senza strappare la maglia glutinica."
+      "text": "Riportare l'impastatrice in prima velocità (V1) o fermarla. Inserire {noci:100}g di gherigli di noci precedentemente tostati e raffreddati. Impastare per {tempo_sospensioni:1!} - 2 minuti al massimo, giusto il tempo di distribuirli uniformemente senza strappare la maglia glutinica."
     },
     {
       "title": "Puntata e Pieghe",
-      "text": "Trasferire l'impasto in un contenitore leggermente oliato con bordi dritti. Far riposare per {tempo_puntata:45!} minuti a {temp_puntata:24!}Â°C. Eseguire un giro di pieghe (coil fold) e lasciar raddoppiare in volume (circa {tempo_raddoppio:2!} - 3 ore a seconda della temperatura)."
+      "text": "Trasferire l'impasto in un contenitore leggermente oliato con bordi dritti. Far riposare per {tempo_puntata:45!} minuti a {temp_puntata:24!}°C. Eseguire un giro di pieghe (coil fold) e lasciar raddoppiare in volume (circa {tempo_raddoppio:2!} - 3 ore a seconda della temperatura)."
     },
     {
       "title": "Formatura e Appretto",
@@ -182,7 +182,7 @@
     }
   ],
   "sensoryProfile": {
-    "summary": "Un pane di carattere deciso e aristocratico, dove la lunga maturazione del poolish regala una mollica aperta e profumata, con note lattiche e leggermente acetiche di grande finezza. I gherigli di noci tostati introducono un contrasto grasso e amaro che dialoga splendidamente con la crosta spessa e scura, ottenuta dalla cottura ad alta temperatura su pietra. Il finale Ã¨ lungo, cerealicolo e leggermente tannico, con una sapiditÃ  equilibrata che invita al morso successivo.",
+    "summary": "Un pane di carattere deciso e aristocratico, dove la lunga maturazione del poolish regala una mollica aperta e profumata, con note lattiche e leggermente acetiche di grande finezza. I gherigli di noci tostati introducono un contrasto grasso e amaro che dialoga splendidamente con la crosta spessa e scura, ottenuta dalla cottura ad alta temperatura su pietra. Il finale è lungo, cerealicolo e leggermente tannico, con una sapidità equilibrata che invita al morso successivo.",
     "axes": [
       {
         "label": "Croccantezza Crosta",
@@ -193,11 +193,11 @@
         "value": 7
       },
       {
-        "label": "ComplessitÃ  Fermentativa",
+        "label": "Complessità Fermentativa",
         "value": 8
       },
       {
-        "label": "SapiditÃ ",
+        "label": "Sapidità",
         "value": 5
       },
       {
