@@ -10,8 +10,10 @@
     "build": "vite build",
     "preview": "vite preview",
     "build:recipes": "node scripts/build-recipes.js",
-    "deploy": "npm run build:recipes && vite build && node scripts/generate-og.js && node scripts/deploy-ghpages.js",
-    "generate-og": "node scripts/generate-og.js"
+    "generate-og": "node scripts/generate-og.js",
+    "verifica": "node scripts/verifica-build.js",
+    "check": "npm run build:recipes && vite build && npm run generate-og && npm run verifica",
+    "deploy": "npm run check && node scripts/deploy-ghpages.js"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",

@@ -1,0 +1,9 @@
+#!/bin/sh
+# Gate prima del push: qui il push su main non pubblica nulla (il sito sta su
+# gh-pages e ci arriva con `npm run deploy`), ma un dato rotto committato oggi
+# diventa un deploy rotto domani. Meglio scoprirlo adesso.
+# Attivazione (una tantum per postazione): git config core.hooksPath .githooks
+# Bypass d'emergenza: git push --no-verify
+set -e
+echo "pre-push: build dati + build sito + verifica output (bypass: --no-verify)"
+npm run check

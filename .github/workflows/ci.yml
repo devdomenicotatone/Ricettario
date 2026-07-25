@@ -1,0 +1,25 @@
+# CI sul percorso di pubblicazione. Qui il deploy NON è il push su main: il
+# sito vive sul branch gh-pages e ci arriva solo con `npm run deploy`. Questo
+# workflow fa girare la stessa verifica su ogni push, così una regressione nei
+# dati o nell'output statico si vede sul commit invece che dopo la
+# pubblicazione. Il gate bloccante locale è .githooks/pre-push.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verifica:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # build:recipes valida i dati delle ricette, verifica-build controlla
+      # l'HTML generato (dati strutturati, canonical, codifica, sitemap).
+      - run: npm run check
