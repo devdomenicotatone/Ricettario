@@ -45,6 +45,15 @@
         --container-max: 1200px;
         --container-narrow: 900px;
         --section-gap: clamp(var(--space-3xl), 8vw, var(--space-4xl));
+
+        /* Altezza della navbar, che è `position: fixed` e sta sopra tutto.
+           Le pagine che iniziano con un hero alto la lasciano sovrapporre di
+           proposito: il contenuto è centrato e sotto la navbar non finisce
+           niente di utile. Le pagine che iniziano con contenuto funzionale
+           (il calcolatore di cottura) devono scostarsi di questo valore,
+           altrimenti i primi comandi restano coperti.
+           Se cambi il padding della navbar o l'altezza del logo, aggiorna qui. */
+        --navbar-height: 74px;
     }
 
 
