@@ -1,0 +1,203 @@
+{
+  "title": "Pizza Napoletana Verace STG",
+  "slug": "pizza-napoletana-verace-stg",
+  "emoji": "🍕",
+  "description": "La ricetta autentica della Pizza Napoletana a lievitazione lenta, basata sul disciplinare STG. Impasto diretto, alta digeribilità e il classico cornicione alveolato.",
+  "subtitle": "Impasto diretto a temperatura ambiente secondo il disciplinare",
+  "category": "Pizza",
+  "hydration": 63,
+  "targetTemp": "23-24°C",
+  "fermentation": "12-16h a T.A.",
+  "totalFlour": 800,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per l'Impasto STG",
+      "items": [
+        {
+          "name": "Acqua",
+          "note": "(18-20°C)",
+          "grams": 500,
+          "tokenId": "acqua_impasto"
+        },
+        {
+          "name": "Farina Tipo 00",
+          "note": "(W 260-280)",
+          "grams": 800,
+          "tokenId": "farina_impasto"
+        },
+        {
+          "name": "Sale Marino Fino",
+          "note": "",
+          "grams": 25,
+          "tokenId": "sale_impasto"
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "",
+          "grams": 1,
+          "tokenId": "lievito_impasto"
+        },
+        {
+          "name": "Semola rimacinata o farina per lo spolvero",
+          "note": "q.b.",
+          "grams": 0,
+          "tokenId": "spolvero_stesura"
+        }
+      ]
+    },
+    {
+      "group": "Per il Condimento (Margherita)",
+      "items": [
+        {
+          "name": "Pomodori Pelati San Marzano DOP",
+          "note": "(sgocciolati dal succo in eccesso)",
+          "grams": 400,
+          "tokenId": "pelati_condimento"
+        },
+        {
+          "name": "Fiordilatte",
+          "note": "(scolato dal siero)",
+          "grams": 400,
+          "tokenId": "fiordilatte_condimento"
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "",
+          "grams": 30,
+          "tokenId": "olio_condimento"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "",
+          "grams": 4,
+          "tokenId": "sale_condimento"
+        },
+        {
+          "name": "Basilico Fresco",
+          "note": "(in foglie)",
+          "grams": 10,
+          "tokenId": "basilico_condimento"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Preparazione in madia (Punto di pasta)",
+      "text": "Versare {acqua_impasto:500}g di acqua a temperatura ambiente in una madia o in una ciotola capiente. Aggiungere {sale_impasto:25}g di sale fino e mescolare con una mano per scioglierlo completamente. Questo passaggio, tipico del disciplinare napoletano, serve a proteggere l'impasto. Aggiungere circa la metà di {farina_impasto:800}g di farina e iniziare a mescolare. Sbriciolare {lievito_impasto:1}g di lievito fresco sulla farina asciutta e incorporarlo gradualmente."
+    },
+    {
+      "title": "Impastamento manuale",
+      "text": "Aggiungere la restante farina a pioggia continuando a impastare con una mano, in modo che assorba gradualmente l'acqua. Trasferire il composto sul banco di lavoro e impastare a due mani per circa {tempo_impasto:20!} minuti. La tecnica corretta prevede di ripiegare l'impasto su se stesso e spingerlo con il palmo. L'impasto sarà pronto quando risulterà liscio, morbido e non appiccicoso al tatto."
+    },
+    {
+      "title": "Puntata (Prima lievitazione in massa)",
+      "text": "Effettuare una leggera pirlatura per dare una forma sferica all'impasto. Riporlo nella madia, coprire con un coperchio ermetico o un panno umido e lasciare riposare a temperatura ambiente (circa 20-22°C) per {tempo_puntata:2!} ore. L'impasto si rilasserà e avvierà la fermentazione."
+    },
+    {
+      "title": "Staglio e Formatura dei panetti",
+      "text": "Trascorso il tempo della puntata, procedere allo staglio (divisione dell'impasto). Ricavare delle porzioni tagliando l'impasto con un tarocco. Formare dei panetti da circa {panetto_peso:265!}g ciascuno, chiudendoli perfettamente alla base (pirlatura stretta) per garantire che i gas di lievitazione rimangano intrappolati all'interno."
+    },
+    {
+      "title": "Appretto (Seconda lievitazione)",
+      "text": "Disporre i panetti in una cassetta di lievitazione per pizza, distanziandoli adeguatamente poiché raddoppieranno di volume. Chiudere la cassetta con il coperchio per evitare la formazione della crosta superficiale. Lasciare maturare e lievitare a temperatura ambiente per {tempo_appretto:12!} - {tempo_appretto_max:14!} ore."
+    },
+    {
+      "title": "Stesura manuale",
+      "text": "Spolverare il piano di lavoro con abbondante farina o semola rimacinata. Prelevare un panetto con una spatola, evitando di sgonfiarlo. Con i polpastrelli, eseguire una pressione partendo dal centro verso l'esterno per spingere i gas nel cornicione. Applicare la tecnica dello 'schiaffo napoletano' (slap & fold) per allargare il disco di pasta fino a uno spessore di circa {spessore_centro:4!} millimetri al centro, lasciando il bordo intatto."
+    }
+  ],
+  "stepsCondiment": [
+    {
+      "title": "Preparazione dei pomodori",
+      "text": "Versare {pelati_condimento:400}g di pomodori pelati San Marzano in una ciotola. Schiacciarli rigorosamente a mano (o passarli al passaverdure a fori larghi) per evitare di frullare i semi, che rilascerebbero note amare. Condire con {sale_condimento:4}g di sale e mescolare delicatamente."
+    },
+    {
+      "title": "Taglio del fiordilatte",
+      "text": "Tagliare {fiordilatte_condimento:400}g di fiordilatte a listarelle (julienne spessa) o a fette. È fondamentale eseguire questa operazione qualche ora prima, lasciando scolare il fiordilatte in un colino in frigorifero per eliminare il siero in eccesso, che altrimenti annacquerebbe la pizza in cottura."
+    },
+    {
+      "title": "Condimento del disco di pasta",
+      "text": "Distribuire un mestolo abbondante di pomodoro al centro del disco steso e, con un movimento a spirale, allargarlo verso il bordo. Aggiungere il fiordilatte scolato, qualche foglia spezzata a mano di {basilico_condimento:10}g di basilico fresco e completare con un giro a spirale di {olio_condimento:30}g di olio extravergine d'oliva."
+    }
+  ],
+  "flourTable": [
+    {
+      "type": "Farina Tipo 00",
+      "w": "260-280",
+      "brands": "Caputo Pizzeria, 5 Stagioni Napoletana, Dallagiovanna Nobilgrano"
+    }
+  ],
+  "baking": {
+    "temperature": "280°C",
+    "time": "4-6 minuti",
+    "tips": [
+      "I forni casalinghi non raggiungono i 450°C del forno a legna. Riscaldare il forno alla massima temperatura (250-280°C) per almeno 45 minuti con una pietra refrattaria posizionata sul ripiano più alto, vicino alla resistenza superiore.",
+      "Per simulare il forno a legna, infornare in modalità statica ma accendere il grill al massimo 2 minuti prima di infornare la pizza, lasciandolo acceso durante la cottura.",
+      "Alternativa 'Combo Padella-Grill': cuocere la base della pizza per 2 minuti in una padella di ferro rovente sul fornello a gas, poi trasferirla subito nel forno sotto il grill incandescente per cuocere la parte superiore."
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Madia",
+      "definition": "Contenitore tradizionale in legno o plastica utilizzato per impastare a mano e far riposare l'impasto."
+    },
+    {
+      "term": "Puntata",
+      "definition": "La prima fase di lievitazione dell'impasto, che avviene 'in massa' (tutto l'impasto intero) prima della divisione in panetti."
+    },
+    {
+      "term": "Staglio",
+      "definition": "L'operazione di taglio e divisione dell'impasto lievitato in porzioni più piccole (panetti)."
+    },
+    {
+      "term": "Pirlatura",
+      "definition": "Arrotondamento del panetto di impasto facendolo roteare sul piano di lavoro per conferirgli tensione superficiale e una forma sferica perfetta."
+    },
+    {
+      "term": "Appretto",
+      "definition": "La seconda fase di lievitazione, che avviene dopo lo staglio, in cui i singoli panetti maturano e si rilassano prima di essere stesi."
+    },
+    {
+      "term": "Cornicione",
+      "definition": "Il bordo rialzato tipico della pizza napoletana, vuoto all'interno (alveolato) grazie alla spinta dei gas di lievitazione."
+    },
+    {
+      "term": "Schiaffo Napoletano",
+      "definition": "Tecnica manuale di stesura che consiste nel sollevare e ribaltare il disco di pasta sui pugni o sul banco per allargarlo uniformemente senza schiacciare i bordi."
+    }
+  ],
+  "alert": "Non utilizzare MAI il mattarello per stendere l'impasto. Il mattarello schiaccia le bolle di gas generate dalla lievitazione, rendendo la pizza piatta e dura ai bordi, vanificando completamente le 16 ore di lavoro.",
+  "proTips": [
+    "Il sale va sciolto nell'acqua all'inizio secondo il disciplinare: ritarda l'azione del lievito permettendo all'impasto di maturare più lentamente e sviluppare aromi complessi a temperatura ambiente.",
+    "Non frullare mai i pomodori pelati con il mixer a immersione: le lame rompono i semi rilasciando un sapore amaro. Schiacciali rigorosamente a mano.",
+    "Se l'ambiente in casa è molto caldo (sopra i 25°C in estate), riduci il lievito a 0.5g e riduci i tempi di appretto, oppure utilizza il frigorifero per le prime 10 ore."
+  ],
+  "storage": [
+    "L'impasto in panetti può essere conservato in frigorifero (a 4°C) fino a 48 ore. Ricordati di estrarlo almeno 3-4 ore prima della stesura per riportarlo a temperatura ambiente.",
+    "I panetti lievitati possono essere congelati singolarmente. Per rigenerarli, lasciali scongelare in frigorifero per una notte, poi portali a temperatura ambiente per 2 ore prima di stenderli."
+  ],
+  "imageKeywords": [
+    "neapolitan pizza",
+    "pizza margherita stg",
+    "homemade pizza stone",
+    "pizza napoletana cornicione",
+    "fresh basil margherita",
+    "raw pizza dough balls"
+  ],
+  "tags": [
+    "pizza napoletana",
+    "STG",
+    "impasto a mano",
+    "lievitazione lenta",
+    "pizza fatta in casa",
+    "tradizione",
+    "margherita"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "_createdAt": "2026-04-27T22:01:13.604Z",
+  "image": "images/ricette/pizza/pizza-napoletana-verace-stg.webp",
+  "imageAttribution": "📷 Foto: Willians Huerta — Pexels License via Pexels"
+}

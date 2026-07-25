@@ -1,0 +1,185 @@
+{
+  "title": "Pomodorini Confit Sott'olio",
+  "slug": "pomodorini-confit-sottolio",
+  "emoji": "🍅",
+  "description": "Conserva artigianale di pomodorini caramellati a bassa temperatura. Un concentrato di umami e dolcezza, conservati in olio extravergine d'oliva.",
+  "subtitle": "Caramellizzazione lenta e conservazione sott'olio",
+  "category": "Conserve",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per la Cottura Confit",
+      "items": [
+        {
+          "name": "Pomodorini Datterini o Ciliegini",
+          "note": "(sodi e ben maturi)",
+          "grams": 1000,
+          "tokenId": "pomodorini_confit"
+        },
+        {
+          "name": "Zucchero di Canna",
+          "note": "(o zucchero a velo)",
+          "grams": 15,
+          "tokenId": "zucchero_confit"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(marino)",
+          "grams": 10,
+          "tokenId": "sale_confit"
+        },
+        {
+          "name": "Pepe Nero",
+          "note": "(macinato fresco)",
+          "grams": 2,
+          "tokenId": "pepe_confit"
+        },
+        {
+          "name": "Aglio Fresco",
+          "note": "(in camicia, circa 4 spicchi)",
+          "grams": 20,
+          "tokenId": "aglio_confit"
+        },
+        {
+          "name": "Timo Fresco",
+          "note": "(foglioline e rametti)",
+          "grams": 5,
+          "tokenId": "timo_confit"
+        },
+        {
+          "name": "Origano Essiccato",
+          "note": "(di alta qualità)",
+          "grams": 2,
+          "tokenId": "origano_confit"
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(per l'arrostitura)",
+          "grams": 50,
+          "tokenId": "olio_cottura"
+        }
+      ]
+    },
+    {
+      "group": "Per la Conservazione",
+      "items": [
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(estratto a freddo)",
+          "grams": 400,
+          "tokenId": "olio_conservazione"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Mondatura e Taglio",
+      "text": "Lavare accuratamente {pomodorini_confit:1000}g di pomodorini sotto acqua corrente e asciugarli perfettamente con un canovaccio pulito per rimuovere ogni traccia di umidità esterna. Con un coltello ben affilato, tagliare ciascun pomodorino a metà nel senso della lunghezza. Disporre i pomodorini su una teglia capiente precedentemente foderata con carta forno, assicurandosi che la parte tagliata sia rivolta verso l'alto e che i pomodorini non si sovrappongano tra loro."
+    },
+    {
+      "title": "Condimento e Aromatizzazione",
+      "text": "Procedere con la speziatura distribuendo uniformemente sui pomodorini {zucchero_confit:15}g di zucchero di canna, {sale_confit:10}g di sale fino, {origano_confit:2}g di origano essiccato e {pepe_confit:2}g di pepe nero macinato. Schiacciare leggermente {aglio_confit:20}g di aglio (lasciandolo rigorosamente 'in camicia' per non bruciarlo) e distribuirlo nella teglia insieme a {timo_confit:5}g di timo fresco. Infine, irrorare il tutto a filo con {olio_cottura:50}g di olio extravergine d'oliva."
+    },
+    {
+      "title": "Cottura a Bassa Temperatura",
+      "text": "Infornare in forno preriscaldato a {temperatura:140!}°C per circa {tempo:120!} minuti. L'obiettivo non è cuocere violentemente, ma disidratare dolcemente il pomodoro e favorire la caramellizzazione degli zuccheri (reazione di Maillard). I pomodorini saranno pronti quando risulteranno appassiti, leggermente arricciati sui bordi, ma ancora morbidi al centro. Sfornare e lasciare raffreddare completamente a temperatura ambiente."
+    },
+    {
+      "title": "Invasamento e Copertura",
+      "text": "Trasferire i pomodorini ormai freddi in vasetti di vetro precedentemente sterilizzati. Pressarli leggermente ma senza spappolarli. Versare {olio_conservazione:400}g di olio extravergine d'oliva (o quanto basta per colmare il vasetto), assicurandosi di sommergere completamente i pomodorini. Sbattere delicatamente i vasetti sul piano di lavoro o usare uno spiedino di legno per far risalire ed eliminare eventuali bolle d'aria intrappolate sul fondo. Chiudere ermeticamente."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "baking": {
+    "temperature": "140°C",
+    "time": "120 minuti",
+    "tips": [
+      "In questa specifica preparazione, l'uso del forno ventilato è consigliato per favorire la rapida evaporazione dell'acqua di vegetazione.",
+      "Se il forno tende a scaldare molto, abbassare a 130°C e prolungare la cottura di 30 minuti."
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Confit",
+      "definition": "Tecnica di cottura a bassa temperatura in immersione di grassi o, come in questo caso, tramite una lenta disidratazione al forno combinata a zuccheri e un velo d'olio per concentrare i sapori."
+    },
+    {
+      "term": "In camicia",
+      "definition": "Spicchio d'aglio lasciato intero con la sua pellicola protettiva (tuniche). Protegge la polpa dell'aglio dalle alte temperature, rilasciando l'aroma senza bruciare e diventare amaro."
+    },
+    {
+      "term": "Sterilizzazione (dei vasetti)",
+      "definition": "Processo di sanificazione termica (solitamente tramite bollitura prolungata o passaggio in forno a 110°C) per eliminare i microrganismi dai contenitori prima di invasare le conserve."
+    }
+  ],
+  "alert": "RISCHIO BOTULINO: Le conserve sott'olio casalinghe nascondono rischi se non c'è sufficiente acidità o disidratazione. Assicurati che i pomodorini siano ben appassiti (l'acqua favorisce i batteri). Non inserire MAI aglio fresco tritato o erbe aromatiche fresche e umide DIRETTAMENTE nell'olio del vasetto finale: usa solo le erbe e l'aglio in camicia già cotti e disidratati dal passaggio in forno.",
+  "proTips": [
+    "Sostituisci lo zucchero di canna con zucchero a velo: quest'ultimo contiene una piccola percentuale di amido che aiuta ad assorbire l'acqua di vegetazione e glassa i pomodorini in modo più uniforme.",
+    "Per un gusto agrodolce e una sicurezza alimentare maggiore, puoi spruzzare un cucchiaio di aceto di mele o di vino bianco sui pomodorini prima di infornarli.",
+    "Non buttare l'olio di conservazione una volta finiti i pomodorini: sarà un olio aromatizzato straordinario per condire bruschette, pasta o marinare carni."
+  ],
+  "storage": [
+    "Se non si effettua la pastorizzazione successiva (bollitura dei vasetti pieni), conservare rigorosamente IN FRIGORIFERO e consumare entro 2-3 settimane. In frigo l'olio tenderà a solidificare: basta lasciarlo a temperatura ambiente per 15 minuti prima dell'uso.",
+    "Per la conservazione a lungo termine in dispensa (fino a 6 mesi), è obbligatorio procedere con la pastorizzazione (bollitura a bagnomaria dei vasetti chiusi) e verificare che si formi il sottovuoto (il tappo non deve fare 'click-clack')."
+  ],
+  "imageKeywords": [
+    "cherry tomato confit",
+    "roasted cherry tomatoes olive oil",
+    "pomodorini confit",
+    "sun dried tomatoes jar",
+    "confit tomaten"
+  ],
+  "tags": [
+    "conserve",
+    "pomodorini",
+    "sottolio",
+    "condimento",
+    "confit",
+    "vegetariano"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "_createdAt": "2026-04-24T14:35:19.869Z",
+  "image": "images/ricette/conserve/pomodorini-confit-sottolio.webp",
+  "imageAttribution": "📷 Foto: Caricata manualmente",
+  "sensoryProfile": {
+    "summary": "Un concentrato di sole mediterraneo: i pomodorini confit rivelano una complessità dolce-sapida straordinaria, con la caramellizzazione degli zuccheri che si intreccia a una vena erbacea di timo e origano. L'olio extravergine avvolge tutto in una texture vellutata e persistente, mentre l'aglio in camicia cede le sue note più gentili e rotonde, senza mai sopraffare. Un profilo aromatico di grande intensità, tipico di una conserva artigianale di alto livello.",
+    "axes": [
+      {
+        "label": "Sapidità / Umami",
+        "value": 8
+      },
+      {
+        "label": "Acidità / Pungenza",
+        "value": 4
+      },
+      {
+        "label": "Cremosità / Densità",
+        "value": 7
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 6
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 9
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 198,
+    "macros": {
+      "carbs": 7,
+      "protein": 1,
+      "fat": 18
+    }
+  },
+  "_originalImageUrl": ""
+}

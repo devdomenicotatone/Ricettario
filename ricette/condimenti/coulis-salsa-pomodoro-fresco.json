@@ -1,0 +1,171 @@
+{
+  "title": "Salsa e Coulis di Pomodoro Fresco",
+  "slug": "coulis-salsa-pomodoro-fresco",
+  "emoji": "🍅",
+  "description": "Ricetta professionale per salsa e coulis di pomodoro fresco. Tecnica del concassé e setacciatura per una texture vellutata e un sapore intenso.",
+  "subtitle": "Preparazione classica: sbianchitura, concassè e setacciatura a maglia fine",
+  "category": "Condimenti",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per la Salsa Base",
+      "items": [
+        {
+          "name": "Pomodori Freschi",
+          "note": "(San Marzano o Ramati, ben maturi)",
+          "grams": 1000,
+          "tokenId": "pomodori_freschi"
+        },
+        {
+          "name": "Cipolla Dorata",
+          "note": "(tritata finemente)",
+          "grams": 40,
+          "tokenId": "cipolla_dorata"
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(estratto a freddo)",
+          "grams": 35,
+          "tokenId": "olio_evo"
+        },
+        {
+          "name": "Basilico Fresco",
+          "note": "(in foglie)",
+          "grams": 10,
+          "tokenId": "basilico_fresco"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(dosaggio all'1% circa)",
+          "grams": 8,
+          "tokenId": "sale_fino"
+        },
+        {
+          "name": "Aglio",
+          "note": "(1 spicchio intero o schiacciato)",
+          "grams": 5,
+          "tokenId": "aglio_spicchio"
+        },
+        {
+          "name": "Zucchero Semolato",
+          "note": "(opzionale, per calibrare l'acidità)",
+          "grams": 5,
+          "tokenId": "zucchero_semolato"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Preparazione dei Pomodori (Sbianchitura e Concassé)",
+      "text": "Lavare accuratamente i {pomodori_freschi:1000}g di pomodori freschi. Rimuovere il picciolo e incidere una leggera croce sul fondo di ognuno. Tuffarli in acqua bollente per esattamente {tempo_sbianchitura:1!} minuto. Scolarli immediatamente e trasferirli in una bacinella con acqua e ghiaccio per bloccare la cottura. Procedere alla spellatura, tagliarli in quarti e rimuovere i semi e l'acqua di vegetazione. Ridurre la polpa a cubetti."
+    },
+    {
+      "title": "Fondo Aromatico",
+      "text": "In una casseruola dal fondo spesso, versare {olio_evo:35}g di olio extravergine di oliva. Aggiungere {aglio_spicchio:5}g di aglio e {cipolla_dorata:40}g di cipolla tritata finemente. Lasciar sudare a fuoco dolcissimo per circa {tempo_sudatura:5!} minuti, evitando che gli zuccheri della cipolla caramellizzino eccessivamente o prendano colore scuro."
+    },
+    {
+      "title": "Cottura",
+      "text": "Incorporare la polpa di pomodoro a cubetti. Condire con {sale_fino:8}g di sale fino e {zucchero_semolato:5}g di zucchero semolato (utile per arrotondare le note acide naturali del vegetale). Coprire parzialmente e lasciar sobbollire a fuoco dolce per {tempo_cottura:30!} minuti, mescolando di tanto in tanto."
+    },
+    {
+      "title": "Setacciatura e Coulis",
+      "text": "A cottura ultimata, passare il sugo al passaverdure con disco a maglia fine. Per un coulis di alta ristorazione (texture setosa), passare ulteriormente il composto al colino cinese (chinois). A fuoco spento, immergere {basilico_fresco:10}g di basilico nel coulis caldo, lasciandolo in infusione per rilasciare gli oli essenziali."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "baking": {
+    "temperature": "Fuoco dolce (sobbollitura)",
+    "time": "30-45 minuti",
+    "tips": [
+      "Utilizzare sempre pentole dal fondo spesso per distribuire uniformemente il calore",
+      "La salsa deve 'pippiare' (sobbollire lentamente) per concentrare il sapore senza bruciare il fondo"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Sbianchitura",
+      "definition": "Breve shock termico in acqua bollente seguito da rapido raffreddamento in ghiaccio. Indispensabile per staccare la buccia dei vegetali preservandone colore e struttura."
+    },
+    {
+      "term": "Concassé",
+      "definition": "Termine francese che indica un taglio specifico del pomodoro: prima spellato, poi privato dei semi e infine tagliato a piccoli cubetti."
+    },
+    {
+      "term": "Coulis",
+      "definition": "Salsa densa, fluida e vellutata ottenuta frullando e setacciando a maglia finissima verdure o frutta."
+    },
+    {
+      "term": "Chinois",
+      "definition": "Colino conico a maglia metallica finissima, utilizzato nelle cucine professionali per filtrare salse e ottenere consistenze lisce e brillanti."
+    }
+  ],
+  "alert": "Non frullare MAI il pomodoro con frullatori ad alta velocità (blender) inserendo aria: i semi frantumati rilasciano note amare e il pomodoro si ossida, cambiando colore da rosso brillante a un arancione pallido.",
+  "proTips": [
+    "Non gettare l'acqua di vegetazione del pomodoro scartata durante il concassé: filtrala a maglia fine e utilizzala per mantecare un risotto o cuocere la pasta direttamente in padella.",
+    "L'inserimento del basilico deve avvenire tassativamente a fuoco spento. Le alte temperature distruggono i composti aromatici volatili dell'erba, restituendo sentori amari e un colore annerito."
+  ],
+  "storage": [
+    "In frigorifero: trasferire in un contenitore di vetro ermetico, coprire la superficie a filo con un velo d'olio EVO per isolare dall'ossigeno. Si conserva per 3-4 giorni al massimo.",
+    "Congelamento: abbattere la salsa o porzionarla in contenitori ermetici o sacchetti del ghiaccio. Si conserva per 3-4 mesi. Per l'utilizzo, scaldare dolcemente in padella per ripristinare l'emulsione."
+  ],
+  "imageKeywords": [
+    "fresh tomato sauce",
+    "tomato coulis",
+    "salsa di pomodoro fresco",
+    "tomatensauce",
+    "homemade italian pasta sauce",
+    "rustic tomato puree top down view"
+  ],
+  "tags": [
+    "Salsa",
+    "Pomodoro",
+    "Coulis",
+    "Condimento",
+    "Vegetariano",
+    "Senza Glutine"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "_createdAt": "2026-04-19T20:25:45.908Z",
+  "image": "images/ricette/condimenti/coulis-salsa-pomodoro-fresco.webp",
+  "imageAttribution": "📷 Foto: Willians Huerta — Pexels License via Pexels",
+  "sensoryProfile": {
+    "summary": "Un coulis di pomodoro fresco di grande eleganza, dove la polpa di San Marzano matura esprime una vivace acidità brillante perfettamente bilanciata dalla dolcezza naturale del vegetale e dallo zucchero calibratore. Il fondo aromatico di cipolla dorata e aglio costruisce una base umami raffinata, mentre l'infusione finale di basilico fresco regala un bouquet aromatico mediterraneo intenso e persistente, con sentori erbacei e floreali che si fondono in un profilo complessivo di fresca vivacità e profondità.",
+    "axes": [
+      {
+        "label": "Sapidità / Umami",
+        "value": 7
+      },
+      {
+        "label": "Acidità / Pungenza",
+        "value": 7
+      },
+      {
+        "label": "Cremosità / Densità",
+        "value": 5
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 5
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 72,
+    "macros": {
+      "carbs": 7,
+      "protein": 1,
+      "fat": 4
+    }
+  }
+}

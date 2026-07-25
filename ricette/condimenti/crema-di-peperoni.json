@@ -1,0 +1,163 @@
+{
+  "title": "Crema di Peperoni",
+  "slug": "crema-di-peperoni",
+  "emoji": "🫑",
+  "description": "Salsa vellutata ed emulsionata a base di peperoni dolci stufati, ideale per mantecare primi piatti, risotti o accompagnare lievitati rustici.",
+  "subtitle": "Emulsione vegetale dolce a stufatura lenta",
+  "category": "Condimenti",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per la Crema",
+      "items": [
+        {
+          "name": "Peperoni Rossi e Gialli",
+          "note": "(freschi, a polpa carnosa)",
+          "grams": 600,
+          "tokenId": "peperoni_misti"
+        },
+        {
+          "name": "Cipolla Dorata",
+          "note": "(mondata)",
+          "grams": 50,
+          "tokenId": "cipolla"
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(estratto a freddo)",
+          "grams": 40,
+          "tokenId": "olio_evo"
+        },
+        {
+          "name": "Acqua",
+          "note": "(calda, per la stufatura)",
+          "grams": 50,
+          "tokenId": "acqua_cottura"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(marino)",
+          "grams": 5,
+          "tokenId": "sale"
+        },
+        {
+          "name": "Aglio",
+          "note": "(spicchio intero)",
+          "grams": 5,
+          "tokenId": "aglio"
+        },
+        {
+          "name": "Basilico Fresco",
+          "note": "(in foglie)",
+          "grams": 5,
+          "tokenId": "basilico"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Mondatura e Taglio",
+      "text": "Lavare accuratamente {peperoni_misti:600}g di peperoni. Rimuovere il picciolo, dividerli a metà ed eliminare scrupolosamente tutti i semi e i filamenti bianchi interni (responsabili di note amare). Tagliare la polpa a listarelle o cubetti regolari per garantire una cottura uniforme."
+    },
+    {
+      "title": "Soffritto e Base Aromatica",
+      "text": "Tritare finemente {cipolla:50}g di cipolla dorata (brunoise). In un tegame capiente dai bordi alti, versare {olio_evo:40}g di olio extravergine d'oliva e aggiungere {aglio:5}g di aglio in camicia leggermente schiacciato. Lasciare insaporire a fuoco dolce per un paio di minuti, unendo poi la cipolla. Far sudare il tutto senza far prendere colore."
+    },
+    {
+      "title": "Stufatura dei Peperoni",
+      "text": "Alzare leggermente la fiamma e inserire i peperoni nel tegame. Aggiungere {sale:5}g di sale fino per innescare la fuoriuscita dei liquidi di vegetazione. Rosolare per un paio di minuti, quindi abbassare la fiamma, coprire con un coperchio e lasciar stufare per circa {tempo_cottura:25!} minuti. Se il fondo dovesse asciugarsi troppo, aggiungere gradualmente {acqua_cottura:50}g di acqua calda per evitare bruciature."
+    },
+    {
+      "title": "Frullatura ed Emulsione",
+      "text": "A cottura ultimata, i peperoni dovranno risultare estremamente cedevoli. Rimuovere lo spicchio d'aglio dal tegame. Trasferire il composto in un bicchiere da frullatore (o utilizzare un frullatore a immersione direttamente nel tegame). Aggiungere {basilico:5}g di foglie di basilico fresco spezzettate a mano. Frullare alla massima velocità fino a ottenere un'emulsione liscia, densa e dal colore brillante e omogeneo."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "glossary": [
+    {
+      "term": "Brunoise",
+      "definition": "Taglio preciso delle verdure a cubetti molto piccoli (1-2 mm), ideale per soffritti che devono sciogliersi in cottura."
+    },
+    {
+      "term": "Sudare (Far sudare)",
+      "definition": "Cottura a fuoco molto dolce di verdure (solitamente cipolla) in una materia grassa, con lo scopo di far rilasciare la loro acqua di vegetazione rendendole traslucide senza farle rosolare o dorare."
+    },
+    {
+      "term": "Emulsione",
+      "definition": "Dispersione di un liquido in un altro (es. olio nell'acqua di vegetazione) tramite azione meccanica (frullatura), ottenendo una crema legata e vellutata."
+    },
+    {
+      "term": "Aglio in camicia",
+      "definition": "Spicchio d'aglio non sbucciato, leggermente schiacciato, utilizzato per aromatizzare delicatamente i grassi in cottura e rimosso prima del termine."
+    }
+  ],
+  "alert": "Non omettere MAI la rimozione dei filamenti bianchi (placenta) all'interno del peperone: contengono alti livelli di capsaicina e composti amari che comprometterebbero irrimediabilmente la naturale dolcezza della crema.",
+  "proTips": [
+    "Per una consistenza da 'ristorante stellato', passa la crema ottenuta al setaccio (chinois) a maglie fini: eliminerai eventuali residui di pellicina ottenendo una vellutata perfetta.",
+    "Se intendi usare questa crema per mantecare una pasta secca, sostituisci i 50g di acqua calda con acqua di cottura della pasta ricca di amido: favorirà un'emulsione ancora più cremosa.",
+    "Per arricchire il profilo aromatico, puoi arrostire preventivamente i peperoni interi in forno a 200°C per 25 minuti: la reazione di Maillard sulla buccia (che andrà poi spellata) donerà una nota affumicata eccezionale."
+  ],
+  "storage": [
+    "In Frigorifero: trasferire la crema in un vasetto di vetro ermetico, livellare la superficie e coprire con un sottile strato di olio EVO. Si conserva per 3-4 giorni.",
+    "In Freezer: congelare in stampi per cubetti di ghiaccio per avere monoporzioni pronte all'uso (durata massima 3 mesi). Rigenerare direttamente in padella a fuoco bassissimo."
+  ],
+  "imageKeywords": [
+    "creamy roasted red pepper sauce",
+    "crema di peperoni",
+    "vegan pepper dip",
+    "italian yellow and red pepper cream",
+    "paprika creme pasta sauce"
+  ],
+  "tags": [
+    "condimento",
+    "vegetariano",
+    "senza glutine",
+    "crema",
+    "peperoni"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "_createdAt": "2026-04-27T08:49:54.940Z",
+  "image": "images/ricette/condimenti/crema-di-peperoni.webp",
+  "imageAttribution": "📷 Foto: Caricata manualmente",
+  "_originalImageUrl": "",
+  "sensoryProfile": {
+    "summary": "Una crema vellutata e luminosa, dal carattere dolce e mediterraneo: la polpa carnosa dei peperoni rossi e gialli cede una dolcezza vegetale matura e una rotondità avvolgente, sostenuta dalla leggera sapidità del sale marino. Il basilico fresco introduce una nota aromatica erbacea e leggermente aneisata, mentre il soffritto di cipolla e aglio costruisce un fondo umami discreto ma persistente, con l'olio EVO che chiude con una cremosità setosa e un accenno pepato.",
+    "axes": [
+      {
+        "label": "Sapidità / Umami",
+        "value": 5
+      },
+      {
+        "label": "Acidità / Pungenza",
+        "value": 2
+      },
+      {
+        "label": "Cremosità / Densità",
+        "value": 7
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 8
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 6
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 89,
+    "macros": {
+      "carbs": 8,
+      "protein": 1,
+      "fat": 6
+    }
+  }
+}

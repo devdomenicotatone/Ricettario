@@ -1,0 +1,150 @@
+{
+  "title": "Burro Chiarificato",
+  "slug": "burro-chiarificato",
+  "emoji": "🧈",
+  "description": "Burro chiarificato fatto in casa: puro grasso di burro senza proteine né acqua, ideale per fritture e pasticceria. Resa ~80%.",
+  "subtitle": "Grasso butirrico purificato per eliminazione di caseina, siero e acqua — tecnica a bagnomaria",
+  "category": "Conserve",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Ingredienti",
+      "items": [
+        {
+          "name": "Burro",
+          "note": "(non salato, qualità centrifuga, min. 82% materia grassa)",
+          "grams": 500,
+          "tokenId": "burro"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Preparazione del burro",
+      "text": "Prelevare {burro:500}g di burro freddo di frigorifero e tagliarlo a cubetti di circa 2-3 cm. Pezzi uniformi garantiscono una fusione omogenea senza che le parti esterne si surriscaldino mentre il centro è ancora solido."
+    },
+    {
+      "title": "Fusione a bagnomaria",
+      "text": "Riempire un pentolino capiente per metà con acqua e portare a leggero bollore. Posizionare sopra una ciotola in acciaio o vetro resistente al calore, assicurandosi che il fondo non tocchi l'acqua. Versare i cubetti di burro nella ciotola e abbassare la fiamma al minimo. Lasciare fondere lentamente senza mescolare per {tempo_fusione:40!}-{tempo_fusione_max:60!} minuti. La temperatura del burro non deve mai superare i {temp_max:90!}°C. La fusione lenta e indiretta è fondamentale: il calore diretto rischia di brunire le proteine sul fondo e dare gusto amaro."
+    },
+    {
+      "title": "Separazione delle tre fasi",
+      "text": "Man mano che il burro fonde, si separerà naturalmente in tre strati ben distinti: 1) una schiuma bianca superficiale composta da proteine del siero (lattoalbumina e lattoglobulina); 2) una fase centrale limpida e dorata — il grasso butirrico puro, ovvero il burro chiarificato; 3) un deposito biancastro sul fondo composto principalmente da caseina e residui acquosi. NON mescolare in nessun momento: ogni movimento rimette in sospensione i solidi del latte compromettendo la separazione."
+    },
+    {
+      "title": "Schiumatura della superficie",
+      "text": "Con un cucchiaio o una schiumarola a maglia fine, rimuovere delicatamente la schiuma bianca che si forma in superficie. Procedere con gesti lenti per non disturbare lo strato limpido sottostante. Raccogliere la schiuma in una ciotolina (può essere usata per condire verdure o purè, non va sprecata). Ripetere la schiumatura ogni {intervallo_schiumatura:10!} minuti circa, fino a quando la superficie risulta pulita e il liquido sottostante è dorato e trasparente."
+    },
+    {
+      "title": "Filtraggio e separazione finale",
+      "text": "Spegnere il fuoco e lasciare riposare {riposo:5!} minuti. Preparare un imbuto posizionato su un barattolo di vetro sterilizzato e foderarlo con una garza sterile a maglie strette (o un panno di mussola) piegata in 2-3 strati. Versare lentamente il burro fuso dalla ciotola nell'imbuto, fermandosi PRIMA di raggiungere il deposito biancastro sul fondo. Inclinare la ciotola con estrema delicatezza — gli ultimi 2-3 cm di liquido sul fondo contengono caseina e acqua residua e vanno scartati. Il risultato è un liquido dorato, limpido e profumato: il burro chiarificato puro."
+    },
+    {
+      "title": "Raffreddamento e solidificazione",
+      "text": "Lasciare il barattolo aperto a temperatura ambiente fino a completo intiepidimento (circa {raffreddamento:60!} minuti). Per una solidificazione completa e rapida, trasferire il barattolo in frigorifero dopo il primo intiepidimento a temperatura ambiente: il grasso butirrico puro cristallizza completamente in frigorifero in tempi più certi rispetto alla sola temperatura ambiente, che potrebbe non essere sufficiente per raggiungere la fase solida. Il burro chiarificato passerà da liquido dorato a solido cremoso di colore giallo intenso. Chiudere con un coperchio a vite e conservare in frigorifero. La resa finale sarà di circa {resa:400!}g — pari all'80% del burro di partenza: il restante 20% è acqua e proteine del latte eliminate."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "baking": null,
+  "glossary": [
+    {
+      "term": "Burro chiarificato",
+      "definition": "Grasso butirrico purificato ottenuto eliminando acqua (~15%), caseina e proteine del siero (~4%) dal burro. Ha punto di fumo di ~250°C contro i ~130°C del burro intero, rendendolo ideale per fritture."
+    },
+    {
+      "term": "Bagnomaria",
+      "definition": "Tecnica di cottura indiretta in cui un recipiente è posto sopra un altro contenente acqua in leggero bollore. Garantisce temperatura delicata e uniforme (max 90-95°C), evitando il contatto diretto con la fiamma."
+    },
+    {
+      "term": "Caseina",
+      "definition": "Proteina principale del latte (circa 80% delle proteine totali). Nel burro si deposita sul fondo durante la chiarificazione come sedimento biancastro. È responsabile dell'imbrunimento e del basso punto di fumo del burro intero."
+    },
+    {
+      "term": "Schiumatura",
+      "definition": "Operazione di rimozione della schiuma superficiale (proteine del siero coagulate) con cucchiaio o schiumarola durante la chiarificazione del burro."
+    },
+    {
+      "term": "Punto di fumo",
+      "definition": "Temperatura alla quale un grasso inizia a decomporsi producendo fumo e sostanze tossiche (acroleina). Il burro chiarificato ha un punto di fumo molto più alto (~250°C) rispetto al burro intero (~130°C)."
+    },
+    {
+      "term": "Materia grassa",
+      "definition": "Percentuale di grasso nel burro. Il burro di qualità per chiarificazione deve avere almeno l'82% di materia grassa (standard europeo). Più alta è la percentuale, maggiore sarà la resa."
+    }
+  ],
+  "alert": "NON mescolare MAI il burro durante la fusione: ogni movimento rimette in sospensione caseina e proteine del siero, compromettendo la separazione. NON usare fiamma alta o contatto diretto aggressivo — le proteine bruciano rapidamente e conferiscono un gusto amaro irreversibile al burro chiarificato. NON versare anche l'ultimo residuo dalla ciotola: gli ultimi centimetri contengono il deposito di caseina e acqua.",
+  "proTips": [
+    "Usa burro di centrifuga con almeno 82% di materia grassa (es. burro bavarese o danese): maggiore è il contenuto di grasso, maggiore sarà la resa e più pulito il risultato finale. I burri industriali al 78-80% contengono più acqua e richiedono cottura più lunga.",
+    "La schiuma bianca rimossa in superficie è ottima per condire purè di patate, verdure lesse o riso in bianco — non sprecarla. Ha un sapore intenso e lattico.",
+    "Per verificare che la chiarificazione sia completa, preleva un cucchiaio di liquido e osservalo controluce: deve essere trasparente come olio d'oliva chiaro, senza alcuna opalescenza. Se è ancora torbido, prosegui la cottura a bagnomaria."
+  ],
+  "storage": [
+    "In frigorifero: il burro chiarificato si conserva in barattolo di vetro con chiusura ermetica per 3-4 mesi. L'assenza di proteine del latte e acqua rallenta enormemente l'irrancidimento rispetto al burro normale.",
+    "In freezer: porzionare in stampi per cubetti di ghiaccio (circa 20-25g ciascuno), congelare e trasferire in sacchetto per alimenti. Si conserva fino a 12 mesi. Scongelare in frigorifero o fondere direttamente in padella.",
+    "A temperatura ambiente: in clima fresco (sotto i 20°C), il burro chiarificato si conserva anche 4-6 settimane in un barattolo ben chiuso al riparo dalla luce, come il ghee tradizionale indiano. In estate o ambienti caldi, preferire sempre il frigorifero."
+  ],
+  "imageKeywords": [
+    "clarified butter jar",
+    "homemade ghee golden",
+    "burro chiarificato fatto in casa",
+    "clarified butter pouring",
+    "geklärte Butter Glas",
+    "melted butter straining cheesecloth",
+    "golden ghee glass jar kitchen"
+  ],
+  "tags": [
+    "burro chiarificato",
+    "ghee",
+    "preparazione base",
+    "conserve",
+    "grasso butirrico",
+    "frittura",
+    "pasticceria",
+    "tecnica base"
+  ],
+  "_generatedBy": "claude-opus",
+  "_createdAt": "2026-04-24T13:09:48.168Z",
+  "image": "images/ricette/conserve/burro-chiarificato.webp",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
+  "sensoryProfile": {
+    "summary": "Il burro chiarificato si presenta con un profilo aromatico intenso e puro, dominato da note di nocciola tostata e latticini concentrati, frutto della rimozione delle proteine del siero. La texture è straordinariamente vellutata e oleosa, con una densità grassa assoluta che riveste il palato con persistenza lunga e avvolgente. L'assenza di acqua e caseine elimina qualsiasi nota acida o salina, lasciando emergere unicamente la rotondità burrosa e la complessità aromatica del grasso butirrico puro.",
+    "axes": [
+      {
+        "label": "Sapidità / Umami",
+        "value": 2
+      },
+      {
+        "label": "Acidità / Pungenza",
+        "value": 1
+      },
+      {
+        "label": "Cremosità / Densità",
+        "value": 10
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 7
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 897,
+    "macros": {
+      "carbs": 0,
+      "protein": 0,
+      "fat": 99
+    }
+  },
+  "_originalImageUrl": ""
+}

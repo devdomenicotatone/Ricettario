@@ -1,0 +1,221 @@
+{
+  "title": "Dado Vegetale Fatto in Casa",
+  "slug": "dado-vegetale-fatto-in-casa",
+  "emoji": "🧊",
+  "description": "Dado vegetale artigianale con verdure fresche e sale: senza conservanti, senza glutammato, da congelare in cubetti pronti all'uso.",
+  "subtitle": "Conserva artigianale a base di verdure fresche — tecnica cottura-riduzione e conservazione in freezer",
+  "category": "Conserve",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Verdure Base",
+      "items": [
+        {
+          "name": "Carote",
+          "note": "(pulite e pelate, tagliate a pezzi)",
+          "grams": 200,
+          "tokenId": "carote"
+        },
+        {
+          "name": "Sedano",
+          "note": "(pulito, privo delle parti fibrose, tagliate a pezzi)",
+          "grams": 180,
+          "tokenId": "sedano"
+        },
+        {
+          "name": "Cipolla",
+          "note": "(dorata, pulita e sbucciata)",
+          "grams": 150,
+          "tokenId": "cipolla"
+        },
+        {
+          "name": "Patate",
+          "note": "(pelate, tagliate a pezzi — aiutano la consistenza finale del dado)",
+          "grams": 150,
+          "tokenId": "patate"
+        },
+        {
+          "name": "Pomodorini",
+          "note": "(maturi, privati del picciolo)",
+          "grams": 150,
+          "tokenId": "pomodorini"
+        },
+        {
+          "name": "Zucchine",
+          "note": "(fresche, tagliate a rondelle)",
+          "grams": 100,
+          "tokenId": "zucchine"
+        },
+        {
+          "name": "Prezzemolo Fresco",
+          "note": "(ciuffo con gambi e foglie)",
+          "grams": 15,
+          "tokenId": "prezzemolo"
+        },
+        {
+          "name": "Aglio",
+          "note": "(1 spicchio, sbucciato)",
+          "grams": 5,
+          "tokenId": "aglio"
+        }
+      ]
+    },
+    {
+      "group": "Condimento e Sale",
+      "items": [
+        {
+          "name": "Sale Fino Integrale",
+          "note": "(marino o rosa himalayano — NO sale iodato che può alterare il colore)",
+          "grams": 300,
+          "tokenId": "sale"
+        },
+        {
+          "name": "Olio Extravergine di Oliva",
+          "note": "(fruttato leggero, spremitura a freddo)",
+          "grams": 30,
+          "tokenId": "olio_evo"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "baking": null,
+  "glossary": [
+    {
+      "term": "Rilascio di liquidi",
+      "definition": "Il sale, per osmosi, estrae l'acqua di vegetazione contenuta nelle verdure. Con 300g di sale su ~950g di verdure, la perdita di peso per evaporazione durante la cottura è del 40-60% del totale."
+    },
+    {
+      "term": "Riduzione",
+      "definition": "Processo di evaporazione dell'acqua in eccesso per concentrare i sapori e raggiungere la consistenza solida necessaria alla formatura del dado. La crema deve perdere tutta l'acqua libera non trattenuta dal sale."
+    },
+    {
+      "term": "Acqua di vegetazione",
+      "definition": "Liquido naturalmente contenuto nelle cellule vegetali, rilasciato per osmosi quando le verdure vengono a contatto con il sale. È la principale fonte di umidità da eliminare durante la cottura."
+    },
+    {
+      "term": "Osmosi (nel contesto culinario)",
+      "definition": "Fenomeno fisico per cui il sale, posto a contatto con le verdure, richiama l'acqua intracellulare verso l'esterno, favorendo sia la cottura che la disidratazione progressiva del prodotto."
+    },
+    {
+      "term": "Bassofondo spesso",
+      "definition": "Casseruola con fondo multistrato (acciaio-alluminio-acciaio o ghisa smaltata) che distribuisce uniformemente il calore, fondamentale per la fase di riduzione del dado senza bruciature."
+    },
+    {
+      "term": "Conservazione ipertonica",
+      "definition": "Tecnica di conservazione basata sull'alta concentrazione di sale (circa 30% sul peso delle verdure), che inibisce la proliferazione batterica anche fuori dal freezer, rendendo il dado microbiologicamente stabile."
+    },
+    {
+      "term": "Punto di congelamento abbassato",
+      "definition": "L'alta concentrazione di sale abbassa il punto di congelamento del dado sotto 0°C. Ecco perché i dadi non diventano duri come il ghiaccio in freezer ma restano semisolidi e lavorabili anche congelati."
+    },
+    {
+      "term": "Frullatura a immersione",
+      "definition": "Utilizzo del minipimer direttamente nella casseruola per omogeneizzare le verdure cotte in una crema liscia. Va eseguita a fuoco spento e con la pentola stabile per evitare schizzi del composto caldo e salato."
+    },
+    {
+      "term": "Formatura a blocco",
+      "definition": "Tecnica di modellatura del composto ancora caldo in forma rettangolare su carta da forno, per poi ottenere i cubetti tagliando il blocco solidificato. Alternativa agli stampini per cubetti di ghiaccio."
+    }
+  ],
+  "alert": "NON riducete il sale sotto il 25-28% del peso delle verdure pulite: il sale non è solo un condimento ma il principale conservante del dado. Una quantità insufficiente comprometterebbe la sicurezza microbiologica del prodotto (rischio proliferazione batterica) e la consistenza finale (il dado non solidificherà correttamente in freezer). Al contrario, non eccedete oltre il 35%: il dado risulterebbe troppo salato e inutilizzabile. Pesate sempre con una bilancia da cucina — non andate ad occhio.",
+  "proTips": [
+    "RAPPORTO SALE/VERDURE: il metodo più preciso è pesare le verdure DOPO averle pulite e pelate, poi calcolare il 30% esatto come quantità di sale. Con verdure diverse (zucca, spinaci, bietole) il peso cambia: ricalcolate ogni volta. Una bilancia di precisione è fondamentale.",
+    "DADO ANTI-GLUTAMMATO: per intensificare il sapore umami senza additivi industriali, aggiungete durante la prima cottura un pezzetto di alga kombu (5g) e 3-4 pomodorini secchi. L'acido glutammico naturale dell'alga e dei pomodori secchi replica la profondità di sapore del dado industriale senza ricorrere al glutammato monosodico.",
+    "TEST DI CONSISTENZA PERFETTA: prima di formare il blocco, fate la prova del piatto freddo: prelevate un cucchiaino di composto e ponetelo su un piattino freddo di frigo. Se in 2 minuti si stabilizza e non cola ai bordi, la consistenza è giusta. Se cola ancora, continuate la riduzione. Questo evita di ritrovarsi con un blocco troppo morbido che non si taglia in dadi netti."
+  ],
+  "storage": [
+    "Porzionare il composto in stampi per il ghiaccio in silicone e congelare. Una volta solidificati, trasferire i cubetti in sacchetti per sottovuoto per massimizzare la durata (oltre 12 mesi) e preservare intatto il profilo aromatico, evitando la bruciatura da freddo. In alternativa, usare contenitori ermetici per una conservazione fino a 6 mesi.",
+    "Per una conservazione in frigorifero (fino a 3-4 mesi), trasferire il composto ancora caldo in vasetti di vetro sterilizzati, compattare bene per eliminare bolle d'aria e sigillare la superficie con un sottile strato di olio extravergine d'oliva prima di chiudere ermeticamente. L'olio agirà da barriera protettiva contro l'ossidazione.",
+    "Il dado non richiede scongelamento preventivo. I cubetti congelati o il composto prelevato dal vasetto in frigo possono essere aggiunti direttamente a liquidi bollenti (acqua, brodi, salse) o a soffritti caldi, dove si scioglieranno rapidamente rilasciando il loro sapore concentrato."
+  ],
+  "imageKeywords": [
+    "homemade vegetable stock cubes",
+    "dado vegetale fatto in casa",
+    "vegetable bouillon cubes homemade",
+    "gemüsebrühe würfel hausgemacht",
+    "natural vegetable broth concentrate",
+    "fresh vegetables food preservation",
+    "dado vegetale congelare"
+  ],
+  "tags": [
+    "dado vegetale",
+    "conserve",
+    "brodo",
+    "senza glutine",
+    "vegano",
+    "senza conservanti",
+    "fatto in casa",
+    "freezer",
+    "umami"
+  ],
+  "_generatedBy": "claude",
+  "image": "images/ricette/conserve/dado-vegetale-fatto-in-casa.webp",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
+  "steps": [
+    {
+      "title": "Preparazione delle Verdure",
+      "text": "Lavate accuratamente tutte le verdure sotto acqua corrente fredda. Pelate le {carote:200}g di carote e le {patate:150}g di patate. Sbucciate la {cipolla:150}g di cipolla. Eliminate i filamenti più duri dal {sedano:180}g di sedano. Rimuovete il picciolo dai {pomodorini:150}g di pomodorini. Spuntate e tagliate a rondelle le {zucchine:100}g di zucchine. Tagliate tutte le verdure a pezzi di circa 2-3 cm: non occorre che siano perfetti, andranno tutto frullati. Pelate lo {aglio:5}g di aglio e lasciatelo intero. Tenete da parte il {prezzemolo:15}g di prezzemolo."
+    },
+    {
+      "title": "Prima Cottura: Rilascio dei Liquidi",
+      "text": "In una casseruola larga e alta (preferibilmente antiaderente o in acciaio dal fondo spesso), versate i {olio_evo:30}g di olio extravergine di oliva. Aggiungete tutte le verdure tagliate, l'aglio, il prezzemolo e i {sale:300}g di sale fino. Mescolate bene per distribuire il sale uniformemente tra le verdure. Cuocete a fuoco vivace per 7-10 minuti, girando spesso: le verdure salate rilasceranno progressivamente i loro liquidi e il sale si scioglierà completamente. Vedrete formarsi del liquido sul fondo — è normale, è l'acqua di vegetazione. Abbassate la fiamma al minimo, coprite con il coperchio e lasciate cuocere per 50-60 minuti, mescolando ogni 15 minuti, finché tutte le verdure sono completamente morbide e sfatte."
+    },
+    {
+      "title": "Frullatura",
+      "text": "Spegnete il fuoco e lasciate intiepidire 5 minuti. Con un frullatore a immersione (minipimer), frullate il composto direttamente nella casseruola fino a ottenere una crema perfettamente liscia e vellutata, senza grumi. Passate il frullatore più volte in tutte le direzioni. Se preferite una consistenza ancora più fine, potete passare la crema al setaccio fine, ma non è strettamente necessario."
+    },
+    {
+      "title": "Seconda Cottura: Riduzione e Asciugatura",
+      "text": "Rimettete la casseruola sul fuoco bassissimo, senza coperchio. Cuocete mescolando continuamente con una spatola di silicone o un cucchiaio di legno per altri 15-25 minuti, finché il composto si restringe visibilmente e inizia a staccarsi dai bordi della pentola, assumendo una consistenza simile a una polenta densa. Questo passaggio è fondamentale: se il composto è troppo morbido o liquido, i dadi non manterranno la forma. La crema è pronta quando sollevando la spatola ricade a nastro lentamente, non scorre liquida. Attenzione agli schizzi: usate un coperchio a schermo o un guanto da forno."
+    },
+    {
+      "title": "Formatura dei Dadi",
+      "text": "Stendete un foglio di carta da forno su una teglia o un tagliere. Versate il composto caldo sulla carta e livellatelo con una spatola bagnata a formare un rettangolo dello spessore di circa 2-2,5 cm. Coprite con un secondo foglio di carta da forno senza premere troppo per non deformare la superficie. Lasciate raffreddare completamente a temperatura ambiente (circa 1 ora), poi trasferite in freezer per almeno 10-12 ore o tutta la notte, fino a ottenere un blocco solido e compatto. In alternativa, potete versare la crema ancora calda direttamente negli stampini per cubetti di ghiaccio (rivestiti con pellicola trasparente) per avere già la forma del dado."
+    },
+    {
+      "title": "Porzionatura e Conservazione",
+      "text": "Una volta solidificato, estraete il blocco dal freezer. Con un coltello lungo e affilato (o un cutter da cucina), tagliate prima in strisce, poi in cubetti di circa 3×3 cm. Staccate i singoli dadi delicatamente: non saranno durissimi (il sale abbassa il punto di congelamento), ma saranno compatti e lavorabili. Trasferiteli in sacchetti da freezer o in contenitori ermetici, separando i dadi con carta da forno per evitare che si attacchino tra loro. Si conservano in freezer fino a 6 mesi. Per l'utilizzo: aggiungere 1 dado (circa 3×3 cm) ogni 500 ml di acqua per brodo o direttamente in soffritti e zuppe, assaggiando prima di aggiungere ulteriore sale."
+    }
+  ],
+  "sensoryProfile": {
+    "summary": "Un dado vegetale casalingo dalla personalità decisa e avvolgente: la sapidità marcata del sale integrale domina il palato, sostenuta da una profonda nota umami data dal concentrato di carota, sedano e pomodorino. La consistenza è densa e pastosa, quasi gelatinosa, con un bouquet aromatico erbaceo-vegetale in cui il prezzemolo fresco e l'aglio dialogano con la dolcezza naturale delle carote e delle patate. Il finale è lungo, rotondo e leggermente acidulo per la presenza dei pomodorini maturi.",
+    "axes": [
+      {
+        "label": "Sapidità / Umami",
+        "value": 9
+      },
+      {
+        "label": "Acidità / Pungenza",
+        "value": 4
+      },
+      {
+        "label": "Cremosità / Densità",
+        "value": 8
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 4
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 7
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 118,
+    "macros": {
+      "carbs": 11,
+      "protein": 2,
+      "fat": 4
+    }
+  },
+  "_originalImageUrl": ""
+}

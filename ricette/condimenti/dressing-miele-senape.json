@@ -1,0 +1,154 @@
+{
+  "title": "Dressing al Miele e Senape",
+  "slug": "dressing-miele-senape",
+  "emoji": "🍯",
+  "description": "Una vinaigrette emulsionata a freddo, perfettamente bilanciata. Il legante della senape crea una salsa stabile e vellutata ideale per insalate e carni.",
+  "subtitle": "Emulsione stabile a base di senape e olio extravergine",
+  "category": "Condimenti",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per l'Emulsione Base",
+      "items": [
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(delicato)",
+          "grams": 100,
+          "tokenId": "olio_dressing"
+        },
+        {
+          "name": "Senape di Digione",
+          "note": "(liscia o all'antica)",
+          "grams": 40,
+          "tokenId": "senape_dressing"
+        },
+        {
+          "name": "Miele di Acacia",
+          "note": "(liquido e fluido)",
+          "grams": 40,
+          "tokenId": "miele_dressing"
+        },
+        {
+          "name": "Aceto di Mele",
+          "note": "(acidità 5%)",
+          "grams": 40,
+          "tokenId": "aceto_dressing"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(marino)",
+          "grams": 3,
+          "tokenId": "sale_dressing"
+        },
+        {
+          "name": "Pepe Nero",
+          "note": "(macinato fresco)",
+          "grams": 2,
+          "tokenId": "pepe_dressing"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Unione delle basi idrofile",
+      "text": "In un contenitore a sponde alte (o nel bicchiere di un frullatore a immersione), inserire {senape_dressing:40}g di senape di Digione, {miele_dressing:40}g di miele di acacia e {aceto_dressing:40}g di aceto di mele. Aggiungere {sale_dressing:3}g di sale fino e {pepe_dressing:2}g di pepe nero."
+    },
+    {
+      "title": "Miscelazione preliminare",
+      "text": "Lavorare vigorosamente gli ingredienti con una frusta a mano per circa 1-2 minuti. L'obiettivo in questa fase è sciogliere perfettamente il sale e il miele nei liquidi acidi, creando una base fluida e omogenea."
+    },
+    {
+      "title": "Creazione dell'emulsione",
+      "text": "Mentre si continua a miscelare con la frusta (o azionando il minipimer), versare a filo {olio_dressing:100}g di olio extravergine d'oliva. Il versamento lento unito all'azione meccanica permetterà alla lecitina naturale della senape di inglobare i grassi, creando un'emulsione stabile, liscia e vellutata."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "baking": {
+    "temperature": "0°C",
+    "time": "0 minuti",
+    "tips": [
+      "Nessuna cottura prevista. La salsa si prepara interamente a freddo."
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Emulsione",
+      "definition": "Dispersione stabile di minuscole goccioline di un liquido (olio) in un altro con cui non è miscibile (aceto), resa possibile dall'azione meccanica e da un agente emulsionante (in questo caso la senape)."
+    },
+    {
+      "term": "A filo",
+      "definition": "Tecnica che consiste nel versare un liquido in modo continuo, lento e sottile (come un filo) in un composto in movimento, per garantirne il perfetto assorbimento senza slegare l'impasto o la salsa."
+    }
+  ],
+  "alert": "Mai versare l'olio tutto in una volta nella base acida. Se i grassi vengono inseriti troppo rapidamente senza una corrispondente azione meccanica, l'emulsione si 'straccerà', separandosi in una fase oleosa in superficie e una liquida sul fondo.",
+  "proTips": [
+    "Per una variante più strutturata e rustica, usa una senape all'antica (con i grani interi) al posto della classica Digione liscia.",
+    "Temperatura degli ingredienti: per facilitare l'emulsione chimica, assicurati che la senape, il miele e l'olio siano a temperatura ambiente (circa 20°C).",
+    "Metodo shaker: se non hai una frusta, puoi inserire tutti gli ingredienti in un barattolo Mason Jar a chiusura ermetica e shakerare violentemente per 30-40 secondi."
+  ],
+  "storage": [
+    "Conservare il dressing in frigorifero, all'interno di un barattolo di vetro con tappo a chiusura ermetica, per un massimo di 10-15 giorni.",
+    "A basse temperature l'olio extravergine tenderà a solidificare. Estrarre il barattolo dal frigo 15 minuti prima dell'uso e agitarlo vigorosamente per ripristinare la fluidità originale."
+  ],
+  "imageKeywords": [
+    "honey mustard dressing",
+    "homemade vinaigrette",
+    "condimento senape e miele",
+    "salad dressing mason jar",
+    "creamy mustard sauce pouring",
+    "honig senf dressing",
+    "emulsified vinaigrette"
+  ],
+  "tags": [
+    "Condimento",
+    "Vinaigrette",
+    "Salsa a freddo",
+    "Senza glutine",
+    "Vegetariano"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "_createdAt": "2026-04-19T20:32:19.935Z",
+  "image": "images/ricette/condimenti/dressing-miele-senape.webp",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
+  "sensoryProfile": {
+    "summary": "Un dressing di grande personalità ed equilibrio, dove la pungenza viva della senape di Digione dialoga con la dolcezza floreale del miele di acacia in un gioco di contrasti eleganti. L'aceto di mele apporta una freschezza acida e fruttata che alleggerisce la struttura oleosa, mentre l'emulsione risulta setosa, avvolgente e di buona densità. Il finale è aromatico e persistente, con note pepate che chiudono la degustazione con carattere.",
+    "axes": [
+      {
+        "label": "Sapidità / Umami",
+        "value": 5
+      },
+      {
+        "label": "Acidità / Pungenza",
+        "value": 8
+      },
+      {
+        "label": "Cremosità / Densità",
+        "value": 7
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 6
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 7
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 418,
+    "macros": {
+      "carbs": 18,
+      "protein": 2,
+      "fat": 37
+    }
+  },
+  "_originalImageUrl": ""
+}

@@ -1,0 +1,266 @@
+{
+  "title": "Focaccia Genovese Classica",
+  "slug": "focaccia-genovese-classica",
+  "emoji": "🫒",
+  "description": "Focaccia tradizionale ligure con biga, salamoia e doppia lievitazione. Idratazione 75%, lievitazione controllata 5-6h totali per massima digeribilità.",
+  "subtitle": "Focaccia tradizionale ligure con biga, salamoia e doppia lievitazione",
+  "category": "Focaccia",
+  "hydration": 75,
+  "targetTemp": "24-26°C",
+  "fermentation": "5-6h totali",
+  "totalFlour": 1000,
+  "ingredients": [],
+  "suspensions": [],
+  "stepsCondiment": [],
+  "flourTable": [
+    {
+      "type": "Manitoba Forte (70%)",
+      "w": "350-380",
+      "brands": "Molino Dallagiovanna Manitoba Oro, Molino Grassi Manitoba, Caputo Manitoba"
+    },
+    {
+      "type": "Tipo 0 Media Forza (30%)",
+      "w": "260-280",
+      "brands": "Molino Dallagiovanna Tipo 0, Caputo Cuoco, Le 5 Stagioni Tipo 0"
+    }
+  ],
+  "baking": {
+    "temperature": "220°C",
+    "time": "20-25 minuti",
+    "tips": [
+      "Preriscaldare il forno a 220°C per almeno 30 minuti con teglia vuota o pietra refrattaria al centro",
+      "Generare vapore nei primi 5 minuti: spruzzare acqua sulle pareti del forno o inserire pentolino con acqua bollente alla base",
+      "Cottura ottimale: superficie dorata-ambrata con fossette più scure, base croccante. Verificare sollevando un angolo con spatola: la base deve essere dorata uniforme",
+      "Se il forno tende a bruciare sopra, abbassare a 200°C e prolungare di 5 minuti coprendo con carta forno negli ultimi minuti",
+      "Sfornare e spennellare immediatamente con filo d'olio EVO a crudo per esaltare profumo e lucentezza"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Biga",
+      "definition": "Pre-impasto solido (idratazione 50-55%) preparato 1-2 ore prima dell'impasto finale. Migliora digeribilità, sviluppo aromi e conservabilità. Caratteristica: struttura alveolata dopo lievitazione."
+    },
+    {
+      "term": "Incordatura",
+      "definition": "Fase dell'impastamento in cui il glutine si sviluppa completamente: l'impasto diventa liscio, elastico, si stacca dalle pareti della vasca/piano formando un cordone continuo. Segno di corretta struttura glutinica."
+    },
+    {
+      "term": "Puntata",
+      "definition": "Prima lievitazione in massa dell'impasto dopo l'impastamento. Per la focaccia: 3-4 ore a 26°C fino a triplicazione del volume. Fondamentale per sviluppo alveolatura e sapore."
+    },
+    {
+      "term": "Appretto",
+      "definition": "Seconda lievitazione dopo la stesura in teglia. Per la focaccia: 40-50 minuti. L'impasto si rilassa, si gonfia e diventa pronto per fossette e cottura."
+    },
+    {
+      "term": "Pirlatura",
+      "definition": "Tecnica per formare una palla di impasto liscia e tesa in superficie. Si esegue con movimento circolare sul piano, creando tensione superficiale che favorisce lievitazione uniforme."
+    },
+    {
+      "term": "Slap & Fold",
+      "definition": "Tecnica di impastamento per impasti molto idratati: si solleva l'impasto, si sbatte con forza sul piano, si ripiega su se stesso. Sviluppa glutine senza aggiungere farina."
+    },
+    {
+      "term": "Stretch & Fold",
+      "definition": "Pieghe di rinforzo: si distende delicatamente l'impasto, si ripiega su se stesso, si ruota 90° e si ripete. Rinforza la maglia glutinica senza degasare."
+    },
+    {
+      "term": "Prova del Velo",
+      "definition": "Test per verificare il corretto sviluppo del glutine: stendendo una piccola porzione d'impasto deve formarsi una membrana sottile, elastica e trasparente (come carta velina) senza rompersi."
+    },
+    {
+      "term": "Salamoia (per focaccia)",
+      "definition": "Emulsione di acqua, olio EVO e sale fine agitata vigorosamente. Si versa sulla focaccia prima della cottura per creare la caratteristica superficie lucida, croccante e saporita."
+    },
+    {
+      "term": "Fossette",
+      "definition": "Depressioni profonde create con i polpastrelli sulla superficie della focaccia. Servono a trattenere olio e salamoia, creando la texture caratteristica e impedendo rigonfiamenti eccessivi in cottura."
+    },
+    {
+      "term": "Bassinage",
+      "definition": "Tecnica di aggiunta graduale dell'acqua durante l'impastamento. Permette di gestire impasti ad alta idratazione incorporando l'acqua residua dopo il primo sviluppo del glutine."
+    },
+    {
+      "term": "Degasare",
+      "definition": "Eliminare l'aria dall'impasto lievitato con pressione delicata delle mani. Per la focaccia va fatto con moderazione per non perdere l'alveolatura."
+    }
+  ],
+  "alert": "⚠️ NON stendere la focaccia troppo sottile in teglia: lo spessore ideale è 1,5-2cm. Focacce troppo sottili si seccano e diventano dure come crackers. NON saltare la salamoia: è l'elemento distintivo della focaccia genovese e crea la croccantezza caratteristica. NON premere le fossette troppo delicatamente: devono arrivare quasi al fondo della teglia per trattenere l'olio. NON usare temperature superiori a 220-230°C: la focaccia brucerebbe in superficie rimanendo cruda inside. NON usare solo farina debole: serve la manitoba per sostenere l'alta idratazione e la doppia lievitazione.",
+  "proTips": [
+    "🫒 OLIO LIGURE DOP: Usa olio extravergine ligure DOP Riviera Ligure o Taggiasco per il sapore autentico. L'olio va usato a crudo sulla focaccia sfornata: il calore esalta i profumi fruttati delicati tipici dell'olio ligure.",
+    "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
+  ],
+  "storage": [
+    "Conservare la focaccia a temperatura ambiente per un massimo di 24-36 ore, avvolta in un sacchetto di carta per pane o coperta da un canovaccio pulito. Evitare la plastica, che trattiene umidità e compromette la croccantezza, e il frigorifero, che accelera la retrogradazione degli amidi (raffermamento).",
+    "Per il congelamento, tagliare la focaccia in porzioni una volta completamente fredda, avvolgere ogni pezzo ermeticamente nella pellicola per alimenti e riporla in sacchetti per congelatore, eliminando più aria possibile. La tecnica ottimale è il sottovuoto, che ne preserva le qualità organolettiche fino a 3 mesi.",
+    "Per rigenerare la focaccia e ripristinare la fragranza originale, preriscaldare il forno statico a 180°C. Infornare le porzioni direttamente da congelate per circa 8-10 minuti, o per 4-5 minuti se a temperatura ambiente. Un leggero spruzzo d'acqua sulla superficie prima di infornare aiuterà a mantenere l'interno morbido mentre la crosta torna croccante."
+  ],
+  "imageKeywords": [
+    "focaccia genovese oil",
+    "ligurian focaccia bread",
+    "focaccia ligure classica",
+    "genueser focaccia öl",
+    "genoese flatbread olive",
+    "italian focaccia dimples"
+  ],
+  "tags": [
+    "focaccia",
+    "liguria",
+    "genovese",
+    "biga",
+    "salamoia",
+    "doppia lievitazione",
+    "olio evo",
+    "fossette"
+  ],
+  "image": "images/ricette/focaccia/focaccia-genovese-classica.webp",
+  "ingredientGroups": [
+    {
+      "group": "Per la Biga",
+      "items": [
+        {
+          "name": "Farina Manitoba Forte",
+          "note": "(W 350-380)",
+          "grams": 700
+        },
+        {
+          "name": "Acqua",
+          "note": "(per biga)",
+          "grams": 120
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(per biga)",
+          "grams": 3
+        }
+      ]
+    },
+    {
+      "group": "Per l'Impasto Finale",
+      "items": [
+        {
+          "name": "Farina Tipo 0 Media Forza",
+          "note": "(W 260-280)",
+          "grams": 300
+        },
+        {
+          "name": "Acqua",
+          "note": "(per impasto)",
+          "grams": 600
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(per impasto finale)",
+          "grams": 12
+        },
+        {
+          "name": "Olio Extravergine d'Oliva Ligure DOP",
+          "note": "(nell'impasto)",
+          "grams": 50
+        },
+        {
+          "name": "Miele o Zucchero",
+          "note": "(attivatore lievitazione)",
+          "grams": 10
+        },
+        {
+          "name": "Sale Fino Marino",
+          "note": "(da aggiungere dopo incordatura)",
+          "grams": 18
+        }
+      ]
+    },
+    {
+      "group": "Per la Salamoia e Finitura",
+      "items": [
+        {
+          "name": "Acqua",
+          "note": "(per salamoia)",
+          "grams": 100
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(per salamoia ed emulsione)",
+          "grams": 60
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(per salamoia)",
+          "grams": 4
+        },
+        {
+          "name": "Sale Grosso Marino",
+          "note": "(per finitura superficie)",
+          "grams": 8
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Preparazione Biga (pre-impasto)",
+      "text": "Prelevare 200g del mix farine (140g manitoba + {olio_evo_salamoia_e_fini:60}g tipo 0), unire {acqua_biga:120}g acqua tiepida (25-28°C) e {lievito_fresco_biga:3}g lievito fresco sbriciolato. Impastare brevemente a velocità 1 per 3-4 minuti fino a ottenere una palla liscia ma compatta. Formare una pallina, incidere a croce sulla superficie, coprire con pellicola e far lievitare in ambiente controllato a 26°C (forno spento con luce accesa) per 1h30-2h. La biga deve raddoppiare di volume e presentare una struttura alveolata."
+    },
+    {
+      "title": "Impasto Base con Spirale",
+      "text": "Nella vasca della spirale inserire la biga a pezzi, aggiungere il restante mix farine (560g manitoba + 240g tipo 0), {acqua_impasto_finale:600}g acqua fredda 8-10°C, {lievito_fresco_impasto_finale:12}g lievito fresco sbriciolato e {miele:10}g miele. Avviare spirale a velocità 1 per 8 minuti fino a completa amalgamazione. La massa deve risultare ruvida ma omogenea. TEMPERATURA IMPASTO TARGET: 23-24°C massimo."
+    },
+    {
+      "title": "Incordatura e Aggiunta Olio",
+      "text": "Passare a velocità 2 e aggiungere {olio_evo_impasto_finale:50}g olio EVO a filo continuo in 2 minuti. Continuare per altri 6-7 minuti totali a velocità 2 fino a completa incordatura. L'impasto deve staccarsi dalle pareti, risultare liscio, elastico e lucido. Temperatura finale impasto: 24-25°C. Se supera 26°C, raffreddare la vasca con ghiaccio esterno."
+    },
+    {
+      "title": "Aggiunta Sale e Completamento",
+      "text": "Aggiungere {sale_impasto_finale:18}g sale fino e impastare a velocità 1 per 3-4 minuti fino a completo assorbimento. L'impasto deve essere morbido, setoso, leggermente appiccicoso ma gestibile. Totale tempo impasto spirale: 18-20 minuti. Verificare sviluppo glutine con prova velo: stendendo una porzione d'impasto deve formarsi una membrana sottile e trasparente senza strappi."
+    },
+    {
+      "title": "Prima Lievitazione (Puntata)",
+      "text": "Trasferire l'impasto in contenitore oliato capiente (almeno 3 volte il volume), coprire con pellicola a contatto e panno umido. Lievitare a temperatura controllata 26°C per 3-4 ore (in estate 2h30 possono bastare). L'impasto deve TRIPLICARE di volume, risultare gonfio e pieno di bolle in superficie. Test della lievitazione: premendo delicatamente con un dito, l'impronta deve rimanere visibile e risalire lentamente."
+    },
+    {
+      "title": "Stesura in Teglia (facoltativo: Pirlatura intermedia)",
+      "text": "PER FOCACCIA PIÙ DIGERIBILE: rovesciare l'impasto su piano infarinato, desgasare delicatamente con le mani a piatto, formare una palla liscia con pirlatura leggera, coprire e far riposare 15 minuti. Preparare teglia 30x40cm (o due teglie 30x30cm) con abbondante olio EVO sul fondo (circa 20g per teglia). Rovesciare l'impasto al centro della teglia, ungere le mani d'olio e stendere delicatamente dai centro verso i bordi SENZA premere troppo, lasciando bordi più alti. Coprire con pellicola oleata."
+    },
+    {
+      "title": "Appretto e Fossette",
+      "text": "Lasciar riposare in teglia coperto per 40-50 minuti a 26°C. L'impasto deve gonfiarsi visibilmente. Preparare la SALAMOIA: emulsionare vigorosamente {acqua_salamoia_e_fini:100}g acqua + {olio_evo_salamoia_e_fini:60}g olio EVO + {sale_salamoia_e_fini:4}g sale fino fino a ottenere un'emulsione lattiginosa stabile (usare frusta o shaker). Versare metà salamoia sulla superficie della focaccia. Con polpastrelli ben oleati, premere con decisione creando le tipiche FOSSETTE profonde fino quasi a toccare il fondo della teglia. Questo passaggio è FONDAMENTALE: le fossette trattengono olio e creano la texture caratteristica."
+    },
+    {
+      "title": "Finitura Pre-Cottura",
+      "text": "Versare la restante salamoia nelle fossette e su tutta la superficie. Cospargere uniformemente con {sale_salamoia_e_fini_2:8}g sale grosso marino (non troppo: deve dare croccantezza senza salare eccessivamente). Lasciar riposare scoperto 5 minuti per far assorbire la salamoia. La superficie deve apparire lucida, ricca di olio e con fossette ben marcate."
+    }
+  ],
+  "sensoryProfile": {
+    "summary": "Una focaccia genovese di grande carattere, costruita su una biga ben sviluppata che regala una complessità aromatica fermentativa elegante e una mollica aperta, quasi traslucida. La salamoia abbondante penetra nelle fossette creando quella tensione golosa tra crosta ambrata e croccante e un interno che si scioglie in bocca, mentre l'olio extravergine ligure DOP firma il profilo con note fruttate delicate e un finale lievemente amaro. La sapidità, bilanciata tra sale fino nell'impasto, sale nella salamoia e sale grosso in superficie, è decisa ma mai aggressiva, perfettamente integrata con la dolcezza residua del miele e la rotondità dell'olio.",
+    "axes": [
+      {
+        "label": "Croccantezza Esterna",
+        "value": 8
+      },
+      {
+        "label": "Scioglievolezza Impasto",
+        "value": 7
+      },
+      {
+        "label": "Sapidità / Umami",
+        "value": 8
+      },
+      {
+        "label": "Equilibrio Condimento-Impasto",
+        "value": 9
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 8
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 272,
+    "macros": {
+      "carbs": 38,
+      "protein": 7,
+      "fat": 9
+    }
+  }
+}

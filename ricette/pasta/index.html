@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasta — 1 Ricette — Ricettario Lab</title>
+    <link rel="icon" type="image/svg+xml" href="/Ricettario/assets/favicon-Ce3yoLgR.svg">
+    <link rel="apple-touch-icon" href="/Ricettario/assets/apple-touch-icon-DVCrky5e.png">
+    <link rel="manifest" href="/Ricettario/assets/site-LXOPX623.webmanifest">
+    <meta name="theme-color" content="#C2884D">
+
+    <!-- Open Graph — Social Sharing Card -->
+
+    <!-- Twitter / X Card -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- FOUC Prevention: applica tema prima del rendering -->
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = saved || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+  <script type="module" crossorigin src="/Ricettario/assets/main-CJvgu6TR.js"></script>
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-BxAZpQxw.css">
+
+    <meta name="description" content="Esplora 1 ricette di pasta nel Ricettario Lab — parametri tecnici, dosi precise e risultati replicabili.">
+    <link rel="canonical" href="https://devdomenicotatone.github.io/Ricettario/ricette/pasta/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pasta — 1 Ricette">
+    <meta property="og:description" content="Esplora 1 ricette di pasta nel Ricettario Lab — parametri tecnici, dosi precise e risultati replicabili.">
+    <meta property="og:url" content="https://devdomenicotatone.github.io/Ricettario/ricette/pasta/">
+    <meta property="og:image" content="https://devdomenicotatone.github.io/Ricettario/images/ricette/pasta/gnocchi-di-patate.webp">
+    <meta property="og:site_name" content="Ricettario Lab">
+    <meta property="og:locale" content="it_IT">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pasta — 1 Ricette">
+    <meta name="twitter:description" content="Esplora 1 ricette di pasta nel Ricettario Lab — parametri tecnici, dosi precise e risultati replicabili.">
+    <meta name="twitter:image" content="https://devdomenicotatone.github.io/Ricettario/images/ricette/pasta/gnocchi-di-patate.webp">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Pasta — Ricettario Lab",
+  "url": "https://devdomenicotatone.github.io/Ricettario/ricette/pasta/",
+  "inLanguage": "it-IT",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Ricettario Lab",
+    "url": "https://devdomenicotatone.github.io/Ricettario/"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": 1,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Gnocchi di Patate",
+        "url": "https://devdomenicotatone.github.io/Ricettario/ricette/pasta/gnocchi-di-patate/"
+      }
+    ]
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://devdomenicotatone.github.io/Ricettario/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Pasta",
+      "item": "https://devdomenicotatone.github.io/Ricettario/ricette/pasta/"
+    }
+  ]
+}
+    </script>
+</head>
+
+<body>
+
+    <!-- Skip to content — Accessibilità -->
+    <a href="#ricette" class="skip-link">Vai al contenuto principale</a>
+
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="/Ricettario/" class="navbar__logo" data-link>
+                <div class="navbar__logo-icon">
+                    <img src="/Ricettario/assets/wheat-logo-TzPQBXOF.svg" alt="" aria-hidden="true" width="40" height="56">
+                </div>
+
+                <span>Ricettario Lab</span>
+            </a>
+
+            <ul class="navbar__links" id="nav-links">
+                <li><a href="#ricette" data-nav-section="ricette" class="active">Ricette</a></li>
+                <li><a href="#strumenti" data-nav-section="strumenti">Strumenti</a></li>
+                <li><a href="#chi-sono" data-nav-section="chi-sono">Chi Sono</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+                <span class="theme-toggle__icon theme-toggle__sun"><i data-lucide="sun"></i></span>
+                <span class="theme-toggle__icon theme-toggle__moon"><i data-lucide="moon"></i></span>
+            </button>
+
+            <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════ SPA CONTAINER ═══════════ -->
+    <!-- Il router carica dinamicamente il contenuto qui -->
+    <div id="app">
+
+      <section class="category-hero">
+        <div class="category-hero__content">
+          <h1 class="category-hero__title">Pasta</h1>
+          <p class="category-hero__subtitle">Tutte le ricette di pasta del Ricettario Lab.</p>
+          <div class="category-hero__count">1 ricetta</div>
+        </div>
+      </section>
+      <main class="section">
+        <div class="container">
+          <nav class="breadcrumb">
+            <a href="/Ricettario/">Home</a>
+            <span class="breadcrumb__separator">›</span>
+            <span class="breadcrumb__current">Pasta</span>
+          </nav>
+          <div class="category-grid">
+            
+              <a href="/Ricettario/ricette/pasta/gnocchi-di-patate/" class="category-card">
+                <div class="category-card__body">
+                  <h2 class="category-card__title">Gnocchi di Patate</h2>
+                  <p class="category-card__desc">Gnocchi di patate fatti in casa: soffici, leggeri e perfettamente rigati. Ricetta classica italiana con patate, farina, uovo e il segreto della lavorazione minima.</p>
+                </div>
+              </a>
+          </div>
+        </div>
+      </main>
+    </div><!-- /#app -->
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__brand-name"><img src="/Ricettario/images/emoji/fire.png" width="20" height="20" alt=""
+                            class="fluent-emoji"> <span>Ricettario Lab</span></div>
+                    <p class="footer__brand-desc">
+                        Ricettario personale. Ricette artigianali documentate con precisione tecnica per
+                        risultati replicabili al 100%.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Navigazione</h4>
+                    <ul class="footer__links">
+                        <li><a href="#home"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Home</a>
+                        </li>
+                        <li><a href="#ricette"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
+                                Ricette</a></li>
+                        <li><a href="#strumenti"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
+                                Strumenti</a></li>
+                        <li><a href="#chi-sono"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Chi
+                                Sono</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Categorie</h4>
+                    <ul class="footer__links">
+                        <li><a href="ricette/pane/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Pane</a></li>
+                        <li><a href="ricette/pizza/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Pizza</a></li>
+                        <li><a href="ricette/pasta/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Pasta</a></li>
+                        <li><a href="ricette/lievitati/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Lievitati</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer__col-title">Stack</h4>
+                    <ul class="footer__links">
+                        <li><a href="#strumenti"><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Famag Grilletta</a></li>
+                        <li><a href="#strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Mix Tri-Farina</a></li>
+                        <li><a href="#strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Farine Professionali</a></li>
+                        <li><a href="#strumenti"><img src="/Ricettario/images/emoji/thermometer.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Termometro Laser</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <span>© <span id="current-year">2026</span> Ricettario Lab</span>
+                <div class="footer__social">
+                    <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

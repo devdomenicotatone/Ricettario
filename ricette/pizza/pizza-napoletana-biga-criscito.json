@@ -1,0 +1,266 @@
+{
+  "title": "Pizza Napoletana Antica Tradizione con Biga e Criscito",
+  "slug": "pizza-napoletana-biga-criscito",
+  "emoji": "🍕",
+  "description": "Metodo professionale con prefermento e lievito madre per pizzeria artigianale. Biga 18-24h, criscito e blend Saccorosso-Nuvola per pizza napoletana autentica.",
+  "subtitle": "Metodo professionale con prefermento e lievito madre per pizzeria artigianale",
+  "category": "Pizza",
+  "hydration": 68,
+  "targetTemp": "23-24°C",
+  "fermentation": "24-30h totali",
+  "totalFlour": 3000,
+  "ingredients": [],
+  "suspensions": [
+    {
+      "name": "Semola Rimacinata Caputo",
+      "note": "(per stesura sul banco)",
+      "grams": 200
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [
+    {
+      "type": "Caputo Saccorosso",
+      "w": "330-350",
+      "brands": "Molino Caputo (ufficiale), non ha equivalenti diretti per caratteristiche specifiche"
+    },
+    {
+      "type": "Caputo Nuvola Super",
+      "w": "260-280",
+      "brands": "Molino Caputo (ufficiale), Le 5 Stagioni Manitoba Oro (alternativa), Molino Agugiaro Figna Petra 3"
+    },
+    {
+      "type": "Semola Rimacinata",
+      "w": "-",
+      "brands": "Caputo Semola Rimacinata, Molino Spadoni, Divella Semola Rimacinata di Grano Duro"
+    }
+  ],
+  "baking": {
+    "temperature": "Forno professionale: 430-480°C | Forno casalingo: 280°C (MAX)",
+    "time": "Forno professionale a legna/gas: 60-90 secondi | Effeuno P134H: 90-120 secondi (platea 450°C, cielo 450°C con biscotto) | Forno casalingo: 5-7 minuti con pietra preriscaldata",
+    "tips": [
+      "Stendere la pizza su banco infarinato con semola rimacinata, mai con matterello: usare solo le mani partendo dal centro",
+      "In forno casalingo: preriscaldare pietra refrattaria per 45-60 minuti a 280°C. Infornare con pala infarinata",
+      "Girare la pizza ogni 20-30 secondi in forno a legna per cottura uniforme",
+      "La pizza è pronta quando il cornicione è gonfio e dorato, il fondo ha macchie scure (leopardatura)",
+      "In Effeuno usare il biscotto refrattario per simulare la massa termica del forno a legna"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Biga",
+      "definition": "Prefermento solido italiano con idratazione 40-50%, maturazione 16-48h. Migliora sapore, digeribilità, conservabilità e struttura dell'impasto finale."
+    },
+    {
+      "term": "Criscito",
+      "definition": "Nome tradizionale del lievito madre (pasta acida). La versione Caputo è lievito madre secco stabilizzato, da reidratare. Apporta acidità, complessità aromatica e alveolatura."
+    },
+    {
+      "term": "Bassinage",
+      "definition": "Tecnica francese: aggiunta graduale di liquidi a filo durante l'impastamento. Permette di raggiungere idratazioni elevate mantenendo la maglia glutinica strutturata."
+    },
+    {
+      "term": "Incordatura",
+      "definition": "Fase dell'impastamento in cui il glutine si struttura formando una rete elastica. L'impasto si stacca dalle pareti, diventa liscio e 'canta' (suono caratteristico)."
+    },
+    {
+      "term": "Puntata",
+      "definition": "Prima lievitazione in massa (tutto l'impasto insieme) prima dello staglio. Sviluppa aromi, rinforza la maglia, prepara l'impasto alla divisione."
+    },
+    {
+      "term": "Staglio",
+      "definition": "Divisione dell'impasto in porzioni individuali (panetti). Richiede precisione nel peso per uniformità di cottura e gestione."
+    },
+    {
+      "term": "Pirlatura",
+      "definition": "Tecnica per formare sfere lisce e tese. Con mani a coppa si fa ruotare il panetto sul banco creando tensione superficiale. Essenziale per una buona lievitazione."
+    },
+    {
+      "term": "Appretto",
+      "definition": "Seconda lievitazione dopo lo staglio. I panetti riposano in cassetta fino al raddoppio di volume. Determina alveolatura e sofficità del prodotto finale."
+    },
+    {
+      "term": "Maglia glutinica",
+      "definition": "Rete tridimensionale formata dalle proteine del glutine (gliadina e glutenina) che trattiene i gas della lievitazione. Una maglia forte = pizza soffice e alveolata."
+    },
+    {
+      "term": "Idratazione",
+      "definition": "Percentuale di liquidi rispetto alla farina (es. 68% = 680g acqua su 1kg farina). Idratazioni alte (>65%) = impasti più estensibili, alveolature grandi, ma più difficili da gestire."
+    },
+    {
+      "term": "Slap and Fold",
+      "definition": "Tecnica di impastamento manuale: sollevare l'impasto, sbatterlo sul piano, ripiegarlo. Sviluppa forza senza surriscaldare. Ideale per impasti ad alta idratazione."
+    },
+    {
+      "term": "Stretch and Fold",
+      "definition": "Piega di rinforzo durante la puntata: tirare delicatamente i lembi dell'impasto e ripiegarli verso il centro. Rinforza la struttura senza sgonfiare."
+    },
+    {
+      "term": "W (Forza)",
+      "definition": "Indice alveografico che misura la forza della farina (resistenza ed estensibilità). W 330-350 = farine molto forti per lunghe lievitazioni. W 260-280 = medie per equilibrio."
+    },
+    {
+      "term": "Leopardatura",
+      "definition": "Caratteristica estetica della pizza napoletana: macchie scure ('bruciature') sul fondo e cornicione. Indica cottura perfetta ad alta temperatura e impasto ben maturato."
+    }
+  ],
+  "alert": "⚠️ NON superare i 25°C di temperatura finale dell'impasto: oltre questa soglia i lieviti si stressano e la biga perde efficacia. Se l'impasto si surriscalda, la maturazione accelera in modo incontrollato, compromettendo alveolatura e digeribilità. In estate, usare acqua ghiacciata (2-4°C) e impastare a velocità moderate. La biga deve maturare LENTAMENTE: temperature superiori a 20°C la fanno 'correre', perdendo i benefici organolettici del prefermento lungo.",
+  "proTips": [
+    "🔬 BLEND STRATEGICO: Il 10% di Nuvola Super (farina più debole) nel blend finale non indebolisce la struttura, anzi migliora l'estensibilità e crea alveoli più grandi. Il Saccorosso (forza W 330-350) domina con l'85% garantendo tenuta e lievitazione prolungata.",
+    "🧪 CRISCITO DOSAGGIO: 40g/kg di Criscito Caputo (equivalente a 120g su 3kg farina) è una dose 'spinta' che conferisce sapidità intensa e nota acidula tipica della tradizione napoletana. Se preferisci un profilo più neutro, riduci a 20-25g/kg."
+  ],
+  "storage": [
+    "Per la pizza già cotta, la conservazione ideale a breve termine (massimo 48 ore) è in frigorifero. Attendere il completo raffreddamento, poi avvolgere gli spicchi in pellicola alimentare o riporli in un contenitore ermetico per preservare l'umidità del cornicione. Per la rigenerazione, preriscaldare il forno a 190°C e infornare su teglia calda per 6-8 minuti per ripristinare croccantezza e fragranza.",
+    "Per una conservazione prolungata (fino a 2 mesi), congelare la pizza cotta. Separare le fette con un foglio di carta forno, avvolgerle singolarmente in pellicola trasparente e sigillarle in un sacchetto per congelatore, eliminando più aria possibile. Rigenerare direttamente da congelato in forno statico a 200°C per circa 10-12 minuti, fino a completa fusione del condimento e doratura della base.",
+    "Considerando la tecnica professionale, è possibile conservare i 'panetti' di impasto crudi. Dopo la stagliatura, riporli in un contenitore ermetico leggermente oliato in frigorifero a 4°C (tecnica del freddo) fino a 72 ore. Questo processo matura l'impasto, migliorando digeribilità e profilo aromatico. Estrarli 3-4 ore prima dell'utilizzo per farli acclimatare e raggiungere la temperatura ottimale per la stesura."
+  ],
+  "image": "images/ricette/pizza/pizza-napoletana-biga-criscito.webp",
+  "imageKeywords": [
+    "neapolitan pizza antica",
+    "traditional neapolitan pizza",
+    "pizza napoletana tradizionale",
+    "neapolitanische pizza traditionell",
+    "antica pizza napoletana",
+    "authentic napoli pizza"
+  ],
+  "tags": [
+    "pizza napoletana",
+    "biga",
+    "criscito",
+    "lievito madre",
+    "prefermento",
+    "lunga lievitazione",
+    "caputo saccorosso",
+    "tradizione napoletana",
+    "professionale",
+    "pizzeria"
+  ],
+  "ingredientGroups": [
+    {
+      "group": "Per la Biga",
+      "items": [
+        {
+          "name": "Farina Caputo Saccorosso",
+          "note": "(W 330-350, per biga)",
+          "grams": 900,
+          "excludeFromTotal": true
+        },
+        {
+          "name": "Acqua",
+          "note": "(fredda 10-12°C, per biga)",
+          "grams": 400,
+          "excludeFromTotal": true
+        },
+        {
+          "name": "Lievito Secco Caputo",
+          "note": "(per biga)",
+          "grams": 3,
+          "excludeFromTotal": true
+        }
+      ]
+    },
+    {
+      "group": "Per l'Impasto Finale",
+      "items": [
+        {
+          "name": "Biga di Saccorosso",
+          "note": "(tutta la biga preparata)",
+          "grams": 1300
+        },
+        {
+          "name": "Farina Caputo Saccorosso",
+          "note": "(W 330-350, struttura)",
+          "grams": 1800
+        },
+        {
+          "name": "Farina Caputo Nuvola Super",
+          "note": "(W 260-280, leggerezza e alveolatura)",
+          "grams": 300
+        },
+        {
+          "name": "Acqua",
+          "note": "(in 3 riprese: 50% iniziale, 30% durante incordatura, 20% finale)",
+          "grams": 1650
+        },
+        {
+          "name": "Criscito Caputo",
+          "note": "(lievito madre secco attivo, 40g/kg farina)",
+          "grams": 120
+        },
+        {
+          "name": "Estratto di Malto",
+          "note": "(diastasico, favorisce lievitazione e colorazione)",
+          "grams": 15
+        },
+        {
+          "name": "Sale Marino Fino",
+          "note": "(2.5% su farina totale)",
+          "grams": 75
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Preparazione Biga (18-24h prima)",
+      "text": "Nella ciotola dell'impastatrice versare {farina_caputo_saccor_biga:900}g di Caputo Saccorosso e {acqua_biga:400}g di acqua fredda (10-12°C). Aggiungere {lievito_secco_biga:3}g di lievito secco. Mescolare a velocità 1 per 2-3 minuti fino a ottenere un impasto 'a stracci' (grumoso, non omogeneo). Trasferire in contenitore chiuso e far maturare 18-24 ore a 18°C (cantina/frigo alto)."
+    },
+    {
+      "title": "Spezzamento Biga e Malto",
+      "text": "Inserire nella Grilletta IM5 tutta la biga (circa {biga_di_saccorosso_impasto_finale:1300}g), l'estratto di malto ({malto_impasto_finale:15}g) e il 60% dell'acqua di rinfresco (circa 990g). Azionare a velocità 1 per 3-4 minuti per spezzare la biga e renderla cremosa. L'impasto deve risultare liquido e omogeneo."
+    },
+    {
+      "title": "Aggiunta Polveri e Criscito",
+      "text": "Con impastatrice in movimento a velocità 1, aggiungere: {farina_caputo_saccor_impasto_finale:1800}g Saccorosso + {farina_caputo_nuvola_impasto_finale:300}g Nuvola Super + {criscito_impasto_finale:120}g Criscito Caputo. Impastare 3-4 minuti fino a completo assorbimento. L'impasto inizia a strutturarsi ma è ancora morbido."
+    },
+    {
+      "title": "Incordatura e Bassinage",
+      "text": "Aumentare a velocità 2-3. Aggiungere il sale ({sale_impasto_finale:75}g) e versare a filo l'acqua rimanente (circa 660g) in tecnica bassinage. Impastare 6-8 minuti fino a maglia liscia, lucida e incordata. Temperatura finale: 23-24°C. Se supera i 25°C, l'impasto è sovrariscaldato."
+    },
+    {
+      "title": "Puntata in Massa",
+      "text": "Trasferire l'impasto in contenitore leggermente oliato. Coprire con pellicola. Puntata di 1.5-2 ore a temperatura ambiente (20-22°C). A metà tempo (dopo 45-50 min) eseguire una piega di rinforzo: sollevare i lembi dell'impasto e ripiegare verso il centro (4 pieghe a croce)."
+    },
+    {
+      "title": "Staglio Panetti",
+      "text": "Rovesciare l'impasto su banco infarinato con semola rimacinata. Stagliare panetti da 260-270g (circa 18-19 pezzi). Pirlare bene ogni panetto chiudendo il fondo con tecnica a pizzaiolo: formare una sfera tesa, pizzicare la giuntura sul fondo."
+    },
+    {
+      "title": "Appretto in Cassetta",
+      "text": "Disporre i panetti in cassette da lievitazione ben distanziati (minimo 5cm tra loro). Coprire con coperchio o pellicola. Appretto di 5-6 ore a temperatura ambiente (20-22°C). I panetti devono raddoppiare di volume, risultare soffici al tatto e non appiccicosi."
+    }
+  ],
+  "sensoryProfile": {
+    "summary": "Una pizza napoletana di straordinaria complessità, costruita su una doppia fermentazione biga-criscito che regala al cornicione un profumo di grano maturo, note lattiche e una sottile acidità nobile. L'impasto, grazie alla Nuvola Super e all'elevata idratazione al 68%, si scioglie in bocca con una leggerezza quasi eterea, mentre la cottura ad altissima temperatura sviluppa quella leopardatura carbone-zolfo che è firma del grande forno a legna. L'equilibrio tra il condimento e la base è calibrato con precisione artigianale: l'impasto è protagonista, non semplice supporto.",
+    "axes": [
+      {
+        "label": "Croccantezza Esterna",
+        "value": 8
+      },
+      {
+        "label": "Scioglievolezza Impasto",
+        "value": 9
+      },
+      {
+        "label": "Sapidità / Umami",
+        "value": 7
+      },
+      {
+        "label": "Equilibrio Condimento-Impasto",
+        "value": 8
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 9
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 249,
+    "macros": {
+      "carbs": 46,
+      "protein": 8,
+      "fat": 2
+    }
+  }
+}

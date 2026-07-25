@@ -1,0 +1,223 @@
+{
+  "title": "Baguette Francese Tradizionale",
+  "slug": "baguette-francese-tradizionale",
+  "emoji": "🥖",
+  "description": "La vera ricetta della baguette francese croccante e alveolata, preparata con metodo indiretto (Poolish) per massimizzare profumi e conservabilità.",
+  "subtitle": "Metodo indiretto con Poolish a media idratazione",
+  "category": "Pane",
+  "hydration": 70,
+  "targetTemp": "24-25°C",
+  "fermentation": "~18h",
+  "totalFlour": 600,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per il Poolish",
+      "items": [
+        {
+          "name": "Farina Tipo 0 o Manitoba",
+          "note": "(W 300-350)",
+          "grams": 150,
+          "tokenId": "farina_poolish"
+        },
+        {
+          "name": "Acqua",
+          "note": "(Temperatura ambiente)",
+          "grams": 150,
+          "tokenId": "acqua_poolish"
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(Dose per maturazione lunga)",
+          "grams": 1,
+          "tokenId": "lievito_poolish"
+        }
+      ]
+    },
+    {
+      "group": "Per l'Impasto Finale",
+      "items": [
+        {
+          "name": "Farina Tipo 0",
+          "note": "(W 240-270)",
+          "grams": 450,
+          "tokenId": "farina_impasto"
+        },
+        {
+          "name": "Acqua",
+          "note": "(Da dividere: base + bassinage)",
+          "grams": 240,
+          "tokenId": "acqua_impasto"
+        },
+        {
+          "name": "Acqua per Bassinage",
+          "note": "(Da aggiungere alla fine)",
+          "grams": 30,
+          "tokenId": "acqua_bassinage"
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(Per la spinta finale)",
+          "grams": 3,
+          "tokenId": "lievito_impasto"
+        },
+        {
+          "name": "Malto d'orzo in sciroppo",
+          "note": "(Opzionale, aiuta la doratura della crosta)",
+          "grams": 4,
+          "tokenId": "malto_impasto"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(2% sulla farina totale)",
+          "grams": 12,
+          "tokenId": "sale_impasto"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "stepsCondiment": [],
+  "flourTable": [
+    {
+      "type": "Tipo 0 / 00 Francese (T65)",
+      "w": "240-270",
+      "brands": "Caputo Nuvola/Classica, Petra 3, Molino Pasini Tradizione"
+    },
+    {
+      "type": "Manitoba (per il Poolish)",
+      "w": "330-380",
+      "brands": "Caputo Cuoco, Garofalo W350, Petra 5037"
+    }
+  ],
+  "baking": {
+    "temperature": "250°C",
+    "time": "20-25 minuti",
+    "tips": [
+      "Preriscaldare il forno in modalità statica con pietra refrattaria per almeno 45 minuti.",
+      "VAPORE FONDAMENTALE: Inserire un pentolino sul fondo del forno. Appena infornate le baguette, versare mezzo bicchiere di acqua bollente nel pentolino per creare vapore saturo.",
+      "Dopo 12-15 minuti, rimuovere il pentolino del vapore e abbassare a 220°C per asciugare la crosta.",
+      "Aprire a fessura lo sportello (cottura a spiffero) negli ultimi 3-4 minuti."
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Poolish",
+      "definition": "Pre-impasto liquido (100% idratazione) preparato con acqua, farina e una minima quantità di lievito. Dona sapore, croccantezza e prolunga la shelf-life."
+    },
+    {
+      "term": "Bassinage",
+      "definition": "Tecnica che prevede l'inserimento di una parte dell'acqua a fine impasto, a incordatura già avvenuta, per facilitare l'assorbimento di alte idratazioni."
+    },
+    {
+      "term": "Couche",
+      "definition": "Telo di lino o cotone grezzo, usato nella tradizione francese per far lievitare le baguette mantenendone la forma cilindrica e asciugando leggermente la superficie."
+    },
+    {
+      "term": "Slap & Fold",
+      "definition": "Tecnica manuale per impasti idratati: si solleva l'impasto, lo si sbatte con forza sul banco e lo si ripiega su se stesso per sviluppare il glutine intrappolando aria."
+    },
+    {
+      "term": "Scarpatura (Scoring)",
+      "definition": "I tagli praticati con la lametta prima di infornare. Nelle baguette servono a creare i caratteristici 'orecchi' e permettono l'espansione dei gas in cottura."
+    }
+  ],
+  "alert": "Non sgasare eccessivamente l'impasto durante la formatura. I movimenti devono essere decisi ma leggeri. Se schiacciati troppo il panetto, perderete la caratteristica alveolatura irregolare della vera baguette.",
+  "proTips": [
+    "I tagli sulla baguette non devono essere orizzontali né incrociati. Devono essere quasi paralleli alla lunghezza del filone (angolo di 20-30 gradi) e sovrapporsi nel loro asse verticale per circa 1/3 del taglio precedente.",
+    "Il vapore nei primi 10 minuti di cottura è vitale: ritarda la formazione della crosta permettendo al pane di sviluppare volume e aprire i tagli (oven spring).",
+    "Se la lametta fa attrito durante il taglio, inumidiscila con una goccia d'acqua."
+  ],
+  "storage": [
+    "Per conservare la baguette per 1-2 giorni, evitate il frigorifero che accelera il raffermamento (retrogradazione degli amidi). Riponetela a temperatura ambiente in un sacchetto di carta, che permette alla crosta di 'respirare' mantenendo una discreta croccantezza. Per rigenerarla, inumidite leggermente la superficie con acqua e infornate a 200°C per 3-5 minuti.",
+    "Il congelamento è la tecnica migliore per una conservazione a lungo termine (fino a 1 mese). Appena la baguette è completamente fredda, avvolgetela strettamente in pellicola per alimenti e poi in un foglio di alluminio, oppure inseritela in un sacchetto per freezer espellendo tutta l'aria. È preferibile congelarla intera per proteggere la mollica dalla disidratazione.",
+    "Per rigenerare la baguette dal freezer, non scongelatela a temperatura ambiente. Prelevatela direttamente dal congelatore, passatela velocemente sotto l'acqua fredda e infornatela subito in forno statico preriscaldato a 190-200°C per 10-15 minuti. In questo modo la mollica si scongelerà e la crosta tornerà estremamente croccante e fragrante."
+  ],
+  "imageKeywords": [
+    "french baguette",
+    "crusty artisan bread",
+    "freshly baked baguette scoring",
+    "baguette francese",
+    "baguette brot",
+    "couche bread dough"
+  ],
+  "tags": [
+    "baguette",
+    "pane francese",
+    "poolish",
+    "lievito di birra",
+    "croccante",
+    "tradizionale"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "image": "images/ricette/pane/baguette-francese-tradizionale.webp",
+  "imageAttribution": "📷 Foto: Brett Jordan — Pexels License via Pexels",
+  "steps": [
+    {
+      "title": "Preparazione del Poolish",
+      "text": "In un contenitore alto e stretto, sciogliere {lievito_poolish:1}g di lievito in {acqua_poolish:150}g di acqua. Aggiungere {farina_poolish:150}g di farina e mescolare con una forchetta fino a ottenere una crema grezza, senza grumi secchi. Coprire e lasciare a temperatura ambiente (20-22°C) per 2 ore, poi riporre in frigorifero a 4°C per 12-14 ore. Il poolish è pronto quando triplica di volume e presenta un leggero cedimento al centro."
+    },
+    {
+      "title": "Impastamento Iniziale",
+      "text": "Versare tutto il poolish nella vasca dell'impastatrice. Aggiungere {farina_impasto:450}g di farina, {lievito_impasto:3}g di lievito sbriciolato, {malto_impasto:4}g di malto e {acqua_impasto:240}g di acqua (tenendo da parte l'acqua di bassinage). Avviare in prima velocità per 4-5 minuti, fino a formare un impasto coeso."
+    },
+    {
+      "title": "Incordatura e Bassinage",
+      "text": "Passare in seconda velocità. Quando l'impasto inizia a staccarsi dalle pareti, aggiungere {sale_impasto:12}g di sale. Subito dopo, iniziare a inserire i restanti {acqua_bassinage:30}g di acqua a filo (tecnica del bassinage), aspettando che la dose precedente sia stata assorbita prima di aggiungerne altra. Chiudere l'impasto a 24-25°C."
+    },
+    {
+      "title": "Puntata e Pieghe",
+      "text": "Trasferire l'impasto in un mastello leggermente oliato. Praticare una serie di pieghe (coil fold) per dare struttura. Coprire e lasciare lievitare (puntata) a 24°C per circa 2 ore, o fino al raddoppio del volume, praticando un'altra serie di pieghe a metà del tempo."
+    },
+    {
+      "title": "Staglio e Preforma",
+      "text": "Rovesciare l'impasto sul banco leggermente infarinato. Con l'aiuto di un tarocco, dividere l'impasto in 3 pezzature da circa {panetto_peso:340!}g l'una. Pre-formare delicatamente dei cilindri tozzi (senza sgasare eccessivamente). Coprire con un panno e lasciare riposare sul banco per {riposo:20!} minuti per far rilassare la maglia glutinica."
+    },
+    {
+      "title": "Formatura della Baguette",
+      "text": "Prendere un cilindro, appiattirlo leggermente in un rettangolo. Piegare il lembo superiore verso il centro e sigillare col palmo della mano. Piegare il lembo inferiore verso il centro e sigillare. Infine, piegare a metà per il lungo e sigillare la chiusura pizzicando la pasta. Allungare il filone facendolo rotolare con entrambe le mani dal centro verso l'esterno, affinando le punte (devono raggiungere circa {lunghezza:35!} cm, o la misura della vostra teglia)."
+    },
+    {
+      "title": "Appretto nel Couche",
+      "text": "Disporre le baguette su un telo di lino infarinato (couche) o su un canovaccio spesso spolverato di semola, sollevando la stoffa tra una baguette e l'altra per creare dei divisori che ne mantengano la forma in lievitazione. La chiusura (verme) deve stare verso l'alto se poi verranno capovolte, o verso il basso se infornate direttamente. Coprire e far lievitare per 45-60 minuti a 24°C."
+    },
+    {
+      "title": "Taglio (Scarpatura)",
+      "text": "Trasferire delicatamente le baguette su una pala infarinata o su carta forno. Con una lametta da panettiere (inclinata a 30° rispetto alla superficie), praticare 3 o 4 tagli netti, quasi longitudinali. I tagli devono sovrapporsi leggermente: l'inizio di un taglio deve trovarsi parallelo alla fine del precedente. Infornare immediatamente."
+    }
+  ],
+  "sensoryProfile": {
+    "summary": "Una baguette di rara eleganza artigianale: la crosta si manifesta con una croccantezza cristallina e sonora, frutto dell'idratazione al 70% e della cottura con vapore saturo. Il poolish a maturazione lenta (12-14h) conferisce una complessità fermentativa spiccata, con sentori lattici delicati e una leggera nota acetica. La mollica si presenta aperta e irregolare, con alveoli pronunciati e una texture setosa, mentre le note cerealicole tostate della farina tipo 0 chiudono un profilo armonioso e persistente.",
+    "axes": [
+      {
+        "label": "Croccantezza Crosta",
+        "value": 9
+      },
+      {
+        "label": "Alveolatura Mollica",
+        "value": 8
+      },
+      {
+        "label": "Complessità Fermentativa",
+        "value": 8
+      },
+      {
+        "label": "Sapidità",
+        "value": 5
+      },
+      {
+        "label": "Note Tostate / Cerealicole",
+        "value": 7
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 268,
+    "macros": {
+      "carbs": 53,
+      "protein": 9,
+      "fat": 1
+    }
+  },
+  "_originalImageUrl": "https://images.pexels.com/photos/8207391/pexels-photo-8207391.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+}

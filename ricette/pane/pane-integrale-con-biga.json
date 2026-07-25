@@ -1,0 +1,225 @@
+{
+    "title":  "Pane Integrale con Biga",
+    "slug":  "pane-integrale-con-biga",
+    "emoji":  "ðŸŒ¾",
+    "description":  "Un pane rustico e profumato con farina integrale e biga al 30%. Alta idratazione (75%) per una mollica alveolata e crosta croccante.",
+    "subtitle":  "Impasto indiretto ad alta idratazione con farina integrale e malto",
+    "category":  "Pane",
+    "hydration":  75,
+    "targetTemp":  "25-26Â°C",
+    "fermentation":  "~20-21h totali",
+    "totalFlour":  1000,
+    "ingredients":  [
+
+                    ],
+    "ingredientGroups":  [
+                             {
+                                 "group":  "Per la Biga (16-18 ore a 18Â°C)",
+                                 "items":  [
+                                               {
+                                                   "name":  "Farina Tipo 0 o Manitoba",
+                                                   "note":  "(W 330-350)",
+                                                   "grams":  300,
+                                                   "tokenId":  "farina_biga"
+                                               },
+                                               {
+                                                   "name":  "Acqua",
+                                                   "note":  "(18-20Â°C)",
+                                                   "grams":  135,
+                                                   "tokenId":  "acqua_biga"
+                                               },
+                                               {
+                                                   "name":  "Lievito di Birra Fresco",
+                                                   "note":  "(1% su farina biga)",
+                                                   "grams":  3,
+                                                   "tokenId":  "lievito_biga"
+                                               }
+                                           ]
+                             },
+                             {
+                                 "group":  "Per l\u0027Impasto Finale",
+                                 "items":  [
+                                               {
+                                                   "name":  "Farina Integrale",
+                                                   "note":  "(W 280-300)",
+                                                   "grams":  700,
+                                                   "tokenId":  "farina_impasto"
+                                               },
+                                               {
+                                                   "name":  "Acqua",
+                                                   "note":  "Base",
+                                                   "grams":  515,
+                                                   "tokenId":  "acqua_impasto"
+                                               },
+                                               {
+                                                   "name":  "Acqua",
+                                                   "note":  "Bassinage",
+                                                   "grams":  100,
+                                                   "tokenId":  "acqua_bassinage"
+                                               },
+                                               {
+                                                   "name":  "Malto d\u0027orzo o Miele",
+                                                   "note":  "(per colore e nutrimento lieviti)",
+                                                   "grams":  5,
+                                                   "tokenId":  "malto_impasto"
+                                               },
+                                               {
+                                                   "name":  "Lievito di Birra Fresco",
+                                                   "note":  "(starter per la farina integrale)",
+                                                   "grams":  2,
+                                                   "tokenId":  "lievito_impasto"
+                                               },
+                                               {
+                                                   "name":  "Sale Fino",
+                                                   "note":  "(2% su farina totale)",
+                                                   "grams":  20,
+                                                   "tokenId":  "sale_impasto"
+                                               }
+                                           ]
+                             }
+                         ],
+    "suspensions":  [
+
+                    ],
+    "flourTable":  [
+                       {
+                           "type":  "Farina Tipo 0 / Manitoba (per Biga)",
+                           "w":  "330-350",
+                           "brands":  "Caputo Manitoba, Petra 5037, Garofalo W350"
+                       },
+                       {
+                           "type":  "Farina Integrale (per Impasto)",
+                           "w":  "280-300",
+                           "brands":  "Petra 9, Caputo Integrale, Molino Quaglia, Molino Dallagiovanna Integrale"
+                       }
+                   ],
+    "baking":  {
+                   "temperature":  "250Â°C",
+                   "time":  "45-50 minuti",
+                   "tips":  [
+                                "Preriscaldare il forno statico a 250Â°C con pentolino d\u0027acqua sul fondo o pietra refrattaria per almeno 45 min.",
+                                "Ribaltare il pane dal cestino alla pala/teglia, praticare il taglio (scoring) con lametta a 45Â° lungo tutta la superficie.",
+                                "Infornare a 250Â°C con vapore per i primi 15 minuti.",
+                                "Rimuovere il vapore (togliere il pentolino), abbassare a 200Â°C e cuocere per altri 25 minuti.",
+                                "Ultimi 10 minuti: sportello a fessura (forno a spiffero) per far uscire l\u0027umiditÃ  e garantire una crosta croccante."
+                            ]
+               },
+    "glossary":  [
+                     {
+                         "term":  "Biga",
+                         "definition":  "Pre-impasto solido non incordato (idratazione 44-50%), matura 16-24h. Fornisce struttura, profumi acetici lattici e prolunga la shelf-life del pane."
+                     },
+                     {
+                         "term":  "Bassinage",
+                         "definition":  "Tecnica che consiste nell\u0027aggiungere una parte dell\u0027acqua (solitamente il 10-20% finale) solo dopo aver formato una solida maglia glutinica, permettendo alte idratazioni."
+                     },
+                     {
+                         "term":  "Puntata",
+                         "definition":  "Prima fase di lievitazione dell\u0027impasto in massa (tutto intero), fondamentale per lo sviluppo dei lieviti e della struttura."
+                     },
+                     {
+                         "term":  "Appretto",
+                         "definition":  "Seconda fase di lievitazione, avviene dopo che l\u0027impasto Ã¨ stato diviso e formato. Precede la cottura."
+                     },
+                     {
+                         "term":  "Coil Folds",
+                         "definition":  "Pieghe di rinforzo eseguite sollevando l\u0027impasto dal centro e ripiegandolo sotto se stesso. Delicate e perfette per impasti ad alta idratazione."
+                     },
+                     {
+                         "term":  "Slap \u0026 Fold",
+                         "definition":  "Tecnica di impastamento manuale francese (sbattere e ripiegare) che sfrutta la forza d\u0027urto per incordare impasti idratati senza l\u0027uso di impastatrici."
+                     }
+                 ],
+    "alert":  "âš ï¸ CRITICITÃ€ DELLA BIGA: Non impastare MAI la biga fino a renderla liscia. Deve essere slegata e grezza. Se si forma glutine durante la preparazione della biga, fermenterÃ  in modo scorretto sprigionando aciditÃ  eccessiva. Inoltre, rispettare rigorosamente la temperatura di 18Â°C per le 16 ore.",
+    "proTips":  [
+                    "La farina integrale assorbe molta acqua ma la cede piÃ¹ facilmente durante l\u0027impastamento rispetto alla farina bianca. Il bassinage deve essere molto lento per non \u0027lavare\u0027 la maglia glutinica.",
+                    "Il malto (o miele) Ã¨ fondamentale negli impasti indiretti (con biga) in quanto la fermentazione lunga consuma molti zuccheri; il malto garantisce nutrimento residuo per una bella reazione di Maillard (crosta dorata in cottura).",
+                    "Per capire quando il pane Ã¨ cotto, bussare con le nocche sul fondo della pagnotta: deve suonare vuoto come un tamburo. La temperatura al cuore deve essere attorno ai 96-98Â°C."
+                ],
+    "storage":  [
+                    "Per preservare la fragranza e la croccantezza della crosta per i primi 3-4 giorni, conservare il pane a temperatura ambiente, avvolto in un sacchetto di carta o in un panno di cotone. Evitare contenitori di plastica e il frigorifero, che accelerano il processo di raffermamento e la perdita di croccantezza.",
+                    "Per una conservazione a lungo termine (fino a 2-3 mesi), si consiglia di congelare il pane il giorno stesso della produzione, una volta completamente freddo. Affettarlo prima di congelarlo permette un utilizzo piÃ¹ pratico. Avvolgere le fette o il pane intero prima in pellicola alimentare e poi in un sacchetto gelo ermetico per evitare bruciature da freddo e disidratazione.",
+                    "Per rigenerare il pane e restituirgli una consistenza simile al \u0027come appena sfornato\u0027, riscaldare il forno a 180Â°C. Inumidire leggermente la superficie del pane con acqua e infornare per 5-10 minuti. Le fette congelate possono essere rigenerate direttamente in tostapane o in una padella calda."
+                ],
+    "imageKeywords":  [
+                          "whole wheat artisan bread",
+                          "pane integrale fatto in casa",
+                          "sourdough wholemeal bread slice",
+                          "dark crust rustic bread",
+                          "vollkornbrot rustikal",
+                          "baker scoring dough",
+                          "bread crumb open texture"
+                      ],
+    "tags":  [
+                 "pane",
+                 "integrale",
+                 "biga",
+                 "impasto indiretto",
+                 "alta idratazione",
+                 "rustico"
+             ],
+    "_generatedBy":  "gemini-3.1",
+    "_createdAt":  "2026-04-05T02:05:44.664Z",
+    "image":  "images/ricette/pane/pane-integrale-con-biga.webp",
+    "imageAttribution":  "ðŸ“· Foto: Sabine Freiberger â€” Pexels License via Pexels",
+    "_originalImageUrl":  "https://images.pexels.com/photos/36353181/pexels-photo-36353181.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940",
+    "steps":  [
+                  {
+                      "title":  "Preparazione della Biga (Giorno 1)",
+                      "text":  "Sciogliere grossolanamente {lievito_biga:3}g di lievito fresco in {acqua_biga:135}g di acqua a temperatura ambiente (18-20Â°C). Aggiungere {farina_biga:300}g di farina forte e impastare a mano per massimo 1-2 minuti. L\u0027impasto DEVE rimanere grezzo, stracciato e non omogeneo (non formare la maglia glutinica). Riporre in un contenitore alto e stretto, coprire con pellicola forata e lasciare maturare a 18Â°C per 16-18 ore."
+                  },
+                  {
+                      "title":  "Fase Iniziale e Autolisi Breve (Giorno 2)",
+                      "text":  "Nella vasca della spirale inserire la biga matura (deve presentare un odore pungente ma gradevole, simile allo yogurt), {farina_impasto:700}g di farina integrale, {malto_impasto:5}g di malto d\u0027orzo, {lievito_impasto:2}g di lievito fresco sbriciolato e {acqua_impasto:515}g di acqua fredda. Avviare in prima velocitÃ  per 5-6 minuti finchÃ© la farina non Ã¨ completamente idratata. Lasciare riposare in vasca (fermentolisi) per 20 minuti."
+                  },
+                  {
+                      "title":  "Incordatura e Bassinage",
+                      "text":  "Azionare la spirale in seconda velocitÃ . Quando l\u0027impasto inizia a prendere corda e staccarsi dalle pareti, inserire {sale_impasto:20}g di sale. Non appena il sale Ã¨ assorbito, iniziare ad aggiungere i restanti {acqua_bassinage:100}g di acqua a filo (tecnica del bassinage). Aggiungere l\u0027acqua in 3-4 riprese, aspettando che la dose precedente sia completamente assorbita prima di inserire la successiva. Tempo totale di impasto: circa 12-15 minuti. Temperatura target al termine: {temp_impasto:26!}Â°C."
+                  },
+                  {
+                      "title":  "Puntata e Pieghe (Coil Folds)",
+                      "text":  "Trasferire l\u0027impasto in un contenitore leggermente oliato con bordi dritti. Effettuare la puntata (prima lievitazione in massa) a temperatura ambiente (24-25Â°C) per circa 2-2.5 ore. Durante questo periodo, effettuare 2 serie di pieghe di rinforzo (coil folds) a distanza di 45 minuti l\u0027una dall\u0027altra, per dare struttura all\u0027impasto integrale."
+                  },
+                  {
+                      "title":  "Staglio e Formatura",
+                      "text":  "Rovesciare l\u0027impasto sul banco di lavoro leggermente infarinato. Eseguire lo staglio dividendo l\u0027impasto in pezzi da circa {panetto_peso:885!}g ciascuno. Fare una pre-forma leggera (pirlatura morbida) e lasciare riposare sul banco coperto a campana per 20 minuti. Successivamente, formare i filoni o le pagnotte definitive stringendo bene la chiusura."
+                  },
+                  {
+                      "title":  "Appretto",
+                      "text":  "Trasferire le pagnotte in cestini di lievitazione (banneton) ben infarinati con farina di riso o semola, con la chiusura (seam) rivolta verso l\u0027alto. Coprire con un panno o inserire in buste di plastica. Lasciare lievitare a 24-25Â°C per circa 1.5 - 2 ore, finchÃ© premendo leggermente con un dito la pasta torna indietro lentamente (test del dito)."
+                  }
+              ],
+    "sensoryProfile":  {
+                           "summary":  "Un pane integrale di grande carattere e profonditÃ : la lunga maturazione della biga a 18Â°C sviluppa note lattiche e acetiche eleganti, che si fondono con la rustica complessitÃ  della farina integrale. Al naso emerge un bouquet cerealicolo ricco e avvolgente, con sentori di crusca tostata e una lieve nota di yogurt; in bocca la crosta croccante e caramellata dialoga con una mollica compatta ma morbida, dall\u0027alveolatura irregolare e ben sviluppata per la sua idratazione al 75%. La sapiditÃ  Ã¨ calibrata e sostenuta, capace di esaltare le note terrose del grano integrale senza mai sovrastarle.",
+                           "axes":  [
+                                        {
+                                            "label":  "Croccantezza Crosta",
+                                            "value":  9
+                                        },
+                                        {
+                                            "label":  "Alveolatura Mollica",
+                                            "value":  6
+                                        },
+                                        {
+                                            "label":  "ComplessitÃ  Fermentativa",
+                                            "value":  8
+                                        },
+                                        {
+                                            "label":  "SapiditÃ ",
+                                            "value":  6
+                                        },
+                                        {
+                                            "label":  "Note Tostate / Cerealicole",
+                                            "value":  9
+                                        }
+                                    ]
+                       },
+    "nutrition":  {
+                      "kcal_per_100g":  248,
+                      "macros":  {
+                                     "carbs":  46,
+                                     "protein":  9,
+                                     "fat":  2
+                                 }
+                  }
+}

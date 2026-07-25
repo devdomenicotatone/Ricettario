@@ -1,0 +1,172 @@
+{
+  "title": "Olio al Peperone Crusco o Paprika Dolce (Rosso Rubino)",
+  "slug": "olio-peperone-crusco-rosso-rubino",
+  "emoji": "🌶️",
+  "description": "Condimento artigianale lucano dal colore rosso rubino e dal profumo affumicato. Ideale per insaporire focacce, pasta, bruschette o per l'uso a crudo.",
+  "subtitle": "Tecnica di estrazione a caldo e shock termico per oli aromatizzati",
+  "category": "Condimenti",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per la Base Oleosa",
+      "items": [
+        {
+          "name": "Olio Extravergine di Oliva",
+          "note": "(delicato, preferibilmente lucano o pugliese - per l'estrazione a freddo)",
+          "grams": 250,
+          "tokenId": "olio_evo_base"
+        }
+      ]
+    },
+    {
+      "group": "Variante A: Peperone Crusco",
+      "items": [
+        {
+          "name": "Peperoni Secchi di Senise IGP",
+          "note": "(circa 4-5 interi)",
+          "grams": 30,
+          "tokenId": "peperoni_secchi"
+        },
+        {
+          "name": "Olio EVO o Olio di Semi",
+          "note": "(una piccola quantità per la frittura flash)",
+          "grams": 50,
+          "tokenId": "olio_frittura"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(per condire i peperoni dopo la frittura)",
+          "grams": 2,
+          "tokenId": "sale_fino"
+        }
+      ]
+    },
+    {
+      "group": "Variante B: Paprika Dolce",
+      "items": [
+        {
+          "name": "Paprika Dolce in polvere",
+          "note": "(di alta qualità, non affumicata se si vuole replicare il crusco dolce)",
+          "grams": 15,
+          "tokenId": "paprika_polvere"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Preparazione dei Peperoni di Senise (Variante A)",
+      "text": "Se si sceglie di realizzare l'estrazione classica, prendere {peperoni_secchi:30}g di peperoni secchi. Pulirli accuratamente con un panno asciutto. Rimuovere il picciolo e svuotarli dai semi interni battendoli leggermente sul piano di lavoro, facendo attenzione a non romperli completamente."
+    },
+    {
+      "title": "Frittura Flash dei Peperoni (Variante A)",
+      "text": "Versare {olio_frittura:50}g di olio in una padella (suggeriamo olio EVO per il sapore, o olio di semi neutro) e portarlo a {temperatura_frittura:160!}°C. Immergere i peperoni. Attenzione: la cottura dura esattamente {tempo_cottura:3!} secondi. Prelevarli immediatamente e scolarli su carta assorbente. Spolverarli con {sale_fino:2}g di sale. Diventeranno \"cruschi\" (croccanti) raffreddandosi. Questo olio di frittura non andrà nel condimento finale."
+    },
+    {
+      "title": "Infusione e Riscaldamento Controllato (Variante A)",
+      "text": "Una volta freddi e croccanti, metti i peperoni cruschi nel frullatore insieme a {olio_evo_base:250}g di olio EVO fresco e delicato. Frulla per rompere i peperoni e trasferisci il composto in un pentolino. Porta a {temperatura_infusione:65!}°C costanti per 10 minuti mescolando. Questo \"estrae\" il colore rosso rubino senza bruciare i polifenoli dell'olio."
+    },
+    {
+      "title": "Infusione a Caldo (Variante B - Paprika Dolce)",
+      "text": "In alternativa, aromatizza l'olio base ({olio_evo_base:250}g) scaldandolo a circa {temperatura_infusione:60!}°C. A parte, crea una pasta liscia e senza grumi mescolando {paprika_polvere:15}g di paprika dolce con un cucchiaio di olio a temperatura ambiente. Unisci la pasta di paprika all'olio caldo a 60°C e mescola vigorosamente."
+    },
+    {
+      "title": "Shock Termico Inverso e Filtraggio per Gravità",
+      "text": "Prepara la postazione di filtraggio: posiziona un filtro di carta da caffè o un setaccio 400 mesh sopra una ciotola inserita a sua volta in una bacinella di ghiaccio. Versa l'olio caldo (da Variante A o B) sul filtro. Il ghiaccio blocca immediatamente l'estrazione e fissa il colore rosso brillante. Lascia filtrare per gravità senza mai pressare i residui, per ottenere un olio perfettamente limpido e non velato."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "glossary": [
+    {
+      "term": "Peperone Crusco",
+      "definition": "Peperone tipico di Senise (Basilicata) a polpa sottile che viene essiccato. Dopo una frittura rapidissima diventa estremamente croccante e dolce."
+    },
+    {
+      "term": "Shock termico inverso",
+      "definition": "Filtraggio dell'olio caldo direttamente su un contenitore posto nel ghiaccio, per bloccare il processo di estrazione, preservare i profumi volatili e fissare il colore rubino."
+    },
+    {
+      "term": "Estrazione liposolubile",
+      "definition": "Processo in cui i pigmenti colorati (come i carotenoidi del peperone) e le molecole aromatiche si sciolgono e si trasferiscono in una matrice grassa, come l'olio EVO."
+    },
+    {
+      "term": "Filtraggio per Gravità",
+      "definition": "Tecnica di filtraggio che sfrutta solo la forza di gravità senza pressione meccanica. Garantisce la massima limpidezza del liquido."
+    },
+    {
+      "term": "Mesh (325-400)",
+      "definition": "Setaccio a maglie microscopiche (circa 37 micron) in grado di trattenere le polveri sottili rilasciate dal peperone crusco o dalla paprika senza farle passare nell'olio."
+    }
+  ],
+  "alert": "⚠️ SICUREZZA ALIMENTARE E TECNICA: Non superare MAI i 3-4 secondi di frittura per i peperoni secchi. Evita ASSOLUTAMENTE l'aggiunta di acqua in qualsiasi momento (rischio di proliferazione di Clostridium botulinum e intorbidimento). NON pressare i residui durante il filtraggio per non rendere l'olio opaco.",
+  "proTips": [
+    "Per ottenere peperoni cruschi perfetti, toglili dall'olio quando sono ancora rosso brillante e morbidi. La consistenza vitrea e croccante si sviluppa esclusivamente durante il raffreddamento.",
+    "Per evitare grumi nella variante B (paprika), è fondamentale creare prima una 'pasta' omogenea con pochissimo olio a temperatura ambiente prima di mescolarla all'olio caldo.",
+    "L'Olio ai cruschi è perfetto per lucidare a fine cottura la superficie di una Focaccia pugliese o per mantecare una pasta aglio, olio e peperoncino."
+  ],
+  "storage": [
+    "Per prevenire l'ossidazione e preservare il colore rosso brillante e le note aromatiche fresche, conserva l'olio in frigorifero all'interno di una bottiglia di vetro scuro. Assicurarsi che la bottiglia di vetro sia stata perfettamente asciugata (preferibilmente in forno) per eliminare ogni traccia di umidità residua prima dell'imbottigliamento.",
+    "L'olio potrebbe solidificare in frigo a causa delle basse temperature; riportalo a temperatura ambiente per 15-20 minuti prima dell'uso per ripristinarne la fluidità ottimale. Consumare preferibilmente entro 3-4 settimane per godere appieno dei profumi e mantenere totale sicurezza alimentare."
+  ],
+  "imageKeywords": [
+    "peperoni cruschi di senise",
+    "red infused olive oil",
+    "chili oil in glass bottle",
+    "paprika oil",
+    "olio rosso piccante",
+    "fried dried red peppers",
+    "lucanian food tradition"
+  ],
+  "tags": [
+    "condimenti",
+    "olio aromatizzato",
+    "peperone crusco",
+    "paprika",
+    "tradizione lucana",
+    "estrazione"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "_createdAt": "2026-04-24T23:00:17.531Z",
+  "image": "images/ricette/condimenti/olio-peperone-crusco-rosso-rubino.webp",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
+  "sensoryProfile": {
+    "summary": "Un olio dal carattere luminoso e avvolgente, che si presenta con un rosso rubino intenso e una texture setosa di grande eleganza. Al naso domina un bouquet di peperone dolce essiccato, con note terrose e lievemente fruttate che evocano il sole del Meridione; in bocca la dolcezza rotonda del capsico si fonde armoniosamente con la struttura grassa dell'olio EVO, lasciando un finale pulito e persistente. La sapidità è contenuta ma presente, mentre l'intensità aromatica si rivela la firma dominante di questo condimento artigianale.",
+    "axes": [
+      {
+        "label": "Sapidità / Umami",
+        "value": 3
+      },
+      {
+        "label": "Acidità / Pungenza",
+        "value": 2
+      },
+      {
+        "label": "Cremosità / Densità",
+        "value": 6
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 6
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 842,
+    "macros": {
+      "carbs": 3,
+      "protein": 1,
+      "fat": 93
+    }
+  },
+  "_originalImageUrl": ""
+}

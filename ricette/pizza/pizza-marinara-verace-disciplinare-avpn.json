@@ -1,0 +1,269 @@
+{
+  "title": "Pizza Marinara Verace — Disciplinare AVPN",
+  "slug": "pizza-marinara-verace-disciplinare-avpn",
+  "emoji": "🍕",
+  "description": "La Pizza Marinara secondo il disciplinare AVPN 2024: pomodoro pelato San Marzano, aglio, origano e olio extravergine d'oliva. Impasto diretto, lievitazione 12-24 ore, cottura a 430°C.",
+  "subtitle": "Disciplinare Internazionale AVPN 2024 — La pizza storica napoletana",
+  "category": "Pizza",
+  "hydration": 58,
+  "targetTemp": "20-22°C",
+  "fermentation": "12-24h a T.A.",
+  "totalFlour": 1700,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per l'Impasto (Disciplinare AVPN)",
+      "items": [
+        {
+          "name": "Acqua",
+          "note": "(16-22°C, pH 6-7)",
+          "grams": 1000,
+          "tokenId": "acqua_impasto"
+        },
+        {
+          "name": "Farina Tipo 00",
+          "note": "(W 250-320, P/L 0.50-0.70)",
+          "grams": 1700,
+          "tokenId": "farina_impasto"
+        },
+        {
+          "name": "Sale Marino Grosso",
+          "note": "",
+          "grams": 50,
+          "tokenId": "sale_impasto"
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(Saccharomyces cerevisiae)",
+          "grams": 1,
+          "tokenId": "lievito_impasto"
+        }
+      ]
+    },
+    {
+      "group": "Per il Condimento Marinara (per pizza, da disciplinare)",
+      "items": [
+        {
+          "name": "Pomodoro Pelato San Marzano DOP",
+          "note": "(frantumato rigorosamente a mano)",
+          "grams": 85,
+          "tokenId": "pelati_condimento"
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(caratteristiche delicate, no retrogusto aspro-pungente)",
+          "grams": 7,
+          "tokenId": "olio_condimento"
+        },
+        {
+          "name": "Aglio Fresco",
+          "note": "(1 spicchio, circa 3g, privo di corteccia dura)",
+          "grams": 3,
+          "tokenId": "aglio_condimento"
+        },
+        {
+          "name": "Origano",
+          "note": "(Origanum vulgare, un pizzico)",
+          "grams": 0.5,
+          "tokenId": "origano_condimento"
+        },
+        {
+          "name": "Basilico Fresco",
+          "note": "(facoltativo, alcune foglie)",
+          "grams": 2,
+          "tokenId": "basilico_condimento"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(per il pomodoro, Art. 4.3.1)",
+          "grams": 1,
+          "tokenId": "sale_condimento"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Acqua nell'impastatrice — Sistema diretto (Art. 2.1.3)",
+      "text": "Il disciplinare prescrive un impasto di tipo diretto, partendo dall'acqua. Versare {acqua_impasto:1000}g di acqua a temperatura di utilizzo (16-22°C optimum STD) nell'impastatrice a forcella, a spirale o a braccia tuffanti (tutte con cestello ad angoli smussati e rotante). In alternativa, impastare a mano. Regole essenziali da rispettare: impasto di tipo diretto, partire dall'acqua, non inserire alcun tipo di grasso o zuccheri nell'impasto."
+    },
+    {
+      "title": "Sale e lievito in successione (Art. 2.1.3)",
+      "text": "Aggiungere {sale_impasto:50}g di sale marino grosso nell'acqua. In successione, stemperare {lievito_impasto:1}g di lievito di birra fresco direttamente nell'impastatrice. Il disciplinare prescrive che il contatto diretto tra sale e lievito non avvenga per un tempo superiore ai 5 minuti, altrimenti il sale andrebbe a danneggiare le cellule del lievito. Non è consentito l'impiego di lieviti chimici secchi addizionati di miglioratori."
+    },
+    {
+      "title": "Aggiunta della farina — Punto di pasta (Art. 2.1.3)",
+      "text": "Avviare la macchina e aggiungere {farina_impasto:1700}g di farina tipo 00 a pioggia per evitare la formazione di grumi (durata circa {tempo_aggiunta:10!} minuti) sino al raggiungimento della consistenza desiderata (detto 'punto di pasta'). Per ottenere un'ottimale consistenza dell'impasto è molto importante la quantità d'acqua che una farina è in grado di assorbire (idratazione)."
+    },
+    {
+      "title": "Lavorazione finale — Punto di corda (Art. 2.1.3)",
+      "text": "L'impasto viene quindi lavorato per un massimo di ulteriori {tempo_lavorazione:20!} minuti a seconda della tecnologia dell'impastatrice (punto di corda). Una eccessiva lavorazione con il conseguente riscaldamento meccanico comporta l'incordatura dell'impasto, cioè l'organizzazione sotto forma di fibra della maglia glutinica con grave pregiudizio delle proprietà meccaniche e l'inizio del principio di ossidazione dello stesso."
+    },
+    {
+      "title": "Valutazione dell'impasto finito (Art. 2.1.3)",
+      "text": "L'impasto finale deve presentarsi al tatto umido, non appiccicoso, morbido e plastico e facilmente asportabile dalla vasca dell'impastatrice per essere lavorato. Estrarlo e porlo su un tavolo da lavoro."
+    },
+    {
+      "title": "Prima Fermentazione — Puntata (Art. 2.1.4)",
+      "text": "Coprire l'impasto con un panno umido in modo che la superficie non possa indurirsi formando crosta. Il panno umido è fondamentale per evitare l'evaporazione dell'acqua rilasciata dall'impasto stesso. Lasciar riposare per innescare la prima fermentazione. Per garantire l'uniformità del prodotto è consentito l'uso di celle di fermentazione a temperatura ed umidità controllabili (parametri ideali: {temp_cella:18!}-20°C con 60-70% di umidità)."
+    },
+    {
+      "title": "Staglio — Formatura dei panetti (Art. 2.1.4)",
+      "text": "Con l'ausilio di una spatola, tagliare dall'impasto una porzione e darle forma di panetto con la tecnica tradizionale napoletana della 'mozzatura' (ricorda la preparazione delle mozzarelle). Il peso del panetto deve essere proporzionato al diametro della pizza: panetti da {panetto_piccolo:200!}g per pizza ø 22-24 cm, fino a {panetto_grande:280!}g per pizza ø 28-35 cm. Non è consentito l'uso di matterello o macchina a disco tipo pressa meccanica."
+    },
+    {
+      "title": "Seconda Fermentazione e Maturazione — Appretto (Art. 2.1.4)",
+      "text": "Disporre i panetti in cassette per alimenti ('mattarelle'). I tempi complessivi di fermentazione devono essere compresi tra un minimo di {tempo_min:12!} e un massimo di {tempo_max:24!} ore, secondo la tipologia di farina impiegata e tenendo conto di temperatura, umidità e tempo di utilizzo. La maturazione scinde le strutture complesse (proteine e amidi) in elementi più semplici, rendendo la pizza più digeribile. L'impasto sarà pronto quando risulterà 'plastico', estensibile e poco elastico."
+    },
+    {
+      "title": "Stesura manuale del disco di pasta (Art. 2.2.1)",
+      "text": "Estrarre il panetto dalla cassetta con l'aiuto di una spatola. Passarlo velocemente nella farina (senza farne assorbire in eccesso) e appoggiarlo sul piano di lavoro. Effettuare una pressione delle dita di entrambe le mani, dal basso verso l'alto, fino al raggiungimento della dimensione della mano. Completare l'allargamento con il movimento coordinato di sollevamento, estensione del lembo e rotazione del disco. Questa manipolazione sposta l'aria verso la periferia, creando il cornicione (1-2 cm). Lo spessore al centro sarà di circa {spessore:0.25!} cm (tolleranza ±10%). L'eccesso di farina residua sulla base causa colore giallo ocra e sapore amaro in cottura."
+    }
+  ],
+  "stepsCondiment": [
+    {
+      "title": "Preparazione del pomodoro pelato (Art. 4.3.1)",
+      "text": "Versare {pelati_condimento:85}g di pomodori pelati San Marzano DOP in una ciotola. Frantumarli rigorosamente a mano e condirli con {sale_condimento:1}g di sale fino: questa tecnica conferisce una differente consistenza al prodotto ed evita la rottura dei semi, che rilascerebbero un tipico gusto amaro. La proporzione generale è 10-12g di sale per 1 kg di pelati (7-10g se San Marzano, già più sapido). Sono da escludere pomodori OGM o trattati con radiazioni ionizzanti."
+    },
+    {
+      "title": "Condimento del disco — Tecnica Marinara (Art. 4.3.2)",
+      "text": "Con un cucchiaio deporre al centro del disco di pasta il pomodoro pelato frantumato. Tagliare {aglio_condimento:3}g di aglio fresco (1 spicchio), privo della corteccia dura, in fettine sottili con un raschietto; spargerle sulla superficie del pomodoro. Distribuire {origano_condimento:0.5}g di origano (Origanum vulgare) sulla superficie con movimento ordinato. Deporre {olio_condimento:7}g di olio extravergine d'oliva con movimento a spirale, partendo dal centro verso la periferia, utilizzando un contenitore inerte o il tradizionale orciuolo in rame con becco sottile. È possibile aggiungere qualche foglia di basilico fresco."
+    }
+  ],
+  "flourTable": [
+    {
+      "type": "Farina Tipo 00",
+      "w": "250-320",
+      "brands": "Caputo Pizzeria, 5 Stagioni Napoletana, Dallagiovanna Nobilgrano"
+    },
+    {
+      "type": "Farina Tipo 0 (alternativa disciplinare)",
+      "w": "250-320",
+      "brands": "Caputo Saccorosso, Mulino Grassi tipo 0"
+    }
+  ],
+  "baking": {
+    "temperature": "380-430°C (platea) / 485°C (volta)",
+    "time": "60-90 secondi",
+    "tips": [
+      "Cottura direttamente sul piano del forno, mai in teglie. Trasferire la pizza condita su una pala di legno o alluminio con un poco di farina per facilitare lo scivolamento.",
+      "Con un rapido colpo di polso far scivolare la pizza dalla pala sulla platea del forno. Durante la cottura, sollevare un lembo laterale con la pala in acciaio (palino) e ruotare la pizza verso il fuoco.",
+      "Utilizzare sempre la stessa zona di platea iniziale per evitare che la pizza si bruci a causa di due differenti temperature. Assicurarsi che venga cotta uniformemente su tutta la circonferenza.",
+      "Al termine della cottura, prelevare la pizza con il palino, lasciarla riposare a bocca di forno per alcuni secondi prima di disporla sul piatto da portata.",
+      "In forno casalingo (max 280°C): riscaldare la pietra refrattaria per almeno 45 minuti alla massima temperatura. Usare il grill al massimo negli ultimi 2 minuti per simulare la volta del forno a legna. Tempo di cottura: 4-6 minuti.",
+      "Per la legna: usare quercia, frassino, faggio o acero. Mai legna che dia fumo o odori che modifichino l'aroma della pizza. È consentito l'uso di trucioli ('pampuglia') per una rapida fiammata."
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Punto di pasta",
+      "definition": "Il momento esatto in cui l'impasto raggiunge la consistenza desiderata durante la fase di aggiunta della farina all'acqua."
+    },
+    {
+      "term": "Punto di corda",
+      "definition": "La fase finale dell'impastamento dove l'impasto viene ulteriormente lavorato dopo aver raggiunto il punto di pasta. Un eccesso di lavorazione causa l'incordatura."
+    },
+    {
+      "term": "Incordatura",
+      "definition": "Difetto dell'impasto causato da eccessiva lavorazione meccanica: la maglia glutinica si organizza sotto forma di fibra con grave pregiudizio delle proprietà meccaniche e inizio del principio di ossidazione."
+    },
+    {
+      "term": "Staglio",
+      "definition": "L'operazione di taglio e divisione dell'impasto lievitato in porzioni (panetti) con la tecnica napoletana della 'mozzatura', che ricorda la preparazione delle mozzarelle."
+    },
+    {
+      "term": "Mozzatura",
+      "definition": "Tecnica tradizionale napoletana di formatura dei panetti che ricorda la preparazione delle mozzarelle: l'impasto viene sagomato a mano sotto forma di palline."
+    },
+    {
+      "term": "Mattarelle",
+      "definition": "Le cassette per alimenti in cui vengono disposti i panetti per la seconda fermentazione e maturazione."
+    },
+    {
+      "term": "Cornicione",
+      "definition": "Il bordo rialzato tipico (1-2 cm) della Verace Pizza Napoletana, regolare, ben alveolato, privo di bolle e bruciature e di colore dorato."
+    },
+    {
+      "term": "Falling number",
+      "definition": "Indice che misura l'attività enzimatica della farina (250-400 per il disciplinare). Influenza i tempi di maturazione dell'impasto."
+    },
+    {
+      "term": "Palino",
+      "definition": "Pala in acciaio utilizzata per spostare e ruotare la pizza nel forno e per sfornarla dopo la cottura."
+    },
+    {
+      "term": "Orciuolo",
+      "definition": "Tradizionale contenitore in rame con becco sottile utilizzato per deporre l'olio extravergine con movimento a spirale sulla pizza."
+    }
+  ],
+  "alert": "Non inserire MAI alcun tipo di grasso o zucchero nell'impasto — il disciplinare AVPN lo vieta espressamente. Non utilizzare lieviti chimici secchi addizionati di miglioratori. La pizza va consumata preferibilmente entro 10 minuti nel locale, 20 minuti da asporto. Non può essere congelata o surgelata.",
+  "proTips": [
+    "Art. 2.1.1 — La farina ideale ha W 250-320, P/L 0.50-0.70 (ideale 0.6), assorbimento 55-62%, proteine 11.5-13.5%. Sono farine di media forza, equilibrate e con buone attitudini alla panificazione.",
+    "Art. 2.1.1 — Il sale va preferibilmente marino grosso: è un ottimo antibatterico, grazie al calcio rinforza la maglia glutinica, e contribuisce alla caratteristica colorazione della crosta.",
+    "Art. 4.3.1 — Il pomodoro pelato va frantumato a mano: la tecnica conferisce diversa consistenza ed evita la rottura dei semi. Per il S. Marzano DOP, ridurre il sale a 7-10g/kg perché già sapido.",
+    "Art. 4.3.1 — L'olio extravergine va aggiunto prima della cottura: andando in emulsione contribuisce alla cottura uniforme degli ingredienti. È consentita anche l'aggiunta a crudo dopo cottura per ragioni organolettiche.",
+    "Art. 2.1.4 — La maturazione è diversa dalla lievitazione: processi biochimici che scindono proteine e amidi in elementi semplici. Un buon coordinamento di entrambe assicura un impasto più digeribile.",
+    "Art. 2.1.2 — La temperatura dell'acqua (16-22°C) è critica. È consentito l'uso di celle di fermentazione a 18-20°C con 60-70% di umidità per garantire l'uniformità del prodotto al variare delle condizioni stagionali."
+  ],
+  "storage": [
+    "La Verace Pizza Napoletana va consumata appena sfornata. Secondo il disciplinare AVPN, non può essere congelata, surgelata o posta sottovuoto per una successiva vendita.",
+    "Consumo ottimale: entro 10 minuti nel locale di produzione, entro 20 minuti se da asporto.",
+    "L'impasto in panetti può essere conservato in celle a 18-20°C con 60-70% di umidità per un massimo di 24 ore complessive di fermentazione."
+  ],
+  "imageKeywords": [
+    "pizza marinara napoletana",
+    "pizza marinara forno legna",
+    "neapolitan marinara pizza",
+    "pizza pomodoro aglio origano",
+    "verace pizza napoletana",
+    "wood fired pizza marinara"
+  ],
+  "tags": [
+    "pizza napoletana",
+    "marinara",
+    "disciplinare AVPN",
+    "forno a legna",
+    "lievitazione lenta",
+    "tradizione napoletana",
+    "verace"
+  ],
+  "_generatedBy": "antigravity-opus",
+  "_createdAt": "2026-04-28T22:56:00.000Z",
+  "image": "images/ricette/pizza/pizza-marinara-napoletana-verace.webp",
+  "imageAttribution": "📷 Foto: Ruthven — CC CC0 via Openverse",
+  "_originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Pizza_marinara_%28Napoli%29.jpg",
+  "sensoryProfile": {
+    "summary": "La Pizza Marinara Napoletana Verace si presenta come un'esperienza di purezza assoluta: il cornicione alto e alveolato, frutto di una lievitazione lenta di 12-24 ore, offre una crosta esterna leggermente croccante che cede a una mollica soffice, ariosa e scioglievole al palato. Il pomodoro San Marzano DOP, frantumato a mano e appena salato, dialoga in perfetta armonia con le note pungenti e terrose dell'aglio fresco in fettine, il calore floreale dell'origano e la rotondità fruttata dell'olio extravergine, in un equilibrio che esalta la filosofia del 'meno è più'. La complessità aromatica è sottile ma stratificata: sentori di grano fermentato, acidità viva del pomodoro, erbe mediterranee e quella inconfondibile nota affumicata e minerale del forno a legna a 430°C completano un profilo di grande eleganza e identità territoriale.",
+    "axes": [
+      {
+        "label": "Croccantezza Esterna",
+        "value": 7
+      },
+      {
+        "label": "Scioglievolezza Impasto",
+        "value": 9
+      },
+      {
+        "label": "Sapidità / Umami",
+        "value": 7
+      },
+      {
+        "label": "Equilibrio Condimento-Impasto",
+        "value": 9
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 8
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 226,
+    "macros": {
+      "carbs": 40,
+      "protein": 7,
+      "fat": 3
+    }
+  }
+}

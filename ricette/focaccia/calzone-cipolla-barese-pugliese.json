@@ -1,0 +1,236 @@
+{
+  "title": "Calzone di Cipolla Barese",
+  "slug": "calzone-cipolla-barese-pugliese",
+  "emoji": "🥧",
+  "description": "L'autentica ricetta pugliese del calzone di cipolla: impasto fragrante all'olio e vino bianco, farcito con sponsali dolci, olive, acciughe e uvetta.",
+  "subtitle": "Torta salata tradizionale con pasta all'olio e vino e ripieno di sponsali",
+  "category": "Focaccia",
+  "targetTemp": "22-24°C",
+  "fermentation": "",
+  "totalFlour": 500,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per l'Impasto (Senza Lievito)",
+      "items": [
+        {
+          "name": "Farina Tipo 0",
+          "note": "(W 200-220, debole/media)",
+          "grams": 500,
+          "tokenId": "farina_impasto"
+        },
+        {
+          "name": "Vino Bianco Secco",
+          "note": "(temperatura ambiente)",
+          "grams": 150,
+          "tokenId": "vino_impasto"
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(varietà dolce, es. Coratina delicato)",
+          "grams": 120,
+          "tokenId": "olio_impasto"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(2% sulla farina)",
+          "grams": 10,
+          "tokenId": "sale_impasto"
+        }
+      ]
+    },
+    {
+      "group": "Per il Ripieno di Cipolle",
+      "items": [
+        {
+          "name": "Cipolle Sponsali",
+          "note": "(in alternativa cipolle dorate)",
+          "grams": 1500,
+          "tokenId": "cipolle_ripieno"
+        },
+        {
+          "name": "Pomodorini Pelati",
+          "note": "(schiacciati)",
+          "grams": 150,
+          "tokenId": "pomodori_ripieno"
+        },
+        {
+          "name": "Olive Nere",
+          "note": "(baresane o leccino, denocciolate)",
+          "grams": 80,
+          "tokenId": "olive_ripieno"
+        },
+        {
+          "name": "Uva Sultanina",
+          "note": "(ammollata e ben strizzata)",
+          "grams": 40,
+          "tokenId": "uvetta_ripieno"
+        },
+        {
+          "name": "Filetti di Acciughe",
+          "note": "(sott'olio, sgocciolati)",
+          "grams": 20,
+          "tokenId": "acciughe_ripieno"
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(per la cottura delle cipolle)",
+          "grams": 30,
+          "tokenId": "olio_cottura_cipolle"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(regolare in base alla sapidità delle acciughe)",
+          "grams": 5,
+          "tokenId": "sale_ripieno"
+        },
+        {
+          "name": "Pepe Nero",
+          "note": "(macinato fresco)",
+          "grams": 2,
+          "tokenId": "pepe_ripieno"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Preparazione dell'emulsione liquida",
+      "text": "In un pentolino, unire {vino_impasto:150}g di vino bianco secco e {olio_impasto:120}g di olio EVO. Scaldare leggermente il composto a fuoco bassissimo fino a raggiungere circa {temperatura_liquidi:35!}°C. Questo passaggio è fondamentale per conferire all'impasto la tipica consistenza friabile ed elastica della tradizione pugliese."
+    },
+    {
+      "title": "Impastamento",
+      "text": "Disporre a fontana {farina_impasto:500}g di farina su una spianatoia (o in planetaria con gancio a K). Aggiungere al centro {sale_impasto:10}g di sale fino. Versare gradualmente l'emulsione tiepida di olio e vino, incorporando man mano la farina. Lavorare energicamente con le mani per circa {tempo_impasto:10!} minuti, fino a ottenere un panetto compatto, liscio e non appiccicoso."
+    },
+    {
+      "title": "Riposo del panetto",
+      "text": "Avvolgere l'impasto strettamente in pellicola alimentare o coprirlo con una ciotola rovesciata. Lasciare riposare a temperatura ambiente per almeno {tempo_riposo:30!} minuti. Questo rilasserà la maglia glutinica, facilitando la successiva stesura."
+    },
+    {
+      "title": "Stesura e base del calzone",
+      "text": "Dividere l'impasto in due porzioni (una leggermente più grande per la base). Con un matterello, stendere la porzione maggiore fino a ottenere un disco di spessore inferiore a mezzo centimetro. Oliare accuratamente una teglia tonda da {teglia_diametro:28!}cm e foderarla con il disco di pasta, facendolo risalire bene sui bordi. Bucherellare il fondo con i rebbi di una forchetta."
+    },
+    {
+      "title": "Farcitura e chiusura",
+      "text": "Versare all'interno il ripieno di cipolle precedentemente preparato e raffreddato, distribuendolo in modo uniforme. Stendere la seconda metà dell'impasto e adagiarla sopra il ripieno per chiudere il calzone. Suddividere l'impasto indicativamente in 60% per la base (circa 370g) e 40% per il coperchio (circa 250g), in modo da avere pasta sufficiente per foderare la teglia e farla risalire sui bordi. Sigillare i bordi arrotolando la pasta in eccesso della base verso l'interno, effettuando una 'pizzicatura' per chiudere ermeticamente."
+    },
+    {
+      "title": "Finitura prima della cottura",
+      "text": "Bucherellare uniformemente la superficie del calzone con una forchetta per permettere la fuoriuscita del vapore durante la cottura ed evitare rigonfiamenti. Spennellare un velo sottile di olio EVO su tutta la superficie per favorire una doratura ottimale."
+    }
+  ],
+  "stepsCondiment": [
+    {
+      "title": "Mondatura e taglio degli sponsali",
+      "text": "Pulire accuratamente {cipolle_ripieno:1500}g di cipolle sponsali (o cipolle dorate), eliminando le radici, la parte verde più dura e le pellicine esterne. Lavarle sotto acqua corrente per smorzarne l'acidità e affettarle finemente al coltello."
+    },
+    {
+      "title": "Appassimento delle cipolle",
+      "text": "In un'ampia padella o casseruola, scaldare {olio_cottura_cipolle:30}g di olio EVO. Aggiungere le cipolle affettate, {sale_ripieno:5}g di sale fino (attenzione a non eccedere perché ci saranno olive e acciughe) e {pepe_ripieno:2}g di pepe nero. Coprire con un coperchio e lasciar appassire a fuoco molto dolce per circa {tempo_cottura_cipolle:50!} minuti, mescolando di tanto in tanto finché non risulteranno morbide e traslucide."
+    },
+    {
+      "title": "Integrazione dei sapori",
+      "text": "Rimuovere il coperchio e aggiungere {pomodori_ripieno:150}g di pomodorini pelati schiacciati, {olive_ripieno:80}g di olive nere denocciolate, {uvetta_ripieno:40}g di uvetta (precedentemente ammollata e strizzata) e {acciughe_ripieno:20}g di filetti di acciughe spezzettati. Alzare leggermente la fiamma per asciugare i liquidi in eccesso per altri {tempo_riduzione:10!} minuti. Il ripieno completamente cotto e asciugato deve pesare indicativamente 700-800g: assicurarsi che sia ben compattato prima di farcire il calzone. Spegnere e lasciar raffreddare COMPLETAMENTE prima di utilizzare il ripieno."
+    }
+  ],
+  "flourTable": [
+    {
+      "type": "Farina Tipo 0",
+      "w": "200-220",
+      "brands": "Caputo Pizzeria, Molino Pasini Primitiva, Spadoni Pulcinella"
+    }
+  ],
+  "baking": {
+    "temperature": "200°C",
+    "time": "45-50 minuti",
+    "tips": [
+      "Cuocere in forno statico preriscaldato",
+      "Posizionare la teglia nel ripiano più basso per i primi 20 minuti per assicurare la cottura del fondo",
+      "Spostare a metà altezza per il tempo rimanente fino a doratura della superficie",
+      "Lasciar intiepidire almeno 30 minuti prima di tagliare per far assestare il ripieno"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Sponsali",
+      "definition": "Cipolle porraie tipiche pugliesi, raccolte prima della formazione completa del bulbo. Hanno un sapore particolarmente dolce e consistenza tenera."
+    },
+    {
+      "term": "Pasta all'olio e vino",
+      "definition": "Impasto povero tradizionale senza lievito. L'utilizzo di liquidi tiepidi conferisce plasticità in stesura e una consistenza finale friabile, simile a una frolla salata."
+    },
+    {
+      "term": "Pizzicatura",
+      "definition": "Tecnica manuale per sigillare due strati di pasta, ripiegando il bordo inferiore su quello superiore e pizzicando con le dita per creare un cordone ermetico (chiamato 'girello')."
+    },
+    {
+      "term": "Appassimento",
+      "definition": "Cottura a fuoco bassissimo e coperta che permette alle verdure di cuocere nei propri succhi senza rosolare o prendere colore."
+    }
+  ],
+  "alert": "Non inserire MAI il ripieno ancora caldo o tiepido sull'impasto crudo. Il calore scioglierebbe l'olio presente nella base, compromettendo la struttura della pasta che risulterebbe gommosa, molle e incline a rompersi.",
+  "proTips": [
+    "Scaldare l'emulsione di olio e vino (senza superare i 40°C) prima di unirla alla farina modifica la reazione delle proteine, garantendo la caratteristica fragranza di questo calzone.",
+    "Se non trovi gli sponsali, usa cipolle dorate o bianche e, dopo averle affettate, lasciale in ammollo in acqua fredda per 30 minuti per attenuarne le note più pungenti.",
+    "Asciuga perfettamente il ripieno in padella: un eccesso di liquido ('acqua di vegetazione') bagnerebbe il fondo in cottura, rovinando il risultato finale."
+  ],
+  "storage": [
+    "Conservare a temperatura ambiente per 24 ore coperto con un canovaccio pulito (mantiene meglio la fragranza).",
+    "In frigorifero si conserva fino a 3-4 giorni in contenitore ermetico. Per rigenerarlo, scaldarlo in forno a 160°C per 10 minuti (evitare il microonde che lo renderebbe gommoso).",
+    "È possibile congelare il calzone già cotto e porzionato, rigenerandolo direttamente in forno da congelato."
+  ],
+  "imageKeywords": [
+    "apulian onion pie",
+    "calzone di cipolla pugliese",
+    "focaccia ripiena cipolle",
+    "rustic italian stuffed flatbread",
+    "zwiebelkuchen italienisch",
+    "traditional barese calzone"
+  ],
+  "tags": [
+    "puglia",
+    "tradizionale",
+    "torte salate",
+    "senza lievito",
+    "sponsali"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "_createdAt": "2026-04-22T20:39:25.883Z",
+  "image": "images/ricette/focaccia/calzone-cipolla-barese-pugliese.webp",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
+  "sensoryProfile": {
+    "summary": "Il Calzone di Cipolla Barese si presenta come un gioiello della tradizione pugliese: la pasta friabile all'olio e vino bianco cede sotto il coltello con un croccante secco e pulito, rivelando un ripieno avvolgente dove la dolcezza degli sponsali appassiti dialoga con la nota iodata delle acciughe, la grassezza delle olive leccino e il tocco agrodolce dell'uvetta sultanina. Il profilo aromatico è di straordinaria complessità: sentori di cipolla caramellata, frutto maturo, umami marino e un fondo speziato di pepe nero si fondono in un equilibrio dolce-salato tipicamente meridionale. La struttura dell'impasto, pur essendo senza lievito, garantisce una masticazione piacevolmente burrosa e scioglievole al palato, mentre la lunga cottura a doppia posizione conferisce alla calotta una doratura profonda e invitante.",
+    "axes": [
+      {
+        "label": "Croccantezza Esterna",
+        "value": 8
+      },
+      {
+        "label": "Scioglievolezza Impasto",
+        "value": 7
+      },
+      {
+        "label": "Sapidità / Umami",
+        "value": 8
+      },
+      {
+        "label": "Equilibrio Condimento-Impasto",
+        "value": 9
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 9
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 268,
+    "macros": {
+      "carbs": 28,
+      "protein": 5,
+      "fat": 14
+    }
+  },
+  "_originalImageUrl": ""
+}

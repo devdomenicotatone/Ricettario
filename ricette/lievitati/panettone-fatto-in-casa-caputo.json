@@ -1,0 +1,270 @@
+{
+  "title": "Panettone Artigianale Classico",
+  "slug": "panettone-fatto-in-casa-caputo",
+  "emoji": "🎄",
+  "description": "La ricetta tecnica per il classico Panettone di Natale tipo Milano, realizzato con lievito madre e due impasti per una struttura alveolata, soffice e aromatica.",
+  "subtitle": "Grande lievitato da ricorrenza a due impasti con lievito madre",
+  "category": "Lievitati",
+  "hydration": 50,
+  "targetTemp": "26-28°C",
+  "fermentation": "24-36h",
+  "totalFlour": 1133,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Primo Impasto (Sera)",
+      "items": [
+        {
+          "name": "Lievito Madre Solido",
+          "note": "(rinfrescato 3 volte, al 50% di idratazione)",
+          "grams": 200,
+          "tokenId": "lm_primo"
+        },
+        {
+          "name": "Farina Tipo 0 o 00 Forte",
+          "note": "(W 370-400, es. Manitoba Oro)",
+          "grams": 800,
+          "tokenId": "farina_primo"
+        },
+        {
+          "name": "Zucchero Semolato",
+          "note": "",
+          "grams": 100,
+          "tokenId": "zucchero_primo"
+        },
+        {
+          "name": "Acqua",
+          "note": "(18-20°C)",
+          "grams": 450,
+          "tokenId": "acqua_primo"
+        },
+        {
+          "name": "Tuorli d'uovo",
+          "note": "(freddi di frigo)",
+          "grams": 150,
+          "tokenId": "tuorli_primo"
+        },
+        {
+          "name": "Burro",
+          "note": "(morbido a pomata, 18-20°C)",
+          "grams": 200,
+          "tokenId": "burro_primo"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(da inserire se previsto dalla ricetta sorgente)",
+          "grams": 10,
+          "tokenId": "sale_primo"
+        }
+      ]
+    },
+    {
+      "group": "Secondo Impasto (Mattina)",
+      "items": [
+        {
+          "name": "Farina Tipo 0 o 00 Forte",
+          "note": "(W 370-400)",
+          "grams": 200,
+          "tokenId": "farina_secondo"
+        },
+        {
+          "name": "Zucchero Semolato",
+          "note": "",
+          "grams": 250,
+          "tokenId": "zucchero_secondo"
+        },
+        {
+          "name": "Miele di Acacia",
+          "note": "",
+          "grams": 50,
+          "tokenId": "miele_secondo"
+        },
+        {
+          "name": "Tuorli d'uovo",
+          "note": "(freddi di frigo)",
+          "grams": 150,
+          "tokenId": "tuorli_secondo"
+        },
+        {
+          "name": "Acqua",
+          "note": "(per eventuale bassinage)",
+          "grams": 50,
+          "tokenId": "acqua_secondo"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "",
+          "grams": 4,
+          "tokenId": "sale_secondo"
+        },
+        {
+          "name": "Burro",
+          "note": "(morbido a pomata, 18-20°C)",
+          "grams": 250,
+          "tokenId": "burro_secondo"
+        },
+        {
+          "name": "Pasta d'Arancia Candita",
+          "note": "(mix di aromi)",
+          "grams": 30,
+          "tokenId": "aroma_arancia"
+        },
+        {
+          "name": "Baccello di Vaniglia",
+          "note": "(i semi)",
+          "grams": 3,
+          "tokenId": "aroma_vaniglia"
+        }
+      ]
+    }
+  ],
+  "suspensions": [
+    {
+      "name": "Uvetta e Canditi",
+      "note": "(o gocce di cioccolato fondente)",
+      "grams": 750,
+      "tokenId": "sospensioni_frutta"
+    }
+  ],
+  "flourTable": [
+    {
+      "type": "Farina Manitoba Oro o Forte",
+      "w": "370-400",
+      "brands": "Caputo Manitoba Oro, Dalla Giovanna Panettone, Petra Panettone"
+    }
+  ],
+  "baking": {
+    "temperature": "180°C",
+    "time": "50-55 minuti",
+    "tips": [
+      "Cuocere rigorosamente in forno statico nei ripiani inferiori",
+      "Per panettoni da 1kg, la cottura termina quando il cuore (misurato con termometro a sonda) raggiunge i 94°C - 96°C",
+      "Negli ultimi 10 minuti di cottura, aprire in fessura lo sportello del forno (cottura a valvola aperta) per asciugare l'umidità",
+      "APPENA SFORNATI: infilzare la base con gli appositi ferri e capovolgere immediatamente a testa in giù per almeno 10-12 ore per evitare il collasso strutturale"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Spia di lievitazione",
+      "definition": "Piccola quantità di impasto prelevata e messa in un contenitore graduato cilindrico per valutare oggettivamente la crescita in volume (nel panettone deve quadruplicare, ovvero 1+3)."
+    },
+    {
+      "term": "Puntatura",
+      "definition": "Il primo riposo dell'impasto in massa (non ancora diviso) prima della spezzatura. Nel panettone serve a rilassare il glutine e avviare la fermentazione."
+    },
+    {
+      "term": "Pirlatura",
+      "definition": "L'azione di arrotondare l'impasto facendolo roteare sui palmi delle mani o sul piano di lavoro, per tendere la superficie esterna e creare una 'pelle' resistente che tratterrà i gas in cottura."
+    },
+    {
+      "term": "Scarpatura",
+      "definition": "Il taglio a forma di croce sulla cupola del panettone prima di infornarlo. I quattro lembi vengono talvolta sollevati, imburrati alla base e riposizionati per favorire l'apertura ('sbocciatura') in cottura."
+    },
+    {
+      "term": "Valvola Aperta",
+      "definition": "Tecnica che consiste nel bloccare lo sportello del forno con uno spessore (es. cucchiaio di legno) per creare una fessura di pochi millimetri, permettendo la fuoriuscita del vapore negli ultimi minuti di cottura."
+    }
+  ],
+  "alert": "ERRORE FATALE: Non forzare i tempi di lievitazione! Il primo impasto DEVE quadruplicare. Se infornate il secondo impasto partendo da un primo impasto raddoppiato o triplicato, il panettone non svilupperà in cottura, risulterà pesante e l'alveolatura sarà compatta e cruda.",
+  "proTips": [
+    "Gestione Temperature: I tuorli devono essere freddi di frigorifero, il burro invece deve avere la consistenza di una 'pomata' (18-20°C, plastico ma non sciolto).",
+    "Incordatura: Non aggiungere mai la dose successiva di tuorli o burro se la precedente non è stata completamente assorbita e l'impasto non è tornato liscio ed elastico. Perdere l'incordatura in fase finale è irrecuperabile.",
+    "Sospensioni: Se si usa l'uvetta, ricordarsi di idratarla in acqua tiepida per qualche ora, per poi strizzarla e asciugarla perfettamente prima di inserirla. L'uvetta secca assorbirebbe l'umidità dell'impasto."
+  ],
+  "storage": [
+    "Per preservare al meglio la fragranza del panettone una volta iniziato, conservarlo nel suo sacchetto originale ben richiuso o in un porta-torte ermetico a temperatura ambiente. Si manterrà soffice per 7-10 giorni. Evitare assolutamente il frigorifero, che ne accelera il raffermamento.",
+    "Per una conservazione prolungata, il congelamento è la tecnica ideale. Si consiglia di tagliare il panettone a fette, avvolgerle singolarmente in pellicola alimentare e poi inserirle in un sacchetto per congelatore. In questo modo, si conserverà perfettamente per circa 2-3 mesi, consentendo di scongelare solo le porzioni desiderate.",
+    "Per rigenerare una fetta e riportarla alla sua sofficità e profumo originali, passarla in forno preriscaldato a 150°C per 3-4 minuti. Il calore moderato riattiverà i grassi nobili dell'impasto (burro), sprigionando nuovamente tutti gli aromi come se fosse appena sfornato."
+  ],
+  "imageKeywords": [
+    "homemade panettone",
+    "classic milanese panettone",
+    "panettone artigianale",
+    "italian sweet bread christmas",
+    "lievitato natalizio",
+    "panettone dough stand mixer",
+    "italienischer weihnachtskuchen"
+  ],
+  "tags": [
+    "natale",
+    "grandi lievitati",
+    "lievito madre",
+    "panettone",
+    "dolci tradizionali"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "_createdAt": "2026-04-15T19:19:48.291Z",
+  "image": "images/ricette/lievitati/panettone-fatto-in-casa-caputo.webp",
+  "imageAttribution": "📷 Foto: Polina ⠀ — Pexels License via Pexels",
+  "steps": [
+    {
+      "title": "Primo Impasto (Incordatura iniziale)",
+      "text": "Nella vasca dell'impastatrice inserire {farina_primo}g di farina, {zucchero_primo}g di zucchero, {lm_primo}g di lievito madre spezzettato e {acqua_primo}g di acqua. Avviare in prima velocità per circa 10-12 minuti fino a formare una maglia glutinica tenace (incordatura)."
+    },
+    {
+      "title": "Inserimento Grassi (Primo Impasto)",
+      "text": "Aggiungere {tuorli_primo}g di tuorli in 3-4 riprese, aspettando che la dose precedente sia completamente assorbita. Inserire {sale_primo}g di sale. Infine, aggiungere gradualmente {burro_primo}g di burro a pomata. L'impasto finale deve essere liscio ed elastico. Temperatura target: {temp_primo_imp:27!}°C."
+    },
+    {
+      "title": "Lievitazione Notturna",
+      "text": "Riporre l'impasto in un contenitore capiente, coperto con pellicola. Prelevare una piccola porzione (spia) e inserirla in un contenitore graduato per monitorare la crescita. Lasciare in cella di lievitazione a {temp_cella:26!}°C - {temp_cella_max:27!}°C per circa {ore_lievitazione:12!} - {ore_lievitazione_max:14!} ore. L'impasto deve QUADRUPLICARE (1+3) il suo volume."
+    },
+    {
+      "title": "Secondo Impasto (Rincordatura)",
+      "text": "Il mattino seguente, sgonfiare il primo impasto lievitato in macchina aggiungendo {farina_secondo}g di farina. Lavorare per circa 15 minuti per ripristinare la maglia glutinica."
+    },
+    {
+      "title": "Emulsione Aromatica e Grassi",
+      "text": "Incorporare {zucchero_secondo}g di zucchero, {miele_secondo}g di miele e gli aromi ({aroma_arancia}g di pasta d'arancia e i semi di {aroma_vaniglia}g di vaniglia). Aggiungere {tuorli_secondo}g di tuorli a filo. Se l'impasto è troppo rigido, usare {acqua_secondo}g di acqua in bassinage. Aggiungere {sale_secondo}g di sale. Terminare inserendo gradualmente {burro_secondo}g di burro a pomata."
+    },
+    {
+      "title": "Inserimento Sospensioni",
+      "text": "Abbassare la velocità al minimo e incorporare {sospensioni_frutta}g di canditi e uvetta per 1-2 minuti, giusto il tempo di distribuirli uniformemente."
+    },
+    {
+      "title": "Puntatura e Spezzatura",
+      "text": "Trasferire l'impasto sul banco e lasciar puntare a {temp_puntatura:28!}°C - {temp_puntatura_max:30!}°C per {tempo_puntatura:60!} - {tempo_puntatura_max:90!} minuti. Spezzare l'impasto calcolando il 10% in più rispetto al volume dello stampo (es. {peso_pirottino:1100!}g per uno stampo da 1kg)."
+    },
+    {
+      "title": "Pirlatura e Appretto",
+      "text": "Arrotondare (pirlare) strettamente ogni pezzo, lasciar riposare 15 minuti a temperatura ambiente e pirlare una seconda volta. Inserire negli stampi e lasciar lievitare a {temp_appretto:28!}°C - {temp_appretto_max:30!}°C per circa {ore_appretto:4!} - {ore_appretto_max:5!} ore, o finché l'impasto non arriva a 2 cm dal bordo."
+    },
+    {
+      "title": "Scarpatura e Cottura",
+      "text": "Lasciare i panettoni a temperatura ambiente per 15-30 minuti per far formare una pellicola superficiale (pelle). Praticare un'incisione a croce (scarpatura) con una lametta e posizionare una noce di burro al centro. Infornare."
+    }
+  ],
+  "sensoryProfile": {
+    "summary": "Un panettone artigianale di grande struttura e carattere: la doppia quota di burro e tuorli conferisce una mollica straordinariamente soffice e filante, con un'alveolatura aperta e setosa al palato. La complessità aromatica è notevole, costruita su strati di vaniglia bourbon, pasta d'arancia candita e le note lattiche e leggermente acidule del lievito madre maturo rinfrescato tre volte. La dolcezza è presente e avvolgente ma sapientemente bilanciata dal miele d'acacia e da un pizzico di sale, lasciando un finale pulito, burroso e persistente.",
+    "axes": [
+      {
+        "label": "Sofficezza / Alveolatura",
+        "value": 9
+      },
+      {
+        "label": "Scioglievolezza",
+        "value": 9
+      },
+      {
+        "label": "Ricchezza Burrosa / Lattica",
+        "value": 9
+      },
+      {
+        "label": "Dolcezza Percepita",
+        "value": 7
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 9
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 378,
+    "macros": {
+      "carbs": 48,
+      "protein": 8,
+      "fat": 17
+    }
+  }
+}

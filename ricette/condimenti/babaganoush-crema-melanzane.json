@@ -1,0 +1,202 @@
+{
+  "title": "Babaganoush",
+  "slug": "babaganoush-crema-melanzane",
+  "emoji": "🍆",
+  "description": "L'autentico caviale di melanzane mediorientale: una crema rustica dal sentore affumicato, arricchita con tahina, limone e aglio. Consistenza artigianale garantita.",
+  "subtitle": "Crema rustica di melanzane arrostite e tahina",
+  "category": "Condimenti",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per la Crema Base",
+      "items": [
+        {
+          "name": "Melanzane",
+          "note": "(varietà lunga o ovale scura)",
+          "grams": 800,
+          "tokenId": "melanzane"
+        },
+        {
+          "name": "Tahina",
+          "note": "(crema 100% semi di sesamo)",
+          "grams": 50,
+          "tokenId": "tahina"
+        },
+        {
+          "name": "Succo di Limone",
+          "note": "(fresco e filtrato)",
+          "grams": 35,
+          "tokenId": "succo_limone"
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(fruttato delicato)",
+          "grams": 15,
+          "tokenId": "olio_crema"
+        },
+        {
+          "name": "Aglio",
+          "note": "(spicchio privato dell'anima)",
+          "grams": 5,
+          "tokenId": "aglio"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(marino)",
+          "grams": 5,
+          "tokenId": "sale"
+        },
+        {
+          "name": "Pepe Nero",
+          "note": "(macinato fresco al momento)",
+          "grams": 1,
+          "tokenId": "pepe"
+        }
+      ]
+    },
+    {
+      "group": "Per la Guarnizione",
+      "items": [
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(per finitura)",
+          "grams": 15,
+          "tokenId": "olio_guarnizione"
+        },
+        {
+          "name": "Menta Fresca",
+          "note": "(foglie intere o spezzate a mano)",
+          "grams": 5,
+          "tokenId": "menta"
+        },
+        {
+          "name": "Semi di Sesamo",
+          "note": "(tostati in padella)",
+          "grams": 5,
+          "tokenId": "sesamo"
+        },
+        {
+          "name": "Paprika Dolce",
+          "note": "(o affumicata, in polvere)",
+          "grams": 3,
+          "tokenId": "paprika"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Cottura e Affumicatura delle Melanzane",
+      "text": "Lavare accuratamente {melanzane:800}g di melanzane. Bucherellare la buccia in più punti con i rebbi di una forchetta per evitare che scoppino in cottura. Adagiarle intere su una teglia rivestita di carta forno. Cuocere in forno statico a {temperatura:220!}°C per circa {tempo_cottura:45!} - {tempo_max:60!} minuti, girandole a metà cottura. Devono risultare completamente afflosciate e la buccia deve apparire raggrinzita e leggermente bruciacchiata per conferire il tipico aroma affumicato."
+    },
+    {
+      "title": "Estrazione e Spurgo della Polpa",
+      "text": "Sfornare le melanzane e lasciarle intiepidire in una ciotola coperta per circa {riposo:15!} minuti (il vapore faciliterà la spellatura). Rimuovere il picciolo e incidere la buccia, aprendole a libro. Con l'aiuto di un cucchiaio, raschiare delicatamente tutta la polpa, scartando la buccia. Trasferire la polpa in un colino a maglie strette e lasciarla scolare per {scolatura:15!} minuti per eliminare l'eccesso di acqua di vegetazione, che porterebbe un gusto eccessivamente amaro e diluirebbe la crema."
+    },
+    {
+      "title": "Lavorazione della Crema (Rigorosamente a Mano)",
+      "text": "Trasferire la polpa ben scolata in una terrina ampia. Battere e schiacciare la polpa con una forchetta. Aggiungere {tahina:50}g di tahina, {succo_limone:35}g di succo di limone e {aglio:5}g di aglio (precedentemente ridotto in pasta al mortaio o tritato finemente e schiacciato con la lama del coltello). Continuare a mescolare energicamente con la forchetta per amalgamare gli oli della tahina con l'acidità del limone."
+    },
+    {
+      "title": "Emulsione ed Equilibrio dei Sapori",
+      "text": "Aggiungere all'impasto rustico {sale:5}g di sale, {pepe:1}g di pepe nero e versare a filo {olio_crema:15}g di olio extravergine d'oliva. Mescolare compiendo movimenti dal basso verso l'alto per creare una leggera emulsione. Assaggiare e calibrare: il Babaganoush deve risultare equilibrato, con la dolcezza affumicata della melanzana bilanciata dalla nota tostata del sesamo e dalla spinta acida del limone."
+    },
+    {
+      "title": "Impiattamento e Guarnizione",
+      "text": "Trasferire la crema in una ciotola bassa in terracotta o ceramica, creando con il dorso di un cucchiaio dei leggeri avvallamenti circolari sulla superficie. Colmare questi solchi versando a filo {olio_guarnizione:15}g di olio EVO. Spolverare i bordi con {paprika:3}g di paprika dolce, cospargere il centro con {sesamo:5}g di semi di sesamo tostati e decorare con {menta:5}g di foglie di menta fresca spezzate a mano per sprigionare gli oli essenziali. Servire a temperatura ambiente."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "baking": {
+    "temperature": "220°C",
+    "time": "45-60 minuti",
+    "tips": [
+      "Le melanzane devono collassare su se stesse. Più la buccia scurisce, maggiore sarà il sentore affumicato.",
+      "In alternativa al forno, per un sapore 'charred' autentico, si possono bruciacchiare direttamente sulla fiamma del fornello a gas per 15 minuti, completando poi la cottura in forno."
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Tahina",
+      "definition": "Pasta densa mediorientale ottenuta dalla macinazione di semi di sesamo bianco decorticati e tostati. Apporta la componente grassa e aromatica alla ricetta."
+    },
+    {
+      "term": "Acqua di vegetazione",
+      "definition": "Il liquido interno rilasciato dalle melanzane cotte. Se non scolato, rende la salsa acquosa e conferisce note eccessivamente astringenti e amare."
+    },
+    {
+      "term": "Animare l'aglio",
+      "definition": "Tagliare lo spicchio d'aglio a metà longitudinalmente ed estrarre il filamento centrale (anima), responsabile dell'alito pesante e della difficile digestione."
+    }
+  ],
+  "alert": "ERRORE GRAVE: Non usare MAI il frullatore a immersione o il mixer a lame ad alta velocità. Il Babaganoush autentico deve mantenere una struttura rustica e fibrosa. Frullarlo rompe le molecole d'acqua della verdura, trasformandolo in una purea liquida, bavosa e priva di consistenza.",
+  "proTips": [
+    "Per un aroma affumicato da vero ristorante libanese, fai bruciacchiare le melanzane sulla brace o sulla fiamma viva del fornello per 10 minuti prima di passarle in forno: il fumo permeerà la polpa.",
+    "Il riposo è fondamentale: prepara il Babaganoush con qualche ora di anticipo o il giorno prima. I sapori di aglio, limone e sesamo hanno bisogno di tempo per fondersi con la melanzana.",
+    "Non buttare l'olio affiorante della tahina: mescola sempre vigorosamente il barattolo prima di prelevare i 50g necessari, altrimenti sul fondo resterà una massa di sesamo cementificata."
+  ],
+  "storage": [
+    "Conservazione in Frigo: Fino a 3-4 giorni in un contenitore ermetico in vetro. Livellare la superficie e coprire con un millimetro di olio extravergine per evitare l'ossidazione.",
+    "Temperatura di Servizio: Estrarre dal frigorifero almeno 30 minuti prima del servizio. Il freddo anestetizza i sapori e irrigidisce la tahina.",
+    "Sconsigliato il Congelamento: La polpa di melanzana ricca d'acqua perderebbe irreparabilmente struttura, risultando spugnosa allo scongelamento."
+  ],
+  "imageKeywords": [
+    "traditional baba ganoush flatlay",
+    "roasted eggplant dip middle eastern platter",
+    "crema di melanzane libanese tahina",
+    "rustic aubergine dip bowl pita",
+    "mutabbal babaganoush mezze"
+  ],
+  "tags": [
+    "Medio Oriente",
+    "Vegano",
+    "Senza Glutine",
+    "Melanzane",
+    "Salsa",
+    "Antipasto"
+  ],
+  "_generatedBy": "gemini-3.1",
+  "_createdAt": "2026-05-05T20:37:39.421Z",
+  "image": "images/ricette/condimenti/babaganoush-crema-melanzane.webp",
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
+  "_originalImageUrl": "",
+  "sensoryProfile": {
+    "summary": "Il Babaganoush si presenta come una crema avvolgente e profonda, dominata da una nota affumicata e terrosa della melanzana arrostita, sostenuta dalla mineralità tostata della tahina e da un vivace slancio acido del limone fresco. Al palato si rivela rotondo e vellutato, con un finale lungo in cui l'aglio, il pepe nero e la paprika intessono un bouquet aromatico speziato e mediterraneo. La menta fresca in guarnizione dona un tocco erbaceo e balsamico che alleggerisce e impreziosisce l'insieme.",
+    "axes": [
+      {
+        "label": "Sapidità / Umami",
+        "value": 6
+      },
+      {
+        "label": "Acidità / Pungenza",
+        "value": 6
+      },
+      {
+        "label": "Cremosità / Densità",
+        "value": 7
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 4
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 112,
+    "macros": {
+      "carbs": 7,
+      "protein": 3,
+      "fat": 8
+    }
+  }
+}

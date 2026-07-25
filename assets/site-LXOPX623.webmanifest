@@ -1,0 +1,16 @@
+{
+  "name": "Il Ricettario",
+  "short_name": "Ricettario",
+  "description": "Ricette artigianali ottimizzate — Pane, pasta e lievitati",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#F5EDE3",
+  "theme_color": "#C2884D",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
