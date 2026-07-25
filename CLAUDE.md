@@ -6,7 +6,7 @@ qui c'è solo quello che non si deduce leggendo il codice.
 
 ## Fonti uniche: non duplicarle
 
-Tre cose in questo progetto sono già state duplicate una volta, e le copie
+Alcune cose in questo progetto sono già state duplicate una volta, e le copie
 sono divergute in silenzio. Se ti serve quel contenuto altrove, **leggilo
 dalla fonte**, non riscriverlo.
 
@@ -21,11 +21,21 @@ dalla fonte**, non riscriverlo.
   cartella su disco e non sempre coincide con la chiave (`secondi_piatti` →
   `ricette/secondi-piatti/`). Per path e URL usa `dir` o `CATEGORIES_BY_DIR`,
   mai la chiave.
+- **`dati/cottura/coefficienti.js` è l'unica fonte dei numeri del
+  calcolatore.** I tagli puntano una curva per nome (`curva_tempo`), non se ne
+  portano una copia: se ogni taglio di manzo avesse la sua tabella,
+  ricalibrare dopo una cottura reale vorrebbe dire modificarne sei. Se scrivi
+  un numero dentro `js/cottura/`, è un bug.
+- **`dati/cottura/dispositivi.json` è il registry degli apparecchi.** Il
+  comportamento della famiglia kamado sta in `js/cottura/kamado.js`; i numeri
+  dei singoli modelli stanno nel JSON. Aggiungere un kamado è una voce di
+  dati, aggiungere un tipo di barbecue è un modulo accanto a `kamado.js`.
 
-## Le pagine ricetta devono restare indicizzabili
+## Le pagine devono restare indicizzabili
 
 `scripts/generate-og.js` pre-renderizza pagine complete a partire da
-`dist/index.html`. Due vincoli da non rompere:
+`dist/index.html`: ricette, categorie, e i piani del calcolatore di cottura.
+Due vincoli da non rompere:
 
 - **Niente redirect JavaScript.** Prima c'era un `location.replace()`
   immediato: i crawler lo seguivano e consolidavano tutto sulla homepage,
@@ -35,6 +45,42 @@ dalla fonte**, non riscriverlo.
   con JSON-LD ingredienti o passaggi che la pagina non mostra è una violazione
   delle linee guida Google, non un'ottimizzazione. Se aggiungi campi allo
   schema, aggiungi anche il markup visibile corrispondente.
+
+## Due file del calcolatore devono restare puri
+
+`js/cottura/motore.js` (il calcolo) e `js/cottura/html-piano.js` (il markup del
+piano) **non possono toccare il DOM, `window`, `localStorage` o
+`import.meta`**, e i dati devono arrivargli come argomento invece che con un
+`import`. Non è una preferenza di stile: li importa anche Node, dentro
+`scripts/generate-og.js` e `scripts/build-cottura.js`.
+
+Se qualcuno ci infila un riferimento al browser, il pre-rendering si rompe e la
+strada facile diventa riscrivere il markup a mano nello script di build — cioè
+una seconda copia del piano, che divergerebbe al primo cambiamento. È da questa
+purezza che deriva la garanzia che l'`HowTo` corrisponda a contenuto visibile:
+la pagina statica e quella interattiva escono dalla stessa funzione.
+
+Il montaggio nel browser (timer, storico, Wake Lock) sta in `vista-piano.js`,
+`vista-timer.js` e `vista-storico.js`: è là che va il codice che ha bisogno di
+un browser.
+
+## Cose del calcolatore che sembrano bug e non lo sono
+
+- **La temperatura di estrazione non scende sotto `soglia_sicurezza`.** La
+  regola generale è `target − carryover`, ma sul pollo la soglia vince
+  sull'aritmetica: su un patogeno non si scommette su una stima. Sta in
+  `estrazione()` dentro `motore.js` ed è una scelta concordata.
+- **L'allarme dei timer suona al tempo MINIMO della finestra**, non al massimo.
+  "35-45 minuti" vuol dire "da 35 comincia a controllare", non "pronto a 45":
+  un allarme sul massimo arriverebbe quando la carne è già oltre.
+- **La curva del manzo cresce con circa s^1,45, non con s².** Applicando il
+  quadrato dall'ancora dei 2,5 cm, a 6,5 cm uscirebbero 118 minuti invece dei
+  60-80 osservati. Le ancore sono esperienza reale e vincono sulla formula.
+- **La stagnola è vietata nel riposo delle bistecche e corretta sul brisket.**
+  La regola in `regole.js` è vincolata a `famiglia`: non "uniformarla".
+- **`dati/cottura/` non finisce in `dist/`.** Non è in `public/`: viene
+  importato dal codice, quindi entra nel bundle del calcolatore, che è un chunk
+  caricato solo su `/cottura/`.
 
 ## Codifica dei file
 
@@ -49,6 +95,16 @@ Il progetto non ha test unitari di proposito: il rischio sta quasi tutto
 nell'output statico, e lo copre `npm run check` (dati + build + pre-rendering
 + controlli su `dist/`). Fallo girare davvero prima di dichiarare che una
 modifica funziona — non basta che il file sia stato scritto.
+
+Il cancello include `npm run build:cottura`, che oltre a validare i dati
+**genera 918 piani** — ogni taglio per ogni dispositivo, cottura, metodo e
+temperatura di partenza — e controlla monotonìe (più spesso deve voler dire più
+tempo), intervalli rovesciati e avvisi agganciati a fasi inesistenti. Ha già
+intercettato un avviso di sicurezza che spariva su un intero metodo di cottura:
+se aggiungi regole o fasi, quel controllo è ciò che se ne accorge.
+
+Per vedere un piano senza aprire il browser:
+`node scripts/build-cottura.js --piano fiorentina 4.5 media_al_sangue kamado_piccolo`
 
 Per verificare il comportamento nel browser usa `npm run preview`, che serve
 `dist/` come sarà pubblicato. `npm run dev` non esegue il pre-rendering,
