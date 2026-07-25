@@ -1,15 +1,10 @@
 {
-  "generatedAt": "2026-07-25T00:54:06.446Z",
+  "generatedAt": "2026-07-25T01:04:35.516Z",
   "totalRecipes": 80,
   "categories": [
     {
-      "name": "Pasta",
-      "count": 1,
-      "emoji": "🍝"
-    },
-    {
       "name": "Primi",
-      "count": 1,
+      "count": 2,
       "emoji": "🥣"
     },
     {
@@ -57,11 +52,11 @@
     {
       "title": "Gnocchi di Patate",
       "slug": "gnocchi-di-patate",
-      "category": "Pasta",
-      "categoryDir": "pasta",
+      "category": "Primi",
+      "categoryDir": "primi",
       "emoji": "🥔",
-      "href": "ricette/pasta/gnocchi-di-patate.html",
-      "image": "images/ricette/pasta/gnocchi-di-patate.webp",
+      "href": "ricette/primi/gnocchi-di-patate.html",
+      "image": "images/ricette/primi/gnocchi-di-patate.webp",
       "description": "Gnocchi di patate fatti in casa: soffici, leggeri e perfettamente rigati. Ricetta classica italiana con patate, farina, uovo e il segreto della lavorazione minima.",
       "hydration": null,
       "time": "Riposo 20-40 min",

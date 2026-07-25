@@ -4,7 +4,7 @@
   "emoji": "🥔",
   "description": "Gnocchi di patate fatti in casa: soffici, leggeri e perfettamente rigati. Ricetta classica italiana con patate, farina, uovo e il segreto della lavorazione minima.",
   "subtitle": "La ricetta tradizionale italiana — patate rosse, farina 00 e lavorazione rapida per gnocchi soffici e leggeri",
-  "category": "Pasta",
+  "category": "Primi",
   "hydration": 0,
   "targetTemp": "28-32°C",
   "fermentation": "Riposo 20-40 min",
@@ -161,7 +161,7 @@
   ],
   "_generatedBy": "claude-opus",
   "_createdAt": "2026-04-18T00:10:40.501Z",
-  "image": "images/ricette/pasta/gnocchi-di-patate.webp",
+  "image": "images/ricette/primi/gnocchi-di-patate.webp",
   "imageAttribution": "📷 Foto: Demian Spinetta — Pexels License via Pexels",
   "sensoryProfile": {
     "summary": "Gli gnocchi di patate rosse farinose si presentano con una struttura interna soffice e cedevole, capace tuttavia di opporre una piacevole resistenza iniziale al morso grazie alla breve mantecatura finale. La superficie rugosa conferita dalla rigatura e dalla semola di spolveratura garantisce un'eccellente adesione ai condimenti, mentre il profilo cerealicolo rimane delicatamente in sottofondo, lasciando spazio alla dolcezza amidacea della patata. L'elasticità è volutamente contenuta — frutto di una lavorazione breve e di una farina debole — restituendo una masticabilità morbida e avvolgente, quasi fondente.",

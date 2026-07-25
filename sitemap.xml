@@ -5,7 +5,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://devdomenicotatone.github.io/Ricettario/ricette/pasta/gnocchi-di-patate/</loc>
+    <loc>https://devdomenicotatone.github.io/Ricettario/ricette/primi/gnocchi-di-patate/</loc>
     <lastmod>2026-04-18</lastmod>
     <priority>0.8</priority>
   </url>
@@ -403,10 +403,6 @@
     <loc>https://devdomenicotatone.github.io/Ricettario/ricette/secondi-piatti/spare-ribs-salsa-bbq/</loc>
     <lastmod>2026-04-27</lastmod>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devdomenicotatone.github.io/Ricettario/ricette/pasta/</loc>
-    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://devdomenicotatone.github.io/Ricettario/ricette/primi/</loc>
