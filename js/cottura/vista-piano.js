@@ -22,9 +22,10 @@ export function montaPiano(radice, p, { base, config, onModifica }) {
     });
 
     coda = montaStorico(radice.querySelector('#cottura-coda'), p, config, {
-        // Chiedere "com'è andata" a chi sta ancora leggendo il piano non ha
-        // senso: il pannello compare solo quando almeno una fase è partita.
-        avviata: timer.sessione().fasi.some(f => f.avviatoA),
+        // Funzione e non valore: viene richiamata a ogni ridisegno, così il
+        // pannello passa dalla forma "in attesa" a quella con i pulsanti nel
+        // momento in cui parte il primo timer, senza aspettare un ricarico.
+        avviata: () => timer.sessione().fasi.some(f => f.avviatoA),
     });
 
     if (timer.altrove) mostraCotturaAltrove(radice, timer.altrove, base);

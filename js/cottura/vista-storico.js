@@ -6,8 +6,11 @@
  * taglio la tendenza dice se i coefficienti vanno alzati o abbassati — che è
  * l'unico modo onesto di trasformare stime in numeri tuoi.
  *
- * Il pannello dell'esito compare solo se la cottura è stata avviata davvero:
- * chiedere com'è andata a chi sta ancora leggendo il piano non ha senso.
+ * Il pannello si vede sempre, ma in due forme: chi ha avviato la cottura trova
+ * i pulsanti, chi sta ancora leggendo il piano trova una riga che spiega a cosa
+ * serve e quando comparirà. Prima esisteva solo la prima forma, quindi la
+ * funzione era invisibile finché non la si trovava per caso — che è esattamente
+ * come è andata la prima volta che qualcuno l'ha cercata.
  */
 
 import { ESITI, registra, perTaglio, voceDi, tendenza } from './storico.js';
@@ -17,12 +20,19 @@ const giorno = (ms) => new Date(ms).toLocaleDateString('it-IT', {
     day: 'numeric', month: 'long', year: 'numeric',
 });
 
+/**
+ * @param {{avviata: () => boolean}} opzioni  `avviata` è una FUNZIONE, non un
+ *   booleano: viene richiamata a ogni ridisegno. Con un booleano catturato al
+ *   montaggio il pannello restava quello di partenza anche dopo l'avvio del
+ *   primo timer, e cambiava solo ricaricando la pagina.
+ */
 export function montaStorico(radice, piano, config, { avviata }) {
     function disegna() {
         const passate = perTaglio(config.taglio);
         const t = tendenza(config.taglio);
+        const partita = typeof avviata === 'function' ? avviata() : Boolean(avviata);
         radice.innerHTML = [
-            avviata ? pannelloEsito(piano, config) : '',
+            partita ? pannelloEsito(piano, config) : pannelloInAttesa(),
             passate.length ? elencoPassate(passate, t) : '',
         ].join('');
     }
@@ -62,6 +72,25 @@ export function montaStorico(radice, piano, config, { avviata }) {
 }
 
 // ═══════════════════════════════════════════════════════════════
+
+/**
+ * Forma "in attesa": visibile, ma non invita a dichiarare l'esito di una
+ * cottura che non è ancora cominciata. Dice anche quando comparirà l'altra, che
+ * era l'informazione mancante.
+ */
+function pannelloInAttesa() {
+    return `
+      <section class="esito esito--attesa">
+        <h2 class="piano__blocco-titolo">Com'è andata</h2>
+        <p class="esito__perche">
+          Quando avrai cucinato questo piano, qui potrai registrare com'è venuta —
+          al punto, poco cotta, troppo cotta — con una nota tua.
+          Serve a tarare i tempi sul tuo kamado: dopo tre cotture sullo stesso
+          taglio il sito ti dice in che direzione correggere i coefficienti.
+        </p>
+        <p class="esito__quando">Compare appena avvii il primo timer qui sopra.</p>
+      </section>`;
+}
 
 function pannelloEsito(piano, config) {
     const gia = voceDi(config, Date.now());

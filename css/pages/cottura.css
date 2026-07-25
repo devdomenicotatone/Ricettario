@@ -985,6 +985,24 @@
         margin-bottom: var(--space-md);
     }
 
+    /* Forma in attesa: si vede, ma non chiede niente. Bordo tratteggiato e
+       nessun accento, per non competere con la fase di cottura in corso. */
+    .esito--attesa {
+        border-style: dashed;
+        border-color: var(--border-medium);
+        background: transparent;
+
+        & .esito__perche {
+            margin-bottom: var(--space-sm);
+        }
+    }
+
+    .esito__quando {
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--color-accent);
+    }
+
     .esito__scelte {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
