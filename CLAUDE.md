@@ -62,6 +62,11 @@ Pages serve dal branch `gh-pages`, aggiornato solo da quel comando.
 Il deploy è preceduto da `npm run check` con `&&`: se i dati sono incoerenti
 la pubblicazione si ferma prima di partire. È voluto, non aggirarlo.
 
+**Pubblica senza chiedere, se `npm run check` passa.** È il cancello a
+decidere: quando è verde, chiudi il lavoro con `npm run deploy` invece di
+fermarti a domandare. Se fallisce, non forzare — riporta cosa si è rotto.
+(Indicazione esplicita di Domenico, 25/07/2026.)
+
 `public/pdf/` (~173 MB di materiale sorgente) è nel `.gitignore` ma Vite copia
 tutto `public/` in `dist/`: un plugin in `vite.config.js` lo esclude
 esplicitamente. Se tocchi quel plugin, controlla il peso di `dist/`.
