@@ -80,7 +80,9 @@ function mostraPiano(app, config) {
 
     document.title = `${calcolato.taglio.nome} da ${misura} su kamado — ${SITO}`;
     aggiornaDescrizione(
-        `Piano di cottura per ${calcolato.taglio.nome.toLowerCase()} da ${misura} su ${calcolato.dispositivo.nome.toLowerCase()}: `
+        // Il nome del taglio non si abbassa: "Fiorentina / T-bone" diventerebbe
+        // "fiorentina / t-bone". Quello del dispositivo sì, è un nome comune.
+        `Piano di cottura per ${calcolato.taglio.nome} da ${misura} su ${calcolato.dispositivo.nome.toLowerCase()}: `
         + `estrazione a ${calcolato.estrazione.c} °C, fasi, temperature di camera e gestione delle valvole.`,
     );
 

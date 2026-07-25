@@ -46,10 +46,18 @@ function testoVisibile(html) {
  */
 const DOPPIA_CODIFICA = /[Â-Ã][-¿]/g;
 
+/** Contenuto di un tag/attributo singolo, o stringa vuota. */
+function estrai(html, regex) {
+    const m = html.match(regex);
+    return m ? normalizza(m[1].replace(/<[^>]+>/g, ' ')) : '';
+}
+
 function paginaHtml(percorso) {
     const rel = percorso.split(sep).join('/');
     const html = readFileSync(percorso, 'utf8');
     const eRicetta = /\/ricette\/[^/]+\/[^/]+\/index\.html$/.test(rel);
+    const ePianoCottura = /\/cottura\/[^/]+\/index\.html$/.test(rel);
+    const eIndiceCottura = /\/cottura\/index\.html$/.test(rel);
 
     if (!/rel="canonical"/.test(html)) err(`${rel}: manca <link rel="canonical">`);
 
@@ -78,6 +86,64 @@ function paginaHtml(percorso) {
     const tipi = blocchi.map(b => b['@type']);
     if (new Set(tipi).size !== tipi.length) {
         err(`${rel}: dati strutturati duplicati (${tipi.join(', ')})`);
+    }
+
+    // ── Pagine del calcolatore di cottura ──
+    // Valgono le stesse regole delle ricette, per lo stesso motivo: sono
+    // generate da uno script, e uno script che marca con HowTo dei passaggi che
+    // la pagina non mostra produce una violazione delle linee guida, non un
+    // vantaggio. Qui il rischio è concreto perché il markup arriva da
+    // html-piano.js e il JSON-LD da generate-og.js: se qualcuno cambia uno dei
+    // due, questo controllo è ciò che se ne accorge.
+    if (ePianoCottura) {
+        const howTo = blocchi.find(b => b['@type'] === 'HowTo');
+        if (!howTo) {
+            err(`${rel}: pagina di cottura senza JSON-LD HowTo`);
+            return { rel, blocchi };
+        }
+        for (const campo of ['name', 'step', 'totalTime']) {
+            if (!howTo[campo] || howTo[campo].length === 0) err(`${rel}: HowTo senza "${campo}"`);
+        }
+
+        const testo = testoVisibile(html);
+        if (testo.length < 300) err(`${rel}: solo ${testo.length} caratteri visibili senza JS`);
+        for (const passo of howTo.step || []) {
+            const inizio = normalizza(passo.text).slice(0, 40);
+            if (inizio && !testo.includes(inizio)) {
+                err(`${rel}: passo HowTo marcato ma non visibile — "${inizio}…"`);
+            }
+            if (passo.name && !testo.includes(normalizza(passo.name))) {
+                err(`${rel}: nome del passo HowTo non visibile — "${passo.name}"`);
+            }
+        }
+
+        // Titolo, meta description e H1 devono dire tre cose diverse: sono tre
+        // spazi diversi e ripetere la stessa frase in tutti e tre spreca due.
+        // Il controllo vale solo qui: sulle ricette titolo e H1 coincidono per
+        // scelta, ed è corretto così.
+        const titolo = estrai(html, /<title>([\s\S]*?)<\/title>/);
+        const descrizione = estrai(html, /<meta\s+name="description"\s+content="([^"]*)"/);
+        const h1 = estrai(html, /<h1[^>]*>([\s\S]*?)<\/h1>/);
+        if (!h1) err(`${rel}: manca l'H1`);
+        if (!descrizione) err(`${rel}: manca la meta description`);
+        const senzaSito = titolo.replace(/\s+—\s+Ricettario Lab$/, '');
+        if (h1 && senzaSito === h1) err(`${rel}: titolo e H1 identici ("${h1}")`);
+        if (descrizione && (descrizione === senzaSito || descrizione === h1)) {
+            err(`${rel}: meta description uguale al titolo o all'H1`);
+        }
+        return { rel, blocchi };
+    }
+
+    if (eIndiceCottura) {
+        if (!blocchi.some(b => b['@type'] === 'CollectionPage')) {
+            err(`${rel}: indice del calcolatore senza JSON-LD CollectionPage`);
+        }
+        const testo = testoVisibile(html);
+        if (testo.length < 300) {
+            err(`${rel}: solo ${testo.length} caratteri visibili senza JS — il crawler non compila il form, `
+                + 'quindi questa pagina è tutto quello che vede');
+        }
+        return { rel, blocchi };
     }
 
     if (!eRicetta) return { rel, blocchi };
