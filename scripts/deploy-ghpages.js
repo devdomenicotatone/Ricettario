@@ -68,6 +68,18 @@ async function deploy() {
         process.exit(1);
     }
 
+    // Identità da propagare al repo di deploy: è un repo a sé e non eredita
+    // nulla da questo. Senza, `git commit` fallisce quando la macchina non ha
+    // una config globale — ed è così che si finisce per committare con
+    // un'email non collegata all'account GitHub.
+    const authorName = runSilent('git config user.name');
+    const authorEmail = runSilent('git config user.email');
+    if (!authorName || !authorEmail) {
+        console.error('❌ Identità git non configurata in questo repo. Imposta:');
+        console.error('   git config user.name "..." && git config user.email "..."');
+        process.exit(1);
+    }
+
     // Strategia: repo separato dedicato solo a gh-pages
     const repoReady = existsSync(join(DEPLOY_DIR, '.git'));
 
@@ -88,6 +100,10 @@ async function deploy() {
     } else {
         console.log('📦 Push incrementale su gh-pages (solo delta)...');
     }
+
+    // Riallineata a ogni deploy, non solo alla creazione del repo.
+    run(`git config user.name "${authorName}"`, DEPLOY_DIR);
+    run(`git config user.email "${authorEmail}"`, DEPLOY_DIR);
 
     // Pulisci contenuto vecchio del deploy dir (tranne .git)
     const entries = readdirSync(DEPLOY_DIR);
