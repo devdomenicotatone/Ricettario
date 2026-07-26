@@ -41,10 +41,92 @@ function testoVisibile(html) {
 }
 
 /**
- * Doppia codifica UTF-8: testo salvato come Latin-1 e ri-codificato.
- * Si vede come "metÃ " al posto di "metà". È già successo su 7 ricette.
+ * Doppia codifica UTF-8: byte UTF-8 riletti come Windows-1252 e risalvati.
+ * Si vede come "metÃ " al posto di "metà", o come un trattino lungo che
+ * diventa tre caratteri incomprensibili. È già successo su 7 ricette.
+ *
+ * Prima qui c'era una regex che guardava solo i byte guida C2/C3 e solo le
+ * continuazioni Latin-1: copriva le lettere accentate e basta, quindi
+ * lasciava passare trattini lunghi, virgolette tipografiche ed emoji — 186
+ * sequenze rimaste per mesi in 7 ricette pubblicate. Riconoscere il mojibake
+ * byte per byte costa dieci righe in più e non ha quel buco.
  */
-const DOPPIA_CODIFICA = /[Â-Ã][-¿]/g;
+
+/** Windows-1252: i byte 0x80-0x9F che NON coincidono con Latin-1. */
+const CP1252_ALTI = {
+    0x80: '€', 0x82: '‚', 0x83: 'ƒ', 0x84: '„',
+    0x85: '…', 0x86: '†', 0x87: '‡', 0x88: 'ˆ',
+    0x89: '‰', 0x8A: 'Š', 0x8B: '‹', 0x8C: 'Œ',
+    0x8E: 'Ž', 0x91: '‘', 0x92: '’', 0x93: '“',
+    0x94: '”', 0x95: '•', 0x96: '–', 0x97: '—',
+    0x98: '˜', 0x99: '™', 0x9A: 'š', 0x9B: '›',
+    0x9C: 'œ', 0x9E: 'ž', 0x9F: 'Ÿ',
+};
+const BYTE_DI = new Map();
+for (let b = 0; b <= 0xFF; b++) {
+    const c = CP1252_ALTI[b] ?? String.fromCharCode(b);
+    if (!BYTE_DI.has(c)) BYTE_DI.set(c, b);
+}
+// Chi ha riletto i byte come Latin-1 puro invece che come Windows-1252 non
+// ottiene "€" ma il carattere di controllo U+0080. Vale come byte anche quello,
+// e nel testo di una ricetta non ci finisce per altre strade.
+for (let b = 0x80; b <= 0x9F; b++) {
+    const c = String.fromCharCode(b);
+    if (!BYTE_DI.has(c)) BYTE_DI.set(c, b);
+}
+const byteDi = (c) => (BYTE_DI.has(c) ? BYTE_DI.get(c) : -1);
+
+/**
+ * Le sequenze di doppia codifica trovate in `testo`, come si leggono a schermo.
+ *
+ * Non basta cercare i caratteri sospetti uno per uno: le lettere accentate e il
+ * simbolo di grado sono italiano normale. È mojibake solo quando i caratteri,
+ * riconvertiti in byte, formano una sequenza UTF-8 multibyte COMPLETA e valida:
+ * un byte guida seguito esattamente dalle sue continuazioni. Una lettera
+ * accentata da sola non ha continuazioni dietro e non fa scattare niente.
+ */
+function sequenzeDoppiaCodifica(testo) {
+    const trovate = [];
+    for (let i = 0; i < testo.length; i++) {
+        const guida = byteDi(testo[i]);
+        let lunghezza = 0;
+        if (guida >= 0xC2 && guida <= 0xDF) lunghezza = 2;
+        else if (guida >= 0xE0 && guida <= 0xEF) lunghezza = 3;
+        else if (guida >= 0xF0 && guida <= 0xF4) lunghezza = 4;
+        if (!lunghezza || i + lunghezza > testo.length) continue;
+
+        const byte = [guida];
+        for (let k = 1; k < lunghezza; k++) {
+            const b = byteDi(testo[i + k]);
+            if (b < 0x80 || b > 0xBF) break;
+            byte.push(b);
+        }
+        if (byte.length !== lunghezza) continue;
+
+        // Buffer mette U+FFFD sulle sequenze non valide (overlong, surrogati):
+        // in quel caso non è mojibake, è testo che si somiglia per caso.
+        const decodificato = Buffer.from(byte).toString('utf8');
+        if (decodificato.includes('�')) continue;
+
+        trovate.push(testo.slice(i, i + lunghezza));
+        i += lunghezza - 1;
+    }
+    return trovate;
+}
+
+/**
+ * Segnala il mojibake trovato in un testo, con qualche esempio.
+ * `bloccante` a false per i file che non vengono pubblicati: vale la pena
+ * saperlo, non vale la pena fermare un deploy per un file che nessuno legge.
+ */
+function controllaDoppiaCodifica(etichetta, testo, bloccante = true) {
+    const rotti = sequenzeDoppiaCodifica(testo);
+    if (!rotti.length) return;
+    const esempi = [...new Set(rotti)].slice(0, 4).map(s => JSON.stringify(s)).join(' ');
+    const messaggio = `${etichetta}: testo a doppia codifica UTF-8 (${rotti.length} occorrenze: ${esempi})`;
+    if (bloccante) err(messaggio);
+    else warn(messaggio);
+}
 
 /** Contenuto di un tag/attributo singolo, o stringa vuota. */
 function estrai(html, regex) {
@@ -60,13 +142,6 @@ function paginaHtml(percorso) {
     const eIndiceCottura = /\/cottura\/index\.html$/.test(rel);
 
     if (!/rel="canonical"/.test(html)) err(`${rel}: manca <link rel="canonical">`);
-
-    DOPPIA_CODIFICA.lastIndex = 0;
-    const rotti = html.match(DOPPIA_CODIFICA);
-    if (rotti) {
-        const esempi = [...new Set(rotti)].slice(0, 4).map(s => JSON.stringify(s)).join(' ');
-        err(`${rel}: testo a doppia codifica UTF-8 (${rotti.length} occorrenze: ${esempi})`);
-    }
 
     // Il redirect JS rendeva le pagine non indicizzabili: i crawler lo seguono
     // e consolidano tutto sulla homepage. Non deve tornare.
@@ -191,6 +266,35 @@ let pagine = 0;
     }
 })(DIST);
 
+// ── 1-bis. Doppia codifica, ovunque ──
+// Il controllo stava dentro paginaHtml e guardava solo gli index.html: bastava
+// che il testo corrotto stesse in un campo non pre-renderizzato (un consiglio,
+// una nota, la definizione di un glossario) perché passasse indisturbato e
+// arrivasse comunque al browser via recipes.json o via il .json della ricetta.
+// Qui si guarda tutto quello che è testo: la sorgente in ricette/ — così il
+// problema si vede prima ancora della build — e ogni file pubblicabile di dist/.
+const ESTENSIONI_TESTO = /\.(html|json|xml|txt|css|js|svg|webmanifest)$/i;
+
+/** Sidecar e backup che vivono accanto alle ricette ma non sono ricette. */
+const NON_E_UNA_RICETTA = /\.(backup|pre-edit|pre-gen|qualita)\.json$/i;
+
+function scorriTesti(dir, azione) {
+    if (!existsSync(dir)) return;
+    for (const e of readdirSync(dir, { withFileTypes: true })) {
+        const p = join(dir, e.name);
+        if (e.isDirectory()) scorriTesti(p, azione);
+        else if (ESTENSIONI_TESTO.test(e.name)) azione(p, p.split(sep).join('/'));
+    }
+}
+
+let testiControllati = 0;
+for (const cartella of ['ricette', DIST]) {
+    scorriTesti(cartella, (percorso, rel) => {
+        testiControllati++;
+        controllaDoppiaCodifica(rel, readFileSync(percorso, 'utf8'), !NON_E_UNA_RICETTA.test(rel));
+    });
+}
+
 // ── 2. Sitemap ──
 if (!existsSync(join(DIST, 'sitemap.xml'))) {
     err('manca dist/sitemap.xml');
@@ -235,7 +339,7 @@ const mb = peso(DIST) / 1048576;
 if (mb > 60) err(`dist/ pesa ${mb.toFixed(0)} MB: qualcosa di grosso è rientrato nel deploy`);
 
 // ── Esito ──
-console.log(`🔍 Verifica build — ${pagine} pagine, ${mb.toFixed(1)} MB`);
+console.log(`🔍 Verifica build — ${pagine} pagine, ${testiControllati} file di testo, ${mb.toFixed(1)} MB`);
 for (const a of avvisi) console.warn(`⚠️  ${a}`);
 if (problemi.length) {
     for (const p of problemi.slice(0, 25)) console.error(`❌ ${p}`);

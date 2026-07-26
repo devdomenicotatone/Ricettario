@@ -1,9 +1,9 @@
 {
     "title":  "Pizza in Teglia Romana",
     "slug":  "pizza-in-teglia-romana",
-    "emoji":  "ðŸ•",
+    "emoji":  "🍕",
     "description":  "Pizza in teglia romana ad alta idratazione: croccante sotto, soffice e alveolata dentro. Tecnica professionale con maturazione in freddo 24h.",
-    "subtitle":  "Alta idratazione, pieghe di rinforzo e doppia cottura â€” metodo Accademia",
+    "subtitle":  "Alta idratazione, pieghe di rinforzo e doppia cottura — metodo Accademia",
     "category":  "Pizza",
     "hydration":  83,
     "targetTemp":  "24-26°C",
@@ -18,13 +18,13 @@
                                  "items":  [
                                                {
                                                    "name":  "Farina Tipo 0 Alta Forza",
-                                                   "note":  "(W 300â€“330, es. Caputo Nuvola Super, Molino Dalla Giovanna Uniqua Blu)",
+                                                   "note":  "(W 300–330, es. Caputo Nuvola Super, Molino Dalla Giovanna Uniqua Blu)",
                                                    "grams":  500,
                                                    "tokenId":  "farina"
                                                },
                                                {
                                                    "name":  "Acqua",
-                                                   "note":  "(fredda, 4â€“6°C)",
+                                                   "note":  "(fredda, 4–6°C)",
                                                    "grams":  415,
                                                    "tokenId":  "acqua_totale"
                                                },
@@ -60,16 +60,16 @@
                     ],
     "steps":  [
                   {
-                      "title":  "Autolisi â€” Idratazione della Farina",
-                      "text":  "In una ciotola capiente (o nella vasca della planetaria), versa {farina:500}g di farina tipo 0 W 300â€“330 e {acqua_totale:415}g di acqua fredda (4â€“6°C) per circa il 55% dell\u0027acqua totale, ovvero circa 230g. Mescola grossolanamente con un cucchiaio o a mano fino a bagnare tutta la farina: non serve un impasto liscio, basta che non ci sia farina secca. Copri con pellicola e lascia riposare 30 minuti a temperatura ambiente. Questo passaggio â€” detto fermentolisi quando il lievito è già presente, o autolisi se la farina incontra solo acqua â€” idrata il glutine e semplifica enormemente l\u0027incordatura successiva."
+                      "title":  "Autolisi — Idratazione della Farina",
+                      "text":  "In una ciotola capiente (o nella vasca della planetaria), versa {farina:500}g di farina tipo 0 W 300–330 e {acqua_totale:415}g di acqua fredda (4–6°C) per circa il 55% dell\u0027acqua totale, ovvero circa 230g. Mescola grossolanamente con un cucchiaio o a mano fino a bagnare tutta la farina: non serve un impasto liscio, basta che non ci sia farina secca. Copri con pellicola e lascia riposare 30 minuti a temperatura ambiente. Questo passaggio — detto fermentolisi quando il lievito è già presente, o autolisi se la farina incontra solo acqua — idrata il glutine e semplifica enormemente l\u0027incordatura successiva."
                   },
                   {
                       "title":  "Incorporo del Lievito e Bassinage",
-                      "text":  "Sciogli {lievito:4}g di lievito di birra fresco (o {malto:5}g di malto diastasico in questa fase se lo usi) nei restanti 185g di acqua fredda. Aggiungi la soluzione acqua-lievito all\u0027impasto autolitico in 3â€“4 riprese, a filo, lavorando energicamente a mano con la tecnica slap \u0026 fold oppure con la planetaria a gancio a velocità 2. Tra un\u0027aggiunta e l\u0027altra lascia che l\u0027acqua venga completamente assorbita prima di procedere. Questo metodo â€” il bassinage â€” è fondamentale per gestire l\u0027alta idratazione senza perdere l\u0027incordatura. Totale acqua finale: 415g (83% su farina)."
+                      "text":  "Sciogli {lievito:4}g di lievito di birra fresco (o {malto:5}g di malto diastasico in questa fase se lo usi) nei restanti 185g di acqua fredda. Aggiungi la soluzione acqua-lievito all\u0027impasto autolitico in 3–4 riprese, a filo, lavorando energicamente a mano con la tecnica slap \u0026 fold oppure con la planetaria a gancio a velocità 2. Tra un\u0027aggiunta e l\u0027altra lascia che l\u0027acqua venga completamente assorbita prima di procedere. Questo metodo — il bassinage — è fondamentale per gestire l\u0027alta idratazione senza perdere l\u0027incordatura. Totale acqua finale: 415g (83% su farina)."
                   },
                   {
                       "title":  "Incorporo di Sale e Olio",
-                      "text":  "Quando l\u0027impasto è compatto e inizia a incordarsi (si stacca dalle pareti, circa 8â€“10 minuti totali), aggiungi {sale:12}g di sale fino e continua a lavorare 2 minuti. Solo alla fine aggiungi {olio_impasto:20}g di olio EVO a filo lentissimo, aspettando che ogni goccia venga assorbita prima di aggiungerne altra. L\u0027olio va SEMPRE per ultimo: aggiunto prima impedirebbe al glutine di svilupparsi correttamente. L\u0027impasto finale deve risultare liscio, lucido, elastico e non appiccicoso. Temperatura impasto target: 24â€“26°C."
+                      "text":  "Quando l\u0027impasto è compatto e inizia a incordarsi (si stacca dalle pareti, circa 8–10 minuti totali), aggiungi {sale:12}g di sale fino e continua a lavorare 2 minuti. Solo alla fine aggiungi {olio_impasto:20}g di olio EVO a filo lentissimo, aspettando che ogni goccia venga assorbita prima di aggiungerne altra. L\u0027olio va SEMPRE per ultimo: aggiunto prima impedirebbe al glutine di svilupparsi correttamente. L\u0027impasto finale deve risultare liscio, lucido, elastico e non appiccicoso. Temperatura impasto target: 24–26°C."
                   },
                   {
                       "title":  "Pieghe di Rinforzo",
@@ -77,23 +77,23 @@
                   },
                   {
                       "title":  "Prima Lievitazione e Maturazione in Freddo",
-                      "text":  "Dopo le pieghe, lascia riposare l\u0027impasto a temperatura ambiente per 1â€“2 ore (puntata), poi trasferisci il contenitore coperto con pellicola in frigorifero a 4°C per 18â€“24 ore. La maturazione lenta in freddo sviluppa aromi complessi, migliora la digeribilità e irrobustisce la struttura alveolare. NON accorciare questo passaggio: è il cuore tecnico della teglia romana."
+                      "text":  "Dopo le pieghe, lascia riposare l\u0027impasto a temperatura ambiente per 1–2 ore (puntata), poi trasferisci il contenitore coperto con pellicola in frigorifero a 4°C per 18–24 ore. La maturazione lenta in freddo sviluppa aromi complessi, migliora la digeribilità e irrobustisce la struttura alveolare. NON accorciare questo passaggio: è il cuore tecnico della teglia romana."
                   },
                   {
-                      "title":  "Appretto â€” Acclimatamento e Formatura",
-                      "text":  "Togli l\u0027impasto dal frigo e lascialo a temperatura ambiente per 2â€“3 ore (appretto), coperto per evitare la crosta. L\u0027impasto deve visibilmente riprendere volume e sembrare vivo e gonfio. NON affrettare: un impasto freddo non si stende correttamente e strappa."
+                      "title":  "Appretto — Acclimatamento e Formatura",
+                      "text":  "Togli l\u0027impasto dal frigo e lascialo a temperatura ambiente per 2–3 ore (appretto), coperto per evitare la crosta. L\u0027impasto deve visibilmente riprendere volume e sembrare vivo e gonfio. NON affrettare: un impasto freddo non si stende correttamente e strappa."
                   },
                   {
                       "title":  "Stesura in Teglia",
-                      "text":  "Ungi generosamente una teglia 30Ã—40 cm con olio EVO (non lesinare: l\u0027olio in abbondanza favorisce la croccantezza del fondo). Rovescia delicatamente l\u0027impasto nella teglia fredda. Con i polpastrelli unti, allarga l\u0027impasto partendo dal centro verso i bordi, con movimenti dolci e orizzontali â€” mai premere verso il basso con il palmo piatto. Se l\u0027impasto resiste e si ritira, coprilo e lascialo riposare 10â€“15 minuti: si rilasserà da solo. Non usare mattarello: distruggeresti tutta l\u0027alveolatura. L\u0027impasto deve riempire la teglia uniformemente senza strappi."
+                      "text":  "Ungi generosamente una teglia 30×40 cm con olio EVO (non lesinare: l\u0027olio in abbondanza favorisce la croccantezza del fondo). Rovescia delicatamente l\u0027impasto nella teglia fredda. Con i polpastrelli unti, allarga l\u0027impasto partendo dal centro verso i bordi, con movimenti dolci e orizzontali — mai premere verso il basso con il palmo piatto. Se l\u0027impasto resiste e si ritira, coprilo e lascialo riposare 10–15 minuti: si rilasserà da solo. Non usare mattarello: distruggeresti tutta l\u0027alveolatura. L\u0027impasto deve riempire la teglia uniformemente senza strappi."
                   },
                   {
-                      "title":  "Doppia Cottura â€” Prima Fase (Base)",
-                      "text":  "Preriscalda il forno statico con una pietra refrattaria posizionata sul ripiano basso a 250â€“260°C per almeno 40â€“45 minuti. Condisci la pizza con pomodoro schiacciato a mano (o fiordilatte se fai una bianca), senza esagerare col peso. Appoggia la teglia direttamente sulla pietra refrattaria e cuoci 12â€“15 minuti, fino a quando il bordo inizia a colorarsi e il fondo è dorato e croccante. La prima cottura fissa la struttura dell\u0027impasto."
+                      "title":  "Doppia Cottura — Prima Fase (Base)",
+                      "text":  "Preriscalda il forno statico con una pietra refrattaria posizionata sul ripiano basso a 250–260°C per almeno 40–45 minuti. Condisci la pizza con pomodoro schiacciato a mano (o fiordilatte se fai una bianca), senza esagerare col peso. Appoggia la teglia direttamente sulla pietra refrattaria e cuoci 12–15 minuti, fino a quando il bordo inizia a colorarsi e il fondo è dorato e croccante. La prima cottura fissa la struttura dell\u0027impasto."
                   },
                   {
-                      "title":  "Doppia Cottura â€” Seconda Fase (Topping)",
-                      "text":  "Sforna, aggiungi la mozzarella (ben strizzata) e tutti i condimenti desiderati. Reinforma a 250°C per altri 3â€“5 minuti, questa volta sul ripiano medio-alto, fino a quando il formaggio è fuso e leggermente dorato. I condimenti delicati (mortadella, rucola, burrata) si aggiungono SEMPRE dopo la cottura, fuori dal forno. Sforna, lascia riposare 2â€“3 minuti sulla griglia prima di tagliare: il vapore sotto la teglia si disperde e la base rimane croccante."
+                      "title":  "Doppia Cottura — Seconda Fase (Topping)",
+                      "text":  "Sforna, aggiungi la mozzarella (ben strizzata) e tutti i condimenti desiderati. Reinforma a 250°C per altri 3–5 minuti, questa volta sul ripiano medio-alto, fino a quando il formaggio è fuso e leggermente dorato. I condimenti delicati (mortadella, rucola, burrata) si aggiungono SEMPRE dopo la cottura, fuori dal forno. Sforna, lascia riposare 2–3 minuti sulla griglia prima di tagliare: il vapore sotto la teglia si disperde e la base rimane croccante."
                   }
               ],
     "stepsCondiment":  [
@@ -102,28 +102,28 @@
     "flourTable":  [
                        {
                            "type":  "Farina Tipo 0 Alta Forza",
-                           "w":  "300â€“330",
+                           "w":  "300–330",
                            "brands":  "Caputo Nuvola Super, Molino Dalla Giovanna Uniqua Blu, Garofalo Pizzeria W300, Le 5 Stagioni Super"
                        },
                        {
                            "type":  "Farina Tipo 1 Semi-integrale (variante)",
-                           "w":  "280â€“320",
+                           "w":  "280–320",
                            "brands":  "Molino Pivetti Gran Riserva Tipo 1, Mulino Marino Tipo 1, Caputo Tipo 1"
                        },
                        {
                            "type":  "Farina Tipo 0 Media Forza (solo per principianti)",
-                           "w":  "260â€“280",
+                           "w":  "260–280",
                            "brands":  "Caputo Rossa, Molino Rosignoli Tipo 0, Lo Conte Farina Pizzeria"
                        }
                    ],
     "baking":  {
-                   "temperature":  "250â€“260°C",
-                   "time":  "12â€“15 min (prima cottura) + 3â€“5 min (con topping)",
+                   "temperature":  "250–260°C",
+                   "time":  "12–15 min (prima cottura) + 3–5 min (con topping)",
                    "tips":  [
-                                "Preriscalda il forno statico (MAI ventilato) a 250â€“260°C per almeno 40â€“45 minuti con la pietra refrattaria sul ripiano basso",
-                                "Olio abbondante nella teglia: non è un errore, è tecnica â€” favorisce la croccantezza del fondo e impedisce l\u0027attaccamento",
-                                "Prima cottura sempre sul ripiano PIÃ™ BASSO (appoggiando la teglia sulla pietra refrattaria) per scaldare il fondo; seconda cottura sul ripiano medio-alto per gratinare i topping",
-                                "Il fondo è cotto quando, sollevando un angolo con una spatola, risulta dorato e rigido â€” non pallido e cedevole",
+                                "Preriscalda il forno statico (MAI ventilato) a 250–260°C per almeno 40–45 minuti con la pietra refrattaria sul ripiano basso",
+                                "Olio abbondante nella teglia: non è un errore, è tecnica — favorisce la croccantezza del fondo e impedisce l\u0027attaccamento",
+                                "Prima cottura sempre sul ripiano PIÙ BASSO (appoggiando la teglia sulla pietra refrattaria) per scaldare il fondo; seconda cottura sul ripiano medio-alto per gratinare i topping",
+                                "Il fondo è cotto quando, sollevando un angolo con una spatola, risulta dorato e rigido — non pallido e cedevole",
                                 "Mozzarella: strizzala bene 30 minuti prima in un colino. Il siero in eccesso renderebbe la superficie acquosa",
                                 "Dopo aver sfornato, trasferisci SEMPRE su una griglia: non lasciare la pizza nella teglia o il vapore intrappolato ammorbidisce il fondo"
                             ]
@@ -131,7 +131,7 @@
     "glossary":  [
                      {
                          "term":  "Autolisi / Fermentolisi",
-                         "definition":  "Riposo di farina e acqua (autolisi: senza lievito; fermentolisi: con lievito già presente) per 20â€“60 min. Idrata il glutine, riduce i tempi di impastamento e migliora l\u0027estensibilità."
+                         "definition":  "Riposo di farina e acqua (autolisi: senza lievito; fermentolisi: con lievito già presente) per 20–60 min. Idrata il glutine, riduce i tempi di impastamento e migliora l\u0027estensibilità."
                      },
                      {
                          "term":  "Bassinage",
@@ -139,7 +139,7 @@
                      },
                      {
                          "term":  "Incordatura",
-                         "definition":  "Il momento in cui la maglia glutinica è sviluppata al punto che l\u0027impasto si stacca dalle pareti della ciotola o del gancio, risulta elastico, liscio e non appiccicoso. Ãˆ il segnale che il glutine ha assorbito tutta l\u0027acqua e l\u0027impasto è pronto."
+                         "definition":  "Il momento in cui la maglia glutinica è sviluppata al punto che l\u0027impasto si stacca dalle pareti della ciotola o del gancio, risulta elastico, liscio e non appiccicoso. È il segnale che il glutine ha assorbito tutta l\u0027acqua e l\u0027impasto è pronto."
                      },
                      {
                          "term":  "Pieghe di Rinforzo (Stretch \u0026 Fold / Coil Fold)",
@@ -151,11 +151,11 @@
                      },
                      {
                          "term":  "Appretto",
-                         "definition":  "Seconda fase di lievitazione: dopo lo staglio (o nel caso della teglia, dopo il riposo in freddo), l\u0027impasto acclimatizza a temperatura ambiente prima della stesura. Dura 2â€“3 ore per la teglia romana."
+                         "definition":  "Seconda fase di lievitazione: dopo lo staglio (o nel caso della teglia, dopo il riposo in freddo), l\u0027impasto acclimatizza a temperatura ambiente prima della stesura. Dura 2–3 ore per la teglia romana."
                      },
                      {
                          "term":  "Maturazione in Freddo",
-                         "definition":  "Processo di fermentazione lenta a 4°C (frigorifero) per 18â€“48 ore. A bassa temperatura i lieviti rallentano ma gli enzimi continuano a lavorare, migliorando sapore, profumo, digeribilità e struttura dell\u0027impasto."
+                         "definition":  "Processo di fermentazione lenta a 4°C (frigorifero) per 18–48 ore. A bassa temperatura i lieviti rallentano ma gli enzimi continuano a lavorare, migliorando sapore, profumo, digeribilità e struttura dell\u0027impasto."
                      },
                      {
                          "term":  "Maglia Glutinica",
@@ -175,13 +175,13 @@
                      },
                      {
                          "term":  "W (Forza della Farina)",
-                         "definition":  "Indice alveografico che misura la resistenza della farina alla deformazione. Farine W 300â€“330 sono \u0027forti\u0027: reggono lunghe lievitazioni e alte idratazioni. Farine W \u003c250 sono \u0027deboli\u0027: vanno bene per lievitazioni brevi e idratazioni moderate."
+                         "definition":  "Indice alveografico che misura la resistenza della farina alla deformazione. Farine W 300–330 sono \u0027forti\u0027: reggono lunghe lievitazioni e alte idratazioni. Farine W \u003c250 sono \u0027deboli\u0027: vanno bene per lievitazioni brevi e idratazioni moderate."
                      }
                  ],
-    "alert":  "NON usare farine deboli (W \u003c 260) per questo impasto: con 83% di idratazione e 24h di maturazione, una farina debole non sviluppa la maglia glutinica necessaria e l\u0027impasto diventa una poltiglia ingestibile. Allo stesso modo, NON abbreviare la maturazione in freddo a meno di 12 ore: la teglia romana non è una pizza veloce â€” la sua leggerezza e digeribilità dipendono dalla lentezza del processo.",
+    "alert":  "NON usare farine deboli (W \u003c 260) per questo impasto: con 83% di idratazione e 24h di maturazione, una farina debole non sviluppa la maglia glutinica necessaria e l\u0027impasto diventa una poltiglia ingestibile. Allo stesso modo, NON abbreviare la maturazione in freddo a meno di 12 ore: la teglia romana non è una pizza veloce — la sua leggerezza e digeribilità dipendono dalla lentezza del processo.",
     "proTips":  [
-                    "Per ottenere il fondo perfettamente croccante, posiziona una pietra refrattaria sul ripiano basso del forno durante il preriscaldamento e appoggia la teglia direttamente su di essa: il calore diretto dal basso garantisce una spinta termica immediata sul fondo, replicando la tecnica delle pizzerie al taglio romane â€” in totale sicurezza.",
-                    "Se la tua cucina è calda (\u003e25°C), usa acqua ancora più fredda (2â€“4°C dal congelatore in parte ghiacciata) e riduci la puntata a temperatura ambiente a soli 30 minuti prima del frigo. La temperatura dell\u0027impasto non deve mai superare i 26°C prima di entrare in frigo, altrimenti la maturazione diventa incontrollabile.",
+                    "Per ottenere il fondo perfettamente croccante, posiziona una pietra refrattaria sul ripiano basso del forno durante il preriscaldamento e appoggia la teglia direttamente su di essa: il calore diretto dal basso garantisce una spinta termica immediata sul fondo, replicando la tecnica delle pizzerie al taglio romane — in totale sicurezza.",
+                    "Se la tua cucina è calda (\u003e25°C), usa acqua ancora più fredda (2–4°C dal congelatore in parte ghiacciata) e riduci la puntata a temperatura ambiente a soli 30 minuti prima del frigo. La temperatura dell\u0027impasto non deve mai superare i 26°C prima di entrare in frigo, altrimenti la maturazione diventa incontrollabile.",
                     "Per un\u0027alveolatura ancora più pronunciata, sostituisci il 20% della farina (100g) con Tipo 1 o semola rimacinata (50g + 50g): le fibre rallentano leggermente il glutine, creando alveoli più grandi e irregolari e un profilo aromatico più complesso."
                 ],
     "storage":  [
@@ -212,7 +212,7 @@
     "_generatedBy":  "claude",
     "_createdAt":  "2026-04-16T21:34:52.774Z",
     "image":  "images/ricette/pizza/pizza-in-teglia-romana.webp",
-    "imageAttribution":  "ðŸ“· Foto: Milton Das â€” Pexels License via Pexels",
+    "imageAttribution":  "📷 Foto: Milton Das — Pexels License via Pexels",
     "sensoryProfile":  {
                            "summary":  "La Pizza in Teglia Romana si presenta come un capolavoro di texture contrastanti: una base fragrante e croccante, quasi fritta nell\u0027olio EVO della teglia, cede il passo a una mollica alta, leggera e alveolata che si scioglie in bocca con grazia. La lunga maturazione in freddo di 18-24 ore regala un profilo aromatico di rara complessità, con note di fermentazione lattica, sentori di cereale tostato e un retrogusto dolce-minerale che persiste elegantemente. L\u0027equilibrio tra il pomodoro acidulo, la mozzarella fondente e la struttura dell\u0027impasto ad alta idratazione crea un insieme armonico e soddisfacente, dove nessun elemento prevarica l\u0027altro.",
                            "axes":  [

@@ -1,7 +1,7 @@
 {
     "title":  "Pane Integrale con Biga",
     "slug":  "pane-integrale-con-biga",
-    "emoji":  "ðŸŒ¾",
+    "emoji":  "🌾",
     "description":  "Un pane rustico e profumato con farina integrale e biga al 30%. Alta idratazione (75%) per una mollica alveolata e crosta croccante.",
     "subtitle":  "Impasto indiretto ad alta idratazione con farina integrale e malto",
     "category":  "Pane",
@@ -130,7 +130,7 @@
                          "definition":  "Tecnica di impastamento manuale francese (sbattere e ripiegare) che sfrutta la forza d\u0027urto per incordare impasti idratati senza l\u0027uso di impastatrici."
                      }
                  ],
-    "alert":  "âš ï¸ CRITICITÃ€ DELLA BIGA: Non impastare MAI la biga fino a renderla liscia. Deve essere slegata e grezza. Se si forma glutine durante la preparazione della biga, fermenterà in modo scorretto sprigionando acidità eccessiva. Inoltre, rispettare rigorosamente la temperatura di 18°C per le 16 ore.",
+    "alert":  "⚠️ CRITICITÀ DELLA BIGA: Non impastare MAI la biga fino a renderla liscia. Deve essere slegata e grezza. Se si forma glutine durante la preparazione della biga, fermenterà in modo scorretto sprigionando acidità eccessiva. Inoltre, rispettare rigorosamente la temperatura di 18°C per le 16 ore.",
     "proTips":  [
                     "La farina integrale assorbe molta acqua ma la cede più facilmente durante l\u0027impastamento rispetto alla farina bianca. Il bassinage deve essere molto lento per non \u0027lavare\u0027 la maglia glutinica.",
                     "Il malto (o miele) è fondamentale negli impasti indiretti (con biga) in quanto la fermentazione lunga consuma molti zuccheri; il malto garantisce nutrimento residuo per una bella reazione di Maillard (crosta dorata in cottura).",
@@ -161,7 +161,7 @@
     "_generatedBy":  "gemini-3.1",
     "_createdAt":  "2026-04-05T02:05:44.664Z",
     "image":  "images/ricette/pane/pane-integrale-con-biga.webp",
-    "imageAttribution":  "ðŸ“· Foto: Sabine Freiberger â€” Pexels License via Pexels",
+    "imageAttribution":  "📷 Foto: Sabine Freiberger — Pexels License via Pexels",
     "_originalImageUrl":  "https://images.pexels.com/photos/36353181/pexels-photo-36353181.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940",
     "steps":  [
                   {
