@@ -35,6 +35,12 @@ import { normalizza, slugDaConfig } from '../js/cottura/stato-url.js';
 import { durata as durataUmana } from '../js/cottura/formato.js';
 import { PAGINE_SEO } from '../dati/cottura/coefficienti.js';
 
+// Stesso motivo, applicato ai crediti delle foto: il testo dell'attribuzione lo
+// compone js/credito-foto.js, che è puro e lo importano tutti e due i renderer.
+// Una foto CC va citata sempre, quindi la citazione non può dipendere dal fatto
+// che la SPA sia partita o no.
+import { htmlCreditoFoto } from '../js/credito-foto.js';
+
 const PROJECT_DIR = process.cwd();
 const DIST_DIR = join(PROJECT_DIR, 'dist');
 const SITE_URL = 'https://devdomenicotatone.github.io/Ricettario';
@@ -384,6 +390,7 @@ function prerenderRecipe(recipe, src, catDir) {
     const ingredients = flatIngredients(src);
     const steps = (src.steps || []).filter(s => s && s.text);
     const img = absUrl(recipe.image || src.image);
+    const credito = htmlCreditoFoto(src.imageAttribution, src._originalImageUrl);
 
     const badges = [
         src.hydration ? `<div class="tech-badge">Idratazione: <span class="tech-badge__value">${escHtml(src.hydration)}%</span></div>` : '',
@@ -392,6 +399,7 @@ function prerenderRecipe(recipe, src, catDir) {
     ].join('');
 
     return `
+      ${credito ? '<figure class="recipe-foto">' : ''}
       <div class="recipe-hero">
         ${img ? `<picture class="recipe-hero__picture"><img src="${escAttr(img)}" alt="${escAttr(recipe.title)}" class="recipe-hero__img"></picture>` : ''}
         <div class="container">
@@ -408,6 +416,7 @@ function prerenderRecipe(recipe, src, catDir) {
           </div>
         </div>
       </div>
+      ${credito ? `<figcaption class="recipe-foto__credito"><div class="container">${credito}</div></figcaption></figure>` : ''}
 
       <div class="container" style="padding-top: 40px;">
         <div class="tech-badges">${badges}</div>

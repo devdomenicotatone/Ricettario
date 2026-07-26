@@ -25,6 +25,9 @@ const NOT_A_RECIPE = /\.(backup|pre-edit)\.json$/;
 /** Valori usati per dire "non si applica": vanno normalizzati a null. */
 const PLACEHOLDER = ['n/a', 'na', 'nessuna', 'nessuno', 'none', 'null', '0', '-', '—'];
 
+/** Testo UTF-8 riletto come Latin-1/CP1252: `ðŸ“·` invece di 📷, `â€”` invece di —. */
+const DOPPIA_CODIFICA = /ðŸ|â€|[Â-Ã][-¿]/;
+
 const errors = [];
 const warnings = [];
 
@@ -78,6 +81,14 @@ function buildEntry(cat, file) {
   }
   if (!raw.description) warnings.push(`${cat.dir}/${slug}: description vuota`);
 
+  // Il credito finisce sotto la foto, quindi il testo corrotto si vede. Il
+  // controllo in verifica-build.js intercetta solo la doppia codifica delle
+  // lettere accentate (`metÃ `): su `—` e su 📷 produce `â€”` e `ðŸ“·`, che
+  // quel filtro lascia passare. Sei ricette erano in questo stato.
+  if (DOPPIA_CODIFICA.test(raw.imageAttribution ?? '')) {
+    errors.push(`${cat.dir}/${slug}: imageAttribution a doppia codifica UTF-8 (${JSON.stringify(raw.imageAttribution)})`);
+  }
+
   return {
     title: raw.title,
     slug,
@@ -91,6 +102,9 @@ function buildEntry(cat, file) {
     time: text(raw.fermentation),
     temp: text(raw.targetTemp),
     tool: raw.tool ?? '',
+    // Il credito della foto: senza di lui le immagini CC risultano pubblicate
+    // in violazione della licenza, e chi legge l'indice non ha modo di saperlo.
+    imageAttribution: text(raw.imageAttribution),
     hasSensory: Boolean(raw.sensoryProfile),
     hasStorage: Boolean(raw.storage),
     _generatedBy: raw._generatedBy ?? null,

@@ -8,6 +8,7 @@ import { buildHeroPicture } from './image-utils.js';
 import { initMadeToggle } from './recipe-bookmarks.js';
 import { fluentEmoji, categoryEmoji, CATEGORY_FLUENT, refreshIcons } from './emoji.js';
 import { isValidBadge } from './recipe-meta.js';
+import { htmlCreditoFoto } from './credito-foto.js';
 
 /**
  * Renderizza una ricetta completa nel container #app.
@@ -65,8 +66,14 @@ function buildRecipeHTML(r, categoryDir) {
     ? `${BASE}${r.image.replace(/^\//, '')}`
     : `${BASE}images/ricette/${categoryDir}/${r.slug}.webp`;
 
+  // Il credito della foto esce dallo stesso modulo puro che usa il
+  // pre-rendering (js/credito-foto.js): è un obbligo di licenza, non può
+  // comparire solo su una delle due strade.
+  const credito = htmlCreditoFoto(r.imageAttribution, r._originalImageUrl);
+
   return `
     <!-- ═══════════ RECIPE HERO ═══════════ -->
+    ${credito ? '<figure class="recipe-foto">' : ''}
     <div class="recipe-hero">
       ${buildHeroPicture(imagePath, r.title)}
       <div class="container">
@@ -89,6 +96,7 @@ function buildRecipeHTML(r, categoryDir) {
         </div>
       </div>
     </div>
+    ${credito ? `<figcaption class="recipe-foto__credito"><div class="container">${credito}</div></figcaption></figure>` : ''}
 
     <!-- ═══════════ TECH BADGES ═══════════ -->
     <div class="container" style="padding-top: 40px;">

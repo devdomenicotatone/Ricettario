@@ -89,6 +89,39 @@
         z-index: 0;
     }
 
+    /* ── Foto + crediti ──
+       La <figure> avvolge tutto il hero (l'immagine sta lì dentro) e la
+       didascalia le sta sotto, nel flusso normale.
+       Sovrapporla all'immagine era la prima idea ed era sbagliata: misurato a
+       375 px, il credito di focaccia-di-recco andava a capo e finiva addosso
+       al sottotitolo, cioè proprio sull'unico testo che la licenza obbliga a
+       far leggere. Qui non può succedere a nessuna larghezza. */
+    .recipe-foto {
+        margin: 0;
+    }
+
+    /* Crediti delle foto: autore, licenza e pagina d'origine. Le licenze
+       Creative Commons li pretendono a ogni pubblicazione dell'immagine. */
+    .recipe-foto__credito {
+        padding-top: var(--space-sm);
+        font-size: 0.75rem;
+        line-height: 1.45;
+        /* secondary e non muted: in tema scuro muted è al 42% di opacità, e un
+           credito di licenza deve restare leggibile, non essere un accenno. */
+        color: var(--color-text-secondary);
+
+        & a {
+            color: inherit;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+
+            &:hover,
+            &:focus-visible {
+                color: var(--color-accent);
+            }
+        }
+    }
+
     .recipe-hero__img {
         width: 100%;
         height: 100%;
