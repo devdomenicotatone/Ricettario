@@ -29,6 +29,7 @@ import { fluentEmoji, categoryEmoji, CATEGORY_FLUENT, refreshIcons } from './emo
 import { initLogoIntro } from './logo-intro-v2b.js';
 import { CATEGORIES, CATEGORIES_BY_DIR, CATEGORY_ORDER as CAT_ORDER } from './categories.js';
 import { isValidBadge } from './recipe-meta.js';
+import { escHtml, escAttr } from './escape.js';
 
 /* global __RECIPES_HASH__ */
 const RECIPE_CACHE_BUST = typeof __RECIPES_HASH__ !== 'undefined' ? `?v=${__RECIPES_HASH__}` : '';
@@ -263,7 +264,7 @@ async function renderCategory(app, { category }) {
     app.innerHTML = `
       <div class="container" style="padding: 120px 0; text-align: center;">
         <h1>${fluentEmoji('prohibited', 28)} Categoria non trovata</h1>
-        <p style="color: var(--color-text-muted);">La categoria "${category}" non esiste (o non esiste più).</p>
+        <p style="color: var(--color-text-muted);">La categoria "${escHtml(category)}" non esiste (o non esiste più).</p>
         <p><a href="${BASE}#ricette" data-link>← Vedi tutte le ricette</a></p>
       </div>`;
     refreshIcons();
@@ -289,8 +290,8 @@ async function renderCategory(app, { category }) {
   app.innerHTML = `
     <section class="category-hero" id="category-hero">
       <div class="category-hero__content">
-        <h1 class="category-hero__title">${meta.title}</h1>
-        <p class="category-hero__subtitle">${meta.desc}</p>
+        <h1 class="category-hero__title">${escHtml(meta.title)}</h1>
+        <p class="category-hero__subtitle">${escHtml(meta.desc)}</p>
         <div class="category-hero__count" id="recipe-count">⏳ Caricamento...</div>
       </div>
     </section>
@@ -302,14 +303,14 @@ async function renderCategory(app, { category }) {
           <span class="breadcrumb__separator">›</span>
           <a href="${BASE}#ricette" data-link>Ricette</a>
           <span class="breadcrumb__separator">›</span>
-          <span class="breadcrumb__current">${meta.name}</span>
+          <span class="breadcrumb__current">${escHtml(meta.name)}</span>
         </nav>
 
         <div class="category-toolbar" id="category-toolbar">
           <div class="category-toolbar__search">
             <span class="category-toolbar__search-icon"><i data-lucide="search" style="width:16px;height:16px"></i></span>
             <input type="text" class="category-toolbar__search-input" id="category-search"
-              placeholder="Cerca tra le ricette di ${meta.name.toLowerCase()}...">
+              placeholder="Cerca tra le ricette di ${escAttr(meta.name.toLowerCase())}...">
           </div>
           <div class="category-toolbar__results" id="results-counter"></div>
           <div class="category-toolbar__sort">
@@ -473,19 +474,19 @@ function updateCategoryView() {
   grid.innerHTML = visible.map((r, index) => {
     const spaHref = `${BASE}ricette/${r.categoryDir || categoryDir}/${r.slug}`;
     return `
-      <a href="${spaHref}" class="category-card" data-link
-         data-title="${(r.title || '').toLowerCase()}"
+      <a href="${escAttr(spaHref)}" class="category-card" data-link
+         data-title="${escAttr((r.title || '').toLowerCase())}"
          data-hydration="${parseInt(r.hydration) || 0}">
         <div class="category-card__image-wrapper">
           ${r.image ? buildPicture(`${BASE}${r.image}`, r.title, 'category-card__image', 'lazy') : ''}
           <div class="category-card__meta">
-            ${isValidBadge(r.hydration) ? `<span class="category-card__tag">${fluentEmoji('droplet', 14)} ${r.hydration}</span>` : ''}
-            ${isValidBadge(r.time) ? `<span class="category-card__tag">${fluentEmoji('stopwatch', 14)} ${r.time}</span>` : ''}
+            ${isValidBadge(r.hydration) ? `<span class="category-card__tag">${fluentEmoji('droplet', 14)} ${escHtml(r.hydration)}</span>` : ''}
+            ${isValidBadge(r.time) ? `<span class="category-card__tag">${fluentEmoji('stopwatch', 14)} ${escHtml(r.time)}</span>` : ''}
           </div>
         </div>
         <div class="category-card__body">
-          <h3 class="category-card__title">${r.title}</h3>
-          ${r.description ? `<p class="category-card__desc">${r.description}</p>` : ''}
+          <h3 class="category-card__title">${escHtml(r.title)}</h3>
+          ${r.description ? `<p class="category-card__desc">${escHtml(r.description)}</p>` : ''}
         </div>
       </a>`;
   }).join('');
@@ -563,15 +564,15 @@ function buildCarouselRow(container, catKey, catEmoji, catDir, recipes) {
         ${recipes.map(r => {
           const spaHref = r.href.replace('.html', '');
           return `
-          <a href="${spaHref}" class="recipe-card--compact" data-link data-title="${r.title.toLowerCase()}" data-category="${r.category}">
+          <a href="${escAttr(spaHref)}" class="recipe-card--compact" data-link data-title="${escAttr(r.title.toLowerCase())}" data-category="${escAttr(r.category)}">
             <div class="recipe-card--compact__image-wrapper">
               ${r.image ? buildPicture(r.image, r.title, 'recipe-card--compact__image', 'lazy') : ''}
             </div>
             <div class="recipe-card--compact__body">
-              <h4 class="recipe-card--compact__title">${r.title}</h4>
+              <h4 class="recipe-card--compact__title">${escHtml(r.title)}</h4>
               <div class="recipe-card--compact__meta">
-                ${isValidBadge(r.hydration) ? `<span class="recipe-card--compact__tag">${fluentEmoji('droplet', 16)} ${r.hydration}</span>` : ''}
-                ${isValidBadge(r.time) ? `<span>${fluentEmoji('stopwatch', 16)} ${r.time}</span>` : ''}
+                ${isValidBadge(r.hydration) ? `<span class="recipe-card--compact__tag">${fluentEmoji('droplet', 16)} ${escHtml(r.hydration)}</span>` : ''}
+                ${isValidBadge(r.time) ? `<span>${fluentEmoji('stopwatch', 16)} ${escHtml(r.time)}</span>` : ''}
               </div>
             </div>
           </a>`;

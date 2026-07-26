@@ -48,16 +48,14 @@ const SITE_NAME = 'Ricettario Lab';
 const BASE_PATH = '/Ricettario';
 
 // ── Escape ──
-function escAttr(str) {
-    if (!str) return '';
-    return String(str)
-        .replace(/&/g, '&amp;')
-        .replace(/"/g, '&quot;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;');
-}
+// Era la terza copia della stessa funzione (le altre in `js/credito-foto.js` e
+// `js/recipe-renderer.js`). Ora è una sola: vedi `js/escape.js`. I due nomi
+// restano come alias perché in questo file compaiono una trentina di volte e
+// dicono in che posizione finisce il testo.
+import { escHtml as escapeCondiviso } from '../js/escape.js';
 
-const escHtml = escAttr;
+const escAttr = escapeCondiviso;
+const escHtml = escapeCondiviso;
 
 /**
  * Toglie i blocchi JSON-LD già presenti. Serve perché il template è

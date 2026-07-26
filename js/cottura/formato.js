@@ -14,13 +14,13 @@ export function num(n) {
     return String(n).replace('.', ',');
 }
 
-export function esc(s) {
-    return String(s ?? '')
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;');
-}
+/**
+ * Escape HTML. L'implementazione NON sta qui: era la quarta copia identica nel
+ * progetto, e le copie divergono. Resta esportata da questo file perché la
+ * importano già cinque moduli del calcolatore, e `js/escape.js` è puro quanto
+ * questo — lo carica anche Node dentro `scripts/generate-og.js`.
+ */
+export { escHtml as esc } from '../escape.js';
 
 /**
  * Un intervallo di minuti in forma leggibile. Sopra l'ora e mezza passa alle

@@ -18,6 +18,10 @@
  * `scripts/generate-og.js`.
  */
 
+// L'escape arriva dal modulo condiviso: qui ce n'era una copia, ed era una
+// delle tre che convivevano nel progetto. Vedi `js/escape.js` per il perché.
+import { escHtml as esc } from './escape.js';
+
 /** Attribuzioni che non citano nessuno: non hanno niente da mostrare. */
 const SEGNAPOSTO = ['immagine esistente', 'caricata manualmente'];
 
@@ -30,14 +34,6 @@ const URL_LICENZE_PROVIDER = {
     'unsplash license': 'https://unsplash.com/license',
     'pixabay license': 'https://pixabay.com/service/license-summary/',
 };
-
-function esc(s) {
-    return String(s ?? '')
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;');
-}
 
 /**
  * URL della licenza, o null se non è ricostruibile con certezza.

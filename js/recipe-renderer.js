@@ -9,6 +9,7 @@ import { initMadeToggle } from './recipe-bookmarks.js';
 import { fluentEmoji, categoryEmoji, CATEGORY_FLUENT, refreshIcons } from './emoji.js';
 import { isValidBadge } from './recipe-meta.js';
 import { htmlCreditoFoto } from './credito-foto.js';
+import { escHtml, escAttr } from './escape.js';
 
 /**
  * Renderizza una ricetta completa nel container #app.
@@ -50,7 +51,7 @@ export async function renderRecipe(app, { category, slug }) {
     app.innerHTML = `
       <div class="container" style="padding: 120px 0; text-align: center;">
         <h2>${fluentEmoji('prohibited', 28)} Ricetta non trovata</h2>
-        <p style="color: var(--color-text-muted);">${err.message}</p>
+        <p style="color: var(--color-text-muted);">${escHtml(err.message)}</p>
         <a href="${BASE}" data-link class="btn-back">${fluentEmoji('fire', 16)} Torna alla Home</a>
       </div>`;
   }
@@ -82,17 +83,17 @@ function buildRecipeHTML(r, categoryDir) {
           <span class="breadcrumb__separator">›</span>
           <a href="${BASE}#ricette" data-link>Ricette</a>
           <span class="breadcrumb__separator">›</span>
-          <a href="${BASE}ricette/${categoryDir}/" data-link>${r.category}</a>
+          <a href="${escAttr(BASE)}ricette/${escAttr(categoryDir)}/" data-link>${escHtml(r.category)}</a>
           <span class="breadcrumb__separator">›</span>
-          <span>${r.title}</span>
+          <span>${escHtml(r.title)}</span>
         </nav>
 
         <div class="recipe-hero__content">
           <div class="recipe-hero__tags reveal">
-            <span class="tag tag--category">${catEmoji} ${r.category}</span>
+            <span class="tag tag--category">${catEmoji} ${escHtml(r.category)}</span>
           </div>
-          <h1 class="recipe-hero__title reveal reveal-delay-1">${r.title}</h1>
-          <p class="recipe-hero__subtitle reveal reveal-delay-2">${r.subtitle || r.description}</p>
+          <h1 class="recipe-hero__title reveal reveal-delay-1">${escHtml(r.title)}</h1>
+          <p class="recipe-hero__subtitle reveal reveal-delay-2">${escHtml(r.subtitle || r.description)}</p>
         </div>
       </div>
     </div>
@@ -101,9 +102,9 @@ function buildRecipeHTML(r, categoryDir) {
     <!-- ═══════════ TECH BADGES ═══════════ -->
     <div class="container" style="padding-top: 40px;">
       <div class="tech-badges reveal">
-        ${isValidBadge(r.hydration) ? `<div class="tech-badge">${fluentEmoji('droplet', 18)} Idratazione: <span class="tech-badge__value">&nbsp;${r.hydration}%</span></div>` : ''}
-        ${isValidBadge(r.targetTemp) ? `<div class="tech-badge">${fluentEmoji('thermometer', 18)} Target Temp: <span class="tech-badge__value">&nbsp;${r.targetTemp}</span></div>` : ''}
-        ${isValidBadge(r.fermentation) ? `<div class="tech-badge">${fluentEmoji('stopwatch', 18)} Lievitazione: <span class="tech-badge__value">&nbsp;${r.fermentation}</span></div>` : ''}
+        ${isValidBadge(r.hydration) ? `<div class="tech-badge">${fluentEmoji('droplet', 18)} Idratazione: <span class="tech-badge__value">&nbsp;${escHtml(r.hydration)}%</span></div>` : ''}
+        ${isValidBadge(r.targetTemp) ? `<div class="tech-badge">${fluentEmoji('thermometer', 18)} Target Temp: <span class="tech-badge__value">&nbsp;${escHtml(r.targetTemp)}</span></div>` : ''}
+        ${isValidBadge(r.fermentation) ? `<div class="tech-badge">${fluentEmoji('stopwatch', 18)} Lievitazione: <span class="tech-badge__value">&nbsp;${escHtml(r.fermentation)}</span></div>` : ''}
         <button class="made-toggle" id="made-toggle" type="button" aria-label="Segna come fatta"></button>
       </div>
     </div>
@@ -147,7 +148,7 @@ function buildIngredientRow(ing) {
 
   return `<tr${excludeAttr}>
     <td>${escHtml(ing.name)} ${ing.note ? `<span class="ingredient-note">${escHtml(ing.note)}</span>` : ''}</td>
-    <td class="ingredient-qty">${ing.grams != null ? `${ing.grams}g` : ''}</td>
+    <td class="ingredient-qty">${ing.grams != null ? `${escHtml(ing.grams)}g` : ''}</td>
   </tr>`;
 }
 
@@ -200,7 +201,7 @@ function buildSuspensionsPanel(r) {
   const rows = r.suspensions.map(s => `
     <tr>
       <td>${escHtml(s.name)} ${s.note ? `<span class="ingredient-note">${escHtml(s.note)}</span>` : ''}</td>
-      <td class="ingredient-qty">${s.grams != null ? `${s.grams}g` : ''}</td>
+      <td class="ingredient-qty">${s.grams != null ? `${escHtml(s.grams)}g` : ''}</td>
     </tr>
   `).join('');
 
@@ -267,9 +268,13 @@ function buildSensoryProfile(r) {
 
   let nutritionHtml = '';
   if (r.nutrition && r.nutrition.macros) {
-      const carbs = r.nutrition.macros.carbs || 0;
-      const prot = r.nutrition.macros.protein || 0;
-      const fat = r.nutrition.macros.fat || 0;
+      // `Number(...)` non è cosmesi: questi valori arrivano dal JSON e finiscono
+      // sia nell'aritmetica delle percentuali sia dentro l'HTML. Forzarli a
+      // numero li rende innocui in entrambi i posti, e un valore non numerico
+      // diventa 0 invece di NaN nella barra.
+      const carbs = Number(r.nutrition.macros.carbs) || 0;
+      const prot = Number(r.nutrition.macros.protein) || 0;
+      const fat = Number(r.nutrition.macros.fat) || 0;
       const total = carbs + prot + fat;
       const pctCarbs = total > 0 ? (carbs / total) * 100 : 0;
       const pctProt = total > 0 ? (prot / total) * 100 : 0;
@@ -283,7 +288,7 @@ function buildSensoryProfile(r) {
         
         <div class="nutrition-content">
           <div class="nutrition-kcal">
-              <span class="nutrition-kcal__value">${r.nutrition.kcal_per_100g}</span>
+              <span class="nutrition-kcal__value">${escHtml(r.nutrition.kcal_per_100g)}</span>
               <span class="nutrition-kcal__unit">Kcal</span>
           </div>
 
@@ -336,7 +341,7 @@ function buildSensoryProfile(r) {
         
         <div class="sensory-dominant">
           <span class="sensory-dominant__badge">
-            👑 Tratto Dominante: ${escHtml(dominant.label)} (${dominant.value}/10)
+            👑 Tratto Dominante: ${escHtml(dominant.label)} (${escHtml(dominant.value)}/10)
           </span>
         </div>
 
@@ -590,10 +595,8 @@ function updateTotalWeight() {
 
 
 // ── Utility ──
-function escHtml(str) {
-  if (!str) return '';
-  return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-}
+// `escHtml` viveva qui, ed era una delle tre copie sparse nel progetto: ora
+// arriva da `./escape.js`, che è l'unica.
 
 /**
  * Risolve i token {id:base} nel testo degli step.

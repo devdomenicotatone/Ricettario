@@ -3,6 +3,8 @@
    Helper per generare <picture> con AVIF + WebP
    ============================================ */
 
+import { escAttr } from './escape.js';
+
 /**
  * Dato un path immagine, restituisce i path AVIF e WebP corrispondenti.
  * @param {string} src - Path originale dell'immagine (es. 'images/ricette/pane/ciabatta.jpg')
@@ -27,13 +29,16 @@ export function getImageSources(src) {
 export function buildPicture(src, alt, cssClass = '', loading = 'lazy') {
   if (!src) return '';
   const { avif, webp } = getImageSources(src);
-  const cls = cssClass ? ` class="${cssClass}"` : '';
-  const load = loading ? ` loading="${loading}"` : '';
+  const cls = cssClass ? ` class="${escAttr(cssClass)}"` : '';
+  const load = loading ? ` loading="${escAttr(loading)}"` : '';
 
+  // `alt` è il titolo della ricetta, che lo scrive l'AI leggendo pagine
+  // scaricate dal web: senza escape una virgoletta lo fa uscire
+  // dall'attributo. Vale anche per `src`, che deriva dal campo `image`.
   return `<picture>
-  <source srcset="${avif}" type="image/avif">
-  <source srcset="${webp}" type="image/webp">
-  <img src="${webp}" alt="${alt}"${cls}${load}>
+  <source srcset="${escAttr(avif)}" type="image/avif">
+  <source srcset="${escAttr(webp)}" type="image/webp">
+  <img src="${escAttr(webp)}" alt="${escAttr(alt)}"${cls}${load}>
 </picture>`;
 }
 
@@ -48,8 +53,8 @@ export function buildHeroPicture(src, alt) {
   const { avif, webp } = getImageSources(src);
 
   return `<picture class="recipe-hero__picture">
-  <source srcset="${avif}" type="image/avif">
-  <source srcset="${webp}" type="image/webp">
-  <img src="${webp}" alt="${alt}" class="recipe-hero__img">
+  <source srcset="${escAttr(avif)}" type="image/avif">
+  <source srcset="${escAttr(webp)}" type="image/webp">
+  <img src="${escAttr(webp)}" alt="${escAttr(alt)}" class="recipe-hero__img">
 </picture>`;
 }
