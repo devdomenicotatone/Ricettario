@@ -19,3 +19,14 @@ Thumbs.db
 
 # PDF source files (troppo grandi per GitHub)
 public/pdf/
+
+# Copie di sicurezza delle ricette: NON stanno in questo repo.
+# La dashboard le scriveva accanto alla ricetta (86 file, 1,1 MB) e il vecchio
+# deploy faceva `git add -A`, quindi entravano nella storia una per una. Adesso
+# vivono in tools/data/backup-ricette/, con timestamp e rotazione. Queste due
+# righe sono la barriera: se qualcosa torna a scriverle qui, almeno non vengono
+# committate. Nel repo del sito ogni file dentro ricette/ che non sia una
+# ricetta o un suo report e' un incidente.
+ricette/**/*.backup.json
+ricette/**/*.pre-edit.json
+ricette/**/*.pre-gen.json
