@@ -1,7 +1,7 @@
 {
     "title":  "Focaccia Barese",
     "slug":  "focaccia-barese",
-    "emoji":  "ðŸ«’",
+    "emoji":  "🫒",
     "description":  "Focaccia barese tradizionale con semola, patate, pomodorini e olive: croccante sotto, soffice dentro, profumo di Puglia.",
     "subtitle":  "L\u0027originale pugliese con semola rimacinata, patate lesse, pomodorini schiacciati e olive baresane",
     "category":  "Focaccia",
@@ -94,7 +94,7 @@
                                                },
                                                {
                                                    "name":  "Olive Baresane",
-                                                   "note":  "(in salamoia, con nocciolo â€” circa 20 pz)",
+                                                   "note":  "(in salamoia, con nocciolo — circa 20 pz)",
                                                    "grams":  120,
                                                    "tokenId":  "olive_condimento"
                                                },
@@ -138,7 +138,7 @@
                    "temperature":  "250-270°C statico",
                    "time":  "25-30 minuti",
                    "tips":  [
-                                "Preriscaldare il forno alla MASSIMA temperatura (250-270°C) in modalità STATICA per almeno 30 minuti â€” mai ventilato, che secca la superficie e impedisce la giusta idratazione",
+                                "Preriscaldare il forno alla MASSIMA temperatura (250-270°C) in modalità STATICA per almeno 30 minuti — mai ventilato, che secca la superficie e impedisce la giusta idratazione",
                                 "Posizionare la teglia nella parte BASSA del forno per i primi 15 minuti (per croccantezza del fondo), poi spostare al centro per altri 10-15 minuti (per doratura uniforme)",
                                 "La focaccia è pronta quando il bordo è color ambrato scuro, la superficie è lucida d\u0027olio e i pomodorini sono leggermente caramellati",
                                 "Se il fondo non è abbastanza croccante, negli ultimi 3-4 minuti appoggiare la teglia direttamente sulla base del forno (senza griglia)",
@@ -183,11 +183,11 @@
                          "definition":  "Semola di grano duro macinata due volte, con granulometria fine simile alla farina 00. Conferisce colore dorato, sapore caratteristico e croccantezza alla focaccia pugliese."
                      }
                  ],
-    "alert":  "âš ï¸ NON usare il frullatore per le patate â€” le lame rompono le cellule dell\u0027amido trasformandole in una colla gommosa che rovina irreparabilmente la texture della focaccia. Usare SEMPRE uno schiacciapatate. NON aggiungere farina extra durante la lavorazione anche se l\u0027impasto sembra troppo molle: la focaccia barese DEVE essere un impasto morbido e umido, è la sua natura. La farina in eccesso la renderebbe secca e compatta come un pane sbagliato.",
+    "alert":  "⚠️ NON usare il frullatore per le patate — le lame rompono le cellule dell\u0027amido trasformandole in una colla gommosa che rovina irreparabilmente la texture della focaccia. Usare SEMPRE uno schiacciapatate. NON aggiungere farina extra durante la lavorazione anche se l\u0027impasto sembra troppo molle: la focaccia barese DEVE essere un impasto morbido e umido, è la sua natura. La farina in eccesso la renderebbe secca e compatta come un pane sbagliato.",
     "proTips":  [
-                    "ðŸ«’ Le olive baresane (o \"olive nere di Puglia\") sono olive celline in salamoia, leggermente amarognole e sode â€” se non le trovi, usa olive Leccino o Taggiasca in salamoia (MAI denocciolate sott\u0027olio, troppo molli). L\u0027oliva con nocciolo tiene meglio la cottura e rilascia meno acqua.",
-                    "ðŸ… I pomodorini vanno premuti con la parte tagliata VERSO IL BASSO nelle fossette: così rilasciano il sugo direttamente nell\u0027impasto durante la cottura, creando le caratteristiche \"pozze\" rosse tipiche della focaccia barese. Condiscili 15-20 minuti prima con olio e sale per farli insaporire.",
-                    "ðŸ¥” Le patate sono il segreto della morbidezza interna: assorbono umidità e la rilasciano lentamente, mantenendo la focaccia soffice anche il giorno dopo. Usane di tipo farinose (Kennebec, Agria) e mai acquose (tipo novelle). Il peso indicato è da crude â€” da cotte perderanno circa il 15%."
+                    "🫒 Le olive baresane (o \"olive nere di Puglia\") sono olive celline in salamoia, leggermente amarognole e sode — se non le trovi, usa olive Leccino o Taggiasca in salamoia (MAI denocciolate sott\u0027olio, troppo molli). L\u0027oliva con nocciolo tiene meglio la cottura e rilascia meno acqua.",
+                    "🍅 I pomodorini vanno premuti con la parte tagliata VERSO IL BASSO nelle fossette: così rilasciano il sugo direttamente nell\u0027impasto durante la cottura, creando le caratteristiche \"pozze\" rosse tipiche della focaccia barese. Condiscili 15-20 minuti prima con olio e sale per farli insaporire.",
+                    "🥔 Le patate sono il segreto della morbidezza interna: assorbono umidità e la rilasciano lentamente, mantenendo la focaccia soffice anche il giorno dopo. Usane di tipo farinose (Kennebec, Agria) e mai acquose (tipo novelle). Il peso indicato è da crude — da cotte perderanno circa il 15%."
                 ],
     "storage":  [
                     "Per conservare la Focaccia Barese fino a 2 giorni, avvolgerla, una volta completamente fredda, in un sacchetto di carta per pane o in un canovaccio pulito. Evitare contenitori ermetici e frigorifero a temperatura ambiente, che intrappolerebbero l\u0027umidità del pomodoro e della patata rendendo la base molle e accelerando il raffermamento.",
@@ -217,7 +217,7 @@
              ],
     "_generatedBy":  "claude-opus",
     "image":  "images/ricette/focaccia/focaccia-barese.webp",
-    "imageAttribution":  "ðŸ“· Foto: Simona.IT â€” CC BY-SA via Openverse",
+    "imageAttribution":  "📷 Foto: Simona.IT — CC BY-SA via Openverse",
     "steps":  [
                   {
                       "title":  "Preparazione Lievitino",
@@ -225,23 +225,23 @@
                   },
                   {
                       "title":  "Lessare le Patate",
-                      "text":  "Nel frattempo, lessare {patate_impasto:150}g di patate intere con la buccia in acqua leggermente salata fino a completa cottura (circa 25-30 minuti, devono essere morbidissime). Sbucciarle calde e schiacciarle con uno schiacciapatate (MAI frullatore â€” si forma una colla). Lasciar raffreddare completamente prima di unirle all\u0027impasto."
+                      "text":  "Nel frattempo, lessare {patate_impasto:150}g di patate intere con la buccia in acqua leggermente salata fino a completa cottura (circa 25-30 minuti, devono essere morbidissime). Sbucciarle calde e schiacciarle con uno schiacciapatate (MAI frullatore — si forma una colla). Lasciar raffreddare completamente prima di unirle all\u0027impasto."
                   },
                   {
-                      "title":  "Impastamento in Spirale â€” Prima Fase",
+                      "title":  "Impastamento in Spirale — Prima Fase",
                       "text":  "Nella vasca della spirale, versare {farina_zero_impasto:270}g di farina tipo 0 e {semola_impasto:250}g di semola rimacinata. Aggiungere il lievitino maturo e le patate schiacciate fredde. Avviare in V1 e versare gradualmente {acqua_impasto:290}g di acqua (20-22°C). Impastare in V1 per 6-8 minuti fino ad assorbimento completo dei liquidi e formazione di un impasto grezzo."
                   },
                   {
-                      "title":  "Impastamento in Spirale â€” Seconda Fase",
-                      "text":  "Aggiungere {sale_impasto:15}g di sale fino. Continuare in V1 per 2 minuti, poi passare in V2 per 3-4 minuti. Quando l\u0027impasto inizia a incordarsi e staccarsi dalle pareti, aggiungere {olio_impasto:45}g di olio EVO a filo, un cucchiaio alla volta. Impastare in V2 per altri 3-4 minuti fino a completo assorbimento dell\u0027olio. L\u0027impasto risulterà morbido, leggermente appiccicoso ma elastico â€” NON deve essere asciutto e compatto. Temperatura finale impasto: 24-26°C."
+                      "title":  "Impastamento in Spirale — Seconda Fase",
+                      "text":  "Aggiungere {sale_impasto:15}g di sale fino. Continuare in V1 per 2 minuti, poi passare in V2 per 3-4 minuti. Quando l\u0027impasto inizia a incordarsi e staccarsi dalle pareti, aggiungere {olio_impasto:45}g di olio EVO a filo, un cucchiaio alla volta. Impastare in V2 per altri 3-4 minuti fino a completo assorbimento dell\u0027olio. L\u0027impasto risulterà morbido, leggermente appiccicoso ma elastico — NON deve essere asciutto e compatto. Temperatura finale impasto: 24-26°C."
                   },
                   {
-                      "title":  "Puntata â€” Prima Lievitazione",
-                      "text":  "Trasferire l\u0027impasto in una ciotola leggermente unta con olio EVO. Eseguire una serie di pieghe a portafoglio direttamente in ciotola: prendere un lembo dell\u0027impasto, tirarlo verso l\u0027alto e ripiegarlo al centro. Ruotare la ciotola di 90° e ripetere per tutti e 4 i lati. Coprire con pellicola a contatto e lasciar lievitare a 26-28°C per circa 2 ore e 30 minuti â€” 3 ore, fino a quando l\u0027impasto triplica di volume. A metà lievitazione (dopo ~1h 15min) eseguire un secondo giro di pieghe."
+                      "title":  "Puntata — Prima Lievitazione",
+                      "text":  "Trasferire l\u0027impasto in una ciotola leggermente unta con olio EVO. Eseguire una serie di pieghe a portafoglio direttamente in ciotola: prendere un lembo dell\u0027impasto, tirarlo verso l\u0027alto e ripiegarlo al centro. Ruotare la ciotola di 90° e ripetere per tutti e 4 i lati. Coprire con pellicola a contatto e lasciar lievitare a 26-28°C per circa 2 ore e 30 minuti — 3 ore, fino a quando l\u0027impasto triplica di volume. A metà lievitazione (dopo ~1h 15min) eseguire un secondo giro di pieghe."
                   },
                   {
                       "title":  "Preparazione Teglia e Stesura",
-                      "text":  "Versare metà dell\u0027{olio_condimento:80}g di olio EVO per condimento (circa 40g) in una teglia rotonda da 32-34 cm (o rettangolare 30Ã—40 cm) e spalmare uniformemente sul fondo e i bordi. Rovesciare l\u0027impasto lievitato sulla teglia oliata. Con le dita umide d\u0027olio, stendere l\u0027impasto dal centro verso i bordi con pressione delicata, creando i caratteristici fossette (\"buchi\"). Non schiacciare l\u0027impasto con forza â€” deve mantenere aria al suo interno. Se l\u0027impasto oppone resistenza, lasciar riposare 10 minuti coperto e riprendere la stesura. L\u0027impasto deve arrivare a coprire tutta la teglia con spessore uniforme di circa 1.5-2 cm."
+                      "text":  "Versare metà dell\u0027{olio_condimento:80}g di olio EVO per condimento (circa 40g) in una teglia rotonda da 32-34 cm (o rettangolare 30×40 cm) e spalmare uniformemente sul fondo e i bordi. Rovesciare l\u0027impasto lievitato sulla teglia oliata. Con le dita umide d\u0027olio, stendere l\u0027impasto dal centro verso i bordi con pressione delicata, creando i caratteristici fossette (\"buchi\"). Non schiacciare l\u0027impasto con forza — deve mantenere aria al suo interno. Se l\u0027impasto oppone resistenza, lasciar riposare 10 minuti coperto e riprendere la stesura. L\u0027impasto deve arrivare a coprire tutta la teglia con spessore uniforme di circa 1.5-2 cm."
                   },
                   {
                       "title":  "Condimento e Seconda Lievitazione",
