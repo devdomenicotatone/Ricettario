@@ -24,6 +24,12 @@
 > **Non resta aperto nessun punto.** Quel che manca è nella sezione "Cosa
 > questo checkup NON ha guardato", che è il posto più utile del documento.
 >
+> **La voce più grossa di quella sezione è stata tolta.** L'accessibilità aveva
+> un solo controllo qui — gli attributi `alt` — e adesso ha un checkup suo,
+> [CHECKUP-ACCESSIBILITA.md](./CHECKUP-ACCESSIBILITA.md), **chiuso su tutti e
+> nove i punti** più i tre avanzi. Vale la pena leggerlo per il punto 8, dove la
+> diagnosi che avevo scritto era sbagliata pur avendo il numero giusto.
+>
 > **Metodo:** analisi statica più esecuzione reale — sito avviato, attacchi
 > provati sul renderer vero, `npm run check` a ogni passo. Nessun agente
 > parallelo, quindi la copertura è quella di una lettura attenta, non di un
@@ -292,10 +298,17 @@ immagini da fuori la build, il controllo va allargato invece che silenziato.
 
 Dichiararlo serve a non far credere che il resto sia stato approvato.
 
-- ~~**Accessibilità oltre il minimo.**~~ **Fatto**, in un checkup a parte:
-  [CHECKUP-ACCESSIBILITA.md](./CHECKUP-ACCESSIBILITA.md). Otto voci, la più
-  grave delle quali è che la SPA cambia pagina senza annunciarlo a chi usa uno
-  screen reader. Resta fuori la prova con un lettore vero.
+- ~~**Accessibilità oltre il minimo.**~~ **Fatto e chiuso**, in un checkup a
+  parte: [CHECKUP-ACCESSIBILITA.md](./CHECKUP-ACCESSIBILITA.md). Nove punti
+  aperti, **nove chiusi**, più i tre avanzi dichiarati in fondo alle voci. La
+  più grave era che la SPA cambiava pagina senza dirlo a chi usa uno screen
+  reader; le più insidiose erano un pannello con l'alternativa testuale dietro
+  una porta che la tastiera non apriva, e i pulsanti dei timer distrutti una
+  volta al secondo mentre il conto alla rovescia correva.
+  **Resta fuori la prova con un lettore vero**, e non è un dettaglio: tutto
+  quello che c'è scritto lì viene dall'albero di accessibilità e dal DOM
+  misurato. È il modo giusto per sapere se una struttura c'è; non è il modo per
+  sapere come suona.
 - **Il CSS.** 19 fogli, di cui `cottura.css` da 33 KB e `recipe-detail.css` da
   29 KB: non ho cercato regole morte né duplicazioni.
 - **Il calcolatore di cottura nel merito.** Ho verificato che sia integro (918
@@ -320,8 +333,12 @@ irrecuperabile dopo averla cercata in sette posti. Se un giorno te la ricordi,
 sono quattro stringhe da sostituire.
 
 Il resto del lavoro possibile su questo repo è nella sezione "Cosa questo
-checkup NON ha guardato" qui sotto: accessibilità oltre gli `alt`, i 19 fogli
-CSS, prestazioni misurate davvero, compatibilità fra browser.
+checkup NON ha guardato" qui sopra: i 19 fogli CSS, prestazioni misurate
+davvero, compatibilità fra browser, l'animazione d'ingresso mai aperta.
+
+L'accessibilità non è più in quella lista: ha avuto il suo checkup ed è chiusa
+su tutti e nove i punti. L'unica cosa che le resta è una verifica, non una
+correzione — ascoltarla con NVDA o VoiceOver.
 
 ## La lezione, che vale più della lista
 
@@ -339,3 +356,18 @@ leggeva quel campo prima di toglierlo.
 Quando qui qualcosa si rompe in silenzio, la domanda giusta non è «come lo
 aggiusto» ma «cosa avrebbe dovuto gridare». E prima di togliere qualcosa che
 sembra inutile, la domanda è «chi lo legge?», non «a cosa sembra servire».
+
+Il checkup sull'accessibilità, che è venuto dopo, ha aggiunto il rovescio della
+stessa medaglia: là il guaio non era che mancasse un controllo, era che ce
+n'era uno **al contrario**. `body { overflow-x: hidden }` sembrava una rete di
+sicurezza ed era una benda: teneva nascosti due pezzi di contenuto che finivano
+fuori pagina, e li teneva nascosti così bene che non comparivano nemmeno come
+barra di scorrimento. Toglierla ne ha fatti emergere altri due nello stesso
+giorno.
+
+E la scoperta più scomoda è arrivata dalle note «non provato». In un documento
+onesto sono la parte che si legge come una formalità — invece dentro c'erano i
+difetti peggiori: i pulsanti dei timer che sparivano ogni secondo stavano
+dietro un «il pannello dei timer non è stato provato mentre conta». Un «non
+provato» non è una nota a piè di pagina: è lavoro non fatto, e va aperto come
+si apre un punto.
