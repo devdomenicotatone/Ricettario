@@ -93,8 +93,15 @@ Se modifichi un JSON di ricetta, salvalo in UTF-8 senza BOM.
 
 Il progetto non ha test unitari di proposito: il rischio sta quasi tutto
 nell'output statico, e lo copre `npm run check` (dati + build + pre-rendering
-+ controlli su `dist/`). Fallo girare davvero prima di dichiarare che una
-modifica funziona — non basta che il file sia stato scritto.
++ controlli su `dist/` e sui fogli di stile). Fallo girare davvero prima di
+dichiarare che una modifica funziona — non basta che il file sia stato scritto.
+
+Il CSS ha due controlli suoi (sezione 9 di `verifica-build.js`), perché è
+l'unica parte che si rompe senza dire niente: **ogni `var(--x)` deve avere una
+`--x` definita** e **ogni classe dichiarata deve comparire in qualche markup**.
+Se aggiungi una classe che il JavaScript compone a runtime — come
+`piano--${percorso}` — il cancello non può vederla: va dichiarato il prefisso in
+`PREFISSI_A_RUNTIME`, non silenziato il controllo.
 
 Il cancello include `npm run build:cottura`, che oltre a validare i dati
 **genera 918 piani** — ogni taglio per ogni dispositivo, cottura, metodo e

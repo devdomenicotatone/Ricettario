@@ -495,8 +495,129 @@ function peso(dir) {
 const mb = peso(DIST) / 1048576;
 if (mb > 60) err(`dist/ pesa ${mb.toFixed(0)} MB: qualcosa di grosso è rientrato nel deploy`);
 
+// ── 9. Il CSS, che non ha errori ──
+// Un `var()` che punta a un token inesistente non è un errore di sintassi: il
+// foglio si carica, la pagina si disegna, la console tace, e la dichiarazione
+// semplicemente non fa niente. Una classe che nessuno scrive più nel markup non
+// produce nemmeno un avviso. Sono difetti che nascono morti e restano tali per
+// mesi, perché nessuno strumento di questo progetto era in grado di accorgersene:
+// tre token mai esistiti hanno tenuto spente le sfumature dei caroselli e
+// l'ombra delle frecce dal 20/02/2026, e il bordo del pulsante «Fatta» dal
+// 30/03; 25 classi morte facevano scaricare 4 kB di CSS a ogni visitatore.
+//
+// Guardano i SORGENTI in css/, non dist/, per due motivi: il problema si vede
+// prima della build, e il messaggio può nominare il file e la riga veri invece
+// di un bundle con l'hash nel nome.
+let classiCss = 0;
+{
+    const fogli = [];
+    scorriTesti('css', (percorso, rel) => {
+        if (rel.endsWith('.css')) fogli.push({ rel, testo: readFileSync(percorso, 'utf8') });
+    });
+
+    // Commenti, stringhe e url() vanno neutralizzati prima di ogni analisi: i
+    // commenti nominano di proposito token e classi che non esistono più (è così
+    // che si spiega perché sono stati tolti), e `url(../images/x.png)` fa
+    // sembrare `.png` un selettore di classe. Si sostituiscono con spazi invece
+    // che a vuoto perché i numeri di riga devono restare quelli veri.
+    const spazi = (m) => m.replace(/[^\n]/g, ' ');
+    const pulisci = (s) => s
+        .replace(/\/\*[\s\S]*?\*\//g, spazi)
+        .replace(/url\([^)]*\)/g, spazi)
+        .replace(/"[^"\n]*"/g, spazi)
+        .replace(/'[^'\n]*'/g, spazi);
+    const riga = (testo, indice) => testo.slice(0, indice).split('\n').length;
+    for (const f of fogli) f.pulito = pulisci(f.testo);
+
+    // ── 9a. Ogni var(--x) deve avere una --x definita ──
+    const definiti = new Set();
+    for (const f of fogli) {
+        for (const m of f.pulito.matchAll(/(--[\w-]+)\s*:/g)) definiti.add(m[1]);
+    }
+    // Oggi nessuna custom property nasce fuori dai fogli, ma il giorno in cui
+    // qualcuno ne scriverà una da JavaScript o in uno `style=` inline, questo
+    // controllo non deve accusarla di non esistere.
+    scorriTesti('js', (percorso) => {
+        const t = readFileSync(percorso, 'utf8');
+        for (const m of t.matchAll(/setProperty\(\s*['"`](--[\w-]+)/g)) definiti.add(m[1]);
+        for (const m of t.matchAll(/(--[\w-]+)\s*:/g)) definiti.add(m[1]);
+    });
+    for (const m of readFileSync('index.html', 'utf8').matchAll(/(--[\w-]+)\s*:/g)) definiti.add(m[1]);
+
+    for (const f of fogli) {
+        for (const m of f.pulito.matchAll(/var\(\s*(--[\w-]+)\s*(,?)/g)) {
+            if (definiti.has(m[1])) continue;
+            const dove = `${f.rel}:${riga(f.pulito, m.index)}`;
+            if (m[2] === ',') {
+                warn(`${dove}: var(${m[1]}) non è definita, quindi vince sempre il valore di ripiego. `
+                    + 'Se è voluto scrivilo, se no è un token sbagliato.');
+            } else {
+                err(`${dove}: var(${m[1]}) non è definita da nessuna parte, quindi l'INTERA dichiarazione `
+                    + 'è invalida e la proprietà torna al valore iniziale — senza un errore in console. '
+                    + 'Definisci il token in css/base/tokens.css, o usa quello giusto: questo progetto '
+                    + 'ha --color-surface-0…3, --border-subtle/medium, --shadow-sm/md/lg.');
+            }
+        }
+    }
+
+    // ── 9b. Ogni classe dichiarata deve comparire da qualche parte ──
+    // Quattro famiglie di classi le compone il JavaScript a runtime
+    // (`piano--${percorso}`): nel codice non compaiono mai per intero, quindi si
+    // riconoscono dal prefisso. Se ne nasce una quinta, va aggiunta qui.
+    const PREFISSI_A_RUNTIME = ['cottura-opzioni--', 'piano--', 'avviso--', 'storico__esito--'];
+
+    const dichiarate = new Map();
+    for (const f of fogli) {
+        for (const m of f.pulito.matchAll(/\.(-?[_a-zA-Z][\w-]*)/g)) {
+            if (!dichiarate.has(m[1])) dichiarate.set(m[1], `${f.rel}:${riga(f.pulito, m.index)}`);
+        }
+    }
+    classiCss = dichiarate.size;
+
+    // Tutto ciò che può scrivere una classe nel markup. Le righe che importano
+    // un foglio di stile non contano: `filter-bar` compariva solo dentro
+    // `import '.../filter-bar.css'`, cioè nella riga che caricava il foglio
+    // morto, e si giustificava da sola.
+    const CORPUS = /\.(js|html|json|svg|webmanifest)$/i;
+    const FUORI = new Set(['node_modules', 'dist', '.git', 'css', 'pdf', 'fonts', 'images', 'materiale']);
+    let corpus = '';
+    (function raccogli(dir) {
+        for (const e of readdirSync(dir, { withFileTypes: true })) {
+            if (FUORI.has(e.name)) continue;
+            const p = join(dir, e.name);
+            if (e.isDirectory()) raccogli(p);
+            else if (CORPUS.test(e.name)) {
+                corpus += readFileSync(p, 'utf8')
+                    .split('\n').filter(r => !/import\s+['"][^'"]+\.css['"]/.test(r)).join('\n') + '\n';
+            }
+        }
+    })('.');
+
+    // Confine di parola, non sottostringa: `.recipe-card` "compare" dentro
+    // `recipe-card--compact`, che è una classe diversa. Cercandola fra le parole
+    // del corpus il confine è garantito, e il controllo resta lineare invece di
+    // scandire tutto il codice una volta per classe.
+    const parole = new Set(corpus.split(/[^\w-]+/));
+
+    const morte = [];
+    for (const [classe, dove] of dichiarate) {
+        if (PREFISSI_A_RUNTIME.some(pre => classe.startsWith(pre))) continue;
+        if (!parole.has(classe)) morte.push(`${dove} .${classe}`);
+    }
+    if (morte.length) {
+        const quante = morte.length === 1
+            ? '1 classe dichiarata nel CSS che non compare'
+            : `${morte.length} classi dichiarate nel CSS che non compaiono`;
+        err(`${quante} in nessun markup. O il markup che le usava è stato sostituito e le regole sono `
+            + 'da cancellare, o le scrive qualcosa che questo controllo non guarda — in quel caso il posto '
+            + `giusto è PREFISSI_A_RUNTIME qui in verifica-build.js. ${morte.slice(0, 5).join(', ')}`
+            + (morte.length > 5 ? `, …e altre ${morte.length - 5}` : ''));
+    }
+}
+
 // ── Esito ──
-console.log(`🔍 Verifica build — ${pagine} pagine, ${testiControllati} file di testo, ${mb.toFixed(1)} MB`);
+console.log(`🔍 Verifica build — ${pagine} pagine, ${testiControllati} file di testo, `
+    + `${classiCss} classi CSS, ${mb.toFixed(1)} MB`);
 for (const a of avvisi) console.warn(`⚠️  ${a}`);
 if (problemi.length) {
     for (const p of problemi.slice(0, 25)) console.error(`❌ ${p}`);

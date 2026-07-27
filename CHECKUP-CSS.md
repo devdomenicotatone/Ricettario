@@ -560,10 +560,10 @@ manutenzione: un layer sbagliato che nessuno incontra, tre copie di una ricetta
 di quattro proprietà, nove breakpoint che nessuno ricorda a memoria. Nessuno ci
 inciampa oggi.
 
-Quello che vale è in fondo: i **due controlli meccanici** della sezione «La
-lezione». Avrebbero intercettato i punti 1, 2 e 3 il giorno in cui sono nati,
-invece che cinque mesi dopo — e adesso che il punto 3 è chiuso, sono anche
-l'unica cosa che impedisce al CSS morto di riformarsi in silenzio.
+Quello che valeva davvero — i **due controlli meccanici** della sezione «La
+lezione» — **è stato fatto**: sono nel cancello, sezione 9 di
+`verifica-build.js`. Da adesso un token che non esiste e una classe che non usa
+nessuno fermano il deploy invece di aspettare il prossimo checkup.
 
 ---
 
@@ -615,11 +615,33 @@ nate morte e sono rimaste tali per mesi — non per disattenzione, ma perché
 **nessuno strumento di questo progetto era in grado di accorgersene.**
 
 Il cancello (`npm run check`) controlla i dati, i link, i JSON-LD, il peso delle
-immagini e le risorse orfane. Non controlla il CSS. I due controlli che
-servirebbero sono meccanici e si scrivono in poche righe: *ogni `var(--x)` deve
-avere una `--x` definita*, e *ogni classe dichiarata deve comparire da qualche
-parte nel codice*. Sarebbero bastati a intercettare i punti 1, 2 e 3 il giorno
-in cui sono nati, invece che cinque mesi dopo.
+immagini e le risorse orfane. **Adesso controlla anche il CSS**, con i due
+controlli meccanici che questa sezione chiedeva — sezione 9 di
+`verifica-build.js`: *ogni `var(--x)` deve avere una `--x` definita*, e *ogni
+classe dichiarata deve comparire da qualche parte nel codice*. Sarebbero bastati
+a intercettare i punti 1, 2 e 3 il giorno in cui sono nati, invece che cinque
+mesi dopo.
+
+Guardano i sorgenti in `css/`, non `dist/`: il problema si vede prima della
+build e il messaggio nomina il file e la riga veri invece di un bundle con
+l'hash nel nome. Tre cose che hanno richiesto una riga in più, e senza le quali
+il controllo mentiva:
+
+- **Commenti, stringhe e `url()` neutralizzati prima di leggere.** I commenti di
+  questo progetto nominano di proposito i token e le classi che sono stati
+  tolti — è così che si spiega perché non ci sono più — e un
+  `url(../images/x.png)` fa sembrare `.png` un selettore di classe. Vengono
+  sostituiti con spazi e non a vuoto, perché i numeri di riga devono restare
+  quelli veri.
+- **Confine di parola, non sottostringa.** È l'errore che aveva nascosto le due
+  voci più grosse del punto 3.
+- **Le righe di `import` di un foglio non contano come uso.** Era l'altro.
+
+Provati al contrario, iniettando un token inesistente, uno con valore di
+ripiego e una classe morta: il primo è un errore che ferma il deploy, il secondo
+un avviso (il ripiego vince sempre, quindi la pagina è giusta ma il token è
+sbagliato), la terza un errore con file e riga. Un token nominato dentro un
+commento non conta, e `url(...)` non produce più classi finte.
 
 **Un corollario venuto fuori chiudendo i punti.** Tutte e tre le volte la
 correzione scritta qui era giusta e insufficiente: sotto il contrasto del punto 1

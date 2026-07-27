@@ -50,6 +50,9 @@ corrispondano a contenuto visibile** (ingrediente per ingrediente, passo per
 passo), che ci siano H1 e meta description e che non coincidano fra loro, che la
 sitemap non elenchi URL inesistenti, che non sia rientrata la doppia codifica,
 che i 173 MB di PDF sorgente restino fuori e che `dist/` non sfondi i 60 MB.
+Da luglio guarda anche il CSS, che è l'unica cosa qui capace di rompersi senza
+dirlo: ogni `var()` deve puntare a un token che esiste, e ogni classe dichiarata
+deve comparire in qualche markup.
 
 **E gira da solo.** `.github/workflows/ci.yml` esegue `npm run check` su ogni
 push e ogni PR, più un hook `pre-push` locale. Gli ultimi run sono tutti verdi.
@@ -360,12 +363,12 @@ chiusi erano il contrasto del pulsante «Fatta» (l'ultimo problema di
 accessibilità rimasto sul sito), i token che non esistevano, il colore della
 navbar che non seguiva il tema e i 4 kB di CSS che non toccava nessun elemento.
 
-La cosa più utile che resta da fare su questo repo non è nessuno dei tre: sono i
-**due controlli meccanici** che quel documento descrive in fondo — ogni `var()`
-deve puntare a un token definito, ogni classe dichiarata deve comparire da
-qualche parte. Il cancello controlla i dati, i link, i JSON-LD, il peso delle
-immagini e le risorse orfane; il CSS no, ed è l'unica famiglia di difetti che
-qui è nata morta e ci è rimasta per mesi.
+La cosa più utile non era nessuno dei tre, ed **è stata fatta**: i due controlli
+meccanici sul CSS sono nel cancello (sezione 9 di `verifica-build.js`). Ogni
+`var()` deve puntare a un token definito, ogni classe dichiarata deve comparire
+da qualche parte — le due famiglie di difetti che qui sono nate morte e ci sono
+rimaste per mesi, perché nessuno strumento del progetto era in grado di
+accorgersene.
 
 L'accessibilità non è più in quella lista: ha avuto il suo checkup ed è chiusa
 su tutti e nove i punti. L'unica cosa che le resta è una verifica, non una
