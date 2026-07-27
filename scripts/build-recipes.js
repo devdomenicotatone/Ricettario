@@ -282,6 +282,25 @@ function buildEntry(cat, file) {
   if (!raw.sensoryProfile?.axes?.length) {
     warnings.push(`${cat.dir}/${slug}: senza profilo sensoriale (niente grafico né tabella dei tratti)`);
   }
+
+  // Un asse a ZERO è l'impronta di un profilo preso in prestito da un'altra
+  // famiglia di ricette. Gli assi non li sceglie la singola ricetta: la
+  // dashboard ha una tabella categoria → cinque assi, uguale per tutte (80
+  // ricette, 9 categorie, una sola combinazione per categoria). «Secondi
+  // Piatti» non ha la sua e usa quella del PANE, identica etichetta per
+  // etichetta: così le spare ribs sono valutate su «Alveolatura Mollica»,
+  // che per una costina vale zero e sul radar disegna una punta schiacciata.
+  //
+  // Il segnale è preciso, non è un'euristica larga: su 400 assi gli unici
+  // due a zero sono esattamente le due ricette di quella categoria. Un asse
+  // a 1 invece è spesso legittimo («Acidità: 1» su un burro chiarificato
+  // vuol dire che non è acido), quindi la soglia è lo zero e non «≤1».
+  for (const a of raw.sensoryProfile?.axes || []) {
+    if (a?.value === 0) {
+      warnings.push(`${cat.dir}/${slug}: l'asse sensoriale "${a.label}" vale 0 — di solito vuol dire `
+        + `che il profilo arriva dal modello di un'altra categoria, non che il tratto sia assente`);
+    }
+  }
   if (!raw.nutrition?.kcal_per_100g) {
     warnings.push(`${cat.dir}/${slug}: senza valori nutrizionali`);
   }
