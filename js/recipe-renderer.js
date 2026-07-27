@@ -343,6 +343,11 @@ function buildSensoryProfile(r) {
   // nell'albero di accessibilità. Il canvas va quindi nascosto agli assistenti
   // (`aria-hidden`), o il grafico verrebbe annunciato come elemento vuoto
   // accanto alla sua stessa alternativa.
+  //
+  // Il nome della tabella è un `aria-label` e non una `<caption>`: la caption è
+  // l'unico pezzo che `table-layout: fixed` non riesce a stringere, e quella
+  // frase, tenuta su una riga sola, teneva larga tutta la tabella nascosta —
+  // 266 px che sporgevano oltre il bordo della pagina.
   const righeAssi = r.sensoryProfile.axes
     .map(a => `<tr><th scope="row">${escHtml(a.label)}</th><td>${escHtml(a.value)} su 10</td></tr>`)
     .join('');
@@ -367,8 +372,7 @@ function buildSensoryProfile(r) {
 
         <div class="sensory-canvas-wrap">
           <canvas id="sensoryChart" aria-hidden="true"></canvas>
-          <table class="solo-lettore">
-            <caption>Profilo sensoriale, in scala da 1 a 10</caption>
+          <table class="solo-lettore" aria-label="Profilo sensoriale, in scala da 1 a 10">
             <tbody>${righeAssi}</tbody>
           </table>
         </div>

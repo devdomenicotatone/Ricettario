@@ -20,12 +20,29 @@
         text-size-adjust: 100%;
     }
 
+    /* Qui c'era `overflow-x: hidden`. Sembrava una rete di sicurezza ed era una
+       benda: quando qualcosa sbordava non lo faceva scorrere, lo tagliava — e
+       il contenuto tagliato non è scomodo, è irraggiungibile. È così che sono
+       rimasti nascosti per mesi il link «Vedi tutte» della riga Condimenti e la
+       colonna dei marchi nella tabella delle farine (punto 8 del checkup): non
+       comparivano nemmeno come barra di scorrimento, quindi non c'era niente da
+       notare.
+       Tolta la benda, un difetto futuro si vedrà. L'unico elemento che sta
+       fuori schermo di proposito è il menu a scomparsa dei telefoni, ma è
+       `position: fixed`, e gli elementi fissi non allargano l'area scorribile
+       del documento: misurato con il menu aperto e chiuso, `scrollWidth` non si
+       muove. Verificato a 320 px sulle quattro pagine, a 375 con il menu, e a
+       1272: `scrollWidth` sempre uguale alla finestra.
+
+       Togliendola sono saltati fuori due difetti che teneva nascosti — il
+       `<canvas>` del profilo sensoriale largo 300 px prima che Chart.js lo
+       ridimensioni, e la tabella nascosta accanto — che sono corretti dove
+       stanno. Era esattamente il motivo per toglierla. */
     body {
         font-family: var(--font-ui);
         background: var(--color-surface-0);
         color: var(--color-text);
         line-height: 1.7;
-        overflow-x: hidden;
         min-height: 100dvh;
         transition:
             background-color var(--transition-theme),
@@ -124,6 +141,13 @@
         overflow: hidden;
         clip-path: inset(50%);
         white-space: nowrap;
+        /* Su una `<table>` quel `width: 1px` verrebbe ignorato: in layout
+           automatico la larghezza minima del contenuto vince sempre. La
+           tabella del profilo sensoriale sporgeva così 8 px oltre il bordo
+           della pagina — invisibile agli occhi, ma abbastanza per far comparire
+           una barra di scorrimento orizzontale ora che il `body` non taglia
+           più. Su tutto ciò che non è una tabella questa riga non fa niente. */
+        table-layout: fixed;
     }
 
     /* Utility: JS-driven visibility toggle */

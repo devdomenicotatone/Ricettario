@@ -35,39 +35,100 @@ export function montaTimer(radice, piano, config, { onCambio } = {}) {
 
     // ── Disegno ──────────────────────────────────────────────
 
-    function disegnaFase(contenitore) {
-        const s = statoFase(sessione, contenitore.dataset.timer, ora());
-        if (!s) return;
+    /**
+     * IL MARKUP SI RIFÀ SOLO QUANDO CAMBIA LO STATO, NON A OGNI SECONDO.
+     *
+     * Prima `disegnaFase` riscriveva `innerHTML` a ogni battito. I numeri
+     * cambiavano — e insieme a loro sparivano e rinascevano i pulsanti. Per chi
+     * usa il mouse è invisibile; per chi naviga da tastiera vuol dire che
+     * l'elemento con il focus veniva distrutto **una volta al secondo** e il
+     * focus tornava al `<body>`: Pausa e Fatta erano irraggiungibili proprio
+     * mentre il timer correva, cioè nell'unico momento in cui servono.
+     * Misurato: focus su Pausa, due secondi dopo focus su BODY e quel pulsante
+     * non era più nel documento.
+     *
+     * Adesso la *forma* del pannello (quali pulsanti, quale testo fisso) dipende
+     * solo dallo stato, e si ricostruisce quando lo stato cambia. A ogni battito
+     * si riscrivono soltanto i valori: il tempo, la barra, la nota. Il focus
+     * sopravvive perché gli elementi sono gli stessi.
+     */
+    function formaDi(s) {
+        return `${s.stato}${s.oltreMassimo ? '|oltre' : ''}`;
+    }
 
-        const finestra = `finestra ${durata([Math.round(s.minMs / 60000), Math.round(s.maxMs / 60000)])}`;
+    function classeDi(s) {
+        if (s.stato === 'ferma') return 'timer';
+        if (s.stato === 'completata') return 'timer is-completata';
+        return `timer is-attiva${s.stato === 'scaduta' ? ' is-scaduta' : ''}${s.stato === 'in_pausa' ? ' is-pausa' : ''}`;
+    }
 
+    function markupDi(s, finestra) {
         if (s.stato === 'ferma') {
-            contenitore.className = 'timer';
-            contenitore.innerHTML = `
-              <button class="timer__avvia" data-azione="avvia">Avvia — ${esc(durata([Math.round(s.minMs / 60000), Math.round(s.maxMs / 60000)]))}</button>`;
-            return;
+            return `<button class="timer__avvia" data-azione="avvia">Avvia — ${esc(durata([Math.round(s.minMs / 60000), Math.round(s.maxMs / 60000)]))}</button>`;
         }
 
         if (s.stato === 'completata') {
-            contenitore.className = 'timer is-completata';
-            contenitore.innerHTML = `
-              <span class="timer__fatto">✓ fatta in ${orologio(s.trascorsoMs)}</span>
+            return `
+              <span class="timer__fatto">✓ fatta in <span data-valore="tempo">${orologio(s.trascorsoMs)}</span></span>
               <button class="timer__minore" data-azione="azzera">rifai</button>`;
-            return;
         }
 
         const scaduta = s.stato === 'scaduta';
-        contenitore.className = `timer is-attiva${scaduta ? ' is-scaduta' : ''}${s.stato === 'in_pausa' ? ' is-pausa' : ''}`;
-        contenitore.innerHTML = `
-          <div class="timer__tempo">${scaduta ? '+' : ''}${orologio(scaduta ? s.oltreMs : s.rimanenteMs)}</div>
-          <div class="timer__barra"><span style="width:${Math.round(s.frazione * 100)}%"></span></div>
-          <p class="timer__nota">${esc(nota(s, finestra))}</p>
+        // «14:45» da solo, per chi ascolta, è un orario: senza la premessa non
+        // si capisce se manca o se è passato. La barra invece non aggiunge
+        // niente — è lo stesso numero disegnato — e va tolta di mezzo.
+        return `
+          <div class="timer__tempo">
+            <span class="solo-lettore">${scaduta ? 'Oltre il tempo minimo di ' : 'Tempo rimanente '}</span><span data-valore="tempo"></span>
+          </div>
+          <div class="timer__barra" aria-hidden="true"><span></span></div>
+          <p class="timer__nota" data-valore="nota"></p>
           <div class="timer__comandi">
             ${s.stato === 'in_pausa'
                 ? '<button class="timer__minore" data-azione="riprendi">Riprendi</button>'
                 : '<button class="timer__minore" data-azione="pausa">Pausa</button>'}
             <button class="timer__avvia timer__avvia--stretto" data-azione="completa">Fatta</button>
           </div>`;
+    }
+
+    /** I soli pezzi che cambiano fra un secondo e l'altro. */
+    function aggiornaValori(contenitore, s, finestra) {
+        const scaduta = s.stato === 'scaduta';
+
+        const tempo = contenitore.querySelector('[data-valore="tempo"]');
+        if (tempo) {
+            const testo = s.stato === 'completata'
+                ? orologio(s.trascorsoMs)
+                : `${scaduta ? '+' : ''}${orologio(scaduta ? s.oltreMs : s.rimanenteMs)}`;
+            if (tempo.textContent !== testo) tempo.textContent = testo;
+        }
+
+        const riempimento = contenitore.querySelector('.timer__barra span');
+        if (riempimento) riempimento.style.width = `${Math.round(s.frazione * 100)}%`;
+
+        const nodoNota = contenitore.querySelector('[data-valore="nota"]');
+        if (nodoNota) {
+            // `textContent` e non `innerHTML`: il testo non viene interpretato
+            // come markup, quindi qui l'escape non serve proprio.
+            const testo = nota(s, finestra);
+            if (nodoNota.textContent !== testo) nodoNota.textContent = testo;
+        }
+    }
+
+    function disegnaFase(contenitore) {
+        const s = statoFase(sessione, contenitore.dataset.timer, ora());
+        if (!s) return;
+
+        const finestra = `finestra ${durata([Math.round(s.minMs / 60000), Math.round(s.maxMs / 60000)])}`;
+        const forma = formaDi(s);
+
+        if (contenitore.dataset.forma !== forma) {
+            contenitore.dataset.forma = forma;
+            contenitore.className = classeDi(s);
+            contenitore.innerHTML = markupDi(s, finestra);
+        }
+
+        aggiornaValori(contenitore, s, finestra);
     }
 
     function nota(s, finestra) {
@@ -105,17 +166,28 @@ export function montaTimer(radice, piano, config, { onCambio } = {}) {
 
         const scaduta = attiva.stato === 'scaduta';
         barra.classList.toggle('is-scaduta', scaduta);
-        barra.innerHTML = `
-          <div class="barra-timer__fase">
-            <span class="barra-timer__nome">${esc(attiva.nome)}</span>
-            <span class="barra-timer__stato">${attiva.stato === 'in_pausa' ? 'in pausa' : scaduta ? 'controlla' : 'in corso'}</span>
-          </div>
-          <div class="barra-timer__tempo">${scaduta ? '+' : ''}${orologio(scaduta ? attiva.oltreMs : attiva.rimanenteMs)}</div>
-          <button class="barra-timer__bottone" data-azione="${attiva.stato === 'in_pausa' ? 'riprendi' : 'pausa'}"
-                  aria-label="${attiva.stato === 'in_pausa' ? 'Riprendi' : 'Pausa'}">
-            ${attiva.stato === 'in_pausa' ? '▶' : '❙❙'}
-          </button>
-          <button class="barra-timer__bottone barra-timer__bottone--fine" data-azione="completa" aria-label="Fase completata">✓</button>`;
+
+        // Stessa regola del pannello di fase: la barra contiene due pulsanti, e
+        // rifarne il markup a ogni secondo li strappava di sotto al focus.
+        const forma = `${attiva.id}|${attiva.stato}`;
+        if (barra.dataset.forma !== forma) {
+            barra.dataset.forma = forma;
+            barra.innerHTML = `
+              <div class="barra-timer__fase">
+                <span class="barra-timer__nome">${esc(attiva.nome)}</span>
+                <span class="barra-timer__stato">${attiva.stato === 'in_pausa' ? 'in pausa' : scaduta ? 'controlla' : 'in corso'}</span>
+              </div>
+              <div class="barra-timer__tempo" data-valore="tempo"></div>
+              <button class="barra-timer__bottone" data-azione="${attiva.stato === 'in_pausa' ? 'riprendi' : 'pausa'}"
+                      aria-label="${attiva.stato === 'in_pausa' ? 'Riprendi' : 'Pausa'}">
+                ${attiva.stato === 'in_pausa' ? '▶' : '❙❙'}
+              </button>
+              <button class="barra-timer__bottone barra-timer__bottone--fine" data-azione="completa" aria-label="Fase completata">✓</button>`;
+        }
+
+        const tempo = barra.querySelector('[data-valore="tempo"]');
+        const testo = `${scaduta ? '+' : ''}${orologio(scaduta ? attiva.oltreMs : attiva.rimanenteMs)}`;
+        if (tempo && tempo.textContent !== testo) tempo.textContent = testo;
     }
 
     function disegnaTutto() {

@@ -440,12 +440,38 @@ ricetta con le parole più lunghe del sito: **zero elementi oltre il bordo**, e
 confronto con la versione pubblicata è identico al pixel — intestazione alta 54,
 titolo 68→364, link 1117→1204 — quindi sui monitor non è cambiato niente.
 
-**Cosa resta fuori:** `body { overflow-x: hidden }` è ancora lì. Adesso non
-nasconde niente, ma continua a essere una rete che, se qualcosa sbordasse
-domani, lo taglierebbe in silenzio invece di farlo vedere. Toglierla è un
-lavoro a sé: va prima verificato che nessun elemento decorativo — gli aloni
-dell'hero, il menu che entra da destra — la stia usando per stare fuori
-schermo.
+### E la benda è stata tolta
+
+`body { overflow-x: hidden }` era rimasto, con la nota «toglierla è un lavoro a
+sé». Tolto. Sembrava una rete di sicurezza ed era una benda: quando qualcosa
+sbordava non lo faceva scorrere, lo tagliava — e il contenuto tagliato non è
+scomodo, è irraggiungibile. È così che sono rimasti nascosti per mesi il link
+«Vedi tutte» e la colonna dei marchi: non comparivano nemmeno come barra di
+scorrimento, quindi non c'era niente da notare.
+
+Il timore era il menu a scomparsa dei telefoni, che sta fuori schermo di
+proposito. Non è un problema: è `position: fixed`, e gli elementi fissi non
+allargano l'area scorribile del documento. **Misurato** con il menu aperto e
+chiuso: `scrollWidth` non si muove di un pixel.
+
+E togliendola sono saltati fuori **due difetti che teneva nascosti**, che è
+esattamente il motivo per cui andava tolta:
+
+- il **`<canvas>` del profilo sensoriale** è largo 300 px per impostazione del
+  browser finché Chart.js non lo ridimensiona, e Chart.js arriva solo dopo
+  l'import dinamico. In quella finestra — e per sempre, se il caricamento
+  fallisce — il grafico sporgeva di 37 px su uno schermo da 320. Adesso il
+  tetto lo mette il CSS.
+- la **tabella nascosta** che avevo aggiunto al punto 6 sporgeva di 8 px. Il
+  suo `width: 1px` non serviva a niente: su una `<table>` in layout automatico
+  la larghezza minima del contenuto vince sempre. Con `table-layout: fixed` la
+  larghezza viene rispettata — ma restava larga la `<caption>`, che è l'unico
+  pezzo che il layout fisso non stringe. Il nome della tabella è diventato un
+  `aria-label`, come già nelle tabelle degli ingredienti: da 266 px a 6.
+
+**Verificato** a 320 px sulle quattro pagine, a 375 con il menu aperto e chiuso,
+e a 1272: `scrollWidth` sempre uguale alla finestra, e la pagina non si sposta
+di un pixel provando a scorrerla di lato.
 
 ---
 
@@ -552,6 +578,41 @@ completa → «fase completata. Adesso tocca a Cottura indiretta.» Il focus tor
 sull'opzione scelta, e su «Avanti» e «Indietro» va sulla domanda nuova. Il
 cambio di rotta della SPA continua ad annunciare come prima.
 
+### Il timer perdeva il focus una volta al secondo
+
+Questo era rimasto scritto come «non provato»: il pannello dei timer non l'avevo
+guardato *mentre conta*. Guardandolo, è venuto fuori il difetto più duro di
+tutta la lista, e non era negli annunci.
+
+Il pannello si ridisegnava con `innerHTML` a ogni battito. I numeri cambiavano —
+e insieme a loro **sparivano e rinascevano i pulsanti**. Per chi usa il mouse è
+invisibile; da tastiera vuol dire che l'elemento con il focus veniva distrutto
+una volta al secondo e il focus tornava al `<body>`. Pausa e Fatta erano
+irraggiungibili proprio mentre il timer correva, cioè nell'unico momento in cui
+servono. Lo stesso valeva per la barra fissa in basso, che ha altri due
+pulsanti.
+
+```
+focus su «Pausa»                    → BUTTON «Pausa»
+due secondi dopo (11:42 → 11:33)    → BODY      ← e il pulsante non era
+                                                  più nel documento
+```
+
+Adesso la *forma* del pannello — quali pulsanti, quale testo fisso — dipende
+solo dallo stato e si ricostruisce quando lo stato cambia. A ogni battito si
+riscrivono soltanto il tempo, la barra e la nota. **Misurato di nuovo:** dopo
+nove secondi di conto alla rovescia il focus è ancora sullo stesso identico
+nodo, che è ancora nel documento. Vale anche per la barra fissa.
+
+Due dettagli venuti dalla stessa occhiata: «14:45» da solo, per chi ascolta, è
+un orario — non si capisce se manca o se è passato — e adesso è preceduto da
+«Tempo rimanente» (o «Oltre il tempo minimo di») in testo solo-lettore. E la
+barra di avanzamento è passata ad `aria-hidden`: disegna lo stesso numero che
+c'è scritto sopra, quindi per chi ascolta era solo rumore.
+
+**Cosa resta:** i quattro stati sono provati uno per uno — in corso, in pausa,
+scaduta, completata, più «rifai» — ma sempre leggendo il DOM, non ascoltando.
+
 ---
 
 ## I limiti di questo checkup
@@ -593,15 +654,16 @@ ascoltata con uno screen reader vero.** Tutto ciò che c'è scritto qui viene
 dall'albero di accessibilità e dal DOM misurato. È il modo giusto di verificare
 che una struttura ci sia; non è il modo di sapere come suona.
 
-Sono rimaste fuori anche due cose che non erano nella lista dei nove:
-`body { overflow-x: hidden }` continua a poter nascondere un futuro sbordamento
-invece di mostrarlo (punto 8), e il pannello dei timer non è stato provato con
-un lettore attivo mentre conta.
+Gli avanzi dichiarati in fondo ai punti — il `<header>` mancante, la benda
+`overflow-x: hidden`, il pannello dei timer mai guardato mentre conta — sono
+stati chiusi tutti e tre. Gli ultimi due hanno restituito quattro difetti che
+nessuno aveva visto: il canvas largo 300 px, la tabella nascosta che sporgeva,
+e i pulsanti dei timer strappati di sotto al focus una volta al secondo in due
+punti diversi.
 
-Il `<header>` mancante del punto 2, che era il terzo di questi avanzi, adesso
-c'è.
+Resta il metodo. E resta una cosa che il metodo non può dare: **come suona.**
 
-## Una cosa che si è ripetuta sei volte
+## Una cosa che si è ripetuta sette volte
 
 Chiudere un punto ha reso più economico o più visibile quello dopo:
 
@@ -632,9 +694,16 @@ Chiudere un punto ha reso più economico o più visibile quello dopo:
   esattamente 21 px. Andando a correggere il logo avrei sistemato una cosa che
   funzionava e lasciato tagliate le due che non funzionavano.
 
+- e gli **avanzi**, quelli scritti in fondo ai punti come «cosa resta»,
+  contenevano più difetti dei punti stessi. Togliere `overflow-x: hidden` ne ha
+  scoperti due che stavano lì sotto; guardare i timer *mentre contano* — che era
+  scritto come «non provato», non come «da correggere» — ha trovato pulsanti che
+  sparivano una volta al secondo. Un «non provato» non è una nota a piè di
+  pagina: è un pezzo di lavoro non fatto, e va aperto come si apre un punto.
+
 Morale operativa: dopo ogni correzione conviene **rimisurare tutto**, non solo
 la cosa corretta; prima di aggiungere contenuto a un pannello, controllare che
 il pannello si apra; una voce archiviata come minore va aperta lo stesso, perché
-la gravità stimata da fuori non è la gravità; e un difetto confermato da un
-numero giusto può avere lo stesso la causa sbagliata — la sintomatologia va
-rifatta prima di operare, non dopo.
+la gravità stimata da fuori non è la gravità; un difetto confermato da un numero
+giusto può avere lo stesso la causa sbagliata; e ciò che nasconde i difetti —
+una benda come `overflow-x: hidden` — costa più dei difetti che nasconde.

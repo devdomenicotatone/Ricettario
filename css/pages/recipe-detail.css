@@ -804,6 +804,16 @@
         width: 100%;
         max-width: 450px;
         margin: 0 auto;
+
+        /* Un `<canvas>` senza dimensioni è largo 300 px per impostazione del
+           browser, e Chart.js arriva a ridimensionarlo solo dopo l'import
+           dinamico. In quella finestra — e per sempre, se il caricamento
+           fallisce — il grafico era più largo del suo contenitore: su uno
+           schermo da 320 px sporgeva di 37. Non si vedeva perché il `body`
+           tagliava; adesso che non taglia più, il tetto lo mette il CSS. */
+        & canvas {
+            max-width: 100%;
+        }
     }
 
     /* ── Sensory Note (degustazione) ── */
