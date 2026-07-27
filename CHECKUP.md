@@ -292,9 +292,10 @@ immagini da fuori la build, il controllo va allargato invece che silenziato.
 
 Dichiararlo serve a non far credere che il resto sia stato approvato.
 
-- **Accessibilità oltre il minimo.** Ho verificato che nessun `<img>` sia senza
-  `alt`. Non ho guardato contrasto, ordine di tabulazione, ruoli ARIA, focus
-  visibile, né il comportamento con uno screen reader.
+- ~~**Accessibilità oltre il minimo.**~~ **Fatto**, in un checkup a parte:
+  [CHECKUP-ACCESSIBILITA.md](./CHECKUP-ACCESSIBILITA.md). Otto voci, la più
+  grave delle quali è che la SPA cambia pagina senza annunciarlo a chi usa uno
+  screen reader. Resta fuori la prova con un lettore vero.
 - **Il CSS.** 19 fogli, di cui `cottura.css` da 33 KB e `recipe-detail.css` da
   29 KB: non ho cercato regole morte né duplicazioni.
 - **Il calcolatore di cottura nel merito.** Ho verificato che sia integro (918
