@@ -111,8 +111,10 @@ un'informazione su cui una persona celiaca decide se può mangiare una cosa**.
 sulla salsa di soia, che il grano ce l'ha.
 
 `controllaPromesse` in `scripts/build-recipes.js` boccia la build quando un tag
-promette «senza glutine» o «vegano» e fra gli ingredienti c'è qualcosa che lo
-smentisce. Due cose da sapere:
+promette **«senza glutine», «senza lattosio», «vegano» o «vegetariano»** e fra
+gli ingredienti c'è qualcosa che lo smentisce. Le liste delle fonti sono tre e
+si compongono: carne e pesce smentiscono sia vegano sia vegetariano, uova e
+latticini solo vegano. Tre cose da sapere:
 
 - **Per dichiarare una promessa condizionata si usa la parentesi**:
   `senza glutine (con tamari)`, come fa `condimenti/salsa-teriyaki-originale`.
@@ -123,6 +125,14 @@ smentisce. Due cose da sapere:
   «per la versione senza glutine usa tamari» bastava ad assolvere una ricetta
   che monta salsa di soia normale. Un cancello che si disinnesca leggendo la
   prosa che descrive il problema non protegge niente.
+- **Quello che sta FUORI dalle liste è deciso quanto quello che sta dentro.**
+  Il parmigiano e gli altri stagionati non sono fra le fonti di lattosio
+  (tracce sotto la soglia dichiarabile: una ricetta «senza lattosio» col
+  parmigiano è corretta), le uova e i latticini non smentiscono
+  «vegetariano», e `salam[ei]` è scritto stretto perché `salam\w*`
+  prenderebbe la «salamoia». Le radici invece vogliono `\w*`: scritto
+  `\b(acciugh)\b` il plurale «Acciughe» non combacia, e una ricetta con le
+  alici passava per vegetariana — l'ha trovato il test negativo, non l'occhio.
 
 L'analisi qualità della dashboard **non** copre questo: nei suoi 83 referti le
 aree sono Coerenza, Dosi, Setup, Tempi, Temperature. Di allergeni non parla mai.

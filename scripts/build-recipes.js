@@ -145,39 +145,79 @@ function controllaToken(raw, dove) {
  * Un controllo che si lascia disinnescare dalla prosa che spiega il problema
  * non protegge niente: la nota è una spiegazione, il nome è l'ingrediente.
  */
+/** Glutine: cereali col glutine e cose che ne derivano. */
+const FONTI_GLUTINE = [
+  { re: /\bfarin[ae]\b/i, salvo: /\b(riso|mais|ceci|mandorl|castagn|grano saraceno|cocco)\b/i },
+  { re: /\bsemol(a|ino)\b/i },
+  { re: /\bpangrattato\b/i },
+  { re: /\bpane\b/i },
+  { re: /\bcous ?cous\b/i },
+  { re: /\b(orzo|farro|seitan|bulgur)\b/i },
+  { re: /\bmalto\b/i },
+  { re: /\bbirra\b/i },
+  // La soia normale è fermentata col grano: senza glutine è il tamari.
+  { re: /\bsalsa di soia\b|\bsoia light\b/i, salvo: /\btamari\b/i },
+];
+
+/**
+ * Carne e pesce: smentiscono sia «vegetariano» sia «vegano», e stanno in una
+ * lista sola perché ripeterla nelle due promesse vorrebbe dire due elenchi
+ * che divergono al primo ingrediente nuovo.
+ */
+// `\w*` sulle radici, e non è un dettaglio: scritte come `\b(acciugh)\b` il
+// confine di parola finale pretendeva che la parola finisse lì, quindi
+// «Acciughe» non combaciava e una ricetta con le alici passava per
+// vegetariana. Il test negativo l'ha intercettato.
+// `salam[ei]` invece resta stretto di proposito: `salam\w*` prenderebbe la
+// «salamoia», che è acqua e sale.
+const FONTI_CARNE_PESCE = [
+  { re: /\b(carne|pancetta|guanciale|lardo|strutto|prosciutto|salsicc\w*|speck|bresaola|salam[ei])\b/i },
+  { re: /\b(pesce|acciugh\w*|alici|gamber\w*|crostacei|tonno|colatura|bottarga|vongole|cozze|calamar\w*|seppi\w*|salmone)\b/i },
+  { re: /\bbrodo di (carne|pollo|manzo|vitello|pesce)\b/i },
+  { re: /\bgelatina\b/i, salvo: /\bagar\b/i },
+];
+
+/**
+ * Uova, latticini e miele: smentiscono «vegano» ma NON «vegetariano», che
+ * li ammette. È la differenza fra le due promesse, ed è tutta qui.
+ */
+const FONTI_NON_VEGANE = [
+  { re: /\buov[ao]\b/i },
+  { re: /\bmiele\b/i },
+  { re: /\bburro\b/i, salvo: /\b(cacao|arachidi|mandorl|vegetale)\b/i },
+  { re: /\blatte\b/i, salvo: /\b(cocco|mandorl|soia|riso|avena|vegetale)\b/i },
+  { re: /\bpanna\b/i, salvo: /\bvegetale\b/i },
+  { re: /\byogurt\b/i, salvo: /\b(soia|vegetale|cocco)\b/i },
+  { re: /\b(formagg\w*|parmigiano|pecorino|grana|ricotta|mascarpone|provola|mozzarella|burrata|stracchino)\b/i },
+];
+
+/**
+ * Lattosio: SOLO latticini freschi, ed è una lista più corta di quella dei
+ * latticini in generale — di proposito.
+ *
+ * Fuori restano i **formaggi a lunga stagionatura** (parmigiano, grana,
+ * pecorino stagionato), che di lattosio ne hanno tracce sotto la soglia
+ * dichiarabile e vengono venduti come «naturalmente privi di lattosio»: una
+ * ricetta senza lattosio col parmigiano dentro è corretta, e bocciarla
+ * insegnerebbe solo che il cancello è da aggirare. Fuori anche il **burro**,
+ * che ne ha pochissimo, e il chiarificato praticamente zero.
+ *
+ * Questo controllo dice «attenzione, qui c'è un latticino fresco», non
+ * pretende di fare il conto dei grammi di lattosio.
+ */
+const FONTI_LATTOSIO = [
+  { re: /\blatte\b/i, salvo: /\b(cocco|mandorl|soia|riso|avena|vegetale|delattosat|senza lattosio)\b/i },
+  { re: /\bpanna\b/i, salvo: /\b(vegetale|senza lattosio)\b/i },
+  { re: /\b(ricotta|mascarpone|mozzarella|burrata|stracchino|robiola|crescenza|philadelphia)\b/i },
+  { re: /\byogurt\b/i, salvo: /\b(soia|vegetale|cocco|senza lattosio)\b/i },
+];
+
 const PROMESSE_ALIMENTARI = [
-  {
-    tag: /senza glutine|gluten[ -]?free/i,
-    cosa: 'glutine',
-    fonti: [
-      { re: /\bfarin[ae]\b/i, salvo: /\b(riso|mais|ceci|mandorl|castagn|grano saraceno|cocco)\b/i },
-      { re: /\bsemol(a|ino)\b/i },
-      { re: /\bpangrattato\b/i },
-      { re: /\bpane\b/i },
-      { re: /\bcous ?cous\b/i },
-      { re: /\b(orzo|farro|seitan|bulgur)\b/i },
-      { re: /\bmalto\b/i },
-      { re: /\bbirra\b/i },
-      // La soia normale è fermentata col grano: senza glutine è il tamari.
-      { re: /\bsalsa di soia\b|\bsoia light\b/i, salvo: /\btamari\b|senza glutine/i },
-    ],
-  },
-  {
-    tag: /\bvegan[oi]?\b/i,
-    cosa: 'ingredienti animali',
-    fonti: [
-      { re: /\buov[ao]\b/i },
-      { re: /\bmiele\b/i },
-      { re: /\bburro\b/i, salvo: /\b(cacao|arachidi|mandorl|vegetale)\b/i },
-      { re: /\blatte\b/i, salvo: /\b(cocco|mandorl|soia|riso|avena|vegetale)\b/i },
-      { re: /\bpanna\b/i, salvo: /\bvegetale\b/i },
-      { re: /\byogurt\b/i, salvo: /\b(soia|vegetale|cocco)\b/i },
-      { re: /\b(formaggio|parmigiano|pecorino|grana|ricotta|mascarpone|provola|mozzarella)\b/i },
-      { re: /\b(carne|pancetta|guanciale|lardo|strutto|prosciutto|salsiccia)\b/i },
-      { re: /\b(pesce|acciugh|alici|gamber|crostacei|tonno|colatura)\b/i },
-      { re: /\bgelatina\b/i, salvo: /\bagar\b/i },
-    ],
-  },
+  { tag: /senza glutine|gluten[ -]?free/i, cosa: 'glutine', fonti: FONTI_GLUTINE },
+  { tag: /senza lattosio|lactose[ -]?free/i, cosa: 'lattosio', fonti: FONTI_LATTOSIO },
+  { tag: /\bvegan[oi]?\b/i, cosa: 'ingredienti animali', fonti: [...FONTI_CARNE_PESCE, ...FONTI_NON_VEGANE] },
+  // «vegetariano» ammette uova e latticini: gli si contesta solo carne e pesce.
+  { tag: /\bvegetarian[oi]?\b/i, cosa: 'carne o pesce', fonti: FONTI_CARNE_PESCE },
 ];
 
 function controllaPromesse(raw, dove) {
@@ -234,6 +274,18 @@ function buildEntry(cat, file) {
   controllaToken(raw, `${cat.dir}/${slug}`);
   controllaPromesse(raw, `${cat.dir}/${slug}`);
 
+  // Dati sensoriali e nutrizionali: AVVISO, non errore. Una ricetta senza il
+  // profilo sensoriale si pubblica benissimo — il pannello semplicemente non
+  // compare — quindi fermare la build sarebbe sproporzionato. Ma è un pezzo
+  // che dovrebbe esserci, e senza qualcuno che lo nomini resta mancante per
+  // sempre: oggi sono 2 ricette su 81, cioè una svista, non una scelta.
+  if (!raw.sensoryProfile?.axes?.length) {
+    warnings.push(`${cat.dir}/${slug}: senza profilo sensoriale (niente grafico né tabella dei tratti)`);
+  }
+  if (!raw.nutrition?.kcal_per_100g) {
+    warnings.push(`${cat.dir}/${slug}: senza valori nutrizionali`);
+  }
+
   return {
     title: raw.title,
     slug,
@@ -250,7 +302,11 @@ function buildEntry(cat, file) {
     // Il credito della foto: senza di lui le immagini CC risultano pubblicate
     // in violazione della licenza, e chi legge l'indice non ha modo di saperlo.
     imageAttribution: text(raw.imageAttribution),
-    hasSensory: Boolean(raw.sensoryProfile),
+    // `Boolean(raw.sensoryProfile)` diceva `true` anche per un profilo senza
+    // assi, cioè per una ricetta che il pannello sensoriale non lo mostra:
+    // chi filtra su questo campo cercava le ricette incomplete e non le
+    // trovava. Ora la condizione è la stessa che usa il renderer.
+    hasSensory: Boolean(raw.sensoryProfile?.axes?.length),
     hasStorage: Boolean(raw.storage),
     // `_generatedBy` (quale modello ha scritto la ricetta) NON entra qui: lo
     // legge solo la dashboard, e lo legge dal JSON della ricetta nel repo, non
