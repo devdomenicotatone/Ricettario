@@ -96,12 +96,19 @@ nell'output statico, e lo copre `npm run check` (dati + build + pre-rendering
 + controlli su `dist/` e sui fogli di stile). Fallo girare davvero prima di
 dichiarare che una modifica funziona — non basta che il file sia stato scritto.
 
-Il CSS ha due controlli suoi (sezione 9 di `verifica-build.js`), perché è
+Il CSS ha tre controlli suoi (sezione 9 di `verifica-build.js`), perché è
 l'unica parte che si rompe senza dire niente: **ogni `var(--x)` deve avere una
-`--x` definita** e **ogni classe dichiarata deve comparire in qualche markup**.
-Se aggiungi una classe che il JavaScript compone a runtime — come
-`piano--${percorso}` — il cancello non può vederla: va dichiarato il prefisso in
-`PREFISSI_A_RUNTIME`, non silenziato il controllo.
+`--x` definita**, **ogni classe dichiarata deve comparire in qualche markup** e
+**ogni foglio deve dichiarare il layer della sua cartella** (`css/pages/` →
+`@layer pages`; `css/base/` è esente perché ne ha due per scelta).
+
+Due cose da sapere quando uno dei tre si lamenta:
+
+- Se aggiungi una classe che il JavaScript compone a runtime — come
+  `piano--${percorso}` — il cancello non può vederla: va dichiarato il prefisso
+  in `PREFISSI_A_RUNTIME`, non silenziato il controllo.
+- Un foglio senza `@layer` è un errore, non una svista veniale: le regole fuori
+  dai layer battono tutte quelle dentro, qualunque sia la specificità.
 
 Il cancello include `npm run build:cottura`, che oltre a validare i dati
 **genera 918 piani** — ogni taglio per ogni dispositivo, cottura, metodo e

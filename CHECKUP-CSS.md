@@ -540,6 +540,16 @@ titolo esce in Playfair Display e i pulsanti hanno i loro 56 px di altezza
 minima — cioè le regole del foglio si applicano ancora tutte. Nessun errore in
 console.
 
+### E adesso non può tornare
+
+Questo è l'unico punto che, chiudendosi, ha suggerito un controllo che nessuno
+aveva chiesto: **ogni foglio deve dichiarare il layer della sua cartella**. È il
+terzo della sezione 9 del cancello, e prende anche il caso peggiore della stessa
+famiglia — un foglio senza nessun `@layer`, che vincerebbe su tutto. Provato al
+contrario in tutti e due i modi: un file in `css/pages/` che dichiara
+`components` e uno in `css/components/` che non dichiara niente fermano il
+deploy, nominando il file, la riga e il layer che ci vuole.
+
 ---
 
 ## 6. Sette blocchi di dichiarazioni identici
@@ -659,6 +669,15 @@ controlli meccanici che questa sezione chiedeva — sezione 9 di
 classe dichiarata deve comparire da qualche parte nel codice*. Sarebbero bastati
 a intercettare i punti 1, 2 e 3 il giorno in cui sono nati, invece che cinque
 mesi dopo.
+
+**Ce n'è un terzo, che questa sezione non aveva previsto:** *ogni foglio deve
+dichiarare il layer della sua cartella*. Lo ha suggerito il punto 5 chiudendosi
+— `css/pages/cottura.css` che apriva con `@layer components` — e copre anche il
+caso peggiore della stessa famiglia, un foglio che non dichiara **nessun** layer:
+le regole fuori dai layer battono tutte quelle dentro qualunque sia la
+specificità, ed è esattamente quello che era successo al pulsante «Fatta» nel
+punto 1. `css/base/` resta fuori dall'elenco perché è l'unica cartella con due
+layer per scelta.
 
 Guardano i sorgenti in `css/`, non `dist/`: il problema si vede prima della
 build e il messaggio nomina il file e la riga veri invece di un bundle con

@@ -604,6 +604,44 @@ let classiCss = 0;
         if (PREFISSI_A_RUNTIME.some(pre => classe.startsWith(pre))) continue;
         if (!parole.has(classe)) morte.push(`${dove} .${classe}`);
     }
+    // ── 9c. Il layer deve essere quello della cartella ──
+    // `css/pages/cottura.css` ha dichiarato `@layer components` per mesi, cioè
+    // il layer che PERDE contro `pages`: qualunque regola di recipe-detail.css
+    // avrebbe battuto una regola del calcolatore a parità di specificità, il
+    // contrario di quello che dà per scontato chi apre un file dentro pages/.
+    // Non si vedeva perché quei due fogli non hanno un selettore in comune — è
+    // il tipo di difetto che aspetta la regola giusta per mordere, e allora non
+    // sembra un problema di layer ma di specificità.
+    //
+    // `css/base/` non è in elenco: è l'unica cartella con più layer per scelta
+    // (tokens e reset), e fonts.css non ne ha nessuno perché contiene solo
+    // @font-face.
+    const LAYER_DELLA_CARTELLA = {
+        'css/layout': 'layout',
+        'css/components': 'components',
+        'css/pages': 'pages',
+        'css/utilities': 'utilities',
+    };
+    for (const f of fogli) {
+        const cartella = f.rel.slice(0, f.rel.lastIndexOf('/'));
+        const atteso = LAYER_DELLA_CARTELLA[cartella];
+        if (!atteso) continue;
+        const dichiarati = [...f.pulito.matchAll(/@layer\s+([\w-]+)/g)];
+        if (!dichiarati.length) {
+            err(`${f.rel}: non dichiara nessun @layer. Le regole fuori dai layer battono TUTTE quelle `
+                + `dentro, qualunque sia la specificità — è già successo al pulsante «Fatta». `
+                + `Questo foglio deve aprire con @layer ${atteso}.`);
+            continue;
+        }
+        for (const m of dichiarati) {
+            if (m[1] === atteso) continue;
+            err(`${f.rel}:${riga(f.pulito, m.index)}: dichiara @layer ${m[1]}, ma sta in ${cartella}/ `
+                + `e quindi deve essere @layer ${atteso}. L'ordine è tokens → reset → layout → `
+                + 'components → pages → utilities: il layer sbagliato fa perdere (o vincere) contro '
+                + 'fogli che non c\'entrano niente, e non si vede finché due regole non si incontrano.');
+        }
+    }
+
     if (morte.length) {
         const quante = morte.length === 1
             ? '1 classe dichiarata nel CSS che non compare'
