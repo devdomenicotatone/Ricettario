@@ -309,10 +309,14 @@ Dichiararlo serve a non far credere che il resto sia stato approvato.
   reader; le più insidiose erano un pannello con l'alternativa testuale dietro
   una porta che la tastiera non apriva, e i pulsanti dei timer distrutti una
   volta al secondo mentre il conto alla rovescia correva.
-  **Resta fuori la prova con un lettore vero**, e non è un dettaglio: tutto
-  quello che c'è scritto lì viene dall'albero di accessibilità e dal DOM
-  misurato. È il modo giusto per sapere se una struttura c'è; non è il modo per
-  sapere come suona.
+  **La prova con un lettore vero adesso è stata fatta** — NVDA 2026.1.1 su
+  Chrome, sul sito pubblicato — ed è servita: otto punti su nove tenevano, ma è
+  saltato fuori un **decimo difetto che nessuna misura sull'albero poteva
+  vedere**. Aprendo una ricetta dalla homepage, NVDA legge l'intera ricetta in
+  un solo annuncio ininterrotto (8 750–9 543 caratteri, tre prove su tre) prima
+  di dire «pagina caricata». È aperto, ed è il punto 10 di quel documento.
+  Resta fuori solo **come suona**: la sintesi era a volume zero e quello che ho
+  letto è il testo che NVDA avrebbe pronunciato, preso dal suo log.
 - ~~**Il CSS.**~~ **Fatto e chiuso**, in un checkup a parte:
   [CHECKUP-CSS.md](./CHECKUP-CSS.md). Sette punti, **sette chiusi**. Il primo
   era il più grave perché riguardava chi usa il sito: il pulsante «Fatta» e il
@@ -376,9 +380,10 @@ breakpoint deve essere uno di quelli dichiarati in `tokens.css` — le famiglie 
 difetti che qui sono nate morte e ci sono rimaste per mesi, perché nessuno
 strumento del progetto era in grado di accorgersene.
 
-L'accessibilità non è più in quella lista: ha avuto il suo checkup ed è chiusa
-su tutti e nove i punti. L'unica cosa che le resta è una verifica, non una
-correzione — ascoltarla con NVDA o VoiceOver.
+L'accessibilità ha avuto il suo checkup, i nove punti sono chiusi e la verifica
+che mancava — ascoltarla con un lettore vero — **è stata fatta**. Ha restituito
+un decimo punto, che è l'unico difetto aperto oggi su tutto il repo: aprendo una
+ricetta, NVDA legge tutta la ricetta invece di annunciare che sei arrivato.
 
 ## La lezione, che vale più della lista
 

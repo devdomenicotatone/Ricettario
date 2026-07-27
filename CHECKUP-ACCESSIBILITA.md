@@ -18,6 +18,16 @@
 > logo della navbar — che ci sta, con 9 px di margine. Il racconto dell'errore è
 > nel punto 8, e vale più della correzione.
 >
+> **Adesso è stato ascoltato con NVDA vero** (2026.1.1, Chrome, sul sito
+> pubblicato). Era il limite dichiarato in fondo a questo documento, ed è caduto.
+> Quasi tutto tiene: lo skip link è la prima fermata e dice quello che deve, i
+> landmark si sentono, il pulsante del tema ha un nome, la regione live annuncia
+> il cambio pagina, il tasto Indietro annuncia il nuovo documento.
+> **Ma è saltato fuori un difetto che nessuna misura sull'albero poteva
+> mostrare: aprendo una ricetta dalla homepage, NVDA legge l'INTERA ricetta in
+> un solo annuncio** — 8 750, 9 543 e 8 000+ caratteri in tre prove su tre —
+> prima di dire «pagina caricata». Vedi il **punto 10**.
+>
 > Le voci sono in ordine di quanto pesano per chi le subisce, non di quanto
 > costa sistemarle.
 >
@@ -615,14 +625,96 @@ scaduta, completata, più «rifai» — ma sempre leggendo il DOM, non ascoltand
 
 ---
 
+## 10. Aprire una ricetta legge tutta la ricetta — APERTO
+
+*Trovato ascoltando con NVDA 2026.1.1 su Chrome, sul sito pubblicato. Non è
+misurabile sull'albero di accessibilità: l'albero è giusto, è l'annuncio che è
+sbagliato.*
+
+Con il fuoco su una scheda della homepage, premi Invio. NVDA dice, in **un unico
+annuncio ininterrotto**:
+
+> figura, Baguette Francese Tradizionale, grafico, navigazione punto di
+> riferimento, Home, link, › Ricette, link, › Pane, link, … Ingredienti e
+> quantità, tabella, riga 1, colonna 1, … Procedimento, … Glossario, …
+
+cioè la ricetta intera — briciole di pane, intestazione, didascalia della foto,
+tabella degli ingredienti riga per riga, tutti i passaggi per esteso, pro tip,
+conservazione, glossario. **Poi**, in un secondo annuncio, arriva il messaggio
+della regione live: «Baguette Francese Tradizionale, pagina caricata».
+
+| prova | ricetta | caratteri in un annuncio |
+|---|---|---|
+| 1 | Gnocchi di Patate | 8 750 |
+| 2 | Polenta Concia alla Valdostana | ~8 000 |
+| 3 | Baguette Francese Tradizionale | 9 543 |
+
+**Non è la lettura automatica di NVDA.** Il primo sospetto era
+`autoSayAllOnPageLoad`, l'opzione — attiva di serie — con cui NVDA legge da sola
+la pagina appena caricata. Disattivata, e ripetuta la prova: **il megannuncio
+resta**. Quando è say-all vero, nel log compaiono i marcatori
+`say-all:lineReached` fra una riga e l'altra e si può interrompere; qui non
+c'è nessun marcatore, è una sequenza sola.
+
+**Cosa vuol dire per chi ascolta.** Un utente vedente che clicca una ricetta
+vede la pagina e decide dove guardare. Qui l'unica cosa da fare è ascoltare
+otto-novemila caratteri o interrompere con Ctrl e ricominciare a orientarsi da
+capo. È l'opposto di quello che voleva ottenere il punto 1 di questo documento:
+lì il problema era che la SPA non diceva niente, adesso dice tutto.
+
+**Quello che NON ho ancora isolato**, e va detto invece di indovinare: il
+meccanismo esatto dentro `router.js`. Tre riproduzioni sintetiche fatte a mano
+sulla pagina viva — sostituire l'`innerHTML` di `#contenuto`, dare il fuoco a
+`main#contenuto` senza toccare il DOM, e distruggere l'elemento che aveva il
+fuoco per poi darlo a `main` — **non** riproducono l'annuncio: NVDA tace in tutti
+e tre i casi. Serve quindi la combinazione completa che fa il router
+(`history.pushState` + cambio di `document.title` + sostituzione del contenuto +
+spostamento del fuoco), e la prossima mossa è capire quale pezzo la innesca.
+
+La strada più promettente è comunque nota: dopo una navigazione la maggior parte
+delle SPA sposta il fuoco su un elemento **piccolo** — l'`h1` con
+`tabindex="-1"` — invece che sul contenitore che contiene tutta la pagina. Ma
+finché il meccanismo non è isolato, questa è un'ipotesi, non una correzione.
+
+---
+
+## Piccole cose sentite per la prima volta
+
+Nessuna di queste blocca niente, e nessuna si vedeva nell'albero.
+
+- **Ogni scheda ricetta dice il nome due volte.** «Gnocchi di Patate, grafico,
+  Gnocchi di Patate, intestazione livello 4, Riposo 20-40 min, link»: il testo
+  alternativo dell'immagine ripete il titolo che sta già nel link. Corretto come
+  `alt`, ridondante come ascolto — su una homepage con 80 schede sono 80
+  ripetizioni. Un `alt=""` sull'immagine dentro un link che porta già il nome è
+  la scelta abituale.
+- **«Vedi tutte, →, link»**: la freccia decorativa viene pronunciata.
+- **L'H1 della homepage si sente come due intestazioni di livello 1**,
+  «Ricettario» e «Lab», perché dentro c'è un `<br>` e uno `<span>`.
+
+---
+
 ## I limiti di questo checkup
 
 Vanno letti, perché due misure su tre le ho dovute rifare.
 
-- **Nessuno screen reader vero.** Ho letto l'albero di accessibilità e misurato
-  il DOM; non ho ascoltato NVDA, JAWS o VoiceOver. Le conclusioni sul punto 1 e
-  sul punto 6 sono solide perché riguardano strutture assenti, non sfumature di
-  pronuncia — ma "provato con un lettore vero" sarebbe un'altra cosa.
+- ~~**Nessuno screen reader vero.**~~ **Fatto**, con NVDA 2026.1.1 su Chrome, sul
+  sito pubblicato: vedi il punto 10 e la sezione delle piccole cose. Resta fuori
+  **come suona** — cadenza, velocità, quanto è faticoso all'orecchio — perché la
+  sintesi era a volume zero e quello che ho letto è il testo che NVDA avrebbe
+  pronunciato, preso dal suo log a livello I/O. E resta fuori **come lo usa chi
+  lo usa davvero**: io ho premuto Tab e Invio, non ho navigato per intestazioni,
+  per landmark o con il cursore virtuale come fa chi ci vive dentro.
+- **Il metodo ha mentito, di nuovo, e questa volta si era mangiato le prove.**
+  La prima configurazione usava la sintesi `silence` per non far parlare il
+  computer. Con quella, NVDA registrava a ogni annuncio un errore interno
+  (`getSpeechSequenceWithLangs … 'NoneType' object has no attribute 'replace'`,
+  perché una sintesi muta non dichiara una lingua) e **gli annunci della regione
+  live sparivano**. Stavo per scrivere che la regione live non funziona — cioè
+  riaprire il punto 1 — quando il difetto era mio. Rifatto con eSpeak a volume
+  0: la regione live si sente, e il megannuncio del punto 10 resta.
+  **Uno strumento di prova che zittisce la cosa che deve misurare produce
+  esattamente il difetto che stai cercando.**
 - **Il contrasto del testo sopra le foto non è misurabile così.** L'intestazione
   della ricetta è testo bianco sopra l'immagine, con un gradiente scuro
   sovrapposto — che è la tecnica corretta. Il mio metodo legge il colore di
@@ -645,14 +737,14 @@ Vanno letti, perché due misure su tre le ho dovute rifare.
 
 ## Quello che resta
 
-Dei nove punti, nessuno. Restano i **limiti del metodo**, qui sotto, e vanno
-letti come si legge un consuntivo: sono la parte di lavoro non fatta, non una
-formalità.
+Dei nove punti iniziali, nessuno. **Resta il punto 10**, che non c'era in questa
+lista perché nessuna misura sull'albero poteva vederlo: l'ha trovato NVDA al
+primo Invio su una scheda.
 
-Il più grosso è sempre lo stesso: **nessuna di queste correzioni è stata
-ascoltata con uno screen reader vero.** Tutto ciò che c'è scritto qui viene
-dall'albero di accessibilità e dal DOM misurato. È il modo giusto di verificare
-che una struttura ci sia; non è il modo di sapere come suona.
+Il limite più grosso è caduto — il sito è stato ascoltato per davvero — e
+quello che ha restituito conferma perché valeva la pena: otto punti su nove
+tenevano, e il nono difetto era grosso e invisibile a tutto quello che avevo
+fatto prima.
 
 Gli avanzi dichiarati in fondo ai punti — il `<header>` mancante, la benda
 `overflow-x: hidden`, il pannello dei timer mai guardato mentre conta — sono
