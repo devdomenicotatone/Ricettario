@@ -1017,6 +1017,102 @@
         color: var(--color-text-accent);
         font-weight: 600;
     }
+
+    /* ═══════════════════════════════════════
+       MADE TOGGLE — Bottone "Fatta ✓"
+       ═══════════════════════════════════════ */
+
+    /* Questo blocco stava FUORI dal layer, cioè vinceva su tutte le regole di
+       tutti i layer del progetto qualunque fosse la specificità. Non faceva
+       danno perché nessuno provava a sovrascriverlo: era la trappola che scatta
+       fra sei mesi, quando qualcuno scrive una regola più specifica in
+       `@layer pages` e non capisce perché non si applica. */
+    .made-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 18px;
+        /* Era `var(--color-border)`, token mai definito in tutta la storia del
+           repo: un `var()` che non risolve rende invalida l'intera
+           dichiarazione, quindi `border-style` tornava a `none` e questo
+           pulsante non ha mai avuto il bordo che dichiarava — da marzo. E
+           insieme al bordo non funzionavano nemmeno i due `border-color` degli
+           stati sotto, perché uno stile `none` non ha niente da colorare.
+           Il bordo qui è portante: lo sfondo del pulsante e quello della pagina
+           stanno a 1,05:1, cioè sono indistinguibili, quindi senza bordo il
+           controllo non ha contorno. `--color-text-muted` è lo stesso colore
+           del testo che c'è dentro e dà 5,04:1 in tema scuro, 5,46 in chiaro:
+           sopra la soglia di 3 per il contorno di un comando. */
+        border: 2px solid var(--color-text-muted);
+        border-radius: 100px;
+        background: var(--color-surface-1);
+        color: var(--color-text-muted);
+        font-size: 0.82rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        user-select: none;
+        white-space: nowrap;
+    }
+
+    .made-toggle:hover {
+        border-color: var(--color-accent);
+        color: var(--color-text-accent);
+        background: var(--glow-accent);
+    }
+
+    .made-toggle--active {
+        border-color: var(--color-success);
+        background: var(--color-success);
+        color: var(--color-on-success);
+    }
+
+    .made-toggle--active:hover {
+        background: var(--color-success-hover);
+        border-color: var(--color-success-hover);
+        color: var(--color-on-success);
+    }
+
+    .made-toggle__icon {
+        font-size: 1rem;
+        line-height: 1;
+    }
+
+    .made-toggle--pop {
+        animation: made-pop 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ═══════════════════════════════════════
+       MADE BADGE — Badge "✓" sulle card
+       ═══════════════════════════════════════ */
+
+    .made-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: var(--color-success);
+        color: var(--color-on-success);
+        font-size: 0.85rem;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 5;
+        box-shadow: 0 2px 8px color-mix(in oklch, var(--color-success) 40%, transparent);
+        pointer-events: none;
+    }
+}
+
+/* I `@keyframes` non appartengono a nessun layer — la cascata non li tocca —
+   quindi restano qui accanto agli altri. */
+@keyframes made-pop {
+    0% { transform: scale(1); }
+    30% { transform: scale(1.15); }
+    60% { transform: scale(0.95); }
+    100% { transform: scale(1); }
 }
 
 /* ── View Transitions (SPA navigation) ── */
@@ -1034,80 +1130,3 @@
     from { opacity: 0; }
 }
 
-/* ═══════════════════════════════════════
-   MADE TOGGLE — Bottone "Fatta ✓"
-   ═══════════════════════════════════════ */
-
-.made-toggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 8px 18px;
-    border: 2px solid var(--color-border);
-    border-radius: 100px;
-    background: var(--color-surface-1);
-    color: var(--color-text-muted);
-    font-size: 0.82rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    user-select: none;
-    white-space: nowrap;
-}
-
-.made-toggle:hover {
-    border-color: var(--color-accent);
-    color: var(--color-text-accent);
-    background: var(--glow-accent);
-}
-
-.made-toggle--active {
-    border-color: #16a34a;
-    background: #16a34a;
-    color: #fff;
-}
-
-.made-toggle--active:hover {
-    background: #15803d;
-    border-color: #15803d;
-    color: #fff;
-}
-
-.made-toggle__icon {
-    font-size: 1rem;
-    line-height: 1;
-}
-
-.made-toggle--pop {
-    animation: made-pop 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@keyframes made-pop {
-    0% { transform: scale(1); }
-    30% { transform: scale(1.15); }
-    60% { transform: scale(0.95); }
-    100% { transform: scale(1); }
-}
-
-/* ═══════════════════════════════════════
-   MADE BADGE — Badge "✓" sulle card
-   ═══════════════════════════════════════ */
-
-.made-badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: #16a34a;
-    color: #fff;
-    font-size: 0.85rem;
-    font-weight: 800;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 5;
-    box-shadow: 0 2px 8px rgba(22, 163, 74, 0.4);
-    pointer-events: none;
-}

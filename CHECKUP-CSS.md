@@ -5,20 +5,22 @@
 > `recipe-detail.css` da 29 KB: non ho cercato regole morte né duplicazioni».
 > Questo colma quel buco.
 >
-> **Sette punti aperti, nessuno ancora chiuso:** questo documento è un esame,
-> non un intervento. Le correzioni sono quasi tutte da una riga, ma vanno
-> decise una per una.
+> **Sette punti. Chiuso il primo, restano aperti gli altri sei:** questo
+> documento è nato come esame, non come intervento. Le correzioni sono quasi
+> tutte da una riga, ma vanno decise una per una.
 >
-> **Il più grave riguarda chi usa il sito, non chi legge il codice:** il
-> pulsante «Fatta» e il bollino ✓ sulle schede hanno un contrasto di
-> **3,30:1**, sotto la soglia di 4,5:1. È sfuggito al checkup
-> sull'accessibilità perché compare solo dopo che una ricetta è stata segnata:
-> uno stato in cui quella misura non è mai entrata.
+> **Il punto 1 era il più grave, perché riguardava chi usa il sito e non chi
+> legge il codice:** il pulsante «Fatta» e il bollino ✓ avevano un contrasto di
+> **3,30:1**, sotto la soglia. Era sfuggito al checkup sull'accessibilità
+> perché quel colore compare solo dopo che una ricetta è stata segnata: uno
+> stato in cui quella misura non era mai entrata. Adesso è **5,17:1** in
+> entrambi i temi, il verde è un token, il bordo che il pulsante dichiarava da
+> marzo esiste davvero e il componente è rientrato nel suo layer.
 >
-> **Il più vecchio ha cinque mesi:** tre `var()` puntano a token che **non sono
-> mai esistiti** nella storia del repo. Le dichiarazioni che li usano non hanno
-> mai applicato niente, e con loro non hanno mai funzionato le sfumature ai
-> bordi dei caroselli e l'ombra delle frecce.
+> **Il più vecchio ancora aperto ha cinque mesi:** due `var()` puntano a token
+> che **non sono mai esistiti** nella storia del repo. Le dichiarazioni che li
+> usano non hanno mai applicato niente, e con loro non hanno mai funzionato le
+> sfumature ai bordi dei caroselli e l'ombra delle frecce.
 >
 > **Metodo:** analisi statica dei 19 fogli (163 KB) più misure nel browser sulle
 > pagine vere. Le classi sospette non sono state dedotte: sono state contate nel
@@ -54,33 +56,45 @@ corta perché l'impianto è buono.
 
 ---
 
-## 1. Il pulsante «Fatta» — tre difetti in dodici righe
+## 1. Il pulsante «Fatta» — tre difetti in dodici righe — CHIUSO
 
-`recipe-detail.css:1041-1073`. È il pulsante «Segna come fatta» in cima a ogni
-ricetta, più il bollino ✓ che compare sulle schede. Dodici righe di CSS con tre
-cose sbagliate, di tre nature diverse.
+`recipe-detail.css`. È il pulsante «Segna come fatta» in cima a ogni ricetta,
+più il bollino ✓ che compare sulle schede. Dodici righe di CSS con tre cose
+sbagliate, di tre nature diverse.
 
-### Il contrasto è sotto soglia
+### Il contrasto era sotto soglia
 
 Misurato sulla pagina vera, con le transizioni disattivate perché il valore
 calcolato non mentisse:
 
-| | testo | sfondo | contrasto | soglia |
-|---|---|---|---|---|
-| «Fatta!» attivo | `#fff` | `#16a34a` | **3,30:1** | 4,5:1 |
-| bollino ✓ sulle schede | `#fff` | `#16a34a` | **3,30:1** | 4,5:1 |
+| | testo | sfondo | prima | dopo | soglia |
+|---|---|---|---|---|---|
+| «Fatta!» attivo | bianco caldo | verde | 3,30:1 | **5,17:1** | 4,5:1 |
+| bollino ✓ sulle schede | bianco caldo | verde | 3,30:1 | **5,17:1** | 4,5:1 |
+| verde contro la pagina, tema scuro | | | 3,03 | **3,51** | 3:1 |
+| verde contro la pagina, tema chiaro | | | 3,03 | **5,17** | 3:1 |
 
 Il bollino è un carattere da 13,6 px in grassetto: non è «testo grande», quindi
-la soglia resta 4,5. Scurire il verde a circa `#137a37` porta il contrasto sopra
-4,5 senza cambiare la tinta in modo percepibile.
+la soglia resta 4,5.
 
-**Perché il checkup sull'accessibilità non l'ha visto:** quella misura passava
-in rassegna le pagine come si presentano, e questo colore esiste solo **dopo**
-che l'utente ha segnato una ricetta. Uno stato in cui non è mai entrata. È lo
-stesso limite di allora, scritto in fondo a quel documento — «un solo motore, e
-solo gli stati che ho attraversato».
+**Perché il checkup sull'accessibilità non l'aveva visto:** quella misura
+passava in rassegna le pagine come si presentano, e questo colore esiste solo
+**dopo** che l'utente ha segnato una ricetta. Uno stato in cui non è mai
+entrata.
 
-### Il bordo dichiarato non esiste
+**Il verde adesso è un token**, `--color-success`, con il suo `--hover` e il suo
+`--color-on-success`: prima era `#16a34a` scritto a mano in cinque punti, quindi
+il «fatto» non aveva un colore nel sistema.
+
+Un dettaglio deciso e non subìto: quei token stanno in `:root` e **non** nei due
+blocchi per tema, al contrario di `--color-danger`. La ragione è nell'uso.
+`danger` è un colore di *testo*, e in tema scuro va schiarito per restare
+leggibile; questo è un colore di *riempimento* che porta sopra di sé del testo
+chiaro, quindi schiarirlo romperebbe proprio la cosa che deve garantire. Un
+unico valore scuro funziona in tutti e due i temi — ed è per questo che i numeri
+qui sopra sono identici a destra.
+
+### Il bordo dichiarato non esisteva
 
 ```css
 border: 2px solid var(--color-border);   /* ← token mai definito */
@@ -89,23 +103,37 @@ border: 2px solid var(--color-border);   /* ← token mai definito */
 `--color-border` non è mai esistito in questo repo. Quando un `var()` non
 risolve, la dichiarazione è **invalida al momento del calcolo** e la proprietà
 torna al valore iniziale: `border-style: none`. Misurato sul pulsante vero,
-`0px none` **in tutti e due gli stati** — e quindi anche il `border-color:
-#16a34a` dello stato attivo non disegna niente, perché uno stile `none` non ha
-colore da mostrare.
+`0px none` **in tutti e due gli stati** — e quindi anche il `border-color` dello
+stato attivo non disegnava niente, perché uno stile `none` non ha colore da
+mostrare. Il pulsante è nato con un bordo da 2 px il **30 marzo 2026** e non
+l'ha mai avuto.
 
-Il pulsante è nato con un bordo da 2 px il **30 marzo 2026** e non l'ha mai
-avuto.
+Quel bordo non è decorativo, è portante: lo sfondo del pulsante e quello della
+pagina stanno a **1,05:1**, cioè sono indistinguibili. Senza bordo il controllo
+non ha contorno, e l'unica cosa che lo segnala è il testo.
 
-### Sta fuori dal layer
+Adesso è `2px solid var(--color-text-muted)` — lo stesso colore del testo che
+c'è dentro, quindi il pulsante resta un oggetto solo. Misurato contro il proprio
+sfondo: **5,04:1** in tema scuro, **5,46** in chiaro, sopra la soglia di 3 per
+il contorno di un comando.
 
-Il blocco `@layer pages` di `recipe-detail.css` chiude a riga 1020. Tutto il
-componente — `.made-toggle`, `.made-toggle--active`, `.made-badge` — sta **dopo**,
-quindi non è in nessun layer. E le regole senza layer **vincono su tutte quelle
-nei layer**, qualunque sia la specificità.
+### Stava fuori dal layer
 
-Oggi non fa danno perché nessuno prova a sovrascriverlo. È il tipo di trappola
-che scatta fra sei mesi, quando qualcuno scriverà una regola più specifica in
-`@layer pages` e non capirà perché non si applica.
+Il blocco `@layer pages` di `recipe-detail.css` chiudeva prima del componente:
+`.made-toggle`, `.made-toggle--active` e `.made-badge` stavano **dopo**, quindi
+in nessun layer — e le regole senza layer vincono su tutte quelle nei layer,
+qualunque sia la specificità.
+
+Non faceva danno perché nessuno provava a sovrascriverle. Era la trappola che
+scatta fra sei mesi, quando qualcuno scrive una regola più specifica in
+`@layer pages` e non capisce perché non si applica. Adesso il componente sta
+dentro il layer; fuori restano solo i `@keyframes`, che la cascata non tocca, e
+le `::view-transition`.
+
+**Verificato** sul pulsante vero e su un bollino istanziato nella pagina, in
+entrambi i temi: bordo `2px solid` (era `0px none`), testo su verde 5,17:1 in
+tutti e due i temi, e l'ombra del bollino non è più un `rgba` scritto a mano ma
+un `color-mix` sul token.
 
 ---
 
@@ -121,7 +149,7 @@ i nomi generici di un design system diverso.
 |---|---|---|---|
 | `--color-bg` | `category-carousel.css:116` e `:121` | 20/02/2026 | `background-image: none` |
 | `--shadow-card` | `category-carousel.css:148` | 20/02/2026 | `box-shadow: none` |
-| `--color-border` | `recipe-detail.css:1046` | 30/03/2026 | nessun bordo (punto 1) |
+| ~~`--color-border`~~ | `recipe-detail.css` | 30/03/2026 | **corretto nel punto 1** |
 
 Verificato su git con `-S`: **nessuno dei tre è mai stato definito**, in nessun
 commit. Non si sono rotti, non hanno mai funzionato.
@@ -227,11 +255,11 @@ Non è un problema di contrasto — è un bordo decorativo — ma è esattamente
 tipo di copia che questo progetto ha già pagato altrove: il valore vive in due
 posti e uno dei due non segue più l'altro.
 
-Nella stessa famiglia, di gravità minore: `#16a34a` e `#15803d` (il verde del
-punto 1) non sono token, quindi il «fatto» non ha un colore nel sistema; e sei
-`#fff` in `recipe-detail.css`, metà dei quali sono testo sopra la foto di
-copertina — legittimi, perché lì sotto c'è un gradiente scuro — e metà sono
-sopra il verde del punto 1.
+Nella stessa famiglia c'erano `#16a34a` e `#15803d`, il verde del «fatto», e tre
+dei sei `#fff` di `recipe-detail.css`: **corretti nel punto 1**, adesso sono
+`--color-success` e `--color-on-success`. Gli altri tre `#fff` sono testo sopra
+la foto di copertina e restano legittimi — lì sotto c'è un gradiente scuro
+apposta.
 
 ---
 
@@ -301,17 +329,15 @@ di questo progetto, perché non sono tre, sono nove.
 
 ## Se hai tempo per una cosa sola
 
-**Il punto 1, il pulsante «Fatta».** È l'unico che qualcuno subisce davvero: il
-contrasto sotto soglia lo vede chi ha una vista imperfetta, ed è l'ultimo
-problema di accessibilità rimasto sul sito dopo tutto il lavoro dell'altro
-checkup. La correzione è un colore.
-
-Poi il **punto 2**, che costa tre parole — `--color-surface-0`, `--shadow-lg`,
-un token per il bordo — e restituisce due funzionalità che nessuno ha mai visto
-funzionare.
+**Il punto 2**, adesso che il primo è chiuso. Costa due parole —
+`--color-surface-0` al posto di `--color-bg`, `--shadow-lg` al posto di
+`--shadow-card` — e restituisce due cose che nessuno ha mai visto funzionare: le
+sfumature che dicono «c'è altro, scorri» ai bordi dei caroselli, e l'ombra delle
+frecce.
 
 Il **punto 3** (7 KB di CSS morto) è il più grosso in byte e il meno urgente:
-non si vede, costa solo banda.
+non si vede, costa solo banda. Il **punto 4** (l'accento scritto a mano nella
+navbar) è l'unico rimasto che si veda a occhio, e solo in tema chiaro.
 
 ---
 

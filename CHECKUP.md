@@ -310,15 +310,16 @@ Dichiararlo serve a non far credere che il resto sia stato approvato.
   misurato. È il modo giusto per sapere se una struttura c'è; non è il modo per
   sapere come suona.
 - ~~**Il CSS.**~~ **Fatto**, in un checkup a parte:
-  [CHECKUP-CSS.md](./CHECKUP-CSS.md). Sette punti, tutti aperti — quello è un
-  esame, non un intervento. Il più grave riguarda chi usa il sito: il pulsante
-  «Fatta» e il bollino ✓ hanno un contrasto di 3,30:1, sotto la soglia, e sono
-  sfuggiti al checkup sull'accessibilità perché quel colore compare solo dopo
-  che una ricetta è stata segnata. Il più vecchio ha cinque mesi: tre `var()`
-  puntano a token **mai esistiti**, e con loro non hanno mai funzionato le
-  sfumature dei caroselli e l'ombra delle frecce. Resta fuori quello che è
-  scritto nei suoi limiti: le regole sovrascritte, le prestazioni di disegno e
-  gli stili inline che i renderer scrivono da JavaScript.
+  [CHECKUP-CSS.md](./CHECKUP-CSS.md). Sette punti, **chiuso il primo**. Era il
+  più grave perché riguardava chi usa il sito: il pulsante «Fatta» e il bollino
+  ✓ avevano un contrasto di 3,30:1, sotto la soglia, ed erano sfuggiti al
+  checkup sull'accessibilità perché quel colore compare solo dopo che una
+  ricetta è stata segnata. Adesso è 5,17:1. Il più vecchio fra quelli aperti ha
+  cinque mesi: due `var()` puntano a token **mai esistiti**, e con loro non
+  hanno mai funzionato le sfumature dei caroselli e l'ombra delle frecce.
+  Resta fuori quello che è scritto nei suoi limiti: le regole sovrascritte, le
+  prestazioni di disegno e gli stili inline che i renderer scrivono da
+  JavaScript.
 - **Il calcolatore di cottura nel merito.** Ho verificato che sia integro (918
   piani generati, percorso completo fino al piano nel browser) e che i due file
   puri lo siano ancora, ma non ho messo in discussione i numeri: quelli hanno un
@@ -344,10 +345,9 @@ Il resto del lavoro possibile su questo repo è nella sezione "Cosa questo
 checkup NON ha guardato" qui sopra: prestazioni misurate davvero, compatibilità
 fra browser, l'animazione d'ingresso mai aperta, `npm audit`.
 
-Fuori da qui restano invece **sette punti aperti nel checkup del CSS**, che è
-un esame e non un intervento: vanno decisi uno per uno, e il primo — il
-contrasto del pulsante «Fatta» — è l'ultimo problema di accessibilità rimasto
-sul sito.
+Fuori da qui restano invece **sei punti aperti nel checkup del CSS**: vanno
+decisi uno per uno. Il primo, il contrasto del pulsante «Fatta», era l'ultimo
+problema di accessibilità rimasto sul sito ed è chiuso.
 
 L'accessibilità non è più in quella lista: ha avuto il suo checkup ed è chiusa
 su tutti e nove i punti. L'unica cosa che le resta è una verifica, non una
