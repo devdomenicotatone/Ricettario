@@ -38,7 +38,7 @@
     .category-row__link {
         font-size: 0.9rem;
         font-weight: 600;
-        color: var(--color-accent);
+        color: var(--color-text-accent);
         text-decoration: none;
         display: flex;
         align-items: center;
@@ -256,7 +256,7 @@
         font-size: 0.7rem;
         font-weight: 600;
         background: var(--glow-accent);
-        color: var(--color-accent);
+        color: var(--color-text-accent);
         border: 1px solid color-mix(in oklch, var(--color-accent) 15%, transparent);
     }
 

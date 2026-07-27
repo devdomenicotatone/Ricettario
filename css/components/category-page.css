@@ -76,7 +76,7 @@
         border: 1px solid var(--border-subtle);
         font-size: 0.85rem;
         font-weight: 600;
-        color: var(--color-accent);
+        color: var(--color-text-accent);
     }
 
     /* ── Toolbar Filtri ── */
@@ -154,7 +154,8 @@
     .category-toolbar__sort-btn.active,
     .category-toolbar__sort-btn:hover {
         background: var(--color-accent);
-        color: white;
+        /* Era `white`, che in tema scuro finiva su ambra chiara: 2,60:1. */
+        color: var(--color-on-accent);
         border-color: var(--color-accent);
     }
 
@@ -238,7 +239,7 @@
 
     .category-card:hover .category-card__tag {
         background: var(--color-accent);
-        color: white;
+        color: var(--color-on-accent);
         border-color: var(--color-accent);
     }
 
@@ -262,7 +263,7 @@
     }
 
     .category-card:hover .category-card__title {
-        color: var(--color-accent);
+        color: var(--color-text-accent);
     }
 
     .category-card__desc {
@@ -293,7 +294,7 @@
     }
 
     .breadcrumb a:hover {
-        color: var(--color-accent);
+        color: var(--color-text-accent);
     }
 
     .breadcrumb__separator {
@@ -334,7 +335,7 @@
         font-family: var(--font-display);
         font-size: 1.4rem;
         font-weight: 800;
-        color: var(--color-accent);
+        color: var(--color-text-accent);
     }
 
     .category-stats__label {
@@ -378,7 +379,7 @@
 
     .view-toggle-btn.active {
         background: var(--color-accent);
-        color: white;
+        color: var(--color-on-accent);
         box-shadow: 0 2px 8px color-mix(in oklch, var(--color-accent) 30%, transparent);
     }
 
@@ -391,7 +392,7 @@
     }
 
     .category-toolbar__results strong {
-        color: var(--color-accent);
+        color: var(--color-text-accent);
         font-weight: 700;
     }
 
@@ -500,7 +501,7 @@
 
     .load-more-btn:hover span,
     .load-more-btn:hover svg {
-        color: white;
+        color: var(--color-on-accent);
     }
 
     .load-more-btn span,

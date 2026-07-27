@@ -150,7 +150,7 @@
         gap: var(--space-sm);
         font-size: 0.8rem;
         font-weight: 600;
-        color: var(--color-accent);
+        color: var(--color-text-accent);
         text-transform: uppercase;
         letter-spacing: 3px;
         margin-bottom: var(--space-md);

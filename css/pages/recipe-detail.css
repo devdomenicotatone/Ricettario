@@ -117,7 +117,7 @@
 
             &:hover,
             &:focus-visible {
-                color: var(--color-accent);
+                color: var(--color-text-accent);
             }
         }
     }
@@ -158,30 +158,18 @@
     }
 
 
-    /* Navbar bianca quando c'è hero con picture (non scrollata) */
-    body:has(.recipe-hero__picture) .navbar:not(.scrolled) {
-        & .navbar__logo {
-            color: #fff;
-            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6),
-                0 0 12px rgba(0, 0, 0, 0.2);
-        }
-
-        & .navbar__links a {
-            color: rgba(255, 255, 255, 0.9);
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6),
-                0 0 10px rgba(0, 0, 0, 0.2);
-
-            &:hover {
-                color: #fff;
-                background: rgba(255, 255, 255, 0.12);
-            }
-        }
-
-        & .navbar__hamburger span {
-            background: #fff;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-        }
-    }
+    /* QUI C'ERA la "navbar bianca quando c'è hero con picture": logo, link e
+       hamburger forzati a bianco con text-shadow, per farli leggere sopra la
+       foto di copertina.
+       Era rimasta indietro rispetto alla navbar, che oggi NON è più
+       trasparente: `components/navbar.css` le dà sempre
+       `color-mix(in srgb, var(--color-surface-1) 88%, transparent)`. In tema
+       scuro quella superficie è scura e il bianco reggeva (13,6:1); in tema
+       chiaro è quasi bianca, e i link della navbar uscivano bianchi su bianco:
+       misurato 1,16:1, cioè illeggibili su ogni pagina ricetta.
+       Tolta: la navbar ha il suo fondo e i colori del tema vanno bene in
+       entrambi. Se un giorno tornasse trasparente sopra la foto, questa regola
+       va riscritta insieme a quella trasparenza, non da sola. */
 
     .recipe-hero__content {
         position: relative;
@@ -225,7 +213,7 @@
             color: var(--color-text-secondary);
 
             &:hover {
-                color: var(--color-accent);
+                color: var(--color-text-accent);
             }
         }
     }
@@ -260,7 +248,7 @@
     }
 
     .tech-badge__value {
-        color: var(--color-accent);
+        color: var(--color-text-accent);
     }
 
     /* Recipe layout */
@@ -350,7 +338,7 @@
             &:last-child {
                 text-align: end;
                 font-weight: 600;
-                color: var(--color-accent);
+                color: var(--color-text-accent);
                 border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
             }
         }
@@ -390,7 +378,7 @@
                 justify-content: center;
                 font-weight: 700;
                 font-size: 0.85rem;
-                color: var(--color-accent);
+                color: var(--color-text-accent);
             }
 
             & strong {
@@ -483,7 +471,7 @@
         }
 
         & strong {
-            color: var(--color-accent);
+            color: var(--color-text-accent);
         }
     }
 
@@ -500,7 +488,7 @@
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 1.2px;
-        color: var(--color-accent);
+        color: var(--color-text-accent);
         border-bottom: 2px solid var(--border-accent);
         background: transparent;
     }
@@ -521,7 +509,7 @@
         font-size: 0.92rem;
     }
     .ingredient-total-row .ingredient-qty {
-        color: var(--color-accent);
+        color: var(--color-text-accent);
         font-size: 1rem;
         font-weight: 800;
     }
@@ -569,7 +557,7 @@
         border: 1px solid var(--border-medium);
         border-radius: var(--radius-sm);
         background: var(--color-surface-2);
-        color: var(--color-accent);
+        color: var(--color-text-accent);
         font-size: 1.2rem;
         font-weight: 700;
         cursor: pointer;
@@ -581,7 +569,7 @@
 
         &:hover {
             background: var(--color-accent);
-            color: var(--color-surface);
+            color: var(--color-on-accent);
             border-color: var(--color-accent);
             transform: scale(1.08);
         }
@@ -598,7 +586,7 @@
 
         &:hover {
             background: var(--color-surface-2);
-            color: var(--color-accent);
+            color: var(--color-text-accent);
             border-color: var(--border-medium);
             transform: none;
         }
@@ -612,7 +600,12 @@
         justify-content: center;
         padding: 0 14px;
         background: var(--color-accent);
-        color: var(--color-surface);
+        /* Era `var(--color-surface)`, un token che non esiste: la
+           dichiarazione non applicava niente e il badge ereditava il testo
+           chiaro della pagina, finendo a 2,05:1 su ambra — il contrasto
+           peggiore del sito, proprio sul numero che dice quante dosi stai
+           calcolando. */
+        color: var(--color-on-accent);
         border-radius: 100px;
         font-size: 0.95rem;
         font-weight: 700;
@@ -680,7 +673,7 @@
         margin-top: var(--space-md);
         padding: 12px 24px;
         background: var(--color-accent);
-        color: white;
+        color: var(--color-on-accent);
         border-radius: 8px;
         text-decoration: none;
         font-weight: 600;
@@ -691,7 +684,7 @@
 
     /* ── Dose Inline (token nel procedimento) ── */
     .dose-inline {
-        color: var(--color-accent);
+        color: var(--color-text-accent);
         font-weight: 700;
         font-variant-numeric: tabular-nums;
         transition: color 0.3s ease, transform 0.3s ease;
@@ -746,7 +739,7 @@
         border-radius: 20px;
         font-size: 13px;
         font-weight: 600;
-        color: var(--color-accent);
+        color: var(--color-text-accent);
     }
 
     .sensory-canvas-wrap {
@@ -824,7 +817,7 @@
     .nutrition-toggle__icon {
         width: 16px;
         height: 16px;
-        color: var(--color-accent);
+        color: var(--color-text-accent);
     }
 
     .nutrition-content {
@@ -943,7 +936,7 @@
     }
 
     .flour-table__w {
-        color: var(--color-accent);
+        color: var(--color-text-accent);
         font-weight: 600;
     }
 }
@@ -986,7 +979,7 @@
 
 .made-toggle:hover {
     border-color: var(--color-accent);
-    color: var(--color-accent);
+    color: var(--color-text-accent);
     background: var(--glow-accent);
 }
 

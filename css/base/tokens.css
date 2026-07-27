@@ -81,8 +81,28 @@
         /* Testo */
         --color-text: oklch(0.22 0.02 50);
         --color-text-secondary: oklch(0.40 0.02 50);
-        --color-text-muted: oklch(0.55 0.015 55);
-        --color-text-accent: var(--color-accent);
+        /* Era 0.55, che dava 3,74:1 sulla superficie più scura: sotto il
+           minimo di 4,5 che WCAG chiede per il testo normale. A 0.48 il
+           rapporto sta fra 4,99 e 6,32 su tutte e quattro le superfici. */
+        --color-text-muted: oklch(0.48 0.015 55);
+        /* L'accento QUANDO FA DA TESTO, che non è lo stesso lavoro che fa da
+           sfondo. A 0.55 — il valore dell'accento — dava 4,38:1 sulla
+           superficie 1 e 4,00 sulla 3: sotto il minimo. A 0.50 sta fra 4,97 e
+           6,29, tinta al 10% compresa (il riquadro dei "PRO TIP").
+           Il token esisteva già ma era un alias di --color-accent, quindi non
+           serviva a niente: adesso ha un valore suo, ed è quello che usano
+           tutte e 40 le dichiarazioni `color:` accentate del progetto. */
+        --color-text-accent: oklch(0.50 0.16 35);
+        /* Il testo che va SOPRA lo sfondo accento.
+           Prima non esisteva, e ogni punto del CSS tirava a indovinare:
+           `white`, `--color-surface-0`, `--color-surface-2`, e perfino
+           `--color-surface`, che non esiste — quindi non applicava niente e il
+           badge delle dosi ereditava il testo chiaro, finendo a 2,05:1.
+           Qui l'accento è terracotta scuro: ci vuole un testo chiaro (4,80:1,
+           e 6,04 sull'accento in hover). NON è un alias di --color-surface-0:
+           se un giorno le superfici cambiano, questo valore va riverificato
+           contro --color-accent, non trascinato dietro. */
+        --color-on-accent: oklch(0.97 0.008 80);
 
         /* Bordi */
         --border-subtle: oklch(0.22 0.02 50 / 0.08);
@@ -133,8 +153,18 @@
         /* Testo — crema caldo */
         --color-text: oklch(0.92 0.01 75);
         --color-text-secondary: color-mix(in oklch, oklch(0.92 0.01 75) 65%, transparent);
-        --color-text-muted: color-mix(in oklch, oklch(0.92 0.01 75) 42%, transparent);
+        /* Era 42%, che dava fra 3,37 e 3,48:1 sulle quattro superfici: sotto
+           il minimo di 4,5. Il tema scuro stava peggio del chiaro ed è quello
+           predefinito per chi ha il sistema in scuro. A 55% il rapporto sta
+           fra 4,74 e 5,15. */
+        --color-text-muted: color-mix(in oklch, oklch(0.92 0.01 75) 55%, transparent);
         --color-text-accent: var(--color-accent);
+        /* Il testo che va SOPRA lo sfondo accento — vedi il tema chiaro per il
+           perché esiste. Qui l'accento è ambra chiara, quindi ci vuole un
+           testo scuro: 7,58:1, e 6,43 sull'accento in hover. Il testo chiaro,
+           che è quello che il badge delle dosi ereditava per sbaglio, dava
+           2,05. */
+        --color-on-accent: oklch(0.15 0.015 50);
 
         /* Bordi */
         --border-subtle: oklch(1 0 0 / 0.06);

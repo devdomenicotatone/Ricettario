@@ -135,7 +135,7 @@
         border: none;
         border-radius: var(--radius-md);
         background: var(--color-accent);
-        color: var(--color-surface-2);
+        color: var(--color-on-accent);
         font-family: var(--font-ui);
         font-size: 1.05rem;
         font-weight: 700;
@@ -227,7 +227,7 @@
 
         .cottura-opzione.is-attiva & {
             background: var(--color-accent);
-            color: var(--color-surface-2);
+            color: var(--color-on-accent);
             border-color: transparent;
         }
     }
@@ -322,7 +322,7 @@
         margin-left: auto;
         font-size: 0.85rem;
         font-weight: 700;
-        color: var(--color-accent);
+        color: var(--color-text-accent);
         text-decoration: underline;
         text-underline-offset: 3px;
         white-space: nowrap;
@@ -537,7 +537,7 @@
         font-size: clamp(3.4rem, 20vw, 6rem);
         font-weight: 700;
         line-height: 1;
-        color: var(--color-accent);
+        color: var(--color-text-accent);
         font-variant-numeric: tabular-nums;
         margin-block: var(--space-xs) var(--space-sm);
     }
@@ -595,7 +595,7 @@
         height: 32px;
         border-radius: var(--radius-full);
         background: var(--color-accent);
-        color: var(--color-surface-2);
+        color: var(--color-on-accent);
         font-size: 0.95rem;
         font-weight: 700;
     }
@@ -658,7 +658,7 @@
 
     .piano-fase__tappa {
         font-variant-numeric: tabular-nums;
-        color: var(--color-accent);
+        color: var(--color-text-accent);
         font-weight: 600;
     }
 
@@ -737,7 +737,7 @@
         border: none;
         border-radius: var(--radius-md);
         background: var(--color-accent);
-        color: var(--color-surface-2);
+        color: var(--color-on-accent);
         font-family: var(--font-ui);
         font-size: 1rem;
         font-weight: 700;
@@ -772,7 +772,7 @@
         font-weight: 700;
         line-height: 1;
         text-align: center;
-        color: var(--color-accent);
+        color: var(--color-text-accent);
         font-variant-numeric: tabular-nums;
     }
 
@@ -922,7 +922,7 @@
         font-size: 1.6rem;
         font-weight: 700;
         line-height: 1;
-        color: var(--color-accent);
+        color: var(--color-text-accent);
         font-variant-numeric: tabular-nums;
     }
 
@@ -962,7 +962,7 @@
 
     .barra-timer__bottone--fine {
         background: var(--color-accent);
-        color: var(--color-surface-2);
+        color: var(--color-on-accent);
         border-color: transparent;
     }
 
@@ -1000,7 +1000,7 @@
     .esito__quando {
         font-size: 0.88rem;
         font-weight: 600;
-        color: var(--color-accent);
+        color: var(--color-text-accent);
     }
 
     .esito__scelte {
@@ -1080,7 +1080,7 @@
     }
 
     .storico__esito--punto {
-        color: var(--color-accent);
+        color: var(--color-text-accent);
         border-color: var(--border-accent);
     }
 
@@ -1150,7 +1150,7 @@
         margin-bottom: var(--space-lg);
 
         & a {
-            color: var(--color-accent);
+            color: var(--color-text-accent);
             font-weight: 600;
         }
     }

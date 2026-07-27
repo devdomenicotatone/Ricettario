@@ -81,7 +81,7 @@
         transform: translateX(-50%);
         padding: var(--space-sm) var(--space-md);
         background: var(--color-accent);
-        color: var(--color-surface-0);
+        color: var(--color-on-accent);
         font-weight: 700;
         border-radius: var(--radius-sm);
         z-index: 9999;

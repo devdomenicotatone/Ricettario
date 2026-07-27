@@ -43,7 +43,7 @@
         /* Stato attivo */
         &.active {
             background: var(--glow-accent-strong);
-            color: var(--color-accent);
+            color: var(--color-text-accent);
             border-color: var(--border-accent);
             box-shadow: var(--shadow-glow);
         }

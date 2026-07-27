@@ -65,7 +65,7 @@
         border-radius: var(--radius-full);
         font-size: 0.7rem;
         font-weight: 600;
-        color: var(--color-accent);
+        color: var(--color-text-accent);
         text-transform: uppercase;
         letter-spacing: 2px;
         margin-bottom: var(--space-lg);
@@ -134,7 +134,7 @@
         transition: color var(--transition-fast);
 
         .hero__search:focus-within & {
-            color: var(--color-accent);
+            color: var(--color-text-accent);
         }
     }
 
@@ -155,7 +155,9 @@
     .hero__search-kbd {
         display: none;
         padding: 2px 8px;
-        background: var(--color-surface);
+        /* Era `var(--color-surface)`, token che non esiste: la dichiarazione
+           non applicava niente e il riquadro restava trasparente. */
+        background: var(--color-surface-2);
         border: 1px solid var(--border-medium);
         border-radius: 6px;
         font-size: 0.72rem;

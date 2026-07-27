@@ -73,7 +73,7 @@
             gap: var(--space-sm);
 
             &:hover {
-                color: var(--color-accent);
+                color: var(--color-text-accent);
                 transform: translateX(4px);
             }
         }
@@ -135,7 +135,7 @@
             &:hover {
                 background: var(--glow-accent);
                 border-color: var(--border-accent);
-                color: var(--color-accent);
+                color: var(--color-text-accent);
                 transform: translateY(-2px);
             }
         }

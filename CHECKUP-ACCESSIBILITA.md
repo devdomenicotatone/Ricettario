@@ -3,10 +3,12 @@
 > **27/07/2026.** Il [CHECKUP.md](./CHECKUP.md) generale dichiarava di non aver
 > guardato l'accessibilità oltre agli attributi `alt`. Questo colma quel buco.
 >
-> **Chiusi i punti 1, 2 e 3** — le tre voci che riguardavano tutte le 105
-> pagine: il cambio di rotta adesso viene annunciato e il focus gestito, esiste
-> il landmark principale, e lo skip link porta da qualche parte. Le altre
-> cinque sono ancora aperte.
+> **Chiusi i punti 1, 2, 3, 4 e 5.** Il cambio di rotta viene annunciato e il
+> focus gestito, esiste il landmark principale, lo skip link porta da qualche
+> parte, e il contrasto è a norma ovunque: misurato **zero problemi** su
+> homepage, ricetta, categoria e calcolatore, in entrambi i temi.
+>
+> **Restano aperti i punti 6, 7, 8 e 9.**
 >
 > Le voci sono in ordine di quanto pesano per chi le subisce, non di quanto
 > costa sistemarle.
@@ -140,45 +142,76 @@ rinominando.
 
 ---
 
-## 4. Il testo attenuato non arriva al contrasto minimo
+## 4 e 5. Contrasto — CHIUSI, e il rimedio era più largo del sintomo
 
-**Chi ne soffre:** chi ha una vista ridotta, chi legge al sole, tutti su uno
-schermo scadente. Serve **4,5:1**; il token `--color-text-muted` (42% di
-opacità) non ci arriva in nessuno dei due temi.
+Erano tre difetti diversi che si presentavano come uno. Adesso la misura dà
+**zero problemi** su homepage, pagina ricetta, pagina categoria e calcolatore
+(piano di cottura compreso), in **entrambi i temi**.
 
-| dove | scuro | chiaro |
+### Il testo attenuato (punto 4)
+
+Il token `--color-text-muted` non arrivava a 4,5:1 in nessuno dei due temi.
+Colpiva le note degli ingredienti, le intestazioni della tabella farine, i
+conteggi, il piè di pagina.
+
+| | prima | dopo |
 |---|---|---|
-| «2 ricette» (conteggio categoria) | **3,44** | 4,50 |
-| note degli ingredienti | **3,46** | — |
-| intestazioni tabella farine | **3,46** | — |
-| «Riposo 20-40 min» | **3,46** | 3,55 |
-| «Segna come fatta» | **3,48** | 4,10 |
-| «© Ricettario Lab» | **3,48** | 4,10 |
-| «Il mio setup» (etichetta sezione) | — | 4,38 |
+| tema scuro (opacità) | 42% → 3,37-3,48:1 | **55% → 4,74-5,15:1** |
+| tema chiaro (lightness) | 0.55 → 3,74-4,50:1 | **0.48 → 4,99-6,32:1** |
 
-Il tema scuro sta peggio, ed è il tema predefinito per chi ha il sistema in
-scuro. Non è un caso limite: le note degli ingredienti sono contenuto della
-ricetta, non decorazione.
+Le percentuali non sono a occhio: ho cercato per tentativi il valore minimo che
+passa su tutte e quattro le superfici del tema, e ho preso il primo con margine.
 
-Si corregge in un posto solo — `css/base/tokens.css`, alzando l'opacità del
-token da 42% a circa 60% nel tema scuro.
+### Il badge delle dosi (punto 5) — era un refuso
 
----
+Il caso peggiore del sito, 2,05:1, e la causa non era una scelta cromatica
+sbagliata: `.dose-calculator__display` diceva `color: var(--color-surface)`, e
+**quel token non esiste**. La dichiarazione non applicava niente, il badge
+ereditava il testo chiaro della pagina e finiva su ambra chiara.
 
-## 5. Il badge delle dosi: 2,05:1
+Lo stesso token inesistente era usato in altri due punti — uno rendeva
+trasparente un riquadro che doveva avere uno sfondo.
 
-**Il caso peggiore trovato.** Il riquadro `×1` del calcolatore delle dosi, nella
-pagina ricetta, in tema scuro:
+| | prima | dopo |
+|---|---|---|
+| badge dosi, tema scuro | 2,05 | **7,58** |
+| badge dosi, tema chiaro | 3,33 | **4,80** |
 
-```
-testo:   oklch(0.92 0.01 75)   (chiaro)
-sfondo:  oklch(0.72 0.16 55)   (ambra)
-rapporto: 2,05:1   — ne servono 4,5
-```
+### Il difetto vero: nessuno aveva deciso cosa va sopra l'accento
 
-Testo chiaro su ambra chiara. In tema chiaro va meglio ma non basta (3,33:1).
-È il numero che dice quante dosi stai calcolando: se non si legge, il
-calcolatore non si usa.
+Cercando gli altri usi del token inesistente è saltato fuori che ogni punto del
+CSS aveva **indovinato** per conto suo cosa scrivere su uno sfondo accento:
+`white` in tre posti, `--color-surface-0` in uno, `--color-surface-2` in
+quattro, e il token inesistente in due. Alcuni azzeccavano per caso, altri no —
+`white` su ambra chiara dà 2,60:1.
+
+Adesso c'è **`--color-on-accent`**, definito una volta per tema e verificato
+contro l'accento: 7,58:1 nel tema scuro, 4,80 nel chiaro (6,43 e 6,04 sugli
+accenti in hover). Tutte le dichiarazioni lo usano.
+
+### E l'accento come testo
+
+Con quelli sistemati restava un residuo uniforme in tema chiaro: 4,38-4,39
+ovunque comparisse l'accento come colore del **testo** — appena sotto la
+soglia. Esisteva già un token per quel lavoro, `--color-text-accent`, ma era un
+alias di `--color-accent`, quindi non serviva a niente. Adesso ha un valore suo
+(0.50 invece di 0.55: da 4,97 a 6,29 su tutte le superfici), e lo usano tutte e
+40 le dichiarazioni `color:` accentate del progetto.
+
+### Il bug trovato mentre verificavo
+
+Rimisurando è emerso qualcosa che **non era nella lista**: sulle pagine ricetta,
+in tema chiaro, i link della navbar erano **bianchi su bianco — 1,16:1**.
+
+Una regola in `recipe-detail.css` forzava logo e link a bianco quando la pagina
+ha una foto di copertina, per farli leggere sopra l'immagine. Era rimasta
+indietro: la navbar oggi non è più trasparente, ha sempre uno sfondo
+semiopaco preso da `--color-surface-1`. In tema scuro quella superficie è scura
+e il bianco reggeva (13,6:1), quindi il difetto era invisibile a chi sviluppa in
+scuro — cioè al tema predefinito. Tolta la regola: **14,81:1**.
+
+Non l'avevo trovato nel checkup perché avevo misurato la navbar solo sulla
+homepage, dove sta sopra un fondo scuro.
 
 ---
 
@@ -289,18 +322,28 @@ Vanno letti, perché due misure su tre le ho dovute rifare.
 
 ## Se hai tempo per una cosa sola
 
-**I punti 4 e 5: il contrasto.**
+**Il punto 6: il grafico sensoriale.**
 
-Sono quelli che restano più gravi, e si correggono quasi tutti in un file solo,
-`css/base/tokens.css`: alzare l'opacità del token del testo attenuato (oggi 42%,
-sotto soglia in entrambi i temi) e scurire il fondo del badge delle dosi, che a
-2,05:1 è il numero meno leggibile del sito.
+Costa poco, perché i dati esistono già in forma testuale — `sensoryProfile.axes`
+è un elenco di etichette e valori, e `summary` è già una descrizione scritta.
+Vale molto, perché oggi quel pannello per chi ascolta non contiene niente.
 
-Poi il punto 6, il grafico sensoriale: costa poco perché i dati esistono già in
-forma testuale, e vale molto perché oggi quel pannello, per chi ascolta, non
-contiene niente.
+Poi il 7 (due controlli senza indicatore di focus) e il 9 (le voci minori), che
+sono piccoli. Il punto 8, i 21 px di scorrimento a 320 px, è il più fastidioso
+da sistemare perché tocca il logo della navbar.
 
-Nota su come sono andate le prime tre: la chiusura dei punti 2 e 3 ha reso il
-punto 1 molto più economico di com'era stimato — il `main#contenuto` con
-`tabindex="-1"` era esattamente il bersaglio che serviva al router. Vale la pena
-guardare se anche fra le voci rimaste qualcuna ne sblocca un'altra.
+## Una cosa che si è ripetuta tre volte
+
+Chiudere un punto ha reso più economico o più visibile quello dopo:
+
+- i punti 2 e 3 hanno consegnato al punto 1 il bersaglio che gli serviva
+  (`main#contenuto` focalizzabile);
+- il punto 5 non era un colore sbagliato ma **un token inesistente**, e
+  cercarne gli altri usi ha fatto emergere che nessuno aveva mai deciso cosa
+  scrivere sopra l'accento — otto punti che tiravano a indovinare;
+- rimisurare dopo la correzione ha fatto saltare fuori la navbar bianca su
+  bianco, che nel checkup non c'era perché l'avevo misurata solo dove il fondo
+  era scuro.
+
+Morale operativa: dopo ogni correzione conviene **rimisurare tutto**, non solo
+la cosa corretta.
