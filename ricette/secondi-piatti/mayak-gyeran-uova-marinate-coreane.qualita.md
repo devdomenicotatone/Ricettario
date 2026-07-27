@@ -1,19 +1,19 @@
 # Qualità: Mayak Gyeran
 
-## 🟢 Score Finale: 95/100
+## 🟢 Score Finale: 98/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 0 warning |
-| Gemini | 95/100 | 🟢 Buona |
+| Gemini | 98/100 | 🟢 Buona |
 
-La ricetta è di qualità professionale, estremamente dettagliata e tecnicamente ineccepibile. Dosi, tempi e temperature sono perfetti per il risultato desiderato. Le spiegazioni chimico-fisiche (ruolo del sale/aceto, shock termico) sono da manuale. L'unico, piccolissimo, margine di miglioramento riguarda la chiarezza di un ingrediente ripetuto.
+Ricetta di qualità eccellente, redatta con una precisione tecnica e una chiarezza espositiva da manuale. Le spiegazioni sui processi chimico-fisici (cottura dell'uovo, shock termico, marinatura) sono ineccepibili e dimostrano profonda competenza. Non sono presenti errori critici; l'unico spunto di miglioramento è un dettaglio di formattazione per la massima chiarezza.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| 💡 | Coerenza | L'ingrediente 'Aceto di Riso' è presente due volte in due gruppi diversi (Per le Uova, Per la Marinata). Sebbene il procedimento specifichi correttamente quale usare, questa duplicazione nell'elenco potrebbe confondere un utente durante la preparazione degli ingredienti, portandolo a sommare le dosi. | Differenziare i nomi nell'elenco ingredienti per renderli inequivocabili, ad esempio: 'Aceto di Riso (per cottura)' e 'Aceto di Riso (per marinata)', rispecchiando la distinzione già presente nei token del procedimento ({aceto_cottura} e {aceto_marinata}). |
+| 💡 | Setup | L'ingrediente 'Salsa di Pesce' è correttamente indicato come facoltativo nella descrizione tra doppie parentesi e nel procedimento ('Se disponibile...'), ma per una leggibilità immediata sarebbe preferibile evidenziarlo anche nel nome dell'ingrediente stesso. | Modificare la riga dell'ingrediente in: 'Salsa di Pesce (facoltativa) 15g' per rendere l'opzionalità evidente a colpo d'occhio, senza dover leggere la descrizione. |
 
 ---
-*Generato: 2026-07-27T20:54:20.861Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-27T21:00:36.799Z | Pipeline: Schema → Gemini*

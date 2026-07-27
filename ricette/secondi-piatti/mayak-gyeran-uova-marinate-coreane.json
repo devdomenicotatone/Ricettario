@@ -216,6 +216,39 @@
   "_generatedBy": "claude",
   "_createdAt": "2026-07-27T20:27:38.646Z",
   "image": "images/ricette/secondi-piatti/mayak-gyeran-uova-marinate-coreane.webp",
-  "imageAttribution": "📷 Foto: FOX ^.ᆽ.^= ∫ — Pexels License via Pexels",
-  "_originalImageUrl": "https://images.pexels.com/photos/29731796/pexels-photo-29731796.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
+  "_originalImageUrl": "",
+  "sensoryProfile": {
+    "summary": "Le Mayak Gyeran si presentano con un profilo organolettico stratificato e seducente: l'albume, sodo ma serico, cede a un tuorlo cremoso e avvolgente che si fonde con una marinata dalla complessità umami profonda, sostenuta dalle note fermentative della salsa di soia e dalla salsa di pesce. Al palato si susseguono onde di sapidità intensa bilanciate dalla dolcezza del miele e dall'acidità viva dell'aceto di riso, mentre il peperoncino fresco introduce un calore progressivo e i semi di sesamo tostati rilasciano un finale tostato e nocciolato di grande persistenza.",
+    "axes": [
+      {
+        "label": "Cremosità del Tuorlo",
+        "value": 9
+      },
+      {
+        "label": "Piccantezza",
+        "value": 5
+      },
+      {
+        "label": "Complessità Fermentativa",
+        "value": 8
+      },
+      {
+        "label": "Sapidità",
+        "value": 9
+      },
+      {
+        "label": "Note Tostate / Cerealicole",
+        "value": 4
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 148,
+    "macros": {
+      "carbs": 14,
+      "protein": 9,
+      "fat": 5
+    }
+  }
 }
