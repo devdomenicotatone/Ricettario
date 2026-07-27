@@ -18,6 +18,7 @@ import '../css/components/footer.css';
 import '../css/pages/recipe-detail.css';
 import '../css/components/category-page.css';
 import '../css/utilities/animations.css';
+import '../css/utilities/testo.css';
 
 // ── SPA Router ──
 import { initRouter, registerRenderers, initReveal, BASE } from './router.js';

@@ -552,7 +552,7 @@ deploy, nominando il file, la riga e il layer che ci vuole.
 
 ---
 
-## 6. Sette blocchi di dichiarazioni identici
+## 6. Sette blocchi di dichiarazioni identici — CHIUSO
 
 Cercati i blocchi con almeno tre proprietà uguali. Il più interessante è la
 ricetta del testo con gradiente, ripetuta **in tre fogli** — `hero.css:87`,
@@ -571,13 +571,30 @@ Le tre copie usano lo stesso token e sono ancora identiche: qui la duplicazione
 non ha ancora fatto danno. Ma sono quattro proprietà che vanno insieme o non
 funzionano — se un giorno ne serve una quinta (`color` di ripiego per i browser
 che non fanno il clip, per dirne una) va aggiunta in tre punti, e basta
-dimenticarne uno.
+dimenticarne uno perché quel titolo diventi invisibile: `-webkit-text-fill-color:
+transparent` senza il clip che lo riempie è testo trasparente su niente.
 
-Gli altri sei sono coincidenze innocue fra componenti diversi
-(`display: flex; align-items: center; gap`), tranne uno che vale la pena
-guardare: `.recipe-card--compact__image` e `.category-card__image` hanno le
-stesse quattro proprietà, cioè due schede diverse che si comportano già
-identiche sull'immagine.
+**Adesso è una sola**, l'utility `.testo-gradiente` in `css/utilities/testo.css`,
+e i tre `<span>` la portano nel markup. Sta fra le utility e non fra i componenti
+perché non appartiene a nessuno dei tre: è un modo di dipingere il testo, non una
+parte dell'hero. I tre span stavano tutti in `index.html`, quindi non c'è stato
+niente da cambiare nel JavaScript.
+
+**Gli altri sei restano dove sono, ed è una decisione.** Sono coincidenze fra
+componenti diversi (`display: flex; align-items: center; gap`): unificarle
+vorrebbe dire legare due componenti che oggi si somigliano per caso, e la prima
+volta che uno dei due deve cambiare si scopre che la somiglianza non era un
+contratto. Vale anche per il più sospetto,
+`.recipe-card--compact__image` e `.category-card__image` con le stesse quattro
+proprietà: due schede diverse che si comportano già identiche sull'immagine, non
+una scheda sola scritta due volte. La differenza con il gradiente è che lì le
+quattro proprietà **non funzionano separate** — è una ricetta, non una
+coincidenza.
+
+**Verifica:** homepage, 1 157 elementi in tutti e due i temi, impronta identica
+prima e dopo. I tre span hanno `background-clip: text`, riempimento trasparente e
+lo stesso `--gradient-hero` di prima; il footer, che compare su tutte e 105 le
+pagine, porta la classe anche in quelle pre-renderizzate.
 
 ---
 

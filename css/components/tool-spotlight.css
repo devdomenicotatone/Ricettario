@@ -76,13 +76,7 @@
         font-weight: 800;
         margin-bottom: var(--space-md);
         line-height: 1.1;
-
-        & span {
-            background: var(--gradient-hero);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        /* Il gradiente sullo <span> è l'utility .testo-gradiente. */
     }
 
     .tool-spotlight__desc {

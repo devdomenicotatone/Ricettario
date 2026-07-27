@@ -83,13 +83,7 @@
         line-height: 1.05;
         margin-bottom: var(--space-md);
         letter-spacing: -1px;
-
-        & span {
-            background: var(--gradient-hero);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        /* Il gradiente sullo <span> è l'utility .testo-gradiente. */
     }
 
     .hero__subtitle {

@@ -33,13 +33,7 @@
         display: flex;
         align-items: center;
         gap: 10px;
-
-        & span {
-            background: var(--gradient-hero);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        /* Il gradiente sullo <span> è l'utility .testo-gradiente. */
     }
 
     .footer__brand-desc {

@@ -1,0 +1,27 @@
+/* ============================================
+   TESTO — utility tipografiche
+   ============================================ */
+
+@layer utilities {
+
+    /* Il testo dipinto con il gradiente del sito: lo usano il titolo dell'hero,
+       il nome nel footer e quello dello strumento in evidenza.
+
+       Stava scritto per intero in tutti e tre i componenti, dentro un `& span`.
+       Le tre copie erano ancora identiche — la duplicazione non aveva fatto
+       danno — ma sono quattro proprietà che vanno insieme o non funzionano: se
+       un giorno ne serve una quinta (un `color` di ripiego per i browser che
+       non fanno il clip, per dirne una) va aggiunta in tre punti, e basta
+       dimenticarne uno perché quel titolo diventi invisibile. Vedi
+       CHECKUP-CSS.md, punto 6.
+
+       Sta fra le utility e non fra i componenti perché non appartiene a
+       nessuno dei tre: è un modo di dipingere il testo, non una parte
+       dell'hero. */
+    .testo-gradiente {
+        background: var(--gradient-hero);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
