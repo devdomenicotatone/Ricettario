@@ -166,8 +166,15 @@ async function renderRoute(route, app) {
   if (renderer) {
     await renderer(app, route.params);
   } else {
+    // Guardia difensiva, non un percorso vivo: `matchRoute` ripiega su
+    // `home` per qualunque URL non riconosciuto e tutti e quattro i tipi
+    // hanno un renderer, quindi oggi qui non ci si arriva. Serve se un
+    // giorno nascesse un tipo di rotta senza renderer registrato — e in quel
+    // caso deve rispettare le stesse regole delle altre pagine: un `h1` a cui
+    // dare il fuoco e un `document.title` per la regione live.
+    document.title = 'Pagina non trovata — Ricettario Lab';
     app.innerHTML = `<div class="container" style="padding: 80px 0; text-align: center;">
-      <h2>Pagina non trovata</h2>
+      <h1>Pagina non trovata</h1>
       <p><a href="${BASE}" data-link>← Torna alla Home</a></p>
     </div>`;
   }

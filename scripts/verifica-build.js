@@ -167,6 +167,21 @@ function paginaHtml(percorso) {
         err(`${rel}: contiene un redirect che impedisce l'indicizzazione`);
     }
 
+    // Ogni pagina deve avere ESATTAMENTE un H1 dentro #app, e non è solo
+    // struttura dei titoli: è l'elemento a cui il router dà il fuoco dopo una
+    // navigazione SPA (`dopoIlCambioPagina` in js/router.js). Se manca, il
+    // fuoco ricade sull'intero `main#contenuto` — e con quello NVDA leggeva
+    // la ricetta intera in un annuncio unico da 8-9.000 caratteri (punto 10
+    // di CHECKUP-ACCESSIBILITA.md). Il controllo esisteva solo per le pagine
+    // di cottura, cioè su 14 pagine su 105.
+    const dentroApp = html.match(/<div id="app">([\s\S]*?)<\/div><!-- \/#app -->/);
+    const quantiH1 = [...(dentroApp ? dentroApp[1] : '').matchAll(/<h1\b/g)].length;
+    if (quantiH1 !== 1) {
+        err(`${rel}: ${quantiH1} H1 dentro #app, ne serve esattamente uno — è l'elemento `
+            + `a cui il router dà il fuoco dopo una navigazione, e senza il fuoco torna `
+            + `sull'intero contenuto (punto 10 del checkup accessibilità)`);
+    }
+
     const blocchi = [];
     for (const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
         try {

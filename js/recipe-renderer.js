@@ -50,9 +50,15 @@ export async function renderRecipe(app, { category, slug }) {
     refreshIcons();
 
   } catch (err) {
+    // Il titolo va aggiornato anche quando la ricetta non c'è: il router lo
+    // legge per la regione live (`dopoIlCambioPagina`), quindi senza questa
+    // riga chi ascolta sentiva annunciare la pagina PRECEDENTE — misurato:
+    // «Calcolatore di cottura su kamado, pagina caricata» sopra una pagina
+    // che dice «Ricetta non trovata». Vale anche per la scheda del browser.
+    document.title = 'Ricetta non trovata — Ricettario Lab';
     app.innerHTML = `
       <div class="container" style="padding: 120px 0; text-align: center;">
-        <h2>${fluentEmoji('prohibited', 28)} Ricetta non trovata</h2>
+        <h1>${fluentEmoji('prohibited', 28)} Ricetta non trovata</h1>
         <p style="color: var(--color-text-muted);">${escHtml(err.message)}</p>
         <a href="${BASE}" data-link class="btn-back">${fluentEmoji('fire', 16)} Torna alla Home</a>
       </div>`;

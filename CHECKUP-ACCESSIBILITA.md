@@ -676,6 +676,29 @@ delle SPA sposta il fuoco su un elemento **piccolo** — l'`h1` con
 `tabindex="-1"` — invece che sul contenitore che contiene tutta la pagina. Ma
 finché il meccanismo non è isolato, questa è un'ipotesi, non una correzione.
 
+**Aggiornamento 27/07/2026, seconda parte.** Il fuoco sull'`h1` è stato
+verificato su **sei rotte** (categoria, ricetta, calcolatore, ricetta
+inesistente, categoria inesistente, tasto Indietro): in tutte atterra sull'`h1`
+giusto. Nel farlo sono usciti due difetti che nessuno aveva visto:
+
+- **La pagina «Ricetta non trovata» non aveva un `h1`**: era un `h2`, quindi
+  il router non trovava niente a cui dare il fuoco e ricadeva su
+  `main#contenuto` — esattamente il comportamento che questo punto vuole
+  evitare. Adesso è un `h1`, e un cancello in `verifica-build.js` pretende
+  **esattamente un `h1` dentro `#app` su tutte le 105 pagine generate** (prima
+  il controllo esisteva solo per le 14 pagine di cottura).
+  Nota onesta, venuta da una revisione avversariale: nello stesso giro ho
+  cambiato in `h1` anche il «Pagina non trovata» di `renderRoute`, ma **quel
+  ramo è irraggiungibile** (`matchRoute` ripiega su `home` e tutti i tipi
+  hanno un renderer), quindi lì non c'era nessun difetto da misurare: è una
+  guardia per il futuro, non una correzione. «Categoria non trovata» aveva
+  già il suo `h1`.
+- **La pagina «Ricetta non trovata» annunciava la pagina precedente.** Il
+  percorso d'errore di `renderRecipe` non aggiornava `document.title`, che è
+  quello che il router legge per la regione live: misurato «Calcolatore di
+  cottura su kamado, pagina caricata» sopra una pagina che diceva «Ricetta non
+  trovata». Valeva anche per il titolo della scheda del browser.
+
 **Aggiornamento 27/07/2026:** l'ipotesi qui sopra è stata applicata —
 `dopoIlCambioPagina` in `js/router.js` ora dà il fuoco all'`h1` della pagina
 nuova (con `tabindex="-1"` aggiunto al volo, e fallback su `#contenuto` se un
