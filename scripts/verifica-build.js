@@ -326,7 +326,91 @@ if (!existsSync(join(DIST, 'sitemap.xml'))) {
     }
 })(DIST);
 
-// ── 4. Peso ──
+// ── 4. Risorse pubblicate che nessuno usa ──
+// `public/` viene copiato per intero in dist/, quindi ci basta metterci un file
+// perché finisca online: nessuno lo referenzia, nessuno lo vede, e resta lì.
+// È successo con 26 immagini di trafile (324 KB), pubblicate per mesi senza che
+// una sola pagina le nominasse.
+//
+// Come si decide se una risorsa è usata: si cerca in TUTTI i file di testo di
+// dist/ (html, css, js, json, sitemap) o il percorso, o il nome del file senza
+// estensione. Il nome nudo serve perché i percorsi delle foto ricetta non sono
+// mai scritti per esteso: nascono da `images/ricette/${cartella}/${slug}.webp`,
+// quindi in dist/ compare lo slug, non il percorso. Basta quello a distinguere
+// una foto usata da una dimenticata.
+const ESTENSIONI_RISORSA = /\.(webp|avif|png|jpe?g|gif|svg|woff2?|ttf|otf|mp4|webm|pdf)$/i;
+
+/**
+ * Risorse che nessuna pagina nomina, ma che vanno servite lo stesso perché le
+ * chiede il browser o un crawler da sé.
+ */
+const SEMPRE_LECITE = [
+    /^favicon\./i,
+    /^apple-touch-icon/i,
+    /^robots\.txt$/i,
+    /^site\.webmanifest$/i,
+];
+
+function elencaRisorse(dir, acc = []) {
+    for (const e of readdirSync(dir, { withFileTypes: true })) {
+        const p = join(dir, e.name);
+        if (e.isDirectory()) elencaRisorse(p, acc);
+        else if (ESTENSIONI_RISORSA.test(e.name)) acc.push(p);
+    }
+    return acc;
+}
+
+// Un'unica grande stringa con tutto il testo pubblicato: cercare 300 volte
+// dentro 300 file sarebbe O(n²) su un cancello che deve restare veloce.
+let testoPubblicato = '';
+scorriTesti(DIST, (percorso) => { testoPubblicato += readFileSync(percorso, 'utf8'); });
+
+const risorse = elencaRisorse(DIST);
+const orfane = [];
+for (const p of risorse) {
+    const rel = p.slice(DIST.length + 1).split(sep).join('/');
+    const nome = rel.split('/').pop();
+    const senzaEstensione = nome.replace(/\.[^.]+$/, '');
+    if (SEMPRE_LECITE.some(r => r.test(nome))) continue;
+    // `dist/assets/` sono i file prodotti da Vite: hanno l'hash nel nome e sono
+    // referenziati dall'HTML, quindi il controllo li copre già dal caso generale.
+    if (testoPubblicato.includes(rel) || testoPubblicato.includes(nome)) continue;
+    if (senzaEstensione.length >= 4 && testoPubblicato.includes(senzaEstensione)) continue;
+    orfane.push({ rel, kb: Math.round(statSync(p).size / 1024) });
+}
+if (orfane.length) {
+    const totale = orfane.reduce((s, o) => s + o.kb, 0);
+    err(`${orfane.length} risorse pubblicate che nessuna pagina referenzia (${totale} KB in totale). `
+        + `Se servono, referenziale; se non servono, tienile fuori da public/. `
+        + `Prime: ${orfane.slice(0, 3).map(o => o.rel).join(', ')}`);
+}
+
+// ── 5. Immagini troppo pesanti ──
+// Il totale di dist/ non basta: 60 MB di soglia lasciano passare una singola
+// foto da 700 KB, che su una pagina ricetta è dieci volte il peso di tutto il
+// JavaScript. La soglia non è inventata: alla dimensione standard del sito
+// (1800 px) la mediana delle 38 foto è 181 KB, quindi 500 KB è già il triplo
+// della norma e 300 KB il segnale che qualcosa è stato compresso male.
+const LIMITE_AVVISO_KB = 300;
+const LIMITE_ERRORE_KB = 500;
+// Le immagini Open Graph le scarica solo un crawler quando qualcuno condivide
+// un link, mai un lettore che naviga: hanno una soglia loro, più larga.
+const LIMITE_OG_KB = 1024;
+
+for (const p of risorse) {
+    if (!/\.(webp|avif|png|jpe?g)$/i.test(p)) continue;
+    const rel = p.slice(DIST.length + 1).split(sep).join('/');
+    const kb = Math.round(statSync(p).size / 1024);
+    const eOg = rel.includes('images/og/');
+    const limite = eOg ? LIMITE_OG_KB : LIMITE_ERRORE_KB;
+    if (kb > limite) {
+        err(`${rel}: ${kb} KB, oltre il limite di ${limite} KB — va ricompressa`);
+    } else if (!eOg && kb > LIMITE_AVVISO_KB) {
+        warn(`${rel}: ${kb} KB (la mediana del sito è 181 KB)`);
+    }
+}
+
+// ── 6. Peso complessivo ──
 function peso(dir) {
     let t = 0;
     for (const e of readdirSync(dir, { withFileTypes: true })) {

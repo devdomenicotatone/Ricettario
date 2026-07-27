@@ -8,9 +8,11 @@
 > ricette entravano nella pagina come HTML. Non è stato dedotto, è stato
 > **eseguito**: un titolo con `<img src=x onerror=...>` faceva partire codice.
 >
-> **RESTA APERTO:** i punti 2, 3, 4, 5, 6 qui sotto. Nessuno di questi rompe
-> niente e nessuno è urgente. Il punto 6 è quello che conviene fare per primo,
-> perché è ciò che impedisce ai punti 2 e 5 di tornare.
+> **Chiusi anche i punti 2, 5 e 6** (commit successivi): il cancello adesso
+> vede le risorse orfane e le immagini troppo pesanti, ed è stato lui a trovare
+> 34 file inutili invece dei 26 che avevo contato a mano.
+>
+> **RESTA APERTO:** i punti 3 e 4. Nessuno dei due rompe niente.
 >
 > **Metodo:** analisi statica più esecuzione reale — sito avviato, attacchi
 > provati sul renderer vero, `npm run check` a ogni passo. Nessun agente
@@ -107,18 +109,23 @@ prima `testoVisibile`.
 
 ---
 
-## 2. Ventisei immagini pubblicate che nessuno usa
+## 2. Immagini pubblicate che nessuno usa — CHIUSO
 
-`public/images/trafile/` contiene 26 file (324 KB) che nessun file del progetto
-referenzia — verificato con `grep` su `js/`, `css/`, `index.html`, `ricette/`,
-`dati/` e `scripts/`. Ma `public/` viene copiato per intero in `dist/`, quindi
-finiscono online: verificato, ci sono tutti e 26 sul branch `gh-pages`.
+Avevo contato 26 file in `public/images/trafile/`. Quando il controllo del
+punto 6 è entrato in funzione ne ha trovati **34**, per 386 KB: agli 8 che mi
+erano sfuggiti — le foto degli strumenti in `public/images/strumenti/` — non
+ci ero arrivato perché avevo cercato solo la cartella che già sospettavo. È
+esattamente la ragione per cui un controllo automatico batte una lettura
+attenta.
 
-Hanno anche nomi lunghissimi con spazi e `°` dentro, che nelle URL è un guaio a
-parte.
+`public/` viene copiato per intero in `dist/`, quindi basta appoggiarci un file
+perché finisca online per sempre senza che nessuno lo nomini.
 
-Non fanno danni: sono 324 KB e nessuno ci arriva. Ma sono la prova che
-`public/` non ha un guardiano, ed è il punto 6.
+Non sono stati cancellati: sono materiale preparato per pagine che non
+esistono ancora (le trafile della Philips, gli strumenti che la homepage non
+mostra). Sono stati spostati in **`materiale/`**, che è fuori da `public/` e
+quindi non entra nella build — restano nel repo e in git. Vedi
+`materiale/README.md`.
 
 ---
 
@@ -155,29 +162,66 @@ quattro immagini pubblicate di cui il repo non sa dire la provenienza, e questo
 
 ---
 
-## 5. Immagini pesanti
+## 5. Immagini pesanti — CHIUSO le due sopra soglia
 
-`pinsa-romana.webp` pesa 696 KB, `og/homepage.png` 825 KB, e `dist/images` in
-totale 23 MB su 27 MB di sito. Su una pagina ricetta l'immagine di copertina è
-quasi tutto il peso scaricato: il JavaScript è 62 KB, la foto dieci volte tanto.
+Il tetto adesso c'è (punto 6). Due foto lo sfondavano: `pinsa-romana.webp`
+(696 KB) e `pane-pugliese-con-biga.webp` (594 KB).
 
-La pipeline della dashboard le converte già in WebP e AVIF, quindi il formato è
-giusto — manca un tetto sulle dimensioni.
+**La compressione non era la leva.** Misurato: a 1800 px, anche scendendo a
+qualità 70 — già visibilmente peggio — la pinsa restava a 590 KB. Sono foto con
+molta texture, e ricomprimere lossy su lossy rende poco. La leva era la
+dimensione: a **1500 px con qualità piena (82)** scendono a 391 e 369 KB.
+
+Rifatti entrambi i formati per tenere la coppia coerente. Risparmio: 809 KB.
+
+| | prima | dopo |
+|---|---|---|
+| pinsa-romana | 696 KB webp · 403 KB avif · 1800 px | 391 · 231 KB · 1500 px |
+| pane-pugliese | 594 KB webp · 302 KB avif · 1800 px | 369 · 195 KB · 1500 px |
+
+**Il compromesso, detto per intero:** su uno schermo ad alta densità l'immagine
+di copertina passa da 1,42× a 1,18× i pixel dello spazio che occupa. Su uno
+schermo normale non cambia niente; su un 1.5× o 2× è leggermente meno nitida di
+prima, in cambio del 43% di byte in meno. È una scelta reversibile: gli
+originali sono nella storia git.
+
+Restano otto foto fra i 300 e i 433 KB, che il cancello segnala come avvisi
+senza bloccare: sopra la mediana del sito (181 KB) ma non abbastanza da
+giustificare di ritoccarle.
+
+`og/homepage.png` resta a 825 KB ed è voluto: le immagini Open Graph le scarica
+un crawler quando qualcuno condivide un link, mai un lettore che naviga. Hanno
+una soglia loro, più larga.
 
 ---
 
-## 6. Il cancello ha due punti ciechi, e sono i punti 2 e 5
+## 6. I due punti ciechi del cancello — CHIUSO
 
-`verifica-build.js` controlla molto, ma non:
+`verifica-build.js` controllava molto, ma non le risorse pubblicate che nessuno
+referenzia, né il peso delle singole immagini: il totale di `dist/` ha una
+soglia di 60 MB, quindi una foto da 700 KB passava senza una parola.
 
-- **le risorse pubblicate che nessuno referenzia** — per questo le 26 immagini
-  di `trafile/` sono online da chissà quando senza che nessuno se ne accorgesse;
-- **il peso delle singole immagini** — controlla il totale di `dist/` (soglia 60
-  MB, oggi 27), quindi un file da 700 KB passa senza una parola.
+**Risorse orfane.** Il controllo mette insieme tutto il testo pubblicato
+(html, css, js, json, sitemap) e per ogni risorsa cerca il percorso, il nome
+del file o il nome senza estensione. Il nome nudo serve perché i percorsi delle
+foto ricetta non sono mai scritti per esteso: nascono da
+`images/ricette/${cartella}/${slug}.webp`, quindi in `dist/` compare lo slug e
+non il percorso. Le uniche eccezioni sono le risorse che il browser chiede da
+sé — favicon, apple-touch-icon, robots, webmanifest.
 
-È il punto da fare per primo, non perché sia il più grave, ma perché è quello
-che impedisce agli altri due di tornare. Vale la stessa logica del `CLAUDE.md`
-dei tools: il controllo che se ne accorge conta più della correzione singola.
+**Peso delle immagini.** Avviso sopra 300 KB, errore sopra 500 KB. Le soglie
+non sono inventate: alla dimensione standard del sito (1800 px) la mediana
+delle 38 foto è **181 KB**, quindi 500 KB è già il triplo della norma. Le
+immagini Open Graph hanno una soglia loro a 1 MB, perché le scarica solo un
+crawler.
+
+Il controllo ha giustificato sé stesso al primo giro: cercava 26 file orfani e
+ne ha trovati 34.
+
+**Una cosa che non fa, di proposito:** non guarda l'HTML *sorgente*, solo
+`dist/`. Una risorsa referenziata da un file che la build non pubblica
+risulterebbe orfana — non succede oggi, ma se un domani qualcosa referenzia le
+immagini da fuori la build, il controllo va allargato invece che silenziato.
 
 ---
 
@@ -206,11 +250,17 @@ Dichiararlo serve a non far credere che il resto sia stato approvato.
 
 ## Se hai tempo per una cosa sola
 
-**Fai il punto 6: insegna al cancello a vedere le risorse orfane.**
+**Il punto 3: smetti di pubblicare la tubatura interna della dashboard.**
 
-Il punto 1 era il più grave ed è già chiuso. Fra quelli che restano, questo è
-l'unico che si ripaga da solo: le 26 immagini pubblicate per sbaglio non le ha
-notate nessuno per mesi, e non sarà l'ultima volta che qualcosa entra in
-`public/` e non ne esce più. Un controllo che elenca i file pubblicati che
-nessuno referenzia costa poche righe accanto a quelli che ci sono già, e da quel
-momento il problema non torna in silenzio.
+I punti 1, 2, 5 e 6 sono chiusi. Di quel che resta, il 3 è l'unico che tocca
+dati che finiscono davvero online, ed è una riga in `scripts/build-recipes.js`:
+scartare i campi che iniziano con `_` tranne quelli dichiarati pubblici. Il
+punto 4 sono quattro foto di cui non sappiamo la provenienza — vale la pena
+guardarle, ma è lavoro di memoria, non di codice.
+
+Vale la pena notare da dove è venuto il guadagno più grande di questo giro: non
+da una correzione, ma dal **controllo che se ne accorge**. Cercavo 26 file
+inutili, il cancello ne ha trovati 34; e le due foto pesanti le ho ricomprese
+solo perché lui le ha nominate. Quando qualcosa in questo progetto si rompe in
+silenzio, la domanda giusta non è "come lo aggiusto" ma "cosa avrebbe dovuto
+gridare".
