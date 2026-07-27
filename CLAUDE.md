@@ -96,19 +96,25 @@ nell'output statico, e lo copre `npm run check` (dati + build + pre-rendering
 + controlli su `dist/` e sui fogli di stile). Fallo girare davvero prima di
 dichiarare che una modifica funziona — non basta che il file sia stato scritto.
 
-Il CSS ha tre controlli suoi (sezione 9 di `verifica-build.js`), perché è
+Il CSS ha quattro controlli suoi (sezione 9 di `verifica-build.js`), perché è
 l'unica parte che si rompe senza dire niente: **ogni `var(--x)` deve avere una
-`--x` definita**, **ogni classe dichiarata deve comparire in qualche markup** e
+`--x` definita**, **ogni classe dichiarata deve comparire in qualche markup**,
 **ogni foglio deve dichiarare il layer della sua cartella** (`css/pages/` →
-`@layer pages`; `css/base/` è esente perché ne ha due per scelta).
+`@layer pages`; `css/base/` è esente perché ne ha due per scelta) e **ogni
+breakpoint deve essere fra quelli elencati nel blocco «── BREAKPOINT» in testa a
+`css/base/tokens.css`**, tutti `min-width`. Quel blocco è l'unica fonte delle
+soglie: il cancello lo legge da lì invece di tenerne una copia. Se ti serve una
+soglia nuova, aggiungila lì con il suo perché.
 
-Due cose da sapere quando uno dei tre si lamenta:
+Tre cose da sapere quando uno dei quattro si lamenta:
 
 - Se aggiungi una classe che il JavaScript compone a runtime — come
   `piano--${percorso}` — il cancello non può vederla: va dichiarato il prefisso
   in `PREFISSI_A_RUNTIME`, non silenziato il controllo.
 - Un foglio senza `@layer` è un errore, non una svista veniale: le regole fuori
   dai layer battono tutte quelle dentro, qualunque sia la specificità.
+- `720px` sembra un `769px` scritto male e non lo è: il tablet in verticale è
+  largo 768, quindi 769 lo escluderebbe. Le soglie non si «uniformano» a occhio.
 
 Il cancello include `npm run build:cottura`, che oltre a validare i dati
 **genera 918 piani** — ogni taglio per ogni dispositivo, cottura, metodo e

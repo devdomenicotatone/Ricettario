@@ -52,8 +52,8 @@ sitemap non elenchi URL inesistenti, che non sia rientrata la doppia codifica,
 che i 173 MB di PDF sorgente restino fuori e che `dist/` non sfondi i 60 MB.
 Da luglio guarda anche il CSS, che è l'unica cosa qui capace di rompersi senza
 dirlo: ogni `var()` deve puntare a un token che esiste, ogni classe dichiarata
-deve comparire in qualche markup, e ogni foglio deve dichiarare il layer della
-sua cartella.
+deve comparire in qualche markup, ogni foglio deve dichiarare il layer della sua
+cartella e ogni breakpoint deve essere uno di quelli dichiarati in `tokens.css`.
 
 **E gira da solo.** `.github/workflows/ci.yml` esegue `npm run check` su ogni
 push e ogni PR, più un hook `pre-push` locale. Gli ultimi run sono tutti verdi.
@@ -313,27 +313,29 @@ Dichiararlo serve a non far credere che il resto sia stato approvato.
   quello che c'è scritto lì viene dall'albero di accessibilità e dal DOM
   misurato. È il modo giusto per sapere se una struttura c'è; non è il modo per
   sapere come suona.
-- ~~**Il CSS.**~~ **Fatto**, in un checkup a parte:
-  [CHECKUP-CSS.md](./CHECKUP-CSS.md). Sette punti, **chiusi 1, 2 e 4** — cioè
-  tutti quelli che si vedevano. Il primo era il più grave perché riguardava chi
-  usa il sito: il pulsante «Fatta» e il bollino ✓ avevano un contrasto di
-  3,30:1, sotto la soglia, ed erano sfuggiti al checkup sull'accessibilità
-  perché quel colore compare solo dopo che una ricetta è stata segnata. Adesso è
-  5,17:1. Il secondo era il più vecchio: tre `var()` puntavano a token **mai
-  esistiti**, e con loro non avevano mai funzionato le sfumature dei caroselli e
-  l'ombra delle frecce — oggi il progetto non ha più un `var()` che non risolve.
-  Il quarto era l'ultimo visibile: la riga di colore sotto la navbar non
-  cambiava con il tema, e lo stesso colore stava in altri due file fuori dal
-  CSS, compreso quello che tinge la barra del browser su mobile. Il terzo era il
+- ~~**Il CSS.**~~ **Fatto e chiuso**, in un checkup a parte:
+  [CHECKUP-CSS.md](./CHECKUP-CSS.md). Sette punti, **sette chiusi**. Il primo
+  era il più grave perché riguardava chi usa il sito: il pulsante «Fatta» e il
+  bollino ✓ avevano un contrasto di 3,30:1, sotto la soglia, ed erano sfuggiti
+  al checkup sull'accessibilità perché quel colore compare solo dopo che una
+  ricetta è stata segnata. Adesso è 5,17:1. Il secondo era il più vecchio: tre
+  `var()` puntavano a token **mai esistiti**, e con loro non avevano mai
+  funzionato le sfumature dei caroselli e l'ombra delle frecce. Il terzo era il
   più grosso in byte: 25 classi morte, un foglio intero e la scheda ricetta
   originale rimasta accanto ai suoi successori — 4,05 kB che ogni visitatore
   scaricava per non usarli, e il sito dopo è disegnato identico, verificato
-  proprietà per proprietà su 2 223 elementi. Il quinto era una parola:
-  `cottura.css` sta in `pages/` e dichiarava `@layer components`, cioè il layer
-  che perde. Restano due punti aperti, tutti e due debito da manutenzione.
-  Resta fuori anche quello che è scritto nei limiti di
-  quel documento: le regole sovrascritte, le prestazioni di disegno e gli stili
-  inline che i renderer scrivono da JavaScript.
+  proprietà per proprietà su 2 223 elementi. Il quarto era l'ultimo visibile: la
+  riga di colore sotto la navbar non cambiava con il tema, e lo stesso colore
+  stava in altri due file fuori dal CSS, compreso quello che tinge la barra del
+  browser su mobile. Il quinto era una parola: `cottura.css` sta in `pages/` e
+  dichiarava `@layer components`, cioè il layer che perde. Il sesto e il settimo
+  erano debito: la ricetta del testo con gradiente scritta in tre file, e nove
+  breakpoint che nessuno poteva ricordare — adesso sono otto, tutti
+  mobile-first, e ognuno ha il suo perché scritto accanto.
+  **Il lascito più utile di quel documento non è nessuno dei sette punti: sono i
+  quattro controlli sul CSS che adesso stanno nel cancello.** Resta fuori quello
+  che è scritto nei suoi limiti: le regole sovrascritte, le prestazioni di
+  disegno e gli stili inline che i renderer scrivono da JavaScript.
 - **Il calcolatore di cottura nel merito.** Ho verificato che sia integro (918
   piani generati, percorso completo fino al piano nel browser) e che i due file
   puri lo siano ancora, ma non ho messo in discussione i numeri: quelli hanno un
@@ -359,20 +361,20 @@ Il resto del lavoro possibile su questo repo è nella sezione "Cosa questo
 checkup NON ha guardato" qui sopra: prestazioni misurate davvero, compatibilità
 fra browser, l'animazione d'ingresso mai aperta, `npm audit`.
 
-Fuori da qui restano invece **due punti aperti nel checkup del CSS**: tre
-blocchi duplicati e nove breakpoint. Sono debito da manutenzione, non difetti —
-**nessuno dei due si vede e nessuno ci inciampa oggi**. I cinque chiusi erano il
-contrasto del pulsante «Fatta» (l'ultimo problema di accessibilità rimasto sul
-sito), i token che non esistevano, il colore della navbar che non seguiva il
-tema, i 4 kB di CSS che non toccava nessun elemento e il layer sbagliato del
-calcolatore.
+**Il checkup del CSS è chiuso su tutti e sette i punti**: il contrasto del
+pulsante «Fatta» (l'ultimo problema di accessibilità rimasto sul sito), i token
+che non esistevano, i 4 kB di CSS che non toccava nessun elemento, il colore
+della navbar che non seguiva il tema, il layer sbagliato del calcolatore, la
+ricetta del testo con gradiente scritta in tre file e i breakpoint. Quello che
+resta è nei limiti di quel documento, non nella sua lista.
 
-La cosa più utile non era nessuno dei due, ed **è stata fatta**: i controlli
+La cosa più utile non era nessuno dei punti, ed **è stata fatta**: i controlli
 meccanici sul CSS sono nel cancello (sezione 9 di `verifica-build.js`). Ogni
 `var()` deve puntare a un token definito, ogni classe dichiarata deve comparire
-da qualche parte, ogni foglio deve dichiarare il layer della sua cartella — le
-famiglie di difetti che qui sono nate morte e ci sono rimaste per mesi, perché
-nessuno strumento del progetto era in grado di accorgersene.
+da qualche parte, ogni foglio deve dichiarare il layer della sua cartella e ogni
+breakpoint deve essere uno di quelli dichiarati in `tokens.css` — le famiglie di
+difetti che qui sono nate morte e ci sono rimaste per mesi, perché nessuno
+strumento del progetto era in grado di accorgersene.
 
 L'accessibilità non è più in quella lista: ha avuto il suo checkup ed è chiusa
 su tutti e nove i punti. L'unica cosa che le resta è una verifica, non una

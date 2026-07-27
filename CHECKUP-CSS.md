@@ -5,13 +5,21 @@
 > `recipe-detail.css` da 29 KB: non ho cercato regole morte né duplicazioni».
 > Questo colma quel buco.
 >
-> **Sette punti. Chiusi 1, 2, 3, 4 e 5, restano aperti il 6 e il 7:** questo
-> documento è nato come esame, non come intervento. Le correzioni sono quasi
-> tutte da una riga, ma vanno decise una per una — e quattro volte su cinque la
-> riga non è bastata: sotto quasi ognuno dei punti chiusi c'era qualcosa che
-> l'esame non aveva visto. **Il punto 5 è l'unico che era esattamente come
-> scritto:** una parola cambiata, `components` in `pages`, e le due pagine del
-> calcolatore disegnate identiche.
+> **Sette punti, chiusi tutti e sette.** Questo documento è nato come esame, non
+> come intervento; è diventato l'uno e l'altro. Le correzioni erano quasi tutte
+> da una riga, ma quasi ogni volta la riga non è bastata: sotto quasi ognuno dei
+> punti c'era qualcosa che l'esame non aveva visto. **Il punto 5 è l'unico che
+> era esattamente come scritto.**
+>
+> **Il punto 7 è quello che l'esame aveva letto peggio.** Diceva «nove
+> breakpoint, nessuno se li ricorda», e la conclusione naturale era ridurli.
+> Sbagliata: `720` non è un `769` scritto male, è la soglia che prende il tablet
+> in verticale — largo 768 px — e alzarla avrebbe rotto il calcolatore proprio
+> sul dispositivo per cui quella regola esiste. Il debito non era il numero delle
+> soglie: era che nessuna avesse il suo perché scritto accanto.
+>
+> **Restano tre controlli nel cancello** che prima non c'erano, e sono la parte
+> di questo lavoro che continua a lavorare da sola.
 >
 > **Il punto 1 era il più grave, perché riguardava chi usa il sito e non chi
 > legge il codice:** il pulsante «Fatta» e il bollino ✓ avevano un contrasto di
@@ -598,7 +606,7 @@ pagine, porta la classe anche in quelle pre-renderizzate.
 
 ---
 
-## 7. Tredici breakpoint diversi
+## 7. Tredici breakpoint diversi — CHIUSO
 
 ```
 11 × min-width: 769px      2 × min-width: 720px      1 × max-width: 768px
@@ -609,26 +617,91 @@ pagine, porta la classe anche in quelle pre-renderizzate.
 ```
 
 Il progetto dichiara «Mobile-First (min-width)» in `style.css`, e per 34 media
-query su 37 lo rispetta. Le tre `max-width` sono l'eccezione, e producono la
+query su 37 lo rispettava. Le tre `max-width` erano l'eccezione, e producevano la
 sovrapposizione classica: `max-width: 768px` e `min-width: 769px` descrivono lo
 stesso confine da due lati, e `640` e `720` sono due soglie a 80 px di distanza
 senza un motivo scritto da nessuna parte.
 
-Non è un difetto, è debito: nessuno può dire a memoria quali siano i breakpoint
-di questo progetto, perché non sono tre, sono nove.
+Non era un difetto, era debito: nessuno poteva dire a memoria quali fossero i
+breakpoint di questo progetto, perché non erano tre, erano nove.
+
+### Il debito non era il numero, era che non fossero scritti
+
+La tentazione era ridurli a tre o quattro. È la cosa sbagliata, e si vede
+guardando cosa fanno davvero:
+
+- **720 non è un 769 scritto male.** Il tablet in verticale è largo **768 px**:
+  con `min-width: 720px` ci rientra, con 769 no. È la soglia da cui il
+  calcolatore smette di essere un flusso a tutta altezza con il piede fisso —
+  proprio la cosa che su un iPad non ha senso. Alzarlo a 769 avrebbe rotto il
+  calcolatore sul dispositivo per cui quella regola esiste. **La ragione c'era,
+  non era scritta:** è questo il difetto.
+- **1024 è l'unico posto in cui il footer passa a quattro colonne**, e 1600 e
+  2000 sono due gradini della sola pagina ricetta sugli schermi molto larghi.
+  Accorparli a 1200 vuol dire cambiare come si vede il sito su una fascia di
+  larghezze, cioè una decisione di design — non una pulizia.
+
+Quello che invece era davvero da correggere sono le tre `max-width`, in un
+progetto che si dichiara mobile-first: sono state **girate**, portando i valori
+del telefono nella regola di partenza e lasciando alle media query il compito di
+aggiungere.
+
+| dove | prima | dopo |
+|---|---|---|
+| freccia del carosello | `display: flex` + `max-width: 768px { display: none }` | `display: none` + `min-width: 769px { display: flex }` |
+| scheda del carosello | 260 px + `max-width: 480px { 200 px }` | 200 px + `min-width: 480px { 260 px }` |
+| scheda in vista lista | orizzontale + `max-width: 640px { impilata }` | impilata + `min-width: 640px { orizzontale }` |
+
+Nove valori mescolati a tre `max-width` diventano **otto, tutti `min-width`**. E
+adesso hanno un nome e una ragione, nel blocco «── BREAKPOINT» in testa a
+`css/base/tokens.css` — che non è un commento decorativo: **il cancello lo legge
+da lì** (controllo 9d) e boccia una media query con un valore che non compare
+nell'elenco, o scritta con `max-width`. È l'unico posto dove le soglie hanno un
+nome, quindi è anche l'unico che può divergere: non ce n'è una seconda copia
+dentro `verifica-build.js`.
+
+### Verifica
+
+La prima inversione è esatta — `max-width: 768px` e `min-width: 769px` sono
+complementari, non c'è nessun pixel scoperto né doppio. Le altre due spostano il
+confine di un pixel, e quel pixel l'ho misurato invece di dedurlo:
+
+| pagina | larghezza | esito |
+|---|---|---|
+| homepage | 375 px | identica |
+| homepage | 1 000 px | identica |
+| categoria (vista lista) | 375 px | identica |
+| categoria (vista lista) | 1 000 px | identica |
+
+A **esattamente 480 px** la scheda del carosello adesso è quella grande (260 px,
+immagine 160) invece della piccola (200 px, immagine 120); a **esattamente
+640 px** la scheda in vista lista è orizzontale invece che impilata. È il
+cambiamento voluto: prima quel pixel apparteneva insieme al mondo `max-width` e
+a quello `min-width`, adesso appartiene solo al secondo.
+
+**Il metodo ha mentito una volta, ed è la cosa più utile di questo punto.** A
+375 px l'impronta segnalava otto elementi diversi — caroselli e frecce. Non era
+il CSS: confrontando la stessa identica build con sé stessa dopo un reload
+uscivano le stesse differenze, `has-scroll-right` sul carosello e `cursor` sulla
+freccia disabilitata. Sono stati che scrive il JavaScript misurando lo scorrimento,
+e non si assestano uguali a ogni caricamento. Neutralizzati quelli, le impronte
+combaciano. **Un'impronta che include stato scritto a runtime non confronta due
+build: confronta due caricamenti.**
 
 ---
 
 ## Se hai tempo per una cosa sola
 
-**Non è un punto di questa lista.** I due rimasti — 6 e 7 — sono debito da
-manutenzione: tre copie di una ricetta di quattro proprietà, nove breakpoint che
-nessuno ricorda a memoria. Nessuno ci inciampa oggi.
+**Non resta niente da chiudere in questa lista.** Quello che valeva davvero — i
+controlli meccanici della sezione «La lezione» — è nel cancello, sezione 9 di
+`verifica-build.js`: un token che non esiste, una classe che non usa nessuno, un
+foglio nel layer sbagliato e un breakpoint fuori scala fermano il deploy invece
+di aspettare il prossimo checkup.
 
-Quello che valeva davvero — i **due controlli meccanici** della sezione «La
-lezione» — **è stato fatto**: sono nel cancello, sezione 9 di
-`verifica-build.js`. Da adesso un token che non esiste e una classe che non usa
-nessuno fermano il deploy invece di aspettare il prossimo checkup.
+Se hai tempo, spendilo su quello che questo documento **non** ha guardato — la
+lista qui sotto. La voce più grossa è la prima: nessuna delle regole vive è stata
+verificata nel merito. Una regola può essere viva, ben scritta e comunque
+sbagliata.
 
 ---
 
@@ -687,8 +760,14 @@ classe dichiarata deve comparire da qualche parte nel codice*. Sarebbero bastati
 a intercettare i punti 1, 2 e 3 il giorno in cui sono nati, invece che cinque
 mesi dopo.
 
-**Ce n'è un terzo, che questa sezione non aveva previsto:** *ogni foglio deve
-dichiarare il layer della sua cartella*. Lo ha suggerito il punto 5 chiudendosi
+**E un quarto, dal punto 7:** *i breakpoint sono solo quelli dichiarati, e sono
+tutti `min-width`*. L'elenco sta nel blocco «── BREAKPOINT» di
+`css/base/tokens.css`, dove ogni soglia ha il suo perché — e il cancello lo legge
+da lì invece di tenerne una copia, perché due elenchi divergono al primo
+cambiamento.
+
+**Il terzo lo aveva suggerito il punto 5 chiudendosi:** *ogni foglio deve
+dichiarare il layer della sua cartella*
 — `css/pages/cottura.css` che apriva con `@layer components` — e copre anche il
 caso peggiore della stessa famiglia, un foglio che non dichiara **nessun** layer:
 le regole fuori dai layer battono tutte quelle dentro qualunque sia la

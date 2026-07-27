@@ -3,6 +3,30 @@
    Il Ricettario — Design System
    ============================================ */
 
+/* ── BREAKPOINT ──────────────────────────────────────────────────────────
+   Le media query non possono usare le custom property: questi numeri restano
+   scritti a mano dentro i fogli. Questo elenco è l'unico posto in cui hanno un
+   nome e una ragione, e **fa fede**: il cancello lo legge da qui (sezione 9d di
+   scripts/verifica-build.js) e boccia una media query con un valore che non
+   compare, o scritta con `max-width`.
+
+   Erano nove valori mescolati a tre `max-width`, in un progetto che si dichiara
+   mobile-first: nessuno poteva dire a memoria quali fossero. Adesso sono otto,
+   tutti `min-width`. Se te ne serve un nono, aggiungilo qui con il suo perché —
+   è una decisione, non una svista.
+
+   480   telefono grande — la scheda del carosello passa da 200 a 260 px
+   640   due colonne — footer, container, la scheda in vista lista diventa
+         orizzontale
+   720   tablet in verticale — è largo 768 px, e 769 lo escluderebbe: da qui il
+         calcolatore smette di essere un flusso a tutta altezza col piede fisso
+   769   desktop — sparisce l'hamburger, compaiono le frecce dei caroselli
+   1024  footer a quattro colonne
+   1200  desktop largo — la scheda del carosello arriva a 290 px
+   1600  solo pagina ricetta: la colonna degli ingredienti si allarga
+   2000  solo pagina ricetta: il gradino successivo, per schermi molto larghi
+   ─────────────────────────────────────────────────────────────────────── */
+
 @layer tokens {
 
     /* ── Token condivisi (non cambiano con il tema) ── */

@@ -373,16 +373,33 @@
         gap: var(--space-md) !important;
     }
 
+    /* Di partenza la scheda in lista resta impilata: da 640 in su diventa
+       orizzontale. Stava al contrario, con la forma orizzontale qui e un
+       `@media (max-width: 640px)` che la rimpiccioliva — l'unico modo di
+       descrivere quel confine che il progetto, che è mobile-first, non usa. */
     .category-grid--list .category-card {
-        flex-direction: row;
-        height: 140px;
+        flex-direction: column;
+        height: auto;
     }
 
     .category-grid--list .category-card__image-wrapper {
-        width: 200px;
-        min-width: 200px;
-        height: 100%;
-        border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+        width: 100%;
+        height: 160px;
+        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    }
+
+    @media (min-width: 640px) {
+        .category-grid--list .category-card {
+            flex-direction: row;
+            height: 140px;
+        }
+
+        .category-grid--list .category-card__image-wrapper {
+            width: 200px;
+            min-width: 200px;
+            height: 100%;
+            border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+        }
     }
 
     .category-grid--list .category-card__body {
@@ -404,20 +421,6 @@
         bottom: var(--space-sm);
         right: var(--space-sm);
         flex-direction: row;
-    }
-
-    @media (max-width: 640px) {
-        .category-grid--list .category-card {
-            flex-direction: column;
-            height: auto;
-        }
-
-        .category-grid--list .category-card__image-wrapper {
-            width: 100%;
-            min-width: unset;
-            height: 160px;
-            border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-        }
     }
 
     /* ══════════════════════════════════════════

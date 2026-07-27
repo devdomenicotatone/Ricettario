@@ -642,6 +642,45 @@ let classiCss = 0;
         }
     }
 
+    // ── 9d. I breakpoint sono quelli dichiarati, e sono mobile-first ──
+    // Erano nove valori mescolati a tre `max-width`, in un progetto che si
+    // dichiara mobile-first: nessuno poteva dire a memoria quali fossero, e due
+    // dei tre `max-width` descrivevano da un lato lo stesso confine che un
+    // `min-width` descriveva dall'altro. Non era un difetto, era debito — il
+    // tipo che si paga quando qualcuno aggiunge il decimo valore perché non
+    // sapeva che esistevano gli altri nove.
+    //
+    // L'elenco NON sta qui: sta in css/base/tokens.css, dove ogni soglia ha il
+    // suo perché scritto accanto. Averne una copia in questo file vorrebbe dire
+    // due elenchi che divergono al primo cambiamento — è il difetto che questo
+    // progetto ha già pagato tre volte.
+    {
+        const tokens = readFileSync(join('css', 'base', 'tokens.css'), 'utf8');
+        const blocco = tokens.match(/\/\*\s*──\s*BREAKPOINT[\s\S]*?\*\//);
+        const scala = blocco ? [...blocco[0].matchAll(/^\s*(\d{3,4})\s+\S/gm)].map(m => Number(m[1])) : [];
+        if (!scala.length) {
+            err('css/base/tokens.css: manca il blocco «── BREAKPOINT», che è l\'elenco delle soglie '
+                + 'ammesse. Senza quello questo controllo non sa cosa permettere: rimettilo, non '
+                + 'togliere il controllo.');
+        } else {
+            for (const f of fogli) {
+                for (const m of f.pulito.matchAll(/@media[^{]*?\(\s*(min|max)-width\s*:\s*(\d+)px/g)) {
+                    const dove = `${f.rel}:${riga(f.pulito, m.index)}`;
+                    if (m[1] === 'max') {
+                        err(`${dove}: @media (max-width: ${m[2]}px). Questo progetto è mobile-first: la `
+                            + 'regola di partenza è quella del telefono e le media query aggiungono, non '
+                            + 'tolgono. Girala in `min-width` — e se descrive lo stesso confine di una '
+                            + 'query che esiste già, sono due modi di dire la stessa cosa.');
+                    } else if (!scala.includes(Number(m[2]))) {
+                        err(`${dove}: @media (min-width: ${m[2]}px) non è una delle soglie del progetto `
+                            + `(${scala.join(', ')}). Usa quella giusta, o aggiungi la nuova al blocco `
+                            + '«── BREAKPOINT» di css/base/tokens.css scrivendo perché serve.');
+                    }
+                }
+            }
+        }
+    }
+
     if (morte.length) {
         const quante = morte.length === 1
             ? '1 classe dichiarata nel CSS che non compare'
