@@ -137,26 +137,49 @@ latticini solo vegano. Tre cose da sapere:
 L'analisi qualità della dashboard **non** copre questo: nei suoi 83 referti le
 aree sono Coerenza, Dosi, Setup, Tempi, Temperature. Di allergeni non parla mai.
 
-## Gli assi del profilo sensoriale: una regola, non una tabella
+## Gli assi del profilo sensoriale: il set della famiglia, con deroga
 
 Il profilo sensoriale ha **cinque assi**, e sono tutto il profilo. La regola
-è una sola: **nessun asse può valere 0 o 1**. Un tratto assente non è un asse
-di quella ricetta — va sostituito con uno che la ricetta ha davvero, non
-misurato a zero.
+ha due metà, e servono entrambe:
 
-Prima gli assi venivano da una tabella `categoria → cinque assi` nella
-dashboard. Non funzionava, e non per una riga mancante: «Secondi Piatti» non
-aveva la sua e usava quella del **pane**, quindi delle costine di maiale
-venivano valutate su «Alveolatura Mollica» (zero, per tre mesi, in
-produzione). Ma il problema è più profondo: quella categoria tiene insieme
-costine e uova marinate, che non condividono quasi nessun tratto, quindi
-**qualunque** set fisso produce zeri su metà categoria. Infatti il controllo
-trova assi non pertinenti anche in categorie «giuste»: «Dolcezza Percepita: 1»
-su una pasta madre, «Acidità: 1» su un burro chiarificato.
+1. **Si parte dagli assi che la famiglia usa già.** I 40 condimenti hanno gli
+   stessi cinque (*Sapidità / Acidità / Cremosità / Dolcezza / Intensità
+   Aromatica*), il pane i suoi, pizza e focaccia ne condividono un terzo. Non
+   è pigrizia: assi uguali sono **ciò che rende confrontabili due ricette**.
+   Guardando due radar sai che la maionese sta a 9 di cremosità e il
+   chimichurri a 2, e quel 2 è informazione, non un difetto.
+2. **Si sostituisce un asse solo quando la ricetta non può esprimerlo
+   affatto**, cioè quando varrebbe 0 o 1. Lì non stai posizionando la ricetta
+   rispetto a nessuno: stai buttando un quinto del profilo per dire «non si
+   applica», e sul radar disegni una punta schiacciata.
+
+La differenza fra i due casi è tutta qui: **un valore basso su un asse
+condiviso colloca la ricetta; un valore a zero dice che l'asse non parla di
+quel cibo.**
+
+Da dove nasce. Gli assi venivano da una tabella `categoria → cinque assi`
+nella dashboard, e «Secondi Piatti» non avendo la sua usava quella del
+**pane**: delle costine di maiale sono state valutate su «Alveolatura
+Mollica» — zero — per tre mesi in produzione. Aggiungere righe alla tabella
+non basta, perché quella categoria tiene insieme costine e uova marinate, che
+non condividono quasi nessun tratto. Ma nemmeno «assi su misura per ogni
+ricetta» va bene, ed è l'errore che stavo per consigliare: si perde la
+confrontabilità dentro la famiglia, cioè proprio nella categoria più numerosa
+del sito. La misura ha deciso: **3 ricette su 80 violavano la regola, 62%
+erano a posto** — rigenerare tutto avrebbe riscritto 46.000 caratteri di note
+di degustazione per sistemare quattro assi.
+
+Quando sostituisci un asse, **scegli il tratto leggendo le note di
+degustazione della ricetta**: nelle tre sistemate a mano il tratto giusto era
+già descritto lì dentro — «priva di dolcezza propria» sulla pasta madre,
+«dominato da note di nocciola tostata» sul burro chiarificato — e mancava
+solo l'asse che lo rappresentasse. Così grafico e testo dicono la stessa cosa,
+e non serve riscrivere la prosa. Riusa un'etichetta già in uso nel sito quando
+esiste, invece di coniarne una nuova.
 
 `build-recipes.js` avvisa (non blocca: una ricetta con un asse fiacco si
-pubblica) quando un asse è ≤1. Se ne vedi uno, la correzione è cambiare
-l'asse, non alzare il numero.
+pubblica) quando un asse è ≤1. Se ne vedi uno, la correzione è **cambiare
+l'asse, non alzare il numero**.
 
 ## Codifica dei file
 
