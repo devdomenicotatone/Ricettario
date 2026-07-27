@@ -58,6 +58,61 @@ function matchRoute(pathname) {
 }
 
 /**
+ * Il primo `navigateTo` è quello che disegna la pagina appena aperta, non un
+ * cambio di rotta: lì non si sposta il focus e non si annuncia niente. Il
+ * browser ha già fatto il suo lavoro, e rubare il focus al caricamento
+ * disorienta invece di aiutare.
+ */
+let primaNavigazione = true;
+
+/**
+ * Quello che va fatto DOPO che il contenuto nuovo è nel DOM.
+ *
+ * Perché serve: questa è una SPA. Cliccando una ricetta il browser non carica
+ * niente — il contenuto viene sostituito e basta. Chi vede se ne accorge; chi
+ * usa uno screen reader no: il focus resta dov'era, la voce resta ferma, e
+ * l'unico indizio che qualcosa è successo è che non c'è nessun indizio.
+ *
+ * Si fanno DUE cose, e nessuna delle due basta da sola:
+ *
+ *   il focus va su `main#contenuto`  perché altrimenti il Tab successivo
+ *                                    ripartirebbe dalla navbar, cioè da capo,
+ *                                    a ogni navigazione;
+ *   il titolo va nella regione live  perché `<main>` da solo si annuncia come
+ *                                    "principale" e non dice DOVE sei
+ *                                    arrivato.
+ *
+ * L'annuncio viene messo dopo il focus e non prima: al contrario, la voce
+ * dell'assistente verrebbe interrotta dal cambio di focus a metà frase.
+ */
+function dopoIlCambioPagina() {
+  const contenuto = document.getElementById('contenuto');
+  if (contenuto) contenuto.focus({ preventScroll: true });
+
+  const annuncio = document.getElementById('annuncio-pagina');
+  if (!annuncio) return;
+
+  // Il titolo del documento lo aggiorna il renderer: qui si legge dopo, a
+  // contenuto già scritto. Il `— Ricettario Lab` finale si toglie perché
+  // ripeterlo a ogni navigazione è rumore.
+  const titolo = document.title.replace(/\s*[—-]\s*(Il )?Ricettario( Lab)?\s*$/i, '').trim();
+
+  // Svuotare e riempire nello stesso giro non produce annuncio: molti
+  // assistenti confrontano il contenuto e, non vedendo differenze, tacciono.
+  // Serve una pausa in mezzo perché il cambiamento venga notato — e serve
+  // anche quando si torna sulla stessa pagina, dove il testo sarebbe identico.
+  //
+  // `setTimeout` e non `requestAnimationFrame`: quest'ultimo è legato al
+  // disegno, e in una scheda che il browser non sta ridisegnando non scatta
+  // affatto. L'annuncio sparirebbe proprio quando la pagina è in secondo
+  // piano. Misurato: con rAF la regione restava vuota.
+  annuncio.textContent = '';
+  setTimeout(() => {
+    annuncio.textContent = titolo ? `${titolo}, pagina caricata` : 'Pagina caricata';
+  }, 100);
+}
+
+/**
  * Naviga a un URL, renderizza la pagina corrispondente.
  */
 async function navigateTo(url, pushState = true) {
@@ -77,13 +132,23 @@ async function navigateTo(url, pushState = true) {
   // Scroll to top
   window.scrollTo(0, 0);
 
+  // Il primo giro disegna la pagina aperta dall'utente: non è un cambio di
+  // rotta, e non va né annunciato né rubato il focus.
+  const eraLaPrima = primaNavigazione;
+  primaNavigazione = false;
+
   // View Transition API per animazioni fluide
   if ('startViewTransition' in document) {
-    document.startViewTransition(async () => {
+    const transizione = document.startViewTransition(async () => {
       await renderRoute(route, app);
     });
+    // `updateCallbackDone` scatta quando il DOM nuovo è a posto, senza
+    // aspettare la fine dell'animazione: il focus non deve stare dietro a
+    // mezzo secondo di dissolvenza.
+    if (!eraLaPrima) transizione.updateCallbackDone.then(dopoIlCambioPagina).catch(() => {});
   } else {
     await renderRoute(route, app);
+    if (!eraLaPrima) dopoIlCambioPagina();
   }
 }
 

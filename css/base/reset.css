@@ -107,6 +107,25 @@
         outline-offset: -2px;
     }
 
+    /* Testo che esiste solo per chi ascolta la pagina.
+       Non si usa `display: none` né `visibility: hidden`: quelli tolgono
+       l'elemento anche agli screen reader, che è l'opposto di quello che
+       serve. Il ritaglio a un pixel lo rende invisibile agli occhi lasciandolo
+       nell'albero di accessibilità.
+       `white-space: nowrap` evita che una frase lunga, schiacciata in un
+       pixel, si spezzi e allunghi la pagina di migliaia di righe invisibili. */
+    .solo-lettore {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+    }
+
     /* Utility: JS-driven visibility toggle */
     .hidden {
         display: none !important;

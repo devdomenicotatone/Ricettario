@@ -3,9 +3,10 @@
 > **27/07/2026.** Il [CHECKUP.md](./CHECKUP.md) generale dichiarava di non aver
 > guardato l'accessibilità oltre agli attributi `alt`. Questo colma quel buco.
 >
-> **Chiusi i punti 2 e 3** (landmark principale e skip link): erano le due voci
-> che riguardavano tutte le 105 pagine. Le altre sei sono ancora aperte — è un
-> rapporto, non un piano di lavoro già eseguito.
+> **Chiusi i punti 1, 2 e 3** — le tre voci che riguardavano tutte le 105
+> pagine: il cambio di rotta adesso viene annunciato e il focus gestito, esiste
+> il landmark principale, e lo skip link porta da qualche parte. Le altre
+> cinque sono ancora aperte.
 >
 > Le voci sono in ordine di quanto pesano per chi le subisce, non di quanto
 > costa sistemarle.
@@ -46,28 +47,52 @@ Non è un contentino: è parecchio, ed è il motivo per cui la lista dei problem
 
 ---
 
-## 1. La SPA cambia pagina senza dirlo a nessuno
+## 1. La SPA cambiava pagina senza dirlo a nessuno — CHIUSO
 
-**Chi ne soffre:** chi usa uno screen reader. Su tutto il sito.
-
-Cliccando una ricetta, il contenuto della pagina viene sostituito per intero e
-il titolo del documento cambia. Misurato cosa succede a chi non vede:
+**Com'era.** Cliccando una ricetta il contenuto veniva sostituito per intero e
+il titolo del documento cambiava, ma per chi non vede non succedeva niente:
 
 ```
 focus prima del clic:  BODY
-focus dopo il clic:    BODY        ← non si è mosso
+focus dopo il clic:    BODY        ← non si era mosso
 regioni live:          nessuna     ← niente da annunciare
-h1 focalizzabile:      no
 ```
 
-Uno screen reader non annuncia niente. L'utente resta con il focus a inizio
-pagina, la voce ferma, e nessun indizio che il contenuto sotto sia cambiato. È
-il difetto classico delle single-page application, ed è quello che pesa di più
-qui perché riguarda **ogni navigazione interna del sito**.
+Nessun indizio che il contenuto sotto fosse cambiato — e l'unico indizio era
+che non c'era nessun indizio.
 
-La correzione standard: dopo il cambio di rotta, spostare il focus sull'`h1`
-nuovo (con `tabindex="-1"`), oppure annunciare il titolo in una regione
-`aria-live="polite"`.
+**Com'è adesso.** Il router fa due cose dopo ogni cambio di rotta, e nessuna
+delle due basterebbe da sola:
+
+- **sposta il focus su `main#contenuto`**, altrimenti il Tab successivo
+  ripartirebbe dalla navbar a ogni navigazione;
+- **scrive il titolo in una regione `aria-live="polite"`**, perché `<main>` da
+  solo si annuncia come «principale» e non dice *dove* sei arrivato.
+
+Tre dettagli che sono costati una correzione ciascuno:
+
+- **Il primo caricamento non annuncia e non tocca il focus.** È la pagina che
+  l'utente ha aperto, non un cambio di rotta: rubargli il focus lo
+  disorienterebbe. Il router distingue i due casi con una bandierina.
+- **La regione live sta fuori da `#app`.** Se il router la sostituisse a ogni
+  navigazione, l'assistente smetterebbe di osservarla e l'annuncio andrebbe
+  perso. Dev'essere sempre lo stesso elemento.
+- **`setTimeout`, non `requestAnimationFrame`.** La regione va svuotata e poi
+  riempita, o un titolo identico non verrebbe riannunciato. Avevo messo la
+  pausa con `requestAnimationFrame`, che è legato al disegno: in una scheda che
+  il browser non sta ridisegnando non scatta affatto, e l'annuncio restava
+  vuoto. **Misurato** — è così che me ne sono accorto.
+
+**Verificato** navigando davvero: clic su categoria → «Primi Piatti, pagina
+caricata»; clic su ricetta → «Gnocchi di Patate, pagina caricata»; tasto
+Indietro → annuncia la pagina di destinazione; ritorno sulla stessa pagina →
+riannuncia. Il caricamento iniziale resta muto e lascia il focus dov'è. Dopo
+ogni navigazione il Tab atterra dentro il contenuto, non sulla navbar.
+Nell'albero di accessibilità compaiono ora `status`, `navigation`, `main` e
+`contentinfo`.
+
+**Cosa resta:** non l'ho ascoltato con uno screen reader vero. La struttura è
+quella giusta e i valori sono misurati, ma come suoni NVDA non l'ho sentito.
 
 ---
 
@@ -264,13 +289,18 @@ Vanno letti, perché due misure su tre le ho dovute rifare.
 
 ## Se hai tempo per una cosa sola
 
-**Il punto 1: fai annunciare il cambio di pagina.**
+**I punti 4 e 5: il contrasto.**
 
-I punti 2 e 3 sono chiusi, e la loro chiusura rende il punto 1 più economico di
-quanto fosse: adesso esiste un `main#contenuto` con `tabindex="-1"`, cioè
-esattamente il bersaglio su cui spostare il focus dopo un cambio di rotta.
-Mancano poche righe nel router, non un impianto nuovo.
+Sono quelli che restano più gravi, e si correggono quasi tutti in un file solo,
+`css/base/tokens.css`: alzare l'opacità del token del testo attenuato (oggi 42%,
+sotto soglia in entrambi i temi) e scurire il fondo del badge delle dosi, che a
+2,05:1 è il numero meno leggibile del sito.
 
-È il più grave che resta perché riguarda ogni navigazione interna del sito.
-Subito dopo verrebbero i punti 4 e 5 — il contrasto — che si correggono quasi
-tutti in un file solo, `css/base/tokens.css`.
+Poi il punto 6, il grafico sensoriale: costa poco perché i dati esistono già in
+forma testuale, e vale molto perché oggi quel pannello, per chi ascolta, non
+contiene niente.
+
+Nota su come sono andate le prime tre: la chiusura dei punti 2 e 3 ha reso il
+punto 1 molto più economico di com'era stimato — il `main#contenuto` con
+`tabindex="-1"` era esattamente il bersaglio che serviva al router. Vale la pena
+guardare se anche fra le voci rimaste qualcuna ne sblocca un'altra.
