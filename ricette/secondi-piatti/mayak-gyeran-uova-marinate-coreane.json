@@ -21,8 +21,8 @@
           "tokenId": "uova"
         },
         {
-          "name": "Aceto di Riso",
-          "note": "(o aceto bianco, per la cottura)",
+          "name": "Aceto di Riso (per cottura)",
+          "note": "(o aceto bianco — solo per l'acqua di bollitura)",
           "grams": 15,
           "tokenId": "aceto_cottura"
         },
@@ -39,7 +39,7 @@
       "items": [
         {
           "name": "Salsa di Soia Light",
-          "note": "(chiara, non scura — es. Kikkoman Light o Sempio)",
+          "note": "(chiara, non scura — es. Kikkoman Light o Sempio; per la versione senza glutine usa tamari certificato: la soia normale contiene grano)",
           "grams": 180,
           "tokenId": "salsa_soia"
         },
@@ -86,8 +86,8 @@
           "tokenId": "sesamo"
         },
         {
-          "name": "Aceto di Riso",
-          "note": "(per la marinata)",
+          "name": "Aceto di Riso (per marinata)",
+          "note": "(dose a parte rispetto a quello della bollitura)",
           "grams": 20,
           "tokenId": "aceto_marinata"
         },
@@ -206,7 +206,7 @@
     "uova",
     "marinatura",
     "soia",
-    "senza glutine",
+    "senza glutine (con tamari)",
     "meal prep",
     "street food",
     "asia",
