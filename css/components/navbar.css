@@ -14,11 +14,18 @@
         backdrop-filter: blur(20px) saturate(1.4);
         -webkit-backdrop-filter: blur(20px) saturate(1.4);
         border-bottom: 2px solid transparent;
+        /* Le tappe erano `rgba(194, 136, 77, …)` scritto a mano: un terzo
+           colore, avanzo di una palette precedente, che non corrispondeva
+           all'accento di nessuno dei due temi — quindi questa riga sotto la
+           navbar non cambiava quando cambiavi tema.
+           Le percentuali sono le alfa di prima, invariate: cambia il colore,
+           non l'intensità. Quelle di `.scrolled` sono più alte perché lì la
+           riga deve staccarsi dal contenuto che le è passato sotto. */
         border-image: linear-gradient(90deg,
             transparent 0%,
-            rgba(194, 136, 77, 0.15) 20%,
-            rgba(194, 136, 77, 0.3) 50%,
-            rgba(194, 136, 77, 0.15) 80%,
+            color-mix(in oklch, var(--color-accent) 15%, transparent) 20%,
+            color-mix(in oklch, var(--color-accent) 30%, transparent) 50%,
+            color-mix(in oklch, var(--color-accent) 15%, transparent) 80%,
             transparent 100%) 1;
 
         &.scrolled {
@@ -27,9 +34,9 @@
                         0 1px 3px rgba(0, 0, 0, 0.06);
             border-image: linear-gradient(90deg,
                 transparent 0%,
-                rgba(194, 136, 77, 0.25) 20%,
-                rgba(194, 136, 77, 0.45) 50%,
-                rgba(194, 136, 77, 0.25) 80%,
+                color-mix(in oklch, var(--color-accent) 25%, transparent) 20%,
+                color-mix(in oklch, var(--color-accent) 45%, transparent) 50%,
+                color-mix(in oklch, var(--color-accent) 25%, transparent) 80%,
                 transparent 100%) 1;
         }
     }
@@ -55,7 +62,9 @@
 
         &:hover .navbar__logo-icon {
             transform: scale(1.12);
-            filter: drop-shadow(0 2px 8px rgba(194, 136, 77, 0.45));
+            /* Stesso terzo colore del bordo qui sopra: l'alone del logo era
+               l'unico punto della navbar che non seguiva il tema. */
+            filter: drop-shadow(0 2px 8px color-mix(in oklch, var(--color-accent) 45%, transparent));
         }
 
         &:hover .navbar__logo-icon svg {

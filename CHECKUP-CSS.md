@@ -5,11 +5,11 @@
 > `recipe-detail.css` da 29 KB: non ho cercato regole morte né duplicazioni».
 > Questo colma quel buco.
 >
-> **Sette punti. Chiusi i primi due, restano aperti gli altri cinque:** questo
+> **Sette punti. Chiusi 1, 2 e 4, restano aperti gli altri quattro:** questo
 > documento è nato come esame, non come intervento. Le correzioni sono quasi
-> tutte da una riga, ma vanno decise una per una — e due volte su due la riga
-> non è bastata: sotto ognuno dei primi due punti c'era un secondo difetto che
-> l'esame non aveva visto.
+> tutte da una riga, ma vanno decise una per una — e tre volte su tre la riga
+> non è bastata: sotto ognuno dei punti chiusi c'era qualcosa che l'esame non
+> aveva visto.
 >
 > **Il punto 1 era il più grave, perché riguardava chi usa il sito e non chi
 > legge il codice:** il pulsante «Fatta» e il bollino ✓ avevano un contrasto di
@@ -26,6 +26,14 @@
 > però anche un difetto in JavaScript, senza il quale la correzione del CSS
 > sarebbe rimasta invisibile: il calcolo che accende il segnale girava una volta
 > sola dentro un `requestAnimationFrame`, cioè troppo presto e mai più.
+>
+> **Il punto 4 era l'ultimo che si vedesse a occhio:** la riga di colore sotto
+> la navbar non cambiava quando cambiavi tema, perché era un terzo colore
+> scritto a mano. Adesso è l'accento, e segue il tema. Ma l'esame ne aveva
+> contate sette occorrenze **perché guardava solo i fogli di stile**: lo stesso
+> `#C2884D` stava anche in `index.html` e in `site.webmanifest`, cioè nel
+> colore che il browser dà alla propria barra su mobile — l'unico dei tre posti
+> che un lettore vede senza guardare il sito.
 >
 > **Metodo:** analisi statica dei 19 fogli (163 KB) più misure nel browser sulle
 > pagine vere. Le classi sospette non sono state dedotte: sono state contate nel
@@ -284,11 +292,11 @@ che spiega perché era stata scritta. È il fossile perfetto.
 
 ---
 
-## 4. Colori scritti a mano che non seguono il tema
+## 4. Colori scritti a mano che non seguono il tema — CHIUSO
 
 51 colori letterali fuori da `tokens.css`. La maggior parte sono neri e bianchi
-in ombre e gradienti, dove è legittimo. Ma sette sono **l'accento del sito
-scritto a mano**, e non corrispondono a nessuno dei due temi:
+in ombre e gradienti, dove è legittimo. Ma sette erano **l'accento del sito
+scritto a mano**, e non corrispondevano a nessuno dei due temi:
 
 ```
 scritto nel CSS   rgb(194, 136, 77)   ← in navbar.css, 7 volte
@@ -296,15 +304,78 @@ accento vero, tema scuro    rgb(239, 133, 46)
 accento vero, tema chiaro   rgb(188,  69, 39)
 ```
 
-È un terzo colore, avanzo di una palette precedente. Sta nel bordo inferiore
+Un terzo colore, avanzo di una palette precedente. Stava nel bordo inferiore
 della navbar (un gradiente in tre tappe, che si ripete per lo stato `.scrolled`)
-e nell'alone che il logo prende al passaggio del mouse. Conseguenza: quella
-riga di colore sotto la navbar **non cambia** quando cambi tema, e in tema
-chiaro è una tinta che non appartiene alla pagina.
+e nell'alone che il logo prende al passaggio del mouse. Conseguenza: quella riga
+di colore sotto la navbar **non cambiava** quando cambiavi tema, e in tema chiaro
+era una tinta che non apparteneva alla pagina.
 
-Non è un problema di contrasto — è un bordo decorativo — ma è esattamente il
-tipo di copia che questo progetto ha già pagato altrove: il valore vive in due
-posti e uno dei due non segue più l'altro.
+Adesso le sette tappe sono `color-mix(in oklch, var(--color-accent) N%,
+transparent)`, **con le alfa di prima invariate**: 15/30/15 a riposo, 25/45/25
+per `.scrolled`, 45 nell'alone del logo. Cambia il colore, non l'intensità.
+
+### Cosa cambia davvero, misurato
+
+Colori compositi della tappa centrale sopra il fondo vero della navbar, con le
+transizioni spente, e contrasto contro quel fondo:
+
+| | fondo navbar | bordo prima | bordo dopo | `.scrolled` dopo |
+|---|---|---|---|---|
+| chiaro | `#F2ECE4` | 228,206,182 · 1,30:1 | 226,186,171 · **1,51:1** | 218,160,143 · 1,90:1 |
+| scuro | `#170E0A` | 75,50,29 · 1,61:1 | 88,49,20 · **1,69:1** | 120,67,26 · 2,37:1 |
+
+Il tema scuro si muove poco: il tan di prima era già vicino all'ambra. **La
+differenza si vede in chiaro**, dove la riga passa da un beige sbiadito quasi
+invisibile a terracotta, ed è la stessa terracotta di tutto il resto della
+pagina. Non è un requisito di contrasto — è un bordo decorativo, nessuna soglia
+lo governa — ma prima non apparteneva a niente.
+
+Verificato anche il modo in cui poteva rompersi: se `--color-accent` non
+risolvesse, `border-image-source` calcolerebbe `none` e il bordo sparirebbe
+senza un errore, che è precisamente il difetto del punto 2. Letto sul vero
+elemento: `linear-gradient(90deg, …, oklch(0.55 0.16 35 / 0.3) 50%, …)` in
+chiaro e `oklch(0.72 0.16 55 / 0.3)` in scuro, con `border-bottom: solid 2px`.
+
+### L'ottava e la nona copia stavano fuori dal CSS
+
+Questo esame contava le occorrenze **nei fogli di stile**, e lì erano sette. Lo
+stesso `#C2884D` — `rgb(194, 136, 77)`, identico — stava anche in:
+
+| file | campo | chi lo legge |
+|---|---|---|
+| `index.html` | `<meta name="theme-color">` | la barra del browser su mobile |
+| `site.webmanifest` | `theme_color` | la barra del titolo della PWA installata |
+
+È l'unico dei tre posti che un utente vede **senza guardare il sito**, ed era
+anche il più inerte: un attributo statico non può seguire un tema che si cambia
+con un pulsante.
+
+**Che colore devono avere.** Non l'accento: `theme-color` serve a far continuare
+la pagina dentro la cornice del browser, e la cornice sta sopra la navbar. Il
+valore giusto è il fondo della navbar, misurato invece che dedotto (è
+`--color-surface-1` all'88% sopra `--color-surface-0`): **`#F2ECE4`** in chiaro,
+**`#170E0A`** in scuro.
+
+**E adesso segue il tema.** I due valori stanno solo nello script anti-FOUC in
+testa a `index.html`, che già decide il tema prima del primo disegno; `main.js`
+chiama quella funzione quando si preme il pulsante, invece di portarsi dietro
+una copia — sarebbe stato lo stesso difetto una riga più in là. Il manifest
+resta a un valore solo perché è un file statico: quello chiaro, coerente con il
+`background_color: #F5EDE3` che già dichiara.
+
+Verificato cliccando il pulsante vero, non chiamando la funzione: in homepage e
+su una pagina ricetta pre-renderizzata il `content` passa da `#170E0A` a
+`#F2ECE4` e torna indietro, e in tutti e due i temi coincide con il fondo della
+navbar misurato nello stesso istante.
+
+### Cosa resta in questo file
+
+`rgba(107, 66, 38, 0.12)`, l'ombra di `.scrolled`: un marrone scritto a mano,
+l'ultimo colore letterale di `navbar.css`. Non l'ho toccato perché non è
+l'accento ed è un'ombra — ma nemmeno lui segue il tema, e il progetto le ombre
+le fa in nero (`--shadow-md` è `oklch(0 0 0 / 0.08)` in chiaro e `/ 0.35` in
+scuro), quindi in tema scuro quest'ombra è molto più debole di ogni altra del
+sito. Cambiarla si vede: va decisa, non uniformata di nascosto.
 
 Nella stessa famiglia c'erano `#16a34a` e `#15803d`, il verde del «fatto», e tre
 dei sei `#fff` di `recipe-detail.css`: **corretti nel punto 1**, adesso sono
@@ -380,13 +451,17 @@ di questo progetto, perché non sono tre, sono nove.
 
 ## Se hai tempo per una cosa sola
 
-**Il punto 4**, l'accento scritto a mano nella navbar: adesso che i primi due
-sono chiusi, è l'unico rimasto che si veda a occhio — quella riga di colore
-sotto la navbar non cambia quando cambi tema.
+**Nessuno dei quattro punti rimasti si vede.** Con il 4 chiuso, quelli che
+riguardavano chi usa il sito sono finiti: 3, 5, 6 e 7 li paga solo chi apre il
+codice.
 
 Il **punto 3** (7 KB di CSS morto) è il più grosso in byte e il meno urgente:
-non si vede, costa solo banda. Il **5** e il **6** sono debito da manutenzione,
-non difetti: nessuno oggi ci inciampa.
+non si vede, costa solo banda. Il **5**, il **6** e il **7** sono debito da
+manutenzione, non difetti: nessuno oggi ci inciampa.
+
+Se invece hai tempo per una cosa sola che valga per il futuro, non è un punto di
+questa lista: sono i **due controlli meccanici** descritti in fondo, che avrebbero
+intercettato i punti 1, 2 e 3 il giorno in cui sono nati.
 
 ---
 
@@ -416,6 +491,11 @@ Dichiararlo serve a non far credere che il resto sia stato approvato.
   vincono su tutto il resto e che questo esame non ha inventariato.
 - **`dist/`.** Ho guardato i sorgenti. Quanto di quel 4,2% sopravviva alla
   minificazione non l'ho misurato.
+- **Gli altri 50 colori letterali fuori dai fogli.** Chiudendo il punto 4 ho
+  cercato `#C2884D` in tutto il repo e ho trovato le due copie in `index.html` e
+  `site.webmanifest`. La stessa ricerca **non** l'ho ripetuta per gli altri
+  valori scritti a mano: se un altro di quei 50 ha un gemello fuori dal CSS, non
+  lo so.
 
 ---
 
@@ -439,10 +519,19 @@ avere una `--x` definita*, e *ogni classe dichiarata deve comparire da qualche
 parte nel codice*. Sarebbero bastati a intercettare i punti 1, 2 e 3 il giorno
 in cui sono nati, invece che cinque mesi dopo.
 
-**Un corollario venuto fuori chiudendo i primi due punti.** Tutte e due le volte
-la correzione scritta qui era giusta e insufficiente: sotto il contrasto del
-punto 1 c'erano un bordo che non esisteva e un componente fuori dal layer, e
-sotto i token del punto 2 c'era un `requestAnimationFrame` che rendeva
-invisibile la correzione appena fatta. Un esame statico vede la riga sbagliata;
-non vede se, riparata quella riga, la cosa funziona davvero. **La verifica dopo
-la correzione non è una formalità: è dove si trova la metà del difetto.**
+**Un corollario venuto fuori chiudendo i punti.** Tutte e tre le volte la
+correzione scritta qui era giusta e insufficiente: sotto il contrasto del punto 1
+c'erano un bordo che non esisteva e un componente fuori dal layer, sotto i token
+del punto 2 c'era un `requestAnimationFrame` che rendeva invisibile la correzione
+appena fatta, e sotto le sette occorrenze del punto 4 ce n'erano altre due.
+Un esame statico vede la riga sbagliata; non vede se, riparata quella riga, la
+cosa funziona davvero. **La verifica dopo la correzione non è una formalità: è
+dove si trova la metà del difetto.**
+
+**E il punto 4 aggiunge una variante.** Lì la correzione era completa — dentro il
+perimetro dell'esame. Le altre due copie di quel colore non erano nascoste: erano
+in `index.html` e in `site.webmanifest`, cioè fuori dai file `.css`, e questo
+documento aveva contato solo dentro. Un numero preciso — «sette volte» — suona
+come una misura completa, e invece è completa solo rispetto a dove hai guardato.
+**Quando un valore è un colore, un URL o un nome, il perimetro giusto non è mai
+un'estensione di file: è il repo.** Cercarlo dappertutto costa un comando.

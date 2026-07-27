@@ -96,12 +96,17 @@ function initThemeToggle() {
     setTimeout(() => themeToggle.classList.remove('theme-toggle--switching'), 400);
 
     document.documentElement.setAttribute('data-theme', next);
+    // La barra del browser segue il tema. I due colori stanno nello script
+    // in testa a index.html, non qui: vedi il commento là.
+    window.applicaColoreBarra?.(next);
     localStorage.setItem('theme', next);
   });
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
     if (!localStorage.getItem('theme')) {
-      document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+      const tema = e.matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', tema);
+      window.applicaColoreBarra?.(tema);
     }
   });
 }

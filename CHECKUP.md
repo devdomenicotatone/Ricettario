@@ -310,17 +310,20 @@ Dichiararlo serve a non far credere che il resto sia stato approvato.
   misurato. È il modo giusto per sapere se una struttura c'è; non è il modo per
   sapere come suona.
 - ~~**Il CSS.**~~ **Fatto**, in un checkup a parte:
-  [CHECKUP-CSS.md](./CHECKUP-CSS.md). Sette punti, **chiuso il primo**. Era il
-  più grave perché riguardava chi usa il sito: il pulsante «Fatta» e il bollino
-  ✓ avevano un contrasto di 3,30:1, sotto la soglia, ed erano sfuggiti al
-  checkup sull'accessibilità perché quel colore compare solo dopo che una
-  ricetta è stata segnata. Adesso è 5,17:1. **Chiuso anche il punto 2**, il più
-  vecchio: tre `var()` puntavano a token **mai esistiti**, e con loro non
-  avevano mai funzionato le sfumature dei caroselli e l'ombra delle frecce —
-  oggi il progetto non ha più un `var()` che non risolve. Restano cinque punti
-  aperti. Resta fuori anche quello che è scritto nei limiti di quel documento:
-  le regole sovrascritte, le prestazioni di disegno e gli stili inline che i
-  renderer scrivono da JavaScript.
+  [CHECKUP-CSS.md](./CHECKUP-CSS.md). Sette punti, **chiusi 1, 2 e 4** — cioè
+  tutti quelli che si vedevano. Il primo era il più grave perché riguardava chi
+  usa il sito: il pulsante «Fatta» e il bollino ✓ avevano un contrasto di
+  3,30:1, sotto la soglia, ed erano sfuggiti al checkup sull'accessibilità
+  perché quel colore compare solo dopo che una ricetta è stata segnata. Adesso è
+  5,17:1. Il secondo era il più vecchio: tre `var()` puntavano a token **mai
+  esistiti**, e con loro non avevano mai funzionato le sfumature dei caroselli e
+  l'ombra delle frecce — oggi il progetto non ha più un `var()` che non risolve.
+  Il quarto era l'ultimo visibile: la riga di colore sotto la navbar non
+  cambiava con il tema, e lo stesso colore stava in altri due file fuori dal
+  CSS, compreso quello che tinge la barra del browser su mobile. Restano quattro
+  punti aperti, tutti invisibili a chi usa il sito. Resta fuori anche quello che
+  è scritto nei limiti di quel documento: le regole sovrascritte, le prestazioni
+  di disegno e gli stili inline che i renderer scrivono da JavaScript.
 - **Il calcolatore di cottura nel merito.** Ho verificato che sia integro (918
   piani generati, percorso completo fino al piano nel browser) e che i due file
   puri lo siano ancora, ma non ho messo in discussione i numeri: quelli hanno un
@@ -346,10 +349,11 @@ Il resto del lavoro possibile su questo repo è nella sezione "Cosa questo
 checkup NON ha guardato" qui sopra: prestazioni misurate davvero, compatibilità
 fra browser, l'animazione d'ingresso mai aperta, `npm audit`.
 
-Fuori da qui restano invece **cinque punti aperti nel checkup del CSS**: vanno
-decisi uno per uno. I primi due sono chiusi — il contrasto del pulsante «Fatta»,
-che era l'ultimo problema di accessibilità rimasto sul sito, e i token che non
-esistevano.
+Fuori da qui restano invece **quattro punti aperti nel checkup del CSS**: CSS
+morto, un layer sbagliato, tre blocchi duplicati e nove breakpoint. Vanno decisi
+uno per uno, ma **nessuno dei quattro si vede**: i tre chiusi erano il contrasto
+del pulsante «Fatta» (l'ultimo problema di accessibilità rimasto sul sito), i
+token che non esistevano, e il colore della navbar che non seguiva il tema.
 
 L'accessibilità non è più in quella lista: ha avuto il suo checkup ed è chiusa
 su tutti e nove i punti. L'unica cosa che le resta è una verifica, non una
