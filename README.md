@@ -219,11 +219,15 @@ index.html              Unica fonte del markup della homepage
 js/
   router.js             Router SPA + gestione del deep link su GitHub Pages
   main.js               Avvio, homepage, pagine categoria, caroselli, ricerca
-  recipe-renderer.js    Pagina ricetta: dosi, grafico sensoriale, sezioni
+  recipe-renderer.js    Pagina ricetta: fetch, montaggio, dosi, grafico
+  html-ricetta.js       Markup della pagina ricetta — PURO, condiviso col pre-rendering
+  html-categoria.js     Markup di categorie, schede e caroselli — PURO, condiviso
+  token-dosi.js         Grammatica e resa dei token {id:valore} — PURO, unica fonte
   categories.js         Registry categorie — unica fonte
   recipe-meta.js        Guardia sui badge (idratazione, tempi)
   icons.js              Icone Lucide inline, nessun CDN
-  emoji.js              Helper per le Fluent Emoji locali
+  emoji.js              Helper per le Fluent Emoji locali (faccia SPA)
+  emoji-core.js         Nucleo puro delle emoji, base come argomento
   cottura/              Calcolatore di cottura (chunk a parte, import dinamico)
     pagina.js           Ingresso nella SPA: decide form o piano dall'URL
     form.js             Form a sei passi

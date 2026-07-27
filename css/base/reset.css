@@ -124,6 +124,20 @@
         outline-offset: -2px;
     }
 
+    /* Dopo una navigazione SPA il router dà il fuoco all'H1 della pagina
+       nuova, non più all'intero #contenuto (vedi dopoIlCambioPagina in
+       js/router.js): stesso trattamento del bersaglio dello skip link qui
+       sopra — nessun anello sul fuoco dato da programma, anello quando è la
+       tastiera a chiederlo. */
+    h1[tabindex="-1"]:focus {
+        outline: none;
+    }
+
+    h1[tabindex="-1"]:focus-visible {
+        outline: 2px solid var(--color-accent);
+        outline-offset: 4px;
+    }
+
     /* Testo che esiste solo per chi ascolta la pagina.
        Non si usa `display: none` né `visibility: hidden`: quelli tolgono
        l'elemento anche agli screen reader, che è l'opposto di quello che

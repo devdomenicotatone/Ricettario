@@ -293,6 +293,18 @@ function paginaHtml(percorso) {
         err(`${rel}: cookTime ${ricetta.cookTime} maggiore di totalTime ${ricetta.totalTime}`);
     }
 
+    // NutritionInformation marcata → le calorie devono essere visibili: è lo
+    // stesso vincolo di ingredienti e passaggi. Si era già rotto in silenzio:
+    // le pagine statiche marcavano nutrition nel JSON-LD senza un solo valore
+    // nutrizionale nel testo, e questo controllo non esisteva.
+    const calorie = ricetta.nutrition?.calories;
+    if (calorie) {
+        const kcal = String(calorie).replace(/\s*kcal\s*$/i, '');
+        if (!new RegExp(`${kcal}\\s*kcal`, 'i').test(testo)) {
+            err(`${rel}: NutritionInformation marcata (${calorie}) ma nessun valore calorico visibile nella pagina`);
+        }
+    }
+
     return { rel, blocchi };
 }
 
@@ -350,6 +362,88 @@ if (!existsSync(join(DIST, 'sitemap.xml'))) {
     }
     if (urls.length !== pagine) {
         warn(`sitemap.xml elenca ${urls.length} URL ma le pagine sono ${pagine}`);
+    }
+}
+
+// ── 2-bis. Il grafo dei link interni ──
+// Era l'unico layer senza cancello, e si è visto: il footer ha pubblicato per
+// mesi link relativi che si rompevano su 104 pagine su 105 (un path relativo
+// nel guscio condiviso si risolve contro l'URL della pagina che lo ospita),
+// più una categoria «pasta» che non esiste. Qui ogni <a href> interno di ogni
+// pagina deve risolvere a qualcosa che esiste davvero in dist/.
+{
+    const BASE_PATH = new URL(SITE_URL).pathname + '/'; // "/Ricettario/"
+    // Il candidato deve essere un FILE: una directory senza index.html
+    // "esiste" per existsSync ma in produzione è un 404.
+    const eFile = (p) => {
+        try { return statSync(p).isFile(); } catch { return false; }
+    };
+    const esisteTarget = new Map();
+    const target = (percorso) => {
+        if (esisteTarget.has(percorso)) return esisteTarget.get(percorso);
+        const locale = percorso.replace(/\/+$/, '');
+        const candidati = locale === ''
+            ? [join(DIST, 'index.html')]
+            : [
+                join(DIST, ...locale.split('/'), 'index.html'),
+                join(DIST, ...locale.split('/')),
+                join(DIST, ...`${locale}.html`.split('/')),
+            ];
+        const ok = candidati.some(eFile);
+        esisteTarget.set(percorso, ok);
+        return ok;
+    };
+
+    (function scorriPagine(dir) {
+        for (const e of readdirSync(dir, { withFileTypes: true })) {
+            const p = join(dir, e.name);
+            if (e.isDirectory()) { scorriPagine(p); continue; }
+            if (e.name !== 'index.html') continue;
+            const rel = p.slice(DIST.length + 1).split(sep).join('/');
+            const html = readFileSync(p, 'utf8');
+            // L'URL della cartella della pagina: è la base contro cui il
+            // browser risolverebbe un href relativo, quindi è quella giusta
+            // anche per giudicarlo.
+            const dirUrl = `https://pagina${BASE_PATH}${rel.replace(/index\.html$/, '')}`;
+            for (const m of html.matchAll(/<a\s[^>]*?href="([^"]*)"/g)) {
+                const href = m[1];
+                if (!href || /^(https?:|mailto:|tel:|#|javascript:)/i.test(href)) continue;
+                let u;
+                try { u = new URL(href, dirUrl); } catch {
+                    err(`${rel}: href non interpretabile — "${href}"`);
+                    continue;
+                }
+                if (!u.pathname.startsWith(BASE_PATH)) {
+                    err(`${rel}: link interno fuori dalla base del sito — href="${href}" `
+                        + `risolve a ${u.pathname}. Un path relativo nel guscio condiviso vale `
+                        + `solo sulla pagina dove per caso torna: scrivilo assoluto (${BASE_PATH}…).`);
+                    continue;
+                }
+                const percorso = decodeURI(u.pathname.slice(BASE_PATH.length));
+                if (!target(percorso)) {
+                    err(`${rel}: link a una pagina che non esiste — href="${href}"`);
+                }
+            }
+        }
+    })(DIST);
+
+    // Le pagine categoria sono linkate staticamente solo dal footer della
+    // homepage: senza quei link sono orfane per un crawler senza JS, e
+    // l'elenco nel footer è per forza una copia di js/categories.js (markup
+    // statico). Questo controllo è ciò che impedisce alle due liste di
+    // divergere: categoria nuova nell'indice → link nuovo nel footer, o non
+    // si pubblica.
+    const indicePath = join(DIST, 'recipes.json');
+    if (existsSync(indicePath)) {
+        const indice = JSON.parse(readFileSync(indicePath, 'utf8'));
+        const home = readFileSync(join(DIST, 'index.html'), 'utf8');
+        for (const d of [...new Set(indice.recipes.map(r => r.categoryDir))]) {
+            if (!home.includes(`href="${BASE_PATH}ricette/${d}/"`)) {
+                err(`index.html: la categoria "${d}" non ha un link statico in homepage — `
+                    + `aggiungila all'elenco del footer in index.html, o la sua pagina resta `
+                    + `orfana per i crawler`);
+            }
+        }
     }
 }
 

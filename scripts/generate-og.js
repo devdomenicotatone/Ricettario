@@ -35,11 +35,14 @@ import { normalizza, slugDaConfig } from '../js/cottura/stato-url.js';
 import { durata as durataUmana } from '../js/cottura/formato.js';
 import { PAGINE_SEO } from '../dati/cottura/coefficienti.js';
 
-// Stesso motivo, applicato ai crediti delle foto: il testo dell'attribuzione lo
-// compone js/credito-foto.js, che è puro e lo importano tutti e due i renderer.
-// Una foto CC va citata sempre, quindi la citazione non può dipendere dal fatto
-// che la SPA sia partita o no.
-import { htmlCreditoFoto } from '../js/credito-foto.js';
+// Stesso motivo, esteso a ricette, categorie e caroselli: il
+// markup esce dagli stessi moduli puri che usa la SPA. Le copie a mano che
+// vivevano qui dentro (prerenderRecipe, prerenderCategory) erano GIÀ
+// divergenti in produzione: niente Pro Tips, Conservazione o Glossario nella
+// versione statica, H1 diversi sulle pagine categoria.
+import { htmlRicetta } from '../js/html-ricetta.js';
+import { htmlCategoria, htmlRigaCarosello } from '../js/html-categoria.js';
+import { CATEGORIES, CATEGORY_ORDER, CATEGORIES_BY_DIR } from '../js/categories.js';
 
 const PROJECT_DIR = process.cwd();
 const DIST_DIR = join(PROJECT_DIR, 'dist');
@@ -400,103 +403,11 @@ function breadcrumbJsonLd(trail) {
 //  PRE-RENDERING DEL CONTENUTO
 // ═══════════════════════════════════════
 
-/**
- * Markup statico della ricetta, con le stesse classi della SPA così da non
- * mostrare contenuto non stilizzato nella frazione di secondo prima che il
- * router prenda il controllo.
- */
-function prerenderRecipe(recipe, src, catDir) {
-    const ingredients = flatIngredients(src);
-    const steps = (src.steps || []).filter(s => s && s.text);
-    const img = absUrl(recipe.image || src.image);
-    const credito = htmlCreditoFoto(src.imageAttribution, src._originalImageUrl);
-
-    const badges = [
-        src.hydration ? `<div class="tech-badge">Idratazione: <span class="tech-badge__value">${escHtml(src.hydration)}%</span></div>` : '',
-        src.targetTemp ? `<div class="tech-badge">Target Temp: <span class="tech-badge__value">${escHtml(src.targetTemp)}</span></div>` : '',
-        src.fermentation ? `<div class="tech-badge">Lievitazione: <span class="tech-badge__value">${escHtml(src.fermentation)}</span></div>` : '',
-    ].join('');
-
-    return `
-      ${credito ? '<figure class="recipe-foto">' : ''}
-      <div class="recipe-hero">
-        ${img ? `<picture class="recipe-hero__picture"><img src="${escAttr(img)}" alt="${escAttr(recipe.title)}" class="recipe-hero__img"></picture>` : ''}
-        <div class="container">
-          <nav class="breadcrumb">
-            <a href="${BASE_PATH}/">Home</a>
-            <span class="breadcrumb__separator">›</span>
-            <a href="${BASE_PATH}/ricette/${escAttr(catDir)}/">${escHtml(recipe.category)}</a>
-            <span class="breadcrumb__separator">›</span>
-            <span>${escHtml(recipe.title)}</span>
-          </nav>
-          <div class="recipe-hero__content">
-            <h1 class="recipe-hero__title">${escHtml(recipe.title)}</h1>
-            <p class="recipe-hero__subtitle">${escHtml(src.subtitle || src.description || '')}</p>
-          </div>
-        </div>
-      </div>
-      ${credito ? `<figcaption class="recipe-foto__credito"><div class="container">${credito}</div></figcaption></figure>` : ''}
-
-      <div class="container" style="padding-top: 40px;">
-        <div class="tech-badges">${badges}</div>
-      </div>
-
-      <section class="recipe-content">
-        <div class="container">
-          <div class="recipe-layout">
-            <div>
-              <div class="recipe-panel">
-                <h2 class="recipe-panel__title">Ingredienti</h2>
-                <table class="ingredients-table" aria-label="Ingredienti e quantità">
-                  ${ingredients.map(i => `<tr><th scope="row">${escHtml(i.name)}${i.note ? ` <span class="ingredient-note">${escHtml(i.note)}</span>` : ''}</th><td class="ingredient-qty">${i.grams != null ? `${i.grams}g` : ''}</td></tr>`).join('')}
-                </table>
-              </div>
-            </div>
-            <div>
-              <div class="recipe-panel">
-                <h2 class="recipe-panel__title">Procedimento</h2>
-                <ol class="steps-list">
-                  ${steps.map(s => `<li class="step-item"><strong>${escHtml(s.title || '')}</strong><p>${escHtml(risolviTokenTesto(s.text))}</p></li>`).join('')}
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>`;
-}
-
-function prerenderCategory(cat, catRecipes, catDir) {
-    return `
-      <section class="category-hero">
-        <div class="category-hero__content">
-          <h1 class="category-hero__title">${escHtml(cat.name)}</h1>
-          <p class="category-hero__subtitle">${escHtml(`Tutte le ricette di ${cat.name.toLowerCase()} del Ricettario Lab.`)}</p>
-          <div class="category-hero__count">${catRecipes.length} ricett${catRecipes.length === 1 ? 'a' : 'e'}</div>
-        </div>
-      </section>
-      <!-- Qui ci vuole una "section", non un "main": il landmark principale
-           adesso è quello del guscio, che avvolge #app. Due annidati sono
-           markup non valido, e uno screen reader non sa più qual è il
-           contenuto. -->
-      <section class="section">
-        <div class="container">
-          <nav class="breadcrumb">
-            <a href="${BASE_PATH}/">Home</a>
-            <span class="breadcrumb__separator">›</span>
-            <span class="breadcrumb__current">${escHtml(cat.name)}</span>
-          </nav>
-          <div class="category-grid">
-            ${catRecipes.map(r => `
-              <a href="${BASE_PATH}/ricette/${escAttr(catDir)}/${escAttr(r.slug)}/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">${escHtml(r.title)}</h2>
-                  ${r.description ? `<p class="category-card__desc">${escHtml(r.description)}</p>` : ''}
-                </div>
-              </a>`).join('')}
-          </div>
-        </div>
-      </section>`;
-}
+// Il markup statico di ricette e categorie esce da js/html-ricetta.js e
+// js/html-categoria.js in modalità `interattivo: false`: le funzioni
+// prerenderRecipe e prerenderCategory che vivevano qui erano copie a mano
+// della SPA, già divergenti in produzione. Vedi i commenti in testa ai due
+// moduli.
 
 // ═══════════════════════════════════════
 //  COMPOSIZIONE DELLA PAGINA
@@ -609,7 +520,7 @@ function generate() {
             url,
             image: recipe.image,
             type: 'article',
-            appHtml: prerenderRecipe(recipe, src, catDir),
+            appHtml: htmlRicetta(src, { base: `${BASE_PATH}/`, categoryDir: catDir, interattivo: false }),
             jsonLd: [
                 recipeJsonLd(recipe, src, url),
                 breadcrumbJsonLd([
@@ -643,7 +554,7 @@ function generate() {
             url,
             image: catRecipes.find(r => r.image)?.image || null,
             type: 'website',
-            appHtml: prerenderCategory(cat, catRecipes, catDir),
+            appHtml: htmlCategoria(CATEGORIES_BY_DIR[catDir], catRecipes, { base: `${BASE_PATH}/`, interattivo: false }),
             jsonLd: [
                 categoryJsonLd(cat, catRecipes, url),
                 breadcrumbJsonLd([
@@ -742,8 +653,28 @@ function generate() {
         sitemap.push({ loc: url, priority: '0.8' });
     }
 
-    // ── 5. Homepage: canonical + JSON-LD WebSite ──
+    // ── 5. Homepage: caroselli statici + canonical + JSON-LD WebSite ──
     let home = stripJsonLd(template.replace(/[ \t]*<link\s+rel="canonical"[\s\S]*?>\n?/g, ''));
+
+    // Il contenitore dei caroselli in index.html è vuoto: lo riempie la SPA.
+    // Per un crawler senza JavaScript la homepage non aveva UN link a una
+    // ricetta — 80 pagine raggiungibili solo via sitemap. Qui si scrivono le
+    // stesse righe che monterebbe la SPA (stesso builder, js/html-categoria.js):
+    // all'avvio initCarousels le sostituisce con la versione interattiva,
+    // quindi chi ha JavaScript non vede differenze. Il wrapper non porta la
+    // classe `reveal` perché senza JS resterebbe a opacity 0.
+    const righeCaroselli = CATEGORY_ORDER.map(key => {
+        const cat = CATEGORIES[key];
+        const delCat = recipes.filter(r => r.categoryDir === cat.dir);
+        if (!delCat.length) return '';
+        return `<div class="category-row">${htmlRigaCarosello(cat.name, cat.emoji, cat.dir, delCat, { base: `${BASE_PATH}/` })}</div>`;
+    }).join('\n');
+    if (!/<div id="recipe-carousels">\s*<\/div>/.test(home)) {
+        console.error('❌ index.html non contiene il contenitore vuoto #recipe-carousels: template incompatibile.');
+        process.exit(1);
+    }
+    home = home.replace(/<div id="recipe-carousels">\s*<\/div>/,
+        `<div id="recipe-carousels">${righeCaroselli}</div>`);
     home = home.replace('</head>', `    <link rel="canonical" href="${SITE_URL}/">
     <script type="application/ld+json">
 ${jsonLdSafe({

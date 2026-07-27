@@ -46,13 +46,32 @@ Due vincoli da non rompere:
   delle linee guida Google, non un'ottimizzazione. Se aggiungi campi allo
   schema, aggiungi anche il markup visibile corrispondente.
 
-## Due file del calcolatore devono restare puri
+## I moduli condivisi col pre-rendering devono restare puri
 
-`js/cottura/motore.js` (il calcolo) e `js/cottura/html-piano.js` (il markup del
-piano) **non possono toccare il DOM, `window`, `localStorage` o
-`import.meta`**, e i dati devono arrivargli come argomento invece che con un
-`import`. Non è una preferenza di stile: li importa anche Node, dentro
-`scripts/generate-og.js` e `scripts/build-cottura.js`.
+`js/cottura/motore.js` (il calcolo), `js/cottura/html-piano.js` (il markup del
+piano), e da luglio 2026 anche `js/html-ricetta.js`, `js/html-categoria.js`,
+`js/token-dosi.js` ed `js/emoji-core.js` (il markup di ricette, categorie,
+schede e caroselli, i token dose, le emoji) **non possono toccare il DOM,
+`window`, `localStorage` o `import.meta`**, e i dati devono arrivargli come
+argomento invece che con un `import`. Non è una preferenza di stile: li importa
+anche Node, dentro `scripts/generate-og.js`, `scripts/build-recipes.js` e
+`scripts/build-cottura.js`. In particolare **non importare `js/router.js` o
+`js/emoji.js` da questi moduli**: leggono `import.meta.env`, che esiste solo
+dentro Vite. La `base` si passa come argomento (`{ base }`), come già fa
+html-piano.js.
+
+Le vecchie copie a mano del markup dentro `generate-og.js` (`prerenderRecipe`,
+`prerenderCategory`) sono state rimosse perché erano già divergute in
+produzione: la pagina statica non aveva Pro Tips, Conservazione né Glossario, e
+le pagine categoria avevano H1 diversi dalla SPA. Non reintrodurle: il
+pre-rendering chiama gli stessi builder con `interattivo: false`, che omette
+solo i controlli morti senza JavaScript (calcolatore dosi, toolbar, canvas e
+toggle del pannello sensoriale — i cui DATI però restano, come contenuto
+piatto: il JSON-LD NutritionInformation deve corrispondere a testo visibile) e
+toglie le classi `reveal`, che senza JS restano a `opacity: 0`. Anche le frecce
+dei caroselli non stanno nel markup: le crea `attivaCarosello` in main.js, che
+IDRATA le righe pre-renderizzate invece di ricostruirle — rifarle dal fetch
+significava cancellare 80 link funzionanti al primo errore di rete.
 
 Se qualcuno ci infila un riferimento al browser, il pre-rendering si rompe e la
 strada facile diventa riscrivere il markup a mano nello script di build — cioè

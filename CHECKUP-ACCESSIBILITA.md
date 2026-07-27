@@ -676,6 +676,17 @@ delle SPA sposta il fuoco su un elemento **piccolo** — l'`h1` con
 `tabindex="-1"` — invece che sul contenitore che contiene tutta la pagina. Ma
 finché il meccanismo non è isolato, questa è un'ipotesi, non una correzione.
 
+**Aggiornamento 27/07/2026:** l'ipotesi qui sopra è stata applicata —
+`dopoIlCambioPagina` in `js/router.js` ora dà il fuoco all'`h1` della pagina
+nuova (con `tabindex="-1"` aggiunto al volo, e fallback su `#contenuto` se un
+`h1` non c'è), lo stesso pattern che il form di cottura usava già sulla sua
+domanda. Con il fuoco su un elemento piccolo, l'annuncio da fuoco può contenere
+al massimo il titolo; resta l'annuncio della regione live, che è voluto. Il
+punto però NON si chiude qui: il meccanismo del megannuncio non è mai stato
+isolato, quindi finché una nuova sessione di ascolto con NVDA sul sito
+pubblicato non conferma che l'annuncio è tornato corto, questa è una modifica
+plausibile, non una misura.
+
 ---
 
 ## Piccole cose sentite per la prima volta

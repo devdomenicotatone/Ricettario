@@ -23,13 +23,15 @@ import '../css/utilities/testo.css';
 // ── SPA Router ──
 import { initRouter, registerRenderers, initReveal, BASE } from './router.js';
 import { renderRecipe } from './recipe-renderer.js';
-import { buildPicture } from './image-utils.js';
 import { applyMadeBadgesToCards } from './recipe-bookmarks.js';
-import { fluentEmoji, categoryEmoji, CATEGORY_FLUENT, refreshIcons } from './emoji.js';
+import { fluentEmoji, CATEGORY_FLUENT, refreshIcons } from './emoji.js';
 import { initLogoIntro } from './logo-intro-v2b.js';
 import { CATEGORIES, CATEGORIES_BY_DIR, CATEGORY_ORDER as CAT_ORDER } from './categories.js';
-import { isValidBadge } from './recipe-meta.js';
-import { escHtml, escAttr } from './escape.js';
+import { escHtml } from './escape.js';
+// Il markup di pagine categoria, schede e caroselli sta in html-categoria.js,
+// che è PURO e viene importato anche dal pre-rendering: qui restano stato,
+// fetch e listener.
+import { htmlCategoria, htmlCardCategoria, htmlRigaCarosello } from './html-categoria.js';
 
 /* global __RECIPES_HASH__ */
 const RECIPE_CACHE_BUST = typeof __RECIPES_HASH__ !== 'undefined' ? `?v=${__RECIPES_HASH__}` : '';
@@ -291,58 +293,13 @@ async function renderCategory(app, { category }) {
     categoryDir: category,
   };
 
-  // Struttura HTML con toolbar aggiornata
-  app.innerHTML = `
-    <section class="category-hero" id="category-hero">
-      <div class="category-hero__content">
-        <h1 class="category-hero__title">${escHtml(meta.title)}</h1>
-        <p class="category-hero__subtitle">${escHtml(meta.desc)}</p>
-        <div class="category-hero__count" id="recipe-count">⏳ Caricamento...</div>
-      </div>
-    </section>
-
-    <!-- Qui ci vuole una "section", non un "main": il landmark principale è
-         quello del guscio, che avvolge #app e sopravvive ai cambi di rotta.
-         Uno annidato dentro l'altro è markup non valido. -->
-    <section class="section">
-      <div class="container">
-        <nav class="breadcrumb">
-          <a href="${BASE}" data-link>Home</a>
-          <span class="breadcrumb__separator">›</span>
-          <a href="${BASE}#ricette" data-link>Ricette</a>
-          <span class="breadcrumb__separator">›</span>
-          <span class="breadcrumb__current">${escHtml(meta.name)}</span>
-        </nav>
-
-        <div class="category-toolbar" id="category-toolbar">
-          <div class="category-toolbar__search">
-            <span class="category-toolbar__search-icon"><i data-lucide="search" style="width:16px;height:16px"></i></span>
-            <input type="text" class="category-toolbar__search-input" id="category-search"
-              placeholder="Cerca tra le ricette di ${escAttr(meta.name.toLowerCase())}...">
-          </div>
-          <div class="category-toolbar__results" id="results-counter"></div>
-          <div class="category-toolbar__sort">
-            <button class="category-toolbar__sort-btn active" data-sort="az">A-Z</button>
-            <button class="category-toolbar__sort-btn" data-sort="hydration">${fluentEmoji('droplet', 14)} Idratazione</button>
-          </div>
-          <div class="category-toolbar__views">
-            <button class="view-toggle-btn ${catState.viewMode === 'grid' ? 'active' : ''}" data-view="grid" aria-label="Vista griglia">
-              <i data-lucide="grid-3x3" style="width:16px;height:16px"></i>
-            </button>
-            <button class="view-toggle-btn ${catState.viewMode === 'list' ? 'active' : ''}" data-view="list" aria-label="Vista lista">
-              <i data-lucide="list" style="width:16px;height:16px"></i>
-            </button>
-          </div>
-        </div>
-
-        <div class="category-grid ${catState.viewMode === 'list' ? 'category-grid--list' : ''}" id="category-grid">
-          ${buildSkeletonCards(6)}
-        </div>
-
-        <div id="load-more-container"></div>
-      </div>
-    </section>
-  `;
+  // Il markup esce dal builder condiviso col pre-rendering: qui la modalità è
+  // interattiva (toolbar + scheletri), le ricette arrivano col fetch qui sotto.
+  app.innerHTML = htmlCategoria(meta, null, {
+    base: BASE,
+    interattivo: true,
+    viewMode: catState.viewMode,
+  });
 
   refreshIcons();
 
@@ -452,7 +409,7 @@ function updateCategoryView() {
   const loadMoreContainer = document.getElementById('load-more-container');
   if (!grid) return;
 
-  const { filteredRecipes, displayedCount, categoryDir } = catState;
+  const { filteredRecipes, displayedCount } = catState;
   const visible = filteredRecipes.slice(0, displayedCount);
   const totalFiltered = filteredRecipes.length;
 
@@ -478,26 +435,8 @@ function updateCategoryView() {
     return;
   }
 
-  // Render visible cards
-  grid.innerHTML = visible.map((r, index) => {
-    const spaHref = `${BASE}ricette/${r.categoryDir || categoryDir}/${r.slug}`;
-    return `
-      <a href="${escAttr(spaHref)}" class="category-card" data-link
-         data-title="${escAttr((r.title || '').toLowerCase())}"
-         data-hydration="${parseInt(r.hydration) || 0}">
-        <div class="category-card__image-wrapper">
-          ${r.image ? buildPicture(`${BASE}${r.image}`, r.title, 'category-card__image', 'lazy') : ''}
-          <div class="category-card__meta">
-            ${isValidBadge(r.hydration) ? `<span class="category-card__tag">${fluentEmoji('droplet', 14)} ${escHtml(r.hydration)}</span>` : ''}
-            ${isValidBadge(r.time) ? `<span class="category-card__tag">${fluentEmoji('stopwatch', 14)} ${escHtml(r.time)}</span>` : ''}
-          </div>
-        </div>
-        <div class="category-card__body">
-          <h2 class="category-card__title">${escHtml(r.title)}</h2>
-          ${r.description ? `<p class="category-card__desc">${escHtml(r.description)}</p>` : ''}
-        </div>
-      </a>`;
-  }).join('');
+  // Render visible cards — stessa scheda del pre-rendering (html-categoria.js)
+  grid.innerHTML = visible.map(r => htmlCardCategoria(r, { base: BASE })).join('');
 
   // Load More
   if (loadMoreContainer) {
@@ -538,17 +477,6 @@ function updateCategoryView() {
   applyMadeBadgesToCards();
 }
 
-function buildSkeletonCards(count) {
-  return Array.from({ length: count }, () => `
-    <div class="category-card category-card--skeleton">
-      <div class="category-card__image-wrapper"></div>
-      <div class="category-card__body">
-        <div class="skeleton-line skeleton-line--title"></div>
-        <div class="skeleton-line skeleton-line--desc"></div>
-      </div>
-    </div>`).join('');
-}
-
 // ═══════════════════════════════════════
 //  CAROUSELS (Netflix-style rows)
 // ═══════════════════════════════════════
@@ -558,45 +486,43 @@ function buildCarouselRow(container, catKey, catEmoji, catDir, recipes) {
   row.className = 'category-row reveal';
   row.dataset.category = catKey;
 
-  row.innerHTML = `
-    <div class="category-row__header">
-      <h3 class="category-row__title">
-        ${fluentEmoji(catEmoji, 32)} ${catKey}
-        <span class="category-row__count">${recipes.length} ricett${recipes.length === 1 ? 'a' : 'e'}</span>
-      </h3>
-      <a href="${BASE}ricette/${catDir}/" class="category-row__link" data-link>Vedi tutte</a>
-    </div>
-    <div class="category-row__carousel-wrapper">
-      <button class="carousel-arrow carousel-arrow--prev" aria-label="Precedente">‹</button>
-      <div class="category-row__carousel">
-        ${recipes.map(r => {
-          const spaHref = r.href.replace('.html', '');
-          return `
-          <a href="${escAttr(spaHref)}" class="recipe-card--compact" data-link data-title="${escAttr(r.title.toLowerCase())}" data-category="${escAttr(r.category)}">
-            <div class="recipe-card--compact__image-wrapper">
-              ${r.image ? buildPicture(r.image, r.title, 'recipe-card--compact__image', 'lazy') : ''}
-            </div>
-            <div class="recipe-card--compact__body">
-              <h4 class="recipe-card--compact__title">${escHtml(r.title)}</h4>
-              <div class="recipe-card--compact__meta">
-                ${isValidBadge(r.hydration) ? `<span class="recipe-card--compact__tag">${fluentEmoji('droplet', 16)} ${escHtml(r.hydration)}</span>` : ''}
-                ${isValidBadge(r.time) ? `<span>${fluentEmoji('stopwatch', 16)} ${escHtml(r.time)}</span>` : ''}
-              </div>
-            </div>
-          </a>`;
-        }).join('')}
-      </div>
-      <button class="carousel-arrow carousel-arrow--next" aria-label="Successivo">›</button>
-    </div>
-  `;
+  // Stessa riga del pre-rendering (html-categoria.js): qui si aggiunge solo
+  // la logica di scorrimento, che ha bisogno del DOM.
+  row.innerHTML = htmlRigaCarosello(catKey, catEmoji, catDir, recipes, { base: BASE });
 
   container.appendChild(row);
+  attivaCarosello(row);
+}
 
-  // Carousel scroll logic
+/**
+ * Aggancia la logica di scorrimento a una riga carosello — che sia appena
+ * costruita da buildCarouselRow o pre-renderizzata da generate-og. Le frecce
+ * le CREA qui, perché nel markup non ci sono: nella pagina statica sarebbero
+ * pulsanti morti, 18 fermate da tastiera che non fanno niente.
+ */
+function attivaCarosello(row) {
+  // Le righe restano nel DOM tra una visita e l'altra della home (vengono
+  // idratate, non ricostruite): senza questa guardia ogni ritorno
+  // aggiungerebbe un secondo set di listener e un altro ResizeObserver.
+  if (row.dataset.attivo) return;
+  row.dataset.attivo = '1';
+
   const carousel = row.querySelector('.category-row__carousel');
   const wrapper = row.querySelector('.category-row__carousel-wrapper');
-  const prevBtn = row.querySelector('.carousel-arrow--prev');
-  const nextBtn = row.querySelector('.carousel-arrow--next');
+  if (!carousel || !wrapper) return;
+
+  const creaFreccia = (classe, etichetta, testo) => {
+    const btn = document.createElement('button');
+    btn.className = `carousel-arrow ${classe}`;
+    btn.setAttribute('aria-label', etichetta);
+    btn.textContent = testo;
+    return btn;
+  };
+  const prevBtn = creaFreccia('carousel-arrow--prev', 'Precedente', '‹');
+  const nextBtn = creaFreccia('carousel-arrow--next', 'Successivo', '›');
+  wrapper.insertBefore(prevBtn, carousel);
+  wrapper.appendChild(nextBtn);
+
   const cardWidth = 276;
 
   const updateScrollState = () => {
@@ -637,6 +563,24 @@ function initCarousels() {
   const carouselsContainer = document.getElementById('recipe-carousels');
   if (!carouselsContainer) return;
 
+  // Se le righe ci sono già — pre-renderizzate da generate-og, o ripristinate
+  // dallo snapshot della home — NON si rifanno: si aggancia la logica a
+  // quelle esistenti. Rifarle dal fetch aveva due difetti concreti: un errore
+  // di rete sostituiva 80 link funzionanti con un messaggio d'errore, e la
+  // ricostruzione (con la classe `reveal`, che parte a opacity 0) faceva
+  // sparire e ridissolvere una sezione che l'utente stava già guardando.
+  const righeEsistenti = carouselsContainer.querySelectorAll('.category-row');
+  if (righeEsistenti.length) {
+    righeEsistenti.forEach(attivaCarosello);
+    initReveal();
+    setupSearch();
+    applyMadeBadgesToCards();
+    return;
+  }
+
+  // Contenitore vuoto: succede solo con `npm run dev`, dove il pre-rendering
+  // non gira. Qui il fetch è l'unica fonte, e il messaggio d'errore non
+  // cancella niente che l'utente stesse già usando.
   // Ordine predefinito dalla single source of truth
   const CATEGORY_ORDER = CAT_ORDER.map(key => {
     const cat = CATEGORIES[key];

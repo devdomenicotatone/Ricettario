@@ -77,19 +77,36 @@ let primaNavigazione = true;
  *
  * Si fanno DUE cose, e nessuna delle due basta da sola:
  *
- *   il focus va su `main#contenuto`  perché altrimenti il Tab successivo
- *                                    ripartirebbe dalla navbar, cioè da capo,
- *                                    a ogni navigazione;
- *   il titolo va nella regione live  perché `<main>` da solo si annuncia come
- *                                    "principale" e non dice DOVE sei
- *                                    arrivato.
+ *   il focus va sull'H1 della pagina  perché altrimenti il Tab successivo
+ *                                     ripartirebbe dalla navbar, cioè da capo,
+ *                                     a ogni navigazione;
+ *   il titolo va nella regione live   perché un H1 da solo non dice che è
+ *                                     cambiata la pagina intera.
+ *
+ * PERCHÉ L'H1 E NON PIÙ `main#contenuto`: con il fuoco sull'intero contenitore,
+ * NVDA leggeva la ricetta INTERA in un annuncio unico e ininterrotto da
+ * 8-9.000 caratteri — briciole, tabella ingredienti riga per riga, tutti i
+ * passaggi (punto 10 di CHECKUP-ACCESSIBILITA.md, misurato sul sito
+ * pubblicato). Spostare il fuoco su un elemento piccolo è il pattern standard
+ * delle SPA, ed è lo stesso già usato dal form di cottura sulla sua domanda.
+ * Onestà dovuta: il meccanismo esatto del megannuncio non è mai stato isolato
+ * (tre riproduzioni sintetiche non lo riproducono), quindi questa è l'ipotesi
+ * più probabile applicata, non una correzione dimostrata — va ri-misurata con
+ * NVDA sul sito pubblicato prima di chiudere il punto 10.
+ *
+ * Il fallback su `#contenuto` resta per le pagine senza H1 (non dovrebbero
+ * esistere, ma un fuoco perso alla navbar è peggio di un annuncio lungo).
  *
  * L'annuncio viene messo dopo il focus e non prima: al contrario, la voce
  * dell'assistente verrebbe interrotta dal cambio di focus a metà frase.
  */
 function dopoIlCambioPagina() {
   const contenuto = document.getElementById('contenuto');
-  if (contenuto) contenuto.focus({ preventScroll: true });
+  const destinazione = contenuto?.querySelector('h1') || contenuto;
+  if (destinazione) {
+    if (!destinazione.hasAttribute('tabindex')) destinazione.setAttribute('tabindex', '-1');
+    destinazione.focus({ preventScroll: true });
+  }
 
   // Il titolo del documento lo aggiorna il renderer: qui si legge dopo, a
   // contenuto già scritto. Il `— Ricettario Lab` finale si toglie perché
