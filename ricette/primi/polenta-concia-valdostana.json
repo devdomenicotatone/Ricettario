@@ -166,23 +166,23 @@
     "summary": "Una polenta concia di grande carattere montano: la grana grossa della bramata macinata a pietra conferisce una tessitura rustica e viva, mentre la mantecatura a fuoco spento con Fontina DOP, Toma Piemontese e burro di centrifuga avvolge ogni granulo in una crema burrosa, filante e avvolgente. Al palato domina un intenso sapore cerealicolo dorato, scandito dalla grassezza nobile dei formaggi d'alpeggio e da una persistenza lunga, calda e quasi tattile, con il pepe nero che richiama con eleganza la rusticità della tradizione valdostana.",
     "axes": [
       {
-        "label": "Tenuta al Morso",
-        "value": 6
+        "label": "Cremosità / Mantecatura",
+        "value": 9
       },
       {
-        "label": "Ruvidezza Superficie",
-        "value": 7
+        "label": "Grana / Rusticità",
+        "value": 8
       },
       {
-        "label": "Elasticità / Masticabilità",
-        "value": 5
+        "label": "Filatura del Formaggio",
+        "value": 8
       },
       {
         "label": "Sapore Cerealicolo",
         "value": 8
       },
       {
-        "label": "Assorbimento Condimento",
+        "label": "Ricchezza Lattica / Burrosa",
         "value": 9
       }
     ]
