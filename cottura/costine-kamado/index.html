@@ -160,7 +160,18 @@
          l'annuncio andrebbe perso. Dev'essere lo stesso elemento, sempre. -->
     <div id="annuncio-pagina" class="solo-lettore" role="status" aria-live="polite" aria-atomic="true"></div>
 
-    <!-- ═══════════ NAVBAR ═══════════ -->
+    <!-- ═══════════ NAVBAR ═══════════
+         Il `<header>` AVVOLGE il `<nav>`, non lo sostituisce. Sono due
+         landmark diversi e servono a due cose diverse: `banner` dice «qui
+         comincia l'intestazione del sito», `navigation` dice «qui ci sono i
+         link per spostarsi». Rinominare il tag avrebbe tolto il secondo per
+         aggiungere il primo, e il secondo è quello che serve per saltare
+         dentro il menu.
+         Non ha classe né stile: contiene solo un elemento `position: fixed`,
+         quindi è alto zero e non sposta niente. Non deve prendere `transform`,
+         `filter` o `contain`: diventerebbe il blocco contenitore della navbar,
+         che smetterebbe di essere ancorata alla finestra. -->
+    <header>
     <nav class="navbar" id="navbar">
         <div class="navbar__inner">
             <a href="/Ricettario/" class="navbar__logo" data-link>
@@ -191,6 +202,7 @@
             </button>
         </div>
     </nav>
+    </header>
 
     <!-- ═══════════ SPA CONTAINER ═══════════ -->
     <!-- Il router carica dinamicamente il contenuto qui -->
