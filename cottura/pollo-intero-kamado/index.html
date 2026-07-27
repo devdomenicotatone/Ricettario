@@ -29,8 +29,8 @@
             document.documentElement.setAttribute('data-theme', theme);
         })();
     </script>
-  <script type="module" crossorigin src="/Ricettario/assets/main-CDHCNJy1.js"></script>
-  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-DsTduW_4.css">
+  <script type="module" crossorigin src="/Ricettario/assets/main-Biba6zwg.js"></script>
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-wQ_KD084.css">
 
     <meta name="description" content="Piano di cottura a fasi per Pollo intero da 1,4 kg su kamado: 1,6-2 h in tutto, estrazione a 74 °C, temperature di camera, gestione delle valvole e carbone…">
     <link rel="canonical" href="https://devdomenicotatone.github.io/Ricettario/cottura/pollo-intero-kamado/">
@@ -155,6 +155,17 @@
          homepage, quindi su 104 pagine su 105 il primo tasto che un utente da
          tastiera premeva non faceva niente. -->
     <a href="#contenuto" class="skip-link">Vai al contenuto principale</a>
+
+    <!-- Annuncio dei cambi di pagina.
+         Questo sito è una SPA: cliccando una ricetta il contenuto viene
+         sostituito senza che il browser carichi niente, quindi uno screen
+         reader non ha nulla da annunciare e l'utente resta a chiedersi se il
+         clic abbia funzionato. Il router ci scrive dentro il titolo della
+         pagina nuova.
+         Sta FUORI da #app di proposito: se il router lo sostituisse a ogni
+         navigazione, l'assistente non lo starebbe più osservando e
+         l'annuncio andrebbe perso. Dev'essere lo stesso elemento, sempre. -->
+    <div id="annuncio-pagina" class="solo-lettore" role="status" aria-live="polite" aria-atomic="true"></div>
 
     <!-- ═══════════ NAVBAR ═══════════ -->
     <nav class="navbar" id="navbar">
