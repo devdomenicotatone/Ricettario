@@ -5,9 +5,11 @@
 > `recipe-detail.css` da 29 KB: non ho cercato regole morte né duplicazioni».
 > Questo colma quel buco.
 >
-> **Sette punti. Chiuso il primo, restano aperti gli altri sei:** questo
+> **Sette punti. Chiusi i primi due, restano aperti gli altri cinque:** questo
 > documento è nato come esame, non come intervento. Le correzioni sono quasi
-> tutte da una riga, ma vanno decise una per una.
+> tutte da una riga, ma vanno decise una per una — e due volte su due la riga
+> non è bastata: sotto ognuno dei primi due punti c'era un secondo difetto che
+> l'esame non aveva visto.
 >
 > **Il punto 1 era il più grave, perché riguardava chi usa il sito e non chi
 > legge il codice:** il pulsante «Fatta» e il bollino ✓ avevano un contrasto di
@@ -17,10 +19,13 @@
 > entrambi i temi, il verde è un token, il bordo che il pulsante dichiarava da
 > marzo esiste davvero e il componente è rientrato nel suo layer.
 >
-> **Il più vecchio ancora aperto ha cinque mesi:** due `var()` puntano a token
-> che **non sono mai esistiti** nella storia del repo. Le dichiarazioni che li
-> usano non hanno mai applicato niente, e con loro non hanno mai funzionato le
-> sfumature ai bordi dei caroselli e l'ombra delle frecce.
+> **Il punto 2 era il più vecchio, cinque mesi:** tre `var()` puntavano a token
+> che **non sono mai esistiti** nella storia del repo, e con loro non hanno mai
+> funzionato le sfumature ai bordi dei caroselli e l'ombra delle frecce. Adesso
+> il progetto non ha più un solo `var()` che non risolve. Sotto quel punto c'era
+> però anche un difetto in JavaScript, senza il quale la correzione del CSS
+> sarebbe rimasta invisibile: il calcolo che accende il segnale girava una volta
+> sola dentro un `requestAnimationFrame`, cioè troppo presto e mai più.
 >
 > **Metodo:** analisi statica dei 19 fogli (163 KB) più misure nel browser sulle
 > pagine vere. Le classi sospette non sono state dedotte: sono state contate nel
@@ -137,7 +142,7 @@ un `color-mix` sul token.
 
 ---
 
-## 2. Tre token che non esistono, e tre cose che non si vedono
+## 2. Tre token che non esistono, e tre cose che non si vedono — CHIUSO
 
 Stessa forma del difetto trovato nel checkup sull'accessibilità — lì era
 `--color-surface` sul badge delle dosi — e stessa causa: **nomi presi da un altro
@@ -145,14 +150,15 @@ schema di denominazione.** Questo progetto usa `--color-surface-0…3`,
 `--border-subtle/medium`, `--shadow-md/lg`. Chi ha scritto queste righe ha usato
 i nomi generici di un design system diverso.
 
-| token | dove | dal | conseguenza misurata |
-|---|---|---|---|
-| `--color-bg` | `category-carousel.css:116` e `:121` | 20/02/2026 | `background-image: none` |
-| `--shadow-card` | `category-carousel.css:148` | 20/02/2026 | `box-shadow: none` |
-| ~~`--color-border`~~ | `recipe-detail.css` | 30/03/2026 | **corretto nel punto 1** |
+| token | dove | dal | conseguenza misurata | ora |
+|---|---|---|---|---|
+| `--color-bg` | `category-carousel.css`, 2 volte | 20/02/2026 | `background-image: none` | `--color-surface-0` |
+| `--shadow-card` | `category-carousel.css` | 20/02/2026 | `box-shadow: none` | `--shadow-md` |
+| `--color-border` | `recipe-detail.css` | 30/03/2026 | nessun bordo | corretto nel punto 1 |
 
-Verificato su git con `-S`: **nessuno dei tre è mai stato definito**, in nessun
-commit. Non si sono rotti, non hanno mai funzionato.
+Verificato su git con `-S`: **nessuno dei tre era mai stato definito**, in nessun
+commit. Non si erano rotti, non avevano mai funzionato. Adesso il progetto non
+ha più un solo `var()` che non risolve.
 
 ### Le sfumature ai bordi dei caroselli
 
@@ -162,23 +168,68 @@ commit. Non si sono rotti, non hanno mai funzionato.
 }
 ```
 
-Servono a dire «c'è altro, scorri». Il resto del meccanismo funziona: sulla
-homepage ci sono 9 caroselli, il JavaScript applica `has-scroll-left` o
-`has-scroll-right` a **6** di loro, e ci sono 18 frecce. Ma i due pseudo-elementi
-esistono larghi 60 px e non dipingono niente: misurato,
-`background-image: none`. Il segnale non è mai comparso.
+Servono a dire «c'è altro, scorri». I due pseudo-elementi esistevano larghi
+60 px e non dipingevano niente.
 
-La correzione è una parola: `--color-surface-0`, che è lo sfondo della pagina.
+Il colore giusto è `--color-surface-0`, e non è una scelta a occhio: risalendo
+dal carosello tutti i contenitori sono trasparenti e il primo fondo opaco è
+quello del `body`, che è esattamente quel token. La sfumatura deve sparire in
+quello, o si vedrebbe il bordo dove finisce.
+
+### E il segnale non compariva lo stesso
+
+Qui la correzione del token non bastava, e me ne sono accorto solo perché ho
+guardato la pagina invece di fidarmi del CSS. Con la sfumatura riparata, sulle
+righe che sborda*vano* davvero il segnale restava spento.
+
+La causa è in `main.js`, ed è una vecchia conoscenza di questo progetto:
+
+```js
+requestAnimationFrame(updateScrollState);   // una volta sola, e mai più
+```
+
+Due difetti sommati. **`requestAnimationFrame` è legato al disegno**: in una
+scheda che il browser non sta ridisegnando non scatta affatto — la stessa
+trappola già pagata sulla regione live in `router.js`, annotata nel checkup
+sull'accessibilità. E anche quando scatta, **un frame solo arriva prima che le
+immagini delle schede abbiano fatto assestare la larghezza**, quindi la misura
+cade su `scrollWidth === clientWidth` e conclude «non c'è niente da scorrere».
+In più non ricalcolava niente al ridimensionamento della finestra, che è proprio
+la cosa che decide se il carosello sborda.
+
+Misurato prima: tre righe su quattro avevano **2208 px di contenuto in 844 di
+spazio** — da scorrere eccome — e nessuna delle tre aveva la classe. Le frecce
+restavano disabilitate.
+
+Adesso c'è una misura sincrona più un `ResizeObserver` sul carosello, che copre
+tutti e tre i casi: primo calcolo, immagini che arrivano, finestra
+ridimensionata.
 
 ### L'ombra delle frecce
 
-`.carousel-arrow` chiede `var(--shadow-card)` a riposo e `var(--shadow-card-hover)`
-al passaggio del mouse. Il secondo esiste, il primo no. Risultato misurato:
-`box-shadow: none` a riposo, ombra al passaggio. La freccia non ha un'ombra che
-si accentua — ne fa comparire una dal nulla.
+`.carousel-arrow` chiedeva `var(--shadow-card)` a riposo e
+`var(--shadow-card-hover)` al passaggio del mouse: il secondo esiste, il primo
+no. La freccia non aveva un'ombra che si accentua — ne faceva comparire una dal
+nulla.
 
-C'è anche un token `--shadow-lg`, definito per tutti e due i temi e **mai usato
-da nessuno**: probabilmente è quello che cercava.
+**Qui il checkup aveva tirato a indovinare, e aveva indovinato male.** Avevo
+scritto che il token cercato era probabilmente `--shadow-lg`, definito e mai
+usato. Guardando la scala, `--shadow-lg` (`0 20px 60px / 0.45` in tema scuro) è
+**più grande** di `--shadow-card-hover` (`0 20px 50px / 0.4`): come stato di
+riposo andrebbe al contrario. Quello giusto è `--shadow-md`, il gradino di
+mezzo, che il progetto usa già in cinque punti. `--shadow-lg` resta orfano.
+
+Una scelta da spiegare: le schede qui accanto **non** hanno ombra a riposo e la
+prendono solo in hover, quindi la freccia sembrerebbe l'eccezione. Non lo è: le
+schede stanno nel flusso e hanno un bordo che le delimita, la freccia è un
+comando che galleggia sopra le immagini e sconfina di 12 px fuori dal carosello.
+Se non si stacca dal fondo, non si legge.
+
+**Verificato** sulla homepage vera, a 892 px e poi a 1392 senza ricaricare:
+6 caroselli su 9 accendono il segnale — e i 3 che non lo accendono sono
+esattamente quelli il cui contenuto ci sta — la sfumatura è opaca al 100% e larga
+60 px, il colore segue il tema (`oklch(0.15 …)` in scuro, `oklch(0.97 …)` in
+chiaro) e la freccia ha `0 8px 30px` a riposo contro l'ombra più grande in hover.
 
 ---
 
@@ -329,15 +380,13 @@ di questo progetto, perché non sono tre, sono nove.
 
 ## Se hai tempo per una cosa sola
 
-**Il punto 2**, adesso che il primo è chiuso. Costa due parole —
-`--color-surface-0` al posto di `--color-bg`, `--shadow-lg` al posto di
-`--shadow-card` — e restituisce due cose che nessuno ha mai visto funzionare: le
-sfumature che dicono «c'è altro, scorri» ai bordi dei caroselli, e l'ombra delle
-frecce.
+**Il punto 4**, l'accento scritto a mano nella navbar: adesso che i primi due
+sono chiusi, è l'unico rimasto che si veda a occhio — quella riga di colore
+sotto la navbar non cambia quando cambi tema.
 
 Il **punto 3** (7 KB di CSS morto) è il più grosso in byte e il meno urgente:
-non si vede, costa solo banda. Il **punto 4** (l'accento scritto a mano nella
-navbar) è l'unico rimasto che si veda a occhio, e solo in tema chiaro.
+non si vede, costa solo banda. Il **5** e il **6** sono debito da manutenzione,
+non difetti: nessuno oggi ci inciampa.
 
 ---
 
@@ -389,3 +438,11 @@ servirebbero sono meccanici e si scrivono in poche righe: *ogni `var(--x)` deve
 avere una `--x` definita*, e *ogni classe dichiarata deve comparire da qualche
 parte nel codice*. Sarebbero bastati a intercettare i punti 1, 2 e 3 il giorno
 in cui sono nati, invece che cinque mesi dopo.
+
+**Un corollario venuto fuori chiudendo i primi due punti.** Tutte e due le volte
+la correzione scritta qui era giusta e insufficiente: sotto il contrasto del
+punto 1 c'erano un bordo che non esisteva e un componente fuori dal layer, e
+sotto i token del punto 2 c'era un `requestAnimationFrame` che rendeva
+invisibile la correzione appena fatta. Un esame statico vede la riga sbagliata;
+non vede se, riparata quella riga, la cosa funziona davvero. **La verifica dopo
+la correzione non è una formalità: è dove si trova la metà del difetto.**

@@ -111,14 +111,23 @@
         transition: opacity var(--transition-medium);
     }
 
+    /* Le due sfumature che dicono «c'è altro, scorri». Chiedevano
+       `var(--color-bg)`, un token mai definito in tutta la storia del repo:
+       quando un `var()` non risolve la dichiarazione è invalida e `background`
+       torna al valore iniziale, cioè trasparente. I due pseudo-elementi
+       esistevano larghi 60 px e non dipingevano niente — dal 20 febbraio.
+       Il colore giusto è `--color-surface-0`: risalendo dal carosello tutti i
+       contenitori sono trasparenti e il primo fondo opaco è quello del `body`,
+       che è esattamente quel token. La sfumatura deve sparire in quello, o si
+       vedrebbe il bordo dove finisce. */
     .category-row__carousel-wrapper::before {
         left: 0;
-        background: linear-gradient(to right, var(--color-bg), transparent);
+        background: linear-gradient(to right, var(--color-surface-0), transparent);
     }
 
     .category-row__carousel-wrapper::after {
         right: 0;
-        background: linear-gradient(to left, var(--color-bg), transparent);
+        background: linear-gradient(to left, var(--color-surface-0), transparent);
     }
 
     .category-row__carousel-wrapper.has-scroll-left::before,
@@ -145,7 +154,16 @@
         justify-content: center;
         opacity: 0;
         transition: all var(--transition-medium);
-        box-shadow: var(--shadow-card);
+        /* Era `var(--shadow-card)`, altro token mai definito: la freccia non
+           aveva ombra a riposo e ne faceva comparire una dal nulla al passaggio
+           del mouse, invece di accentuare quella che aveva.
+           `--shadow-md` e non `--shadow-lg`, che pure è definito e non lo usa
+           nessuno: nella scala del progetto `lg` è più grande di
+           `--shadow-card-hover`, quindi come stato di riposo andrebbe al
+           contrario. Le schede qui accanto non hanno ombra a riposo, ma questa
+           è un comando che galleggia sopra le immagini e sconfina di 12 px
+           fuori dal carosello: se non si stacca, non si legge. */
+        box-shadow: var(--shadow-md);
     }
 
     .carousel-arrow:hover {

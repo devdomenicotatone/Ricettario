@@ -314,12 +314,13 @@ Dichiararlo serve a non far credere che il resto sia stato approvato.
   più grave perché riguardava chi usa il sito: il pulsante «Fatta» e il bollino
   ✓ avevano un contrasto di 3,30:1, sotto la soglia, ed erano sfuggiti al
   checkup sull'accessibilità perché quel colore compare solo dopo che una
-  ricetta è stata segnata. Adesso è 5,17:1. Il più vecchio fra quelli aperti ha
-  cinque mesi: due `var()` puntano a token **mai esistiti**, e con loro non
-  hanno mai funzionato le sfumature dei caroselli e l'ombra delle frecce.
-  Resta fuori quello che è scritto nei suoi limiti: le regole sovrascritte, le
-  prestazioni di disegno e gli stili inline che i renderer scrivono da
-  JavaScript.
+  ricetta è stata segnata. Adesso è 5,17:1. **Chiuso anche il punto 2**, il più
+  vecchio: tre `var()` puntavano a token **mai esistiti**, e con loro non
+  avevano mai funzionato le sfumature dei caroselli e l'ombra delle frecce —
+  oggi il progetto non ha più un `var()` che non risolve. Restano cinque punti
+  aperti. Resta fuori anche quello che è scritto nei limiti di quel documento:
+  le regole sovrascritte, le prestazioni di disegno e gli stili inline che i
+  renderer scrivono da JavaScript.
 - **Il calcolatore di cottura nel merito.** Ho verificato che sia integro (918
   piani generati, percorso completo fino al piano nel browser) e che i due file
   puri lo siano ancora, ma non ho messo in discussione i numeri: quelli hanno un
@@ -345,9 +346,10 @@ Il resto del lavoro possibile su questo repo è nella sezione "Cosa questo
 checkup NON ha guardato" qui sopra: prestazioni misurate davvero, compatibilità
 fra browser, l'animazione d'ingresso mai aperta, `npm audit`.
 
-Fuori da qui restano invece **sei punti aperti nel checkup del CSS**: vanno
-decisi uno per uno. Il primo, il contrasto del pulsante «Fatta», era l'ultimo
-problema di accessibilità rimasto sul sito ed è chiuso.
+Fuori da qui restano invece **cinque punti aperti nel checkup del CSS**: vanno
+decisi uno per uno. I primi due sono chiusi — il contrasto del pulsante «Fatta»,
+che era l'ultimo problema di accessibilità rimasto sul sito, e i token che non
+esistevano.
 
 L'accessibilità non è più in quella lista: ha avuto il suo checkup ed è chiusa
 su tutti e nove i punti. L'unica cosa che le resta è una verifica, non una

@@ -603,7 +603,26 @@ function buildCarouselRow(container, catKey, catEmoji, catDir, recipes) {
   };
 
   carousel.addEventListener('scroll', updateScrollState, { passive: true });
-  requestAnimationFrame(updateScrollState);
+
+  // Qui c'era un solo `requestAnimationFrame(updateScrollState)`, e non
+  // bastava per due motivi che si sommano:
+  //
+  //   - `requestAnimationFrame` è legato al disegno: in una scheda che il
+  //     browser non sta ridisegnando non scatta affatto. È la stessa trappola
+  //     già pagata sulla regione live in `router.js`.
+  //   - un frame solo arriva comunque prima che le immagini delle schede
+  //     abbiano fatto assestare la larghezza del carosello, quindi la misura
+  //     cadeva su `scrollWidth === clientWidth` e concludeva «non c'è niente
+  //     da scorrere».
+  //
+  // In più non ricalcolava niente al ridimensionamento della finestra, che è
+  // proprio la cosa che decide se il carosello sborda o no.
+  //
+  // Misurato prima della correzione: tre righe su quattro avevano 2208 px di
+  // contenuto in 844 di spazio — cioè da scorrere eccome — e nessuna delle tre
+  // aveva la classe. Le frecce restavano disabilitate e le sfumature spente.
+  updateScrollState();
+  new ResizeObserver(updateScrollState).observe(carousel);
 
   prevBtn.addEventListener('click', () => carousel.scrollBy({ left: -cardWidth * 3, behavior: 'smooth' }));
   nextBtn.addEventListener('click', () => carousel.scrollBy({ left: cardWidth * 3, behavior: 'smooth' }));
