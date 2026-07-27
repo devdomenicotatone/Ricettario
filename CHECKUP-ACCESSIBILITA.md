@@ -144,10 +144,35 @@ sposta il focus su `main#contenuto`, e il Tab dopo atterra dentro il contenuto
 — sulle briciole di pane della ricetta, non di nuovo sulla navbar. Il landmark
 sopravvive ai cambi di rotta della SPA (provati tre passaggi di fila).
 
-**Cosa resta fuori:** manca ancora `<header>`. L'ho lasciato perché la navbar è
-già un `<nav>`, che è il landmark che conta per saltarci dentro, e trasformarla
-avrebbe tolto quello per aggiungere l'altro. Va fatto avvolgendo, non
-rinominando.
+### E adesso c'è anche `<header>`
+
+Era rimasto fuori, con la nota «va fatto avvolgendo, non rinominando». Fatto
+così: `<header>` **avvolge** il `<nav>`, non lo sostituisce.
+
+Sono due landmark diversi e servono a due cose diverse: `banner` dice «qui
+comincia l'intestazione del sito», `navigation` dice «qui ci sono i link per
+spostarsi». Rinominare il tag avrebbe tolto il secondo per aggiungere il primo,
+e il secondo è quello che conta per saltare dentro il menu.
+
+Il `<header>` non ha classe né stile, e non è una dimenticanza: contiene solo un
+elemento `position: fixed`, quindi è alto zero e non sposta niente. Una cosa da
+non fargli mai: dargli `transform`, `filter` o `contain`. Diventerebbe il blocco
+contenitore della navbar, che smetterebbe di essere ancorata alla finestra e
+comincerebbe a scorrere via con la pagina.
+
+**Verificato** su tutte e 106 le pagine generate: **un solo** `<header>` di
+primo livello ciascuna. Le uniche altre due sono annidate dentro `<main>` — la
+testata del form e quella del piano di cottura — che è markup legittimo e non
+produce un secondo `banner`. Fa eccezione `404.html`, che non ne ha nessuno:
+è la pagina tecnica di rimbalzo per GitHub Pages, senza contenuto, e non deve
+averlo.
+
+E provato nel browser: nell'albero di accessibilità compaiono `banner` →
+`navigation`, `main`, `contentinfo`, e restano quattro dopo tre cambi di rotta
+della SPA. La navbar resta ancorata in cima (`fixed`, `top: 0`, `z-index: 1000`)
+e il menu a scomparsa dei telefoni entra e esce come prima — 488→751 chiuso,
+113→375 aperto — segno che nessun antenato è diventato il suo blocco
+contenitore.
 
 ---
 
@@ -568,11 +593,13 @@ ascoltata con uno screen reader vero.** Tutto ciò che c'è scritto qui viene
 dall'albero di accessibilità e dal DOM misurato. È il modo giusto di verificare
 che una struttura ci sia; non è il modo di sapere come suona.
 
-Sono rimaste fuori anche tre cose che non erano nella lista dei nove e che ho
-incontrato per strada: manca ancora un `<header>` attorno alla navbar (punto 2),
+Sono rimaste fuori anche due cose che non erano nella lista dei nove:
 `body { overflow-x: hidden }` continua a poter nascondere un futuro sbordamento
 invece di mostrarlo (punto 8), e il pannello dei timer non è stato provato con
 un lettore attivo mentre conta.
+
+Il `<header>` mancante del punto 2, che era il terzo di questi avanzi, adesso
+c'è.
 
 ## Una cosa che si è ripetuta sei volte
 
