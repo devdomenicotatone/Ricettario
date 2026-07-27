@@ -829,6 +829,17 @@
             background: color-mix(in oklch, var(--color-accent) 18%, transparent);
             border-color: color-mix(in oklch, var(--color-accent) 50%, transparent);
         }
+
+        /* È il <summary> di «Analisi Nutrizionale»: si apre col Tab e Invio,
+           quindi il focus dev'essere visibile. Aveva solo `:hover`, che è
+           l'informazione per il mouse, e un `outline: none` che toglieva
+           l'unica cosa rimasta a chi usa la tastiera.
+           `:focus-visible` e non `:focus`: così il contorno non compare a chi
+           ha appena cliccato, che sa già dov'è. */
+        &:focus-visible {
+            outline: 2px solid var(--color-accent);
+            outline-offset: 3px;
+        }
     }
 
     .nutrition-toggle__icon {

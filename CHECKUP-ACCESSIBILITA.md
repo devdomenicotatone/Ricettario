@@ -3,13 +3,14 @@
 > **27/07/2026.** Il [CHECKUP.md](./CHECKUP.md) generale dichiarava di non aver
 > guardato l'accessibilità oltre agli attributi `alt`. Questo colma quel buco.
 >
-> **Chiusi i punti 1, 2, 3, 4, 5 e 6.** Il cambio di rotta viene annunciato e il
+> **Chiusi i punti dall'1 al 7.** Il cambio di rotta viene annunciato e il
 > focus gestito, esiste il landmark principale, lo skip link porta da qualche
 > parte, il contrasto è a norma ovunque — misurato **zero problemi** su
-> homepage, ricetta, categoria e calcolatore, in entrambi i temi — e il profilo
-> sensoriale esiste anche in parole, non solo in pixel.
+> homepage, ricetta, categoria e calcolatore, in entrambi i temi — il profilo
+> sensoriale esiste anche in parole e non solo in pixel, e **tutti i 227
+> controlli** delle quattro pagine mostrano dove sta il focus.
 >
-> **Restano aperti i punti 7, 8 e 9.**
+> **Restano aperti i punti 8 e 9.**
 >
 > Le voci sono in ordine di quanto pesano per chi le subisce, non di quanto
 > costa sistemarle.
@@ -36,8 +37,8 @@ Non è un contentino: è parecchio, ed è il motivo per cui la lista dei problem
   hanno tutti il loro `aria-label`.
 - **Tutte le immagini hanno `alt`**, e l'`alt` della foto di copertina è il
   titolo della ricetta, che è la cosa giusta.
-- **Il focus si vede**, con l'anello del browser, su tutti i controlli tranne
-  due (punto 7).
+- **Il focus si vede** su tutti i controlli: 227 misurati sulle quattro pagine,
+  zero senza indicatore (punto 7, chiuso).
 - **Nessun `tabindex` positivo.** L'ordine di tabulazione è quello del
   documento, che è il solo che non si rompe.
 - **`prefers-reduced-motion` è rispettato** in quattro punti: animazioni
@@ -275,21 +276,62 @@ dentro sono pulsanti, quindi non si perde niente da tastiera.
 
 ---
 
-## 7. Due controlli senza indicatore di focus
+## 7. Due controlli senza indicatore di focus — CHIUSO
 
-**Chi ne soffre:** chi naviga da tastiera.
+**Chi ne soffriva:** chi naviga da tastiera.
 
-- **`.hero__search-input`** — `css/components/hero.css:148`: `outline: none`
-  senza niente al suo posto, e il campo non ha nemmeno un bordo
-  (`border: none`, sfondo trasparente). Ci si finisce col Tab e non si capisce
-  di esserci.
-- **`.nutrition-toggle__btn`** — `css/pages/recipe-detail.css:811`: è il
-  `<summary>` di «Analisi Nutrizionale», quindi un controllo azionabile da
-  tastiera. Ha solo uno stato `:hover`, niente per il focus.
+**Com'era.** Due `outline: none` senza niente al loro posto.
 
-Il terzo `outline: none` del progetto, in `category-page.css:122`, è invece
-fatto bene: toglie l'anello del browser ma mette un bordo colorato più
-`box-shadow`. È il modello da copiare negli altri due.
+- **`.hero__search-input`** — il campo di ricerca della homepage. Nessun bordo
+  proprio (`border: none`, sfondo trasparente) e nessun contorno: ci si
+  arrivava col Tab e niente diceva di esserci arrivati. C'era un
+  `:focus-within` sulla pillola che lo contiene, ma diceva troppo poco — un
+  alone all'**8% di opacità** sopra un fondo che ha già un'ombra accentata.
+- **`.nutrition-toggle__btn`** — il `<summary>` di «Analisi Nutrizionale»,
+  quindi un controllo che si apre da tastiera. Aveva solo uno stato `:hover`,
+  che è l'informazione per il mouse.
+
+**Com'è adesso.** Tutti e due usano la stessa convenzione del resto del
+progetto — `outline: 2px solid var(--color-accent)` con uno scostamento — che
+era già applicata in undici punti fra calcolatore, barra dei filtri e promo.
+
+Una scelta da spiegare: sul campo di ricerca **l'anello sta sulla pillola, non
+sul campo**. Il campo non ha né bordo né sfondo, quindi il suo riquadro è una
+striscia dentro la pillola e un contorno lì sembrerebbe un errore di disegno.
+Il bersaglio che si vede è la pillola, ed è la pillola che si illumina; il suo
+bordo passa contemporaneamente da `oklch(1 0 0 / 0.06)` — praticamente
+invisibile — all'accento pieno. L'`outline: none` sul campo resta, ma adesso è
+legittimo: c'è un altro indicatore al suo posto, che è la sola condizione a cui
+si può togliere quello del browser.
+
+Sul `<summary>` la regola è `:focus-visible` e non `:focus`, così il contorno
+non compare a chi ha appena cliccato — che sa già dov'è.
+
+**Verificato** misurando: l'anello è `solid 2px` nel colore d'accento su
+entrambi i controlli, e il contrasto contro quello che ha intorno è **7,58:1
+nel tema scuro e 4,80:1 nel chiaro** — la soglia per gli elementi non testuali
+è 3:1, quindi c'è margine in tutti e due i temi.
+
+Poi ho ripassato **tutti** i controlli delle quattro pagine, non solo i due:
+focus su ciascuno e confronto dello stile prima e dopo, contando come valido
+anche un cambiamento su un antenato (è il caso della pillola di ricerca).
+
+| pagina | controlli | senza indicatore |
+|---|---|---|
+| homepage | 129 | **0** |
+| ricetta | 28 | **0** |
+| categoria | 35 | **0** |
+| calcolatore | 35 | **0** |
+
+Il terzo `outline: none` del progetto, in `category-page.css:122`, era già fatto
+bene e l'ho lasciato com'era: toglie l'anello del browser ma mette un bordo
+colorato più `box-shadow`.
+
+**Cosa resta fuori:** la misura del contrasto usa lo sfondo pieno che sta dietro
+la pillola. Sopra ci sono due gradienti decorativi dell'hero — un alone
+all'8% e delle particelle da un pixel — che il metodo non compone. Spostano il
+colore di pochissimo e il margine sulla soglia è ampio, ma non è una misura sui
+pixel veri.
 
 ---
 
@@ -361,15 +403,16 @@ Vanno letti, perché due misure su tre le ho dovute rifare.
 
 ## Se hai tempo per una cosa sola
 
-**Il punto 7: i due controlli senza indicatore di focus.**
+**Il punto 9: le voci minori.**
 
-Costa poco — in `category-page.css:122` c'è già il modello da copiare — e vale
-molto, perché uno dei due è il campo di ricerca in homepage: ci si arriva col
-Tab e non si capisce di esserci.
+Sono quattro cose piccole e indipendenti — le intestazioni della tabella
+ingredienti, i salti di livello nei titoli, le tredici opzioni del calcolatore
+che non sono un gruppo, e il calcolatore che non annuncia i cambi di passo.
+Nessuna richiede di ripensare niente, e la terza e la quarta pesano parecchio
+su chi usa il calcolatore ascoltandolo.
 
-Poi il 9 (le voci minori), che sono piccole ma numerose. Il punto 8, i 21 px di
-scorrimento a 320 px, è il più fastidioso da sistemare perché tocca il logo
-della navbar.
+Il punto 8, i 21 px di scorrimento a 320 px, è l'ultimo perché è il più
+fastidioso da sistemare: tocca il logo della navbar.
 
 ## Una cosa che si è ripetuta quattro volte
 

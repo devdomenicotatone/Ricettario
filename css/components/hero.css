@@ -118,8 +118,18 @@
         transition: all var(--transition-fast);
         box-shadow: 0 4px 20px color-mix(in oklch, var(--color-accent) 6%, transparent);
 
+        /* L'anello di focus sta qui e non sul campo: `.hero__search-input` non
+           ha né bordo né sfondo, quindi il suo riquadro è una striscia dentro
+           la pillola e un contorno lì sembrerebbe un errore di disegno. Il
+           bersaglio visibile è la pillola, ed è la pillola che si illumina.
+           C'era già un `:focus-within`, ma diceva troppo poco: bordo accento e
+           un alone all'8% di opacità, cioè quasi niente sopra un fondo che ha
+           già un'ombra accentata. Il contorno pieno è quello che il resto del
+           progetto usa in undici punti. */
         &:focus-within {
             border-color: var(--color-accent);
+            outline: 2px solid var(--color-accent);
+            outline-offset: 2px;
             box-shadow:
                 0 4px 20px color-mix(in oklch, var(--color-accent) 12%, transparent),
                 0 0 0 3px color-mix(in oklch, var(--color-accent) 8%, transparent);
@@ -145,6 +155,11 @@
         color: var(--color-text);
         font-size: 0.95rem;
         font-family: var(--font-body);
+        /* Togliere l'anello si può solo perché ce n'è un altro al suo posto:
+           lo disegna `.hero__search:focus-within`, qui sopra. Da solo questo
+           `outline: none` era il difetto — si arrivava col Tab su un campo
+           senza bordo, senza sfondo e senza contorno, e niente diceva di
+           esserci arrivati. */
         outline: none;
 
         &::placeholder {
