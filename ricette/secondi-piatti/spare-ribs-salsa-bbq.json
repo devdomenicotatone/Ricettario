@@ -110,7 +110,7 @@
         },
         {
           "name": "Salsa Worcestershire",
-          "note": "(umami e sapidità)",
+          "note": "(umami e sapidità — per la versione senza glutine scegline una senza aceto di malto: quella europea classica è fatta con orzo)",
           "grams": 10,
           "tokenId": "worcester_salsa"
         }
@@ -200,7 +200,7 @@
     "Low & Slow",
     "American Barbecue",
     "Cottura al Forno",
-    "Senza Glutine"
+    "Senza Glutine (con Worcestershire senza malto)"
   ],
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-27T18:44:07.389Z",

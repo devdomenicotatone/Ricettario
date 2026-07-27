@@ -157,6 +157,12 @@ const FONTI_GLUTINE = [
   { re: /\bbirra\b/i },
   // La soia normale è fermentata col grano: senza glutine è il tamari.
   { re: /\bsalsa di soia\b|\bsoia light\b/i, salvo: /\btamari\b/i },
+  // La Worcestershire europea è fatta con aceto di malto d'orzo; quella
+  // americana con aceto distillato ed è dichiarata senza glutine. Dal nome
+  // dell'ingrediente non si distingue, quindi qui non c'è esenzione: chi la
+  // usa in una ricetta senza glutine deve qualificare il tag e dire nella
+  // nota quale bottiglia serve.
+  { re: /\bworcestershire\b|\bsalsa inglese\b/i },
 ];
 
 /**
@@ -175,6 +181,11 @@ const FONTI_CARNE_PESCE = [
   { re: /\b(pesce|acciugh\w*|alici|gamber\w*|crostacei|tonno|colatura|bottarga|vongole|cozze|calamar\w*|seppi\w*|salmone)\b/i },
   { re: /\bbrodo di (carne|pollo|manzo|vitello|pesce)\b/i },
   { re: /\bgelatina\b/i, salvo: /\bagar\b/i },
+  // Le acciughe della Worcestershire non compaiono nel nome dell'ingrediente,
+  // ed è proprio per questo che sta in elenco: un ingrediente la cui
+  // composizione non si legge dall'etichetta è quello che sfugge a chi
+  // controlla a occhio.
+  { re: /\bworcestershire\b|\bsalsa inglese\b/i },
 ];
 
 /**
