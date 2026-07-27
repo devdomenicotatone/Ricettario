@@ -29,8 +29,8 @@
             document.documentElement.setAttribute('data-theme', theme);
         })();
     </script>
-  <script type="module" crossorigin src="/Ricettario/assets/main-Dn2y8Z8Z.js"></script>
-  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-BUWYlgbt.css">
+  <script type="module" crossorigin src="/Ricettario/assets/main-CDHCNJy1.js"></script>
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-DsTduW_4.css">
 
     <meta name="description" content="La vera ricetta della Polenta Concia: un abbraccio cremoso di farina di mais bramata, arricchita con abbondante burro di alpeggio, Fontina DOP e Toma…">
     <link rel="canonical" href="https://devdomenicotatone.github.io/Ricettario/ricette/primi/polenta-concia-valdostana/">
@@ -163,8 +163,11 @@
 
 <body>
 
-    <!-- Skip to content — Accessibilità -->
-    <a href="#ricette" class="skip-link">Vai al contenuto principale</a>
+    <!-- Skip to content — Accessibilità
+         Punta a #contenuto, non a #ricette: quell'ancora esiste solo in
+         homepage, quindi su 104 pagine su 105 il primo tasto che un utente da
+         tastiera premeva non faceva niente. -->
+    <a href="#contenuto" class="skip-link">Vai al contenuto principale</a>
 
     <!-- ═══════════ NAVBAR ═══════════ -->
     <nav class="navbar" id="navbar">
@@ -200,6 +203,20 @@
 
     <!-- ═══════════ SPA CONTAINER ═══════════ -->
     <!-- Il router carica dinamicamente il contenuto qui -->
+    <!-- ═══════════ CONTENUTO PRINCIPALE ═══════════
+         `main` avvolge il contenitore #app invece di sostituirlo. Il tag di
+         apertura e quello di chiusura di #app, con il commento che lo segue,
+         sono portanti in tre punti: generate-og.js li cerca per iniettare il
+         contenuto pre-renderizzato e si ferma con "template incompatibile" se
+         non li trova, e verifica-build.js ci estrae il testo visibile per
+         confrontarlo con i dati strutturati. Rinominare quel tag li avrebbe
+         rotti tutti e tre.
+
+         `tabindex="-1"` non è decorativo: senza, lo skip link porta la pagina
+         quaggiù ma lascia il focus della tastiera dov'era, e il tasto dopo
+         riparte dalla navbar. Con -1 l'elemento riceve il focus da programma
+         pur restando fuori dall'ordine di tabulazione. -->
+    <main id="contenuto" tabindex="-1">
     <div id="app">
 
       <figure class="recipe-foto">
@@ -248,6 +265,7 @@
         </div>
       </section>
     </div><!-- /#app -->
+    </main>
 
     <!-- ═══════════ FOOTER ═══════════ -->
     <footer class="footer">
