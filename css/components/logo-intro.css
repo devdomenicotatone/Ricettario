@@ -161,10 +161,10 @@
         stroke-dashoffset: 80;
         animation: introStrokeDraw 0.45s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     }
+    /* L'SVG disegna due rametti: i ritardi --3 e --4 restavano da una versione
+       precedente del logo. */
     .logo-intro__ramo--1 { animation-delay: 0.55s; }
     .logo-intro__ramo--2 { animation-delay: 0.62s; }
-    .logo-intro__ramo--3 { animation-delay: 0.69s; }
-    .logo-intro__ramo--4 { animation-delay: 0.76s; }
 
     /* Phase 3-4: Chicchi — cascading bloom dal basso */
     .logo-intro__chicco {

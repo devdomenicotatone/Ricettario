@@ -11,7 +11,6 @@ import '../css/components/navbar.css';
 import '../css/components/theme-toggle.css';
 import '../css/components/hero.css';
 import '../css/components/recipe-card.css';
-import '../css/components/filter-bar.css';
 import '../css/components/category-carousel.css';
 import '../css/components/tool-spotlight.css';
 import '../css/components/cottura-promo.css';

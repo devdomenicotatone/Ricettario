@@ -5,11 +5,11 @@
 > `recipe-detail.css` da 29 KB: non ho cercato regole morte né duplicazioni».
 > Questo colma quel buco.
 >
-> **Sette punti. Chiusi 1, 2 e 4, restano aperti gli altri quattro:** questo
+> **Sette punti. Chiusi 1, 2, 3 e 4, restano aperti gli altri tre:** questo
 > documento è nato come esame, non come intervento. Le correzioni sono quasi
-> tutte da una riga, ma vanno decise una per una — e tre volte su tre la riga
-> non è bastata: sotto ognuno dei punti chiusi c'era qualcosa che l'esame non
-> aveva visto.
+> tutte da una riga, ma vanno decise una per una — e quattro volte su quattro la
+> riga non è bastata: sotto ognuno dei punti chiusi c'era qualcosa che l'esame
+> non aveva visto.
 >
 > **Il punto 1 era il più grave, perché riguardava chi usa il sito e non chi
 > legge il codice:** il pulsante «Fatta» e il bollino ✓ avevano un contrasto di
@@ -40,6 +40,14 @@
 > l'accento», in tema scuro **schiarisce**: quel marrone è più chiaro del fondo
 > della pagina, quindi la navbar che scorre proiettava un alone, non un'ombra.
 > Adesso `navbar.css` non ha più un colore scritto a mano.
+>
+> **Il punto 3 era il più grosso in byte e il meno urgente**, ed è stato
+> l'unico chiuso cancellando invece che correggendo: 25 classi morte, un foglio
+> intero e il componente `.recipe-card` originale, rimasto accanto ai suoi due
+> successori. Erano 25 e non 23: **`.filter-bar` e `.recipe-card` si erano
+> nascoste dentro la ricerca stessa** — la prima compare nella riga che importa
+> il proprio foglio, la seconda dentro `recipe-card--compact`. Il sito, dopo,
+> è disegnato identico: verificato proprietà per proprietà su 2 223 elementi.
 >
 > **Metodo:** analisi statica dei 19 fogli (163 KB) più misure nel browser sulle
 > pagine vere. Le classi sospette non sono state dedotte: sono state contate nel
@@ -247,7 +255,7 @@ chiaro) e la freccia ha `0 8px 30px` a riposo contro l'ombra più grande in hove
 
 ---
 
-## 3. Il 4,2% del CSS non tocca nessun elemento
+## 3. Il 4,2% del CSS non tocca nessun elemento — CHIUSO
 
 Ho estratto le 373 classi dichiarate nei fogli e cercato ognuna in tutto il
 codice — JS, HTML, JSON — tenendo conto dei quattro prefissi che il JavaScript
@@ -256,6 +264,15 @@ costruisce a runtime (`cottura-opzioni--`, `piano--`, `avviso--`,
 
 Non mi sono fermato all'analisi statica: le ho contate nel DOM delle pagine vere.
 Su homepage, ricetta e categoria, **tutte e 23 corrispondono a zero elementi**.
+
+> **Erano 25.** Rifacendo il conto per cancellarle, con la ricerca a confine di
+> parola invece che per sottostringa, ne sono saltate fuori altre due — e sono
+> le due più grosse. `.filter-bar` risultava viva perché il suo nome compare in
+> `import '.../filter-bar.css'`, cioè **nella riga che carica il foglio morto**:
+> si giustificava da sola. `.recipe-card` risultava viva perché è un prefisso di
+> `recipe-card--compact`, che è una classe diversa. Due modi opposti di
+> sbagliare la stessa ricerca, tutti e due dentro il perimetro che credevo di
+> aver coperto.
 
 | dove | byte | cosa |
 |---|---|---|
@@ -295,6 +312,62 @@ quello che succede.
 
 Una regola che nasconde un elemento che non esiste più, con accanto il commento
 che spiega perché era stata scritta. È il fossile perfetto.
+
+### Cancellate, e come si dimostra che non è cambiato niente
+
+`filter-bar.css` è stato eliminato insieme alla riga che lo importava; le altre
+regole sono uscite dai sei fogli che le ospitavano. Il conto dopo: **349 classi
+dichiarate, zero mai usate.**
+
+| | prima | dopo |
+|---|---|---|
+| sorgenti CSS | 169 851 byte | 163 553 byte |
+| CSS pubblicato (i tre bundle) | 85,79 kB | **81,74 kB** |
+
+I 6 936 byte del conto iniziale diventano 6 298 di sorgente perché al posto
+delle regole ho lasciato tre commenti che spiegano cosa non c'è più. E si
+risponde qui alla domanda che questo documento aveva lasciato aperta in fondo —
+*quanto di quel 4,2% sopravvive alla minificazione*: **4,05 kB, il 4,7% del CSS
+che ogni visitatore scarica.** Il CSS morto si comprime bene ma non sparisce.
+
+**La verifica.** Cancellare CSS è la modifica che si nota di meno quando va
+male, quindi non basta guardare le pagine. Ho preso l'impronta di come il
+browser le disegna — per ogni elemento tutte le proprietà calcolate, più
+`::before` e `::after`, in tutti e due i temi — prima e dopo:
+
+| pagina | elementi | esito |
+|---|---|---|
+| homepage | 1 157 | identica |
+| ricetta | 465 | identica |
+| categoria | 304 | identica |
+| piano di cottura | 297 | identica |
+
+**2 223 elementi, nessuna differenza.**
+
+Il metodo ha avuto un difetto suo, e si è visto solo perché il risultato era
+troppo bello: la prima impronta usava `getComputedStyle(el).cssText`, che in
+Blink **restituisce stringa vuota**. Confrontava soltanto tag e classi, e infatti
+dava lo stesso identico numero per il tema chiaro e per quello scuro — due temi
+con colori diversi non possono avere la stessa impronta. Le proprietà vanno
+enumerate una per una.
+
+**Gli stati che non si vedono standosene fermi** li ho provati a parte, perché è
+lì che si nascondeva il difetto del punto 1. La ricerca in homepage: 80 schede,
+«pizza» ne lascia 8 in 1 riga, una parola inesistente le nasconde tutte, e
+svuotando il campo tornano 80 su 9 righe. Nasconde con l'utility `.hidden`, non
+con le due classi che ho cancellato — e questo lo si sapeva già dal codice, che
+è l'unica prova possibile per uno stato che nessuno scrive mai.
+
+Una cosa notata provando: **con zero risultati la homepage non dice niente.**
+Le righe spariscono e resta il vuoto. Lo stato vuoto esiste (`.category-empty`,
+con «Nessuna ricetta trovata») ma lo usa solo la pagina categoria. Non c'entra
+con questo punto — è un buco della ricerca, non del CSS.
+
+**Un file che adesso mente.** In `recipe-card.css` non c'è più nessuna scheda
+ricetta: restano l'intestazione di sezione e le pastiglie. Ho messo il perché in
+testa al file invece di rinominarlo — un rename tocca l'import e non aggiunge
+niente a chi legge — ma il nome resta una piccola trappola, della stessa
+famiglia dell'underscore che marcava come «interni» due campi pubblici.
 
 ---
 
@@ -482,17 +555,15 @@ di questo progetto, perché non sono tre, sono nove.
 
 ## Se hai tempo per una cosa sola
 
-**Nessuno dei quattro punti rimasti si vede.** Con il 4 chiuso, quelli che
-riguardavano chi usa il sito sono finiti: 3, 5, 6 e 7 li paga solo chi apre il
-codice.
+**Non è un punto di questa lista.** I tre rimasti — 5, 6 e 7 — sono debito da
+manutenzione: un layer sbagliato che nessuno incontra, tre copie di una ricetta
+di quattro proprietà, nove breakpoint che nessuno ricorda a memoria. Nessuno ci
+inciampa oggi.
 
-Il **punto 3** (7 KB di CSS morto) è il più grosso in byte e il meno urgente:
-non si vede, costa solo banda. Il **5**, il **6** e il **7** sono debito da
-manutenzione, non difetti: nessuno oggi ci inciampa.
-
-Se invece hai tempo per una cosa sola che valga per il futuro, non è un punto di
-questa lista: sono i **due controlli meccanici** descritti in fondo, che avrebbero
-intercettato i punti 1, 2 e 3 il giorno in cui sono nati.
+Quello che vale è in fondo: i **due controlli meccanici** della sezione «La
+lezione». Avrebbero intercettato i punti 1, 2 e 3 il giorno in cui sono nati,
+invece che cinque mesi dopo — e adesso che il punto 3 è chiuso, sono anche
+l'unica cosa che impedisce al CSS morto di riformarsi in silenzio.
 
 ---
 
@@ -520,8 +591,8 @@ Dichiararlo serve a non far credere che il resto sia stato approvato.
 - **Il CSS dentro il JavaScript.** Ci sono stili inline scritti dai renderer —
   `style="display:none"`, larghezze delle barre, `transform` dei chevron — che
   vincono su tutto il resto e che questo esame non ha inventariato.
-- **`dist/`.** Ho guardato i sorgenti. Quanto di quel 4,2% sopravviva alla
-  minificazione non l'ho misurato.
+- ~~**`dist/`.**~~ Misurato chiudendo il punto 3: dei 6 936 byte di sorgente,
+  **4,05 kB arrivavano davvero al visitatore** (85,79 → 81,74 kB sui tre bundle).
 - **Gli altri 50 colori letterali fuori dai fogli.** Chiudendo il punto 4 ho
   cercato `#C2884D` in tutto il repo e ho trovato le due copie in `index.html` e
   `site.webmanifest`. La stessa ricerca **non** l'ho ripetuta per gli altri
@@ -566,6 +637,14 @@ documento aveva contato solo dentro. Un numero preciso — «sette volte» — s
 come una misura completa, e invece è completa solo rispetto a dove hai guardato.
 **Quando un valore è un colore, un URL o un nome, il perimetro giusto non è mai
 un'estensione di file: è il repo.** Cercarlo dappertutto costa un comando.
+
+**Il punto 3 ha dato la stessa lezione dall'altro capo.** Lì il perimetro era
+giusto — tutto il repo — ed era sbagliato il modo di cercare: una ricerca per
+sottostringa fa passare per viva una classe che compare solo nella riga che
+importa il proprio foglio, e una che è il prefisso di un'altra. Due entrate su
+25, cioè il 60% dei byte, invisibili **dentro la misura stessa**. Quando il
+numero che esce da un controllo è la ragione per cui non guardi oltre, quel
+controllo va provato su un caso di cui conosci la risposta.
 
 **Poi il punto 4 ha ripetuto una lezione del checkup sull'accessibilità**, quella
 che dice che un «non provato» non è una nota a piè di pagina ma lavoro non fatto.

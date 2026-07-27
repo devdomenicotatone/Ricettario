@@ -320,10 +320,14 @@ Dichiararlo serve a non far credere che il resto sia stato approvato.
   l'ombra delle frecce — oggi il progetto non ha più un `var()` che non risolve.
   Il quarto era l'ultimo visibile: la riga di colore sotto la navbar non
   cambiava con il tema, e lo stesso colore stava in altri due file fuori dal
-  CSS, compreso quello che tinge la barra del browser su mobile. Restano quattro
-  punti aperti, tutti invisibili a chi usa il sito. Resta fuori anche quello che
-  è scritto nei limiti di quel documento: le regole sovrascritte, le prestazioni
-  di disegno e gli stili inline che i renderer scrivono da JavaScript.
+  CSS, compreso quello che tinge la barra del browser su mobile. Il terzo era il
+  più grosso in byte: 25 classi morte, un foglio intero e la scheda ricetta
+  originale rimasta accanto ai suoi successori — 4,05 kB che ogni visitatore
+  scaricava per non usarli, e il sito dopo è disegnato identico, verificato
+  proprietà per proprietà su 2 223 elementi. Restano tre punti aperti, tutti
+  debito da manutenzione. Resta fuori anche quello che è scritto nei limiti di
+  quel documento: le regole sovrascritte, le prestazioni di disegno e gli stili
+  inline che i renderer scrivono da JavaScript.
 - **Il calcolatore di cottura nel merito.** Ho verificato che sia integro (918
   piani generati, percorso completo fino al piano nel browser) e che i due file
   puri lo siano ancora, ma non ho messo in discussione i numeri: quelli hanno un
@@ -349,11 +353,19 @@ Il resto del lavoro possibile su questo repo è nella sezione "Cosa questo
 checkup NON ha guardato" qui sopra: prestazioni misurate davvero, compatibilità
 fra browser, l'animazione d'ingresso mai aperta, `npm audit`.
 
-Fuori da qui restano invece **quattro punti aperti nel checkup del CSS**: CSS
-morto, un layer sbagliato, tre blocchi duplicati e nove breakpoint. Vanno decisi
-uno per uno, ma **nessuno dei quattro si vede**: i tre chiusi erano il contrasto
-del pulsante «Fatta» (l'ultimo problema di accessibilità rimasto sul sito), i
-token che non esistevano, e il colore della navbar che non seguiva il tema.
+Fuori da qui restano invece **tre punti aperti nel checkup del CSS**: un layer
+sbagliato, tre blocchi duplicati e nove breakpoint. Sono debito da manutenzione,
+non difetti — **nessuno dei tre si vede e nessuno ci inciampa oggi**. I quattro
+chiusi erano il contrasto del pulsante «Fatta» (l'ultimo problema di
+accessibilità rimasto sul sito), i token che non esistevano, il colore della
+navbar che non seguiva il tema e i 4 kB di CSS che non toccava nessun elemento.
+
+La cosa più utile che resta da fare su questo repo non è nessuno dei tre: sono i
+**due controlli meccanici** che quel documento descrive in fondo — ogni `var()`
+deve puntare a un token definito, ogni classe dichiarata deve comparire da
+qualche parte. Il cancello controlla i dati, i link, i JSON-LD, il peso delle
+immagini e le risorse orfane; il CSS no, ed è l'unica famiglia di difetti che
+qui è nata morta e ci è rimasta per mesi.
 
 L'accessibilità non è più in quella lista: ha avuto il suo checkup ed è chiusa
 su tutti e nove i punti. L'unica cosa che le resta è una verifica, non una

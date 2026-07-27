@@ -185,11 +185,6 @@
         }
     }
 
-    /* Recipe card hidden by search */
-    .recipe-card--hidden {
-        display: none !important;
-    }
-
     @keyframes heroGlow {
         0% {
             transform: translate(0, 0) scale(1);

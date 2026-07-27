@@ -42,11 +42,6 @@
         margin: 0 auto;
     }
 
-    .category-hero__emoji {
-        display: none;
-        /* Nascosto perché rimpiazzato dall'immagine reale */
-    }
-
     .category-hero__title {
         font-family: var(--font-display);
         font-size: clamp(3rem, 6vw, 4.2rem);
@@ -317,32 +312,6 @@
     .category-empty__icon {
         font-size: 3rem;
         margin-bottom: var(--space-md);
-    }
-
-    /* ── Stats Bar ── */
-    .category-stats {
-        display: flex;
-        gap: var(--space-lg);
-        justify-content: center;
-        margin-top: var(--space-md);
-    }
-
-    .category-stats__item {
-        text-align: center;
-    }
-
-    .category-stats__value {
-        font-family: var(--font-display);
-        font-size: 1.4rem;
-        font-weight: 800;
-        color: var(--color-text-accent);
-    }
-
-    .category-stats__label {
-        font-size: 0.75rem;
-        color: var(--color-text-muted);
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
     }
 
     /* ══════════════════════════════════════════

@@ -309,11 +309,4 @@
         }
     }
 
-    /* ── Empty state ── */
-    .category-row__empty {
-        padding: var(--space-xl);
-        text-align: center;
-        color: var(--color-text-muted);
-        font-style: italic;
-    }
 }

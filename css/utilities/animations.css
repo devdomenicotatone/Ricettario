@@ -29,10 +29,6 @@
         transition-delay: 0.3s;
     }
 
-    .reveal-delay-4 {
-        transition-delay: 0.4s;
-    }
-
     /* ── View Transitions API ── */
     ::view-transition-old(root) {
         animation: vt-fade-out 0.2s ease-out;
