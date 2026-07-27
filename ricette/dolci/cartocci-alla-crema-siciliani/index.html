@@ -7,8 +7,10 @@
     <title>Cartocci alla Crema Siciliani — Ricettario Lab</title>
     <link rel="icon" type="image/svg+xml" href="/Ricettario/assets/favicon-Ce3yoLgR.svg">
     <link rel="apple-touch-icon" href="/Ricettario/assets/apple-touch-icon-DVCrky5e.png">
-    <link rel="manifest" href="/Ricettario/assets/site-LXOPX623.webmanifest">
-    <meta name="theme-color" content="#C2884D">
+    <link rel="manifest" href="/Ricettario/assets/site-DXZVqlE8.webmanifest">
+    <!-- Lo script in fondo al <head> lo riscrive secondo il tema: qui c'è il
+         chiaro, che è anche il tema dichiarato su <html>. -->
+    <meta name="theme-color" content="#F2ECE4">
 
     <!-- Open Graph — Social Sharing Card -->
 
@@ -27,10 +29,21 @@
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             const theme = saved || (prefersDark ? 'dark' : 'light');
             document.documentElement.setAttribute('data-theme', theme);
+
+            /* Barra del browser = fondo della navbar, misurato (88% di
+               --color-surface-1 su --color-surface-0). Unica copia dei due
+               valori: main.js chiama questa funzione, non li riscrive.
+               Perché non è più #C2884D: CHECKUP-CSS.md, punto 4. */
+            const COLORI_BARRA = { light: '#F2ECE4', dark: '#170E0A' };
+            window.applicaColoreBarra = function (t) {
+                const meta = document.querySelector('meta[name="theme-color"]');
+                if (meta && COLORI_BARRA[t]) meta.setAttribute('content', COLORI_BARRA[t]);
+            };
+            window.applicaColoreBarra(theme);
         })();
     </script>
-  <script type="module" crossorigin src="/Ricettario/assets/main-Duz0AH1B.js"></script>
-  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-Cq0ns0GB.css">
+  <script type="module" crossorigin src="/Ricettario/assets/main-CbiLrIHe.js"></script>
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-D_9N2jSp.css">
 
     <meta name="description" content="Cannoli fritti lievitati con crema pasticcera — tradizione dolciaria siciliana con impasto morbido e friabile">
     <link rel="canonical" href="https://devdomenicotatone.github.io/Ricettario/ricette/dolci/cartocci-alla-crema-siciliani/">
