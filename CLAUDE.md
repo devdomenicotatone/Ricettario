@@ -101,6 +101,32 @@ un browser.
   importato dal codice, quindi entra nel bundle del calcolatore, che è un chunk
   caricato solo su `/cottura/`.
 
+## I tag che promettono qualcosa a chi mangia
+
+I `tags` non li scrive questo repo: arrivano dalla dashboard, cambiano modello
+nel tempo, e da qui finiscono nelle `keywords` dei dati strutturati — cioè a
+Google. «coreano» sbagliato è un fastidio; **«senza glutine» sbagliato è
+un'informazione su cui una persona celiaca decide se può mangiare una cosa**.
+È già successo: la Mayak Gyeran è stata pubblicata con quel tag ed è costruita
+sulla salsa di soia, che il grano ce l'ha.
+
+`controllaPromesse` in `scripts/build-recipes.js` boccia la build quando un tag
+promette «senza glutine» o «vegano» e fra gli ingredienti c'è qualcosa che lo
+smentisce. Due cose da sapere:
+
+- **Per dichiarare una promessa condizionata si usa la parentesi**:
+  `senza glutine (con tamari)`, come fa `condimenti/salsa-teriyaki-originale`.
+  Un tag con parentesi passa, perché dice al lettore a quale condizione la
+  promessa vale. È quella la via d'uscita, non allargare le esenzioni.
+- **Le esenzioni guardano il NOME dell'ingrediente, mai la nota**, ed è una
+  cicatrice: la prima versione leggeva anche le note, e la nota che spiega
+  «per la versione senza glutine usa tamari» bastava ad assolvere una ricetta
+  che monta salsa di soia normale. Un cancello che si disinnesca leggendo la
+  prosa che descrive il problema non protegge niente.
+
+L'analisi qualità della dashboard **non** copre questo: nei suoi 83 referti le
+aree sono Coerenza, Dosi, Setup, Tempi, Temperature. Di allergeni non parla mai.
+
 ## Codifica dei file
 
 I JSON delle ricette sono UTF-8. Sette file sono già stati salvati una volta

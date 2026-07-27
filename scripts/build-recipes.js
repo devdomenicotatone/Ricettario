@@ -105,6 +105,109 @@ function controllaToken(raw, dove) {
   })(raw, '');
 }
 
+/**
+ * I tag che promettono qualcosa a chi mangia.
+ *
+ * PERCHÉ ESISTE QUESTO CONTROLLO
+ * I tag non li scrive nessuno di questo repo: arrivano dalla dashboard che
+ * genera le ricette, cambiano modello nel tempo (`_generatedBy` dice
+ * `gemini-3.1`, `claude`, `claude-opus`) e da qui vanno dritti nelle
+ * `keywords` dei dati strutturati, cioè a Google. Nessuno li guardava.
+ *
+ * «coreano» o «street food» sbagliato è un fastidio. «senza glutine» sbagliato
+ * è un'informazione su cui una persona celiaca decide se può mangiare una
+ * cosa: la Mayak Gyeran è stata pubblicata con quel tag ed è costruita sulla
+ * salsa di soia, che il grano ce l'ha. Su 22 ricette con una promessa
+ * alimentare era l'unica smentita dai suoi stessi ingredienti — cioè il
+ * generatore ci prende quasi sempre, ed è esattamente per questo che
+ * l'errore raro passa inosservato.
+ *
+ * L'analisi qualità della dashboard non copre questo: nei suoi 83 referti le
+ * aree sono Coerenza, Dosi, Setup, Tempi, Temperature — di tag e allergeni
+ * non parla mai. È un controllo che serve qui.
+ *
+ * COME SI DICHIARA UNA PROMESSA CONDIZIONATA
+ * Un tag con una parentesi è considerato già vincolato e passa:
+ * `senza glutine (con tamari)` è la convenzione che questo repo usa sulla
+ * salsa teriyaki, e dice al lettore *a quale condizione* la promessa vale.
+ * È la via d'uscita voluta — non silenziare il controllo, qualificare il tag.
+ *
+ * Le liste sono volutamente CORTE e ad alta confidenza: un cancello che
+ * boccia build sane viene disattivato, e allora non protegge più niente.
+ *
+ * SI GUARDA IL NOME DELL'INGREDIENTE, MAI LA NOTA — e vale in tutti e due i
+ * versi. Sul lato dell'accusa perché una prima versione scandiva anche le
+ * note e incolpava il purè per «patate a pasta gialla», dove «pasta» è la
+ * polpa del tubero. Sul lato dell'assoluzione perché è peggio: la nota della
+ * Mayak Gyeran spiega che «per la versione senza glutine usa tamari», e con
+ * l'esenzione applicata alla nota il cancello leggeva la parola «tamari» e
+ * assolveva una ricetta che di suo monta salsa di soia col grano dentro.
+ * Un controllo che si lascia disinnescare dalla prosa che spiega il problema
+ * non protegge niente: la nota è una spiegazione, il nome è l'ingrediente.
+ */
+const PROMESSE_ALIMENTARI = [
+  {
+    tag: /senza glutine|gluten[ -]?free/i,
+    cosa: 'glutine',
+    fonti: [
+      { re: /\bfarin[ae]\b/i, salvo: /\b(riso|mais|ceci|mandorl|castagn|grano saraceno|cocco)\b/i },
+      { re: /\bsemol(a|ino)\b/i },
+      { re: /\bpangrattato\b/i },
+      { re: /\bpane\b/i },
+      { re: /\bcous ?cous\b/i },
+      { re: /\b(orzo|farro|seitan|bulgur)\b/i },
+      { re: /\bmalto\b/i },
+      { re: /\bbirra\b/i },
+      // La soia normale è fermentata col grano: senza glutine è il tamari.
+      { re: /\bsalsa di soia\b|\bsoia light\b/i, salvo: /\btamari\b|senza glutine/i },
+    ],
+  },
+  {
+    tag: /\bvegan[oi]?\b/i,
+    cosa: 'ingredienti animali',
+    fonti: [
+      { re: /\buov[ao]\b/i },
+      { re: /\bmiele\b/i },
+      { re: /\bburro\b/i, salvo: /\b(cacao|arachidi|mandorl|vegetale)\b/i },
+      { re: /\blatte\b/i, salvo: /\b(cocco|mandorl|soia|riso|avena|vegetale)\b/i },
+      { re: /\bpanna\b/i, salvo: /\bvegetale\b/i },
+      { re: /\byogurt\b/i, salvo: /\b(soia|vegetale|cocco)\b/i },
+      { re: /\b(formaggio|parmigiano|pecorino|grana|ricotta|mascarpone|provola|mozzarella)\b/i },
+      { re: /\b(carne|pancetta|guanciale|lardo|strutto|prosciutto|salsiccia)\b/i },
+      { re: /\b(pesce|acciugh|alici|gamber|crostacei|tonno|colatura)\b/i },
+      { re: /\bgelatina\b/i, salvo: /\bagar\b/i },
+    ],
+  },
+];
+
+function controllaPromesse(raw, dove) {
+  const ingredienti = [
+    ...(raw.ingredientGroups || []).flatMap(g => g.items || []),
+    ...(raw.ingredients || []),
+    ...(raw.suspensions || []),
+  ].filter(i => i && i.name);
+
+  for (const tag of raw.tags || []) {
+    // Una parentesi nel tag dice a quale condizione la promessa vale: è la
+    // forma corretta di dichiararla, e passa.
+    if (/\(.+\)/.test(tag)) continue;
+
+    for (const promessa of PROMESSE_ALIMENTARI) {
+      if (!promessa.tag.test(tag)) continue;
+      for (const ing of ingredienti) {
+        const nome = String(ing.name);
+        const fonte = promessa.fonti.find(f => f.re.test(nome) && !(f.salvo?.test(nome)));
+        if (!fonte) continue;
+        errors.push(`${dove}: il tag "${tag}" è smentito dall'ingrediente "${nome}" `
+          + `(${promessa.cosa}). O togli il tag, o cambia l'ingrediente, o vincola la `
+          + `promessa scrivendola fra parentesi — «senza glutine (con tamari)» — come `
+          + `fa condimenti/salsa-teriyaki-originale.`);
+        break; // un ingrediente basta: il tag è già da correggere
+      }
+    }
+  }
+}
+
 function buildEntry(cat, file) {
   const slug = basename(file, '.json');
   const raw = JSON.parse(readFileSync(resolve(RECIPES_DIR, cat.dir, file), 'utf8'));
@@ -129,6 +232,7 @@ function buildEntry(cat, file) {
   }
 
   controllaToken(raw, `${cat.dir}/${slug}`);
+  controllaPromesse(raw, `${cat.dir}/${slug}`);
 
   return {
     title: raw.title,
