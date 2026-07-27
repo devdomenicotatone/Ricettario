@@ -57,6 +57,12 @@ import { escHtml as escapeCondiviso } from '../js/escape.js';
 const escAttr = escapeCondiviso;
 const escHtml = escapeCondiviso;
 
+// Stessa storia dei token dose `{acqua:750}` negli step: la grammatica e la
+// resa del valore stanno in js/token-dosi.js, condivise con la SPA. La copia
+// locale che viveva qui non ammetteva cifre nei nomi (`{farina_00:100}`) e ha
+// pubblicato graffe grezze nel testo visibile e nel JSON-LD di 11 pagine.
+import { risolviTokenTesto } from '../js/token-dosi.js';
+
 /**
  * Toglie i blocchi JSON-LD già presenti. Serve perché il template è
  * dist/index.html, che questo stesso script riscrive alla fine: senza
@@ -78,34 +84,45 @@ function truncateDesc(desc, maxLen = 160) {
     return desc.slice(0, maxLen - 1).replace(/\s+\S*$/, '') + '…';
 }
 
-/** Gli step contengono token `{acqua:750}` per il calcolatore dosi: qui vale il numero. */
-function resolveTokens(text) {
-    return String(text || '').replace(/\{([a-z_]+):(\d+\.?\d*)(!)?\}/g, (_, __, value) => value);
-}
-
 function absUrl(path) {
     if (!path) return null;
     return `${SITE_URL}/${String(path).replace(/^\//, '')}`;
 }
 
 /**
- * Converte durate in linguaggio naturale in ISO 8601, o null se il formato
+ * Estrae una durata in minuti dal linguaggio naturale, o null se il formato
  * non è riconosciuto con certezza. Sui range prende il minimo: è il tempo
  * minimo per portare a casa la ricetta, non il caso peggiore.
- * Es: "24-72h in frigo" → PT24H | "20-25 minuti" → PT20M | "~3.5h" → PT3H30M
+ * Es: "24-72h in frigo" → 1440 | "20-25 minuti" → 20 | "90 secondi" → 1.5
+ *
+ * Il lookbehind `(?<![a-z0-9])` esige che il numero cominci una parola: senza,
+ * il modello del forno «Effeuno P134H» combaciava come "134" + "h" e la pizza
+ * napoletana è stata pubblicata con `cookTime: PT134H` — 134 ore di cottura
+ * dichiarate a Google, in contraddizione col suo stesso totalTime.
  */
-function toIsoDuration(text) {
+function durataMinuti(text) {
     if (!text) return null;
     const s = String(text).toLowerCase();
-    const m = s.match(/(\d+(?:[.,]\d+)?)\s*(?:[-–]\s*\d+(?:[.,]\d+)?\s*)?(h\b|ore|ora|min\b|minuti|minuto)/);
+    const m = s.match(/(?<![a-z0-9])(\d+(?:[.,]\d+)?)\s*(?:[-–]\s*\d+(?:[.,]\d+)?\s*)?(h\b|ore|ora|min\b|minuti|minuto|sec\b|secondi|secondo)/);
     if (!m) return null;
     const value = parseFloat(m[1].replace(',', '.'));
     if (!Number.isFinite(value) || value <= 0) return null;
-    const isHours = /^(h|ore|ora)$/.test(m[2]);
-    if (!isHours) return `PT${Math.round(value)}M`;
-    const hours = Math.floor(value);
-    const minutes = Math.round((value - hours) * 60);
-    return minutes ? `PT${hours}H${minutes}M` : `PT${hours}H`;
+    if (/^(h|ore|ora)$/.test(m[2])) return value * 60;
+    if (/^sec/.test(m[2])) return value / 60;
+    return value;
+}
+
+/** Minuti (anche frazionari: "90 secondi" → 1.5) in ISO 8601. */
+function isoDaMinuti(minuti) {
+    const sec = Math.round(minuti * 60);
+    const h = Math.floor(sec / 3600);
+    const m = Math.floor((sec % 3600) / 60);
+    const s = sec % 60;
+    let iso = 'PT';
+    if (h) iso += `${h}H`;
+    if (m) iso += `${m}M`;
+    if (s || iso === 'PT') iso += `${s}S`;
+    return iso;
 }
 
 /** Appiattisce ingredientGroups/ingredients in righe "1000 g Farina (nota)". */
@@ -162,17 +179,21 @@ function recipeJsonLd(recipe, src, url) {
             '@type': 'HowToStep',
             position: i + 1,
             ...(s.title ? { name: s.title } : {}),
-            text: resolveTokens(s.text),
+            text: risolviTokenTesto(s.text),
         }));
     }
 
     const yield_ = totalWeight(src);
     if (yield_) ld.recipeYield = yield_;
 
-    const cook = toIsoDuration(src.baking?.time);
-    if (cook) ld.cookTime = cook;
-    const total = toIsoDuration(src.fermentation) || cook;
-    if (total) ld.totalTime = total;
+    // `totalTime` è la somma di lievitazione e cottura, non la sola
+    // lievitazione: schema.org lo definisce come il tempo complessivo, e un
+    // totale minore del solo cookTime sarebbe internamente contraddittorio
+    // (verifica-build ora lo boccia).
+    const cookMin = durataMinuti(src.baking?.time);
+    if (cookMin) ld.cookTime = isoDaMinuti(cookMin);
+    const totalMin = (durataMinuti(src.fermentation) || 0) + (cookMin || 0);
+    if (totalMin) ld.totalTime = isoDaMinuti(totalMin);
 
     // I valori nutrizionali del progetto sono per 100 g: lo dichiaro esplicitamente,
     // altrimenti Google li interpreterebbe come "per porzione".
@@ -435,7 +456,7 @@ function prerenderRecipe(recipe, src, catDir) {
               <div class="recipe-panel">
                 <h2 class="recipe-panel__title">Procedimento</h2>
                 <ol class="steps-list">
-                  ${steps.map(s => `<li class="step-item"><strong>${escHtml(s.title || '')}</strong><p>${escHtml(resolveTokens(s.text))}</p></li>`).join('')}
+                  ${steps.map(s => `<li class="step-item"><strong>${escHtml(s.title || '')}</strong><p>${escHtml(risolviTokenTesto(s.text))}</p></li>`).join('')}
                 </ol>
               </div>
             </div>

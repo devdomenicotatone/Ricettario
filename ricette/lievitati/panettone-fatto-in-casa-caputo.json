@@ -199,11 +199,11 @@
   "steps": [
     {
       "title": "Primo Impasto (Incordatura iniziale)",
-      "text": "Nella vasca dell'impastatrice inserire {farina_primo}g di farina, {zucchero_primo}g di zucchero, {lm_primo}g di lievito madre spezzettato e {acqua_primo}g di acqua. Avviare in prima velocità per circa 10-12 minuti fino a formare una maglia glutinica tenace (incordatura)."
+      "text": "Nella vasca dell'impastatrice inserire {farina_primo:800}g di farina, {zucchero_primo:100}g di zucchero, {lm_primo:200}g di lievito madre spezzettato e {acqua_primo:450}g di acqua. Avviare in prima velocità per circa 10-12 minuti fino a formare una maglia glutinica tenace (incordatura)."
     },
     {
       "title": "Inserimento Grassi (Primo Impasto)",
-      "text": "Aggiungere {tuorli_primo}g di tuorli in 3-4 riprese, aspettando che la dose precedente sia completamente assorbita. Inserire {sale_primo}g di sale. Infine, aggiungere gradualmente {burro_primo}g di burro a pomata. L'impasto finale deve essere liscio ed elastico. Temperatura target: {temp_primo_imp:27!}°C."
+      "text": "Aggiungere {tuorli_primo:150}g di tuorli in 3-4 riprese, aspettando che la dose precedente sia completamente assorbita. Inserire {sale_primo:10}g di sale. Infine, aggiungere gradualmente {burro_primo:200}g di burro a pomata. L'impasto finale deve essere liscio ed elastico. Temperatura target: {temp_primo_imp:27!}°C."
     },
     {
       "title": "Lievitazione Notturna",
@@ -211,15 +211,15 @@
     },
     {
       "title": "Secondo Impasto (Rincordatura)",
-      "text": "Il mattino seguente, sgonfiare il primo impasto lievitato in macchina aggiungendo {farina_secondo}g di farina. Lavorare per circa 15 minuti per ripristinare la maglia glutinica."
+      "text": "Il mattino seguente, sgonfiare il primo impasto lievitato in macchina aggiungendo {farina_secondo:200}g di farina. Lavorare per circa 15 minuti per ripristinare la maglia glutinica."
     },
     {
       "title": "Emulsione Aromatica e Grassi",
-      "text": "Incorporare {zucchero_secondo}g di zucchero, {miele_secondo}g di miele e gli aromi ({aroma_arancia}g di pasta d'arancia e i semi di {aroma_vaniglia}g di vaniglia). Aggiungere {tuorli_secondo}g di tuorli a filo. Se l'impasto è troppo rigido, usare {acqua_secondo}g di acqua in bassinage. Aggiungere {sale_secondo}g di sale. Terminare inserendo gradualmente {burro_secondo}g di burro a pomata."
+      "text": "Incorporare {zucchero_secondo:250}g di zucchero, {miele_secondo:50}g di miele e gli aromi ({aroma_arancia:30}g di pasta d'arancia e i semi di {aroma_vaniglia:3}g di vaniglia). Aggiungere {tuorli_secondo:150}g di tuorli a filo. Se l'impasto è troppo rigido, usare {acqua_secondo:50}g di acqua in bassinage. Aggiungere {sale_secondo:4}g di sale. Terminare inserendo gradualmente {burro_secondo:250}g di burro a pomata."
     },
     {
       "title": "Inserimento Sospensioni",
-      "text": "Abbassare la velocità al minimo e incorporare {sospensioni_frutta}g di canditi e uvetta per 1-2 minuti, giusto il tempo di distribuirli uniformemente."
+      "text": "Abbassare la velocità al minimo e incorporare {sospensioni_frutta:750}g di canditi e uvetta per 1-2 minuti, giusto il tempo di distribuirli uniformemente."
     },
     {
       "title": "Puntatura e Spezzatura",

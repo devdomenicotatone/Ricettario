@@ -134,6 +134,24 @@ function estrai(html, regex) {
     return m ? normalizza(m[1].replace(/<[^>]+>/g, ' ')) : '';
 }
 
+/**
+ * Un token dose sopravvissuto alla resa: `{farina_00:100}`, `{tempo:5!}` o la
+ * forma senza valore `{farina_primo}`. Nelle pagine pubblicate non deve
+ * esistere: il lettore deve vedere il numero, non la graffa. È il controllo
+ * speculare del cancello alla fonte in build-recipes.js — quello boccia i dati
+ * che la grammatica di js/token-dosi.js non riconosce, questo si accorge se la
+ * grammatica e il renderer divergono di nuovo (è già successo: 11 pagine
+ * pubblicate per mesi con `{farina_00:100}` nel testo e nel JSON-LD).
+ */
+const TOKEN_RESIDUO = /\{[a-zA-Z_][a-zA-Z0-9_]*(?::\d+(?:\.\d+)?!?)?\}/;
+
+/** Minuti da una durata ISO 8601 tipo PT3H30M, o null se non è in quel formato. */
+function minutiDaIso(iso) {
+    const m = String(iso || '').match(/^PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?$/);
+    if (!m || (!m[1] && !m[2] && !m[3])) return null;
+    return Number(m[1] || 0) * 60 + Number(m[2] || 0) + Number(m[3] || 0) / 60;
+}
+
 function paginaHtml(percorso) {
     const rel = percorso.split(sep).join('/');
     const html = readFileSync(percorso, 'utf8');
@@ -251,6 +269,28 @@ function paginaHtml(percorso) {
         if (inizio && !testo.includes(inizio)) {
             err(`${rel}: step marcato ma non visibile — "${inizio}…"`);
         }
+        const residuoLd = String(step.text || '').match(TOKEN_RESIDUO);
+        if (residuoLd) {
+            err(`${rel}: token dose non risolto nel JSON-LD — "${residuoLd[0]}"`);
+        }
+    }
+    const residuo = testo.match(TOKEN_RESIDUO);
+    if (residuo) {
+        err(`${rel}: token dose non risolto nel testo visibile — "${residuo[0]}"`);
+    }
+
+    // Durate del JSON-LD: più di 24 ore di cookTime per una ricetta di casa non
+    // è una ricetta, è un parsing andato male («Effeuno P134H» letto come 134
+    // ore — pubblicato davvero); e un totale minore della sola cottura è
+    // internamente contraddittorio.
+    const cookMin = minutiDaIso(ricetta.cookTime);
+    const totMin = minutiDaIso(ricetta.totalTime);
+    if (cookMin != null && cookMin > 24 * 60) {
+        err(`${rel}: cookTime ${ricetta.cookTime} — oltre 24 ore di cottura: quasi certamente `
+            + `una durata letta da testo che non era una durata`);
+    }
+    if (cookMin != null && totMin != null && cookMin > totMin) {
+        err(`${rel}: cookTime ${ricetta.cookTime} maggiore di totalTime ${ricetta.totalTime}`);
     }
 
     return { rel, blocchi };

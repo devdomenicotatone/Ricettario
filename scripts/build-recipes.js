@@ -13,6 +13,7 @@ import { readFileSync, writeFileSync, existsSync, readdirSync } from 'fs';
 import { resolve, dirname, basename } from 'path';
 import { fileURLToPath } from 'url';
 import { CATEGORIES, CATEGORY_ORDER } from '../js/categories.js';
+import { graffeNonRisolte } from '../js/token-dosi.js';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const RECIPES_DIR = resolve(ROOT, 'ricette');
@@ -66,6 +67,44 @@ function hydration(v, slug) {
   return `${n}%`;
 }
 
+/**
+ * I token dose `{id:valore}` sono un mini-formato dentro il testo degli step,
+ * e per mesi nessun cancello li ha guardati: una regex troppo stretta ha
+ * pubblicato `{farina_00:100}` come testo grezzo — visibile e nel JSON-LD — su
+ * 11 pagine, e il panettone usava una forma senza valore (`{farina_primo}`)
+ * che il sito non ha mai risolto. Il controllo a valle in verifica-build.js
+ * era cieco per costruzione: confronta dati strutturati e testo visibile, ma
+ * i due lati uscivano dalla stessa regex, quindi coincidevano anche sul rotto.
+ *
+ * Da qui in poi si boccia alla fonte: dentro gli step ogni graffa deve
+ * appartenere a un token che matcha la grammatica di js/token-dosi.js; fuori
+ * dagli step le graffe sono vietate del tutto, perché il sito i token li
+ * risolve SOLO negli step — un token in un proTip arriva al lettore così com'è.
+ */
+function controllaToken(raw, dove) {
+  const testiStep = new Set();
+  for (const s of [...(raw.steps || []), ...(raw.stepsCondiment || [])]) {
+    if (s?.text) testiStep.add(s.text);
+  }
+  (function scava(val, campo) {
+    if (typeof val === 'string') {
+      if (testiStep.has(val)) {
+        for (const rotto of graffeNonRisolte(val)) {
+          errors.push(`${dove}: token malformato in "${campo}" — ${JSON.stringify(rotto)} `
+            + `(la grammatica è {id:numero} o {id:numero!}, vedi js/token-dosi.js)`);
+        }
+      } else if (/[{}]/.test(val)) {
+        errors.push(`${dove}: graffe in "${campo}", ma il sito risolve i token solo nel testo `
+          + `degli step: qui arriverebbero al lettore come testo grezzo`);
+      }
+    } else if (Array.isArray(val)) {
+      for (const v of val) scava(v, campo);
+    } else if (val && typeof val === 'object') {
+      for (const [k, v] of Object.entries(val)) scava(v, campo || k);
+    }
+  })(raw, '');
+}
+
 function buildEntry(cat, file) {
   const slug = basename(file, '.json');
   const raw = JSON.parse(readFileSync(resolve(RECIPES_DIR, cat.dir, file), 'utf8'));
@@ -88,6 +127,8 @@ function buildEntry(cat, file) {
   if (DOPPIA_CODIFICA.test(raw.imageAttribution ?? '')) {
     errors.push(`${cat.dir}/${slug}: imageAttribution a doppia codifica UTF-8 (${JSON.stringify(raw.imageAttribution)})`);
   }
+
+  controllaToken(raw, `${cat.dir}/${slug}`);
 
   return {
     title: raw.title,

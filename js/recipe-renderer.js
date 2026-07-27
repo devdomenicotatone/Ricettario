@@ -10,6 +10,7 @@ import { fluentEmoji, categoryEmoji, CATEGORY_FLUENT, refreshIcons } from './emo
 import { isValidBadge } from './recipe-meta.js';
 import { htmlCreditoFoto } from './credito-foto.js';
 import { escHtml, escAttr } from './escape.js';
+import { risolviTokenSpan, formatDoseInline } from './token-dosi.js';
 
 /**
  * Renderizza una ricetta completa nel container #app.
@@ -233,7 +234,7 @@ function buildStepsPanel(r) {
       <ol class="steps-list">
         ${steps.map((s, i) => `<li class="step-item">
             <strong>${escHtml(s.title)}</strong>
-            <p>${resolveTokens(escHtml(s.text))}</p>
+            <p>${risolviTokenSpan(escHtml(s.text))}</p>
           </li>`).join('')}
       </ol>
     </div>`;
@@ -252,7 +253,7 @@ function buildCondimentPanel(r) {
       <ol class="steps-list">
         ${steps.map((s, i) => `<li class="step-item">
             <strong>${escHtml(s.title)}</strong>
-            <p>${resolveTokens(escHtml(s.text))}</p>
+            <p>${risolviTokenSpan(escHtml(s.text))}</p>
           </li>`).join('')}
       </ol>
     </div>`;
@@ -624,27 +625,9 @@ function updateTotalWeight() {
 
 // ── Utility ──
 // `escHtml` viveva qui, ed era una delle tre copie sparse nel progetto: ora
-// arriva da `./escape.js`, che è l'unica.
-
-/**
- * Risolve i token {id:base} nel testo degli step.
- * Sostituisce {token_name:123} con <span class="dose-inline" data-base="123" data-token-id="token_name">123</span>
- */
-function resolveTokens(text) {
-  return text.replace(/\{([a-z_]+):(\d+\.?\d*)(!)?\}/g, (match, tokenId, baseValue, fixedFlag) => {
-    const num = parseFloat(baseValue);
-    const formatted = formatDoseInline(num);
-    const fixedAttr = fixedFlag ? ' data-fixed="true"' : '';
-    return `<span class="dose-inline" data-base="${num}" data-token-id="${tokenId}"${fixedAttr}>${formatted}</span>`;
-  });
-}
-
-function formatDoseInline(val) {
-  if (val === 0) return '0';
-  if (val >= 10) return `${Math.round(val)}`;
-  if (val >= 1) return `${Math.round(val * 10) / 10}`;
-  return `${Math.round(val * 100) / 100}`;
-}
+// arriva da `./escape.js`, che è l'unica. Stessa storia per i token dose:
+// la grammatica e `formatDoseInline` stanno in `./token-dosi.js`, condivisi
+// col pre-rendering.
 
 /**
  * Inizializza il toggle del pannello sensoriale con Chart.js lazy-loaded.
