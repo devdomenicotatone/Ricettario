@@ -42,8 +42,8 @@
             window.applicaColoreBarra(theme);
         })();
     </script>
-  <script type="module" crossorigin src="/Ricettario/assets/main-qb9fLy33.js"></script>
-  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-tU9DCPIn.css">
+  <script type="module" crossorigin src="/Ricettario/assets/main-C_GJS2lf.js"></script>
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-D6mH_z1p.css">
 
     <meta name="description" content="Esplora 3 ricette di dolci nel Ricettario Lab — parametri tecnici, dosi precise e risultati replicabili.">
     <link rel="canonical" href="https://devdomenicotatone.github.io/Ricettario/ricette/dolci/">
@@ -204,47 +204,92 @@
     <main id="contenuto" tabindex="-1">
     <div id="app">
 
-      <section class="category-hero">
-        <div class="category-hero__content">
-          <h1 class="category-hero__title">Dolci</h1>
-          <p class="category-hero__subtitle">Tutte le ricette di dolci del Ricettario Lab.</p>
-          <div class="category-hero__count">3 ricette</div>
-        </div>
-      </section>
-      <!-- Qui ci vuole una "section", non un "main": il landmark principale
-           adesso è quello del guscio, che avvolge #app. Due annidati sono
-           markup non valido, e uno screen reader non sa più qual è il
-           contenuto. -->
-      <section class="section">
-        <div class="container">
-          <nav class="breadcrumb">
-            <a href="/Ricettario/">Home</a>
-            <span class="breadcrumb__separator">›</span>
-            <span class="breadcrumb__current">Dolci</span>
-          </nav>
-          <div class="category-grid">
+    <section class="category-hero" id="category-hero" style="background-image: url('/Ricettario/images/ricette/dolci/cantuccini-di-prato.webp')">
+      <div class="category-hero__content">
+        <h1 class="category-hero__title">Dolci e Pasticceria</h1>
+        <p class="category-hero__subtitle">Dolci tradizionali, frolle, biscotti e pasticceria artigianale.</p>
+        <div class="category-hero__count" id="recipe-count">3 ricette</div>
+      </div>
+    </section>
+
+    <!-- Qui ci vuole una "section", non un "main": il landmark principale è
+         quello del guscio, che avvolge #app e sopravvive ai cambi di rotta.
+         Uno annidato dentro l'altro è markup non valido. -->
+    <section class="section">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="/Ricettario/" data-link>Home</a>
+          <span class="breadcrumb__separator">›</span>
+          <a href="/Ricettario/#ricette" data-link>Ricette</a>
+          <span class="breadcrumb__separator">›</span>
+          <span class="breadcrumb__current">Dolci</span>
+        </nav>
+        
+        <div class="category-grid " id="category-grid">
+          
+      <a href="/Ricettario/ricette/dolci/cantuccini-di-prato/" class="category-card" data-link
+         data-title="cantuccini di prato"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/dolci/cantuccini-di-prato.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/dolci/cantuccini-di-prato.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/dolci/cantuccini-di-prato.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
             
-              <a href="/Ricettario/ricette/dolci/cantuccini-di-prato/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Cantuccini di Prato</h2>
-                  <p class="category-card__desc">Biscotti tradizionali toscani con mandorle e doppia cottura, friabili e croccanti, perfetti da inzuppare nel Vin Santo</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/dolci/cartocci-alla-crema-siciliani/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Cartocci alla Crema Siciliani</h2>
-                  <p class="category-card__desc">Cannoli fritti lievitati con crema pasticcera — tradizione dolciaria siciliana con impasto morbido e friabile</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/dolci/migliaccio-napoletano/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Migliaccio Napoletano</h2>
-                  <p class="category-card__desc">Dolce tradizionale napoletano di Carnevale a base di semolino e ricotta: morbido, compatto e profumato di agrumi e vaniglia.</p>
-                </div>
-              </a>
+            
           </div>
         </div>
-      </section>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Cantuccini di Prato</h2>
+          <p class="category-card__desc">Biscotti tradizionali toscani con mandorle e doppia cottura, friabili e croccanti, perfetti da inzuppare nel Vin Santo</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/dolci/cartocci-alla-crema-siciliani/" class="category-card" data-link
+         data-title="cartocci alla crema siciliani"
+         data-hydration="45">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/dolci/cartocci-alla-crema-siciliani.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/dolci/cartocci-alla-crema-siciliani.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/dolci/cartocci-alla-crema-siciliani.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            <span class="category-card__tag"><img src="/Ricettario/images/emoji/droplet.png" width="14" height="14" alt="" class="fluent-emoji" loading="lazy"> 45%</span>
+            <span class="category-card__tag"><img src="/Ricettario/images/emoji/stopwatch.png" width="14" height="14" alt="" class="fluent-emoji" loading="lazy"> ~2-3h totali</span>
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Cartocci alla Crema Siciliani</h2>
+          <p class="category-card__desc">Cannoli fritti lievitati con crema pasticcera — tradizione dolciaria siciliana con impasto morbido e friabile</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/dolci/migliaccio-napoletano/" class="category-card" data-link
+         data-title="migliaccio napoletano"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/dolci/migliaccio-napoletano.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/dolci/migliaccio-napoletano.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/dolci/migliaccio-napoletano.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Migliaccio Napoletano</h2>
+          <p class="category-card__desc">Dolce tradizionale napoletano di Carnevale a base di semolino e ricotta: morbido, compatto e profumato di agrumi e vaniglia.</p>
+        </div>
+      </a>
+        </div>
+
+        
+      </div>
+    </section>
+  
     </div><!-- /#app -->
     </main>
 
@@ -275,17 +320,37 @@
                     </ul>
                 </div>
 
+                <!-- Tutte le categorie, con path ASSOLUTI. I vecchi link erano
+                     relativi ("ricette/pane/"): giusti in homepage e rotti su
+                     ogni altra pagina, perché il footer è nel guscio condiviso
+                     e un path relativo si risolve contro l'URL della pagina che
+                     lo ospita. C'era anche una categoria «Pasta» che non esiste.
+                     Questo elenco è una copia di js/categories.js e non può non
+                     esserlo (markup statico): verifica-build.js controlla che
+                     le due liste coincidano, quindi se diverge la build si
+                     ferma. Sono anche gli unici link statici che rendono
+                     raggiungibili le pagine categoria dai crawler. -->
                 <div>
                     <h2 class="footer__col-title">Categorie</h2>
                     <ul class="footer__links">
-                        <li><a href="ricette/pane/" data-link><i data-lucide="arrow-up-right"
+                        <li><a href="/Ricettario/ricette/primi/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Primi</a></li>
+                        <li><a href="/Ricettario/ricette/pane/" data-link><i data-lucide="arrow-up-right"
                                     class="footer__link-icon"></i> Pane</a></li>
-                        <li><a href="ricette/pizza/" data-link><i data-lucide="arrow-up-right"
+                        <li><a href="/Ricettario/ricette/pizza/" data-link><i data-lucide="arrow-up-right"
                                     class="footer__link-icon"></i> Pizza</a></li>
-                        <li><a href="ricette/pasta/" data-link><i data-lucide="arrow-up-right"
-                                    class="footer__link-icon"></i> Pasta</a></li>
-                        <li><a href="ricette/lievitati/" data-link><i data-lucide="arrow-up-right"
+                        <li><a href="/Ricettario/ricette/lievitati/" data-link><i data-lucide="arrow-up-right"
                                     class="footer__link-icon"></i> Lievitati</a></li>
+                        <li><a href="/Ricettario/ricette/dolci/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Dolci</a></li>
+                        <li><a href="/Ricettario/ricette/focaccia/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Focaccia</a></li>
+                        <li><a href="/Ricettario/ricette/conserve/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Conserve</a></li>
+                        <li><a href="/Ricettario/ricette/condimenti/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Condimenti</a></li>
+                        <li><a href="/Ricettario/ricette/secondi-piatti/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Secondi Piatti</a></li>
                     </ul>
                 </div>
 
@@ -307,7 +372,7 @@
             <div class="footer__bottom">
                 <span>© <span id="current-year">2026</span> Ricettario Lab</span>
                 <div class="footer__social">
-                    <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
+                    <a href="https://github.com/devdomenicotatone/Ricettario" target="_blank" rel="noopener" aria-label="GitHub">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                             <path
                                 d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />

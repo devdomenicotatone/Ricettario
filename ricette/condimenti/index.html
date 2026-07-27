@@ -42,8 +42,8 @@
             window.applicaColoreBarra(theme);
         })();
     </script>
-  <script type="module" crossorigin src="/Ricettario/assets/main-qb9fLy33.js"></script>
-  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-tU9DCPIn.css">
+  <script type="module" crossorigin src="/Ricettario/assets/main-C_GJS2lf.js"></script>
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-D6mH_z1p.css">
 
     <meta name="description" content="Esplora 40 ricette di condimenti nel Ricettario Lab — parametri tecnici, dosi precise e risultati replicabili.">
     <link rel="canonical" href="https://devdomenicotatone.github.io/Ricettario/ricette/condimenti/">
@@ -426,269 +426,795 @@
     <main id="contenuto" tabindex="-1">
     <div id="app">
 
-      <section class="category-hero">
-        <div class="category-hero__content">
-          <h1 class="category-hero__title">Condimenti</h1>
-          <p class="category-hero__subtitle">Tutte le ricette di condimenti del Ricettario Lab.</p>
-          <div class="category-hero__count">40 ricette</div>
-        </div>
-      </section>
-      <!-- Qui ci vuole una "section", non un "main": il landmark principale
-           adesso è quello del guscio, che avvolge #app. Due annidati sono
-           markup non valido, e uno screen reader non sa più qual è il
-           contenuto. -->
-      <section class="section">
-        <div class="container">
-          <nav class="breadcrumb">
-            <a href="/Ricettario/">Home</a>
-            <span class="breadcrumb__separator">›</span>
-            <span class="breadcrumb__current">Condimenti</span>
-          </nav>
-          <div class="category-grid">
+    <section class="category-hero" id="category-hero" style="background-image: url('/Ricettario/images/ricette/condimenti/babaganoush-crema-melanzane.webp')">
+      <div class="category-hero__content">
+        <h1 class="category-hero__title">Condimenti</h1>
+        <p class="category-hero__subtitle">Salse, pesti e condimenti artigianali per ogni piatto.</p>
+        <div class="category-hero__count" id="recipe-count">40 ricette</div>
+      </div>
+    </section>
+
+    <!-- Qui ci vuole una "section", non un "main": il landmark principale è
+         quello del guscio, che avvolge #app e sopravvive ai cambi di rotta.
+         Uno annidato dentro l'altro è markup non valido. -->
+    <section class="section">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="/Ricettario/" data-link>Home</a>
+          <span class="breadcrumb__separator">›</span>
+          <a href="/Ricettario/#ricette" data-link>Ricette</a>
+          <span class="breadcrumb__separator">›</span>
+          <span class="breadcrumb__current">Condimenti</span>
+        </nav>
+        
+        <div class="category-grid " id="category-grid">
+          
+      <a href="/Ricettario/ricette/condimenti/babaganoush-crema-melanzane/" class="category-card" data-link
+         data-title="babaganoush"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/babaganoush-crema-melanzane.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/babaganoush-crema-melanzane.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/babaganoush-crema-melanzane.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
             
-              <a href="/Ricettario/ricette/condimenti/babaganoush-crema-melanzane/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Babaganoush</h2>
-                  <p class="category-card__desc">L'autentico caviale di melanzane mediorientale: una crema rustica dal sentore affumicato, arricchita con tahina, limone e aglio. Consistenza artigianale garantita.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/besciamella/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Besciamella</h2>
-                  <p class="category-card__desc">Besciamella classica italiana: roux biondo e latte caldo per una salsa vellutata perfetta per lasagne, cannelloni e gratinati.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/burro-composto-acciughe-tartufo/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Burro Composto: Acciughe e Limone o Tartufo Nero</h2>
-                  <p class="category-card__desc">Tecnica professionale per realizzare burri aromatizzati a pomata (Maître d'Hôtel style). Ideali per mantecare paste fresche, risotti o per crostini caldi.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/burro-maitre-d-hotel/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Burro Maître d'Hôtel</h2>
-                  <p class="category-card__desc">Il classico burro composto francese: un'emulsione perfetta di burro a pomata, prezzemolo fresco e succo di limone. Ideale per esaltare carni alla griglia e pesci.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/caesar-dressing/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Caesar Dressing</h2>
-                  <p class="category-card__desc">Caesar dressing artigianale con tuorlo, acciughe, senape di Digione e Parmigiano Reggiano DOP. Emulsione classica per la vera Caesar Salad.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/chimichurri/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Chimichurri</h2>
-                  <p class="category-card__desc">Salsa chimichurri argentina: prezzemolo, aglio, origano, peperoncino, aceto e olio EVO. Perfetta per carni alla griglia e asado.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/crema-al-parmigiano/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Crema al Parmigiano</h2>
-                  <p class="category-card__desc">Una salsa vellutata e avvolgente a base di Parmigiano Reggiano, creata tramite emulsione su base roux. Ideale per arricchire paste, tortellini o secondi piatti.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/crema-di-peperoni/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Crema di Peperoni</h2>
-                  <p class="category-card__desc">Salsa vellutata ed emulsionata a base di peperoni dolci stufati, ideale per mantecare primi piatti, risotti o accompagnare lievitati rustici.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/dressing-miele-senape/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Dressing al Miele e Senape</h2>
-                  <p class="category-card__desc">Una vinaigrette emulsionata a freddo, perfettamente bilanciata. Il legante della senape crea una salsa stabile e vellutata ideale per insalate e carni.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/fumetto-di-crostacei/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Fumetto di Crostacei</h2>
-                  <p class="category-card__desc">Fumetto di crostacei fatto in casa: brodo concentrato da carapaci e teste, base insostituibile per risotti, zuppe e salse di pesce.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/guacamole/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Guacamole</h2>
-                  <p class="category-card__desc">Salsa guacamole messicana originale con avocado maturo, lime, cipolla, pomodoro e coriandolo. Perfetta per nachos, tacos e aperitivi.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/maionese/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Maionese</h2>
-                  <p class="category-card__desc">Maionese fatta in casa: emulsione classica di tuorli e olio, cremosa e stabile. Tecnica con fruste elettriche e variante rapida al minipimer.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/marinatura-menta-aceto-verdure-grigliate/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Marinatura alla Menta e Aceto</h2>
-                  <p class="category-card__desc">L'emulsione balsamica ispirata alla tradizione ebraico-romana, perfetta per zucchine e melanzane alla brace.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/olio-al-basilico-verde-smeraldo/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Olio al Basilico Verde Smeraldo</h2>
-                  <p class="category-card__desc">Olio aromatico al basilico con tecnica dello shock termico: colore verde neon, purezza cristallina e sicurezza alimentare totale.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/olio-cavolo-viola-elettrico/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Olio al Cavolo Viola (Elettrico)</h2>
-                  <p class="category-card__desc">Olio di finitura professionale dal colore viola vibrante e dalla purezza ottica assoluta. La perfetta terza variante cromatica da affiancare all'olio al basilico e al peperone crusco.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/olio-peperone-crusco-rosso-rubino/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Olio al Peperone Crusco o Paprika Dolce (Rosso Rubino)</h2>
-                  <p class="category-card__desc">Condimento artigianale lucano dal colore rosso rubino e dal profumo affumicato. Ideale per insaporire focacce, pasta, bruschette o per l'uso a crudo.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/olio-aglio-nero-ossidiana/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Olio all'Aglio Nero (Nero Ossidiana)</h2>
-                  <p class="category-card__desc">Condimento tecnico e scenografico dal colore nero profondo, ideale per esaltare pizze gourmet e piatti d'alta cucina con note umami e balsamiche.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/olio-carota-zenzero-arancio-fluo/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Olio alla Carota e Zenzero (Arancio Fluo)</h2>
-                  <p class="category-card__desc">Condimento professionale dal colore arancio fluo vibrante e purezza ottica assoluta. La freschezza agrumata dello zenzero incontra la dolcezza della carota in un'estrazione lipidica a bassa temperatura.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/olio-curcuma-zafferano-giallo-oro/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Olio alla Curcuma o Zafferano (Giallo Oro)</h2>
-                  <p class="category-card__desc">Olio aromatizzato artigianale estratto a freddo. Un condimento funzionale dal colore brillante e profilo aromatico terroso o floreale, ideale a crudo.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/olio-extravergine-aromatizzato-verde-dorato/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Olio Extravergine Aromatizzato (Verde Dorato)</h2>
-                  <p class="category-card__desc">Olio extravergine di oliva infuso a freddo con aglio, rosmarino e scorza di limone. Una preparazione tecnica essenziale per condire bruschette, focacce e carni.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/pesto-alla-genovese-tradizionale/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Pesto alla Genovese Tradizionale</h2>
-                  <p class="category-card__desc">La ricetta autentica del Pesto Ligure al mortaio. Proporzioni bilanciate per un'emulsione a freddo verde smeraldo, ricca di oli essenziali e senza ossidazione.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/pesto-alla-siciliana/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Pesto alla Siciliana</h2>
-                  <p class="category-card__desc">Ricetta professionale del pesto alla siciliana: un'emulsione a crudo perfettamente bilanciata con pomodori ramati, ricotta ben scolata, mandorle e basilico fresco.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/pesto-di-barbabietola/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Pesto di Barbabietola</h2>
-                  <p class="category-card__desc">Pesto di barbabietola rossa con pinoli e parmigiano: crema vegetale vibrante e versatile per condire pasta, bruschette e risotti.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/pesto-di-fave-maro/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Pesto di Fave (Marò)</h2>
-                  <p class="category-card__desc">Marò ligure: pesto di fave fresche con pecorino, menta e aglio. Ricetta tradizionale genovese per condire pasta, bruschette e pinzimonio.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/pesto-di-pistacchi-artigianale/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Pesto di Pistacchi Siciliano</h2>
-                  <p class="category-card__desc">Ricetta professionale del pesto di pistacchi: consistenza cremosa, colore verde brillante e sapore intenso. Ideale per paste, bruschette o pizze gourmet.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/pesto-pomodori-secchi-mandorle-basilico/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Pesto di Pomodori Secchi, Mandorle e Basilico</h2>
-                  <p class="category-card__desc">Pesto rustico siciliano con pomodori secchi sott'olio, mandorle e basilico fresco. Condimento versatile per pasta, bruschette e crostini.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/pesto-rucola-artigianale/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Pesto di Rucola Artigianale</h2>
-                  <p class="category-card__desc">Ricetta professionale per un pesto di rucola dal colore verde brillante e texture perfetta. Bilanciamento classico con Parmigiano, Pecorino e pinoli tostati.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/pesto-di-zucchine/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Pesto di Zucchine a Freddo</h2>
-                  <p class="category-card__desc">Una crema verde brillante e vellutata, realizzata rigorosamente a freddo per mantenere inalterati colori, sapori e proprietà nutrizionali delle zucchine e del basilico.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/pure-di-patate/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Purè di Patate</h2>
-                  <p class="category-card__desc">Purè di patate classico italiano: cremoso, vellutato e senza grumi. Ricetta tecnica con patate farinose, burro e latte caldo.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/salmoriglio-siciliano-tradizionale/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Salmoriglio Siciliano</h2>
-                  <p class="category-card__desc">L'autentica emulsione siciliana a base di olio EVO, limone, aglio e origano. La salsa a crudo perfetta per marinare e condire carni, pesci e verdure alla griglia.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/salsa-alle-noci/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Salsa alle Noci</h2>
-                  <p class="category-card__desc">L'autentica salsa ligure cremosa e avvolgente, perfetta per condire i tradizionali pansoti o paste fresche. Preparata a freddo con noci, aglio, maggiorana e olio EVO.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/salsa-allo-yogurt-ed-erba-cipollina/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Salsa allo Yogurt ed Erba Cipollina</h2>
-                  <p class="category-card__desc">Salsa fresca e cremosa a base di yogurt greco, erba cipollina e limone. Pronta in 10 minuti, perfetta per carni, pesce e verdure.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/salsa-allo-yogurt/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Salsa allo Yogurt ed Erbe Aromatiche</h2>
-                  <p class="category-card__desc">Emulsione fredda a base di yogurt greco, olio EVO ed erbe aromatiche. Ideale per bilanciare carni, pesci o accompagnare verdure e lievitati.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/salsa-bbq-artigianale/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Salsa BBQ Artigianale</h2>
-                  <p class="category-card__desc">Ricetta professionale per l'autentica Salsa Barbecue americana. Un equilibrio chimico perfetto tra componente zuccherina, spinta acida, note affumicate e spezie.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/salsa-bernese/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Salsa Bernese</h2>
-                  <p class="category-card__desc">Salsa bernese classica francese: emulsione calda di tuorli e burro chiarificato, aromatizzata con riduzione di aceto, vino bianco, scalogno e dragoncello.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/salsa-cocktail-rosa-artigianale/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Salsa Cocktail (Salsa Rosa)</h2>
-                  <p class="category-card__desc">La ricetta professionale della grande salsa classica: emulsione perfetta a freddo con maionese artigianale, un tocco di Cognac e panna per una setosità ineguagliabile.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/coulis-salsa-pomodoro-fresco/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Salsa e Coulis di Pomodoro Fresco</h2>
-                  <p class="category-card__desc">Ricetta professionale per salsa e coulis di pomodoro fresco. Tecnica del concassé e setacciatura per una texture vellutata e un sapore intenso.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/salsa-teriyaki-originale/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Salsa Teriyaki Originale</h2>
-                  <p class="category-card__desc">Salsa teriyaki giapponese autentica: soia, sake, mirin e zucchero ridotti a glassa lucida e bilanciata.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/salsa-verde-tradizionale/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Salsa Verde Tradizionale</h2>
-                  <p class="category-card__desc">La ricetta professionale della classica salsa verde (bagnet verd), perfetta per accompagnare bolliti, carni e crostini. Con uova sode e un'emulsione perfetta a base d'olio EVO.</p>
-                </div>
-              </a>
-              <a href="/Ricettario/ricette/condimenti/vinaigrette-classica-e-citronette/" class="category-card">
-                <div class="category-card__body">
-                  <h2 class="category-card__title">Vinaigrette Classica e Citronette</h2>
-                  <p class="category-card__desc">Due emulsioni fredde fondamentali: vinaigrette con aceto e citronette con limone. Rapporto 3:1 olio/acido, pronte in 5 minuti.</p>
-                </div>
-              </a>
+            
           </div>
         </div>
-      </section>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Babaganoush</h2>
+          <p class="category-card__desc">L'autentico caviale di melanzane mediorientale: una crema rustica dal sentore affumicato, arricchita con tahina, limone e aglio. Consistenza artigianale garantita.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/besciamella/" class="category-card" data-link
+         data-title="besciamella"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/besciamella.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/besciamella.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/besciamella.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Besciamella</h2>
+          <p class="category-card__desc">Besciamella classica italiana: roux biondo e latte caldo per una salsa vellutata perfetta per lasagne, cannelloni e gratinati.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/burro-composto-acciughe-tartufo/" class="category-card" data-link
+         data-title="burro composto: acciughe e limone o tartufo nero"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/burro-composto-acciughe-tartufo.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/burro-composto-acciughe-tartufo.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/burro-composto-acciughe-tartufo.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Burro Composto: Acciughe e Limone o Tartufo Nero</h2>
+          <p class="category-card__desc">Tecnica professionale per realizzare burri aromatizzati a pomata (Maître d'Hôtel style). Ideali per mantecare paste fresche, risotti o per crostini caldi.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/burro-maitre-d-hotel/" class="category-card" data-link
+         data-title="burro maître d'hôtel"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/burro-maitre-d-hotel.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/burro-maitre-d-hotel.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/burro-maitre-d-hotel.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Burro Maître d'Hôtel</h2>
+          <p class="category-card__desc">Il classico burro composto francese: un'emulsione perfetta di burro a pomata, prezzemolo fresco e succo di limone. Ideale per esaltare carni alla griglia e pesci.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/caesar-dressing/" class="category-card" data-link
+         data-title="caesar dressing"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/caesar-dressing.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/caesar-dressing.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/caesar-dressing.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Caesar Dressing</h2>
+          <p class="category-card__desc">Caesar dressing artigianale con tuorlo, acciughe, senape di Digione e Parmigiano Reggiano DOP. Emulsione classica per la vera Caesar Salad.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/chimichurri/" class="category-card" data-link
+         data-title="chimichurri"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/chimichurri.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/chimichurri.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/chimichurri.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Chimichurri</h2>
+          <p class="category-card__desc">Salsa chimichurri argentina: prezzemolo, aglio, origano, peperoncino, aceto e olio EVO. Perfetta per carni alla griglia e asado.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/crema-al-parmigiano/" class="category-card" data-link
+         data-title="crema al parmigiano"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/crema-al-parmigiano.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/crema-al-parmigiano.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/crema-al-parmigiano.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Crema al Parmigiano</h2>
+          <p class="category-card__desc">Una salsa vellutata e avvolgente a base di Parmigiano Reggiano, creata tramite emulsione su base roux. Ideale per arricchire paste, tortellini o secondi piatti.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/crema-di-peperoni/" class="category-card" data-link
+         data-title="crema di peperoni"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/crema-di-peperoni.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/crema-di-peperoni.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/crema-di-peperoni.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Crema di Peperoni</h2>
+          <p class="category-card__desc">Salsa vellutata ed emulsionata a base di peperoni dolci stufati, ideale per mantecare primi piatti, risotti o accompagnare lievitati rustici.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/dressing-miele-senape/" class="category-card" data-link
+         data-title="dressing al miele e senape"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/dressing-miele-senape.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/dressing-miele-senape.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/dressing-miele-senape.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Dressing al Miele e Senape</h2>
+          <p class="category-card__desc">Una vinaigrette emulsionata a freddo, perfettamente bilanciata. Il legante della senape crea una salsa stabile e vellutata ideale per insalate e carni.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/fumetto-di-crostacei/" class="category-card" data-link
+         data-title="fumetto di crostacei"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/fumetto-di-crostacei.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/fumetto-di-crostacei.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/fumetto-di-crostacei.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Fumetto di Crostacei</h2>
+          <p class="category-card__desc">Fumetto di crostacei fatto in casa: brodo concentrato da carapaci e teste, base insostituibile per risotti, zuppe e salse di pesce.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/guacamole/" class="category-card" data-link
+         data-title="guacamole"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/guacamole.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/guacamole.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/guacamole.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Guacamole</h2>
+          <p class="category-card__desc">Salsa guacamole messicana originale con avocado maturo, lime, cipolla, pomodoro e coriandolo. Perfetta per nachos, tacos e aperitivi.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/maionese/" class="category-card" data-link
+         data-title="maionese"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/maionese.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/maionese.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/maionese.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Maionese</h2>
+          <p class="category-card__desc">Maionese fatta in casa: emulsione classica di tuorli e olio, cremosa e stabile. Tecnica con fruste elettriche e variante rapida al minipimer.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/marinatura-menta-aceto-verdure-grigliate/" class="category-card" data-link
+         data-title="marinatura alla menta e aceto"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/marinatura-menta-aceto-verdure-grigliate.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/marinatura-menta-aceto-verdure-grigliate.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/marinatura-menta-aceto-verdure-grigliate.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Marinatura alla Menta e Aceto</h2>
+          <p class="category-card__desc">L'emulsione balsamica ispirata alla tradizione ebraico-romana, perfetta per zucchine e melanzane alla brace.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/olio-al-basilico-verde-smeraldo/" class="category-card" data-link
+         data-title="olio al basilico verde smeraldo"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/olio-al-basilico-verde-smeraldo.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/olio-al-basilico-verde-smeraldo.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/olio-al-basilico-verde-smeraldo.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Olio al Basilico Verde Smeraldo</h2>
+          <p class="category-card__desc">Olio aromatico al basilico con tecnica dello shock termico: colore verde neon, purezza cristallina e sicurezza alimentare totale.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/olio-cavolo-viola-elettrico/" class="category-card" data-link
+         data-title="olio al cavolo viola (elettrico)"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/olio-cavolo-viola-elettrico.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/olio-cavolo-viola-elettrico.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/olio-cavolo-viola-elettrico.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Olio al Cavolo Viola (Elettrico)</h2>
+          <p class="category-card__desc">Olio di finitura professionale dal colore viola vibrante e dalla purezza ottica assoluta. La perfetta terza variante cromatica da affiancare all'olio al basilico e al peperone crusco.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/olio-peperone-crusco-rosso-rubino/" class="category-card" data-link
+         data-title="olio al peperone crusco o paprika dolce (rosso rubino)"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/olio-peperone-crusco-rosso-rubino.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/olio-peperone-crusco-rosso-rubino.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/olio-peperone-crusco-rosso-rubino.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Olio al Peperone Crusco o Paprika Dolce (Rosso Rubino)</h2>
+          <p class="category-card__desc">Condimento artigianale lucano dal colore rosso rubino e dal profumo affumicato. Ideale per insaporire focacce, pasta, bruschette o per l'uso a crudo.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/olio-aglio-nero-ossidiana/" class="category-card" data-link
+         data-title="olio all'aglio nero (nero ossidiana)"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/olio-aglio-nero-ossidiana.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/olio-aglio-nero-ossidiana.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/olio-aglio-nero-ossidiana.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Olio all'Aglio Nero (Nero Ossidiana)</h2>
+          <p class="category-card__desc">Condimento tecnico e scenografico dal colore nero profondo, ideale per esaltare pizze gourmet e piatti d'alta cucina con note umami e balsamiche.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/olio-carota-zenzero-arancio-fluo/" class="category-card" data-link
+         data-title="olio alla carota e zenzero (arancio fluo)"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/olio-carota-zenzero-arancio-fluo.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/olio-carota-zenzero-arancio-fluo.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/olio-carota-zenzero-arancio-fluo.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Olio alla Carota e Zenzero (Arancio Fluo)</h2>
+          <p class="category-card__desc">Condimento professionale dal colore arancio fluo vibrante e purezza ottica assoluta. La freschezza agrumata dello zenzero incontra la dolcezza della carota in un'estrazione lipidica a bassa temperatura.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/olio-curcuma-zafferano-giallo-oro/" class="category-card" data-link
+         data-title="olio alla curcuma o zafferano (giallo oro)"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/olio-curcuma-zafferano-giallo-oro.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/olio-curcuma-zafferano-giallo-oro.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/olio-curcuma-zafferano-giallo-oro.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            <span class="category-card__tag"><img src="/Ricettario/images/emoji/stopwatch.png" width="14" height="14" alt="" class="fluent-emoji" loading="lazy"> 7 giorni</span>
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Olio alla Curcuma o Zafferano (Giallo Oro)</h2>
+          <p class="category-card__desc">Olio aromatizzato artigianale estratto a freddo. Un condimento funzionale dal colore brillante e profilo aromatico terroso o floreale, ideale a crudo.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/olio-extravergine-aromatizzato-verde-dorato/" class="category-card" data-link
+         data-title="olio extravergine aromatizzato (verde dorato)"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/olio-extravergine-aromatizzato-verde-dorato.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/olio-extravergine-aromatizzato-verde-dorato.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/olio-extravergine-aromatizzato-verde-dorato.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Olio Extravergine Aromatizzato (Verde Dorato)</h2>
+          <p class="category-card__desc">Olio extravergine di oliva infuso a freddo con aglio, rosmarino e scorza di limone. Una preparazione tecnica essenziale per condire bruschette, focacce e carni.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/pesto-alla-genovese-tradizionale/" class="category-card" data-link
+         data-title="pesto alla genovese tradizionale"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/pesto-alla-genovese-tradizionale.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/pesto-alla-genovese-tradizionale.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/pesto-alla-genovese-tradizionale.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Pesto alla Genovese Tradizionale</h2>
+          <p class="category-card__desc">La ricetta autentica del Pesto Ligure al mortaio. Proporzioni bilanciate per un'emulsione a freddo verde smeraldo, ricca di oli essenziali e senza ossidazione.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/pesto-alla-siciliana/" class="category-card" data-link
+         data-title="pesto alla siciliana"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/pesto-alla-siciliana.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/pesto-alla-siciliana.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/pesto-alla-siciliana.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Pesto alla Siciliana</h2>
+          <p class="category-card__desc">Ricetta professionale del pesto alla siciliana: un'emulsione a crudo perfettamente bilanciata con pomodori ramati, ricotta ben scolata, mandorle e basilico fresco.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/pesto-di-barbabietola/" class="category-card" data-link
+         data-title="pesto di barbabietola"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/pesto-di-barbabietola.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/pesto-di-barbabietola.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/pesto-di-barbabietola.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Pesto di Barbabietola</h2>
+          <p class="category-card__desc">Pesto di barbabietola rossa con pinoli e parmigiano: crema vegetale vibrante e versatile per condire pasta, bruschette e risotti.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/pesto-di-fave-maro/" class="category-card" data-link
+         data-title="pesto di fave (marò)"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/pesto-di-fave-maro.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/pesto-di-fave-maro.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/pesto-di-fave-maro.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Pesto di Fave (Marò)</h2>
+          <p class="category-card__desc">Marò ligure: pesto di fave fresche con pecorino, menta e aglio. Ricetta tradizionale genovese per condire pasta, bruschette e pinzimonio.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/pesto-di-pistacchi-artigianale/" class="category-card" data-link
+         data-title="pesto di pistacchi siciliano"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/pesto-di-pistacchi-artigianale.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/pesto-di-pistacchi-artigianale.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/pesto-di-pistacchi-artigianale.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Pesto di Pistacchi Siciliano</h2>
+          <p class="category-card__desc">Ricetta professionale del pesto di pistacchi: consistenza cremosa, colore verde brillante e sapore intenso. Ideale per paste, bruschette o pizze gourmet.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/pesto-pomodori-secchi-mandorle-basilico/" class="category-card" data-link
+         data-title="pesto di pomodori secchi, mandorle e basilico"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/pesto-pomodori-secchi-mandorle-basilico.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/pesto-pomodori-secchi-mandorle-basilico.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/pesto-pomodori-secchi-mandorle-basilico.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Pesto di Pomodori Secchi, Mandorle e Basilico</h2>
+          <p class="category-card__desc">Pesto rustico siciliano con pomodori secchi sott'olio, mandorle e basilico fresco. Condimento versatile per pasta, bruschette e crostini.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/pesto-rucola-artigianale/" class="category-card" data-link
+         data-title="pesto di rucola artigianale"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/pesto-rucola-artigianale.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/pesto-rucola-artigianale.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/pesto-rucola-artigianale.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Pesto di Rucola Artigianale</h2>
+          <p class="category-card__desc">Ricetta professionale per un pesto di rucola dal colore verde brillante e texture perfetta. Bilanciamento classico con Parmigiano, Pecorino e pinoli tostati.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/pesto-di-zucchine/" class="category-card" data-link
+         data-title="pesto di zucchine a freddo"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/pesto-di-zucchine.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/pesto-di-zucchine.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/pesto-di-zucchine.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Pesto di Zucchine a Freddo</h2>
+          <p class="category-card__desc">Una crema verde brillante e vellutata, realizzata rigorosamente a freddo per mantenere inalterati colori, sapori e proprietà nutrizionali delle zucchine e del basilico.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/pure-di-patate/" class="category-card" data-link
+         data-title="purè di patate"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/pure-di-patate.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/pure-di-patate.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/pure-di-patate.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Purè di Patate</h2>
+          <p class="category-card__desc">Purè di patate classico italiano: cremoso, vellutato e senza grumi. Ricetta tecnica con patate farinose, burro e latte caldo.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/salmoriglio-siciliano-tradizionale/" class="category-card" data-link
+         data-title="salmoriglio siciliano"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/salmoriglio-siciliano-tradizionale.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/salmoriglio-siciliano-tradizionale.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/salmoriglio-siciliano-tradizionale.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Salmoriglio Siciliano</h2>
+          <p class="category-card__desc">L'autentica emulsione siciliana a base di olio EVO, limone, aglio e origano. La salsa a crudo perfetta per marinare e condire carni, pesci e verdure alla griglia.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/salsa-alle-noci/" class="category-card" data-link
+         data-title="salsa alle noci"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/salsa-alle-noci.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/salsa-alle-noci.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/salsa-alle-noci.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Salsa alle Noci</h2>
+          <p class="category-card__desc">L'autentica salsa ligure cremosa e avvolgente, perfetta per condire i tradizionali pansoti o paste fresche. Preparata a freddo con noci, aglio, maggiorana e olio EVO.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/salsa-allo-yogurt-ed-erba-cipollina/" class="category-card" data-link
+         data-title="salsa allo yogurt ed erba cipollina"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/salsa-allo-yogurt-ed-erba-cipollina.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/salsa-allo-yogurt-ed-erba-cipollina.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/salsa-allo-yogurt-ed-erba-cipollina.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Salsa allo Yogurt ed Erba Cipollina</h2>
+          <p class="category-card__desc">Salsa fresca e cremosa a base di yogurt greco, erba cipollina e limone. Pronta in 10 minuti, perfetta per carni, pesce e verdure.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/salsa-allo-yogurt/" class="category-card" data-link
+         data-title="salsa allo yogurt ed erbe aromatiche"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/salsa-allo-yogurt.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/salsa-allo-yogurt.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/salsa-allo-yogurt.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Salsa allo Yogurt ed Erbe Aromatiche</h2>
+          <p class="category-card__desc">Emulsione fredda a base di yogurt greco, olio EVO ed erbe aromatiche. Ideale per bilanciare carni, pesci o accompagnare verdure e lievitati.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/salsa-bbq-artigianale/" class="category-card" data-link
+         data-title="salsa bbq artigianale"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/salsa-bbq-artigianale.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/salsa-bbq-artigianale.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/salsa-bbq-artigianale.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Salsa BBQ Artigianale</h2>
+          <p class="category-card__desc">Ricetta professionale per l'autentica Salsa Barbecue americana. Un equilibrio chimico perfetto tra componente zuccherina, spinta acida, note affumicate e spezie.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/salsa-bernese/" class="category-card" data-link
+         data-title="salsa bernese"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/salsa-bernese.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/salsa-bernese.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/salsa-bernese.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Salsa Bernese</h2>
+          <p class="category-card__desc">Salsa bernese classica francese: emulsione calda di tuorli e burro chiarificato, aromatizzata con riduzione di aceto, vino bianco, scalogno e dragoncello.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/salsa-cocktail-rosa-artigianale/" class="category-card" data-link
+         data-title="salsa cocktail (salsa rosa)"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/salsa-cocktail-rosa-artigianale.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/salsa-cocktail-rosa-artigianale.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/salsa-cocktail-rosa-artigianale.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Salsa Cocktail (Salsa Rosa)</h2>
+          <p class="category-card__desc">La ricetta professionale della grande salsa classica: emulsione perfetta a freddo con maionese artigianale, un tocco di Cognac e panna per una setosità ineguagliabile.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/coulis-salsa-pomodoro-fresco/" class="category-card" data-link
+         data-title="salsa e coulis di pomodoro fresco"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/coulis-salsa-pomodoro-fresco.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/coulis-salsa-pomodoro-fresco.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/coulis-salsa-pomodoro-fresco.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Salsa e Coulis di Pomodoro Fresco</h2>
+          <p class="category-card__desc">Ricetta professionale per salsa e coulis di pomodoro fresco. Tecnica del concassé e setacciatura per una texture vellutata e un sapore intenso.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/salsa-teriyaki-originale/" class="category-card" data-link
+         data-title="salsa teriyaki originale"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/salsa-teriyaki-originale.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/salsa-teriyaki-originale.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/salsa-teriyaki-originale.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Salsa Teriyaki Originale</h2>
+          <p class="category-card__desc">Salsa teriyaki giapponese autentica: soia, sake, mirin e zucchero ridotti a glassa lucida e bilanciata.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/salsa-verde-tradizionale/" class="category-card" data-link
+         data-title="salsa verde tradizionale"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/salsa-verde-tradizionale.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/salsa-verde-tradizionale.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/salsa-verde-tradizionale.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Salsa Verde Tradizionale</h2>
+          <p class="category-card__desc">La ricetta professionale della classica salsa verde (bagnet verd), perfetta per accompagnare bolliti, carni e crostini. Con uova sode e un'emulsione perfetta a base d'olio EVO.</p>
+        </div>
+      </a>
+      <a href="/Ricettario/ricette/condimenti/vinaigrette-classica-e-citronette/" class="category-card" data-link
+         data-title="vinaigrette classica e citronette"
+         data-hydration="0">
+        <div class="category-card__image-wrapper">
+          <picture>
+  <source srcset="/Ricettario/images/ricette/condimenti/vinaigrette-classica-e-citronette.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/vinaigrette-classica-e-citronette.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/vinaigrette-classica-e-citronette.webp" alt="" class="category-card__image" loading="lazy">
+</picture>
+          <div class="category-card__meta">
+            
+            
+          </div>
+        </div>
+        <div class="category-card__body">
+          <h2 class="category-card__title">Vinaigrette Classica e Citronette</h2>
+          <p class="category-card__desc">Due emulsioni fredde fondamentali: vinaigrette con aceto e citronette con limone. Rapporto 3:1 olio/acido, pronte in 5 minuti.</p>
+        </div>
+      </a>
+        </div>
+
+        
+      </div>
+    </section>
+  
     </div><!-- /#app -->
     </main>
 
@@ -719,17 +1245,37 @@
                     </ul>
                 </div>
 
+                <!-- Tutte le categorie, con path ASSOLUTI. I vecchi link erano
+                     relativi ("ricette/pane/"): giusti in homepage e rotti su
+                     ogni altra pagina, perché il footer è nel guscio condiviso
+                     e un path relativo si risolve contro l'URL della pagina che
+                     lo ospita. C'era anche una categoria «Pasta» che non esiste.
+                     Questo elenco è una copia di js/categories.js e non può non
+                     esserlo (markup statico): verifica-build.js controlla che
+                     le due liste coincidano, quindi se diverge la build si
+                     ferma. Sono anche gli unici link statici che rendono
+                     raggiungibili le pagine categoria dai crawler. -->
                 <div>
                     <h2 class="footer__col-title">Categorie</h2>
                     <ul class="footer__links">
-                        <li><a href="ricette/pane/" data-link><i data-lucide="arrow-up-right"
+                        <li><a href="/Ricettario/ricette/primi/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Primi</a></li>
+                        <li><a href="/Ricettario/ricette/pane/" data-link><i data-lucide="arrow-up-right"
                                     class="footer__link-icon"></i> Pane</a></li>
-                        <li><a href="ricette/pizza/" data-link><i data-lucide="arrow-up-right"
+                        <li><a href="/Ricettario/ricette/pizza/" data-link><i data-lucide="arrow-up-right"
                                     class="footer__link-icon"></i> Pizza</a></li>
-                        <li><a href="ricette/pasta/" data-link><i data-lucide="arrow-up-right"
-                                    class="footer__link-icon"></i> Pasta</a></li>
-                        <li><a href="ricette/lievitati/" data-link><i data-lucide="arrow-up-right"
+                        <li><a href="/Ricettario/ricette/lievitati/" data-link><i data-lucide="arrow-up-right"
                                     class="footer__link-icon"></i> Lievitati</a></li>
+                        <li><a href="/Ricettario/ricette/dolci/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Dolci</a></li>
+                        <li><a href="/Ricettario/ricette/focaccia/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Focaccia</a></li>
+                        <li><a href="/Ricettario/ricette/conserve/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Conserve</a></li>
+                        <li><a href="/Ricettario/ricette/condimenti/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Condimenti</a></li>
+                        <li><a href="/Ricettario/ricette/secondi-piatti/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Secondi Piatti</a></li>
                     </ul>
                 </div>
 
@@ -751,7 +1297,7 @@
             <div class="footer__bottom">
                 <span>© <span id="current-year">2026</span> Ricettario Lab</span>
                 <div class="footer__social">
-                    <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
+                    <a href="https://github.com/devdomenicotatone/Ricettario" target="_blank" rel="noopener" aria-label="GitHub">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                             <path
                                 d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
