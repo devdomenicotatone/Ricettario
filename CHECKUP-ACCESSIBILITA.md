@@ -3,14 +3,16 @@
 > **27/07/2026.** Il [CHECKUP.md](./CHECKUP.md) generale dichiarava di non aver
 > guardato l'accessibilità oltre agli attributi `alt`. Questo colma quel buco.
 >
-> **Chiusi i punti dall'1 al 7.** Il cambio di rotta viene annunciato e il
-> focus gestito, esiste il landmark principale, lo skip link porta da qualche
+> **Chiusi i punti dall'1 al 7 e il 9.** Il cambio di rotta viene annunciato e
+> il focus gestito, esiste il landmark principale, lo skip link porta da qualche
 > parte, il contrasto è a norma ovunque — misurato **zero problemi** su
 > homepage, ricetta, categoria e calcolatore, in entrambi i temi — il profilo
-> sensoriale esiste anche in parole e non solo in pixel, e **tutti i 227
-> controlli** delle quattro pagine mostrano dove sta il focus.
+> sensoriale esiste anche in parole e non solo in pixel, **tutti i 227
+> controlli** delle quattro pagine mostrano dove sta il focus, le tabelle hanno
+> le loro intestazioni, i titoli non saltano su nessuna delle **106 pagine
+> generate**, e il calcolatore dice a voce quello che fa.
 >
-> **Restano aperti i punti 8 e 9.**
+> **Resta aperto il punto 8**, l'unico che tocca il disegno della navbar.
 >
 > Le voci sono in ordine di quanto pesano per chi le subisce, non di quanto
 > costa sistemarle.
@@ -47,7 +49,8 @@ Non è un contentino: è parecchio, ed è il motivo per cui la lista dei problem
 - **`aria-pressed` è mantenuto correttamente** sulle 13 opzioni del
   calcolatore: una sola a `true`, le altre a `false`.
 - **Un solo bersaglio tattile** sotto i 24×24 px di WCAG 2.2.
-- La tabella delle farine ha le sue intestazioni `<th>`.
+- La tabella delle farine ha le sue intestazioni `<th>` — e adesso ce le hanno
+  anche quella degli ingredienti e quella delle sospensioni (punto 9, chiuso).
 
 ---
 
@@ -356,20 +359,108 @@ esattamente la soglia che lo standard fissa.
 
 ---
 
-## 9. Minori
+## 9. Minori — CHIUSI tutti e quattro
 
-- **La tabella degli ingredienti non ha intestazioni.** 9 righe, 2 colonne
-  (nome e quantità), zero `<th>`. Uno screen reader legge i numeri senza dire di
-  che colonna sono. La tabella delle farine, due riquadri più sotto, ce le ha.
-- **Salti di livello nei titoli.** `h2 → h4` in homepage e nelle ricette,
-  `h1 → h4` nel calcolatore. La causa è sempre la stessa: i titoli del footer
-  sono `h4` senza che ci sia un `h3` prima.
-- **Le 13 opzioni del calcolatore non sono un gruppo.** Nessun `fieldset`,
-  nessun `role="radiogroup"`, e la domanda «Che cosa cuoci?» non è legata alle
-  opzioni. Chi arriva col Tab sente tredici pulsanti e nessuna domanda.
-- **Il calcolatore non ha regioni live.** È una procedura a passi: scegli,
-  premi Avanti, il pannello cambia. Nessun annuncio. Vale anche per i timer,
-  che contano alla rovescia in silenzio.
+Erano quattro voci piccole e indipendenti. Una delle quattro non era piccola.
+
+### La tabella degli ingredienti non aveva intestazioni
+
+Due colonne, nome e quantità, zero `<th>`: chi naviga la tabella con un lettore
+di schermo sentiva «1000g» senza sapere di che cosa.
+
+Il nome dell'ingrediente è adesso un **`<th scope="row">`** — è l'intestazione
+della riga, e con lo `scope` la quantità viene annunciata insieme
+all'ingrediente a cui appartiene. Il titolo del gruppo, che prima era un
+`<td colspan="2">`, è un `<th scope="colgroup">`: intesta le righe che seguono.
+Stesso trattamento alla tabella delle sospensioni e a quella pre-renderizzata,
+che è quella che vede il crawler.
+
+Il disegno non doveva cambiare, e non è cambiato: al `<th>` il browser mette
+d'ufficio grassetto e testo centrato, tolti entrambi. Verificato confrontando la
+pagina locale con quella pubblicata, cella per cella — `400 / start / 15,2px /
+padding 16px 12px` sul nome, `600 / end` sulla quantità, `700` sul totale, prima
+e dopo identici. E il calcolatore delle dosi continua a funzionare: 100 g → 125 g
+a ×1,25, totale ricalcolato, e ritorno.
+
+### Salti di livello nei titoli
+
+I titoli del footer erano `h4` senza un `h3` prima: un salto su ogni pagina del
+sito. Sul calcolatore era `h1 → h4`, il salto più largo possibile.
+
+Sono diventati **`h2`**: sono le sezioni di un landmark di primo livello, quindi
+`h2` è il posto giusto, e da lì non si può saltare perché ogni pagina ha il suo
+`h1`. Con loro sono cadute altre due cose che il checkup non aveva visto: «Note
+di Degustazione» dentro il pannello sensoriale era `h4` sotto un `h2`, ed è
+diventato `h3`; e le schede della pagina categoria erano `h3` nella versione
+SPA e `h2` in quella pre-renderizzata — **la stessa pagina con due strutture
+diverse a seconda di come ci arrivi**. Adesso sono `h2` in tutte e due.
+
+**Verificato** su quattro tipi di pagina nel browser e su **tutte e 106** le
+pagine HTML generate: zero salti.
+
+### Le 13 opzioni del calcolatore non erano un gruppo
+
+La domanda «Che cosa cuoci?» era un titolo che stava sopra e non era legato a
+niente: chi arrivava col Tab sentiva tredici pulsanti e nessuna domanda.
+
+Adesso ogni blocco di opzioni è un **`role="group"` con `aria-labelledby`** che
+punta alla domanda dello step, o al proprio sottotitolo quando lo step ne ha
+più di uno — «Misura del kamado», «Cosa hai a disposizione», «Legno da
+affumicatura». Verificato su tutti e sei gli step: ogni gruppo ha la sua
+etichetta e ogni id esiste davvero.
+
+Restano pulsanti con `aria-pressed` e non un `radiogroup`: quello vorrebbe la
+navigazione con le frecce e un solo elemento tabulabile, cioè un modo di
+muoversi diverso da quello che c'è oggi. Il gruppo etichettato risolve il
+problema segnalato senza cambiare come si usa la pagina.
+
+### Il calcolatore non aveva regioni live — ed era la voce più grossa delle quattro
+
+Qui sotto c'era un difetto peggiore di quello scritto. Il form ridisegna tutto
+lo step a ogni tocco: `radice.innerHTML = …` distrugge l'elemento che aveva il
+focus, e il focus torna al `<body>`. Non era solo che nessuno annunciava il
+cambiamento — era che **a ogni singola scelta il Tab successivo ripartiva dalla
+navbar**. Scegliere il taglio fra tredici opzioni e poi dover ritraversare tutta
+la pagina per arrivare ad «Avanti», tredici volte.
+
+Adesso il focus va dove è appena successo qualcosa:
+
+- **cambio di passo** → sulla domanda del passo nuovo, `tabindex="-1"`, che
+  l'assistente legge ad alta voce. È insieme l'annuncio e il punto da cui
+  ripartire. Una regione live in più direbbe la stessa frase due volte.
+- **scelta di un'opzione** → sull'opzione equivalente nel markup ridisegnato,
+  che viene riletta col suo `aria-pressed` aggiornato: la conferma che la scelta
+  è stata registrata.
+
+Al primo disegno il focus non si tocca, per la stessa ragione del punto 1: è la
+pagina che l'utente ha aperto, non un cambio di passo. E la barra di
+avanzamento, che era un `progressbar` senza nome, adesso si chiama
+«Avanzamento» e dice `aria-valuetext="Passo 2 di 6"`.
+
+**I timer.** Il conto alla rovescia non si annuncia e non deve: una regione live
+che parla ogni secondo rende la pagina inascoltabile. Si annunciano i **cambi di
+stato**, che sono le cose che succedevano in silenzio — timer avviato con la sua
+finestra, in pausa, ripreso, fase completata con il nome della prossima, e
+l'allarme del tempo minimo.
+
+Quest'ultimo passa da `avvisa()` in `avvisatore.js`, che era già il posto dove
+convergono suono, vibrazione e notifica: l'annuncio è il quarto canale, e ha lo
+stesso senso degli altri tre. Chi ascolta la pagina non sente il suono come
+segnale — lo sente come un rumore senza spiegazione — e la notifica di sistema
+arriva solo se il permesso è stato dato.
+
+La regione live è **una sola per tutto il sito** (`js/annuncio.js`): quella del
+router, che era codice inline dentro `router.js`, è diventata un modulo che usano
+tutti e due. Due regioni separate sarebbero state due copie della stessa
+trappola — la pausa prima di scrivere, il `setTimeout` invece di
+`requestAnimationFrame` — e la seconda copia sarebbe divergita al primo
+cambiamento.
+
+**Verificato** sul piano vero: avvia → «Braci e fumo pulito: timer avviato,
+finestra 15-20 min. L'allarme suona al tempo minimo.», pausa, ripresa, e
+completa → «fase completata. Adesso tocca a Cottura indiretta.» Il focus torna
+sull'opzione scelta, e su «Avanti» e «Indietro» va sulla domanda nuova. Il
+cambio di rotta della SPA continua ad annunciare come prima.
 
 ---
 
@@ -401,20 +492,17 @@ Vanno letti, perché due misure su tre le ho dovute rifare.
 
 ---
 
-## Se hai tempo per una cosa sola
+## Quello che resta
 
-**Il punto 9: le voci minori.**
+**Solo il punto 8**, i 21 px di scorrimento orizzontale a 320 px. È rimasto per
+ultimo perché è il solo che non si chiude con un attributo o una regola CSS: il
+colpevole è il logo della navbar, quindi va deciso cosa fare del logo sui
+telefoni più stretti — accorciarlo, ridurlo, o lasciare solo il simbolo.
 
-Sono quattro cose piccole e indipendenti — le intestazioni della tabella
-ingredienti, i salti di livello nei titoli, le tredici opzioni del calcolatore
-che non sono un gruppo, e il calcolatore che non annuncia i cambi di passo.
-Nessuna richiede di ripensare niente, e la terza e la quarta pesano parecchio
-su chi usa il calcolatore ascoltandolo.
+Restano anche i limiti del metodo, qui sotto: soprattutto il fatto che nessuna
+di queste correzioni è stata ascoltata con uno screen reader vero.
 
-Il punto 8, i 21 px di scorrimento a 320 px, è l'ultimo perché è il più
-fastidioso da sistemare: tocca il logo della navbar.
-
-## Una cosa che si è ripetuta quattro volte
+## Una cosa che si è ripetuta cinque volte
 
 Chiudere un punto ha reso più economico o più visibile quello dopo:
 
@@ -430,8 +518,16 @@ Chiudere un punto ha reso più economico o più visibile quello dopo:
   andando a metterla è emerso che **quel pannello non si apriva da tastiera**,
   quindi l'alternativa sarebbe finita dietro una porta senza maniglia. Avevo
   misurato il contenuto e non la strada per arrivarci. Nella stessa manciata di
-  righe si nascondeva anche una freccia che non ruotava da mesi.
+  righe si nascondeva anche una freccia che non ruotava da mesi;
+- il punto 9 era archiviato come «minori», e dentro c'era la cosa più pesante
+  di tutte: il calcolatore **perdeva il focus a ogni tocco**, quindi ogni scelta
+  costava di ritraversare la pagina da capo. Avevo scritto «non ci sono regioni
+  live» guardando cosa mancava, invece di provare a usare la procedura con la
+  sola tastiera. E i titoli non saltavano solo nel footer: le schede della
+  pagina categoria avevano due livelli diversi a seconda che la pagina arrivasse
+  dalla SPA o dal pre-rendering.
 
 Morale operativa: dopo ogni correzione conviene **rimisurare tutto**, non solo
-la cosa corretta — e prima di aggiungere contenuto a un pannello, controllare
-che il pannello si apra.
+la cosa corretta; prima di aggiungere contenuto a un pannello, controllare che
+il pannello si apra; e una voce archiviata come minore va aperta lo stesso,
+perché la gravità stimata da fuori non è la gravità.

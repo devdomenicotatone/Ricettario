@@ -488,7 +488,7 @@ function updateCategoryView() {
           </div>
         </div>
         <div class="category-card__body">
-          <h3 class="category-card__title">${escHtml(r.title)}</h3>
+          <h2 class="category-card__title">${escHtml(r.title)}</h2>
           ${r.description ? `<p class="category-card__desc">${escHtml(r.description)}</p>` : ''}
         </div>
       </a>`;

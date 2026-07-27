@@ -426,8 +426,8 @@ function prerenderRecipe(recipe, src, catDir) {
             <div>
               <div class="recipe-panel">
                 <h2 class="recipe-panel__title">Ingredienti</h2>
-                <table class="ingredients-table">
-                  ${ingredients.map(i => `<tr><td>${escHtml(i.name)}${i.note ? ` <span class="ingredient-note">${escHtml(i.note)}</span>` : ''}</td><td class="ingredient-qty">${i.grams != null ? `${i.grams}g` : ''}</td></tr>`).join('')}
+                <table class="ingredients-table" aria-label="Ingredienti e quantità">
+                  ${ingredients.map(i => `<tr><th scope="row">${escHtml(i.name)}${i.note ? ` <span class="ingredient-note">${escHtml(i.note)}</span>` : ''}</th><td class="ingredient-qty">${i.grams != null ? `${i.grams}g` : ''}</td></tr>`).join('')}
                 </table>
               </div>
             </div>

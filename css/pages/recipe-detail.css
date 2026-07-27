@@ -326,9 +326,17 @@
             }
         }
 
+        /* Il nome dell'ingrediente è un `<th scope="row">`: senza intestazione
+           di riga un lettore di schermo annuncia «1000g» senza dire di che
+           cosa. Le due celle vanno quindi disegnate insieme, e al `<th>` va
+           tolto quello che il browser gli mette d'ufficio — grassetto e testo
+           centrato — perché la tabella deve restare identica a prima. */
+        & th,
         & td {
             padding: var(--space-md) 12px;
             font-size: 0.95rem;
+            font-weight: 400;
+            text-align: start;
             border-bottom: 1px solid var(--border-subtle);
 
             &:first-child {
@@ -343,6 +351,7 @@
             }
         }
 
+        & tr:last-child th,
         & tr:last-child td {
             border-bottom: none;
         }
@@ -482,7 +491,11 @@
     }
 
     /* ── Ingredient Group Headers ── */
-    .ingredient-section-header td {
+    /* Il titolo del gruppo è passato da `<td colspan="2">` a
+       `<th colspan="2" scope="colgroup">`: è l'intestazione delle righe che
+       seguono, e adesso lo dice anche al lettore di schermo. Il disegno non
+       cambia, ma i selettori devono seguire il tag. */
+    .ingredient-section-header th {
         padding: var(--space-sm) 12px;
         font-size: 0.72rem;
         font-weight: 700;
@@ -493,7 +506,7 @@
         background: transparent;
     }
 
-    .ingredient-section-header:not(:first-child) td {
+    .ingredient-section-header:not(:first-child) th {
         padding-top: var(--space-lg);
     }
 
@@ -502,6 +515,7 @@
     }
 
     /* ── Riga Totale Impasto ── */
+    .ingredient-total-row th,
     .ingredient-total-row td {
         padding-top: var(--space-md);
         border-top: 2px solid var(--border-accent);

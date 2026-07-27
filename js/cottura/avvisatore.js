@@ -13,6 +13,8 @@
  * terze parti e non ha senso aggiungere un mp3 per tre note.
  */
 
+import { annuncia } from '../annuncio.js';
+
 let contesto = null;
 let notificheChieste = false;
 let sentinella = null;
@@ -127,11 +129,20 @@ export function notifica(titolo, corpo) {
     } catch { /* Safari lancia in certi contesti */ }
 }
 
-/** Suono + vibrazione + notifica in un colpo. */
+/**
+ * Suono + vibrazione + notifica + annuncio, in un colpo.
+ *
+ * L'annuncio è il quarto canale, e ha lo stesso senso degli altri tre: chi
+ * ascolta la pagina con un lettore di schermo non sente il suono come segnale —
+ * lo sente come un rumore senza spiegazione — e la notifica di sistema arriva
+ * solo se il permesso è stato dato. La frase nella regione live dice cosa è
+ * successo, e arriva anche quando tutto il resto è negato o silenziato.
+ */
 export function avvisa(tipo, titolo, corpo) {
     suona(tipo);
     vibra(tipo);
     if (titolo) notifica(titolo, corpo);
+    if (titolo) annuncia(corpo ? `${titolo}. ${corpo}` : titolo);
 }
 
 // ═══════════════════════════════════════════════════════════════

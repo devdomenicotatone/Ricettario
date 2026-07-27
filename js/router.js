@@ -3,6 +3,8 @@
    Client-side router per GitHub Pages
    ============================================ */
 
+import { annuncia } from './annuncio.js';
+
 const BASE = import.meta.env.BASE_URL; // es. "/Ricettario/"
 
 /**
@@ -89,27 +91,14 @@ function dopoIlCambioPagina() {
   const contenuto = document.getElementById('contenuto');
   if (contenuto) contenuto.focus({ preventScroll: true });
 
-  const annuncio = document.getElementById('annuncio-pagina');
-  if (!annuncio) return;
-
   // Il titolo del documento lo aggiorna il renderer: qui si legge dopo, a
   // contenuto già scritto. Il `— Ricettario Lab` finale si toglie perché
   // ripeterlo a ogni navigazione è rumore.
   const titolo = document.title.replace(/\s*[—-]\s*(Il )?Ricettario( Lab)?\s*$/i, '').trim();
 
-  // Svuotare e riempire nello stesso giro non produce annuncio: molti
-  // assistenti confrontano il contenuto e, non vedendo differenze, tacciono.
-  // Serve una pausa in mezzo perché il cambiamento venga notato — e serve
-  // anche quando si torna sulla stessa pagina, dove il testo sarebbe identico.
-  //
-  // `setTimeout` e non `requestAnimationFrame`: quest'ultimo è legato al
-  // disegno, e in una scheda che il browser non sta ridisegnando non scatta
-  // affatto. L'annuncio sparirebbe proprio quando la pagina è in secondo
-  // piano. Misurato: con rAF la regione restava vuota.
-  annuncio.textContent = '';
-  setTimeout(() => {
-    annuncio.textContent = titolo ? `${titolo}, pagina caricata` : 'Pagina caricata';
-  }, 100);
+  // La regione live è una sola per tutto il sito: vedi js/annuncio.js, dove
+  // sta anche il perché della pausa prima di scrivere.
+  annuncia(titolo ? `${titolo}, pagina caricata` : 'Pagina caricata');
 }
 
 /**

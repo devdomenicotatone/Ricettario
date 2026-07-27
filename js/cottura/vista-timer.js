@@ -15,6 +15,7 @@ import {
     statoFase, faseAttiva, tutteCompletate, allarmiDaDare, orologio,
 } from './timer.js';
 import { sblocca, avvisa, suona, vibra, tieniSchermoAcceso, supporti } from './avvisatore.js';
+import { annuncia } from '../annuncio.js';
 import { esc, durata } from './formato.js';
 
 export function montaTimer(radice, piano, config, { onCambio } = {}) {
@@ -173,6 +174,14 @@ export function montaTimer(radice, piano, config, { onCambio } = {}) {
     async function comanda(faseId, azione) {
         const t = ora();
 
+        // Il nome e la finestra si leggono prima di toccare la sessione: dopo
+        // `completa` la fase non è più quella attiva e servirebbe cercarla.
+        const prima = statoFase(sessione, faseId, t);
+        const nome = prima?.nome || 'Fase';
+        const finestra = prima
+            ? durata([Math.round(prima.minMs / 60000), Math.round(prima.maxMs / 60000)])
+            : '';
+
         if (azione === 'avvia') {
             await sblocca();
             if (altrove) scartaSessione();
@@ -181,13 +190,21 @@ export function montaTimer(radice, piano, config, { onCambio } = {}) {
             if (f) f.allarmeDato = false;
             suona('tocco');
             vibra('tocco');
+            // Il conto alla rovescia non si annuncia: una regione live che
+            // parla ogni secondo rende la pagina inascoltabile. Si annunciano i
+            // cambi di stato, che sono le cose che l'utente ha bisogno di
+            // sapere e che altrimenti succedono in silenzio.
+            annuncia(`${nome}: timer avviato, finestra ${finestra}. L'allarme suona al tempo minimo.`);
         } else if (azione === 'pausa') {
             pausa(sessione, faseId, t);
+            annuncia(`${nome}: timer in pausa.`);
         } else if (azione === 'riprendi') {
             riprendi(sessione, faseId, t);
+            annuncia(`${nome}: timer ripreso.`);
         } else if (azione === 'completa') {
             completa(sessione, faseId, t);
             if (tutteCompletate(sessione)) {
+                // `avvisa` annuncia già per conto suo: qui non si ripete.
                 avvisa('fine', 'Cottura completata', 'Registra com\'è andata: serve a tarare i tempi.');
             } else {
                 suona('tocco');
@@ -199,9 +216,13 @@ export function montaTimer(radice, piano, config, { onCambio } = {}) {
                     requestAnimationFrame(() => document.getElementById(`fase-${prossima.id}`)
                         ?.scrollIntoView({ behavior: 'smooth', block: 'center' }));
                 }
+                annuncia(prossima
+                    ? `${nome}: fase completata. Adesso tocca a ${prossima.nome}.`
+                    : `${nome}: fase completata.`);
             }
         } else if (azione === 'azzera') {
             azzera(sessione, faseId);
+            annuncia(`${nome}: timer azzerato.`);
         }
 
         salvaSessione(sessione);

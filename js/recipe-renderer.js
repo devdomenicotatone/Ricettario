@@ -143,11 +143,17 @@ function buildRecipeHTML(r, categoryDir) {
 
 
 // ── Ingredienti (con supporto gruppi) ──
+/**
+ * Il nome dell'ingrediente è un `<th scope="row">`, non un `<td>`: è
+ * l'intestazione della riga, e senza di essa chi naviga la tabella con un
+ * lettore di schermo sente «1000g» senza sapere di che cosa. Con lo `scope` la
+ * quantità viene annunciata insieme all'ingrediente a cui appartiene.
+ */
 function buildIngredientRow(ing) {
   const excludeAttr = ing.excludeFromTotal ? ' data-exclude-total="true"' : '';
 
   return `<tr${excludeAttr}>
-    <td>${escHtml(ing.name)} ${ing.note ? `<span class="ingredient-note">${escHtml(ing.note)}</span>` : ''}</td>
+    <th scope="row">${escHtml(ing.name)} ${ing.note ? `<span class="ingredient-note">${escHtml(ing.note)}</span>` : ''}</th>
     <td class="ingredient-qty">${ing.grams != null ? `${escHtml(ing.grams)}g` : ''}</td>
   </tr>`;
 }
@@ -161,7 +167,7 @@ function buildIngredientsPanel(r) {
   if (hasGroups) {
     rows = r.ingredientGroups.map(group => {
       if (!group.items?.length) return ''; // skip gruppi malformati
-      const header = `<tr class="ingredient-section-header"><td colspan="2">${escHtml(group.group || 'Ingredienti')}</td></tr>`;
+      const header = `<tr class="ingredient-section-header"><th colspan="2" scope="colgroup">${escHtml(group.group || 'Ingredienti')}</th></tr>`;
       const items = group.items.map(buildIngredientRow).join('');
       return header + items;
     }).join('');
@@ -186,10 +192,10 @@ function buildIngredientsPanel(r) {
         </div>
       </div>
 
-      <table class="ingredients-table" id="ingredients-table">
+      <table class="ingredients-table" id="ingredients-table" aria-label="Ingredienti e quantità">
         ${rows}
         <tr class="ingredient-total-row" id="ingredient-total-row">
-          <td>Peso Totale Impasto</td>
+          <th scope="row">Peso Totale Impasto</th>
           <td class="ingredient-qty" id="ingredient-total-qty"></td>
         </tr>
       </table>
@@ -200,7 +206,7 @@ function buildIngredientsPanel(r) {
 function buildSuspensionsPanel(r) {
   const rows = r.suspensions.map(s => `
     <tr>
-      <td>${escHtml(s.name)} ${s.note ? `<span class="ingredient-note">${escHtml(s.note)}</span>` : ''}</td>
+      <th scope="row">${escHtml(s.name)} ${s.note ? `<span class="ingredient-note">${escHtml(s.note)}</span>` : ''}</th>
       <td class="ingredient-qty">${s.grams != null ? `${escHtml(s.grams)}g` : ''}</td>
     </tr>
   `).join('');
@@ -210,7 +216,7 @@ function buildSuspensionsPanel(r) {
       <h2 class="recipe-panel__title">
         <span class="recipe-panel__title-icon">${fluentEmoji('peanuts', 24)}</span> Ingredienti Aggiuntivi / Sospensioni
       </h2>
-      <table class="ingredients-table" id="suspensions-table">${rows}</table>
+      <table class="ingredients-table" id="suspensions-table" aria-label="Ingredienti aggiuntivi e quantità">${rows}</table>
     </div>`;
 }
 
@@ -261,7 +267,7 @@ function buildSensoryProfile(r) {
   
   const summaryHtml = r.sensoryProfile.summary ? `
     <div class="sensory-note">
-      <h4 class="sensory-note__title">Note di Degustazione</h4>
+      <h3 class="sensory-note__title">Note di Degustazione</h3>
       <p class="sensory-note__text">"${escHtml(r.sensoryProfile.summary)}"</p>
     </div>
   ` : '';

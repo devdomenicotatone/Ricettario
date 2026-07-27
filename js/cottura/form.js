@@ -20,6 +20,9 @@ import { esc, num } from './formato.js';
 
 const CHIAVE_ATTREZZATURA = 'ricettario-cottura-attrezzatura';
 
+/** Id della domanda dello step: fa da etichetta ai gruppi di opzioni. */
+const ID_DOMANDA = 'cottura-domanda';
+
 // ═══════════════════════════════════════════════════════════════
 //  SUGGERIMENTO DEL METODO
 // ═══════════════════════════════════════════════════════════════
@@ -81,20 +84,20 @@ const STEP = [
                 : cursore('spessore', s.spessore, t.spessore, 0.5, 'cm', 'Spessore nel punto più grosso'));
 
             if (ossoObbligato(t) === null) {
-                blocchi.push(sottotitolo('Osso'));
+                blocchi.push(sottotitolo('Osso', 'gruppo-osso'));
                 blocchi.push(opzioni([
                     { valore: '1', campo: 'osso', attiva: s.osso === true, titolo: 'Con osso' },
                     { valore: '0', campo: 'osso', attiva: s.osso === false, titolo: 'Senza osso' },
-                ], 'orizzontale'));
+                ], 'orizzontale', 'gruppo-osso'));
             }
 
             if (t.gestione_grasso?.bordo_grasso) {
-                blocchi.push(sottotitolo('Bordo di grasso (lardello)'));
+                blocchi.push(sottotitolo('Bordo di grasso (lardello)', 'gruppo-grasso'));
                 blocchi.push(opzioni([
                     { valore: '0', campo: 'bordo_grasso_cm', attiva: !s.bordo_grasso_cm, titolo: 'Assente o sottile' },
                     { valore: '1', campo: 'bordo_grasso_cm', attiva: s.bordo_grasso_cm === 1, titolo: 'Circa 1 cm' },
                     { valore: '1.8', campo: 'bordo_grasso_cm', attiva: s.bordo_grasso_cm === 1.8, titolo: 'Più di 1,5 cm' },
-                ], 'orizzontale'));
+                ], 'orizzontale', 'gruppo-grasso'));
             }
 
             return blocchi.join('');
@@ -169,7 +172,7 @@ const STEP = [
         rilevante: () => true,
         render: (s, d) => {
             const blocchi = [];
-            blocchi.push(sottotitolo('Misura del kamado'));
+            blocchi.push(sottotitolo('Misura del kamado', 'gruppo-kamado'));
             blocchi.push(opzioni(d.dispositivi.map(disp => ({
                 valore: disp.id,
                 campo: 'dispositivo',
@@ -177,23 +180,23 @@ const STEP = [
                 titolo: `${disp.nome} — ${disp.pollici}"`,
                 riga: disp.modelli.slice(0, 3).join(' · '),
                 badge: `${disp.griglia_cm} cm`,
-            }))));
+            })), 'verticale', 'gruppo-kamado'));
 
-            blocchi.push(sottotitolo('Cosa hai a disposizione'));
+            blocchi.push(sottotitolo('Cosa hai a disposizione', 'gruppo-dotazione'));
             blocchi.push(interruttori([
                 { campo: 'sonda', attiva: s.sonda, titolo: 'Termometro a sonda', riga: 'Cambia tutto il piano: con la sonda comandano le temperature, senza comandano i tempi.' },
                 { campo: 'deflettore', attiva: s.deflettore, titolo: 'Deflettore', riga: 'Serve per qualunque cottura indiretta.' },
                 { campo: 'griglia_rialzata', attiva: s.griglia_rialzata, titolo: 'Griglia rialzata', riga: 'Distanza dalle braci: conta di più sui kamado piccoli.' },
-            ]));
+            ], 'gruppo-dotazione'));
 
-            blocchi.push(sottotitolo('Legno da affumicatura'));
+            blocchi.push(sottotitolo('Legno da affumicatura', 'gruppo-legno'));
             blocchi.push(opzioni([
                 { valore: '', campo: 'legno', attiva: !s.legno, titolo: 'Niente legno' },
                 ...['quercia', 'ciliegio', 'melo', 'faggio', 'hickory'].map(l => ({
                     valore: l, campo: 'legno', attiva: s.legno === l,
                     titolo: l.charAt(0).toUpperCase() + l.slice(1),
                 })),
-            ], 'orizzontale'));
+            ], 'orizzontale', 'gruppo-legno'));
 
             return blocchi.join('');
         },
@@ -215,12 +218,27 @@ function descrizioneTaglio(t) {
     return `${famiglia} · ${t.specie}${t.grasso === 'magro' ? ' · magro' : ''}`;
 }
 
-function sottotitolo(testo) {
-    return `<h2 class="cottura-sottotitolo">${esc(testo)}</h2>`;
+/** L'id serve solo quando il sottotitolo fa da etichetta a un gruppo di opzioni. */
+function sottotitolo(testo, id) {
+    return `<h2 class="cottura-sottotitolo"${id ? ` id="${esc(id)}"` : ''}>${esc(testo)}</h2>`;
 }
 
-function opzioni(righe, disposizione = 'verticale') {
-    return `<div class="cottura-opzioni cottura-opzioni--${disposizione}">${righe.map(riga => {
+/**
+ * `role="group"` più `aria-labelledby` non sono decorazione: senza, chi arriva
+ * col Tab sente tredici pulsanti in fila e nessuna domanda — la domanda è un
+ * titolo che sta sopra e non è legata a niente. Con l'etichetta, entrando nel
+ * gruppo l'assistente annuncia «Che cosa cuoci?» e poi le opzioni.
+ *
+ * Restano pulsanti con `aria-pressed` e non un `radiogroup`: quello vorrebbe
+ * la navigazione con le frecce e un solo elemento tabulabile, cioè un modo di
+ * muoversi diverso da quello che c'è oggi. Il gruppo etichettato risolve il
+ * problema segnalato senza cambiare come si usa la pagina.
+ *
+ * `etichettatoDa` vale per difetto l'id della domanda dello step, che è il caso
+ * normale: i sottogruppi passano il proprio sottotitolo.
+ */
+function opzioni(righe, disposizione = 'verticale', etichettatoDa = ID_DOMANDA) {
+    return `<div class="cottura-opzioni cottura-opzioni--${disposizione}" role="group" aria-labelledby="${esc(etichettatoDa)}">${righe.map(riga => {
         if (riga.bloccata) {
             return `
               <div class="cottura-opzione cottura-opzione--bloccata">
@@ -246,8 +264,8 @@ function opzioni(righe, disposizione = 'verticale') {
     }).join('')}</div>`;
 }
 
-function interruttori(righe) {
-    return `<div class="cottura-opzioni cottura-opzioni--verticale">${righe.map(riga => `
+function interruttori(righe, etichettatoDa = ID_DOMANDA) {
+    return `<div class="cottura-opzioni cottura-opzioni--verticale" role="group" aria-labelledby="${esc(etichettatoDa)}">${righe.map(riga => `
       <button class="cottura-opzione cottura-opzione--interruttore${riga.attiva ? ' is-attiva' : ''}"
               data-campo="${esc(riga.campo)}" data-valore="${riga.attiva ? '0' : '1'}"
               aria-pressed="${riga.attiva ? 'true' : 'false'}">
@@ -288,7 +306,7 @@ export function montaForm(radice, stato, dati, azioni) {
 
     const attivi = () => STEP.filter(p => p.rilevante(s, dati));
 
-    function disegna() {
+    function disegna(fuoco = null) {
         const passi = attivi();
         indice = Math.min(indice, passi.length - 1);
         const passo = passi[indice];
@@ -298,14 +316,15 @@ export function montaForm(radice, stato, dati, azioni) {
           <div class="cottura-form">
             <header class="cottura-form__testa">
               <button class="cottura-torna" data-indietro aria-label="Indietro">←</button>
-              <div class="cottura-avanzamento" role="progressbar"
-                   aria-valuemin="1" aria-valuemax="${passi.length}" aria-valuenow="${indice + 1}">
+              <div class="cottura-avanzamento" role="progressbar" aria-label="Avanzamento"
+                   aria-valuemin="1" aria-valuemax="${passi.length}" aria-valuenow="${indice + 1}"
+                   aria-valuetext="Passo ${indice + 1} di ${passi.length}">
                 ${passi.map((_, i) => `<span class="cottura-avanzamento__punto${i <= indice ? ' is-fatto' : ''}"></span>`).join('')}
               </div>
               <span class="cottura-form__contatore">${indice + 1}/${passi.length}</span>
             </header>
 
-            <h1 class="cottura-domanda">${esc(risolvi(passo.domanda, s, dati))}</h1>
+            <h1 class="cottura-domanda" id="${ID_DOMANDA}" tabindex="-1">${esc(risolvi(passo.domanda, s, dati))}</h1>
             <div class="cottura-form__corpo">${passo.render(s, dati)}</div>
 
             <div class="cottura-form__piede">
@@ -316,13 +335,50 @@ export function montaForm(radice, stato, dati, azioni) {
           </div>`;
         radice.querySelector('.cottura-form__corpo')?.scrollTo?.(0, 0);
         window.scrollTo(0, 0);
+        riprendiIlFuoco(fuoco);
+    }
+
+    /**
+     * `radice.innerHTML = …` distrugge l'elemento che aveva il focus, e il
+     * focus torna al `<body>`: da lì il Tab successivo riparte dalla navbar, a
+     * ogni singola scelta. È il difetto che rendeva questa procedura a passi
+     * muta e disorientante per chi non usa il mouse. Dove rimetterlo dipende da
+     * cosa è appena successo:
+     *
+     *   - **cambio di passo** → sulla domanda, che l'assistente legge ad alta
+     *     voce. È l'annuncio del passo nuovo e insieme rimette la tastiera
+     *     all'inizio del contenuto cambiato. Una regione live in più direbbe la
+     *     stessa frase due volte.
+     *   - **scelta di un'opzione** → sull'opzione equivalente nel markup
+     *     ridisegnato, che viene riletta con il suo `aria-pressed` aggiornato:
+     *     la conferma che la scelta è stata registrata.
+     *
+     * Al primo disegno il focus non si tocca: è la pagina che l'utente ha
+     * aperto, non un cambio di passo.
+     */
+    function riprendiIlFuoco(fuoco) {
+        if (!fuoco) return;
+
+        if (fuoco === 'domanda') {
+            radice.querySelector(`#${ID_DOMANDA}`)?.focus({ preventScroll: true });
+            return;
+        }
+
+        // Sugli interruttori `data-valore` si ribalta a ogni tocco (0 ↔ 1),
+        // quindi il primo selettore non trova più niente: il ripiego per campo
+        // è il caso normale, non un errore.
+        const { campo, valore } = fuoco;
+        const bersaglio = radice.querySelector(`[data-campo="${campo}"][data-valore="${valore}"]`)
+            || radice.querySelector(`[data-campo="${campo}"]`);
+        bersaglio?.focus({ preventScroll: true });
     }
 
     radice.addEventListener('click', (e) => {
         const opzione = e.target.closest('[data-campo]');
         if (opzione) {
-            imposta(s, opzione.dataset.campo, opzione.dataset.valore, dati);
-            disegna();
+            const { campo, valore } = opzione.dataset;
+            imposta(s, campo, valore, dati);
+            disegna({ campo, valore });
             return;
         }
 
@@ -342,7 +398,7 @@ export function montaForm(radice, stato, dati, azioni) {
                 azioni.onFine(s);
             } else {
                 indice++;
-                disegna();
+                disegna('domanda');
             }
             return;
         }
@@ -352,7 +408,7 @@ export function montaForm(radice, stato, dati, azioni) {
                 azioni.onAnnulla?.();
             } else {
                 indice--;
-                disegna();
+                disegna('domanda');
             }
         }
     });
