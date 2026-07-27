@@ -35,6 +35,12 @@
 > colore che il browser dà alla propria barra su mobile — l'unico dei tre posti
 > che un lettore vede senza guardare il sito.
 >
+> **E l'avanzo che avevo dichiarato in fondo al punto era il pezzo peggiore.**
+> L'ombra marrone della navbar, lasciata fuori perché «è un'ombra, non
+> l'accento», in tema scuro **schiarisce**: quel marrone è più chiaro del fondo
+> della pagina, quindi la navbar che scorre proiettava un alone, non un'ombra.
+> Adesso `navbar.css` non ha più un colore scritto a mano.
+>
 > **Metodo:** analisi statica dei 19 fogli (163 KB) più misure nel browser sulle
 > pagine vere. Le classi sospette non sono state dedotte: sono state contate nel
 > DOM di homepage, ricetta e categoria. I contrasti sono calcolati secondo WCAG
@@ -368,14 +374,39 @@ su una pagina ricetta pre-renderizzata il `content` passa da `#170E0A` a
 `#F2ECE4` e torna indietro, e in tutti e due i temi coincide con il fondo della
 navbar misurato nello stesso istante.
 
-### Cosa resta in questo file
+### L'ombra della navbar era un'ombra al contrario
 
-`rgba(107, 66, 38, 0.12)`, l'ombra di `.scrolled`: un marrone scritto a mano,
-l'ultimo colore letterale di `navbar.css`. Non l'ho toccato perché non è
-l'accento ed è un'ombra — ma nemmeno lui segue il tema, e il progetto le ombre
-le fa in nero (`--shadow-md` è `oklch(0 0 0 / 0.08)` in chiaro e `/ 0.35` in
-scuro), quindi in tema scuro quest'ombra è molto più debole di ogni altra del
-sito. Cambiarla si vede: va decisa, non uniformata di nascosto.
+L'avevo lasciata fuori — «non è l'accento, ed è un'ombra» — e mi sbagliavo sulla
+gravità, non sulla categoria. `rgba(107, 66, 38, 0.12)` in `.scrolled`, l'ultimo
+colore letterale del file, **in tema scuro non è un'ombra debole: schiarisce.**
+Quel marrone è più chiaro del fondo della pagina, quindi la navbar che scorre
+non proiettava un'ombra, proiettava un alone.
+
+Misurato al colmo dell'ombra, sopra il fondo della pagina:
+
+| | pagina | prima | dopo |
+|---|---|---|---|
+| chiaro | 248,245,239 | 230,223,215 (scurisce) | 228,225,220 (scurisce) |
+| scuro | 16,9,6 | 27,15,10 — **schiarisce** | 10,5,3 (scurisce) |
+
+In tema chiaro non cambia quasi niente: il token fa lo stesso lavoro, neutro
+invece che virato al marrone. In tema scuro cambia il segno.
+
+Adesso è `var(--shadow-md)`, il gradino che il progetto usa già per gli elementi
+che galleggiano — `oklch(0 0 0 / 0.08)` in chiaro, `/ 0.35` in scuro. **Un token
+solo e non due strati sovrapposti**: nel progetto le ombre si scrivono con un
+token (`--shadow-md` compare in cinque punti, sempre da solo), e lo strato di
+contatto nero al 6% che c'era sotto faceva un lavoro di stacco che il bordo da
+2 px qui sopra fa già.
+
+Con questo, `navbar.css` non ha più un colore scritto a mano.
+
+**Quello che non ho potuto provare:** la classe `.scrolled` la mette lo scroll, e
+nel pannello del browser che uso la pagina non scorre — non compone i fotogrammi,
+quindi `scrollTop` torna a 0. Ho misurato la regola con la classe applicata a
+mano. Il codice che la accende (`navbar.classList.toggle('scrolled',
+window.scrollY > 50)`) non l'ho toccato, ma «non l'ho toccato» non è «l'ho
+visto funzionare».
 
 Nella stessa famiglia c'erano `#16a34a` e `#15803d`, il verde del «fatto», e tre
 dei sei `#fff` di `recipe-detail.css`: **corretti nel punto 1**, adesso sono
@@ -535,3 +566,12 @@ documento aveva contato solo dentro. Un numero preciso — «sette volte» — s
 come una misura completa, e invece è completa solo rispetto a dove hai guardato.
 **Quando un valore è un colore, un URL o un nome, il perimetro giusto non è mai
 un'estensione di file: è il repo.** Cercarlo dappertutto costa un comando.
+
+**Poi il punto 4 ha ripetuto una lezione del checkup sull'accessibilità**, quella
+che dice che un «non provato» non è una nota a piè di pagina ma lavoro non fatto.
+Qui la nota era anche più rassicurante: avevo scritto io, chiudendo il punto, che
+l'ombra marrone restava fuori perché «non è l'accento ed è un'ombra» — cioè
+l'avevo guardata e archiviata. Bastava misurarla per vedere che in tema scuro
+schiarisce invece di scurire. **Le righe che ti scrivi da solo per giustificare
+un'esclusione vanno riaperte come si riapre un punto:** sono il posto dove
+l'attenzione si è fermata di proposito.

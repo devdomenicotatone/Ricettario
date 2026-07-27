@@ -30,8 +30,18 @@
 
         &.scrolled {
             padding-block: 10px;
-            box-shadow: 0 4px 24px rgba(107, 66, 38, 0.12),
-                        0 1px 3px rgba(0, 0, 0, 0.06);
+            /* Era `0 4px 24px rgba(107, 66, 38, 0.12)` più un secondo strato
+               nero al 6%: l'ultimo colore letterale del file, e in tema scuro
+               non era un'ombra debole — era un'ombra AL CONTRARIO. Quel
+               marrone è più chiaro del fondo della pagina (27,15,10 contro
+               16,9,6), quindi sotto la navbar schiariva invece di scurire.
+               In chiaro faceva il suo lavoro e il token lo rifà quasi
+               identico: 228,225,220 contro i 230,223,215 di prima, neutro
+               invece che virato al marrone.
+               Un token solo e non due sovrapposti: nel progetto le ombre si
+               scrivono così, e il bordo da 2 px qui sopra fa già il lavoro di
+               stacco che faceva il secondo strato. */
+            box-shadow: var(--shadow-md);
             border-image: linear-gradient(90deg,
                 transparent 0%,
                 color-mix(in oklch, var(--color-accent) 25%, transparent) 20%,
