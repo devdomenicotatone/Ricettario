@@ -453,7 +453,11 @@ function prerenderCategory(cat, catRecipes, catDir) {
           <div class="category-hero__count">${catRecipes.length} ricett${catRecipes.length === 1 ? 'a' : 'e'}</div>
         </div>
       </section>
-      <main class="section">
+      <!-- Qui ci vuole una "section", non un "main": il landmark principale
+           adesso è quello del guscio, che avvolge #app. Due annidati sono
+           markup non valido, e uno screen reader non sa più qual è il
+           contenuto. -->
+      <section class="section">
         <div class="container">
           <nav class="breadcrumb">
             <a href="${BASE_PATH}/">Home</a>
@@ -470,7 +474,7 @@ function prerenderCategory(cat, catRecipes, catDir) {
               </a>`).join('')}
           </div>
         </div>
-      </main>`;
+      </section>`;
 }
 
 // ═══════════════════════════════════════

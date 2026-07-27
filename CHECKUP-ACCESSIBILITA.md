@@ -3,8 +3,12 @@
 > **27/07/2026.** Il [CHECKUP.md](./CHECKUP.md) generale dichiarava di non aver
 > guardato l'accessibilità oltre agli attributi `alt`. Questo colma quel buco.
 >
-> **Niente è stato corretto**: è solo il rapporto. Le voci sono in ordine di
-> quanto pesano per chi le subisce, non di quanto costa sistemarle.
+> **Chiusi i punti 2 e 3** (landmark principale e skip link): erano le due voci
+> che riguardavano tutte le 105 pagine. Le altre sei sono ancora aperte — è un
+> rapporto, non un piano di lavoro già eseguito.
+>
+> Le voci sono in ordine di quanto pesano per chi le subisce, non di quanto
+> costa sistemarle.
 >
 > **Metodo:** analisi statica più misure eseguite nel browser sulle pagine vere
 > — homepage, ricetta, categoria, calcolatore di cottura — in **entrambi i
@@ -67,45 +71,47 @@ nuovo (con `tabindex="-1"`), oppure annunciare il titolo in una regione
 
 ---
 
-## 2. Manca il landmark principale
+## 2 e 3. Landmark principale e skip link — CHIUSI
 
-**Chi ne soffre:** screen reader, e chiunque navighi per regioni.
+Erano due facce dello stesso buco, e si sono risolti insieme.
 
-| pagina | `<main>` |
-|---|---|
-| homepage | **0** |
-| pagina ricetta | **0** |
-| calcolatore cottura | **0** |
-| pagina categoria | 1 |
+**Com'era.** Il contenuto viveva dentro un `<div id="app">` senza `<main>`:
+zero sulla homepage, sulle ricette e sul calcolatore, presente solo sulle
+pagine categoria — un tipo su quattro. E lo skip link, che è il primo elemento
+che si raggiunge premendo Tab, puntava a `#ricette`, un'ancora che **esiste
+solo in homepage**: su 104 pagine su 105 il primo tasto premuto non faceva
+niente. Peggio che non averlo, perché insegna a non usarlo.
 
-Il contenuto vive dentro `<div id="app">`. Senza `<main>` non esiste il comando
-"vai al contenuto principale" che ogni screen reader offre, e l'incoerenza
-(presente solo su un tipo di pagina su quattro) è essa stessa un problema:
-l'utente impara che il comando non funziona e smette di provarlo.
+**Com'è adesso.** Un `<main id="contenuto" tabindex="-1">` avvolge `#app` nel
+guscio, quindi vale per tutte le pagine in un colpo solo, e lo skip link punta
+lì.
 
-`<nav>` e `<footer>` ci sono. Manca anche `<header>`.
+Tre dettagli che non erano ovvi:
 
----
+- **Il `<main>` avvolge `#app`, non lo sostituisce.** I marcatori del
+  contenitore sono portanti in tre punti: `generate-og.js` li cerca per
+  iniettare il contenuto pre-renderizzato e si ferma con «template
+  incompatibile» se non li trova, e `verifica-build.js` ci estrae il testo
+  visibile per confrontarlo con i dati strutturati. Rinominare quel tag li
+  avrebbe rotti tutti e tre.
+- **`tabindex="-1"` serve davvero.** Senza, lo skip link porta la pagina in
+  fondo ma lascia il focus dov'era, e il Tab successivo riparte dalla navbar —
+  cioè il salto non salta niente.
+- **I due `<main>` che già c'erano sono diventati `<section>`.** Le pagine
+  categoria ne emettevano uno (da `generate-og.js` e da `main.js`): annidato
+  dentro quello nuovo sarebbe stato markup non valido.
 
-## 3. Lo skip link funziona solo in homepage
+**Verificato** su tutte e 105 le pagine generate: 105 con esattamente un
+`<main>`, 105 con `id="contenuto"`, 105 con lo skip link che punta lì, **zero**
+annidati. E provato a tastiera sul sito vero: Tab porta allo skip link, Invio
+sposta il focus su `main#contenuto`, e il Tab dopo atterra dentro il contenuto
+— sulle briciole di pane della ricetta, non di nuovo sulla navbar. Il landmark
+sopravvive ai cambi di rotta della SPA (provati tre passaggi di fila).
 
-**Chi ne soffre:** chi naviga da tastiera. Su 104 pagine su 105.
-
-Il primo elemento che si raggiunge premendo Tab è «Vai al contenuto
-principale», e punta a `#ricette`:
-
-| pagina | esiste `id="ricette"`? |
-|---|---|
-| homepage | sì |
-| pagina ricetta | **no** |
-| pagina categoria | **no** |
-| calcolatore | **no** |
-
-Ovunque tranne la homepage, il primo tasto che un utente da tastiera preme non
-fa niente. È peggio di non avere lo skip link, perché insegna che non serve.
-
-Si risolve insieme al punto 2: se le pagine hanno `<main id="contenuto">`, lo
-skip link punta lì e funziona ovunque.
+**Cosa resta fuori:** manca ancora `<header>`. L'ho lasciato perché la navbar è
+già un `<nav>`, che è il landmark che conta per saltarci dentro, e trasformarla
+avrebbe tolto quello per aggiungere l'altro. Va fatto avvolgendo, non
+rinominando.
 
 ---
 
@@ -258,13 +264,13 @@ Vanno letti, perché due misure su tre le ho dovute rifare.
 
 ## Se hai tempo per una cosa sola
 
-**I punti 2 e 3 insieme: aggiungi `<main id="contenuto">` e fai puntare lì lo
-skip link.**
+**Il punto 1: fai annunciare il cambio di pagina.**
 
-Sono la stessa mezz'ora di lavoro e si risolvono a vicenda: il landmark che
-manca è anche il bersaglio che allo skip link non c'è. Da soli valgono più del
-resto perché riguardano tutte le 105 pagine, e perché oggi il primo tasto che
-un utente da tastiera preme sul sito non fa niente.
+I punti 2 e 3 sono chiusi, e la loro chiusura rende il punto 1 più economico di
+quanto fosse: adesso esiste un `main#contenuto` con `tabindex="-1"`, cioè
+esattamente il bersaglio su cui spostare il focus dopo un cambio di rotta.
+Mancano poche righe nel router, non un impianto nuovo.
 
-Subito dopo verrebbe il punto 1, che è il più grave in assoluto ma costa di
-più: gestire il focus a ogni cambio di rotta significa toccare il router.
+È il più grave che resta perché riguarda ogni navigazione interna del sito.
+Subito dopo verrebbero i punti 4 e 5 — il contrasto — che si correggono quasi
+tutti in un file solo, `css/base/tokens.css`.

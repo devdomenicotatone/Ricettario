@@ -296,7 +296,10 @@ async function renderCategory(app, { category }) {
       </div>
     </section>
 
-    <main class="section">
+    <!-- Qui ci vuole una "section", non un "main": il landmark principale è
+         quello del guscio, che avvolge #app e sopravvive ai cambi di rotta.
+         Uno annidato dentro l'altro è markup non valido. -->
+    <section class="section">
       <div class="container">
         <nav class="breadcrumb">
           <a href="${BASE}" data-link>Home</a>
@@ -333,7 +336,7 @@ async function renderCategory(app, { category }) {
 
         <div id="load-more-container"></div>
       </div>
-    </main>
+    </section>
   `;
 
   refreshIcons();

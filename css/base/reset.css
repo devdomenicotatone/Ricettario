@@ -92,6 +92,21 @@
         }
     }
 
+    /* Il bersaglio dello skip link.
+       `tabindex="-1"` lo rende focalizzabile da programma, ma in Safari e
+       Firefox un clic del mouse dentro un contenitore focalizzabile ci sposta
+       il focus: senza questa regola comparirebbe un anello attorno a mezza
+       pagina ogni volta che si clicca. `:focus-visible` invece resta, quindi
+       chi arriva qui con lo skip link continua a vedere dove si trova. */
+    #contenuto:focus {
+        outline: none;
+    }
+
+    #contenuto:focus-visible {
+        outline: 2px solid var(--color-accent);
+        outline-offset: -2px;
+    }
+
     /* Utility: JS-driven visibility toggle */
     .hidden {
         display: none !important;
