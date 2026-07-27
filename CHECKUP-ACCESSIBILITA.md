@@ -24,9 +24,12 @@
 > landmark si sentono, il pulsante del tema ha un nome, la regione live annuncia
 > il cambio pagina, il tasto Indietro annuncia il nuovo documento.
 > **Ma è saltato fuori un difetto che nessuna misura sull'albero poteva
-> mostrare: aprendo una ricetta dalla homepage, NVDA legge l'INTERA ricetta in
+> mostrare: aprendo una ricetta dalla homepage, NVDA leggeva l'INTERA ricetta in
 > un solo annuncio** — 8 750, 9 543 e 8 000+ caratteri in tre prove su tre —
-> prima di dire «pagina caricata». Vedi il **punto 10**.
+> prima di dire «pagina caricata». **Corretto e ri-misurato: 34 caratteri.**
+> Vedi il **punto 10**, che contiene anche la distinzione fra questo difetto e
+> la lettura automatica che NVDA fa su qualunque sito quando si ricarica una
+> pagina — le due cose si somigliano all'orecchio e non sono la stessa.
 >
 > Le voci sono in ordine di quanto pesano per chi le subisce, non di quanto
 > costa sistemarle.
@@ -625,7 +628,7 @@ scaduta, completata, più «rifai» — ma sempre leggendo il DOM, non ascoltand
 
 ---
 
-## 10. Aprire una ricetta legge tutta la ricetta — APERTO
+## 10. Aprire una ricetta legge tutta la ricetta — CHIUSO, misurato
 
 *Trovato ascoltando con NVDA 2026.1.1 su Chrome, sul sito pubblicato. Non è
 misurabile sull'albero di accessibilità: l'albero è giusto, è l'annuncio che è
@@ -703,12 +706,39 @@ giusto. Nel farlo sono usciti due difetti che nessuno aveva visto:
 `dopoIlCambioPagina` in `js/router.js` ora dà il fuoco all'`h1` della pagina
 nuova (con `tabindex="-1"` aggiunto al volo, e fallback su `#contenuto` se un
 `h1` non c'è), lo stesso pattern che il form di cottura usava già sulla sua
-domanda. Con il fuoco su un elemento piccolo, l'annuncio da fuoco può contenere
-al massimo il titolo; resta l'annuncio della regione live, che è voluto. Il
-punto però NON si chiude qui: il meccanismo del megannuncio non è mai stato
-isolato, quindi finché una nuova sessione di ascolto con NVDA sul sito
-pubblicato non conferma che l'annuncio è tornato corto, questa è una modifica
-plausibile, non una misura.
+domanda.
+
+### La misura che chiude il punto
+
+Rifatta con NVDA 2026.1.1 sul sito pubblicato, pilotando **solo la pagina**
+attraverso il protocollo di debug di Chrome invece che con tasti di sistema —
+dettaglio non pedante: la prima versione di questa misura usava `SendKeys`, i
+tasti sono finiti su una finestra che non era il browser e hanno disinstallato
+NVDA. Gli annunci sono letti dal log di NVDA a livello I/O.
+
+| scenario | annunci | caratteri totali | annuncio più lungo |
+|---|---|---|---|
+| **clic su una scheda ricetta** (navigazione SPA) | 2 | **41** | **34** |
+| caricamento della stessa pagina ricetta | 99 | 6 194 | 259 |
+| caricamento di Wikipedia «Pane» (controllo) | 475 | 37 127 | 506 |
+| caricamento di example.com (controllo) | 6 | 206 | 76 |
+
+**Il difetto è chiuso.** Il caso descritto qui sopra — aprire una ricetta dalla
+homepage — è passato da **8 750 caratteri in un annuncio unico a 34**:
+«Gnocchi di Patate, pagina caricata».
+
+**E c'è una cosa che va scritta perché non venga riaperta per sbaglio.**
+Ricaricare la pagina (F5) è un caso *diverso*, e lì NVDA legge comunque tutta
+la pagina: sono i 6 194 caratteri della seconda riga. **Non è questo difetto e
+non è un difetto del sito**, ed è per questo che ci sono le due righe di
+controllo: Wikipedia, ricaricata allo stesso modo, ne legge **sei volte tanti**,
+ed example.com ne legge 206 perché non ha altro da leggere. È la lettura
+automatica di NVDA all'apertura di una pagina (`autoSayAllOnPageLoad`, attiva di
+serie), che si comporta così su qualunque sito. Si riconosce da due cose: nel
+log ogni riga porta il marcatore `say-all:lineReached` — 84 annunci su 99 — e
+l'annuncio più lungo è di 259 caratteri, cioè si tratta di tante righe separate
+e interrompibili con Ctrl. Il difetto vero era l'opposto: **un** blocco unico da
+8 750 caratteri, senza marcatori, che Ctrl non spezzava.
 
 ---
 
@@ -749,6 +779,23 @@ Vanno letti, perché due misure su tre le ho dovute rifare.
   0: la regione live si sente, e il megannuncio del punto 10 resta.
   **Uno strumento di prova che zittisce la cosa che deve misurare produce
   esattamente il difetto che stai cercando.**
+- **Il metodo ha mentito una terza volta, e stavolta è costato caro.** Per
+  ri-misurare il punto 10 avevo automatizzato la prova con `SendKeys`, che manda
+  i tasti alla finestra che ha il fuoco in quel momento — e il fuoco non era sul
+  browser: era sulle Impostazioni di Windows. I dieci Tab e l'Invio hanno
+  premuto **Disinstalla** su NVDA, gli Invii seguenti hanno confermato, e
+  l'ultimo tasto ha premuto «Riavvia ora». NVDA è stato reinstallato e la misura
+  rifatta pilotando **solo la pagina** via protocollo di debug di Chrome, dove
+  un comando non può uscire dalla scheda. *Automatizzare l'input a livello di
+  sistema operativo per misurare un sito è sproporzionato al problema: il raggio
+  d'azione è tutto il computer.*
+- **Due misure su quattro sono uscite vuote prima di uscire giuste.** NVDA legge
+  soltanto la finestra in **primo piano**: quando Chrome lo perdeva, il log non
+  registrava niente e sembrava che il sito non annunciasse nulla — cioè il
+  risultato che avrei voluto vedere. Le misure valide sono quelle prese nei primi
+  secondi dopo il lancio di una finestra nuova, quando il primo piano è certo.
+  *Un silenzio nel log non è una buona notizia finché non hai provato che lo
+  strumento stava ascoltando.*
 - **Il contrasto del testo sopra le foto non è misurabile così.** L'intestazione
   della ricetta è testo bianco sopra l'immagine, con un gradiente scuro
   sovrapposto — che è la tecnica corretta. Il mio metodo legge il colore di
@@ -771,7 +818,11 @@ Vanno letti, perché due misure su tre le ho dovute rifare.
 
 ## Quello che resta
 
-Dei nove punti iniziali, nessuno. **Resta il punto 10**, che non c'era in questa
+Dei nove punti iniziali, nessuno. **E adesso nemmeno il punto 10**, chiuso con
+la misura del 27/07/2026: da 8 750 caratteri a 34. Quello che segue è il
+racconto di com'era, che vale la pena tenere.
+
+Il punto 10 non c'era in questa
 lista perché nessuna misura sull'albero poteva vederlo: l'ha trovato NVDA al
 primo Invio su una scheda.
 
