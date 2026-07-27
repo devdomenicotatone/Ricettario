@@ -137,6 +137,27 @@ latticini solo vegano. Tre cose da sapere:
 L'analisi qualità della dashboard **non** copre questo: nei suoi 83 referti le
 aree sono Coerenza, Dosi, Setup, Tempi, Temperature. Di allergeni non parla mai.
 
+## Gli assi del profilo sensoriale: una regola, non una tabella
+
+Il profilo sensoriale ha **cinque assi**, e sono tutto il profilo. La regola
+è una sola: **nessun asse può valere 0 o 1**. Un tratto assente non è un asse
+di quella ricetta — va sostituito con uno che la ricetta ha davvero, non
+misurato a zero.
+
+Prima gli assi venivano da una tabella `categoria → cinque assi` nella
+dashboard. Non funzionava, e non per una riga mancante: «Secondi Piatti» non
+aveva la sua e usava quella del **pane**, quindi delle costine di maiale
+venivano valutate su «Alveolatura Mollica» (zero, per tre mesi, in
+produzione). Ma il problema è più profondo: quella categoria tiene insieme
+costine e uova marinate, che non condividono quasi nessun tratto, quindi
+**qualunque** set fisso produce zeri su metà categoria. Infatti il controllo
+trova assi non pertinenti anche in categorie «giuste»: «Dolcezza Percepita: 1»
+su una pasta madre, «Acidità: 1» su un burro chiarificato.
+
+`build-recipes.js` avvisa (non blocca: una ricetta con un asse fiacco si
+pubblica) quando un asse è ≤1. Se ne vedi uno, la correzione è cambiare
+l'asse, non alzare il numero.
+
 ## Codifica dei file
 
 I JSON delle ricette sono UTF-8. Sette file sono già stati salvati una volta

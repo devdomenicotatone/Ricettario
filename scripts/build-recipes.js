@@ -294,22 +294,31 @@ function buildEntry(cat, file) {
     warnings.push(`${cat.dir}/${slug}: senza profilo sensoriale (niente grafico né tabella dei tratti)`);
   }
 
-  // Un asse a ZERO è l'impronta di un profilo preso in prestito da un'altra
-  // famiglia di ricette. Gli assi non li sceglie la singola ricetta: la
-  // dashboard ha una tabella categoria → cinque assi, uguale per tutte (80
-  // ricette, 9 categorie, una sola combinazione per categoria). «Secondi
-  // Piatti» non ha la sua e usa quella del PANE, identica etichetta per
-  // etichetta: così le spare ribs sono valutate su «Alveolatura Mollica»,
-  // che per una costina vale zero e sul radar disegna una punta schiacciata.
+  // LA REGOLA: un asse che vale 0 o 1 non è un asse di questa ricetta.
   //
-  // Il segnale è preciso, non è un'euristica larga: su 400 assi gli unici
-  // due a zero sono esattamente le due ricette di quella categoria. Un asse
-  // a 1 invece è spesso legittimo («Acidità: 1» su un burro chiarificato
-  // vuol dire che non è acido), quindi la soglia è lo zero e non «≤1».
+  // Gli assi sono CINQUE, e sono l'intero profilo sensoriale: uno speso per
+  // dire «questo tratto non si applica» è un quinto buttato, e sul radar
+  // disegna una punta schiacciata che non informa nessuno. Se un tratto è
+  // assente non va misurato a zero, va sostituito con un tratto che la
+  // ricetta ha davvero.
+  //
+  // Da dove nasce: la dashboard sceglieva gli assi da una tabella categoria
+  // → cinque assi, e «Secondi Piatti» non avendo la sua usava quella del
+  // PANE — così delle costine di maiale venivano valutate su «Alveolatura
+  // Mollica», che vale zero. Aggiungere righe alla tabella non basta:
+  // «Secondi Piatti» tiene insieme costine e uova marinate, che non
+  // condividono quasi nessun tratto, quindi QUALUNQUE set fisso produce
+  // zeri su metà categoria. La regola sostituisce la tabella.
+  //
+  // Soglia a 1 e non a 0 perché il caso limite lo dice meglio di una
+  // spiegazione: «Acidità: 1» su un burro chiarificato è un'informazione
+  // vera — il burro non è acido — ma resta un asse su cinque speso per una
+  // negazione, in un profilo che aveva Purezza, Nota di Nocciola e Pulizia
+  // del Gusto da raccontare.
   for (const a of raw.sensoryProfile?.axes || []) {
-    if (a?.value === 0) {
-      warnings.push(`${cat.dir}/${slug}: l'asse sensoriale "${a.label}" vale 0 — di solito vuol dire `
-        + `che il profilo arriva dal modello di un'altra categoria, non che il tratto sia assente`);
+    if (typeof a?.value === 'number' && a.value <= 1) {
+      warnings.push(`${cat.dir}/${slug}: l'asse sensoriale "${a.label}" vale ${a.value} — un tratto `
+        + `assente non è un asse di questa ricetta: sostituiscilo con uno che la ricetta ha davvero`);
     }
   }
   if (!raw.nutrition?.kcal_per_100g) {
