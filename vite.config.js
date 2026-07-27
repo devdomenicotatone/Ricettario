@@ -1,7 +1,33 @@
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
-import { cpSync, existsSync, readFileSync, readdirSync, statSync, rmSync } from 'fs';
+import { existsSync, readFileSync, writeFileSync, readdirSync, mkdirSync, statSync, rmSync } from 'fs';
 import { createHash } from 'crypto';
+
+/**
+ * Metadati che la dashboard scrive nel JSON della ricetta e che NON devono
+ * finire online: li legge lei, dai file del repo, non dal sito.
+ *
+ * `_generatedBy` (quale modello ha scritto la ricetta) era pubblicato in 70
+ * ricette su 80 senza che nessuna pagina lo mostrasse: pubblicato e invisibile
+ * insieme. Nella dashboard resta, ed è dove serve: la pastiglia AI nella lista
+ * "Le mie Ricette".
+ *
+ * ATTENZIONE — due campi cominciano con `_` ma sono CONTRATTO PUBBLICO, e
+ * toglierli rompe il sito in silenzio:
+ *
+ *   `_createdAt`        date delle ricette, `datePublished` nel JSON-LD e
+ *                       `lastmod` nella sitemap. Per 17 ricette la data vera
+ *                       esiste solo nell'indice.
+ *   `_originalImageUrl` lo legge `js/credito-foto.js` per collegare il credito
+ *                       alla pagina d'origine della foto. Senza, le immagini
+ *                       Creative Commons perdono il link che la licenza
+ *                       richiede.
+ *
+ * `scripts/verifica-build.js` fa rispettare l'elenco in tutte e due le
+ * direzioni: se un campo interno nuovo comincia a essere pubblicato, il
+ * cancello lo intercetta.
+ */
+const CAMPI_INTERNI = ['_generatedBy', '_validation', '_imageData', '_sourcesUsed'];
 
 // Calcola hash dei JSON ricette per cache busting
 function hashRecipeDir(dir) {
@@ -90,25 +116,46 @@ export default defineConfig({
         },
 
         // Plugin 3: Copia i JSON delle ricette in dist/ durante la build
+        //
+        // Non è una copia secca: i JSON delle ricette contengono anche metadati
+        // di produzione della dashboard, che non hanno motivo di finire online.
+        // Vedi CAMPI_INTERNI qui sotto per quali, e perché due campi che
+        // cominciano con `_` restano invece pubblicati apposta.
         {
             name: 'copy-recipe-json',
             closeBundle() {
                 const src = resolve(__dirname, 'ricette');
                 const dest = resolve(__dirname, 'dist', 'ricette');
-                if (existsSync(src)) {
-                    cpSync(src, dest, {
-                        recursive: true,
-                        filter: (source) => {
-                            // Copia solo le directory e i file .json
-                            if (source.includes('.') && !source.endsWith('.json')) return false;
-                            // …ma non i backup: sono file di lavoro, e finivano
-                            // pubblicati a URL raggiungibili (~914 KB).
-                            if (/\.(backup|pre-edit)\.json$/.test(source)) return false;
-                            return true;
-                        },
-                    });
-                    console.log('📋 Copiati JSON ricette in dist/ricette/');
-                }
+                if (!existsSync(src)) return;
+
+                let copiati = 0;
+                let ripuliti = 0;
+
+                const copiaCartella = (da, a) => {
+                    mkdirSync(a, { recursive: true });
+                    for (const e of readdirSync(da, { withFileTypes: true })) {
+                        const origine = resolve(da, e.name);
+                        const destinazione = resolve(a, e.name);
+                        if (e.isDirectory()) { copiaCartella(origine, destinazione); continue; }
+                        if (!e.name.endsWith('.json')) continue;
+                        // Backup e sidecar: sono file di lavoro, e finivano
+                        // pubblicati a URL raggiungibili (~914 KB).
+                        if (/\.(backup|pre-edit|pre-gen)\.json$/.test(e.name)) continue;
+
+                        const ricetta = JSON.parse(readFileSync(origine, 'utf8'));
+                        let tolto = false;
+                        for (const campo of CAMPI_INTERNI) {
+                            if (campo in ricetta) { delete ricetta[campo]; tolto = true; }
+                        }
+                        if (tolto) ripuliti++;
+                        writeFileSync(destinazione, JSON.stringify(ricetta, null, 2), 'utf-8');
+                        copiati++;
+                    }
+                };
+
+                copiaCartella(src, dest);
+                console.log(`📋 Copiati ${copiati} JSON ricette in dist/ricette/`
+                    + (ripuliti ? ` (${ripuliti} ripuliti dai metadati di produzione)` : ''));
             },
         },
     ],

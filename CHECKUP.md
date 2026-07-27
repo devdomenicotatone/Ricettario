@@ -8,11 +8,17 @@
 > ricette entravano nella pagina come HTML. Non è stato dedotto, è stato
 > **eseguito**: un titolo con `<img src=x onerror=...>` faceva partire codice.
 >
-> **Chiusi anche i punti 2, 5 e 6** (commit successivi): il cancello adesso
-> vede le risorse orfane e le immagini troppo pesanti, ed è stato lui a trovare
-> 34 file inutili invece dei 26 che avevo contato a mano.
+> **Chiusi anche i punti 2, 3, 5 e 6** (commit successivi). Il cancello adesso
+> vede le risorse orfane, le immagini troppo pesanti e i metadati di produzione
+> pubblicati — ed è stato lui a trovare 34 file inutili invece dei 26 che avevo
+> contato a mano.
 >
-> **RESTA APERTO:** i punti 3 e 4. Nessuno dei due rompe niente.
+> **Il punto 3 era scritto male**, e la correzione che proponevo avrebbe rotto i
+> crediti Creative Commons. Vedi lì: è il caso più istruttivo di tutto il
+> documento.
+>
+> **RESTA APERTO:** solo il punto 4, quattro foto di cui non sappiamo la
+> provenienza. Non rompe niente.
 >
 > **Metodo:** analisi statica più esecuzione reale — sito avviato, attacchi
 > provati sul renderer vero, `npm run check` a ogni passo. Nessun agente
@@ -129,20 +135,40 @@ quindi non entra nella build — restano nel repo e in git. Vedi
 
 ---
 
-## 3. Tubatura interna della dashboard pubblicata nei JSON
+## 3. Metadati di produzione pubblicati — CHIUSO, ma non come avevo scritto
 
-`_originalImageUrl` compare in **43 ricette su 80** dentro `dist/`, quindi
-online. È l'URL della foto sorgente, che serve alla dashboard per l'indice
-anti-duplicati: non ha niente a che fare con un file pubblico.
+**Questo punto era sbagliato, ed è utile sapere perché.** Nella prima stesura
+avevo scritto che `_originalImageUrl` «serve alla dashboard per l'indice
+anti-duplicati: non ha niente a che fare con un file pubblico», e avevo
+proposto come «regola pulita» di non copiare i campi che iniziano con `_`.
 
-Insieme viaggiano `_generatedBy` (`"claude"`) e `_createdAt`. Quelli però
-potrebbero essere una scelta di trasparenza, non una svista: dichiarare che una
-ricetta è generata da un modello è una posizione legittima. Va deciso, non
-corretto d'ufficio.
+Applicare quella regola avrebbe rotto i crediti Creative Commons messi tre
+commit prima. `_originalImageUrl` lo legge `js/credito-foto.js` — sia nella
+pagina interattiva sia nel pre-rendering — per collegare il credito alla pagina
+d'origine della foto. È un requisito di licenza, non tubatura. Stessa cosa per
+`_createdAt`: regge le date, `datePublished` nel JSON-LD e `lastmod` nella
+sitemap, e per 17 ricette la data vera **esiste solo nell'indice**.
 
-La regola pulita sarebbe: i campi che iniziano con `_` sono interni e
-`scripts/build-recipes.js` non li copia, tranne quelli esplicitamente
-dichiarati pubblici.
+Il difetto vero era un altro, e più insidioso: **l'underscore mente.** Marca
+come "interni" tre campi di cui due sono contratto pubblico. È una trappola che
+scatta esattamente quando qualcuno fa pulizia in buona fede — ci sono cascato
+io scrivendo questo documento.
+
+Cosa è stato fatto:
+
+- **`_generatedBy` non viene più pubblicato.** Era in 70 ricette su 80 e non lo
+  mostrava nessuna pagina: pubblicato e invisibile insieme. Resta nei file del
+  repo, dove serve davvero — la dashboard lo usa per la pastiglia AI nella lista
+  "Le mie Ricette" — e sparisce da `public/recipes.json` e dalle copie in
+  `dist/`.
+- **La regola è scritta in `vite.config.js`** (`CAMPI_INTERNI`), con accanto
+  l'elenco dei due campi `_` che sono pubblici apposta e il motivo di ciascuno.
+- **Il cancello la fa rispettare al contrario**: `verifica-build.js` non ha una
+  lista di ciò che è vietato, ma di ciò che è **ammesso**
+  (`CAMPI_INTERNI_AMMESSI`). Così un campo interno nuovo — che nasce nell'altro
+  repo e che qui nessuno può prevedere — viene fermato al primo deploy invece
+  che al prossimo checkup. Provato: iniettando un campo finto, il cancello lo
+  nomina e spiega le due strade possibili.
 
 ---
 
@@ -248,19 +274,25 @@ Dichiararlo serve a non far credere che il resto sia stato approvato.
 
 ---
 
-## Se hai tempo per una cosa sola
+## Cosa resta
 
-**Il punto 3: smetti di pubblicare la tubatura interna della dashboard.**
+**Il punto 4: quattro foto di cui il repo non sa dire la provenienza.** È
+lavoro di memoria, non di codice — bisogna ricordarsi da dove vengono. Tutto il
+resto è chiuso.
 
-I punti 1, 2, 5 e 6 sono chiusi. Di quel che resta, il 3 è l'unico che tocca
-dati che finiscono davvero online, ed è una riga in `scripts/build-recipes.js`:
-scartare i campi che iniziano con `_` tranne quelli dichiarati pubblici. Il
-punto 4 sono quattro foto di cui non sappiamo la provenienza — vale la pena
-guardarle, ma è lavoro di memoria, non di codice.
+## La lezione, che vale più della lista
 
-Vale la pena notare da dove è venuto il guadagno più grande di questo giro: non
-da una correzione, ma dal **controllo che se ne accorge**. Cercavo 26 file
-inutili, il cancello ne ha trovati 34; e le due foto pesanti le ho ricomprese
-solo perché lui le ha nominate. Quando qualcosa in questo progetto si rompe in
-silenzio, la domanda giusta non è "come lo aggiusto" ma "cosa avrebbe dovuto
-gridare".
+Il guadagno più grande di questo giro non è venuto da una correzione, ma dal
+**controllo che se ne accorge**. Cercavo 26 file inutili, il cancello ne ha
+trovati 34. Le due foto pesanti le ho ricompresse solo perché lui le ha
+nominate. E il campo `_generatedBy` era online da mesi senza che nessuno lo
+mostrasse.
+
+Il corollario scomodo è il punto 3: **avevo scritto io la correzione sbagliata**,
+e avrebbe rotto in silenzio una conformità di licenza sistemata tre commit
+prima. Non l'ha evitata la mia attenzione — l'ha evitata l'aver controllato chi
+leggeva quel campo prima di toglierlo.
+
+Quando qui qualcosa si rompe in silenzio, la domanda giusta non è «come lo
+aggiusto» ma «cosa avrebbe dovuto gridare». E prima di togliere qualcosa che
+sembra inutile, la domanda è «chi lo legge?», non «a cosa sembra servire».

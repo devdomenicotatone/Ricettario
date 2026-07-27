@@ -107,7 +107,17 @@ function buildEntry(cat, file) {
     imageAttribution: text(raw.imageAttribution),
     hasSensory: Boolean(raw.sensoryProfile),
     hasStorage: Boolean(raw.storage),
-    _generatedBy: raw._generatedBy ?? null,
+    // `_generatedBy` (quale modello ha scritto la ricetta) NON entra qui: lo
+    // legge solo la dashboard, e lo legge dal JSON della ricetta nel repo, non
+    // da questo indice. Copiarlo qui significava pubblicarlo senza che nessuna
+    // pagina lo mostrasse — il peggio dei due mondi.
+    //
+    // `_createdAt` invece SÌ, ed è obbligatorio: l'underscore dice "interno" ma
+    // questo campo è contratto pubblico. Per 17 ricette la vera data di
+    // creazione esiste SOLO qui dentro (vedi `previousCreatedAt` più sopra), e
+    // da qui la rileggono sia questo script al giro successivo sia
+    // `generate-og.js` per `datePublished` e per `lastmod` della sitemap.
+    // Toglierlo perché "comincia con _" fa perdere le date in silenzio.
     _createdAt: raw._createdAt ?? previousCreatedAt[slug] ?? null,
   };
 }

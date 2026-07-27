@@ -410,7 +410,47 @@ for (const p of risorse) {
     }
 }
 
-// ── 6. Peso complessivo ──
+// ── 6. Metadati di produzione pubblicati ──
+// I JSON delle ricette servono al sito, ma li scrive la dashboard, che ci
+// infila anche roba sua. `_generatedBy` (quale modello ha scritto la ricetta)
+// è stato online in 70 ricette su 80 senza che nessuna pagina lo mostrasse.
+//
+// Il controllo è una lista di ciò che PUÒ essere pubblicato, non di ciò che non
+// può: così un campo interno nuovo — che nessuno qui può prevedere, perché
+// nasce nell'altro repo — viene intercettato al primo deploy invece che al
+// prossimo checkup.
+const CAMPI_INTERNI_AMMESSI = {
+    // L'underscore dice "interno", ma questi due sono contratto pubblico.
+    _createdAt: 'date delle ricette, datePublished nel JSON-LD, lastmod nella sitemap',
+    _originalImageUrl: 'link alla pagina d\'origine della foto, richiesto dalle licenze CC',
+};
+
+function controllaCampiInterni(dir) {
+    if (!existsSync(dir)) return;
+    for (const e of readdirSync(dir, { withFileTypes: true })) {
+        const p = join(dir, e.name);
+        if (e.isDirectory()) { controllaCampiInterni(p); continue; }
+        if (!e.name.endsWith('.json')) continue;
+        let dati;
+        try { dati = JSON.parse(readFileSync(p, 'utf8')); } catch { continue; }
+        const ricette = Array.isArray(dati?.recipes) ? dati.recipes : [dati];
+        const rel = p.slice(DIST.length + 1).split(sep).join('/');
+        const visti = new Set();
+        for (const r of ricette) {
+            if (!r || typeof r !== 'object') continue;
+            for (const k of Object.keys(r)) {
+                if (k.startsWith('_') && !(k in CAMPI_INTERNI_AMMESSI)) visti.add(k);
+            }
+        }
+        for (const k of visti) {
+            err(`${rel}: pubblica il campo interno "${k}". Se serve al sito, dichiaralo in `
+                + `CAMPI_INTERNI_AMMESSI qui in verifica-build.js; se no, toglilo in vite.config.js.`);
+        }
+    }
+}
+controllaCampiInterni(DIST);
+
+// ── 7. Peso complessivo ──
 function peso(dir) {
     let t = 0;
     for (const e of readdirSync(dir, { withFileTypes: true })) {

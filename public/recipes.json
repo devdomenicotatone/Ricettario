@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-27T00:05:14.738Z",
+  "generatedAt": "2026-07-27T00:15:17.088Z",
   "totalRecipes": 80,
   "categories": [
     {
@@ -65,7 +65,6 @@
       "imageAttribution": "📷 Foto: Demian Spinetta — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-18T00:10:40.501Z"
     },
     {
@@ -84,7 +83,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-17T17:50:23.207Z"
     },
     {
@@ -103,7 +101,6 @@
       "imageAttribution": "📷 Foto: Brett Jordan — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-27T22:28:43.516Z"
     },
     {
@@ -122,7 +119,6 @@
       "imageAttribution": "📷 Foto: Cats Coming — Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-26T20:33:44.362Z"
     },
     {
@@ -141,7 +137,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-18T00:04:36.289Z"
     },
     {
@@ -160,7 +155,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-28T18:29:14.516Z"
     },
     {
@@ -179,7 +173,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-26T21:32:06.955Z"
     },
     {
@@ -198,7 +191,6 @@
       "imageAttribution": "📷 Foto: Sabine Freiberger — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-05T02:05:44.664Z"
     },
     {
@@ -217,7 +209,6 @@
       "imageAttribution": "📷 Foto: Beyza Yalçın — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-26T20:37:20.271Z"
     },
     {
@@ -236,7 +227,6 @@
       "imageAttribution": "📷 Foto: Cats Coming — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-23T22:00:37.889Z"
     },
     {
@@ -255,7 +245,6 @@
       "imageAttribution": "📷 Foto: Ensahequ — CC BY-SA via Openverse",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude",
       "_createdAt": "2026-05-07T09:14:09.751Z"
     },
     {
@@ -274,7 +263,6 @@
       "imageAttribution": null,
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": null,
       "_createdAt": "2026-04-26T20:39:13.190Z"
     },
     {
@@ -293,7 +281,6 @@
       "imageAttribution": "📷 Foto: Milton Das — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude",
       "_createdAt": "2026-04-16T21:34:52.774Z"
     },
     {
@@ -312,7 +299,6 @@
       "imageAttribution": "📷 Foto: Anna Guerrero — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude",
       "_createdAt": "2026-04-16T21:35:51.898Z"
     },
     {
@@ -331,7 +317,6 @@
       "imageAttribution": "📷 Foto: mustafa türkeri — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "antigravity-opus",
       "_createdAt": "2026-04-28T23:01:00.000Z"
     },
     {
@@ -350,7 +335,6 @@
       "imageAttribution": "📷 Foto: Ruthven — CC CC0 via Openverse",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "antigravity-opus",
       "_createdAt": "2026-04-28T22:56:00.000Z"
     },
     {
@@ -369,7 +353,6 @@
       "imageAttribution": null,
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": null,
       "_createdAt": "2026-04-28T12:06:00.810Z"
     },
     {
@@ -388,7 +371,6 @@
       "imageAttribution": "📷 Foto: Willians Huerta — Pexels License via Pexels",
       "hasSensory": false,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-27T22:01:13.604Z"
     },
     {
@@ -407,7 +389,6 @@
       "imageAttribution": "📷 Foto: Alejandro Aznar — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude",
       "_createdAt": "2026-04-16T21:48:08.809Z"
     },
     {
@@ -426,7 +407,6 @@
       "imageAttribution": "📷 Foto: Ahmed Kadri — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-05T01:36:05.142Z"
     },
     {
@@ -445,7 +425,6 @@
       "imageAttribution": "📷 Immagine esistente",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-05T01:25:46.208Z"
     },
     {
@@ -464,7 +443,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": null,
       "_createdAt": "2026-05-05T21:11:33.062Z"
     },
     {
@@ -483,7 +461,6 @@
       "imageAttribution": "📷 Foto: Polina ⠀ — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-15T19:19:48.291Z"
     },
     {
@@ -502,7 +479,6 @@
       "imageAttribution": null,
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": null,
       "_createdAt": "2026-04-28T12:06:00.806Z"
     },
     {
@@ -521,7 +497,6 @@
       "imageAttribution": "📷 Foto: Backen.de — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-16T20:00:36.244Z"
     },
     {
@@ -540,7 +515,6 @@
       "imageAttribution": "📷 Foto: Suzy Hazelwood — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude",
       "_createdAt": "2026-04-16T19:51:32.202Z"
     },
     {
@@ -559,7 +533,6 @@
       "imageAttribution": "📷 Foto: Natalia Olivera — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-15T19:29:40.558Z"
     },
     {
@@ -578,7 +551,6 @@
       "imageAttribution": "📷 Foto: Anna.Massini — CC BY 4.0 via Wikimedia",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": null,
       "_createdAt": "2026-04-26T20:33:23.446Z"
     },
     {
@@ -597,7 +569,6 @@
       "imageAttribution": "📷 Foto: Valeria Boltneva — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": null,
       "_createdAt": "2026-05-05T21:44:29.887Z"
     },
     {
@@ -616,7 +587,6 @@
       "imageAttribution": "📷 Foto: Pervane Mustafa27 — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": null,
       "_createdAt": "2026-04-28T12:06:00.802Z"
     },
     {
@@ -635,7 +605,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-22T20:39:25.883Z"
     },
     {
@@ -654,7 +623,6 @@
       "imageAttribution": "📷 Foto: Simona.IT — CC BY-SA via Openverse",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-28T12:30:00.924Z"
     },
     {
@@ -673,7 +641,6 @@
       "imageAttribution": "📷 Foto: Alessio Sbarbaro User_talk:Yoggysot — CC BY-SA via Openverse",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": null,
       "_createdAt": "2026-04-26T20:34:25.601Z"
     },
     {
@@ -692,7 +659,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": null,
       "_createdAt": "2026-04-28T09:28:04.226Z"
     },
     {
@@ -711,7 +677,6 @@
       "imageAttribution": null,
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": null,
       "_createdAt": "2026-04-28T12:06:00.803Z"
     },
     {
@@ -730,7 +695,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-24T13:09:48.168Z"
     },
     {
@@ -749,7 +713,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude",
       "_createdAt": "2026-04-28T17:56:23.656Z"
     },
     {
@@ -768,7 +731,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-28T17:57:50.584Z"
     },
     {
@@ -787,7 +749,6 @@
       "imageAttribution": "📷 Foto: Caricata manualmente",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T14:35:19.869Z"
     },
     {
@@ -806,7 +767,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-05-05T20:37:39.421Z"
     },
     {
@@ -825,7 +785,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-24T13:05:07.661Z"
     },
     {
@@ -844,7 +803,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-19T20:32:53.898Z"
     },
     {
@@ -863,7 +821,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-19T20:32:57.188Z"
     },
     {
@@ -882,7 +839,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-19T20:32:20.490Z"
     },
     {
@@ -901,7 +857,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-19T20:31:01.182Z"
     },
     {
@@ -920,7 +875,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-27T08:28:55.207Z"
     },
     {
@@ -939,7 +893,6 @@
       "imageAttribution": "📷 Foto: Caricata manualmente",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-27T08:49:54.940Z"
     },
     {
@@ -958,7 +911,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-19T20:32:19.935Z"
     },
     {
@@ -977,7 +929,6 @@
       "imageAttribution": "📷 Foto: Caricata manualmente",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-27T08:28:19.026Z"
     },
     {
@@ -996,7 +947,6 @@
       "imageAttribution": "📷 Foto: RDNE Stock project — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude",
       "_createdAt": "2026-04-19T20:30:21.184Z"
     },
     {
@@ -1015,7 +965,6 @@
       "imageAttribution": "📷 Foto: Stacy Spensley — CC BY 2.0 via Wikimedia",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-24T13:05:46.127Z"
     },
     {
@@ -1034,7 +983,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-17T18:05:00.000Z"
     },
     {
@@ -1053,7 +1001,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude",
       "_createdAt": "2026-04-16T14:32:01.457Z"
     },
     {
@@ -1072,7 +1019,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T23:21:43.378Z"
     },
     {
@@ -1091,7 +1037,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T23:00:17.531Z"
     },
     {
@@ -1110,7 +1055,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T23:44:59.842Z"
     },
     {
@@ -1129,7 +1073,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T23:37:26.093Z"
     },
     {
@@ -1148,7 +1091,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T23:44:45.379Z"
     },
     {
@@ -1167,7 +1109,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-16T18:16:57.771Z"
     },
     {
@@ -1186,7 +1127,6 @@
       "imageAttribution": "📷 Immagine esistente",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-19T20:27:46.793Z"
     },
     {
@@ -1205,7 +1145,6 @@
       "imageAttribution": "📷 Foto: Enzo Iorio — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T12:58:25.630Z"
     },
     {
@@ -1224,7 +1163,6 @@
       "imageAttribution": "📷 Foto: Nadin Sh — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-24T13:07:44.327Z"
     },
     {
@@ -1243,7 +1181,6 @@
       "imageAttribution": "📷 Foto: Shameel mukkath — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-24T13:09:52.619Z"
     },
     {
@@ -1262,7 +1199,6 @@
       "imageAttribution": "📷 Foto: Ron Lach — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T12:56:21.494Z"
     },
     {
@@ -1281,7 +1217,6 @@
       "imageAttribution": "📷 Foto: Andrés  Góngora — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-19T20:28:35.471Z"
     },
     {
@@ -1300,7 +1235,6 @@
       "imageAttribution": "📷 Foto: Elimira Lotti — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T12:53:22.833Z"
     },
     {
@@ -1319,7 +1253,6 @@
       "imageAttribution": "📷 Foto: Jana Ohajdova — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T12:54:03.100Z"
     },
     {
@@ -1338,7 +1271,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-27T17:39:31.547Z"
     },
     {
@@ -1357,7 +1289,6 @@
       "imageAttribution": "📷 Foto: Los Muertos Crew — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-17T17:21:21.505Z"
     },
     {
@@ -1376,7 +1307,6 @@
       "imageAttribution": "📷 Foto: Eden FC — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T13:06:15.634Z"
     },
     {
@@ -1395,7 +1325,6 @@
       "imageAttribution": "📷 Foto: Kyle Killam — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude",
       "_createdAt": "2026-04-19T20:45:45.094Z"
     },
     {
@@ -1414,7 +1343,6 @@
       "imageAttribution": "📷 Foto: Shameel mukkath — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T13:07:59.331Z"
     },
     {
@@ -1433,7 +1361,6 @@
       "imageAttribution": "📷 Foto: Meraj Kazi — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-19T20:31:05.239Z"
     },
     {
@@ -1452,7 +1379,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-24T13:07:57.640Z"
     },
     {
@@ -1471,7 +1397,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T13:06:31.160Z"
     },
     {
@@ -1490,7 +1415,6 @@
       "imageAttribution": "📷 Foto: Willians Huerta — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-19T20:25:45.908Z"
     },
     {
@@ -1509,7 +1433,6 @@
       "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude",
       "_createdAt": "2026-04-19T20:48:00.508Z"
     },
     {
@@ -1528,7 +1451,6 @@
       "imageAttribution": "📷 Foto: Los Muertos Crew — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-24T13:05:21.348Z"
     },
     {
@@ -1547,7 +1469,6 @@
       "imageAttribution": "📷 Foto: Nadin Sh — Pexels License via Pexels",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "claude-opus",
       "_createdAt": "2026-04-19T20:31:44.570Z"
     },
     {
@@ -1566,7 +1487,6 @@
       "imageAttribution": "📷 Foto: RitaE — Pixabay License via Pixabay",
       "hasSensory": true,
       "hasStorage": true,
-      "_generatedBy": "gemini-3.1",
       "_createdAt": "2026-04-27T18:44:07.389Z"
     }
   ]
