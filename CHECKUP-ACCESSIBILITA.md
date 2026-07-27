@@ -3,16 +3,20 @@
 > **27/07/2026.** Il [CHECKUP.md](./CHECKUP.md) generale dichiarava di non aver
 > guardato l'accessibilità oltre agli attributi `alt`. Questo colma quel buco.
 >
-> **Chiusi i punti dall'1 al 7 e il 9.** Il cambio di rotta viene annunciato e
-> il focus gestito, esiste il landmark principale, lo skip link porta da qualche
+> **Chiusi tutti e nove i punti.** Il cambio di rotta viene annunciato e il
+> focus gestito, esiste il landmark principale, lo skip link porta da qualche
 > parte, il contrasto è a norma ovunque — misurato **zero problemi** su
 > homepage, ricetta, categoria e calcolatore, in entrambi i temi — il profilo
 > sensoriale esiste anche in parole e non solo in pixel, **tutti i 227
 > controlli** delle quattro pagine mostrano dove sta il focus, le tabelle hanno
 > le loro intestazioni, i titoli non saltano su nessuna delle **106 pagine
-> generate**, e il calcolatore dice a voce quello che fa.
+> generate**, il calcolatore dice a voce quello che fa, e a 320 px non sborda
+> più niente.
 >
-> **Resta aperto il punto 8**, l'unico che tocca il disegno della navbar.
+> **Un avvertimento sul punto 8:** era l'unico dove la diagnosi scritta qui era
+> sbagliata. Il difetto c'era e i 21 px erano giusti, ma il colpevole non era il
+> logo della navbar — che ci sta, con 9 px di margine. Il racconto dell'errore è
+> nel punto 8, e vale più della correzione.
 >
 > Le voci sono in ordine di quanto pesano per chi le subisce, non di quanto
 > costa sistemarle.
@@ -338,24 +342,85 @@ pixel veri.
 
 ---
 
-## 8. A 320 px la pagina scorre in orizzontale
+## 8. A 320 px il contenuto sbordava — CHIUSO, ma il colpevole era un altro
 
-WCAG chiede che il contenuto stia in 320 px senza scorrimento laterale. Qui ne
-servono 341:
+**Il difetto c'era, i 21 px erano giusti, e la diagnosi era sbagliata.** Vale la
+pena raccontarla, perché l'errore è di un tipo che si rifà facilmente.
+
+### Il logo non c'entrava
+
+Il conto scritto qui sopra sommava 199 px di logo, 40 di pulsante tema, 40 di
+hamburger, 32 di margini e **30 di spaziature**, arrivava a 341 e concludeva che
+il logo non ci stava. Ma quei 30 px non sono una misura: la navbar è un flex con
+`justify-content: space-between`, e lo spazio fra gli elementi è *quello che
+avanza*, non un costo. Misurando la navbar a 320 px veri:
 
 ```
-logo "RicettarioLab"   199 px
+logo                   199 px
 pulsante tema           40 px
 hamburger               40 px
-due spaziature          30 px
 margini laterali        32 px
                        ─────
-                       341 px   in un contenuto da 320
+                       311 px   in 320 disponibili → avanzano 9 px
 ```
 
-Il colpevole è il logo. A 360 px rientra tutto, quindi il difetto riguarda solo
-i telefoni più stretti e chi ingrandisce molto la pagina — ma 320 px è
-esattamente la soglia che lo standard fissa.
+Le spaziature diventano 5 e 4 px e tutto sta dentro. **Verificato** forzando la
+navbar a 320 px esatti: logo 16→215, tema 220→260, hamburger 264→304, bordo a
+320. Non serve toccare il logo.
+
+Da dove venivano i 341? Da `window.innerWidth`, che in un browser da scrivania
+**comprende la barra di scorrimento verticale** — 21 px in questo caso. La
+finestra di layout vera è `documentElement.clientWidth`, cioè 320. I 21 px di
+differenza erano la barra, non il contenuto.
+
+### I 21 px veri, però, c'erano — in altri due posti
+
+Rifatta la misura come si deve — elemento per elemento, escludendo i `fixed`
+(che sono dimensionati sul viewport barra compresa) e chi sta dentro un
+contenitore che scorre apposta — sono usciti due colpevoli reali:
+
+| pagina | elemento | tagliato |
+|---|---|---|
+| homepage | intestazione della riga «Condimenti» | **21 px** |
+| ricetta | tabella delle farine | **24 px** |
+
+Sulla homepage il titolo più lungo del sito, «Condimenti · 40 ricette», occupa
+230 px dei 288 disponibili e non lascia posto a «Vedi tutte», che finiva a 341.
+Sulle ricette la tabella delle farine chiedeva 311 px in un pannello che ne dà
+256.
+
+E qui c'è la parte che il checkup non aveva colto: **la pagina non scorreva
+affatto**. `body { overflow-x: hidden }` tagliava l'eccedenza invece di
+renderla raggiungibile. Non è un'attenuante, è un aggravante: con una barra di
+scorrimento il contenuto si raggiunge, tagliato no. «Vedi tutte» c'era ma non si
+poteva leggere né toccare per intero, e i marchi di farina consigliati sparivano
+oltre il bordo.
+
+### Com'è adesso
+
+- **L'intestazione della riga va a capo** (`flex-wrap: wrap`), e il titolo ha
+  `min-width: 0`, che gli toglie il diritto di non rimpicciolirsi mai — quel
+  diritto era il motivo per cui spingeva fuori il link. Sotto i 360 px il link
+  scende sotto il titolo; sopra, non cambia niente.
+- **La tabella delle farine sta stretta sotto i 480 px** (spaziatura delle celle
+  da 16 a 8 px: con la spaziatura piena il 37% della tabella era aria) e ha
+  `overflow-wrap: anywhere` a ogni larghezza. Quest'ultimo è l'unico che riduce
+  anche la larghezza *minima* di una colonna, quindi è l'unico che impedisce a
+  un nome di marca lungo di forzare di nuovo la tabella fuori pagina. Spezza una
+  parola solo quando non ci sta in nessun modo.
+
+**Verificato** a 320 px su homepage, ricetta, categoria e calcolatore, più la
+ricetta con le parole più lunghe del sito: **zero elementi oltre il bordo**, e
+`window.scrollTo(9999, y)` non muove la pagina di un pixel. A 1272 px il
+confronto con la versione pubblicata è identico al pixel — intestazione alta 54,
+titolo 68→364, link 1117→1204 — quindi sui monitor non è cambiato niente.
+
+**Cosa resta fuori:** `body { overflow-x: hidden }` è ancora lì. Adesso non
+nasconde niente, ma continua a essere una rete che, se qualcosa sbordasse
+domani, lo taglierebbe in silenzio invece di farlo vedere. Toglierla è un
+lavoro a sé: va prima verificato che nessun elemento decorativo — gli aloni
+dell'hero, il menu che entra da destra — la stia usando per stare fuori
+schermo.
 
 ---
 
@@ -494,15 +559,22 @@ Vanno letti, perché due misure su tre le ho dovute rifare.
 
 ## Quello che resta
 
-**Solo il punto 8**, i 21 px di scorrimento orizzontale a 320 px. È rimasto per
-ultimo perché è il solo che non si chiude con un attributo o una regola CSS: il
-colpevole è il logo della navbar, quindi va deciso cosa fare del logo sui
-telefoni più stretti — accorciarlo, ridurlo, o lasciare solo il simbolo.
+Dei nove punti, nessuno. Restano i **limiti del metodo**, qui sotto, e vanno
+letti come si legge un consuntivo: sono la parte di lavoro non fatta, non una
+formalità.
 
-Restano anche i limiti del metodo, qui sotto: soprattutto il fatto che nessuna
-di queste correzioni è stata ascoltata con uno screen reader vero.
+Il più grosso è sempre lo stesso: **nessuna di queste correzioni è stata
+ascoltata con uno screen reader vero.** Tutto ciò che c'è scritto qui viene
+dall'albero di accessibilità e dal DOM misurato. È il modo giusto di verificare
+che una struttura ci sia; non è il modo di sapere come suona.
 
-## Una cosa che si è ripetuta cinque volte
+Sono rimaste fuori anche tre cose che non erano nella lista dei nove e che ho
+incontrato per strada: manca ancora un `<header>` attorno alla navbar (punto 2),
+`body { overflow-x: hidden }` continua a poter nascondere un futuro sbordamento
+invece di mostrarlo (punto 8), e il pannello dei timer non è stato provato con
+un lettore attivo mentre conta.
+
+## Una cosa che si è ripetuta sei volte
 
 Chiudere un punto ha reso più economico o più visibile quello dopo:
 
@@ -527,7 +599,15 @@ Chiudere un punto ha reso più economico o più visibile quello dopo:
   pagina categoria avevano due livelli diversi a seconda che la pagina arrivasse
   dalla SPA o dal pre-rendering.
 
+- il punto 8 è il caso limite: **il difetto era vero e la diagnosi era falsa**.
+  Il numero — 21 px — era giusto per caso, perché veniva da
+  `window.innerWidth`, che comprende la barra di scorrimento, ed è largo
+  esattamente 21 px. Andando a correggere il logo avrei sistemato una cosa che
+  funzionava e lasciato tagliate le due che non funzionavano.
+
 Morale operativa: dopo ogni correzione conviene **rimisurare tutto**, non solo
 la cosa corretta; prima di aggiungere contenuto a un pannello, controllare che
-il pannello si apra; e una voce archiviata come minore va aperta lo stesso,
-perché la gravità stimata da fuori non è la gravità.
+il pannello si apra; una voce archiviata come minore va aperta lo stesso, perché
+la gravità stimata da fuori non è la gravità; e un difetto confermato da un
+numero giusto può avere lo stesso la causa sbagliata — la sintomatologia va
+rifatta prima di operare, non dopo.

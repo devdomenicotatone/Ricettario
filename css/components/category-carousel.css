@@ -10,10 +10,22 @@
         position: relative;
     }
 
+    /* A 320 px il titolo più lungo del sito — «Condimenti · 40 ricette», 230 px
+       su 288 disponibili — non lasciava spazio a «Vedi tutte», che finiva 21 px
+       oltre il bordo della pagina. E `overflow-x: hidden` sul body lo tagliava
+       invece di farlo scorrere: il link c'era, ma non si poteva né leggere né
+       toccare per intero, che è peggio di una barra di scorrimento.
+       Il capo a riga lo fa scendere sotto il titolo invece di spingerlo fuori
+       pagina; `min-width: 0` toglie al titolo il diritto di non rimpicciolirsi
+       mai — quel diritto è il motivo per cui spingeva. Sopra i 360 px non
+       cambia niente: ci stanno tutti e due sulla stessa riga e il capo a riga
+       non scatta. */
     .category-row__header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
+        gap: var(--space-sm);
         margin-bottom: var(--space-lg);
         padding-inline: var(--space-sm);
     }
@@ -25,6 +37,7 @@
         display: flex;
         align-items: center;
         gap: var(--space-sm);
+        min-width: 0;
     }
 
     .category-row__count {

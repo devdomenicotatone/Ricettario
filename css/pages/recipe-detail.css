@@ -406,14 +406,30 @@
     }
 
     /* Flour table */
+    /* A 320 px il pannello lascia 256 px al contenuto e questa tabella ne
+       chiedeva 311: la colonna dei marchi finiva 24 px oltre il bordo, e
+       `overflow-x: hidden` sul body la tagliava invece di farla scorrere — i
+       consigli sulle farine c'erano ma erano irraggiungibili.
+       Due leve, e servono tutte e due. Sotto i 480 px le celle stanno strette,
+       perché con 16 px di spaziatura per lato il 37% della tabella era aria.
+       `overflow-wrap: anywhere` è la valvola di sicurezza a ogni larghezza: è
+       l'unica forma che riduce anche la larghezza minima della colonna, quindi
+       è l'unica che impedisce a un nome di marca lungo — «Dallagiovanna» oggi,
+       chissà cosa domani — di forzare di nuovo la tabella fuori pagina. Spezza
+       una parola solo quando non ci sta in nessun modo. */
     .flour-table {
         width: 100%;
         border-collapse: collapse;
         margin-top: var(--space-lg);
 
+        & th,
+        & td {
+            overflow-wrap: anywhere;
+        }
+
         & thead th {
             text-align: start;
-            padding: var(--space-md);
+            padding: 10px 8px;
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -422,9 +438,19 @@
         }
 
         & tbody td {
-            padding: 14px var(--space-md);
+            padding: 12px 8px;
             font-size: 0.9rem;
             border-bottom: 1px solid var(--border-subtle);
+        }
+
+        @media (min-width: 480px) {
+            & thead th {
+                padding: var(--space-md);
+            }
+
+            & tbody td {
+                padding: 14px var(--space-md);
+            }
         }
 
         & tbody tr:hover {
