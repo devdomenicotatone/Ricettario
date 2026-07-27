@@ -327,8 +327,10 @@ Dichiararlo serve a non far credere che il resto sia stato approvato.
   più grosso in byte: 25 classi morte, un foglio intero e la scheda ricetta
   originale rimasta accanto ai suoi successori — 4,05 kB che ogni visitatore
   scaricava per non usarli, e il sito dopo è disegnato identico, verificato
-  proprietà per proprietà su 2 223 elementi. Restano tre punti aperti, tutti
-  debito da manutenzione. Resta fuori anche quello che è scritto nei limiti di
+  proprietà per proprietà su 2 223 elementi. Il quinto era una parola:
+  `cottura.css` sta in `pages/` e dichiarava `@layer components`, cioè il layer
+  che perde. Restano due punti aperti, tutti e due debito da manutenzione.
+  Resta fuori anche quello che è scritto nei limiti di
   quel documento: le regole sovrascritte, le prestazioni di disegno e gli stili
   inline che i renderer scrivono da JavaScript.
 - **Il calcolatore di cottura nel merito.** Ho verificato che sia integro (918
@@ -356,12 +358,13 @@ Il resto del lavoro possibile su questo repo è nella sezione "Cosa questo
 checkup NON ha guardato" qui sopra: prestazioni misurate davvero, compatibilità
 fra browser, l'animazione d'ingresso mai aperta, `npm audit`.
 
-Fuori da qui restano invece **tre punti aperti nel checkup del CSS**: un layer
-sbagliato, tre blocchi duplicati e nove breakpoint. Sono debito da manutenzione,
-non difetti — **nessuno dei tre si vede e nessuno ci inciampa oggi**. I quattro
-chiusi erano il contrasto del pulsante «Fatta» (l'ultimo problema di
-accessibilità rimasto sul sito), i token che non esistevano, il colore della
-navbar che non seguiva il tema e i 4 kB di CSS che non toccava nessun elemento.
+Fuori da qui restano invece **due punti aperti nel checkup del CSS**: tre
+blocchi duplicati e nove breakpoint. Sono debito da manutenzione, non difetti —
+**nessuno dei due si vede e nessuno ci inciampa oggi**. I cinque chiusi erano il
+contrasto del pulsante «Fatta» (l'ultimo problema di accessibilità rimasto sul
+sito), i token che non esistevano, il colore della navbar che non seguiva il
+tema, i 4 kB di CSS che non toccava nessun elemento e il layer sbagliato del
+calcolatore.
 
 La cosa più utile non era nessuno dei tre, ed **è stata fatta**: i due controlli
 meccanici sul CSS sono nel cancello (sezione 9 di `verifica-build.js`). Ogni

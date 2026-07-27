@@ -11,7 +11,15 @@
    import dinamico.
    ============================================ */
 
-@layer components {
+/* `pages` e non `components`: questo foglio sta in css/pages/ e stila una
+   pagina sola, come il suo gemello recipe-detail.css. Dichiarava `components`,
+   che nell'ordine viene PRIMA di `pages`, quindi qualunque regola del layer
+   `pages` avrebbe battuto una regola del calcolatore a parità di specificità —
+   il contrario di quello che dà per scontato chi apre un file dentro pages/.
+   Non si vedeva perché in `pages` non c'è un solo selettore che possa toccare
+   un elemento del calcolatore: era una trappola per fra sei mesi, non un
+   difetto di oggi. Vedi CHECKUP-CSS.md, punto 5. */
+@layer pages {
 
     /* ══════════════════════════════════════════
        FORM A STEP

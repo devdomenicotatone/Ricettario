@@ -5,11 +5,13 @@
 > `recipe-detail.css` da 29 KB: non ho cercato regole morte né duplicazioni».
 > Questo colma quel buco.
 >
-> **Sette punti. Chiusi 1, 2, 3 e 4, restano aperti gli altri tre:** questo
+> **Sette punti. Chiusi 1, 2, 3, 4 e 5, restano aperti il 6 e il 7:** questo
 > documento è nato come esame, non come intervento. Le correzioni sono quasi
-> tutte da una riga, ma vanno decise una per una — e quattro volte su quattro la
-> riga non è bastata: sotto ognuno dei punti chiusi c'era qualcosa che l'esame
-> non aveva visto.
+> tutte da una riga, ma vanno decise una per una — e quattro volte su cinque la
+> riga non è bastata: sotto quasi ognuno dei punti chiusi c'era qualcosa che
+> l'esame non aveva visto. **Il punto 5 è l'unico che era esattamente come
+> scritto:** una parola cambiata, `components` in `pages`, e le due pagine del
+> calcolatore disegnate identiche.
 >
 > **Il punto 1 era il più grave, perché riguardava chi usa il sito e non chi
 > legge il codice:** il pulsante «Fatta» e il bollino ✓ avevano un contrasto di
@@ -489,17 +491,54 @@ apposta.
 
 ---
 
-## 5. `cottura.css` sta in `pages/` ma dichiara `@layer components`
+## 5. `cottura.css` sta in `pages/` ma dichiara `@layer components` — CHIUSO
 
-`css/pages/cottura.css` (34 KB, il foglio più grosso del progetto) apre con
+`css/pages/cottura.css` (34 KB, il foglio più grosso del progetto) apriva con
 `@layer components`, mentre il suo gemello `css/pages/recipe-detail.css` apre
 con `@layer pages`. Due file nella stessa cartella, due layer diversi.
 
-Oggi non produce niente di visibile: le pagine ricetta e il calcolatore non
+Non produceva niente di visibile: le pagine ricetta e il calcolatore non
 compaiono mai insieme, quindi le due serie di regole non si incontrano. Ma
 `components` viene **prima** di `pages` nell'ordine, quindi qualunque regola del
-layer `pages` batterebbe una regola del calcolatore a parità di specificità — e
-chi apre un file dentro `pages/` dà per scontato il contrario.
+layer `pages` avrebbe battuto una regola del calcolatore a parità di specificità
+— e chi apre un file dentro `pages/` dà per scontato il contrario.
+
+### Perché era davvero innocuo, misurato invece che dedotto
+
+La prima stesura diceva «oggi non produce niente di visibile» ragionando sulle
+pagine. La ragione vera è più forte e sta nei fogli:
+
+- **Zero classi in comune.** Le 106 classi di `cottura.css` non compaiono in
+  nessuno degli altri 17 fogli.
+- **In `@layer pages` non c'è un solo selettore che possa toccare un elemento
+  del calcolatore.** `recipe-detail.css` non ha nemmeno una regola su un
+  elemento nudo: gli unici selettori senza classe sono le tappe dei
+  `@keyframes` e due `::view-transition`. Non è che le regole non si
+  incontrino per fortuna — non esiste proprio la regola che potrebbe vincere.
+- **E `cottura.css` era comunque l'ultimo del suo layer**, perché il suo chunk
+  si carica dopo `main.css`: dentro `components` vinceva già su tutti. Lo
+  spostamento cambia solo il confronto con `pages`.
+
+L'ordine dei layer non è dichiarato da nessuna parte: nasce dall'ordine di
+apparizione. Letto dal CSSOM sulla pagina vera, `main.css` li apre in questa
+sequenza — `tokens`, `reset`, `layout`, `components` (otto volte), `pages`,
+`components`, `utilities` — e il foglio del calcolatore arriva dopo, adesso
+dichiarando `pages`.
+
+### Verifica
+
+Stessa impronta usata per il punto 3, sulle due pagine dove `cottura.css` esiste:
+
+| pagina | elementi | esito |
+|---|---|---|
+| `/cottura/` (il form) | 205 | identica |
+| `/cottura/fiorentina-4cm-kamado/` (piano pre-renderizzato) | 297 | identica |
+
+Più il percorso interattivo, che l'impronta non copre perché nasce dai clic: il
+form percorso fino in fondo genera il piano (`piano piano--temperature`), il
+titolo esce in Playfair Display e i pulsanti hanno i loro 56 px di altezza
+minima — cioè le regole del foglio si applicano ancora tutte. Nessun errore in
+console.
 
 ---
 
@@ -555,10 +594,9 @@ di questo progetto, perché non sono tre, sono nove.
 
 ## Se hai tempo per una cosa sola
 
-**Non è un punto di questa lista.** I tre rimasti — 5, 6 e 7 — sono debito da
-manutenzione: un layer sbagliato che nessuno incontra, tre copie di una ricetta
-di quattro proprietà, nove breakpoint che nessuno ricorda a memoria. Nessuno ci
-inciampa oggi.
+**Non è un punto di questa lista.** I due rimasti — 6 e 7 — sono debito da
+manutenzione: tre copie di una ricetta di quattro proprietà, nove breakpoint che
+nessuno ricorda a memoria. Nessuno ci inciampa oggi.
 
 Quello che valeva davvero — i **due controlli meccanici** della sezione «La
 lezione» — **è stato fatto**: sono nel cancello, sezione 9 di
