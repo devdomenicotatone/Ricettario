@@ -22,8 +22,19 @@
 // delle tre che convivevano nel progetto. Vedi `js/escape.js` per il perché.
 import { escHtml as esc } from './escape.js';
 
-/** Attribuzioni che non citano nessuno: non hanno niente da mostrare. */
-const SEGNAPOSTO = ['immagine esistente', 'caricata manualmente'];
+/**
+ * Attribuzioni che non citano nessuno: non hanno niente da mostrare.
+ *
+ * `provenienza non documentata` non è un sinonimo pigro degli altri due: dice
+ * che la fonte è stata CERCATA e non trovata. Quattro foto entrate nel repo
+ * prima che la pipeline registrasse i crediti non hanno lasciato traccia da
+ * nessuna parte — né nei JSON di allora, né negli indici della dashboard, né
+ * negli EXIF (i JPEG originali erano già ripuliti). Scriverlo nel dato è
+ * meglio del campo vuoto: il campo vuoto sembra una dimenticanza da riempire,
+ * questo dice che qualcuno ha già guardato. In pagina non compare comunque:
+ * un credito che non cita nessuno non è un credito.
+ */
+const SEGNAPOSTO = ['immagine esistente', 'caricata manualmente', 'provenienza non documentata'];
 
 /** Nomi che sono provider, non licenze: `— Pexels` significa "via Pexels". */
 const PROVIDER = ['pexels', 'unsplash', 'pixabay', 'wikimedia', 'openverse', 'flickr'];

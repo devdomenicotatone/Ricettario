@@ -450,7 +450,40 @@ function controllaCampiInterni(dir) {
 }
 controllaCampiInterni(DIST);
 
-// ── 7. Peso complessivo ──
+// ── 7. Foto senza credito ──
+// Una foto pubblicata senza dire da dove viene è un rischio di licenza, non un
+// dettaglio di forma: le Creative Commons obbligano a citare autore e licenza
+// ogni volta che l'immagine si vede, e la CC BY decade da sola se non lo fai.
+// È già successo — cinque ricette pubblicate per mesi con foto CC e nessun
+// credito (punto 13 del checkup della dashboard).
+//
+// Il campo può anche dire "provenienza non documentata": è una risposta valida
+// e vuol dire che la fonte è stata cercata e non trovata. Quello che il
+// cancello non accetta è il silenzio, cioè una foto e nessun campo.
+{
+    const senzaCredito = [];
+    (function cerca(dir) {
+        if (!existsSync(dir)) return;
+        for (const e of readdirSync(dir, { withFileTypes: true })) {
+            const p = join(dir, e.name);
+            if (e.isDirectory()) { cerca(p); continue; }
+            if (!e.name.endsWith('.json')) continue;
+            let r;
+            try { r = JSON.parse(readFileSync(p, 'utf8')); } catch { continue; }
+            if (!r || typeof r !== 'object' || Array.isArray(r.recipes)) continue;
+            if (r.image && !String(r.imageAttribution || '').trim()) {
+                senzaCredito.push(p.slice(DIST.length + 1).split(sep).join('/'));
+            }
+        }
+    })(join(DIST, 'ricette'));
+    for (const f of senzaCredito) {
+        err(`${f}: ha una foto ma nessun "imageAttribution". Se la fonte non è `
+            + `ricostruibile, scrivi "📷 Foto: provenienza non documentata" — il sito `
+            + `non lo mostra, ma resta agli atti che è stata cercata.`);
+    }
+}
+
+// ── 8. Peso complessivo ──
 function peso(dir) {
     let t = 0;
     for (const e of readdirSync(dir, { withFileTypes: true })) {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-27T00:15:17.088Z",
+  "generatedAt": "2026-07-27T00:42:22.403Z",
   "totalRecipes": 80,
   "categories": [
     {
@@ -260,7 +260,7 @@
       "time": "24h biga + 6-7h rinfresco",
       "temp": "23°C",
       "tool": "",
-      "imageAttribution": null,
+      "imageAttribution": "📷 Foto: provenienza non documentata",
       "hasSensory": true,
       "hasStorage": true,
       "_createdAt": "2026-04-26T20:39:13.190Z"
@@ -350,7 +350,7 @@
       "time": "24-30h totali",
       "temp": "23-24°C",
       "tool": "",
-      "imageAttribution": null,
+      "imageAttribution": "📷 Foto: provenienza non documentata",
       "hasSensory": true,
       "hasStorage": true,
       "_createdAt": "2026-04-28T12:06:00.810Z"
@@ -476,7 +476,7 @@
       "time": "24-36h totali",
       "temp": "26-28°C",
       "tool": "",
-      "imageAttribution": null,
+      "imageAttribution": "📷 Foto: provenienza non documentata",
       "hasSensory": true,
       "hasStorage": true,
       "_createdAt": "2026-04-28T12:06:00.806Z"
@@ -674,7 +674,7 @@
       "time": "5-6h totali",
       "temp": "24-26°C",
       "tool": "",
-      "imageAttribution": null,
+      "imageAttribution": "📷 Foto: provenienza non documentata",
       "hasSensory": true,
       "hasStorage": true,
       "_createdAt": "2026-04-28T12:06:00.803Z"

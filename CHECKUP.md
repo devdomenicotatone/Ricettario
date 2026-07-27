@@ -17,8 +17,12 @@
 > crediti Creative Commons. Vedi lì: è il caso più istruttivo di tutto il
 > documento.
 >
-> **RESTA APERTO:** solo il punto 4, quattro foto di cui non sappiamo la
-> provenienza. Non rompe niente.
+> **Chiuso anche il punto 4**, per quanto si poteva: la provenienza di quattro
+> foto è stata cercata ovunque e non esiste più. Il dato adesso lo dice invece
+> di tacerlo, e il cancello non accetta più una foto senza credito.
+>
+> **Non resta aperto nessun punto.** Quel che manca è nella sezione "Cosa
+> questo checkup NON ha guardato", che è il posto più utile del documento.
 >
 > **Metodo:** analisi statica più esecuzione reale — sito avviato, attacchi
 > provati sul renderer vero, `npm run check` a ogni passo. Nessun agente
@@ -172,19 +176,52 @@ Cosa è stato fatto:
 
 ---
 
-## 4. Quattro ricette con la foto e senza credito
+## 4. Quattro foto senza credito — CHIUSO come si poteva
 
-Da quando il sito mostra i crediti sotto le foto (commit `1f0e4ab`), l'assenza
-di `imageAttribution` è diventata visibile per la sua assenza. Sono:
+Quattro immagini pubblicate di cui il repo non sapeva dire la provenienza:
+`focaccia-genovese-classica`, `panettone-pere-cioccolato`,
+`pizza-contemporanea-canotto`, `pizza-napoletana-biga-criscito`.
 
-- `focaccia/focaccia-genovese-classica`
-- `lievitati/panettone-pere-cioccolato`
-- `pizza/pizza-contemporanea-canotto`
-- `pizza/pizza-napoletana-biga-criscito`
+### L'indagine, e perché è finita in nulla
 
-Non è una violazione di licenza: probabilmente sono foto tue o generate. Ma sono
-quattro immagini pubblicate di cui il repo non sa dire la provenienza, e questo
-è esattamente il buco da cui è nato il punto 13 del checkup della dashboard.
+Cercate in ogni posto dove poteva esserci una traccia:
+
+| dove | esito |
+|---|---|
+| storia git dei JSON, versione per versione | il campo non è **mai** esistito |
+| EXIF/IPTC/XMP dei JPEG originali (recuperati da git) | ripuliti: restano solo JFIF e un profilo ICC |
+| `used-images.json` della dashboard (61 voci) | nessuna traccia |
+| `image-cache.json` (84 voci) | le ricerche sono di **un mese dopo** il commit delle foto: non c'entrano |
+| firma dimensionale (1880×1253) | condivisa con `focaccia-barese`, che è Openverse CC… |
+| …ma `focaccia-barese` ha `_originalImageUrl` e `_generatedBy` | quindi è passata dalla pipeline: **non è lo stesso lotto** |
+| messaggi dei commit d'origine | `panettone` arriva da «batch v2 + immagini Pexels»… |
+| …ma il batch v3 «19 immagini rigenerate» **sostituisce** quella foto | quindi neanche quello vale |
+
+Due piste sembravano solide e sono cadute entrambe al controllo successivo. È
+il motivo per cui nei quattro campi non c'è scritto «Pexels»: un credito
+inventato è peggio di un credito assente, perché smette di far cercare.
+
+### Cosa è stato fatto
+
+I quattro campi adesso dicono **`📷 Foto: provenienza non documentata`**. Non è
+un modo elegante di dire "vuoto": dice che la fonte è stata cercata e non
+trovata, e chi legge il file non ricomincia da capo. In pagina non compare —
+`credito-foto.js` tratta i crediti che non citano nessuno come già faceva per
+«Immagine esistente» e «Caricata manualmente»: un credito che non cita nessuno
+non è un credito.
+
+E soprattutto: **il cancello non accetta più il silenzio.** Una ricetta con una
+foto e nessun `imageAttribution` blocca la pubblicazione. Provato togliendo il
+credito alla maionese: si ferma e spiega cosa scrivere.
+
+### Cosa resta a te
+
+Se ti ricordi da dove vengono quelle quattro foto, sostituisci la frase con il
+credito vero. Se erano tue o generate, scrivilo lo stesso: `📷 Foto:
+dell'autore` o `📷 Foto: Generata da AI (…)`, come nelle altre. Finché la
+provenienza è ignota resta un rischio di licenza teorico — piccolo, perché le
+banche immagini che il progetto usa di più non chiedono attribuzione, ma non
+azzerabile senza saperlo.
 
 ---
 
@@ -276,9 +313,14 @@ Dichiararlo serve a non far credere che il resto sia stato approvato.
 
 ## Cosa resta
 
-**Il punto 4: quattro foto di cui il repo non sa dire la provenienza.** È
-lavoro di memoria, non di codice — bisogna ricordarsi da dove vengono. Tutto il
-resto è chiuso.
+Dei sei punti, nessuno. Ma "chiuso" non vuol dire "risolto" dappertutto: la
+provenienza di quattro foto **non è stata recuperata**, è stata dichiarata
+irrecuperabile dopo averla cercata in sette posti. Se un giorno te la ricordi,
+sono quattro stringhe da sostituire.
+
+Il resto del lavoro possibile su questo repo è nella sezione "Cosa questo
+checkup NON ha guardato" qui sotto: accessibilità oltre gli `alt`, i 19 fogli
+CSS, prestazioni misurate davvero, compatibilità fra browser.
 
 ## La lezione, che vale più della lista
 
