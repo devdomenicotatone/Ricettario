@@ -3,12 +3,13 @@
 > **27/07/2026.** Il [CHECKUP.md](./CHECKUP.md) generale dichiarava di non aver
 > guardato l'accessibilità oltre agli attributi `alt`. Questo colma quel buco.
 >
-> **Chiusi i punti 1, 2, 3, 4 e 5.** Il cambio di rotta viene annunciato e il
+> **Chiusi i punti 1, 2, 3, 4, 5 e 6.** Il cambio di rotta viene annunciato e il
 > focus gestito, esiste il landmark principale, lo skip link porta da qualche
-> parte, e il contrasto è a norma ovunque: misurato **zero problemi** su
-> homepage, ricetta, categoria e calcolatore, in entrambi i temi.
+> parte, il contrasto è a norma ovunque — misurato **zero problemi** su
+> homepage, ricetta, categoria e calcolatore, in entrambi i temi — e il profilo
+> sensoriale esiste anche in parole, non solo in pixel.
 >
-> **Restano aperti i punti 6, 7, 8 e 9.**
+> **Restano aperti i punti 7, 8 e 9.**
 >
 > Le voci sono in ordine di quanto pesano per chi le subisce, non di quanto
 > costa sistemarle.
@@ -215,9 +216,10 @@ homepage, dove sta sopra un fondo scuro.
 
 ---
 
-## 6. Il grafico sensoriale non esiste, per chi non vede
+## 6. Il grafico sensoriale non esisteva, per chi non vede — CHIUSO
 
-Il pannello «Dati Tecnici & Sensoriali» disegna un radar su `<canvas>`:
+**Com'era.** Il pannello «Dati Tecnici & Sensoriali» disegna un radar su
+`<canvas>`:
 
 ```
 role:            nessuno
@@ -226,13 +228,50 @@ testo di ripiego: 0 caratteri
 ```
 
 Un `<canvas>` senza alternativa testuale è un buco nero. Per uno screen reader
-quel pannello non contiene niente.
+quel pannello non conteneva niente.
 
-È il difetto più facile da correggere bene, perché **i dati esistono già in
-forma testuale**: `sensoryProfile.axes` è un elenco di etichette e valori da 1 a
-10, e `summary` è già una descrizione scritta. Basta metterli dentro il
-`<canvas>` come contenuto di ripiego, o accanto in una tabella visivamente
-nascosta.
+**Com'è adesso.** Accanto al radar c'è una tabella con gli stessi cinque assi,
+marcata `solo-lettore`: invisibile agli occhi, presente nell'albero di
+accessibilità. Il `<canvas>` è passato ad `aria-hidden`, o il grafico verrebbe
+annunciato come elemento vuoto accanto alla sua stessa alternativa. Non è
+costato una riga di dati nuovi: `sensoryProfile.axes` è già un elenco di
+etichette e valori da 1 a 10.
+
+**E il pannello adesso si può aprire.** Questa è la parte che il checkup non
+aveva visto, e senza la quale il resto non serviva a niente: la testata che apre
+e chiude il pannello era un `<h2>` con un gestore di clic. Non compare nella
+tabulazione, quindi **il Tab non ci arriva e Invio non lo aziona**. Chi naviga
+da tastiera non poteva aprire quel pannello affatto — l'alternativa testuale
+sarebbe finita dietro una porta senza maniglia, perché il contenuto chiuso è
+`display: none` e per gli assistenti non esiste. Adesso è un `<button>` dentro
+l'`<h2>`: il titolo resta un heading, che è come chi ascolta salta di sezione in
+sezione, e il pulsante porta `aria-expanded`, che è l'unico modo di sapere se il
+pannello è aperto — il chevron ruotato lo dice solo a chi guarda.
+
+**E il chevron non ruotava.** Terzo difetto, trovato mentre sistemavo il
+secondo. `initSensoryChart()` prendeva il riferimento alla freccia, e subito
+dopo `refreshIcons()` sostituiva ogni `<i data-lucide>` con l'`<svg>`
+corrispondente: il riferimento restava appeso a un elemento staccato dal
+documento, e la rotazione veniva scritta su un nodo che non era più nella
+pagina. Visibile a chiunque, da mesi, e invisibile a chi legge il codice: le due
+righe erano corrette, era il loro ordine a non esserlo. Adesso la freccia si
+cerca al momento del clic.
+
+**Verificato** sulla pagina vera: il Tab porta il focus sul pulsante (posizione
+15 su 30 elementi tabulabili) con l'anello del browser visibile; il pannello si
+apre, `aria-expanded` passa a `true` e torna a `false` alla chiusura; il radar
+si disegna; nell'albero di accessibilità il canvas non compare più e al suo
+posto c'è una `table` con le cinque righe («Tenuta al Morso = 5 su 10» e
+compagnia) e la sua didascalia. La freccia riceve davvero `rotate(180deg)`,
+questa volta sull'`<svg>` vivo.
+
+**Cosa resta:** anche qui, nessuno screen reader vero.
+
+Il caso non si ripete altrove: ho passato i 19 gestori di clic del progetto e i
+bersagli sono tutti `<button>` veri, comprese le tredici opzioni del
+calcolatore e i comandi dei timer. L'unica altra eccezione è la barra fissa del
+timer, un `<div>` il cui clic serve solo a scorrere fino alla fase — i comandi
+dentro sono pulsanti, quindi non si perde niente da tastiera.
 
 ---
 
@@ -322,17 +361,17 @@ Vanno letti, perché due misure su tre le ho dovute rifare.
 
 ## Se hai tempo per una cosa sola
 
-**Il punto 6: il grafico sensoriale.**
+**Il punto 7: i due controlli senza indicatore di focus.**
 
-Costa poco, perché i dati esistono già in forma testuale — `sensoryProfile.axes`
-è un elenco di etichette e valori, e `summary` è già una descrizione scritta.
-Vale molto, perché oggi quel pannello per chi ascolta non contiene niente.
+Costa poco — in `category-page.css:122` c'è già il modello da copiare — e vale
+molto, perché uno dei due è il campo di ricerca in homepage: ci si arriva col
+Tab e non si capisce di esserci.
 
-Poi il 7 (due controlli senza indicatore di focus) e il 9 (le voci minori), che
-sono piccoli. Il punto 8, i 21 px di scorrimento a 320 px, è il più fastidioso
-da sistemare perché tocca il logo della navbar.
+Poi il 9 (le voci minori), che sono piccole ma numerose. Il punto 8, i 21 px di
+scorrimento a 320 px, è il più fastidioso da sistemare perché tocca il logo
+della navbar.
 
-## Una cosa che si è ripetuta tre volte
+## Una cosa che si è ripetuta quattro volte
 
 Chiudere un punto ha reso più economico o più visibile quello dopo:
 
@@ -343,7 +382,13 @@ Chiudere un punto ha reso più economico o più visibile quello dopo:
   scrivere sopra l'accento — otto punti che tiravano a indovinare;
 - rimisurare dopo la correzione ha fatto saltare fuori la navbar bianca su
   bianco, che nel checkup non c'era perché l'avevo misurata solo dove il fondo
-  era scuro.
+  era scuro;
+- il punto 6 sembrava un canvas senza alternativa testuale, e lo era: ma
+  andando a metterla è emerso che **quel pannello non si apriva da tastiera**,
+  quindi l'alternativa sarebbe finita dietro una porta senza maniglia. Avevo
+  misurato il contenuto e non la strada per arrivarci. Nella stessa manciata di
+  righe si nascondeva anche una freccia che non ruotava da mesi.
 
 Morale operativa: dopo ogni correzione conviene **rimisurare tutto**, non solo
-la cosa corretta.
+la cosa corretta — e prima di aggiungere contenuto a un pannello, controllare
+che il pannello si apra.

@@ -703,11 +703,28 @@
        SENSORY PANEL — Dati Tecnici & Sensoriali
        ═══════════════════════════════════════ */
 
+    /* La testata è un <button> dentro l'<h2>, non l'<h2> stesso: il pannello si
+       apre e si chiude, quindi dev'essere raggiungibile col Tab e azionabile
+       con Invio — cose che un titolo con un gestore di clic non fa. Il titolo
+       resta un heading perché è così che chi ascolta salta di sezione in
+       sezione. Qui il bottone viene spogliato del suo aspetto nativo e prende
+       quello del titolo che lo contiene; l'anello di focus del browser resta,
+       scostato perché non tocchi le lettere. */
     .sensory-panel__header {
-        cursor: pointer;
+        flex: 1;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        font: inherit;
+        color: inherit;
+        text-align: left;
+        background: none;
+        border: 0;
+        cursor: pointer;
+        outline-offset: 4px;
     }
 
     .sensory-chevron {

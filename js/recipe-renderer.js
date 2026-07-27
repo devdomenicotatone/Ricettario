@@ -331,14 +331,28 @@ function buildSensoryProfile(r) {
   window.__sensoryChartData = window.__sensoryChartData || {};
   window.__sensoryChartData[chartId] = chartData;
 
+  // Il radar è disegnato su <canvas>: per chi non vede è un buco nero, perché
+  // un canvas non ha contenuto, solo pixel. Gli stessi assi escono anche in
+  // tabella, marcata `solo-lettore` — invisibile agli occhi, presente
+  // nell'albero di accessibilità. Il canvas va quindi nascosto agli assistenti
+  // (`aria-hidden`), o il grafico verrebbe annunciato come elemento vuoto
+  // accanto alla sua stessa alternativa.
+  const righeAssi = r.sensoryProfile.axes
+    .map(a => `<tr><th scope="row">${escHtml(a.label)}</th><td>${escHtml(a.value)} su 10</td></tr>`)
+    .join('');
+
   return `
     <div class="recipe-panel sensory-panel reveal recipe-panel--spaced">
-      <h2 class="recipe-panel__title sensory-panel__header" id="sensory-header" data-chart-id="${chartId}">
-        <span><span class="recipe-panel__title-icon">${fluentEmoji('star', 24)}</span> Dati Tecnici & Sensoriali</span>
-        <i data-lucide="chevron-down" class="sensory-chevron"></i>
+      <h2 class="recipe-panel__title">
+        <button type="button" class="sensory-panel__header" id="sensory-header"
+                aria-expanded="false" aria-controls="sensory-chart-container"
+                data-chart-id="${chartId}">
+          <span><span class="recipe-panel__title-icon">${fluentEmoji('star', 24)}</span> Dati Tecnici & Sensoriali</span>
+          <i data-lucide="chevron-down" class="sensory-chevron" aria-hidden="true"></i>
+        </button>
       </h2>
       <div class="sensory-chart-container" id="sensory-chart-container" style="display:none;">
-        
+
         <div class="sensory-dominant">
           <span class="sensory-dominant__badge">
             👑 Tratto Dominante: ${escHtml(dominant.label)} (${escHtml(dominant.value)}/10)
@@ -346,7 +360,11 @@ function buildSensoryProfile(r) {
         </div>
 
         <div class="sensory-canvas-wrap">
-          <canvas id="sensoryChart"></canvas>
+          <canvas id="sensoryChart" aria-hidden="true"></canvas>
+          <table class="solo-lettore">
+            <caption>Profilo sensoriale, in scala da 1 a 10</caption>
+            <tbody>${righeAssi}</tbody>
+          </table>
         </div>
 
         ${summaryHtml}
@@ -630,8 +648,13 @@ function initSensoryChart() {
   if (!header) return;
 
   const container = document.getElementById('sensory-chart-container');
-  const chevron = header.querySelector('.sensory-chevron');
-  if (!container || !chevron) return;
+  if (!container) return;
+
+  // Il chevron si cerca al clic, non qui: subito dopo questa funzione gira
+  // `refreshIcons()`, che sostituisce ogni `<i data-lucide>` con l'<svg>
+  // corrispondente. Un riferimento preso adesso punterebbe a un elemento
+  // staccato dal documento, e la freccia non ruoterebbe mai.
+  const chevron = () => header.querySelector('.sensory-chevron');
 
   // Recupera dati via closure registrata in buildSensoryProfile
   const chartId = header.getAttribute('data-chart-id');
@@ -643,9 +666,13 @@ function initSensoryChart() {
   header.addEventListener('click', async () => {
     const isHidden = container.style.display === 'none' || !container.style.display;
 
+    // `aria-expanded` è l'unico modo che ha chi ascolta di sapere se il
+    // pannello è aperto: il chevron ruotato lo dice solo a chi guarda.
+    header.setAttribute('aria-expanded', String(isHidden));
+
     if (isHidden) {
       container.style.display = 'block';
-      chevron.style.transform = 'rotate(180deg)';
+      chevron()?.style.setProperty('transform', 'rotate(180deg)');
 
       // Chart.js si carica solo qui, alla prima apertura del pannello.
       // L'import dinamico di un pacchetto locale finisce in un chunk separato:
@@ -740,7 +767,7 @@ function initSensoryChart() {
       });
     } else {
       container.style.display = 'none';
-      chevron.style.transform = 'rotate(0deg)';
+      chevron()?.style.setProperty('transform', 'rotate(0deg)');
     }
   });
 }
