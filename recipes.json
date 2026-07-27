@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-27T21:02:03.009Z",
+  "generatedAt": "2026-07-27T23:11:51.190Z",
   "totalRecipes": 81,
   "categories": [
     {
@@ -1484,8 +1484,8 @@
       "time": null,
       "temp": null,
       "tool": "",
-      "imageAttribution": "📷 Foto: FOX ^.ᆽ.^= ∫ — Pexels License via Pexels",
-      "hasSensory": false,
+      "imageAttribution": "📷 Foto: Generata da AI (Nano Banana 2)",
+      "hasSensory": true,
       "hasStorage": true,
       "_createdAt": "2026-07-27T20:27:38.646Z"
     },
