@@ -1,0 +1,220 @@
+{
+  "title": "Mayak Gyeran",
+  "slug": "mayak-gyeran-uova-marinate-coreane",
+  "emoji": "🥚",
+  "description": "Uova marinate coreane dal tuorlo cremoso e miele ambrato, immerse in salsa di soia con aglio, cipollotti e peperoncino. Pronte in 6 ore.",
+  "subtitle": "Uova marinate coreane — 마약계란",
+  "category": "Secondi Piatti",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per le Uova",
+      "items": [
+        {
+          "name": "Uova",
+          "note": "(medie, circa 60g l'una, a temperatura ambiente)",
+          "grams": 360,
+          "tokenId": "uova"
+        },
+        {
+          "name": "Aceto di Riso",
+          "note": "(o aceto bianco, per la cottura)",
+          "grams": 15,
+          "tokenId": "aceto_cottura"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(per la cottura)",
+          "grams": 10,
+          "tokenId": "sale_cottura"
+        }
+      ]
+    },
+    {
+      "group": "Per la Marinata",
+      "items": [
+        {
+          "name": "Salsa di Soia Light",
+          "note": "(chiara, non scura — es. Kikkoman Light o Sempio)",
+          "grams": 180,
+          "tokenId": "salsa_soia"
+        },
+        {
+          "name": "Acqua",
+          "note": "(fredda di rubinetto)",
+          "grams": 120,
+          "tokenId": "acqua_marinata"
+        },
+        {
+          "name": "Miele",
+          "note": "(o sciroppo di riso/sciroppo di mais)",
+          "grams": 45,
+          "tokenId": "miele"
+        },
+        {
+          "name": "Cipollotti",
+          "note": "(interi, affettati sottili in rondelle)",
+          "grams": 80,
+          "tokenId": "cipollotti"
+        },
+        {
+          "name": "Aglio",
+          "note": "(3 spicchi, tritati finemente)",
+          "grams": 12,
+          "tokenId": "aglio"
+        },
+        {
+          "name": "Peperoncino Rosso Fresco",
+          "note": "(affettato in rondelle, semi facoltativi)",
+          "grams": 15,
+          "tokenId": "peperoncino_rosso"
+        },
+        {
+          "name": "Peperoncino Verde Fresco",
+          "note": "(affettato in rondelle, semi facoltativi)",
+          "grams": 15,
+          "tokenId": "peperoncino_verde"
+        },
+        {
+          "name": "Semi di Sesamo Tostati",
+          "note": "(bianchi, già tostati)",
+          "grams": 8,
+          "tokenId": "sesamo"
+        },
+        {
+          "name": "Aceto di Riso",
+          "note": "(per la marinata)",
+          "grams": 20,
+          "tokenId": "aceto_marinata"
+        },
+        {
+          "name": "Salsa di Pesce",
+          "note": "(facoltativa — es. Tiparos o Nam Pla)",
+          "grams": 15,
+          "tokenId": "salsa_pesce"
+        }
+      ]
+    },
+    {
+      "group": "Per il Servizio",
+      "items": [
+        {
+          "name": "Riso Cotto",
+          "note": "(riso per sushi o basmati, come accompagnamento)",
+          "grams": 300,
+          "tokenId": "riso"
+        },
+        {
+          "name": "Olio di Sesamo",
+          "note": "(tostato, per il servizio finale)",
+          "grams": 10,
+          "tokenId": "olio_sesamo"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Preparazione del bagno di ghiaccio",
+      "text": "Prima ancora di accendere il fuoco, prepara una ciotola capiente riempita per metà di acqua fredda e abbondante ghiaccio. Questo passaggio è critico: il bagno ghiacciato deve essere pronto nel momento esatto in cui le uova escono dalla pentola. Un ritardo di anche solo 60 secondi compromette il tuorlo cremoso."
+    },
+    {
+      "title": "Cottura delle uova a tuorlo cremoso",
+      "text": "Porta a piena ebollizione una pentola con abbondante acqua (almeno 1,5 litri per {uova:360}g di uova). Aggiungi {sale_cottura:10}g di sale e {aceto_cottura:15}g di aceto di riso: il sale rinforza la struttura dell'albume, l'aceto coagula rapidamente la proteina in caso di microrotture del guscio, evitando fuoriuscite. Con un cucchiaio, immergi le uova delicatamente una alla volta, assicurandoti che siano già a temperatura ambiente (estraile dal frigo almeno 20 minuti prima). Abbassa la fiamma a un bollore vivace ma non turbolento e cuoci esattamente {tempo_cottura:6!} minuti e 30 secondi per un tuorlo cremoso e denso. Se preferisci il tuorlo completamente sodo, allunga fino a 8-10 minuti."
+    },
+    {
+      "title": "Shock termico e sgusciatura",
+      "text": "Non appena il timer suona, trasferisci immediatamente le uova nel bagno di ghiaccio preparato in precedenza. Lascia raffreddare per almeno 5-7 minuti: questo arresta la cottura residua e separa la membrana interna dal guscio, rendendo la sgusciatura netta e pulita. Sguscia le uova sotto un filo d'acqua fredda corrente, partendo dal polo tondo (dove c'è la camera d'aria) e lavorando con delicatezza con i polpastrelli. Una superficie liscia e integra è fondamentale: ogni imperfezione nell'albume assorbe la marinata in modo irregolare. Asciuga le uova sgusciate con carta da cucina."
+    },
+    {
+      "title": "Preparazione della marinata",
+      "text": "In una ciotola capiente o in un contenitore ermetico con coperchio (di vetro o plastica alimentare, con capacità di almeno 800 ml), unisci {salsa_soia:180}g di salsa di soia light, {acqua_marinata:120}g di acqua fredda, {miele:45}g di miele (o sciroppo di riso) e {aceto_marinata:20}g di aceto di riso. Mescola con una frusta o un cucchiaio fino a che il miele è completamente sciolto — i cristalli di miele non sciolti si depositano sul fondo e creano punti di marinatura irregolare. Aggiungi {cipollotti:80}g di cipollotti affettati in rondelle sottili di circa 2 mm, {aglio:12}g di aglio tritato finemente, {peperoncino_rosso:15}g di peperoncino rosso e {peperoncino_verde:15}g di peperoncino verde affettati (rimuovi i semi se vuoi una piccantezza moderata), {sesamo:8}g di semi di sesamo tostati. Se disponibile, aggiungi anche {salsa_pesce:15}g di salsa di pesce per una profondità umami più marcata. Mescola nuovamente fino ad amalgamare."
+    },
+    {
+      "title": "Marinatura in frigorifero",
+      "text": "Immergi le uova sgusciate nella marinata, assicurandoti che siano completamente sommerse. Se il contenitore è stretto e le uova galleggiano, copri la superficie con un foglio di carta da cucina bagnato — capillarità e peso la terranno sommerse. In alternativa, usa un sacchetto ermetico: elimina tutta l'aria e sigilla, così ogni uovo è a contatto uniforme con la marinata. Chiudi ermeticamente e riponi in frigorifero per un minimo di {tempo_marinatura:6!} ore, idealmente per {tempo_ottimale:12!} ore o anche 24 ore. Trascorse le prime 2 ore, ribalta delicatamente il contenitore o le uova per garantire una marinatura uniforme su tutta la superficie."
+    },
+    {
+      "title": "Cottura del riso e assemblaggio finale",
+      "text": "Sciacqua {riso:300}g di riso sotto acqua fredda corrente fino a che l'acqua risulta quasi limpida (3-4 lavaggi), per eliminare l'amido in eccesso. Cuoci il riso seguendo le indicazioni sulla confezione (per riso sushi: rapporto 1:1,2 con acqua, cottura a fuoco basso con coperchio). Servi le uova intere o tagliate a metà su un letto di riso. Condisci con qualche rondella dei cipollotti dalla marinata, un filo di {olio_sesamo:10}g di olio di sesamo tostato versato al momento. La marinata avanzata si può usare come condimento aggiuntivo sul riso. Le Mayak Gyeran si servono fredde o a temperatura ambiente."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "baking": null,
+  "glossary": [
+    {
+      "term": "Mayak Gyeran",
+      "definition": "Letteralmente 'uova droga' in coreano (마약계란): il nome si riferisce all'effetto 'dipendente' che queste uova creano. Piatto popolarissimo della cucina coreana moderna, diffuso dai mercati di Seoul."
+    },
+    {
+      "term": "Shock termico",
+      "definition": "Trasferimento rapido di un alimento cotto in acqua ghiacciata per arrestare istantaneamente la cottura residua. Fondamentale per mantenere la texture desiderata nel tuorlo."
+    },
+    {
+      "term": "Cottura residua",
+      "definition": "Il calore interno accumulato continua a cuocere l'alimento anche dopo averlo rimosso dal fuoco. Per le uova a cottura breve, può aumentare la consistenza del tuorlo di 1-2 minuti equivalenti se non si fa lo shock termico."
+    },
+    {
+      "term": "Bassinage",
+      "definition": "Tecnica di aggiunta progressiva di un liquido durante la lavorazione di un impasto o di una marinata. Non applicata in questa ricetta, ma il principio di sciogliere gradualmente il miele nella soia segue logica simile."
+    },
+    {
+      "term": "Salsa di Soia Light",
+      "definition": "Versione chiara della salsa di soia (生抽, 진간장 scuro vs 양조간장 chiaro): più salata e meno densa di quella scura, ideale per marinature dove non si vuole colorare eccessivamente l'albume in nero."
+    },
+    {
+      "term": "Umami",
+      "definition": "Il quinto gusto fondamentale, percepito come saporito/ricco/profondo. Presente naturalmente nella salsa di soia, nella salsa di pesce e nel sesamo tostato. La combinazione di questi tre elementi moltiplica l'effetto umami per sinergia."
+    },
+    {
+      "term": "Maturazione in marinata",
+      "definition": "Processo osmotico per cui la soluzione salina e aromatica penetra nell'albume e nel tuorlo nel tempo. Oltre 12 ore, la penetrazione raggiunge il cuore del tuorlo conferendogli colore ambrato e sapore complesso."
+    },
+    {
+      "term": "Salsa di pesce",
+      "definition": "Condimento liquido fermentato a base di pesce e sale, comune nella cucina dell'Asia sud-orientale (Nam Pla tailandese, Nuoc Mam vietnamita). Aggiunge profondità umami senza un sapore riconoscibilmente 'di pesce'."
+    }
+  ],
+  "alert": "NON sgusciare le uova subito dopo il bagno di ghiaccio senza averle raffreddate completamente: l'albume ancora caldo è morbido e si rompe. NON marinare per più di 48 ore: l'albume diventa gommoso e il tuorlo eccessivamente salato. NON usare salsa di soia scura al posto di quella light come unica base: l'albume diventa nero e il sapore dominante e amaro. NON far bollire la marinata: gli aromi volatili di cipollotto e aglio evaporano e la marinata perde freschezza.",
+  "proTips": [
+    "Per un tuorlo perfettamente cremoso e riproducibile, usa uova a temperatura ambiente (20-22°C) e un timer digitale preciso al secondo: la differenza tra 6 minuti e 7 minuti è la differenza tra un tuorlo fluido-denso e uno quasi sodo. Con fornelli a gas potenti, scendi a 6 minuti netti.",
+    "Sostituisci il miele con sciroppo di riso (쌀조청) se riesci a trovarlo in un negozio di alimentari asiatici: ha una dolcezza meno invadente e una viscosità superiore che aiuta la marinata ad aderire all'albume, creando uno strato lucido e uniforme.",
+    "La marinata avanzata non va gettata: usala come condimento per noodles freddi, come base per condire verdure saltate o come salsa da intingolo per dumpling. Si conserva in frigorifero fino a 2 settimane e migliora con il tempo."
+  ],
+  "storage": [
+    "Frigo: conserva le uova nel contenitore con la marinata, chiuso ermeticamente, per un massimo di 3-4 giorni. Non scolare le uova dalla marinata finché non le consumi: restare immerse le mantiene umide e ne prolunga la vita.",
+    "Freezer: NON congelare. Le uova sode o barzotte perdono completamente la texture originale dopo lo scongelamento (l'albume diventa spugnoso e acquoso, il tuorlo granuloso). Prepara solo la quantità che consumi entro 3-4 giorni.",
+    "Rigenerazione: le Mayak Gyeran si servono sempre fredde o al massimo a temperatura ambiente (mai riscaldate). Se le hai conservate in frigo, estraile 10-15 minuti prima di servire per permettere al tuorlo di ammorbidirsi leggermente. Taglia sempre con un coltello affilato in un unico gesto deciso per non schiacciare il tuorlo cremoso."
+  ],
+  "imageKeywords": [
+    "korean marinated eggs soy sauce",
+    "mayak gyeran soft boiled eggs",
+    "korean drug eggs rice bowl",
+    "soy sauce eggs halved yolk",
+    "uova marinate coreane riso",
+    "koreanische marinierte Eier Sojasoße",
+    "soft boiled eggs asian marinade sesame"
+  ],
+  "tags": [
+    "coreano",
+    "uova",
+    "marinatura",
+    "soia",
+    "senza glutine",
+    "meal prep",
+    "street food",
+    "asia",
+    "senza forno",
+    "proteico"
+  ],
+  "_createdAt": "2026-07-27T20:27:38.646Z",
+  "image": "images/ricette/secondi-piatti/mayak-gyeran-uova-marinate-coreane.webp",
+  "imageAttribution": "📷 Foto: FOX ^.ᆽ.^= ∫ — Pexels License via Pexels",
+  "_originalImageUrl": "https://images.pexels.com/photos/29731796/pexels-photo-29731796.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+}

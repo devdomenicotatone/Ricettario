@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-27T20:25:41.299Z",
-  "totalRecipes": 80,
+  "generatedAt": "2026-07-27T20:47:14.353Z",
+  "totalRecipes": 81,
   "categories": [
     {
       "name": "Primi",
@@ -44,7 +44,7 @@
     },
     {
       "name": "Secondi Piatti",
-      "count": 1,
+      "count": 2,
       "emoji": "🍲"
     }
   ],
@@ -1470,6 +1470,24 @@
       "hasSensory": true,
       "hasStorage": true,
       "_createdAt": "2026-04-19T20:31:44.570Z"
+    },
+    {
+      "title": "Mayak Gyeran",
+      "slug": "mayak-gyeran-uova-marinate-coreane",
+      "category": "Secondi Piatti",
+      "categoryDir": "secondi-piatti",
+      "emoji": "🥚",
+      "href": "ricette/secondi-piatti/mayak-gyeran-uova-marinate-coreane.html",
+      "image": "images/ricette/secondi-piatti/mayak-gyeran-uova-marinate-coreane.webp",
+      "description": "Uova marinate coreane dal tuorlo cremoso e miele ambrato, immerse in salsa di soia con aglio, cipollotti e peperoncino. Pronte in 6 ore.",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "imageAttribution": "📷 Foto: FOX ^.ᆽ.^= ∫ — Pexels License via Pexels",
+      "hasSensory": false,
+      "hasStorage": true,
+      "_createdAt": "2026-07-27T20:27:38.646Z"
     },
     {
       "title": "Spare Ribs in Salsa BBQ",

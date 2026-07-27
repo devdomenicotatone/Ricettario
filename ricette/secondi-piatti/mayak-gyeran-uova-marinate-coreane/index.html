@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayak Gyeran — Ricettario Lab</title>
+    <link rel="icon" type="image/svg+xml" href="/Ricettario/assets/favicon-Ce3yoLgR.svg">
+    <link rel="apple-touch-icon" href="/Ricettario/assets/apple-touch-icon-DVCrky5e.png">
+    <link rel="manifest" href="/Ricettario/assets/site-DXZVqlE8.webmanifest">
+    <!-- Lo script in fondo al <head> lo riscrive secondo il tema: qui c'è il
+         chiaro, che è anche il tema dichiarato su <html>. -->
+    <meta name="theme-color" content="#F2ECE4">
+
+    <!-- Open Graph — Social Sharing Card -->
+
+    <!-- Twitter / X Card -->
+
+    <!-- Font serviti da qui, non da Google: vedi css/base/fonts.css.
+         Il preload evita che il testo resti col font di sistema mentre il
+         CSS che li dichiara viene ancora scaricato. -->
+    <link rel="preload" href="/Ricettario/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/Ricettario/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- FOUC Prevention: applica tema prima del rendering -->
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = saved || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+
+            /* Barra del browser = fondo della navbar, misurato (88% di
+               --color-surface-1 su --color-surface-0). Unica copia dei due
+               valori: main.js chiama questa funzione, non li riscrive.
+               Perché non è più #C2884D: CHECKUP-CSS.md, punto 4. */
+            const COLORI_BARRA = { light: '#F2ECE4', dark: '#170E0A' };
+            window.applicaColoreBarra = function (t) {
+                const meta = document.querySelector('meta[name="theme-color"]');
+                if (meta && COLORI_BARRA[t]) meta.setAttribute('content', COLORI_BARRA[t]);
+            };
+            window.applicaColoreBarra(theme);
+        })();
+    </script>
+  <script type="module" crossorigin src="/Ricettario/assets/main-CtJ6ahPU.js"></script>
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-D6mH_z1p.css">
+
+    <meta name="description" content="Uova marinate coreane dal tuorlo cremoso e miele ambrato, immerse in salsa di soia con aglio, cipollotti e peperoncino. Pronte in 6 ore.">
+    <link rel="canonical" href="https://devdomenicotatone.github.io/Ricettario/ricette/secondi-piatti/mayak-gyeran-uova-marinate-coreane/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Mayak Gyeran">
+    <meta property="og:description" content="Uova marinate coreane dal tuorlo cremoso e miele ambrato, immerse in salsa di soia con aglio, cipollotti e peperoncino. Pronte in 6 ore.">
+    <meta property="og:url" content="https://devdomenicotatone.github.io/Ricettario/ricette/secondi-piatti/mayak-gyeran-uova-marinate-coreane/">
+    <meta property="og:image" content="https://devdomenicotatone.github.io/Ricettario/images/ricette/secondi-piatti/mayak-gyeran-uova-marinate-coreane.webp">
+    <meta property="og:site_name" content="Ricettario Lab">
+    <meta property="og:locale" content="it_IT">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mayak Gyeran">
+    <meta name="twitter:description" content="Uova marinate coreane dal tuorlo cremoso e miele ambrato, immerse in salsa di soia con aglio, cipollotti e peperoncino. Pronte in 6 ore.">
+    <meta name="twitter:image" content="https://devdomenicotatone.github.io/Ricettario/images/ricette/secondi-piatti/mayak-gyeran-uova-marinate-coreane.webp">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Mayak Gyeran",
+  "description": "Uova marinate coreane dal tuorlo cremoso e miele ambrato, immerse in salsa di soia con aglio, cipollotti e peperoncino. Pronte in 6 ore.",
+  "url": "https://devdomenicotatone.github.io/Ricettario/ricette/secondi-piatti/mayak-gyeran-uova-marinate-coreane/",
+  "author": {
+    "@type": "Organization",
+    "name": "Ricettario Lab"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ricettario Lab"
+  },
+  "recipeCategory": "Secondi Piatti",
+  "inLanguage": "it-IT",
+  "image": [
+    "https://devdomenicotatone.github.io/Ricettario/images/ricette/secondi-piatti/mayak-gyeran-uova-marinate-coreane.webp"
+  ],
+  "datePublished": "2026-07-27",
+  "keywords": "coreano, uova, marinatura, soia, senza glutine, meal prep, street food, asia, senza forno, proteico",
+  "recipeIngredient": [
+    "360 g Uova (medie, circa 60g l'una, a temperatura ambiente)",
+    "15 g Aceto di Riso (o aceto bianco, per la cottura)",
+    "10 g Sale Fino (per la cottura)",
+    "180 g Salsa di Soia Light (chiara, non scura — es. Kikkoman Light o Sempio)",
+    "120 g Acqua (fredda di rubinetto)",
+    "45 g Miele (o sciroppo di riso/sciroppo di mais)",
+    "80 g Cipollotti (interi, affettati sottili in rondelle)",
+    "12 g Aglio (3 spicchi, tritati finemente)",
+    "15 g Peperoncino Rosso Fresco (affettato in rondelle, semi facoltativi)",
+    "15 g Peperoncino Verde Fresco (affettato in rondelle, semi facoltativi)",
+    "8 g Semi di Sesamo Tostati (bianchi, già tostati)",
+    "20 g Aceto di Riso (per la marinata)",
+    "15 g Salsa di Pesce (facoltativa — es. Tiparos o Nam Pla)",
+    "300 g Riso Cotto (riso per sushi o basmati, come accompagnamento)",
+    "10 g Olio di Sesamo (tostato, per il servizio finale)"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Preparazione del bagno di ghiaccio",
+      "text": "Prima ancora di accendere il fuoco, prepara una ciotola capiente riempita per metà di acqua fredda e abbondante ghiaccio. Questo passaggio è critico: il bagno ghiacciato deve essere pronto nel momento esatto in cui le uova escono dalla pentola. Un ritardo di anche solo 60 secondi compromette il tuorlo cremoso."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Cottura delle uova a tuorlo cremoso",
+      "text": "Porta a piena ebollizione una pentola con abbondante acqua (almeno 1,5 litri per 360g di uova). Aggiungi 10g di sale e 15g di aceto di riso: il sale rinforza la struttura dell'albume, l'aceto coagula rapidamente la proteina in caso di microrotture del guscio, evitando fuoriuscite. Con un cucchiaio, immergi le uova delicatamente una alla volta, assicurandoti che siano già a temperatura ambiente (estraile dal frigo almeno 20 minuti prima). Abbassa la fiamma a un bollore vivace ma non turbolento e cuoci esattamente 6 minuti e 30 secondi per un tuorlo cremoso e denso. Se preferisci il tuorlo completamente sodo, allunga fino a 8-10 minuti."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Shock termico e sgusciatura",
+      "text": "Non appena il timer suona, trasferisci immediatamente le uova nel bagno di ghiaccio preparato in precedenza. Lascia raffreddare per almeno 5-7 minuti: questo arresta la cottura residua e separa la membrana interna dal guscio, rendendo la sgusciatura netta e pulita. Sguscia le uova sotto un filo d'acqua fredda corrente, partendo dal polo tondo (dove c'è la camera d'aria) e lavorando con delicatezza con i polpastrelli. Una superficie liscia e integra è fondamentale: ogni imperfezione nell'albume assorbe la marinata in modo irregolare. Asciuga le uova sgusciate con carta da cucina."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Preparazione della marinata",
+      "text": "In una ciotola capiente o in un contenitore ermetico con coperchio (di vetro o plastica alimentare, con capacità di almeno 800 ml), unisci 180g di salsa di soia light, 120g di acqua fredda, 45g di miele (o sciroppo di riso) e 20g di aceto di riso. Mescola con una frusta o un cucchiaio fino a che il miele è completamente sciolto — i cristalli di miele non sciolti si depositano sul fondo e creano punti di marinatura irregolare. Aggiungi 80g di cipollotti affettati in rondelle sottili di circa 2 mm, 12g di aglio tritato finemente, 15g di peperoncino rosso e 15g di peperoncino verde affettati (rimuovi i semi se vuoi una piccantezza moderata), 8g di semi di sesamo tostati. Se disponibile, aggiungi anche 15g di salsa di pesce per una profondità umami più marcata. Mescola nuovamente fino ad amalgamare."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Marinatura in frigorifero",
+      "text": "Immergi le uova sgusciate nella marinata, assicurandoti che siano completamente sommerse. Se il contenitore è stretto e le uova galleggiano, copri la superficie con un foglio di carta da cucina bagnato — capillarità e peso la terranno sommerse. In alternativa, usa un sacchetto ermetico: elimina tutta l'aria e sigilla, così ogni uovo è a contatto uniforme con la marinata. Chiudi ermeticamente e riponi in frigorifero per un minimo di 6 ore, idealmente per 12 ore o anche 24 ore. Trascorse le prime 2 ore, ribalta delicatamente il contenitore o le uova per garantire una marinatura uniforme su tutta la superficie."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 6,
+      "name": "Cottura del riso e assemblaggio finale",
+      "text": "Sciacqua 300g di riso sotto acqua fredda corrente fino a che l'acqua risulta quasi limpida (3-4 lavaggi), per eliminare l'amido in eccesso. Cuoci il riso seguendo le indicazioni sulla confezione (per riso sushi: rapporto 1:1,2 con acqua, cottura a fuoco basso con coperchio). Servi le uova intere o tagliate a metà su un letto di riso. Condisci con qualche rondella dei cipollotti dalla marinata, un filo di 10g di olio di sesamo tostato versato al momento. La marinata avanzata si può usare come condimento aggiuntivo sul riso. Le Mayak Gyeran si servono fredde o a temperatura ambiente."
+    }
+  ],
+  "recipeYield": "circa 1205 g di impasto"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://devdomenicotatone.github.io/Ricettario/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Secondi Piatti",
+      "item": "https://devdomenicotatone.github.io/Ricettario/ricette/secondi-piatti/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Mayak Gyeran",
+      "item": "https://devdomenicotatone.github.io/Ricettario/ricette/secondi-piatti/mayak-gyeran-uova-marinate-coreane/"
+    }
+  ]
+}
+    </script>
+</head>
+
+<body>
+
+    <!-- Skip to content — Accessibilità
+         Punta a #contenuto, non a #ricette: quell'ancora esiste solo in
+         homepage, quindi su 104 pagine su 105 il primo tasto che un utente da
+         tastiera premeva non faceva niente. -->
+    <a href="#contenuto" class="skip-link">Vai al contenuto principale</a>
+
+    <!-- Annuncio dei cambi di pagina.
+         Questo sito è una SPA: cliccando una ricetta il contenuto viene
+         sostituito senza che il browser carichi niente, quindi uno screen
+         reader non ha nulla da annunciare e l'utente resta a chiedersi se il
+         clic abbia funzionato. Il router ci scrive dentro il titolo della
+         pagina nuova.
+         Sta FUORI da #app di proposito: se il router lo sostituisse a ogni
+         navigazione, l'assistente non lo starebbe più osservando e
+         l'annuncio andrebbe perso. Dev'essere lo stesso elemento, sempre. -->
+    <div id="annuncio-pagina" class="solo-lettore" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- ═══════════ NAVBAR ═══════════
+         Il `<header>` AVVOLGE il `<nav>`, non lo sostituisce. Sono due
+         landmark diversi e servono a due cose diverse: `banner` dice «qui
+         comincia l'intestazione del sito», `navigation` dice «qui ci sono i
+         link per spostarsi». Rinominare il tag avrebbe tolto il secondo per
+         aggiungere il primo, e il secondo è quello che serve per saltare
+         dentro il menu.
+         Non ha classe né stile: contiene solo un elemento `position: fixed`,
+         quindi è alto zero e non sposta niente. Non deve prendere `transform`,
+         `filter` o `contain`: diventerebbe il blocco contenitore della navbar,
+         che smetterebbe di essere ancorata alla finestra. -->
+    <header>
+    <nav class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="/Ricettario/" class="navbar__logo" data-link>
+                <div class="navbar__logo-icon">
+                    <img src="/Ricettario/assets/wheat-logo-TzPQBXOF.svg" alt="" aria-hidden="true" width="40" height="56">
+                </div>
+
+                <span>Ricettario Lab</span>
+            </a>
+
+            <ul class="navbar__links" id="nav-links">
+                <li><a href="#ricette" data-nav-section="ricette" class="active">Ricette</a></li>
+                <!-- Route vera, non un'ancora: il router la intercetta come link interno -->
+                <li><a href="/Ricettario/cottura/">Cottura</a></li>
+                <li><a href="#strumenti" data-nav-section="strumenti">Strumenti</a></li>
+                <li><a href="#chi-sono" data-nav-section="chi-sono">Chi Sono</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+                <span class="theme-toggle__icon theme-toggle__sun"><i data-lucide="sun"></i></span>
+                <span class="theme-toggle__icon theme-toggle__moon"><i data-lucide="moon"></i></span>
+            </button>
+
+            <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    </header>
+
+    <!-- ═══════════ SPA CONTAINER ═══════════ -->
+    <!-- Il router carica dinamicamente il contenuto qui -->
+    <!-- ═══════════ CONTENUTO PRINCIPALE ═══════════
+         `main` avvolge il contenitore #app invece di sostituirlo. Il tag di
+         apertura e quello di chiusura di #app, con il commento che lo segue,
+         sono portanti in tre punti: generate-og.js li cerca per iniettare il
+         contenuto pre-renderizzato e si ferma con "template incompatibile" se
+         non li trova, e verifica-build.js ci estrae il testo visibile per
+         confrontarlo con i dati strutturati. Rinominare quel tag li avrebbe
+         rotti tutti e tre.
+
+         `tabindex="-1"` non è decorativo: senza, lo skip link porta la pagina
+         quaggiù ma lascia il focus della tastiera dov'era, e il tasto dopo
+         riparte dalla navbar. Con -1 l'elemento riceve il focus da programma
+         pur restando fuori dall'ordine di tabulazione. -->
+    <main id="contenuto" tabindex="-1">
+    <div id="app">
+
+    <!-- ═══════════ RECIPE HERO ═══════════ -->
+    <figure class="recipe-foto">
+    <div class="recipe-hero">
+      <picture class="recipe-hero__picture">
+  <source srcset="/Ricettario/images/ricette/secondi-piatti/mayak-gyeran-uova-marinate-coreane.avif" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/secondi-piatti/mayak-gyeran-uova-marinate-coreane.webp" type="image/webp">
+  <img src="/Ricettario/images/ricette/secondi-piatti/mayak-gyeran-uova-marinate-coreane.webp" alt="Mayak Gyeran" class="recipe-hero__img">
+</picture>
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="/Ricettario/" data-link>Home</a>
+          <span class="breadcrumb__separator">›</span>
+          <a href="/Ricettario/#ricette" data-link>Ricette</a>
+          <span class="breadcrumb__separator">›</span>
+          <a href="/Ricettario/ricette/secondi-piatti/" data-link>Secondi Piatti</a>
+          <span class="breadcrumb__separator">›</span>
+          <span>Mayak Gyeran</span>
+        </nav>
+
+        <div class="recipe-hero__content">
+          <div class="recipe-hero__tags">
+            <span class="tag tag--category"><img src="/Ricettario/images/emoji/fork-and-knife.png" width="22" height="22" alt="" class="fluent-emoji" loading="lazy"> Secondi Piatti</span>
+          </div>
+          <h1 class="recipe-hero__title">Mayak Gyeran</h1>
+          <p class="recipe-hero__subtitle">Uova marinate coreane — 마약계란</p>
+        </div>
+      </div>
+    </div>
+    <figcaption class="recipe-foto__credito"><div class="container">Foto: FOX ^.ᆽ.^= ∫ — <a href="https://www.pexels.com/license/" target="_blank" rel="license noopener nofollow">Pexels License</a> via <a href="https://www.pexels.com/photo/29731796/" target="_blank" rel="noopener nofollow">Pexels</a></div></figcaption></figure>
+
+    <!-- ═══════════ TECH BADGES ═══════════ -->
+    <div class="container" style="padding-top: 40px;">
+      <div class="tech-badges">
+        
+        
+        
+        
+      </div>
+    </div>
+
+    <!-- ═══════════ RECIPE CONTENT ═══════════ -->
+    <section class="recipe-content" id="recipe-content">
+      <div class="container">
+        <div class="recipe-layout">
+
+          <!-- COLONNA SX: Ingredienti -->
+          <div>
+            
+    <div class="recipe-panel">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/shopping-cart.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Ingredienti Base
+      </h2>
+      
+      <table class="ingredients-table" id="ingredients-table" aria-label="Ingredienti e quantità">
+        <tr class="ingredient-section-header"><th colspan="2" scope="colgroup">Per le Uova</th></tr><tr>
+    <th scope="row">Uova <span class="ingredient-note">(medie, circa 60g l'una, a temperatura ambiente)</span></th>
+    <td class="ingredient-qty">360g</td>
+  </tr><tr>
+    <th scope="row">Aceto di Riso <span class="ingredient-note">(o aceto bianco, per la cottura)</span></th>
+    <td class="ingredient-qty">15g</td>
+  </tr><tr>
+    <th scope="row">Sale Fino <span class="ingredient-note">(per la cottura)</span></th>
+    <td class="ingredient-qty">10g</td>
+  </tr><tr class="ingredient-section-header"><th colspan="2" scope="colgroup">Per la Marinata</th></tr><tr>
+    <th scope="row">Salsa di Soia Light <span class="ingredient-note">(chiara, non scura — es. Kikkoman Light o Sempio)</span></th>
+    <td class="ingredient-qty">180g</td>
+  </tr><tr>
+    <th scope="row">Acqua <span class="ingredient-note">(fredda di rubinetto)</span></th>
+    <td class="ingredient-qty">120g</td>
+  </tr><tr>
+    <th scope="row">Miele <span class="ingredient-note">(o sciroppo di riso/sciroppo di mais)</span></th>
+    <td class="ingredient-qty">45g</td>
+  </tr><tr>
+    <th scope="row">Cipollotti <span class="ingredient-note">(interi, affettati sottili in rondelle)</span></th>
+    <td class="ingredient-qty">80g</td>
+  </tr><tr>
+    <th scope="row">Aglio <span class="ingredient-note">(3 spicchi, tritati finemente)</span></th>
+    <td class="ingredient-qty">12g</td>
+  </tr><tr>
+    <th scope="row">Peperoncino Rosso Fresco <span class="ingredient-note">(affettato in rondelle, semi facoltativi)</span></th>
+    <td class="ingredient-qty">15g</td>
+  </tr><tr>
+    <th scope="row">Peperoncino Verde Fresco <span class="ingredient-note">(affettato in rondelle, semi facoltativi)</span></th>
+    <td class="ingredient-qty">15g</td>
+  </tr><tr>
+    <th scope="row">Semi di Sesamo Tostati <span class="ingredient-note">(bianchi, già tostati)</span></th>
+    <td class="ingredient-qty">8g</td>
+  </tr><tr>
+    <th scope="row">Aceto di Riso <span class="ingredient-note">(per la marinata)</span></th>
+    <td class="ingredient-qty">20g</td>
+  </tr><tr>
+    <th scope="row">Salsa di Pesce <span class="ingredient-note">(facoltativa — es. Tiparos o Nam Pla)</span></th>
+    <td class="ingredient-qty">15g</td>
+  </tr><tr class="ingredient-section-header"><th colspan="2" scope="colgroup">Per il Servizio</th></tr><tr>
+    <th scope="row">Riso Cotto <span class="ingredient-note">(riso per sushi o basmati, come accompagnamento)</span></th>
+    <td class="ingredient-qty">300g</td>
+  </tr><tr>
+    <th scope="row">Olio di Sesamo <span class="ingredient-note">(tostato, per il servizio finale)</span></th>
+    <td class="ingredient-qty">10g</td>
+  </tr>
+        <tr class="ingredient-total-row" id="ingredient-total-row">
+          <th scope="row">Peso Totale Impasto</th>
+          <td class="ingredient-qty" id="ingredient-total-qty">~1.2kg</td>
+        </tr>
+      </table>
+    </div>
+            
+          </div>
+
+          <!-- COLONNA DX: Procedimento -->
+          <div>
+            
+    <div class="recipe-panel" id="steps-panel">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/gear.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Procedimento
+      </h2>
+      <ol class="steps-list">
+        <li class="step-item">
+            <strong>Preparazione del bagno di ghiaccio</strong>
+            <p>Prima ancora di accendere il fuoco, prepara una ciotola capiente riempita per metà di acqua fredda e abbondante ghiaccio. Questo passaggio è critico: il bagno ghiacciato deve essere pronto nel momento esatto in cui le uova escono dalla pentola. Un ritardo di anche solo 60 secondi compromette il tuorlo cremoso.</p>
+          </li><li class="step-item">
+            <strong>Cottura delle uova a tuorlo cremoso</strong>
+            <p>Porta a piena ebollizione una pentola con abbondante acqua (almeno 1,5 litri per 360g di uova). Aggiungi 10g di sale e 15g di aceto di riso: il sale rinforza la struttura dell'albume, l'aceto coagula rapidamente la proteina in caso di microrotture del guscio, evitando fuoriuscite. Con un cucchiaio, immergi le uova delicatamente una alla volta, assicurandoti che siano già a temperatura ambiente (estraile dal frigo almeno 20 minuti prima). Abbassa la fiamma a un bollore vivace ma non turbolento e cuoci esattamente 6 minuti e 30 secondi per un tuorlo cremoso e denso. Se preferisci il tuorlo completamente sodo, allunga fino a 8-10 minuti.</p>
+          </li><li class="step-item">
+            <strong>Shock termico e sgusciatura</strong>
+            <p>Non appena il timer suona, trasferisci immediatamente le uova nel bagno di ghiaccio preparato in precedenza. Lascia raffreddare per almeno 5-7 minuti: questo arresta la cottura residua e separa la membrana interna dal guscio, rendendo la sgusciatura netta e pulita. Sguscia le uova sotto un filo d'acqua fredda corrente, partendo dal polo tondo (dove c'è la camera d'aria) e lavorando con delicatezza con i polpastrelli. Una superficie liscia e integra è fondamentale: ogni imperfezione nell'albume assorbe la marinata in modo irregolare. Asciuga le uova sgusciate con carta da cucina.</p>
+          </li><li class="step-item">
+            <strong>Preparazione della marinata</strong>
+            <p>In una ciotola capiente o in un contenitore ermetico con coperchio (di vetro o plastica alimentare, con capacità di almeno 800 ml), unisci 180g di salsa di soia light, 120g di acqua fredda, 45g di miele (o sciroppo di riso) e 20g di aceto di riso. Mescola con una frusta o un cucchiaio fino a che il miele è completamente sciolto — i cristalli di miele non sciolti si depositano sul fondo e creano punti di marinatura irregolare. Aggiungi 80g di cipollotti affettati in rondelle sottili di circa 2 mm, 12g di aglio tritato finemente, 15g di peperoncino rosso e 15g di peperoncino verde affettati (rimuovi i semi se vuoi una piccantezza moderata), 8g di semi di sesamo tostati. Se disponibile, aggiungi anche 15g di salsa di pesce per una profondità umami più marcata. Mescola nuovamente fino ad amalgamare.</p>
+          </li><li class="step-item">
+            <strong>Marinatura in frigorifero</strong>
+            <p>Immergi le uova sgusciate nella marinata, assicurandoti che siano completamente sommerse. Se il contenitore è stretto e le uova galleggiano, copri la superficie con un foglio di carta da cucina bagnato — capillarità e peso la terranno sommerse. In alternativa, usa un sacchetto ermetico: elimina tutta l'aria e sigilla, così ogni uovo è a contatto uniforme con la marinata. Chiudi ermeticamente e riponi in frigorifero per un minimo di 6 ore, idealmente per 12 ore o anche 24 ore. Trascorse le prime 2 ore, ribalta delicatamente il contenitore o le uova per garantire una marinatura uniforme su tutta la superficie.</p>
+          </li><li class="step-item">
+            <strong>Cottura del riso e assemblaggio finale</strong>
+            <p>Sciacqua 300g di riso sotto acqua fredda corrente fino a che l'acqua risulta quasi limpida (3-4 lavaggi), per eliminare l'amido in eccesso. Cuoci il riso seguendo le indicazioni sulla confezione (per riso sushi: rapporto 1:1,2 con acqua, cottura a fuoco basso con coperchio). Servi le uova intere o tagliate a metà su un letto di riso. Condisci con qualche rondella dei cipollotti dalla marinata, un filo di 10g di olio di sesamo tostato versato al momento. La marinata avanzata si può usare come condimento aggiuntivo sul riso. Le Mayak Gyeran si servono fredde o a temperatura ambiente.</p>
+          </li>
+      </ol>
+    </div>
+            
+          </div>
+
+        </div>
+
+        
+        
+        
+    <div class="alert alert--danger recipe-panel--spaced">
+      <span class="alert__icon"><img src="/Ricettario/images/emoji/prohibited.png" width="28" height="28" alt="" class="fluent-emoji" loading="lazy"></span>
+      <div class="alert__content">
+        <strong>ALERT PROFESSIONALE</strong>
+        <p><img src="/Ricettario/images/emoji/warning.png" width="18" height="18" alt="" class="fluent-emoji" loading="lazy"> NON sgusciare le uova subito dopo il bagno di ghiaccio senza averle raffreddate completamente: l'albume ancora caldo è morbido e si rompe. NON marinare per più di 48 ore: l'albume diventa gommoso e il tuorlo eccessivamente salato. NON usare salsa di soia scura al posto di quella light come unica base: l'albume diventa nero e il sapore dominante e amaro. NON far bollire la marinata: gli aromi volatili di cipollotto e aglio evaporano e la marinata perde freschezza.</p>
+      </div>
+    </div>
+        
+        
+    <div class="recipe-panel recipe-panel--spaced">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/light-bulb.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Pro Tips
+      </h2>
+      <ul class="tip-list">
+        <li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Per un tuorlo perfettamente cremoso e riproducibile, usa uova a temperatura ambiente (20-22°C) e un timer digitale preciso al secondo: la differenza tra 6 minuti e 7 minuti è la differenza tra un tuorlo fluido-denso e uno quasi sodo. Con fornelli a gas potenti, scendi a 6 minuti netti.</li><li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Sostituisci il miele con sciroppo di riso (쌀조청) se riesci a trovarlo in un negozio di alimentari asiatici: ha una dolcezza meno invadente e una viscosità superiore che aiuta la marinata ad aderire all'albume, creando uno strato lucido e uniforme.</li><li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> La marinata avanzata non va gettata: usala come condimento per noodles freddi, come base per condire verdure saltate o come salsa da intingolo per dumpling. Si conserva in frigorifero fino a 2 settimane e migliora con il tempo.</li>
+      </ul>
+    </div>
+        
+    <div class="recipe-panel recipe-panel--spaced">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/package.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Conservazione
+      </h2>
+      <ul class="tip-list">
+        <li class="tip-item"><img src="/Ricettario/images/emoji/package.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Frigo: conserva le uova nel contenitore con la marinata, chiuso ermeticamente, per un massimo di 3-4 giorni. Non scolare le uova dalla marinata finché non le consumi: restare immerse le mantiene umide e ne prolunga la vita.</li><li class="tip-item"><img src="/Ricettario/images/emoji/package.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Freezer: NON congelare. Le uova sode o barzotte perdono completamente la texture originale dopo lo scongelamento (l'albume diventa spugnoso e acquoso, il tuorlo granuloso). Prepara solo la quantità che consumi entro 3-4 giorni.</li><li class="tip-item"><img src="/Ricettario/images/emoji/package.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Rigenerazione: le Mayak Gyeran si servono sempre fredde o al massimo a temperatura ambiente (mai riscaldate). Se le hai conservate in frigo, estraile 10-15 minuti prima di servire per permettere al tuorlo di ammorbidirsi leggermente. Taglia sempre con un coltello affilato in un unico gesto deciso per non schiacciare il tuorlo cremoso.</li>
+      </ul>
+    </div>
+        
+    <div class="recipe-panel recipe-panel--spaced">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/open-book.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Glossario
+      </h2>
+      <dl class="glossary-list">
+        
+          <dt class="glossary-term">Mayak Gyeran</dt>
+          <dd class="glossary-def">Letteralmente 'uova droga' in coreano (마약계란): il nome si riferisce all'effetto 'dipendente' che queste uova creano. Piatto popolarissimo della cucina coreana moderna, diffuso dai mercati di Seoul.</dd>
+        
+          <dt class="glossary-term">Shock termico</dt>
+          <dd class="glossary-def">Trasferimento rapido di un alimento cotto in acqua ghiacciata per arrestare istantaneamente la cottura residua. Fondamentale per mantenere la texture desiderata nel tuorlo.</dd>
+        
+          <dt class="glossary-term">Cottura residua</dt>
+          <dd class="glossary-def">Il calore interno accumulato continua a cuocere l'alimento anche dopo averlo rimosso dal fuoco. Per le uova a cottura breve, può aumentare la consistenza del tuorlo di 1-2 minuti equivalenti se non si fa lo shock termico.</dd>
+        
+          <dt class="glossary-term">Bassinage</dt>
+          <dd class="glossary-def">Tecnica di aggiunta progressiva di un liquido durante la lavorazione di un impasto o di una marinata. Non applicata in questa ricetta, ma il principio di sciogliere gradualmente il miele nella soia segue logica simile.</dd>
+        
+          <dt class="glossary-term">Salsa di Soia Light</dt>
+          <dd class="glossary-def">Versione chiara della salsa di soia (生抽, 진간장 scuro vs 양조간장 chiaro): più salata e meno densa di quella scura, ideale per marinature dove non si vuole colorare eccessivamente l'albume in nero.</dd>
+        
+          <dt class="glossary-term">Umami</dt>
+          <dd class="glossary-def">Il quinto gusto fondamentale, percepito come saporito/ricco/profondo. Presente naturalmente nella salsa di soia, nella salsa di pesce e nel sesamo tostato. La combinazione di questi tre elementi moltiplica l'effetto umami per sinergia.</dd>
+        
+          <dt class="glossary-term">Maturazione in marinata</dt>
+          <dd class="glossary-def">Processo osmotico per cui la soluzione salina e aromatica penetra nell'albume e nel tuorlo nel tempo. Oltre 12 ore, la penetrazione raggiunge il cuore del tuorlo conferendogli colore ambrato e sapore complesso.</dd>
+        
+          <dt class="glossary-term">Salsa di pesce</dt>
+          <dd class="glossary-def">Condimento liquido fermentato a base di pesce e sale, comune nella cucina dell'Asia sud-orientale (Nam Pla tailandese, Nuoc Mam vietnamita). Aggiunge profondità umami senza un sapore riconoscibilmente 'di pesce'.</dd>
+        
+      </dl>
+    </div>
+      </div>
+    </section>
+  
+    </div><!-- /#app -->
+    </main>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__brand-name"><img src="/Ricettario/images/emoji/fire.png" width="20" height="20" alt=""
+                            class="fluent-emoji"> <span class="testo-gradiente">Ricettario Lab</span></div>
+                    <p class="footer__brand-desc">
+                        Ricettario personale. Ricette artigianali documentate con precisione tecnica per
+                        risultati replicabili al 100%.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="footer__col-title">Navigazione</h2>
+                    <ul class="footer__links">
+                        <li><a href="#home"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Home</a>
+                        </li>
+                        <li><a href="#ricette"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
+                                Ricette</a></li>
+                        <li><a href="#strumenti"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
+                                Strumenti</a></li>
+                        <li><a href="#chi-sono"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Chi
+                                Sono</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tutte le categorie, con path ASSOLUTI. I vecchi link erano
+                     relativi ("ricette/pane/"): giusti in homepage e rotti su
+                     ogni altra pagina, perché il footer è nel guscio condiviso
+                     e un path relativo si risolve contro l'URL della pagina che
+                     lo ospita. C'era anche una categoria «Pasta» che non esiste.
+                     Questo elenco è una copia di js/categories.js e non può non
+                     esserlo (markup statico): verifica-build.js controlla che
+                     le due liste coincidano, quindi se diverge la build si
+                     ferma. Sono anche gli unici link statici che rendono
+                     raggiungibili le pagine categoria dai crawler. -->
+                <div>
+                    <h2 class="footer__col-title">Categorie</h2>
+                    <ul class="footer__links">
+                        <li><a href="/Ricettario/ricette/primi/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Primi</a></li>
+                        <li><a href="/Ricettario/ricette/pane/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Pane</a></li>
+                        <li><a href="/Ricettario/ricette/pizza/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Pizza</a></li>
+                        <li><a href="/Ricettario/ricette/lievitati/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Lievitati</a></li>
+                        <li><a href="/Ricettario/ricette/dolci/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Dolci</a></li>
+                        <li><a href="/Ricettario/ricette/focaccia/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Focaccia</a></li>
+                        <li><a href="/Ricettario/ricette/conserve/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Conserve</a></li>
+                        <li><a href="/Ricettario/ricette/condimenti/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Condimenti</a></li>
+                        <li><a href="/Ricettario/ricette/secondi-piatti/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Secondi Piatti</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="footer__col-title">Stack</h2>
+                    <ul class="footer__links">
+                        <li><a href="#strumenti"><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Famag Grilletta</a></li>
+                        <li><a href="#strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Mix Tri-Farina</a></li>
+                        <li><a href="#strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Farine Professionali</a></li>
+                        <li><a href="#strumenti"><img src="/Ricettario/images/emoji/thermometer.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Termometro Laser</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <span>© <span id="current-year">2026</span> Ricettario Lab</span>
+                <div class="footer__social">
+                    <a href="https://github.com/devdomenicotatone/Ricettario" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
