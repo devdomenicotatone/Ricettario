@@ -58,7 +58,7 @@
         {
           "name": "Sale Fino",
           "note": "(sale kosher o marino fine)",
-          "grams": 10,
+          "grams": 14,
           "tokenId": "sale_rub"
         },
         {
@@ -92,7 +92,7 @@
         },
         {
           "name": "Brodo di Manzo",
-          "note": "(caldo, di buona qualità)",
+          "note": "(caldo e non salato: il fondo si riduce e il sale si concentra)",
           "grams": 500,
           "tokenId": "brodo_manzo"
         },
@@ -190,7 +190,7 @@
     },
     {
       "title": "Preparazione del Rub e Marinatura",
-      "text": "In una ciotolina, mescolare {paprika:8}g di paprika, {pepe_rub:5}g di pepe nero macinato grossolano, {sale_rub:10}g di sale fino, {timo:5}g di timo, {origano:5}g di origano e {zucchero_canna:8}g di zucchero di canna. In un secondo contenitore, lavorare a pasta {rosmarino:15}g di rosmarino tritato, {aglio_rub:20}g di aglio tritato e {olio_rub:30}g di olio EVO. Unire le due miscele fino a ottenere un composto denso e aromatico. Massaggiare il rub su tutta la superficie del brisket con pressione decisa, facendolo penetrare nelle pieghe e ricoprendo sia il lato del grasso sia il lato magro. Avvolgere in pellicola alimentare e lasciar riposare in frigorifero almeno {riposo_frigo:480!} minuti (idealmente overnight, {riposo_frigo_max:720!} minuti) per permettere al sale di disidratare leggermente la superficie e al rub di penetrare."
+      "text": "In una ciotolina, mescolare {paprika:8}g di paprika, {pepe_rub:5}g di pepe nero macinato grossolano, {sale_rub:14}g di sale fino, {timo:5}g di timo, {origano:5}g di origano e {zucchero_canna:8}g di zucchero di canna. In un secondo contenitore, lavorare a pasta {rosmarino:15}g di rosmarino tritato, {aglio_rub:20}g di aglio tritato e {olio_rub:30}g di olio EVO. Unire le due miscele fino a ottenere un composto denso e aromatico. Massaggiare il rub su tutta la superficie del brisket con pressione decisa, facendolo penetrare nelle pieghe e ricoprendo sia il lato del grasso sia il lato magro. Avvolgere in pellicola alimentare e lasciar riposare in frigorifero almeno {riposo_frigo:480!} minuti (idealmente overnight, {riposo_frigo_max:720!} minuti) per permettere al sale di disidratare leggermente la superficie e al rub di penetrare."
     },
     {
       "title": "Rosolare il Brisket",
@@ -202,7 +202,7 @@
     },
     {
       "title": "Brasatura Lenta in Forno",
-      "text": "Rimettere il brisket nella cocotte, con il lato del grasso rivolto verso l'alto: il grasso fondendosi bagnerà costantemente la carne sottostante. Il liquido di brasatura deve arrivare a circa metà altezza del pezzo di carne — se necessario aggiungere un po' di brodo caldo. Portare a leggero bollore sul fornello, poi coprire ermeticamente con il coperchio (o sigillare con doppio strato di alluminio) e trasferire in forno statico a {temp_forno:160!}°C. Cuocere per le prime {tempo_cottura_scoperto:60!} minuti senza coperchio, poi coprire e proseguire per altre {tempo_cottura_coperto:120!}–{tempo_cottura_coperto_max:150!} minuti. Ogni {frequenza_bagnatura:30!} minuti, aprire il forno e irrorare la superficie con il fondo di cottura usando un cucchiaio o un pennello. La cottura è completa quando la temperatura interna raggiunge {temp_interna:93!}–{temp_interna_max:96!}°C e uno stuzzicadenti o la sonda del termometro penetra senza resistenza, come se affondasse nel burro. Tempo totale indicativo: {tempo_totale:180!}–{tempo_totale_max:240!} minuti."
+      "text": "Rimettere il brisket nella cocotte, con il lato del grasso rivolto verso l'alto: il grasso fondendosi bagnerà costantemente la carne sottostante. Il liquido di brasatura deve arrivare a circa metà altezza del pezzo di carne — se necessario aggiungere un po' di brodo caldo. Portare a leggero bollore sul fornello, poi trasferire in forno statico a {temp_forno:160!}°C SENZA coperchio: i primi {tempo_cottura_scoperto:60!} minuti scoperti asciugano la superficie e formano la crosta. Coprire poi ermeticamente con il coperchio (o sigillare con doppio strato di alluminio) e proseguire per altri {tempo_cottura_coperto:150!}–{tempo_cottura_coperto_max:180!} minuti. Ogni {frequenza_bagnatura:30!} minuti, aprire il forno e irrorare la superficie con il fondo di cottura usando un cucchiaio o un pennello. La cottura è completa quando la temperatura interna raggiunge {temp_interna:93!}–{temp_interna_max:96!}°C e uno stuzzicadenti o la sonda del termometro penetra senza resistenza, come se affondasse nel burro. Tempo totale indicativo: {tempo_totale:210!}–{tempo_totale_max:240!} minuti."
     },
     {
       "title": "Riposo e Affettatura",
@@ -217,7 +217,7 @@
   "flourTable": [],
   "baking": {
     "temperature": "160°C statico",
-    "time": "180–240 minuti totali (30 min scoperto + 150–180 min coperto)",
+    "time": "210–240 minuti totali (60 min scoperto + 150–180 min coperto)",
     "tips": [
       "Usare forno STATICO, mai ventilato: il ventilato secca la superficie e impedisce la brasatura umida corretta",
       "Il brisket è cotto correttamente quando la temperatura interna raggiunge 93–96°C e la sonda penetra senza resistenza",
