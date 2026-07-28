@@ -30,3 +30,6 @@ public/pdf/
 ricette/**/*.backup.json
 ricette/**/*.pre-edit.json
 ricette/**/*.pre-gen.json
+
+# Cartella di lavoro del deploy (path Windows hardcoded: su Mac diventa una dir letterale)
+C\:\\tmp\\ghp-ricettario/
