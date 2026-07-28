@@ -349,6 +349,12 @@ function buildEntry(cat, file) {
     // chi filtra su questo campo cercava le ricette incomplete e non le
     // trovava. Ora la condizione è la stessa che usa il renderer.
     hasSensory: Boolean(raw.sensoryProfile?.axes?.length),
+    // Stessa lezione di hasSensory, un campo più in là: la condizione è quella
+    // del renderer del pannello (html-ricetta.js: `r.nutrition &&
+    // r.nutrition.macros`), non un `Boolean(raw.nutrition)` che direbbe `true`
+    // per un oggetto vuoto. Lo legge il filtro «Senza Profilo/Nutrizione»
+    // della dashboard.
+    hasNutrition: Boolean(raw.nutrition?.macros),
     hasStorage: Boolean(raw.storage),
     // `_generatedBy` (quale modello ha scritto la ricetta) NON entra qui: lo
     // legge solo la dashboard, e lo legge dal JSON della ricetta nel repo, non
