@@ -274,6 +274,16 @@ Pages serve dal branch `gh-pages`, aggiornato solo da quel comando.
 Il deploy è preceduto da `npm run check` con `&&`: se i dati sono incoerenti
 la pubblicazione si ferma prima di partire. È voluto, non aggirarlo.
 
+**E non si pubblica ciò che non è su GitHub.** `deploy-ghpages.js` chiede al
+server — non al riferimento locale, che può essere vecchio di ore — se il ramo
+corrente è avanti al suo remoto, e in quel caso si ferma. Il motivo sta nel
+punto 5 di [CHECKUP.md](./CHECKUP.md): pubblicare e versionare sono due gesti
+separati, e si è arrivati a **diciassette commit esistenti solo sul portatile**
+mentre undici deploy erano già partiti da lì — con la CI, che gira sul push a
+`main`, che non aveva mai visto quel codice. Se serve pubblicare lo stesso (ramo
+di prova, macchina senza rete) la via d'uscita è esplicita:
+`npm run deploy -- --comunque`.
+
 **Pubblica senza chiedere, se `npm run check` passa.** È il cancello a
 decidere: quando è verde, chiudi il lavoro con `npm run deploy` invece di
 fermarti a domandare. Se fallisce, non forzare — riporta cosa si è rotto.

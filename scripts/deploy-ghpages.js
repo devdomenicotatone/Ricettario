@@ -16,7 +16,11 @@ import { join, resolve } from 'path';
 
 const PROJECT_DIR = process.cwd();
 const DIST_DIR = join(PROJECT_DIR, 'dist');
-const COMMIT_MSG = process.argv[2] || 'deploy: aggiornamento GitHub Pages';
+const ARGOMENTI = process.argv.slice(2);
+// Le opzioni non sono il messaggio di commit: senza questo filtro
+// `npm run deploy -- --comunque` finiva a fare `git commit -m "--comunque"`.
+const COMMIT_MSG = ARGOMENTI.find(a => !a.startsWith('--')) || 'deploy: aggiornamento GitHub Pages';
+const COMUNQUE = ARGOMENTI.includes('--comunque');
 const DEPLOY_DIR = 'C:\\tmp\\ghp-ricettario';
 
 function run(cmd, cwd = PROJECT_DIR) {
@@ -43,8 +47,81 @@ function runSilent(cmd, cwd = PROJECT_DIR) {
     }
 }
 
+/**
+ * Non si pubblica quello che non è su GitHub.
+ *
+ * PERCHÉ ESISTE
+ * `npm run deploy` scrive su `gh-pages` senza chiedere niente a `main`:
+ * pubblicare e versionare sono due gesti separati, quindi il sito online può
+ * restare l'unico posto al mondo in cui un lavoro esiste — e contiene il
+ * *risultato*, non i sorgenti. Il 28/07/2026 sono arrivati a diciassette i
+ * commit presenti solo sul portatile mentre undici deploy erano già partiti da
+ * lì: la CI, che gira sul push a `main`, non aveva mai visto quel codice.
+ * È rientrato per coincidenza — un'altra sessione aperta sullo stesso repo ha
+ * spinto e se li è portati dietro — e un rischio che rientra per fortuna va
+ * trasformato in un controllo. Punto 5 di CHECKUP.md.
+ *
+ * COSA CONTROLLA, E COSA NO
+ * Solo che il ramo corrente non sia AVANTI al suo remoto. Non pretende che il
+ * remoto sia avanti (succede in continuazione quando si lavora su due
+ * sessioni), non guarda le modifiche non committate — quelle le vede
+ * `npm run check`, che gira prima — e non blocca se il ramo non è `main`.
+ *
+ * La via d'uscita è esplicita: `npm run deploy -- --comunque`. Serve davvero
+ * quando si pubblica da un ramo di prova o senza rete, e chiede di scriverlo
+ * invece di aggirare il controllo commentandolo.
+ */
+function controllaAllineamentoColRemoto() {
+    if (COMUNQUE) {
+        console.log('⚠️  --comunque: salto il controllo di allineamento con GitHub.\n');
+        return;
+    }
+
+    const ramo = runSilent('git rev-parse --abbrev-ref HEAD');
+    if (!ramo || ramo === 'HEAD') {
+        console.error('❌ HEAD staccato: non so quale ramo dovrei confrontare con GitHub.');
+        console.error('   Torna su un ramo, o pubblica con: npm run deploy -- --comunque');
+        process.exit(1);
+    }
+
+    // Il riferimento locale `origin/<ramo>` può essere vecchio di ore e
+    // risponderebbe di sì con comodo: si chiede al server.
+    const remoto = runSilent(`git ls-remote origin refs/heads/${ramo}`);
+    if (!remoto) {
+        console.error(`❌ Non riesco a leggere refs/heads/${ramo} da GitHub (rete assente, o il ramo là non esiste).`);
+        console.error('   Senza quella risposta non posso garantire che il codice pubblicato esista anche altrove.');
+        console.error(`   Spingi il ramo (git push -u origin ${ramo}), oppure: npm run deploy -- --comunque`);
+        process.exit(1);
+    }
+
+    const hashRemoto = remoto.split(/\s+/)[0];
+    const avanti = runSilent(`git rev-list --count ${hashRemoto}..HEAD`);
+
+    if (avanti && Number(avanti) > 0) {
+        const quanti = Number(avanti);
+        console.error(`❌ ${quanti} commit ${quanti === 1 ? 'è' : 'sono'} solo su questa macchina: `
+            + `«${ramo}» è avanti a origin/${ramo}.`);
+        console.error('   Pubblicare adesso metterebbe online codice che non esiste su GitHub e che');
+        console.error('   la CI non ha mai visto. Se il disco muore, quel lavoro non è da nessuna parte.');
+        console.error(`\n   git push origin ${ramo}\n`);
+        console.error('   Se è voluto (ramo di prova, deploy senza rete): npm run deploy -- --comunque');
+        process.exit(1);
+    }
+
+    console.log(`✅ «${ramo}» è allineato con GitHub.`);
+}
+
 async function deploy() {
     console.log('🚀 Deploy su GitHub Pages...\n');
+
+    // Per primo, perché è l'unico che decide SE pubblicare: gli altri
+    // controllano che la build sia completa, questo che il lavoro esista anche
+    // fuori da questa macchina. Vuole `origin`, e basta quello.
+    if (!runSilent('git remote get-url origin')) {
+        console.error('❌ Nessun remote "origin" configurato.');
+        process.exit(1);
+    }
+    controllaAllineamentoColRemoto();
 
     if (!existsSync(DIST_DIR)) {
         console.error('❌ Cartella dist/ non trovata. Esegui prima "vite build".');
@@ -67,12 +144,8 @@ async function deploy() {
         process.exit(1);
     }
 
-    // Ottieni URL remoto
+    // Già validato in testa: qui serve solo il valore.
     const remoteUrl = runSilent('git remote get-url origin');
-    if (!remoteUrl) {
-        console.error('❌ Nessun remote "origin" configurato.');
-        process.exit(1);
-    }
 
     // Identità da propagare al repo di deploy: è un repo a sé e non eredita
     // nulla da questo. Senza, `git commit` fallisce quando la macchina non ha
