@@ -24,4 +24,21 @@
         background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
+    /* In contrasto elevato (forced-colors) il browser rimuove i gradienti di
+       sfondo ma NON il riempimento trasparente del testo: le tre scritte
+       diventavano lettere trasparenti sopra niente — misurato con
+       l'emulazione: text-fill rgba(0,0,0,0) e background-image none su tutti
+       e tre gli usi. Qui il testo torna testo, col colore che decide il
+       sistema di chi guarda. */
+    @media (forced-colors: active) {
+        .testo-gradiente {
+            background: none;
+            /* CanvasText e non currentColor: currentColor si risolve sul
+               colore del tema del sito, che con la palette forzata CHIARA
+               resterebbe chiaro su bianco. CanvasText è il testo di sistema,
+               giusto per definizione in entrambe le palette. */
+            -webkit-text-fill-color: CanvasText;
+        }
+    }
 }

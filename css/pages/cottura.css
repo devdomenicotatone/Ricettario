@@ -1220,4 +1220,35 @@
             transition: none;
         }
     }
+
+    /* ── Contrasto elevato (forced-colors) ──
+       Questa modalità appiattisce gli sfondi: l'opzione scelta restava
+       distinta dalle altre solo da un velo d'alpha residuo — misurato con
+       l'emulazione: rgba(0,0,0,.15) contro rgb(0,0,0) — e il progresso, punti
+       del form e barra dei timer, spariva del tutto. I colori di sistema sono
+       gli unici che il forced-colors rispetta: SelectedItem è «elemento
+       selezionato» nel tema di chi guarda, ButtonText il tratto dei contorni. */
+    @media (forced-colors: active) {
+
+        .cottura-opzione[aria-pressed="true"] {
+            background-color: SelectedItem;
+            color: SelectedItemText;
+        }
+
+        .cottura-avanzamento__punto {
+            border: 1px solid ButtonText;
+        }
+
+        .cottura-avanzamento__punto.is-fatto {
+            background-color: SelectedItem;
+        }
+
+        .timer__barra {
+            border: 1px solid ButtonText;
+        }
+
+        .timer__barra span {
+            background-color: SelectedItem;
+        }
+    }
 }
