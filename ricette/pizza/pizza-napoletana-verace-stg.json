@@ -199,5 +199,38 @@
   "_generatedBy": "gemini-3.1",
   "_createdAt": "2026-04-27T22:01:13.604Z",
   "image": "images/ricette/pizza/pizza-napoletana-verace-stg.webp",
-  "imageAttribution": "📷 Foto: Willians Huerta — Pexels License via Pexels"
+  "imageAttribution": "📷 Foto: Willians Huerta — Pexels License via Pexels",
+  "sensoryProfile": {
+    "summary": "Una pizza di struttura classica e autentica, dove il cornicione alveolato e leggermente bruciato rivela una fermentazione lenta e disciplinata, con sentori di cereale tostato e lieve acidità lattica. Il condimento, fedele al disciplinare STG, offre una sinfonia mediterranea: la dolcezza ferrosa del San Marzano DOP si intreccia con la cremosità lattea del fiordilatte e il profumo erbaceo del basilico fresco, bilanciati dalla rotondità dell'olio extravergine. L'impasto, idratato al 63% e maturato 12-14 ore, esprime una scioglievolezza interna quasi vellutata, contrapposta alla leggera resistenza esterna impressa dalla cottura ad alta temperatura.",
+    "axes": [
+      {
+        "label": "Croccantezza Esterna",
+        "value": 7
+      },
+      {
+        "label": "Scioglievolezza Impasto",
+        "value": 8
+      },
+      {
+        "label": "Sapidità / Umami",
+        "value": 8
+      },
+      {
+        "label": "Equilibrio Condimento-Impasto",
+        "value": 9
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 8
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 232,
+    "macros": {
+      "carbs": 27,
+      "protein": 10,
+      "fat": 8
+    }
+  }
 }
