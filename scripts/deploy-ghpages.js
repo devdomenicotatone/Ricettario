@@ -5,7 +5,7 @@
  * - Primo deploy: crea orphan branch gh-pages con solo il contenuto di dist/
  * - Deploy successivi: aggiorna il branch e pusha solo il delta
  * 
- * Usa un worktree separato in C:\tmp\ghp per:
+ * Usa un worktree separato FUORI dal repo per:
  * 1. Non inquinare il repo principale
  * 2. Evitare "Filename too long" su Windows (path corto)
  */
@@ -13,6 +13,7 @@
 import { execSync } from 'child_process';
 import { existsSync, writeFileSync, mkdirSync, rmSync, cpSync, readdirSync } from 'fs';
 import { join, resolve } from 'path';
+import { tmpdir } from 'os';
 
 const PROJECT_DIR = process.cwd();
 const DIST_DIR = join(PROJECT_DIR, 'dist');
@@ -21,7 +22,14 @@ const ARGOMENTI = process.argv.slice(2);
 // `npm run deploy -- --comunque` finiva a fare `git commit -m "--comunque"`.
 const COMMIT_MSG = ARGOMENTI.find(a => !a.startsWith('--')) || 'deploy: aggiornamento GitHub Pages';
 const COMUNQUE = ARGOMENTI.includes('--comunque');
-const DEPLOY_DIR = 'C:\\tmp\\ghp-ricettario';
+// Su Windows il path resta CORTO di proposito (C:\tmp): la temp di sistema
+// (AppData\Local\Temp\…) è più lunga e riporterebbe i "Filename too long".
+// Altrove C:\tmp non esiste: la stringa diventava una directory LETTERALE
+// «C:\tmp\ghp-ricettario» nella radice del repo — su Mac è già finita
+// nell'indice come gitlink (v. commit 66a3e23). Quindi: os.tmpdir().
+const DEPLOY_DIR = process.platform === 'win32'
+    ? 'C:\\tmp\\ghp-ricettario'
+    : join(tmpdir(), 'ghp-ricettario');
 
 function run(cmd, cwd = PROJECT_DIR) {
     console.log(`   → ${cmd}`);
