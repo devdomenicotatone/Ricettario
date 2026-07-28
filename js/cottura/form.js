@@ -282,7 +282,7 @@ function cursore(campo, valore, range, passo, unita, etichetta) {
         <output class="cottura-cursore__valore" data-uscita="${esc(campo)}">${num(valore)} ${esc(unita)}</output>
         <input type="range" class="cottura-cursore__input"
                data-cursore="${esc(campo)}" data-unita="${esc(unita)}"
-               min="${range.min}" max="${range.max}" step="${passo}" value="${valore}"
+               min="${esc(range.min)}" max="${esc(range.max)}" step="${esc(passo)}" value="${esc(valore)}"
                aria-label="${esc(etichetta || campo)}">
         <div class="cottura-cursore__estremi">
           <span>${num(range.min)}</span><span>${num(range.max)}</span>
@@ -465,11 +465,31 @@ function imposta(s, campo, valore, dati) {
 
 // ── L'attrezzatura non cambia tra una cottura e l'altra ──
 
+/**
+ * Solo le quattro chiavi che `ricordaAttrezzatura` scrive davvero, e con il
+ * tipo che devono avere.
+ *
+ * Prima si restituiva l'oggetto letto da localStorage così com'era, con il
+ * solo controllo `typeof === 'object'`, e `montaForm` lo sovrapponeva allo
+ * stato DOPO `normalizza()` — cioè dopo il cancello che clampa i valori.
+ * Qualunque chiave passava, anche quelle che questo file non scrive mai: uno
+ * `spessore` arbitrario finiva nel `value=` di un `<input>`, e con il valore
+ * giusto ne usciva un attributo `onfocus` che eseguiva davvero (provato).
+ *
+ * Su GitHub Pages tutti i siti di un account condividono l'origine, quindi
+ * condividono anche il localStorage: non serve un attacco al Ricettario per
+ * scriverci dentro, basta un'altra pagina dello stesso account.
+ */
 function attrezzaturaRicordata() {
     try {
         const salvata = JSON.parse(localStorage.getItem(CHIAVE_ATTREZZATURA) || 'null');
         if (!salvata || typeof salvata !== 'object') return {};
-        return salvata;
+        const pulita = {};
+        if (typeof salvata.dispositivo === 'string') pulita.dispositivo = salvata.dispositivo;
+        for (const flag of ['sonda', 'deflettore', 'griglia_rialzata']) {
+            if (typeof salvata[flag] === 'boolean') pulita[flag] = salvata[flag];
+        }
+        return pulita;
     } catch {
         return {};
     }

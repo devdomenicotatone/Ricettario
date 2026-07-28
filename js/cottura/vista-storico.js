@@ -123,6 +123,18 @@ function pannelloEsito(piano, config) {
       </section>`;
 }
 
+/**
+ * Ogni valore passa da `esc`, compresi quelli che dovrebbero essere numeri.
+ *
+ * `num()` è solo `String(n).replace('.', ',')` e non protegge niente, e queste
+ * voci arrivano da localStorage, che `leggiStorico` valida solo nella forma
+ * esterna (versione + array), mai nei campi. Un `estrazione_c` contenente un
+ * tag immagine con `onerror` eseguiva all'apertura dello storico, senza un
+ * clic — provato, non dedotto.
+ *
+ * Nota per chi modifica: qui dentro non si scrivono commenti HTML, perché il
+ * markup è un template literal e i backtick di un commento lo chiuderebbero.
+ */
 function elencoPassate(voci, t) {
     return `
       <section class="piano__blocco">
@@ -144,9 +156,9 @@ function elencoPassate(voci, t) {
                 ${v.esito ? `<span class="storico__esito storico__esito--${esc(v.esito)}">${esc(ESITI.find(e => e.id === v.esito)?.nome || v.esito)}</span>` : ''}
               </div>
               <div class="storico__dati">
-                ${v.dominante === 'spessore' ? `${num(v.spessore)} cm` : `${num(v.peso)} kg`}
+                ${v.dominante === 'spessore' ? `${esc(num(v.spessore))} cm` : `${esc(num(v.peso))} kg`}
                 · ${esc(String(v.cottura).replace(/_/g, ' '))}
-                · estratta a ${v.estrazione_c} °C
+                · estratta a ${esc(v.estrazione_c)} °C
               </div>
               ${v.nota ? `<p class="storico__nota">${esc(v.nota)}</p>` : ''}
             </li>`).join('')}
