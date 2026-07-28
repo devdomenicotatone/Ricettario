@@ -21,5 +21,20 @@
 </head>
 <body>
     <!-- GitHub Pages SPA Redirect — see https://github.com/rafgraph/spa-github-pages -->
+    <!--
+        Con JavaScript attivo questo corpo non si vede: lo script qui sopra ha
+        già sostituito la pagina, e a dire «non trovata» ci pensa la SPA, che
+        conosce l'indirizzo chiesto (js/non-trovata.js). Senza JavaScript
+        resterebbe una pagina bianca, ed è l'unica del sito: tutte le altre
+        sono pre-renderizzate. Il link è assoluto perché questo file risponde
+        a QUALUNQUE profondità di percorso — "../" non saprebbe dove tornare —
+        e la base è la stessa che lo script conta con pathSegmentsToKeep.
+        scripts/verifica-build.js controlla che i due valori non divergano.
+    -->
+    <noscript>
+        <h1>Pagina non trovata</h1>
+        <p>L'indirizzo che hai aperto non corrisponde a nessuna pagina di questo sito.</p>
+        <p><a href="/Ricettario/">Torna alla home del Ricettario</a></p>
+    </noscript>
 </body>
 </html>
