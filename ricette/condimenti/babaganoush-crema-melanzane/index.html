@@ -51,7 +51,7 @@
             window.applicaColoreBarra(theme);
         })();
     </script>
-  <script type="module" crossorigin src="/Ricettario/assets/main-CKT5-adX.js"></script>
+  <script type="module" crossorigin src="/Ricettario/assets/main-lZFBZtGR.js"></script>
   <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-D6mH_z1p.css">
 
     <meta name="description" content="L'autentico caviale di melanzane mediorientale: una crema rustica dal sentore affumicato, arricchita con tahina, limone e aglio. Consistenza artigianale…">
@@ -139,7 +139,7 @@
       "text": "Trasferire la crema in una ciotola bassa in terracotta o ceramica, creando con il dorso di un cucchiaio dei leggeri avvallamenti circolari sulla superficie. Colmare questi solchi versando a filo 15g di olio EVO. Spolverare i bordi con 3g di paprika dolce, cospargere il centro con 5g di semi di sesamo tostati e decorare con 5g di foglie di menta fresca spezzate a mano per sprigionare gli oli essenziali. Servire a temperatura ambiente."
     }
   ],
-  "recipeYield": "circa 939 g di impasto",
+  "recipeYield": "circa 939 g",
   "cookTime": "PT45M",
   "totalTime": "PT45M",
   "nutrition": {
@@ -263,11 +263,11 @@
 
     <!-- ═══════════ RECIPE HERO ═══════════ -->
     <figure class="recipe-foto">
-    <div class="recipe-hero">
+    <div class="recipe-hero" data-ricetta="condimenti/babaganoush-crema-melanzane">
       <picture class="recipe-hero__picture">
-  <source srcset="/Ricettario/images/ricette/condimenti/babaganoush-crema-melanzane.avif" type="image/avif">
-  <source srcset="/Ricettario/images/ricette/condimenti/babaganoush-crema-melanzane.webp" type="image/webp">
-  <img src="/Ricettario/images/ricette/condimenti/babaganoush-crema-melanzane.webp" alt="Babaganoush" class="recipe-hero__img">
+  <source srcset="/Ricettario/images/ricette/condimenti/babaganoush-crema-melanzane-640.avif 640w, /Ricettario/images/ricette/condimenti/babaganoush-crema-melanzane.avif 1200w" sizes="100vw" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/condimenti/babaganoush-crema-melanzane-640.webp 640w, /Ricettario/images/ricette/condimenti/babaganoush-crema-melanzane.webp 1200w" sizes="100vw" type="image/webp">
+  <img src="/Ricettario/images/ricette/condimenti/babaganoush-crema-melanzane.webp" srcset="/Ricettario/images/ricette/condimenti/babaganoush-crema-melanzane-640.webp 640w, /Ricettario/images/ricette/condimenti/babaganoush-crema-melanzane.webp 1200w" sizes="100vw" width="1200" height="896" alt="Babaganoush" class="recipe-hero__img">
 </picture>
       <div class="container">
         <nav class="breadcrumb">
@@ -350,7 +350,7 @@
     <td class="ingredient-qty">3g</td>
   </tr>
         <tr class="ingredient-total-row" id="ingredient-total-row">
-          <th scope="row">Peso Totale Impasto</th>
+          <th scope="row">Peso Totale</th>
           <td class="ingredient-qty" id="ingredient-total-qty">939g</td>
         </tr>
       </table>
@@ -439,7 +439,7 @@
           </div>
 
           <p class="nutrition-disclaimer">
-            <em>Disclaimer: Valori medi calcolati tramite database USDA per l'intera ricetta. Considerano il calo peso da evaporazione. I valori effettivi possono variare in base ai marchi commerciali usati.</em>
+            <em>Disclaimer: Valori medi per 100 g di prodotto finito, calcolati tramite database USDA. Considerano il calo peso da evaporazione. I valori effettivi possono variare in base ai marchi commerciali usati.</em>
           </p>
         </div>
     </div>
@@ -520,16 +520,26 @@
                     </p>
                 </div>
 
+                <!-- URL veri con base assoluta, non ancore nude: il footer è nel
+                     guscio condiviso da TUTTE le pagine e #ricette/#strumenti/
+                     #chi-sono esistono solo in homepage — altrove un'ancora nuda
+                     lasciava l'URL con l'hash e la pagina ferma. Senza JavaScript
+                     l'URL basta da solo (carica la home e salta alla sezione);
+                     con JavaScript data-nav-section riusa la gestione della
+                     navbar in router.js: da una pagina interna porta in home e
+                     poi scrolla alla sezione, in homepage resta il salto nativo.
+                     La forma dell'URL è la stessa dei breadcrumb
+                     (js/html-ricetta.js: base + "#ricette"). -->
                 <div>
                     <h2 class="footer__col-title">Navigazione</h2>
                     <ul class="footer__links">
-                        <li><a href="#home"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Home</a>
+                        <li><a href="/Ricettario/"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Home</a>
                         </li>
-                        <li><a href="#ricette"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
+                        <li><a href="/Ricettario/#ricette" data-nav-section="ricette"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
                                 Ricette</a></li>
-                        <li><a href="#strumenti"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
                                 Strumenti</a></li>
-                        <li><a href="#chi-sono"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Chi
+                        <li><a href="/Ricettario/#chi-sono" data-nav-section="chi-sono"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Chi
                                 Sono</a></li>
                     </ul>
                 </div>
@@ -571,13 +581,13 @@
                 <div>
                     <h2 class="footer__col-title">Stack</h2>
                     <ul class="footer__links">
-                        <li><a href="#strumenti"><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Famag Grilletta</a></li>
-                        <li><a href="#strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Mix Tri-Farina</a></li>
-                        <li><a href="#strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Farine Professionali</a></li>
-                        <li><a href="#strumenti"><img src="/Ricettario/images/emoji/thermometer.png" width="14" height="14" alt=""
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/thermometer.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Termometro Laser</a></li>
                     </ul>
                 </div>

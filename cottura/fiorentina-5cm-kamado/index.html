@@ -51,7 +51,7 @@
             window.applicaColoreBarra(theme);
         })();
     </script>
-  <script type="module" crossorigin src="/Ricettario/assets/main-CKT5-adX.js"></script>
+  <script type="module" crossorigin src="/Ricettario/assets/main-lZFBZtGR.js"></script>
   <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-D6mH_z1p.css">
 
     <meta name="description" content="Piano di cottura a fasi per Fiorentina / T-bone da 5 cm su kamado: 1,3-1,7 h in tutto, estrazione a 48 °C, temperature di camera, gestione delle valvole e…">
@@ -439,6 +439,12 @@
 
           
 
+          
+            <section class="piano__blocco">
+              <h2 class="piano__blocco-titolo">Cinque centimetri: comanda la camera, non l'orologio</h2>
+              <p>Su 45-55 minuti di indiretta l'errore che pesa non è il cronometro, è la camera: quindici gradi sopra i 120 °C previsti accorciano la stima di circa il 15%, sette minuti buoni sul massimo. Prima di appoggiare la carne conviene che il kamado sia fermo sul numero da qualche minuto, non che ci stia solo passando davanti.</p><p>A metà del tempo il cuore segna 29 °C e sembra un guasto. Non lo è: i primi 25 gradi arrivano in mezz'ora scarsa, gli ultimi 19 si prendono tutto il resto, perché la salita rallenta man mano che il cuore si avvicina a quella della camera. I checkpoint scritti nel piano esistono per questo momento esatto.</p><p>Il riposo qui vale un grado di cottura intero: si estrae a 48 °C e i 6,5 °C di carryover portano il cuore ai 54 del target da soli. Estrarre «al numero giusto», cioè a 54, significherebbe ritrovarsi oltre la media: l'energia accumulata in cinque centimetri di strati esterni non chiede il permesso.</p><p>A questo spessore la fiorentina prende i ritmi di un piccolo arrosto: mezz'ora abbondante prima di vedere 30 °C al cuore, e ogni apertura del coperchio per dare un'occhiata butta giù la camera e allunga il conto. La sonda serve anche a questo: a lasciare il coperchio chiuso.</p>
+            </section>
+
           <section class="piano__blocco">
             <h2 class="piano__blocco-titolo">Carbone</h2>
             <p>Cestello a metà. Riempi comunque senza risparmiare: il carbone che non brucia lo ritrovi alla prossima cottura, mentre restare a secco a metà no.</p>
@@ -481,16 +487,26 @@
                     </p>
                 </div>
 
+                <!-- URL veri con base assoluta, non ancore nude: il footer è nel
+                     guscio condiviso da TUTTE le pagine e #ricette/#strumenti/
+                     #chi-sono esistono solo in homepage — altrove un'ancora nuda
+                     lasciava l'URL con l'hash e la pagina ferma. Senza JavaScript
+                     l'URL basta da solo (carica la home e salta alla sezione);
+                     con JavaScript data-nav-section riusa la gestione della
+                     navbar in router.js: da una pagina interna porta in home e
+                     poi scrolla alla sezione, in homepage resta il salto nativo.
+                     La forma dell'URL è la stessa dei breadcrumb
+                     (js/html-ricetta.js: base + "#ricette"). -->
                 <div>
                     <h2 class="footer__col-title">Navigazione</h2>
                     <ul class="footer__links">
-                        <li><a href="#home"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Home</a>
+                        <li><a href="/Ricettario/"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Home</a>
                         </li>
-                        <li><a href="#ricette"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
+                        <li><a href="/Ricettario/#ricette" data-nav-section="ricette"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
                                 Ricette</a></li>
-                        <li><a href="#strumenti"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
                                 Strumenti</a></li>
-                        <li><a href="#chi-sono"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Chi
+                        <li><a href="/Ricettario/#chi-sono" data-nav-section="chi-sono"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Chi
                                 Sono</a></li>
                     </ul>
                 </div>
@@ -532,13 +548,13 @@
                 <div>
                     <h2 class="footer__col-title">Stack</h2>
                     <ul class="footer__links">
-                        <li><a href="#strumenti"><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Famag Grilletta</a></li>
-                        <li><a href="#strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Mix Tri-Farina</a></li>
-                        <li><a href="#strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Farine Professionali</a></li>
-                        <li><a href="#strumenti"><img src="/Ricettario/images/emoji/thermometer.png" width="14" height="14" alt=""
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/thermometer.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Termometro Laser</a></li>
                     </ul>
                 </div>

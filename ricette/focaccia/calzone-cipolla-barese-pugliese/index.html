@@ -51,7 +51,7 @@
             window.applicaColoreBarra(theme);
         })();
     </script>
-  <script type="module" crossorigin src="/Ricettario/assets/main-CKT5-adX.js"></script>
+  <script type="module" crossorigin src="/Ricettario/assets/main-lZFBZtGR.js"></script>
   <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-D6mH_z1p.css">
 
     <meta name="description" content="L'autentica ricetta pugliese del calzone di cipolla: impasto fragrante all'olio e vino bianco, farcito con sponsali dolci, olive, acciughe e uvetta.">
@@ -146,7 +146,7 @@
       "text": "Bucherellare uniformemente la superficie del calzone con una forchetta per permettere la fuoriuscita del vapore durante la cottura ed evitare rigonfiamenti. Spennellare un velo sottile di olio EVO su tutta la superficie per favorire una doratura ottimale."
     }
   ],
-  "recipeYield": "circa 2607 g di impasto",
+  "recipeYield": "circa 2607 g",
   "cookTime": "PT45M",
   "totalTime": "PT45M",
   "nutrition": {
@@ -270,11 +270,11 @@
 
     <!-- ═══════════ RECIPE HERO ═══════════ -->
     <figure class="recipe-foto">
-    <div class="recipe-hero">
+    <div class="recipe-hero" data-ricetta="focaccia/calzone-cipolla-barese-pugliese">
       <picture class="recipe-hero__picture">
-  <source srcset="/Ricettario/images/ricette/focaccia/calzone-cipolla-barese-pugliese.avif" type="image/avif">
-  <source srcset="/Ricettario/images/ricette/focaccia/calzone-cipolla-barese-pugliese.webp" type="image/webp">
-  <img src="/Ricettario/images/ricette/focaccia/calzone-cipolla-barese-pugliese.webp" alt="Calzone di Cipolla Barese" class="recipe-hero__img">
+  <source srcset="/Ricettario/images/ricette/focaccia/calzone-cipolla-barese-pugliese-640.avif 640w, /Ricettario/images/ricette/focaccia/calzone-cipolla-barese-pugliese.avif 1200w" sizes="100vw" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/focaccia/calzone-cipolla-barese-pugliese-640.webp 640w, /Ricettario/images/ricette/focaccia/calzone-cipolla-barese-pugliese.webp 1200w" sizes="100vw" type="image/webp">
+  <img src="/Ricettario/images/ricette/focaccia/calzone-cipolla-barese-pugliese.webp" srcset="/Ricettario/images/ricette/focaccia/calzone-cipolla-barese-pugliese-640.webp 640w, /Ricettario/images/ricette/focaccia/calzone-cipolla-barese-pugliese.webp 1200w" sizes="100vw" width="1200" height="896" alt="Calzone di Cipolla Barese" class="recipe-hero__img">
 </picture>
       <div class="container">
         <nav class="breadcrumb">
@@ -360,7 +360,7 @@
     <td class="ingredient-qty">2g</td>
   </tr>
         <tr class="ingredient-total-row" id="ingredient-total-row">
-          <th scope="row">Peso Totale Impasto</th>
+          <th scope="row">Peso Totale</th>
           <td class="ingredient-qty" id="ingredient-total-qty">~2.6kg</td>
         </tr>
       </table>
@@ -469,7 +469,7 @@
           </div>
 
           <p class="nutrition-disclaimer">
-            <em>Disclaimer: Valori medi calcolati tramite database USDA per l'intera ricetta. Considerano il calo peso da evaporazione. I valori effettivi possono variare in base ai marchi commerciali usati.</em>
+            <em>Disclaimer: Valori medi per 100 g di prodotto finito, calcolati tramite database USDA. Considerano il calo peso da evaporazione. I valori effettivi possono variare in base ai marchi commerciali usati.</em>
           </p>
         </div>
     </div>
@@ -574,16 +574,26 @@
                     </p>
                 </div>
 
+                <!-- URL veri con base assoluta, non ancore nude: il footer è nel
+                     guscio condiviso da TUTTE le pagine e #ricette/#strumenti/
+                     #chi-sono esistono solo in homepage — altrove un'ancora nuda
+                     lasciava l'URL con l'hash e la pagina ferma. Senza JavaScript
+                     l'URL basta da solo (carica la home e salta alla sezione);
+                     con JavaScript data-nav-section riusa la gestione della
+                     navbar in router.js: da una pagina interna porta in home e
+                     poi scrolla alla sezione, in homepage resta il salto nativo.
+                     La forma dell'URL è la stessa dei breadcrumb
+                     (js/html-ricetta.js: base + "#ricette"). -->
                 <div>
                     <h2 class="footer__col-title">Navigazione</h2>
                     <ul class="footer__links">
-                        <li><a href="#home"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Home</a>
+                        <li><a href="/Ricettario/"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Home</a>
                         </li>
-                        <li><a href="#ricette"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
+                        <li><a href="/Ricettario/#ricette" data-nav-section="ricette"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
                                 Ricette</a></li>
-                        <li><a href="#strumenti"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
                                 Strumenti</a></li>
-                        <li><a href="#chi-sono"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Chi
+                        <li><a href="/Ricettario/#chi-sono" data-nav-section="chi-sono"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Chi
                                 Sono</a></li>
                     </ul>
                 </div>
@@ -625,13 +635,13 @@
                 <div>
                     <h2 class="footer__col-title">Stack</h2>
                     <ul class="footer__links">
-                        <li><a href="#strumenti"><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Famag Grilletta</a></li>
-                        <li><a href="#strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Mix Tri-Farina</a></li>
-                        <li><a href="#strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Farine Professionali</a></li>
-                        <li><a href="#strumenti"><img src="/Ricettario/images/emoji/thermometer.png" width="14" height="14" alt=""
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/thermometer.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Termometro Laser</a></li>
                     </ul>
                 </div>
