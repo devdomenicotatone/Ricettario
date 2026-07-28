@@ -372,11 +372,27 @@ function initSensoryChart(recipe) {
 
       const { labels, values } = chartData;
 
-      // Spezza le label lunghe su più righe per i dispositivi mobili
+      // Le etichette non si tagliano MAI: se non entrano, vanno a capo.
+      // Prima l'a-capo scattava solo sotto i 600px (e metteva OGNI parola
+      // su una riga sua, «/» compresa): sul desktop «Alveolatura Mollica»
+      // e «Equilibrio Condimento-Impasto» uscivano dal canvas mozzate.
+      // Ora: spezzatura greedy per parole, sempre attiva — Chart.js
+      // accetta un array di righe come label multiriga. Una parola sola
+      // più lunga del massimo resta intera: meglio larga che monca.
       const isMobile = window.innerWidth < 600;
-      const formattedLabels = labels.map(l => {
-        if (isMobile && l.includes(' ')) return l.split(' ');
-        return l;
+      const maxRiga = isMobile ? 10 : 14;
+      const formattedLabels = labels.map(etichetta => {
+        const righe = [];
+        let riga = '';
+        for (const parola of String(etichetta).split(' ')) {
+          if (!riga) riga = parola;
+          // La «/» non va mai a capo da sola: si incolla alla riga corrente
+          // anche sforando di due caratteri («Tenerezza /» batte «/» orfana).
+          else if (parola === '/' || `${riga} ${parola}`.length <= maxRiga) riga += ` ${parola}`;
+          else { righe.push(riga); riga = parola; }
+        }
+        if (riga) righe.push(riga);
+        return righe.length > 1 ? righe : etichetta;
       });
 
       const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
