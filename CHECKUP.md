@@ -295,14 +295,22 @@ dalla stessa fonte da entrambe le parti — è la terza volta oggi che un
 controllo risulta cieco perché guarda due lati derivati da un'unica sorgente.
 
 **Chiuso il 28/07/2026.** Il disclaimer ora dice «Valori medi per 100 g di
-prodotto finito, calcolati tramite database USDA» — il resto della frase
-invariato; `generate-og.js` non andava toccato (era già coerente, e il
-pre-rendering passa dallo stesso builder). E il cancello non guarda più solo
-il numero: quando il JSON-LD dichiara `servingSize` con «100 g», pretende che
-il testo VISIBILE contenga la locuzione «per 100 g» — il solo «100 g» non
-basta, lo direbbe qualunque riga ingrediente. Provato nei due sensi: il
-markup vecchio bocciato anche con «100 g di farina» fra gli ingredienti, il
-nuovo passa; «intera ricetta» non compare più in nessun sorgente.
+prodotto finito» — il resto della frase invariato; `generate-og.js` non andava
+toccato (era già coerente, e il pre-rendering passa dallo stesso builder). E il
+cancello non guarda più solo il numero: quando il JSON-LD dichiara
+`servingSize` con «100 g», pretende che il testo VISIBILE contenga la
+locuzione «per 100 g» — il solo «100 g» non basta, lo direbbe qualunque riga
+ingrediente. Provato nei due sensi: il markup vecchio bocciato anche con
+«100 g di farina» fra gli ingredienti, il nuovo passa; «intera ricetta» non
+compare più in nessun sorgente.
+
+*Nota successiva, stesso giorno:* dalla frase è uscito anche «calcolati
+tramite database USDA». I valori li stima l'AI della dashboard, non un
+database: dichiarare una fonte che non c'è era un difetto della stessa specie
+della base sbagliata — solo meno visibile, perché nessun numero lo
+contraddiceva. Ora: «stimati sugli ingredienti della ricetta». Se un giorno i
+numeri arriveranno davvero da USDA (FoodData Central), la frase tornerà a
+nominarlo.
 
 ## 10. Il cancello sulle promesse alimentari ignora il femminile — CHIUSO
 
