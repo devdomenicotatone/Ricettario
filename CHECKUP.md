@@ -542,7 +542,10 @@ composita i frame (limite già dichiarato dalla seconda edizione):
   funzionare dopo la sostituzione;
 - **NVDA vero** su: annuncio «Dosi ×N», i cambi di stato dei timer col fuoco
   che segue, i due stati del pulsante «Fatta»;
-- la **tastiera vera** sui timer (anello di focus, scroll non strattonato).
+- la **tastiera vera** sui timer (anello di focus, scroll non strattonato);
+- il **contrasto elevato reale di Windows**: le regole `forced-colors` sono
+  misurate con l'emulazione nelle due palette (vedi la voce nella sezione
+  sotto), non col tema HCM attivato dal sistema.
 
 ## Cosa questo checkup NON ha guardato
 
@@ -572,12 +575,36 @@ state coperte dalla passata di chiusura.)
   duplicazione è misurata, la conseguenza è inferita — e ora anche la
   de-duplicazione è misurata, la conseguenza resta da vedere in Search
   Console.
-- **La modalità a contrasto elevato di Windows** (`forced-colors`) resta non
-  provata, ed era già il primo dei «non provati» del checkup accessibilità. Nei
-  19 fogli CSS non c'è una sola occorrenza di `forced-colors`,
-  `forced-color-adjust` o `prefers-contrast`.
-- **`npm audit` non è stato eseguito**, né confrontate le versioni installate
-  delle tre dipendenze.
+- ~~**La modalità a contrasto elevato di Windows** (`forced-colors`)~~ —
+  **provata e corretta il 28/07/2026**, con l'emulazione forced-colors via
+  protocollo di debug (Edge headless), in **entrambe le palette**. Tre difetti
+  misurati e chiusi: le tre scritte col gradiente (`.testo-gradiente`: hero,
+  footer, strumento in evidenza) erano **lettere trasparenti sopra niente** —
+  il forced-colors toglie il gradiente di sfondo ma non il riempimento
+  trasparente del testo — e ora tornano testo con `CanvasText` (bianco su
+  palette scura, nero su chiara, misurate entrambe; la prima stesura usava
+  `currentColor`, che segue il tema del sito e non la palette, ed era
+  sbagliata proprio nel caso chiaro); l'opzione scelta del calcolatore restava
+  distinta dalle altre solo da un velo d'alpha residuo (rgba(0,0,0,.15) su
+  nero) e ora porta `SelectedItem`/`SelectedItemText`; punti di avanzamento e
+  barra dei timer sparivano del tutto e ora hanno bordo `ButtonText` e
+  riempimento `SelectedItem` — la barra misurata con un timer davvero avviato.
+  Il cancello 9d non serviva toccarlo: guarda solo le media query di
+  larghezza. **Resta non provato l'HCM reale di Windows** (attivato dal
+  sistema, non emulato) e il comportamento su Firefox.
+- ~~**`npm audit` non è stato eseguito**~~ — **eseguito il 28/07/2026**: nel
+  repo del sito **4 vulnerabilità high**, tutte in vite ≤6.4.2 (path traversal
+  e file read del dev server, NTLMv2 su Windows — roba del server di sviluppo,
+  non del sito statico), chiuse con `npm audit fix` → **vite 6.4.3, zero
+  vulnerabilità**, build verificata dopo l'aggiornamento. Versioni
+  confrontate: vite 6.4.3 (il major 8.1.5 esiste e NON è stato preso: due
+  major in un colpo si fanno a parte, con calma), chart.js 4.5.1 e gh-pages
+  6.3.0 correnti. Fuori dal repo, `tools/` (non versionato qui) aveva
+  basic-ftp critical e body-parser: ripuliti col fix non-breaking, più sharp
+  0.34.5→0.35.3 (4 CVE ereditate da libvips, resize di prova verde). Restano
+  lì 7 high che sono **un solo advisory** (brace-expansion, DoS) in fondo alla
+  catena puppeteer-extra: si chiudono solo rompendo quella catena, e per
+  tooling locale che lavora su input propri non vale il rischio oggi.
 
 ## Cosa è stato proposto e scartato
 
