@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brisket in Stile Toscano — Ricettario Lab</title>
+    <!-- Il manifest e la favicon puntano ai file di `public/`, serviti così come
+         sono, e NON alla copia che Vite hashera dentro /assets/.
+         Il manifest è il motivo: Vite riscrive gli URL nell'HTML ma non quelli
+         DENTRO un file JSON, quindi da /assets/ il suo `"src": "favicon.svg"`
+         risolveva a /assets/favicon.svg e `"start_url": "./"` a /assets/ —
+         404 tutti e due, cioè una PWA che all'avvio apriva una pagina che non
+         esiste. Servito da /Ricettario/, gli stessi percorsi relativi tornano
+         giusti, e restano giusti anche se un domani cambia la base.
+         La favicon la seguo per non tenerne due copie identiche in giro. -->
+    <link rel="icon" type="image/svg+xml" href="/Ricettario/favicon.svg">
+    <link rel="apple-touch-icon" href="/Ricettario/assets/apple-touch-icon-DVCrky5e.png">
+    <link rel="manifest" href="/Ricettario/site.webmanifest">
+    <!-- Lo script in fondo al <head> lo riscrive secondo il tema: qui c'è il
+         chiaro, che è anche il tema dichiarato su <html>. -->
+    <meta name="theme-color" content="#F2ECE4">
+
+    <!-- Open Graph — Social Sharing Card -->
+
+    <!-- Twitter / X Card -->
+
+    <!-- Font serviti da qui, non da Google: vedi css/base/fonts.css.
+         Il preload evita che il testo resti col font di sistema mentre il
+         CSS che li dichiara viene ancora scaricato. -->
+    <link rel="preload" href="/Ricettario/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/Ricettario/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- FOUC Prevention: applica tema prima del rendering -->
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = saved || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+
+            /* Barra del browser = fondo della navbar, misurato (88% di
+               --color-surface-1 su --color-surface-0). Unica copia dei due
+               valori: main.js chiama questa funzione, non li riscrive.
+               Perché non è più #C2884D: CHECKUP-CSS.md, punto 4. */
+            const COLORI_BARRA = { light: '#F2ECE4', dark: '#170E0A' };
+            window.applicaColoreBarra = function (t) {
+                const meta = document.querySelector('meta[name="theme-color"]');
+                if (meta && COLORI_BARRA[t]) meta.setAttribute('content', COLORI_BARRA[t]);
+            };
+            window.applicaColoreBarra(theme);
+        })();
+    </script>
+  <script type="module" crossorigin src="/Ricettario/assets/main-DyIr7wsD.js"></script>
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-BvCxNhbZ.css">
+
+    <meta name="description" content="Punta di petto di manzo brasata lentamente con vino rosso toscano, rosmarino, aglio e brodo. Carne tenera che si scioglie in bocca.">
+    <link rel="canonical" href="https://devdomenicotatone.github.io/Ricettario/ricette/secondi-piatti/brisket-stile-toscano/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Brisket in Stile Toscano">
+    <meta property="og:description" content="Punta di petto di manzo brasata lentamente con vino rosso toscano, rosmarino, aglio e brodo. Carne tenera che si scioglie in bocca.">
+    <meta property="og:url" content="https://devdomenicotatone.github.io/Ricettario/ricette/secondi-piatti/brisket-stile-toscano/">
+    <meta property="og:image" content="https://devdomenicotatone.github.io/Ricettario/images/ricette/secondi-piatti/brisket-stile-toscano.webp">
+    <meta property="og:site_name" content="Ricettario Lab">
+    <meta property="og:locale" content="it_IT">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Brisket in Stile Toscano">
+    <meta name="twitter:description" content="Punta di petto di manzo brasata lentamente con vino rosso toscano, rosmarino, aglio e brodo. Carne tenera che si scioglie in bocca.">
+    <meta name="twitter:image" content="https://devdomenicotatone.github.io/Ricettario/images/ricette/secondi-piatti/brisket-stile-toscano.webp">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Brisket in Stile Toscano",
+  "description": "Punta di petto di manzo brasata lentamente con vino rosso toscano, rosmarino, aglio e brodo. Carne tenera che si scioglie in bocca.",
+  "url": "https://devdomenicotatone.github.io/Ricettario/ricette/secondi-piatti/brisket-stile-toscano/",
+  "author": {
+    "@type": "Organization",
+    "name": "Ricettario Lab"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ricettario Lab"
+  },
+  "recipeCategory": "Secondi Piatti",
+  "inLanguage": "it-IT",
+  "image": [
+    "https://devdomenicotatone.github.io/Ricettario/images/ricette/secondi-piatti/brisket-stile-toscano.webp"
+  ],
+  "datePublished": "2026-07-28",
+  "keywords": "brisket, punta di petto, manzo, brasato, cottura lenta, secondo piatto, forno, vino rosso, toscano, senza glutine",
+  "recipeIngredient": [
+    "2000 g Punta di Petto di Manzo (brisket flat, intero con cappello di grasso)",
+    "15 g Rosmarino Fresco (foglie tritate finemente)",
+    "20 g Aglio (spicchi tritati finemente o pressati)",
+    "30 g Olio Extravergine di Oliva (per formare la pasta aromatica)",
+    "8 g Paprika Dolce in Polvere (affumicata o dolce, a piacere)",
+    "5 g Pepe Nero (macinato fresco, grossolano)",
+    "10 g Sale Fino (sale kosher o marino fine)",
+    "5 g Timo Essiccato (in polvere o sfogliato)",
+    "5 g Origano Essiccato (mediterraneo)",
+    "8 g Zucchero di Canna Scuro (cassonade, per il bark caramellato)",
+    "200 g Vino Rosso Toscano Secco (Chianti, Morellino o Sangiovese)",
+    "500 g Brodo di Manzo (caldo, di buona qualità)",
+    "30 g Concentrato di Pomodoro (doppio concentrato)",
+    "120 g Cipolla Dorata (media, tritata grossolanamente)",
+    "100 g Carota (media, tagliata a rondelle)",
+    "20 g Aceto Balsamico di Modena (IGP, per profondità di sapore)",
+    "30 g Olio Extravergine di Oliva (per rosolare)",
+    "2 g Foglia di Alloro (fresca o essiccata)",
+    "40 g Prezzemolo Fresco (tritato grossolanamente)",
+    "60 g Olio Extravergine di Oliva (fruttato, alta qualità)",
+    "20 g Capperi sotto Sale (dissalati e tritati)",
+    "15 g Succo di Limone (fresco, non da bottiglia)",
+    "3 g Scorza di Limone (grattugiata, non trattato)",
+    "5 g Aglio (spicchio tritato finissimo)",
+    "2 g Sale e Pepe (q.b. per aggiustare)"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Trimming della Carne",
+      "text": "Estrarre il 2000g di punta di petto dal frigo almeno 60 minuti prima della lavorazione (idealmente la sera prima per il rub a secco). Con un coltello affilato da disosso, rimuovere il grasso in eccesso lasciando uno strato omogeneo di circa 6–8mm sul cappello superiore (fat cap): questo strato protegge la carne durante la lunga cottura e fondendosi la mantiene umida. Eliminare eventuali membrane dure, nervetti e strati di grasso interstiziale spesso. Asciugare accuratamente la superficie con carta assorbente: la carne deve essere perfettamente asciutta per permettere una corretta adesione del rub e la formazione del bark."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Preparazione del Rub e Marinatura",
+      "text": "In una ciotolina, mescolare 8g di paprika, 5g di pepe nero macinato grossolano, 10g di sale fino, 5g di timo, 5g di origano e 8g di zucchero di canna. In un secondo contenitore, lavorare a pasta 15g di rosmarino tritato, 20g di aglio tritato e 30g di olio EVO. Unire le due miscele fino a ottenere un composto denso e aromatico. Massaggiare il rub su tutta la superficie del brisket con pressione decisa, facendolo penetrare nelle pieghe e ricoprendo sia il lato del grasso sia il lato magro. Avvolgere in pellicola alimentare e lasciar riposare in frigorifero almeno 480 minuti (idealmente overnight, 720 minuti) per permettere al sale di disidratare leggermente la superficie e al rub di penetrare."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Rosolare il Brisket",
+      "text": "Estrarre il brisket dal frigo 30 minuti prima della cottura. Preriscaldare il forno statico a 160°C. In una cocotte o teglia da forno profonda con coperchio (oppure una teglia alta da coprire con doppio strato di foil), scaldare 30g di olio EVO a fuoco medio-alto fino al punto di fumo. Rosolare il brisket sul lato del grasso per circa 4–5 minuti, poi girarlo e rosolare brevemente anche il lato magro per 2–3 minuti per lato. L'obiettivo è caramellare il rub esterno (reazione di Maillard), non cuocere l'interno. La superficie deve essere bruna e leggermente crostosa. Togliere il brisket e tenerlo da parte."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Soffritto e Fondo Aromatico",
+      "text": "Nella stessa cocotte, senza pulirla (i residui di rosolatura sono fondamentali per il sapore del fondo), aggiungere 120g di cipolla tritata e 100g di carota a rondelle. Rosolare a fuoco medio per 5–6 minuti coperto, mescolando occasionalmente, fino a quando le verdure iniziano ad ammorbidirsi. Togliere il coperchio, alzare leggermente la fiamma e aggiungere 30g di concentrato di pomodoro. Tostare il concentrato per 2 minuti mescolando continuamente finché non scurisce leggermente (questo elimina l'acidità e intensifica il sapore umami). Sfumare con 200g di vino rosso toscano e deglassare raschiando bene il fondo con un cucchiaio di legno per staccare tutti i succhi caramellati. Lasciar evaporare l'alcol per 3–4 minuti a fuoco vivace. Aggiungere 500g di brodo di manzo caldo, 20g di aceto balsamico e la 2g di foglia d'alloro. Portare a un fremito."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Brasatura Lenta in Forno",
+      "text": "Rimettere il brisket nella cocotte, con il lato del grasso rivolto verso l'alto: il grasso fondendosi bagnerà costantemente la carne sottostante. Il liquido di brasatura deve arrivare a circa metà altezza del pezzo di carne — se necessario aggiungere un po' di brodo caldo. Portare a leggero bollore sul fornello, poi coprire ermeticamente con il coperchio (o sigillare con doppio strato di alluminio) e trasferire in forno statico a 160°C. Cuocere per le prime 60 minuti senza coperchio, poi coprire e proseguire per altre 120–150 minuti. Ogni 30 minuti, aprire il forno e irrorare la superficie con il fondo di cottura usando un cucchiaio o un pennello. La cottura è completa quando la temperatura interna raggiunge 93–96°C e uno stuzzicadenti o la sonda del termometro penetra senza resistenza, come se affondasse nel burro. Tempo totale indicativo: 180–240 minuti."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 6,
+      "name": "Riposo e Affettatura",
+      "text": "Togliere la cocotte dal forno. Trasferire il brisket su un tagliere con scanalatura per raccogliere i succhi e coprire con un foglio di alluminio a tenda (non sigillato) per 20–30 minuti: questo passaggio è fondamentale — le fibre muscolari si rilassano e redistribuiscono i succhi, evitando che la carne si asciughi al taglio. Nel frattempo, filtrare il fondo di cottura attraverso un colino a maglie strette, sgrassare con un cucchiaio o con una salsiera separagrasso, e far ridurre a fuoco vivace per 8–10 minuti fino a ottenere una salsa lucida e nappante. Affettare il brisket SEMPRE contro le fibre (perpendicolarmente alla direzione dei fasci muscolari) in fette spesse circa 8–10mm. Disporre le fette su piatto da portata e nappare con il fondo ristretto."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 7,
+      "name": "Preparazione della Gremolata",
+      "text": "Mentre il brisket riposa, preparare la gremolata (facoltativa ma altamente consigliata — bilancia la ricchezza della carne con freschezza acida). In una ciotola, combinare 40g di prezzemolo tritato grossolanamente, 60g di olio EVO fruttato, 20g di capperi dissalati e tritati, 15g di succo di limone fresco, 3g di scorza di limone grattugiata e 5g di aglio tritato finissimo. Aggiustare di 2g di sale e pepe. Mescolare bene e lasciar riposare almeno 20 minuti a temperatura ambiente affinché i sapori si amalgamino. Servire un cucchiaio di gremolata sopra ogni porzione di brisket affettato, con la gremolata rimanente in una ciotolina a lato."
+    }
+  ],
+  "recipeYield": "circa 3253 g",
+  "cookTime": "PT3H",
+  "totalTime": "PT3H",
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "servingSize": "100 g",
+    "calories": "218 kcal",
+    "carbohydrateContent": "4 g",
+    "proteinContent": "24 g",
+    "fatContent": "11 g"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://devdomenicotatone.github.io/Ricettario/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Secondi Piatti",
+      "item": "https://devdomenicotatone.github.io/Ricettario/ricette/secondi-piatti/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Brisket in Stile Toscano",
+      "item": "https://devdomenicotatone.github.io/Ricettario/ricette/secondi-piatti/brisket-stile-toscano/"
+    }
+  ]
+}
+    </script>
+</head>
+
+<body>
+
+    <!-- Skip to content — Accessibilità
+         Punta a #contenuto, non a #ricette: quell'ancora esiste solo in
+         homepage, quindi su 104 pagine su 105 il primo tasto che un utente da
+         tastiera premeva non faceva niente. -->
+    <a href="#contenuto" class="skip-link">Vai al contenuto principale</a>
+
+    <!-- Annuncio dei cambi di pagina.
+         Questo sito è una SPA: cliccando una ricetta il contenuto viene
+         sostituito senza che il browser carichi niente, quindi uno screen
+         reader non ha nulla da annunciare e l'utente resta a chiedersi se il
+         clic abbia funzionato. Il router ci scrive dentro il titolo della
+         pagina nuova.
+         Sta FUORI da #app di proposito: se il router lo sostituisse a ogni
+         navigazione, l'assistente non lo starebbe più osservando e
+         l'annuncio andrebbe perso. Dev'essere lo stesso elemento, sempre. -->
+    <div id="annuncio-pagina" class="solo-lettore" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- ═══════════ NAVBAR ═══════════
+         Il `<header>` AVVOLGE il `<nav>`, non lo sostituisce. Sono due
+         landmark diversi e servono a due cose diverse: `banner` dice «qui
+         comincia l'intestazione del sito», `navigation` dice «qui ci sono i
+         link per spostarsi». Rinominare il tag avrebbe tolto il secondo per
+         aggiungere il primo, e il secondo è quello che serve per saltare
+         dentro il menu.
+         Non ha classe né stile: contiene solo un elemento `position: fixed`,
+         quindi è alto zero e non sposta niente. Non deve prendere `transform`,
+         `filter` o `contain`: diventerebbe il blocco contenitore della navbar,
+         che smetterebbe di essere ancorata alla finestra. -->
+    <header>
+    <nav class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="/Ricettario/" class="navbar__logo" data-link>
+                <div class="navbar__logo-icon">
+                    <img src="/Ricettario/assets/wheat-logo-TzPQBXOF.svg" alt="" aria-hidden="true" width="40" height="56">
+                </div>
+
+                <span>Ricettario Lab</span>
+            </a>
+
+            <ul class="navbar__links" id="nav-links">
+                <li><a href="#ricette" data-nav-section="ricette" class="active">Ricette</a></li>
+                <!-- Route vera, non un'ancora: il router la intercetta come link interno -->
+                <li><a href="/Ricettario/cottura/">Cottura</a></li>
+                <li><a href="#strumenti" data-nav-section="strumenti">Strumenti</a></li>
+                <li><a href="#chi-sono" data-nav-section="chi-sono">Chi Sono</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+                <span class="theme-toggle__icon theme-toggle__sun"><i data-lucide="sun"></i></span>
+                <span class="theme-toggle__icon theme-toggle__moon"><i data-lucide="moon"></i></span>
+            </button>
+
+            <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    </header>
+
+    <!-- ═══════════ SPA CONTAINER ═══════════ -->
+    <!-- Il router carica dinamicamente il contenuto qui -->
+    <!-- ═══════════ CONTENUTO PRINCIPALE ═══════════
+         `main` avvolge il contenitore #app invece di sostituirlo. Il tag di
+         apertura e quello di chiusura di #app, con il commento che lo segue,
+         sono portanti in tre punti: generate-og.js li cerca per iniettare il
+         contenuto pre-renderizzato e si ferma con "template incompatibile" se
+         non li trova, e verifica-build.js ci estrae il testo visibile per
+         confrontarlo con i dati strutturati. Rinominare quel tag li avrebbe
+         rotti tutti e tre.
+
+         `tabindex="-1"` non è decorativo: senza, lo skip link porta la pagina
+         quaggiù ma lascia il focus della tastiera dov'era, e il tasto dopo
+         riparte dalla navbar. Con -1 l'elemento riceve il focus da programma
+         pur restando fuori dall'ordine di tabulazione. -->
+    <main id="contenuto" tabindex="-1">
+    <div id="app">
+
+    <!-- ═══════════ RECIPE HERO ═══════════ -->
+    <figure class="recipe-foto">
+    <div class="recipe-hero" data-ricetta="secondi-piatti/brisket-stile-toscano">
+      <picture class="recipe-hero__picture">
+  <source srcset="/Ricettario/images/ricette/secondi-piatti/brisket-stile-toscano-640.avif 640w, /Ricettario/images/ricette/secondi-piatti/brisket-stile-toscano.avif 1800w" sizes="100vw" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/secondi-piatti/brisket-stile-toscano-640.webp 640w, /Ricettario/images/ricette/secondi-piatti/brisket-stile-toscano.webp 1800w" sizes="100vw" type="image/webp">
+  <img src="/Ricettario/images/ricette/secondi-piatti/brisket-stile-toscano.webp" srcset="/Ricettario/images/ricette/secondi-piatti/brisket-stile-toscano-640.webp 640w, /Ricettario/images/ricette/secondi-piatti/brisket-stile-toscano.webp 1800w" sizes="100vw" width="1800" height="1201" alt="Brisket in Stile Toscano" class="recipe-hero__img">
+</picture>
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="/Ricettario/" data-link>Home</a>
+          <span class="breadcrumb__separator">›</span>
+          <a href="/Ricettario/#ricette" data-link>Ricette</a>
+          <span class="breadcrumb__separator">›</span>
+          <a href="/Ricettario/ricette/secondi-piatti/" data-link>Secondi Piatti</a>
+          <span class="breadcrumb__separator">›</span>
+          <span>Brisket in Stile Toscano</span>
+        </nav>
+
+        <div class="recipe-hero__content">
+          <div class="recipe-hero__tags">
+            <span class="tag tag--category"><img src="/Ricettario/images/emoji/fork-and-knife.png" width="22" height="22" alt="" class="fluent-emoji" loading="lazy"> Secondi Piatti</span>
+          </div>
+          <h1 class="recipe-hero__title">Brisket in Stile Toscano</h1>
+          <p class="recipe-hero__subtitle">Punta di petto brasata al forno con rub aromatico e fondo di cottura al vino rosso</p>
+        </div>
+      </div>
+    </div>
+    <figcaption class="recipe-foto__credito"><div class="container">Foto: Gil Goldman — <a href="https://www.pexels.com/license/" target="_blank" rel="license noopener nofollow">Pexels License</a> via <a href="https://www.pexels.com/photo/12645502/" target="_blank" rel="noopener nofollow">Pexels</a></div></figcaption></figure>
+
+    <!-- ═══════════ TECH BADGES ═══════════ -->
+    <div class="container" style="padding-top: 40px;">
+      <div class="tech-badges">
+        
+        
+        
+        
+      </div>
+    </div>
+
+    <!-- ═══════════ RECIPE CONTENT ═══════════ -->
+    <section class="recipe-content" id="recipe-content">
+      <div class="container">
+        <div class="recipe-layout">
+
+          <!-- COLONNA SX: Ingredienti -->
+          <div>
+            
+    <div class="recipe-panel">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/shopping-cart.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Ingredienti Base
+      </h2>
+      
+      <table class="ingredients-table" id="ingredients-table" aria-label="Ingredienti e quantità">
+        <tr class="ingredient-section-header"><th colspan="2" scope="colgroup">Per la Carne</th></tr><tr>
+    <th scope="row">Punta di Petto di Manzo <span class="ingredient-note">(brisket flat, intero con cappello di grasso)</span></th>
+    <td class="ingredient-qty">2000g</td>
+  </tr><tr class="ingredient-section-header"><th colspan="2" scope="colgroup">Per il Rub Aromatico</th></tr><tr>
+    <th scope="row">Rosmarino Fresco <span class="ingredient-note">(foglie tritate finemente)</span></th>
+    <td class="ingredient-qty">15g</td>
+  </tr><tr>
+    <th scope="row">Aglio <span class="ingredient-note">(spicchi tritati finemente o pressati)</span></th>
+    <td class="ingredient-qty">20g</td>
+  </tr><tr>
+    <th scope="row">Olio Extravergine di Oliva <span class="ingredient-note">(per formare la pasta aromatica)</span></th>
+    <td class="ingredient-qty">30g</td>
+  </tr><tr>
+    <th scope="row">Paprika Dolce in Polvere <span class="ingredient-note">(affumicata o dolce, a piacere)</span></th>
+    <td class="ingredient-qty">8g</td>
+  </tr><tr>
+    <th scope="row">Pepe Nero <span class="ingredient-note">(macinato fresco, grossolano)</span></th>
+    <td class="ingredient-qty">5g</td>
+  </tr><tr>
+    <th scope="row">Sale Fino <span class="ingredient-note">(sale kosher o marino fine)</span></th>
+    <td class="ingredient-qty">10g</td>
+  </tr><tr>
+    <th scope="row">Timo Essiccato <span class="ingredient-note">(in polvere o sfogliato)</span></th>
+    <td class="ingredient-qty">5g</td>
+  </tr><tr>
+    <th scope="row">Origano Essiccato <span class="ingredient-note">(mediterraneo)</span></th>
+    <td class="ingredient-qty">5g</td>
+  </tr><tr>
+    <th scope="row">Zucchero di Canna Scuro <span class="ingredient-note">(cassonade, per il bark caramellato)</span></th>
+    <td class="ingredient-qty">8g</td>
+  </tr><tr class="ingredient-section-header"><th colspan="2" scope="colgroup">Per il Fondo di Brasatura</th></tr><tr>
+    <th scope="row">Vino Rosso Toscano Secco <span class="ingredient-note">(Chianti, Morellino o Sangiovese)</span></th>
+    <td class="ingredient-qty">200g</td>
+  </tr><tr>
+    <th scope="row">Brodo di Manzo <span class="ingredient-note">(caldo, di buona qualità)</span></th>
+    <td class="ingredient-qty">500g</td>
+  </tr><tr>
+    <th scope="row">Concentrato di Pomodoro <span class="ingredient-note">(doppio concentrato)</span></th>
+    <td class="ingredient-qty">30g</td>
+  </tr><tr>
+    <th scope="row">Cipolla Dorata <span class="ingredient-note">(media, tritata grossolanamente)</span></th>
+    <td class="ingredient-qty">120g</td>
+  </tr><tr>
+    <th scope="row">Carota <span class="ingredient-note">(media, tagliata a rondelle)</span></th>
+    <td class="ingredient-qty">100g</td>
+  </tr><tr>
+    <th scope="row">Aceto Balsamico di Modena <span class="ingredient-note">(IGP, per profondità di sapore)</span></th>
+    <td class="ingredient-qty">20g</td>
+  </tr><tr>
+    <th scope="row">Olio Extravergine di Oliva <span class="ingredient-note">(per rosolare)</span></th>
+    <td class="ingredient-qty">30g</td>
+  </tr><tr>
+    <th scope="row">Foglia di Alloro <span class="ingredient-note">(fresca o essiccata)</span></th>
+    <td class="ingredient-qty">2g</td>
+  </tr><tr class="ingredient-section-header"><th colspan="2" scope="colgroup">Per la Gremolata (facoltativa)</th></tr><tr>
+    <th scope="row">Prezzemolo Fresco <span class="ingredient-note">(tritato grossolanamente)</span></th>
+    <td class="ingredient-qty">40g</td>
+  </tr><tr>
+    <th scope="row">Olio Extravergine di Oliva <span class="ingredient-note">(fruttato, alta qualità)</span></th>
+    <td class="ingredient-qty">60g</td>
+  </tr><tr>
+    <th scope="row">Capperi sotto Sale <span class="ingredient-note">(dissalati e tritati)</span></th>
+    <td class="ingredient-qty">20g</td>
+  </tr><tr>
+    <th scope="row">Succo di Limone <span class="ingredient-note">(fresco, non da bottiglia)</span></th>
+    <td class="ingredient-qty">15g</td>
+  </tr><tr>
+    <th scope="row">Scorza di Limone <span class="ingredient-note">(grattugiata, non trattato)</span></th>
+    <td class="ingredient-qty">3g</td>
+  </tr><tr>
+    <th scope="row">Aglio <span class="ingredient-note">(spicchio tritato finissimo)</span></th>
+    <td class="ingredient-qty">5g</td>
+  </tr><tr>
+    <th scope="row">Sale e Pepe <span class="ingredient-note">(q.b. per aggiustare)</span></th>
+    <td class="ingredient-qty">2g</td>
+  </tr>
+        <tr class="ingredient-total-row" id="ingredient-total-row">
+          <th scope="row">Peso Totale</th>
+          <td class="ingredient-qty" id="ingredient-total-qty">~3.3kg</td>
+        </tr>
+      </table>
+    </div>
+            
+          </div>
+
+          <!-- COLONNA DX: Procedimento -->
+          <div>
+            
+    <div class="recipe-panel" id="steps-panel">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/gear.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Procedimento
+      </h2>
+      <ol class="steps-list">
+        <li class="step-item">
+            <strong>Trimming della Carne</strong>
+            <p>Estrarre il 2000g di punta di petto dal frigo almeno 60 minuti prima della lavorazione (idealmente la sera prima per il rub a secco). Con un coltello affilato da disosso, rimuovere il grasso in eccesso lasciando uno strato omogeneo di circa 6–8mm sul cappello superiore (fat cap): questo strato protegge la carne durante la lunga cottura e fondendosi la mantiene umida. Eliminare eventuali membrane dure, nervetti e strati di grasso interstiziale spesso. Asciugare accuratamente la superficie con carta assorbente: la carne deve essere perfettamente asciutta per permettere una corretta adesione del rub e la formazione del bark.</p>
+          </li><li class="step-item">
+            <strong>Preparazione del Rub e Marinatura</strong>
+            <p>In una ciotolina, mescolare 8g di paprika, 5g di pepe nero macinato grossolano, 10g di sale fino, 5g di timo, 5g di origano e 8g di zucchero di canna. In un secondo contenitore, lavorare a pasta 15g di rosmarino tritato, 20g di aglio tritato e 30g di olio EVO. Unire le due miscele fino a ottenere un composto denso e aromatico. Massaggiare il rub su tutta la superficie del brisket con pressione decisa, facendolo penetrare nelle pieghe e ricoprendo sia il lato del grasso sia il lato magro. Avvolgere in pellicola alimentare e lasciar riposare in frigorifero almeno 480 minuti (idealmente overnight, 720 minuti) per permettere al sale di disidratare leggermente la superficie e al rub di penetrare.</p>
+          </li><li class="step-item">
+            <strong>Rosolare il Brisket</strong>
+            <p>Estrarre il brisket dal frigo 30 minuti prima della cottura. Preriscaldare il forno statico a 160°C. In una cocotte o teglia da forno profonda con coperchio (oppure una teglia alta da coprire con doppio strato di foil), scaldare 30g di olio EVO a fuoco medio-alto fino al punto di fumo. Rosolare il brisket sul lato del grasso per circa 4–5 minuti, poi girarlo e rosolare brevemente anche il lato magro per 2–3 minuti per lato. L'obiettivo è caramellare il rub esterno (reazione di Maillard), non cuocere l'interno. La superficie deve essere bruna e leggermente crostosa. Togliere il brisket e tenerlo da parte.</p>
+          </li><li class="step-item">
+            <strong>Soffritto e Fondo Aromatico</strong>
+            <p>Nella stessa cocotte, senza pulirla (i residui di rosolatura sono fondamentali per il sapore del fondo), aggiungere 120g di cipolla tritata e 100g di carota a rondelle. Rosolare a fuoco medio per 5–6 minuti coperto, mescolando occasionalmente, fino a quando le verdure iniziano ad ammorbidirsi. Togliere il coperchio, alzare leggermente la fiamma e aggiungere 30g di concentrato di pomodoro. Tostare il concentrato per 2 minuti mescolando continuamente finché non scurisce leggermente (questo elimina l'acidità e intensifica il sapore umami). Sfumare con 200g di vino rosso toscano e deglassare raschiando bene il fondo con un cucchiaio di legno per staccare tutti i succhi caramellati. Lasciar evaporare l'alcol per 3–4 minuti a fuoco vivace. Aggiungere 500g di brodo di manzo caldo, 20g di aceto balsamico e la 2g di foglia d'alloro. Portare a un fremito.</p>
+          </li><li class="step-item">
+            <strong>Brasatura Lenta in Forno</strong>
+            <p>Rimettere il brisket nella cocotte, con il lato del grasso rivolto verso l'alto: il grasso fondendosi bagnerà costantemente la carne sottostante. Il liquido di brasatura deve arrivare a circa metà altezza del pezzo di carne — se necessario aggiungere un po' di brodo caldo. Portare a leggero bollore sul fornello, poi coprire ermeticamente con il coperchio (o sigillare con doppio strato di alluminio) e trasferire in forno statico a 160°C. Cuocere per le prime 60 minuti senza coperchio, poi coprire e proseguire per altre 120–150 minuti. Ogni 30 minuti, aprire il forno e irrorare la superficie con il fondo di cottura usando un cucchiaio o un pennello. La cottura è completa quando la temperatura interna raggiunge 93–96°C e uno stuzzicadenti o la sonda del termometro penetra senza resistenza, come se affondasse nel burro. Tempo totale indicativo: 180–240 minuti.</p>
+          </li><li class="step-item">
+            <strong>Riposo e Affettatura</strong>
+            <p>Togliere la cocotte dal forno. Trasferire il brisket su un tagliere con scanalatura per raccogliere i succhi e coprire con un foglio di alluminio a tenda (non sigillato) per 20–30 minuti: questo passaggio è fondamentale — le fibre muscolari si rilassano e redistribuiscono i succhi, evitando che la carne si asciughi al taglio. Nel frattempo, filtrare il fondo di cottura attraverso un colino a maglie strette, sgrassare con un cucchiaio o con una salsiera separagrasso, e far ridurre a fuoco vivace per 8–10 minuti fino a ottenere una salsa lucida e nappante. Affettare il brisket SEMPRE contro le fibre (perpendicolarmente alla direzione dei fasci muscolari) in fette spesse circa 8–10mm. Disporre le fette su piatto da portata e nappare con il fondo ristretto.</p>
+          </li><li class="step-item">
+            <strong>Preparazione della Gremolata</strong>
+            <p>Mentre il brisket riposa, preparare la gremolata (facoltativa ma altamente consigliata — bilancia la ricchezza della carne con freschezza acida). In una ciotola, combinare 40g di prezzemolo tritato grossolanamente, 60g di olio EVO fruttato, 20g di capperi dissalati e tritati, 15g di succo di limone fresco, 3g di scorza di limone grattugiata e 5g di aglio tritato finissimo. Aggiustare di 2g di sale e pepe. Mescolare bene e lasciar riposare almeno 20 minuti a temperatura ambiente affinché i sapori si amalgamino. Servire un cucchiaio di gremolata sopra ogni porzione di brisket affettato, con la gremolata rimanente in una ciotolina a lato.</p>
+          </li>
+      </ol>
+    </div>
+            
+          </div>
+
+        </div>
+
+        
+    <div class="recipe-panel sensory-panel recipe-panel--spaced">
+      <h2 class="recipe-panel__title">
+        <span><span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/star.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Dati Tecnici & Sensoriali</span>
+      </h2>
+      <div class="sensory-dominant">
+        <span class="sensory-dominant__badge">
+          👑 Tratto Dominante: Tenerezza / Scioglievolezza (9/10)
+        </span>
+      </div>
+      <table class="ingredients-table" aria-label="Profilo sensoriale, in scala da 1 a 10">
+        <tbody><tr><th scope="row">Tenerezza / Scioglievolezza</th><td>9 su 10</td></tr><tr><th scope="row">Croccantezza Crosta</th><td>6 su 10</td></tr><tr><th scope="row">Complessità Fermentativa</th><td>7 su 10</td></tr><tr><th scope="row">Sapidità</th><td>9 su 10</td></tr><tr><th scope="row">Complessità Aromatica</th><td>8 su 10</td></tr></tbody>
+      </table>
+      
+    <div class="sensory-note">
+      <h3 class="sensory-note__title">Note di Degustazione</h3>
+      <p class="sensory-note__text">"Un brisket di grande struttura e profondità: la lunga brasatura in fondo toscano regala una tenerezza quasi burrosa, con fibre che si aprono al taglio rilasciando succhi carichi di Maillard e riduzione vinosa. Il bark aromatico — rosmarino, aglio, paprika e zucchero di canna caramellato — costruisce una crosta densa e saporita che contrasta la scioglievolezza interna, mentre l'aceto balsamico e il vino rosso donano una complessità fermentativa-acida che nobilita il grasso fondente. La gremolata finale taglia con freschezza citrica e iodata, riequilibrando il corpo con vivacità."</p>
+    </div>
+  
+      
+      <h3 class="sensory-note__title">Analisi Nutrizionale</h3>
+
+        <div class="nutrition-content">
+          <div class="nutrition-kcal">
+              <span class="nutrition-kcal__value">218</span>
+              <span class="nutrition-kcal__unit">Kcal</span>
+          </div>
+
+          <div class="nutrition-bar">
+            <div class="nutrition-bar__segment nutrition-bar__segment--carbs" style="width: 10.256410256410255%;" title="Carboidrati"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--prot" style="width: 61.53846153846154%;" title="Proteine"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--fat" style="width: 28.205128205128204%;" title="Grassi"></div>
+          </div>
+
+          <div class="nutrition-legend">
+            <div class="nutrition-legend__item">
+              <div class="nutrition-legend__dot nutrition-legend__dot--carbs"></div>
+              <span>Carboidrati <strong>4g</strong></span>
+            </div>
+            <div class="nutrition-legend__item">
+              <div class="nutrition-legend__dot nutrition-legend__dot--prot"></div>
+              <span>Proteine <strong>24g</strong></span>
+            </div>
+            <div class="nutrition-legend__item">
+              <div class="nutrition-legend__dot nutrition-legend__dot--fat"></div>
+              <span>Grassi <strong>11g</strong></span>
+            </div>
+          </div>
+
+          <p class="nutrition-disclaimer">
+            <em>Disclaimer: Valori medi per 100 g di prodotto finito, stimati sugli ingredienti della ricetta. Considerano il calo peso da evaporazione. I valori effettivi possono variare in base ai marchi commerciali usati.</em>
+          </p>
+        </div>
+    </div>
+        
+        
+    <div class="alert alert--danger recipe-panel--spaced">
+      <span class="alert__icon"><img src="/Ricettario/images/emoji/prohibited.png" width="28" height="28" alt="" class="fluent-emoji" loading="lazy"></span>
+      <div class="alert__content">
+        <strong>ALERT PROFESSIONALE</strong>
+        <p><img src="/Ricettario/images/emoji/warning.png" width="18" height="18" alt="" class="fluent-emoji" loading="lazy"> NON saltare il riposo post-cottura di almeno 20 minuti: tagliare il brisket immediatamente fuori dal forno libera tutti i succhi sul tagliere, lasciando la carne secca e stopposa. Inoltre, non tagliare MAI il brisket nel senso delle fibre — la direzione di taglio è critica tanto quanto la cottura stessa.</p>
+      </div>
+    </div>
+        
+    <div class="recipe-panel recipe-panel--spaced">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/fire.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Cottura
+      </h2>
+      <div class="tech-badges">
+        <div class="tech-badge"><img src="/Ricettario/images/emoji/thermometer.png" width="18" height="18" alt="" class="fluent-emoji" loading="lazy"> Temperatura: <span class="tech-badge__value">&nbsp;160°C statico</span></div>
+        <div class="tech-badge"><img src="/Ricettario/images/emoji/stopwatch.png" width="18" height="18" alt="" class="fluent-emoji" loading="lazy"> Tempo: <span class="tech-badge__value">&nbsp;180–240 minuti totali (30 min scoperto + 150–180 min coperto)</span></div>
+      </div>
+      <ul class="tip-list">
+        <li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Usare forno STATICO, mai ventilato: il ventilato secca la superficie e impedisce la brasatura umida corretta</li><li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Il brisket è cotto correttamente quando la temperatura interna raggiunge 93–96°C e la sonda penetra senza resistenza</li><li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Utilizzare una cocotte in ghisa smaltata (Le Creuset, Staub) per una distribuzione del calore uniforme e una brasatura perfetta</li><li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Posizionare la teglia sul ripiano centrale del forno</li><li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Mai aprire il forno più spesso di ogni 30 minuti per bagnare la carne — ogni apertura disperde il calore e rallenta la cottura</li>
+      </ul>
+    </div>
+        
+    <div class="recipe-panel recipe-panel--spaced">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/light-bulb.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Pro Tips
+      </h2>
+      <ul class="tip-list">
+        <li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Il brisket migliora il giorno dopo: cuocilo la sera, lascialo raffreddare nel fondo di cottura, metti in frigo tutta la notte. Il giorno dopo il grasso solidificato si rimuove facilmente, e il collagene solidificato trasforma il fondo in una gelatina concentratissima — scalda piano e affetta a freddo prima di scaldare le fette nel fondo ristretto per un risultato superiore.</li><li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Se disponibile, usa la tecnica 'butcher paper stall': quando la temperatura interna si blocca intorno a 68–74°C (la 'stall', dovuta all'evaporazione dei liquidi), avvolgi il brisket in carta da macellaio (non alluminio) inumidita, che rallenta l'evaporazione senza intrappolare troppo vapore — il bark rimane croccante mentre la carne supera il plateau più rapidamente.</li><li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Per un profilo aromatico più complesso, prepara il rub a secco 24–48h prima, applicalo, e lascia marinare la carne scoperta su una griglia in frigo: la superficie si asciuga ulteriormente (effetto pellicola), il sale penetra in profondità e il bark che si formerà sarà notevolmente più spesso e saporito.</li>
+      </ul>
+    </div>
+        
+    <div class="recipe-panel recipe-panel--spaced">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/package.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Conservazione
+      </h2>
+      <ul class="tip-list">
+        <li class="tip-item"><img src="/Ricettario/images/emoji/package.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> In frigorifero: conservare il brisket avanzato intero (non affettato) immerso nel suo fondo di cottura in contenitore ermetico. Dura 4–5 giorni. Riscaldare coperto in forno a 150°C per 20–30 minuti irrorando ogni 10 minuti con il fondo.</li><li class="tip-item"><img src="/Ricettario/images/emoji/package.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> In freezer: affettare il brisket freddo, disporre le fette in sacchetti sottovuoto o in contenitori ermetici con abbondante fondo di cottura (il liquido protegge dalla brina da freezer). Congela fino a 3 mesi. Scongelare in frigo overnight.</li><li class="tip-item"><img src="/Ricettario/images/emoji/package.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Rigenerazione ottimale: per le fette congelate, scongelare in frigo 12h, poi scaldare in padella antiaderente con il fondo di cottura a fuoco medio-basso per 3–4 minuti per lato fino a temperatura — mai microonde che asciuga le fibre e distrugge la texture.</li>
+      </ul>
+    </div>
+        
+    <div class="recipe-panel recipe-panel--spaced">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/open-book.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Glossario
+      </h2>
+      <dl class="glossary-list">
+        
+          <dt class="glossary-term">Trimming</dt>
+          <dd class="glossary-def">Operazione di pulizia della carne che consiste nel rimuovere il grasso in eccesso, le membrane dure e i nervetti, lasciando uno strato uniforme di grasso protettivo sulla superficie.</dd>
+        
+          <dt class="glossary-term">Rub</dt>
+          <dd class="glossary-def">Miscela di spezie, erbe e aromi secchi (a volte con olio per formare una pasta) che viene massaggiata sulla superficie della carne prima della cottura per formare una crosta aromatica.</dd>
+        
+          <dt class="glossary-term">Bark</dt>
+          <dd class="glossary-def">La crosta scura, caramellata e aromatica che si forma sulla superficie esterna del brisket durante la cottura prolungata. È il risultato della reazione di Maillard e della caramellizzazione degli zuccheri del rub.</dd>
+        
+          <dt class="glossary-term">Reazione di Maillard</dt>
+          <dd class="glossary-def">Reazione chimica tra amminoacidi e zuccheri riducenti che avviene ad alta temperatura, responsabile della colorazione bruna e dello sviluppo di sapori complessi durante la rosolatura della carne.</dd>
+        
+          <dt class="glossary-term">Brasatura</dt>
+          <dd class="glossary-def">Tecnica di cottura mista (prima rosolatura a secco poi cottura umida coperta) che utilizza liquidi di cottura (brodo, vino) per ammorbidire tagli di carne duri e ricchi di collagene.</dd>
+        
+          <dt class="glossary-term">Collagene</dt>
+          <dd class="glossary-def">Proteina del tessuto connettivo abbondante nella punta di petto. A temperature di 70–85°C, dopo lunghe esposizioni al calore, si converte in gelatina, donando morbidezza e succosità alla carne.</dd>
+        
+          <dt class="glossary-term">Contro le fibre</dt>
+          <dd class="glossary-def">Direzione di taglio perpendicolare all'orientamento dei fasci muscolari. Fondamentale per il brisket: tagliare nel senso sbagliato rende la carne gommosa e difficile da masticare.</dd>
+        
+          <dt class="glossary-term">Deglassatura</dt>
+          <dd class="glossary-def">Tecnica che consiste nell'aggiungere un liquido (vino, brodo) a una padella o cocotte calda dopo la rosolatura, raschiando i succhi caramellati attaccati al fondo per incorporarli nella salsa.</dd>
+        
+          <dt class="glossary-term">Nappare</dt>
+          <dd class="glossary-def">Versare una salsa sopra la carne in modo da ricoprirla uniformemente con uno strato lucido e denso.</dd>
+        
+          <dt class="glossary-term">Gremolata</dt>
+          <dd class="glossary-def">Condimento tradizionale italiano a base di prezzemolo, aglio e scorza di limone (in questo caso arricchito con olio e capperi). Aggiunge freschezza e acidità a piatti ricchi come la carne brasata.</dd>
+        
+          <dt class="glossary-term">Fat Cap</dt>
+          <dd class="glossary-def">Il cappello di grasso superiore del brisket. Viene mantenuto durante la cottura (ridotto a 6–8mm) perché, fondendosi lentamente, impermeabilizza e lubrifica la carne sottostante.</dd>
+        
+          <dt class="glossary-term">Riposo (resting)</dt>
+          <dd class="glossary-def">Pausa post-cottura di 20–30 minuti sotto alluminio. Le fibre muscolari, contratte dal calore, si rilassano e riassorbono i succhi, evitando che fuoriescano al taglio.</dd>
+        
+      </dl>
+    </div>
+      </div>
+    </section>
+  
+    </div><!-- /#app -->
+    </main>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__brand-name"><img src="/Ricettario/images/emoji/fire.png" width="20" height="20" alt=""
+                            class="fluent-emoji"> <span class="testo-gradiente">Ricettario Lab</span></div>
+                    <p class="footer__brand-desc">
+                        Ricettario personale. Ricette artigianali documentate con precisione tecnica per
+                        risultati replicabili al 100%.
+                    </p>
+                </div>
+
+                <!-- URL veri con base assoluta, non ancore nude: il footer è nel
+                     guscio condiviso da TUTTE le pagine e #ricette/#strumenti/
+                     #chi-sono esistono solo in homepage — altrove un'ancora nuda
+                     lasciava l'URL con l'hash e la pagina ferma. Senza JavaScript
+                     l'URL basta da solo (carica la home e salta alla sezione);
+                     con JavaScript data-nav-section riusa la gestione della
+                     navbar in router.js: da una pagina interna porta in home e
+                     poi scrolla alla sezione, in homepage resta il salto nativo.
+                     La forma dell'URL è la stessa dei breadcrumb
+                     (js/html-ricetta.js: base + "#ricette"). -->
+                <div>
+                    <h2 class="footer__col-title">Navigazione</h2>
+                    <ul class="footer__links">
+                        <li><a href="/Ricettario/"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Home</a>
+                        </li>
+                        <li><a href="/Ricettario/#ricette" data-nav-section="ricette"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
+                                Ricette</a></li>
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
+                                Strumenti</a></li>
+                        <li><a href="/Ricettario/#chi-sono" data-nav-section="chi-sono"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Chi
+                                Sono</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tutte le categorie, con path ASSOLUTI. I vecchi link erano
+                     relativi ("ricette/pane/"): giusti in homepage e rotti su
+                     ogni altra pagina, perché il footer è nel guscio condiviso
+                     e un path relativo si risolve contro l'URL della pagina che
+                     lo ospita. C'era anche una categoria «Pasta» che non esiste.
+                     Questo elenco è una copia di js/categories.js e non può non
+                     esserlo (markup statico): verifica-build.js controlla che
+                     le due liste coincidano, quindi se diverge la build si
+                     ferma. Sono anche gli unici link statici che rendono
+                     raggiungibili le pagine categoria dai crawler. -->
+                <div>
+                    <h2 class="footer__col-title">Categorie</h2>
+                    <ul class="footer__links">
+                        <li><a href="/Ricettario/ricette/primi/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Primi</a></li>
+                        <li><a href="/Ricettario/ricette/pane/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Pane</a></li>
+                        <li><a href="/Ricettario/ricette/pizza/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Pizza</a></li>
+                        <li><a href="/Ricettario/ricette/lievitati/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Lievitati</a></li>
+                        <li><a href="/Ricettario/ricette/dolci/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Dolci</a></li>
+                        <li><a href="/Ricettario/ricette/focaccia/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Focaccia</a></li>
+                        <li><a href="/Ricettario/ricette/conserve/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Conserve</a></li>
+                        <li><a href="/Ricettario/ricette/condimenti/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Condimenti</a></li>
+                        <li><a href="/Ricettario/ricette/secondi-piatti/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Secondi Piatti</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="footer__col-title">Stack</h2>
+                    <ul class="footer__links">
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Famag Grilletta</a></li>
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Mix Tri-Farina</a></li>
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Farine Professionali</a></li>
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/thermometer.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Termometro Laser</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <span>© <span id="current-year">2026</span> Ricettario Lab</span>
+                <div class="footer__social">
+                    <a href="https://github.com/devdomenicotatone/Ricettario" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

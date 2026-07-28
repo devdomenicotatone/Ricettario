@@ -1,0 +1,348 @@
+{
+  "title": "Brisket in Stile Toscano",
+  "slug": "brisket-stile-toscano",
+  "emoji": "🥩",
+  "description": "Punta di petto di manzo brasata lentamente con vino rosso toscano, rosmarino, aglio e brodo. Carne tenera che si scioglie in bocca.",
+  "subtitle": "Punta di petto brasata al forno con rub aromatico e fondo di cottura al vino rosso",
+  "category": "Secondi Piatti",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per la Carne",
+      "items": [
+        {
+          "name": "Punta di Petto di Manzo",
+          "note": "(brisket flat, intero con cappello di grasso)",
+          "grams": 2000,
+          "tokenId": "brisket"
+        }
+      ]
+    },
+    {
+      "group": "Per il Rub Aromatico",
+      "items": [
+        {
+          "name": "Rosmarino Fresco",
+          "note": "(foglie tritate finemente)",
+          "grams": 15,
+          "tokenId": "rosmarino"
+        },
+        {
+          "name": "Aglio",
+          "note": "(spicchi tritati finemente o pressati)",
+          "grams": 20,
+          "tokenId": "aglio_rub"
+        },
+        {
+          "name": "Olio Extravergine di Oliva",
+          "note": "(per formare la pasta aromatica)",
+          "grams": 30,
+          "tokenId": "olio_rub"
+        },
+        {
+          "name": "Paprika Dolce in Polvere",
+          "note": "(affumicata o dolce, a piacere)",
+          "grams": 8,
+          "tokenId": "paprika"
+        },
+        {
+          "name": "Pepe Nero",
+          "note": "(macinato fresco, grossolano)",
+          "grams": 5,
+          "tokenId": "pepe_rub"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(sale kosher o marino fine)",
+          "grams": 10,
+          "tokenId": "sale_rub"
+        },
+        {
+          "name": "Timo Essiccato",
+          "note": "(in polvere o sfogliato)",
+          "grams": 5,
+          "tokenId": "timo"
+        },
+        {
+          "name": "Origano Essiccato",
+          "note": "(mediterraneo)",
+          "grams": 5,
+          "tokenId": "origano"
+        },
+        {
+          "name": "Zucchero di Canna Scuro",
+          "note": "(cassonade, per il bark caramellato)",
+          "grams": 8,
+          "tokenId": "zucchero_canna"
+        }
+      ]
+    },
+    {
+      "group": "Per il Fondo di Brasatura",
+      "items": [
+        {
+          "name": "Vino Rosso Toscano Secco",
+          "note": "(Chianti, Morellino o Sangiovese)",
+          "grams": 200,
+          "tokenId": "vino_rosso"
+        },
+        {
+          "name": "Brodo di Manzo",
+          "note": "(caldo, di buona qualità)",
+          "grams": 500,
+          "tokenId": "brodo_manzo"
+        },
+        {
+          "name": "Concentrato di Pomodoro",
+          "note": "(doppio concentrato)",
+          "grams": 30,
+          "tokenId": "concentrato_pomodoro"
+        },
+        {
+          "name": "Cipolla Dorata",
+          "note": "(media, tritata grossolanamente)",
+          "grams": 120,
+          "tokenId": "cipolla"
+        },
+        {
+          "name": "Carota",
+          "note": "(media, tagliata a rondelle)",
+          "grams": 100,
+          "tokenId": "carota"
+        },
+        {
+          "name": "Aceto Balsamico di Modena",
+          "note": "(IGP, per profondità di sapore)",
+          "grams": 20,
+          "tokenId": "aceto_balsamico"
+        },
+        {
+          "name": "Olio Extravergine di Oliva",
+          "note": "(per rosolare)",
+          "grams": 30,
+          "tokenId": "olio_rosolatura"
+        },
+        {
+          "name": "Foglia di Alloro",
+          "note": "(fresca o essiccata)",
+          "grams": 2,
+          "tokenId": "alloro"
+        }
+      ]
+    },
+    {
+      "group": "Per la Gremolata (facoltativa)",
+      "items": [
+        {
+          "name": "Prezzemolo Fresco",
+          "note": "(tritato grossolanamente)",
+          "grams": 40,
+          "tokenId": "prezzemolo_gremolata"
+        },
+        {
+          "name": "Olio Extravergine di Oliva",
+          "note": "(fruttato, alta qualità)",
+          "grams": 60,
+          "tokenId": "olio_gremolata"
+        },
+        {
+          "name": "Capperi sotto Sale",
+          "note": "(dissalati e tritati)",
+          "grams": 20,
+          "tokenId": "capperi"
+        },
+        {
+          "name": "Succo di Limone",
+          "note": "(fresco, non da bottiglia)",
+          "grams": 15,
+          "tokenId": "succo_limone"
+        },
+        {
+          "name": "Scorza di Limone",
+          "note": "(grattugiata, non trattato)",
+          "grams": 3,
+          "tokenId": "scorza_limone"
+        },
+        {
+          "name": "Aglio",
+          "note": "(spicchio tritato finissimo)",
+          "grams": 5,
+          "tokenId": "aglio_gremolata"
+        },
+        {
+          "name": "Sale e Pepe",
+          "note": "(q.b. per aggiustare)",
+          "grams": 2,
+          "tokenId": "sale_gremolata"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Trimming della Carne",
+      "text": "Estrarre il {brisket:2000}g di punta di petto dal frigo almeno {tempo_riposo_ambiente:60!} minuti prima della lavorazione (idealmente la sera prima per il rub a secco). Con un coltello affilato da disosso, rimuovere il grasso in eccesso lasciando uno strato omogeneo di circa {spessore_grasso:6!}–{spessore_grasso_max:8!}mm sul cappello superiore (fat cap): questo strato protegge la carne durante la lunga cottura e fondendosi la mantiene umida. Eliminare eventuali membrane dure, nervetti e strati di grasso interstiziale spesso. Asciugare accuratamente la superficie con carta assorbente: la carne deve essere perfettamente asciutta per permettere una corretta adesione del rub e la formazione del bark."
+    },
+    {
+      "title": "Preparazione del Rub e Marinatura",
+      "text": "In una ciotolina, mescolare {paprika:8}g di paprika, {pepe_rub:5}g di pepe nero macinato grossolano, {sale_rub:10}g di sale fino, {timo:5}g di timo, {origano:5}g di origano e {zucchero_canna:8}g di zucchero di canna. In un secondo contenitore, lavorare a pasta {rosmarino:15}g di rosmarino tritato, {aglio_rub:20}g di aglio tritato e {olio_rub:30}g di olio EVO. Unire le due miscele fino a ottenere un composto denso e aromatico. Massaggiare il rub su tutta la superficie del brisket con pressione decisa, facendolo penetrare nelle pieghe e ricoprendo sia il lato del grasso sia il lato magro. Avvolgere in pellicola alimentare e lasciar riposare in frigorifero almeno {riposo_frigo:480!} minuti (idealmente overnight, {riposo_frigo_max:720!} minuti) per permettere al sale di disidratare leggermente la superficie e al rub di penetrare."
+    },
+    {
+      "title": "Rosolare il Brisket",
+      "text": "Estrarre il brisket dal frigo {anticipo_ambiente:30!} minuti prima della cottura. Preriscaldare il forno statico a {temp_forno_pre:160!}°C. In una cocotte o teglia da forno profonda con coperchio (oppure una teglia alta da coprire con doppio strato di foil), scaldare {olio_rosolatura:30}g di olio EVO a fuoco medio-alto fino al punto di fumo. Rosolare il brisket sul lato del grasso per circa {tempo_rosolatura_grasso:4!}–{tempo_rosolatura_grasso_max:5!} minuti, poi girarlo e rosolare brevemente anche il lato magro per {tempo_rosolatura_magro:2!}–{tempo_rosolatura_magro_max:3!} minuti per lato. L'obiettivo è caramellare il rub esterno (reazione di Maillard), non cuocere l'interno. La superficie deve essere bruna e leggermente crostosa. Togliere il brisket e tenerlo da parte."
+    },
+    {
+      "title": "Soffritto e Fondo Aromatico",
+      "text": "Nella stessa cocotte, senza pulirla (i residui di rosolatura sono fondamentali per il sapore del fondo), aggiungere {cipolla:120}g di cipolla tritata e {carota:100}g di carota a rondelle. Rosolare a fuoco medio per {tempo_soffritto:5!}–{tempo_soffritto_max:6!} minuti coperto, mescolando occasionalmente, fino a quando le verdure iniziano ad ammorbidirsi. Togliere il coperchio, alzare leggermente la fiamma e aggiungere {concentrato_pomodoro:30}g di concentrato di pomodoro. Tostare il concentrato per {tempo_tostatura:2!} minuti mescolando continuamente finché non scurisce leggermente (questo elimina l'acidità e intensifica il sapore umami). Sfumare con {vino_rosso:200}g di vino rosso toscano e deglassare raschiando bene il fondo con un cucchiaio di legno per staccare tutti i succhi caramellati. Lasciar evaporare l'alcol per {tempo_evaporazione:3!}–{tempo_evaporazione_max:4!} minuti a fuoco vivace. Aggiungere {brodo_manzo:500}g di brodo di manzo caldo, {aceto_balsamico:20}g di aceto balsamico e la {alloro:2}g di foglia d'alloro. Portare a un fremito."
+    },
+    {
+      "title": "Brasatura Lenta in Forno",
+      "text": "Rimettere il brisket nella cocotte, con il lato del grasso rivolto verso l'alto: il grasso fondendosi bagnerà costantemente la carne sottostante. Il liquido di brasatura deve arrivare a circa metà altezza del pezzo di carne — se necessario aggiungere un po' di brodo caldo. Portare a leggero bollore sul fornello, poi coprire ermeticamente con il coperchio (o sigillare con doppio strato di alluminio) e trasferire in forno statico a {temp_forno:160!}°C. Cuocere per le prime {tempo_cottura_scoperto:60!} minuti senza coperchio, poi coprire e proseguire per altre {tempo_cottura_coperto:120!}–{tempo_cottura_coperto_max:150!} minuti. Ogni {frequenza_bagnatura:30!} minuti, aprire il forno e irrorare la superficie con il fondo di cottura usando un cucchiaio o un pennello. La cottura è completa quando la temperatura interna raggiunge {temp_interna:93!}–{temp_interna_max:96!}°C e uno stuzzicadenti o la sonda del termometro penetra senza resistenza, come se affondasse nel burro. Tempo totale indicativo: {tempo_totale:180!}–{tempo_totale_max:240!} minuti."
+    },
+    {
+      "title": "Riposo e Affettatura",
+      "text": "Togliere la cocotte dal forno. Trasferire il brisket su un tagliere con scanalatura per raccogliere i succhi e coprire con un foglio di alluminio a tenda (non sigillato) per {tempo_riposo:20!}–{tempo_riposo_max:30!} minuti: questo passaggio è fondamentale — le fibre muscolari si rilassano e redistribuiscono i succhi, evitando che la carne si asciughi al taglio. Nel frattempo, filtrare il fondo di cottura attraverso un colino a maglie strette, sgrassare con un cucchiaio o con una salsiera separagrasso, e far ridurre a fuoco vivace per {tempo_riduzione:8!}–{tempo_riduzione_max:10!} minuti fino a ottenere una salsa lucida e nappante. Affettare il brisket SEMPRE contro le fibre (perpendicolarmente alla direzione dei fasci muscolari) in fette spesse circa {spessore_fetta:8!}–{spessore_fetta_max:10!}mm. Disporre le fette su piatto da portata e nappare con il fondo ristretto."
+    },
+    {
+      "title": "Preparazione della Gremolata",
+      "text": "Mentre il brisket riposa, preparare la gremolata (facoltativa ma altamente consigliata — bilancia la ricchezza della carne con freschezza acida). In una ciotola, combinare {prezzemolo_gremolata:40}g di prezzemolo tritato grossolanamente, {olio_gremolata:60}g di olio EVO fruttato, {capperi:20}g di capperi dissalati e tritati, {succo_limone:15}g di succo di limone fresco, {scorza_limone:3}g di scorza di limone grattugiata e {aglio_gremolata:5}g di aglio tritato finissimo. Aggiustare di {sale_gremolata:2}g di sale e pepe. Mescolare bene e lasciar riposare almeno {riposo_gremolata:20!} minuti a temperatura ambiente affinché i sapori si amalgamino. Servire un cucchiaio di gremolata sopra ogni porzione di brisket affettato, con la gremolata rimanente in una ciotolina a lato."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "baking": {
+    "temperature": "160°C statico",
+    "time": "180–240 minuti totali (30 min scoperto + 150–180 min coperto)",
+    "tips": [
+      "Usare forno STATICO, mai ventilato: il ventilato secca la superficie e impedisce la brasatura umida corretta",
+      "Il brisket è cotto correttamente quando la temperatura interna raggiunge 93–96°C e la sonda penetra senza resistenza",
+      "Utilizzare una cocotte in ghisa smaltata (Le Creuset, Staub) per una distribuzione del calore uniforme e una brasatura perfetta",
+      "Posizionare la teglia sul ripiano centrale del forno",
+      "Mai aprire il forno più spesso di ogni 30 minuti per bagnare la carne — ogni apertura disperde il calore e rallenta la cottura"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Trimming",
+      "definition": "Operazione di pulizia della carne che consiste nel rimuovere il grasso in eccesso, le membrane dure e i nervetti, lasciando uno strato uniforme di grasso protettivo sulla superficie."
+    },
+    {
+      "term": "Rub",
+      "definition": "Miscela di spezie, erbe e aromi secchi (a volte con olio per formare una pasta) che viene massaggiata sulla superficie della carne prima della cottura per formare una crosta aromatica."
+    },
+    {
+      "term": "Bark",
+      "definition": "La crosta scura, caramellata e aromatica che si forma sulla superficie esterna del brisket durante la cottura prolungata. È il risultato della reazione di Maillard e della caramellizzazione degli zuccheri del rub."
+    },
+    {
+      "term": "Reazione di Maillard",
+      "definition": "Reazione chimica tra amminoacidi e zuccheri riducenti che avviene ad alta temperatura, responsabile della colorazione bruna e dello sviluppo di sapori complessi durante la rosolatura della carne."
+    },
+    {
+      "term": "Brasatura",
+      "definition": "Tecnica di cottura mista (prima rosolatura a secco poi cottura umida coperta) che utilizza liquidi di cottura (brodo, vino) per ammorbidire tagli di carne duri e ricchi di collagene."
+    },
+    {
+      "term": "Collagene",
+      "definition": "Proteina del tessuto connettivo abbondante nella punta di petto. A temperature di 70–85°C, dopo lunghe esposizioni al calore, si converte in gelatina, donando morbidezza e succosità alla carne."
+    },
+    {
+      "term": "Contro le fibre",
+      "definition": "Direzione di taglio perpendicolare all'orientamento dei fasci muscolari. Fondamentale per il brisket: tagliare nel senso sbagliato rende la carne gommosa e difficile da masticare."
+    },
+    {
+      "term": "Deglassatura",
+      "definition": "Tecnica che consiste nell'aggiungere un liquido (vino, brodo) a una padella o cocotte calda dopo la rosolatura, raschiando i succhi caramellati attaccati al fondo per incorporarli nella salsa."
+    },
+    {
+      "term": "Nappare",
+      "definition": "Versare una salsa sopra la carne in modo da ricoprirla uniformemente con uno strato lucido e denso."
+    },
+    {
+      "term": "Gremolata",
+      "definition": "Condimento tradizionale italiano a base di prezzemolo, aglio e scorza di limone (in questo caso arricchito con olio e capperi). Aggiunge freschezza e acidità a piatti ricchi come la carne brasata."
+    },
+    {
+      "term": "Fat Cap",
+      "definition": "Il cappello di grasso superiore del brisket. Viene mantenuto durante la cottura (ridotto a 6–8mm) perché, fondendosi lentamente, impermeabilizza e lubrifica la carne sottostante."
+    },
+    {
+      "term": "Riposo (resting)",
+      "definition": "Pausa post-cottura di 20–30 minuti sotto alluminio. Le fibre muscolari, contratte dal calore, si rilassano e riassorbono i succhi, evitando che fuoriescano al taglio."
+    }
+  ],
+  "alert": "NON saltare il riposo post-cottura di almeno 20 minuti: tagliare il brisket immediatamente fuori dal forno libera tutti i succhi sul tagliere, lasciando la carne secca e stopposa. Inoltre, non tagliare MAI il brisket nel senso delle fibre — la direzione di taglio è critica tanto quanto la cottura stessa.",
+  "proTips": [
+    "Il brisket migliora il giorno dopo: cuocilo la sera, lascialo raffreddare nel fondo di cottura, metti in frigo tutta la notte. Il giorno dopo il grasso solidificato si rimuove facilmente, e il collagene solidificato trasforma il fondo in una gelatina concentratissima — scalda piano e affetta a freddo prima di scaldare le fette nel fondo ristretto per un risultato superiore.",
+    "Se disponibile, usa la tecnica 'butcher paper stall': quando la temperatura interna si blocca intorno a 68–74°C (la 'stall', dovuta all'evaporazione dei liquidi), avvolgi il brisket in carta da macellaio (non alluminio) inumidita, che rallenta l'evaporazione senza intrappolare troppo vapore — il bark rimane croccante mentre la carne supera il plateau più rapidamente.",
+    "Per un profilo aromatico più complesso, prepara il rub a secco 24–48h prima, applicalo, e lascia marinare la carne scoperta su una griglia in frigo: la superficie si asciuga ulteriormente (effetto pellicola), il sale penetra in profondità e il bark che si formerà sarà notevolmente più spesso e saporito."
+  ],
+  "storage": [
+    "In frigorifero: conservare il brisket avanzato intero (non affettato) immerso nel suo fondo di cottura in contenitore ermetico. Dura 4–5 giorni. Riscaldare coperto in forno a 150°C per 20–30 minuti irrorando ogni 10 minuti con il fondo.",
+    "In freezer: affettare il brisket freddo, disporre le fette in sacchetti sottovuoto o in contenitori ermetici con abbondante fondo di cottura (il liquido protegge dalla brina da freezer). Congela fino a 3 mesi. Scongelare in frigo overnight.",
+    "Rigenerazione ottimale: per le fette congelate, scongelare in frigo 12h, poi scaldare in padella antiaderente con il fondo di cottura a fuoco medio-basso per 3–4 minuti per lato fino a temperatura — mai microonde che asciuga le fibre e distrugge la texture."
+  ],
+  "imageKeywords": [
+    "beef brisket sliced braised oven",
+    "slow cooked brisket italian style",
+    "punta di petto brasata al forno",
+    "tuscan braised beef red wine",
+    "brisket au jus close up food photography",
+    "Rinderbrust geschmort toskanisch",
+    "beef brisket gremolata herb sauce"
+  ],
+  "tags": [
+    "brisket",
+    "punta di petto",
+    "manzo",
+    "brasato",
+    "cottura lenta",
+    "secondo piatto",
+    "forno",
+    "vino rosso",
+    "toscano",
+    "senza glutine"
+  ],
+  "_createdAt": "2026-07-28T09:32:03.972Z",
+  "image": "images/ricette/secondi-piatti/brisket-stile-toscano.webp",
+  "imageAttribution": "📷 Foto: Gil Goldman — Pexels License via Pexels",
+  "_originalImageUrl": "https://images.pexels.com/photos/12645502/pexels-photo-12645502.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+  "sensoryProfile": {
+    "summary": "Un brisket di grande struttura e profondità: la lunga brasatura in fondo toscano regala una tenerezza quasi burrosa, con fibre che si aprono al taglio rilasciando succhi carichi di Maillard e riduzione vinosa. Il bark aromatico — rosmarino, aglio, paprika e zucchero di canna caramellato — costruisce una crosta densa e saporita che contrasta la scioglievolezza interna, mentre l'aceto balsamico e il vino rosso donano una complessità fermentativa-acida che nobilita il grasso fondente. La gremolata finale taglia con freschezza citrica e iodata, riequilibrando il corpo con vivacità.",
+    "axes": [
+      {
+        "label": "Tenerezza / Scioglievolezza",
+        "value": 9
+      },
+      {
+        "label": "Croccantezza Crosta",
+        "value": 6
+      },
+      {
+        "label": "Complessità Fermentativa",
+        "value": 7
+      },
+      {
+        "label": "Sapidità",
+        "value": 9
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 8
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 218,
+    "macros": {
+      "carbs": 4,
+      "protein": 24,
+      "fat": 11
+    }
+  }
+}
