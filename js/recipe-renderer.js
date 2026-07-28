@@ -5,10 +5,11 @@
 
 import { BASE } from './router.js';
 import { initMadeToggle } from './recipe-bookmarks.js';
-import { refreshIcons } from './emoji.js';
+import { refreshIcons, fluentEmoji } from './emoji.js';
 import { CATEGORIES_BY_DIR } from './categories.js';
 import { mostraNonTrovata } from './non-trovata.js';
 import { formatDoseInline } from './token-dosi.js';
+import { annuncia } from './annuncio.js';
 // Il markup della pagina sta in html-ricetta.js, che è PURO e viene importato
 // anche dal pre-rendering: qui restano solo il fetch, il montaggio e le
 // funzionalità che hanno bisogno di un browser.
@@ -18,14 +19,42 @@ import { htmlRicetta } from './html-ricetta.js';
  * Renderizza una ricetta completa nel container #app.
  * @param {HTMLElement} app - Container DOM
  * @param {{ category: string, slug: string }} params
+ * @param {{ primoCaricamento?: boolean }} [contesto] - `primoCaricamento` è
+ *        true solo sul primissimo render dopo l'apertura del sito (la
+ *        bandierina del router): l'unico caso in cui dentro #app può esserci
+ *        già il pre-rendering di questa ricetta.
  */
-export async function renderRecipe(app, { category, slug }) {
+export async function renderRecipe(app, { category, slug }, { primoCaricamento = false } = {}) {
   // ── Loading state ──
-  app.innerHTML = `
-    <div class="recipe-loading">
-      <div class="recipe-loading__spinner"></div>
-      <p>Caricamento ricetta...</p>
-    </div>`;
+  //
+  // Al primo caricamento le pagine ricetta arrivano GIÀ piene: il
+  // pre-rendering (scripts/generate-og.js) scrive dentro #app lo stesso
+  // markup di html-ricetta.js in versione statica, marcata con `data-ricetta`
+  // sull'hero. Sostituirla subito con «Caricamento ricetta...» era un lampo
+  // di segnaposto sopra una pagina completa (misurato: 122 ms). Quindi: se il
+  // contenuto servito è proprio questa ricetta, resta al suo posto mentre il
+  // JSON scarica, e si sostituisce solo quando il markup interattivo è
+  // pronto. Il re-render serve comunque — la statica non ha calcolatore dosi,
+  // pulsante «Fatta» né grafico sensoriale — è lo spinner che non deve
+  // lampeggiare. Nelle navigazioni SPA successive dentro #app c'è la pagina
+  // PRECEDENTE, non questa ricetta: lì lo spinner resta.
+  const staticaDaTenere = primoCaricamento &&
+    app.querySelector('.recipe-hero[data-ricetta]')
+      ?.getAttribute('data-ricetta') === `${category}/${slug}`;
+
+  if (!staticaDaTenere) {
+    app.innerHTML = `
+      <div class="recipe-loading">
+        <div class="recipe-loading__spinner"></div>
+        <p>Caricamento ricetta...</p>
+      </div>`;
+  }
+
+  // Con la statica in vista i suoi link restano cliccabili mentre il fetch
+  // corre: se nel frattempo si naviga altrove, la risposta in ritardo non
+  // deve sovrascrivere la pagina nuova. Ogni navigazione cambia il pathname
+  // (pushState/popstate), quindi basta confrontarlo prima di scrivere.
+  const pathnameIniziale = window.location.pathname;
 
   // «La ricetta non esiste» e «la ricetta non si è caricata» sono due notizie
   // diverse per chi legge, e il messaggio dell'errore non è né l'una né
@@ -41,6 +70,7 @@ export async function renderRecipe(app, { category, slug }) {
     mancante = res.status === 404;
     if (!res.ok) throw new Error(`HTTP ${res.status} su ${jsonUrl}`);
     const recipe = await res.json();
+    if (window.location.pathname !== pathnameIniziale) return;
 
     // ── Update page metadata ──
     document.title = `${recipe.title} — Ricettario Lab`;
@@ -68,6 +98,29 @@ export async function renderRecipe(app, { category, slug }) {
     // La pagina è quella condivisa (js/non-trovata.js), che il titolo lo
     // scrive da sé: tre copie dello stesso messaggio erano già divergenti.
     console.error(`Ricetta ${category}/${slug} non caricata:`, err);
+    if (window.location.pathname !== pathnameIniziale) return;
+
+    // Percorso d'errore del primo caricamento con la statica in vista: la
+    // pagina d'errore sarebbe un peggioramento — butterebbe una ricetta
+    // completa e leggibile per dire che non si è caricata. Si tiene la
+    // statica intatta e si avvisa (role="alert", così chi ascolta lo sente)
+    // che i comandi interattivi mancano. Vale anche per il 404 del JSON: se
+    // l'HTML pre-renderizzato esiste, il JSON è stato pubblicato insieme a
+    // lui, quindi un 404 qui è uno stato transitorio (cache, deploy in corso)
+    // e «ricarica» è il consiglio giusto in tutti e due i casi.
+    if (staticaDaTenere) {
+      document.getElementById('recipe-content')?.insertAdjacentHTML('beforebegin', `
+        <div class="container">
+          <div class="alert alert--danger" role="alert">
+            <span class="alert__icon">${fluentEmoji('warning', 28)}</span>
+            <div class="alert__content">
+              <strong>La versione interattiva non si è caricata</strong>
+              <p>La ricetta è completa e leggibile, ma il calcolatore dosi e il pulsante «Fatta» non sono attivi. Controlla la connessione e ricarica la pagina per riprovare.</p>
+            </div>
+          </div>
+        </div>`);
+      return;
+    }
 
     const cat = CATEGORIES_BY_DIR[category];
     mostraNonTrovata(app, {
@@ -147,10 +200,31 @@ function initDoseCalculator(recipe) {
     return `×${m.toFixed(2)}`;
   };
 
+  // A ogni cambio si annuncia UNA frase sintetica — «Dosi ×0,75», con la
+  // virgola dei decimali italiani — non le dieci celle che cambiano: quelle
+  // le rilegge chi vuole, dalla tabella. Passa dalla regione live condivisa
+  // (js/annuncio.js): una seconda regione creata qui non sarebbe osservata.
+  const annunciaDosi = () =>
+    annuncia(`Dosi ${formatMultiplier(multiplier).replace('.', ',')}`);
+
   const updateDoses = () => {
     doseBadge.textContent = formatMultiplier(multiplier);
     doseBadge.classList.toggle('dose-calculator__display--modified', multiplier !== 1);
-    doseDecrease.disabled = multiplier <= MIN_MULT;
+    // Il focus va messo in salvo PRIMA di disabilitare: un pulsante che
+    // diventa disabled mentre lo tiene lo lascia cadere sul BODY, e da lì
+    // chi usa la tastiera ritraversa tutta la pagina per tornare al «+».
+    // La sponda è l'altro pulsante; se mai fosse spento anche lui, il
+    // display del moltiplicatore, focalizzabile solo da programma.
+    const alMinimo = multiplier <= MIN_MULT;
+    if (alMinimo && document.activeElement === doseDecrease) {
+      if (!doseIncrease.disabled) {
+        doseIncrease.focus();
+      } else {
+        doseBadge.setAttribute('tabindex', '-1');
+        doseBadge.focus();
+      }
+    }
+    doseDecrease.disabled = alMinimo;
 
     // Aggiorna tabella ingredienti (usa data-base se presente, altrimenti baseGrams statico)
     ingredientMap.forEach(({ baseGrams, cell }) => {
@@ -173,17 +247,18 @@ function initDoseCalculator(recipe) {
       }
     });
 
-    // Aggiorna il totale impasto
+    // Aggiorna il peso totale (per gli impasti e per tutto il resto)
     updateTotalWeight();
   };
 
   doseDecrease.addEventListener('click', () => {
     const newMult = Math.round((multiplier - STEP) * 100) / 100;
-    if (newMult >= MIN_MULT) { multiplier = newMult; updateDoses(); }
+    if (newMult >= MIN_MULT) { multiplier = newMult; updateDoses(); annunciaDosi(); }
   });
   doseIncrease.addEventListener('click', () => {
     multiplier = Math.round((multiplier + STEP) * 100) / 100;
     updateDoses();
+    annunciaDosi();
   });
 
 

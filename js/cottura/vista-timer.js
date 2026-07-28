@@ -51,6 +51,10 @@ export function montaTimer(radice, piano, config, { onCambio } = {}) {
      * solo dallo stato, e si ricostruisce quando lo stato cambia. A ogni battito
      * si riscrivono soltanto i valori: il tempo, la barra, la nota. Il focus
      * sopravvive perché gli elementi sono gli stessi.
+     *
+     * Quando invece la forma cambia davvero, il fuoco va rimesso a mano: sulla
+     * stessa azione se il cambio arriva dal tempo (qui sotto), sul comando
+     * equivalente se arriva da un comando (`rimettiIlFuoco`).
      */
     function formaDi(s) {
         return `${s.stato}${s.oltreMassimo ? '|oltre' : ''}`;
@@ -115,6 +119,15 @@ export function montaTimer(radice, piano, config, { onCambio } = {}) {
         }
     }
 
+    /**
+     * L'azione del pulsante che ha il fuoco, se il fuoco sta dentro `dentro`.
+     * Va letta PRIMA di rifare l'innerHTML: dopo, il fuoco è già sul body.
+     */
+    function azioneColFuoco(dentro) {
+        const attivo = document.activeElement;
+        return dentro.contains(attivo) ? attivo.closest('[data-azione]')?.dataset.azione : null;
+    }
+
     function disegnaFase(contenitore) {
         const s = statoFase(sessione, contenitore.dataset.timer, ora());
         if (!s) return;
@@ -123,9 +136,19 @@ export function montaTimer(radice, piano, config, { onCambio } = {}) {
         const forma = formaDi(s);
 
         if (contenitore.dataset.forma !== forma) {
+            // Anche il cambio di forma senza comando strappa il fuoco: allo
+            // scoccare del minimo (in corso → scaduta → oltre) i pulsanti si
+            // rifanno identici, e chi teneva il fuoco su Pausa o Fatta lo
+            // perdeva proprio quando l'allarme chiama. Qui si rimette sulla
+            // STESSA azione, se nel markup nuovo esiste ancora; quando è un
+            // comando a cambiare il set dei pulsanti, ci pensa
+            // `rimettiIlFuoco`. Al primo disegno non c'è niente da rimettere:
+            // il contenitore nasce vuoto, il fuoco non può stare qui dentro.
+            const daRimettere = azioneColFuoco(contenitore);
             contenitore.dataset.forma = forma;
             contenitore.className = classeDi(s);
             contenitore.innerHTML = markupDi(s, finestra);
+            if (daRimettere) contenitore.querySelector(`[data-azione="${daRimettere}"]`)?.focus({ preventScroll: true });
         }
 
         aggiornaValori(contenitore, s, finestra);
@@ -171,6 +194,7 @@ export function montaTimer(radice, piano, config, { onCambio } = {}) {
         // rifarne il markup a ogni secondo li strappava di sotto al focus.
         const forma = `${attiva.id}|${attiva.stato}`;
         if (barra.dataset.forma !== forma) {
+            const daRimettere = azioneColFuoco(barra);
             barra.dataset.forma = forma;
             barra.innerHTML = `
               <div class="barra-timer__fase">
@@ -183,6 +207,7 @@ export function montaTimer(radice, piano, config, { onCambio } = {}) {
                 ${attiva.stato === 'in_pausa' ? '▶' : '❙❙'}
               </button>
               <button class="barra-timer__bottone barra-timer__bottone--fine" data-azione="completa" aria-label="Fase completata">✓</button>`;
+            if (daRimettere) barra.querySelector(`[data-azione="${daRimettere}"]`)?.focus({ preventScroll: true });
         }
 
         const tempo = barra.querySelector('[data-valore="tempo"]');
@@ -246,6 +271,12 @@ export function montaTimer(radice, piano, config, { onCambio } = {}) {
     async function comanda(faseId, azione) {
         const t = ora();
 
+        // Anche il fuoco si legge prima: il ridisegno distrugge il pulsante
+        // premuto, e a quel punto `document.activeElement` è già il body.
+        const pannello = radice.querySelector(`[data-timer="${CSS.escape(faseId)}"]`);
+        const fuocoNelPannello = Boolean(pannello?.contains(document.activeElement));
+        const fuocoNellaBarra = Boolean(barra?.contains(document.activeElement));
+
         // Il nome e la finestra si leggono prima di toccare la sessione: dopo
         // `completa` la fase non è più quella attiva e servirebbe cercarla.
         const prima = statoFase(sessione, faseId, t);
@@ -299,8 +330,48 @@ export function montaTimer(radice, piano, config, { onCambio } = {}) {
 
         salvaSessione(sessione);
         disegnaTutto();
+        if (fuocoNelPannello || fuocoNellaBarra) rimettiIlFuoco(azione, faseId, fuocoNellaBarra, t);
         battiSeServe();
         onCambio?.(sessione);
+    }
+
+    /**
+     * Dopo un comando la forma cambia e l'innerHTML si rifà da zero: il
+     * pulsante premuto non esiste più e il fuoco cade sul body — da lì,
+     * misurato, servivano dodici Tab per tornare ai comandi. Come il form del
+     * calcolatore rimette il fuoco sull'opzione equivalente dopo il redraw,
+     * qui va sul comando che continua il gesto:
+     *
+     *   Avvia → Pausa · Pausa → Riprendi · Riprendi → Pausa · rifai → Avvia
+     *
+     * «Fatta» un seguito nel suo pannello non ce l'ha (resta solo «rifai»): il
+     * bersaglio è l'Avvia della fase successiva — dove la pagina sta già
+     * scorrendo e dove l'annuncio indirizza («adesso tocca a…») — e, se un
+     * Avvia successivo non c'è (ultima fase, o successiva già avviata), il
+     * «rifai» appena comparso.
+     *
+     * Due cautele. Si agisce solo se PRIMA del ridisegno il fuoco stava nel
+     * markup rifatto: a chi sta altrove non si ruba niente, come al primo
+     * disegno. E solo se il fuoco è davvero caduto: se la stessa azione
+     * esisteva ancora, `disegnaFase`/`disegnaBarra` l'hanno già rimesso loro.
+     * `preventScroll` perché lo scorrimento ha già un padrone, lo
+     * scrollIntoView morbido verso la fase successiva.
+     */
+    function rimettiIlFuoco(azione, faseId, dallaBarra, t) {
+        const attivo = document.activeElement;
+        if (attivo && attivo !== document.body && attivo.isConnected) return;
+
+        let bersaglio;
+        if (azione === 'completa') {
+            const prossima = faseAttiva(sessione, t);
+            bersaglio = (prossima && radice.querySelector(`[data-timer="${CSS.escape(prossima.id)}"] [data-azione="avvia"]`))
+                || radice.querySelector(`[data-timer="${CSS.escape(faseId)}"] [data-azione="azzera"]`);
+        } else {
+            const equivalente = { avvia: 'pausa', pausa: 'riprendi', riprendi: 'pausa', azzera: 'avvia' }[azione];
+            const dove = dallaBarra ? barra : radice.querySelector(`[data-timer="${CSS.escape(faseId)}"]`);
+            bersaglio = equivalente ? dove?.querySelector(`[data-azione="${equivalente}"]`) : null;
+        }
+        bersaglio?.focus({ preventScroll: true });
     }
 
     // ── Ascoltatori ──────────────────────────────────────────

@@ -19,6 +19,7 @@
 
 import {
     CURVE, PARTENZA, K_OSSO, CARRYOVER, CAMERA, RIPOSO, SOGLIE,
+    MODELLO_TERMICO, FASI, PAGINE_SEO,
 } from '../../dati/cottura/coefficienti.js';
 import * as kamado from './kamado.js';
 import { valutaRegole } from './regole.js';
@@ -89,7 +90,7 @@ function f(cuoreC, cameraC, inizialeC) {
  * dall'utente: altrimenti la partenza verrebbe contata due volte.
  */
 export function fattoreTermico(curva, cuoreC, cameraC) {
-    if (cameraC <= cuoreC + 5) {
+    if (cameraC <= cuoreC + MODELLO_TERMICO.margine_minimo_camera_cuore_c) {
         throw new Error(`Camera a ${cameraC} °C troppo bassa per un cuore a ${cuoreC} °C.`);
     }
     const rif = f(curva.cuore_rif, curva.camera_rif, curva.iniziale_rif);
@@ -254,9 +255,33 @@ export function piano(input, dati) {
         }),
         note_specifiche: taglio.note_specifiche,
         errori_comuni: taglio.errori_comuni,
+        approfondimento: approfondimentoPagina(contesto),
         // Non è un disclaimer a fondo pagina: è il primo dato del piano.
         premessa: 'I tempi sono stime, e restano stime anche quando sono precise al minuto. Il dato che comanda è la temperatura al cuore.',
     };
+}
+
+/**
+ * Approfondimento della pagina pre-generata che corrisponde a questa
+ * configurazione, se esiste. La prosa cita i numeri del piano di default della
+ * pagina, quindi `vale_per` fa da cancello: con una cottura, un metodo o una
+ * partenza diversi quei numeri non sarebbero più veri, e in quel caso è meglio
+ * nessun testo di un testo che mente. Che i numeri citati e il piano
+ * coincidano davvero lo controlla build-cottura.js su `numeri_citati`.
+ */
+function approfondimentoPagina({ taglio, spessore, peso, metodo, cottura, partenza, osso, dispositivo }) {
+    const voce = PAGINE_SEO.find(v => v.approfondimento
+        && v.taglio === taglio.id
+        && (v.spessore == null || v.spessore === spessore)
+        && (v.peso == null || v.peso === peso));
+    if (!voce) return null;
+
+    const effettivo = { metodo, cottura, partenza, osso, dispositivo: dispositivo.id };
+    const combacia = Object.entries(voce.approfondimento.vale_per || {})
+        .every(([campo, valore]) => effettivo[campo] === valore);
+    if (!combacia) return null;
+
+    return { titolo: voce.approfondimento.titolo, paragrafi: voce.approfondimento.paragrafi };
 }
 
 // ── Bistecche, arrosti, tagli interi ──────────────────────────
@@ -301,8 +326,8 @@ function pianoBistecca(ctx, famiglia) {
     if (metodo === 'diretta') {
         const searMin = (sear.secondi_per_lato[1] * 2) / 60;
         const finitura = [
-            Math.max(2, durata[0] - searMin),
-            Math.max(3, durata[1] - searMin),
+            Math.max(FASI.finitura_minima_min[0], durata[0] - searMin),
+            Math.max(FASI.finitura_minima_min[1], durata[1] - searMin),
         ];
         fasi.push({
             id: 'scottatura_iniziale',
@@ -382,7 +407,7 @@ function pianoBistecca(ctx, famiglia) {
         fasi.push({
             id: 'scottatura',
             nome: 'Scottatura finale',
-            durata_min: [1, 3],
+            durata_min: FASI.scottatura_finale_min,
             camera_c: cameraAlta,
             cuore_atteso_c: null,
             azione: [
@@ -398,7 +423,7 @@ function pianoBistecca(ctx, famiglia) {
         nome: 'Riposo finale e taglio',
         durata_min: taglio.famiglia === 'bistecca'
             ? RIPOSO.finale_min
-            : [r(peso * RIPOSO.arrosto_min_per_kg), r(peso * RIPOSO.arrosto_min_per_kg * 1.5)],
+            : [r(peso * RIPOSO.arrosto_min_per_kg), r(peso * RIPOSO.arrosto_min_per_kg * RIPOSO.arrosto_fattore_max)],
         camera_c: null,
         cuore_atteso_c: estr.target_c,
         azione: [
@@ -410,7 +435,7 @@ function pianoBistecca(ctx, famiglia) {
         timer: true,
     });
 
-    const oreAlta = metodo === 'reverse_sear' ? 0.4 : (metodo === 'diretta' ? 0.5 : 0);
+    const oreAlta = FASI.ore_alta_per_metodo[metodo] ?? 0;
 
     return {
         fasi,
@@ -462,9 +487,9 @@ function pianoLowAndSlow(ctx, famiglia) {
         // Lo stallo resta dichiarato per quello che è — la parte meno
         // prevedibile — nel testo della sua fase.
         const quota = (t) => {
-            const pre = t * 0.40;
-            const stallo = Math.min(Math.max(t * 0.25, ls.stallo.durata_min[0]), ls.stallo.durata_min[1]);
-            return { pre, stallo, post: Math.max(30, t - pre - stallo) };
+            const pre = t * FASI.low_and_slow_quota_salita;
+            const stallo = Math.min(Math.max(t * FASI.low_and_slow_quota_stallo, ls.stallo.durata_min[0]), ls.stallo.durata_min[1]);
+            return { pre, stallo, post: Math.max(FASI.low_and_slow_finale_minima_min, t - pre - stallo) };
         };
         const q0 = quota(totale[0]);
         const q1 = quota(totale[1]);
@@ -557,7 +582,7 @@ function cameraConsentita(proposta, ammessa) {
 }
 
 function checkpoint(durataMax, cameraC, inizialeC, cuoreFineC) {
-    return [0.5, 0.75].map(frazione => ({
+    return FASI.checkpoint_frazioni.map(frazione => ({
         al_minuto: r(durataMax * frazione),
         cuore_atteso_c: Math.round(cuoreAlMinuto(durataMax * frazione, durataMax, cameraC, inizialeC, cuoreFineC)),
     }));
@@ -566,7 +591,10 @@ function checkpoint(durataMax, cameraC, inizialeC, cuoreFineC) {
 function riposoPreScottatura(spessore) {
     const base = spessore * RIPOSO.pre_scottatura_min_per_cm;
     const min = Math.min(Math.max(base, RIPOSO.pre_scottatura_min), RIPOSO.pre_scottatura_max);
-    return [Math.round(min), Math.round(Math.min(min * 1.4, RIPOSO.pre_scottatura_max + 3))];
+    return [Math.round(min), Math.round(Math.min(
+        min * RIPOSO.pre_scottatura_fattore_max,
+        RIPOSO.pre_scottatura_max + RIPOSO.pre_scottatura_sforo_max_min,
+    ))];
 }
 
 function temperaturaIniziale(partenza) {

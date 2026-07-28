@@ -62,11 +62,12 @@ export const REGOLE = [
     {
         id: 'griglia_bassa_pezzo_spesso',
         gravita: 'info',
+        // Stessa soglia della rotazione sui bordi: è il confine "pezzo spesso".
         quando: (ctx) => ctx.input.griglia_rialzata === false
             && ctx.metodo === 'diretta'
-            && ctx.spessore >= 4,
+            && ctx.spessore >= SOGLIE.rotazione_su_bordi_da_cm,
         titolo: 'Griglia troppo vicina alle braci',
-        testo: 'Un pezzo da 4 cm o più sulla griglia bassa in diretta si brucia fuori prima di scaldarsi dentro. Con la griglia rialzata guadagni la distanza che serve; senza, conviene passare al reverse sear.',
+        testo: () => `Un pezzo da ${SOGLIE.rotazione_su_bordi_da_cm} cm o più sulla griglia bassa in diretta si brucia fuori prima di scaldarsi dentro. Con la griglia rialzata guadagni la distanza che serve; senza, conviene passare al reverse sear.`,
     },
 
     // ── Taglio ─────────────────────────────────────────────────
@@ -134,9 +135,9 @@ export const REGOLE = [
     {
         id: 'kamado_sovradimensionato',
         gravita: 'info',
-        quando: (ctx) => ctx.dispositivo.griglia_cm >= 61
+        quando: (ctx) => ctx.dispositivo.griglia_cm >= KAMADO.griglia_grande_da_cm
             && ctx.taglio.famiglia === 'bistecca'
-            && ctx.peso < 1,
+            && ctx.peso < SOGLIE.bistecca_piccola_sotto_kg,
         titolo: 'Molto kamado per poca carne',
         testo: (ctx) => `Su ${ctx.dispositivo.nome.toLowerCase()} una bistecca sotto il chilo funziona, ma paghi ${ctx.dispositivo.stabilizzazione_min[1]} minuti di stabilizzazione e un cestello di carbone per una cottura che ne userà una frazione. Se capita spesso, è il caso d'uso di un modello piccolo.`,
     },
@@ -239,7 +240,7 @@ function risolvi(v, ctx, extra) {
 function cameraMassima(ctx) {
     if (ctx.metodo === 'reverse_sear') return CAMERA.reverse_sear.alta;
     if (ctx.metodo === 'diretta') return CAMERA.diretta.unica;
-    return CAMERA[ctx.metodo]?.bassa ?? 120;
+    return CAMERA[ctx.metodo]?.bassa ?? CAMERA.fallback.bassa;
 }
 
 function virgola(n) {

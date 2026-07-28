@@ -78,10 +78,15 @@ export function htmlRicetta(r, { base, categoryDir, interattivo = true }) {
   // comparire solo su una delle due strade.
   const credito = htmlCreditoFoto(r.imageAttribution, r._originalImageUrl);
 
+  // `data-ricetta` marca il markup con l'identità «categoria/slug». Serve al
+  // primo caricamento delle pagine pre-renderizzate: recipe-renderer.js lo
+  // legge per riconoscere che dentro #app c'è già QUESTA ricetta e lasciare
+  // la versione statica al suo posto mentre scarica il JSON, invece di
+  // buttarla per lo spinner.
   const pagina = `
     <!-- ═══════════ RECIPE HERO ═══════════ -->
     ${credito ? '<figure class="recipe-foto">' : ''}
-    <div class="recipe-hero">
+    <div class="recipe-hero" data-ricetta="${escAttr(categoryDir)}/${escAttr(r.slug)}">
       ${buildHeroPicture(imagePath, r.title)}
       <div class="container">
         <nav class="breadcrumb reveal">
@@ -111,7 +116,7 @@ export function htmlRicetta(r, { base, categoryDir, interattivo = true }) {
         ${isValidBadge(r.hydration) ? `<div class="tech-badge">${ctx.emoji('droplet', 18)} Idratazione: <span class="tech-badge__value">&nbsp;${escHtml(r.hydration)}%</span></div>` : ''}
         ${isValidBadge(r.targetTemp) ? `<div class="tech-badge">${ctx.emoji('thermometer', 18)} Target Temp: <span class="tech-badge__value">&nbsp;${escHtml(r.targetTemp)}</span></div>` : ''}
         ${isValidBadge(r.fermentation) ? `<div class="tech-badge">${ctx.emoji('stopwatch', 18)} Lievitazione: <span class="tech-badge__value">&nbsp;${escHtml(r.fermentation)}</span></div>` : ''}
-        ${interattivo ? '<button class="made-toggle" id="made-toggle" type="button" aria-label="Segna come fatta"></button>' : ''}
+        ${interattivo ? '<button class="made-toggle" id="made-toggle" type="button" aria-pressed="false"></button>' : ''}
       </div>
     </div>
 
@@ -176,6 +181,18 @@ function pesoTotale(r) {
   return totale >= 1000 ? `~${(totale / 1000).toFixed(1)}kg` : `${Math.round(totale)}g`;
 }
 
+/**
+ * «Impasto» solo quando l'idratazione è vera: per convenzione (README)
+ * hydration 0 o assente marca ciò che impasto non è — salse, conserve,
+ * condimenti — e il burro chiarificato non deve stampare «Peso Totale
+ * Impasto». Stessa guardia del badge Idratazione, così tabella e badge
+ * raccontano la stessa storia; il JSON-LD (totalWeight in generate-og.js)
+ * segue la stessa regola.
+ */
+function etichettaPesoTotale(r) {
+  return isValidBadge(r.hydration) ? 'Peso Totale Impasto' : 'Peso Totale';
+}
+
 function buildIngredientsPanel(r, ctx) {
   const hasGroups = r.ingredientGroups?.length > 0;
   const hasFlat = r.ingredients?.length > 0;
@@ -219,7 +236,7 @@ function buildIngredientsPanel(r, ctx) {
       <table class="ingredients-table" id="ingredients-table" aria-label="Ingredienti e quantità">
         ${rows}
         <tr class="ingredient-total-row" id="ingredient-total-row">
-          <th scope="row">Peso Totale Impasto</th>
+          <th scope="row">${etichettaPesoTotale(r)}</th>
           <td class="ingredient-qty" id="ingredient-total-qty">${ctx.interattivo ? '' : pesoTotale(r)}</td>
         </tr>
       </table>
@@ -348,7 +365,7 @@ function buildSensoryProfile(r, ctx) {
           </div>
 
           <p class="nutrition-disclaimer">
-            <em>Disclaimer: Valori medi calcolati tramite database USDA per l'intera ricetta. Considerano il calo peso da evaporazione. I valori effettivi possono variare in base ai marchi commerciali usati.</em>
+            <em>Disclaimer: Valori medi per 100 g di prodotto finito, calcolati tramite database USDA. Considerano il calo peso da evaporazione. I valori effettivi possono variare in base ai marchi commerciali usati.</em>
           </p>
         </div>`;
 

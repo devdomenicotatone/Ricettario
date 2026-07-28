@@ -95,7 +95,7 @@ export function scottatura(dispositivo) {
     const [a, b] = dispositivo.scottatura_s_per_lato;
     return {
         secondi_per_lato: [a, b],
-        nota: dispositivo.griglia_cm <= 38
+        nota: dispositivo.griglia_cm <= KAMADO.griglia_piccola_fino_a_cm
             ? 'Su un kamado piccolo le braci sono vicine alla griglia: la scottatura è più violenta e più corta di quanto si aspetti chi viene da un modello grande.'
             : null,
     };
@@ -200,10 +200,15 @@ export function carbone(dispositivo, oreBassa, oreAlta = 0) {
 export function affumicatura(oreTotali, tipoLegno) {
     const utili = KAMADO.legno_ore_utili;
     if (oreTotali <= utili) {
-        return { chunk: oreTotali < 1.5 ? 1 : 2, testo: null };
+        return {
+            chunk: oreTotali < KAMADO.legno_cottura_breve_h
+                ? KAMADO.legno_chunk.breve
+                : KAMADO.legno_chunk.media,
+            testo: null,
+        };
     }
     return {
-        chunk: 3,
+        chunk: KAMADO.legno_chunk.lunga,
         gravita: 'info',
         testo: `Il ${tipoLegno || 'legno'} va messo all'inizio e basta: dopo le prime ${utili} ore la superficie non assorbe più fumo, e quello che continui a produrre si deposita amaro. Due o tre chunk in partenza, poi solo carbone.`,
     };

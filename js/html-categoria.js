@@ -22,7 +22,7 @@
 
 import { escHtml, escAttr } from './escape.js';
 import { isValidBadge } from './recipe-meta.js';
-import { buildPicture } from './image-utils.js';
+import { buildPicture, getImageSources } from './image-utils.js';
 import { fluentEmojiCon } from './emoji-core.js';
 
 /**
@@ -34,12 +34,19 @@ import { fluentEmojiCon } from './emoji-core.js';
  */
 export function htmlCardCategoria(r, { base }) {
   const href = `${base}ricette/${r.categoryDir}/${r.slug}/`;
+  // sizes: la griglia è auto-fill minmax(280px, 1fr) dentro .container
+  // (max 1200px, gap 24px): la colonna arriva a 368px da 3 colonne in su,
+  // sotto i 640 è una sola a tutta larghezza meno il padding.
+  const foto = r.image
+    ? buildPicture(`${base}${r.image}`, '', 'category-card__image', 'lazy',
+      '(min-width: 640px) 368px, calc(100vw - 32px)')
+    : '';
   return `
       <a href="${escAttr(href)}" class="category-card" data-link
          data-title="${escAttr((r.title || '').toLowerCase())}"
          data-hydration="${parseInt(r.hydration) || 0}">
         <div class="category-card__image-wrapper">
-          ${r.image ? buildPicture(`${base}${r.image}`, '', 'category-card__image', 'lazy') : ''}
+          ${foto}
           <div class="category-card__meta">
             ${isValidBadge(r.hydration) ? `<span class="category-card__tag">${fluentEmojiCon(base, 'droplet', 14)} ${escHtml(r.hydration)}</span>` : ''}
             ${isValidBadge(r.time) ? `<span class="category-card__tag">${fluentEmojiCon(base, 'stopwatch', 14)} ${escHtml(r.time)}</span>` : ''}
@@ -65,6 +72,29 @@ export function htmlSchedeScheletro(count) {
 }
 
 /**
+ * Title e meta description della pagina categoria: la composizione è QUI e
+ * solo qui. Erano due — il pre-rendering serviva «Pane — 8 Ricette —
+ * Ricettario Lab», la SPA riscriveva «Pane Artigianale — Il Ricettario» — e
+ * divergevano perfino nel brand. `meta` è la voce del registry
+ * (js/categories.js): name, title, desc.
+ *
+ * `titolo` è il document.title completo: main.js lo scrive così com'è.
+ * `titoloBreve` è per buildPage (generate-og.js), che appende « — Ricettario
+ * Lab» (SITE_NAME) a ogni pagina del sito: il <title> che ne esce deve
+ * coincidere con `titolo`. Il conteggio ricette NON c'è di proposito: la SPA
+ * scrive il title prima del fetch dell'indice, quando il numero non c'è
+ * ancora — identico batte ricco.
+ */
+export function metaPaginaCategoria(meta) {
+  const titoloBreve = meta.title;
+  return {
+    titoloBreve,
+    titolo: `${titoloBreve} — Ricettario Lab`,
+    descrizione: meta.desc,
+  };
+}
+
+/**
  * Pagina categoria completa: hero, breadcrumb e griglia.
  *
  * `meta` è la voce del registry (js/categories.js): name, title, desc.
@@ -74,6 +104,14 @@ export function htmlSchedeScheletro(count) {
  */
 export function htmlCategoria(meta, ricette, { base, interattivo = true, viewMode = 'grid' }) {
   const heroImg = ricette?.find(r => r.image)?.image;
+  // Doppia dichiarazione di sfondo: la prima (solo WebP) è il fallback per i
+  // browser senza image-set(), la seconda lascia scegliere l'AVIF gemello —
+  // stessa foto, circa metà dei byte. Prima l'AVIF restava ignorato (CHECKUP,
+  // punto 2).
+  const sfondoHero = heroImg ? getImageSources(`${base}${heroImg}`) : null;
+  const stileHero = sfondoHero
+    ? ` style="background-image: url('${escAttr(sfondoHero.webp)}'); background-image: image-set(url('${escAttr(sfondoHero.avif)}') type('image/avif'), url('${escAttr(sfondoHero.webp)}') type('image/webp'))"`
+    : '';
   const conteggio = ricette
     ? `${ricette.length} ricett${ricette.length === 1 ? 'a' : 'e'}`
     : '⏳ Caricamento...';
@@ -105,7 +143,7 @@ export function htmlCategoria(meta, ricette, { base, interattivo = true, viewMod
     : ricette.map(r => htmlCardCategoria(r, { base })).join('');
 
   return `
-    <section class="category-hero" id="category-hero"${heroImg ? ` style="background-image: url('${escAttr(`${base}${heroImg}`)}')"` : ''}>
+    <section class="category-hero" id="category-hero"${stileHero}>
       <div class="category-hero__content">
         <h1 class="category-hero__title">${escHtml(meta.title)}</h1>
         <p class="category-hero__subtitle">${escHtml(meta.desc)}</p>
@@ -142,10 +180,17 @@ export function htmlCategoria(meta, ricette, { base, interattivo = true, viewMod
  */
 function htmlCardCarosello(r, { base }) {
   const href = `${base}ricette/${r.categoryDir}/${r.slug}/`;
+  // sizes: le larghezze CSS della scheda compatta (200 → 260 a 480px →
+  // 290 a 1200px, css/components/category-carousel.css). Era il caso peggiore
+  // del checkup: originale da 1200-1880px in uno slot da 200-290.
+  const foto = r.image
+    ? buildPicture(`${base}${r.image}`, '', 'recipe-card--compact__image', 'lazy',
+      '(min-width: 1200px) 290px, (min-width: 480px) 260px, 200px')
+    : '';
   return `
           <a href="${escAttr(href)}" class="recipe-card--compact" data-link data-title="${escAttr((r.title || '').toLowerCase())}" data-category="${escAttr(r.category)}">
             <div class="recipe-card--compact__image-wrapper">
-              ${r.image ? buildPicture(`${base}${r.image}`, '', 'recipe-card--compact__image', 'lazy') : ''}
+              ${foto}
             </div>
             <div class="recipe-card--compact__body">
               <h4 class="recipe-card--compact__title">${escHtml(r.title)}</h4>

@@ -161,25 +161,30 @@ async function navigateTo(url, pushState = true) {
   // View Transition API per animazioni fluide
   if ('startViewTransition' in document) {
     const transizione = document.startViewTransition(async () => {
-      await renderRoute(route, app);
+      await renderRoute(route, app, eraLaPrima);
     });
     // `updateCallbackDone` scatta quando il DOM nuovo è a posto, senza
     // aspettare la fine dell'animazione: il focus non deve stare dietro a
     // mezzo secondo di dissolvenza.
     if (!eraLaPrima) transizione.updateCallbackDone.then(dopoIlCambioPagina).catch(() => {});
   } else {
-    await renderRoute(route, app);
+    await renderRoute(route, app, eraLaPrima);
     if (!eraLaPrima) dopoIlCambioPagina();
   }
 }
 
 /**
  * Renderizza la route corrente nel container #app.
+ *
+ * `primoCaricamento` dice al renderer che sta disegnando la pagina con cui il
+ * sito si è aperto: le pagine ricetta lo usano per NON buttare il contenuto
+ * pre-renderizzato già servito dentro #app in favore dello spinner. I
+ * renderer che non se ne curano lo ignorano.
  */
-async function renderRoute(route, app) {
+async function renderRoute(route, app, primoCaricamento = false) {
   const renderer = renderers[route.type];
   if (renderer) {
-    await renderer(app, route.params);
+    await renderer(app, route.params, { primoCaricamento });
   } else {
     // Guardia difensiva: il tipo `nonTrovata` un renderer ce l'ha (main.js),
     // quindi qui ci si arriva solo se un giorno nasce un tipo di rotta e

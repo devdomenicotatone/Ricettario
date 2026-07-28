@@ -226,9 +226,12 @@ const FONTI_LATTOSIO = [
 const PROMESSE_ALIMENTARI = [
   { tag: /senza glutine|gluten[ -]?free/i, cosa: 'glutine', fonti: FONTI_GLUTINE },
   { tag: /senza lattosio|lactose[ -]?free/i, cosa: 'lattosio', fonti: FONTI_LATTOSIO },
-  { tag: /\bvegan[oi]?\b/i, cosa: 'ingredienti animali', fonti: [...FONTI_CARNE_PESCE, ...FONTI_NON_VEGANE] },
+  // `[oiae]?` copre anche il femminile («vegana», «ricette vegane»), che con
+  // `[oi]?` passava il cancello senza controllo: la gemella della cicatrice
+  // delle acciughe qui sopra, corretta allora solo sul lato ingredienti.
+  { tag: /\bvegan[oiae]?\b/i, cosa: 'ingredienti animali', fonti: [...FONTI_CARNE_PESCE, ...FONTI_NON_VEGANE] },
   // «vegetariano» ammette uova e latticini: gli si contesta solo carne e pesce.
-  { tag: /\bvegetarian[oi]?\b/i, cosa: 'carne o pesce', fonti: FONTI_CARNE_PESCE },
+  { tag: /\bvegetarian[oiae]?\b/i, cosa: 'carne o pesce', fonti: FONTI_CARNE_PESCE },
 ];
 
 function controllaPromesse(raw, dove) {

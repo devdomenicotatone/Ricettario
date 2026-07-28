@@ -152,6 +152,69 @@ function minutiDaIso(iso) {
     return Number(m[1] || 0) * 60 + Number(m[2] || 0) + Number(m[3] || 0) / 60;
 }
 
+/*
+ * ── Redirect JavaScript: tutte le forme di scrittura su location ──
+ *
+ * La prima versione cercava solo `location.replace`: riconosceva una
+ * scrittura su quattro. Passavano `location.href = …`, `window.location = …`,
+ * `location.assign(…)` e soprattutto l'alias `var l = window.location;
+ * l.replace(…)` — che è testualmente la forma di public/404.html: il cancello
+ * non vedeva proprio la scrittura che il progetto usa davvero.
+ *
+ * Le LETTURE non devono scattare: location.pathname, .search, .hash, .origin
+ * e location.href letto nei confronti sono il pane della SPA (js/router.js,
+ * js/main.js, js/cottura/pagina.js). Per questo ogni forma pretende una
+ * SCRITTURA: una chiamata che naviga o un assegnamento con `=` singolo
+ * (né `==`/`===`, né `=>`). Scrivere location.hash resta fuori apposta:
+ * cambia l'àncora senza ricaricare, non è un redirect che un crawler segue.
+ * Il perimetro sono le pagine .html: il bundle (assets/*.js) non si scandisce,
+ * ed è lì che vive il `window.location.assign(BASE)` legittimo di main.js.
+ */
+
+/**
+ * L'oggetto location globale: nudo o dietro uno dei prefissi che lo espongono.
+ * Il lookbehind esclude le proprietà omonime di altri oggetti (`foo.location`),
+ * gli identificatori che finiscono così (`$location`) e `data-location`.
+ */
+const OGGETTO_LOCATION =
+    String.raw`(?:(?:window|document|top|self|parent)\s*\.\s*|(?<![\w$.-]))location`;
+
+const FORME_REDIRECT = [
+    {
+        forma: 'chiamata a location.replace()/assign()',
+        regex: new RegExp(OGGETTO_LOCATION + String.raw`\s*\.\s*(?:replace|assign)\s*\(`),
+    },
+    {
+        // `location = …`, `location.href = …` e le altre proprietà che
+        // navigano. `+=` incluso: su href è comunque una navigazione.
+        forma: 'assegnamento a location o a una sua proprietà di navigazione',
+        regex: new RegExp(OGGETTO_LOCATION
+            + String.raw`(?:\s*\.\s*(?:href|pathname|search|protocol|hostname|host|port))?\s*\+?=(?![=>])`),
+    },
+    {
+        // Copiare l'oggetto intero in una variabile è il passo prima di
+        // `l.replace(…)` ed è già di per sé il segnale: nessuna lettura ne ha
+        // bisogno, i sorgenti leggono sempre la singola proprietà.
+        forma: 'alias dell\'oggetto location in una variabile',
+        regex: new RegExp(String.raw`[\w$]+\s*=\s*` + OGGETTO_LOCATION + String.raw`\b(?!\s*\.)`),
+    },
+    {
+        forma: 'meta refresh',
+        regex: /http-equiv\s*=\s*["']?\s*refresh/i,
+    },
+];
+
+/** Boccia ogni forma di redirect trovata nell'HTML, col frammento incriminato. */
+function controllaRedirect(rel, html) {
+    for (const { forma, regex } of FORME_REDIRECT) {
+        const m = html.match(regex);
+        if (m) {
+            err(`${rel}: redirect che impedisce l'indicizzazione — ${forma} `
+                + `(${JSON.stringify(m[0].trim())})`);
+        }
+    }
+}
+
 function paginaHtml(percorso) {
     const rel = percorso.split(sep).join('/');
     const html = readFileSync(percorso, 'utf8');
@@ -162,10 +225,9 @@ function paginaHtml(percorso) {
     if (!/rel="canonical"/.test(html)) err(`${rel}: manca <link rel="canonical">`);
 
     // Il redirect JS rendeva le pagine non indicizzabili: i crawler lo seguono
-    // e consolidano tutto sulla homepage. Non deve tornare.
-    if (/location\.replace|http-equiv="refresh"/.test(html)) {
-        err(`${rel}: contiene un redirect che impedisce l'indicizzazione`);
-    }
+    // e consolidano tutto sulla homepage. Non deve tornare, in nessuna delle
+    // sue forme (le regex stanno in FORME_REDIRECT, sopra).
+    controllaRedirect(rel, html);
 
     // Ogni pagina deve avere ESATTAMENTE un H1 dentro #app, e non è solo
     // struttura dei titoli: è l'elemento a cui il router dà il fuoco dopo una
@@ -320,16 +382,41 @@ function paginaHtml(percorso) {
         }
     }
 
+    // …e la BASE deve combaciare, non solo il numero. Il JSON-LD dichiara
+    // servingSize "100 g" mentre il disclaimer visibile ha dichiarato per mesi
+    // la base sbagliata (la ricetta intera): il confronto sul numero non poteva
+    // accorgersene, perché kcal esce dalla stessa fonte da entrambe le parti.
+    // Qui si pretende la locuzione «per 100 g» nel testo che una persona
+    // legge — il semplice "100 g" non basta, lo direbbe qualunque riga
+    // ingrediente.
+    const baseNutrizione = ricetta.nutrition?.servingSize;
+    if (baseNutrizione && /100\s*g/i.test(String(baseNutrizione))
+        && !/per\s+100\s*g/i.test(testo)) {
+        err(`${rel}: il JSON-LD dichiara servingSize "${baseNutrizione}" ma nel testo visibile manca la base «per 100 g»`);
+    }
+
     return { rel, blocchi };
 }
 
 // ── 1. Tutte le pagine ──
+// Il controllo redirect copre TUTTI gli .html di dist, non solo gli
+// index.html: prima l'esclusione era implicita («si guardano solo i file
+// chiamati index.html») e su 107 pagine l'unica non controllata era proprio
+// 404.html. L'eccezione ora è dichiarata: dist/404.html è lo shim di GitHub
+// Pages e il redirect DEVE farlo — è il suo mestiere (vedi CLAUDE.md, «Un
+// indirizzo che non esiste deve dirlo»); che lo faccia davvero, e verso la
+// base giusta, lo pretende la sezione 3 qui sotto.
+const REDIRECT_AMMESSO = new Set([`${DIST}/404.html`]);
 let pagine = 0;
 (function scorri(dir) {
     for (const e of readdirSync(dir, { withFileTypes: true })) {
         const p = join(dir, e.name);
         if (e.isDirectory()) scorri(p);
         else if (e.name === 'index.html') { paginaHtml(p); pagine++; }
+        else if (/\.html$/i.test(e.name)) {
+            const rel = p.split(sep).join('/');
+            if (!REDIRECT_AMMESSO.has(rel)) controllaRedirect(rel, readFileSync(p, 'utf8'));
+        }
     }
 })(DIST);
 
@@ -504,6 +591,66 @@ if (!existsSync(join(DIST, 'sitemap.xml'))) {
         } else if (uscita[1] !== BASE_PATH) {
             err(`dist/404.html: il link del <noscript> punta a "${uscita[1]}" ma la base del sito è `
                 + `"${BASE_PATH}". Allinealo, o chi non ha JavaScript finisce fuori dal sito.`);
+        }
+    }
+}
+
+// ── 2-ter. Il manifest della PWA ──
+// Era l'unico file del sito che nessun cancello apriva: `SEMPRE_LECITE` lo
+// dichiara lecito e nessuno ne guardava il contenuto. Intanto stava nella
+// radice del repo invece che in public/, quindi Vite lo trattava come asset di
+// index.html e lo emetteva hashato dentro /assets/ — SENZA riscrivere gli URL
+// che contiene, perché quelli stanno dentro un JSON e non nell'HTML. Risultato
+// misurato in produzione: `"src": "favicon.svg"` risolveva a
+// /Ricettario/assets/favicon.svg (404) e `"start_url": "./"` a
+// /Ricettario/assets/ (404). Cioè installando la PWA si apriva una pagina
+// inesistente, e l'icona non c'era.
+//
+// Il controllo risolve gli URL del manifest come farebbe il browser — relativi
+// alla posizione in cui il manifest è servito — e pretende che esistano.
+{
+    const BASE_PATH = new URL(SITE_URL).pathname + '/';
+    const manifestPath = join(DIST, 'site.webmanifest');
+    if (!existsSync(manifestPath)) {
+        err('dist/site.webmanifest non trovato: deve stare in public/, non nella radice del repo, '
+            + 'o Vite lo hasha dentro /assets/ e gli URL relativi che contiene puntano nel vuoto.');
+    } else {
+        const home = readFileSync(join(DIST, 'index.html'), 'utf8');
+        if (!home.includes(`href="${BASE_PATH}site.webmanifest"`)) {
+            err(`index.html non punta a ${BASE_PATH}site.webmanifest: se il riferimento passa da `
+                + 'Vite il file viene hashato in /assets/ e gli URL interni si rompono.');
+        }
+        let manifest;
+        try {
+            manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
+        } catch (e) {
+            err(`dist/site.webmanifest non parsabile — ${e.message}`);
+        }
+        if (manifest) {
+            const daControllare = [
+                ['start_url', manifest.start_url],
+                ['scope', manifest.scope],
+                ...(manifest.icons || []).map((i, n) => [`icons[${n}].src`, i?.src]),
+            ].filter(([, v]) => v);
+
+            for (const [campo, valore] of daControllare) {
+                // Il manifest è servito da BASE_PATH: è lì che il browser
+                // risolve i suoi percorsi relativi.
+                const risolto = new URL(valore, `https://x${BASE_PATH}site.webmanifest`).pathname;
+                if (!risolto.startsWith(BASE_PATH)) {
+                    err(`site.webmanifest: "${campo}" = "${valore}" esce dalla base del sito (${risolto}).`);
+                    continue;
+                }
+                const rel = risolto.slice(BASE_PATH.length);
+                const bersaglio = rel === '' ? join(DIST, 'index.html') : join(DIST, ...rel.split('/'));
+                if (!existsSync(bersaglio)) {
+                    err(`site.webmanifest: "${campo}" = "${valore}" punta a ${risolto}, che non esiste. `
+                        + `Una PWA installata con questo manifest apre un 404.`);
+                }
+            }
+            if (!manifest.icons?.length) {
+                warn('site.webmanifest: nessuna icona dichiarata.');
+            }
         }
     }
 }

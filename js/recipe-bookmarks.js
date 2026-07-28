@@ -109,11 +109,15 @@ export function initMadeToggle(slug) {
   const btn = document.getElementById('made-toggle');
   if (!btn) return;
 
+  // Il nome accessibile è il testo corrente (niente aria-label: distinguerebbe
+  // gli stati solo a metà). aria-pressed va scritto qui, a ogni passaggio:
+  // il markup nasce con "false" e al mount lo stato vero vive in localStorage.
   const updateButton = (made) => {
     btn.classList.toggle('made-toggle--active', made);
+    btn.setAttribute('aria-pressed', String(made));
     btn.innerHTML = made
-      ? '<span class="made-toggle__icon">✓</span> <span class="made-toggle__label">Fatta!</span>'
-      : '<span class="made-toggle__icon">○</span> <span class="made-toggle__label">Segna come fatta</span>';
+      ? '<span class="made-toggle__icon" aria-hidden="true">✓</span> <span class="made-toggle__label">Fatta!</span>'
+      : '<span class="made-toggle__icon" aria-hidden="true">○</span> <span class="made-toggle__label">Segna come fatta</span>';
     btn.title = made ? 'Clicca per rimuovere' : 'Segna questa ricetta come fatta';
   };
 

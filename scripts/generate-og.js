@@ -41,7 +41,8 @@ import { PAGINE_SEO } from '../dati/cottura/coefficienti.js';
 // divergenti in produzione: niente Pro Tips, Conservazione o Glossario nella
 // versione statica, H1 diversi sulle pagine categoria.
 import { htmlRicetta } from '../js/html-ricetta.js';
-import { htmlCategoria, htmlRigaCarosello } from '../js/html-categoria.js';
+import { isValidBadge } from '../js/recipe-meta.js';
+import { htmlCategoria, htmlRigaCarosello, metaPaginaCategoria } from '../js/html-categoria.js';
 import { CATEGORIES, CATEGORY_ORDER, CATEGORIES_BY_DIR } from '../js/categories.js';
 
 const PROJECT_DIR = process.cwd();
@@ -142,12 +143,20 @@ function ingredientLine(ing) {
     return `${qty}${ing.name}${note}`.trim();
 }
 
-/** Peso totale dell'impasto, escludendo ciò che il renderer esclude. */
+/**
+ * Peso totale, escludendo ciò che il renderer esclude. «di impasto» solo
+ * quando l'idratazione è vera: hydration 0 o assente marca ciò che impasto
+ * non è (salse, conserve, condimenti — convenzione README), e il burro
+ * chiarificato dichiarava a Google «circa 500 g di impasto». Stessa guardia
+ * dell'etichetta visibile (etichettaPesoTotale in html-ricetta.js): i dati
+ * strutturati devono corrispondere al contenuto visibile.
+ */
 function totalWeight(src) {
     const items = flatIngredients(src).filter(i => !i.excludeFromTotal && typeof i.grams === 'number');
     if (!items.length) return null;
     const sum = items.reduce((t, i) => t + i.grams, 0);
-    return sum > 0 ? `circa ${Math.round(sum)} g di impasto` : null;
+    if (sum <= 0) return null;
+    return isValidBadge(src.hydration) ? `circa ${Math.round(sum)} g di impasto` : `circa ${Math.round(sum)} g`;
 }
 
 // ═══════════════════════════════════════
@@ -548,9 +557,15 @@ function generate() {
         }
 
         const url = `${SITE_URL}/ricette/${catDir}/`;
+        // Title e description escono dallo stesso helper della SPA
+        // (metaPaginaCategoria in html-categoria.js): buildPage appende
+        // « — Ricettario Lab», e il <title> che ne esce coincide col
+        // document.title che scrive main.js. Prima erano due composizioni
+        // a mano, già divergenti in produzione (punto 13 del checkup).
+        const pagina = metaPaginaCategoria(CATEGORIES_BY_DIR[catDir]);
         const html = buildPage(template, {
-            title: `${cat.name} — ${cat.count} Ricette`,
-            description: `Esplora ${cat.count} ricette di ${cat.name.toLowerCase()} nel Ricettario Lab — parametri tecnici, dosi precise e risultati replicabili.`,
+            title: pagina.titoloBreve,
+            description: pagina.descrizione,
             url,
             image: catRecipes.find(r => r.image)?.image || null,
             type: 'website',

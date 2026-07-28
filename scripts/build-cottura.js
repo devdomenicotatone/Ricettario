@@ -17,6 +17,7 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
 import { piano } from '../js/cottura/motore.js';
+import { normalizza } from '../js/cottura/stato-url.js';
 import { durata } from '../js/cottura/formato.js';
 import { CURVE, CARRYOVER, PAGINE_SEO, PARTENZA, GRADI_COTTURA, METODI } from '../dati/cottura/coefficienti.js';
 
@@ -220,6 +221,50 @@ for (const p of PAGINE_SEO) {
     }
     if (p.peso != null && (p.peso < t.peso.min || p.peso > t.peso.max)) {
         err(`PAGINE_SEO ${p.taglio}: peso ${p.peso} kg fuori dall'intervallo del taglio`);
+    }
+
+    // L'approfondimento cita nella prosa i numeri del piano della sua pagina:
+    // qui il piano viene ricalcolato e i numeri dichiarati in `numeri_citati`
+    // devono tornare. È la rete sotto le ritarature: cambiare una curva senza
+    // aggiornare la prosa deve fermare la build, non pubblicare testi vecchi.
+    if (p.approfondimento) {
+        const a = p.approfondimento;
+        const etichetta = `${p.taglio}-${p.spessore ?? p.peso ?? ''}`;
+        if (!a.titolo || !a.paragrafi?.length) {
+            err(`PAGINE_SEO ${etichetta}: approfondimento senza titolo o senza paragrafi`);
+        }
+        let pagina = null;
+        try {
+            pagina = piano(normalizza(
+                { taglio: p.taglio, spessore: p.spessore, peso: p.peso },
+                { tagli, dispositivi, defaultDispositivo: docDispositivi.default },
+            ), dati);
+        } catch (e) {
+            err(`PAGINE_SEO ${etichetta}: il piano della pagina non si calcola (${e.message})`);
+        }
+        if (pagina) {
+            if (!pagina.approfondimento) {
+                err(`PAGINE_SEO ${etichetta}: l'approfondimento non compare sul piano della sua stessa pagina — vale_per non combacia con la configurazione di default`);
+            }
+            const n = a.numeri_citati || {};
+            const attesi = [
+                ['estrazione_c', pagina.estrazione.c],
+                ['target_c', pagina.estrazione.target_c],
+                ['carryover_c', pagina.estrazione.carryover_c],
+            ];
+            for (const [campo, reale] of attesi) {
+                if (n[campo] != null && n[campo] !== reale) {
+                    err(`PAGINE_SEO ${etichetta}: numeri_citati.${campo} = ${n[campo]} ma il piano dice ${reale} — la prosa dell'approfondimento è rimasta indietro`);
+                }
+            }
+            if (n.indiretta_min) {
+                const fase = pagina.fasi.find(f => f.id === 'indiretta' || f.id === 'finitura');
+                const reale = fase?.durata_min || [];
+                if (reale[0] !== n.indiretta_min[0] || reale[1] !== n.indiretta_min[1]) {
+                    err(`PAGINE_SEO ${etichetta}: numeri_citati.indiretta_min = ${n.indiretta_min.join('-')} ma il piano dice ${reale.join('-') || '(fase assente)'} — la prosa dell'approfondimento è rimasta indietro`);
+                }
+            }
+        }
     }
 }
 const slug = PAGINE_SEO.map(p => `${p.taglio}-${p.spessore ?? p.peso ?? ''}`);

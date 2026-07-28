@@ -77,6 +77,12 @@ export function htmlPiano(p, { base = '/Ricettario', modificabile = true } = {})
         gravita: p.ingombro.gravita, titolo: 'Verifica le misure prima di accendere', testo: p.ingombro.testo,
     }) : ''}
 
+          ${p.approfondimento ? `
+            <section class="piano__blocco">
+              <h2 class="piano__blocco-titolo">${esc(p.approfondimento.titolo)}</h2>
+              ${p.approfondimento.paragrafi.map(t => `<p>${esc(t)}</p>`).join('')}
+            </section>` : ''}
+
           <section class="piano__blocco">
             <h2 class="piano__blocco-titolo">Carbone</h2>
             <p>${esc(p.carbone.testo)}</p>

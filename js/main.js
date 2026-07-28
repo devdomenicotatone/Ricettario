@@ -31,7 +31,7 @@ import { mostraNonTrovata } from './non-trovata.js';
 // Il markup di pagine categoria, schede e caroselli sta in html-categoria.js,
 // che è PURO e viene importato anche dal pre-rendering: qui restano stato,
 // fetch e listener.
-import { htmlCategoria, htmlCardCategoria, htmlRigaCarosello } from './html-categoria.js';
+import { htmlCategoria, htmlCardCategoria, htmlRigaCarosello, metaPaginaCategoria } from './html-categoria.js';
 
 /* global __RECIPES_HASH__ */
 const RECIPE_CACHE_BUST = typeof __RECIPES_HASH__ !== 'undefined' ? `?v=${__RECIPES_HASH__}` : '';
@@ -284,9 +284,14 @@ async function renderCategory(app, { category }) {
     return;
   }
 
-  document.title = `${meta.title} — Il Ricettario`;
+  // Title e description escono dallo stesso helper del pre-rendering
+  // (metaPaginaCategoria): il title servito e quello riscritto dalla SPA
+  // erano diverguti perfino nel brand. Si scrive PRIMA del fetch dell'indice
+  // — è per questo che il formato non porta il conteggio ricette.
+  const pagina = metaPaginaCategoria(meta);
+  document.title = pagina.titolo;
   const metaDesc = document.querySelector('meta[name="description"]');
-  if (metaDesc) metaDesc.setAttribute('content', meta.desc);
+  if (metaDesc) metaDesc.setAttribute('content', pagina.descrizione);
 
   // Reset state
   catState = {
