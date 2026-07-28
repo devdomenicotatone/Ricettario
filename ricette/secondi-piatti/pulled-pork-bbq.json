@@ -1,0 +1,299 @@
+{
+  "title": "Pulled Pork BBQ",
+  "slug": "pulled-pork-bbq",
+  "emoji": "🍖",
+  "description": "Spalla di maiale low & slow su kamado: rub aromatico, affumicatura lenta a 150°C e sfilacciatura perfetta. Ricetta classica americana.",
+  "subtitle": "Cottura indiretta su kamado con rub secco e BBQ sauce — stile American Classic",
+  "category": "Secondi Piatti",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per il Dry Rub",
+      "items": [
+        {
+          "name": "Paprika Affumicata",
+          "note": "(in polvere, qualità spagnola o ungherese)",
+          "grams": 50,
+          "tokenId": "paprika_affumicata"
+        },
+        {
+          "name": "Paprika Dolce",
+          "note": "(in polvere)",
+          "grams": 40,
+          "tokenId": "paprika_dolce"
+        },
+        {
+          "name": "Zucchero Muscovado",
+          "note": "(grezzo di canna, non raffinato)",
+          "grams": 50,
+          "tokenId": "zucchero_muscovado"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(sale marino fino)",
+          "grams": 35,
+          "tokenId": "sale_rub"
+        },
+        {
+          "name": "Aglio in Polvere",
+          "note": "(non aglio granulare)",
+          "grams": 20,
+          "tokenId": "aglio_polvere"
+        },
+        {
+          "name": "Pepe Bianco",
+          "note": "(macinato finemente)",
+          "grams": 10,
+          "tokenId": "pepe_bianco"
+        },
+        {
+          "name": "Coriandolo in Polvere",
+          "note": "(macinato fresco se possibile)",
+          "grams": 3,
+          "tokenId": "coriandolo_polvere"
+        },
+        {
+          "name": "Origano Secco",
+          "note": "(origano siciliano essiccato)",
+          "grams": 3,
+          "tokenId": "origano_secco"
+        },
+        {
+          "name": "Pepe di Cayenna",
+          "note": "(in polvere, calibrare in base alla tolleranza al piccante)",
+          "grams": 5,
+          "tokenId": "pepe_cayenna"
+        },
+        {
+          "name": "Anice in Polvere",
+          "note": "(anice verde macinato)",
+          "grams": 2,
+          "tokenId": "anice_polvere"
+        }
+      ]
+    },
+    {
+      "group": "Per la Carne",
+      "items": [
+        {
+          "name": "Spalla di Maiale",
+          "note": "(Boston Butt con osso, con cotenna e strato di grasso intatto)",
+          "grams": 5000,
+          "tokenId": "spalla_maiale"
+        },
+        {
+          "name": "Senape di Digione",
+          "note": "(o senape americana gialla, da usare come binder)",
+          "grams": 30,
+          "tokenId": "senape_binder"
+        }
+      ]
+    },
+    {
+      "group": "Per la BBQ Sauce",
+      "items": [
+        {
+          "name": "Ketchup",
+          "note": "(qualità, preferibilmente senza sciroppo di mais ad alto fruttosio)",
+          "grams": 300,
+          "tokenId": "ketchup"
+        },
+        {
+          "name": "Aceto di Mele",
+          "note": "(non filtrato, con madre)",
+          "grams": 30,
+          "tokenId": "aceto_mele"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(per aggiustare la salsa)",
+          "grams": 3,
+          "tokenId": "sale_salsa"
+        },
+        {
+          "name": "Pepe Nero",
+          "note": "(macinato al momento)",
+          "grams": 3,
+          "tokenId": "pepe_nero_salsa"
+        },
+        {
+          "name": "Zenzero in Polvere",
+          "note": "(essiccato e macinato)",
+          "grams": 2,
+          "tokenId": "zenzero_polvere"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Preparazione del Dry Rub",
+      "text": "In un barattolo capiente a chiusura ermetica, unisci {paprika_affumicata:50}g di paprika affumicata, {paprika_dolce:40}g di paprika dolce, {zucchero_muscovado:50}g di zucchero muscovado, {sale_rub:35}g di sale fino, {aglio_polvere:20}g di aglio in polvere, {pepe_bianco:10}g di pepe bianco macinato, {coriandolo_polvere:3}g di coriandolo in polvere, {origano_secco:3}g di origano secco, {pepe_cayenna:5}g di pepe di cayenna e {anice_polvere:2}g di anice in polvere. Chiudi il barattolo e agita energicamente per 30-40 secondi per omogeneizzare. Se il muscovado è grumoso, passa il mix al setaccio a maglia media. Il rub si conserva in barattolo ermetico fino a 3 mesi: prepara una dose doppia e tienilo in dispensa."
+    },
+    {
+      "title": "Preparazione e Rubbatura della Carne",
+      "text": "Estrai la {spalla_maiale:5000}g di spalla di maiale dal frigo almeno {tempo_riposo_carne:60!} minuti prima della lavorazione: la carne a temperatura ambiente assorbe meglio il rub. Asciugala accuratamente con carta assorbente su tutti i lati — l'umidità superficiale impedisce la formazione della bark (crosta). Con le mani pulite, spalma uniformemente {senape_binder:30}g di senape su tutta la superficie della spalla: la senape funge da binder (legante) e non si percepisce nel gusto finale, ma garantisce adesione perfetta del rub. Cosparge tutta la superficie con il rub preparato: sii generoso e premi il mix con le mani per farlo aderire. Ogni centimetro di carne — inclusa la base — deve essere coperto. Avvolgi nella pellicola e riponi in frigo per almeno {riposo_frigo:480!} minuti (idealmente 12-16 ore) per consentire la penetrazione delle spezie."
+    },
+    {
+      "title": "Setup del Kamado per Cottura Indiretta",
+      "text": "Prepara il kamado per cottura indiretta a bassa temperatura. Riempi il cestello della carbonella con carbone in pezzi naturali di alta qualità (quercia o hickory, non bricchetti chimici). Aggiungi 3-4 chunks di legno per affumicatura: hickory per un sapore robusto, melo o ciliegio per una nota più dolce — puoi mischiare. Posiziona il deflettore di calore (heat deflector / pietra refrattaria) sopra la carbonella. Sistema una vaschetta di alluminio sul deflettore per raccogliere i succhi di cottura — aggiungivi 200-300 ml di acqua o succo di mela per aumentare l'umidità. Accendi il kamado e stabilizzalo a {temp_cottura:150!}°C di camera — usa la griglia superiore per il termometro. Per mantenere {temp_cottura:150!}°C: apertura inferiore al 25-30%, apertura superiore al 20-25%. Stabilizzazione completa: circa {tempo_stabilizzazione:30!} minuti."
+    },
+    {
+      "title": "Cottura Low & Slow — Fase Affumicatura",
+      "text": "Estrai la spalla dal frigo. Posiziona la carne sulla griglia direttamente sopra la vaschetta, con la parte grassa (fat cap) rivolta verso l'alto — il grasso fonderà e bagnerà continuamente la carne durante la cottura. Inserisci un termometro a sonda wireless nel punto più spesso della carne, lontano dall'osso. Chiudi il coperchio. Mantieni la temperatura di camera costante a {temp_cottura:150!}°C per le prime {ore_affumicatura:120!} minuti (2 ore): questa è la fase critica di assorbimento del fumo. Evita assolutamente di aprire il coperchio durante questa fase — ogni apertura disperde il fumo e abbassa la temperatura di 15-20°C. Dopo 2 ore il rub sarà solidificato formando una bark scura e croccante: questo è il segnale visivo corretto."
+    },
+    {
+      "title": "Cottura Low & Slow — Fase Principale e Texas Crutch",
+      "text": "Continua la cottura mantenendo {temp_cottura:150!}°C. Attendi lo stallo (stall): intorno ai 65-75°C interni la temperatura della carne si blocca per ore a causa dell'evaporazione dell'umidità. È normale — non alzare la temperatura. Per superare lo stallo più rapidamente (opzionale), applica il 'Texas Crutch': a 70°C interni, avvolgi la spalla strettamente in doppio foglio di alluminio con il succo raccolto dalla vaschetta, poi rimetti sul kamado. Il tempo totale di cottura per una spalla da {spalla_maiale:5000}g è di {tempo_cottura_totale:600!} minuti (10 ore), ma conta sulla temperatura interna, non sul tempo. La carne è pronta quando la sonda indica {temp_interna:95!}°C — a questa temperatura il collagene è completamente gelatinizzato e la carne si sfilaccia da sola. Verifica finale: inserisci un termometro istantaneo in 3 punti diversi, tutti devono segnare 93-97°C."
+    },
+    {
+      "title": "Riposo e Sfilacciatura",
+      "text": "Al raggiungimento di {temp_interna:95!}°C, togli la spalla dal kamado. Senza aprire il foglio di alluminio (se applicato), avvolgila in un asciugamano pulito e riponila in un contenitore termico (tipo borsa frigo) per almeno {riposo_finale:60!} minuti — idealmente {riposo_finale:90!}-120 minuti. Questo riposo è fondamentale: i succhi si redistribuiscono uniformemente nella carne e la temperatura interna si stabilizza. Trascorso il riposo, posa la carne su un tagliere largo con scanalatura raccolta-succhi. Con due pinze robuste, rimuovi l'osso della spalla tirandolo delicatamente: se la cottura è perfetta, l'osso uscirà pulito e senza resistenza. Sfilaccia la carne con due forchette o con le mani protette da guanti resistenti al calore, separando le fibre nel senso della lunghezza. Elimina eventuali parti di grasso solido rimasto."
+    },
+    {
+      "title": "Preparazione della BBQ Sauce e Servizio",
+      "text": "In un pentolino a fuoco medio, unisci {ketchup:300}g di ketchup, {aceto_mele:30}g di aceto di mele, {sale_salsa:3}g di sale, {pepe_nero_salsa:3}g di pepe nero macinato e {zenzero_polvere:2}g di zenzero in polvere. Mescola e porta a leggero bollore, poi abbassa il fuoco al minimo e lascia sobbollire per {cottura_salsa:10!} minuti mescolando spesso. La salsa deve addensarsi leggermente e diventare lucida. Aggiusta sale e pepe. Irrora il pulled pork sfilacciato con metà dei succhi di cottura raccolti nella vaschetta (passali attraverso un colino a maglia fine ed elimina il grasso superficiale). Mescola bene. Servi il pulled pork in panini tipo brioche o bun toastati, accompagnato dalla BBQ sauce, coleslaw cremoso e cetriolini sott'aceto."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "baking": {
+    "temperature": "150°C (camera kamado — cottura indiretta)",
+    "time": "600 minuti (10 ore) — conta sulla temperatura interna: 95°C",
+    "tips": [
+      "Non usare bricchetti con additivi chimici: il fumo alterato rovina il sapore della carne. Usa solo carbonella naturale in pezzi o lump charcoal",
+      "Stabilizza il kamado a temperatura precisa PRIMA di inserire la carne: almeno 30 minuti di stabilizzazione con i chunks di legno già inseriti",
+      "Non aprire mai il coperchio nelle prime 2 ore: il fumo deve penetrare nella carne quando è ancora fredda (sotto i 65°C interni)",
+      "Lo 'stall' a 65-75°C è normale e può durare 2-4 ore: non alzare la temperatura, non farti prendere dal panico",
+      "La bark (crosta scura esterna) è il segnale visivo di buona cottura: deve essere asciutta, scura e compatta, non bruciata"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Dry Rub",
+      "definition": "Mix di spezie secche applicato sulla carne prima della cottura. Forma la bark durante la cottura e insaporisce in profondità."
+    },
+    {
+      "term": "Binder",
+      "definition": "Sostanza (qui la senape) spalmata sulla carne prima del rub per farne aderire le spezie senza apportare sapore significativo."
+    },
+    {
+      "term": "Low & Slow",
+      "definition": "Tecnica di cottura a bassa temperatura (110-160°C) per tempi lunghi (6-16h), tipica del BBQ americano. Scioglie il collagene senza seccare la carne."
+    },
+    {
+      "term": "Bark",
+      "definition": "Crosta scura e croccante che si forma sulla superficie della carne durante la cottura BBQ per reazione di Maillard e caramellizzazione degli zuccheri del rub."
+    },
+    {
+      "term": "Stall (The Stall)",
+      "definition": "Fase in cui la temperatura interna della carne si blocca tra 65-75°C per ore a causa dell'evaporazione dell'umidità. È normale e inevitabile."
+    },
+    {
+      "term": "Texas Crutch",
+      "definition": "Tecnica di avvolgere la carne in foglio di alluminio a metà cottura per superare lo stall più velocemente e mantenere la carne umida."
+    },
+    {
+      "term": "Boston Butt",
+      "definition": "Taglio della spalla di maiale superiore (coppa/collo). È il taglio classico per il pulled pork americano: ricco di grasso intramuscolare e collagene."
+    },
+    {
+      "term": "Cottura Indiretta",
+      "definition": "La carne non è sopra la brace diretta, ma posizionata lateralmente o con un deflettore di calore interposto. Il calore circola come in un forno."
+    },
+    {
+      "term": "Chunks di Legno",
+      "definition": "Pezzi di legno aromatico (hickory, melo, ciliegio) aggiunti alla brace per produrre fumo aromatico durante la cottura."
+    },
+    {
+      "term": "Fat Cap",
+      "definition": "Strato di grasso superficiale sulla spalla di maiale. Mantenuto durante la cottura perché fonde lentamente, bagnando la carne continuamente."
+    },
+    {
+      "term": "Sfilacciatura",
+      "definition": "Tecnica manuale di separare le fibre della carne cotta con due forchette o le mani. Possibile solo quando il collagene è completamente gelatinizzato (95°C interni)."
+    },
+    {
+      "term": "Heat Deflector",
+      "definition": "Pietra o ceramica refrattaria montata nel kamado tra la brace e la griglia per trasformare la cottura da diretta a indiretta."
+    },
+    {
+      "term": "Kamado",
+      "definition": "Barbecue a forma di uovo in ceramica refrattaria. Mantiene le temperature costanti eccezionalmente bene, ideale per cotture low & slow."
+    }
+  ],
+  "alert": "NON aprire il coperchio del kamado nelle prime 2 ore di cottura: ogni apertura disperde il fumo e abbassa la temperatura di camera di 15-20°C, allungando i tempi e compromettendo la bark. NON cuocere basandoti solo sul tempo: temperature esterne, vento e variazioni della carbonella rendono i tempi indicativi. L'unico dato affidabile è la temperatura interna a sonda: 95°C. NON saltare il riposo finale: almeno 60 minuti avvolto prima di sfilacciare — senza riposo i succhi escono tutti al taglio e la carne risulta asciutta.",
+  "proTips": [
+    "Per una bark eccezionale, elimina l'umidità superficiale prima di applicare il rub: asciuga con carta assorbente e lascia la spalla scoperta in frigo su una griglia per 2-4 ore — la superficie diventerà leggermente secca, condizione ideale per la formazione della crosta.",
+    "Mescola i chunks di legno: usa 2 pezzi di hickory per la nota affumicata intensa e 2 di legno di melo o ciliegio per dolcezza e colore rosato della carne. Evita legni resinosi come il pino che producono fumo acre e tossico.",
+    "Raccogli e filtra il liquido nella vaschetta durante la cottura: sgrassalo con un separatore di grassi e usalo per irrorare la carne sfilacciata prima di servire — è naturalmente concentrato di sapori e gelificato, infinitamente meglio di qualsiasi BBQ sauce commerciale."
+  ],
+  "storage": [
+    "Frigo: il pulled pork sfilacciato si conserva in contenitore ermetico per 4-5 giorni. Aggiungere sempre qualche cucchiaio di succhi di cottura prima di chiudere per mantenerlo umido. Riscaldare in padella a fuoco medio con coperchio aggiungendo 2-3 cucchiai di acqua o succo di mela.",
+    "Freezer: si congela egregiamente per 3-4 mesi. Porzionare in sacchetti sous-vide o contenitori da 200-300g con liquido di cottura. Scongelare in frigo 12-16 ore, poi rigenerare in padella coperta o in forno a 160°C per 20 minuti coperto con foglio di alluminio e un goccio di acqua.",
+    "Porzioni da servizio: pre-porzione il pulled pork subito dopo la sfilacciatura, quando è ancora caldo e malleabile. Forma dei 'blocchi' compatti in contenitori e congela: si affettano più facilmente da congelati e si rigenerano uniformemente."
+  ],
+  "imageKeywords": [
+    "pulled pork sandwich bbq american",
+    "smoked pulled pork kamado grill",
+    "pulled pork shredded meat closeup",
+    "bbq pork butt low slow cooking",
+    "pulled pork bun coleslaw",
+    "affumicato maiale sfilacciato panino",
+    "Pulled Pork Sandwich BBQ Grill"
+  ],
+  "tags": [
+    "pulled pork",
+    "bbq",
+    "kamado",
+    "low and slow",
+    "maiale",
+    "affumicato",
+    "american bbq",
+    "rub",
+    "spalla di maiale",
+    "cottura indiretta"
+  ],
+  "_createdAt": "2026-07-28T11:32:11.010Z",
+  "image": "images/ricette/secondi-piatti/pulled-pork-bbq.webp",
+  "imageAttribution": "📷 Foto: btfrewinphotography — Pixabay License via Pixabay",
+  "_originalImageUrl": "https://pixabay.com/get/g10f916b62a335d39b96cf1546109559de4b940eb83af3992f4b0864df027f647e568d41d59b2657c8a216b73d780d6caab6512278fac24d43744d716a9cc22ee_1280.jpg",
+  "sensoryProfile": {
+    "summary": "Il Pulled Pork BBQ si presenta con una bark scura e compatta che cede a fibre di carne straordinariamente tenere e succose, dove il grasso interstitiale completamente gelatinizzato conferisce una scioglievolezza quasi burrosa. Il fumo di hickory e ciliegio intreccia note tostate con la dolcezza bruna del muscovado e la profondità della paprika affumicata, creando un bouquet aromatico di rara complessità. La BBQ sauce aggiunge un contrappunto acidulo-agrodolce che bilancia la ricchezza del maiale, mentre il cayenna regala un calore persistente e misurato sul finale.",
+    "axes": [
+      {
+        "label": "Tenerezza / Scioglievolezza",
+        "value": 10
+      },
+      {
+        "label": "Croccantezza Crosta",
+        "value": 8
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 9
+      },
+      {
+        "label": "Sapidità",
+        "value": 8
+      },
+      {
+        "label": "Piccantezza",
+        "value": 4
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 218,
+    "macros": {
+      "carbs": 6,
+      "protein": 22,
+      "fat": 12
+    }
+  }
+}

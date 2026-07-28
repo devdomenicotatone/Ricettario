@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulled Pork BBQ — Ricettario Lab</title>
+    <!-- Il manifest e la favicon puntano ai file di `public/`, serviti così come
+         sono, e NON alla copia che Vite hashera dentro /assets/.
+         Il manifest è il motivo: Vite riscrive gli URL nell'HTML ma non quelli
+         DENTRO un file JSON, quindi da /assets/ il suo `"src": "favicon.svg"`
+         risolveva a /assets/favicon.svg e `"start_url": "./"` a /assets/ —
+         404 tutti e due, cioè una PWA che all'avvio apriva una pagina che non
+         esiste. Servito da /Ricettario/, gli stessi percorsi relativi tornano
+         giusti, e restano giusti anche se un domani cambia la base.
+         La favicon la seguo per non tenerne due copie identiche in giro. -->
+    <link rel="icon" type="image/svg+xml" href="/Ricettario/favicon.svg">
+    <link rel="apple-touch-icon" href="/Ricettario/assets/apple-touch-icon-DVCrky5e.png">
+    <link rel="manifest" href="/Ricettario/site.webmanifest">
+    <!-- Lo script in fondo al <head> lo riscrive secondo il tema: qui c'è il
+         chiaro, che è anche il tema dichiarato su <html>. -->
+    <meta name="theme-color" content="#F2ECE4">
+
+    <!-- Open Graph — Social Sharing Card -->
+
+    <!-- Twitter / X Card -->
+
+    <!-- Font serviti da qui, non da Google: vedi css/base/fonts.css.
+         Il preload evita che il testo resti col font di sistema mentre il
+         CSS che li dichiara viene ancora scaricato. -->
+    <link rel="preload" href="/Ricettario/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/Ricettario/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- FOUC Prevention: applica tema prima del rendering -->
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = saved || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+
+            /* Barra del browser = fondo della navbar, misurato (88% di
+               --color-surface-1 su --color-surface-0). Unica copia dei due
+               valori: main.js chiama questa funzione, non li riscrive.
+               Perché non è più #C2884D: CHECKUP-CSS.md, punto 4. */
+            const COLORI_BARRA = { light: '#F2ECE4', dark: '#170E0A' };
+            window.applicaColoreBarra = function (t) {
+                const meta = document.querySelector('meta[name="theme-color"]');
+                if (meta && COLORI_BARRA[t]) meta.setAttribute('content', COLORI_BARRA[t]);
+            };
+            window.applicaColoreBarra(theme);
+        })();
+    </script>
+  <script type="module" crossorigin src="/Ricettario/assets/main-DevYtwbr.js"></script>
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-BvCxNhbZ.css">
+
+    <meta name="description" content="Spalla di maiale low &amp; slow su kamado: rub aromatico, affumicatura lenta a 150°C e sfilacciatura perfetta. Ricetta classica americana.">
+    <link rel="canonical" href="https://devdomenicotatone.github.io/Ricettario/ricette/secondi-piatti/pulled-pork-bbq/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Pulled Pork BBQ">
+    <meta property="og:description" content="Spalla di maiale low &amp; slow su kamado: rub aromatico, affumicatura lenta a 150°C e sfilacciatura perfetta. Ricetta classica americana.">
+    <meta property="og:url" content="https://devdomenicotatone.github.io/Ricettario/ricette/secondi-piatti/pulled-pork-bbq/">
+    <meta property="og:image" content="https://devdomenicotatone.github.io/Ricettario/images/ricette/secondi-piatti/pulled-pork-bbq.webp">
+    <meta property="og:site_name" content="Ricettario Lab">
+    <meta property="og:locale" content="it_IT">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pulled Pork BBQ">
+    <meta name="twitter:description" content="Spalla di maiale low &amp; slow su kamado: rub aromatico, affumicatura lenta a 150°C e sfilacciatura perfetta. Ricetta classica americana.">
+    <meta name="twitter:image" content="https://devdomenicotatone.github.io/Ricettario/images/ricette/secondi-piatti/pulled-pork-bbq.webp">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Pulled Pork BBQ",
+  "description": "Spalla di maiale low & slow su kamado: rub aromatico, affumicatura lenta a 150°C e sfilacciatura perfetta. Ricetta classica americana.",
+  "url": "https://devdomenicotatone.github.io/Ricettario/ricette/secondi-piatti/pulled-pork-bbq/",
+  "author": {
+    "@type": "Organization",
+    "name": "Ricettario Lab"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ricettario Lab"
+  },
+  "recipeCategory": "Secondi Piatti",
+  "inLanguage": "it-IT",
+  "image": [
+    "https://devdomenicotatone.github.io/Ricettario/images/ricette/secondi-piatti/pulled-pork-bbq.webp"
+  ],
+  "datePublished": "2026-07-28",
+  "keywords": "pulled pork, bbq, kamado, low and slow, maiale, affumicato, american bbq, rub, spalla di maiale, cottura indiretta",
+  "recipeIngredient": [
+    "50 g Paprika Affumicata (in polvere, qualità spagnola o ungherese)",
+    "40 g Paprika Dolce (in polvere)",
+    "50 g Zucchero Muscovado (grezzo di canna, non raffinato)",
+    "35 g Sale Fino (sale marino fino)",
+    "20 g Aglio in Polvere (non aglio granulare)",
+    "10 g Pepe Bianco (macinato finemente)",
+    "3 g Coriandolo in Polvere (macinato fresco se possibile)",
+    "3 g Origano Secco (origano siciliano essiccato)",
+    "5 g Pepe di Cayenna (in polvere, calibrare in base alla tolleranza al piccante)",
+    "2 g Anice in Polvere (anice verde macinato)",
+    "5000 g Spalla di Maiale (Boston Butt con osso, con cotenna e strato di grasso intatto)",
+    "30 g Senape di Digione (o senape americana gialla, da usare come binder)",
+    "300 g Ketchup (qualità, preferibilmente senza sciroppo di mais ad alto fruttosio)",
+    "30 g Aceto di Mele (non filtrato, con madre)",
+    "3 g Sale Fino (per aggiustare la salsa)",
+    "3 g Pepe Nero (macinato al momento)",
+    "2 g Zenzero in Polvere (essiccato e macinato)"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Preparazione del Dry Rub",
+      "text": "In un barattolo capiente a chiusura ermetica, unisci 50g di paprika affumicata, 40g di paprika dolce, 50g di zucchero muscovado, 35g di sale fino, 20g di aglio in polvere, 10g di pepe bianco macinato, 3g di coriandolo in polvere, 3g di origano secco, 5g di pepe di cayenna e 2g di anice in polvere. Chiudi il barattolo e agita energicamente per 30-40 secondi per omogeneizzare. Se il muscovado è grumoso, passa il mix al setaccio a maglia media. Il rub si conserva in barattolo ermetico fino a 3 mesi: prepara una dose doppia e tienilo in dispensa."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Preparazione e Rubbatura della Carne",
+      "text": "Estrai la 5000g di spalla di maiale dal frigo almeno 60 minuti prima della lavorazione: la carne a temperatura ambiente assorbe meglio il rub. Asciugala accuratamente con carta assorbente su tutti i lati — l'umidità superficiale impedisce la formazione della bark (crosta). Con le mani pulite, spalma uniformemente 30g di senape su tutta la superficie della spalla: la senape funge da binder (legante) e non si percepisce nel gusto finale, ma garantisce adesione perfetta del rub. Cosparge tutta la superficie con il rub preparato: sii generoso e premi il mix con le mani per farlo aderire. Ogni centimetro di carne — inclusa la base — deve essere coperto. Avvolgi nella pellicola e riponi in frigo per almeno 480 minuti (idealmente 12-16 ore) per consentire la penetrazione delle spezie."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Setup del Kamado per Cottura Indiretta",
+      "text": "Prepara il kamado per cottura indiretta a bassa temperatura. Riempi il cestello della carbonella con carbone in pezzi naturali di alta qualità (quercia o hickory, non bricchetti chimici). Aggiungi 3-4 chunks di legno per affumicatura: hickory per un sapore robusto, melo o ciliegio per una nota più dolce — puoi mischiare. Posiziona il deflettore di calore (heat deflector / pietra refrattaria) sopra la carbonella. Sistema una vaschetta di alluminio sul deflettore per raccogliere i succhi di cottura — aggiungivi 200-300 ml di acqua o succo di mela per aumentare l'umidità. Accendi il kamado e stabilizzalo a 150°C di camera — usa la griglia superiore per il termometro. Per mantenere 150°C: apertura inferiore al 25-30%, apertura superiore al 20-25%. Stabilizzazione completa: circa 30 minuti."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Cottura Low & Slow — Fase Affumicatura",
+      "text": "Estrai la spalla dal frigo. Posiziona la carne sulla griglia direttamente sopra la vaschetta, con la parte grassa (fat cap) rivolta verso l'alto — il grasso fonderà e bagnerà continuamente la carne durante la cottura. Inserisci un termometro a sonda wireless nel punto più spesso della carne, lontano dall'osso. Chiudi il coperchio. Mantieni la temperatura di camera costante a 150°C per le prime 120 minuti (2 ore): questa è la fase critica di assorbimento del fumo. Evita assolutamente di aprire il coperchio durante questa fase — ogni apertura disperde il fumo e abbassa la temperatura di 15-20°C. Dopo 2 ore il rub sarà solidificato formando una bark scura e croccante: questo è il segnale visivo corretto."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Cottura Low & Slow — Fase Principale e Texas Crutch",
+      "text": "Continua la cottura mantenendo 150°C. Attendi lo stallo (stall): intorno ai 65-75°C interni la temperatura della carne si blocca per ore a causa dell'evaporazione dell'umidità. È normale — non alzare la temperatura. Per superare lo stallo più rapidamente (opzionale), applica il 'Texas Crutch': a 70°C interni, avvolgi la spalla strettamente in doppio foglio di alluminio con il succo raccolto dalla vaschetta, poi rimetti sul kamado. Il tempo totale di cottura per una spalla da 5000g è di 600 minuti (10 ore), ma conta sulla temperatura interna, non sul tempo. La carne è pronta quando la sonda indica 95°C — a questa temperatura il collagene è completamente gelatinizzato e la carne si sfilaccia da sola. Verifica finale: inserisci un termometro istantaneo in 3 punti diversi, tutti devono segnare 93-97°C."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 6,
+      "name": "Riposo e Sfilacciatura",
+      "text": "Al raggiungimento di 95°C, togli la spalla dal kamado. Senza aprire il foglio di alluminio (se applicato), avvolgila in un asciugamano pulito e riponila in un contenitore termico (tipo borsa frigo) per almeno 60 minuti — idealmente 90-120 minuti. Questo riposo è fondamentale: i succhi si redistribuiscono uniformemente nella carne e la temperatura interna si stabilizza. Trascorso il riposo, posa la carne su un tagliere largo con scanalatura raccolta-succhi. Con due pinze robuste, rimuovi l'osso della spalla tirandolo delicatamente: se la cottura è perfetta, l'osso uscirà pulito e senza resistenza. Sfilaccia la carne con due forchette o con le mani protette da guanti resistenti al calore, separando le fibre nel senso della lunghezza. Elimina eventuali parti di grasso solido rimasto."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 7,
+      "name": "Preparazione della BBQ Sauce e Servizio",
+      "text": "In un pentolino a fuoco medio, unisci 300g di ketchup, 30g di aceto di mele, 3g di sale, 3g di pepe nero macinato e 2g di zenzero in polvere. Mescola e porta a leggero bollore, poi abbassa il fuoco al minimo e lascia sobbollire per 10 minuti mescolando spesso. La salsa deve addensarsi leggermente e diventare lucida. Aggiusta sale e pepe. Irrora il pulled pork sfilacciato con metà dei succhi di cottura raccolti nella vaschetta (passali attraverso un colino a maglia fine ed elimina il grasso superficiale). Mescola bene. Servi il pulled pork in panini tipo brioche o bun toastati, accompagnato dalla BBQ sauce, coleslaw cremoso e cetriolini sott'aceto."
+    }
+  ],
+  "recipeYield": "circa 5586 g",
+  "cookTime": "PT10H",
+  "totalTime": "PT10H",
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "servingSize": "100 g",
+    "calories": "218 kcal",
+    "carbohydrateContent": "6 g",
+    "proteinContent": "22 g",
+    "fatContent": "12 g"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://devdomenicotatone.github.io/Ricettario/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Secondi Piatti",
+      "item": "https://devdomenicotatone.github.io/Ricettario/ricette/secondi-piatti/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Pulled Pork BBQ",
+      "item": "https://devdomenicotatone.github.io/Ricettario/ricette/secondi-piatti/pulled-pork-bbq/"
+    }
+  ]
+}
+    </script>
+</head>
+
+<body>
+
+    <!-- Skip to content — Accessibilità
+         Punta a #contenuto, non a #ricette: quell'ancora esiste solo in
+         homepage, quindi su 104 pagine su 105 il primo tasto che un utente da
+         tastiera premeva non faceva niente. -->
+    <a href="#contenuto" class="skip-link">Vai al contenuto principale</a>
+
+    <!-- Annuncio dei cambi di pagina.
+         Questo sito è una SPA: cliccando una ricetta il contenuto viene
+         sostituito senza che il browser carichi niente, quindi uno screen
+         reader non ha nulla da annunciare e l'utente resta a chiedersi se il
+         clic abbia funzionato. Il router ci scrive dentro il titolo della
+         pagina nuova.
+         Sta FUORI da #app di proposito: se il router lo sostituisse a ogni
+         navigazione, l'assistente non lo starebbe più osservando e
+         l'annuncio andrebbe perso. Dev'essere lo stesso elemento, sempre. -->
+    <div id="annuncio-pagina" class="solo-lettore" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- ═══════════ NAVBAR ═══════════
+         Il `<header>` AVVOLGE il `<nav>`, non lo sostituisce. Sono due
+         landmark diversi e servono a due cose diverse: `banner` dice «qui
+         comincia l'intestazione del sito», `navigation` dice «qui ci sono i
+         link per spostarsi». Rinominare il tag avrebbe tolto il secondo per
+         aggiungere il primo, e il secondo è quello che serve per saltare
+         dentro il menu.
+         Non ha classe né stile: contiene solo un elemento `position: fixed`,
+         quindi è alto zero e non sposta niente. Non deve prendere `transform`,
+         `filter` o `contain`: diventerebbe il blocco contenitore della navbar,
+         che smetterebbe di essere ancorata alla finestra. -->
+    <header>
+    <nav class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="/Ricettario/" class="navbar__logo" data-link>
+                <div class="navbar__logo-icon">
+                    <img src="/Ricettario/assets/wheat-logo-TzPQBXOF.svg" alt="" aria-hidden="true" width="40" height="56">
+                </div>
+
+                <span>Ricettario Lab</span>
+            </a>
+
+            <ul class="navbar__links" id="nav-links">
+                <li><a href="#ricette" data-nav-section="ricette" class="active">Ricette</a></li>
+                <!-- Route vera, non un'ancora: il router la intercetta come link interno -->
+                <li><a href="/Ricettario/cottura/">Cottura</a></li>
+                <li><a href="#strumenti" data-nav-section="strumenti">Strumenti</a></li>
+                <li><a href="#chi-sono" data-nav-section="chi-sono">Chi Sono</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+                <span class="theme-toggle__icon theme-toggle__sun"><i data-lucide="sun"></i></span>
+                <span class="theme-toggle__icon theme-toggle__moon"><i data-lucide="moon"></i></span>
+            </button>
+
+            <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    </header>
+
+    <!-- ═══════════ SPA CONTAINER ═══════════ -->
+    <!-- Il router carica dinamicamente il contenuto qui -->
+    <!-- ═══════════ CONTENUTO PRINCIPALE ═══════════
+         `main` avvolge il contenitore #app invece di sostituirlo. Il tag di
+         apertura e quello di chiusura di #app, con il commento che lo segue,
+         sono portanti in tre punti: generate-og.js li cerca per iniettare il
+         contenuto pre-renderizzato e si ferma con "template incompatibile" se
+         non li trova, e verifica-build.js ci estrae il testo visibile per
+         confrontarlo con i dati strutturati. Rinominare quel tag li avrebbe
+         rotti tutti e tre.
+
+         `tabindex="-1"` non è decorativo: senza, lo skip link porta la pagina
+         quaggiù ma lascia il focus della tastiera dov'era, e il tasto dopo
+         riparte dalla navbar. Con -1 l'elemento riceve il focus da programma
+         pur restando fuori dall'ordine di tabulazione. -->
+    <main id="contenuto" tabindex="-1">
+    <div id="app">
+
+    <!-- ═══════════ RECIPE HERO ═══════════ -->
+    <figure class="recipe-foto">
+    <div class="recipe-hero" data-ricetta="secondi-piatti/pulled-pork-bbq">
+      <picture class="recipe-hero__picture">
+  <source srcset="/Ricettario/images/ricette/secondi-piatti/pulled-pork-bbq-640.avif 640w, /Ricettario/images/ricette/secondi-piatti/pulled-pork-bbq.avif 1280w" sizes="100vw" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/secondi-piatti/pulled-pork-bbq-640.webp 640w, /Ricettario/images/ricette/secondi-piatti/pulled-pork-bbq.webp 1280w" sizes="100vw" type="image/webp">
+  <img src="/Ricettario/images/ricette/secondi-piatti/pulled-pork-bbq.webp" srcset="/Ricettario/images/ricette/secondi-piatti/pulled-pork-bbq-640.webp 640w, /Ricettario/images/ricette/secondi-piatti/pulled-pork-bbq.webp 1280w" sizes="100vw" width="1280" height="853" alt="Pulled Pork BBQ" class="recipe-hero__img">
+</picture>
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="/Ricettario/" data-link>Home</a>
+          <span class="breadcrumb__separator">›</span>
+          <a href="/Ricettario/#ricette" data-link>Ricette</a>
+          <span class="breadcrumb__separator">›</span>
+          <a href="/Ricettario/ricette/secondi-piatti/" data-link>Secondi Piatti</a>
+          <span class="breadcrumb__separator">›</span>
+          <span>Pulled Pork BBQ</span>
+        </nav>
+
+        <div class="recipe-hero__content">
+          <div class="recipe-hero__tags">
+            <span class="tag tag--category"><img src="/Ricettario/images/emoji/fork-and-knife.png" width="22" height="22" alt="" class="fluent-emoji" loading="lazy"> Secondi Piatti</span>
+          </div>
+          <h1 class="recipe-hero__title">Pulled Pork BBQ</h1>
+          <p class="recipe-hero__subtitle">Cottura indiretta su kamado con rub secco e BBQ sauce — stile American Classic</p>
+        </div>
+      </div>
+    </div>
+    <figcaption class="recipe-foto__credito"><div class="container">Foto: btfrewinphotography — <a href="https://pixabay.com/service/license-summary/" target="_blank" rel="license noopener nofollow">Pixabay License</a> via <a href="https://pixabay.com/get/g10f916b62a335d39b96cf1546109559de4b940eb83af3992f4b0864df027f647e568d41d59b2657c8a216b73d780d6caab6512278fac24d43744d716a9cc22ee_1280.jpg" target="_blank" rel="noopener nofollow">Pixabay</a></div></figcaption></figure>
+
+    <!-- ═══════════ TECH BADGES ═══════════ -->
+    <div class="container" style="padding-top: 40px;">
+      <div class="tech-badges">
+        
+        
+        
+        
+      </div>
+    </div>
+
+    <!-- ═══════════ RECIPE CONTENT ═══════════ -->
+    <section class="recipe-content" id="recipe-content">
+      <div class="container">
+        <div class="recipe-layout">
+
+          <!-- COLONNA SX: Ingredienti -->
+          <div>
+            
+    <div class="recipe-panel">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/shopping-cart.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Ingredienti Base
+      </h2>
+      
+      <table class="ingredients-table" id="ingredients-table" aria-label="Ingredienti e quantità">
+        <tr class="ingredient-section-header"><th colspan="2" scope="colgroup">Per il Dry Rub</th></tr><tr>
+    <th scope="row">Paprika Affumicata <span class="ingredient-note">(in polvere, qualità spagnola o ungherese)</span></th>
+    <td class="ingredient-qty">50g</td>
+  </tr><tr>
+    <th scope="row">Paprika Dolce <span class="ingredient-note">(in polvere)</span></th>
+    <td class="ingredient-qty">40g</td>
+  </tr><tr>
+    <th scope="row">Zucchero Muscovado <span class="ingredient-note">(grezzo di canna, non raffinato)</span></th>
+    <td class="ingredient-qty">50g</td>
+  </tr><tr>
+    <th scope="row">Sale Fino <span class="ingredient-note">(sale marino fino)</span></th>
+    <td class="ingredient-qty">35g</td>
+  </tr><tr>
+    <th scope="row">Aglio in Polvere <span class="ingredient-note">(non aglio granulare)</span></th>
+    <td class="ingredient-qty">20g</td>
+  </tr><tr>
+    <th scope="row">Pepe Bianco <span class="ingredient-note">(macinato finemente)</span></th>
+    <td class="ingredient-qty">10g</td>
+  </tr><tr>
+    <th scope="row">Coriandolo in Polvere <span class="ingredient-note">(macinato fresco se possibile)</span></th>
+    <td class="ingredient-qty">3g</td>
+  </tr><tr>
+    <th scope="row">Origano Secco <span class="ingredient-note">(origano siciliano essiccato)</span></th>
+    <td class="ingredient-qty">3g</td>
+  </tr><tr>
+    <th scope="row">Pepe di Cayenna <span class="ingredient-note">(in polvere, calibrare in base alla tolleranza al piccante)</span></th>
+    <td class="ingredient-qty">5g</td>
+  </tr><tr>
+    <th scope="row">Anice in Polvere <span class="ingredient-note">(anice verde macinato)</span></th>
+    <td class="ingredient-qty">2g</td>
+  </tr><tr class="ingredient-section-header"><th colspan="2" scope="colgroup">Per la Carne</th></tr><tr>
+    <th scope="row">Spalla di Maiale <span class="ingredient-note">(Boston Butt con osso, con cotenna e strato di grasso intatto)</span></th>
+    <td class="ingredient-qty">5000g</td>
+  </tr><tr>
+    <th scope="row">Senape di Digione <span class="ingredient-note">(o senape americana gialla, da usare come binder)</span></th>
+    <td class="ingredient-qty">30g</td>
+  </tr><tr class="ingredient-section-header"><th colspan="2" scope="colgroup">Per la BBQ Sauce</th></tr><tr>
+    <th scope="row">Ketchup <span class="ingredient-note">(qualità, preferibilmente senza sciroppo di mais ad alto fruttosio)</span></th>
+    <td class="ingredient-qty">300g</td>
+  </tr><tr>
+    <th scope="row">Aceto di Mele <span class="ingredient-note">(non filtrato, con madre)</span></th>
+    <td class="ingredient-qty">30g</td>
+  </tr><tr>
+    <th scope="row">Sale Fino <span class="ingredient-note">(per aggiustare la salsa)</span></th>
+    <td class="ingredient-qty">3g</td>
+  </tr><tr>
+    <th scope="row">Pepe Nero <span class="ingredient-note">(macinato al momento)</span></th>
+    <td class="ingredient-qty">3g</td>
+  </tr><tr>
+    <th scope="row">Zenzero in Polvere <span class="ingredient-note">(essiccato e macinato)</span></th>
+    <td class="ingredient-qty">2g</td>
+  </tr>
+        <tr class="ingredient-total-row" id="ingredient-total-row">
+          <th scope="row">Peso Totale</th>
+          <td class="ingredient-qty" id="ingredient-total-qty">~5.6kg</td>
+        </tr>
+      </table>
+    </div>
+            
+          </div>
+
+          <!-- COLONNA DX: Procedimento -->
+          <div>
+            
+    <div class="recipe-panel" id="steps-panel">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/gear.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Procedimento
+      </h2>
+      <ol class="steps-list">
+        <li class="step-item">
+            <strong>Preparazione del Dry Rub</strong>
+            <p>In un barattolo capiente a chiusura ermetica, unisci 50g di paprika affumicata, 40g di paprika dolce, 50g di zucchero muscovado, 35g di sale fino, 20g di aglio in polvere, 10g di pepe bianco macinato, 3g di coriandolo in polvere, 3g di origano secco, 5g di pepe di cayenna e 2g di anice in polvere. Chiudi il barattolo e agita energicamente per 30-40 secondi per omogeneizzare. Se il muscovado è grumoso, passa il mix al setaccio a maglia media. Il rub si conserva in barattolo ermetico fino a 3 mesi: prepara una dose doppia e tienilo in dispensa.</p>
+          </li><li class="step-item">
+            <strong>Preparazione e Rubbatura della Carne</strong>
+            <p>Estrai la 5000g di spalla di maiale dal frigo almeno 60 minuti prima della lavorazione: la carne a temperatura ambiente assorbe meglio il rub. Asciugala accuratamente con carta assorbente su tutti i lati — l'umidità superficiale impedisce la formazione della bark (crosta). Con le mani pulite, spalma uniformemente 30g di senape su tutta la superficie della spalla: la senape funge da binder (legante) e non si percepisce nel gusto finale, ma garantisce adesione perfetta del rub. Cosparge tutta la superficie con il rub preparato: sii generoso e premi il mix con le mani per farlo aderire. Ogni centimetro di carne — inclusa la base — deve essere coperto. Avvolgi nella pellicola e riponi in frigo per almeno 480 minuti (idealmente 12-16 ore) per consentire la penetrazione delle spezie.</p>
+          </li><li class="step-item">
+            <strong>Setup del Kamado per Cottura Indiretta</strong>
+            <p>Prepara il kamado per cottura indiretta a bassa temperatura. Riempi il cestello della carbonella con carbone in pezzi naturali di alta qualità (quercia o hickory, non bricchetti chimici). Aggiungi 3-4 chunks di legno per affumicatura: hickory per un sapore robusto, melo o ciliegio per una nota più dolce — puoi mischiare. Posiziona il deflettore di calore (heat deflector / pietra refrattaria) sopra la carbonella. Sistema una vaschetta di alluminio sul deflettore per raccogliere i succhi di cottura — aggiungivi 200-300 ml di acqua o succo di mela per aumentare l'umidità. Accendi il kamado e stabilizzalo a 150°C di camera — usa la griglia superiore per il termometro. Per mantenere 150°C: apertura inferiore al 25-30%, apertura superiore al 20-25%. Stabilizzazione completa: circa 30 minuti.</p>
+          </li><li class="step-item">
+            <strong>Cottura Low &amp; Slow — Fase Affumicatura</strong>
+            <p>Estrai la spalla dal frigo. Posiziona la carne sulla griglia direttamente sopra la vaschetta, con la parte grassa (fat cap) rivolta verso l'alto — il grasso fonderà e bagnerà continuamente la carne durante la cottura. Inserisci un termometro a sonda wireless nel punto più spesso della carne, lontano dall'osso. Chiudi il coperchio. Mantieni la temperatura di camera costante a 150°C per le prime 120 minuti (2 ore): questa è la fase critica di assorbimento del fumo. Evita assolutamente di aprire il coperchio durante questa fase — ogni apertura disperde il fumo e abbassa la temperatura di 15-20°C. Dopo 2 ore il rub sarà solidificato formando una bark scura e croccante: questo è il segnale visivo corretto.</p>
+          </li><li class="step-item">
+            <strong>Cottura Low &amp; Slow — Fase Principale e Texas Crutch</strong>
+            <p>Continua la cottura mantenendo 150°C. Attendi lo stallo (stall): intorno ai 65-75°C interni la temperatura della carne si blocca per ore a causa dell'evaporazione dell'umidità. È normale — non alzare la temperatura. Per superare lo stallo più rapidamente (opzionale), applica il 'Texas Crutch': a 70°C interni, avvolgi la spalla strettamente in doppio foglio di alluminio con il succo raccolto dalla vaschetta, poi rimetti sul kamado. Il tempo totale di cottura per una spalla da 5000g è di 600 minuti (10 ore), ma conta sulla temperatura interna, non sul tempo. La carne è pronta quando la sonda indica 95°C — a questa temperatura il collagene è completamente gelatinizzato e la carne si sfilaccia da sola. Verifica finale: inserisci un termometro istantaneo in 3 punti diversi, tutti devono segnare 93-97°C.</p>
+          </li><li class="step-item">
+            <strong>Riposo e Sfilacciatura</strong>
+            <p>Al raggiungimento di 95°C, togli la spalla dal kamado. Senza aprire il foglio di alluminio (se applicato), avvolgila in un asciugamano pulito e riponila in un contenitore termico (tipo borsa frigo) per almeno 60 minuti — idealmente 90-120 minuti. Questo riposo è fondamentale: i succhi si redistribuiscono uniformemente nella carne e la temperatura interna si stabilizza. Trascorso il riposo, posa la carne su un tagliere largo con scanalatura raccolta-succhi. Con due pinze robuste, rimuovi l'osso della spalla tirandolo delicatamente: se la cottura è perfetta, l'osso uscirà pulito e senza resistenza. Sfilaccia la carne con due forchette o con le mani protette da guanti resistenti al calore, separando le fibre nel senso della lunghezza. Elimina eventuali parti di grasso solido rimasto.</p>
+          </li><li class="step-item">
+            <strong>Preparazione della BBQ Sauce e Servizio</strong>
+            <p>In un pentolino a fuoco medio, unisci 300g di ketchup, 30g di aceto di mele, 3g di sale, 3g di pepe nero macinato e 2g di zenzero in polvere. Mescola e porta a leggero bollore, poi abbassa il fuoco al minimo e lascia sobbollire per 10 minuti mescolando spesso. La salsa deve addensarsi leggermente e diventare lucida. Aggiusta sale e pepe. Irrora il pulled pork sfilacciato con metà dei succhi di cottura raccolti nella vaschetta (passali attraverso un colino a maglia fine ed elimina il grasso superficiale). Mescola bene. Servi il pulled pork in panini tipo brioche o bun toastati, accompagnato dalla BBQ sauce, coleslaw cremoso e cetriolini sott'aceto.</p>
+          </li>
+      </ol>
+    </div>
+            
+          </div>
+
+        </div>
+
+        
+    <div class="recipe-panel sensory-panel recipe-panel--spaced">
+      <h2 class="recipe-panel__title">
+        <span><span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/star.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Dati Tecnici & Sensoriali</span>
+      </h2>
+      <div class="sensory-dominant">
+        <span class="sensory-dominant__badge">
+          👑 Tratto Dominante: Tenerezza / Scioglievolezza (10/10)
+        </span>
+      </div>
+      <table class="ingredients-table" aria-label="Profilo sensoriale, in scala da 1 a 10">
+        <tbody><tr><th scope="row">Tenerezza / Scioglievolezza</th><td>10 su 10</td></tr><tr><th scope="row">Croccantezza Crosta</th><td>8 su 10</td></tr><tr><th scope="row">Complessità Aromatica</th><td>9 su 10</td></tr><tr><th scope="row">Sapidità</th><td>8 su 10</td></tr><tr><th scope="row">Piccantezza</th><td>4 su 10</td></tr></tbody>
+      </table>
+      
+    <div class="sensory-note">
+      <h3 class="sensory-note__title">Note di Degustazione</h3>
+      <p class="sensory-note__text">"Il Pulled Pork BBQ si presenta con una bark scura e compatta che cede a fibre di carne straordinariamente tenere e succose, dove il grasso interstitiale completamente gelatinizzato conferisce una scioglievolezza quasi burrosa. Il fumo di hickory e ciliegio intreccia note tostate con la dolcezza bruna del muscovado e la profondità della paprika affumicata, creando un bouquet aromatico di rara complessità. La BBQ sauce aggiunge un contrappunto acidulo-agrodolce che bilancia la ricchezza del maiale, mentre il cayenna regala un calore persistente e misurato sul finale."</p>
+    </div>
+  
+      
+      <h3 class="sensory-note__title">Analisi Nutrizionale</h3>
+
+        <div class="nutrition-content">
+          <div class="nutrition-kcal">
+              <span class="nutrition-kcal__value">218</span>
+              <span class="nutrition-kcal__unit">Kcal</span>
+          </div>
+
+          <div class="nutrition-bar">
+            <div class="nutrition-bar__segment nutrition-bar__segment--carbs" style="width: 15%;" title="Carboidrati"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--prot" style="width: 55.00000000000001%;" title="Proteine"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--fat" style="width: 30%;" title="Grassi"></div>
+          </div>
+
+          <div class="nutrition-legend">
+            <div class="nutrition-legend__item">
+              <div class="nutrition-legend__dot nutrition-legend__dot--carbs"></div>
+              <span>Carboidrati <strong>6g</strong></span>
+            </div>
+            <div class="nutrition-legend__item">
+              <div class="nutrition-legend__dot nutrition-legend__dot--prot"></div>
+              <span>Proteine <strong>22g</strong></span>
+            </div>
+            <div class="nutrition-legend__item">
+              <div class="nutrition-legend__dot nutrition-legend__dot--fat"></div>
+              <span>Grassi <strong>12g</strong></span>
+            </div>
+          </div>
+
+          <p class="nutrition-disclaimer">
+            <em>Disclaimer: Valori medi per 100 g di prodotto finito, stimati sugli ingredienti della ricetta. Considerano il calo peso da evaporazione. I valori effettivi possono variare in base ai marchi commerciali usati.</em>
+          </p>
+        </div>
+    </div>
+        
+        
+    <div class="alert alert--danger recipe-panel--spaced">
+      <span class="alert__icon"><img src="/Ricettario/images/emoji/prohibited.png" width="28" height="28" alt="" class="fluent-emoji" loading="lazy"></span>
+      <div class="alert__content">
+        <strong>ALERT PROFESSIONALE</strong>
+        <p><img src="/Ricettario/images/emoji/warning.png" width="18" height="18" alt="" class="fluent-emoji" loading="lazy"> NON aprire il coperchio del kamado nelle prime 2 ore di cottura: ogni apertura disperde il fumo e abbassa la temperatura di camera di 15-20°C, allungando i tempi e compromettendo la bark. NON cuocere basandoti solo sul tempo: temperature esterne, vento e variazioni della carbonella rendono i tempi indicativi. L'unico dato affidabile è la temperatura interna a sonda: 95°C. NON saltare il riposo finale: almeno 60 minuti avvolto prima di sfilacciare — senza riposo i succhi escono tutti al taglio e la carne risulta asciutta.</p>
+      </div>
+    </div>
+        
+    <div class="recipe-panel recipe-panel--spaced">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/fire.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Cottura
+      </h2>
+      <div class="tech-badges">
+        <div class="tech-badge"><img src="/Ricettario/images/emoji/thermometer.png" width="18" height="18" alt="" class="fluent-emoji" loading="lazy"> Temperatura: <span class="tech-badge__value">&nbsp;150°C (camera kamado — cottura indiretta)</span></div>
+        <div class="tech-badge"><img src="/Ricettario/images/emoji/stopwatch.png" width="18" height="18" alt="" class="fluent-emoji" loading="lazy"> Tempo: <span class="tech-badge__value">&nbsp;600 minuti (10 ore) — conta sulla temperatura interna: 95°C</span></div>
+      </div>
+      <ul class="tip-list">
+        <li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Non usare bricchetti con additivi chimici: il fumo alterato rovina il sapore della carne. Usa solo carbonella naturale in pezzi o lump charcoal</li><li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Stabilizza il kamado a temperatura precisa PRIMA di inserire la carne: almeno 30 minuti di stabilizzazione con i chunks di legno già inseriti</li><li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Non aprire mai il coperchio nelle prime 2 ore: il fumo deve penetrare nella carne quando è ancora fredda (sotto i 65°C interni)</li><li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Lo 'stall' a 65-75°C è normale e può durare 2-4 ore: non alzare la temperatura, non farti prendere dal panico</li><li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> La bark (crosta scura esterna) è il segnale visivo di buona cottura: deve essere asciutta, scura e compatta, non bruciata</li>
+      </ul>
+    </div>
+        
+    <div class="recipe-panel recipe-panel--spaced">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/light-bulb.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Pro Tips
+      </h2>
+      <ul class="tip-list">
+        <li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Per una bark eccezionale, elimina l'umidità superficiale prima di applicare il rub: asciuga con carta assorbente e lascia la spalla scoperta in frigo su una griglia per 2-4 ore — la superficie diventerà leggermente secca, condizione ideale per la formazione della crosta.</li><li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Mescola i chunks di legno: usa 2 pezzi di hickory per la nota affumicata intensa e 2 di legno di melo o ciliegio per dolcezza e colore rosato della carne. Evita legni resinosi come il pino che producono fumo acre e tossico.</li><li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Raccogli e filtra il liquido nella vaschetta durante la cottura: sgrassalo con un separatore di grassi e usalo per irrorare la carne sfilacciata prima di servire — è naturalmente concentrato di sapori e gelificato, infinitamente meglio di qualsiasi BBQ sauce commerciale.</li>
+      </ul>
+    </div>
+        
+    <div class="recipe-panel recipe-panel--spaced">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/package.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Conservazione
+      </h2>
+      <ul class="tip-list">
+        <li class="tip-item"><img src="/Ricettario/images/emoji/package.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Frigo: il pulled pork sfilacciato si conserva in contenitore ermetico per 4-5 giorni. Aggiungere sempre qualche cucchiaio di succhi di cottura prima di chiudere per mantenerlo umido. Riscaldare in padella a fuoco medio con coperchio aggiungendo 2-3 cucchiai di acqua o succo di mela.</li><li class="tip-item"><img src="/Ricettario/images/emoji/package.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Freezer: si congela egregiamente per 3-4 mesi. Porzionare in sacchetti sous-vide o contenitori da 200-300g con liquido di cottura. Scongelare in frigo 12-16 ore, poi rigenerare in padella coperta o in forno a 160°C per 20 minuti coperto con foglio di alluminio e un goccio di acqua.</li><li class="tip-item"><img src="/Ricettario/images/emoji/package.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Porzioni da servizio: pre-porzione il pulled pork subito dopo la sfilacciatura, quando è ancora caldo e malleabile. Forma dei 'blocchi' compatti in contenitori e congela: si affettano più facilmente da congelati e si rigenerano uniformemente.</li>
+      </ul>
+    </div>
+        
+    <div class="recipe-panel recipe-panel--spaced">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/open-book.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Glossario
+      </h2>
+      <dl class="glossary-list">
+        
+          <dt class="glossary-term">Dry Rub</dt>
+          <dd class="glossary-def">Mix di spezie secche applicato sulla carne prima della cottura. Forma la bark durante la cottura e insaporisce in profondità.</dd>
+        
+          <dt class="glossary-term">Binder</dt>
+          <dd class="glossary-def">Sostanza (qui la senape) spalmata sulla carne prima del rub per farne aderire le spezie senza apportare sapore significativo.</dd>
+        
+          <dt class="glossary-term">Low &amp; Slow</dt>
+          <dd class="glossary-def">Tecnica di cottura a bassa temperatura (110-160°C) per tempi lunghi (6-16h), tipica del BBQ americano. Scioglie il collagene senza seccare la carne.</dd>
+        
+          <dt class="glossary-term">Bark</dt>
+          <dd class="glossary-def">Crosta scura e croccante che si forma sulla superficie della carne durante la cottura BBQ per reazione di Maillard e caramellizzazione degli zuccheri del rub.</dd>
+        
+          <dt class="glossary-term">Stall (The Stall)</dt>
+          <dd class="glossary-def">Fase in cui la temperatura interna della carne si blocca tra 65-75°C per ore a causa dell'evaporazione dell'umidità. È normale e inevitabile.</dd>
+        
+          <dt class="glossary-term">Texas Crutch</dt>
+          <dd class="glossary-def">Tecnica di avvolgere la carne in foglio di alluminio a metà cottura per superare lo stall più velocemente e mantenere la carne umida.</dd>
+        
+          <dt class="glossary-term">Boston Butt</dt>
+          <dd class="glossary-def">Taglio della spalla di maiale superiore (coppa/collo). È il taglio classico per il pulled pork americano: ricco di grasso intramuscolare e collagene.</dd>
+        
+          <dt class="glossary-term">Cottura Indiretta</dt>
+          <dd class="glossary-def">La carne non è sopra la brace diretta, ma posizionata lateralmente o con un deflettore di calore interposto. Il calore circola come in un forno.</dd>
+        
+          <dt class="glossary-term">Chunks di Legno</dt>
+          <dd class="glossary-def">Pezzi di legno aromatico (hickory, melo, ciliegio) aggiunti alla brace per produrre fumo aromatico durante la cottura.</dd>
+        
+          <dt class="glossary-term">Fat Cap</dt>
+          <dd class="glossary-def">Strato di grasso superficiale sulla spalla di maiale. Mantenuto durante la cottura perché fonde lentamente, bagnando la carne continuamente.</dd>
+        
+          <dt class="glossary-term">Sfilacciatura</dt>
+          <dd class="glossary-def">Tecnica manuale di separare le fibre della carne cotta con due forchette o le mani. Possibile solo quando il collagene è completamente gelatinizzato (95°C interni).</dd>
+        
+          <dt class="glossary-term">Heat Deflector</dt>
+          <dd class="glossary-def">Pietra o ceramica refrattaria montata nel kamado tra la brace e la griglia per trasformare la cottura da diretta a indiretta.</dd>
+        
+          <dt class="glossary-term">Kamado</dt>
+          <dd class="glossary-def">Barbecue a forma di uovo in ceramica refrattaria. Mantiene le temperature costanti eccezionalmente bene, ideale per cotture low &amp; slow.</dd>
+        
+      </dl>
+    </div>
+      </div>
+    </section>
+  
+    </div><!-- /#app -->
+    </main>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__brand-name"><img src="/Ricettario/images/emoji/fire.png" width="20" height="20" alt=""
+                            class="fluent-emoji"> <span class="testo-gradiente">Ricettario Lab</span></div>
+                    <p class="footer__brand-desc">
+                        Ricettario personale. Ricette artigianali documentate con precisione tecnica per
+                        risultati replicabili al 100%.
+                    </p>
+                </div>
+
+                <!-- URL veri con base assoluta, non ancore nude: il footer è nel
+                     guscio condiviso da TUTTE le pagine e #ricette/#strumenti/
+                     #chi-sono esistono solo in homepage — altrove un'ancora nuda
+                     lasciava l'URL con l'hash e la pagina ferma. Senza JavaScript
+                     l'URL basta da solo (carica la home e salta alla sezione);
+                     con JavaScript data-nav-section riusa la gestione della
+                     navbar in router.js: da una pagina interna porta in home e
+                     poi scrolla alla sezione, in homepage resta il salto nativo.
+                     La forma dell'URL è la stessa dei breadcrumb
+                     (js/html-ricetta.js: base + "#ricette"). -->
+                <div>
+                    <h2 class="footer__col-title">Navigazione</h2>
+                    <ul class="footer__links">
+                        <li><a href="/Ricettario/"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Home</a>
+                        </li>
+                        <li><a href="/Ricettario/#ricette" data-nav-section="ricette"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
+                                Ricette</a></li>
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
+                                Strumenti</a></li>
+                        <li><a href="/Ricettario/#chi-sono" data-nav-section="chi-sono"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Chi
+                                Sono</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tutte le categorie, con path ASSOLUTI. I vecchi link erano
+                     relativi ("ricette/pane/"): giusti in homepage e rotti su
+                     ogni altra pagina, perché il footer è nel guscio condiviso
+                     e un path relativo si risolve contro l'URL della pagina che
+                     lo ospita. C'era anche una categoria «Pasta» che non esiste.
+                     Questo elenco è una copia di js/categories.js e non può non
+                     esserlo (markup statico): verifica-build.js controlla che
+                     le due liste coincidano, quindi se diverge la build si
+                     ferma. Sono anche gli unici link statici che rendono
+                     raggiungibili le pagine categoria dai crawler. -->
+                <div>
+                    <h2 class="footer__col-title">Categorie</h2>
+                    <ul class="footer__links">
+                        <li><a href="/Ricettario/ricette/primi/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Primi</a></li>
+                        <li><a href="/Ricettario/ricette/pane/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Pane</a></li>
+                        <li><a href="/Ricettario/ricette/pizza/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Pizza</a></li>
+                        <li><a href="/Ricettario/ricette/lievitati/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Lievitati</a></li>
+                        <li><a href="/Ricettario/ricette/dolci/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Dolci</a></li>
+                        <li><a href="/Ricettario/ricette/focaccia/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Focaccia</a></li>
+                        <li><a href="/Ricettario/ricette/conserve/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Conserve</a></li>
+                        <li><a href="/Ricettario/ricette/condimenti/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Condimenti</a></li>
+                        <li><a href="/Ricettario/ricette/secondi-piatti/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Secondi Piatti</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="footer__col-title">Stack</h2>
+                    <ul class="footer__links">
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Famag Grilletta</a></li>
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Mix Tri-Farina</a></li>
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Farine Professionali</a></li>
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/thermometer.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Termometro Laser</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <span>© <span id="current-year">2026</span> Ricettario Lab</span>
+                <div class="footer__social">
+                    <a href="https://github.com/devdomenicotatone/Ricettario" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
