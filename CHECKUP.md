@@ -10,10 +10,10 @@
 > `localStorage`. Non dedotte — **eseguite**, prima per dimostrarle e poi di
 > nuovo per dimostrare che non eseguono più.
 >
-> **Restano 16 punti aperti**, nessuno dei quali blocca il sito. Il più urgente
-> non è nel codice: **17 commit esistono solo su questo portatile** (erano 15
-> quando il critico l'ha misurato, questa mattinata ne ha aggiunti altri due), e
-> la CI non li ha mai visti (punto 5).
+> **Restano 15 punti aperti**, nessuno dei quali blocca il sito. Il sedicesimo —
+> diciassette commit che esistevano solo su questo portatile, mai visti dalla CI
+> — è rientrato in giornata, ma per una coincidenza e non per una garanzia:
+> vale la pena leggere il punto 5 lo stesso.
 >
 > **Metodo:** 24 agenti in parallelo su sette dimensioni — cancelli, sicurezza,
 > dati, prestazioni, SEO, accessibilità, architettura — più un critico di
@@ -116,23 +116,31 @@ evade il controllo è già quella che il progetto usa. E la scansione guarda sol
 i file chiamati `index.html`: dei 107 `.html` di `dist/` ne controlla 106, e
 l'unico escluso è proprio `404.html`.
 
-## 5. Quindici commit esistono solo su questo portatile
+## 5. Si pubblica senza passare da GitHub — RIENTRATO, ma la struttura resta
 
-**Gravità 5.** `.github/workflows/ci.yml` + `scripts/deploy-ghpages.js`
+**Gravità 5 quando è stato misurato, 2 adesso.**
+`.github/workflows/ci.yml` + `scripts/deploy-ghpages.js`
 
-`git rev-list --left-right --count origin/main...HEAD` → **0 17**. Diciassette
-commit non sono mai stati pushati: tutto il lavoro di oggi — la grammatica dei
-token, la fonte unica del markup, i link presidiati, il fuoco sull'H1, i
-cancelli sulle promesse alimentari, la regola degli assi, e la correzione delle
-due XSS qui sopra.
+Quando il critico di completezza l'ha misurato,
+`git rev-list --left-right --count origin/main...HEAD` dava **0 17**:
+diciassette commit — tutto il lavoro della giornata, comprese le due XSS qui
+sopra — esistevano solo su questo portatile. **La CI non li aveva mai visti**,
+perché gira sul push a `main`, mentre gli undici deploy erano partiti da qui.
 
-Due conseguenze. La prima: **la CI non ha mai visto quel codice**, perché gira
-sul push a `main`; gli undici deploy di oggi sono partiti dal portatile, e
-l'unico controllo che li ha visti è `npm run check` locale. La seconda: se il
-disco muore, quel lavoro non è da nessun'altra parte — il sito pubblicato
-contiene il *risultato*, non i sorgenti.
+**Rientrato lo stesso giorno**, e non perché qualcuno abbia eseguito il rimedio:
+una seconda sessione aperta sullo stesso repo ha spinto il proprio commit e si è
+portata dietro anche gli altri diciassette. Verificato interrogando il server —
+`git ls-remote`, non il riferimento locale che poteva essere vecchio: `0 0`, i
+commit chiave sono tutti antenati di `origin/main`, e il run della CI sul push è
+`success`.
 
-Si chiude con `git push origin main`.
+**Quello che resta è la forma, non l'istanza.** `npm run deploy` pubblica su
+`gh-pages` senza chiedere niente a `main`: pubblicare e versionare sono due
+gesti separati, quindi il codice online può restare per ore l'unico posto in cui
+un lavoro esiste, e la CI vederlo dopo — o mai. Stavolta l'ha salvato una
+coincidenza. Se serve una garanzia e non una fortuna, il posto giusto è
+`deploy-ghpages.js`: rifiutare di pubblicare quando `main` è avanti al remoto,
+come già rifiuta di pubblicare quando `npm run check` fallisce.
 
 ## 6. Il manifest della PWA risponde 404, in produzione
 
