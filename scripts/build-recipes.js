@@ -414,8 +414,12 @@ if (errors.length) {
   process.exit(1);
 }
 
+// Niente `generatedAt`: un timestamp dentro un file generato E versionato è
+// un diff perpetuo — ogni sync lo riscriveva e l'indice non risultava mai
+// pulito su git, con la dashboard accesa che lo ritoccava appena committato.
+// Nessun consumatore leggeva il campo (verificato su sito e dashboard); la
+// data dell'ultima rigenerazione la dice la storia dei commit.
 const index = {
-  generatedAt: new Date().toISOString(),
   totalRecipes: recipes.length,
   categories,
   recipes,
