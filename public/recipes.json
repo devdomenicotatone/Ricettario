@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-28T11:40:26.438Z",
-  "totalRecipes": 83,
+  "generatedAt": "2026-07-28T11:56:10.041Z",
+  "totalRecipes": 84,
   "categories": [
     {
       "name": "Primi",
@@ -39,7 +39,7 @@
     },
     {
       "name": "Condimenti",
-      "count": 40,
+      "count": 41,
       "emoji": "🌿"
     },
     {
@@ -808,6 +808,25 @@
       "hasNutrition": true,
       "hasStorage": true,
       "_createdAt": "2026-05-05T20:37:39.421Z"
+    },
+    {
+      "title": "Bagna Cauda",
+      "slug": "bagna-cauda",
+      "category": "Condimenti",
+      "categoryDir": "condimenti",
+      "emoji": "🫕",
+      "href": "ricette/condimenti/bagna-cauda.html",
+      "image": "images/ricette/condimenti/bagna-cauda.webp",
+      "description": "La bagna cauda piemontese tradizionale: aglio dolcificato nel latte, acciughe rosse di Spagna sciolte nell'olio EVO a fuoco lentissimo.",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "imageAttribution": "📷 Foto: Grendelkhan — CC BY-SA 3.0 via Wikimedia",
+      "hasSensory": true,
+      "hasNutrition": true,
+      "hasStorage": true,
+      "_createdAt": "2026-07-28T11:54:07.496Z"
     },
     {
       "title": "Besciamella",

@@ -40,6 +40,7 @@
  */
 export const DIMENSIONI_FOTO = {
   'images/ricette/condimenti/babaganoush-crema-melanzane': [1200, 896],
+  'images/ricette/condimenti/bagna-cauda': [1800, 1350],
   'images/ricette/condimenti/besciamella': [1200, 896],
   'images/ricette/condimenti/burro-composto-acciughe-tartufo': [1200, 896],
   'images/ricette/condimenti/burro-maitre-d-hotel': [1200, 896],
