@@ -7,13 +7,13 @@
 | Schema | ✅ Pass | 0 errori, 0 warning |
 | Gemini | 95/100 | 🟢 Buona |
 
-Ricetta eccellente e di livello professionale. Le temperature di gestione del burro, i riposi per la sfogliatura e i tempi di lievitazione sono impeccabili e riflettono un'alta competenza tecnica. Unico difetto è la discrepanza matematica nel valore dell'idratazione dichiarata.
+Ricetta eccezionale, scritta con estrema precisione e competenza tecnica. Istruzioni su sfogliatura, temperature e riposi sono di livello professionale; l'unica inesattezza riguarda il calcolo matematico dell'idratazione.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| ❌ | Dosi | L'idratazione dichiarata del 47% non corrisponde ai calcoli matematici rigorosi. Formula: Acqua totale (45g in biga + 100g in impasto = 145g) / Farina totale (100g in biga + 260g + 140g in impasto = 500g) * 100 = 29% (solo acqua). Anche calcolando i liquidi totali incluse le uova (145g acqua + 110g uova = 255g), l'idratazione sui liquidi è del 51%. Entrambi i valori differiscono dal 47% per più del 3%. | Aggiornare l'idratazione dichiarata al 51% specificando 'sui liquidi totali', oppure a 45.5% se si intende conteggiare l'effettiva percentuale d'acqua contenuta anche nelle uova. |
+| ❌ | Dosi | L'idratazione dichiarata (47%) non è corretta seguendo il calcolo rigoroso. Farina totale (100g biga + 260g 00 + 140g manitoba) = 500g. Acqua totale (45g biga + 100g impasto) = 145g. Formula: (145g / 500g) × 100 = 29% ≠ 47% dichiarato. (Nota: anche calcolando i liquidi totali includendo i 110g di uova si ottiene il 51%). | Modificare l'idratazione dichiarata al 51% specificando '(liquidi totali)' oppure al 29% se si considera solo l'acqua pura. |
 
 ---
-*Generato: 2026-04-16T19:58:25.262Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-28T00:13:25.305Z | Pipeline: Schema → Gemini*

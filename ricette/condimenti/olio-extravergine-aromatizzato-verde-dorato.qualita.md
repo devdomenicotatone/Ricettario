@@ -1,19 +1,20 @@
-# Qualità: Olio Extravergine Aromatizzato
+# Qualità: Olio Extravergine Aromatizzato (Verde Dorato)
 
-## 🟢 Score Finale: 95/100
+## 🟡 Score Finale: 65/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 0 warning |
-| Gemini | 95/100 | 🟢 Buona |
+| Gemini | 65/100 | 🔴 Problematica |
 
-Ricetta eccellente, strutturata con grande professionalità. Il procedimento è preciso e l'allerta sulla sicurezza alimentare (rischio botulino) è perfetta e fondamentale per questa tipologia di preparazioni. Ottimi anche i consigli per preservare le caratteristiche dell'EVO.
+La ricetta descrive ottime tecniche di estrazione e abbinamenti, ma presenta un difetto critico sulla sicurezza: le tempistiche di infusione suggerite nel procedimento contraddicono apertamente (e pericolosamente) i limiti massimi di conservazione indicati per prevenire il botulino.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| 💡 | Setup | Nei PRO TIPS si suggerisce l'estrazione rapida scaldando al microonde 'a massima potenza per 1 minuto'. Scaldare aromi freschi (ricchi d'acqua) in olio ad alta potenza in un'unica soluzione continua potrebbe causare una frittura violenta e improvvisa dell'acqua, con rischio di schizzi o pericolosi sbalzi termici. | Specificare di scaldare l'olio a intervalli brevi (es. step da 20 secondi), mescolando e controllando la temperatura, per raggiungere il minuto totale in modo sicuro e controllato. |
+| ❌ | Tempi | Grave contraddizione legata alla sicurezza alimentare (rischio botulino). Nel Procedimento (Punto 5) si indica un'infusione di 14 giorni in 'luogo fresco' con ingredienti freschi (aglio, limone, rosmarino). Tuttavia, le sezioni ALERT e CONSERVAZIONE affermano correttamente che il prodotto fresco in olio deve essere tenuto in frigo e consumato tassativamente entro 7-10 giorni. Non è possibile infondere per 14 giorni un prodotto che scade dopo 7. | Ridurre drasticamente il tempo di infusione nel Procedimento (es. 2-3 giorni in frigorifero) per gli ingredienti freschi, oppure sostituire gli ingredienti freschi con le loro controparti essiccate/disidratate per mantenere l'infusione a 14 giorni a temperatura ambiente. |
+| 💡 | Coerenza | Nella sezione CONSERVAZIONE si suggerisce di filtrare l'olio per rimuovere le particelle solide citando tra parentesi '(erbe, aglio, peperoncino)'. Tuttavia, il peperoncino non è presente negli ingredienti di questa specifica ricetta (è presente il pepe nero). | Rimuovere la parola 'peperoncino' dalla sezione Conservazione o sostituirla con 'pepe'/'limone' per coerenza con la lista ingredienti. |
 
 ---
-*Generato: 2026-04-16T18:19:50.884Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-28T00:11:13.019Z | Pipeline: Schema → Gemini*

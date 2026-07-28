@@ -1,20 +1,19 @@
 # Qualità: Burro Maître d'Hôtel
 
-## 🟢 Score Finale: 98/100
+## 🟢 Score Finale: 100/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 0 warning |
-| Gemini | 98/100 | 🟢 Buona |
+| Gemini | 100/100 | 🟢 Buona |
 
-Ricetta eccellente e tecnicamente ineccepibile. Le procedure per la gestione del grasso a pomata, l'emulsione dei liquidi e la successiva ricristallizzazione sono spiegate con precisione da manuale.
+Ricetta eccezionale e ineccepibile. Le proporzioni per l'emulsione sono corrette, i passaggi critici (come non fondere il burro e l'asciugatura del prezzemolo) sono ben spiegati e le tecniche di lavorazione e conservazione riflettono l'alta cucina. Idratazione calcolata a 0% corretta per la tipologia di preparazione.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| 💡 | Dosi | L'idratazione è correttamente 0% (nessuna farina o liquido da impasto presente: 0g / 0g = 0%). Le proporzioni sono eccellenti, tuttavia 30g di sole foglie di prezzemolo tritate per 200g di burro (15%) creeranno un panetto estremamente fitto e verde. Per la versione classica del Maître d'Hôtel, solitamente si staziona intorno al 7-10% (15-20g). | Mantenere 30g se si desidera un burro molto 'rustico' e caricato, oppure abbassare a 15-20g per un'estetica più tradizionale. |
-| 💡 | Setup | Il succo di limone apporta l'acidità necessaria, ma per amplificare lo spettro aromatico e sfruttare al massimo gli oli essenziali (senza sbilanciare la quota liquida dell'emulsione), si potrebbe inserire la scorza grattugiata del limone. | Aggiungere 'Scorza di mezzo limone non trattato' tra gli ingredienti e incorporarla nel punto 4 insieme alle erbe. |
+| 💡 | Coerenza | La ricetta è tecnicamente perfetta e scritta con grande rigore. L'unica piccolissima accortezza riguarda il burro: considerando l'aggiunta di 3g di sale fino (che porta la sapidità all'1,5%, ideale per il condimento), sarebbe utile specificare esplicitamente che il burro deve essere 'non salato', per evitare che un utente sbadato usi un burro salato raddoppiando la sapidità finale. | Modificare la voce ingrediente in 'Burro di centrifuga non salato (82% grassi...)' |
 
 ---
-*Generato: 2026-04-19T20:36:29.668Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-28T00:05:07.140Z | Pipeline: Schema → Gemini*

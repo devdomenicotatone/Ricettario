@@ -7,13 +7,13 @@
 | Schema | ✅ Pass | 0 errori, 0 warning |
 | Gemini | 98/100 | 🟢 Buona |
 
-Ricetta eccellente e tecnicamente ineccepibile. Perfetta coerenza tra ingredienti e procedimento. Ottime e professionali le note sul divieto del frullatore e sull'importanza dello spurgo della polpa per preservare sapore e consistenza.
+Ricetta eccellente, tecnicamente ineccepibile e rispettosa della tradizione. Ottima la gestione dello spurgo delle melanzane e correttissimo il divieto (nell'Alert) dell'uso del frullatore per preservare la texture. Dosi e bilanciamento dei sapori perfetti.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| 💡 | Setup | Il procedimento al punto 3 prevede lo spurgo della polpa di melanzana in un colino per 15 minuti per eliminare l'acqua di vegetazione. È una tecnica corretta, ma l'estrazione dei liquidi potrebbe essere ottimizzata sfruttando l'osmosi. | Si potrebbe suggerire di utilizzare un pizzico dei 5g di sale previsti in ricetta già durante la fase di scolatura della polpa nel colino (Step 3), facilitando e accelerando il rilascio dell'acqua amara. |
+| 💡 | Tempi | Lieve discrepanza nei tempi suggeriti per l'affumicatura su fiamma viva: nella sezione COTTURA si suggeriscono 15 minuti, mentre nei PRO TIPS se ne indicano 10. | Uniformare il suggerimento indicando un range temporale di '10-15 minuti' in entrambe le sezioni per evitare confusioni. |
 
 ---
-*Generato: 2026-05-05T21:01:00.109Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-27T23:50:31.471Z | Pipeline: Schema → Gemini*

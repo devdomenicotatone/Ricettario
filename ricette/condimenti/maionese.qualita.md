@@ -7,13 +7,13 @@
 | Schema | ✅ Pass | 0 errori, 0 warning |
 | Gemini | 95/100 | 🟢 Buona |
 
-Ricetta eccellente e tecnicamente ineccepibile. Idratazione 0% corretta (nessuna farina/acqua presente). Le proporzioni tuorlo/olio (1:125) sono scientificamente perfette, le spiegazioni sulle temperature e la chimica dell'emulsione sono accurate e dettagliate.
+Ricetta tecnicamente impeccabile. Le proporzioni olio/tuorlo (125g/tuorlo), la gestione delle temperature e la spiegazione del processo di emulsione a filo sono da manuale. L'unica lieve imperfezione riguarda la mancata indicazione dell'uovo intero in lista per il metodo alternativo.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| 💡 | Coerenza | Il metodo alternativo col minipimer (Step 6) richiede '1 uovo intero', ma nella lista ingredienti principale sono presenti solo i 'Tuorli d'Uovo'. Per quanto l'utente compri comunque le uova intere, a livello di calcolatore ingredienti l'uovo intero risulta mancante per chi volesse eseguire solo questa variante. | Se la piattaforma lo supporta, aggiungere un gruppo ingredienti opzionale (es. 'Variante Minipimer') contenente '1 Uovo Intero (~60g)' al posto dei 40g di tuorli, per mantenere la tracciabilità esatta. |
+| ⚠️ | Coerenza | Il punto 6 del procedimento (metodo rapido col minipimer) richiede l'uso di '1 uovo intero', ma nella lista ingredienti sono presenti esclusivamente i 'Tuorli d'Uovo'. Chi segue la ricetta preparandosi gli ingredienti indicati non avrà l'uovo intero a disposizione. | Aggiungere un secondo gruppo ingredienti dedicato al 'Metodo Minipimer' includendo l'uovo intero, oppure inserire una nota all'inizio del punto 6 che precisi di sostituire i 40g di tuorli con 1 uovo intero (circa 50-55g). |
 
 ---
-*Generato: 2026-04-24T13:13:44.342Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-28T00:01:53.906Z | Pipeline: Schema → Gemini*

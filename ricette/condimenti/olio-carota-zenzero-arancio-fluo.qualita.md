@@ -1,19 +1,19 @@
 # Qualità: Olio alla Carota e Zenzero (Arancio Fluo)
 
-## 🟢 Score Finale: 100/100
+## 🟢 Score Finale: 95/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 0 warning |
-| Gemini | 100/100 | 🟢 Buona |
+| Gemini | 95/100 | 🟢 Buona |
 
-Ricetta tecnicamente impeccabile e scritta con grande competenza professionale. L'idratazione (0%) è corretta, l'uso delle temperature (70°C) per non degradare lo zenzero e l'attenzione maniacale alla sicurezza alimentare (separazione acqua vegetale e alert botulino) sono da manuale.
+Ricetta eccellente, redatta con grande competenza tecnica. I passaggi chimico-fisici per l'estrazione, il controllo delle temperature e la fondamentale gestione della sicurezza alimentare (rischio botulino) sono corretti e spiegati con precisione.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| 💡 | Setup | Trattandosi di un prodotto a rischio microbiologico dopo le 2-3 settimane (nonostante la corretta decantazione dell'acqua e conservazione in frigo), è prassi igienico-sanitaria fondamentale tracciare la scadenza. | Aggiungere nella sezione CONSERVAZIONE o ALERT il suggerimento di applicare un'etichetta sul contenitore con la data esatta di produzione. |
+| 💡 | Coerenza | C'è una lieve discrepanza nella nomenclatura tra lista ingredienti ('Olio Extravergine di Oliva') e il token nel passaggio 3 del procedimento ('{olio_base:350}g'). | Per assicurare il corretto funzionamento del calcolatore frontend, uniformare il nome del token al nome dell'ingrediente (es. {olio_extravergine_di_oliva:350}g) o viceversa. |
 
 ---
-*Generato: 2026-04-24T23:59:21.923Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-27T23:58:53.142Z | Pipeline: Schema → Gemini*

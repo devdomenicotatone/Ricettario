@@ -1,19 +1,19 @@
 # Qualità: Salsa allo Yogurt ed Erba Cipollina
 
-## 🟢 Score Finale: 100/100
+## 🟢 Score Finale: 95/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 0 warning |
-| Gemini | 100/100 | 🟢 Buona |
+| Gemini | 95/100 | 🟢 Buona |
 
-Ricetta eccellente e tecnicamente ineccepibile. Le proporzioni sono perfettamente bilanciate (sale a circa 1% sul peso totale), le tecniche suggerite sono precise e la coerenza tra lista ingredienti e token nel procedimento è assoluta.
+Ricetta eccellente e impeccabile dal punto di vista tecnico alimentare. Ottime le spiegazioni sull'emulsione separata, l'uso delle forbici per non ossidare l'erba cipollina e la pellicola a contatto. Idratazione 0% confermata data l'assenza di farine.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| 💡 | Dosi | Verifica matematica idratazione eseguita: essendo un condimento senza farine/semole (Farina totale = 0g), il calcolo dell'idratazione tipico dei lievitati non è applicabile. Il valore 0% dichiarato è tecnicamente corretto per il sistema. | Nessuna azione richiesta. |
+| 💡 | Coerenza | Al passaggio 6 si suggerisce di decorare il piatto con 'qualche filo di erba cipollina intera e un giro d'olio EVO'. Tuttavia, tutte le quantità di olio (20g) ed erba cipollina (10g) indicate in ricetta vengono fatte utilizzare completamente nei passaggi 3 e 4. | Aggiungere 'Erba Cipollina Fresca (per guarnire) q.b.' e 'Olio Extravergine di Oliva (per guarnire) q.b.' nella lista ingredienti, oppure specificare nel passaggio 4 di tenere da parte un paio di fili di erba cipollina. |
 
 ---
-*Generato: 2026-04-19T20:58:05.814Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-28T00:04:53.519Z | Pipeline: Schema → Gemini*

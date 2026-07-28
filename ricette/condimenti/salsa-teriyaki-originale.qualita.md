@@ -1,13 +1,13 @@
 # Qualità: Salsa Teriyaki Originale
 
-## 🟢 Score Finale: 98/100
+## 🟢 Score Finale: 95/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 2 warning |
-| Gemini | 98/100 | 🟢 Buona |
+| Gemini | 95/100 | 🟢 Buona |
 
-Ricetta eccellente, tecnicamente ineccepibile e filologicamente corretta. Le proporzioni 1:1:1 rispecchiano fedelmente la tradizione giapponese e le note tecniche su temperature e cristallizzazione degli zuccheri sono perfette.
+Ricetta eccellente, minuziosamente descritta e fedele ai rapporti tradizionali giapponesi (1:1:1). L'unico dettaglio da sistemare è una lieve contraddizione nei suggerimenti di sostituzione degli ingredienti.
 
 ## 🔍 Schema Validation
 
@@ -18,7 +18,7 @@ Ricetta eccellente, tecnicamente ineccepibile e filologicamente corretta. Le pro
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| ⚠️ | Tempi | Nella sezione riassuntiva 'COTTURA' il tempo è indicato come 'N/A', sebbene nel punto 3 del procedimento sia chiaramente indicato un tempo di sobbollitura/riduzione di 25-30 minuti. | Aggiornare i metadati della sezione COTTURA indicando 'Tempo: 25-30 minuti'. |
+| ⚠️ | Coerenza | È presente una contraddizione: nella sezione ALERT si vieta categoricamente di sostituire il sake con vino bianco ('NON sostituire il sake con vino bianco... cambiano le note aromatiche in modo significativo'), mentre nei PRO TIPS si suggerisce esattamente questa sostituzione in caso di necessità ('puoi usare un vino bianco secco fermo... funzionalmente accettabile per usi domestici'). | Armonizzare i due testi: ammorbidire il divieto nell'ALERT spiegando che altera l'autenticità ma è tollerabile come emergenza, oppure rimuovere l'opzione del vino bianco dai PRO TIPS per mantenere un approccio purista. |
 
 ---
-*Generato: 2026-04-19T20:58:45.365Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-28T00:04:39.154Z | Pipeline: Schema → Gemini*

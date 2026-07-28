@@ -1,19 +1,20 @@
 # Qualità: Treccia di Pane all'Olio
 
-## 🟢 Score Finale: 100/100
+## 🟢 Score Finale: 95/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 0 warning |
-| Gemini | 100/100 | 🟢 Buona |
+| Gemini | 95/100 | 🟢 Buona |
 
-Ricetta eccellente e tecnicamente ineccepibile. I calcoli matematici (idratazione ricalcolata al 56% e divisione dei panetti a 286g) sono esatti. Tempi, temperature e inserimento dei grassi sono spiegati con assoluta precisione professionale.
+Ricetta eccellente e tecnicamente ineccepibile. L'idratazione al 56% (280g/500g) è matematicamente corretta, i pesi combaciano alla perfezione e la gestione della cottura senza vapore a 190°C è ideale per un impasto arricchito all'olio.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| 💡 | Setup | La spennellatura con solo latte donerà alla treccia una colorazione dorata ma leggermente opaca. È una scelta corretta, ma per l'effetto tipicamente lucido delle trecce da panificio si usa spesso l'uovo. | Si potrebbe aggiungere nei PRO TIPS l'opzione di usare una miscela di uovo intero sbattuto e un goccio di latte per chi desidera una finitura molto lucida. |
+| 💡 | Procedure | Spennellare la treccia con il latte al termine dell'appretto (Step 7) richiede molta delicatezza, essendoci il rischio di far collassare l'impasto lievitato e teso. | Specificare di usare un pennello a setole molto morbide, oppure suggerire di effettuare una prima spennellatura prima dell'appretto per evitare traumi meccanici a lievitazione ultimata. |
+| 💡 | Temperature | L'acqua a 20-22°C è un buon valore standard, ma lavorando con un'impastatrice (che genera attrito) in una cucina mediamente calda, si rischia di superare il target finale di 25-26°C. | Aggiungere un accorgimento tecnico: 'Se l'ambiente è caldo (es. sopra i 24°C), utilizzare acqua fredda di frigorifero per bilanciare il surriscaldamento dato dall'impastatrice'. |
 
 ---
-*Generato: 2026-04-23T23:22:18.859Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-28T00:04:05.345Z | Pipeline: Schema → Gemini*

@@ -7,13 +7,14 @@
 | Schema | ✅ Pass | 0 errori, 0 warning |
 | Gemini | 95/100 | 🟢 Buona |
 
-Ricetta eccellente e tecnicamente ineccepibile. Il bilanciamento tra la parte acida (aceto), la quota lipidica (olio) e l'acqua (tipica tecnica della 'salmuera' per non rendere la salsa troppo aggressiva) è perfetto. Le avvertenze sulla lavorazione meccanica (no frullatore) dimostrano grande competenza tecnica.
+Ricetta eccellente, strutturata con grande precisione. Le proporzioni sono classiche e corrette, e i consigli tecnici (come l'uso esclusivo del coltello per evitare l'ossidazione del prezzemolo e la stabilizzazione con aceto) dimostrano un'ottima conoscenza della materia. Corrispondenza ingredienti-procedimento impeccabile.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| 💡 | Coerenza | La categoria della ricetta è impostata su 'Pasta'. Sebbene il chimichurri possa essere utilizzato per condire un primo piatto, è tradizionalmente e fondamentalmente una salsa/condimento per carni alla griglia (Asado). | Modificare la categoria in 'Salse' o 'Condimenti' per una maggiore coerenza gastronomica. |
+| 💡 | Dosi | Verifica matematica idratazione: Trattandosi di un condimento privo di sfarinati, il calcolo dell'idratazione (Acqua totale / Farina totale) restituisce una divisione per zero (55g / 0g = N/A). Il valore dichiarato dello 0% è formalmente corretto per questa tipologia di preparazione. | Nessuna azione richiesta. |
+| ⚠️ | Coerenza | Nel Procedimento al punto 3 è presente un'incoerenza nel tempo verbale: viene usato l'imperativo 'Sbriciolate a mano', mentre tutto il resto del testo utilizza correttamente l'infinito (es. 'Sbucciare', 'Rimuovere', 'Tritare', 'Lavare'). | Uniformare lo stile testuale correggendo in 'Sbriciolare a mano'. |
 
 ---
-*Generato: 2026-04-19T20:38:45.555Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-28T00:06:45.249Z | Pipeline: Schema → Gemini*

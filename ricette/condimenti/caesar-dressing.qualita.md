@@ -7,14 +7,13 @@
 | Schema | ✅ Pass | 0 errori, 0 warning |
 | Gemini | 95/100 | 🟢 Buona |
 
-Ricetta eccellente e tecnicamente ineccepibile. I processi chimico-fisici legati all'emulsione (temperature, tecnica a filo, ruolo della lecitina) sono spiegati con precisione magistrale. Idratazione calcolata: 0g liquidi / 0g farina = 0%, che conferma il valore dichiarato essendo una salsa senza farina. Coerenza tra ingredienti e procedimento perfetta.
+Ricetta eccellente, redatta con grande competenza tecnica. I rapporti per l'emulsione sono perfetti, le avvertenze sulle temperature degli ingredienti sono fondamentali e corrette. L'idratazione (0%) è corretta in quanto assenti farine.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| 💡 | Coerenza | La CATEGORIA indicata nell'intestazione è 'Pasta', ma la ricetta è una salsa a freddo tradizionalmente utilizzata per insalate (Caesar Salad) o carni bianche. | Cambiare la categoria in 'Salse e Condimenti' o 'Insalate'. |
-| 💡 | Dosi | La ricetta prevede 2g di sale fino, che si sommano a ingredienti già ricchi di sapidità (10g acciughe, 40g Parmigiano, 15g senape, 6g Worcestershire). C'è il rischio di un risultato finale leggermente troppo sapido. | Nel procedimento al punto 2, suggerire di omettere il sale iniziale o usarne solo un pizzico (0.5g) per sfaldare le acciughe, spostando la regolazione finale della sapidità al punto 5 dopo l'assaggio. |
+| 💡 | Dosi | Nonostante sia correttamente specificato l'uso di un Olio EVO 'fruttato leggero', l'uso del 100% di olio d'oliva in un'emulsione sbattuta energicamente può talvolta sviluppare note amare a causa dell'ossidazione dei polifenoli. | Aggiungere nei PRO TIPS il suggerimento di poter 'tagliare' l'olio EVO al 50% con un olio di semi dal sapore neutro (es. vinacciolo o girasole) per garantire un sapore sempre rotondo e bilanciato. |
 
 ---
-*Generato: 2026-04-19T20:37:06.594Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-28T00:05:37.973Z | Pipeline: Schema → Gemini*

@@ -7,7 +7,7 @@
 | Schema | ✅ Pass | 0 errori, 17 warning |
 | Gemini | 85/100 | 🟡 Da migliorare |
 
-Ricetta tecnicamente molto valida e spiegata in modo eccellente. L'idratazione (550g su 1100g di farine = 50%) è dichiarata correttamente. Tempi, temperature e bilanciamento dei grassi rispecchiano fedelmente la vera rosticceria siciliana. Unico neo un refuso matematico sull'inserimento dell'acqua nel procedimento.
+La ricetta è strutturata molto bene e le temperature/tempi sono corretti per la tipologia di impasto. Tuttavia, c'è un errore matematico nel testo del procedimento che fa perdere 50g di acqua rispetto alla lista ingredienti, abbassando un'idratazione già di per sé molto rigida (50%).
 
 ## 🔍 Schema Validation
 
@@ -33,8 +33,9 @@ Ricetta tecnicamente molto valida e spiegata in modo eccellente. L'idratazione (
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| ❌ | Coerenza | Incongruenza nella quantità d'acqua: negli ingredienti sono indicati 550g totali, ma nel procedimento se ne utilizzano solo 500g (100g al punto 2 + 'i restanti 400g' al punto 3). All'appello mancano 50g. | Modificare il punto 3 del procedimento scrivendo 'aggiungere gradualmente i restanti 450g di acqua fresca'. |
-| 💡 | Gruppi | Al punto 8 del procedimento si richiede di usare 'passata di pomodoro condita (olio, sale, origano)'. Tuttavia, il sale non è presente nel gruppo ingredienti 'Per la Farcitura' (i 20g indicati sono pesati millimetricamente per il solo impasto). | Aggiungere 'Sale fino (q.b. per la passata)' nel gruppo 'Per la Farcitura'. |
+| ❌ | Coerenza | Incongruenza sulla quantità totale di acqua. Negli ingredienti sono indicati 550g totali. Nel procedimento (Punto 2) si usano 100g, e al Punto 3 si dice di aggiungere 'i restanti 400g'. 100g + 400g = 500g. Mancano 50g all'appello nel testo. | Modificare il Punto 3 del procedimento scrivendo 'aggiungere gradualmente i restanti 450g di acqua'. |
+| ⚠️ | Coerenza | Al Punto 8 si indica di condire la passata di pomodoro con '(olio, sale, origano)'. Tuttavia, il sale non è presente nel gruppo ingredienti 'Per la Farcitura' (è presente solo quello per l'impasto). | Aggiungere 'Sale fino q.b.' nel gruppo ingredienti 'Per la Farcitura', oppure rimuovere la dicitura 'sale' dal Punto 8. |
+| 💡 | Dosi | Le percentuali indicate tra parentesi negli ingredienti non corrispondono matematicamente alla farina totale (1100g). Il lievito (25g) è il 2.27% e non il 2.5%; lo zucchero (100g) è il 9% e non il 10%; il sale (20g) è l'1.8% e non il 2%. | Correggere le note tra parentesi per riflettere le percentuali reali, oppure adeguare i grammi (es. 22g di sale per avere esattamente il 2%, 110g di zucchero per il 10%). |
 
 ---
-*Generato: 2026-04-16T19:30:24.846Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-27T23:50:13.314Z | Pipeline: Schema → Gemini*

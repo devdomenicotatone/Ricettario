@@ -1,23 +1,39 @@
 # Qualità: Panettone Pere e Cioccolato
 
-## 🟢 Score Finale: 92/100
+## 🟡 Score Finale: 70/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
-| Schema | ✅ Pass | 0 errori, 0 warning |
-| Claude | 92/100 | 🟢 Buona |
+| Schema | ❌ Fail | 1 errori, 16 warning |
+| Gemini | 85/100 | 🟡 Da migliorare |
 
-Ricetta tecnicamente solida con dosi, temperature e tempi corretti per un panettone professionale. Gli errori principali sono nei riferimenti delle variabili nel procedimento (zucchero/acqua/tuorli mal referenziati). Il carico di sospensioni è al limite superiore ma gestibile con la tecnica descritta. Una volta corretti i riferimenti, sarà un'ottima ricetta per panettone artigianale.
+Ricetta professionale e tecnicamente molto valida, con tempistiche, temperature e proporzioni eccellenti per un grande lievitato. L'idratazione calcolata corrisponde al 45% dichiarato. Necessita solo di una correzione su un refuso critico nel dosaggio dell'acqua descritto nel primo impasto.
+
+## 🔍 Schema Validation
+
+- ❌ totalFlour dichiarato 1250g ma somma farine = 1483g (differenza: 233g)
+- ⚠️ Ingrediente "Farina Panettone Forte" nel gruppo "Per il Primo Impasto" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Lievito Madre Solido" nel gruppo "Per il Primo Impasto" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Acqua" nel gruppo "Per il Primo Impasto" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Zucchero Semolato Fine" nel gruppo "Per il Primo Impasto" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Tuorli d'Uovo" nel gruppo "Per il Primo Impasto" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Burro" nel gruppo "Per il Primo Impasto" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Farina Panettone Forte" nel gruppo "Per il Secondo Impasto" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Zucchero Semolato Fine" nel gruppo "Per il Secondo Impasto" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Tuorli d'Uovo" nel gruppo "Per il Secondo Impasto" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Burro" nel gruppo "Per il Secondo Impasto" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Acqua" nel gruppo "Per il Secondo Impasto" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Miele d'Acacia" nel gruppo "Per il Secondo Impasto" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Pasta d'Arancia" nel gruppo "Per il Secondo Impasto" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Malto Diastasico in Pasta" nel gruppo "Per il Secondo Impasto" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Vaniglia Bourbon" nel gruppo "Per il Secondo Impasto" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Sale Fino" nel gruppo "Per il Secondo Impasto" senza tokenId — il calcolatore dosi non funzionerà correttamente
 
 ## Problemi trovati
 
-| Sev. | Area | Problema | Correzione | Fonte |
-|------|------|----------|------------|-------|
-| ❌ | Coerenza | Nel punto 2 del procedimento c'è un grave errore di riferimento: viene indicato '{zucchero_secondo_impasto:235}g acqua' invece di '{acqua_primo_impasto:350}g acqua'. I 235g si riferiscono allo zucchero del secondo impasto, non all'acqua del primo | Correggere con '{acqua_primo_impasto:350}g acqua a 24-26°C' | 🔵 Claude |
-| ❌ | Coerenza | Nel punto 2, il riferimento '{lievito_madre_primo_impasto:350}g zucchero' è errato. Dovrebbe riferirsi allo zucchero del primo impasto (350g), non al lievito madre | Correggere con '{zucchero_primo_impasto:350}g zucchero' | 🔵 Claude |
-| ❌ | Coerenza | Nel punto 2, '{lievito_madre_primo_impasto:350}g tuorli' è errato. I tuorli del primo impasto sono 350g, non il lievito madre | Correggere con '{tuorli_primo_impasto:350}g tuorli' | 🔵 Claude |
-| ❌ | Coerenza | Nel punto 6, il riferimento '{vaniglia_bourbon_secondo_impasto:2} giri lenti' è inappropriato. I 2g sono il peso della vaniglia, non il numero di giri | Correggere con '1-2 giri lenti di spirale' eliminando il riferimento alla vaniglia | 🔵 Claude |
-| ⚠️ | Dosi | Le sospensioni totali pesano 1250g (875g pere + 375g cioccolato) contro un impasto di circa 3527g, risultando circa 35% del peso impasto. Pur rientrando nel limite dichiarato del 50%, è una percentuale molto alta che potrebbe compromettere la struttura | Considerare di ridurre leggermente le sospensioni o specificare meglio nel testo le precauzioni per gestire questo carico elevato | 🔵 Claude |
+| Sev. | Area | Problema | Correzione |
+|------|------|----------|------------|
+| ❌ | Coerenza | Nel punto 3 (Primo Impasto) il procedimento indica di versare '235g acqua' (sfruttando impropriamente il token dello zucchero), ma la lista ingredienti prevede 350g di acqua per il primo impasto. Questa discrepanza compromette seriamente la maglia glutinica e l'idratazione della prima fase. | Modificare il testo del punto 3 indicando il valore corretto di 350g di acqua per il primo impasto, coerentemente con la lista ingredienti. |
 
 ---
-*Generato: 2026-03-30T21:40:56.754Z | Pipeline: Schema → Claude → Gemini*
+*Generato: 2026-07-27T23:53:34.268Z | Pipeline: Schema → Gemini*

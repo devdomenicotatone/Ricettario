@@ -7,7 +7,7 @@
 | Schema | ✅ Pass | 0 errori, 0 warning |
 | Gemini | 100/100 | 🟢 Buona |
 
-Ricetta eccellente, strutturata in modo impeccabile. Perfetta la coerenza tra lista ingredienti e procedimento. Ottime le note tecniche per evitare l'ossidazione del prezzemolo (asciugatura, taglio a freddo, pulsazioni) e corretta la gestione dei tempi di bollitura delle uova.
+Ricetta eccellente e tecnicamente ineccepibile. Le proporzioni rispettano fedelmente la tradizione e le accortezze tecniche indicate (raffreddamento delle lame, asciugatura del prezzemolo, scelta dell'olio) dimostrano grande competenza, prevenendo l'ossidazione e lo sbilanciamento dei sapori.
 
 ---
-*Generato: 2026-04-24T13:14:03.304Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-28T00:02:13.394Z | Pipeline: Schema → Gemini*

@@ -1,4 +1,4 @@
-# Qualità: Olio alla Curcuma o Zafferano
+# Qualità: Olio alla Curcuma o Zafferano (Giallo Oro)
 
 ## 🟢 Score Finale: 95/100
 
@@ -7,13 +7,13 @@
 | Schema | ✅ Pass | 0 errori, 0 warning |
 | Gemini | 95/100 | 🟢 Buona |
 
-Ricetta eccellente e tecnicamente ineccepibile. Le proporzioni per l'infusione a freddo sono corrette (idratazione 0% confermata), le avvertenze sulle temperature per evitare l'ossidazione dell'olio EVO sono precise e le istruzioni di filtraggio differenziate sono da vero professionista.
+Ricetta eccellente e tecnicamente ineccepibile. Ottima l'attenzione alle temperature per evitare l'ossidazione termica dell'olio e fondamentale il passaggio sul barattolo asciutto (sicurezza alimentare contro il rischio botulino). Idratazione confermata allo 0% in quanto prodotto anidro.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| 💡 | Coerenza | Nei PRO TIPS si suggerisce giustamente l'uso di 3-4 grani di pepe nero per aumentare la biodisponibilità della curcumina. Per comodità dell'utente, sarebbe utile inserire il pepe in grani direttamente nella lista ingredienti come opzionale. | Aggiungere 'Pepe nero in grani ((Opzionale, per attivare la curcumina)) 3-4 pezzi' nel gruppo 'Per l'Infusione alla Curcuma'. |
+| 💡 | Coerenza | Nei PRO TIPS viene consigliato di aggiungere '3-4 grani di pepe nero interi' per favorire la biodisponibilità della curcumina, ma il pepe non è menzionato nella lista ingredienti. | Aggiungere 'Pepe nero in grani (Opzionale)' tra gli ingredienti del gruppo 'Per l'Infusione alla Curcuma'. |
 
 ---
-*Generato: 2026-04-24T23:59:02.422Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-27T23:58:42.435Z | Pipeline: Schema → Gemini*

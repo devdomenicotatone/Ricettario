@@ -7,7 +7,7 @@
 | Schema | ✅ Pass | 0 errori, 0 warning |
 | Gemini | 100/100 | 🟢 Buona |
 
-Ricetta eccellente e tecnicamente ineccepibile. Le proporzioni sono perfettamente bilanciate, i passaggi spiegano con precisione la chimica dell'emulsione a freddo e non vi è alcuna discrepanza tra la lista ingredienti e il procedimento. L'idratazione dello 0% è corretta (assenza di farine).
+Ricetta eccellente e tecnicamente ineccepibile. Le proporzioni per l'emulsione sono perfettamente bilanciate, i passaggi chimico-fisici (distensione proteica, prevenzione dell'ossidazione) sono spiegati con estrema accuratezza e tutti gli ingredienti trovano perfetta corrispondenza nel procedimento.
 
 ---
-*Generato: 2026-04-24T13:12:08.628Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-28T00:00:31.876Z | Pipeline: Schema → Gemini*

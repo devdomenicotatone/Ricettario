@@ -1,20 +1,23 @@
 # Qualità: Focaccia Genovese (Fügassa)
 
-## 🟢 Score Finale: 90/100
+## 🟢 Score Finale: 80/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
-| Schema | ✅ Pass | 0 errori, 0 warning |
-| Gemini | 90/100 | 🟢 Buona |
+| Schema | ❌ Fail | 1 errori, 0 warning |
+| Gemini | 95/100 | 🟢 Buona |
 
-Ricetta eccellente e altamente professionale. Idratazione calcolata perfettamente (335g/650g = 51.5%), così come la calibratura del peso dell'impasto rispetto all'area delle teglie. Ottima la gestione delle tempistiche e della salamoia. Da correggere unicamente l'ordine di inserimento tra sale e lievito in macchina.
+Ricetta eccellente e fedelissima al vero metodo ligure (tempi di riposo, stesura in più fasi e salamoia finale sono perfetti). La verifica matematica dell'idratazione conferma il 51.5% dichiarato (335g acqua / 650g farina). Segnalata solo un'ottimizzazione per il parsing dei token.
+
+## 🔍 Schema Validation
+
+- ❌ Mismatch dosi per token "olio_superficie": nel testo c'è {olio_superficie:30}, ma negli ingredienti grams = 60
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| ⚠️ | Coerenza | L'ordine di inserimento nell'impastatrice è invertito: il sale viene inserito allo Step 3 e il lievito fresco allo Step 4. Aggiungere il lievito fresco sbriciolato (senza acqua) su un impasto già parzialmente incordato e contenente sale ostacola la dispersione omogenea dei lieviti. | Invertire gli inserimenti: inserire il lievito sbriciolato allo Step 2 (con la prima acqua), e spostare l'inserimento del sale allo Step 4 (o fine Step 3) insieme agli ultimi 35g di acqua (bassinage). |
-| 💡 | Coerenza | Allo Step 11 è indicato 'Versare al centro {olio_superficie:30} g olio + 100 g salamoia' ma il testo parla al singolare ('Scoprire la focaccia'). Sebbene le dosi matematicamente corrispondano alla metà dei totali (ci sono 2 teglie), la stesura può risultare ambigua. | Specificare esplicitamente: 'Per ogni teglia, versare al centro 30 g di olio e 100 g di salamoia' per guidare meglio l'utente. |
+| 💡 | Coerenza | Al punto 11 del procedimento viene usato il token {olio_superficie:30} g accompagnato da '100 g salamoia'. Sebbene matematicamente corretto per una singola teglia (essendocene 2), l'ingrediente in lista è da 60 g. L'uso di un token con valore dimezzato rispetto alla lista ingredienti potrebbe causare errori di scalabilità nel calcolatore del frontend. | Modificare la frase al punto 11 riferendosi al totale: 'Versare al centro di ogni teglia metà dell'olio ({olio_superficie:60} g in totale) e metà della salamoia.' |
 
 ---
-*Generato: 2026-04-17T23:45:39.988Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-27T23:54:49.550Z | Pipeline: Schema → Gemini*

@@ -7,14 +7,13 @@
 | Schema | ✅ Pass | 0 errori, 0 warning |
 | Gemini | 95/100 | 🟢 Buona |
 
-Ricetta eccellente, tradizionale e tecnicamente ineccepibile. Il rapporto 1:4 (farina/acqua) è perfetto per la farina bramata, e le indicazioni sulle tecniche di mantecatura a fuoco spento denotano grande competenza. Unico errore reale è l'idratazione dichiarata a 0% nei metadati.
+Ricetta eccellente e tecnicamente ineccepibile. Le proporzioni tra acqua, farina e grassi sono perfette per la tradizione valdostana. Ottimi i consigli sulla mantecatura a fuoco spento. Segnalato solo l'errore matematico sul valore dell'idratazione dichiarata.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| ❌ | Dosi | L'idratazione dichiarata è 0%, ma il calcolo matematico degli ingredienti dà un risultato diverso. Formula: (1600g acqua / 400g farina di mais) × 100 = 400%. Nei composti come la polenta, il rapporto standard 1:4 equivale a un'idratazione del 400%. | Aggiornare l'idratazione dichiarata da 0% a 400%. |
-| 💡 | Coerenza | Nei metadati la ricetta è inserita nella categoria 'Pasta'. Sebbene sia un primo piatto o piatto unico a base di cereali, la classificazione come pasta è tecnicamente imprecisa. | Cambiare la CATEGORIA in 'Primi Piatti' o 'Piatti Unici'. |
+| ❌ | Dosi | Idratazione dichiarata errata. Ricalcolando dal totale dei liquidi e sfarinati: 1600g (acqua) / 400g (farina di mais) * 100 = 400% ≠ 0% dichiarato. Nelle polente il rapporto liquidi/solidi 4:1 equivale matematicamente a un'idratazione del 400%. | Aggiornare l'idratazione dichiarata al 400% o rimuovere il campo se non strettamente necessario per la polenta. |
 
 ---
-*Generato: 2026-04-17T22:59:49.673Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-28T00:08:54.605Z | Pipeline: Schema → Gemini*

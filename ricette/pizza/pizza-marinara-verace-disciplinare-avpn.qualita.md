@@ -7,13 +7,14 @@
 | Schema | ✅ Pass | 0 errori, 0 warning |
 | Gemini | 95/100 | 🟢 Buona |
 
-Ricetta eccellente, tecnicamente ineccepibile e rigorosamente fedele al disciplinare AVPN. L'idratazione (1000g/1700g = 58.8%) conferma il valore dichiarato. Segnalo unicamente un'incongruenza di setup tra il volume dell'impasto in batch e il condimento per singola pizza.
+Ricetta formulata in modo eccellente, scientificamente ineccepibile e perfettamente allineata al disciplinare AVPN. Il check dell'idratazione conferma il 58.82% (1000g / 1700g), pienamente in tolleranza con il 58% dichiarato. L'unica sbavatura riguarda la scalatura asimmetrica tra l'impasto (per ~11 pizze) e il condimento (per 1 pizza).
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| ⚠️ | Setup | Disallineamento nelle proporzioni di base: il gruppo 'Impasto' produce 2751g di pasta (sufficienti per 10-11 panetti da 250g), mentre le dosi del gruppo 'Condimento' sono esplicitamente indicate per una singola pizza (es. 85g di pelati). Questo causerà problemi se la ricetta viene inserita in un calcolatore automatico di porzioni. | Moltiplicare le dosi del condimento per 10-11 per allinearle al volume dell'impasto (es. Pelati 850g, Olio 70g, Aglio 30g), oppure ricalcolare le dosi dell'impasto per una singola pizza. |
+| ⚠️ | Dosi | Discrepanza nelle rese: il totale degli ingredienti dell'impasto (2751g) produce circa 10-11 panetti da 250g, ma le dosi del 'Condimento Marinara' (85g di pelati, 7g di olio) sono calibrate per una sola pizza. | Allineare le dosi del condimento alla resa dell'impasto moltiplicandole per 10-11 (es. 850g di pelati, 70g di olio), oppure specificare chiaramente nell'intestazione del gruppo che le dosi fornite per il condimento valgono per un singolo disco. |
+| 💡 | Coerenza | Al passaggio 13 viene indicato l'uso del basilico ('qualche foglia di basilico fresco') e nella lista ingredienti è presente a 2g, ma nel testo manca il token dinamico per farlo scalare nel frontend. | Modificare l'ultima frase del passaggio 13 in: 'È possibile aggiungere {basilico_condimento:2}g di foglie di basilico fresco.' |
 
 ---
-*Generato: 2026-05-05T21:01:32.260Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-27T23:51:14.305Z | Pipeline: Schema → Gemini*

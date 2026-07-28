@@ -1,20 +1,20 @@
 # Qualità: Olio al Basilico Verde Smeraldo
 
-## 🟢 Score Finale: 100/100
+## 🟢 Score Finale: 90/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 0 warning |
-| Gemini | 100/100 | 🟢 Buona |
+| Gemini | 90/100 | 🟡 Da migliorare |
 
-Ricetta tecnicamente impeccabile e scritta con un livello di dettaglio professionale. Gestione eccellente della chimica degli alimenti (fissaggio della clorofilla) e massima precisione nella prevenzione dei rischi biologici (Clostridium botulinum) per le infusioni a freddo/tiepido.
+Ricetta tecnicamente eccellente e descritta in modo rigoroso. Temperature, profilassi antibotulinica e passaggi per il fissaggio della clorofilla sono perfetti; necessita solo di allineare le discordanze testuali tra procedimento e conservazione.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| 💡 | Dosi | Verifica idratazione (obbligatoria): Farina totale = 0g, Acqua totale = 0g. Essendo un condimento a base esclusivamente grassa, il calcolo (0/0) conferma il valore dichiarato dello 0%. | Nessuna correzione necessaria. Valore corretto per la categoria merceologica. |
-| 💡 | Tempi | Nei PRO TIPS si suggerisce di portare la squeeze bottle a temperatura ambiente per 10 minuti prima dell'uso per renderlo fluido. L'olio EVO, conservato a 4°C in frigorifero (come correttamente indicato per la sicurezza alimentare), tende a cristallizzare/solidificare parzialmente. A seconda della cultivar, 10 minuti potrebbero essere insufficienti. | Suggerimento: ampliare il tempo indicato nei Pro Tips scrivendo 'porta la squeeze bottle a temperatura ambiente per 10-20 minuti (a seconda della temperatura della sala), finché l'olio non torna perfettamente fluido dopo la cristallizzazione da frigo'. |
+| ⚠️ | Coerenza | Contraddizione sul tipo di contenitore per la conservazione: il Punto 6 del procedimento suggerisce di travasare in una 'oliera trasparente', ma la sezione CONSERVAZIONE prescrive l'uso di una 'bottiglia di vetro scuro'. | Chiarire che l'oliera trasparente va usata solo per il servizio a tavola, mentre per la conservazione in frigorifero è tassativo il vetro scuro per prevenire la foto-ossidazione della clorofilla. |
+| ⚠️ | Coerenza | Contraddizione sui tempi di conservazione dell'olio filtrato (senza rametto fresco): il Punto 6 e l'ALERT indicano di consumare entro '3-4 settimane', mentre la sezione CONSERVAZIONE indica un mantenimento ottimale di '1-2 settimane'. | Uniformare il tempo di conservazione a '1-2 settimane' in tutto il testo, sia per preservare il colore smeraldo, sia come precauzione aggiuntiva contro il rischio botulino evidenziato nell'alert. |
 
 ---
-*Generato: 2026-04-16T18:48:22.290Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-28T00:11:26.730Z | Pipeline: Schema → Gemini*

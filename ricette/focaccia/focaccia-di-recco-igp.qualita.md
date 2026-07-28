@@ -7,14 +7,13 @@
 | Schema | ✅ Pass | 0 errori, 0 warning |
 | Gemini | 95/100 | 🟢 Buona |
 
-Ricetta strutturata in modo eccellente. Il calcolo dell'idratazione (544g / 800g = 68%) e i pesi dei panetti (totale 1400g diviso perfettamente) sono esatti. Da rivedere solo la quantità di formaggio per un risultato più ricco e fedele alla tradizione.
+Ricetta eccellente, strutturata benissimo e matematicamente perfetta. L'idratazione ricalcolata è esatta (544g acqua / 800g farina = 68%). La divisione dei panetti (400g base + 300g copertura x2) torna perfettamente col peso totale. Temperature e assenza di lievito rispettano la tradizione.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| ⚠️ | Dosi | La quantità di stracchino (800g totali) equivale a soli 400g per ciascuna teglia 30x40 cm. Per ottenere l'abbondante ripieno cremoso tipico della Focaccia di Recco e riempire adeguatamente l'area della teglia, la dose risulta piuttosto povera rispetto allo standard. | Aumentare lo stracchino ad almeno 1200-1600g totali (600-800g per teglia). |
-| 💡 | Setup | Al punto 9 si suggerisce di 'praticare dei buchi con le dita'. La tecnica tradizionale della Focaccia di Recco prevede invece di 'pizzicare e strappare' leggermente la sfoglia superiore per creare veri e propri fori aperti e irregolari (occhi), garantendo che non si richiudano in cottura e facciano fuoriuscire il formaggio. | Modificare la descrizione al punto 9 suggerendo di pizzicare e strappare delicatamente la pasta per creare fori larghi 1-2 cm. |
+| ⚠️ | Coerenza | Nel passaggio 7 si suggerisce di 'stendere delicatamente con il dorso del cucchiaio' lo stracchino per livellarlo. Poiché lo stracchino è freddo di frigo (come ben specificato) e la sfoglia base è spessa meno di 1 mm (passaggio 6), il movimento di spatolamento/spalmatura rischia fortemente di strappare la pasta, causando la fuoriuscita del formaggio e facendolo bruciare in cottura. | Modificare il testo indicando di distribuire il formaggio semplicemente a piccole noci/ciuffi ravvicinati, senza tentare di spalmarlo o livellarlo. Fonderà e si distribuirà da solo in forno grazie all'alta temperatura. |
 
 ---
-*Generato: 2026-04-16T19:43:07.686Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-27T23:57:46.736Z | Pipeline: Schema → Gemini*

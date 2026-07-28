@@ -1,20 +1,34 @@
 # Qualità: Pizza Napoletana Antica Tradizione con Biga e Criscito
 
-## 🟢 Score Finale: 90/100
+## 🟡 Score Finale: 65/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
-| Schema | ✅ Pass | 0 errori, 0 warning |
-| Gemini | 90/100 | 🟡 Da migliorare |
+| Schema | ❌ Fail | 2 errori, 10 warning |
+| Gemini | 95/100 | 🟢 Buona |
 
-Ricetta eccellente a livello tecnico: idratazione calcolata perfettamente coerente (2050g acqua totale / 3000g farina totale = 68.33%), ottima gestione della biga e temperature in linea con la tradizione. Necessita solo della correzione di due refusi critici legati ai token nel procedimento a mano.
+Ricetta eccellente, redatta con altissima competenza tecnica. I calcoli dell'idratazione (2050g acqua / 3000g farina = 68.3%) confermano il dato dichiarato. Proporzioni di sale, biga e criscito perfette, così come le indicazioni termiche per i diversi forni. L'unico dettaglio è un disallineamento testuale sull'inserimento dell'acqua.
+
+## 🔍 Schema Validation
+
+- ❌ Idratazione dichiarata 68% ma calcolata 49% (1650g liquido / 3400g farina). Scarto: 19%
+- ❌ totalFlour dichiarato 3000g ma somma farine = 3400g (differenza: 400g)
+- ⚠️ Ingrediente "Farina Caputo Saccorosso" nel gruppo "Per la Biga" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Acqua" nel gruppo "Per la Biga" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Lievito Secco Caputo" nel gruppo "Per la Biga" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Biga di Saccorosso" nel gruppo "Per l'Impasto Finale" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Farina Caputo Saccorosso" nel gruppo "Per l'Impasto Finale" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Farina Caputo Nuvola Super" nel gruppo "Per l'Impasto Finale" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Acqua" nel gruppo "Per l'Impasto Finale" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Criscito Caputo" nel gruppo "Per l'Impasto Finale" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Estratto di Malto" nel gruppo "Per l'Impasto Finale" senza tokenId — il calcolatore dosi non funzionerà correttamente
+- ⚠️ Ingrediente "Sale Marino Fino" nel gruppo "Per l'Impasto Finale" senza tokenId — il calcolatore dosi non funzionerà correttamente
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| ❌ | Coerenza | Nel PROCEDIMENTO (A Mano) al punto 2, è presente un grave errore materiale/di token: viene indicato di aggiungere '{acqua_impasto_finale:1650}g malto', associando il peso e il token dell'acqua al malto. | Correggere la dicitura inserendo il token e il quantitativo corretto per il malto: '{malto_impasto_finale:15}g estratto di malto'. |
-| ❌ | Coerenza | Nel PROCEDIMENTO (A Mano) al punto 4, si ripete l'errore sui token: viene indicato 'Sciogliere {acqua_impasto_finale:1650}g sale', associando l'intera quantità d'acqua al quantitativo di sale. | Correggere inserendo la quantità corretta di sale: '{sale_impasto_finale:75}g sale'. |
+| ⚠️ | Coerenza | Discrepanza nelle fasi di inserimento dell'acqua dell'impasto finale. Nelle note dell'ingrediente si indica di inserirla 'in 3 riprese: 50% iniziale, 30% durante incordatura, 20% finale'. Tuttavia, nel procedimento (Step 3 e 5) viene inserita in sole due fasi: il 60% (990g) per sciogliere la biga e il restante 40% (660g) in bassinage. | Allineare la nota dell'ingrediente al procedimento effettivo, modificandola in: '(inserita in 2 riprese: 60% iniziale, 40% finale in bassinage)'. |
 
 ---
-*Generato: 2026-04-01T01:48:13.527Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-27T23:53:05.475Z | Pipeline: Schema → Gemini*

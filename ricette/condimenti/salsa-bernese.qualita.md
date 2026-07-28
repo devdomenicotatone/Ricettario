@@ -7,13 +7,14 @@
 | Schema | ✅ Pass | 0 errori, 0 warning |
 | Gemini | 95/100 | 🟢 Buona |
 
-Ricetta eccellente e tecnicamente impeccabile. Le indicazioni sulle temperature (65-68°C per i tuorli, max 72°C) e la tecnica di emulsione a bagnomaria sono da manuale professionale. L'unica sbavatura riguarda la chiarezza sul peso netto del burro.
+Ricetta eccellente e tecnicamente ineccepibile. Le spiegazioni sui punti critici (bagnomaria, temperature di coagulazione, emulsione) sono da manuale di alta cucina. L'unico appunto riguarda il calo peso fisiologico del burro durante la chiarificazione.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| ⚠️ | Coerenza | Nella lista ingredienti è indicato 'Burro Chiarificato 230g', ma nel passaggio 2 viene detto di sciogliere 230g di burro (sottintendendo intero) per ricavarne 'circa 190-200g di burro chiarificato limpido'. Questo crea un'ambiguità: se l'utente compra burro già chiarificato e ne pesa 230g, avrà una quantità di grasso superiore rispetto a chi parte da 230g di burro intero (190g di resa). | Specificare negli ingredienti 'Burro intero (da chiarificare) 230g' (se la resa desiderata è 190g), oppure 'Burro chiarificato 190g (oppure 230g di burro intero da chiarificare)' per uniformare le dosi effettive nell'emulsione. |
+| 💡 | Dosi | Nel passaggio 2 del procedimento si indica di sciogliere 240g di burro per chiarificarlo al momento. Poiché il burro intero perde circa il 15-20% del suo peso (acqua ed elementi del latticello) durante la chiarificazione, partendo da 240g si otterranno circa 195-200g di burro chiarificato netto, riducendo leggermente la resa della salsa. | Specificare nel testo di partire da circa 300g di burro intero se si deve procedere alla chiarificazione casalinga, per ottenere esattamente i 240g netti richiesti. |
+| 💡 | Coerenza | Verifica idratazione matematica (Self-Check CRITICO): Farine totali = 0g. Liquidi totali = 0g. Formula: 0 / 0 = 0%. Il calcolo conferma esattamente l'idratazione dichiarata. | Nessuna correzione necessaria, il valore è perfetto. |
 
 ---
-*Generato: 2026-04-19T20:38:01.290Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-28T00:00:53.492Z | Pipeline: Schema → Gemini*

@@ -1,20 +1,19 @@
 # Qualità: Salsa Cocktail (Salsa Rosa)
 
-## 🟢 Score Finale: 95/100
+## 🟢 Score Finale: 98/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 0 warning |
-| Gemini | 95/100 | 🟢 Buona |
+| Gemini | 98/100 | 🟢 Buona |
 
-Ricetta eccellente e tecnicamente ineccepibile. Perfetta la bilanciatura dell'emulsione, l'uso della panna semi-montata e giustissime le note tecniche sui polifenoli dell'olio extravergine e sulla conservazione a temperature negative.
+Ricetta eccellente, redatta con grande precisione tecnica. Le proporzioni per l'emulsione sono bilanciate, il procedimento rispetta le regole della chimica degli alimenti e le indicazioni su temperature e conservazione sono ineccepibili.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| 💡 | Coerenza | Sicurezza Alimentare: La ricetta prevede tuorli crudi. Sebbene sia presente l'ottima avvertenza sulla conservazione (max 2-3 giorni), in ambito professionale/ristorativo si preferisce eliminare totalmente il rischio. | Si potrebbe aggiungere '(oppure tuorli pastorizzati in brick per totale sicurezza alimentare)' accanto all'ingrediente Tuorli d'uovo. |
-| 💡 | Dosi | La somma degli ingredienti per la maionese di base (Gruppo 1) produce un totale di 308g di prodotto finito. Nel passaggio 4 viene richiesto di prelevarne giustamente 250g. Questo è corretto per avere un margine di lavorazione, ma l'utente meno esperto potrebbe essere tentato di versare tutta la maionese prodotta. | Il testo al punto 4 dice già 'misurare 250g', che è corretto. Si potrebbe solo aggiungere '(avanzandone circa 50g per altri usi)' per rassicurare l'utente. |
+| 💡 | Dosi | Nella sezione Conservazione si fa giustamente notare il limite di 2-3 giorni a causa dei 'tuorli crudi non pastorizzati'. In ambito professionale, l'utilizzo di tuorli pastorizzati è lo standard per garantire maggiore sicurezza alimentare ed estendere la shelf-life della salsa. | Aggiungere negli ingredienti o nei Pro Tips l'alternativa: 'tuorli pastorizzati in brick' per chi desidera una conservazione leggermente più lunga o per servire la salsa a soggetti a rischio. |
 
 ---
-*Generato: 2026-04-24T13:12:55.328Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-28T00:01:22.883Z | Pipeline: Schema → Gemini*

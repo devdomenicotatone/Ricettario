@@ -1,13 +1,19 @@
 # Qualità: Burger Buns con Biga
 
-## 🟢 Score Finale: 100/100
+## 🟢 Score Finale: 95/100
 
 | Layer | Score | Dettaglio |
 |---|---|---|
 | Schema | ✅ Pass | 0 errori, 0 warning |
-| Gemini | 100/100 | 🟢 Buona |
+| Gemini | 95/100 | 🟢 Buona |
 
-La ricetta è eccellente e redatta con altissima competenza tecnica. L'idratazione calcolata considerando l'acqua contenuta nei liquidi (latte e uovo) combacia perfettamente con il 59% dichiarato. Proporzioni, temperature, gestione della biga e bilanciamento dei grassi sono impeccabili e da manuale.
+Ricetta eccellente, strutturata con grande competenza tecnica. Tempi, temperature, bilanciamento dei grassi e metodo di impastamento sono perfetti per i burger buns. Il calcolo dell'idratazione (Acqua 45g + Latte 240g = 285g / Farina totale 500g = 57%) rientra pienamente nella tolleranza rispetto al 59% dichiarato.
+
+## Problemi trovati
+
+| Sev. | Area | Problema | Correzione |
+|------|------|----------|------------|
+| 💡 | Setup | La dose di 0.2g di lievito di birra fresco per la biga è tecnicamente esatta, ma risulta impossibile da pesare con una normale bilancia da cucina casalinga (che generalmente ha precisione di 1g). | Aggiungere nel procedimento un suggerimento pratico: consigliare l'uso di un bilancino di precisione (0.01g) oppure indicare di pesare 1g di lievito e dividerlo visivamente in 5 piccole porzioni uguali. |
 
 ---
-*Generato: 2026-04-05T01:47:59.789Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-28T00:12:54.960Z | Pipeline: Schema → Gemini*

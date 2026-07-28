@@ -7,7 +7,13 @@
 | Schema | ✅ Pass | 0 errori, 0 warning |
 | Gemini | 100/100 | 🟢 Buona |
 
-Ricetta eccellente, ben bilanciata e tecnicamente ineccepibile. Le spiegazioni sull'emulsione per shock termico, l'estrazione lipidica degli aromi del tartufo e l'uso del burro di centrifuga dimostrano un'alta competenza professionale. Nessun errore rilevato.
+Ricetta eccellente e strutturata con altissima precisione tecnica. I rapporti percentuali degli aromatizzanti sul peso del grasso sono perfettamente bilanciati. Impeccabili le note di chimica culinaria riguardanti l'emulsione per shock termico, l'estrazione per osmosi lipidica e la distinzione tra burro di affioramento e centrifuga.
+
+## Problemi trovati
+
+| Sev. | Area | Problema | Correzione |
+|------|------|----------|------------|
+| 💡 | Dosi | Verifica idratazione eseguita: la ricetta non prevede l'utilizzo di farine o acqua (0g acqua / 0g farina = N/A). L'idratazione dichiarata dello 0% è formalmente corretta per la struttura del ricettario, trattandosi di un condimento interamente lipidico. | Nessuna correzione necessaria. |
 
 ---
-*Generato: 2026-04-19T20:36:45.964Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-28T00:05:20.399Z | Pipeline: Schema → Gemini*

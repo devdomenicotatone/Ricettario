@@ -7,13 +7,13 @@
 | Schema | ✅ Pass | 0 errori, 0 warning |
 | Gemini | 95/100 | 🟢 Buona |
 
-Ricetta eccellente e tecnicamente ineccepibile. Le indicazioni scientifiche sulla gestione della betanina, il controllo delle temperature per evitare l'ossidazione e la tecnica di emulsione a filo sono da vero professionista.
+Ricetta tecnicamente ineccepibile e strutturata in modo eccellente. Perfetta la corrispondenza delle grammature nel procedimento e molto precise le indicazioni di chimica alimentare (gestione della betanina, geosmine e limiti di temperatura) per preservare il colore e il sapore.
 
 ## Problemi trovati
 
 | Sev. | Area | Problema | Correzione |
 |------|------|----------|------------|
-| 💡 | Coerenza | Nel passaggio 6 e nella sezione CONSERVAZIONE si fa riferimento all'uso di olio extravergine aggiuntivo per creare un 'sigillo protettivo contro l'ossidazione' nel barattolo, ma questo elemento non è elencato tra gli ingredienti. | Aggiungere alla lista ingredienti 'Olio Extravergine d'Oliva (per la conservazione) q.b.' in modo che chi fa la spesa sappia di doverne avere a disposizione un po' di più rispetto ai 70g previsti per l'emulsione. |
+| 💡 | Coerenza | Nel passaggio 6 viene indicato di 'coprire con un velo di olio extravergine (circa 1 cm) per creare un sigillo protettivo', ma questo olio aggiuntivo non è presente nella lista ingredienti. | Aggiungere alla lista ingredienti una voce come 'Olio Extravergine d'Oliva (per la conservazione) q.b.' in modo da riflettere tutto il necessario. |
 
 ---
-*Generato: 2026-04-24T13:12:29.394Z | Pipeline: Schema → Gemini*
+*Generato: 2026-07-28T00:01:09.064Z | Pipeline: Schema → Gemini*
