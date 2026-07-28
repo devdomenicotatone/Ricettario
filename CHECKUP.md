@@ -312,6 +312,19 @@ contraddiceva. Ora: «stimati sugli ingredienti della ricetta». Se un giorno i
 numeri arriveranno davvero da USDA (FoodData Central), la frase tornerà a
 nominarlo.
 
+*Quel giorno è arrivato — 28/07/2026, sera.* I numeri ora vengono davvero da
+USDA FoodData Central: in `ricettario-tools` c'è il dizionario
+ingrediente→fdcId (280 voci, curate a mano dove serviva) e le rese di cottura
+DICHIARATE per ricetta o famiglia (`data/fdc-calcolo.json`), il calcolo sta in
+`src/nutrizione.js` e il batch `scripts/applica-nutrizione.mjs` ha riscritto
+la `nutrition` di 83 ricette su 84 (v. `USDA-TODO.md` di là per il percorso).
+L'ultima — i cartocci, fritti — resta SENZA valori finché non si modella
+l'olio assorbito: un buco visibile è più onesto di una stima sotto la fonte
+sbagliata, che è la lezione di tutto questo punto. Il disclaimer torna a
+nominare la fonte: «calcolati sugli ingredienti della ricetta con dati USDA
+FoodData Central e resa di cottura dichiarata» — la locuzione «per 100 g»
+resta al suo posto, e il cancello qui sotto continua a pretenderla.
+
 ## 10. Il cancello sulle promesse alimentari ignora il femminile — CHIUSO
 
 **Gravità 4.** `scripts/build-recipes.js:229` e `:231`

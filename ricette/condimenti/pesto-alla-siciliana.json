@@ -174,11 +174,11 @@
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 242,
+    "kcal_per_100g": 222,
     "macros": {
       "carbs": 5,
       "protein": 7,
-      "fat": 21
+      "fat": 20
     }
   }
 }
