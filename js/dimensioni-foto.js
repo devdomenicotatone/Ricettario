@@ -116,6 +116,7 @@ export const DIMENSIONI_FOTO = {
   'images/ricette/pizza/pizza-romana-stesa-al-matterello': [1800, 1202],
   'images/ricette/primi/gnocchi-di-patate': [1800, 1196],
   'images/ricette/primi/polenta-concia-valdostana': [1200, 896],
+  'images/ricette/secondi-piatti/brisket-stile-toscano': [1800, 1201],
   'images/ricette/secondi-piatti/mayak-gyeran-uova-marinate-coreane': [1200, 896],
   'images/ricette/secondi-piatti/spare-ribs-salsa-bbq': [1280, 853],
 };
