@@ -1,0 +1,178 @@
+{
+  "title": "Bagna Cauda",
+  "slug": "bagna-cauda",
+  "emoji": "🫕",
+  "description": "La bagna cauda piemontese tradizionale: aglio dolcificato nel latte, acciughe rosse di Spagna sciolte nell'olio EVO a fuoco lentissimo.",
+  "subtitle": "Salsa calda piemontese con aglio e acciughe — cottura dolce e tecnica del latte",
+  "category": "Condimenti",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per la Bagna Cauda",
+      "items": [
+        {
+          "name": "Aglio",
+          "note": "(spicchi freschi, possibilmente Aglio di Caraglio o Aglio Rosso di Sulmona)",
+          "grams": 400,
+          "tokenId": "aglio"
+        },
+        {
+          "name": "Acciughe Rosse di Spagna sotto Sale",
+          "note": "(intere, da pulire — qualità Cantabrico o Mar Adriatico)",
+          "grams": 300,
+          "tokenId": "acciughe"
+        },
+        {
+          "name": "Olio Extravergine di Oliva",
+          "note": "(fruttato leggero, preferibilmente ligure o del Garda — acidità ≤ 0.3%)",
+          "grams": 550,
+          "tokenId": "olio_evo"
+        },
+        {
+          "name": "Latte Intero",
+          "note": "(fresco, intero — per dolcificare l'aglio)",
+          "grams": 350,
+          "tokenId": "latte"
+        },
+        {
+          "name": "Vino Rosso Barbera",
+          "note": "(o Dolcetto d'Asti — per risciacquo acciughe)",
+          "grams": 150,
+          "tokenId": "vino_rosso"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Dissalatura delle Acciughe (3h prima)",
+      "text": "Prendete le {acciughe:300}g di acciughe rosse di Spagna sotto sale e sciacquatele rapidamente sotto acqua fredda corrente per eliminare il sale superficiale. Disponetele in un'unica pirofila o ciotola capiente, copritele con abbondante acqua fredda e lasciatele in ammollo per 3 ore, cambiando l'acqua ogni ora. Questo processo è fondamentale per deconcentrare il sale senza eliminare il sapore profondo delle acciughe. Trascorso il tempo, aprite ogni acciuga a metà con le dita, estraete la lisca centrale e le interiora, e separate i filetti. Sciacquateli sotto acqua fredda corrente, poi asciugateli delicatamente con carta assorbente. Disponete i filetti puliti in una pirofila bassa, versate il {vino_rosso:150}g di vino rosso Barbera e lasciate riposare 10 minuti: il vino completa la pulizia e aggiunge un sentore vinoso tipicamente piemontese. Scolate e asciugate nuovamente i filetti con carta assorbente."
+    },
+    {
+      "title": "Preparazione e Ammorbidimento dell'Aglio",
+      "text": "Sbucciate i {aglio:400}g di aglio spicchio per spicchio, eliminando con cura la pellicola esterna (la camicia). Tagliate ogni spicchio a metà nel senso della lunghezza e, con la punta di un coltellino, eliminate il germoglio verde interno (l'anima): è responsabile dell'amarezza e della difficile digeribilità. Riducete ogni mezzo spicchio a fettine sottili (1-2 mm) o lasciatelo in metà se preferite una salsa con più corpo. Trasferite l'aglio tagliato in un pentolino di coccio (o in alternativa un pentolino antiaderente a fondo spesso) e copritelo con il {latte:350}g di latte intero fresco. Portate lentamente a bollore a fuoco dolcissimo, poi abbassate ulteriormente e lasciate sobbollire per 15-20 minuti, mescolando di tanto in tanto, finché l'aglio risulterà morbidissimo e il latte si sarà quasi del tutto assorbito. A questo punto l'aglio deve essere ridotto quasi a purea: potete schiacciarlo con il dorso di un cucchiaio di legno o con una forchetta fino a ottenere una pasta omogenea. Il latte assorbe l'allicina, principio attivo dell'aglio responsabile dell'amarore, rendendo la bagna più elegante e digeribile."
+    },
+    {
+      "title": "Cottura Dolce dell'Olio e delle Acciughe",
+      "text": "In un tegamino separato — idealmente il classico fujot di coccio — versate {olio_evo:550}g di olio extravergine di oliva. Aggiungete i filetti di acciuga asciugati. Ponete su fuoco bassissimo (il fuoco più piccolo, al minimo) e iniziate a mescolare con un cucchiaio di legno a movimento circolare lento: le acciughe devono 'sciogliersi' nell'olio senza friggere né soffriggere — la temperatura dell'olio non deve mai superare i 70-75°C. Continuate a mescolare per circa 15-20 minuti fino a quando i filetti saranno completamente dissolti nell'olio, formando una salsa fluida e profumata. Il segnale di cottura corretta è l'assenza di bolle vivaci nell'olio: dovete vedere solo un lievissimo fremito. Un termometro da cucina è lo strumento ideale per controllare la temperatura."
+    },
+    {
+      "title": "Assemblaggio della Bagna Cauda",
+      "text": "Unite la purea di aglio al latte (o quel che rimane) nel fujot con le acciughe sciolte nell'olio. Mescolate energicamente con il cucchiaio di legno per amalgamare le due componenti in modo omogeneo. Continuate la cottura a fuoco dolcissimo per altri 10-15 minuti, mescolando di continuo: la salsa deve diventare cremosa, uniforme, di colore ambrato scuro. La temperatura deve restare costante intorno ai 65-70°C — mai oltre. Se la bagna si surriscalda e inizia a friggere, toglietela dal fuoco qualche secondo e rimescolate. La consistenza finale deve essere quella di una salsa fluida ma avvolgente, non separata in olio e solidi."
+    },
+    {
+      "title": "Servizio al Tavolo",
+      "text": "La bagna cauda si serve direttamente nel fujot di coccio posto su uno scaldino a candela (o uno scaldavivande elettrico) al centro della tavola, mantenendola calda durante tutto il pasto — intorno ai 60-65°C. Il tepore costante è parte integrante della tradizione: la salsa non deve raffreddarsi né bollire. Predisponete intorno al fujot un ricco assortimento di verdure di stagione: cardi gobbi di Nizza (i migliori), peperoni crudi e grigliati, cipollotti immersi nel Barbera (cipollotti ubriachi), barbabietole al forno a fette, patate lesse tagliate a spicchi, topinambur crudi, carote, sedano, radicchio. Ogni commensale intinge le verdure nella salsa calda e le mangia tenendone un pezzetto sopra come 'scudo' contro i goccioloni. Accompagnate con Barbera d'Asti o Dolcetto d'Alba."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "glossary": [
+    {
+      "term": "Fujot",
+      "definition": "Il tipico recipiente di coccio piemontese a forma di piccolo braciere o pentolino, usato per servire la bagna cauda in tavola mantenendola calda. Il coccio è ideale perché diffonde il calore uniformemente e lentamente."
+    },
+    {
+      "term": "Acciughe Rosse di Spagna",
+      "definition": "Acciughe (Engraulis encrasicolus) conservate sotto sale, pescate nell'Atlantico nord-orientale (Mar Cantabrico). Sono le preferite per la bagna cauda per il loro sapore intenso, la carne rossa e la dimensione. Richiedono dissalatura prima dell'uso."
+    },
+    {
+      "term": "Anima dell'Aglio",
+      "definition": "Il germoglio verde interno dello spicchio d'aglio. Contiene alte concentrazioni di allicina e altri composti solforati che rendono l'aglio più amarognolo e indigesto. Va eliminato prima della cottura per ottenere una bagna cauda più elegante e digeribile."
+    },
+    {
+      "term": "Dissalatura",
+      "definition": "Processo di ammollo in acqua fredda (con cambi periodici) per eliminare il sale in eccesso dalle acciughe conservate. Per le acciughe sotto sale intere, richiede almeno 3 ore con cambio dell'acqua ogni ora."
+    },
+    {
+      "term": "Cottura dolce (a bagnomaria o a fuoco lentissimo)",
+      "definition": "Tecnica di cottura a temperature molto basse (60-75°C) che permette alle acciughe di sciogliersi nell'olio senza friggere, preservando aromi delicati e impedendo l'ossidazione dell'olio. Fondamentale per la riuscita della bagna cauda."
+    },
+    {
+      "term": "Bassinage",
+      "definition": "In questo contesto: il tecnica di ammorbidire l'aglio nel latte. Il latte assorbe i composti solforati (allicina) responsabili dell'amarore e della difficile digeribilità, dolcificando e raffinando il sapore dell'aglio stesso."
+    },
+    {
+      "term": "Cipollotti Ubriachi",
+      "definition": "Cipollotti immersi per alcune ore nel vino rosso Barbera. Perdono il sapore pungente e acquistano note vinose e dolciastre, diventando uno degli accompagnamenti classici della bagna cauda piemontese."
+    },
+    {
+      "term": "Cardo Gobbo di Nizza",
+      "definition": "Varietà di cardo coltivata a Nizza Monferrato, tipicamente imbiancato per interramento (gobbo). Più tenero e meno amaro delle altre varietà, è la verdura d'accompagnamento per eccellenza della bagna cauda. Si trova da ottobre a febbraio."
+    }
+  ],
+  "alert": "NON fate mai bollire la bagna cauda: se l'olio inizia a friggere e le acciughe sfrigolano vivacemente, avete superato la temperatura critica. Oltre i 80°C l'olio EVO inizia a degradare i suoi polifenoli, le acciughe diventano amare e granulose invece di sciogliersi cremose, e l'aglio potrebbe bruciare rovinando irrimediabilmente il sapore dell'intera preparazione. La bagna deve fremere appena — 'tremare', non 'bollire'. Usate il fuoco più piccolo della vostra cucina al minimo assoluto, o meglio ancora un bagnomaria.",
+  "proTips": [
+    "Per una bagna cauda ancora più digeribile, cambiate il latte dell'aglio 2-3 volte durante la cottura: portate a bollore, scolate, rimettete latte fresco e ripetete. Questa tecnica (usata dai cuochi tradizionali cuneesi) elimina quasi totalmente l'allicina mantenendo intatto il sapore umami dell'aglio cotto.",
+    "La qualità delle acciughe è determinante: cercate acciughe rosse di Spagna intere sotto sale in barattolo (non i filetti sott'olio già pronti). I migliori produttori le conservano in sale grosso marino; al taglio devono avere carne compatta di colore rosso mattone, non grigia o disfatta.",
+    "Se volete un'emulsione perfetta e stabile, alla fine della cottura potete frullare brevemente la salsa con un frullatore a immersione per 10-15 secondi: otterrete una bagna vellutata e omogenea che non si separerà nemmeno raffreddandosi — tecnica usata in molti ristoranti piemontesi stellati."
+  ],
+  "storage": [
+    "Frigo (3-4 giorni): trasferite la bagna cauda raffreddata in un barattolo di vetro a chiusura ermetica. Prima di sigillare, versate un filo d'olio EVO in superficie per isolarla dall'aria. Conservate a 4°C. Per rigenerarla: riscaldate a bagnomaria o su fuoco bassissimo mescolando continuamente, mai al microonde (l'olio si surriscalda in modo disomogeneo).",
+    "Freezer (fino a 3 mesi): la bagna cauda si congela sorprendentemente bene. Porzionatela in cubetti da ghiaccio in silicone (ogni cubo ≈ 30g, dose perfetta per 1 persona), poi trasferite i cubetti congelati in sacchetti per freezer. Scongelate in frigo 12h prima oppure direttamente a bagnomaria, mescolando energicamente per riemulsionare l'olio.",
+    "Riciclo degli avanzi: la bagna cauda avanzata è un condimento eccezionale per pasta (tagliolini con bagna cauda e tartufo), come base per un risotto o spalmata su crostoni di pane tostato. La qualità non peggiora con il riscaldamento se fatto correttamente a fuoco dolce."
+  ],
+  "imageKeywords": [
+    "bagna cauda piemontese traditional italian dip",
+    "bagna cauda vegetables dipping sauce piedmont",
+    "anchovy garlic warm sauce fondue italian",
+    "bagna cauda coccio terracotta serving pot",
+    "salsa acciughe aglio piemonte",
+    "Bagna Cauda Piemont Gemüse Dip",
+    "italian hot anchovy dip winter appetizer"
+  ],
+  "tags": [
+    "piemonte",
+    "tradizionale",
+    "acciughe",
+    "aglio",
+    "senza glutine",
+    "autunno",
+    "inverno",
+    "condimento",
+    "salsa calda",
+    "antipasto"
+  ],
+  "_createdAt": "2026-07-28T11:54:07.496Z",
+  "image": "images/ricette/condimenti/bagna-cauda.webp",
+  "imageAttribution": "📷 Foto: Grendelkhan — CC BY-SA 3.0 via Wikimedia",
+  "_originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/03/Bagna_c%C3%A0uda_at_JR_Hotel_Yakushima.jpg",
+  "sensoryProfile": {
+    "summary": "La Bagna Cauda si presenta come un condimento di potenza e profondità straordinarie: l'umami ferroso e salino delle acciughe del Cantabrico si fonde con la dolcezza morbida dell'aglio ammorbidito nel latte, creando una cremosità avvolgente che riveste ogni verdura come un mantello ambrato. L'olio extravergine ligure fa da vettore aromatico nobile, stemperando la pungenza dell'aglio in una rotondità quasi burrosa, mentre le note iodate e fermentate delle acciughe impongono un'intensità aromatica che persiste a lungo sul palato.",
+    "axes": [
+      {
+        "label": "Sapidità / Umami",
+        "value": 10
+      },
+      {
+        "label": "Acidità / Pungenza",
+        "value": 5
+      },
+      {
+        "label": "Cremosità / Densità",
+        "value": 7
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 4
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 9
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 412,
+    "macros": {
+      "carbs": 5,
+      "protein": 8,
+      "fat": 39
+    }
+  }
+}
