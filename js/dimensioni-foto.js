@@ -118,5 +118,6 @@ export const DIMENSIONI_FOTO = {
   'images/ricette/primi/polenta-concia-valdostana': [1200, 896],
   'images/ricette/secondi-piatti/brisket-stile-toscano': [1800, 1201],
   'images/ricette/secondi-piatti/mayak-gyeran-uova-marinate-coreane': [1200, 896],
+  'images/ricette/secondi-piatti/pulled-pork-bbq': [1280, 853],
   'images/ricette/secondi-piatti/spare-ribs-salsa-bbq': [1280, 853],
 };

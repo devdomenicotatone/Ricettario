@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-28T10:17:10.699Z",
-  "totalRecipes": 82,
+  "generatedAt": "2026-07-28T11:34:36.204Z",
+  "totalRecipes": 83,
   "categories": [
     {
       "name": "Primi",
@@ -44,7 +44,7 @@
     },
     {
       "name": "Secondi Piatti",
-      "count": 3,
+      "count": 4,
       "emoji": "🍲"
     }
   ],
@@ -1587,6 +1587,25 @@
       "hasNutrition": true,
       "hasStorage": true,
       "_createdAt": "2026-07-27T20:27:38.646Z"
+    },
+    {
+      "title": "Pulled Pork BBQ",
+      "slug": "pulled-pork-bbq",
+      "category": "Secondi Piatti",
+      "categoryDir": "secondi-piatti",
+      "emoji": "🍖",
+      "href": "ricette/secondi-piatti/pulled-pork-bbq.html",
+      "image": "images/ricette/secondi-piatti/pulled-pork-bbq.webp",
+      "description": "Spalla di maiale low & slow su kamado: rub aromatico, affumicatura lenta a 150°C e sfilacciatura perfetta. Ricetta classica americana.",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "imageAttribution": "📷 Foto: btfrewinphotography — Pixabay License via Pixabay",
+      "hasSensory": true,
+      "hasNutrition": true,
+      "hasStorage": true,
+      "_createdAt": "2026-07-28T11:32:11.010Z"
     },
     {
       "title": "Spare Ribs in Salsa BBQ",
