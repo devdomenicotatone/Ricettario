@@ -4,6 +4,7 @@
    ============================================ */
 
 import { annuncia } from './annuncio.js';
+import { mostraNonTrovata } from './non-trovata.js';
 
 const BASE = import.meta.env.BASE_URL; // es. "/Ricettario/"
 
@@ -23,7 +24,7 @@ export function registerRenderers(map) {
 
 /**
  * Determina il tipo di pagina dall'URL corrente.
- * Returns: { type: 'home' | 'recipe' | 'category', params: {...} }
+ * Returns: { type: 'home' | 'recipe' | 'category' | 'cottura' | 'nonTrovata', params: {...} }
  */
 function matchRoute(pathname) {
   // Rimuovi base path
@@ -55,8 +56,22 @@ function matchRoute(pathname) {
     return { type: 'cottura', params: { config: cotturaMatch[1] || null } };
   }
 
-  // Fallback → homepage
-  return { type: 'home', params: {} };
+  // Nessuna forma riconosciuta → la pagina non esiste.
+  //
+  // Qui c'era `{ type: 'home' }`, ed è il motivo per cui
+  // /Ricettario/ricette/ mostrava la homepage con l'indirizzo sbagliato nella
+  // barra: contenuto buono sotto un URL che non esiste, e nessun segnale per
+  // chi legge. Il server la risposta giusta la dà già — misurato il
+  // 28/07/2026: GitHub Pages risponde 404 e serve 404.html, che è lo shim
+  // della SPA — quindi qui mancava solo di dirlo a chi guarda.
+  //
+  // Attenzione a cosa NON si decide qui: se una categoria o una ricetta
+  // ESISTANO lo sanno i dati, non la forma dell'URL. Quelle risposte restano
+  // dove stanno già (`CATEGORIES_BY_DIR` in renderCategory, il 404 del fetch
+  // in renderRecipe, `configDaSlug` nel calcolatore). Portarle qui vorrebbe
+  // dire una seconda copia del registry delle categorie e un recipes.json
+  // scaricato prima di ogni navigazione.
+  return { type: 'nonTrovata', params: { percorso: pathname } };
 }
 
 /**
@@ -166,17 +181,12 @@ async function renderRoute(route, app) {
   if (renderer) {
     await renderer(app, route.params);
   } else {
-    // Guardia difensiva, non un percorso vivo: `matchRoute` ripiega su
-    // `home` per qualunque URL non riconosciuto e tutti e quattro i tipi
-    // hanno un renderer, quindi oggi qui non ci si arriva. Serve se un
-    // giorno nascesse un tipo di rotta senza renderer registrato — e in quel
-    // caso deve rispettare le stesse regole delle altre pagine: un `h1` a cui
-    // dare il fuoco e un `document.title` per la regione live.
-    document.title = 'Pagina non trovata — Ricettario Lab';
-    app.innerHTML = `<div class="container" style="padding: 80px 0; text-align: center;">
-      <h1>Pagina non trovata</h1>
-      <p><a href="${BASE}" data-link>← Torna alla Home</a></p>
-    </div>`;
+    // Guardia difensiva: il tipo `nonTrovata` un renderer ce l'ha (main.js),
+    // quindi qui ci si arriva solo se un giorno nasce un tipo di rotta e
+    // nessuno lo registra. La pagina è la stessa delle altre non trovate — un
+    // H1 a cui dare il fuoco e un `document.title` per la regione live — così
+    // il buco si vede invece di far sparire il contenuto.
+    mostraNonTrovata(app, { base: BASE });
   }
 
   // Re-init scroll reveal per i nuovi elementi

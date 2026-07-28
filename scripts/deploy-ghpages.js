@@ -11,7 +11,7 @@
  */
 
 import { execSync } from 'child_process';
-import { existsSync, writeFileSync, readFileSync, mkdirSync, rmSync, cpSync, readdirSync } from 'fs';
+import { existsSync, writeFileSync, mkdirSync, rmSync, cpSync, readdirSync } from 'fs';
 import { join, resolve } from 'path';
 
 const PROJECT_DIR = process.cwd();
@@ -55,10 +55,16 @@ async function deploy() {
     const nojekyll = join(DIST_DIR, '.nojekyll');
     if (!existsSync(nojekyll)) writeFileSync(nojekyll, '');
 
-    const indexPath = join(DIST_DIR, 'index.html');
+    // Qui, se mancava il 404, si copiava index.html. Il risultato era la
+    // homepage intera servita sotto qualunque indirizzo sbagliato: contenuto
+    // buono con status 404 addosso, cioè il soft 404 che il sito ha già avuto,
+    // stampato su disco. Il file giusto è public/404.html — lo shim che
+    // rimanda alla SPA — e Vite lo copia in dist/: se non c'è, è la build a
+    // essere incompleta, e fabbricarne uno finto nasconde il problema.
     const notFoundPath = join(DIST_DIR, '404.html');
-    if (existsSync(indexPath) && !existsSync(notFoundPath)) {
-        writeFileSync(notFoundPath, readFileSync(indexPath, 'utf8'));
+    if (!existsSync(notFoundPath)) {
+        console.error('❌ dist/404.html non trovato: deve arrivare da public/404.html. Esegui `npm run check`.');
+        process.exit(1);
     }
 
     // Ottieni URL remoto

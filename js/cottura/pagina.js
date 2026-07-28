@@ -20,6 +20,7 @@ import DOC_TAGLI from '../../dati/cottura/tagli.json';
 import DOC_DISPOSITIVI from '../../dati/cottura/dispositivi.json';
 
 import { BASE, navigateTo } from '../router.js';
+import { mostraNonTrovata } from '../non-trovata.js';
 import { piano } from './motore.js';
 import { montaForm } from './form.js';
 import { montaPiano } from './vista-piano.js';
@@ -38,6 +39,22 @@ export async function renderCottura(app, params = {}) {
     // Priorità allo slug: se l'URL è una pagina pre-generata, è quella che
     // comanda, e la query serve solo per le varianti.
     const daSlug = configDaSlug(params.config, DATI);
+
+    // Uno slug che non si sa rileggere non è una configurazione da completare:
+    // è un indirizzo che non esiste. Prima finiva nel form — una pagina buona
+    // sotto un URL a cui GitHub Pages aveva appena risposto 404, cioè lo
+    // stesso soft 404 della homepage, solo dentro il calcolatore.
+    if (params.config && !daSlug) {
+        return mostraNonTrovata(app, {
+            base: BASE,
+            dettaglio: `Non c'è nessun piano di cottura all'indirizzo «${window.location.pathname}».`,
+            uscite: [
+                { href: `${BASE}cottura/`, testo: 'Apri il calcolatore di cottura' },
+                { href: BASE, testo: 'Torna alla home' },
+            ],
+        });
+    }
+
     const daQuery = leggiQuery(window.location.search);
     const parziale = daSlug ? { ...daSlug, ...(daQuery || {}) } : daQuery;
 

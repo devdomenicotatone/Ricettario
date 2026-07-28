@@ -27,7 +27,7 @@ import { applyMadeBadgesToCards } from './recipe-bookmarks.js';
 import { fluentEmoji, CATEGORY_FLUENT, refreshIcons } from './emoji.js';
 import { initLogoIntro } from './logo-intro-v2b.js';
 import { CATEGORIES, CATEGORIES_BY_DIR, CATEGORY_ORDER as CAT_ORDER } from './categories.js';
-import { escHtml } from './escape.js';
+import { mostraNonTrovata } from './non-trovata.js';
 // Il markup di pagine categoria, schede e caroselli sta in html-categoria.js,
 // che è PURO e viene importato anche dal pre-rendering: qui restano stato,
 // fetch e listener.
@@ -68,6 +68,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const { renderCottura } = await import('./cottura/pagina.js');
       return renderCottura(app, params);
     },
+    // Indirizzo che non assomiglia a nessuna rotta. Prima non c'era e
+    // `matchRoute` ripiegava sulla home: vedi il commento là.
+    nonTrovata: (app, { percorso } = {}) => mostraNonTrovata(app, {
+      base: BASE,
+      dettaglio: percorso
+        ? `L'indirizzo «${percorso}» non corrisponde a nessuna pagina di questo sito.`
+        : '',
+    }),
   });
 
   initRouter();
@@ -266,15 +274,13 @@ async function renderCategory(app, { category }) {
   // Categoria non dichiarata: prima veniva inventata una pagina vuota col nome
   // preso dall'URL (es. "pasta" dopo che la categoria è stata rimossa, ma
   // anche qualunque refuso). Meglio dirlo, e offrire una via d'uscita.
+  // È il registry a saperlo, non il router: vedi il commento in matchRoute.
   if (!meta) {
-    document.title = 'Categoria non trovata — Ricettario Lab';
-    app.innerHTML = `
-      <div class="container" style="padding: 120px 0; text-align: center;">
-        <h1>${fluentEmoji('prohibited', 28)} Categoria non trovata</h1>
-        <p style="color: var(--color-text-muted);">La categoria "${escHtml(category)}" non esiste (o non esiste più).</p>
-        <p><a href="${BASE}#ricette" data-link>← Vedi tutte le ricette</a></p>
-      </div>`;
-    refreshIcons();
+    mostraNonTrovata(app, {
+      base: BASE,
+      titolo: 'Categoria non trovata',
+      dettaglio: `La categoria «${category}» non esiste (o non esiste più).`,
+    });
     return;
   }
 

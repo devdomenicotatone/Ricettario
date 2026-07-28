@@ -462,6 +462,52 @@ if (!existsSync(join(DIST, 'sitemap.xml'))) {
     }
 }
 
+// ── 2-ter. Il file che risponde agli indirizzi che non esistono ──
+// GitHub Pages serve dist/404.html per ogni URL che non corrisponde a un file,
+// e lo serve con status 404 (misurato il 28/07/2026 su /ricette/ e su
+// /cottura/slug-inventato/). Quel file fa DUE mestieri insieme, ed è per questo
+// che va guardato: è la risposta d'errore del server, ed è anche il guscio che
+// rimanda alla SPA l'indirizzo chiesto, perché sia lei a dire cosa manca.
+//
+// Il modo peggiore di romperlo non è cancellarlo: è riempirlo con la homepage.
+// deploy-ghpages.js lo faceva da sé quando il file mancava — copiava
+// index.html — e il risultato sarebbe stato il sito intero servito sotto
+// qualunque indirizzo sbagliato, cioè il soft 404 messo su disco. La copia è
+// stata tolta; questo controllo è ciò che se ne accorge se rientra da un'altra
+// strada.
+{
+    const p404 = join(DIST, '404.html');
+    if (!existsSync(p404)) {
+        err('manca dist/404.html: senza, GitHub Pages risponde con la sua pagina di default e i '
+            + 'deep link non arrivano mai al router della SPA. Deve arrivare da public/404.html.');
+    } else {
+        const html = readFileSync(p404, 'utf8');
+        if (!/spa-redirect/.test(html)) {
+            err('dist/404.html non è lo shim della SPA (non nomina "spa-redirect"): ogni indirizzo '
+                + 'profondo — anche quelli giusti che non hanno un file, come una configurazione '
+                + 'del calcolatore — smetterebbe di arrivare al router.');
+        }
+        if (/id="recipe-carousels"/.test(html)) {
+            err('dist/404.html è una copia della homepage: ogni indirizzo sbagliato servirebbe il '
+                + 'sito intero con status 404 addosso. È il soft 404 che il router non fa più: non '
+                + 'rimetterlo nel file che dovrebbe dire il contrario.');
+        }
+        // La via d'uscita senza JavaScript è l'unico posto del file dove la base
+        // è scritta a mano invece che contata: se il sito cambia base, questo
+        // link resta indietro e nessuno se ne accorge (è visibile solo a chi ha
+        // JavaScript disattivato).
+        const BASE_PATH = new URL(SITE_URL).pathname + '/';
+        const uscita = html.match(/<noscript>[\s\S]*?href="([^"]*)"/);
+        if (!uscita) {
+            warn('dist/404.html: nessuna via d\'uscita dentro <noscript>. Senza JavaScript è '
+                + 'l\'unica pagina bianca del sito, visto che tutte le altre sono pre-renderizzate.');
+        } else if (uscita[1] !== BASE_PATH) {
+            err(`dist/404.html: il link del <noscript> punta a "${uscita[1]}" ma la base del sito è `
+                + `"${BASE_PATH}". Allinealo, o chi non ha JavaScript finisce fuori dal sito.`);
+        }
+    }
+}
+
 // ── 3. Robaccia che non deve essere pubblicata ──
 (function frughino(dir) {
     for (const e of readdirSync(dir, { withFileTypes: true })) {

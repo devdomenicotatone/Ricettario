@@ -5,8 +5,9 @@
 
 import { BASE } from './router.js';
 import { initMadeToggle } from './recipe-bookmarks.js';
-import { fluentEmoji, refreshIcons } from './emoji.js';
-import { escHtml } from './escape.js';
+import { refreshIcons } from './emoji.js';
+import { CATEGORIES_BY_DIR } from './categories.js';
+import { mostraNonTrovata } from './non-trovata.js';
 import { formatDoseInline } from './token-dosi.js';
 // Il markup della pagina sta in html-ricetta.js, che è PURO e viene importato
 // anche dal pre-rendering: qui restano solo il fetch, il montaggio e le
@@ -26,11 +27,19 @@ export async function renderRecipe(app, { category, slug }) {
       <p>Caricamento ricetta...</p>
     </div>`;
 
+  // «La ricetta non esiste» e «la ricetta non si è caricata» sono due notizie
+  // diverse per chi legge, e il messaggio dell'errore non è né l'una né
+  // l'altra: sotto «Ricetta non trovata» si finiva per leggere «Ricetta non
+  // trovata (404)», o addirittura «Unexpected token '<'». Quello va in
+  // console, dove serve; qui si tiene solo quale delle due frasi dire.
+  let mancante = false;
+
   try {
     // ── Fetch JSON ──
     const jsonUrl = `${BASE}ricette/${category}/${slug}.json`;
     const res = await fetch(jsonUrl);
-    if (!res.ok) throw new Error(`Ricetta non trovata (${res.status})`);
+    mancante = res.status === 404;
+    if (!res.ok) throw new Error(`HTTP ${res.status} su ${jsonUrl}`);
     const recipe = await res.json();
 
     // ── Update page metadata ──
@@ -55,13 +64,26 @@ export async function renderRecipe(app, { category, slug }) {
     // riga chi ascolta sentiva annunciare la pagina PRECEDENTE — misurato:
     // «Calcolatore di cottura su kamado, pagina caricata» sopra una pagina
     // che dice «Ricetta non trovata». Vale anche per la scheda del browser.
-    document.title = 'Ricetta non trovata — Ricettario Lab';
-    app.innerHTML = `
-      <div class="container" style="padding: 120px 0; text-align: center;">
-        <h1>${fluentEmoji('prohibited', 28)} Ricetta non trovata</h1>
-        <p style="color: var(--color-text-muted);">${escHtml(err.message)}</p>
-        <a href="${BASE}" data-link class="btn-back">${fluentEmoji('fire', 16)} Torna alla Home</a>
-      </div>`;
+    //
+    // La pagina è quella condivisa (js/non-trovata.js), che il titolo lo
+    // scrive da sé: tre copie dello stesso messaggio erano già divergenti.
+    console.error(`Ricetta ${category}/${slug} non caricata:`, err);
+
+    const cat = CATEGORIES_BY_DIR[category];
+    mostraNonTrovata(app, {
+      base: BASE,
+      titolo: mancante ? 'Ricetta non trovata' : 'Ricetta non caricata',
+      dettaglio: mancante
+        ? `Non c'è nessuna ricetta all'indirizzo «${category}/${slug}». Può essere un refuso, o una ricetta che è stata spostata.`
+        : 'Il caricamento non è riuscito. Controlla la connessione e riprova.',
+      // La via d'uscita migliore è la categoria da cui si veniva — ma solo se
+      // esiste davvero: offrire un link che porta a un'altra pagina «non
+      // trovata» è peggio che non offrirlo.
+      uscite: cat && [
+        { href: `${BASE}ricette/${category}/`, testo: `Vedi le ricette di ${cat.name}` },
+        { href: BASE, testo: 'Torna alla home' },
+      ],
+    });
   }
 }
 

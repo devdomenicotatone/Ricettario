@@ -46,6 +46,43 @@ Due vincoli da non rompere:
   delle linee guida Google, non un'ottimizzazione. Se aggiungi campi allo
   schema, aggiungi anche il markup visibile corrispondente.
 
+## Un indirizzo che non esiste deve dirlo
+
+Il server la risposta giusta la dà già: ogni URL senza un file corrisponde a
+`public/404.html` e torna con **status 404** (misurato il 28/07/2026 su
+`/ricette/` e su `/cottura/slug-inventato/`). Quindi il problema non era
+Google — quegli indirizzi non li indicizza — ma la persona: `404.html` è lo
+shim che rimanda alla SPA, e la SPA ripiegava su `{ type: 'home' }`, cioè
+homepage servita sotto l'indirizzo sbagliato, senza un segnale. Un soft 404
+per chi legge, non per il crawler.
+
+La regola è: **la FORMA dell'URL la giudica il router, l'ESISTENZA dei dati la
+giudica chi ha i dati.**
+
+- `matchRoute` restituisce `nonTrovata` quando il path non assomiglia a
+  nessuna rotta. È l'unica cosa che può decidere da sé, e non serve chiedere
+  niente a nessuno per saperlo.
+- Se una categoria esista lo sa `CATEGORIES_BY_DIR` (in `renderCategory`), se
+  una ricetta esista lo dice il 404 del fetch del suo JSON, se uno slug del
+  calcolatore si rilegga lo sa `configDaSlug`. Portare quei controlli dentro
+  `matchRoute` vorrebbe dire una seconda copia del registry delle categorie e
+  un `recipes.json` scaricato prima di ogni navigazione.
+- Il messaggio è **uno solo**, in `js/non-trovata.js`. Le tre copie che
+  c'erano avevano già tre uscite diverse. Scrive anche `document.title`,
+  perché il router lo legge dopo il render per la regione live: senza, chi
+  ascolta si sente annunciare la pagina precedente.
+
+Quello che **non** si fa è correggere l'URL verso la home con `replaceState`:
+toglie l'unica prova di cosa era stato chiesto — un refuso non si vede più, un
+link rotto non si può segnalare — e in cambio non dà niente a Google, che il
+404 ce l'ha già.
+
+Un caso resta scoperto di proposito: `/cottura/<slug>` valido ma fuori da
+`PAGINE_SEO` (es. `fiorentina-4-5cm-kamado`) è l'unico indirizzo dove la SPA
+disegna una pagina vera sotto un 404. Il piano è calcolabile davvero e la
+stessa configurazione vive a 200 in query string: trasformarlo in un errore
+toglierebbe una pagina utile per amore di coerenza.
+
 ## I moduli condivisi col pre-rendering devono restare puri
 
 `js/cottura/motore.js` (il calcolo), `js/cottura/html-piano.js` (il markup del
