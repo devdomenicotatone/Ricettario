@@ -5,9 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crema al Parmigiano — Ricettario Lab</title>
-    <link rel="icon" type="image/svg+xml" href="/Ricettario/assets/favicon-Ce3yoLgR.svg">
+    <!-- Il manifest e la favicon puntano ai file di `public/`, serviti così come
+         sono, e NON alla copia che Vite hashera dentro /assets/.
+         Il manifest è il motivo: Vite riscrive gli URL nell'HTML ma non quelli
+         DENTRO un file JSON, quindi da /assets/ il suo `"src": "favicon.svg"`
+         risolveva a /assets/favicon.svg e `"start_url": "./"` a /assets/ —
+         404 tutti e due, cioè una PWA che all'avvio apriva una pagina che non
+         esiste. Servito da /Ricettario/, gli stessi percorsi relativi tornano
+         giusti, e restano giusti anche se un domani cambia la base.
+         La favicon la seguo per non tenerne due copie identiche in giro. -->
+    <link rel="icon" type="image/svg+xml" href="/Ricettario/favicon.svg">
     <link rel="apple-touch-icon" href="/Ricettario/assets/apple-touch-icon-DVCrky5e.png">
-    <link rel="manifest" href="/Ricettario/assets/site-DXZVqlE8.webmanifest">
+    <link rel="manifest" href="/Ricettario/site.webmanifest">
     <!-- Lo script in fondo al <head> lo riscrive secondo il tema: qui c'è il
          chiaro, che è anche il tema dichiarato su <html>. -->
     <meta name="theme-color" content="#F2ECE4">
