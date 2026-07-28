@@ -27,8 +27,10 @@
  * Chiave: path della foto da `images/` in poi, senza estensione.
  * Valore: `[larghezza, altezza]` dell'originale.
  *
- * QUANDO AGGIUNGI O SOSTITUISCI UNA FOTO, rigenera varianti e voce con sharp
- * (in una cartella temporanea fuori dal repo, `npm i sharp`):
+ * CHI SCRIVE QUI: la pipeline immagini della dashboard
+ * (tools/src/varianti-foto.js, agganciata a downloadImage) genera varianti e
+ * voce da sola a ogni foto nuova o sostituita — generazione e refresh. A mano
+ * serve solo per una foto aggiunta FUORI dashboard, con le stesse regole:
  *
  *   const sharp = require('sharp');
  *   const meta = await sharp('public/images/ricette/<dir>/<nome>.webp').metadata();
