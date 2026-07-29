@@ -4,314 +4,105 @@ Istruzioni di progetto per Claude Code (caricate a ogni sessione).
 Per stack, comandi e schema delle ricette vedi [README.md](./README.md);
 qui c'è solo quello che non si deduce leggendo il codice.
 
+**Questo file è un indice, non un manuale.** Le regole di dettaglio stanno in
+`.claude/rules/` e si caricano da sole quando apri un file dell'area
+corrispondente. Se stai per lavorare in un'area e la sua regola non è comparsa,
+aprila a mano.
+
+| Se tocchi… | Si carica |
+|---|---|
+| `js/**`, `scripts/**`, `index.html` | `.claude/rules/moduli-condivisi-e-prerendering.md` |
+| `ricette/**`, `scripts/build-recipes.js` | `.claude/rules/ricette-tag-e-sensoriale.md` |
+| `js/cottura/**`, `dati/cottura/**` | `.claude/rules/calcolatore-cottura.md` |
+| `css/**` | `.claude/rules/css-e-cancello.md` |
+
 ## Fonti uniche: non duplicarle
 
-Alcune cose in questo progetto sono già state duplicate una volta, e le copie
-sono divergute in silenzio. Se ti serve quel contenuto altrove, **leggilo
-dalla fonte**, non riscriverlo.
+Alcune cose in questo progetto sono già state duplicate una volta, e le copie sono
+divergute **in silenzio** — markup della homepage diverso a seconda di come ci si
+arrivava, pagine statiche senza Pro Tips, tre messaggi di "non trovato" con tre
+uscite diverse. Se ti serve un contenuto altrove, **leggilo dalla fonte, non
+riscriverlo.**
 
-- **`public/recipes.json` è generato** da `scripts/build-recipes.js`. Non
-  modificarlo a mano: la modifica sparisce al primo `npm run check`. Se manca
-  un campo nell'indice, aggiungilo al generatore.
-- **`index.html` è l'unica fonte del markup della homepage.** La SPA lo
-  fotografa dal DOM e lo ripristina quando serve. Esisteva una seconda copia
-  in `js/main.js` (`getHomepageHTML`): titolo, sottotitolo e schede strumenti
-  erano diversi a seconda di come si arrivava in home. Non reintrodurla.
-- **`js/categories.js` è il registry delle categorie.** Il campo `dir` è la
-  cartella su disco e non sempre coincide con la chiave (`secondi_piatti` →
-  `ricette/secondi-piatti/`). Per path e URL usa `dir` o `CATEGORIES_BY_DIR`,
-  mai la chiave.
-- **`dati/cottura/coefficienti.js` è l'unica fonte dei numeri del
-  calcolatore.** I tagli puntano una curva per nome (`curva_tempo`), non se ne
-  portano una copia: se ogni taglio di manzo avesse la sua tabella,
-  ricalibrare dopo una cottura reale vorrebbe dire modificarne sei. Se scrivi
-  un numero dentro `js/cottura/`, è un bug.
-- **`dati/cottura/dispositivi.json` è il registry degli apparecchi.** Il
-  comportamento della famiglia kamado sta in `js/cottura/kamado.js`; i numeri
-  dei singoli modelli stanno nel JSON. Aggiungere un kamado è una voce di
-  dati, aggiungere un tipo di barbecue è un modulo accanto a `kamado.js`.
+È il principio da cui discendono quasi tutte le regole di dettaglio: quale sia la
+fonte unica di che cosa è scritto nelle regole di `js/**` e di `dati/cottura/**`.
 
-## Le pagine devono restare indicizzabili
+## Il pre-rendering è la ragione di metà dei vincoli
 
-`scripts/generate-og.js` pre-renderizza pagine complete a partire da
-`dist/index.html`: ricette, categorie, e i piani del calcolatore di cottura.
-Due vincoli da non rompere:
+Le pagine di questo sito escono due volte dalle stesse funzioni: una nel browser e
+una in Node, dentro `scripts/generate-og.js`. È da qui che viene la garanzia che i
+dati strutturati corrispondano a contenuto visibile — e da qui il vincolo che certi
+moduli restino **puri** (niente DOM, `window`, `localStorage`, `import.meta`).
 
-- **Niente redirect JavaScript.** Prima c'era un `location.replace()`
-  immediato: i crawler lo seguivano e consolidavano tutto sulla homepage,
-  quindi nessuna ricetta era indicizzata. `npm run verifica` fallisce se
-  rientra.
-- **I dati strutturati devono corrispondere a contenuto visibile.** Marcare
-  con JSON-LD ingredienti o passaggi che la pagina non mostra è una violazione
-  delle linee guida Google, non un'ottimizzazione. Se aggiungi campi allo
-  schema, aggiungi anche il markup visibile corrispondente.
-
-## Un indirizzo che non esiste deve dirlo
-
-Il server la risposta giusta la dà già: ogni URL senza un file corrisponde a
-`public/404.html` e torna con **status 404** (misurato il 28/07/2026 su
-`/ricette/` e su `/cottura/slug-inventato/`). Quindi il problema non era
-Google — quegli indirizzi non li indicizza — ma la persona: `404.html` è lo
-shim che rimanda alla SPA, e la SPA ripiegava su `{ type: 'home' }`, cioè
-homepage servita sotto l'indirizzo sbagliato, senza un segnale. Un soft 404
-per chi legge, non per il crawler.
-
-La regola è: **la FORMA dell'URL la giudica il router, l'ESISTENZA dei dati la
-giudica chi ha i dati.**
-
-- `matchRoute` restituisce `nonTrovata` quando il path non assomiglia a
-  nessuna rotta. È l'unica cosa che può decidere da sé, e non serve chiedere
-  niente a nessuno per saperlo.
-- Se una categoria esista lo sa `CATEGORIES_BY_DIR` (in `renderCategory`), se
-  una ricetta esista lo dice il 404 del fetch del suo JSON, se uno slug del
-  calcolatore si rilegga lo sa `configDaSlug`. Portare quei controlli dentro
-  `matchRoute` vorrebbe dire una seconda copia del registry delle categorie e
-  un `recipes.json` scaricato prima di ogni navigazione.
-- Il messaggio è **uno solo**, in `js/non-trovata.js`. Le tre copie che
-  c'erano avevano già tre uscite diverse. Scrive anche `document.title`,
-  perché il router lo legge dopo il render per la regione live: senza, chi
-  ascolta si sente annunciare la pagina precedente.
-
-Quello che **non** si fa è correggere l'URL verso la home con `replaceState`:
-toglie l'unica prova di cosa era stato chiesto — un refuso non si vede più, un
-link rotto non si può segnalare — e in cambio non dà niente a Google, che il
-404 ce l'ha già.
-
-Un caso resta scoperto di proposito: `/cottura/<slug>` valido ma fuori da
-`PAGINE_SEO` (es. `fiorentina-4-5cm-kamado`) è l'unico indirizzo dove la SPA
-disegna una pagina vera sotto un 404. Il piano è calcolabile davvero e la
-stessa configurazione vive a 200 in query string: trasformarlo in un errore
-toglierebbe una pagina utile per amore di coerenza.
-
-## I moduli condivisi col pre-rendering devono restare puri
-
-`js/cottura/motore.js` (il calcolo), `js/cottura/html-piano.js` (il markup del
-piano), e da luglio 2026 anche `js/html-ricetta.js`, `js/html-categoria.js`,
-`js/token-dosi.js` ed `js/emoji-core.js` (il markup di ricette, categorie,
-schede e caroselli, i token dose, le emoji) **non possono toccare il DOM,
-`window`, `localStorage` o `import.meta`**, e i dati devono arrivargli come
-argomento invece che con un `import`. Non è una preferenza di stile: li importa
-anche Node, dentro `scripts/generate-og.js`, `scripts/build-recipes.js` e
-`scripts/build-cottura.js`. In particolare **non importare `js/router.js` o
-`js/emoji.js` da questi moduli**: leggono `import.meta.env`, che esiste solo
-dentro Vite. La `base` si passa come argomento (`{ base }`), come già fa
-html-piano.js.
-
-Le vecchie copie a mano del markup dentro `generate-og.js` (`prerenderRecipe`,
-`prerenderCategory`) sono state rimosse perché erano già divergute in
-produzione: la pagina statica non aveva Pro Tips, Conservazione né Glossario, e
-le pagine categoria avevano H1 diversi dalla SPA. Non reintrodurle: il
-pre-rendering chiama gli stessi builder con `interattivo: false`, che omette
-solo i controlli morti senza JavaScript (calcolatore dosi, toolbar, canvas e
-toggle del pannello sensoriale — i cui DATI però restano, come contenuto
-piatto: il JSON-LD NutritionInformation deve corrispondere a testo visibile) e
-toglie le classi `reveal`, che senza JS restano a `opacity: 0`. Anche le frecce
-dei caroselli non stanno nel markup: le crea `attivaCarosello` in main.js, che
-IDRATA le righe pre-renderizzate invece di ricostruirle — rifarle dal fetch
-significava cancellare 80 link funzionanti al primo errore di rete.
-
-Se qualcuno ci infila un riferimento al browser, il pre-rendering si rompe e la
-strada facile diventa riscrivere il markup a mano nello script di build — cioè
-una seconda copia del piano, che divergerebbe al primo cambiamento. È da questa
-purezza che deriva la garanzia che l'`HowTo` corrisponda a contenuto visibile:
-la pagina statica e quella interattiva escono dalla stessa funzione.
-
-Il montaggio nel browser (timer, storico, Wake Lock) sta in `vista-piano.js`,
-`vista-timer.js` e `vista-storico.js`: è là che va il codice che ha bisogno di
-un browser.
-
-## Cose del calcolatore che sembrano bug e non lo sono
-
-- **La temperatura di estrazione non scende sotto `soglia_sicurezza`.** La
-  regola generale è `target − carryover`, ma sul pollo la soglia vince
-  sull'aritmetica: su un patogeno non si scommette su una stima. Sta in
-  `estrazione()` dentro `motore.js` ed è una scelta concordata.
-- **L'allarme dei timer suona al tempo MINIMO della finestra**, non al massimo.
-  "35-45 minuti" vuol dire "da 35 comincia a controllare", non "pronto a 45":
-  un allarme sul massimo arriverebbe quando la carne è già oltre.
-- **La curva del manzo cresce con circa s^1,45, non con s².** Applicando il
-  quadrato dall'ancora dei 2,5 cm, a 6,5 cm uscirebbero 118 minuti invece dei
-  60-80 osservati. Le ancore sono esperienza reale e vincono sulla formula.
-- **La stagnola è vietata nel riposo delle bistecche e corretta sul brisket.**
-  La regola in `regole.js` è vincolata a `famiglia`: non "uniformarla".
-- **`dati/cottura/` non finisce in `dist/`.** Non è in `public/`: viene
-  importato dal codice, quindi entra nel bundle del calcolatore, che è un chunk
-  caricato solo su `/cottura/`.
-
-## I tag che promettono qualcosa a chi mangia
-
-I `tags` non li scrive questo repo: arrivano dalla dashboard, cambiano modello
-nel tempo, e da qui finiscono nelle `keywords` dei dati strutturati — cioè a
-Google. «coreano» sbagliato è un fastidio; **«senza glutine» sbagliato è
-un'informazione su cui una persona celiaca decide se può mangiare una cosa**.
-È già successo: la Mayak Gyeran è stata pubblicata con quel tag ed è costruita
-sulla salsa di soia, che il grano ce l'ha.
-
-`controllaPromesse` in `scripts/build-recipes.js` boccia la build quando un tag
-promette **«senza glutine», «senza lattosio», «vegano» o «vegetariano»** e fra
-gli ingredienti c'è qualcosa che lo smentisce. Le liste delle fonti sono tre e
-si compongono: carne e pesce smentiscono sia vegano sia vegetariano, uova e
-latticini solo vegano. Tre cose da sapere:
-
-- **Per dichiarare una promessa condizionata si usa la parentesi**:
-  `senza glutine (con tamari)`, come fa `condimenti/salsa-teriyaki-originale`.
-  Un tag con parentesi passa, perché dice al lettore a quale condizione la
-  promessa vale. È quella la via d'uscita, non allargare le esenzioni.
-- **Le esenzioni guardano il NOME dell'ingrediente, mai la nota**, ed è una
-  cicatrice: la prima versione leggeva anche le note, e la nota che spiega
-  «per la versione senza glutine usa tamari» bastava ad assolvere una ricetta
-  che monta salsa di soia normale. Un cancello che si disinnesca leggendo la
-  prosa che descrive il problema non protegge niente.
-- **Quello che sta FUORI dalle liste è deciso quanto quello che sta dentro.**
-  Il parmigiano e gli altri stagionati non sono fra le fonti di lattosio
-  (tracce sotto la soglia dichiarabile: una ricetta «senza lattosio» col
-  parmigiano è corretta), le uova e i latticini non smentiscono
-  «vegetariano», e `salam[ei]` è scritto stretto perché `salam\w*`
-  prenderebbe la «salamoia». Le radici invece vogliono `\w*`: scritto
-  `\b(acciugh)\b` il plurale «Acciughe» non combacia, e una ricetta con le
-  alici passava per vegetariana — l'ha trovato il test negativo, non l'occhio.
-
-L'analisi qualità della dashboard **non** copre questo: nei suoi 83 referti le
-aree sono Coerenza, Dosi, Setup, Tempi, Temperature. Di allergeni non parla mai.
-
-## Gli assi del profilo sensoriale: il set della famiglia, con deroga
-
-Il profilo sensoriale ha **cinque assi**, e sono tutto il profilo. La regola
-ha due metà, e servono entrambe:
-
-1. **Si parte dagli assi che la famiglia usa già.** I 40 condimenti hanno gli
-   stessi cinque (*Sapidità / Acidità / Cremosità / Dolcezza / Intensità
-   Aromatica*), il pane i suoi, pizza e focaccia ne condividono un terzo. Non
-   è pigrizia: assi uguali sono **ciò che rende confrontabili due ricette**.
-   Guardando due radar sai che la maionese sta a 9 di cremosità e il
-   chimichurri a 2, e quel 2 è informazione, non un difetto.
-2. **Si sostituisce un asse solo quando la ricetta non può esprimerlo
-   affatto**, cioè quando varrebbe 0 o 1. Lì non stai posizionando la ricetta
-   rispetto a nessuno: stai buttando un quinto del profilo per dire «non si
-   applica», e sul radar disegni una punta schiacciata.
-
-La differenza fra i due casi è tutta qui: **un valore basso su un asse
-condiviso colloca la ricetta; un valore a zero dice che l'asse non parla di
-quel cibo.**
-
-Da dove nasce. Gli assi venivano da una tabella `categoria → cinque assi`
-nella dashboard, e «Secondi Piatti» non avendo la sua usava quella del
-**pane**: delle costine di maiale sono state valutate su «Alveolatura
-Mollica» — zero — per tre mesi in produzione. Aggiungere righe alla tabella
-non basta, perché quella categoria tiene insieme costine e uova marinate, che
-non condividono quasi nessun tratto. Ma nemmeno «assi su misura per ogni
-ricetta» va bene, ed è l'errore che stavo per consigliare: si perde la
-confrontabilità dentro la famiglia, cioè proprio nella categoria più numerosa
-del sito. La misura ha deciso: **3 ricette su 80 violavano la regola, 62%
-erano a posto** — rigenerare tutto avrebbe riscritto 46.000 caratteri di note
-di degustazione per sistemare quattro assi.
-
-Quando sostituisci un asse, **scegli il tratto leggendo le note di
-degustazione della ricetta**: nelle tre sistemate a mano il tratto giusto era
-già descritto lì dentro — «priva di dolcezza propria» sulla pasta madre,
-«dominato da note di nocciola tostata» sul burro chiarificato — e mancava
-solo l'asse che lo rappresentasse. Così grafico e testo dicono la stessa cosa,
-e non serve riscrivere la prosa. Riusa un'etichetta già in uso nel sito quando
-esiste, invece di coniarne una nuova.
-
-`build-recipes.js` avvisa (non blocca: una ricetta con un asse fiacco si
-pubblica) quando un asse è ≤1. Se ne vedi uno, la correzione è **cambiare
-l'asse, non alzare il numero**.
-
-## Codifica dei file
-
-I JSON delle ricette sono UTF-8. Sette file sono già stati salvati una volta
-come Latin-1 e ri-codificati, producendo `metÃ ` al posto di `metà` — testo
-corrotto visibile sul sito per mesi. `npm run verifica` ora lo intercetta.
-Se modifichi un JSON di ricetta, salvalo in UTF-8 senza BOM.
+Se stai per toccare `js/` o `scripts/`, leggi la regola: rompere quella purezza non
+dà un errore chiaro, fa fallire il build in un punto lontano e invoglia a riscrivere
+il markup a mano — cioè a creare la seconda copia che divergerà.
 
 ## Verifica prima di dire "fatto"
 
-Il progetto non ha test unitari di proposito: il rischio sta quasi tutto
-nell'output statico, e lo copre `npm run check` (dati + build + pre-rendering
-+ controlli su `dist/` e sui fogli di stile). Fallo girare davvero prima di
-dichiarare che una modifica funziona — non basta che il file sia stato scritto.
+Il progetto **non ha test unitari, di proposito**: il rischio sta quasi tutto
+nell'output statico, e lo copre `npm run check` (dati + build + pre-rendering +
+controlli su `dist/` e sui fogli di stile).
 
-Il CSS ha quattro controlli suoi (sezione 9 di `verifica-build.js`), perché è
-l'unica parte che si rompe senza dire niente: **ogni `var(--x)` deve avere una
-`--x` definita**, **ogni classe dichiarata deve comparire in qualche markup**,
-**ogni foglio deve dichiarare il layer della sua cartella** (`css/pages/` →
-`@layer pages`; `css/base/` è esente perché ne ha due per scelta) e **ogni
-breakpoint deve essere fra quelli elencati nel blocco «── BREAKPOINT» in testa a
-`css/base/tokens.css`**, tutti `min-width`. Quel blocco è l'unica fonte delle
-soglie: il cancello lo legge da lì invece di tenerne una copia. Se ti serve una
-soglia nuova, aggiungila lì con il suo perché.
+**Fallo girare davvero prima di dichiarare che una modifica funziona.** Non basta
+che il file sia stato scritto.
 
-Tre cose da sapere quando uno dei quattro si lamenta:
+```bash
+npm run check
+```
 
-- Se aggiungi una classe che il JavaScript compone a runtime — come
-  `piano--${percorso}` — il cancello non può vederla: va dichiarato il prefisso
-  in `PREFISSI_A_RUNTIME`, non silenziato il controllo.
-- Un foglio senza `@layer` è un errore, non una svista veniale: le regole fuori
-  dai layer battono tutte quelle dentro, qualunque sia la specificità.
-- `720px` sembra un `769px` scritto male e non lo è: il tablet in verticale è
-  largo 768, quindi 769 lo escluderebbe. Le soglie non si «uniformano» a occhio.
-
-Il cancello include `npm run build:cottura`, che oltre a validare i dati
-**genera 918 piani** — ogni taglio per ogni dispositivo, cottura, metodo e
-temperatura di partenza — e controlla monotonìe (più spesso deve voler dire più
-tempo), intervalli rovesciati e avvisi agganciati a fasi inesistenti. Ha già
-intercettato un avviso di sicurezza che spariva su un intero metodo di cottura:
-se aggiungi regole o fasi, quel controllo è ciò che se ne accorge.
-
-Per vedere un piano senza aprire il browser:
-`node scripts/build-cottura.js --piano fiorentina 4.5 media_al_sangue kamado_piccolo`
-
-Per verificare il comportamento nel browser usa `npm run preview`, che serve
-`dist/` come sarà pubblicato. `npm run dev` non esegue il pre-rendering,
-quindi non mostra quello che vedono i crawler.
+Per verificare il comportamento nel browser usa `npm run preview`, che serve `dist/`
+come sarà pubblicato. **`npm run dev` non esegue il pre-rendering**, quindi non
+mostra quello che vedono i crawler.
 
 ## Deploy
 
-Deploy = `npm run deploy`. **Il push su `main` non pubblica niente**: GitHub
-Pages serve dal branch `gh-pages`, aggiornato solo da quel comando.
+Deploy = `npm run deploy`. **Il push su `main` non pubblica niente**: GitHub Pages
+serve dal branch `gh-pages`, aggiornato solo da quel comando.
 
-Il deploy è preceduto da `npm run check` con `&&`: se i dati sono incoerenti
-la pubblicazione si ferma prima di partire. È voluto, non aggirarlo.
+```bash
+npm run deploy
+```
 
-**E non si pubblica ciò che non è su GitHub.** `deploy-ghpages.js` chiede al
-server — non al riferimento locale, che può essere vecchio di ore — se il ramo
-corrente è avanti al suo remoto, e in quel caso si ferma. Il motivo sta nel
-punto 5 di [CHECKUP.md](./CHECKUP.md): pubblicare e versionare sono due gesti
-separati, e si è arrivati a **diciassette commit esistenti solo sul portatile**
-mentre undici deploy erano già partiti da lì — con la CI, che gira sul push a
-`main`, che non aveva mai visto quel codice. Se serve pubblicare lo stesso (ramo
-di prova, macchina senza rete) la via d'uscita è esplicita:
-`npm run deploy -- --comunque`.
+Il deploy è preceduto da `npm run check` con `&&`: se i dati sono incoerenti la
+pubblicazione si ferma prima di partire. È voluto, non aggirarlo.
 
-**Pubblica senza chiedere, se `npm run check` passa.** È il cancello a
-decidere: quando è verde, chiudi il lavoro con `npm run deploy` invece di
-fermarti a domandare. Se fallisce, non forzare — riporta cosa si è rotto.
-(Indicazione esplicita di Domenico, 25/07/2026.)
+**E non si pubblica ciò che non è su GitHub.** `deploy-ghpages.js` chiede al server —
+non al riferimento locale, che può essere vecchio di ore — se il ramo corrente è
+avanti al suo remoto, e in quel caso si ferma. Il motivo sta nel punto 5 di
+[CHECKUP.md](./CHECKUP.md): pubblicare e versionare sono due gesti separati, e si è
+arrivati a **diciassette commit esistenti solo sul portatile** mentre undici deploy
+erano già partiti da lì — con la CI, che gira sul push a `main`, che non aveva mai
+visto quel codice. Se serve pubblicare lo stesso (ramo di prova, macchina senza rete)
+la via d'uscita è esplicita: `npm run deploy -- --comunque`.
 
-`public/pdf/` (~173 MB di materiale sorgente) è nel `.gitignore` ma Vite copia
-tutto `public/` in `dist/`: un plugin in `vite.config.js` lo esclude
-esplicitamente. Se tocchi quel plugin, controlla il peso di `dist/`.
+**Pubblica senza chiedere, se `npm run check` passa.** È il cancello a decidere:
+quando è verde, chiudi il lavoro con `npm run deploy` invece di fermarti a domandare.
+Se fallisce, non forzare — riporta cosa si è rotto.
+*(Indicazione esplicita di Domenico, 25/07/2026.)*
+
+`public/pdf/` (~173 MB di materiale sorgente) è nel `.gitignore` ma Vite copia tutto
+`public/` in `dist/`: un plugin in `vite.config.js` lo esclude esplicitamente. Se
+tocchi quel plugin, controlla il peso di `dist/`.
 
 ## Identità git
 
-Questo repo ha 132 commit storici fatti con `devdomenicotatone@gmail.com`
-(senza punto), che **non è collegata all'account GitHub**: quei commit non
-risultano attribuiti. L'indirizzo giusto è `dev.domenicotatone@gmail.com` ed è
-già configurato in locale. Non cambiarlo, e non "uniformarlo" alla storia
-vecchia.
+Questo repo ha 132 commit storici fatti con `devdomenicotatone@gmail.com` (senza
+punto), che **non è collegata all'account GitHub**: quei commit non risultano
+attribuiti. L'indirizzo giusto è `dev.domenicotatone@gmail.com` ed è già configurato
+in locale. Non cambiarlo, e non "uniformarlo" alla storia vecchia.
 
 ## Lingua
 
-Codice, commenti, commit e interfaccia sono in italiano. Mantieni la
-convenzione, inclusi i messaggi di commit in stile `tipo(ambito): descrizione`.
+Codice, commenti, commit e interfaccia sono in italiano. Mantieni la convenzione,
+inclusi i messaggi di commit in stile `tipo(ambito): descrizione`.
 
 <!-- BEGIN:knowledge-base -->
 ## Knowledge base condivisa
 
-8 file estratti da 4 progetti reali (questo compreso) e verificati contro la documentazione
-ufficiale 2026. Ogni pattern porta: problema · snippet verbatim · provenienza
-`progetto file:riga` · quando NON usarlo.
+8 file estratti da 4 progetti reali (questo compreso) e verificati contro la
+documentazione ufficiale 2026. Ogni pattern porta: problema · snippet verbatim ·
+provenienza `progetto file:riga` · quando NON usarlo.
 
 Vive in un **repository separato e privato**, non in una cartella accanto a questa:
 <https://github.com/devdomenicotatone/knowledge-base>
@@ -324,25 +115,26 @@ git clone https://github.com/devdomenicotatone/knowledge-base.git ../knowledge-b
 claude --add-dir ../knowledge-base
 ```
 
-I riferimenti qui sotto sono relativi a `../knowledge-base/`. Se l'hai clonata altrove usa il
-tuo percorso: **non esiste un percorso valido su ogni macchina**, ed è il motivo per cui questo
-blocco non ne indica uno assoluto.
+I riferimenti qui sotto sono relativi a `../knowledge-base/`. Se l'hai clonata
+altrove usa il tuo percorso: **non esiste un percorso valido su ogni macchina**, ed è
+il motivo per cui questo blocco non ne indica uno assoluto.
 
-**Non riassumerla a memoria: aprila.** Se stai per scrivere codice in una di queste aree e
-non hai letto il file corrispondente in questa sessione, leggilo prima di scrivere.
+**Non riassumerla a memoria: aprila.** Se stai per scrivere codice in una di queste
+aree e non hai letto il file corrispondente in questa sessione, leggilo prima.
 
 | Sto per... | Apri prima |
 |---|---|
 | Scaffold, app nuova, intervento strutturale | `07-STARTER-KIT.md` |
-| Auth, sessioni, MFA, RLS, chiavi, upload, webhook, CSP, header, proxy | `01-SICUREZZA.md` |
-| Server/Client Component, `"use server"`, DAL, confini di modulo, test | `02-ARCHITETTURA-E-CODICE.md` |
-| CSS, token, breakpoint, modali, form, stati vuoti/errore, a11y, SEO | `03-UI-UX-DESIGN.md` |
-| Viewport, tastiera mobile, scroll-lock, gesti, PWA, performance | `04-MOBILE-E-PERFORMANCE.md` |
-| Schema DB, migrazioni, SQL, transazioni, retry, gestione errori, logging | `05-DATI-E-RESILIENZA.md` |
+| Auth, sessioni, chiavi, upload, CSP, header | `01-SICUREZZA.md` |
+| Confini di modulo, architettura, test | `02-ARCHITETTURA-E-CODICE.md` |
+| CSS, token, breakpoint, modali, form, a11y, SEO | `03-UI-UX-DESIGN.md` |
+| Viewport, gesti, PWA, performance | `04-MOBILE-E-PERFORMANCE.md` |
+| Schema dati, gestione errori, logging | `05-DATI-E-RESILIENZA.md` |
 | `CLAUDE.md`, README, docs, hook, CI, rituale di lavoro | `06-DX-E-AGENTI-AI.md` |
 | Dire "fatto" | `00-INDICE.md` § DA NON RIPETERE MAI |
 
-Se citi un pattern, cita la provenienza; se non sai citarla, non l'hai letto. Gli snippet sono
-verbatim salvo dove compare `[...]`: copiali, non parafrasarli. Se la KB e questo codice sono
-in disaccordo, fermati e dillo all'utente — uno dei due è invecchiato.
+Se citi un pattern, cita la provenienza; se non sai citarla, non l'hai letto. Gli
+snippet sono verbatim salvo dove compare `[...]`: copiali, non parafrasarli. Se la KB
+e questo codice sono in disaccordo, fermati e dillo all'utente — uno dei due è
+invecchiato.
 <!-- END:knowledge-base -->
