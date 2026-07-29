@@ -305,3 +305,44 @@ vecchia.
 
 Codice, commenti, commit e interfaccia sono in italiano. Mantieni la
 convenzione, inclusi i messaggi di commit in stile `tipo(ambito): descrizione`.
+
+<!-- BEGIN:knowledge-base -->
+## Knowledge base condivisa
+
+8 file estratti da 4 progetti reali (questo compreso) e verificati contro la documentazione
+ufficiale 2026. Ogni pattern porta: problema · snippet verbatim · provenienza
+`progetto file:riga` · quando NON usarlo.
+
+Vive in un **repository separato e privato**, non in una cartella accanto a questa:
+<https://github.com/devdomenicotatone/knowledge-base>
+
+```bash
+git clone https://github.com/devdomenicotatone/knowledge-base.git ../knowledge-base
+```
+
+```bash
+claude --add-dir ../knowledge-base
+```
+
+I riferimenti qui sotto sono relativi a `../knowledge-base/`. Se l'hai clonata altrove usa il
+tuo percorso: **non esiste un percorso valido su ogni macchina**, ed è il motivo per cui questo
+blocco non ne indica uno assoluto.
+
+**Non riassumerla a memoria: aprila.** Se stai per scrivere codice in una di queste aree e
+non hai letto il file corrispondente in questa sessione, leggilo prima di scrivere.
+
+| Sto per... | Apri prima |
+|---|---|
+| Scaffold, app nuova, intervento strutturale | `07-STARTER-KIT.md` |
+| Auth, sessioni, MFA, RLS, chiavi, upload, webhook, CSP, header, proxy | `01-SICUREZZA.md` |
+| Server/Client Component, `"use server"`, DAL, confini di modulo, test | `02-ARCHITETTURA-E-CODICE.md` |
+| CSS, token, breakpoint, modali, form, stati vuoti/errore, a11y, SEO | `03-UI-UX-DESIGN.md` |
+| Viewport, tastiera mobile, scroll-lock, gesti, PWA, performance | `04-MOBILE-E-PERFORMANCE.md` |
+| Schema DB, migrazioni, SQL, transazioni, retry, gestione errori, logging | `05-DATI-E-RESILIENZA.md` |
+| `CLAUDE.md`, README, docs, hook, CI, rituale di lavoro | `06-DX-E-AGENTI-AI.md` |
+| Dire "fatto" | `00-INDICE.md` § DA NON RIPETERE MAI |
+
+Se citi un pattern, cita la provenienza; se non sai citarla, non l'hai letto. Gli snippet sono
+verbatim salvo dove compare `[...]`: copiali, non parafrasarli. Se la KB e questo codice sono
+in disaccordo, fermati e dillo all'utente — uno dei due è invecchiato.
+<!-- END:knowledge-base -->
