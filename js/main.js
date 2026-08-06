@@ -68,6 +68,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const { renderCottura } = await import('./cottura/pagina.js');
       return renderCottura(app, params);
     },
+    // Stesso schema per la sezione strumenti: guide, scheda tecnica e CSS
+    // viaggiano nel loro chunk.
+    strumenti: async (app, params) => {
+      const { renderStrumenti } = await import('./strumenti/pagina.js');
+      return renderStrumenti(app, params);
+    },
     // Indirizzo che non assomiglia a nessuna rotta. Prima non c'era e
     // `matchRoute` ripiegava sulla home: vedi il commento là.
     nonTrovata: (app, { percorso } = {}) => mostraNonTrovata(app, {

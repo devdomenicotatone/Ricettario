@@ -1,0 +1,205 @@
+{
+  "title": "Torta Caprese",
+  "slug": "torta-caprese",
+  "emoji": "🍫",
+  "description": "Il dolce simbolo di Capri: cioccolato fondente e granella di mandorle, senza farina, con cuore umido e crosticina sottile. Naturalmente senza glutine",
+  "subtitle": "Il dolce al cioccolato e mandorle di Capri, senza farina",
+  "category": "Dolci",
+  "tools": [
+    {
+      "strumento": "cutter-sirman-c-tronic-6",
+      "lama": "dentate",
+      "nota": "Le lame dentate riducono le mandorle pelate in granella fine e tritano il cioccolato fondente a freddo: i prodotti duri e secchi sono il loro terreno."
+    }
+  ],
+  "hydration": 0,
+  "targetTemp": "20-22°C",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "suspensions": [],
+  "stepsCondiment": [],
+  "baking": {
+    "temperature": "170°C (statico)",
+    "time": "45-50 min",
+    "tips": [
+      "Preriscaldare il forno statico a 170°C per almeno 20 minuti prima di infornare",
+      "La tortiera da 24cm è la misura giusta per queste dosi: con uno stampo più piccolo lo spessore aumenta e servono 5-10 minuti in più",
+      "Non aprire il forno nei primi 30 minuti: il composto montato si sgonfierebbe",
+      "La prova stecchino qui si legge al contrario: deve uscire umido, con qualche briciola attaccata — asciutto significa torta troppo cotta",
+      "Se la superficie colora troppo prima del tempo, coprire con un foglio di alluminio e portare a fine cottura"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Lame Dentate",
+      "definition": "Lame da cutter a profilo seghettato, pensate per aggredire prodotti duri e secchi: frutta secca, cioccolato, pane raffermo. Il dente strappa e frantuma dove la lama liscia scivolerebbe, producendo granelle e triti regolari senza surriscaldare il prodotto."
+    },
+    {
+      "term": "Granella di Mandorle",
+      "definition": "Mandorle ridotte in frammenti minuti ma ancora distinti, a metà strada tra il pezzo intero e la farina. Nella caprese sostituisce la farina di mandorle e regala la texture leggermente ruvida tipica del dolce."
+    },
+    {
+      "term": "Montare a Nastro",
+      "definition": "Lavorare tuorli e zucchero fino a una massa chiara e gonfia che, ricadendo dalle fruste, disegna un nastro che resta visibile qualche secondo in superficie. È la riserva d'aria che fa crescere la torta in assenza di lievito."
+    },
+    {
+      "term": "Bagnomaria",
+      "definition": "Tecnica di fusione dolce: la ciotola con il cioccolato poggia su una pentola d'acqua appena fremente senza toccarla, e il calore arriva mediato dal vapore. Evita che il cioccolato bruci o formi grumi."
+    },
+    {
+      "term": "Becco d'Uccello",
+      "definition": "Consistenza degli albumi montati a neve morbida: sollevando le fruste, la punta di albume si piega su se stessa come il becco di un uccello invece di restare rigida. È il punto giusto per incorporarli senza smontarli."
+    }
+  ],
+  "alert": "NON aggiungere farina né lievito: la caprese sta in piedi con la sola aria delle uova montate, e la sua identità di dolce senza glutine dipende dall'assenza di farina. NON ridurre le mandorle in farina nel cutter: pochi impulsi di troppo e la granella diventa una pasta oleosa che appesantisce l'impasto. NON versare il cioccolato fuso ancora caldo sulla montata di tuorli: le uova coagulano e la massa si smonta. NON cuocere fino a stecchino asciutto: il cuore deve restare umido, è la firma della torta. NON sformare la torta calda: si romperebbe, va lasciata assestare nella tortiera.",
+  "proTips": [
+    "Un cioccolato fondente al 60-70% di cacao è l'equilibrio classico: sotto il 60% la torta risulta più dolce e piatta, sopra il 75% più amara e asciutta",
+    "Se la vasca del cutter è tiepida dopo la granella di mandorle, lasciala raffreddare qualche minuto prima di tritare il cioccolato: le lame dentate lavorano bene solo su prodotto freddo e sodo",
+    "Un cucchiaio di liquore Strega o di rum aggiunto al composto di cioccolato fuso è una variante molto diffusa a Capri: profuma senza alterare la struttura",
+    "Sostituendo metà delle mandorle pelate con mandorle con pellicina si ottiene una versione più rustica e amaricante, vicina alle capresi delle pasticcerie storiche"
+  ],
+  "storage": [
+    "La Torta Caprese dà il meglio dal giorno dopo la cottura, quando il cuore umido si è assestato. Si conserva a temperatura ambiente per 3-4 giorni sotto una campana per dolci o coperta con pellicola, al riparo da fonti di calore: il burro e il cioccolato della struttura la mantengono morbida senza bisogno di frigorifero.",
+    "In frigorifero, chiusa in un contenitore ermetico, si conserva fino a una settimana. Il freddo però compatta burro e cioccolato e ne irrigidisce il cuore: riportarla a temperatura ambiente per almeno 30-40 minuti prima di servirla, perché fondente e mandorla ritrovino profumo e morbidezza.",
+    "La caprese si congela molto bene, preferibilmente già porzionata: avvolgere le singole fette in pellicola alimentare, riporle in un sacchetto gelo e conservarle fino a 2 mesi. Scongelare in frigorifero per una notte e poi a temperatura ambiente per mezz'ora; spolverizzare con zucchero a velo fresco solo al momento di servire."
+  ],
+  "imageKeywords": [
+    "torta caprese chocolate almond cake",
+    "flourless chocolate cake italian",
+    "caprese cake capri dessert",
+    "italian chocolate almond cake powdered sugar",
+    "schokoladen mandelkuchen capri",
+    "gluten free chocolate almond cake"
+  ],
+  "tags": [
+    "torta caprese",
+    "cioccolato fondente",
+    "mandorle",
+    "senza glutine",
+    "senza farina",
+    "capri",
+    "dolce campano"
+  ],
+  "ingredientGroups": [
+    {
+      "group": "Per l'Impasto",
+      "items": [
+        {
+          "name": "Mandorle Pelate",
+          "note": "(intere, da ridurre in granella al cutter)",
+          "grams": 250,
+          "tokenId": "mandorle"
+        },
+        {
+          "name": "Cioccolato Fondente",
+          "note": "(60-70% di cacao, in tavolette)",
+          "grams": 250,
+          "tokenId": "cioccolato"
+        },
+        {
+          "name": "Burro",
+          "note": "(a pezzetti, più una noce per la tortiera)",
+          "grams": 250,
+          "tokenId": "burro"
+        },
+        {
+          "name": "Uova Intere",
+          "note": "(circa 5 medie, a temperatura ambiente)",
+          "grams": 250,
+          "tokenId": "uova"
+        },
+        {
+          "name": "Zucchero Semolato",
+          "note": "(diviso tra tuorli e albumi)",
+          "grams": 200,
+          "tokenId": "zucchero"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(1 pizzico, per gli albumi)",
+          "grams": 2,
+          "tokenId": "sale"
+        }
+      ]
+    },
+    {
+      "group": "Per la Finitura",
+      "items": [
+        {
+          "name": "Zucchero a Velo",
+          "note": "(per spolverizzare a torta fredda)",
+          "grams": 20,
+          "tokenId": "zucchero_velo"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Granella di Mandorle al Cutter",
+      "text": "Versare le mandorle pelate ({mandorle:250}g) nella vasca del cutter con le lame dentate montate: i prodotti duri e secchi sono il loro terreno. Lavorare a impulsi brevi, fermandosi ogni 3-4 impulsi per raschiare le pareti con una spatola e riportare al centro i pezzi più grossi. L'obiettivo è una granella fine e uniforme, della consistenza di uno zucchero grosso: NON insistere fino a ridurla in farina, perché le mandorle rilascerebbero il loro olio trasformandosi in pasta. Trasferire la granella in una ciotola e tenere da parte."
+    },
+    {
+      "title": "Tritatura del Cioccolato al Cutter",
+      "text": "Spezzare il cioccolato fondente ({cioccolato:250}g) in quadrotti e versarlo nella vasca del cutter, sempre con le lame dentate. Tritare partendo a velocità bassa e poi crescente, sempre a impulsi, finché il cioccolato è ridotto in un trito minuto e regolare. Il taglio deve avvenire a freddo: se la vasca è tiepida dopo la granella di mandorle, lasciarla raffreddare qualche minuto prima di iniziare, perché il cioccolato scaldato dalle lame impasta invece di tritarsi."
+    },
+    {
+      "title": "Fusione di Cioccolato e Burro",
+      "text": "Fondere il cioccolato tritato con il burro ({burro:250}g) a pezzetti, a bagnomaria dolce o al microonde a bassa potenza, mescolando spesso con una spatola fino a ottenere una crema liscia e lucida. Il trito minuto ottenuto al cutter fonde in fretta e in modo uniforme, senza bisogno di surriscaldare. Lasciare intiepidire: il composto deve scendere sotto i {temp_composto:40!}°C prima di incontrare le uova, altrimenti le cuoce."
+    },
+    {
+      "title": "Montata dei Tuorli",
+      "text": "Separare i tuorli dagli albumi delle uova ({uova:250}g, circa 5 medie a temperatura ambiente), raccogliendo gli albumi in una ciotola perfettamente pulita e sgrassata. Montare i tuorli con {zucchero:140}g di zucchero semolato usando le fruste elettriche a velocità media-alta per {tempo_montata:8!} minuti, fino a ottenere una massa chiara, gonfia e montata a nastro: sollevando le fruste, il composto deve ricadere disegnando un nastro che resta visibile qualche secondo in superficie."
+    },
+    {
+      "title": "Amalgama del Composto",
+      "text": "Versare a filo il composto di cioccolato e burro intiepidito sulla montata di tuorli, incorporandolo con una spatola con movimenti dal basso verso l'alto. Aggiungere quindi la granella di mandorle e amalgamare con movimenti ampi e delicati fino a distribuirla in modo uniforme. Il composto risulterà denso e corposo: è normale, si allenterà con gli albumi."
+    },
+    {
+      "title": "Albumi e Incorporamento Finale",
+      "text": "Montare gli albumi con il sale ({sale:2}g) a velocità media; quando iniziano a schiumare, aggiungere in 2-3 volte i restanti {zucchero:60}g di zucchero e montare a neve lucida ma non fermissima, al punto di becco d'uccello. Incorporarli al composto di cioccolato in 3 aggiunte: la prima mescolata con una certa energia per allentare la massa, le altre due con movimenti delicati dal basso verso l'alto per non smontare. Il composto finale deve essere gonfio, omogeneo e senza striature bianche."
+    },
+    {
+      "title": "Cottura",
+      "text": "Imburrare una tortiera da 24cm e foderarne il fondo con carta forno. Versare il composto e livellare con la spatola senza premere. Infornare in forno statico preriscaldato a {temp_forno:170!}°C nella parte centrale per {tempo_cottura:50!} minuti, controllando dal 45esimo: la superficie deve presentare una crosticina sottile e leggermente screpolata, e uno stecchino inserito al centro deve uscire umido ma non bagnato. È il cuore morbido a fare la caprese: NON prolungare la cottura per ottenere uno stecchino asciutto."
+    },
+    {
+      "title": "Raffreddamento e Finitura",
+      "text": "Sfornare e lasciare raffreddare completamente nella tortiera (almeno 2 ore): appena cotta la torta è fragilissima e si assesta raffreddandosi, formando la caratteristica superficie craquelé. Sformarla capovolgendola su un piatto e poi di nuovo su quello di servizio, quindi spolverizzare con lo zucchero a velo ({zucchero_velo:20}g). Tradizione vuole che si serva a temperatura ambiente, da sola o con un ciuffo di panna montata non zuccherata."
+    }
+  ],
+  "sensoryProfile": {
+    "summary": "La Torta Caprese gioca tutta sul contrasto fra la crosticina sottile e screpolata della superficie e il cuore umido, quasi fondente, dove cioccolato e burro si sciolgono al palato. La granella di mandorle interrompe la cremosità con una masticabilità fine e leggermente ruvida, che è la firma tattile del dolce. Al naso e in bocca dominano il cacao profondo del fondente e la nota tostata e burrosa della mandorla, con una dolcezza misurata, tenuta a freno dall'amaricante del cioccolato; il finale è lungo, ricco e persistente, da piccole fette.",
+    "axes": [
+      {
+        "label": "Dolcezza Percepita",
+        "value": 6
+      },
+      {
+        "label": "Friabilità / Croccantezza",
+        "value": 3
+      },
+      {
+        "label": "Umidità / Cremosità",
+        "value": 8
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Ricchezza / Corpo",
+        "value": 9
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 490,
+    "macros": {
+      "carbs": 32,
+      "protein": 9,
+      "fat": 37
+    }
+  }
+}

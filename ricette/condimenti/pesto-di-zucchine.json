@@ -5,6 +5,13 @@
   "description": "Una crema verde brillante e vellutata, realizzata rigorosamente a freddo per mantenere inalterati colori, sapori e proprietà nutrizionali delle zucchine e del basilico.",
   "subtitle": "Emulsione a freddo con tecnica di spurgatura osmotica",
   "category": "Condimenti",
+  "tools": [
+    {
+      "strumento": "cutter-sirman-c-tronic-6",
+      "lama": "lisce",
+      "nota": "Le lame lisce, nel boccale raffreddato, tritano a impulsi la polpa di zucchine strizzata e incorporano l'olio a filo a freddo."
+    }
+  ],
   "hydration": 0,
   "targetTemp": "",
   "fermentation": "",

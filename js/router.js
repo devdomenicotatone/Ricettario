@@ -24,7 +24,7 @@ export function registerRenderers(map) {
 
 /**
  * Determina il tipo di pagina dall'URL corrente.
- * Returns: { type: 'home' | 'recipe' | 'category' | 'cottura' | 'nonTrovata', params: {...} }
+ * Returns: { type: 'home' | 'recipe' | 'category' | 'cottura' | 'strumenti' | 'nonTrovata', params: {...} }
  */
 function matchRoute(pathname) {
   // Rimuovi base path
@@ -54,6 +54,14 @@ function matchRoute(pathname) {
   const cotturaMatch = path.match(/^cottura(?:\/([^/]+?))?(?:\.html)?$/);
   if (cotturaMatch) {
     return { type: 'cottura', params: { config: cotturaMatch[1] || null } };
+  }
+
+  // Strumenti: strumenti/ (hub) oppure strumenti/<slug> (pagina strumento).
+  // Stessa forma di cottura: hub e dettaglio in un type solo, slug opzionale.
+  // Se lo slug ESISTA lo decide il registry dentro js/strumenti/pagina.js.
+  const strumentiMatch = path.match(/^strumenti(?:\/([^/]+?))?(?:\.html)?$/);
+  if (strumentiMatch) {
+    return { type: 'strumenti', params: { slug: strumentiMatch[1] || null } };
   }
 
   // Nessuna forma riconosciuta → la pagina non esiste.

@@ -37,6 +37,7 @@ import { htmlCreditoFoto } from './credito-foto.js';
 import { isValidBadge } from './recipe-meta.js';
 import { buildHeroPicture } from './image-utils.js';
 import { fluentEmojiCon, categoryEmojiCon } from './emoji-core.js';
+import { STRUMENTI_BY_SLUG, nomeLama } from './strumenti.js';
 
 /**
  * Le classi `reveal` partono a `opacity: 0` e diventano visibili solo quando
@@ -142,6 +143,7 @@ export function htmlRicetta(r, { base, categoryDir, interattivo = true }) {
         ${buildSensoryProfile(r, ctx)}
         ${buildFlourTable(r, ctx)}
         ${buildAlert(r, ctx)}
+        ${buildStrumenti(r, ctx)}
         ${buildBaking(r, ctx)}
         ${buildProTips(r, ctx)}
         ${buildStorage(r, ctx)}
@@ -491,6 +493,33 @@ function buildAlert(r, ctx) {
         <strong>ALERT PROFESSIONALE</strong>
         <p>${ctx.emoji('warning', 18)} ${escHtml(r.alert)}</p>
       </div>
+    </div>`;
+}
+
+// ── Strumenti del mestiere ──
+/**
+ * Compare solo se la ricetta dichiara il campo `tools` (validato da
+ * build-recipes.js contro il registry js/strumenti.js). È il ramo inverso del
+ * collegamento che la pagina /strumenti/<slug>/ costruisce leggendo l'indice:
+ * di là «le ricette per questa lama», di qua «lo strumento per questa ricetta».
+ * Solo classi già in uso (recipe-panel, tip-list): niente CSS dedicato.
+ */
+function buildStrumenti(r, ctx) {
+  const voci = (r.tools || [])
+    .map(t => ({ t, s: STRUMENTI_BY_SLUG[t.strumento] }))
+    .filter(x => x.s);
+  if (!voci.length) return '';
+  return `
+    <div class="recipe-panel reveal recipe-panel--spaced">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon">${ctx.emoji('wrench', 24)}</span> Strumenti del mestiere
+      </h2>
+      <ul class="tip-list">
+        ${voci.map(({ t, s }) => {
+    const lama = t.lama ? nomeLama(t.strumento, t.lama) : null;
+    return `<li class="tip-item">${ctx.emoji('wrench', 16)} <a href="${escAttr(`${ctx.base}strumenti/${s.slug}/`)}" data-link>${escHtml(s.nome)}</a>${lama ? ` — ${escHtml(lama)}` : ''}${t.nota ? `: ${escHtml(t.nota)}` : ''}</li>`;
+  }).join('')}
+      </ul>
     </div>`;
 }
 

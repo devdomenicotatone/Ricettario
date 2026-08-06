@@ -5,6 +5,13 @@
   "description": "Ricetta professionale del pesto di pistacchi: consistenza cremosa, colore verde brillante e sapore intenso. Ideale per paste, bruschette o pizze gourmet.",
   "subtitle": "Emulsione a freddo con pistacchi sbollentati e spellati",
   "category": "Condimenti",
+  "tools": [
+    {
+      "strumento": "cutter-sirman-c-tronic-6",
+      "lama": "pesto",
+      "nota": "Il mozzo per pesto trita a impulsi pistacchi, formaggi e aromi, poi incorpora a bassa velocità olio a filo e acqua ghiacciata."
+    }
+  ],
   "hydration": 0,
   "targetTemp": "",
   "fermentation": "",

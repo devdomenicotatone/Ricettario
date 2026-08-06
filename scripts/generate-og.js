@@ -45,6 +45,13 @@ import { isValidBadge } from '../js/recipe-meta.js';
 import { htmlCategoria, htmlRigaCarosello, metaPaginaCategoria } from '../js/html-categoria.js';
 import { CATEGORIES, CATEGORY_ORDER, CATEGORIES_BY_DIR } from '../js/categories.js';
 
+// Sezione strumenti: stesso principio. Anagrafe dal registry (js/strumenti.js),
+// contenuti da dati/strumenti/, markup e title/description dagli stessi moduli
+// puri che usa la SPA (js/html-strumenti.js).
+import { STRUMENTI } from '../js/strumenti.js';
+import { CONTENUTI_STRUMENTI } from '../dati/strumenti/indice.js';
+import { htmlHubStrumenti, htmlStrumento, metaHubStrumenti, metaPaginaStrumento } from '../js/html-strumenti.js';
+
 const PROJECT_DIR = process.cwd();
 const DIST_DIR = join(PROJECT_DIR, 'dist');
 const SITE_URL = 'https://devdomenicotatone.github.io/Ricettario';
@@ -395,6 +402,45 @@ function cotturaHubJsonLd(pagine, url) {
     };
 }
 
+function strumentiHubJsonLd(url) {
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        name: `I miei strumenti — ${SITE_NAME}`,
+        url,
+        inLanguage: 'it-IT',
+        isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: `${SITE_URL}/` },
+        mainEntity: {
+            '@type': 'ItemList',
+            numberOfItems: STRUMENTI.length,
+            itemListElement: STRUMENTI.map((s, i) => ({
+                '@type': 'ListItem',
+                position: i + 1,
+                name: s.nome,
+                url: `${SITE_URL}/strumenti/${s.slug}/`,
+            })),
+        },
+    };
+}
+
+/**
+ * ItemPage e non Product o HowTo: qui non si vende niente (un Product senza
+ * offerta racconterebbe una scheda commerciale che non esiste) e i rich
+ * result HowTo autonomi sono stati dismessi da Google. Si marca la pagina,
+ * che è esattamente ciò che c'è.
+ */
+function strumentoJsonLd(meta, url) {
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'ItemPage',
+        name: meta.titoloBreve,
+        description: meta.descrizione,
+        url,
+        inLanguage: 'it-IT',
+        isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: `${SITE_URL}/` },
+    };
+}
+
 function breadcrumbJsonLd(trail) {
     return {
         '@context': 'https://schema.org',
@@ -668,6 +714,79 @@ function generate() {
         sitemap.push({ loc: url, priority: '0.8' });
     }
 
+    // ── 4-bis. Sezione strumenti: /strumenti/<slug>/ e indice /strumenti/ ──
+    // Stesso schema della coppia cottura. Le ricette collegate arrivano dal
+    // campo `tools` dell'indice: la stessa fonte che legge la SPA
+    // (js/strumenti/pagina.js), raggruppata per lama nello stesso modo.
+    for (const voce of STRUMENTI) {
+        const contenuto = CONTENUTI_STRUMENTI[voce.slug];
+        if (!contenuto) {
+            console.error(`❌ strumento "${voce.slug}" senza contenuto in dati/strumenti/: registry e contenuti divergono.`);
+            process.exit(1);
+        }
+
+        const ricettePerLama = {};
+        for (const r of recipes) {
+            for (const t of r.tools || []) {
+                if (t.strumento !== voce.slug) continue;
+                (ricettePerLama[t.lama] ??= []).push({
+                    title: r.title, slug: r.slug, categoryDir: r.categoryDir, nota: t.nota || '',
+                });
+            }
+        }
+        for (const voci of Object.values(ricettePerLama)) {
+            voci.sort((a, b) => a.title.localeCompare(b.title, 'it'));
+        }
+        const categorie = (contenuto.categorieCollegate || [])
+            .map(chiave => CATEGORIES[chiave]).filter(Boolean);
+
+        const url = `${SITE_URL}/strumenti/${voce.slug}/`;
+        const meta = metaPaginaStrumento(voce);
+        const html = buildPage(template, {
+            title: meta.titoloBreve,
+            description: meta.descrizione,
+            url,
+            image: voce.image,
+            type: 'article',
+            appHtml: htmlStrumento(contenuto, voce, { base: `${BASE_PATH}/`, ricettePerLama, categorie }),
+            jsonLd: [
+                strumentoJsonLd(meta, url),
+                breadcrumbJsonLd([
+                    { name: 'Home', url: `${SITE_URL}/` },
+                    { name: 'Strumenti', url: `${SITE_URL}/strumenti/` },
+                    { name: voce.nome, url },
+                ]),
+            ],
+        });
+        const outDir = join(DIST_DIR, 'strumenti', voce.slug);
+        mkdirSync(outDir, { recursive: true });
+        writeFileSync(join(outDir, 'index.html'), html, 'utf8');
+        sitemap.push({ loc: url, priority: '0.7' });
+    }
+
+    {
+        const url = `${SITE_URL}/strumenti/`;
+        const meta = metaHubStrumenti();
+        const html = buildPage(template, {
+            title: meta.titoloBreve,
+            description: meta.descrizione,
+            url,
+            image: null,
+            type: 'website',
+            appHtml: htmlHubStrumenti(STRUMENTI, { base: `${BASE_PATH}/` }),
+            jsonLd: [
+                strumentiHubJsonLd(url),
+                breadcrumbJsonLd([
+                    { name: 'Home', url: `${SITE_URL}/` },
+                    { name: 'Strumenti', url },
+                ]),
+            ],
+        });
+        mkdirSync(join(DIST_DIR, 'strumenti'), { recursive: true });
+        writeFileSync(join(DIST_DIR, 'strumenti', 'index.html'), html, 'utf8');
+        sitemap.push({ loc: url, priority: '0.8' });
+    }
+
     // ── 5. Homepage: caroselli statici + canonical + JSON-LD WebSite ──
     let home = stripJsonLd(template.replace(/[ \t]*<link\s+rel="canonical"[\s\S]*?>\n?/g, ''));
 
@@ -729,6 +848,7 @@ ${jsonLdSafe({
     console.log(`   📂 ${categoryCount} pagine categoria (JSON-LD CollectionPage)`);
     if (missingSource) console.log(`   ⚠  ${missingSource} ricette saltate: JSON sorgente assente`);
     console.log(`   🔥 ${pagineCottura.length} pagine cottura (JSON-LD HowTo) + indice /cottura/`);
+    console.log(`   🔧 ${STRUMENTI.length} pagine strumento (JSON-LD ItemPage) + indice /strumenti/`);
     console.log(`   🗺  sitemap.xml — ${sitemap.length} URL`);
     console.log(`   🤖 robots.txt`);
     console.log('\n✅ Pre-rendering completato.\n');

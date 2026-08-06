@@ -1,0 +1,225 @@
+{
+  "title": "Crostata di Frolla Sabbiata",
+  "slug": "crostata-di-frolla-sabbiata",
+  "emoji": "🥧",
+  "description": "Crostata classica con pasta frolla sabbiata al cutter e confettura di albicocche o frutti di bosco: friabile, dorata, profumata di burro e limone",
+  "subtitle": "Frolla sabbiata al cutter con il mozzo per impasti e confettura di frutta",
+  "category": "Dolci",
+  "tools": [
+    {
+      "strumento": "cutter-sirman-c-tronic-6",
+      "lama": "impasti",
+      "nota": "Il mozzo per impasti sabbia burro freddo e farina in pochi secondi senza scaldarli, poi lega l'impasto con le uova: una frolla più friabile di quella lavorata a mano."
+    }
+  ],
+  "hydration": 0,
+  "targetTemp": "18-20°C",
+  "fermentation": "",
+  "totalFlour": 300,
+  "ingredients": [],
+  "suspensions": [],
+  "stepsCondiment": [],
+  "flourTable": [
+    {
+      "type": "Farina Tipo 00 Debole per Dolci",
+      "w": "120-150",
+      "brands": "Molino Spadoni Dolci, Le 5 Stagioni Pasticceria, Molino Grassi Dolci"
+    }
+  ],
+  "baking": {
+    "temperature": "175°C statico (165°C ventilato)",
+    "time": "35-40 min",
+    "tips": [
+      "Preriscaldare il forno a 175°C per almeno 20 minuti prima di infornare",
+      "Cuocere nella parte medio-bassa del forno: il fondo deve asciugarsi e dorarsi, non restare crudo sotto la confettura",
+      "La crostata è pronta quando i bordi e il reticolo sono di un dorato uniforme e la confettura sobbolle appena al centro",
+      "Se il reticolo colora troppo in fretta, coprire la superficie con un foglio di alluminio per gli ultimi 10 minuti",
+      "Non sfornare in anticipo: una frolla pallida resterà molliccia al centro invece che friabile"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Sabbiatura",
+      "definition": "Tecnica di base della pasta frolla: il burro freddo viene ridotto in briciole finissime insieme alla farina, fino a una consistenza di sabbia umida. Il grasso avvolge le particelle di farina e limita la formazione del glutine: è questo a rendere la frolla friabile invece che elastica."
+    },
+    {
+      "term": "Mozzo per Impasti",
+      "definition": "Accessorio non tagliente del cutter che sostituisce la lama in acciaio. Non incide gli ingredienti ma li sfrega e li amalgama: sabbia burro e farina in pochi secondi senza scaldarli e lega la frolla con le uova senza svilupparne il glutine. È pensato per impasti non lievitati a bassa idratazione in piccole quantità, non per pane o pizza."
+    },
+    {
+      "term": "Farina Debole",
+      "definition": "Farina con basso contenuto proteico (W 120-150), ideale per dolci che non richiedono sviluppo glutinico. Assorbe meno liquidi e rende gli impasti più friabili."
+    },
+    {
+      "term": "Dolce da Credenza",
+      "definition": "Dolce privo di creme fresche e farciture deperibili, che si conserva per giorni a temperatura ambiente. La crostata di confettura ne è l'esempio classico: l'alto tenore di zuccheri della confettura funziona da conservante naturale."
+    },
+    {
+      "term": "Reticolo",
+      "definition": "La classica grata di strisce di frolla incrociate sulla superficie della crostata. Oltre alla funzione decorativa, lascia evaporare l'umidità della confettura durante la cottura, evitando che inumidisca il guscio."
+    }
+  ],
+  "alert": "NON usare burro morbido o a temperatura ambiente: la sabbiatura funziona solo con burro freddo di frigorifero, altrimenti si ottiene una crema che rende la frolla dura e unta. NON prolungare il lavoro del cutter dopo l'aggiunta delle uova: appena l'impasto forma briciole grosse che si compattano, si spegne — continuare sviluppa glutine e toglie friabilità. NON stendere la frolla appena impastata: il riposo in frigorifero è obbligatorio, senza si ritira in cottura e si rompe alla stesura. NON usare il mozzo per impasti per pane o pizza: gli impasti lievitati e idratati richiedono l'impastatrice a spirale, nel cutter si scaldano e si strappano.",
+  "proTips": [
+    "La qualità della confettura decide la crostata: scegline una con almeno il 45% di frutta, poco zuccherata. Se è molto liquida, falla addensare 5 minuti in un pentolino prima di usarla, altrimenti in cottura bagnerà il fondo",
+    "Se il cutter ha lavorato a lungo o la cucina è calda, tocca l'impasto: deve essere fresco. In caso contrario allunga il riposo in frigorifero prima della stesura, la frolla ti ripagherà in friabilità",
+    "La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato."
+  ],
+  "storage": [
+    "La crostata di confettura è un dolce da credenza: si conserva a temperatura ambiente per 4-5 giorni, coperta da una campana per dolci o avvolta in pellicola alimentare, in un luogo fresco e asciutto lontano da fonti di calore. Il frigorifero è sconsigliato: l'umidità ammorbidisce la frolla e ne compromette la friabilità.",
+    "La frolla cruda si congela benissimo: avvolta in doppia pellicola resiste fino a 2 mesi. Per usarla, trasferirla in frigorifero la sera prima e stenderla ancora ben fredda. Anche la crostata cotta si può congelare, intera o a fette, per 1 mese: scongelare a temperatura ambiente per 2-3 ore.",
+    "Se dopo qualche giorno la frolla avesse perso fragranza per l'umidità assorbita, è possibile rigenerare la crostata in forno preriscaldato a 150°C per 8-10 minuti. Lasciarla raffreddare completamente su una griglia prima di servirla: raffreddandosi, il guscio ritroverà la sua friabilità."
+  ],
+  "imageKeywords": [
+    "italian jam crostata",
+    "crostata di marmellata",
+    "apricot jam tart lattice",
+    "italian shortcrust pastry tart",
+    "berry jam crostata",
+    "pasta frolla tart"
+  ],
+  "tags": [
+    "crostata",
+    "pasta frolla",
+    "confettura",
+    "sabbiatura",
+    "cutter",
+    "dolce da credenza"
+  ],
+  "ingredientGroups": [
+    {
+      "group": "Per la Frolla Sabbiata",
+      "items": [
+        {
+          "name": "Farina Tipo 00 Debole",
+          "note": "(W 120-150, per dolci)",
+          "grams": 300,
+          "tokenId": "farina_frolla"
+        },
+        {
+          "name": "Burro",
+          "note": "(freddo di frigorifero, a cubetti di 1cm)",
+          "grams": 150,
+          "tokenId": "burro_frolla"
+        },
+        {
+          "name": "Zucchero a Velo",
+          "note": "(si scioglie senza granulosità: frolla più fine)",
+          "grams": 120,
+          "tokenId": "zucchero_frolla"
+        },
+        {
+          "name": "Uovo Intero",
+          "note": "(1 medio, freddo di frigorifero)",
+          "grams": 55,
+          "tokenId": "uovo_frolla"
+        },
+        {
+          "name": "Tuorlo d'Uovo",
+          "note": "(1 medio, freddo di frigorifero)",
+          "grams": 18,
+          "tokenId": "tuorlo_frolla"
+        },
+        {
+          "name": "Scorza di Limone",
+          "note": "(grattugiata, agrume non trattato)",
+          "grams": 3,
+          "tokenId": "scorza_frolla"
+        },
+        {
+          "name": "Sale Fino",
+          "grams": 2,
+          "tokenId": "sale_frolla"
+        }
+      ]
+    },
+    {
+      "group": "Per la Farcitura",
+      "items": [
+        {
+          "name": "Confettura di Albicocche",
+          "note": "(o di frutti di bosco, con almeno il 45% di frutta)",
+          "grams": 350,
+          "tokenId": "confettura_farcitura"
+        },
+        {
+          "name": "Succo di Limone",
+          "note": "(per ravvivare la confettura)",
+          "grams": 5,
+          "tokenId": "succo_limone_farcitura"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Preparazione degli Ingredienti Freddi",
+      "text": "Tagliare il burro freddo di frigorifero ({burro_frolla:150}g) a cubetti di 1cm e rimetterlo subito in frigorifero: il freddo è la condizione della sabbiatura. Pesare la farina 00 debole ({farina_frolla:300}g), lo zucchero a velo ({zucchero_frolla:120}g) e il sale ({sale_frolla:2}g). Grattugiare la scorza di limone ({scorza_frolla:3}g) solo la parte gialla, evitando il bianco amaro. Tenere uovo e tuorlo in frigorifero fino al momento dell'uso. Montare sul cutter il mozzo per impasti, l'accessorio non tagliente: è lui a sabbiare senza scaldare."
+    },
+    {
+      "title": "Sabbiatura al Cutter",
+      "text": "Versare nella vasca del cutter la farina ({farina_frolla:300}g) e il sale ({sale_frolla:2}g), poi distribuire sopra i cubetti di burro freddo ({burro_frolla:150}g). Lavorare a impulsi brevi: pochi secondi alla volta, fermandosi tra un impulso e l'altro. Dopo i primi impulsi, fermare la macchina e raschiare le pareti della vasca con una spatola per riportare tutto al centro. Proseguire a impulsi finché il composto ha l'aspetto di sabbia umida, con briciole fini e nessun pezzo di burro visibile. Servono pochi secondi complessivi di lavoro: il mozzo sabbia senza scaldare, ed è questo il vantaggio rispetto alle mani."
+    },
+    {
+      "title": "Zucchero e Aromi",
+      "text": "Aggiungere nella vasca lo zucchero a velo ({zucchero_frolla:120}g) e la scorza di limone grattugiata ({scorza_frolla:3}g). Dare 2-3 impulsi brevi, quanto basta a distribuirli uniformemente nella sabbia di farina e burro. Il composto deve restare asciutto e scorrevole: se si notasse un principio di compattamento, fermarsi subito e raschiare le pareti."
+    },
+    {
+      "title": "Legatura con le Uova",
+      "text": "Sbattere brevemente con una forchetta l'uovo intero ({uovo_frolla:55}g) con il tuorlo ({tuorlo_frolla:18}g) e versarli nella vasca distribuendoli sulla sabbiatura. Avviare a velocità bassa, poi crescente, e fermarsi APPENA il composto passa da sabbia a briciole grosse che si compattano contro le pareti: la frolla non deve mai diventare una palla liscia dentro il cutter. Da questo momento ogni secondo in più sviluppa glutine e ruba friabilità."
+    },
+    {
+      "title": "Compattamento e Riposo in Frigorifero",
+      "text": "Rovesciare le briciole sul piano di lavoro e compattarle con il palmo della mano, senza impastare: due o tre pressioni decise bastano a unirle in un panetto omogeneo. Dividere l'impasto in due parti, circa due terzi per il fondo e un terzo per il reticolo. Appiattire ciascuna parte in un disco spesso 2cm, avvolgere nella pellicola e riporre in frigorifero per almeno {riposo_frigo:60!} minuti, meglio 2 ore: il riposo idrata la farina in modo uniforme e rassoda il burro, rendendo la frolla stendibile senza rotture."
+    },
+    {
+      "title": "Stesura e Fodera dello Stampo",
+      "text": "Stendere il disco grande tra due fogli di carta forno a uno spessore di 3-4mm, in un cerchio di circa 30cm. Foderare uno stampo per crostate da 24cm imburrato e infarinato (o con fondo amovibile), facendo aderire bene la frolla al fondo e ai bordi senza tirarla. Rifilare l'eccesso passando il matterello sui bordi e bucherellare il fondo con i rebbi di una forchetta. Rimettere lo stampo foderato in frigorifero per {riposo_stampo:15!} minuti mentre si prepara il reticolo: la frolla fredda tiene la forma in cottura."
+    },
+    {
+      "title": "Farcitura e Reticolo",
+      "text": "Mescolare in una ciotola la confettura ({confettura_farcitura:350}g) con il succo di limone ({succo_limone_farcitura:5}g) per renderla scorrevole e ravvivarne l'acidità. Distribuirla sul fondo di frolla livellandola con il dorso di un cucchiaio, lasciando libero 1cm dal bordo. Stendere il disco piccolo a 3-4mm e ricavarne strisce larghe 1,5cm con una rotella liscia o dentellata. Disporre le strisce sulla confettura a formare il classico reticolo a losanghe, facendo aderire le estremità al bordo con una leggera pressione."
+    },
+    {
+      "title": "Cottura",
+      "text": "Infornare in forno statico preriscaldato a {temp_forno:175!}°C (ventilato 165°C), nella parte medio-bassa, per {tempo_cottura:35!}-40 minuti. La crostata è pronta quando bordi e reticolo sono di un dorato uniforme e la confettura sobbolle appena al centro. Se la superficie colorasse troppo in fretta, coprire con un foglio di alluminio per gli ultimi 10 minuti di cottura."
+    },
+    {
+      "title": "Raffreddamento",
+      "text": "Sfornare e lasciare raffreddare completamente nello stampo su una gratella, per almeno 2 ore: da calda la frolla è fragile e la confettura fluida, ed entrambe si assestano solo raffreddandosi. Sformare la crostata ormai fredda e trasferirla sul piatto da portata. Il taglio perfetto si ottiene il giorno dopo, quando la confettura si è completamente rappresa."
+    }
+  ],
+  "sensoryProfile": {
+    "summary": "La Crostata di Frolla Sabbiata si riconosce al primo morso per la friabilità netta del guscio: la sabbiatura a freddo nel cutter produce una frolla che si sgretola senza opporre resistenza, con una ricca nota di burro pulita e persistente. La confettura porta il contrappunto: dolcezza piena e leggermente acidula con l'albicocca, più vinosa e profonda con i frutti di bosco, resa brillante dal tocco di succo di limone. Il profumo è quello caldo della frolla appena cotta, burro e scorza di limone, con la frutta cotta che emerge nel finale. Il contrasto tra guscio asciutto e cuore morbido di confettura è l'equilibrio che definisce questo dolce da credenza.",
+    "axes": [
+      {
+        "label": "Dolcezza Percepita",
+        "value": 7
+      },
+      {
+        "label": "Friabilità / Croccantezza",
+        "value": 8
+      },
+      {
+        "label": "Umidità / Cremosità",
+        "value": 4
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 6
+      },
+      {
+        "label": "Ricchezza / Corpo",
+        "value": 7
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 390,
+    "macros": {
+      "carbs": 60,
+      "protein": 5,
+      "fat": 15
+    }
+  }
+}

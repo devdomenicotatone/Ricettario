@@ -5,6 +5,13 @@
   "description": "Marò ligure: pesto di fave fresche con pecorino, menta e aglio. Ricetta tradizionale genovese per condire pasta, bruschette e pinzimonio.",
   "subtitle": "Salsa cruda tradizionale ligure a base di fave fresche, pecorino e menta — lavorazione al mortaio o mixer a impulsi",
   "category": "Condimenti",
+  "tools": [
+    {
+      "strumento": "cutter-sirman-c-tronic-6",
+      "lama": "pesto",
+      "nota": "Il mozzo per pesto a impulsi brevissimi dà la crema di fave granulosa senza ossidarla; la mantecatura resta fuori dal boccale."
+    }
+  ],
   "hydration": 0,
   "targetTemp": "",
   "fermentation": "",

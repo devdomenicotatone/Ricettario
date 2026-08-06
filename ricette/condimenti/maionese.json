@@ -5,6 +5,13 @@
   "description": "Maionese fatta in casa: emulsione classica di tuorli e olio, cremosa e stabile. Tecnica con fruste elettriche e variante rapida al minipimer.",
   "subtitle": "Emulsione fredda classica — tecnica tradizionale a fruste e metodo rapido al minipimer",
   "category": "Condimenti",
+  "tools": [
+    {
+      "strumento": "cutter-sirman-c-tronic-6",
+      "lama": "forate",
+      "nota": "L'emulsione di tuorli e olio si monta con le lame forate, versando l'olio a filo dal foro del coperchio a velocità costante."
+    }
+  ],
   "hydration": 0,
   "targetTemp": "",
   "fermentation": "",

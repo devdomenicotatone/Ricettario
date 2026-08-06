@@ -1,0 +1,186 @@
+{
+  "title": "Pesto alla Trapanese",
+  "slug": "pesto-alla-trapanese",
+  "emoji": "🍅",
+  "description": "Ricetta professionale del pesto alla trapanese (agghiata): pomodoro fresco crudo, mandorle, basilico, aglio e pecorino lavorati al cutter a impulsi. Senza ricotta, a differenza del pesto alla siciliana, e con solo pomodoro fresco, mai secco.",
+  "subtitle": "Agghiata trapanese a crudo — pomodoro fresco, mandorle e basilico, lavorazione al cutter a impulsi brevi",
+  "category": "Condimenti",
+  "tools": [
+    {
+      "strumento": "cutter-sirman-c-tronic-6",
+      "lama": "pesto",
+      "nota": "Il cutter con lama da pesto trita mandorle e aglio a grana fine e sminuzza basilico e pomodoro a impulsi brevi, emulsionando l'olio senza surriscaldare le erbe."
+    }
+  ],
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per il Pesto",
+      "items": [
+        {
+          "name": "Pomodori Maturi",
+          "note": "(pizzutello, datterino o ciliegino, sodi e profumati)",
+          "grams": 500,
+          "tokenId": "pomodori"
+        },
+        {
+          "name": "Mandorle Pelate",
+          "note": "(dolci, non tostate)",
+          "grams": 80,
+          "tokenId": "mandorle"
+        },
+        {
+          "name": "Olio Extravergine d'Oliva",
+          "note": "(siciliano, fruttato medio)",
+          "grams": 80,
+          "tokenId": "olio"
+        },
+        {
+          "name": "Pecorino Siciliano",
+          "note": "(grattugiato; in alternativa pecorino romano, meno dolce)",
+          "grams": 60,
+          "tokenId": "pecorino"
+        },
+        {
+          "name": "Basilico Fresco",
+          "note": "(foglie pulite e perfettamente asciutte)",
+          "grams": 40,
+          "tokenId": "basilico"
+        },
+        {
+          "name": "Aglio",
+          "note": "(idealmente Rosso di Nubia, privato dell'anima)",
+          "grams": 8,
+          "tokenId": "aglio"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "",
+          "grams": 4,
+          "tokenId": "sale"
+        },
+        {
+          "name": "Pepe Nero",
+          "note": "(macinato fresco)",
+          "grams": 1,
+          "tokenId": "pepe"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Preparazione dei Pomodori",
+      "text": "Lavare {pomodori:500}g di pomodori maturi e inciderli a croce sulla base con un coltellino. Sbollentarli in acqua a bollore per {tempo_sbollentatura:1!} minuto, poi trasferirli immediatamente in acqua e ghiaccio: la buccia si solleverà lungo le incisioni e verrà via senza cuocere la polpa. Pelare i pomodori, dividerli in quarti, eliminare semi e acqua di vegetazione con un cucchiaino, quindi ridurre la polpa a dadi grossolani (concassé). Lasciare scolare i dadi in un colino per {tempo_scolatura:20!} minuti: meno acqua entra nel cutter, più il pesto resterà denso e aggrappato alla pasta."
+    },
+    {
+      "title": "Tritatura di Mandorle e Aglio",
+      "text": "Montare sul cutter la lama da pesto e inserire nel boccale {mandorle:80}g di mandorle pelate e {aglio:8}g di aglio diviso a metà e privato dell'anima centrale. Lavorare a impulsi brevi, con una pausa tra un impulso e l'altro, fino a ottenere una grana sabbiosa e uniforme. Fermare la macchina e raschiare le pareti del boccale con una spatola: le mandorle vicine alle lame si tritano più fini di quelle sulle pareti, e senza questo gesto la grana esce disomogenea. Non insistere oltre: l'attrito prolungato scalda le mandorle e ne libera l'olio, trasformando la granella in una pasta compatta."
+    },
+    {
+      "title": "Basilico a Impulsi Brevissimi",
+      "text": "Aggiungere nel boccale {basilico:40}g di foglie di basilico fresco, lavate e asciugate alla perfezione con carta assorbente. Lavorare a impulsi brevissimi, il minimo indispensabile per sminuzzare le foglie: la lama da pesto è pensata per lavorare veloce e a freddo, ma è la brevità degli impulsi a impedire che l'attrito scaldi le erbe e le ossidi. Fermare e raschiare di nuovo le pareti per riportare verso il centro le foglie rimaste intere."
+    },
+    {
+      "title": "Pomodori ed Emulsione con l'Olio",
+      "text": "Unire i dadi di pomodoro ben scolati e lavorare ancora a impulsi brevi, fino a quando la polpa è sminuzzata ma ancora percettibile: il pesto alla trapanese non è una crema liscia, deve conservare una texture rustica. A questo punto azionare il cutter a velocità bassa e versare a filo {olio:80}g di olio extravergine d'oliva dall'apertura del coperchio, aumentando gradualmente la velocità solo quanto basta a legare: l'azione meccanica emulsiona l'olio con l'acqua residua del pomodoro e il composto vira verso un rosso corallo opaco e cremoso."
+    },
+    {
+      "title": "Pecorino, Condimento e Riposo",
+      "text": "Aggiungere {pecorino:60}g di pecorino siciliano grattugiato, {sale:4}g di sale fino e {pepe:1}g di pepe nero macinato fresco. Dare soltanto due o tre impulsi finali: il formaggio va incorporato, non frullato, altrimenti il calore delle lame ne scioglie i grassi e appesantisce la struttura. Trasferire il pesto in una ciotola, coprire con pellicola a contatto e far riposare in frigorifero per {tempo_riposo:30!} minuti, il tempo che aglio, pomodoro e basilico si amalgamino in un profilo unico. Utilizzarlo a crudo per condire {dose_pasta:500!}g di busiate (o altra pasta corta), allentandolo direttamente nella ciotola con un cucchiaio della loro acqua di cottura: il pesto non va mai passato in padella né scaldato."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "baking": null,
+  "glossary": [
+    {
+      "term": "Agghiata",
+      "definition": "Nome dialettale trapanese del pesto (da 'agghia', aglio): nasce come salsa d'aglio pestata al mortaio, portata a Trapani dai marinai genovesi di passaggio, che la cucina locale arricchì con il pomodoro fresco e le mandorle del territorio."
+    },
+    {
+      "term": "Aglio Rosso di Nubia",
+      "definition": "Varietà di aglio coltivata tra Paceco e Trapani, con tuniche esterne bianche e spicchi rosso vivo. Presidio Slow Food, ha aroma intenso ma pungenza più gentile dell'aglio comune: è l'aglio storico di questa ricetta."
+    },
+    {
+      "term": "Concassé",
+      "definition": "Tecnica di taglio del pomodoro: pelato dopo una rapida sbollentatura, privato dei semi e ridotto a dadi regolari. Permette di dosare esattamente quanta polpa — e quanta acqua — entra nella preparazione."
+    },
+    {
+      "term": "Busiate",
+      "definition": "Pasta fresca trapanese a spirale allungata, tradizionalmente arrotolata attorno a un ferro da calza ('buso'). La superficie attorcigliata trattiene il pesto rustico meglio di qualunque formato liscio: è l'abbinamento canonico di questa ricetta."
+    },
+    {
+      "term": "Acqua di vegetazione",
+      "definition": "Il liquido naturalmente contenuto nei vegetali. Nei pesti a crudo va eliminata il più possibile — qui con lo scolo dei dadi di pomodoro — per non annacquare l'emulsione."
+    }
+  ],
+  "alert": "NON scaldare mai il pesto alla trapanese e NON far lavorare il cutter in modo continuativo: è un condimento a crudo, e il calore — delle lame come della padella — ossida il basilico, cuoce il pomodoro fresco e trasforma il profumo verde e fragrante in una nota amara e spenta. Lavora sempre a impulsi brevi con pause, raschiando le pareti tra una serie e l'altra, e manteca la pasta fuori dal fuoco con la sola acqua di cottura. Attenzione anche all'acqua di vegetazione: pomodori mal scolati producono un pesto acquoso che scivola via dalla pasta invece di avvolgerla.",
+  "proTips": [
+    "Se lo trovi, usa l'Aglio Rosso di Nubia (presidio Slow Food della zona di Trapani): è aromatico ma meno pungente dell'aglio comune, e permette di tenere la dose piena senza che copra il pomodoro. Con aglio comune molto intenso, riduci a un solo spicchio.",
+    "Scegli pomodori maturi ma sodi e molto profumati: pizzutello, datterino o ciliegino di pieno campo danno il miglior equilibrio tra dolcezza e acidità. Un pomodoro insapore non si corregge in nessun passaggio successivo, perché qui il pomodoro resta crudo.",
+    "Per la versione delle grandi occasioni prepara l'agghiata come a Trapani: pesta aglio, sale grosso e basilico nel mortaio, unisci le mandorle e infine il pomodoro schiacciato a mano. Rispetto alla versione al cutter la texture è più irregolare e il rilascio aromatico più lento e profondo: vale il confronto almeno una volta."
+  ],
+  "storage": [
+    "In frigorifero: si conserva 2-3 giorni in un barattolo di vetro a chiusura ermetica. Livella bene la superficie e coprila con un velo di olio extravergine per isolarla dall'ossigeno: il pomodoro fresco accorcia la vita del pesto rispetto alle versioni con pomodori secchi.",
+    "In freezer: fino a 2 mesi negli stampi per cubetti di ghiaccio; una volta rassodati, trasferisci i cubetti in un sacchetto gelo. Scongela in frigorifero o direttamente nella ciotola con un goccio di acqua di cottura calda, mai in padella.",
+    "Il pesto è al suo massimo entro 24 ore dalla preparazione: aglio e basilico evolvono in fretta e il profilo si sposta verso note più pungenti. Preleva sempre con un cucchiaio pulito per non accorciarne la conservazione."
+  ],
+  "imageKeywords": [
+    "pesto alla trapanese",
+    "trapanese pesto fresh tomato",
+    "busiate al pesto trapanese",
+    "sicilian almond tomato pesto",
+    "pesto rosso pomodoro fresco",
+    "fresh tomato basil almond pesto"
+  ],
+  "tags": [
+    "pesto",
+    "pesto alla trapanese",
+    "pomodoro fresco",
+    "mandorle",
+    "cucina siciliana",
+    "condimento",
+    "senza cottura"
+  ],
+  "_generatedBy": "claude-fable",
+  "_createdAt": "2026-08-06T09:00:00.000Z",
+  "sensoryProfile": {
+    "summary": "Il più solare dei pesti siciliani: il pomodoro fresco crudo porta un'acidità succosa e vivace, arrotondata dalla dolcezza vegetale della polpa matura e dalla rotondità burrosa delle mandorle, che danno corpo senza alcun latticino fresco — qui, a differenza del pesto alla siciliana, la ricotta non entra. Il pecorino firma una sapidità decisa e leggermente piccante, l'aglio aggiunge una pungenza che il riposo ammorbidisce, e il basilico chiude con un finale aromatico verde e persistente, sostenuto dal fruttato dell'olio extravergine.",
+    "axes": [
+      {
+        "label": "Sapidità / Umami",
+        "value": 6
+      },
+      {
+        "label": "Acidità / Pungenza",
+        "value": 6
+      },
+      {
+        "label": "Cremosità / Densità",
+        "value": 6
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 5
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 198,
+    "macros": {
+      "carbs": 4,
+      "protein": 5,
+      "fat": 18
+    }
+  }
+}

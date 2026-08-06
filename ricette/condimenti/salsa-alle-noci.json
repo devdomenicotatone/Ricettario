@@ -5,6 +5,13 @@
   "description": "L'autentica salsa ligure cremosa e avvolgente, perfetta per condire i tradizionali pansoti o paste fresche. Preparata a freddo con noci, aglio, maggiorana e olio EVO.",
   "subtitle": "La tecnica tradizionale genovese per un'emulsione vellutata e priva di note amare",
   "category": "Condimenti",
+  "tools": [
+    {
+      "strumento": "cutter-sirman-c-tronic-6",
+      "lama": "dentate",
+      "nota": "Le lame dentate macinano le noci a impulsi brevi senza farne trasudare l'olio; mollica, Parmigiano e olio a filo nello stesso boccale."
+    }
+  ],
   "hydration": 0,
   "targetTemp": "",
   "fermentation": "",

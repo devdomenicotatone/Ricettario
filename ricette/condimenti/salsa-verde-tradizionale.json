@@ -5,6 +5,13 @@
   "description": "La ricetta professionale della classica salsa verde (bagnet verd), perfetta per accompagnare bolliti, carni e crostini. Con uova sode e un'emulsione perfetta a base d'olio EVO.",
   "subtitle": "L'emulsione piemontese a freddo con prezzemolo, acciughe e capperi",
   "category": "Condimenti",
+  "tools": [
+    {
+      "strumento": "cutter-sirman-c-tronic-6",
+      "lama": "dentate",
+      "nota": "Le lame dentate tritano a scatti brevi prezzemolo, mollica acetata, capperi, acciughe e tuorli sodi fino a grana fine ma rustica."
+    }
+  ],
   "hydration": 0,
   "targetTemp": "",
   "fermentation": "",

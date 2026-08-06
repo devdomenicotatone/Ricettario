@@ -13,6 +13,7 @@ import { readFileSync, writeFileSync, existsSync, readdirSync } from 'fs';
 import { resolve, dirname, basename } from 'path';
 import { fileURLToPath } from 'url';
 import { CATEGORIES, CATEGORY_ORDER } from '../js/categories.js';
+import { STRUMENTI_BY_SLUG, nomeLama } from '../js/strumenti.js';
 import { graffeNonRisolte } from '../js/token-dosi.js';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -262,6 +263,42 @@ function controllaPromesse(raw, dove) {
   }
 }
 
+/**
+ * Il campo `tools` collega una ricetta a uno strumento del registry
+ * (js/strumenti.js) e — per il cutter — al mozzo giusto. Da qui finisce
+ * nell'indice, dove lo leggono la pagina /strumenti/<slug>/ (per elencare le
+ * ricette per lama) e il box strumento della pagina ricetta.
+ *
+ * Validazione con lo stesso criterio di `category`: uno slug o una lama fuori
+ * registry sono un errore che ferma la build, non una voce che sparisce in
+ * silenzio dalla pagina dello strumento.
+ */
+function controllaTools(raw, dove) {
+  if (raw.tools === undefined) return [];
+  if (!Array.isArray(raw.tools)) {
+    errors.push(`${dove}: il campo tools deve essere un array di { strumento, lama, nota }`);
+    return [];
+  }
+  const validi = [];
+  for (const t of raw.tools) {
+    const s = STRUMENTI_BY_SLUG[t?.strumento];
+    if (!s) {
+      errors.push(`${dove}: tools punta allo strumento "${t?.strumento}", che non è dichiarato in js/strumenti.js`);
+      continue;
+    }
+    if (s.lame.length && !t.lama) {
+      errors.push(`${dove}: tools per "${t.strumento}" senza campo lama (attese: ${s.lame.map(l => l.key).join(', ')})`);
+      continue;
+    }
+    if (t.lama && !nomeLama(t.strumento, t.lama)) {
+      errors.push(`${dove}: tools per "${t.strumento}" con lama "${t.lama}" fuori registry (attese: ${s.lame.map(l => l.key).join(', ')})`);
+      continue;
+    }
+    validi.push({ strumento: t.strumento, lama: t.lama ?? null, nota: text(t.nota) ?? '' });
+  }
+  return validi;
+}
+
 function buildEntry(cat, file) {
   const slug = basename(file, '.json');
   const raw = JSON.parse(readFileSync(resolve(RECIPES_DIR, cat.dir, file), 'utf8'));
@@ -287,6 +324,7 @@ function buildEntry(cat, file) {
 
   controllaToken(raw, `${cat.dir}/${slug}`);
   controllaPromesse(raw, `${cat.dir}/${slug}`);
+  const tools = controllaTools(raw, `${cat.dir}/${slug}`);
 
   // Dati sensoriali e nutrizionali: AVVISO, non errore. Una ricetta senza il
   // profilo sensoriale si pubblica benissimo — il pannello semplicemente non
@@ -341,6 +379,8 @@ function buildEntry(cat, file) {
     time: text(raw.fermentation),
     temp: text(raw.targetTemp),
     tool: raw.tool ?? '',
+    // Collegamento validato al registry strumenti: vedi controllaTools.
+    tools,
     // Il credito della foto: senza di lui le immagini CC risultano pubblicate
     // in violazione della licenza, e chi legge l'indice non ha modo di saperlo.
     imageAttribution: text(raw.imageAttribution),

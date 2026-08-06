@@ -5,6 +5,13 @@
   "description": "La ricetta professionale della grande salsa classica: emulsione perfetta a freddo con maionese artigianale, un tocco di Cognac e panna per una setosità ineguagliabile.",
   "subtitle": "Emulsione a freddo a base di maionese, ketchup e distillato",
   "category": "Condimenti",
+  "tools": [
+    {
+      "strumento": "cutter-sirman-c-tronic-6",
+      "lama": "forate",
+      "nota": "Le lame forate montano la maionese di base, ferma e setosa, con l'olio a filo; il resto della salsa si assembla a mano."
+    }
+  ],
   "hydration": 0,
   "targetTemp": "",
   "fermentation": "",

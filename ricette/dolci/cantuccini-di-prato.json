@@ -5,6 +5,13 @@
   "description": "Biscotti tradizionali toscani con mandorle e doppia cottura, friabili e croccanti, perfetti da inzuppare nel Vin Santo",
   "subtitle": "Biscotti tradizionali toscani con mandorle e doppia cottura",
   "category": "Dolci",
+  "tools": [
+    {
+      "strumento": "cutter-sirman-c-tronic-6",
+      "lama": "impasti",
+      "nota": "Il mozzo per impasti amalgama uova e zucchero, poi farina e burro in una lavorazione lampo senza scaldare; le mandorle si uniscono a mano."
+    }
+  ],
   "hydration": 0,
   "targetTemp": "20-22°C",
   "fermentation": "",

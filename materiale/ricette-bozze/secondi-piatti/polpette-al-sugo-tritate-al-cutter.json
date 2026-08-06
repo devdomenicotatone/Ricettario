@@ -1,0 +1,267 @@
+{
+  "title": "Polpette al Sugo con Trito Fresco al Cutter",
+  "slug": "polpette-al-sugo-tritate-al-cutter",
+  "emoji": "🧆",
+  "description": "Polpette di manzo morbidissime cotte direttamente nel sugo di pomodoro, con carne tritata al momento al cutter a lame lisce: taglio netto delle fibre, trito asciutto e una succosità che il macinato pronto non ha.",
+  "subtitle": "Polpette di manzo al pomodoro con carne tritata al momento a lame lisce",
+  "category": "Secondi Piatti",
+  "tools": [
+    {
+      "strumento": "cutter-sirman-c-tronic-6",
+      "lama": "lisce",
+      "nota": "Trita nella stessa vasca prima il battuto di verdure del sugo e poi la carne di manzo ben fredda: le lame lisce recidono di netto fibre e nervi, per un trito asciutto e mai surriscaldato."
+    }
+  ],
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per le Polpette",
+      "items": [
+        {
+          "name": "Polpa di Manzo",
+          "note": "(cappello del prete o scamone, in un pezzo unico, ben fredda di frigorifero)",
+          "grams": 600,
+          "tokenId": "manzo"
+        },
+        {
+          "name": "Pane Raffermo",
+          "note": "(solo mollica di 2-3 giorni, senza crosta)",
+          "grams": 120,
+          "tokenId": "pane_raffermo"
+        },
+        {
+          "name": "Latte Intero",
+          "note": "(freddo, per l'ammollo della mollica)",
+          "grams": 150,
+          "tokenId": "latte"
+        },
+        {
+          "name": "Parmigiano Reggiano",
+          "note": "(stagionato 24 mesi, grattugiato fine)",
+          "grams": 60,
+          "tokenId": "parmigiano"
+        },
+        {
+          "name": "Uovo",
+          "note": "(medio, intero, a temperatura ambiente)",
+          "grams": 55,
+          "tokenId": "uovo"
+        },
+        {
+          "name": "Prezzemolo Fresco",
+          "note": "(solo le foglie, tritate al coltello)",
+          "grams": 10,
+          "tokenId": "prezzemolo"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(non iodato)",
+          "grams": 10,
+          "tokenId": "sale_polpette"
+        },
+        {
+          "name": "Pepe Nero",
+          "note": "(macinato fresco al momento)",
+          "grams": 2,
+          "tokenId": "pepe"
+        },
+        {
+          "name": "Noce Moscata",
+          "note": "(grattugiata al momento)",
+          "grams": 1,
+          "tokenId": "noce_moscata"
+        }
+      ]
+    },
+    {
+      "group": "Per il Sugo di Pomodoro",
+      "items": [
+        {
+          "name": "Passata di Pomodoro",
+          "note": "(densa, di buona qualità)",
+          "grams": 700,
+          "tokenId": "passata"
+        },
+        {
+          "name": "Cipolla Dorata",
+          "note": "(sbucciata, in quarti)",
+          "grams": 80,
+          "tokenId": "cipolla"
+        },
+        {
+          "name": "Carota",
+          "note": "(pelata, a tocchetti)",
+          "grams": 50,
+          "tokenId": "carota"
+        },
+        {
+          "name": "Sedano",
+          "note": "(una costa, privata dei filamenti)",
+          "grams": 40,
+          "tokenId": "sedano"
+        },
+        {
+          "name": "Olio Extravergine di Oliva",
+          "note": "(fruttato medio)",
+          "grams": 40,
+          "tokenId": "olio_evo"
+        },
+        {
+          "name": "Basilico Fresco",
+          "note": "(foglie intere, spezzate a mano a fine cottura)",
+          "grams": 5,
+          "tokenId": "basilico"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(per il sugo)",
+          "grams": 6,
+          "tokenId": "sale_sugo"
+        },
+        {
+          "name": "Zucchero",
+          "note": "(facoltativo, solo se la passata è molto acida)",
+          "grams": 3,
+          "tokenId": "zucchero"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Preparazione e raffreddamento della carne",
+      "text": "Rifilare {manzo:600}g di polpa di manzo eliminando solo il tessuto connettivo più grossolano in superficie — i nervi interni li risolveranno le lame lisce. Tagliare la carne in cubi regolari di circa 3 cm, asciugarli con carta assorbente e distribuirli su un vassoio in un solo strato. Trasferire il vassoio in freezer per {riposo_freezer:20!} minuti: la superficie dei cubi deve risultare molto fredda e appena irrigidita, mai congelata. È la condizione che permette al cutter un taglio netto invece di uno strappo."
+    },
+    {
+      "title": "Ammollo della mollica",
+      "text": "Privare della crosta {pane_raffermo:120}g di pane raffermo e ridurre la mollica in pezzi grossolani. Raccoglierla in una ciotola, versare {latte:150}g di latte freddo e lasciare ammorbidire per {ammollo_pane:10!} minuti, girandola a metà tempo. Strizzarla poi con decisione tra le mani: deve restare umida e plastica, non gocciolante — il latte in eccesso renderebbe l'impasto molle e le polpette fragili in cottura."
+    },
+    {
+      "title": "Battuto di verdure nella vasca del cutter",
+      "text": "Montare le lame lisce sul cutter, con vasca e lame pulite e asciutte. Inserire {cipolla:80}g di cipolla in quarti, {carota:50}g di carota a tocchetti e {sedano:40}g di sedano a pezzi. Lavorare a impulsi brevi, fermandosi ogni pochi colpi per raschiare le pareti con una spatola e ridistribuire i pezzi, fino a un battuto fine e uniforme ma non in crema: i pezzetti devono restare distinti, senza acqua di vegetazione sul fondo della vasca. Trasferire il battuto in una casseruola ampia e bassa. Lavare e asciugare perfettamente vasca e lame: per la carne dovranno essere asciutte e possibilmente fredde."
+    },
+    {
+      "title": "Avvio del sugo di pomodoro",
+      "text": "Aggiungere nella casseruola {olio_evo:40}g di olio extravergine e portare il battuto su fuoco dolce. Far appassire per {tempo_soffritto:10!} minuti mescolando spesso: il battuto uscito dal cutter è fine e uniforme, quindi cuoce in fretta e non deve prendere colore. Versare {passata:700}g di passata di pomodoro, unire {sale_sugo:6}g di sale e, se la passata risulta molto acida, {zucchero:3}g di zucchero. Portare a un leggero sobbollore, coprire parzialmente e cuocere per {tempo_sugo:20!} minuti mentre si preparano le polpette, mescolando di tanto in tanto."
+    },
+    {
+      "title": "Tritatura della carne con le lame lisce",
+      "text": "Verificare che vasca e lame lisce siano perfettamente asciutte, quindi caricare i cubi di manzo appena irrigiditi dal freezer — in due cariche se la vasca risulta affollata: i pezzi devono potersi muovere liberamente. Lavorare a impulsi brevi, a velocità bassa poi crescente, fermandosi dopo pochi colpi per raschiare le pareti e riportare i cubi sulle lame. Il filo liscio recide di netto fibre, filamenti e piccoli nervi invece di strapparli: in una manciata di impulsi si ottiene un trito a grana media, sgranato e asciutto, che non ha nulla della pasta compressa del macinato pronto. Fermarsi appena la grana è uniforme: ogni impulso in più scalda il grasso e lo spalma sulle pareti, ed è l'inizio della polpetta gommosa."
+    },
+    {
+      "title": "Impasto e riposo in frigorifero",
+      "text": "Trasferire il trito in una ciotola capiente. Unire la mollica strizzata sbriciolandola tra le dita, {parmigiano:60}g di Parmigiano grattugiato, {uovo:55}g di uovo, {prezzemolo:10}g di prezzemolo tritato, {sale_polpette:10}g di sale, {pepe:2}g di pepe nero e {noce_moscata:1}g di noce moscata. Impastare con le mani il minimo indispensabile, giusto il tempo di distribuire uniformemente gli ingredienti: una lavorazione prolungata sviluppa la miosina e compatta l'impasto. Coprire con pellicola a contatto e far riposare in frigorifero per {riposo_frigo:20!} minuti: l'impasto si rassoda e la mollica finisce di assorbire l'umidità."
+    },
+    {
+      "title": "Formatura delle polpette",
+      "text": "Con le mani leggermente inumidite d'acqua, porzionare l'impasto in pezzi da circa 40 g (poco più piccoli di una pallina da ping pong) e rollarli tra i palmi senza stringere: le polpette devono risultare lisce in superficie ma non pressate. Disporle man mano su un vassoio in un solo strato, senza sovrapporle. Con queste dosi ne escono circa 25."
+    },
+    {
+      "title": "Cottura diretta nel sugo",
+      "text": "Portare il sugo a un sobbollore appena percettibile e adagiarvi le polpette una a una, distribuendole in un solo strato. Non toccarle per i primi {tempo_presa:10!} minuti: la superficie deve rapprendersi a contatto col sugo, ed è questo che le tiene integre senza bisogno di rosolatura. Coprire e proseguire a fuoco dolcissimo per {tempo_cottura:35!} minuti, scuotendo di tanto in tanto la casseruola con un movimento circolare invece di usare il cucchiaio. A fine cottura unire {basilico:5}g di foglie di basilico spezzate a mano, spegnere e lasciar riposare coperto per {tempo_riposo:10!} minuti prima di servire: il sugo si assesta e vela le polpette."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "baking": {
+    "temperature": "Fuoco dolce (sobbollore leggero, mai bollore pieno)",
+    "time": "45 minuti nel sugo, più 20 di sugo da solo",
+    "tips": [
+      "Il sugo deve tremare, non bollire: bolle grosse e continue sballottano le polpette e le sfaldano prima che la superficie si sia rappresa.",
+      "Casseruola ampia e bassa, polpette in un solo strato: impilate cuociono in modo diseguale e quelle sotto si schiacciano."
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Lame lisce",
+      "definition": "I coltelli del cutter a filo continuo e rettilineo: recidono le fibre con un taglio netto, come un coltello ben affilato, invece di strapparle. Sono la scelta giusta per carni crude e battuti dove serve una grana definita e asciutta."
+    },
+    {
+      "term": "A impulsi",
+      "definition": "Azionamento del cutter a scatti brevi invece che in rotazione continua: tra un colpo e l'altro gli ingredienti ricadono sulle lame e si ridistribuiscono, la grana resta uniforme e la temperatura in vasca non sale."
+    },
+    {
+      "term": "Battuto",
+      "definition": "Il trito fine di cipolla, carota e sedano che fa da base aromatica del sugo. Tradizionalmente si fa al coltello; nel cutter a lame lisce si ottiene in pochi impulsi, con la stessa grana asciutta."
+    },
+    {
+      "term": "Miosina",
+      "definition": "Proteina contrattile della carne che, con lavorazione meccanica e sale, forma una rete collosa: preziosa negli hamburger da griglia, indesiderata nelle polpette, dove darebbe un interno compatto e gommoso. Per questo l'impasto si lavora il minimo indispensabile."
+    },
+    {
+      "term": "Sobbollore",
+      "definition": "Regime di cottura appena sotto il punto di ebollizione: la superficie del sugo trema ed emette bolle pigre e isolate. Cuoce le polpette senza disfarle né asciugarle."
+    },
+    {
+      "term": "Pane raffermo",
+      "definition": "Pane di 2-3 giorni che ha perso parte dell'umidità: la mollica, reidratata nel latte e strizzata, fa da spugna trattenendo i succhi della carne in cottura. Il pane fresco, troppo umido, renderebbe l'impasto colloso."
+    }
+  ],
+  "alert": "NON tritare mai la carne a temperatura ambiente e NON far girare il cutter in rotazione continua e prolungata: le lame scaldano, il grasso fonde e si spalma, e il trito da sgranato diventa una pasta collosa che in cottura dà polpette compatte e gommose. Carne ben fredda dal freezer, impulsi brevi, e fermarsi appena la grana è uniforme.",
+  "proTips": [
+    "Il macinato pronto passa per una trafila che pressa e sfilaccia le superfici, che ossidano e perdono liquidi in fretta; il trito al cutter a lame lisce ha superfici di taglio nette che trattengono i succhi. È il motivo per cui queste polpette restano succose anche senza rosolatura.",
+    "Nella stessa vasca, tritando la carne a grana leggermente più grossa e allungando appena il tempo a impulsi sull'ultima carica, si controlla la consistenza finale: grana più grossa per polpette rustiche e masticabili, più fine per una texture da polpetta di famiglia. Il macinato pronto questa scelta non la offre.",
+    "Fatte riposare una notte in frigorifero nel loro sugo, sono ancora migliori: i sapori si fondono, il sugo si arricchisce dei succhi delle polpette e diventa un condimento perfetto per una pasta il giorno dopo."
+  ],
+  "storage": [
+    "Conservare in frigorifero, immerse nel loro sugo in un contenitore ermetico, per massimo 3 giorni.",
+    "Rigenerazione: scaldare a fuoco dolce in casseruola coperta con un cucchiaio d'acqua per allentare il sugo, finché le polpette non sono calde al cuore. Evitare il microonde a piena potenza, che le compatta.",
+    "Congelano molto bene già cotte nel sugo, in porzioni, fino a 2 mesi: scongelare una notte in frigorifero e rigenerare come sopra."
+  ],
+  "imageKeywords": [
+    "italian meatballs tomato sauce",
+    "polpette al sugo casseruola",
+    "beef meatballs simmered in marinara",
+    "polpette di manzo al pomodoro basilico",
+    "hackbällchen in tomatensoße",
+    "meatballs rustic pan basil"
+  ],
+  "tags": [
+    "Polpette",
+    "Secondi di Carne",
+    "Cucina Italiana",
+    "Sugo di Pomodoro",
+    "Carne Tritata Fresca",
+    "Comfort Food"
+  ],
+  "_generatedBy": "claude",
+  "_createdAt": "2026-08-06T09:30:00.000Z",
+  "sensoryProfile": {
+    "summary": "Polpette che cedono alla forchetta senza opporre resistenza: il trito a lame lisce, mai strapazzato, e la mollica ammollata nel latte costruiscono una tenerezza umida e sfaldabile, lontanissima dalla compattezza gommosa del macinato lavorato troppo. La sapidità è piena ma composta, guidata dal Parmigiano 24 mesi che porta anche il suo corredo fermentativo di note evolute, quasi di brodo. Intorno, un sugo dalla complessità aromatica stratificata — la dolcezza vegetale del battuto appassito, l'acidità viva del pomodoro, il basilico fresco in chiusura, un'ombra calda di noce moscata nell'impasto — mentre il pepe nero macinato al momento lascia sul finale un pizzicore gentile, più profumo che fuoco.",
+    "axes": [
+      {
+        "label": "Tenerezza / Scioglievolezza",
+        "value": 9
+      },
+      {
+        "label": "Sapidità",
+        "value": 7
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 7
+      },
+      {
+        "label": "Complessità Fermentativa",
+        "value": 4
+      },
+      {
+        "label": "Piccantezza",
+        "value": 2
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 145,
+    "macros": {
+      "carbs": 8,
+      "protein": 10,
+      "fat": 8
+    }
+  }
+}

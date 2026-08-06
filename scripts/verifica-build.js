@@ -221,6 +221,8 @@ function paginaHtml(percorso) {
     const eRicetta = /\/ricette\/[^/]+\/[^/]+\/index\.html$/.test(rel);
     const ePianoCottura = /\/cottura\/[^/]+\/index\.html$/.test(rel);
     const eIndiceCottura = /\/cottura\/index\.html$/.test(rel);
+    const eStrumento = /\/strumenti\/[^/]+\/index\.html$/.test(rel);
+    const eIndiceStrumenti = /\/strumenti\/index\.html$/.test(rel);
 
     if (!/rel="canonical"/.test(html)) err(`${rel}: manca <link rel="canonical">`);
 
@@ -312,6 +314,46 @@ function paginaHtml(percorso) {
         if (testo.length < 300) {
             err(`${rel}: solo ${testo.length} caratteri visibili senza JS — il crawler non compila il form, `
                 + 'quindi questa pagina è tutto quello che vede');
+        }
+        return { rel, blocchi };
+    }
+
+    // ── Pagine strumenti ──
+    // Stesse regole di cottura, per lo stesso motivo: markup da
+    // js/html-strumenti.js, JSON-LD da generate-og.js — se uno dei due cambia
+    // da solo, è questo controllo che se ne accorge.
+    if (eStrumento) {
+        if (!blocchi.some(b => b['@type'] === 'ItemPage')) {
+            err(`${rel}: pagina strumento senza JSON-LD ItemPage`);
+        }
+        if (!blocchi.some(b => b['@type'] === 'BreadcrumbList')) {
+            err(`${rel}: pagina strumento senza BreadcrumbList`);
+        }
+        const testo = testoVisibile(html);
+        if (testo.length < 300) {
+            err(`${rel}: solo ${testo.length} caratteri visibili senza JS — la guida È il contenuto, `
+                + 'se non si vede la pagina non ha ragione di essere indicizzata');
+        }
+        const titolo = estrai(html, /<title>([\s\S]*?)<\/title>/);
+        const descrizione = estrai(html, /<meta\s+name="description"\s+content="([^"]*)"/);
+        const h1 = estrai(html, /<h1[^>]*>([\s\S]*?)<\/h1>/);
+        if (!h1) err(`${rel}: manca l'H1`);
+        if (!descrizione) err(`${rel}: manca la meta description`);
+        const senzaSito = titolo.replace(/\s+—\s+Ricettario Lab$/, '');
+        if (h1 && senzaSito === h1) err(`${rel}: titolo e H1 identici ("${h1}")`);
+        if (descrizione && (descrizione === senzaSito || descrizione === h1)) {
+            err(`${rel}: meta description uguale al titolo o all'H1`);
+        }
+        return { rel, blocchi };
+    }
+
+    if (eIndiceStrumenti) {
+        if (!blocchi.some(b => b['@type'] === 'CollectionPage')) {
+            err(`${rel}: indice strumenti senza JSON-LD CollectionPage`);
+        }
+        const testo = testoVisibile(html);
+        if (testo.length < 300) {
+            err(`${rel}: solo ${testo.length} caratteri visibili senza JS`);
         }
         return { rel, blocchi };
     }

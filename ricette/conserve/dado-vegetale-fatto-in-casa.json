@@ -5,6 +5,13 @@
   "description": "Dado vegetale artigianale con verdure fresche e sale: senza conservanti, senza glutammato, da congelare in cubetti pronti all'uso.",
   "subtitle": "Conserva artigianale a base di verdure fresche — tecnica cottura-riduzione e conservazione in freezer",
   "category": "Conserve",
+  "tools": [
+    {
+      "strumento": "cutter-sirman-c-tronic-6",
+      "lama": "lisce",
+      "nota": "Le lame lisce tritano in un attimo le verdure crude e, dopo la cottura, riducono la massa in una purea perfettamente liscia."
+    }
+  ],
   "hydration": 0,
   "targetTemp": "",
   "fermentation": "",

@@ -127,4 +127,16 @@
         font-size: 1rem;
         color: var(--color-text);
     }
+
+    /* Rimando dalla vetrina alle schede complete su /strumenti/ */
+    .tool-spotlight__cta {
+        margin-top: var(--space-lg);
+
+        a {
+            color: var(--color-text-accent);
+            font-weight: 600;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+    }
 }

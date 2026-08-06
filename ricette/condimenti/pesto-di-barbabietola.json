@@ -5,6 +5,13 @@
   "description": "Pesto di barbabietola rossa con pinoli e parmigiano: crema vegetale vibrante e versatile per condire pasta, bruschette e risotti.",
   "subtitle": "Crema di rapa rossa con pinoli tostati, Parmigiano Reggiano e basilico fresco",
   "category": "Condimenti",
+  "tools": [
+    {
+      "strumento": "cutter-sirman-c-tronic-6",
+      "lama": "lisce",
+      "nota": "Le lame lisce riducono la barbabietola cotta in purea fine ed emulsionano l'olio a filo, con pause per spatolare le pareti."
+    }
+  ],
   "hydration": 0,
   "targetTemp": "",
   "fermentation": "",

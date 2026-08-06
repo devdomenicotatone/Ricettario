@@ -1,0 +1,199 @@
+{
+  "title": "Salsa Tonnata",
+  "slug": "salsa-tonnata",
+  "emoji": "🐟",
+  "description": "Salsa tonnata classica piemontese: emulsione di tuorli e olio montata al cutter con le lame forate, poi arricchita con tonno sott'olio, acciughe e capperi. La salsa del vitello tonnato.",
+  "subtitle": "Emulsione fredda al cutter — lame forate per la base, lama che taglia per il trito di tonno",
+  "category": "Condimenti",
+  "tools": [
+    {
+      "strumento": "cutter-sirman-c-tronic-6",
+      "lama": "forate",
+      "nota": "Le lame forate montano l'emulsione di tuorli e olio incorporando aria senza tagliare; il trito fine del tonno richiede invece un passaggio preliminare con la lama liscia, che taglia."
+    }
+  ],
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Base all'uovo (emulsione)",
+      "items": [
+        {
+          "name": "Tuorli d'Uovo",
+          "note": "(freschissimi, a temperatura ambiente, ~20g cad.)",
+          "grams": 40,
+          "tokenId": "tuorli"
+        },
+        {
+          "name": "Olio di Semi di Girasole",
+          "note": "(sapore neutro, a temperatura ambiente)",
+          "grams": 200,
+          "tokenId": "olio_semi"
+        },
+        {
+          "name": "Succo di Limone",
+          "note": "(fresco, filtrato)",
+          "grams": 20,
+          "tokenId": "succo_limone"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(volutamente poco: tonno, acciughe e capperi sono già sapidi)",
+          "grams": 2,
+          "tokenId": "sale"
+        }
+      ]
+    },
+    {
+      "group": "Condimento al tonno",
+      "items": [
+        {
+          "name": "Tonno Sott'Olio",
+          "note": "(filetti in olio di oliva, ben sgocciolati)",
+          "grams": 200,
+          "tokenId": "tonno"
+        },
+        {
+          "name": "Acciughe Sott'Olio",
+          "note": "(filetti, sgocciolati e tamponati)",
+          "grams": 15,
+          "tokenId": "acciughe"
+        },
+        {
+          "name": "Capperi Sotto Sale",
+          "note": "(da dissalare in acqua fredda)",
+          "grams": 20,
+          "tokenId": "capperi"
+        },
+        {
+          "name": "Aceto di Vino Bianco",
+          "note": "(~1 cucchiaio scarso)",
+          "grams": 10,
+          "tokenId": "aceto"
+        },
+        {
+          "name": "Acqua Fredda",
+          "note": "(per regolare la densità, quanto basta)",
+          "grams": 20,
+          "tokenId": "acqua"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Preparazione degli ingredienti e dissalatura dei capperi",
+      "text": "Regola fondamentale, identica alla maionese: tuorli e olio devono essere alla stessa temperatura ambiente ({temperatura:20!}–{temperatura_max:22!}°C). Tirare fuori le uova dal frigorifero almeno {tempo_ambiente:60!} minuti prima. Mettere i {capperi:20}g di capperi sotto sale in una ciotola di acqua fredda per {tempo_dissalatura:15!} minuti, cambiando l'acqua a metà ammollo, poi strizzarli e asciugarli bene. Sgocciolare con cura i {tonno:200}g di tonno sott'olio, premendolo leggermente in un colino: l'olio di conserva in eccesso renderebbe la salsa pesante e unta. Tamponare con carta da cucina i {acciughe:15}g di filetti di acciuga. Spremere il limone e filtrare il succo per eliminare polpa e semi."
+    },
+    {
+      "title": "Trito fine del tonno — serve la lama che taglia",
+      "text": "Le lame forate sono nate per le emulsioni: montano, non tagliano — sulle fibre del tonno produrrebbero solo una poltiglia stracciata e irregolare. Per questo il tonno si rifinisce prima, con la lama liscia. Montare la lama liscia sul cutter e riunire nella vasca i {tonno:200}g di tonno ben sgocciolato, i {acciughe:15}g di acciughe e i {capperi:20}g di capperi dissalati. Lavorare a impulsi brevi, fermando la macchina e raschiando le pareti con una spatola ogni pochi impulsi, per {tempo_trito:60!}–{tempo_trito_max:90!} secondi complessivi: il risultato deve essere un trito fine e omogeneo, non una pasta collosa — i grassi del tonno non devono scaldarsi. Trasferire il trito in una ciotola, poi lavare e asciugare vasca e coperchio."
+    },
+    {
+      "title": "Emulsione base con le lame forate",
+      "text": "Montare le lame forate sul cutter. Versare nella vasca i {tuorli:40}g di tuorli (2 tuorli medi), i {sale:2}g di sale fino e circa metà dei {succo_limone:20}g di succo di limone — l'acido aiuta a stabilizzare l'emulsione fin dall'inizio. Avviare a velocità bassa per amalgamare, poi aumentare gradualmente. Con la macchina in movimento, versare i {olio_semi:200}g di olio di semi dal foro del coperchio a FILO SOTTILISSIMO — goccia a goccia per i primi 40-50g, poi in un filo continuo e sottile quando il composto diventa opaco e comincia a ispessirsi. Le lame forate disperdono l'olio in goccioline finissime incorporando aria: rispetto alle fruste il cutter è molto più rapido, l'intera montatura richiede {tempo_emulsione:3!}–{tempo_emulsione_max:5!} minuti. Fermare una volta a metà per raschiare le pareti. Al termine la base deve essere densa, lucida e compatta come una maionese."
+    },
+    {
+      "title": "Unione del trito di tonno alla base",
+      "text": "Aggiungere alla base montata il trito di tonno, acciughe e capperi, i {aceto:10}g di aceto di vino bianco e il succo di limone rimasto. Lavorare a impulsi brevi, quel tanto che basta a distribuire il trito in modo uniforme nell'emulsione: pochi secondi alla volta, fermando e raschiando le pareti tra un impulso e l'altro. Non insistere: un'azione prolungata scalda la salsa e ne compromette la stabilità. Regolare la densità con i {acqua:20}g di acqua fredda, aggiunta poco alla volta, fino a una consistenza nappante: la salsa deve velare il dorso di un cucchiaio senza colare via."
+    },
+    {
+      "title": "Riposo, assaggio e regolazione finale",
+      "text": "Trasferire la salsa in un contenitore, coprire con pellicola a contatto e lasciar riposare in frigorifero per almeno {tempo_riposo:60!} minuti: il riposo fonde i sapori — la sapidità delle acciughe si distribuisce, l'acidità si arrotonda. Al momento di servire, assaggiare e regolare: solo ora, se serve, aggiustare di sale (raramente necessario) o ravvivare con qualche goccia di limone. La salsa fredda risulta più densa: eventualmente allentarla con poca acqua fredda. Per il vitello tonnato va distesa in uno strato generoso sulle fette di carne fredda; più densa, è perfetta per farcire uova sode o accompagnare verdure in pinzimonio."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "baking": null,
+  "glossary": [
+    {
+      "term": "Lame forate",
+      "definition": "Lame del cutter con fori lungo il corpo, progettate per le emulsioni: la superficie forata disperde i grassi in goccioline finissime e incorpora aria, montando il composto senza tagliare le fibre. Sul tonno non sostituiscono la lama liscia, che invece taglia."
+    },
+    {
+      "term": "Emulsione",
+      "definition": "Miscela stabile di due liquidi normalmente non miscibili (acqua e olio). Nella base della tonnata, la lecitina del tuorlo avvolge le goccioline d'olio in una pellicola proteica che le tiene disperse nella fase acquosa."
+    },
+    {
+      "term": "Consistenza nappante",
+      "definition": "Densità di una salsa che vela il dorso di un cucchiaio senza colare via. È il punto giusto della tonnata da vitello tonnato: abbastanza fluida da distendersi sulla carne, abbastanza densa da restarci sopra."
+    },
+    {
+      "term": "Dissalatura",
+      "definition": "Ammollo in acqua fredda che elimina il sale di conserva dai capperi. Senza, il sale dei capperi si somma a quello di acciughe e tonno e sbilancia irrimediabilmente la salsa."
+    },
+    {
+      "term": "Vitello tonnato",
+      "definition": "Piatto piemontese di fette sottili di girello di vitello cotto, coperte di salsa tonnata e servite fredde. È la destinazione storica di questa salsa, codificata dalla cucina piemontese nell'Ottocento."
+    }
+  ],
+  "alert": "NON salare la salsa prima di averla assaggiata a trito incorporato: tonno, acciughe e capperi portano già molta sapidità, e il sale nella base è volutamente poco. Se l'emulsione impazzisce durante la montatura, recuperala come una maionese: un tuorlo fresco nella vasca pulita, poi la salsa rotta aggiunta a filo sottilissimo con le lame forate in movimento. E non lavorare il tonno con le lame forate sperando di fare tutto in un passaggio: non tagliano le fibre, le stracciano — il trito fine richiede la lama liscia.",
+  "proTips": [
+    "La qualità del tonno si sente tutta: filetti sott'olio di oliva, meglio se ventresca, danno una salsa rotonda e profumata. Evita il tonno al naturale: troppo asciutto e fibroso, produce una salsa granulosa.",
+    "Se la servi con il vitello tonnato, regola la densità con un paio di cucchiai del fondo di cottura della carne, filtrato e freddo, al posto dell'acqua: lega il piatto come nella ricetta delle famiglie piemontesi.",
+    "Per una tonnata da ristorante, liscia a specchio, passala al setaccio fine dopo il riposo: elimina ogni residuo fibroso del tonno senza toccare la struttura dell'emulsione.",
+    "La versione storica ottocentesca, precedente alla maionese, si faceva pestando tuorli sodi con tonno, acciughe e capperi, allungando con olio e aceto: più rustica e meno cremosa, vale la pena provarla per capire da dove viene il piatto."
+  ],
+  "storage": [
+    "Conservare in frigorifero a +4°C in contenitore ermetico, con pellicola a contatto sulla superficie, per un massimo di 2-3 giorni: la salsa contiene uova crude e pesce, rispetta rigorosamente la catena del freddo.",
+    "NON congelare: lo scongelamento rompe l'emulsione in modo irreversibile e il tonno rilascia acqua, separando la salsa.",
+    "Utilizza sempre un cucchiaio pulito per prelevare la salsa. Se noti liquido separato in superficie, odore pungente o colore ingrigito, scarta immediatamente."
+  ],
+  "imageKeywords": [
+    "salsa tonnata",
+    "vitello tonnato sauce",
+    "italian tuna sauce",
+    "creamy tuna caper sauce",
+    "tonnato sauce bowl",
+    "salsa tonnata piemontese",
+    "tuna anchovy caper emulsion"
+  ],
+  "tags": [
+    "salsa tonnata",
+    "tonno",
+    "vitello tonnato",
+    "emulsione",
+    "condimento",
+    "piemontese",
+    "senza cottura"
+  ],
+  "_generatedBy": "claude-fable-5",
+  "_createdAt": "2026-08-06T09:00:00.000Z",
+  "sensoryProfile": {
+    "summary": "Una salsa che vive sull'equilibrio tra la spinta sapida del mare — tonno, acciughe, capperi — e la rotondità grassa dell'emulsione di tuorli e olio. Al palato la cremosità è piena e avvolgente, appena più fluida di una maionese, con una sapidità marina intensa che non scivola mai nel salato grazie alla dissalatura dei capperi e al sale trattenuto nella base. L'acidità di limone e aceto tiene il grasso in tensione e pulisce il finale, mentre l'aroma — iodato, con la nota fermentata dell'acciuga e quella verde del cappero — è deciso e persistente.",
+    "axes": [
+      {
+        "label": "Sapidità / Umami",
+        "value": 8
+      },
+      {
+        "label": "Acidità / Pungenza",
+        "value": 6
+      },
+      {
+        "label": "Cremosità / Densità",
+        "value": 8
+      },
+      {
+        "label": "Dolcezza / Rotondità",
+        "value": 3
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 7
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 440,
+    "macros": {
+      "carbs": 1,
+      "protein": 11,
+      "fat": 44
+    }
+  }
+}
