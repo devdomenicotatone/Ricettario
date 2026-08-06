@@ -24,7 +24,10 @@ export const STRUMENTI = [
     title: 'Cutter Sirman C-Tronic 6 VT: guida alle lame',
     desc: 'Guida alle cinque lame del cutter Sirman C-Tronic 6 VT: usi, tecnica, errori da evitare, scheda tecnica e le ricette del sito in cui il cutter lavora meglio.',
     cardDesc: 'Cutter da 5,3 litri con variatore di velocità: la guida completa ai cinque mozzi — lisce, dentate, forate, impasti e pesto.',
-    image: null, // foto in arrivo: la pagina nasce senza
+    image: 'images/strumenti/cutter-sirman-c-tronic-6-detail.webp',
+    // Tavola dei mozzi opzionali (dal catalogo Sirman): la pagina strumento
+    // la mostra in testa alla guida delle lame. Solo il cutter ce l'ha.
+    imageMozzi: 'images/strumenti/cutter-sirman-c-tronic-6-mozzi.webp',
     lame: [
       { key: 'lisce',   nome: 'Lame lisce' },
       { key: 'dentate', nome: 'Lame dentate' },

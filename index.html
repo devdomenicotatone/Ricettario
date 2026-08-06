@@ -286,20 +286,13 @@
                 </div>
 
                 <!-- STRUMENTO 2: Sirman C-Tronic 6 VT.
-                     La foto ancora non c'è (la scatta Domenico; nel registry
-                     js/strumenti.js la voce ha image: null): nello slot
-                     dell'immagine sta il pannello dei cinque mozzi, che del
-                     cutter sono il punto. Quando arriva lo scatto: file in
-                     public/images/strumenti/, un <picture> come quello della
-                     Grilletta al posto del pannello, e `image` valorizzata nel
-                     registry.
                      L'info viene PRIMA dello slot, al contrario della
                      Grilletta, per due effetti in uno: chi legge con lo screen
-                     reader incontra il titolo prima dell'elenco dei mozzi, e
-                     da desktop le colonne si invertono da sole (l'ordine del
-                     sorgente decide, lo slot va a destra) alternando il ritmo
-                     dei due riquadri. Su mobile non cambia niente: l'order: -1
-                     dello slot lo tiene comunque in testa. -->
+                     reader incontra il titolo per primo, e da desktop le
+                     colonne si invertono da sole (l'ordine del sorgente
+                     decide, la foto va a destra) alternando il ritmo dei due
+                     riquadri. Su mobile non cambia niente: l'order: -1 dello
+                     slot tiene comunque la foto in testa. -->
                 <div class="tool-spotlight reveal">
                     <div class="tool-spotlight__info">
                         <h3 class="tool-spotlight__name">
@@ -345,29 +338,14 @@
                         </p>
                     </div>
 
-                    <div class="tool-spotlight__image-wrapper tool-spotlight__pannello-mozzi">
-                        <ul class="tool-spotlight__mozzi" aria-label="I cinque mozzi intercambiabili del cutter">
-                            <li class="tool-spotlight__mozzo">
-                                <span class="tool-spotlight__mozzo-nome">Lame lisce</span>
-                                <span class="tool-spotlight__mozzo-uso">trito netto e salse</span>
-                            </li>
-                            <li class="tool-spotlight__mozzo">
-                                <span class="tool-spotlight__mozzo-nome">Lame dentate</span>
-                                <span class="tool-spotlight__mozzo-uso">granelle dure</span>
-                            </li>
-                            <li class="tool-spotlight__mozzo">
-                                <span class="tool-spotlight__mozzo-nome">Lame forate</span>
-                                <span class="tool-spotlight__mozzo-uso">montate ed emulsioni</span>
-                            </li>
-                            <li class="tool-spotlight__mozzo">
-                                <span class="tool-spotlight__mozzo-nome">Mozzo impasti</span>
-                                <span class="tool-spotlight__mozzo-uso">frolle e basi da forno</span>
-                            </li>
-                            <li class="tool-spotlight__mozzo">
-                                <span class="tool-spotlight__mozzo-nome">Mozzo pesto</span>
-                                <span class="tool-spotlight__mozzo-uso">erbe a freddo</span>
-                            </li>
-                        </ul>
+                    <div class="tool-spotlight__image-wrapper">
+                        <picture>
+                            <source srcset="/Ricettario/images/strumenti/cutter-sirman-c-tronic-6.avif" type="image/avif">
+                            <source srcset="/Ricettario/images/strumenti/cutter-sirman-c-tronic-6.webp" type="image/webp">
+                            <img src="/Ricettario/images/strumenti/cutter-sirman-c-tronic-6.webp"
+                                alt="Sirman C-Tronic 6 VT — Cutter professionale"
+                                class="tool-spotlight__image" loading="lazy">
+                        </picture>
                         <span class="tool-spotlight__badge"><img src="/Ricettario/images/emoji/fork-and-knife.png" width="18"
                                 height="18" alt="" class="fluent-emoji"> Trito e salse</span>
                     </div>

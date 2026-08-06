@@ -146,49 +146,4 @@
     .tool-spotlight + .tool-spotlight {
         margin-top: var(--space-3xl);
     }
-
-    /* Il cutter una foto non ce l'ha ancora: nello slot dell'immagine sta il
-       pannello dei cinque mozzi. `aspect-ratio: auto` scioglie il 4/3 dello
-       slot, che qui deve seguire il contenuto (mobile) o la colonna accanto
-       (desktop, dove il grid lo stira); il padding verticale da --space-3xl
-       tiene la prima voce fuori dal badge, che è in absolute sull'angolo. */
-    .tool-spotlight__pannello-mozzi {
-        aspect-ratio: auto;
-        display: grid;
-        align-content: center;
-        padding: var(--space-3xl) var(--space-lg);
-    }
-
-    .tool-spotlight__mozzi {
-        /* Sopra il velo sfumato ::before dello slot (z-index: 1). */
-        position: relative;
-        z-index: 2;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: grid;
-        gap: var(--space-sm);
-    }
-
-    .tool-spotlight__mozzo {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: baseline;
-        justify-content: space-between;
-        gap: var(--space-2xs) var(--space-md);
-        padding: var(--space-sm) var(--space-md);
-        background: var(--color-glass);
-        border: 1px solid var(--border-subtle);
-        border-radius: var(--radius-md);
-    }
-
-    .tool-spotlight__mozzo-nome {
-        font-weight: 700;
-        font-size: 0.9rem;
-    }
-
-    .tool-spotlight__mozzo-uso {
-        color: var(--color-text-muted);
-        font-size: 0.85rem;
-    }
 }

@@ -115,8 +115,20 @@ export function htmlStrumento(contenuto, voce, { base, ricettePerLama = {}, cate
         </div>`).join('')}
       </dl>` : '';
 
+  // La tavola dei mozzi (voce.imageMozzi, registry) apre la guida alle lame.
+  // Nell'immagine mancano le lisce — sono la dotazione di serie, la tavola
+  // mostra gli opzionali — e c'è la Piranha, che la guida non documenta:
+  // l'alt lo dice, così testo e figura non si smentiscono.
+  const fotoMozzi = voce.imageMozzi ? `
+      <div class="strumento__foto">
+        ${buildPicture(`${base}${voce.imageMozzi}`,
+    'I mozzi opzionali della gamma C-Tronic 6: pesto, impasto, forate, Piranha e dentate (le lame lisce sono di serie)',
+    'strumento__immagine', 'lazy', '(min-width: 720px) 640px, calc(100vw - 32px)')}
+      </div>` : '';
+
   const lame = contenuto.lame?.length ? `
       <h2 class="strumento__sezione-titolo">Le lame: quale mozzo per cosa</h2>
+      ${fotoMozzi}
       ${contenuto.lame.map(l => htmlLama(l, ricettePerLama[l.key] || [], { base })).join('\n')}` : '';
 
   const famiglie = categorie.length ? `
