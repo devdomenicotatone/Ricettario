@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Il Ricettario — Ricette artigianali ottimizzate per i miei strumenti: Famag Grilletta, Fimar PF25E e Philips Serie 7000. Pane, pasta e lievitati.">
+        content="Il Ricettario — Ricette artigianali ottimizzate per i miei strumenti: Famag Grilletta, cutter Sirman C-Tronic 6, Fimar PF25E e Philips Serie 7000. Pane, pasta e lievitati.">
     <title>Ricettario Lab — Cucina Applicata</title>
     <!-- Il manifest e la favicon puntano ai file di `public/`, serviti così come
          sono, e NON alla copia che Vite hashera dentro /assets/.
@@ -280,8 +280,96 @@
                         </div>
 
                         <p class="tool-spotlight__cta">
-                            <a href="/Ricettario/strumenti/">Tutte le schede degli strumenti, con la guida alle lame del cutter →</a>
+                            <a href="/Ricettario/strumenti/famag-grilletta/">La scheda completa dell'impastatrice →</a>
                         </p>
+                    </div>
+                </div>
+
+                <!-- STRUMENTO 2: Sirman C-Tronic 6 VT.
+                     La foto ancora non c'è (la scatta Domenico; nel registry
+                     js/strumenti.js la voce ha image: null): nello slot
+                     dell'immagine sta il pannello dei cinque mozzi, che del
+                     cutter sono il punto. Quando arriva lo scatto: file in
+                     public/images/strumenti/, un <picture> come quello della
+                     Grilletta al posto del pannello, e `image` valorizzata nel
+                     registry.
+                     L'info viene PRIMA dello slot, al contrario della
+                     Grilletta, per due effetti in uno: chi legge con lo screen
+                     reader incontra il titolo prima dell'elenco dei mozzi, e
+                     da desktop le colonne si invertono da sole (l'ordine del
+                     sorgente decide, lo slot va a destra) alternando il ritmo
+                     dei due riquadri. Su mobile non cambia niente: l'order: -1
+                     dello slot lo tiene comunque in testa. -->
+                <div class="tool-spotlight reveal">
+                    <div class="tool-spotlight__info">
+                        <h3 class="tool-spotlight__name">
+                            Sirman <span class="testo-gradiente">C-Tronic 6 VT</span>
+                        </h3>
+                        <p class="tool-spotlight__desc">
+                            Cutter professionale da banco con vasca inox da 5,3 litri e variatore
+                            Variotronic: velocità regolabile in continuo, stabile anche sotto carico.
+                            Il motore ventilato è affiancato alla vasca, non sotto — il prodotto
+                            non si scalda. Il mozzo si sfila e si cambia in pochi gesti.
+                            Un solo motore, cinque macchine diverse.
+                        </p>
+
+                        <div class="tool-spotlight__specs">
+                            <div class="spec-card reveal">
+                                <div class="spec-card__icon"><img src="/Ricettario/images/emoji/high-voltage.png" width="32"
+                                        height="32" alt="" class="fluent-emoji"></div>
+                                <div class="spec-card__label">Motore</div>
+                                <div class="spec-card__value">Ventilato 600 W</div>
+                            </div>
+                            <div class="spec-card reveal reveal-delay-1">
+                                <div class="spec-card__icon"><img src="/Ricettario/images/emoji/bullseye.png" width="32" height="32"
+                                        alt="" class="fluent-emoji"></div>
+                                <div class="spec-card__label">Velocità</div>
+                                <div class="spec-card__value">600–2.300 RPM</div>
+                            </div>
+                            <div class="spec-card reveal reveal-delay-2">
+                                <div class="spec-card__icon"><img src="/Ricettario/images/emoji/package.png" width="32" height="32"
+                                        alt="" class="fluent-emoji"></div>
+                                <div class="spec-card__label">Vasca</div>
+                                <div class="spec-card__value">5,3 litri (3,1 utili)</div>
+                            </div>
+                            <div class="spec-card reveal reveal-delay-3">
+                                <div class="spec-card__icon"><img src="/Ricettario/images/emoji/gear.png" width="32" height="32"
+                                        alt="" class="fluent-emoji"></div>
+                                <div class="spec-card__label">Mozzi</div>
+                                <div class="spec-card__value">5 intercambiabili</div>
+                            </div>
+                        </div>
+
+                        <p class="tool-spotlight__cta">
+                            <a href="/Ricettario/strumenti/cutter-sirman-c-tronic-6/">La guida completa alle cinque lame →</a>
+                        </p>
+                    </div>
+
+                    <div class="tool-spotlight__image-wrapper tool-spotlight__pannello-mozzi">
+                        <ul class="tool-spotlight__mozzi" aria-label="I cinque mozzi intercambiabili del cutter">
+                            <li class="tool-spotlight__mozzo">
+                                <span class="tool-spotlight__mozzo-nome">Lame lisce</span>
+                                <span class="tool-spotlight__mozzo-uso">trito netto e salse</span>
+                            </li>
+                            <li class="tool-spotlight__mozzo">
+                                <span class="tool-spotlight__mozzo-nome">Lame dentate</span>
+                                <span class="tool-spotlight__mozzo-uso">granelle dure</span>
+                            </li>
+                            <li class="tool-spotlight__mozzo">
+                                <span class="tool-spotlight__mozzo-nome">Lame forate</span>
+                                <span class="tool-spotlight__mozzo-uso">montate ed emulsioni</span>
+                            </li>
+                            <li class="tool-spotlight__mozzo">
+                                <span class="tool-spotlight__mozzo-nome">Mozzo impasti</span>
+                                <span class="tool-spotlight__mozzo-uso">frolle e basi da forno</span>
+                            </li>
+                            <li class="tool-spotlight__mozzo">
+                                <span class="tool-spotlight__mozzo-nome">Mozzo pesto</span>
+                                <span class="tool-spotlight__mozzo-uso">erbe a freddo</span>
+                            </li>
+                        </ul>
+                        <span class="tool-spotlight__badge"><img src="/Ricettario/images/emoji/fork-and-knife.png" width="18"
+                                height="18" alt="" class="fluent-emoji"> Trito e salse</span>
                     </div>
                 </div>
             </div>
@@ -297,6 +385,7 @@
                         Appassionato di panificazione artigianale, pasta fresca e impasti ad alta idratazione.
                         Questo ricettario nasce dalla necessità di avere ricette personalizzate e calibrate
                         esattamente sui miei strumenti: la <strong>Famag Grilletta</strong> per gli impasti,
+                        il <strong>cutter Sirman C-Tronic 6</strong> per triti, salse e montate,
                         la <strong>Fimar PF25E</strong> e la <strong>Philips Serie 7000</strong> per la pasta.
                         Ogni ricetta è documentata con precisione tecnica per risultati replicabili al 100%.
                     </p>
@@ -383,10 +472,12 @@
                 <div>
                     <h2 class="footer__col-title">Stack</h2>
                     <ul class="footer__links">
-                        <!-- La Famag ha la sua pagina in /strumenti/; le altre
-                             voci dello stack restano ancore alla vetrina. -->
+                        <!-- Famag e cutter hanno la loro pagina in /strumenti/;
+                             le altre voci dello stack restano ancore alla vetrina. -->
                         <li><a href="/Ricettario/strumenti/famag-grilletta/" data-link><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Famag Grilletta</a></li>
+                        <li><a href="/Ricettario/strumenti/cutter-sirman-c-tronic-6/" data-link><img src="/Ricettario/images/emoji/fork-and-knife.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Cutter Sirman</a></li>
                         <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Mix Tri-Farina</a></li>
                         <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
