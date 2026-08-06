@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cutter Sirman C-Tronic 6 VT: guida alle lame — Ricettario Lab</title>
+    <!-- Il manifest e la favicon puntano ai file di `public/`, serviti così come
+         sono, e NON alla copia che Vite hashera dentro /assets/.
+         Il manifest è il motivo: Vite riscrive gli URL nell'HTML ma non quelli
+         DENTRO un file JSON, quindi da /assets/ il suo `"src": "favicon.svg"`
+         risolveva a /assets/favicon.svg e `"start_url": "./"` a /assets/ —
+         404 tutti e due, cioè una PWA che all'avvio apriva una pagina che non
+         esiste. Servito da /Ricettario/, gli stessi percorsi relativi tornano
+         giusti, e restano giusti anche se un domani cambia la base.
+         La favicon la seguo per non tenerne due copie identiche in giro. -->
+    <link rel="icon" type="image/svg+xml" href="/Ricettario/favicon.svg">
+    <link rel="apple-touch-icon" href="/Ricettario/assets/apple-touch-icon-DVCrky5e.png">
+    <link rel="manifest" href="/Ricettario/site.webmanifest">
+    <!-- Lo script in fondo al <head> lo riscrive secondo il tema: qui c'è il
+         chiaro, che è anche il tema dichiarato su <html>. -->
+    <meta name="theme-color" content="#F2ECE4">
+
+    <!-- Open Graph — Social Sharing Card -->
+
+    <!-- Twitter / X Card -->
+
+    <!-- Font serviti da qui, non da Google: vedi css/base/fonts.css.
+         Il preload evita che il testo resti col font di sistema mentre il
+         CSS che li dichiara viene ancora scaricato. -->
+    <link rel="preload" href="/Ricettario/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/Ricettario/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- FOUC Prevention: applica tema prima del rendering -->
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = saved || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+
+            /* Barra del browser = fondo della navbar, misurato (88% di
+               --color-surface-1 su --color-surface-0). Unica copia dei due
+               valori: main.js chiama questa funzione, non li riscrive.
+               Perché non è più #C2884D: CHECKUP-CSS.md, punto 4. */
+            const COLORI_BARRA = { light: '#F2ECE4', dark: '#170E0A' };
+            window.applicaColoreBarra = function (t) {
+                const meta = document.querySelector('meta[name="theme-color"]');
+                if (meta && COLORI_BARRA[t]) meta.setAttribute('content', COLORI_BARRA[t]);
+            };
+            window.applicaColoreBarra(theme);
+        })();
+    </script>
+  <script type="module" crossorigin src="/Ricettario/assets/main-RStF1M2L.js"></script>
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-DlIt2EXm.css">
+
+    <meta name="description" content="Guida alle cinque lame del cutter Sirman C-Tronic 6 VT: usi, tecnica, errori da evitare, scheda tecnica e le ricette del sito in cui il cutter lavora meglio.">
+    <link rel="canonical" href="https://devdomenicotatone.github.io/Ricettario/strumenti/cutter-sirman-c-tronic-6/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cutter Sirman C-Tronic 6 VT: guida alle lame">
+    <meta property="og:description" content="Guida alle cinque lame del cutter Sirman C-Tronic 6 VT: usi, tecnica, errori da evitare, scheda tecnica e le ricette del sito in cui il cutter lavora meglio.">
+    <meta property="og:url" content="https://devdomenicotatone.github.io/Ricettario/strumenti/cutter-sirman-c-tronic-6/">
+    <meta property="og:image" content="https://devdomenicotatone.github.io/Ricettario/images/og/homepage.webp">
+    <meta property="og:site_name" content="Ricettario Lab">
+    <meta property="og:locale" content="it_IT">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cutter Sirman C-Tronic 6 VT: guida alle lame">
+    <meta name="twitter:description" content="Guida alle cinque lame del cutter Sirman C-Tronic 6 VT: usi, tecnica, errori da evitare, scheda tecnica e le ricette del sito in cui il cutter lavora meglio.">
+    <meta name="twitter:image" content="https://devdomenicotatone.github.io/Ricettario/images/og/homepage.webp">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemPage",
+  "name": "Cutter Sirman C-Tronic 6 VT: guida alle lame",
+  "description": "Guida alle cinque lame del cutter Sirman C-Tronic 6 VT: usi, tecnica, errori da evitare, scheda tecnica e le ricette del sito in cui il cutter lavora meglio.",
+  "url": "https://devdomenicotatone.github.io/Ricettario/strumenti/cutter-sirman-c-tronic-6/",
+  "inLanguage": "it-IT",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Ricettario Lab",
+    "url": "https://devdomenicotatone.github.io/Ricettario/"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://devdomenicotatone.github.io/Ricettario/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Strumenti",
+      "item": "https://devdomenicotatone.github.io/Ricettario/strumenti/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Sirman C-Tronic 6 VT",
+      "item": "https://devdomenicotatone.github.io/Ricettario/strumenti/cutter-sirman-c-tronic-6/"
+    }
+  ]
+}
+    </script>
+</head>
+
+<body>
+
+    <!-- Skip to content — Accessibilità
+         Punta a #contenuto, non a #ricette: quell'ancora esiste solo in
+         homepage, quindi su 104 pagine su 105 il primo tasto che un utente da
+         tastiera premeva non faceva niente. -->
+    <a href="#contenuto" class="skip-link">Vai al contenuto principale</a>
+
+    <!-- Annuncio dei cambi di pagina.
+         Questo sito è una SPA: cliccando una ricetta il contenuto viene
+         sostituito senza che il browser carichi niente, quindi uno screen
+         reader non ha nulla da annunciare e l'utente resta a chiedersi se il
+         clic abbia funzionato. Il router ci scrive dentro il titolo della
+         pagina nuova.
+         Sta FUORI da #app di proposito: se il router lo sostituisse a ogni
+         navigazione, l'assistente non lo starebbe più osservando e
+         l'annuncio andrebbe perso. Dev'essere lo stesso elemento, sempre. -->
+    <div id="annuncio-pagina" class="solo-lettore" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- ═══════════ NAVBAR ═══════════
+         Il `<header>` AVVOLGE il `<nav>`, non lo sostituisce. Sono due
+         landmark diversi e servono a due cose diverse: `banner` dice «qui
+         comincia l'intestazione del sito», `navigation` dice «qui ci sono i
+         link per spostarsi». Rinominare il tag avrebbe tolto il secondo per
+         aggiungere il primo, e il secondo è quello che serve per saltare
+         dentro il menu.
+         Non ha classe né stile: contiene solo un elemento `position: fixed`,
+         quindi è alto zero e non sposta niente. Non deve prendere `transform`,
+         `filter` o `contain`: diventerebbe il blocco contenitore della navbar,
+         che smetterebbe di essere ancorata alla finestra. -->
+    <header>
+    <nav class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="/Ricettario/" class="navbar__logo" data-link>
+                <div class="navbar__logo-icon">
+                    <img src="/Ricettario/assets/wheat-logo-TzPQBXOF.svg" alt="" aria-hidden="true" width="40" height="56">
+                </div>
+
+                <span>Ricettario Lab</span>
+            </a>
+
+            <ul class="navbar__links" id="nav-links">
+                <li><a href="#ricette" data-nav-section="ricette" class="active">Ricette</a></li>
+                <!-- Route vere, non ancore: il router le intercetta come link interni.
+                     La vetrina #strumenti resta in homepage; la voce di menu porta
+                     all'hub /strumenti/ con le schede complete, come Cottura. -->
+                <li><a href="/Ricettario/cottura/">Cottura</a></li>
+                <li><a href="/Ricettario/strumenti/">Strumenti</a></li>
+                <li><a href="#chi-sono" data-nav-section="chi-sono">Chi Sono</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+                <span class="theme-toggle__icon theme-toggle__sun"><i data-lucide="sun"></i></span>
+                <span class="theme-toggle__icon theme-toggle__moon"><i data-lucide="moon"></i></span>
+            </button>
+
+            <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    </header>
+
+    <!-- ═══════════ SPA CONTAINER ═══════════ -->
+    <!-- Il router carica dinamicamente il contenuto qui -->
+    <!-- ═══════════ CONTENUTO PRINCIPALE ═══════════
+         `main` avvolge il contenitore #app invece di sostituirlo. Il tag di
+         apertura e quello di chiusura di #app, con il commento che lo segue,
+         sono portanti in tre punti: generate-og.js li cerca per iniettare il
+         contenuto pre-renderizzato e si ferma con "template incompatibile" se
+         non li trova, e verifica-build.js ci estrae il testo visibile per
+         confrontarlo con i dati strutturati. Rinominare quel tag li avrebbe
+         rotti tutti e tre.
+
+         `tabindex="-1"` non è decorativo: senza, lo skip link porta la pagina
+         quaggiù ma lascia il focus della tastiera dov'era, e il tasto dopo
+         riparte dalla navbar. Con -1 l'elemento riceve il focus da programma
+         pur restando fuori dall'ordine di tabulazione. -->
+    <main id="contenuto" tabindex="-1">
+    <div id="app">
+
+    <div class="container container--narrow strumento">
+      <nav class="breadcrumb">
+        <a href="/Ricettario/" data-link>Home</a>
+        <span class="breadcrumb__separator">›</span>
+        <a href="/Ricettario/strumenti/" data-link>Strumenti</a>
+        <span class="breadcrumb__separator">›</span>
+        <span class="breadcrumb__current">Sirman C-Tronic 6 VT</span>
+      </nav>
+
+      <div class="strumento__testata">
+        <div class="strumento__tipo">Cutter professionale</div>
+        <h1 class="strumento__titolo">Sirman C-Tronic 6 VT</h1>
+      </div>
+      
+      <div class="strumento__intro">
+        <p>Il Sirman C-Tronic 6 VT è un cutter professionale da banco con vasca in acciaio inox 18/10 da 5,3 litri (capacità utile 3,1 litri) e fondo termico. Il motore ventilato da 600 W è affiancato alla vasca, non sotto: una scelta costruttiva che isola il prodotto dal calore, un vantaggio concreto per carni, erbe e preparazioni delicate. La sigla VT indica il Variotronic, il variatore che regola la velocità in continuo da 600 a 2.300 giri/min e la stabilizza sotto carico; il coperchio trasparente in Tritan ha un foro per aggiungere ingredienti a macchina in moto, e i comandi si riducono a tre pulsanti — ON, OFF, PULSE — più la manopola della velocità.</p>
+        <p>Il cuore del sistema è il mozzo estraibile: di serie monta lame curve lisce in acciaio temprato da coltelleria, ma si sfila e si sostituisce in pochi gesti con i mozzi opzionali della gamma — Piranha, lame dentate, lame forate, mozzo per pesto e mozzo per impasti. Ogni mozzo lavora in modo diverso: il filo liscio taglia, il seghettato morde i prodotti duri, il forato incorpora aria senza tagliare, il mozzo impasti amalgama, quello per pesto lavora le erbe in fretta per non scaldarle. Questa scheda documenta i cinque mozzi utili al ricettario, con usi, consigli, errori da evitare e il criterio per scegliere quello giusto.</p>
+      </div>
+      
+      <h2 class="strumento__sezione-titolo">Scheda tecnica</h2>
+      <dl class="strumento__specifiche">
+        
+        <div class="strumento__spec">
+          <dt class="strumento__spec-voce">Modello / codice</dt>
+          <dd class="strumento__spec-valore">Sirman C-Tronic 6 VT, cod. 40780622S (versione CE 230 V); VT = Variotronic, variatore di velocità stabilizzato</dd>
+        </div>
+        <div class="strumento__spec">
+          <dt class="strumento__spec-voce">Potenza</dt>
+          <dd class="strumento__spec-valore">600 W / 0,8 HP</dd>
+        </div>
+        <div class="strumento__spec">
+          <dt class="strumento__spec-voce">Alimentazione</dt>
+          <dd class="strumento__spec-valore">230 V / 50 Hz monofase; richiesti impianto con messa a terra e interruttore differenziale da 0,03 A</dd>
+        </div>
+        <div class="strumento__spec">
+          <dt class="strumento__spec-voce">Giri/min</dt>
+          <dd class="strumento__spec-valore">600–2.300, regolazione continua con variatore stabilizzato Variotronic</dd>
+        </div>
+        <div class="strumento__spec">
+          <dt class="strumento__spec-voce">Capacità vasca</dt>
+          <dd class="strumento__spec-valore">5,3 litri totali</dd>
+        </div>
+        <div class="strumento__spec">
+          <dt class="strumento__spec-voce">Capacità utile</dt>
+          <dd class="strumento__spec-valore">3,1 litri dichiarati da Sirman; il manuale prescrive comunque di non riempire la vasca oltre metà</dd>
+        </div>
+        <div class="strumento__spec">
+          <dt class="strumento__spec-voce">Dimensioni</dt>
+          <dd class="strumento__spec-valore">Ingombro 251×457×362 mm</dd>
+        </div>
+        <div class="strumento__spec">
+          <dt class="strumento__spec-voce">Peso</dt>
+          <dd class="strumento__spec-valore">14,5 kg netto (17 kg con imballo)</dd>
+        </div>
+        <div class="strumento__spec">
+          <dt class="strumento__spec-voce">Vasca</dt>
+          <dd class="strumento__spec-valore">Acciaio inox 18/10 con fondo termico e manici; vasca e motore affiancati per isolare il prodotto dal calore</dd>
+        </div>
+        <div class="strumento__spec">
+          <dt class="strumento__spec-voce">Coperchio</dt>
+          <dd class="strumento__spec-valore">Tritan trasparente, con foro per l’aggiunta di ingredienti durante la lavorazione</dd>
+        </div>
+        <div class="strumento__spec">
+          <dt class="strumento__spec-voce">Lame</dt>
+          <dd class="strumento__spec-valore">Coltelli a lame curve in acciaio temprato da coltelleria (AISI 420 secondo il manuale), su mozzo estraibile per la pulizia</dd>
+        </div>
+        <div class="strumento__spec">
+          <dt class="strumento__spec-voce">Comandi</dt>
+          <dd class="strumento__spec-valore">Pulsanti ON, OFF, PULSE e manopola di regolazione velocità; comandi in acciaio con protezione IP67</dd>
+        </div>
+        <div class="strumento__spec">
+          <dt class="strumento__spec-voce">Sicurezze</dt>
+          <dd class="strumento__spec-valore">Microinterruttore codificato che arresta la macchina alla rimozione del coperchio e ne impedisce il riavvio finché non è richiuso; relè con riarmo volontario dopo un black-out; coperchio rimovibile solo ruotando la leva di blocco vasca; arresto automatico dopo 30 secondi di uso alla velocità minima</dd>
+        </div>
+        <div class="strumento__spec">
+          <dt class="strumento__spec-voce">Dotazione (versione VT)</dt>
+          <dd class="strumento__spec-valore">Mozzo con lame lisce, spatola e manuale d’uso; il raschiatore interno con spatola è previsto per la versione VT ma sulla scheda ufficiale Sirman compare fra gli accessori: verifica la dotazione effettiva all’acquisto. Mozzi con lame speciali (Piranha, dentate, forate, pesto, impasti) disponibili come accessori</dd>
+        </div>
+      </dl>
+      
+      <h2 class="strumento__sezione-titolo">Le lame: quale mozzo per cosa</h2>
+      
+      <section class="lama" id="lama-lisce">
+        <div class="lama__testata">
+          <h3 class="lama__nome">Mozzo con lame lisce</h3>
+          <span class="lama__badge">Di serie</span>
+        </div>
+        <p class="lama__descrizione">Il mozzo di serie monta lame curve a filo liscio in acciaio temprato da coltelleria. Il filo liscio — detto anche «tagliente» — produce un taglio netto e risultati omogenei: è la lama universale del cutter, quella con cui regolando velocità e durata passi dal battuto rustico all’omogeneizzato fine. Taglia con facilità anche i filamenti e i nervi della carne cruda, e la costruzione della macchina — vasca affiancata al motore, fondo termico — mantiene il prodotto più freddo che in altri cutter.</p>
+        
+        <h4 class="lama__lista-titolo">Cosa ci fai</h4>
+        <ul class="lama__lista">
+          <li>Salse, pesti e tritati in genere: le preparazioni indicate da Sirman e dai rivenditori per il mozzo di serie.</li>
+          <li>Carne cruda tritata: il filo liscio taglia di netto filamenti e nervi, ed è la lama d’elezione per i triti di carne.</li>
+          <li>Verdure e cipolle: taglio netto senza sfibrare il prodotto.</li>
+          <li>Triti grossolani, emulsioni e omogeneizzati a texture fine, regolando velocità e durata della lavorazione.</li>
+          <li>Ridurre in purea solidi cotti (verdure stufate, legumi): qui serve una lama che taglia, non una che aera.</li>
+          <li>Omogeneizzati e preparazioni per bambini o anziani.</li>
+        </ul>
+        
+        <h4 class="lama__lista-titolo">Tecnica e consigli</h4>
+        <ul class="lama__lista">
+          <li>Regola la velocità in base all’ingrediente: il variatore lavora tra 600 e 2.300 giri/min e il Variotronic stabilizza i giri sotto carico, utile anche con prodotti volatili e leggeri.</li>
+          <li>Lavora a impulsi brevi per triti ed erbe aromatiche: il comando PULSE evita di disperdere gli oli essenziali e di surriscaldare il composto.</li>
+          <li>Usa il funzionamento continuo a velocità crescente solo per emulsioni e omogeneizzati fini, aggiungendo i liquidi dal foro del coperchio in Tritan senza fermare la macchina.</li>
+          <li>Non sovraccaricare la vasca: inserisci gradualmente prodotti già ridotti in pezzi, restando entro la capacità utile di 3,1 litri sui 5,3 totali.</li>
+          <li>Per i prodotti che aderiscono alle pareti sfrutta il raschiatore interno con spatola, previsto per la versione VT (sulla scheda ufficiale compare fra gli accessori: verifica se la tua macchina lo ha in dotazione).</li>
+          <li>Usa solo mozzi e ricambi originali Sirman: lame di altri marchi possono causare malfunzionamenti o pericoli.</li>
+        </ul>
+        
+        <h4 class="lama__lista-titolo">Errori da evitare</h4>
+        <ul class="lama__lista">
+          <li>Uso continuo prolungato: senza impulsi il trito si scalda, perde gli oli essenziali e «diventa crema» quando non dovrebbe.</li>
+          <li>Lavorazioni lunghe su prezzemolo ed erbe delicate: il problema non è il filo liscio in sé ma il tempo in macchina e il surriscaldamento — procedi a impulsi brevissimi o, per i pesti, passa al mozzo dedicato.</li>
+          <li>Prodotti duri come frutta secca, cioccolato e sale: rovinano più in fretta il filo liscio; per le granelle esiste il mozzo a lame dentate.</li>
+          <li>Cercare di montare a spuma (maionese, panna, mousse) con la lama liscia: per incorporare aria servono le lame forate, prive di filo.</li>
+          <li>Impastare con le lame lisce: per frolle, brisée e composti da forno c’è il mozzo per impasti, non tagliente.</li>
+          <li>Lavare il mozzo in modo aggressivo o maneggiarlo senza cautela: i componenti ferrosi si ossidano e le lame sono affilatissime — lavaggio manuale delicato e guanti.</li>
+        </ul>
+        <p class="lama__quando"><strong>Quando scegliere questa e non le altre:</strong> Scegli le lisce quando vuoi un taglio netto e una texture controllabile, dal trito grossolano all’omogeneizzato fine: sono la lama universale e l’unica indicata per la carne cruda. Passa al dentato quando l’ingrediente è duro e il risultato può restare rustico, alle forate quando il composto deve incorporare aria. Per pesti di erbe e impasti esistono i mozzi dedicati, che fanno quel lavoro meglio.</p>
+        
+        <h4 class="lama__lista-titolo">Dal ricettario</h4>
+        <ul class="lama__ricette">
+          
+          <li>
+            <a href="/Ricettario/ricette/condimenti/crema-di-peperoni/" data-link>Crema di Peperoni</a>
+            <span class="lama__ricetta-nota"> — Le lame lisce ad alta velocità frullano i peperoni stufati con il basilico in un'emulsione liscia e brillante, come al frullatore.</span>
+          </li>
+          <li>
+            <a href="/Ricettario/ricette/conserve/dado-vegetale-fatto-in-casa/" data-link>Dado Vegetale Fatto in Casa</a>
+            <span class="lama__ricetta-nota"> — Le lame lisce tritano in un attimo le verdure crude e, dopo la cottura, riducono la massa in una purea perfettamente liscia.</span>
+          </li>
+          <li>
+            <a href="/Ricettario/ricette/conserve/dado-vegetale-granulare/" data-link>Dado Vegetale Granulare</a>
+            <span class="lama__ricetta-nota"> — Le lame lisce frullano a massima velocità le verdure crude con sale, erbe e olio fino a una purea fine e omogenea.</span>
+          </li>
+          <li>
+            <a href="/Ricettario/ricette/condimenti/pesto-di-barbabietola/" data-link>Pesto di Barbabietola</a>
+            <span class="lama__ricetta-nota"> — Le lame lisce riducono la barbabietola cotta in purea fine ed emulsionano l'olio a filo, con pause per spatolare le pareti.</span>
+          </li>
+          <li>
+            <a href="/Ricettario/ricette/condimenti/pesto-di-zucchine/" data-link>Pesto di Zucchine a Freddo</a>
+            <span class="lama__ricetta-nota"> — Le lame lisce, nel boccale raffreddato, tritano a impulsi la polpa di zucchine strizzata e incorporano l'olio a filo a freddo.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="lama" id="lama-dentate">
+        <div class="lama__testata">
+          <h3 class="lama__nome">Mozzo con lame dentate</h3>
+          <span class="lama__badge">Accessorio — SKU MSC06AMOZ</span>
+        </div>
+        <p class="lama__descrizione">Mozzo di ricambio con lame seghettate a profilo a «S», progettato per i cutter Sirman C6 VV e C-Tronic 6 VT. Si monta al posto del mozzo di serie in pochi gesti ed è dedicato alla tritatura grossolana degli ingredienti di consistenza dura: il profilo seghettato morde frutta secca, cioccolato e sale senza rovinarsi, là dove il filo liscio si consumerebbe in fretta. Il risultato tipico è una granella rustica, non un trito fine e definito.</p>
+        
+        <h4 class="lama__lista-titolo">Cosa ci fai</h4>
+        <ul class="lama__lista">
+          <li>Tritatura grossolana di ingredienti duri: è la funzione con cui il mozzo viene identificato dalle schede di settore.</li>
+          <li>Frutta secca: noci, mandorle e nocciole ridotte in granella.</li>
+          <li>Cioccolato da spezzare in granella (per incorporare cioccolato fuso in composti montati servono invece le lame forate).</li>
+          <li>Sale e altri ingredienti duri e asciutti.</li>
+          <li>Granelle rustiche e irregolari per dolci e croccanti, quando non serve un risultato molto definito.</li>
+        </ul>
+        
+        <h4 class="lama__lista-titolo">Tecnica e consigli</h4>
+        <ul class="lama__lista">
+          <li>Regola la velocità sull’ingrediente: il Variotronic stabilizza i giri scelti nella gamma 600–2.300 giri/min.</li>
+          <li>Lavora a impulsi brevi e fermati appena raggiungi la granella desiderata: prolungando, la frutta secca si scalda e trasuda l’olio.</li>
+          <li>Per preparazioni sensibili al calore alterna impulsi brevi e pause, con ingredienti ben freddi; nei casi estremi raffredda prima lame e vasca.</li>
+          <li>Non superare la capacità utile di 3,1 litri e inserisci gradualmente ingredienti già ridotti di dimensione.</li>
+          <li>Controlla periodicamente l’usura delle lame: il lavoro frequente su alimenti duri le consuma prima; quando la resa cala, rivolgiti al ricambio originale.</li>
+          <li>Usa solo ricambi dello stesso marchio della macchina per evitare malfunzionamenti.</li>
+        </ul>
+        
+        <h4 class="lama__lista-titolo">Errori da evitare</h4>
+        <ul class="lama__lista">
+          <li>Chiedere alla dentata un risultato fine e definito: per texture fini, emulsioni e omogeneizzati servono le lame lisce o le forate.</li>
+          <li>Usarla per impastare: nonostante qualche catalogo lo suggerisca, per gli impasti esiste il mozzo dedicato non tagliente, che non strappa la maglia glutinica.</li>
+          <li>Lavorazione continua prolungata su preparazioni verdi o sensibili: il calore favorisce ossidazione e annerimento — meglio impulsi con pause.</li>
+          <li>Sovraccaricare la vasca o inserire pezzi troppo grandi tutti insieme invece che gradualmente.</li>
+          <li>Trascurare l’usura delle lame o montare lame di marchi diversi dalla macchina.</li>
+        </ul>
+        <p class="lama__quando"><strong>Quando scegliere questa e non le altre:</strong> Scegli il dentato quando l’ingrediente è duro e il risultato può essere rustico: granelle di noci e mandorle, cioccolato spezzato, sale. Il profilo seghettato lavora questi prodotti senza rovinarsi, mentre il filo liscio ne uscirebbe consumato. Se invece cerchi un trito fine o un’emulsione torna alle lisce; se devi montare o aerare, passa alle forate.</p>
+        
+        <h4 class="lama__lista-titolo">Dal ricettario</h4>
+        <ul class="lama__ricette">
+          
+          <li>
+            <a href="/Ricettario/ricette/conserve/dado-vegetale-granulare/" data-link>Dado Vegetale Granulare</a>
+            <span class="lama__ricetta-nota"> — Le lame dentate polverizzano a scatti la lastra essiccata, dura e friabile, nel boccale pulito e asciutto.</span>
+          </li>
+          <li>
+            <a href="/Ricettario/ricette/condimenti/pesto-pomodori-secchi-mandorle-basilico/" data-link>Pesto di Pomodori Secchi, Mandorle e Basilico</a>
+            <span class="lama__ricetta-nota"> — Le lame dentate riducono a impulsi mandorle e pomodori secchi in granella rustica; basilico, pecorino e olio seguono nello stesso boccale.</span>
+          </li>
+          <li>
+            <a href="/Ricettario/ricette/condimenti/salsa-alle-noci/" data-link>Salsa alle Noci</a>
+            <span class="lama__ricetta-nota"> — Le lame dentate macinano le noci a impulsi brevi senza farne trasudare l'olio; mollica, Parmigiano e olio a filo nello stesso boccale.</span>
+          </li>
+          <li>
+            <a href="/Ricettario/ricette/condimenti/salsa-verde-tradizionale/" data-link>Salsa Verde Tradizionale</a>
+            <span class="lama__ricetta-nota"> — Le lame dentate tritano a scatti brevi prezzemolo, mollica acetata, capperi, acciughe e tuorli sodi fino a grana fine ma rustica.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="lama" id="lama-forate">
+        <div class="lama__testata">
+          <h3 class="lama__nome">Mozzo con lame forate</h3>
+          <span class="lama__badge">Accessorio — SKU MSC06AMOF</span>
+        </div>
+        <p class="lama__descrizione">Mozzo intercambiabile con lame a profilo a «S» dalla superficie liscia attraversata da fori per l’aerazione. Le lame non hanno filo tagliente: non tritano, incorporano aria ed emulsionano. È il mozzo delle montate e delle salse spumose — maionese, panna, albumi, mousse — e va scelto ogni volta che il risultato desiderato è aria nel composto, non taglio.</p>
+        
+        <h4 class="lama__lista-titolo">Cosa ci fai</h4>
+        <ul class="lama__lista">
+          <li>Albumi a neve e meringhe.</li>
+          <li>Panna montata.</li>
+          <li>Maionese e salse emulsionate, inclusa la salsa rosa: è l’uso più citato in assoluto per questo mozzo.</li>
+          <li>Creme, mousse e salse a consistenza spumosa.</li>
+          <li>Vinaigrette e altre emulsioni.</li>
+          <li>Rifinire e alleggerire miscele già fluide, o incorporare cioccolato fuso in composti montati: lavori di mescola e aerazione, non di taglio.</li>
+        </ul>
+        
+        <h4 class="lama__lista-titolo">Tecnica e consigli</h4>
+        <ul class="lama__lista">
+          <li>Parti dalla velocità più bassa e sali progressivamente con il Variotronic: la versione VT è pensata proprio per i prodotti volatili o che tendono ad attaccarsi alle pareti, e il raschiatore interno con spatola previsto per la VT tiene pulita la vasca durante la lavorazione.</li>
+          <li>Panna ben fredda di frigorifero e vasca fredda: il freddo aiuta il grasso a trattenere l’aria, e la costruzione con motore affiancato alla vasca isola già il prodotto dal calore.</li>
+          <li>Monta a vista, controllando spesso: nel cutter la montatura è molto rapida e il rischio di smontare la panna in burro è alto.</li>
+          <li>Per gli albumi usa uova a temperatura ambiente e vasca e lame perfettamente sgrassate.</li>
+          <li>Per la maionese versa l’olio a filo dal foro del coperchio in Tritan senza fermare la macchina.</li>
+          <li>Rispetta la capacità utile di 3,1 litri: le montate aumentano di volume durante la lavorazione.</li>
+        </ul>
+        
+        <h4 class="lama__lista-titolo">Errori da evitare</h4>
+        <ul class="lama__lista">
+          <li>Usare le forate per tritare o tagliare: senza filo il risultato è solo un composto mescolato, non un trito.</li>
+          <li>Montare panna a temperatura ambiente o tiepida: non monta correttamente.</li>
+          <li>Prolungare troppo la montatura della panna: diventa granulosa, si separa e si trasforma in burro.</li>
+          <li>Partire subito alla massima velocità: la struttura della montata si rovina — con il Variotronic conviene salire per gradi.</li>
+          <li>Montare albumi in vasca con residui di grasso o tracce di tuorlo: anche una traccia minima impedisce la montatura.</li>
+          <li>Superare la capacità utile di 3,1 litri, dimenticando che le montate crescono di volume.</li>
+        </ul>
+        <p class="lama__quando"><strong>Quando scegliere questa e non le altre:</strong> Scegli le forate ogni volta che il risultato deve essere spumoso o emulsionato: montare e aerare, non tagliare. Per ridurre in purea solidi cotti o tritare servono lame con il filo — lisce o dentate a seconda dell’ingrediente. Per amalgamare un impasto c’è invece il mozzo dedicato, anch’esso senza filo ma costruito per compattare, non per incorporare aria.</p>
+        
+        <h4 class="lama__lista-titolo">Dal ricettario</h4>
+        <ul class="lama__ricette">
+          
+          <li>
+            <a href="/Ricettario/ricette/condimenti/caesar-dressing/" data-link>Caesar Dressing</a>
+            <span class="lama__ricetta-nota"> — Le lame forate riducono in crema le acciughe e montano l'emulsione con l'olio a filo; acidi e Parmigiano entrano nello stesso boccale.</span>
+          </li>
+          <li>
+            <a href="/Ricettario/ricette/condimenti/maionese/" data-link>Maionese</a>
+            <span class="lama__ricetta-nota"> — L'emulsione di tuorli e olio si monta con le lame forate, versando l'olio a filo dal foro del coperchio a velocità costante.</span>
+          </li>
+          <li>
+            <a href="/Ricettario/ricette/condimenti/salsa-cocktail-rosa-artigianale/" data-link>Salsa Cocktail (Salsa Rosa)</a>
+            <span class="lama__ricetta-nota"> — Le lame forate montano la maionese di base, ferma e setosa, con l'olio a filo; il resto della salsa si assembla a mano.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="lama" id="lama-impasti">
+        <div class="lama__testata">
+          <h3 class="lama__nome">Mozzo per impasti</h3>
+          <span class="lama__badge">Accessorio — SKU MSC06AMOI</span>
+        </div>
+        <p class="lama__descrizione">Mozzo intercambiabile con lame lisce sfalsate a «S» prive di filo tagliente, progettate per impastare invece che tagliare: la scheda ufficiale Sirman lo indica per «elaborazioni specifiche di composti e miscele». È uno dei due mozzi senza filo della gamma — l’altro è il forato, dedicato però ad aerare, non ad amalgamare — e si sceglie quando l’obiettivo è compattare un impasto senza sminuzzarne gli ingredienti. Si innesta al posto del mozzo di serie e si sostituisce rapidamente con gli altri.</p>
+        
+        <h4 class="lama__lista-titolo">Cosa ci fai</h4>
+        <ul class="lama__lista">
+          <li>Impastare paste per prodotti da forno di vario tipo: è l’uso dichiarato del ricambio.</li>
+          <li>Elaborazioni specifiche di composti e miscele, secondo la descrizione ufficiale Sirman.</li>
+          <li>Pasta frolla con metodo sabbiato: farina e zucchero in vasca, burro freddo a pezzetti a bassa velocità fino al composto «a fiocchi», poi i tuorli a motore in moto fino a formatura.</li>
+          <li>Sabbiatura rapida a impulsi: pochi secondi fino alla consistenza di sabbia, base di frolle e brisée.</li>
+          <li>Impasti di pizza, pane, dolci e pasta fresca, amalgamati in modo uniforme secondo le guide di settore.</li>
+          <li>In generale, amalgamare basi e composti in modo rapido e omogeneo.</li>
+        </ul>
+        
+        <h4 class="lama__lista-titolo">Tecnica e consigli</h4>
+        <ul class="lama__lista">
+          <li>Impasta alla velocità minima: la regolazione continua del Variotronic parte da 600 giri/min, ed è lì che va tenuta per gli impasti.</li>
+          <li>Ingredienti freddi: per la frolla burro freddo di frigorifero a pezzetti; il motore affiancato alla vasca e il fondo termico aiutano a non scaldare la massa.</li>
+          <li>Lavora a impulsi brevi nella fase di sabbiatura, poi in continuo a bassa velocità solo finché l’impasto si compatta.</li>
+          <li>Aggiungi i liquidi — ad esempio i tuorli — uno alla volta dal foro del coperchio in Tritan, con il motore in moto, aspettando che l’impasto si formi.</li>
+          <li>Rispetta la capacità utile di 3,1 litri e inserisci gli ingredienti gradualmente, senza sovraccaricare.</li>
+          <li>Con le paste burrose fermati appena l’impasto si forma: finisci velocemente a mano sulla spianatoia e fai riposare in frigorifero prima di stendere.</li>
+        </ul>
+        
+        <h4 class="lama__lista-titolo">Errori da evitare</h4>
+        <ul class="lama__lista">
+          <li>Lavorare troppo a lungo e surriscaldare l’impasto: la frolla va lavorata il minimo necessario, altrimenti perde friabilità.</li>
+          <li>Usare burro a temperatura ambiente invece che freddo di frigorifero: la tecnica a freddo nel robot serve proprio a non scaldare la massa.</li>
+          <li>Montare la lama sbagliata: le lame lisce da taglio di serie sono destinate a salse, pesti e tritati, non agli impasti.</li>
+          <li>Superare la capacità utile della vasca o versare tutti gli ingredienti in una volta.</li>
+          <li>Impastare a velocità elevate: le alte velocità del cutter servono per tritare ed emulsionare, non per impastare.</li>
+          <li>Saltare il riposo in frigorifero delle paste burrose prima di stenderle: è un passaggio necessario per crostate e biscotti.</li>
+        </ul>
+        <p class="lama__quando"><strong>Quando scegliere questa e non le altre:</strong> Scegli questo mozzo quando l’obiettivo è amalgamare e impastare senza sminuzzare: frolle, brisée, basi da forno. Come il forato non ha filo tagliente, ma lavora all’opposto: le lame sfalsate compattano l’impasto invece di incorporare aria. Se devi tritare o ridurre in purea torna alle lame con il filo; se devi montare, passa alle forate.</p>
+        
+        <h4 class="lama__lista-titolo">Dal ricettario</h4>
+        <ul class="lama__ricette">
+          
+          <li>
+            <a href="/Ricettario/ricette/dolci/cantuccini-di-prato/" data-link>Cantuccini di Prato</a>
+            <span class="lama__ricetta-nota"> — Il mozzo per impasti amalgama uova e zucchero, poi farina e burro in una lavorazione lampo senza scaldare; le mandorle si uniscono a mano.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="lama" id="lama-pesto">
+        <div class="lama__testata">
+          <h3 class="lama__nome">Mozzo per pesto</h3>
+          <span class="lama__badge">Accessorio — SKU MSC06AMOP.22</span>
+        </div>
+        <p class="lama__descrizione">Mozzo intercambiabile con quattro lame lisce dedicate a pesto, hummus ed emulsioni fredde a base di erbe, compatibile con la serie C-Tronic. Monta 4 lame, più del mozzo standard: a parità di risultato lavora il prodotto più in fretta, riducendo il tempo in macchina e quindi il surriscaldamento — la variabile decisiva per il basilico, che annerisce con calore e ossigeno. Si innesta e si sostituisce rapidamente al posto degli altri mozzi.</p>
+        
+        <h4 class="lama__lista-titolo">Cosa ci fai</h4>
+        <ul class="lama__lista">
+          <li>Pesto alla genovese e pesti di erbe: è l’uso per cui il mozzo è progettato — le quattro lame lavorano il basilico rapidamente senza surriscaldarlo.</li>
+          <li>Hummus e creme di legumi.</li>
+          <li>Altre emulsioni e salse fredde omogenee a base di erbe.</li>
+          <li>Preparazioni in sequenza sulla stessa macchina: il mozzo si scambia in pochi gesti con lisce, dentate, forate e mozzo impasti.</li>
+        </ul>
+        
+        <h4 class="lama__lista-titolo">Tecnica e consigli</h4>
+        <ul class="lama__lista">
+          <li>Lavora a impulsi, mai in rotazione continua prolungata: preservi gli oli essenziali del basilico ed eviti che il trito diventi crema.</li>
+          <li>Parti dalla velocità più bassa del Variotronic (la gamma è 600–2.300 giri/min) e procedi a scatti brevi con pause, così la temperatura del composto non sale.</li>
+          <li>Tutto freddo: olio extravergine tenuto in frigorifero, vasca e lame raffreddate prima dell’uso; durante una pausa puoi aggiungere un cubetto di ghiaccio per tenere bassa la temperatura.</li>
+          <li>Segui l’ordine professionale: trita pinoli e formaggio a parte, basilico e aglio a parte, unisci tutto in vasca aggiungendo l’olio per ultimo; poi mescola delicatamente eliminando le bolle d’aria.</li>
+          <li>Scegli foglie di basilico piccole e tenere e non sciacquarle sotto l’acqua: tamponale con un panno inumidito.</li>
+          <li>Copri il pesto finito con un velo d’olio per isolarlo dall’ossigeno; consumalo fresco o conservalo ben chiuso in frigorifero per 2-3 giorni.</li>
+        </ul>
+        
+        <h4 class="lama__lista-titolo">Errori da evitare</h4>
+        <ul class="lama__lista">
+          <li>Rotazione continua troppo a lungo: surriscalda il composto, disperde gli oli essenziali e trasforma il trito in una crema indistinta.</li>
+          <li>Calore più ossigeno: attivano la polifenolossidasi che fa annerire il basilico — è l’errore numero uno del pesto a macchina.</li>
+          <li>Ingredienti e attrezzatura a temperatura ambiente: olio non refrigerato, vasca e lame calde alzano subito la temperatura del composto.</li>
+          <li>Usare il mozzo sbagliato: le dentate sono per i prodotti duri e danno un risultato grossolano, le forate incorporano aria — nessuna delle due è adatta al pesto.</li>
+          <li>Sciacquare le foglie di basilico sotto l’acqua corrente: le danneggia e ne accelera il deterioramento.</li>
+          <li>Sovraccaricare la vasca oltre la capacità utile di 3,1 litri.</li>
+        </ul>
+        <p class="lama__quando"><strong>Quando scegliere questa e non le altre:</strong> Scegli il mozzo pesto per i pesti di basilico, l’hummus e le salse fredde a base di erbe: le quattro lame riducono il tempo di lavorazione, cioè il calore, che è il vero nemico delle erbe delicate. Con il mozzo lisce di serie un pesto riesce solo a impulsi brevissimi e con tutto ben freddo; qui il margine di errore è molto più ampio. Per granelle di frutta secca serve il dentato, per montare le forate.</p>
+        
+        <h4 class="lama__lista-titolo">Dal ricettario</h4>
+        <ul class="lama__ricette">
+          
+          <li>
+            <a href="/Ricettario/ricette/condimenti/pesto-alla-genovese-tradizionale/" data-link>Pesto alla Genovese Tradizionale</a>
+            <span class="lama__ricetta-nota"> — Alternativa al mortaio: mozzo per pesto con boccale e lame ben freddi e impulsi brevi, per un basilico che non si ossida.</span>
+          </li>
+          <li>
+            <a href="/Ricettario/ricette/condimenti/pesto-alla-siciliana/" data-link>Pesto alla Siciliana</a>
+            <span class="lama__ricetta-nota"> — Tutta la lavorazione avviene nel boccale: il mozzo per pesto trita a impulsi la base secca, poi emulsiona ricotta e olio a filo.</span>
+          </li>
+          <li>
+            <a href="/Ricettario/ricette/condimenti/pesto-di-fave-maro/" data-link>Pesto di Fave (Marò)</a>
+            <span class="lama__ricetta-nota"> — Il mozzo per pesto a impulsi brevissimi dà la crema di fave granulosa senza ossidarla; la mantecatura resta fuori dal boccale.</span>
+          </li>
+          <li>
+            <a href="/Ricettario/ricette/condimenti/pesto-di-pistacchi-artigianale/" data-link>Pesto di Pistacchi Siciliano</a>
+            <span class="lama__ricetta-nota"> — Il mozzo per pesto trita a impulsi pistacchi, formaggi e aromi, poi incorpora a bassa velocità olio a filo e acqua ghiacciata.</span>
+          </li>
+          <li>
+            <a href="/Ricettario/ricette/condimenti/pesto-rucola-artigianale/" data-link>Pesto di Rucola Artigianale</a>
+            <span class="lama__ricetta-nota"> — Con boccale e lame freddi, il mozzo per pesto trita a impulsi pinoli e aglio, poi rucola e formaggi, ed emulsiona l'olio a filo.</span>
+          </li>
+        </ul>
+      </section>
+      
+      
+      <h2 class="strumento__sezione-titolo">Pulizia e manutenzione</h2>
+      <ul class="strumento__lista">
+        <li>Prima di qualsiasi pulizia o manutenzione porta la manopola della velocità al minimo e scollega la spina dalla presa, isolando completamente la macchina.</li>
+        <li>Pulisci la macchina almeno una volta al giorno — più spesso se serve — con detergenti neutri a temperatura ambiente e un panno morbido, con cura particolare per le parti a contatto con gli alimenti.</li>
+        <li>Vasca, coperchio e mozzo lame sono estraibili: ruota la leva di chiusura, togli il coperchio e sfila verso l’alto mozzo e vasca; lavali con acqua e detergente neutro indossando guanti protettivi, perché le lame tagliano.</li>
+        <li>Il lavaggio del mozzo dev’essere manuale e delicato: detergenti aggressivi o spugne abrasive favoriscono l’ossidazione dei componenti ferrosi.</li>
+        <li>Non lavare il cutter né i suoi componenti in lavastoviglie; niente idropulitrici, getti d’acqua in pressione, spazzole o utensili che possano danneggiare le superfici.</li>
+        <li>Evita che liquidi residui penetrino nel corpo macchina (rischio di guasti e folgorazione) e asciuga accuratamente tutte le parti prima di rimontarle.</li>
+        <li>Controlla regolarmente lo stato del cavo di alimentazione: se danneggiato o usurato, fallo sostituire dal Centro Assistenza.</li>
+        <li>La cinghia di trasmissione non richiede regolazioni: indicativamente va sostituita dopo 3-4 anni rivolgendosi al Centro Assistenza.</li>
+        <li>Piedini deteriorati o che perdono elasticità riducono la stabilità del cutter: falli sostituire dal Centro Assistenza.</li>
+        <li>Ogni intervento non previsto dal manuale va affidato al Centro Assistenza, pena il decadimento della garanzia.</li>
+      </ul>
+      
+      <h2 class="strumento__sezione-titolo">Sicurezza</h2>
+      <ul class="strumento__lista">
+        <li>La macchina va usata solo da chi conosce le istruzioni di sicurezza del manuale; chi è nuovo all’uso va formato prima.</li>
+        <li>Non introdurre mai dita o utensili nella vasca con la macchina in funzione.</li>
+        <li>Carica gli alimenti solo a motore fermo e con la manopola della velocità al minimo; riduci prima a pezzi piccoli gli alimenti grandi, senza toccare le lame.</li>
+        <li>Non riempire la vasca oltre la metà.</li>
+        <li>Non lavorare prodotti congelati, carne o pesce con ossa o lische, né prodotti non alimentari.</li>
+        <li>Non usare il cutter a bassa velocità per periodi prolungati: un dispositivo arresta la macchina dopo 30 secondi alla velocità minima per proteggere il motore; lasciala poi riposare almeno 30 secondi.</li>
+        <li>Sicurezze attive: il microinterruttore codificato ferma la macchina se togli il coperchio e ne impedisce il riavvio finché non è richiuso; dopo un black-out un relè richiede il riarmo volontario; il coperchio si rimuove solo ruotando la leva di blocco vasca.</li>
+        <li>Indossa guanti protettivi quando maneggi le lame durante carico e pulizia: contusioni e tagli sono i rischi residui segnalati dal costruttore.</li>
+        <li>Collega la macchina a rete 230 V / 50 Hz con impianto di terra efficiente e interruttore differenziale da 0,03 A; interruttore generale e cavo devono restare accessibili durante l’uso.</li>
+        <li>Installa il cutter su un piano liscio, asciutto, antiscivolo e robusto, ad altezza di circa 80 cm, in ambiente tra +5 e +35 °C con umidità non salina massima del 75%.</li>
+        <li>In caso di malfunzionamento reale o presunto non usare la macchina e non tentare riparazioni in proprio: contatta il Centro Assistenza; manomissioni e ricambi non originali sollevano il costruttore da ogni responsabilità.</li>
+        <li>Prima dell’uso verifica integrità e funzionamento dei comandi: pulsanti ON/OFF, arresto alla rotazione della leva di blocco, variazione di velocità con la manopola, funzione PULSE a impulsi brevi.</li>
+      </ul>
+      
+      <h2 class="strumento__sezione-titolo">Fonti</h2>
+      <ul class="strumento__fonti">
+        <li><a href="https://www.sirman.com/it-IT/preparazione-alimenti/cutter/c-tronic-6/40780622S" rel="noopener">Sirman — C-Tronic 6 (40780622S), scheda prodotto ufficiale</a></li>
+        <li><a href="https://manuals.plus/sirman/c-tronic-4vt-food-processor-manual" rel="noopener">Manuale d’uso Sirman Cutter CT 4-6-9 VT (Manuals+)</a></li>
+        <li><a href="https://www.gastrocentrale.it/cutter-sirman-c-tronic-6-vt.html" rel="noopener">Gastrocentrale — Cutter Sirman C-Tronic 6 VT, scheda rivenditore</a></li>
+        <li><a href="https://www.gastrocentrale.it/post/cutter-professionali-da-cucina-e-panificio.html" rel="noopener">Gastrocentrale (blog) — Cutter professionali da cucina e panificio: guida ai tipi di lame</a></li>
+        <li><a href="https://www.topristorazione.com/blog/novita/guida-alla-scelta-del-cutter-cucina" rel="noopener">TopRistorazione — Il cutter cucina: quale scegliere e come utilizzarlo</a></li>
+        <li><a href="https://www.gastrodomus.it/blog/guida-scelta/cutter-professionale-potenzialita-e-caratteristiche/" rel="noopener">Gastrodomus — Cutter professionale: potenzialità e caratteristiche</a></li>
+        <li><a href="https://www.toprestaurantsupplies.com/products/sirman-msc06amoz-serrated-s-blade-for-c6-vv-and-c-tronic-6-vt-bowl-cutters" rel="noopener">Top Restaurant Supplies — Sirman MSC06AMOZ Serrated S Blade (mozzo lame dentate)</a></li>
+        <li><a href="https://www.webstaurantstore.com/sirman-msc06amof-emulsifying-s-blade-for-c6-vv-and-c-tronic-6-vt-bowl-cutters/751MSC06AMOF.html" rel="noopener">WebstaurantStore — Sirman MSC06AMOF Emulsifying S Blade (mozzo lame forate)</a></li>
+        <li><a href="https://www.webstaurantstore.com/sirman-msc06amoi-dough-s-blade-for-c6-vv-and-c-tronic-6-vt-bowl-cutters/751MSC06AMOI.html" rel="noopener">WebstaurantStore — Sirman MSC06AMOI Dough S Blade (mozzo per impasti)</a></li>
+        <li><a href="https://www.ristosubito.com/mozzo-quattro-lame-per-pesto-per-cutter-c6-modello-msc06amop.html" rel="noopener">Ristosubito — Mozzo quattro lame per pesto per cutter C6, mod. MSC06AMOP.22</a></li>
+        <li><a href="https://shop.laristoservice.it/cutter/263-sirman-cutter-c-tronic-6-vt" rel="noopener">La Ristoservice — Sirman Cutter C-Tronic 6 VT (dotazione e mozzi opzionali)</a></li>
+      </ul>
+    </div>
+    </div><!-- /#app -->
+    </main>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__brand-name"><img src="/Ricettario/images/emoji/fire.png" width="20" height="20" alt=""
+                            class="fluent-emoji"> <span class="testo-gradiente">Ricettario Lab</span></div>
+                    <p class="footer__brand-desc">
+                        Ricettario personale. Ricette artigianali documentate con precisione tecnica per
+                        risultati replicabili al 100%.
+                    </p>
+                </div>
+
+                <!-- URL veri con base assoluta, non ancore nude: il footer è nel
+                     guscio condiviso da TUTTE le pagine e #ricette/#strumenti/
+                     #chi-sono esistono solo in homepage — altrove un'ancora nuda
+                     lasciava l'URL con l'hash e la pagina ferma. Senza JavaScript
+                     l'URL basta da solo (carica la home e salta alla sezione);
+                     con JavaScript data-nav-section riusa la gestione della
+                     navbar in router.js: da una pagina interna porta in home e
+                     poi scrolla alla sezione, in homepage resta il salto nativo.
+                     La forma dell'URL è la stessa dei breadcrumb
+                     (js/html-ricetta.js: base + "#ricette"). -->
+                <div>
+                    <h2 class="footer__col-title">Navigazione</h2>
+                    <ul class="footer__links">
+                        <li><a href="/Ricettario/"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Home</a>
+                        </li>
+                        <li><a href="/Ricettario/#ricette" data-nav-section="ricette"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
+                                Ricette</a></li>
+                        <!-- Route vera come Cottura: porta all'hub /strumenti/,
+                             non all'ancora della vetrina in homepage. -->
+                        <li><a href="/Ricettario/strumenti/" data-link><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
+                                Strumenti</a></li>
+                        <li><a href="/Ricettario/#chi-sono" data-nav-section="chi-sono"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Chi
+                                Sono</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tutte le categorie, con path ASSOLUTI. I vecchi link erano
+                     relativi ("ricette/pane/"): giusti in homepage e rotti su
+                     ogni altra pagina, perché il footer è nel guscio condiviso
+                     e un path relativo si risolve contro l'URL della pagina che
+                     lo ospita. C'era anche una categoria «Pasta» che non esiste.
+                     Questo elenco è una copia di js/categories.js e non può non
+                     esserlo (markup statico): verifica-build.js controlla che
+                     le due liste coincidano, quindi se diverge la build si
+                     ferma. Sono anche gli unici link statici che rendono
+                     raggiungibili le pagine categoria dai crawler. -->
+                <div>
+                    <h2 class="footer__col-title">Categorie</h2>
+                    <ul class="footer__links">
+                        <li><a href="/Ricettario/ricette/primi/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Primi</a></li>
+                        <li><a href="/Ricettario/ricette/pane/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Pane</a></li>
+                        <li><a href="/Ricettario/ricette/pizza/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Pizza</a></li>
+                        <li><a href="/Ricettario/ricette/lievitati/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Lievitati</a></li>
+                        <li><a href="/Ricettario/ricette/dolci/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Dolci</a></li>
+                        <li><a href="/Ricettario/ricette/focaccia/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Focaccia</a></li>
+                        <li><a href="/Ricettario/ricette/conserve/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Conserve</a></li>
+                        <li><a href="/Ricettario/ricette/condimenti/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Condimenti</a></li>
+                        <li><a href="/Ricettario/ricette/secondi-piatti/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Secondi Piatti</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="footer__col-title">Stack</h2>
+                    <ul class="footer__links">
+                        <!-- La Famag ha la sua pagina in /strumenti/; le altre
+                             voci dello stack restano ancore alla vetrina. -->
+                        <li><a href="/Ricettario/strumenti/famag-grilletta/" data-link><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Famag Grilletta</a></li>
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Mix Tri-Farina</a></li>
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Farine Professionali</a></li>
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/thermometer.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Termometro Laser</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <span>© <span id="current-year">2026</span> Ricettario Lab</span>
+                <div class="footer__social">
+                    <a href="https://github.com/devdomenicotatone/Ricettario" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

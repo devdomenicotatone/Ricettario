@@ -520,4 +520,16 @@
     <loc>https://devdomenicotatone.github.io/Ricettario/cottura/</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://devdomenicotatone.github.io/Ricettario/strumenti/cutter-sirman-c-tronic-6/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://devdomenicotatone.github.io/Ricettario/strumenti/famag-grilletta/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://devdomenicotatone.github.io/Ricettario/strumenti/</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>

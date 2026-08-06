@@ -51,8 +51,8 @@
             window.applicaColoreBarra(theme);
         })();
     </script>
-  <script type="module" crossorigin src="/Ricettario/assets/main-CIkMtxy9.js"></script>
-  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-BvCxNhbZ.css">
+  <script type="module" crossorigin src="/Ricettario/assets/main-RStF1M2L.js"></script>
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-DlIt2EXm.css">
 
     <meta name="description" content="Dolce tradizionale napoletano di Carnevale a base di semolino e ricotta: morbido, compatto e profumato di agrumi e vaniglia.">
     <link rel="canonical" href="https://devdomenicotatone.github.io/Ricettario/ricette/dolci/migliaccio-napoletano/">
@@ -139,10 +139,10 @@
   "nutrition": {
     "@type": "NutritionInformation",
     "servingSize": "100 g",
-    "calories": "218 kcal",
-    "carbohydrateContent": "31 g",
-    "proteinContent": "7 g",
-    "fatContent": "7 g"
+    "calories": "179 kcal",
+    "carbohydrateContent": "26 g",
+    "proteinContent": "5 g",
+    "fatContent": "6 g"
   }
 }
     </script>
@@ -217,9 +217,11 @@
 
             <ul class="navbar__links" id="nav-links">
                 <li><a href="#ricette" data-nav-section="ricette" class="active">Ricette</a></li>
-                <!-- Route vera, non un'ancora: il router la intercetta come link interno -->
+                <!-- Route vere, non ancore: il router le intercetta come link interni.
+                     La vetrina #strumenti resta in homepage; la voce di menu porta
+                     all'hub /strumenti/ con le schede complete, come Cottura. -->
                 <li><a href="/Ricettario/cottura/">Cottura</a></li>
-                <li><a href="#strumenti" data-nav-section="strumenti">Strumenti</a></li>
+                <li><a href="/Ricettario/strumenti/">Strumenti</a></li>
                 <li><a href="#chi-sono" data-nav-section="chi-sono">Chi Sono</a></li>
             </ul>
 
@@ -404,33 +406,33 @@
 
         <div class="nutrition-content">
           <div class="nutrition-kcal">
-              <span class="nutrition-kcal__value">218</span>
+              <span class="nutrition-kcal__value">179</span>
               <span class="nutrition-kcal__unit">Kcal</span>
           </div>
 
           <div class="nutrition-bar">
-            <div class="nutrition-bar__segment nutrition-bar__segment--carbs" style="width: 68.88888888888889%;" title="Carboidrati"></div>
-            <div class="nutrition-bar__segment nutrition-bar__segment--prot" style="width: 15.555555555555555%;" title="Proteine"></div>
-            <div class="nutrition-bar__segment nutrition-bar__segment--fat" style="width: 15.555555555555555%;" title="Grassi"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--carbs" style="width: 70.27027027027027%;" title="Carboidrati"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--prot" style="width: 13.513513513513514%;" title="Proteine"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--fat" style="width: 16.216216216216218%;" title="Grassi"></div>
           </div>
 
           <div class="nutrition-legend">
             <div class="nutrition-legend__item">
               <div class="nutrition-legend__dot nutrition-legend__dot--carbs"></div>
-              <span>Carboidrati <strong>31g</strong></span>
+              <span>Carboidrati <strong>26g</strong></span>
             </div>
             <div class="nutrition-legend__item">
               <div class="nutrition-legend__dot nutrition-legend__dot--prot"></div>
-              <span>Proteine <strong>7g</strong></span>
+              <span>Proteine <strong>5g</strong></span>
             </div>
             <div class="nutrition-legend__item">
               <div class="nutrition-legend__dot nutrition-legend__dot--fat"></div>
-              <span>Grassi <strong>7g</strong></span>
+              <span>Grassi <strong>6g</strong></span>
             </div>
           </div>
 
           <p class="nutrition-disclaimer">
-            <em>Disclaimer: Valori medi per 100 g di prodotto finito, stimati sugli ingredienti della ricetta. Considerano il calo peso da evaporazione. I valori effettivi possono variare in base ai marchi commerciali usati.</em>
+            <em>Disclaimer: Valori medi per 100 g di prodotto finito, calcolati sugli ingredienti della ricetta con dati USDA FoodData Central e resa di cottura dichiarata. I valori effettivi possono variare in base ai marchi commerciali usati.</em>
           </p>
         </div>
     </div>
@@ -443,6 +445,7 @@
         <p><img src="/Ricettario/images/emoji/warning.png" width="18" height="18" alt="" class="fluent-emoji" loading="lazy"> NON aggiungere la crema di semolino ancora calda al composto di uova: rischi di far coagulare le uova e ottenere un impasto granuloso invece che cremoso. Attendi che il semolino sia tiepido (35-40°C max). NON aprire il forno nei primi 40 minuti di cottura: lo sbalzo termico può far sgonfiare il dolce. NON utilizzare ricotta troppo liquida o acquosa: se necessario, scolarla in un colino per 30 minuti prima di usarla.</p>
       </div>
     </div>
+        
         
     <div class="recipe-panel recipe-panel--spaced">
       <h2 class="recipe-panel__title">
@@ -540,7 +543,9 @@
                         </li>
                         <li><a href="/Ricettario/#ricette" data-nav-section="ricette"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
                                 Ricette</a></li>
-                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
+                        <!-- Route vera come Cottura: porta all'hub /strumenti/,
+                             non all'ancora della vetrina in homepage. -->
+                        <li><a href="/Ricettario/strumenti/" data-link><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
                                 Strumenti</a></li>
                         <li><a href="/Ricettario/#chi-sono" data-nav-section="chi-sono"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Chi
                                 Sono</a></li>
@@ -584,7 +589,9 @@
                 <div>
                     <h2 class="footer__col-title">Stack</h2>
                     <ul class="footer__links">
-                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
+                        <!-- La Famag ha la sua pagina in /strumenti/; le altre
+                             voci dello stack restano ancore alla vetrina. -->
+                        <li><a href="/Ricettario/strumenti/famag-grilletta/" data-link><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Famag Grilletta</a></li>
                         <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Mix Tri-Farina</a></li>

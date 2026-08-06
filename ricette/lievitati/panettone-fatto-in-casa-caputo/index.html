@@ -51,8 +51,8 @@
             window.applicaColoreBarra(theme);
         })();
     </script>
-  <script type="module" crossorigin src="/Ricettario/assets/main-CIkMtxy9.js"></script>
-  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-BvCxNhbZ.css">
+  <script type="module" crossorigin src="/Ricettario/assets/main-RStF1M2L.js"></script>
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-DlIt2EXm.css">
 
     <meta name="description" content="La ricetta tecnica per il classico Panettone di Natale tipo Milano, realizzato con lievito madre e due impasti per una struttura alveolata, soffice e aromatica.">
     <link rel="canonical" href="https://devdomenicotatone.github.io/Ricettario/ricette/lievitati/panettone-fatto-in-casa-caputo/">
@@ -174,10 +174,10 @@
   "nutrition": {
     "@type": "NutritionInformation",
     "servingSize": "100 g",
-    "calories": "378 kcal",
-    "carbohydrateContent": "48 g",
+    "calories": "388 kcal",
+    "carbohydrateContent": "49 g",
     "proteinContent": "8 g",
-    "fatContent": "17 g"
+    "fatContent": "18 g"
   }
 }
     </script>
@@ -252,9 +252,11 @@
 
             <ul class="navbar__links" id="nav-links">
                 <li><a href="#ricette" data-nav-section="ricette" class="active">Ricette</a></li>
-                <!-- Route vera, non un'ancora: il router la intercetta come link interno -->
+                <!-- Route vere, non ancore: il router le intercetta come link interni.
+                     La vetrina #strumenti resta in homepage; la voce di menu porta
+                     all'hub /strumenti/ con le schede complete, come Cottura. -->
                 <li><a href="/Ricettario/cottura/">Cottura</a></li>
-                <li><a href="#strumenti" data-nav-section="strumenti">Strumenti</a></li>
+                <li><a href="/Ricettario/strumenti/">Strumenti</a></li>
                 <li><a href="#chi-sono" data-nav-section="chi-sono">Chi Sono</a></li>
             </ul>
 
@@ -480,20 +482,20 @@
 
         <div class="nutrition-content">
           <div class="nutrition-kcal">
-              <span class="nutrition-kcal__value">378</span>
+              <span class="nutrition-kcal__value">388</span>
               <span class="nutrition-kcal__unit">Kcal</span>
           </div>
 
           <div class="nutrition-bar">
-            <div class="nutrition-bar__segment nutrition-bar__segment--carbs" style="width: 65.75342465753424%;" title="Carboidrati"></div>
-            <div class="nutrition-bar__segment nutrition-bar__segment--prot" style="width: 10.95890410958904%;" title="Proteine"></div>
-            <div class="nutrition-bar__segment nutrition-bar__segment--fat" style="width: 23.28767123287671%;" title="Grassi"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--carbs" style="width: 65.33333333333333%;" title="Carboidrati"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--prot" style="width: 10.666666666666668%;" title="Proteine"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--fat" style="width: 24%;" title="Grassi"></div>
           </div>
 
           <div class="nutrition-legend">
             <div class="nutrition-legend__item">
               <div class="nutrition-legend__dot nutrition-legend__dot--carbs"></div>
-              <span>Carboidrati <strong>48g</strong></span>
+              <span>Carboidrati <strong>49g</strong></span>
             </div>
             <div class="nutrition-legend__item">
               <div class="nutrition-legend__dot nutrition-legend__dot--prot"></div>
@@ -501,12 +503,12 @@
             </div>
             <div class="nutrition-legend__item">
               <div class="nutrition-legend__dot nutrition-legend__dot--fat"></div>
-              <span>Grassi <strong>17g</strong></span>
+              <span>Grassi <strong>18g</strong></span>
             </div>
           </div>
 
           <p class="nutrition-disclaimer">
-            <em>Disclaimer: Valori medi per 100 g di prodotto finito, stimati sugli ingredienti della ricetta. Considerano il calo peso da evaporazione. I valori effettivi possono variare in base ai marchi commerciali usati.</em>
+            <em>Disclaimer: Valori medi per 100 g di prodotto finito, calcolati sugli ingredienti della ricetta con dati USDA FoodData Central e resa di cottura dichiarata. I valori effettivi possono variare in base ai marchi commerciali usati.</em>
           </p>
         </div>
     </div>
@@ -540,6 +542,7 @@
         <p><img src="/Ricettario/images/emoji/warning.png" width="18" height="18" alt="" class="fluent-emoji" loading="lazy"> ERRORE FATALE: Non forzare i tempi di lievitazione! Il primo impasto DEVE quadruplicare. Se infornate il secondo impasto partendo da un primo impasto raddoppiato o triplicato, il panettone non svilupperà in cottura, risulterà pesante e l'alveolatura sarà compatta e cruda.</p>
       </div>
     </div>
+        
         
     <div class="recipe-panel recipe-panel--spaced">
       <h2 class="recipe-panel__title">
@@ -631,7 +634,9 @@
                         </li>
                         <li><a href="/Ricettario/#ricette" data-nav-section="ricette"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
                                 Ricette</a></li>
-                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
+                        <!-- Route vera come Cottura: porta all'hub /strumenti/,
+                             non all'ancora della vetrina in homepage. -->
+                        <li><a href="/Ricettario/strumenti/" data-link><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
                                 Strumenti</a></li>
                         <li><a href="/Ricettario/#chi-sono" data-nav-section="chi-sono"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Chi
                                 Sono</a></li>
@@ -675,7 +680,9 @@
                 <div>
                     <h2 class="footer__col-title">Stack</h2>
                     <ul class="footer__links">
-                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
+                        <!-- La Famag ha la sua pagina in /strumenti/; le altre
+                             voci dello stack restano ancore alla vetrina. -->
+                        <li><a href="/Ricettario/strumenti/famag-grilletta/" data-link><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Famag Grilletta</a></li>
                         <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Mix Tri-Farina</a></li>

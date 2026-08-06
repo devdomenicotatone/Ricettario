@@ -51,8 +51,8 @@
             window.applicaColoreBarra(theme);
         })();
     </script>
-  <script type="module" crossorigin src="/Ricettario/assets/main-CIkMtxy9.js"></script>
-  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-BvCxNhbZ.css">
+  <script type="module" crossorigin src="/Ricettario/assets/main-RStF1M2L.js"></script>
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-DlIt2EXm.css">
 
     <meta name="description" content="L'autentica emulsione siciliana a base di olio EVO, limone, aglio e origano. La salsa a crudo perfetta per marinare e condire carni, pesci e verdure alla…">
     <link rel="canonical" href="https://devdomenicotatone.github.io/Ricettario/ricette/condimenti/salmoriglio-siciliano-tradizionale/">
@@ -134,10 +134,10 @@
   "nutrition": {
     "@type": "NutritionInformation",
     "servingSize": "100 g",
-    "calories": "558 kcal",
+    "calories": "517 kcal",
     "carbohydrateContent": "3 g",
-    "proteinContent": "1 g",
-    "fatContent": "59 g"
+    "proteinContent": "0 g",
+    "fatContent": "57 g"
   }
 }
     </script>
@@ -212,9 +212,11 @@
 
             <ul class="navbar__links" id="nav-links">
                 <li><a href="#ricette" data-nav-section="ricette" class="active">Ricette</a></li>
-                <!-- Route vera, non un'ancora: il router la intercetta come link interno -->
+                <!-- Route vere, non ancore: il router le intercetta come link interni.
+                     La vetrina #strumenti resta in homepage; la voce di menu porta
+                     all'hub /strumenti/ con le schede complete, come Cottura. -->
                 <li><a href="/Ricettario/cottura/">Cottura</a></li>
-                <li><a href="#strumenti" data-nav-section="strumenti">Strumenti</a></li>
+                <li><a href="/Ricettario/strumenti/">Strumenti</a></li>
                 <li><a href="#chi-sono" data-nav-section="chi-sono">Chi Sono</a></li>
             </ul>
 
@@ -390,14 +392,14 @@
 
         <div class="nutrition-content">
           <div class="nutrition-kcal">
-              <span class="nutrition-kcal__value">558</span>
+              <span class="nutrition-kcal__value">517</span>
               <span class="nutrition-kcal__unit">Kcal</span>
           </div>
 
           <div class="nutrition-bar">
-            <div class="nutrition-bar__segment nutrition-bar__segment--carbs" style="width: 4.761904761904762%;" title="Carboidrati"></div>
-            <div class="nutrition-bar__segment nutrition-bar__segment--prot" style="width: 1.5873015873015872%;" title="Proteine"></div>
-            <div class="nutrition-bar__segment nutrition-bar__segment--fat" style="width: 93.65079365079364%;" title="Grassi"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--carbs" style="width: 5%;" title="Carboidrati"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--prot" style="width: 0%;" title="Proteine"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--fat" style="width: 95%;" title="Grassi"></div>
           </div>
 
           <div class="nutrition-legend">
@@ -407,16 +409,16 @@
             </div>
             <div class="nutrition-legend__item">
               <div class="nutrition-legend__dot nutrition-legend__dot--prot"></div>
-              <span>Proteine <strong>1g</strong></span>
+              <span>Proteine <strong>0g</strong></span>
             </div>
             <div class="nutrition-legend__item">
               <div class="nutrition-legend__dot nutrition-legend__dot--fat"></div>
-              <span>Grassi <strong>59g</strong></span>
+              <span>Grassi <strong>57g</strong></span>
             </div>
           </div>
 
           <p class="nutrition-disclaimer">
-            <em>Disclaimer: Valori medi per 100 g di prodotto finito, stimati sugli ingredienti della ricetta. Considerano il calo peso da evaporazione. I valori effettivi possono variare in base ai marchi commerciali usati.</em>
+            <em>Disclaimer: Valori medi per 100 g di prodotto finito, calcolati sugli ingredienti della ricetta con dati USDA FoodData Central e resa di cottura dichiarata. I valori effettivi possono variare in base ai marchi commerciali usati.</em>
           </p>
         </div>
     </div>
@@ -429,6 +431,7 @@
         <p><img src="/Ricettario/images/emoji/warning.png" width="18" height="18" alt="" class="fluent-emoji" loading="lazy"> ATTENZIONE: NON usare mai un frullatore a immersione (minipimer) o un mixer elettrico per emulsionare questa salsa. L'alta velocità delle lame in acciaio rompe violentemente i polifenoli dell'olio extravergine d'oliva, innescando una rapida ossidazione che renderà l'intero salmoriglio irrimediabilmente amaro. L'uso della frusta a mano è obbligatorio.</p>
       </div>
     </div>
+        
         
         
     <div class="recipe-panel recipe-panel--spaced">
@@ -499,7 +502,9 @@
                         </li>
                         <li><a href="/Ricettario/#ricette" data-nav-section="ricette"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
                                 Ricette</a></li>
-                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
+                        <!-- Route vera come Cottura: porta all'hub /strumenti/,
+                             non all'ancora della vetrina in homepage. -->
+                        <li><a href="/Ricettario/strumenti/" data-link><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
                                 Strumenti</a></li>
                         <li><a href="/Ricettario/#chi-sono" data-nav-section="chi-sono"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Chi
                                 Sono</a></li>
@@ -543,7 +548,9 @@
                 <div>
                     <h2 class="footer__col-title">Stack</h2>
                     <ul class="footer__links">
-                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
+                        <!-- La Famag ha la sua pagina in /strumenti/; le altre
+                             voci dello stack restano ancore alla vetrina. -->
+                        <li><a href="/Ricettario/strumenti/famag-grilletta/" data-link><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Famag Grilletta</a></li>
                         <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Mix Tri-Farina</a></li>

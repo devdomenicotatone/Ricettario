@@ -5,6 +5,13 @@
   "description": "Salsa vellutata ed emulsionata a base di peperoni dolci stufati, ideale per mantecare primi piatti, risotti o accompagnare lievitati rustici.",
   "subtitle": "Emulsione vegetale dolce a stufatura lenta",
   "category": "Condimenti",
+  "tools": [
+    {
+      "strumento": "cutter-sirman-c-tronic-6",
+      "lama": "lisce",
+      "nota": "Le lame lisce ad alta velocità frullano i peperoni stufati con il basilico in un'emulsione liscia e brillante, come al frullatore."
+    }
+  ],
   "hydration": 0,
   "targetTemp": "",
   "fermentation": "",
@@ -152,11 +159,11 @@
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 89,
+    "kcal_per_100g": 95,
     "macros": {
-      "carbs": 8,
+      "carbs": 7,
       "protein": 1,
-      "fat": 6
+      "fat": 7
     }
   }
 }

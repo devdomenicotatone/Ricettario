@@ -51,8 +51,8 @@
             window.applicaColoreBarra(theme);
         })();
     </script>
-  <script type="module" crossorigin src="/Ricettario/assets/main-CIkMtxy9.js"></script>
-  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-BvCxNhbZ.css">
+  <script type="module" crossorigin src="/Ricettario/assets/main-RStF1M2L.js"></script>
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-DlIt2EXm.css">
 
     <meta name="description" content="Olio aromatico al basilico con tecnica dello shock termico: colore verde neon, purezza cristallina e sicurezza alimentare totale.">
     <link rel="canonical" href="https://devdomenicotatone.github.io/Ricettario/ricette/condimenti/olio-al-basilico-verde-smeraldo/">
@@ -135,10 +135,10 @@
   "nutrition": {
     "@type": "NutritionInformation",
     "servingSize": "100 g",
-    "calories": "818 kcal",
+    "calories": "762 kcal",
     "carbohydrateContent": "1 g",
     "proteinContent": "1 g",
-    "fatContent": "91 g"
+    "fatContent": "86 g"
   }
 }
     </script>
@@ -213,9 +213,11 @@
 
             <ul class="navbar__links" id="nav-links">
                 <li><a href="#ricette" data-nav-section="ricette" class="active">Ricette</a></li>
-                <!-- Route vera, non un'ancora: il router la intercetta come link interno -->
+                <!-- Route vere, non ancore: il router le intercetta come link interni.
+                     La vetrina #strumenti resta in homepage; la voce di menu porta
+                     all'hub /strumenti/ con le schede complete, come Cottura. -->
                 <li><a href="/Ricettario/cottura/">Cottura</a></li>
-                <li><a href="#strumenti" data-nav-section="strumenti">Strumenti</a></li>
+                <li><a href="/Ricettario/strumenti/">Strumenti</a></li>
                 <li><a href="#chi-sono" data-nav-section="chi-sono">Chi Sono</a></li>
             </ul>
 
@@ -379,14 +381,14 @@
 
         <div class="nutrition-content">
           <div class="nutrition-kcal">
-              <span class="nutrition-kcal__value">818</span>
+              <span class="nutrition-kcal__value">762</span>
               <span class="nutrition-kcal__unit">Kcal</span>
           </div>
 
           <div class="nutrition-bar">
-            <div class="nutrition-bar__segment nutrition-bar__segment--carbs" style="width: 1.0752688172043012%;" title="Carboidrati"></div>
-            <div class="nutrition-bar__segment nutrition-bar__segment--prot" style="width: 1.0752688172043012%;" title="Proteine"></div>
-            <div class="nutrition-bar__segment nutrition-bar__segment--fat" style="width: 97.84946236559139%;" title="Grassi"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--carbs" style="width: 1.1363636363636365%;" title="Carboidrati"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--prot" style="width: 1.1363636363636365%;" title="Proteine"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--fat" style="width: 97.72727272727273%;" title="Grassi"></div>
           </div>
 
           <div class="nutrition-legend">
@@ -400,12 +402,12 @@
             </div>
             <div class="nutrition-legend__item">
               <div class="nutrition-legend__dot nutrition-legend__dot--fat"></div>
-              <span>Grassi <strong>91g</strong></span>
+              <span>Grassi <strong>86g</strong></span>
             </div>
           </div>
 
           <p class="nutrition-disclaimer">
-            <em>Disclaimer: Valori medi per 100 g di prodotto finito, stimati sugli ingredienti della ricetta. Considerano il calo peso da evaporazione. I valori effettivi possono variare in base ai marchi commerciali usati.</em>
+            <em>Disclaimer: Valori medi per 100 g di prodotto finito, calcolati sugli ingredienti della ricetta con dati USDA FoodData Central e resa di cottura dichiarata. I valori effettivi possono variare in base ai marchi commerciali usati.</em>
           </p>
         </div>
     </div>
@@ -418,6 +420,7 @@
         <p><img src="/Ricettario/images/emoji/warning.png" width="18" height="18" alt="" class="fluent-emoji" loading="lazy"> ⚠️ SICUREZZA ALIMENTARE — RISCHIO BOTULINO: Gli oli aromatizzati con erbe fresche sono ambienti ideali per Clostridium botulinum (anaerobiosi, pH neutro, presenza di acqua residua). Asciuga il basilico in modo maniacale prima dell'infusione e conserva SEMPRE in frigorifero. NON lasciare mai a temperatura ambiente per più di qualche ora. Consuma entro 3–4 settimane al massimo (senza rametto fresco). Se inserisci un rametto di erba fresca nell'olio finito, consuma tassativamente entro 2-4 giorni. NON superare i 70°C durante il riscaldamento: sopra gli 80°C il basilico cuoce, l'aroma vira su 'erba cotta' e il colore tende al marrone. NON pressare durante il filtraggio: si rompe la purezza ottica del prodotto finale.</p>
       </div>
     </div>
+        
         
         
     <div class="recipe-panel recipe-panel--spaced">
@@ -512,7 +515,9 @@
                         </li>
                         <li><a href="/Ricettario/#ricette" data-nav-section="ricette"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
                                 Ricette</a></li>
-                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
+                        <!-- Route vera come Cottura: porta all'hub /strumenti/,
+                             non all'ancora della vetrina in homepage. -->
+                        <li><a href="/Ricettario/strumenti/" data-link><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
                                 Strumenti</a></li>
                         <li><a href="/Ricettario/#chi-sono" data-nav-section="chi-sono"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Chi
                                 Sono</a></li>
@@ -556,7 +561,9 @@
                 <div>
                     <h2 class="footer__col-title">Stack</h2>
                     <ul class="footer__links">
-                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
+                        <!-- La Famag ha la sua pagina in /strumenti/; le altre
+                             voci dello stack restano ancore alla vetrina. -->
+                        <li><a href="/Ricettario/strumenti/famag-grilletta/" data-link><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Famag Grilletta</a></li>
                         <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Mix Tri-Farina</a></li>

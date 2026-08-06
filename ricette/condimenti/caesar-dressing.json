@@ -5,6 +5,13 @@
   "description": "Caesar dressing artigianale con tuorlo, acciughe, senape di Digione e Parmigiano Reggiano DOP. Emulsione classica per la vera Caesar Salad.",
   "subtitle": "Emulsione classica all'italiana — tuorlo, acciughe, senape e Parmigiano Reggiano DOP",
   "category": "Condimenti",
+  "tools": [
+    {
+      "strumento": "cutter-sirman-c-tronic-6",
+      "lama": "forate",
+      "nota": "Le lame forate riducono in crema le acciughe e montano l'emulsione con l'olio a filo; acidi e Parmigiano entrano nello stesso boccale."
+    }
+  ],
   "hydration": 0,
   "targetTemp": "",
   "fermentation": "",
@@ -193,11 +200,11 @@
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 468,
+    "kcal_per_100g": 513,
     "macros": {
-      "carbs": 4,
+      "carbs": 3,
       "protein": 9,
-      "fat": 45
+      "fat": 52
     }
   },
   "_originalImageUrl": ""

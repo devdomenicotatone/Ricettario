@@ -51,8 +51,8 @@
             window.applicaColoreBarra(theme);
         })();
     </script>
-  <script type="module" crossorigin src="/Ricettario/assets/main-CIkMtxy9.js"></script>
-  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-BvCxNhbZ.css">
+  <script type="module" crossorigin src="/Ricettario/assets/main-RStF1M2L.js"></script>
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-DlIt2EXm.css">
 
     <meta name="description" content="Caesar dressing artigianale con tuorlo, acciughe, senape di Digione e Parmigiano Reggiano DOP. Emulsione classica per la vera Caesar Salad.">
     <link rel="canonical" href="https://devdomenicotatone.github.io/Ricettario/ricette/condimenti/caesar-dressing/">
@@ -143,10 +143,10 @@
   "nutrition": {
     "@type": "NutritionInformation",
     "servingSize": "100 g",
-    "calories": "468 kcal",
-    "carbohydrateContent": "4 g",
+    "calories": "513 kcal",
+    "carbohydrateContent": "3 g",
     "proteinContent": "9 g",
-    "fatContent": "45 g"
+    "fatContent": "52 g"
   }
 }
     </script>
@@ -221,9 +221,11 @@
 
             <ul class="navbar__links" id="nav-links">
                 <li><a href="#ricette" data-nav-section="ricette" class="active">Ricette</a></li>
-                <!-- Route vera, non un'ancora: il router la intercetta come link interno -->
+                <!-- Route vere, non ancore: il router le intercetta come link interni.
+                     La vetrina #strumenti resta in homepage; la voce di menu porta
+                     all'hub /strumenti/ con le schede complete, come Cottura. -->
                 <li><a href="/Ricettario/cottura/">Cottura</a></li>
-                <li><a href="#strumenti" data-nav-section="strumenti">Strumenti</a></li>
+                <li><a href="/Ricettario/strumenti/">Strumenti</a></li>
                 <li><a href="#chi-sono" data-nav-section="chi-sono">Chi Sono</a></li>
             </ul>
 
@@ -411,20 +413,20 @@
 
         <div class="nutrition-content">
           <div class="nutrition-kcal">
-              <span class="nutrition-kcal__value">468</span>
+              <span class="nutrition-kcal__value">513</span>
               <span class="nutrition-kcal__unit">Kcal</span>
           </div>
 
           <div class="nutrition-bar">
-            <div class="nutrition-bar__segment nutrition-bar__segment--carbs" style="width: 6.896551724137931%;" title="Carboidrati"></div>
-            <div class="nutrition-bar__segment nutrition-bar__segment--prot" style="width: 15.517241379310345%;" title="Proteine"></div>
-            <div class="nutrition-bar__segment nutrition-bar__segment--fat" style="width: 77.58620689655173%;" title="Grassi"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--carbs" style="width: 4.6875%;" title="Carboidrati"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--prot" style="width: 14.0625%;" title="Proteine"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--fat" style="width: 81.25%;" title="Grassi"></div>
           </div>
 
           <div class="nutrition-legend">
             <div class="nutrition-legend__item">
               <div class="nutrition-legend__dot nutrition-legend__dot--carbs"></div>
-              <span>Carboidrati <strong>4g</strong></span>
+              <span>Carboidrati <strong>3g</strong></span>
             </div>
             <div class="nutrition-legend__item">
               <div class="nutrition-legend__dot nutrition-legend__dot--prot"></div>
@@ -432,12 +434,12 @@
             </div>
             <div class="nutrition-legend__item">
               <div class="nutrition-legend__dot nutrition-legend__dot--fat"></div>
-              <span>Grassi <strong>45g</strong></span>
+              <span>Grassi <strong>52g</strong></span>
             </div>
           </div>
 
           <p class="nutrition-disclaimer">
-            <em>Disclaimer: Valori medi per 100 g di prodotto finito, stimati sugli ingredienti della ricetta. Considerano il calo peso da evaporazione. I valori effettivi possono variare in base ai marchi commerciali usati.</em>
+            <em>Disclaimer: Valori medi per 100 g di prodotto finito, calcolati sugli ingredienti della ricetta con dati USDA FoodData Central e resa di cottura dichiarata. I valori effettivi possono variare in base ai marchi commerciali usati.</em>
           </p>
         </div>
     </div>
@@ -449,6 +451,15 @@
         <strong>ALERT PROFESSIONALE</strong>
         <p><img src="/Ricettario/images/emoji/warning.png" width="18" height="18" alt="" class="fluent-emoji" loading="lazy"> NON aggiungere l'olio tutto insieme: se si versa troppo olio in una volta sola, l'emulsione si rompe irrimediabilmente e il dressing 'impazzisce' (si separa in una massa grumosa e oleosa). Se succede, si può tentare il recupero partendo da un nuovo tuorlo in una ciotola pulita e aggiungendo a filo il dressing rotto. Inoltre, NON usare ingredienti freddi da frigorifero: tuorlo, senape e limone devono essere tutti a temperatura ambiente (18-22°C) per un'emulsione stabile.</p>
       </div>
+    </div>
+        
+    <div class="recipe-panel recipe-panel--spaced">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/wrench.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Strumenti del mestiere
+      </h2>
+      <ul class="tip-list">
+        <li class="tip-item"><img src="/Ricettario/images/emoji/wrench.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> <a href="/Ricettario/strumenti/cutter-sirman-c-tronic-6/" data-link>Sirman C-Tronic 6 VT</a> — Lame forate: Le lame forate riducono in crema le acciughe e montano l'emulsione con l'olio a filo; acidi e Parmigiano entrano nello stesso boccale.</li>
+      </ul>
     </div>
         
         
@@ -532,7 +543,9 @@
                         </li>
                         <li><a href="/Ricettario/#ricette" data-nav-section="ricette"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
                                 Ricette</a></li>
-                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
+                        <!-- Route vera come Cottura: porta all'hub /strumenti/,
+                             non all'ancora della vetrina in homepage. -->
+                        <li><a href="/Ricettario/strumenti/" data-link><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
                                 Strumenti</a></li>
                         <li><a href="/Ricettario/#chi-sono" data-nav-section="chi-sono"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Chi
                                 Sono</a></li>
@@ -576,7 +589,9 @@
                 <div>
                     <h2 class="footer__col-title">Stack</h2>
                     <ul class="footer__links">
-                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
+                        <!-- La Famag ha la sua pagina in /strumenti/; le altre
+                             voci dello stack restano ancore alla vetrina. -->
+                        <li><a href="/Ricettario/strumenti/famag-grilletta/" data-link><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Famag Grilletta</a></li>
                         <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Mix Tri-Farina</a></li>

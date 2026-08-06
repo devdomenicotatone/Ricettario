@@ -5,6 +5,13 @@
   "description": "La ricetta autentica del Pesto Ligure al mortaio. Proporzioni bilanciate per un'emulsione a freddo verde smeraldo, ricca di oli essenziali e senza ossidazione.",
   "subtitle": "Emulsione a freddo al mortaio di marmo",
   "category": "Condimenti",
+  "tools": [
+    {
+      "strumento": "cutter-sirman-c-tronic-6",
+      "lama": "pesto",
+      "nota": "Alternativa al mortaio: mozzo per pesto con boccale e lame ben freddi e impulsi brevi, per un basilico che non si ossida."
+    }
+  ],
   "hydration": 0,
   "targetTemp": "",
   "fermentation": "",
@@ -173,11 +180,11 @@
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 498,
+    "kcal_per_100g": 496,
     "macros": {
-      "carbs": 4,
-      "protein": 13,
-      "fat": 47
+      "carbs": 3,
+      "protein": 12,
+      "fat": 49
     }
   }
 }

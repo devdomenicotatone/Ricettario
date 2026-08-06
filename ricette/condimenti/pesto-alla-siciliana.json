@@ -5,6 +5,13 @@
   "description": "Ricetta professionale del pesto alla siciliana: un'emulsione a crudo perfettamente bilanciata con pomodori ramati, ricotta ben scolata, mandorle e basilico fresco.",
   "subtitle": "Condimento a crudo emulsionato con ricotta, mandorle e pomodori",
   "category": "Condimenti",
+  "tools": [
+    {
+      "strumento": "cutter-sirman-c-tronic-6",
+      "lama": "pesto",
+      "nota": "Tutta la lavorazione avviene nel boccale: il mozzo per pesto trita a impulsi la base secca, poi emulsiona ricotta e olio a filo."
+    }
+  ],
   "hydration": 0,
   "targetTemp": "",
   "fermentation": "",
@@ -173,11 +180,11 @@
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 242,
+    "kcal_per_100g": 222,
     "macros": {
       "carbs": 5,
       "protein": 7,
-      "fat": 21
+      "fat": 20
     }
   }
 }

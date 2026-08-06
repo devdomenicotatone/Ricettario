@@ -51,8 +51,8 @@
             window.applicaColoreBarra(theme);
         })();
     </script>
-  <script type="module" crossorigin src="/Ricettario/assets/main-CIkMtxy9.js"></script>
-  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-BvCxNhbZ.css">
+  <script type="module" crossorigin src="/Ricettario/assets/main-RStF1M2L.js"></script>
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-DlIt2EXm.css">
 
     <meta name="description" content="Pesto rustico siciliano con pomodori secchi sott'olio, mandorle e basilico fresco. Condimento versatile per pasta, bruschette e crostini.">
     <link rel="canonical" href="https://devdomenicotatone.github.io/Ricettario/ricette/condimenti/pesto-pomodori-secchi-mandorle-basilico/">
@@ -133,10 +133,10 @@
   "nutrition": {
     "@type": "NutritionInformation",
     "servingSize": "100 g",
-    "calories": "368 kcal",
-    "carbohydrateContent": "12 g",
+    "calories": "384 kcal",
+    "carbohydrateContent": "16 g",
     "proteinContent": "9 g",
-    "fatContent": "31 g"
+    "fatContent": "34 g"
   }
 }
     </script>
@@ -211,9 +211,11 @@
 
             <ul class="navbar__links" id="nav-links">
                 <li><a href="#ricette" data-nav-section="ricette" class="active">Ricette</a></li>
-                <!-- Route vera, non un'ancora: il router la intercetta come link interno -->
+                <!-- Route vere, non ancore: il router le intercetta come link interni.
+                     La vetrina #strumenti resta in homepage; la voce di menu porta
+                     all'hub /strumenti/ con le schede complete, come Cottura. -->
                 <li><a href="/Ricettario/cottura/">Cottura</a></li>
-                <li><a href="#strumenti" data-nav-section="strumenti">Strumenti</a></li>
+                <li><a href="/Ricettario/strumenti/">Strumenti</a></li>
                 <li><a href="#chi-sono" data-nav-section="chi-sono">Chi Sono</a></li>
             </ul>
 
@@ -386,20 +388,20 @@
 
         <div class="nutrition-content">
           <div class="nutrition-kcal">
-              <span class="nutrition-kcal__value">368</span>
+              <span class="nutrition-kcal__value">384</span>
               <span class="nutrition-kcal__unit">Kcal</span>
           </div>
 
           <div class="nutrition-bar">
-            <div class="nutrition-bar__segment nutrition-bar__segment--carbs" style="width: 23.076923076923077%;" title="Carboidrati"></div>
-            <div class="nutrition-bar__segment nutrition-bar__segment--prot" style="width: 17.307692307692307%;" title="Proteine"></div>
-            <div class="nutrition-bar__segment nutrition-bar__segment--fat" style="width: 59.61538461538461%;" title="Grassi"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--carbs" style="width: 27.11864406779661%;" title="Carboidrati"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--prot" style="width: 15.254237288135593%;" title="Proteine"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--fat" style="width: 57.6271186440678%;" title="Grassi"></div>
           </div>
 
           <div class="nutrition-legend">
             <div class="nutrition-legend__item">
               <div class="nutrition-legend__dot nutrition-legend__dot--carbs"></div>
-              <span>Carboidrati <strong>12g</strong></span>
+              <span>Carboidrati <strong>16g</strong></span>
             </div>
             <div class="nutrition-legend__item">
               <div class="nutrition-legend__dot nutrition-legend__dot--prot"></div>
@@ -407,12 +409,12 @@
             </div>
             <div class="nutrition-legend__item">
               <div class="nutrition-legend__dot nutrition-legend__dot--fat"></div>
-              <span>Grassi <strong>31g</strong></span>
+              <span>Grassi <strong>34g</strong></span>
             </div>
           </div>
 
           <p class="nutrition-disclaimer">
-            <em>Disclaimer: Valori medi per 100 g di prodotto finito, stimati sugli ingredienti della ricetta. Considerano il calo peso da evaporazione. I valori effettivi possono variare in base ai marchi commerciali usati.</em>
+            <em>Disclaimer: Valori medi per 100 g di prodotto finito, calcolati sugli ingredienti della ricetta con dati USDA FoodData Central e resa di cottura dichiarata. I valori effettivi possono variare in base ai marchi commerciali usati.</em>
           </p>
         </div>
     </div>
@@ -424,6 +426,15 @@
         <strong>ALERT PROFESSIONALE</strong>
         <p><img src="/Ricettario/images/emoji/warning.png" width="18" height="18" alt="" class="fluent-emoji" loading="lazy"> NON frullare a velocità continua per più di 20-30 secondi alla volta: le lame del mixer scaldano gli ingredienti rapidamente, ossidando il basilico (che diventa scuro e amaro) e surriscaldando l'olio (che perde le note fruttate). Lavora SEMPRE a impulsi brevi. Inoltre, NON aggiungere sale prima di aver assaggiato: i pomodori secchi sott'olio sono già molto sapidi e il pecorino apporta ulteriore salinità.</p>
       </div>
+    </div>
+        
+    <div class="recipe-panel recipe-panel--spaced">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/wrench.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Strumenti del mestiere
+      </h2>
+      <ul class="tip-list">
+        <li class="tip-item"><img src="/Ricettario/images/emoji/wrench.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> <a href="/Ricettario/strumenti/cutter-sirman-c-tronic-6/" data-link>Sirman C-Tronic 6 VT</a> — Lame dentate: Le lame dentate riducono a impulsi mandorle e pomodori secchi in granella rustica; basilico, pecorino e olio seguono nello stesso boccale.</li>
+      </ul>
     </div>
         
         
@@ -504,7 +515,9 @@
                         </li>
                         <li><a href="/Ricettario/#ricette" data-nav-section="ricette"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
                                 Ricette</a></li>
-                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
+                        <!-- Route vera come Cottura: porta all'hub /strumenti/,
+                             non all'ancora della vetrina in homepage. -->
+                        <li><a href="/Ricettario/strumenti/" data-link><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
                                 Strumenti</a></li>
                         <li><a href="/Ricettario/#chi-sono" data-nav-section="chi-sono"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Chi
                                 Sono</a></li>
@@ -548,7 +561,9 @@
                 <div>
                     <h2 class="footer__col-title">Stack</h2>
                     <ul class="footer__links">
-                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
+                        <!-- La Famag ha la sua pagina in /strumenti/; le altre
+                             voci dello stack restano ancore alla vetrina. -->
+                        <li><a href="/Ricettario/strumenti/famag-grilletta/" data-link><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Famag Grilletta</a></li>
                         <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Mix Tri-Farina</a></li>

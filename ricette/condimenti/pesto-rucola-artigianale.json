@@ -5,6 +5,13 @@
   "description": "Ricetta professionale per un pesto di rucola dal colore verde brillante e texture perfetta. Bilanciamento classico con Parmigiano, Pecorino e pinoli tostati.",
   "subtitle": "Emulsione a freddo con controllo dell'ossidazione",
   "category": "Condimenti",
+  "tools": [
+    {
+      "strumento": "cutter-sirman-c-tronic-6",
+      "lama": "pesto",
+      "nota": "Con boccale e lame freddi, il mozzo per pesto trita a impulsi pinoli e aglio, poi rucola e formaggi, ed emulsiona l'olio a filo."
+    }
+  ],
   "hydration": 0,
   "targetTemp": "",
   "fermentation": "",
@@ -153,11 +160,11 @@
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 612,
+    "kcal_per_100g": 520,
     "macros": {
       "carbs": 4,
-      "protein": 9,
-      "fat": 61
+      "protein": 10,
+      "fat": 52
     }
   }
 }

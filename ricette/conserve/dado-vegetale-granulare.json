@@ -5,6 +5,18 @@
   "description": "Dado vegetale granulare fatto in casa: un concentrato naturale di verdure essiccate, senza glutammato e conservanti artificiali. Perfetto per insaporire brodi e arrosti.",
   "subtitle": "Concentrato vegetale essiccato a bassa temperatura",
   "category": "Conserve",
+  "tools": [
+    {
+      "strumento": "cutter-sirman-c-tronic-6",
+      "lama": "lisce",
+      "nota": "Le lame lisce frullano a massima velocità le verdure crude con sale, erbe e olio fino a una purea fine e omogenea."
+    },
+    {
+      "strumento": "cutter-sirman-c-tronic-6",
+      "lama": "dentate",
+      "nota": "Le lame dentate polverizzano a scatti la lastra essiccata, dura e friabile, nel boccale pulito e asciutto."
+    }
+  ],
   "hydration": 0,
   "targetTemp": "",
   "fermentation": "",
@@ -185,11 +197,11 @@
     ]
   },
   "nutrition": {
-    "kcal_per_100g": 198,
+    "kcal_per_100g": 192,
     "macros": {
-      "carbs": 22,
-      "protein": 4,
-      "fat": 5
+      "carbs": 24,
+      "protein": 3,
+      "fat": 10
     }
   }
 }

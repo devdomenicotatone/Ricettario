@@ -51,8 +51,8 @@
             window.applicaColoreBarra(theme);
         })();
     </script>
-  <script type="module" crossorigin src="/Ricettario/assets/main-CIkMtxy9.js"></script>
-  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-BvCxNhbZ.css">
+  <script type="module" crossorigin src="/Ricettario/assets/main-RStF1M2L.js"></script>
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-DlIt2EXm.css">
 
     <meta name="description" content="Dado vegetale artigianale con verdure fresche e sale: senza conservanti, senza glutammato, da congelare in cubetti pronti all'uso.">
     <link rel="canonical" href="https://devdomenicotatone.github.io/Ricettario/ricette/conserve/dado-vegetale-fatto-in-casa/">
@@ -148,9 +148,9 @@
   "nutrition": {
     "@type": "NutritionInformation",
     "servingSize": "100 g",
-    "calories": "118 kcal",
-    "carbohydrateContent": "11 g",
-    "proteinContent": "2 g",
+    "calories": "68 kcal",
+    "carbohydrateContent": "8 g",
+    "proteinContent": "1 g",
     "fatContent": "4 g"
   }
 }
@@ -226,9 +226,11 @@
 
             <ul class="navbar__links" id="nav-links">
                 <li><a href="#ricette" data-nav-section="ricette" class="active">Ricette</a></li>
-                <!-- Route vera, non un'ancora: il router la intercetta come link interno -->
+                <!-- Route vere, non ancore: il router le intercetta come link interni.
+                     La vetrina #strumenti resta in homepage; la voce di menu porta
+                     all'hub /strumenti/ con le schede complete, come Cottura. -->
                 <li><a href="/Ricettario/cottura/">Cottura</a></li>
-                <li><a href="#strumenti" data-nav-section="strumenti">Strumenti</a></li>
+                <li><a href="/Ricettario/strumenti/">Strumenti</a></li>
                 <li><a href="#chi-sono" data-nav-section="chi-sono">Chi Sono</a></li>
             </ul>
 
@@ -416,24 +418,24 @@
 
         <div class="nutrition-content">
           <div class="nutrition-kcal">
-              <span class="nutrition-kcal__value">118</span>
+              <span class="nutrition-kcal__value">68</span>
               <span class="nutrition-kcal__unit">Kcal</span>
           </div>
 
           <div class="nutrition-bar">
-            <div class="nutrition-bar__segment nutrition-bar__segment--carbs" style="width: 64.70588235294117%;" title="Carboidrati"></div>
-            <div class="nutrition-bar__segment nutrition-bar__segment--prot" style="width: 11.76470588235294%;" title="Proteine"></div>
-            <div class="nutrition-bar__segment nutrition-bar__segment--fat" style="width: 23.52941176470588%;" title="Grassi"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--carbs" style="width: 61.53846153846154%;" title="Carboidrati"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--prot" style="width: 7.6923076923076925%;" title="Proteine"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--fat" style="width: 30.76923076923077%;" title="Grassi"></div>
           </div>
 
           <div class="nutrition-legend">
             <div class="nutrition-legend__item">
               <div class="nutrition-legend__dot nutrition-legend__dot--carbs"></div>
-              <span>Carboidrati <strong>11g</strong></span>
+              <span>Carboidrati <strong>8g</strong></span>
             </div>
             <div class="nutrition-legend__item">
               <div class="nutrition-legend__dot nutrition-legend__dot--prot"></div>
-              <span>Proteine <strong>2g</strong></span>
+              <span>Proteine <strong>1g</strong></span>
             </div>
             <div class="nutrition-legend__item">
               <div class="nutrition-legend__dot nutrition-legend__dot--fat"></div>
@@ -442,7 +444,7 @@
           </div>
 
           <p class="nutrition-disclaimer">
-            <em>Disclaimer: Valori medi per 100 g di prodotto finito, stimati sugli ingredienti della ricetta. Considerano il calo peso da evaporazione. I valori effettivi possono variare in base ai marchi commerciali usati.</em>
+            <em>Disclaimer: Valori medi per 100 g di prodotto finito, calcolati sugli ingredienti della ricetta con dati USDA FoodData Central e resa di cottura dichiarata. I valori effettivi possono variare in base ai marchi commerciali usati.</em>
           </p>
         </div>
     </div>
@@ -454,6 +456,15 @@
         <strong>ALERT PROFESSIONALE</strong>
         <p><img src="/Ricettario/images/emoji/warning.png" width="18" height="18" alt="" class="fluent-emoji" loading="lazy"> NON riducete il sale sotto il 25-28% del peso delle verdure pulite: il sale non è solo un condimento ma il principale conservante del dado. Una quantità insufficiente comprometterebbe la sicurezza microbiologica del prodotto (rischio proliferazione batterica) e la consistenza finale (il dado non solidificherà correttamente in freezer). Al contrario, non eccedete oltre il 35%: il dado risulterebbe troppo salato e inutilizzabile. Pesate sempre con una bilancia da cucina — non andate ad occhio.</p>
       </div>
+    </div>
+        
+    <div class="recipe-panel recipe-panel--spaced">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/wrench.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Strumenti del mestiere
+      </h2>
+      <ul class="tip-list">
+        <li class="tip-item"><img src="/Ricettario/images/emoji/wrench.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> <a href="/Ricettario/strumenti/cutter-sirman-c-tronic-6/" data-link>Sirman C-Tronic 6 VT</a> — Lame lisce: Le lame lisce tritano in un attimo le verdure crude e, dopo la cottura, riducono la massa in una purea perfettamente liscia.</li>
+      </ul>
     </div>
         
         
@@ -546,7 +557,9 @@
                         </li>
                         <li><a href="/Ricettario/#ricette" data-nav-section="ricette"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
                                 Ricette</a></li>
-                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
+                        <!-- Route vera come Cottura: porta all'hub /strumenti/,
+                             non all'ancora della vetrina in homepage. -->
+                        <li><a href="/Ricettario/strumenti/" data-link><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
                                 Strumenti</a></li>
                         <li><a href="/Ricettario/#chi-sono" data-nav-section="chi-sono"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Chi
                                 Sono</a></li>
@@ -590,7 +603,9 @@
                 <div>
                     <h2 class="footer__col-title">Stack</h2>
                     <ul class="footer__links">
-                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
+                        <!-- La Famag ha la sua pagina in /strumenti/; le altre
+                             voci dello stack restano ancore alla vetrina. -->
+                        <li><a href="/Ricettario/strumenti/famag-grilletta/" data-link><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Famag Grilletta</a></li>
                         <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
                                     class="fluent-emoji"> Mix Tri-Farina</a></li>
