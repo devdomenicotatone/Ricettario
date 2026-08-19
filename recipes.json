@@ -1,5 +1,5 @@
 {
-  "totalRecipes": 84,
+  "totalRecipes": 85,
   "categories": [
     {
       "name": "Primi",
@@ -45,6 +45,11 @@
       "name": "Secondi Piatti",
       "count": 4,
       "emoji": "🍲"
+    },
+    {
+      "name": "Bevande",
+      "count": 1,
+      "emoji": "🍹"
     }
   ],
   "recipes": [
@@ -1834,6 +1839,26 @@
       "hasNutrition": true,
       "hasStorage": true,
       "_createdAt": "2026-04-27T18:44:07.389Z"
+    },
+    {
+      "title": "Succo di More",
+      "slug": "succo-di-more-fatto-in-casa",
+      "category": "Bevande",
+      "categoryDir": "bevande",
+      "emoji": "🫐",
+      "href": "ricette/bevande/succo-di-more-fatto-in-casa.html",
+      "image": "images/ricette/bevande/succo-di-more-fatto-in-casa.webp",
+      "description": "Succo di more artigianale con cottura breve, filtraggio a maglia fine e opzione pastorizzazione per conservazione invernale.",
+      "hydration": null,
+      "time": null,
+      "temp": null,
+      "tool": "",
+      "tools": [],
+      "imageAttribution": "📷 Foto: TastyLens — Pixabay License via Pixabay",
+      "hasSensory": true,
+      "hasNutrition": true,
+      "hasStorage": true,
+      "_createdAt": "2026-08-19T23:04:42.604Z"
     }
   ]
 }
