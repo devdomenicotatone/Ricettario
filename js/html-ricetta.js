@@ -527,6 +527,12 @@ function buildStrumenti(r, ctx) {
 function buildBaking(r, ctx) {
   if (!r.baking) return '';
   const b = r.baking;
+  // Guscio vuoto ({temperature:"", time:"", tips:[]}): capita quando l'AI
+  // include il blocco dello scheletro senza compilarlo (le bevande non hanno
+  // cottura al forno). Senza questo controllo si disegnava un pannello con il
+  // solo titolo "Cottura" — le sezioni sorelle (ProTips, Storage) sono già
+  // immuni perché controllano ?.length.
+  if (!b.temperature && !b.time && !b.tips?.length) return '';
   return `
     <div class="recipe-panel reveal recipe-panel--spaced">
       <h2 class="recipe-panel__title">
