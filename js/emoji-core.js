@@ -48,6 +48,7 @@ export const EMOJI_MAP = {
   'canned-food': 'canned-food',
   'herb': 'herb',
   'fork-and-knife': 'fork-and-knife',
+  'tropical-drink': 'tropical-drink',
 
   // Homepage/strumenti
   'star': 'star',

@@ -1,0 +1,168 @@
+{
+  "title": "Succo di More",
+  "slug": "succo-di-more-fatto-in-casa",
+  "emoji": "🫐",
+  "description": "Succo di more artigianale con cottura breve, filtraggio a maglia fine e opzione pastorizzazione per conservazione invernale.",
+  "subtitle": "Estrazione a caldo con filtraggio su stamina — versione fresca o pastorizzata",
+  "category": "Bevande",
+  "hydration": 0,
+  "targetTemp": "",
+  "fermentation": "",
+  "totalFlour": 0,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per il Succo",
+      "items": [
+        {
+          "name": "More Fresche",
+          "note": "(mature, senza piccioli e frutti danneggiati)",
+          "grams": 1000,
+          "tokenId": "more"
+        },
+        {
+          "name": "Acqua",
+          "note": "(temperatura ambiente)",
+          "grams": 500,
+          "tokenId": "acqua"
+        },
+        {
+          "name": "Zucchero Semolato",
+          "note": "(regolabile in base alla dolcezza delle more)",
+          "grams": 150,
+          "tokenId": "zucchero"
+        },
+        {
+          "name": "Succo di Limone",
+          "note": "(circa 15 ml, antiossidante naturale)",
+          "grams": 15,
+          "tokenId": "succo_limone"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Preparazione e Lavaggio delle More",
+      "text": "Versa {more:1000}g di more fresche in una terrina capiente colma di acqua fredda. Sciacquale delicatamente con le mani per rimuovere polvere, impurità e residui di terra. Scola con un colino ed elimina con cura eventuali frutti ammaccati, troppo maturi o deteriorati e tutti i piccioli rimasti attaccati. More danneggiate possono compromettere sapore e conservabilità del succo."
+    },
+    {
+      "title": "Cottura a Fuoco Medio",
+      "text": "Trasferisci le more pulite in una casseruola capiente (almeno 3 litri di capacità). Aggiungi {acqua:500}g di acqua, {zucchero:150}g di zucchero semolato e {succo_limone:15}g di succo di limone. Porta a fuoco medio, mescolando di tanto in tanto con un cucchiaio di legno per sciogliere completamente lo zucchero prima che raggiunga il bollore. Dal momento dell'ebollizione, abbassa leggermente la fiamma e fai sobbollire per {tempo_cottura:10!}–{tempo_cottura_max:15!} minuti: le more si ammorbidiranno completamente rilasciando succo, colore e aromi. La schiuma in superficie è normale, puoi eliminarla con un mestolo forato."
+    },
+    {
+      "title": "Estrazione e Filtraggio",
+      "text": "Togli la casseruola dal fuoco. Posiziona un colino a maglia finissima (o una stamina/etamina di cotone sterilizzata) sopra una ciotola o una pentola capiente. Versa il composto di more cotte nel colino e lascia che il liquido coli spontaneamente per qualche minuto. Poi, con il dorso di un cucchiaio o di un mestolo, schiaccia con decisione tutta la polpa rimasta per estrarre il massimo del succo: premi in movimenti circolari fino a quando rimane solo una massa asciutta di semi e fibra. Scarta i residui solidi. Il succo ottenuto sarà limpido, intensamente colorato e profumato."
+    },
+    {
+      "title": "Raffreddamento e Conservazione Breve",
+      "text": "Se destini il succo al consumo nei giorni successivi: lascia raffreddare completamente il succo a temperatura ambiente (circa {temp_ambiente:20!}–{temp_ambiente_max:22!}°C), poi trasferiscilo in una o più bottiglie di vetro chiuse ermeticamente. Conserva in frigorifero a +{temp_frigo:4!}°C per un massimo di {giorni_frigo:3!}–{giorni_frigo_max:4!} giorni. Prima di servire, agita bene la bottiglia poiché il succo può depositare naturalmente."
+    },
+    {
+      "title": "Pastorizzazione a Bagnomaria (per conservazione invernale)",
+      "text": "Se desideri conservare il succo per l'inverno: sterilizza le bottiglie di vetro in forno a {temp_sterilizzazione:120!}°C per {durata_sterilizzazione:15!} minuti (o facendole bollire in acqua per {durata_bollitura:10!} minuti). Versa il succo ancora bollente o comunque molto caldo (almeno {temp_succo_imbottigliamento:85!}°C) nelle bottiglie sterilizzate, riempiendole quasi fino all'orlo. Chiudi ermeticamente con capsule nuove. Disponi le bottiglie in una pentola alta, separale con canovacci per evitare che si tocchino, copri completamente d'acqua e porta a {temp_bagnomaria:100!}°C. Pastorizza per {durata_pastorizzazione:20!} minuti dal bollore. Lascia raffreddare le bottiglie nella pentola, poi verifica il sottovuoto premendo al centro del tappo: non deve fare 'clic'. Conserva in luogo fresco, buio e asciutto per un massimo di {mesi_conservazione:12!} mesi."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [],
+  "glossary": [
+    {
+      "term": "Stamina / Etamina",
+      "definition": "Tessuto di cotone o lino a trama finissima, usato in cucina per filtrare preparazioni liquide eliminando semi, fibra e impurità solide. Va sterilizzata in acqua bollente prima dell'uso."
+    },
+    {
+      "term": "Sobbollire",
+      "definition": "Cottura a fuoco basso che mantiene il liquido in leggera ebollizione (circa 90–95°C), senza il ribollire violento del pieno bollore. Preserva meglio colori e aromi delicati dei frutti."
+    },
+    {
+      "term": "Pastorizzazione a Bagnomaria",
+      "definition": "Processo termico che porta il contenuto di vasetti/bottiglie chiusi a una temperatura sufficiente (almeno 85°C al cuore) da eliminare muffe, lieviti e la maggior parte dei batteri, garantendo conservabilità a lungo termine."
+    },
+    {
+      "term": "Sottovuoto",
+      "definition": "Condizione di pressione negativa all'interno del vasetto/bottiglia che si forma durante il raffreddamento post-pastorizzazione. Si verifica premendo al centro del tappo: se non cede e non fa 'clic', il sottovuoto è corretto."
+    },
+    {
+      "term": "Antiossidante",
+      "definition": "Sostanza che rallenta l'ossidazione dei pigmenti e dei nutrienti. Il succo di limone (acido citrico + vitamina C) agisce come antiossidante naturale, stabilizzando il colore del succo di more e prolungandone la freschezza."
+    },
+    {
+      "term": "Sterilizzazione",
+      "definition": "Trattamento termico a secco (forno) o in acqua bollente dei contenitori di vetro per eliminare qualsiasi microrganismo prima dell'imbottigliamento, prevenendo fermentazioni e contaminazioni indesiderate."
+    },
+    {
+      "term": "Colino a maglia fine",
+      "definition": "Setaccio metallico a rete molto fitta che trattiene semi e residui solidi lasciando passare solo il liquido. Per le more, dove i semi sono piccoli e legnosi, la maglia deve essere particolarmente stretta."
+    }
+  ],
+  "alert": "NON saltare la verifica del sottovuoto dopo la pastorizzazione: un tappo che cede o fa 'clic' indica che il sottovuoto non si è formato correttamente e il succo NON è sicuro per la conservazione a lungo termine. Apri e consuma subito oppure scarta. Usa SEMPRE capsule nuove — quelle già usate non garantiscono la tenuta ermetica.",
+  "proTips": [
+    "Per un succo più ricco e corposo, frulla le more cotte con un frullatore a immersione PRIMA di filtrare: otterrai molto più liquido dalla polpa rispetto alla sola pressione con il cucchiaio, riducendo gli scarti del 20–30%.",
+    "Se le more sono particolarmente aspre (raccolte a fine stagione o da varietà selvatiche), aggiungi lo zucchero DOPO il filtraggio e il raffreddamento parziale: così puoi assaggiare e regolare la dolcezza con precisione, evitando correzioni a caldo difficili da valutare.",
+    "Per la versione invernale, aggiungi 1–2 rametti di timo limonato o una stecca di cannella durante la cottura: le note aromatiche si trasferiscono perfettamente nel succo e lo rendono un ottimo base per infusi invernali o cocktail analcolici."
+  ],
+  "storage": [
+    "Conservazione breve: in bottiglia di vetro chiusa in frigorifero a +4°C per massimo 3–4 giorni. Agitare prima di servire poiché il succo deposita naturalmente.",
+    "Congelamento: versare il succo raffreddato in contenitori rigidi da freezer o in sacchetti sottovuoto, lasciando 2–3 cm di spazio per l'espansione. Si conserva fino a 6 mesi a –18°C. Scongelare in frigorifero per 12h prima dell'uso.",
+    "Conservazione lunga (pastorizzato): bottiglie con sottovuoto corretto si conservano fino a 12 mesi in luogo fresco, buio e asciutto (cantina o dispensa, idealmente 10–15°C). Una volta aperte, trattare come la versione fresca: frigorifero e consumo entro 3–4 giorni."
+  ],
+  "imageKeywords": [
+    "homemade blackberry juice glass",
+    "fresh blackberry drink bottle",
+    "blackberry juice canning jars",
+    "succo di more artigianale bottiglia vetro",
+    "Brombeersaft hausgemacht einkochen",
+    "wild berry juice pouring",
+    "blackberry fruit syrup homemade"
+  ],
+  "tags": [
+    "more",
+    "succo di frutta",
+    "conserve",
+    "pastorizzazione",
+    "senza glutine",
+    "vegano",
+    "estate",
+    "frutta di bosco",
+    "bevande artigianali"
+  ],
+  "_generatedBy": "claude",
+  "_createdAt": "2026-08-19T23:04:42.604Z",
+  "image": "images/ricette/bevande/succo-di-more-fatto-in-casa.webp",
+  "imageAttribution": "📷 Foto: TastyLens — Pixabay License via Pixabay",
+  "_originalImageUrl": "https://pixabay.com/get/g95a52662ed525a17f1861ba8530b5f646f4be86103b2d49eff9062c5b7217c1edd13c2851a6d35048c7bc9a951985940e76f60425e0e4fec5bce08b9842140da_1280.jpg",
+  "sensoryProfile": {
+    "summary": "Un succo di more dalla personalità vibrante e profonda: al naso si apre con sentori di frutta nera matura, mora selvatica e una sottile nota floreale. In bocca si rivela succoso e avvolgente, con una dolcezza ben calibrata che dialoga con una piacevole acidità fresca donata dal limone, lasciando un finale fruttato e leggermente tannico di buona persistenza.",
+    "axes": [
+      {
+        "label": "Dolcezza Percepita",
+        "value": 7
+      },
+      {
+        "label": "Acidità / Freschezza",
+        "value": 6
+      },
+      {
+        "label": "Intensità Aromatica",
+        "value": 8
+      },
+      {
+        "label": "Corpo / Densità",
+        "value": 6
+      },
+      {
+        "label": "Persistenza al Palato",
+        "value": 7
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 52,
+    "macros": {
+      "carbs": 12,
+      "protein": 0,
+      "fat": 0
+    }
+  }
+}

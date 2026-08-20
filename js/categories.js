@@ -24,6 +24,7 @@ export const CATEGORIES = {
   conserve:   { name: 'Conserve',   dir: 'conserve',   emoji: 'canned-food',    unicode: '🫙', title: 'Conserve e Preparazioni',    desc: 'Conserve fatte in casa — dadi vegetali, salse, sottoli e preparazioni base.' },
   condimenti: { name: 'Condimenti', dir: 'condimenti', emoji: 'herb',           unicode: '🌿', title: 'Condimenti',                 desc: 'Salse, pesti e condimenti artigianali per ogni piatto.' },
   secondi_piatti: { name: 'Secondi Piatti', dir: 'secondi-piatti', emoji: 'fork-and-knife', unicode: '🍲', title: 'Secondi Piatti', desc: 'Esplora ricette complete e saporite per i tuoi secondi piatti: carne, pesce, legumi e verdure.' },
+  bevande: { name: 'Bevande', dir: 'bevande', emoji: 'tropical-drink', unicode: '🍹', title: 'Ricette di Bevande', desc: 'Esplora la nostra collezione di ricette per bevande rinfrescanti, cocktail, succhi, frullati e bevande calde per ogni gusto.' },
 };
 
 /**
@@ -32,6 +33,7 @@ export const CATEGORIES = {
  */
 export const CATEGORY_ORDER = [
   'primi', 'pane', 'pizza', 'lievitati', 'dolci', 'focaccia', 'conserve', 'condimenti', 'secondi_piatti',
+  'bevande',
 ];
 
 /**

@@ -39,6 +39,7 @@
  *   await sharp(orig).resize({ width: 640 }).webp({ quality: 75 }).toFile('<nome>-640.webp');
  */
 export const DIMENSIONI_FOTO = {
+  'images/ricette/bevande/succo-di-more-fatto-in-casa': [1280, 1280],
   'images/ricette/condimenti/babaganoush-crema-melanzane': [1200, 896],
   'images/ricette/condimenti/bagna-cauda': [1800, 1350],
   'images/ricette/condimenti/besciamella': [1200, 896],
