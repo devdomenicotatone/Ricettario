@@ -95,6 +95,7 @@ export const DIMENSIONI_FOTO = {
   'images/ricette/focaccia/focaccia-genovese-fugassa': [1200, 896],
   'images/ricette/lievitati/burger-buns-con-biga': [1800, 1200],
   'images/ricette/lievitati/cornetti-sfogliati-classici': [1800, 1200],
+  'images/ricette/lievitati/cornetti-sfogliati-fatti-in-casa': [1280, 719],
   'images/ricette/lievitati/impasto-rosticceria-siciliana': [1200, 896],
   'images/ricette/lievitati/panettone-fatto-in-casa-caputo': [1800, 1202],
   'images/ricette/lievitati/panettone-pere-cioccolato': [1880, 1251],

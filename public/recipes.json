@@ -1,5 +1,5 @@
 {
-  "totalRecipes": 85,
+  "totalRecipes": 86,
   "categories": [
     {
       "name": "Primi",
@@ -18,7 +18,7 @@
     },
     {
       "name": "Lievitati",
-      "count": 8,
+      "count": 9,
       "emoji": "🥐"
     },
     {
@@ -472,6 +472,26 @@
       "hasNutrition": true,
       "hasStorage": true,
       "_createdAt": "2026-04-05T01:25:46.208Z"
+    },
+    {
+      "title": "Cornetti Sfogliati Fatti in Casa",
+      "slug": "cornetti-sfogliati-fatti-in-casa",
+      "category": "Lievitati",
+      "categoryDir": "lievitati",
+      "emoji": "🥐",
+      "href": "ricette/lievitati/cornetti-sfogliati-fatti-in-casa.html",
+      "image": "images/ricette/lievitati/cornetti-sfogliati-fatti-in-casa.webp",
+      "description": "Cornetti sfogliati all'italiana con impasto brioche ricco, sfogliatura a 3 giri e lievitazione lenta per una sfoglia ariosa e fragrante.",
+      "hydration": "48%",
+      "time": "1h a TA + 12-16h in frigo + 2-3h appretto",
+      "temp": "24-26°C",
+      "tool": "",
+      "tools": [],
+      "imageAttribution": "📷 Foto: Pexels — Pixabay License via Pixabay",
+      "hasSensory": true,
+      "hasNutrition": true,
+      "hasStorage": true,
+      "_createdAt": "2026-10-04T12:23:22.771Z"
     },
     {
       "title": "Impasto Rosticceria Siciliana",

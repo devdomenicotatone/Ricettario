@@ -1,0 +1,326 @@
+{
+  "title": "Cornetti Sfogliati Fatti in Casa",
+  "slug": "cornetti-sfogliati-fatti-in-casa",
+  "emoji": "🥐",
+  "description": "Cornetti sfogliati all'italiana con impasto brioche ricco, sfogliatura a 3 giri e lievitazione lenta per una sfoglia ariosa e fragrante.",
+  "subtitle": "Brioche sfogliata artigianale con pieghe a libro — metodo italiano",
+  "category": "Lievitati",
+  "hydration": 48,
+  "targetTemp": "24-26°C",
+  "fermentation": "1h a TA + 12-16h in frigo + 2-3h appretto",
+  "totalFlour": 515,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per l'Impasto Brioche",
+      "items": [
+        {
+          "name": "Farina Manitoba",
+          "note": "(W 380-420, es. Lo Conte Magica, Caputo Nuvola Superior)",
+          "grams": 250,
+          "tokenId": "farina_manitoba"
+        },
+        {
+          "name": "Farina Tipo 00",
+          "note": "(W 220-240, es. Caputo Cuoco, Molino Grassi)",
+          "grams": 250,
+          "tokenId": "farina_00"
+        },
+        {
+          "name": "Zucchero Semolato",
+          "note": "(fine, non a velo)",
+          "grams": 100,
+          "tokenId": "zucchero"
+        },
+        {
+          "name": "Uova Intere",
+          "note": "(taglia M, ca. 60g l'una, a temperatura ambiente)",
+          "grams": 120,
+          "tokenId": "uova"
+        },
+        {
+          "name": "Tuorlo",
+          "note": "(taglia M, a temperatura ambiente)",
+          "grams": 20,
+          "tokenId": "tuorlo_impasto"
+        },
+        {
+          "name": "Latte Intero",
+          "note": "(a temperatura ambiente, 20-22°C)",
+          "grams": 100,
+          "tokenId": "latte"
+        },
+        {
+          "name": "Acqua",
+          "note": "(a temperatura ambiente, 20-22°C)",
+          "grams": 60,
+          "tokenId": "acqua"
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(in alternativa 3g secco)",
+          "grams": 10,
+          "tokenId": "lievito_fresco"
+        },
+        {
+          "name": "Burro",
+          "note": "(morbido a pomata, 20°C, qualità europea 82% m.g.)",
+          "grams": 50,
+          "tokenId": "burro_impasto"
+        },
+        {
+          "name": "Miele di Acacia",
+          "note": "(o miele millefiori, aiuta la doratura)",
+          "grams": 10,
+          "tokenId": "miele"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(marino fine)",
+          "grams": 8,
+          "tokenId": "sale"
+        },
+        {
+          "name": "Scorza di Arancia",
+          "note": "(grattugiata fine, non trattata)",
+          "grams": 5,
+          "tokenId": "scorza_arancia"
+        },
+        {
+          "name": "Estratto di Vaniglia Naturale",
+          "note": "(o mezza bacca, NON vanillina sintetica)",
+          "grams": 3,
+          "tokenId": "vaniglia"
+        }
+      ]
+    },
+    {
+      "group": "Per il Panetto di Sfogliatura (Beurrage)",
+      "items": [
+        {
+          "name": "Burro di Qualità Superiore",
+          "note": "(84% m.g., tipo Lurpak, Beurre de Charentes, Inalpi Extra Corman — freddo da frigo)",
+          "grams": 250,
+          "tokenId": "burro_sfogliatura"
+        },
+        {
+          "name": "Farina Tipo 00",
+          "note": "(per infarinare il panetto, assorbe l'eccesso di umidità)",
+          "grams": 15,
+          "tokenId": "farina_beurrage"
+        }
+      ]
+    },
+    {
+      "group": "Per la Finitura",
+      "items": [
+        {
+          "name": "Tuorlo",
+          "note": "(per spennellare, taglia M)",
+          "grams": 20,
+          "tokenId": "tuorlo_finitura"
+        },
+        {
+          "name": "Latte Intero",
+          "note": "(per la doratura)",
+          "grams": 20,
+          "tokenId": "latte_finitura"
+        },
+        {
+          "name": "Zucchero a Velo",
+          "note": "(per spolverare dopo cottura, facoltativo)",
+          "grams": 20,
+          "tokenId": "zucchero_velo"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Preparazione del Beurrage (Panetto di Burro per Sfogliatura)",
+      "text": "Il giorno prima o almeno 2 ore prima di iniziare, preparare il beurrage. Tirare dal frigo {burro_sfogliatura:250}g di burro di qualità superiore (84% m.g.) e tagliarlo a fette di circa 1 cm. Disporre le fette su un foglio di carta forno, spolverarle con {farina_beurrage:15}g di farina 00 e coprirle con un altro foglio di carta forno. Con il mattarello, battere energicamente il burro fino a ottenere un panetto rettangolare uniforme di circa 20×15 cm e spessore 1 cm. Il burro deve essere plastico e flessibile, NON sciolto: temperatura ideale 12-14°C. Riporre il panetto in frigo avvolto nella carta forno fino all'utilizzo."
+    },
+    {
+      "title": "Impasto Brioche — Prima Fase (Planetaria)",
+      "text": "Nella ciotola della planetaria con gancio, sciogliere {lievito_fresco:10}g di lievito fresco in {acqua:60}g di acqua a temperatura ambiente (20-22°C). Aggiungere {latte:100}g di latte, {uova:120}g di uova intere (2 uova M sbattute leggermente), {tuorlo_impasto:20}g di tuorlo, {miele:10}g di miele, {scorza_arancia:5}g di scorza d'arancia grattugiata e {vaniglia:3}g di estratto di vaniglia naturale. Mescolare brevemente. Aggiungere il mix di farine ({farina_manitoba:250}g manitoba + {farina_00:250}g farina 00 setacciate insieme) e {zucchero:100}g di zucchero semolato. Avviare la planetaria a velocità 1 per 2 minuti finché si forma una massa omogenea, poi portare a velocità 2-3 e impastare per 6-8 minuti fino a ottenere un impasto liscio che si stacca dalle pareti della ciotola."
+    },
+    {
+      "title": "Inserimento del Burro e Incordatura",
+      "text": "Con la planetaria a velocità 2, aggiungere {burro_impasto:50}g di burro morbido a pomata (20°C) a pezzetti, pochi alla volta, aspettando che ogni aggiunta venga assorbita prima di inserire il successivo. Ci vorranno circa 4-5 minuti. Infine aggiungere {sale:8}g di sale e aumentare a velocità 3 per altri 3-4 minuti fino a completa incordatura: l'impasto deve essere liscio, elastico e setoso, e fare il cosiddetto 'velo' quando tirato tra le dita. La temperatura finale dell'impasto deve essere di 24-26°C: se supera i 26°C, fermarsi e fare riposare in frigo per 15 minuti."
+    },
+    {
+      "title": "Prima Lievitazione e Riposo in Frigo",
+      "text": "Formare una palla liscia con l'impasto, adagiarla in una ciotola leggermente unta con un filo d'olio, coprire con pellicola a contatto e lasciare lievitare a temperatura ambiente (24°C) per 60 minuti, finché l'impasto inizia a gonfiarsi visibilmente. Poi trasferire la ciotola in frigorifero a 4°C per 12-16 ore (fino al giorno dopo). Questo lungo riposo in freddo sviluppa gli aromi, rende l'impasto più gestibile durante la sfogliatura e rallenta la lievitazione per un risultato più complesso."
+    },
+    {
+      "title": "Primo Giro di Sfogliatura — Giro a 3",
+      "text": "Il giorno seguente, estrarre l'impasto dal frigo. Tirare fuori anche il panetto di burro e portarlo a 12-14°C (deve essere plastico ma non molle — si piega senza spezzarsi). Su un piano infarinato, stendere l'impasto con il mattarello in un rettangolo di circa 40×25 cm. Posizionare il panetto di burro al centro, coprendo i 2/3 centrali del rettangolo. Ripiegare un lembo dell'impasto sul burro (come una lettera commerciale), poi sovrapporre l'altro lembo. Premere i bordi per sigillare il burro all'interno. Ruotare il panetto di 90° (la piega aperta verso destra). Stendere delicatamente ma con decisione in un rettangolo lungo circa 60 cm, mantenendo una larghezza uniforme. Eseguire la piega a 3: piegare un terzo del rettangolo verso il centro, poi sovrapporre l'altro terzo. Avvolgere nella pellicola e riporre in frigo per 30 minuti."
+    },
+    {
+      "title": "Secondo e Terzo Giro di Sfogliatura",
+      "text": "Estrarre l'impasto dal frigo. Posizionarlo con la piega aperta verso destra e stenderlo nuovamente in un rettangolo lungo ~60 cm. Eseguire un altro giro a 3. Avvolgere e riporre in frigo per altri 30 minuti. Estrarre e ripetere per il terzo e ultimo giro a 3. Dopo i 3 giri (per un totale di 27 strati di burro), avvolgere il pastello nella pellicola e riporre in frigo per un riposo finale di 30-60 minuti. Questo passaggio è fondamentale: se il burro si rompe o fuoriesce durante la sfogliatura, l'impasto si è scaldato troppo — rimettere immediatamente in frigo."
+    },
+    {
+      "title": "Formatura dei Cornetti",
+      "text": "Estrarre il pastello dal frigo. Su un piano leggermente infarinato, stendere il pastello in un rettangolo di circa 60×30 cm con spessore di 4-5 mm. Con una rotella tagliapasta o un coltello affilato, tagliare dei triangoli isosceli con base di circa 10-12 cm e altezza di 20-22 cm. Se si vuole farcire, disporre un cucchiaino di ripieno (Nutella, crema pasticcera, marmellata) alla base del triangolo. Praticare un piccolo taglio da 1 cm al centro della base. Arrotolare il cornetto dal basso verso l'alto tirando leggermente le punte laterali. Formare una leggera curva a mezzaluna e posizionare sulla teglia rivestita di carta forno, con la punta sotto. Distanziare almeno 5 cm tra un cornetto e l'altro."
+    },
+    {
+      "title": "Appretto (Seconda Lievitazione)",
+      "text": "Coprire le teglie con i cornetti formati con pellicola leggermente unta o un canovaccio umido. Lasciare lievitare a temperatura ambiente (22-24°C) per 2-3 ore, finché i cornetti sono visibilmente gonfi, morbidi al tatto e hanno quasi raddoppiato il loro volume. NON lasciarli sovralievitare: un cornetto ben lievitato mantiene la forma e non crolla se si tocca leggermente. Se si vuole, è possibile lasciarli lievitare in frigo tutta la notte dopo la formatura e cuocerli direttamente la mattina (metodo a freddo): in questo caso estrarli dal frigo 30 minuti prima di infornare."
+    },
+    {
+      "title": "Doratura e Cottura",
+      "text": "Preriscaldare il forno statico a {temperatura:195!}°C per almeno 20 minuti. Preparare la doratura mescolando {tuorlo_finitura:20}g di tuorlo con {latte_finitura:20}g di latte. Spennellare delicatamente i cornetti con due passate di doratura (la prima leggera, aspettare 2 minuti, poi la seconda). Infornare nel ripiano centrale del forno per {tempo_cottura:20!}-{tempo_cottura_max:23!} minuti finché sono dorati in superficie e il loro profumo invade la cucina. Gli ultimi 3-4 minuti aprire leggermente lo sportello del forno (tenerlo socchiuso con un cucchiaio di legno) per favorire l'asciugatura della sfogliatura. Sfornare e lasciare raffreddare su una gratella per almeno 10 minuti prima di servire. Spolverare con {zucchero_velo:20}g di zucchero a velo solo a raffreddamento completato (facoltativo)."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [
+    {
+      "type": "Manitoba (per l'impasto)",
+      "w": "380-420",
+      "brands": "Lo Conte Le Magiche, Caputo Nuvola Superior, Molino Dallagiovanna Top, Garofalo Farina Manitoba"
+    },
+    {
+      "type": "Farina 00 (bilanciamento impasto)",
+      "w": "220-240",
+      "brands": "Caputo Cuoco, Molino Grassi 00, Barilla Farina 00, Agugiaro&Figna Le 5 Stagioni 00"
+    },
+    {
+      "type": "Alternativa monofarina (W alto)",
+      "w": "280-320",
+      "brands": "Caputo Nuvola, Molino Rossetto Speciale per Croissant, Petra 5"
+    }
+  ],
+  "baking": {
+    "temperature": "195°C statico",
+    "time": "20-23 minuti",
+    "tips": [
+      "Forno STATICO obbligatorio: il ventilato asciuga la superficie troppo velocemente impedendo l'oven spring e rovinando la sfogliatura",
+      "Posizione teglia: ripiano centrale, mai il ripiano basso (brucia il fondo) né il ripiano alto (brucia la superficie prima che l'interno cuocia)",
+      "Aprire lo sportello del forno di un dito negli ultimi 3-4 minuti per asciugare la sfogliatura interna ed evitare l'effetto 'vapore'",
+      "I cornetti sono cotti quando il fondo risulta dorato e suona vuoto battendoci sopra con le nocche — non solo la superficie dorata è sufficiente",
+      "NON aprire il forno nei primi 15 minuti per non bloccare lo sviluppo della sfogliatura (oven spring)"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Beurrage",
+      "definition": "Il panetto di burro lavorato e sagomato che viene incorporato nell'impasto durante la sfogliatura. Deve essere plastico (12-14°C) per scorrere tra gli strati senza rompersi."
+    },
+    {
+      "term": "Sfogliatura",
+      "definition": "Tecnica che consiste nell'incorporare un panetto di burro nell'impasto tramite pieghe successive, creando strati alternati di pasta e grasso che in cottura si separano per effetto del vapore, dando la struttura lamellare del croissant."
+    },
+    {
+      "term": "Giro a 3 (Piega a Libro)",
+      "definition": "Tipo di piega in cui il rettangolo di pasta viene diviso idealmente in 3 parti uguali e piegato come una lettera commerciale (un lembo sopra l'altro). Ogni giro a 3 triplica il numero di strati."
+    },
+    {
+      "term": "Pastello",
+      "definition": "L'impasto che 'avvolge' il panetto di burro (beurrage) nelle prime fasi della sfogliatura. Non è il prodotto finito, ma il sistema impasto+burro durante la lavorazione."
+    },
+    {
+      "term": "Incordatura",
+      "definition": "Sviluppo completo della maglia glutinica: l'impasto diventa liscio, elastico e 'si incorda' attorno al gancio. Si verifica quando il glutine forma una rete resistente — il test del velo è la prova visiva."
+    },
+    {
+      "term": "Velo",
+      "definition": "Test per verificare l'incordatura: si prende un pezzetto di impasto e lo si allarga delicatamente tra le dita. Se forma una membrana sottile e traslucida senza rompersi, il glutine è ben sviluppato."
+    },
+    {
+      "term": "Appretto",
+      "definition": "La seconda e ultima lievitazione, quella che avviene dopo la formatura. Dà volume al prodotto finito e deve essere monitorata attentamente per non sovralievitare."
+    },
+    {
+      "term": "Puntata",
+      "definition": "La prima lievitazione dell'impasto (prima della formatura). Nel caso dei cornetti sfogliati, viene interrotta in frigo per mantenere il glutine teso e facilitare la sfogliatura."
+    },
+    {
+      "term": "Burro a Pomata",
+      "definition": "Burro lavorato fino a consistenza cremosa simile a una pomata (20-22°C), né fuso né solido. Si incorpora facilmente nell'impasto senza alternarne la temperatura."
+    },
+    {
+      "term": "Oven Spring",
+      "definition": "Il rapido sviluppo in forno nei primi minuti di cottura, dovuto all'espansione dei gas di lievitazione e al vapore prodotto dall'acqua nel burro. Dà l'apertura caratteristica della sfogliatura."
+    },
+    {
+      "term": "Retard (in frigo)",
+      "definition": "Tecnica di rallentamento della lievitazione tramite freddo (4-6°C). Permette di distribuire il lavoro su due giorni, migliora gli aromi per maturazione enzimatica lenta e rende l'impasto più gestibile."
+    },
+    {
+      "term": "Triangolo con intaglio alla base",
+      "definition": "Il piccolo taglio da 1 cm praticato al centro della base del triangolo prima dell'arrotolamento: permette al cornetto di curvare naturalmente in forma di mezzaluna e riduce la tensione degli strati."
+    }
+  ],
+  "alert": "NON usare burro con meno dell'82% di materia grassa per la sfogliatura: i burri con più acqua (tipo burro da cucina economico) producono vapore eccessivo che bagna gli strati invece di separarli, rendendo la sfogliatura gommosa anziché croccante. Allo stesso modo, NON sfogliare mai con burro fuso o troppo morbido (>16°C): penetra nella pasta invece di stratificarsi, compromettendo irrimediabilmente la struttura lamellare. Se il burro fuoriesce dai bordi durante la stesura, rimettere immediatamente in frigo per 20 minuti.",
+  "proTips": [
+    "Per una sfogliatura ancora più definita e croccante, dopo i 3 giri a 3 (27 strati), puoi eseguire un quarto giro a 4 (piega a portafoglio): questo porta a 108 strati e una sfogliatura più sottile tipica del croissant francese. Tuttavia per il cornetto italiano, i 27 strati sono il punto ideale di equilibrio tra morbidezza brioche e sfogliatura visibile.",
+    "La doratura a doppia passata fa la differenza: la prima stesura di tuorlo+latte asciuga parzialmente durante i 2 minuti di attesa, e la seconda crea una lacca lucida che in cottura diventa una doratura profonda e uniforme. Aggiungere 5g di miele nella doratura intensifica il colore e la brillantezza.",
+    "Per cornetti perfettamente uniformi, usare la teglia capovolta (il fondo liscio come superficie di lavoro) e una riga o una dima di cartone per tagliare i triangoli sempre delle stesse dimensioni. La coerenza nelle dimensioni garantisce cottura uniforme: cornetti di dimensioni diverse cuociono a velocità diverse."
+  ],
+  "storage": [
+    "A temperatura ambiente: i cornetti si conservano sotto una campana di vetro o in una busta di carta (non plastica, che li ammorbidisce) per massimo 12-18 ore. Oltre questo tempo perdono la croccantezza della sfogliatura.",
+    "In freezer (prima della cottura — metodo ideale): dopo la formatura e PRIMA dell'appretto, congelare i cornetti su teglia per 2 ore poi trasferirli in sacchetti sottovuoto. Si conservano fino a 60 giorni. Per cuocerli: estrarre la sera prima, lasciare in frigo tutta la notte, poi a temperatura ambiente 2-3 ore di appretto e infornare come di consueto.",
+    "In freezer (già cotti): avvolgere i cornetti completamente freddi singolarmente in pellicola, poi in alluminio. Si conservano fino a 30 giorni. Per rigenerare: forno statico a 170°C per 5-7 minuti direttamente dal freezer. NON usare il microonde che rende la sfogliatura gommosa."
+  ],
+  "imageKeywords": [
+    "italian cornetti sfogliati homemade",
+    "brioche croissant italian breakfast pastry",
+    "cornetti fatti in casa sfogliatura",
+    "homemade croissant laminated dough flaky",
+    "italian pastry bar colazione",
+    "Hörnchen blätterteig hausgemacht",
+    "croissant sfogliato colazione italiana"
+  ],
+  "tags": [
+    "cornetti",
+    "brioche",
+    "sfogliatura",
+    "colazione",
+    "lievitati",
+    "croissant",
+    "beurrage",
+    "pasticceria",
+    "lievito di birra",
+    "burro"
+  ],
+  "_generatedBy": "claude",
+  "_createdAt": "2026-10-04T12:23:22.771Z",
+  "image": "images/ricette/lievitati/cornetti-sfogliati-fatti-in-casa.webp",
+  "imageAttribution": "📷 Foto: Pexels — Pixabay License via Pixabay",
+  "_originalImageUrl": "https://pixabay.com/get/g0adf035ef747d8a479132f68415536337bbf4b33d93108314d8f6576c319f0a919dc3d5b9aef9c18e4c714bbc4b2f9748fa2d58334fb163ec0949953aded7bd1_1280.jpg",
+  "sensoryProfile": {
+    "summary": "Un croissant sfogliato di scuola artigianale francese, dove la ricchezza burrosa del beurrage a 84% m.g. si esprime in strati sottilissimi che si aprono al morso con una leggerezza quasi eterea. La complessità aromatica è costruita su più registri — vaniglia naturale, scorza d'arancia, miele di acacia e la lunga fermentazione a freddo — che si intrecciano senza sovrastarsi, lasciando un finale lungo e avvolgente. La dolcezza è presente ma misurata, bilanciata dalla sapidità dell'impasto e dalla caramellizzazione della crosta dorata.",
+    "axes": [
+      {
+        "label": "Sofficezza / Alveolatura",
+        "value": 8
+      },
+      {
+        "label": "Scioglievolezza",
+        "value": 9
+      },
+      {
+        "label": "Ricchezza Burrosa / Lattica",
+        "value": 9
+      },
+      {
+        "label": "Dolcezza Percepita",
+        "value": 5
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 9
+      }
+    ]
+  },
+  "nutrition": {
+    "kcal_per_100g": 425,
+    "macros": {
+      "carbs": 45,
+      "protein": 8,
+      "fat": 24
+    }
+  }
+}
