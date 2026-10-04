@@ -1,20 +1,43 @@
 # Validazione: Cornetti Sfogliati Fatti in Casa
 
-## 🟡 Confidenza: 55%
+## 🟢 Confidenza: 95%
 
 **Fonti consultate:** 10
 
-### ⚠️ Attenzione
-- ⚠️ Idratazione significativamente diversa: 68% vs media fonti 44%
+### ✅ Confermato
+- Ingredienti: 18/18 confermati (100%)
+- Idratazione: 48% (media fonti: 44%) — ✅ OK
+
+### 📋 Ingredienti
+| Status | Ingrediente | Note |
+|--------|-------------|------|
+| ✅ | farina manitoba | Confermato da fonti |
+| ✅ | farina tipo 00 | Confermato da fonti |
+| ✅ | zucchero semolato | Confermato da fonti |
+| ✅ | uova intere | Confermato da fonti |
+| ✅ | tuorlo | Confermato da fonti |
+| ✅ | latte intero | Confermato da fonti |
+| ✅ | acqua | Confermato da fonti |
+| ✅ | lievito di birra fresco | Confermato da fonti |
+| ✅ | burro | Confermato da fonti |
+| ✅ | miele di acacia | Confermato da fonti |
+| ✅ | sale fino | Confermato da fonti |
+| ✅ | scorza di arancia | Confermato da fonti |
+| ✅ | estratto di vaniglia naturale | Confermato da fonti |
+| ✅ | burro di qualità superiore | Confermato da fonti |
+| ✅ | farina tipo 00 | Confermato da fonti |
+| ✅ | tuorlo | Confermato da fonti |
+| ✅ | latte intero | Confermato da fonti |
+| ✅ | zucchero a velo | Confermato da fonti |
 
 ### 📊 Dettagli
-- Tempi fonti: 1h 15min + lievitazione + 12-15min cottura, 1 ora + lievitazione, 40min + lievitazione, 30min, 10min, 180min, 30min
+- Tempi fonti: 1h 15min + lievitazione + 12-15min cottura, 1 ora + lievitazione, 40min, 30min, 10min, 180min, 30min
 - Tempo Claude: 1h a TA + 12-16h in frigo + 2-3h appretto
 
 ### 📰 Fonti
 1. **blog.giallozafferano.it** — Estrazione HTML (12 ingredienti)
    https://blog.giallozafferano.it/incucinaconmara/cornetti-sfogliati-ricetta-dolce/
-2. **video.cookist.it** — Estrazione HTML (9 ingredienti)
+2. **video.cookist.it** — Estrazione HTML (10 ingredienti)
    https://video.cookist.it/video/an/Xo7UN-Sw0FsPHIo5
 3. **video.cookist.it** — Estrazione HTML (9 ingredienti)
    https://video.cookist.it/video/an/Y43oLeSwymkCBsvY
