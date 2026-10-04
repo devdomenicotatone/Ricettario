@@ -72,6 +72,27 @@ export function risolviTokenTesto(testo) {
 }
 
 /**
+ * Per chi deve leggere i token invece di risolverli: ogni token del testo con
+ * id, valore e fissità, nell'ordine in cui compare.
+ *
+ * Esiste perché i tools che generano le ricette tenevano tre copie proprie
+ * della grammatica (schema, analisi qualità, editor della dashboard), ferme
+ * alla forma vecchia `[a-z_]+`: i token con cifre o maiuscole, come
+ * `{farina_00:250}`, sfuggivano al controllo grammi ↔ procedimento. Ora
+ * leggono la grammatica da qui.
+ *
+ * @returns {{ token: string, id: string, valore: number, fisso: boolean }[]}
+ */
+export function tokenDelTesto(testo) {
+    return [...String(testo || '').matchAll(nuovo())].map(([token, id, valore, fisso]) => ({
+        token,
+        id,
+        valore: parseFloat(valore),
+        fisso: Boolean(fisso),
+    }));
+}
+
+/**
  * Per i cancelli: quello che resta di ogni graffa dopo aver tolto i token
  * validi. Un array vuoto vuol dire testo sano; qualsiasi elemento è un token
  * malformato (`{farina impasto:100}`), una graffa spaiata, o la forma senza
