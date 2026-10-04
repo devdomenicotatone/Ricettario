@@ -2,10 +2,10 @@
   "title": "Focaccia Genovese Classica",
   "slug": "focaccia-genovese-classica",
   "emoji": "🫒",
-  "description": "Focaccia tradizionale ligure con biga, salamoia e doppia lievitazione. Idratazione 75%, lievitazione controllata 5-6h totali per massima digeribilità.",
+  "description": "Focaccia tradizionale ligure con biga, salamoia e doppia lievitazione. Idratazione 72%, lievitazione controllata 5-6h totali per massima digeribilità.",
   "subtitle": "Focaccia tradizionale ligure con biga, salamoia e doppia lievitazione",
   "category": "Focaccia",
-  "hydration": 75,
+  "hydration": 72,
   "targetTemp": "24-26°C",
   "fermentation": "5-6h totali",
   "totalFlour": 1000,
@@ -122,7 +122,14 @@
         {
           "name": "Farina Manitoba Forte",
           "note": "(W 350-380)",
-          "grams": 700
+          "grams": 140,
+          "tokenId": "farina_manitoba_biga"
+        },
+        {
+          "name": "Farina Tipo 0 Media Forza",
+          "note": "(W 260-280)",
+          "grams": 60,
+          "tokenId": "farina_tipo0_biga"
         },
         {
           "name": "Acqua",
@@ -140,9 +147,16 @@
       "group": "Per l'Impasto Finale",
       "items": [
         {
+          "name": "Farina Manitoba Forte",
+          "note": "(W 350-380)",
+          "grams": 560,
+          "tokenId": "farina_manitoba_impasto"
+        },
+        {
           "name": "Farina Tipo 0 Media Forza",
           "note": "(W 260-280)",
-          "grams": 300
+          "grams": 240,
+          "tokenId": "farina_tipo0_impasto"
         },
         {
           "name": "Acqua",
@@ -200,11 +214,11 @@
   "steps": [
     {
       "title": "Preparazione Biga (pre-impasto)",
-      "text": "Prelevare 200g del mix farine (140g manitoba + {olio_evo_salamoia_e_fini:60}g tipo 0), unire {acqua_biga:120}g acqua tiepida (25-28°C) e {lievito_fresco_biga:3}g lievito fresco sbriciolato. Impastare brevemente a velocità 1 per 3-4 minuti fino a ottenere una palla liscia ma compatta. Formare una pallina, incidere a croce sulla superficie, coprire con pellicola e far lievitare in ambiente controllato a 26°C (forno spento con luce accesa) per 1h30-2h. La biga deve raddoppiare di volume e presentare una struttura alveolata."
+      "text": "Prelevare {mix_farine_biga:200}g del mix farine ({farina_manitoba_biga:140}g manitoba + {farina_tipo0_biga:60}g tipo 0), unire {acqua_biga:120}g acqua tiepida (25-28°C) e {lievito_fresco_biga:3}g lievito fresco sbriciolato. Impastare brevemente a velocità 1 per 3-4 minuti fino a ottenere una palla liscia ma compatta. Formare una pallina, incidere a croce sulla superficie, coprire con pellicola e far lievitare in ambiente controllato a 26°C (forno spento con luce accesa) per 1h30-2h. La biga deve raddoppiare di volume e presentare una struttura alveolata."
     },
     {
       "title": "Impasto Base con Spirale",
-      "text": "Nella vasca della spirale inserire la biga a pezzi, aggiungere il restante mix farine (560g manitoba + 240g tipo 0), {acqua_impasto_finale:600}g acqua fredda 8-10°C, {lievito_fresco_impasto_finale:12}g lievito fresco sbriciolato e {miele:10}g miele. Avviare spirale a velocità 1 per 8 minuti fino a completa amalgamazione. La massa deve risultare ruvida ma omogenea. TEMPERATURA IMPASTO TARGET: 23-24°C massimo."
+      "text": "Nella vasca della spirale inserire la biga a pezzi, aggiungere il restante mix farine ({farina_manitoba_impasto:560}g manitoba + {farina_tipo0_impasto:240}g tipo 0), {acqua_impasto_finale:600}g acqua fredda 8-10°C, {lievito_fresco_impasto_finale:12}g lievito fresco sbriciolato e {miele:10}g miele. Avviare spirale a velocità 1 per 8 minuti fino a completa amalgamazione. La massa deve risultare ruvida ma omogenea. TEMPERATURA IMPASTO TARGET: 23-24°C massimo."
     },
     {
       "title": "Incordatura e Aggiunta Olio",

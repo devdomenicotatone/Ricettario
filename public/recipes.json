@@ -562,7 +562,7 @@
       "href": "ricette/lievitati/pasta-brioche-artigianale.html",
       "image": "images/ricette/lievitati/pasta-brioche-artigianale.webp",
       "description": "L'impasto base perfetto per brioche sofficissime, trecce e cornetti. Una ricetta professionale ricca di burro e aromi naturali, con lievitazione controllata.",
-      "hydration": "43%",
+      "hydration": "40%",
       "time": "14-18h",
       "temp": "25-26°C",
       "tool": "",
@@ -767,8 +767,8 @@
       "emoji": "🫒",
       "href": "ricette/focaccia/focaccia-genovese-classica.html",
       "image": "images/ricette/focaccia/focaccia-genovese-classica.webp",
-      "description": "Focaccia tradizionale ligure con biga, salamoia e doppia lievitazione. Idratazione 75%, lievitazione controllata 5-6h totali per massima digeribilità.",
-      "hydration": "75%",
+      "description": "Focaccia tradizionale ligure con biga, salamoia e doppia lievitazione. Idratazione 72%, lievitazione controllata 5-6h totali per massima digeribilità.",
+      "hydration": "72%",
       "time": "5-6h totali",
       "temp": "24-26°C",
       "tool": "",
@@ -1876,7 +1876,7 @@
       "tools": [],
       "imageAttribution": "📷 Foto: TastyLens — Pixabay License via Pixabay",
       "hasSensory": true,
-      "hasNutrition": true,
+      "hasNutrition": false,
       "hasStorage": true,
       "_createdAt": "2026-08-19T23:04:42.604Z"
     }
