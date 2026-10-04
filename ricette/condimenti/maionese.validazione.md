@@ -1,25 +1,34 @@
 # Validazione: Maionese
 
-## 🟡 Confidenza: 60%
+## 🟢 Confidenza: 100%
 
-**Fonti consultate:** 7
+**Fonti consultate:** 5
+
+### ✅ Confermato
+- Ingredienti: 6/6 confermati (100%)
+
+### 📋 Ingredienti
+| Status | Ingrediente | Note |
+|--------|-------------|------|
+| ✅ | tuorli d'uovo | Confermato da fonti |
+| ✅ | olio di semi di girasole | Confermato da fonti |
+| ✅ | succo di limone | Confermato da fonti |
+| ✅ | aceto di vino bianco | Confermato da fonti |
+| ✅ | sale fino | Confermato da fonti |
+| ✅ | pepe nero | Confermato da fonti |
 
 ### 📊 Dettagli
-- Tempi fonti: 30min, 10min, 1min, 0h 10min
+- Tempi fonti: 10min, 0min, P0DT0H10M, 10min, 5min
 - Tempo Claude: 
 
 ### 📰 Fonti
-1. **ricette.giallozafferano.it** — Dati strutturati (6 ingredienti)
-   https://ricette.giallozafferano.it/Maionese.html
-2. **blog.giallozafferano.it** — Dati strutturati (9 ingredienti)
-   https://blog.giallozafferano.it/allacciateilgrembiule/maionese/
-3. **tavolartegusto.it** — Dati strutturati (4 ingredienti)
-   https://www.tavolartegusto.it/ricetta/maionese-ricetta/
-4. **italiangourmet.it** — Estrazione HTML (4 ingredienti)
-   https://www.italiangourmet.it/ricette/maionese-tradizionale/
-5. **salepepe.it** — Dati strutturati (1 ingredienti)
-   https://www.salepepe.it/tecniche-base/come-fare/come-fare-la-maionese/
-6. **bbq4all.it** — Estrazione HTML (6 ingredienti)
-   https://bbq4all.it/ricetta-maionese/
-7. **casapappagallo.it** — Dati strutturati (5 ingredienti)
-   https://www.casapappagallo.it/ricette/maionese
+1. **blog.giallozafferano.it** — Estrazione HTML (6 ingredienti)
+   https://blog.giallozafferano.it/toniaincucina/maionese-fatta-in-casa/
+2. **ricette-utenti.cookaround.com** — Dati strutturati (3 ingredienti)
+   https://ricette-utenti.cookaround.com/la-maionese.html
+3. **blog.giallozafferano.it** — Dati strutturati (5 ingredienti)
+   https://blog.giallozafferano.it/incucinaconklea/maionese/
+4. **langolodellacasalinga.blogspot.com** — Estrazione HTML (5 ingredienti)
+   https://langolodellacasalinga.blogspot.com/2013/05/maionese-fatta-in-casa.html
+5. **netrafood.it** — Dati strutturati (6 ingredienti)
+   https://www.netrafood.it/maionese-veloce/

@@ -1,25 +1,45 @@
 # Validazione: Brisket in Stile Toscano
 
-## 🟡 Confidenza: 50%
+## 🔴 Confidenza: 24%
 
-**Fonti consultate:** 7
+**Fonti consultate:** 1
+
+### ⚠️ Attenzione
+- Ingredienti: solo 7/25 confermati (28%)
+
+### 📋 Ingredienti
+| Status | Ingrediente | Note |
+|--------|-------------|------|
+| ⚠️ | punta di petto di manzo | Non trovato nelle fonti |
+| ⚠️ | rosmarino fresco | Non trovato nelle fonti |
+| ✅ | aglio | Confermato da fonti |
+| ⚠️ | olio extravergine di oliva | Non trovato nelle fonti |
+| ⚠️ | paprika dolce in polvere | Non trovato nelle fonti |
+| ✅ | pepe nero | Confermato da fonti |
+| ✅ | sale fino | Confermato da fonti |
+| ⚠️ | timo essiccato | Non trovato nelle fonti |
+| ⚠️ | origano essiccato | Non trovato nelle fonti |
+| ⚠️ | zucchero di canna scuro | Non trovato nelle fonti |
+| ✅ | vino rosso toscano secco | Confermato da fonti |
+| ⚠️ | brodo di manzo | Non trovato nelle fonti |
+| ⚠️ | concentrato di pomodoro | Non trovato nelle fonti |
+| ⚠️ | cipolla dorata | Non trovato nelle fonti |
+| ⚠️ | carota | Non trovato nelle fonti |
+| ⚠️ | aceto balsamico di modena | Non trovato nelle fonti |
+| ⚠️ | olio extravergine di oliva | Non trovato nelle fonti |
+| ⚠️ | foglia di alloro | Non trovato nelle fonti |
+| ⚠️ | prezzemolo fresco | Non trovato nelle fonti |
+| ⚠️ | olio extravergine di oliva | Non trovato nelle fonti |
+| ✅ | capperi sotto sale | Confermato da fonti |
+| ⚠️ | succo di limone | Non trovato nelle fonti |
+| ⚠️ | scorza di limone | Non trovato nelle fonti |
+| ✅ | aglio | Confermato da fonti |
+| ✅ | sale e pepe | Confermato da fonti |
 
 ### 📊 Dettagli
-- Tempi fonti: 20min, 10-12 ore, 70min, 10min
+- Tempi fonti: 18h
 - Tempo Claude: 
 
 ### 📰 Fonti
-1. **cucchiaio.it** — Estrazione HTML (8 ingredienti)
-   https://www.cucchiaio.it/ricetta/brisket-al-forno/
-2. **unamericanaincucina.com** — Estrazione HTML (4 ingredienti)
-   https://unamericanaincucina.com/2014/08/bbq-brisket-manzo/
-3. **biggreenegg.eu** — Dati strutturati (10 ingredienti)
-   https://www.biggreenegg.eu/it/inspiration/ricette/brisket
-4. **atuttagriglia.com** — Dati strutturati (2 ingredienti)
-   https://atuttagriglia.com/ricette-barbecue/brisket-punta-di-petto/
-5. **weber.com** — Dati strutturati (9 ingredienti)
-   https://www.weber.com/IT/it/ricette/manzo/brisket/weber-2217969.html
-6. **alimentaitaly.com** — Dati strutturati (12 ingredienti)
-   https://www.alimentaitaly.com/magazine/secondi/brisket-texano-ricette-preparazione?srsltid=AfmBOorrJhha8FccCQQSb3tFoOzoXRmtoEBPDhul7ptogRgdW5W2GkOK
-7. **carriesexperimentalkitchen.com** — Dati strutturati (8 ingredienti)
-   https://www.carriesexperimentalkitchen.com/tuscan-style-beef-brisket/
+1. **atuttagriglia.com** — Dati strutturati (3 ingredienti)
+   https://atuttagriglia.com/ricette/ricetta-bbq-brisket-texas/

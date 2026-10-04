@@ -1,21 +1,25 @@
-# Validazione: Olio alla Carota e Zenzero
+# Validazione: Olio alla Carota e Zenzero (Arancio Fluo)
 
-## 🔴 Confidenza: 45%
+## 🔴 Confidenza: 49%
 
-**Fonti consultate:** 5
+**Fonti consultate:** 2
+
+### ⚠️ Attenzione
+- Ingredienti: solo 2/3 confermati (67%)
+
+### 📋 Ingredienti
+| Status | Ingrediente | Note |
+|--------|-------------|------|
+| ✅ | olio extravergine di oliva | Confermato da fonti |
+| ✅ | carote fresche | Confermato da fonti |
+| ⚠️ | zenzero fresco | Non trovato nelle fonti |
 
 ### 📊 Dettagli
-- Tempi fonti: non specificato, P0DT0H40M, 30min, 15min, 10min preparazione + 20min cottura
+- Tempi fonti: 5min
 - Tempo Claude: 
 
 ### 📰 Fonti
-1. **blog.cookaround.com** — Estrazione HTML (6 ingredienti)
-   https://blog.cookaround.com/gnamsimangia/carote-allo-zenzero/
-2. **blog.giallozafferano.it** — Dati strutturati (16 ingredienti)
-   https://blog.giallozafferano.it/piovonoricette/torta-di-carote-e-zenzero/
-3. **pantaleo.it** — Estrazione HTML (5 ingredienti)
-   https://pantaleo.it/blogs/olio-extra-vergine-ricette/vellutata-detox-di-carote-e-zenzero?srsltid=AfmBOop1faa_xFf2aCCVBYzHUMFtnx1GOlztNc62ufneZ_gYjtwXmWhd
-4. **magimix.it** — Estrazione HTML (5 ingredienti)
-   https://www.magimix.it/ricette/Carote-allo-zenzero_i
-5. **ilgolosario.it** — Estrazione HTML (9 ingredienti)
-   https://www.ilgolosario.it/it/carote-stufate-allo-zenzero
+1. **blog.giallozafferano.it** — Estrazione HTML (3 ingredienti)
+   https://blog.giallozafferano.it/ilrumoredelcibo/olio-aromatizzato-allarancia/
+2. **soscuisine.it** — Dati strutturati (7 ingredienti)
+   https://www.soscuisine.it/it/ricetta/purea-carote-arancia?gpr=1761

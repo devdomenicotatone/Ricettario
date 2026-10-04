@@ -1,30 +1,47 @@
 # Validazione: Pasta Brioche Artigianale
 
-## 🟡 Confidenza: 60%
+## 🟢 Confidenza: 89%
 
-**Fonti consultate:** 8
+**Fonti consultate:** 6
 
 ### ✅ Confermato
-- Idratazione: 53% (media fonti: 50%) — ✅ OK
+- Ingredienti: 12/14 confermati (86%)
+
+### ⚠️ Attenzione
+- ⚠️ Idratazione significativamente diversa: 40% vs media fonti 56%
+
+### 📋 Ingredienti
+| Status | Ingrediente | Note |
+|--------|-------------|------|
+| ✅ | miele d'acacia | Confermato da fonti |
+| ⚠️ | rum | Non trovato nelle fonti |
+| ✅ | scorza di limone | Confermato da fonti |
+| ✅ | scorza d'arancia | Confermato da fonti |
+| ✅ | semi di vaniglia | Confermato da fonti |
+| ✅ | farina tipo 0 o manitoba | Confermato da fonti |
+| ✅ | latte intero | Confermato da fonti |
+| ✅ | uova intere | Confermato da fonti |
+| ✅ | zucchero semolato | Confermato da fonti |
+| ✅ | lievito di birra fresco | Confermato da fonti |
+| ✅ | sale fino | Confermato da fonti |
+| ✅ | burro | Confermato da fonti |
+| ✅ | tuorlo d'uovo | Confermato da fonti |
+| ⚠️ | panna fresca liquida | Non trovato nelle fonti |
 
 ### 📊 Dettagli
-- Tempi fonti: 40min, 30min, 15h, 240h, 15min, 60min, 1h + 12h lievitazione
-- Tempo Claude: 14-18h (inclusa maturazione a freddo)
+- Tempi fonti: 35min, 1 ora, 60min
+- Tempo Claude: 14-18h
 
 ### 📰 Fonti
-1. **ricette.giallozafferano.it** — Dati strutturati (11 ingredienti)
-   https://ricette.giallozafferano.it/Brioches.html
-2. **misya.info** — Dati strutturati (12 ingredienti)
-   https://www.misya.info/ricetta/pasta-brioche.htm
-3. **tavolartegusto.it** — Dati strutturati (16 ingredienti)
-   https://www.tavolartegusto.it/ricetta/pasta-brioche-ricetta-brioches-dolci-trecce-brioches/
-4. **salepepe.it** — Dati strutturati (10 ingredienti)
-   https://www.salepepe.it/ricette/pan-brioche-classico/
-5. **blog.giallozafferano.it** — Dati strutturati (10 ingredienti)
-   https://blog.giallozafferano.it/ricettepanedolci/ricetta-impasto-brioche-soffice/
-6. **theblackfig.com** — Dati strutturati (10 ingredienti)
-   https://theblackfig.com/2015/03/il-pan-brioche-con-ricetta-originale-e-la-sua-storia.html
-7. **corman.pro** — Estrazione HTML (7 ingredienti)
-   https://www.corman.pro/it/it/chefs/servizi/tutorials/consigli-per-una-pasta-brioche-perfetta/
-8. **cuordicacao.altervista.org** — Estrazione HTML (14 ingredienti)
-   https://cuordicacao.altervista.org/pasta-brioche/
+1. **blog.giallozafferano.it** — Estrazione HTML (10 ingredienti)
+   https://blog.giallozafferano.it/amicincucina/intrecci-di-pasta-brioche/
+2. **blog.giallozafferano.it** — Dati strutturati (8 ingredienti)
+   https://blog.giallozafferano.it/ricettepanedolci/impasto-brioche-profumato/
+3. **blog.giallozafferano.it** — Estrazione HTML (8 ingredienti)
+   https://blog.giallozafferano.it/ricetteditina/pan-brioche-ricetta-base/
+4. **cuoredisedanoblog.blogspot.com** — Estrazione HTML (12 ingredienti)
+   https://cuoredisedanoblog.blogspot.com/2015/08/brioche-col-tuppo.html
+5. **saporinostri.it** — Dati strutturati (16 ingredienti)
+   https://www.saporinostri.it/angelica-salata-la-brioche-soffice-con-feta-salame-e-olive/
+6. **nosalpes.eu** — Estrazione HTML (8 ingredienti)
+   https://nosalpes.eu/2025/07/06/la-ricetta-della-brioche-alle-praline-di-saint-genix/

@@ -1,34 +1,40 @@
 # Validazione: Baguette Francese Tradizionale
 
-## 🟡 Confidenza: 60%
+## 🟢 Confidenza: 96%
 
-**Fonti consultate:** 10
+**Fonti consultate:** 5
+
+### ✅ Confermato
+- Ingredienti: 8/9 confermati (89%)
 
 ### ⚠️ Attenzione
-- ⚠️ Idratazione significativamente diversa: 70% vs media fonti 121%
+- Idratazione: 70% vs media fonti 65% (differenza 6%)
+
+### 📋 Ingredienti
+| Status | Ingrediente | Note |
+|--------|-------------|------|
+| ✅ | farina tipo 0 o manitoba | Confermato da fonti |
+| ✅ | acqua | Confermato da fonti |
+| ✅ | lievito di birra fresco | Confermato da fonti |
+| ✅ | farina tipo 0 | Confermato da fonti |
+| ✅ | acqua | Confermato da fonti |
+| ✅ | acqua per bassinage | Confermato da fonti |
+| ✅ | lievito di birra fresco | Confermato da fonti |
+| ⚠️ | malto d'orzo in sciroppo | Non trovato nelle fonti |
+| ✅ | sale fino | Confermato da fonti |
 
 ### 📊 Dettagli
-- Tempi fonti: 6h, P0DT0H30M, 20min, 2h 45min, 1h, 30min, 7-9 ore
+- Tempi fonti: 30min, 40min, 30min, 110min
 - Tempo Claude: ~18h
 
 ### 📰 Fonti
-1. **tavolartegusto.it** — Dati strutturati (8 ingredienti)
-   https://www.tavolartegusto.it/ricetta/baguette-la-ricetta-originale-francese/
-2. **blog.giallozafferano.it** — Dati strutturati (7 ingredienti)
-   https://blog.giallozafferano.it/ilcaldosaporedelsud/baguette-francese-croccante-con-lievito-di-birra/
-3. **blog.giallozafferano.it** — Dati strutturati (5 ingredienti)
-   https://blog.giallozafferano.it/emimettoaifornelli/ricetta-della-baguette/
-4. **blog.giallozafferano.it** — Dati strutturati (8 ingredienti)
-   https://blog.giallozafferano.it/loscrignodelbuongusto/baguette-francese-ricetta-semplice/
-5. **lalunasulcucchiaio.it** — Estrazione HTML (6 ingredienti)
-   https://www.lalunasulcucchiaio.it/2020/11/la-vera-baguette-francese.html
-6. **meilleurduchef.com** — Dati strutturati (5 ingredienti)
-   https://www.meilleurduchef.com/it/ricetta/baguette-ricetta.html
-7. **papolab.com** — Estrazione HTML (4 ingredienti)
-   https://www.papolab.com/blog/ricetta-baguette.html
-8. **biancolievito.it** — Dati strutturati (8 ingredienti)
-   https://biancolievito.it/baguette/
-9. **davidezambelli.com** — Dati strutturati (10 ingredienti)
-   https://www.davidezambelli.com/ricette/baguette-la-migliore-ricetta-da-fare-a-casa/
-10. **ruggerishop.it** — Estrazione HTML (6 ingredienti)
-   https://www.ruggerishop.it/blogs/blog/pane-francese-baguette-di-julia-child?srsltid=AfmBOorCDyABBwQkdS5lLxFa9EziIPzwdd22jG-QYmbOAZ68EFvrNnBa
+1. **misya.info** — Dati strutturati (4 ingredienti)
+   https://www.misya.info/ricetta/baguette.htm
+2. **soniaperonaci.it** — Dati strutturati (7 ingredienti)
+   https://www.soniaperonaci.it/baguette/
+3. **blog.giallozafferano.it** — Dati strutturati (6 ingredienti)
+   https://blog.giallozafferano.it/sarabuonodavvero/ricetta-baguette-veloci-fatte-in-casa/
+4. **video.cookist.it** — Estrazione HTML (4 ingredienti)
+   https://video.cookist.it/video/an/XIJCweSw9KuzRxtP
+5. **profumodibroccoli.com** — Estrazione HTML (7 ingredienti)
+   https://www.profumodibroccoli.com/saint-paul-de-vence-fougasse/

@@ -1,25 +1,42 @@
 # Validazione: Dado Vegetale Granulare
 
-## 🟡 Confidenza: 60%
+## 🟢 Confidenza: 82%
 
 **Fonti consultate:** 7
 
+### ✅ Confermato
+- Ingredienti: 8/10 confermati (80%)
+
+### 📋 Ingredienti
+| Status | Ingrediente | Note |
+|--------|-------------|------|
+| ✅ | carote | Confermato da fonti |
+| ✅ | sedano | Confermato da fonti |
+| ✅ | cipolle dorate | Confermato da fonti |
+| ✅ | zucchine | Confermato da fonti |
+| ⚠️ | patate | Non trovato nelle fonti |
+| ✅ | pomodorini | Confermato da fonti |
+| ✅ | aglio | Confermato da fonti |
+| ✅ | sale fino | Confermato da fonti |
+| ✅ | olio extravergine di oliva | Confermato da fonti |
+| ⚠️ | erbe aromatiche fresche | Non trovato nelle fonti |
+
 ### 📊 Dettagli
-- Tempi fonti: 30min, P0DT0H20M, 20min, 30min, 10min, 25min + 4h essicazione
+- Tempi fonti: 15 minuti, 30min, alcune ore, 140min, 10min
 - Tempo Claude: 
 
 ### 📰 Fonti
-1. **tavolartegusto.it** — Dati strutturati (8 ingredienti)
-   https://www.tavolartegusto.it/ricetta/dado-vegetale-fatto-in-casa/
-2. **blog.giallozafferano.it** — Dati strutturati (3 ingredienti)
-   https://blog.giallozafferano.it/mastercheffa/come-fare-il-dado-vegetale/
-3. **misya.info** — Dati strutturati (12 ingredienti)
-   https://www.misya.info/ricetta/dado-granulare.htm
-4. **conlemaninpasta.com** — Estrazione HTML (2 ingredienti)
-   https://www.conlemaninpasta.com/2014/02/dado-vegetale-granulare/
-5. **panierebio.com** — Estrazione HTML (3 ingredienti)
-   https://www.panierebio.com/blog/ricetta-dado-fatto-in-casa/
-6. **funandfood.it** — Dati strutturati (13 ingredienti)
-   https://www.funandfood.it/2015/09/12/dado-vegetale-granulare-homemade/
-7. **ilcaffedellemamme.it** — Estrazione HTML (4 ingredienti)
-   https://www.ilcaffedellemamme.it/food/dado-vegetale-fatto-in-casa-cuisine-companion/
+1. **blog.giallozafferano.it** — Estrazione HTML (7 ingredienti)
+   https://blog.giallozafferano.it/buonappetitobypaola/minestra-di-riso-e-verze-leggera-senza-grassi-e-codimenti/
+2. **misya.info** — Dati strutturati (11 ingredienti)
+   https://www.misya.info/ricetta/dado-vegetale.htm
+3. **glocaltaste.com** — Estrazione HTML (7 ingredienti)
+   http://www.glocaltaste.com/dado-vegetale-homemade-glutammato-free/2/
+4. **trattoriadamartina.com** — Estrazione HTML (11 ingredienti)
+   https://www.trattoriadamartina.com/2011/03/dado-granulare-di-carne-marty-homemade/
+5. **senzapanna.it** — Estrazione HTML (7 ingredienti)
+   https://www.senzapanna.it/2006/03/dado-vegetale.html
+6. **ziorapa.it** — Estrazione HTML (9 ingredienti)
+   https://www.ziorapa.it/ricettario/dado-granulare
+7. **soffiodizefiro.com** — Dati strutturati (10 ingredienti)
+   https://www.soffiodizefiro.com/ricetta-dado-granulare-di-verdure-fatto-in-casa/

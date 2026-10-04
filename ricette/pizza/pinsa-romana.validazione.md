@@ -1,26 +1,35 @@
 # Validazione: Pinsa Romana
 
-## 🟡 Confidenza: 50%
+## 🟢 Confidenza: 100%
 
-**Fonti consultate:** 6
+**Fonti consultate:** 5
 
 ### ✅ Confermato
-- Idratazione: 75% (media fonti: 75%) — ✅ OK
+- Ingredienti: 6/6 confermati (100%)
+- Idratazione: 75% (media fonti: 77%) — ✅ OK
+
+### 📋 Ingredienti
+| Status | Ingrediente | Note |
+|--------|-------------|------|
+| ✅ | farina per pinsa | Confermato da fonti |
+| ✅ | acqua | Confermato da fonti |
+| ✅ | lievito di birra fresco | Confermato da fonti |
+| ✅ | sale fino | Confermato da fonti |
+| ✅ | olio extravergine d'oliva | Confermato da fonti |
+| ✅ | semola di grano duro rimacinata | Confermato da fonti |
 
 ### 📊 Dettagli
-- Tempi fonti: 30min, P0DT0H20M, 20min impasto + 30min riposo, 24-150 ore (maturazione in frigo)
+- Tempi fonti: 15min, 20min, 10-12 ore lievitazione, 24 ore, 35min
 - Tempo Claude: 24-72h in frigo (maturazione a freddo)
 
 ### 📰 Fonti
-1. **ricette.giallozafferano.it** — Dati strutturati (6 ingredienti)
-   https://ricette.giallozafferano.it/Pinsa-romana.html
-2. **blog.giallozafferano.it** — Dati strutturati (8 ingredienti)
-   https://blog.giallozafferano.it/valeriaciccotti/impasto-per-pinsa-romana/
-3. **pinsaromana.info** — Estrazione HTML (5 ingredienti)
-   https://www.pinsaromana.info/ricetta-impasto-ingredienti-pinsa-romana/
-4. **molinopordenone.it** — Estrazione HTML (6 ingredienti)
-   https://www.molinopordenone.it/it/ricette/pinsa-romana-ricetta.html
-5. **pinsadimarco.com** — Estrazione HTML (5 ingredienti)
-   https://www.pinsadimarco.com/ingredienti-pinsa-romana/
-6. **cookandlove.it** — Estrazione HTML (6 ingredienti)
-   https://cookandlove.it/2020/06/01/pinsa-romana-fatta-in-casa-la-ricetta-originale-con-trucchi-e-segreti/
+1. **blog.giallozafferano.it** — Dati strutturati (8 ingredienti)
+   https://blog.giallozafferano.it/valeriaciccotti/carciofi-alla-romana/
+2. **soniaperonaci.it** — Dati strutturati (10 ingredienti)
+   https://www.soniaperonaci.it/gnocchi-alla-romana/
+3. **blog.giallozafferano.it** — Estrazione HTML (6 ingredienti)
+   https://blog.giallozafferano.it/fantasieatavola/impasto-per-pizza-a-modo-mio/
+4. **video.cookist.it** — Estrazione HTML (5 ingredienti)
+   https://video.cookist.it/video/an/ZTzHsOSwLnxMRbcF
+5. **blog.giallozafferano.it** — Dati strutturati (6 ingredienti)
+   https://blog.giallozafferano.it/mariakitchen/ricetta-pinsa/

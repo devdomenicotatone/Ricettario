@@ -1,29 +1,40 @@
 # Validazione: Salsa allo Yogurt ed Erbe Aromatiche
 
-## 🟡 Confidenza: 60%
+## 🟢 Confidenza: 90%
 
-**Fonti consultate:** 9
+**Fonti consultate:** 7
+
+### ✅ Confermato
+- Ingredienti: 7/8 confermati (88%)
+
+### 📋 Ingredienti
+| Status | Ingrediente | Note |
+|--------|-------------|------|
+| ✅ | yogurt greco | Confermato da fonti |
+| ✅ | olio extravergine d'oliva | Confermato da fonti |
+| ✅ | succo di limone | Confermato da fonti |
+| ✅ | sale fino | Confermato da fonti |
+| ✅ | pepe nero | Confermato da fonti |
+| ⚠️ | erbe aromatiche fresche | Non trovato nelle fonti |
+| ✅ | aglio fresco | Confermato da fonti |
+| ✅ | scorza di limone | Confermato da fonti |
 
 ### 📊 Dettagli
-- Tempi fonti: P0DT0H5M, 10min, 20min, 10min, 5min, 10min
+- Tempi fonti: 5min, 30min, 60min, 15 minuti, 10min
 - Tempo Claude: 
 
 ### 📰 Fonti
-1. **blog.giallozafferano.it** — Dati strutturati (8 ingredienti)
-   https://blog.giallozafferano.it/mielefarinaefantasia/salsa-allo-yogurt-naturale-ed-erbe-aromatiche/
-2. **cookist.it** — Dati strutturati (18 ingredienti)
-   https://www.cookist.it/salsa-allo-yogurt-ricetta/
-3. **blog.giallozafferano.it** — Dati strutturati (6 ingredienti)
-   https://blog.giallozafferano.it/crienry/ricetta-salsa-allo-yogurt/
-4. **ricette.giallozafferano.it** — Dati strutturati (15 ingredienti)
-   https://ricette.giallozafferano.it/Salsa-allo-yogurt.html
-5. **migusto.migros.ch** — Dati strutturati (4 ingredienti)
-   https://migusto.migros.ch/it/ricette/salsa-di-yogurt-alle-erbe-aromatiche
-6. **foodbankoncology.org** — Estrazione HTML (5 ingredienti)
-   https://www.foodbankoncology.org/alimentazioni/salsa-allo-yogurt-ed-erbe-aromatiche-per-carne-pesce-e-verdure/
-7. **tacchiepentole.com** — Estrazione HTML (6 ingredienti)
-   https://www.tacchiepentole.com/index.php/2019/06/04/salsa-allo-yogurt-greco-con-erbe-aromatiche/
-8. **it.fage** — Estrazione HTML (7 ingredienti)
-   https://it.fage/ricette/salsa-allo-yogurt-con-erbe-di-provenza
-9. **nonsoloveg.altervista.org** — Estrazione HTML (8 ingredienti)
-   https://nonsoloveg.altervista.org/salsa-di-yogurt-alle-erbe/
+1. **blog.giallozafferano.it** — Estrazione HTML (6 ingredienti)
+   https://blog.giallozafferano.it/pasticciandoconcarla/salsa-allo-yogurt-greco-light/
+2. **blog.giallozafferano.it** — Estrazione HTML (7 ingredienti)
+   https://blog.giallozafferano.it/benessereegusto/salsa-rosa-allo-yogurt/
+3. **blog.giallozafferano.it** — Dati strutturati (4 ingredienti)
+   https://blog.giallozafferano.it/cucinaconmarietto/ricetta-salsa-allo-yogurt-fresca-leggera-e-versatile/
+4. **blog.giallozafferano.it** — Dati strutturati (11 ingredienti)
+   https://blog.giallozafferano.it/spicylove/ricetta-nidi-tagliatelle/
+5. **donnad.it** — Estrazione HTML (7 ingredienti)
+   https://www.donnad.it/cucina/come-si-prepara-salsa-yogurt
+6. **xagena.it** — Estrazione HTML (5 ingredienti)
+   https://xagena.it/news/e-benessere_it_news/ae385516bf05975c06778418ba30dc0a.html
+7. **diredonna.it** — Estrazione HTML (8 ingredienti)
+   https://www.diredonna.it/ricetta/salsa-allo-yogurth

@@ -1,29 +1,35 @@
 # Validazione: Caesar Dressing
 
-## 🟡 Confidenza: 60%
+## 🟡 Confidenza: 71%
 
-**Fonti consultate:** 9
+**Fonti consultate:** 3
+
+### ✅ Confermato
+- Ingredienti: 10/11 confermati (91%)
+
+### 📋 Ingredienti
+| Status | Ingrediente | Note |
+|--------|-------------|------|
+| ✅ | tuorlo d'uovo | Confermato da fonti |
+| ✅ | acciughe sott'olio | Confermato da fonti |
+| ✅ | senape di digione | Confermato da fonti |
+| ✅ | olio extravergine d'oliva | Confermato da fonti |
+| ✅ | succo di limone | Confermato da fonti |
+| ⚠️ | aceto di vino bianco | Non trovato nelle fonti |
+| ✅ | salsa worcestershire | Confermato da fonti |
+| ✅ | parmigiano reggiano dop | Confermato da fonti |
+| ✅ | aglio | Confermato da fonti |
+| ✅ | sale fino | Confermato da fonti |
+| ✅ | pepe nero | Confermato da fonti |
 
 ### 📊 Dettagli
-- Tempi fonti: 40min, 10min, P0DT0H25M, 35min, 30min, 30min, 15min, 5min
+- Tempi fonti: 20min, 10min, 40min
 - Tempo Claude: 
 
 ### 📰 Fonti
-1. **ricette.giallozafferano.it** — Dati strutturati (18 ingredienti)
-   https://ricette.giallozafferano.it/Caesar-salad.html
-2. **misya.info** — Dati strutturati (6 ingredienti)
-   https://www.misya.info/ricetta/salsa-caesar.htm
-3. **blog.giallozafferano.it** — Dati strutturati (16 ingredienti)
-   https://blog.giallozafferano.it/ilchiccodimais/caesar-salad/
-4. **cookist.it** — Dati strutturati (11 ingredienti)
-   https://www.cookist.it/ricetta-caesar-salad/
-5. **soniaperonaci.it** — Dati strutturati (17 ingredienti)
-   https://www.soniaperonaci.it/caesar-salad/
-6. **lacucinaitaliana.it** — Estrazione HTML (9 ingredienti)
-   https://www.lacucinaitaliana.it/gallery/ceasar-salad-ricetta-insalata-crostini-parmigiano-dressing/
-7. **lacucinaitaliana.it** — Dati strutturati (10 ingredienti)
-   https://www.lacucinaitaliana.it/ricetta/piatti-unici/caesar-salad/
-8. **ilclubdellericette.it** — Dati strutturati (8 ingredienti)
-   https://www.ilclubdellericette.it/ricetta/salsa-caesar-la-ricetta-originale
-9. **cookidoo.it** — Dati strutturati (7 ingredienti)
-   https://cookidoo.it/recipes/recipe/it-IT/r338937
+1. **tavolartegusto.it** — Dati strutturati (15 ingredienti)
+   https://www.tavolartegusto.it/ricetta/caesar-salad/
+2. **contemporaneofood.com** — Dati strutturati (8 ingredienti)
+   https://www.contemporaneofood.com/salsa-caesar/
+3. **pingusenglish.it** — Estrazione HTML (3 ingredienti)
+   https://www.pingusenglish.it/blog/2022/caesar-salad/

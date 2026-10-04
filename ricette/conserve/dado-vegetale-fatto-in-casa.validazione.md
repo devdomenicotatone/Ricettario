@@ -1,29 +1,48 @@
 # Validazione: Dado Vegetale Fatto in Casa
 
-## 🟡 Confidenza: 60%
+## 🟢 Confidenza: 100%
 
-**Fonti consultate:** 9
+**Fonti consultate:** 10
+
+### ✅ Confermato
+- Ingredienti: 10/10 confermati (100%)
+
+### 📋 Ingredienti
+| Status | Ingrediente | Note |
+|--------|-------------|------|
+| ✅ | carote | Confermato da fonti |
+| ✅ | sedano | Confermato da fonti |
+| ✅ | cipolla | Confermato da fonti |
+| ✅ | patate | Confermato da fonti |
+| ✅ | pomodorini | Confermato da fonti |
+| ✅ | zucchine | Confermato da fonti |
+| ✅ | prezzemolo fresco | Confermato da fonti |
+| ✅ | aglio | Confermato da fonti |
+| ✅ | sale fino integrale | Confermato da fonti |
+| ✅ | olio extravergine di oliva | Confermato da fonti |
 
 ### 📊 Dettagli
-- Tempi fonti: 30min, P0DT0H20M, 30min, 45min cottura + 2-3h essiccazione, P0Y0M0DT1H45M0S, 30min, P0Y0M0DT0H50M0S, 30min, 20min
-- Tempo Claude: n/a
+- Tempi fonti: 10min, 20min, 15min, P0DT0H15M, P0DT0H20M, 35min, 2 ore circa, 20min, 1h 30min
+- Tempo Claude: 
 
 ### 📰 Fonti
-1. **tavolartegusto.it** — Dati strutturati (8 ingredienti)
-   https://www.tavolartegusto.it/ricetta/dado-vegetale-fatto-in-casa/
-2. **blog.giallozafferano.it** — Dati strutturati (3 ingredienti)
-   https://blog.giallozafferano.it/mastercheffa/come-fare-il-dado-vegetale/
-3. **misya.info** — Dati strutturati (11 ingredienti)
-   https://www.misya.info/ricetta/dado-vegetale.htm
-4. **lacucinaitaliana.it** — Estrazione HTML (6 ingredienti)
-   https://www.lacucinaitaliana.it/tutorial/i-consigli/come-fare-in-casa-il-dado-vegetale/
-5. **blog.giallozafferano.it** — Dati strutturati (3 ingredienti)
-   https://blog.giallozafferano.it/allacciateilgrembiule/dado-vegetale/
-6. **cucchiaio.it** — Estrazione HTML (7 ingredienti)
-   https://www.cucchiaio.it/ricetta/dado-vegetale-fatto-casa/
-7. **blog.giallozafferano.it** — Dati strutturati (8 ingredienti)
-   https://blog.giallozafferano.it/latavoladigio/dado-vegetale-fatto-in-casa/
-8. **cucinabotanica.com** — Estrazione HTML (6 ingredienti)
-   https://www.cucinabotanica.com/ricette/dado-vegetale-fatto-in-casa-ricetta-facile/
-9. **cookidoo.it** — Dati strutturati (12 ingredienti)
-   https://cookidoo.it/recipes/recipe/it-IT/r54825
+1. **cookaround.com** — Dati strutturati (7 ingredienti)
+   https://www.cookaround.com/ricetta/Dado-vegetale-fatto-in-casa.html
+2. **misya.info** — Dati strutturati (12 ingredienti)
+   https://www.misya.info/ricetta/dado-granulare.htm
+3. **blog.giallozafferano.it** — Dati strutturati (16 ingredienti)
+   https://blog.giallozafferano.it/ritaamordicucina/ricetta-il-mio-dado-vegetale-fatto-in-casa/
+4. **blog.giallozafferano.it** — Dati strutturati (11 ingredienti)
+   https://blog.giallozafferano.it/fornoefornelli/dado-vegetale-fatto-in-casa/
+5. **blog.giallozafferano.it** — Dati strutturati (8 ingredienti)
+   https://blog.giallozafferano.it/emanu74/il-dado-fatto-in-casa/
+6. **video.cookist.it** — Estrazione HTML (9 ingredienti)
+   https://video.cookist.it/video/an/Y4cls-SwymkCBsE0
+7. **blog.giallozafferano.it** — Estrazione HTML (11 ingredienti)
+   https://blog.giallozafferano.it/raffikaelesuemaniinpasta/dado-vegetale-fatto-in-casa/
+8. **blog.giallozafferano.it** — Estrazione HTML (11 ingredienti)
+   https://blog.giallozafferano.it/gnamgnamplus/dado-vegetale-fatto-in-casa-ricetta/
+9. **blog.giallozafferano.it** — Dati strutturati (12 ingredienti)
+   https://blog.giallozafferano.it/kitchenaidolcepassione/dado-vegetale-fatto-in-casa/
+10. **blog.giallozafferano.it** — Estrazione HTML (7 ingredienti)
+   https://blog.giallozafferano.it/unamammachecucina1/dado-vegetale-fatto-in-casa-sprechi/

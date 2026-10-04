@@ -1,31 +1,37 @@
 # Validazione: Pomodorini Confit Sott'olio
 
-## 🟡 Confidenza: 50%
+## 🟢 Confidenza: 100%
 
-**Fonti consultate:** 10
+**Fonti consultate:** 5
+
+### ✅ Confermato
+- Ingredienti: 9/9 confermati (100%)
+
+### 📋 Ingredienti
+| Status | Ingrediente | Note |
+|--------|-------------|------|
+| ✅ | pomodorini datterini o ciliegini | Confermato da fonti |
+| ✅ | zucchero di canna | Confermato da fonti |
+| ✅ | sale fino | Confermato da fonti |
+| ✅ | pepe nero | Confermato da fonti |
+| ✅ | aglio fresco | Confermato da fonti |
+| ✅ | timo fresco | Confermato da fonti |
+| ✅ | origano essiccato | Confermato da fonti |
+| ✅ | olio extravergine d'oliva | Confermato da fonti |
+| ✅ | olio extravergine d'oliva | Confermato da fonti |
 
 ### 📊 Dettagli
-- Tempi fonti: P0DT0H20M, 45min, 180 minuti, PT, 2 ore, 2 ore, 15min + 4 ore cottura, 5min, 10min
+- Tempi fonti: 20min, 20-30min, 5min, 90-120min, 35min
 - Tempo Claude: 
 
 ### 📰 Fonti
-1. **blog.giallozafferano.it** — Dati strutturati (10 ingredienti)
-   https://blog.giallozafferano.it/passionecooking/pomodorini-confit-sottolio/
-2. **cucinabotanica.com** — Estrazione HTML (6 ingredienti)
-   https://www.cucinabotanica.com/ricette/pomodorini-confit-sott'olio/
-3. **ilariabarisi.it** — Estrazione HTML (7 ingredienti)
-   https://www.ilariabarisi.it/2023/07/31/pomodorini-confit-sottolio/
-4. **dolcipassioni.net** — Dati strutturati (6 ingredienti)
-   https://dolcipassioni.net/ricetta/pomodorini-confit-sottolio-ricetta-della-nina/
-5. **spignattando.it** — Estrazione HTML (6 ingredienti)
-   https://www.spignattando.it/pomodorini-confit-sotto-olio/
-6. **oliocristofaro.it** — Estrazione HTML (8 ingredienti)
-   https://oliocristofaro.it/pomodori-confit-sottolio-al-forno-come-prepararli/
-7. **cuochiperpassione.altervista.org** — Estrazione HTML (6 ingredienti)
-   https://cuochiperpassione.altervista.org/pomodorini-confit-sott-olio/
-8. **viaggiandoincucina.com** — Estrazione HTML (9 ingredienti)
-   http://www.viaggiandoincucina.com/pomodorini-confit-sottolio-al-profumo-di-aglio-ed-erbe-aromatiche/
-9. **mangiawithmichele.com** — Dati strutturati (9 ingredienti)
-   https://mangiawithmichele.com/confit-cherry-tomatoes-and-garlic/
-10. **savoringitaly.com** — Dati strutturati (5 ingredienti)
-   https://www.savoringitaly.com/cherry-tomato-confit/
+1. **soniaperonaci.it** — Dati strutturati (19 ingredienti)
+   https://www.soniaperonaci.it/vitello-tonnato/
+2. **blog.giallozafferano.it** — Estrazione HTML (6 ingredienti)
+   https://blog.giallozafferano.it/farina00/pomodorini-confit/
+3. **blog.giallozafferano.it** — Dati strutturati (8 ingredienti)
+   https://blog.giallozafferano.it/cucinoperpassione/pomodorini-confit/
+4. **blog.giallozafferano.it** — Estrazione HTML (5 ingredienti)
+   https://blog.giallozafferano.it/gastronomylove/2015/11/pomodorini-confit.html
+5. **hellofresh.it** — Dati strutturati (13 ingredienti)
+   https://www.hellofresh.it/recipes/stufato-bietola-cannellini-grana-focaccia-68ecf757a267a9c2fbff958e

@@ -1,25 +1,37 @@
 # Validazione: Salsa Bernese
 
-## 🟡 Confidenza: 60%
+## 🟡 Confidenza: 74%
 
-**Fonti consultate:** 7
+**Fonti consultate:** 4
+
+### ✅ Confermato
+- Ingredienti: 10/11 confermati (91%)
+
+### 📋 Ingredienti
+| Status | Ingrediente | Note |
+|--------|-------------|------|
+| ✅ | aceto di vino bianco | Confermato da fonti |
+| ✅ | vino bianco secco | Confermato da fonti |
+| ✅ | scalogno | Confermato da fonti |
+| ✅ | dragoncello fresco | Confermato da fonti |
+| ✅ | pepe nero | Confermato da fonti |
+| ✅ | tuorli d'uovo | Confermato da fonti |
+| ✅ | burro chiarificato | Confermato da fonti |
+| ✅ | sale fino | Confermato da fonti |
+| ⚠️ | succo di limone | Non trovato nelle fonti |
+| ✅ | dragoncello fresco | Confermato da fonti |
+| ✅ | cerfoglio fresco | Confermato da fonti |
 
 ### 📊 Dettagli
-- Tempi fonti: 20min, 20 minuti, 5min, 1h 20min, 10min, 00h 35min, 10min
+- Tempi fonti: 10min, 20min
 - Tempo Claude: 
 
 ### 📰 Fonti
-1. **ricette.giallozafferano.it** — Dati strutturati (10 ingredienti)
-   https://ricette.giallozafferano.it/Salsa-bernese.html
-2. **lacucinaitaliana.it** — Dati strutturati (7 ingredienti)
-   https://www.lacucinaitaliana.it/ricetta/salsa-bernese/
-3. **cucchiaio.it** — Estrazione HTML (8 ingredienti)
-   https://www.cucchiaio.it/ricetta/salsa-bernese-ricetta-base/
-4. **cookist.it** — Dati strutturati (11 ingredienti)
-   https://www.cookist.it/salsa-bernese-la-ricetta/
-5. **dissapore.com** — Dati strutturati (8 ingredienti)
-   https://www.dissapore.com/ricette/salsa-bernese/
-6. **nonnapaperina.it** — Dati strutturati (7 ingredienti)
-   https://www.nonnapaperina.it/2010/06/salsa-bernese-leggera/
-7. **downshiftology.com** — Dati strutturati (9 ingredienti)
-   https://downshiftology.com/recipes/bearnaise-sauce/
+1. **blog.giallozafferano.it** — Dati strutturati (9 ingredienti)
+   https://blog.giallozafferano.it/viaggiandomangiando/ricetta-salsa-bernese-e-chateaubriand-francia/
+2. **lafrancerie.com** — Estrazione HTML (5 ingredienti)
+   https://lafrancerie.com/blogs/curiosita/la-salsa-bernese-un-capolavoro-culinario-nato-per-caso?srsltid=AU7gw4W1IbiXcR02pDN0mL6z87q-w_HAqgORr0NzChIyd6hccIuI1wR4
+3. **hotmixpro.com** — Estrazione HTML (3 ingredienti)
+   https://hotmixpro.com/it/approfondimenti/salsa-bernese-hotmixpro-vs-tradizione/
+4. **my-personaltrainer.it** — Estrazione HTML (8 ingredienti)
+   https://www.my-personaltrainer.it/alimentazione/salsa-bernese.html

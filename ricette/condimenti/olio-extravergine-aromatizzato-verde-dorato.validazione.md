@@ -1,25 +1,31 @@
-# Validazione: Olio Extravergine Aromatizzato
+# Validazione: Olio Extravergine Aromatizzato (Verde Dorato)
 
-## 🟡 Confidenza: 55%
+## 🔴 Confidenza: 45%
 
-**Fonti consultate:** 7
+**Fonti consultate:** 4
+
+### ⚠️ Attenzione
+- Ingredienti: solo 2/5 confermati (40%)
+
+### 📋 Ingredienti
+| Status | Ingrediente | Note |
+|--------|-------------|------|
+| ✅ | olio extravergine di oliva | Confermato da fonti |
+| ⚠️ | aglio fresco | Non trovato nelle fonti |
+| ⚠️ | rosmarino | Non trovato nelle fonti |
+| ⚠️ | scorza di limone | Non trovato nelle fonti |
+| ✅ | pepe nero | Confermato da fonti |
 
 ### 📊 Dettagli
-- Tempi fonti: 20h, 1min, 1-3 settimane, 30-40 secondi di riscaldamento
+- Tempi fonti: 1-2 ore, 30 giorni
 - Tempo Claude: 
 
 ### 📰 Fonti
-1. **salepepe.it** — Dati strutturati (5 ingredienti)
-   https://www.salepepe.it/scuola-cucina/come-preparare-lolio-aromatizzato/
-2. **blog.giallozafferano.it** — Dati strutturati (2 ingredienti)
-   https://blog.giallozafferano.it/allacciateilgrembiule/olio-aromatizzato/
-3. **lacucinaitaliana.it** — Estrazione HTML (2 ingredienti)
-   https://www.lacucinaitaliana.it/tutorial/i-consigli/come-fare-lolio-aromatizzato/
-4. **dimolfettafrantoiani.it** — Estrazione HTML (2 ingredienti)
-   https://www.dimolfettafrantoiani.it/blog/conoscere-olio-extravergine-oliva/come-preparare-olio-extravergine-aromatizzato
-5. **oliocarli.it** — Estrazione HTML (2 ingredienti)
-   https://www.oliocarli.it/magazine/segreti-di-qualita/olio-aromatizzato-fatto-in-casa-come-prepararlo?srsltid=AfmBOor19mIT2G-GzBmQJhrma4u215ee9PCtXwyWZxUifeA0dBXDEaSF
-6. **autoproduciamo.it** — Estrazione HTML (5 ingredienti)
-   https://www.autoproduciamo.it/olio-doliva-aromatizzato-come-preparalo-in-casa/
-7. **oliocarli.it** — Estrazione HTML (2 ingredienti)
-   https://www.oliocarli.it/magazine/segreti-di-qualita/olio-aromatizzato-fatto-in-casa-come-prepararlo?srsltid=AfmBOopi2Ttd7IdY8Qo4h5yuwmsrCVrOBy7HxICcg9F2M5eimoV8QzIY
+1. **lacucinaitaliana.it** — Estrazione HTML (2 ingredienti)
+   https://www.lacucinaitaliana.it/galleries/gait82178/
+2. **lavecchiasaggia.com** — Estrazione HTML (6 ingredienti)
+   https://www.lavecchiasaggia.com/category/dolci/page/11/
+3. **l-appetito-vien-leggendo.com** — Estrazione HTML (7 ingredienti)
+   https://l-appetito-vien-leggendo.com/category/primi/minestrezuppe/feed
+4. **ricettedicasa.altervista.org** — Estrazione HTML (4 ingredienti)
+   https://ricettedicasa.altervista.org/olio-aromatizzato-con-foglie-di-alloro/

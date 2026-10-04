@@ -1,27 +1,45 @@
 # Validazione: Babaganoush
 
-## 🟡 Confidenza: 60%
+## 🟢 Confidenza: 95%
 
 **Fonti consultate:** 8
 
+### ✅ Confermato
+- Ingredienti: 11/11 confermati (100%)
+
+### 📋 Ingredienti
+| Status | Ingrediente | Note |
+|--------|-------------|------|
+| ✅ | melanzane | Confermato da fonti |
+| ✅ | tahina | Confermato da fonti |
+| ✅ | succo di limone | Confermato da fonti |
+| ✅ | olio extravergine d'oliva | Confermato da fonti |
+| ✅ | aglio | Confermato da fonti |
+| ✅ | sale fino | Confermato da fonti |
+| ✅ | pepe nero | Confermato da fonti |
+| ✅ | olio extravergine d'oliva | Confermato da fonti |
+| ✅ | menta fresca | Confermato da fonti |
+| ✅ | semi di sesamo | Confermato da fonti |
+| ✅ | paprika dolce | Confermato da fonti |
+
 ### 📊 Dettagli
-- Tempi fonti: 10min, 15min, 10min, 10min, 75min, 10min, 30min
+- Tempi fonti: 10min, 90min, 5min + 2h cottura, 5min, 0h 3min, 15min + 90min cottura, 40min
 - Tempo Claude: 
 
 ### 📰 Fonti
-1. **ricette.giallozafferano.it** — Dati strutturati (11 ingredienti)
-   https://ricette.giallozafferano.it/Babaganoush.html
-2. **misya.info** — Dati strutturati (9 ingredienti)
-   https://www.misya.info/ricetta/babaganoush.htm
-3. **tavolartegusto.it** — Dati strutturati (9 ingredienti)
-   https://www.tavolartegusto.it/ricetta/babaganoush/
-4. **cucchiaio.it** — Estrazione HTML (7 ingredienti)
-   https://www.cucchiaio.it/ricetta/babaganoush/
-5. **cucinabotanica.com** — Estrazione HTML (9 ingredienti)
-   https://www.cucinabotanica.com/ricette/babaganoush-la-ricetta-originale/
-6. **sonoiosandra.it** — Dati strutturati (8 ingredienti)
-   https://www.sonoiosandra.it/babaganoush-salsa-di-melanzane-mediorientale/
-7. **labna.it** — Dati strutturati (6 ingredienti)
-   https://www.labna.it/baba-ganoush-melanzane-e-tahina.html
-8. **cortilia.it** — Estrazione HTML (9 ingredienti)
-   https://www.cortilia.it/ricette/estate/babaganoush-di-melanzane?srsltid=AfmBOorvdYnYz5MfTui-GIrto0FQsd3DpBj4FZquxVXXr7UVNa5aTfD5
+1. **blog.giallozafferano.it** — Dati strutturati (10 ingredienti)
+   https://blog.giallozafferano.it/atavolacontea/babaganush-la-ricetta-originale-facile-e-veloce/
+2. **blog.giallozafferano.it** — Estrazione HTML (7 ingredienti)
+   https://blog.giallozafferano.it/gastronomylove/2015/10/baba-ganoush-o-crema-di-melanzane.html
+3. **thebluebirdkitchen.com** — Estrazione HTML (6 ingredienti)
+   https://thebluebirdkitchen.com/babaganoush/
+4. **cucinaverza.com** — Dati strutturati (7 ingredienti)
+   https://cucinaverza.com/ricette-senza-glutine/babaganoush-veloce/
+5. **pasticciandoconlafranca.it** — Dati strutturati (12 ingredienti)
+   https://www.pasticciandoconlafranca.it/2019/antipasti/babaganoush-o-caviale-di-melanzane/
+6. **ricettedalmondo.it** — Estrazione HTML (9 ingredienti)
+   https://www.ricettedalmondo.it/babaganoush.html
+7. **zwilling.com** — Estrazione HTML (8 ingredienti)
+   https://www.zwilling.com/it/magazine/ricette-di-ispirazione/ricette-per-elettrodomestici/ricette-con-il-frullatore-pro/cream-of-aubergine.html
+8. **iocomesono-pippi.blogspot.com** — Estrazione HTML (3 ingredienti)
+   https://iocomesono-pippi.blogspot.com/2014/03/baba-ghanoush-melanzana-thaina-e-lime.html

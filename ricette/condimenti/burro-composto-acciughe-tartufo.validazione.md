@@ -1,25 +1,37 @@
 # Validazione: Burro Composto: Acciughe e Limone o Tartufo Nero
 
-## 🟡 Confidenza: 60%
+## 🟢 Confidenza: 75%
 
-**Fonti consultate:** 7
+**Fonti consultate:** 6
+
+### ✅ Confermato
+- Ingredienti: 7/7 confermati (100%)
+
+### 📋 Ingredienti
+| Status | Ingrediente | Note |
+|--------|-------------|------|
+| ✅ | burro di centrifuga | Confermato da fonti |
+| ✅ | filetti di acciuga | Confermato da fonti |
+| ✅ | scorza di limone | Confermato da fonti |
+| ✅ | pepe nero | Confermato da fonti |
+| ✅ | burro di centrifuga | Confermato da fonti |
+| ✅ | tartufo nero fresco | Confermato da fonti |
+| ✅ | sale fino | Confermato da fonti |
 
 ### 📊 Dettagli
-- Tempi fonti: 1min, 10min, 10min, 5min, 1min prep, 10min cooking
+- Tempi fonti: 10min, 2 hours
 - Tempo Claude: 
 
 ### 📰 Fonti
-1. **blog.giallozafferano.it** — Dati strutturati (6 ingredienti)
-   https://blog.giallozafferano.it/ilcaldosaporedelsud/ricetta-pasta-burro-alici-e-limone/
-2. **soniaperonaci.it** — Dati strutturati (4 ingredienti)
-   https://www.soniaperonaci.it/pasta-al-burro-acciughe-e-limone/
-3. **cucchiaio.it** — Dati strutturati (3 ingredienti)
-   https://www.cucchiaio.it/ricetta/ricetta-burro-composto-allacciuga/
-4. **unacuocapericolosa.com** — Estrazione HTML (6 ingredienti)
-   https://unacuocapericolosa.com/2019/11/20/burro-acciughe-e-tartufo/
-5. **fortunatiantonio.it** — Estrazione HTML (2 ingredienti)
-   https://www.fortunatiantonio.it/burro-al-tartufo-ricetta/
-6. **roscioliwineclub.com** — Estrazione HTML (4 ingredienti)
-   https://www.roscioliwineclub.com/pasta-burro-e-alici-recipe-new/
-7. **tiongbahrukitchen.wordpress.com** — Estrazione HTML (6 ingredienti)
-   https://tiongbahrukitchen.wordpress.com/2021/08/23/pasta-burro-ed-acciughe/
+1. **insidewine.it** — Estrazione HTML (6 ingredienti)
+   https://www.insidewine.it/spaghetto-burro-e-alici-limone-e-pane-tostato-alle-erbe/
+2. **winepairing.it** — Estrazione HTML (5 ingredienti)
+   https://www.winepairing.it/piatto/tagliolini-burro-e-tartufo-nero
+3. **quellidellaratatouille.it** — Dati strutturati (7 ingredienti)
+   https://quellidellaratatouille.it/spaghettoni-burro-e-alici-un-primo-perfetto-per-ogni-occasione/
+4. **scattidigusto.it** — Estrazione HTML (8 ingredienti)
+   https://www.scattidigusto.it/burro-alici-ricetta-perfetta-antonello-colonna
+5. **inaudi.com** — Estrazione HTML (6 ingredienti)
+   https://www.inaudi.com/en/ricette/tagliatelle-with-black-truffle/
+6. **app.ckbk.com** — Estrazione HTML (2 ingredienti)
+   https://app.ckbk.com/recipe/comp88310c09s001r006/formaggio-al-tartufo

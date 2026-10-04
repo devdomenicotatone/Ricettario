@@ -1,28 +1,39 @@
-# Validazione: Pane di Altamura DOP
+# Validazione: Pane di Altamura
 
-## 🟡 Confidenza: 50%
+## 🟡 Confidenza: 70%
 
-**Fonti consultate:** 7
+**Fonti consultate:** 5
+
+### ✅ Confermato
+- Ingredienti: 7/8 confermati (88%)
 
 ### ⚠️ Attenzione
-- Idratazione: 67% vs media fonti 61% (differenza 7%)
+- Idratazione: 67% vs media fonti 75% (differenza 8%)
+
+### 📋 Ingredienti
+| Status | Ingrediente | Note |
+|--------|-------------|------|
+| ✅ | semola di grano duro rimacinata | Confermato da fonti |
+| ✅ | acqua | Confermato da fonti |
+| ✅ | lievito di birra fresco | Confermato da fonti |
+| ✅ | semola di grano duro rimacinata | Confermato da fonti |
+| ✅ | acqua (1ª parte per autolisi) | Confermato da fonti |
+| ✅ | acqua (bassinage) | Confermato da fonti |
+| ⚠️ | miele di acacia | Non trovato nelle fonti |
+| ✅ | sale fino | Confermato da fonti |
 
 ### 📊 Dettagli
-- Tempi fonti: P0DT0H30M, 30min, 4h 10min, 0h 20min, 5min, 3h30min
+- Tempi fonti: 35min, 6 ore, 20min
 - Tempo Claude: 18-20h
 
 ### 📰 Fonti
-1. **blog.giallozafferano.it** — Dati strutturati (5 ingredienti)
-   https://blog.giallozafferano.it/dulcisinforno/pane-di-altamura-di-semola/
-2. **melarossa.it** — Dati strutturati (5 ingredienti)
-   https://www.melarossa.it/ricette/per-categoria/pane-di-altamura/
-3. **panealtamura.it** — Estrazione HTML (4 ingredienti)
-   http://www.panealtamura.it/panealtamura_ricetta.html
-4. **laterradipuglia.it** — Estrazione HTML (4 ingredienti)
-   https://www.laterradipuglia.it/gli-itinerari/le-aree-della-puglia/le-murge/altamura/il-pane-di-altamura
-5. **gnamitfood.it** — Dati strutturati (4 ingredienti)
-   https://www.gnamitfood.it/tasty/pane-di-altamura-dop/
-6. **cookidoo.international** — Dati strutturati (5 ingredienti)
-   https://cookidoo.international/recipes/recipe/id/r96788
-7. **panealtamura.it** — Estrazione HTML (4 ingredienti)
-   https://www.panealtamura.it/pane-di-altamura/ricetta-pane-di-altamura.html
+1. **blog.giallozafferano.it** — Estrazione HTML (4 ingredienti)
+   https://blog.giallozafferano.it/cuinalory/pane-di-matera/
+2. **chefstefanobarbato.com** — Estrazione HTML (2 ingredienti)
+   https://www.chefstefanobarbato.com/ita/ingredienti/lievito-madre-disidratato/
+3. **bruschettadialtamura.it** — Estrazione HTML (5 ingredienti)
+   https://bruschettadialtamura.it/ricette/bruschette-con-pane-di-altamura-d-o-p-robiola-speck-e-radicchio-tardivo/
+4. **cuciniamoinsieme.it** — Estrazione HTML (5 ingredienti)
+   https://www.cuciniamoinsieme.it/item/132-pane-cafone-al-lievito-madre-essiccato.html
+5. **birrificioangeloporetti.it** — Estrazione HTML (8 ingredienti)
+   https://www.birrificioangeloporetti.it/it/ricette/burrata-pane-altamura-colatura-alici-puntarelle

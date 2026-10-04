@@ -1,29 +1,46 @@
 # Validazione: Pesto di Pistacchi Siciliano
 
-## 🟡 Confidenza: 60%
+## 🟢 Confidenza: 100%
 
 **Fonti consultate:** 9
 
+### ✅ Confermato
+- Ingredienti: 10/10 confermati (100%)
+
+### 📋 Ingredienti
+| Status | Ingrediente | Note |
+|--------|-------------|------|
+| ✅ | pistacchi sgusciati | Confermato da fonti |
+| ✅ | olio extravergine di oliva | Confermato da fonti |
+| ✅ | acqua | Confermato da fonti |
+| ✅ | parmigiano reggiano dop | Confermato da fonti |
+| ✅ | pecorino romano dop | Confermato da fonti |
+| ✅ | basilico fresco | Confermato da fonti |
+| ✅ | aglio | Confermato da fonti |
+| ✅ | scorza di limone bio | Confermato da fonti |
+| ✅ | sale fino | Confermato da fonti |
+| ✅ | pepe nero | Confermato da fonti |
+
 ### 📊 Dettagli
-- Tempi fonti: P0Y0M0DT0H10M0S, 10min, 20min, 15min, 15min
+- Tempi fonti: P0DT0H5M, 10min, P0Y0M0DT0H20M0S, 10min, 30min, 40-50min
 - Tempo Claude: 
 
 ### 📰 Fonti
-1. **blog.giallozafferano.it** — Dati strutturati (5 ingredienti)
-   https://blog.giallozafferano.it/studentiaifornelli/pesto-di-pistacchi/
-2. **lacucinaitaliana.it** — Estrazione HTML (9 ingredienti)
-   https://www.lacucinaitaliana.it/tutorial/i-consigli/pesto-pistacchi-cremoso-ricetta-siciliana/
-3. **soniaperonaci.it** — Dati strutturati (6 ingredienti)
-   https://www.soniaperonaci.it/pesto-di-pistacchi/
-4. **ricette.giallozafferano.it** — Dati strutturati (9 ingredienti)
-   https://ricette.giallozafferano.it/Pesto-di-pistacchi.html
-5. **mandorleepistacchidisicilia.com** — Estrazione HTML (5 ingredienti)
-   https://mandorleepistacchidisicilia.com/come-fare-il-pesto-di-pistacchio-siciliano/
-6. **caraci.it** — Estrazione HTML (9 ingredienti)
-   https://caraci.it/blogs/ricette-al-pistacchio/come-fare-il-pesto-di-pistacchio?srsltid=AfmBOoqrbO0Kdg6EhxGply-D34k-yWknZxfmHq1eTsZ1x0dYDQ9VZUzm
-7. **cibocrudo.com** — Dati strutturati (6 ingredienti)
-   https://www.cibocrudo.com/blogs/ricette/pesto-di-pistacchi-siciliani?srsltid=AfmBOoqoRnxA1TOQa0RacEK3ROXVt_JJp5E8GICDl00HBp7JAUDQRXBm
-8. **caraci.it** — Estrazione HTML (9 ingredienti)
-   https://caraci.it/blogs/ricette-al-pistacchio/come-fare-il-pesto-di-pistacchio?srsltid=AfmBOop8tu4i7_zQIuOwzU7MI4r7Kf6bzpKKc9eITQihaq43YSA-uds1
-9. **cibocrudo.com** — Dati strutturati (6 ingredienti)
-   https://www.cibocrudo.com/blogs/ricette/pesto-di-pistacchi-siciliani?srsltid=AfmBOop6Cwl_2kU4wP07PcQY80iQYcyBQB8eTCFjpc8ZrRyAHZhnHKHk
+1. **blog.giallozafferano.it** — Dati strutturati (6 ingredienti)
+   https://blog.giallozafferano.it/cucinanonnavirgi/pesto-con-pistacchi-ricetta/
+2. **tavolartegusto.it** — Dati strutturati (5 ingredienti)
+   https://www.tavolartegusto.it/ricetta/pesto-di-pistacchio-ricetta/
+3. **blog.giallozafferano.it** — Dati strutturati (8 ingredienti)
+   https://blog.giallozafferano.it/lacucinadimarge/come-fare-il-pesto-di-pistacchi/
+4. **blog.giallozafferano.it** — Dati strutturati (7 ingredienti)
+   https://blog.giallozafferano.it/rossellainpadella/pesto-di-pistacchi/
+5. **shop.sicilianstories.eu** — Estrazione HTML (6 ingredienti)
+   https://shop.sicilianstories.eu/it/sughi-e-pesti/105-pesto-di-pistacchio-di-sicilia.html
+6. **cucinareinsiemeate.altervista.org** — Estrazione HTML (9 ingredienti)
+   https://cucinareinsiemeate.altervista.org/2016/11/pesto-di-pistacchi-e-guanciale.html
+7. **siciliafan.it** — Estrazione HTML (9 ingredienti)
+   https://www.siciliafan.it/pesto-di-pistacchi-la-ricetta-originale/
+8. **sicilianet.net** — Estrazione HTML (4 ingredienti)
+   https://www.sicilianet.net/blog/?ricetta-tipica-originale---pesto-di-pistacchi-alla-siciliana-
+9. **suspirannu.it** — Estrazione HTML (6 ingredienti)
+   https://suspirannu.it/prodotto/pesto-di-pistacchio/?srsltid=AU7gw4XmWtuArlJ6ifbK-InJ-CSY-d9e7pPnFThJDe0SIRBJGaDFVRGa
