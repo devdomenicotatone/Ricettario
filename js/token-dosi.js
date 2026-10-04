@@ -81,3 +81,45 @@ export function graffeNonRisolte(testo) {
     const resto = String(testo || '').replace(nuovo(), '');
     return resto.match(/\{[^{}]*\}|[{}]/g) || [];
 }
+
+/**
+ * Per i cancelli, sull'intera ricetta: ogni graffa che il sito non risolverebbe.
+ * Dentro il testo degli step ogni graffa deve appartenere a un token valido;
+ * fuori dagli step non ce ne devono essere affatto, perché il sito i token li
+ * risolve SOLO lì — un token in un proTip o in `storage` arriva al lettore così
+ * com'è.
+ *
+ * La regola sta qui, e non dentro chi la applica, perché le ricette passano da
+ * due validatori: il cancello della build (`scripts/build-recipes.js`) e lo
+ * schema dei tools che le generano. Finché il secondo non la conosceva, la
+ * generazione salvava ricette che il primo poi bocciava, a JSON già scritto e
+ * indice già toccato: i cornetti di ottobre 2026 sono usciti col token
+ * `{temp_rigenerazione:170!}` dentro `storage`.
+ *
+ * `campo` è il campo di primo livello in cui sta la graffa; `rotto` è il
+ * frammento malformato dentro uno step, oppure `null` per una graffa fuori dagli
+ * step.
+ *
+ * @returns {{ campo: string, rotto: string|null }[]}
+ */
+export function graffeFuoriPosto(ricetta) {
+    const testiStep = new Set();
+    for (const s of [...(ricetta?.steps || []), ...(ricetta?.stepsCondiment || [])]) {
+        if (s?.text) testiStep.add(s.text);
+    }
+    const trovate = [];
+    (function scava(val, campo) {
+        if (typeof val === 'string') {
+            if (testiStep.has(val)) {
+                for (const rotto of graffeNonRisolte(val)) trovate.push({ campo, rotto });
+            } else if (/[{}]/.test(val)) {
+                trovate.push({ campo, rotto: null });
+            }
+        } else if (Array.isArray(val)) {
+            for (const v of val) scava(v, campo);
+        } else if (val && typeof val === 'object') {
+            for (const [k, v] of Object.entries(val)) scava(v, campo || k);
+        }
+    })(ricetta, '');
+    return trovate;
+}

@@ -14,7 +14,7 @@ import { resolve, dirname, basename } from 'path';
 import { fileURLToPath } from 'url';
 import { CATEGORIES, CATEGORY_ORDER } from '../js/categories.js';
 import { STRUMENTI_BY_SLUG, nomeLama } from '../js/strumenti.js';
-import { graffeNonRisolte } from '../js/token-dosi.js';
+import { graffeFuoriPosto } from '../js/token-dosi.js';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const RECIPES_DIR = resolve(ROOT, 'ricette');
@@ -81,29 +81,19 @@ function hydration(v, slug) {
  * appartenere a un token che matcha la grammatica di js/token-dosi.js; fuori
  * dagli step le graffe sono vietate del tutto, perché il sito i token li
  * risolve SOLO negli step — un token in un proTip arriva al lettore così com'è.
+ *
+ * La regola vive in `graffeFuoriPosto` (js/token-dosi.js), non qui: la applica
+ * anche lo schema dei tools, che così ferma la ricetta alla generazione invece
+ * di lasciarla arrivare fin qui.
  */
 function controllaToken(raw, dove) {
-  const testiStep = new Set();
-  for (const s of [...(raw.steps || []), ...(raw.stepsCondiment || [])]) {
-    if (s?.text) testiStep.add(s.text);
+  for (const { campo, rotto } of graffeFuoriPosto(raw)) {
+    errors.push(rotto
+      ? `${dove}: token malformato in "${campo}" — ${JSON.stringify(rotto)} `
+        + `(la grammatica è {id:numero} o {id:numero!}, vedi js/token-dosi.js)`
+      : `${dove}: graffe in "${campo}", ma il sito risolve i token solo nel testo `
+        + `degli step: qui arriverebbero al lettore come testo grezzo`);
   }
-  (function scava(val, campo) {
-    if (typeof val === 'string') {
-      if (testiStep.has(val)) {
-        for (const rotto of graffeNonRisolte(val)) {
-          errors.push(`${dove}: token malformato in "${campo}" — ${JSON.stringify(rotto)} `
-            + `(la grammatica è {id:numero} o {id:numero!}, vedi js/token-dosi.js)`);
-        }
-      } else if (/[{}]/.test(val)) {
-        errors.push(`${dove}: graffe in "${campo}", ma il sito risolve i token solo nel testo `
-          + `degli step: qui arriverebbero al lettore come testo grezzo`);
-      }
-    } else if (Array.isArray(val)) {
-      for (const v of val) scava(v, campo);
-    } else if (val && typeof val === 'object') {
-      for (const [k, v] of Object.entries(val)) scava(v, campo || k);
-    }
-  })(raw, '');
 }
 
 /**
