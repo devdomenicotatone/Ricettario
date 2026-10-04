@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cornetti Sfogliati Fatti in Casa — Ricettario Lab</title>
+    <!-- Il manifest e la favicon puntano ai file di `public/`, serviti così come
+         sono, e NON alla copia che Vite hashera dentro /assets/.
+         Il manifest è il motivo: Vite riscrive gli URL nell'HTML ma non quelli
+         DENTRO un file JSON, quindi da /assets/ il suo `"src": "favicon.svg"`
+         risolveva a /assets/favicon.svg e `"start_url": "./"` a /assets/ —
+         404 tutti e due, cioè una PWA che all'avvio apriva una pagina che non
+         esiste. Servito da /Ricettario/, gli stessi percorsi relativi tornano
+         giusti, e restano giusti anche se un domani cambia la base.
+         La favicon la seguo per non tenerne due copie identiche in giro. -->
+    <link rel="icon" type="image/svg+xml" href="/Ricettario/favicon.svg">
+    <link rel="apple-touch-icon" href="/Ricettario/assets/apple-touch-icon-DVCrky5e.png">
+    <link rel="manifest" href="/Ricettario/site.webmanifest">
+    <!-- Lo script in fondo al <head> lo riscrive secondo il tema: qui c'è il
+         chiaro, che è anche il tema dichiarato su <html>. -->
+    <meta name="theme-color" content="#F2ECE4">
+
+    <!-- Open Graph — Social Sharing Card -->
+
+    <!-- Twitter / X Card -->
+
+    <!-- Font serviti da qui, non da Google: vedi css/base/fonts.css.
+         Il preload evita che il testo resti col font di sistema mentre il
+         CSS che li dichiara viene ancora scaricato. -->
+    <link rel="preload" href="/Ricettario/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/Ricettario/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- FOUC Prevention: applica tema prima del rendering -->
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = saved || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+
+            /* Barra del browser = fondo della navbar, misurato (88% di
+               --color-surface-1 su --color-surface-0). Unica copia dei due
+               valori: main.js chiama questa funzione, non li riscrive.
+               Perché non è più #C2884D: CHECKUP-CSS.md, punto 4. */
+            const COLORI_BARRA = { light: '#F2ECE4', dark: '#170E0A' };
+            window.applicaColoreBarra = function (t) {
+                const meta = document.querySelector('meta[name="theme-color"]');
+                if (meta && COLORI_BARRA[t]) meta.setAttribute('content', COLORI_BARRA[t]);
+            };
+            window.applicaColoreBarra(theme);
+        })();
+    </script>
+  <script type="module" crossorigin src="/Ricettario/assets/main--_tOn_US.js"></script>
+  <link rel="stylesheet" crossorigin href="/Ricettario/assets/main-hqfJ22sT.css">
+
+    <meta name="description" content="Cornetti sfogliati all'italiana con impasto brioche ricco, sfogliatura a 3 giri e lievitazione lenta per una sfoglia ariosa e fragrante.">
+    <link rel="canonical" href="https://devdomenicotatone.github.io/Ricettario/ricette/lievitati/cornetti-sfogliati-fatti-in-casa/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cornetti Sfogliati Fatti in Casa">
+    <meta property="og:description" content="Cornetti sfogliati all'italiana con impasto brioche ricco, sfogliatura a 3 giri e lievitazione lenta per una sfoglia ariosa e fragrante.">
+    <meta property="og:url" content="https://devdomenicotatone.github.io/Ricettario/ricette/lievitati/cornetti-sfogliati-fatti-in-casa/">
+    <meta property="og:image" content="https://devdomenicotatone.github.io/Ricettario/images/ricette/lievitati/cornetti-sfogliati-fatti-in-casa.webp">
+    <meta property="og:site_name" content="Ricettario Lab">
+    <meta property="og:locale" content="it_IT">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cornetti Sfogliati Fatti in Casa">
+    <meta name="twitter:description" content="Cornetti sfogliati all'italiana con impasto brioche ricco, sfogliatura a 3 giri e lievitazione lenta per una sfoglia ariosa e fragrante.">
+    <meta name="twitter:image" content="https://devdomenicotatone.github.io/Ricettario/images/ricette/lievitati/cornetti-sfogliati-fatti-in-casa.webp">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Cornetti Sfogliati Fatti in Casa",
+  "description": "Cornetti sfogliati all'italiana con impasto brioche ricco, sfogliatura a 3 giri e lievitazione lenta per una sfoglia ariosa e fragrante.",
+  "url": "https://devdomenicotatone.github.io/Ricettario/ricette/lievitati/cornetti-sfogliati-fatti-in-casa/",
+  "author": {
+    "@type": "Organization",
+    "name": "Ricettario Lab"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ricettario Lab"
+  },
+  "recipeCategory": "Lievitati",
+  "inLanguage": "it-IT",
+  "image": [
+    "https://devdomenicotatone.github.io/Ricettario/images/ricette/lievitati/cornetti-sfogliati-fatti-in-casa.webp"
+  ],
+  "datePublished": "2026-10-04",
+  "keywords": "cornetti, brioche, sfogliatura, colazione, lievitati, croissant, beurrage, pasticceria, lievito di birra, burro",
+  "recipeIngredient": [
+    "250 g Farina Manitoba (W 380-420, es. Lo Conte Magica, Caputo Nuvola Superior)",
+    "250 g Farina Tipo 00 (W 220-240, es. Caputo Cuoco, Molino Grassi)",
+    "100 g Zucchero Semolato (fine, non a velo)",
+    "120 g Uova Intere (taglia M, ca. 60g l'una, a temperatura ambiente)",
+    "20 g Tuorlo (taglia M, a temperatura ambiente)",
+    "100 g Latte Intero (a temperatura ambiente, 20-22°C)",
+    "60 g Acqua (a temperatura ambiente, 20-22°C)",
+    "10 g Lievito di Birra Fresco (in alternativa 3g secco)",
+    "50 g Burro (morbido a pomata, 20°C, qualità europea 82% m.g.)",
+    "10 g Miele di Acacia (o miele millefiori, aiuta la doratura)",
+    "8 g Sale Fino (marino fine)",
+    "5 g Scorza di Arancia (grattugiata fine, non trattata)",
+    "3 g Estratto di Vaniglia Naturale (o mezza bacca, NON vanillina sintetica)",
+    "250 g Burro di Qualità Superiore (84% m.g., tipo Lurpak, Beurre de Charentes, Inalpi Extra Corman — freddo da frigo)",
+    "15 g Farina Tipo 00 (per infarinare il panetto, assorbe l'eccesso di umidità)",
+    "20 g Tuorlo (per spennellare, taglia M)",
+    "20 g Latte Intero (per la doratura)",
+    "20 g Zucchero a Velo (per spolverare dopo cottura, facoltativo)"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Preparazione del Beurrage (Panetto di Burro per Sfogliatura)",
+      "text": "Il giorno prima o almeno 2 ore prima di iniziare, preparare il beurrage. Tirare dal frigo 250g di burro di qualità superiore (84% m.g.) e tagliarlo a fette di circa 1 cm. Disporre le fette su un foglio di carta forno, spolverarle con 15g di farina 00 e coprirle con un altro foglio di carta forno. Con il mattarello, battere energicamente il burro fino a ottenere un panetto rettangolare uniforme di circa 20×15 cm e spessore 1 cm. Il burro deve essere plastico e flessibile, NON sciolto: temperatura ideale 12-14°C. Riporre il panetto in frigo avvolto nella carta forno fino all'utilizzo."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Impasto Brioche — Prima Fase (Planetaria)",
+      "text": "Nella ciotola della planetaria con gancio, sciogliere 10g di lievito fresco in 60g di acqua a temperatura ambiente (20-22°C). Aggiungere 100g di latte, 120g di uova intere (2 uova M sbattute leggermente), 20g di tuorlo, 10g di miele, 5g di scorza d'arancia grattugiata e 3g di estratto di vaniglia naturale. Mescolare brevemente. Aggiungere il mix di farine (250g manitoba + 250g farina 00 setacciate insieme) e 100g di zucchero semolato. Avviare la planetaria a velocità 1 per 2 minuti finché si forma una massa omogenea, poi portare a velocità 2-3 e impastare per 6-8 minuti fino a ottenere un impasto liscio che si stacca dalle pareti della ciotola."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Inserimento del Burro e Incordatura",
+      "text": "Con la planetaria a velocità 2, aggiungere 50g di burro morbido a pomata (20°C) a pezzetti, pochi alla volta, aspettando che ogni aggiunta venga assorbita prima di inserire il successivo. Ci vorranno circa 4-5 minuti. Infine aggiungere 8g di sale e aumentare a velocità 3 per altri 3-4 minuti fino a completa incordatura: l'impasto deve essere liscio, elastico e setoso, e fare il cosiddetto 'velo' quando tirato tra le dita. La temperatura finale dell'impasto deve essere di 24-26°C: se supera i 26°C, fermarsi e fare riposare in frigo per 15 minuti."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Prima Lievitazione e Riposo in Frigo",
+      "text": "Formare una palla liscia con l'impasto, adagiarla in una ciotola leggermente unta con un filo d'olio, coprire con pellicola a contatto e lasciare lievitare a temperatura ambiente (24°C) per 60 minuti, finché l'impasto inizia a gonfiarsi visibilmente. Poi trasferire la ciotola in frigorifero a 4°C per 12-16 ore (fino al giorno dopo). Questo lungo riposo in freddo sviluppa gli aromi, rende l'impasto più gestibile durante la sfogliatura e rallenta la lievitazione per un risultato più complesso."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Primo Giro di Sfogliatura — Giro a 3",
+      "text": "Il giorno seguente, estrarre l'impasto dal frigo. Tirare fuori anche il panetto di burro e portarlo a 12-14°C (deve essere plastico ma non molle — si piega senza spezzarsi). Su un piano infarinato, stendere l'impasto con il mattarello in un rettangolo di circa 40×25 cm. Posizionare il panetto di burro al centro, coprendo i 2/3 centrali del rettangolo. Ripiegare un lembo dell'impasto sul burro (come una lettera commerciale), poi sovrapporre l'altro lembo. Premere i bordi per sigillare il burro all'interno. Ruotare il panetto di 90° (la piega aperta verso destra). Stendere delicatamente ma con decisione in un rettangolo lungo circa 60 cm, mantenendo una larghezza uniforme. Eseguire la piega a 3: piegare un terzo del rettangolo verso il centro, poi sovrapporre l'altro terzo. Avvolgere nella pellicola e riporre in frigo per 30 minuti."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 6,
+      "name": "Secondo e Terzo Giro di Sfogliatura",
+      "text": "Estrarre l'impasto dal frigo. Posizionarlo con la piega aperta verso destra e stenderlo nuovamente in un rettangolo lungo ~60 cm. Eseguire un altro giro a 3. Avvolgere e riporre in frigo per altri 30 minuti. Estrarre e ripetere per il terzo e ultimo giro a 3. Dopo i 3 giri (per un totale di 27 strati di burro), avvolgere il pastello nella pellicola e riporre in frigo per un riposo finale di 30-60 minuti. Questo passaggio è fondamentale: se il burro si rompe o fuoriesce durante la sfogliatura, l'impasto si è scaldato troppo — rimettere immediatamente in frigo."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 7,
+      "name": "Formatura dei Cornetti",
+      "text": "Estrarre il pastello dal frigo. Su un piano leggermente infarinato, stendere il pastello in un rettangolo di circa 60×30 cm con spessore di 4-5 mm. Con una rotella tagliapasta o un coltello affilato, tagliare dei triangoli isosceli con base di circa 10-12 cm e altezza di 20-22 cm. Se si vuole farcire, disporre un cucchiaino di ripieno (Nutella, crema pasticcera, marmellata) alla base del triangolo. Praticare un piccolo taglio da 1 cm al centro della base. Arrotolare il cornetto dal basso verso l'alto tirando leggermente le punte laterali. Formare una leggera curva a mezzaluna e posizionare sulla teglia rivestita di carta forno, con la punta sotto. Distanziare almeno 5 cm tra un cornetto e l'altro."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 8,
+      "name": "Appretto (Seconda Lievitazione)",
+      "text": "Coprire le teglie con i cornetti formati con pellicola leggermente unta o un canovaccio umido. Lasciare lievitare a temperatura ambiente (22-24°C) per 2-3 ore, finché i cornetti sono visibilmente gonfi, morbidi al tatto e hanno quasi raddoppiato il loro volume. NON lasciarli sovralievitare: un cornetto ben lievitato mantiene la forma e non crolla se si tocca leggermente. Se si vuole, è possibile lasciarli lievitare in frigo tutta la notte dopo la formatura e cuocerli direttamente la mattina (metodo a freddo): in questo caso estrarli dal frigo 30 minuti prima di infornare."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 9,
+      "name": "Doratura e Cottura",
+      "text": "Preriscaldare il forno statico a 195°C per almeno 20 minuti. Preparare la doratura mescolando 20g di tuorlo con 20g di latte. Spennellare delicatamente i cornetti con due passate di doratura (la prima leggera, aspettare 2 minuti, poi la seconda). Infornare nel ripiano centrale del forno per 20-23 minuti finché sono dorati in superficie e il loro profumo invade la cucina. Gli ultimi 3-4 minuti aprire leggermente lo sportello del forno (tenerlo socchiuso con un cucchiaio di legno) per favorire l'asciugatura della sfogliatura. Sfornare e lasciare raffreddare su una gratella per almeno 10 minuti prima di servire. Spolverare con 20g di zucchero a velo solo a raffreddamento completato (facoltativo)."
+    }
+  ],
+  "recipeYield": "circa 1311 g di impasto",
+  "cookTime": "PT20M",
+  "totalTime": "PT1H20M",
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "servingSize": "100 g",
+    "calories": "425 kcal",
+    "carbohydrateContent": "45 g",
+    "proteinContent": "8 g",
+    "fatContent": "24 g"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://devdomenicotatone.github.io/Ricettario/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Lievitati",
+      "item": "https://devdomenicotatone.github.io/Ricettario/ricette/lievitati/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Cornetti Sfogliati Fatti in Casa",
+      "item": "https://devdomenicotatone.github.io/Ricettario/ricette/lievitati/cornetti-sfogliati-fatti-in-casa/"
+    }
+  ]
+}
+    </script>
+</head>
+
+<body>
+
+    <!-- Skip to content — Accessibilità
+         Punta a #contenuto, non a #ricette: quell'ancora esiste solo in
+         homepage, quindi su 104 pagine su 105 il primo tasto che un utente da
+         tastiera premeva non faceva niente. -->
+    <a href="#contenuto" class="skip-link">Vai al contenuto principale</a>
+
+    <!-- Annuncio dei cambi di pagina.
+         Questo sito è una SPA: cliccando una ricetta il contenuto viene
+         sostituito senza che il browser carichi niente, quindi uno screen
+         reader non ha nulla da annunciare e l'utente resta a chiedersi se il
+         clic abbia funzionato. Il router ci scrive dentro il titolo della
+         pagina nuova.
+         Sta FUORI da #app di proposito: se il router lo sostituisse a ogni
+         navigazione, l'assistente non lo starebbe più osservando e
+         l'annuncio andrebbe perso. Dev'essere lo stesso elemento, sempre. -->
+    <div id="annuncio-pagina" class="solo-lettore" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- ═══════════ NAVBAR ═══════════
+         Il `<header>` AVVOLGE il `<nav>`, non lo sostituisce. Sono due
+         landmark diversi e servono a due cose diverse: `banner` dice «qui
+         comincia l'intestazione del sito», `navigation` dice «qui ci sono i
+         link per spostarsi». Rinominare il tag avrebbe tolto il secondo per
+         aggiungere il primo, e il secondo è quello che serve per saltare
+         dentro il menu.
+         Non ha classe né stile: contiene solo un elemento `position: fixed`,
+         quindi è alto zero e non sposta niente. Non deve prendere `transform`,
+         `filter` o `contain`: diventerebbe il blocco contenitore della navbar,
+         che smetterebbe di essere ancorata alla finestra. -->
+    <header>
+    <nav class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="/Ricettario/" class="navbar__logo" data-link>
+                <div class="navbar__logo-icon">
+                    <img src="/Ricettario/assets/wheat-logo-TzPQBXOF.svg" alt="" aria-hidden="true" width="40" height="56">
+                </div>
+
+                <span>Ricettario Lab</span>
+            </a>
+
+            <ul class="navbar__links" id="nav-links">
+                <li><a href="#ricette" data-nav-section="ricette" class="active">Ricette</a></li>
+                <!-- Route vere, non ancore: il router le intercetta come link interni.
+                     La vetrina #strumenti resta in homepage; la voce di menu porta
+                     all'hub /strumenti/ con le schede complete, come Cottura. -->
+                <li><a href="/Ricettario/cottura/">Cottura</a></li>
+                <li><a href="/Ricettario/strumenti/">Strumenti</a></li>
+                <li><a href="#chi-sono" data-nav-section="chi-sono">Chi Sono</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+                <span class="theme-toggle__icon theme-toggle__sun"><i data-lucide="sun"></i></span>
+                <span class="theme-toggle__icon theme-toggle__moon"><i data-lucide="moon"></i></span>
+            </button>
+
+            <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    </header>
+
+    <!-- ═══════════ SPA CONTAINER ═══════════ -->
+    <!-- Il router carica dinamicamente il contenuto qui -->
+    <!-- ═══════════ CONTENUTO PRINCIPALE ═══════════
+         `main` avvolge il contenitore #app invece di sostituirlo. Il tag di
+         apertura e quello di chiusura di #app, con il commento che lo segue,
+         sono portanti in tre punti: generate-og.js li cerca per iniettare il
+         contenuto pre-renderizzato e si ferma con "template incompatibile" se
+         non li trova, e verifica-build.js ci estrae il testo visibile per
+         confrontarlo con i dati strutturati. Rinominare quel tag li avrebbe
+         rotti tutti e tre.
+
+         `tabindex="-1"` non è decorativo: senza, lo skip link porta la pagina
+         quaggiù ma lascia il focus della tastiera dov'era, e il tasto dopo
+         riparte dalla navbar. Con -1 l'elemento riceve il focus da programma
+         pur restando fuori dall'ordine di tabulazione. -->
+    <main id="contenuto" tabindex="-1">
+    <div id="app">
+
+    <!-- ═══════════ RECIPE HERO ═══════════ -->
+    <figure class="recipe-foto">
+    <div class="recipe-hero" data-ricetta="lievitati/cornetti-sfogliati-fatti-in-casa">
+      <picture class="recipe-hero__picture">
+  <source srcset="/Ricettario/images/ricette/lievitati/cornetti-sfogliati-fatti-in-casa-640.avif 640w, /Ricettario/images/ricette/lievitati/cornetti-sfogliati-fatti-in-casa.avif 1280w" sizes="100vw" type="image/avif">
+  <source srcset="/Ricettario/images/ricette/lievitati/cornetti-sfogliati-fatti-in-casa-640.webp 640w, /Ricettario/images/ricette/lievitati/cornetti-sfogliati-fatti-in-casa.webp 1280w" sizes="100vw" type="image/webp">
+  <img src="/Ricettario/images/ricette/lievitati/cornetti-sfogliati-fatti-in-casa.webp" srcset="/Ricettario/images/ricette/lievitati/cornetti-sfogliati-fatti-in-casa-640.webp 640w, /Ricettario/images/ricette/lievitati/cornetti-sfogliati-fatti-in-casa.webp 1280w" sizes="100vw" width="1280" height="719" alt="Cornetti Sfogliati Fatti in Casa" class="recipe-hero__img">
+</picture>
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="/Ricettario/" data-link>Home</a>
+          <span class="breadcrumb__separator">›</span>
+          <a href="/Ricettario/#ricette" data-link>Ricette</a>
+          <span class="breadcrumb__separator">›</span>
+          <a href="/Ricettario/ricette/lievitati/" data-link>Lievitati</a>
+          <span class="breadcrumb__separator">›</span>
+          <span>Cornetti Sfogliati Fatti in Casa</span>
+        </nav>
+
+        <div class="recipe-hero__content">
+          <div class="recipe-hero__tags">
+            <span class="tag tag--category"><img src="/Ricettario/images/emoji/croissant.png" width="22" height="22" alt="" class="fluent-emoji" loading="lazy"> Lievitati</span>
+          </div>
+          <h1 class="recipe-hero__title">Cornetti Sfogliati Fatti in Casa</h1>
+          <p class="recipe-hero__subtitle">Brioche sfogliata artigianale con pieghe a libro — metodo italiano</p>
+        </div>
+      </div>
+    </div>
+    <figcaption class="recipe-foto__credito"><div class="container">Foto: Pexels — <a href="https://pixabay.com/service/license-summary/" target="_blank" rel="license noopener nofollow">Pixabay License</a> via <a href="https://pixabay.com/get/g0adf035ef747d8a479132f68415536337bbf4b33d93108314d8f6576c319f0a919dc3d5b9aef9c18e4c714bbc4b2f9748fa2d58334fb163ec0949953aded7bd1_1280.jpg" target="_blank" rel="noopener nofollow">Pixabay</a></div></figcaption></figure>
+
+    <!-- ═══════════ TECH BADGES ═══════════ -->
+    <div class="container" style="padding-top: 40px;">
+      <div class="tech-badges">
+        <div class="tech-badge"><img src="/Ricettario/images/emoji/droplet.png" width="18" height="18" alt="" class="fluent-emoji" loading="lazy"> Idratazione: <span class="tech-badge__value">&nbsp;48%</span></div>
+        <div class="tech-badge"><img src="/Ricettario/images/emoji/thermometer.png" width="18" height="18" alt="" class="fluent-emoji" loading="lazy"> Target Temp: <span class="tech-badge__value">&nbsp;24-26°C</span></div>
+        <div class="tech-badge"><img src="/Ricettario/images/emoji/stopwatch.png" width="18" height="18" alt="" class="fluent-emoji" loading="lazy"> Lievitazione: <span class="tech-badge__value">&nbsp;1h a TA + 12-16h in frigo + 2-3h appretto</span></div>
+        
+      </div>
+    </div>
+
+    <!-- ═══════════ RECIPE CONTENT ═══════════ -->
+    <section class="recipe-content" id="recipe-content">
+      <div class="container">
+        <div class="recipe-layout">
+
+          <!-- COLONNA SX: Ingredienti -->
+          <div>
+            
+    <div class="recipe-panel">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/shopping-cart.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Ingredienti Base
+      </h2>
+      
+      <table class="ingredients-table" id="ingredients-table" aria-label="Ingredienti e quantità">
+        <tr class="ingredient-section-header"><th colspan="2" scope="colgroup">Per l'Impasto Brioche</th></tr><tr>
+    <th scope="row">Farina Manitoba <span class="ingredient-note">(W 380-420, es. Lo Conte Magica, Caputo Nuvola Superior)</span></th>
+    <td class="ingredient-qty">250g</td>
+  </tr><tr>
+    <th scope="row">Farina Tipo 00 <span class="ingredient-note">(W 220-240, es. Caputo Cuoco, Molino Grassi)</span></th>
+    <td class="ingredient-qty">250g</td>
+  </tr><tr>
+    <th scope="row">Zucchero Semolato <span class="ingredient-note">(fine, non a velo)</span></th>
+    <td class="ingredient-qty">100g</td>
+  </tr><tr>
+    <th scope="row">Uova Intere <span class="ingredient-note">(taglia M, ca. 60g l'una, a temperatura ambiente)</span></th>
+    <td class="ingredient-qty">120g</td>
+  </tr><tr>
+    <th scope="row">Tuorlo <span class="ingredient-note">(taglia M, a temperatura ambiente)</span></th>
+    <td class="ingredient-qty">20g</td>
+  </tr><tr>
+    <th scope="row">Latte Intero <span class="ingredient-note">(a temperatura ambiente, 20-22°C)</span></th>
+    <td class="ingredient-qty">100g</td>
+  </tr><tr>
+    <th scope="row">Acqua <span class="ingredient-note">(a temperatura ambiente, 20-22°C)</span></th>
+    <td class="ingredient-qty">60g</td>
+  </tr><tr>
+    <th scope="row">Lievito di Birra Fresco <span class="ingredient-note">(in alternativa 3g secco)</span></th>
+    <td class="ingredient-qty">10g</td>
+  </tr><tr>
+    <th scope="row">Burro <span class="ingredient-note">(morbido a pomata, 20°C, qualità europea 82% m.g.)</span></th>
+    <td class="ingredient-qty">50g</td>
+  </tr><tr>
+    <th scope="row">Miele di Acacia <span class="ingredient-note">(o miele millefiori, aiuta la doratura)</span></th>
+    <td class="ingredient-qty">10g</td>
+  </tr><tr>
+    <th scope="row">Sale Fino <span class="ingredient-note">(marino fine)</span></th>
+    <td class="ingredient-qty">8g</td>
+  </tr><tr>
+    <th scope="row">Scorza di Arancia <span class="ingredient-note">(grattugiata fine, non trattata)</span></th>
+    <td class="ingredient-qty">5g</td>
+  </tr><tr>
+    <th scope="row">Estratto di Vaniglia Naturale <span class="ingredient-note">(o mezza bacca, NON vanillina sintetica)</span></th>
+    <td class="ingredient-qty">3g</td>
+  </tr><tr class="ingredient-section-header"><th colspan="2" scope="colgroup">Per il Panetto di Sfogliatura (Beurrage)</th></tr><tr>
+    <th scope="row">Burro di Qualità Superiore <span class="ingredient-note">(84% m.g., tipo Lurpak, Beurre de Charentes, Inalpi Extra Corman — freddo da frigo)</span></th>
+    <td class="ingredient-qty">250g</td>
+  </tr><tr>
+    <th scope="row">Farina Tipo 00 <span class="ingredient-note">(per infarinare il panetto, assorbe l'eccesso di umidità)</span></th>
+    <td class="ingredient-qty">15g</td>
+  </tr><tr class="ingredient-section-header"><th colspan="2" scope="colgroup">Per la Finitura</th></tr><tr>
+    <th scope="row">Tuorlo <span class="ingredient-note">(per spennellare, taglia M)</span></th>
+    <td class="ingredient-qty">20g</td>
+  </tr><tr>
+    <th scope="row">Latte Intero <span class="ingredient-note">(per la doratura)</span></th>
+    <td class="ingredient-qty">20g</td>
+  </tr><tr>
+    <th scope="row">Zucchero a Velo <span class="ingredient-note">(per spolverare dopo cottura, facoltativo)</span></th>
+    <td class="ingredient-qty">20g</td>
+  </tr>
+        <tr class="ingredient-total-row" id="ingredient-total-row">
+          <th scope="row">Peso Totale Impasto</th>
+          <td class="ingredient-qty" id="ingredient-total-qty">~1.3kg</td>
+        </tr>
+      </table>
+    </div>
+            
+          </div>
+
+          <!-- COLONNA DX: Procedimento -->
+          <div>
+            
+    <div class="recipe-panel" id="steps-panel">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/gear.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Procedimento
+      </h2>
+      <ol class="steps-list">
+        <li class="step-item">
+            <strong>Preparazione del Beurrage (Panetto di Burro per Sfogliatura)</strong>
+            <p>Il giorno prima o almeno 2 ore prima di iniziare, preparare il beurrage. Tirare dal frigo 250g di burro di qualità superiore (84% m.g.) e tagliarlo a fette di circa 1 cm. Disporre le fette su un foglio di carta forno, spolverarle con 15g di farina 00 e coprirle con un altro foglio di carta forno. Con il mattarello, battere energicamente il burro fino a ottenere un panetto rettangolare uniforme di circa 20×15 cm e spessore 1 cm. Il burro deve essere plastico e flessibile, NON sciolto: temperatura ideale 12-14°C. Riporre il panetto in frigo avvolto nella carta forno fino all'utilizzo.</p>
+          </li><li class="step-item">
+            <strong>Impasto Brioche — Prima Fase (Planetaria)</strong>
+            <p>Nella ciotola della planetaria con gancio, sciogliere 10g di lievito fresco in 60g di acqua a temperatura ambiente (20-22°C). Aggiungere 100g di latte, 120g di uova intere (2 uova M sbattute leggermente), 20g di tuorlo, 10g di miele, 5g di scorza d'arancia grattugiata e 3g di estratto di vaniglia naturale. Mescolare brevemente. Aggiungere il mix di farine (250g manitoba + 250g farina 00 setacciate insieme) e 100g di zucchero semolato. Avviare la planetaria a velocità 1 per 2 minuti finché si forma una massa omogenea, poi portare a velocità 2-3 e impastare per 6-8 minuti fino a ottenere un impasto liscio che si stacca dalle pareti della ciotola.</p>
+          </li><li class="step-item">
+            <strong>Inserimento del Burro e Incordatura</strong>
+            <p>Con la planetaria a velocità 2, aggiungere 50g di burro morbido a pomata (20°C) a pezzetti, pochi alla volta, aspettando che ogni aggiunta venga assorbita prima di inserire il successivo. Ci vorranno circa 4-5 minuti. Infine aggiungere 8g di sale e aumentare a velocità 3 per altri 3-4 minuti fino a completa incordatura: l'impasto deve essere liscio, elastico e setoso, e fare il cosiddetto 'velo' quando tirato tra le dita. La temperatura finale dell'impasto deve essere di 24-26°C: se supera i 26°C, fermarsi e fare riposare in frigo per 15 minuti.</p>
+          </li><li class="step-item">
+            <strong>Prima Lievitazione e Riposo in Frigo</strong>
+            <p>Formare una palla liscia con l'impasto, adagiarla in una ciotola leggermente unta con un filo d'olio, coprire con pellicola a contatto e lasciare lievitare a temperatura ambiente (24°C) per 60 minuti, finché l'impasto inizia a gonfiarsi visibilmente. Poi trasferire la ciotola in frigorifero a 4°C per 12-16 ore (fino al giorno dopo). Questo lungo riposo in freddo sviluppa gli aromi, rende l'impasto più gestibile durante la sfogliatura e rallenta la lievitazione per un risultato più complesso.</p>
+          </li><li class="step-item">
+            <strong>Primo Giro di Sfogliatura — Giro a 3</strong>
+            <p>Il giorno seguente, estrarre l'impasto dal frigo. Tirare fuori anche il panetto di burro e portarlo a 12-14°C (deve essere plastico ma non molle — si piega senza spezzarsi). Su un piano infarinato, stendere l'impasto con il mattarello in un rettangolo di circa 40×25 cm. Posizionare il panetto di burro al centro, coprendo i 2/3 centrali del rettangolo. Ripiegare un lembo dell'impasto sul burro (come una lettera commerciale), poi sovrapporre l'altro lembo. Premere i bordi per sigillare il burro all'interno. Ruotare il panetto di 90° (la piega aperta verso destra). Stendere delicatamente ma con decisione in un rettangolo lungo circa 60 cm, mantenendo una larghezza uniforme. Eseguire la piega a 3: piegare un terzo del rettangolo verso il centro, poi sovrapporre l'altro terzo. Avvolgere nella pellicola e riporre in frigo per 30 minuti.</p>
+          </li><li class="step-item">
+            <strong>Secondo e Terzo Giro di Sfogliatura</strong>
+            <p>Estrarre l'impasto dal frigo. Posizionarlo con la piega aperta verso destra e stenderlo nuovamente in un rettangolo lungo ~60 cm. Eseguire un altro giro a 3. Avvolgere e riporre in frigo per altri 30 minuti. Estrarre e ripetere per il terzo e ultimo giro a 3. Dopo i 3 giri (per un totale di 27 strati di burro), avvolgere il pastello nella pellicola e riporre in frigo per un riposo finale di 30-60 minuti. Questo passaggio è fondamentale: se il burro si rompe o fuoriesce durante la sfogliatura, l'impasto si è scaldato troppo — rimettere immediatamente in frigo.</p>
+          </li><li class="step-item">
+            <strong>Formatura dei Cornetti</strong>
+            <p>Estrarre il pastello dal frigo. Su un piano leggermente infarinato, stendere il pastello in un rettangolo di circa 60×30 cm con spessore di 4-5 mm. Con una rotella tagliapasta o un coltello affilato, tagliare dei triangoli isosceli con base di circa 10-12 cm e altezza di 20-22 cm. Se si vuole farcire, disporre un cucchiaino di ripieno (Nutella, crema pasticcera, marmellata) alla base del triangolo. Praticare un piccolo taglio da 1 cm al centro della base. Arrotolare il cornetto dal basso verso l'alto tirando leggermente le punte laterali. Formare una leggera curva a mezzaluna e posizionare sulla teglia rivestita di carta forno, con la punta sotto. Distanziare almeno 5 cm tra un cornetto e l'altro.</p>
+          </li><li class="step-item">
+            <strong>Appretto (Seconda Lievitazione)</strong>
+            <p>Coprire le teglie con i cornetti formati con pellicola leggermente unta o un canovaccio umido. Lasciare lievitare a temperatura ambiente (22-24°C) per 2-3 ore, finché i cornetti sono visibilmente gonfi, morbidi al tatto e hanno quasi raddoppiato il loro volume. NON lasciarli sovralievitare: un cornetto ben lievitato mantiene la forma e non crolla se si tocca leggermente. Se si vuole, è possibile lasciarli lievitare in frigo tutta la notte dopo la formatura e cuocerli direttamente la mattina (metodo a freddo): in questo caso estrarli dal frigo 30 minuti prima di infornare.</p>
+          </li><li class="step-item">
+            <strong>Doratura e Cottura</strong>
+            <p>Preriscaldare il forno statico a 195°C per almeno 20 minuti. Preparare la doratura mescolando 20g di tuorlo con 20g di latte. Spennellare delicatamente i cornetti con due passate di doratura (la prima leggera, aspettare 2 minuti, poi la seconda). Infornare nel ripiano centrale del forno per 20-23 minuti finché sono dorati in superficie e il loro profumo invade la cucina. Gli ultimi 3-4 minuti aprire leggermente lo sportello del forno (tenerlo socchiuso con un cucchiaio di legno) per favorire l'asciugatura della sfogliatura. Sfornare e lasciare raffreddare su una gratella per almeno 10 minuti prima di servire. Spolverare con 20g di zucchero a velo solo a raffreddamento completato (facoltativo).</p>
+          </li>
+      </ol>
+    </div>
+            
+          </div>
+
+        </div>
+
+        
+    <div class="recipe-panel sensory-panel recipe-panel--spaced">
+      <h2 class="recipe-panel__title">
+        <span><span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/star.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Dati Tecnici & Sensoriali</span>
+      </h2>
+      <div class="sensory-dominant">
+        <span class="sensory-dominant__badge">
+          👑 Tratto Dominante: Scioglievolezza (9/10)
+        </span>
+      </div>
+      <table class="ingredients-table" aria-label="Profilo sensoriale, in scala da 1 a 10">
+        <tbody><tr><th scope="row">Sofficezza / Alveolatura</th><td>8 su 10</td></tr><tr><th scope="row">Scioglievolezza</th><td>9 su 10</td></tr><tr><th scope="row">Ricchezza Burrosa / Lattica</th><td>9 su 10</td></tr><tr><th scope="row">Dolcezza Percepita</th><td>5 su 10</td></tr><tr><th scope="row">Complessità Aromatica</th><td>9 su 10</td></tr></tbody>
+      </table>
+      
+    <div class="sensory-note">
+      <h3 class="sensory-note__title">Note di Degustazione</h3>
+      <p class="sensory-note__text">"Un croissant sfogliato di scuola artigianale francese, dove la ricchezza burrosa del beurrage a 84% m.g. si esprime in strati sottilissimi che si aprono al morso con una leggerezza quasi eterea. La complessità aromatica è costruita su più registri — vaniglia naturale, scorza d'arancia, miele di acacia e la lunga fermentazione a freddo — che si intrecciano senza sovrastarsi, lasciando un finale lungo e avvolgente. La dolcezza è presente ma misurata, bilanciata dalla sapidità dell'impasto e dalla caramellizzazione della crosta dorata."</p>
+    </div>
+  
+      
+      <h3 class="sensory-note__title">Analisi Nutrizionale</h3>
+
+        <div class="nutrition-content">
+          <div class="nutrition-kcal">
+              <span class="nutrition-kcal__value">425</span>
+              <span class="nutrition-kcal__unit">Kcal</span>
+          </div>
+
+          <div class="nutrition-bar">
+            <div class="nutrition-bar__segment nutrition-bar__segment--carbs" style="width: 58.44155844155844%;" title="Carboidrati"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--prot" style="width: 10.38961038961039%;" title="Proteine"></div>
+            <div class="nutrition-bar__segment nutrition-bar__segment--fat" style="width: 31.16883116883117%;" title="Grassi"></div>
+          </div>
+
+          <div class="nutrition-legend">
+            <div class="nutrition-legend__item">
+              <div class="nutrition-legend__dot nutrition-legend__dot--carbs"></div>
+              <span>Carboidrati <strong>45g</strong></span>
+            </div>
+            <div class="nutrition-legend__item">
+              <div class="nutrition-legend__dot nutrition-legend__dot--prot"></div>
+              <span>Proteine <strong>8g</strong></span>
+            </div>
+            <div class="nutrition-legend__item">
+              <div class="nutrition-legend__dot nutrition-legend__dot--fat"></div>
+              <span>Grassi <strong>24g</strong></span>
+            </div>
+          </div>
+
+          <p class="nutrition-disclaimer">
+            <em>Disclaimer: Valori medi per 100 g di prodotto finito, calcolati sugli ingredienti della ricetta con dati USDA FoodData Central e resa di cottura dichiarata. I valori effettivi possono variare in base ai marchi commerciali usati.</em>
+          </p>
+        </div>
+    </div>
+        
+    <div class="recipe-panel recipe-panel--spaced">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/flatbread.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Consigli Farine & Marchi
+      </h2>
+      <table class="flour-table">
+        <thead><tr><th>Tipo Farina</th><th>Forza (W)</th><th>Marchi Consigliati</th></tr></thead>
+        <tbody>
+          
+            <tr>
+              <td>Manitoba (per l'impasto)</td>
+              <td class="flour-table__w">380-420</td>
+              <td>Lo Conte Le Magiche, Caputo Nuvola Superior, Molino Dallagiovanna Top, Garofalo Farina Manitoba</td>
+            </tr>
+          
+            <tr>
+              <td>Farina 00 (bilanciamento impasto)</td>
+              <td class="flour-table__w">220-240</td>
+              <td>Caputo Cuoco, Molino Grassi 00, Barilla Farina 00, Agugiaro&amp;Figna Le 5 Stagioni 00</td>
+            </tr>
+          
+            <tr>
+              <td>Alternativa monofarina (W alto)</td>
+              <td class="flour-table__w">280-320</td>
+              <td>Caputo Nuvola, Molino Rossetto Speciale per Croissant, Petra 5</td>
+            </tr>
+          
+        </tbody>
+      </table>
+
+      <div class="pro-tip-box">
+        <p><strong><img src="/Ricettario/images/emoji/light-bulb.png" width="18" height="18" alt="" class="fluent-emoji" loading="lazy"> PRO TIP:</strong> La forza (W) è il parametro chiave. Se non trovi i marchi suggeriti, cerca qualsiasi farina con il valore W indicato.</p>
+      </div>
+    </div>
+        
+    <div class="alert alert--danger recipe-panel--spaced">
+      <span class="alert__icon"><img src="/Ricettario/images/emoji/prohibited.png" width="28" height="28" alt="" class="fluent-emoji" loading="lazy"></span>
+      <div class="alert__content">
+        <strong>ALERT PROFESSIONALE</strong>
+        <p><img src="/Ricettario/images/emoji/warning.png" width="18" height="18" alt="" class="fluent-emoji" loading="lazy"> NON usare burro con meno dell'82% di materia grassa per la sfogliatura: i burri con più acqua (tipo burro da cucina economico) producono vapore eccessivo che bagna gli strati invece di separarli, rendendo la sfogliatura gommosa anziché croccante. Allo stesso modo, NON sfogliare mai con burro fuso o troppo morbido (&gt;16°C): penetra nella pasta invece di stratificarsi, compromettendo irrimediabilmente la struttura lamellare. Se il burro fuoriesce dai bordi durante la stesura, rimettere immediatamente in frigo per 20 minuti.</p>
+      </div>
+    </div>
+        
+        
+    <div class="recipe-panel recipe-panel--spaced">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/fire.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Cottura
+      </h2>
+      <div class="tech-badges">
+        <div class="tech-badge"><img src="/Ricettario/images/emoji/thermometer.png" width="18" height="18" alt="" class="fluent-emoji" loading="lazy"> Temperatura: <span class="tech-badge__value">&nbsp;195°C statico</span></div>
+        <div class="tech-badge"><img src="/Ricettario/images/emoji/stopwatch.png" width="18" height="18" alt="" class="fluent-emoji" loading="lazy"> Tempo: <span class="tech-badge__value">&nbsp;20-23 minuti</span></div>
+      </div>
+      <ul class="tip-list">
+        <li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Forno STATICO obbligatorio: il ventilato asciuga la superficie troppo velocemente impedendo l'oven spring e rovinando la sfogliatura</li><li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Posizione teglia: ripiano centrale, mai il ripiano basso (brucia il fondo) né il ripiano alto (brucia la superficie prima che l'interno cuocia)</li><li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Aprire lo sportello del forno di un dito negli ultimi 3-4 minuti per asciugare la sfogliatura interna ed evitare l'effetto 'vapore'</li><li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> I cornetti sono cotti quando il fondo risulta dorato e suona vuoto battendoci sopra con le nocche — non solo la superficie dorata è sufficiente</li><li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> NON aprire il forno nei primi 15 minuti per non bloccare lo sviluppo della sfogliatura (oven spring)</li>
+      </ul>
+    </div>
+        
+    <div class="recipe-panel recipe-panel--spaced">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/light-bulb.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Pro Tips
+      </h2>
+      <ul class="tip-list">
+        <li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Per una sfogliatura ancora più definita e croccante, dopo i 3 giri a 3 (27 strati), puoi eseguire un quarto giro a 4 (piega a portafoglio): questo porta a 108 strati e una sfogliatura più sottile tipica del croissant francese. Tuttavia per il cornetto italiano, i 27 strati sono il punto ideale di equilibrio tra morbidezza brioche e sfogliatura visibile.</li><li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> La doratura a doppia passata fa la differenza: la prima stesura di tuorlo+latte asciuga parzialmente durante i 2 minuti di attesa, e la seconda crea una lacca lucida che in cottura diventa una doratura profonda e uniforme. Aggiungere 5g di miele nella doratura intensifica il colore e la brillantezza.</li><li class="tip-item"><img src="/Ricettario/images/emoji/light-bulb.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> Per cornetti perfettamente uniformi, usare la teglia capovolta (il fondo liscio come superficie di lavoro) e una riga o una dima di cartone per tagliare i triangoli sempre delle stesse dimensioni. La coerenza nelle dimensioni garantisce cottura uniforme: cornetti di dimensioni diverse cuociono a velocità diverse.</li>
+      </ul>
+    </div>
+        
+    <div class="recipe-panel recipe-panel--spaced">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/package.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Conservazione
+      </h2>
+      <ul class="tip-list">
+        <li class="tip-item"><img src="/Ricettario/images/emoji/package.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> A temperatura ambiente: i cornetti si conservano sotto una campana di vetro o in una busta di carta (non plastica, che li ammorbidisce) per massimo 12-18 ore. Oltre questo tempo perdono la croccantezza della sfogliatura.</li><li class="tip-item"><img src="/Ricettario/images/emoji/package.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> In freezer (prima della cottura — metodo ideale): dopo la formatura e PRIMA dell'appretto, congelare i cornetti su teglia per 2 ore poi trasferirli in sacchetti sottovuoto. Si conservano fino a 60 giorni. Per cuocerli: estrarre la sera prima, lasciare in frigo tutta la notte, poi a temperatura ambiente 2-3 ore di appretto e infornare come di consueto.</li><li class="tip-item"><img src="/Ricettario/images/emoji/package.png" width="16" height="16" alt="" class="fluent-emoji" loading="lazy"> In freezer (già cotti): avvolgere i cornetti completamente freddi singolarmente in pellicola, poi in alluminio. Si conservano fino a 30 giorni. Per rigenerare: forno statico a 170°C per 5-7 minuti direttamente dal freezer. NON usare il microonde che rende la sfogliatura gommosa.</li>
+      </ul>
+    </div>
+        
+    <div class="recipe-panel recipe-panel--spaced">
+      <h2 class="recipe-panel__title">
+        <span class="recipe-panel__title-icon"><img src="/Ricettario/images/emoji/open-book.png" width="24" height="24" alt="" class="fluent-emoji" loading="lazy"></span> Glossario
+      </h2>
+      <dl class="glossary-list">
+        
+          <dt class="glossary-term">Beurrage</dt>
+          <dd class="glossary-def">Il panetto di burro lavorato e sagomato che viene incorporato nell'impasto durante la sfogliatura. Deve essere plastico (12-14°C) per scorrere tra gli strati senza rompersi.</dd>
+        
+          <dt class="glossary-term">Sfogliatura</dt>
+          <dd class="glossary-def">Tecnica che consiste nell'incorporare un panetto di burro nell'impasto tramite pieghe successive, creando strati alternati di pasta e grasso che in cottura si separano per effetto del vapore, dando la struttura lamellare del croissant.</dd>
+        
+          <dt class="glossary-term">Giro a 3 (Piega a Libro)</dt>
+          <dd class="glossary-def">Tipo di piega in cui il rettangolo di pasta viene diviso idealmente in 3 parti uguali e piegato come una lettera commerciale (un lembo sopra l'altro). Ogni giro a 3 triplica il numero di strati.</dd>
+        
+          <dt class="glossary-term">Pastello</dt>
+          <dd class="glossary-def">L'impasto che 'avvolge' il panetto di burro (beurrage) nelle prime fasi della sfogliatura. Non è il prodotto finito, ma il sistema impasto+burro durante la lavorazione.</dd>
+        
+          <dt class="glossary-term">Incordatura</dt>
+          <dd class="glossary-def">Sviluppo completo della maglia glutinica: l'impasto diventa liscio, elastico e 'si incorda' attorno al gancio. Si verifica quando il glutine forma una rete resistente — il test del velo è la prova visiva.</dd>
+        
+          <dt class="glossary-term">Velo</dt>
+          <dd class="glossary-def">Test per verificare l'incordatura: si prende un pezzetto di impasto e lo si allarga delicatamente tra le dita. Se forma una membrana sottile e traslucida senza rompersi, il glutine è ben sviluppato.</dd>
+        
+          <dt class="glossary-term">Appretto</dt>
+          <dd class="glossary-def">La seconda e ultima lievitazione, quella che avviene dopo la formatura. Dà volume al prodotto finito e deve essere monitorata attentamente per non sovralievitare.</dd>
+        
+          <dt class="glossary-term">Puntata</dt>
+          <dd class="glossary-def">La prima lievitazione dell'impasto (prima della formatura). Nel caso dei cornetti sfogliati, viene interrotta in frigo per mantenere il glutine teso e facilitare la sfogliatura.</dd>
+        
+          <dt class="glossary-term">Burro a Pomata</dt>
+          <dd class="glossary-def">Burro lavorato fino a consistenza cremosa simile a una pomata (20-22°C), né fuso né solido. Si incorpora facilmente nell'impasto senza alternarne la temperatura.</dd>
+        
+          <dt class="glossary-term">Oven Spring</dt>
+          <dd class="glossary-def">Il rapido sviluppo in forno nei primi minuti di cottura, dovuto all'espansione dei gas di lievitazione e al vapore prodotto dall'acqua nel burro. Dà l'apertura caratteristica della sfogliatura.</dd>
+        
+          <dt class="glossary-term">Retard (in frigo)</dt>
+          <dd class="glossary-def">Tecnica di rallentamento della lievitazione tramite freddo (4-6°C). Permette di distribuire il lavoro su due giorni, migliora gli aromi per maturazione enzimatica lenta e rende l'impasto più gestibile.</dd>
+        
+          <dt class="glossary-term">Triangolo con intaglio alla base</dt>
+          <dd class="glossary-def">Il piccolo taglio da 1 cm praticato al centro della base del triangolo prima dell'arrotolamento: permette al cornetto di curvare naturalmente in forma di mezzaluna e riduce la tensione degli strati.</dd>
+        
+      </dl>
+    </div>
+      </div>
+    </section>
+  
+    </div><!-- /#app -->
+    </main>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__brand-name"><img src="/Ricettario/images/emoji/fire.png" width="20" height="20" alt=""
+                            class="fluent-emoji"> <span class="testo-gradiente">Ricettario Lab</span></div>
+                    <p class="footer__brand-desc">
+                        Ricettario personale. Ricette artigianali documentate con precisione tecnica per
+                        risultati replicabili al 100%.
+                    </p>
+                </div>
+
+                <!-- URL veri con base assoluta, non ancore nude: il footer è nel
+                     guscio condiviso da TUTTE le pagine e #ricette/#strumenti/
+                     #chi-sono esistono solo in homepage — altrove un'ancora nuda
+                     lasciava l'URL con l'hash e la pagina ferma. Senza JavaScript
+                     l'URL basta da solo (carica la home e salta alla sezione);
+                     con JavaScript data-nav-section riusa la gestione della
+                     navbar in router.js: da una pagina interna porta in home e
+                     poi scrolla alla sezione, in homepage resta il salto nativo.
+                     La forma dell'URL è la stessa dei breadcrumb
+                     (js/html-ricetta.js: base + "#ricette"). -->
+                <div>
+                    <h2 class="footer__col-title">Navigazione</h2>
+                    <ul class="footer__links">
+                        <li><a href="/Ricettario/"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Home</a>
+                        </li>
+                        <li><a href="/Ricettario/#ricette" data-nav-section="ricette"><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
+                                Ricette</a></li>
+                        <!-- Route vera come Cottura: porta all'hub /strumenti/,
+                             non all'ancora della vetrina in homepage. -->
+                        <li><a href="/Ricettario/strumenti/" data-link><i data-lucide="arrow-up-right" class="footer__link-icon"></i>
+                                Strumenti</a></li>
+                        <li><a href="/Ricettario/#chi-sono" data-nav-section="chi-sono"><i data-lucide="arrow-up-right" class="footer__link-icon"></i> Chi
+                                Sono</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tutte le categorie, con path ASSOLUTI. I vecchi link erano
+                     relativi ("ricette/pane/"): giusti in homepage e rotti su
+                     ogni altra pagina, perché il footer è nel guscio condiviso
+                     e un path relativo si risolve contro l'URL della pagina che
+                     lo ospita. C'era anche una categoria «Pasta» che non esiste.
+                     Questo elenco è una copia di js/categories.js e non può non
+                     esserlo (markup statico): verifica-build.js controlla che
+                     le due liste coincidano, quindi se diverge la build si
+                     ferma. Sono anche gli unici link statici che rendono
+                     raggiungibili le pagine categoria dai crawler. -->
+                <div>
+                    <h2 class="footer__col-title">Categorie</h2>
+                    <ul class="footer__links">
+                        <li><a href="/Ricettario/ricette/primi/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Primi</a></li>
+                        <li><a href="/Ricettario/ricette/pane/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Pane</a></li>
+                        <li><a href="/Ricettario/ricette/pizza/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Pizza</a></li>
+                        <li><a href="/Ricettario/ricette/lievitati/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Lievitati</a></li>
+                        <li><a href="/Ricettario/ricette/dolci/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Dolci</a></li>
+                        <li><a href="/Ricettario/ricette/focaccia/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Focaccia</a></li>
+                        <li><a href="/Ricettario/ricette/conserve/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Conserve</a></li>
+                        <li><a href="/Ricettario/ricette/condimenti/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Condimenti</a></li>
+                        <li><a href="/Ricettario/ricette/secondi-piatti/" data-link><i data-lucide="arrow-up-right"
+                                    class="footer__link-icon"></i> Secondi Piatti</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="footer__col-title">Stack</h2>
+                    <ul class="footer__links">
+                        <!-- Famag e cutter hanno la loro pagina in /strumenti/;
+                             le altre voci dello stack restano ancore alla vetrina. -->
+                        <li><a href="/Ricettario/strumenti/famag-grilletta/" data-link><img src="/Ricettario/images/emoji/wrench.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Famag Grilletta</a></li>
+                        <li><a href="/Ricettario/strumenti/cutter-sirman-c-tronic-6/" data-link><img src="/Ricettario/images/emoji/fork-and-knife.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Cutter Sirman</a></li>
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Mix Tri-Farina</a></li>
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/flatbread.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Farine Professionali</a></li>
+                        <li><a href="/Ricettario/#strumenti" data-nav-section="strumenti"><img src="/Ricettario/images/emoji/thermometer.png" width="14" height="14" alt=""
+                                    class="fluent-emoji"> Termometro Laser</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <span>© <span id="current-year">2026</span> Ricettario Lab</span>
+                <div class="footer__social">
+                    <a href="https://github.com/devdomenicotatone/Ricettario" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
