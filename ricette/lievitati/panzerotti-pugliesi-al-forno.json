@@ -1,0 +1,281 @@
+{
+  "title": "Panzerotti Pugliesi al Forno",
+  "slug": "panzerotti-pugliesi-al-forno",
+  "emoji": "🥙",
+  "description": "Panzerotti pugliesi al forno: impasto con farina 00 e semola rimacinata, ripieno classico pomodoro e mozzarella. Leggeri, dorati e fragranti.",
+  "subtitle": "Mezzalune lievitate pugliesi con ripieno pomodoro e mozzarella — cottura al forno",
+  "category": "Lievitati",
+  "hydration": 62,
+  "targetTemp": "25-26°C",
+  "fermentation": "~2h + 20 min appretto",
+  "totalFlour": 500,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per l'Impasto",
+      "items": [
+        {
+          "name": "Farina Tipo 00",
+          "note": "(W 200-240, farina da pane media forza)",
+          "grams": 350,
+          "tokenId": "farina_00"
+        },
+        {
+          "name": "Semola Rimacinata di Grano Duro",
+          "note": "(finissima, tipo Divella o De Cecco)",
+          "grams": 150,
+          "tokenId": "semola"
+        },
+        {
+          "name": "Acqua",
+          "note": "(tiepida, 28-30°C)",
+          "grams": 310,
+          "tokenId": "acqua_impasto"
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(o 4g lievito di birra secco)",
+          "grams": 10,
+          "tokenId": "lievito_fresco"
+        },
+        {
+          "name": "Olio Extravergine di Oliva",
+          "note": "(pugliese o delicato)",
+          "grams": 25,
+          "tokenId": "olio_impasto"
+        },
+        {
+          "name": "Zucchero Semolato",
+          "note": "(attiva la lievitazione)",
+          "grams": 10,
+          "tokenId": "zucchero_impasto"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(2.2% su farina totale)",
+          "grams": 11,
+          "tokenId": "sale_impasto"
+        }
+      ]
+    },
+    {
+      "group": "Per il Ripieno Classico (Pomodoro e Mozzarella)",
+      "items": [
+        {
+          "name": "Mozzarella per Pizza",
+          "note": "(sgocciolata bene, a bassa umidità — no fior di latte fresco intero)",
+          "grams": 300,
+          "tokenId": "mozzarella_ripieno"
+        },
+        {
+          "name": "Passata di Pomodoro",
+          "note": "(densa, o polpa finissima)",
+          "grams": 250,
+          "tokenId": "passata_ripieno"
+        },
+        {
+          "name": "Formaggio Grattugiato",
+          "note": "(Pecorino romano o Grana Padano)",
+          "grams": 30,
+          "tokenId": "formaggio_ripieno"
+        },
+        {
+          "name": "Olio Extravergine di Oliva",
+          "note": "(per condire il ripieno)",
+          "grams": 15,
+          "tokenId": "olio_ripieno"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(per il ripieno)",
+          "grams": 4,
+          "tokenId": "sale_ripieno"
+        },
+        {
+          "name": "Origano Secco",
+          "note": "(siciliano o pugliese, intenso)",
+          "grams": 4,
+          "tokenId": "origano_ripieno"
+        },
+        {
+          "name": "Pepe Nero",
+          "note": "(macinato fresco)",
+          "grams": 2,
+          "tokenId": "pepe_ripieno"
+        }
+      ]
+    },
+    {
+      "group": "Per la Finitura",
+      "items": [
+        {
+          "name": "Olio Extravergine di Oliva",
+          "note": "(per spennellare prima di infornare)",
+          "grams": 20,
+          "tokenId": "olio_finitura"
+        },
+        {
+          "name": "Passata di Pomodoro",
+          "note": "(facoltativa, per spennellare la superficie)",
+          "grams": 30,
+          "tokenId": "passata_finitura"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Preparazione del Ripieno (da fare prima)",
+      "text": "Il ripieno va preparato con anticipo per far scolare i liquidi in eccesso — errore tipico nei panzerotti che si aprono in cottura.\n\nTaglia {mozzarella_ripieno:300}g di mozzarella per pizza a dadini piccoli (5mm) e disponila in un colino a maglie fitte. Lasciala sgocciolare per almeno 30 minuti, poi strizzala delicatamente con le mani o con un panno pulito. Questo passaggio è CRITICO: la mozzarella troppo umida rende il ripieno acquoso e fa aprire le mezzalune.\n\nIn una ciotola unisci la mozzarella strizzata con {passata_ripieno:250}g di passata di pomodoro densa, {formaggio_ripieno:30}g di formaggio grattugiato, {olio_ripieno:15}g di olio EVO, {sale_ripieno:4}g di sale fino, {origano_ripieno:4}g di origano secco e {pepe_ripieno:2}g di pepe nero macinato. Mescola con un cucchiaio e riponi il ripieno in frigo fino al momento dell'utilizzo — raffreddarlo aiuta a mantenerlo compatto durante la farcitura."
+    },
+    {
+      "title": "Impasto a Mano",
+      "text": "In una ciotola capiente sciogli {lievito_fresco:10}g di lievito di birra fresco in {acqua_impasto:310}g di acqua tiepida a 28-30°C insieme a {zucchero_impasto:10}g di zucchero. Mescola con le dita fino a completa dissoluzione (circa 1 minuto).\n\nIn un'altra ciotola grande unisci {farina_00:350}g di farina 00 e {semola:150}g di semola rimacinata e mescola le due farine a secco. Crea una fontana al centro e versa gradualmente il liquido con il lievito, incorporando la farina dai bordi verso il centro con le dita.\n\nQuando l'impasto inizia a prendere corpo, trasferiscilo sul piano di lavoro e aggiungi {sale_impasto:11}g di sale fino. Impasta energicamente con i palmi della mano per 2-3 minuti.\n\nAggiungi {olio_impasto:25}g di olio EVO a filo, continuando a lavorare l'impasto per altri 5-7 minuti con movimenti di spinta e piega, fino ad ottenere un panetto liscio, elastico e leggermente morbido. L'impasto non deve risultare appiccicoso: se necessario aggiungi pochissima semola. Target temperatura impasto: 25-26°C."
+    },
+    {
+      "title": "Puntata (Prima Lievitazione)",
+      "text": "Forma una palla pirlando l'impasto sul piano di lavoro. Disponila in una ciotola leggermente unta con olio EVO, pratica il classico taglio a croce in superficie con un tarocco o coltello, poi copri con pellicola alimentare a contatto.\n\nFai lievitare a temperatura ambiente in un luogo riparato da correnti d'aria (ideale 26-28°C) per circa {tempo_puntata:120!} minuti, o comunque fino al raddoppio del volume. In estate potrebbe essere sufficiente 90 minuti; in inverno con casa fredda valuta 150 minuti."
+    },
+    {
+      "title": "Staglio e Appretto (Seconda Lievitazione)",
+      "text": "A lievitazione completata, rovescia l'impasto sul piano di lavoro leggermente infarinato con semola e sgonfialo delicatamente con le mani.\n\nForma un filoncino e usando un tarocco (raschietto da banco) dividi l'impasto in circa {num_pezzi:14!} porzioni da circa {panetto_peso:70!}g ciascuna — usa una bilancia da cucina per uniformità. Ogni porzione darà un panzerotto generoso.\n\nPirla ogni porzione sul piano — senza farina o con pochissima — formando palline tese con la chiusura rivolta verso il basso. Disponi le palline su una teglia coperta con carta forno, distanziate di almeno 5 cm tra loro. Copri con un canovaccio umido o pellicola e lascia riposare in appretto per {tempo_appretto:20!} minuti a temperatura ambiente."
+    },
+    {
+      "title": "Stesura e Farcitura",
+      "text": "Preriscalda il forno a 220°C in modalità statica con la teglia vuota (o pietra refrattaria se disponibile) già all'interno, in posizione centrale.\n\nPrendi una pallina per volta e stendila sul piano leggermente infarinato con semola usando un mattarello, formando un disco di circa 12-13 cm di diametro e 3-4 mm di spessore — non troppo sottile altrimenti rischia di rompersi, non troppo spesso altrimenti il cuore rimane crudo.\n\nDeposita il disco sulla mano sinistra aperta (o sul piano). Preleva un cucchiaio colmo di ripieno (circa 35-40g) e posizionalo su metà disco, lasciando libero un bordo di circa 1,5 cm. NON esagerare con il ripieno: l'errore più comune che fa aprire i panzerotti è il riempimento eccessivo.\n\nInumidisci il bordo con un pennello da cucina bagnato (o con un dito umido) tutt'attorno al semicerchio. Richiudi a mezzaluna, sovrapponendo i bordi e premendo con decisione prima con le dita, poi sigilla con i rebbi di una forchetta passando con pressione costante lungo tutta la chiusura. Ripiega e premi ulteriormente a mano il bordo sagomato per doppia sicurezza."
+    },
+    {
+      "title": "Finitura e Cottura al Forno",
+      "text": "Disponi i panzerotti chiusi sulla teglia foderata con carta forno, lasciando 3-4 cm di spazio tra l'uno e l'altro. Spennella generosamente la superficie di ciascun panzerotto con {olio_finitura:20}g di olio EVO usando un pennello da cucina — questo garantisce la doratura caratteristica in forno.\n\nFacoltativo ma consigliato: spalma un velo sottilissimo di {passata_finitura:30}g di passata di pomodoro sulla superficie superiore prima dell'olio, per un colore più vivace e un sapore più intenso.\n\nInforna la teglia nel forno già caldo a {temp_forno:220!}°C statico, posizione centrale, per {tempo_cottura:18!} minuti circa. Gli ultimi 2-3 minuti puoi attivare la funzione grill (resistenza superiore) per dorare ulteriormente la superficie. I panzerotti sono pronti quando la superficie è dorata-ambrata e la base è asciutta e leggermente croccante.\n\nSforna e lascia intiepidire su una gratella per 5 minuti prima di servire — il ripieno è bollente all'uscita dal forno."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [
+    {
+      "type": "Farina 00 Media Forza",
+      "w": "200-240",
+      "brands": "Molino Caputo Cuoco, Lo Conte Le Farine dei Nostri Sacchi, Garofalo 00"
+    },
+    {
+      "type": "Semola Rimacinata di Grano Duro",
+      "w": "—",
+      "brands": "Divella Semola Rimacinata, De Cecco Semola Rimacinata, Rummo Semola"
+    }
+  ],
+  "baking": {
+    "temperature": "220°C",
+    "time": "18 minuti (+ 2-3 min grill finale opzionale)",
+    "tips": [
+      "Forno statico a 220°C: il calore uniforme permette la lievitazione in forno (oven spring) senza seccare la superficie",
+      "Preriscalda il forno con la teglia o pietra refrattaria all'interno per almeno 20 minuti: il calore dal basso croccantisce la base e riduce il rischio di apertura",
+      "Posizione teglia: centrale. Mai troppo in alto (brucia la superficie) né troppo in basso (base cruda)",
+      "I panzerotti sono pronti quando la superficie è dorata-ambrata omogenea e la base risulta secca al tocco con la spatola",
+      "Attiva il grill solo negli ultimi 2-3 minuti e stai presente: il passaggio da dorato a bruciato è veloce"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Puntata",
+      "definition": "Prima lievitazione dell'impasto dopo la formazione del panetto, dalla fine dell'impastamento fino allo staglio. Sviluppa sapore e struttura glutinica."
+    },
+    {
+      "term": "Appretto",
+      "definition": "Seconda e ultima lievitazione dopo lo staglio e la formatura delle palline, prima della stesura. Permette al glutine di rilassarsi e alla massa di gonfiarsi ulteriormente."
+    },
+    {
+      "term": "Staglio",
+      "definition": "Operazione di divisione dell'impasto in porzioni di peso uguale usando un tarocco. Si esegue con un taglio netto senza strappare la maglia glutinica."
+    },
+    {
+      "term": "Pirlatura",
+      "definition": "Tecnica di arrotondamento della porzione di impasto in forma sferica, creando tensione superficiale con movimenti circolari sul piano di lavoro. Qui usata per formare le palline prima dell'appretto."
+    },
+    {
+      "term": "Incordatura",
+      "definition": "Sviluppo della rete glutinica durante l'impastamento: l'impasto è 'incordato' quando è liscio, elastico e si stacca dalle pareti della ciotola o dal piano senza strapparsi."
+    },
+    {
+      "term": "Maglia glutinica",
+      "definition": "Rete di proteine (glutenina e gliadina) che si forma durante l'impastamento e trattiene i gas della lievitazione, dando struttura e elasticità all'impasto."
+    },
+    {
+      "term": "Bassinage",
+      "definition": "Tecnica di aggiunta graduale dell'acqua residua a filo dopo l'incordatura. Non applicata in questa ricetta (idratazione moderata al 62%), ma citata per completezza tecnica."
+    },
+    {
+      "term": "Oven spring",
+      "definition": "Rapida espansione dell'impasto nei primi minuti di cottura in forno, dovuta all'attivazione termica dei lieviti e alla vaporizzazione dell'acqua. Nei panzerotti al forno è fondamentale per ottenere un prodotto gonfio e leggero."
+    },
+    {
+      "term": "Tarocco",
+      "definition": "Raschietto rettangolare (in metallo o plastica) usato per dividere l'impasto, raccoglierlo dal piano di lavoro e pulire la superficie di lavoro."
+    },
+    {
+      "term": "Sgocciolamento mozzarella",
+      "definition": "Processo di eliminazione del siero dalla mozzarella prima dell'utilizzo come ripieno. Fondamentale nei prodotti da forno per evitare l'accumulo di liquido che causa l'apertura in cottura."
+    }
+  ],
+  "alert": "NON farcire i panzerotti con mozzarella fior di latte fresca intera senza averla preventivamente sgocciolata e strizzata. Il siero che fuoriesce durante la cottura crea vapore interno che spalanca le mezzalune. Allo stesso modo, non esagerare con il ripieno: oltre 40g per panzerotto il rischio di apertura durante la cottura aumenta drasticamente. Sigilla sempre il bordo con la forchetta E con le dita, non solo con uno dei due metodi.",
+  "proTips": [
+    "Per un impasto ancora più profumato e saporito, sostituisci 50g di acqua con 50g di latte intero tiepido: il grasso del latte ammorbidisce la mollica e favorisce una doratura più ricca in superficie (tecnica usata dai panzerottai baresi tradizionali).",
+    "Se vuoi un colore superficiale più intenso senza aggiungere uova (che alterano la texture del panzerotto), emulsiona olio EVO e passata di pomodoro in parti uguali e spennella questa miscela prima di infornare: è la tecnica delle panetterie pugliesi per il forno.",
+    "Porta il ripieno preparato almeno 2 ore prima in frigo: un ripieno freddo e compatto è molto più facile da dosare, non scivola durante la chiusura, e la differenza di temperatura tra ripieno freddo e impasto caldo riduce la formazione di vapore nelle prime fasi della cottura — panzerotti che resistono meglio all'apertura."
+  ],
+  "storage": [
+    "Panzerotti cotti: conserva a temperatura ambiente per max 4-6 ore (consumali in giornata). In frigo durano fino a 24h avvolti in pellicola, ma perdono croccantezza. Rigenera in forno statico a 180°C per 6-8 minuti o in friggitrice ad aria a 170°C per 5 minuti.",
+    "Panzerotti crudi già farciti e chiusi: puoi congelarli prima della cottura disponendoli su vassoio senza sovrapporli. Una volta congelati, trasferiscili in sacchetti. Si conservano fino a 2 mesi. Cuoci direttamente da congelato a 200°C per 22-25 minuti senza scongelarli prima.",
+    "Palline di impasto non stese: possono essere conservate in frigo fino a 24h (maturazione in freddo) coperte con pellicola dopo lo staglio. Questo migliora il sapore e la digeribilità. Prima di stendere, lascia acclimatare a temperatura ambiente per 20-30 minuti."
+  ],
+  "imageKeywords": [
+    "baked panzerotti pugliesi golden",
+    "stuffed dough pockets tomato mozzarella oven baked",
+    "panzerotti al forno pugliesi dorati",
+    "italian baked stuffed bread pockets",
+    "panzerotti forno mozzarella pomodoro",
+    "gefüllte Teigtaschen gebacken italienisch",
+    "homemade baked calzone pugliese"
+  ],
+  "tags": [
+    "panzerotti",
+    "puglia",
+    "al forno",
+    "lievitati",
+    "street food",
+    "mozzarella",
+    "pomodoro",
+    "semola",
+    "ricetta pugliese",
+    "senza frittura"
+  ],
+  "_generatedBy": "claude",
+  "_createdAt": "2026-10-14T13:43:42.184Z",
+  "image": "images/ricette/lievitati/panzerotti-pugliesi-al-forno.webp",
+  "imageAttribution": "📷 Foto: Caricata manualmente",
+  "_originalImageUrl": "",
+  "sensoryProfile": {
+    "summary": "Un lievitato da forno dalla personalità schietta e generosa: la crosta si presenta dorata e leggermente croccante per via dell'olio che la pennella, mentre la mollica — mista di farina 00 e semola rimacinata — è soffice, elastica e con una grana rustica tipicamente pugliese. Il ripieno di pomodoro, mozzarella e origano esplode al morso con calore, sapidità e un profumo erbaceo intenso che domina il profilo aromatico, relegando la dolcezza a un ruolo quasi impercettibile.",
+    "axes": [
+      {
+        "label": "Sofficezza / Alveolatura",
+        "value": 7
+      },
+      {
+        "label": "Scioglievolezza",
+        "value": 5
+      },
+      {
+        "label": "Equilibrio Condimento-Impasto",
+        "value": 8
+      },
+      {
+        "label": "Dolcezza Percepita",
+        "value": 2
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 7
+      }
+    ]
+  }
+}

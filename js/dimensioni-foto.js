@@ -99,6 +99,8 @@ export const DIMENSIONI_FOTO = {
   'images/ricette/lievitati/impasto-rosticceria-siciliana': [1200, 896],
   'images/ricette/lievitati/panettone-fatto-in-casa-caputo': [1800, 1202],
   'images/ricette/lievitati/panettone-pere-cioccolato': [1880, 1251],
+  'images/ricette/lievitati/panzerotti-pugliesi-al-forno': [1800, 1013],
+  'images/ricette/lievitati/panzerotti-pugliesi-fritti': [1280, 871],
   'images/ricette/lievitati/pasta-brioche-artigianale': [1800, 1200],
   'images/ricette/lievitati/pasta-brioche-classica': [1800, 1064],
   'images/ricette/lievitati/pasta-madre-solida-creazione-rinfresco': [1800, 1202],

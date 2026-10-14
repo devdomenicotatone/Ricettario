@@ -1,0 +1,277 @@
+{
+  "title": "Panzerotti Pugliesi Fritti",
+  "slug": "panzerotti-pugliesi-fritti",
+  "emoji": "🫓",
+  "description": "Panzerotti pugliesi fritti con impasto misto 00 e semola, ripieni di pomodoro, mozzarella e formaggio. Croccanti fuori, filanti dentro.",
+  "subtitle": "Impasto semidiretto con mix farina 00 e semola rimacinata — frittura in olio di arachidi a 175°C",
+  "category": "Lievitati",
+  "hydration": 52,
+  "targetTemp": "25-27°C",
+  "fermentation": "2h + 30 min appretto",
+  "totalFlour": 1000,
+  "ingredients": [],
+  "ingredientGroups": [
+    {
+      "group": "Per l'Impasto",
+      "items": [
+        {
+          "name": "Farina Tipo 00",
+          "note": "(W 240-260, media forza)",
+          "grams": 500,
+          "tokenId": "farina_00"
+        },
+        {
+          "name": "Semola Rimacinata di Grano Duro",
+          "note": "(finissima, per impasti)",
+          "grams": 500,
+          "tokenId": "semola_rimacinata"
+        },
+        {
+          "name": "Acqua",
+          "note": "(tiepida, 28-30°C)",
+          "grams": 320,
+          "tokenId": "acqua_impasto"
+        },
+        {
+          "name": "Latte Intero",
+          "note": "(tiepido, 28-30°C)",
+          "grams": 230,
+          "tokenId": "latte_impasto"
+        },
+        {
+          "name": "Lievito di Birra Fresco",
+          "note": "(o 5g secco)",
+          "grams": 15,
+          "tokenId": "lievito_fresco"
+        },
+        {
+          "name": "Olio Extravergine di Oliva",
+          "note": "(da aggiungere a impasto incordato)",
+          "grams": 30,
+          "tokenId": "olio_impasto"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(da sciogliere nei liquidi)",
+          "grams": 20,
+          "tokenId": "sale_impasto"
+        },
+        {
+          "name": "Zucchero Semolato",
+          "note": "(per attivare il lievito)",
+          "grams": 8,
+          "tokenId": "zucchero_impasto"
+        }
+      ]
+    },
+    {
+      "group": "Per il Ripieno",
+      "items": [
+        {
+          "name": "Mozzarella per Pizza",
+          "note": "(asciutta, tagliata a cubetti piccoli, ben scolata)",
+          "grams": 300,
+          "tokenId": "mozzarella_ripieno"
+        },
+        {
+          "name": "Passata di Pomodoro",
+          "note": "(densa, non acquosa)",
+          "grams": 200,
+          "tokenId": "passata_ripieno"
+        },
+        {
+          "name": "Parmigiano Reggiano o Pecorino Grattugiato",
+          "note": "(facoltativo ma consigliato)",
+          "grams": 50,
+          "tokenId": "formaggio_ripieno"
+        },
+        {
+          "name": "Sale Fino",
+          "note": "(q.b. per il condimento del ripieno)",
+          "grams": 5,
+          "tokenId": "sale_ripieno"
+        },
+        {
+          "name": "Origano Secco",
+          "note": "(a piacere)",
+          "grams": 3,
+          "tokenId": "origano_ripieno"
+        },
+        {
+          "name": "Pepe Nero Macinato",
+          "note": "(a piacere)",
+          "grams": 2,
+          "tokenId": "pepe_ripieno"
+        },
+        {
+          "name": "Olio Extravergine di Oliva",
+          "note": "(per condire il pomodoro)",
+          "grams": 15,
+          "tokenId": "olio_ripieno"
+        }
+      ]
+    },
+    {
+      "group": "Per la Frittura",
+      "items": [
+        {
+          "name": "Olio di Arachidi",
+          "note": "(per frittura profonda, almeno 5-6 cm in pentola)",
+          "grams": 1500,
+          "tokenId": "olio_frittura"
+        }
+      ]
+    }
+  ],
+  "suspensions": [],
+  "steps": [
+    {
+      "title": "Preparazione del Ripieno (da fare prima)",
+      "text": "Inizia dal ripieno così avrà tempo di insaporirsi e la mozzarella di perdere umidità. Taglia {mozzarella_ripieno:300}g di mozzarella per pizza a cubetti piccoli (circa 1 cm) e mettila in un colino a maglie fini sospeso su una ciotola. Cospargi con {sale_ripieno:5}g di sale e lascia scolare in frigorifero per almeno 60 min — questo passaggio è fondamentale per evitare che il ripieno rilasci acqua e faccia esplodere i panzerotti in frittura. In una ciotola separata mescola {passata_ripieno:200}g di passata di pomodoro densa con {olio_ripieno:15}g di olio EVO, {origano_ripieno:3}g di origano secco e {pepe_ripieno:2}g di pepe nero. Aggiungi anche {formaggio_ripieno:50}g di formaggio grattugiato. Tieni tutto in frigorifero fino al momento dell'uso."
+    },
+    {
+      "title": "Impasto a Mano o in Planetaria",
+      "text": "Sciogli {lievito_fresco:15}g di lievito di birra fresco e {zucchero_impasto:8}g di zucchero in {acqua_impasto:320}g di acqua tiepida (28-30°C) e {latte_impasto:230}g di latte tiepido. In una ciotola capiente (o nella ciotola della planetaria con gancio) unisci {farina_00:500}g di farina 00 e {semola_rimacinata:500}g di semola rimacinata. Mescola le farine a secco, poi aggiungi i liquidi con lievito e zucchero: in planetaria a vel. 2 per 5 min, a mano lavora energicamente per 8-10 min. Quando l'impasto è quasi incordato (liscio e non appiccicoso), aggiungi {olio_impasto:30}g di olio EVO a filo lentamente, e infine {sale_impasto:20}g di sale sciolto in un cucchiaino di acqua. Continua ad impastare — in planetaria vel. 3 per 5 min, a mano per altri 5 min — fino ad ottenere un impasto liscio, elastico e non appiccicoso. Il risultato deve formare un panetto compatto che si stacca nettamente dalle pareti."
+    },
+    {
+      "title": "Prima Lievitazione (Puntata)",
+      "text": "Pirlatura sull'impasto: arrotondalo a sfera stringendo la base. Mettilo in una ciotola leggermente oliata, pratica un taglio a croce sulla superficie e coprilo con pellicola alimentare o un canovaccio umido. Fai lievitare in un luogo caldo (26-28°C) per {durata_puntata:120!} min, fino al raddoppio del volume. In alternativa, puoi mettere la ciotola nel forno spento con la luce accesa."
+    },
+    {
+      "title": "Staglio e Appretto",
+      "text": "Una volta raddoppiato, riversa l'impasto sul piano di lavoro leggermente infarinato (usa semola per la spolvero). Con un tarocco dividi l'impasto in pezzetti da {panetto_peso:80!}g ciascuno — otterrai circa 20 panzerotti. Forma ogni pezzo a pallina (pirlatura): porta i bordi verso il basso stringendo il fondo. Disponi le palline su teglie foderate con carta forno, ben distanziate. Coprile con pellicola o un telo e lascia lievitare per {appretto:30!} min a temperatura ambiente. Le palline devono apparire leggermente rigonfie e morbide al tatto."
+    },
+    {
+      "title": "Stesura e Farcitura",
+      "text": "Scalda l'olio di arachidi in una pentola o padella dai bordi alti (minimo 5-6 cm di olio) a fuoco medio, monitorando la temperatura con un termometro da cucina: il target è {temp_frittura:175!}°C. Nel frattempo, stendi una pallina alla volta sul piano leggermente infarinato con il mattarello, ottenendo un disco di circa 18-20 cm di diametro e spessore 3-4 mm — non troppo sottile o si romperà, non troppo spesso o l'interno non cuocerà. Se l'impasto si ritira, lascialo riposare 2-3 min e riprendi. Posiziona al centro del disco 2 cucchiai colmi di passata di pomodoro condita, 50g di mozzarella scolata e una spolverata di formaggio grattugiato, mantenendo libero il bordo per almeno 2 cm. Rimuovi l'aria intorno al ripieno accompagnandola verso il bordo con le dita, poi piega il disco a mezzaluna. Sigilla i bordi premendo con forza con i polpastrelli, poi ripiega il bordo su se stesso pizzicandolo energicamente (tecnica del 'bordino ritorto') per evitare aperture in frittura. Procedi a formare i panzerotti uno alla volta, friggendoli man mano che sono pronti."
+    },
+    {
+      "title": "Frittura e Finitura",
+      "text": "Con l'olio di arachidi a {temp_frittura:175!}°C stabile, immergi 2-3 panzerotti alla volta (non di più, per non abbassare troppo la temperatura dell'olio). Usa una schiumarola o delle pinze lunghe per girarli dopo {tempo_primo_lato:2!} min, quando il lato inferiore è dorato. Cuoci altri {tempo_secondo_lato:2!} min finché sono uniformemente dorati e gonfi. Estraili con la schiumarola e appoggiali su un vassoio foderato di carta assorbente per eliminare l'olio in eccesso. Servi immediatamente: il panzerotto pugliese autentico si mangia bollente, tenuto in verticale per non perdere il ripieno."
+    }
+  ],
+  "stepsCondiment": [],
+  "flourTable": [
+    {
+      "type": "Farina Tipo 00 Media Forza",
+      "w": "240-260",
+      "brands": "Caputo Cuoco, Molino Dallagiovanna Tutto00, Lo Conte Le Farine Magiche, Divella 00"
+    },
+    {
+      "type": "Semola Rimacinata di Grano Duro",
+      "w": "180-220",
+      "brands": "Caputo Semola Rimacinata, De Cecco Semola, Molino Rachello Semola, La Molisana Semola Rimacinata"
+    }
+  ],
+  "baking": {
+    "temperature": "Frittura in olio a 175°C",
+    "time": "4 minuti totali (2 min per lato)",
+    "tips": [
+      "Usa un termometro da cucina digitale: la temperatura dell'olio è tutto. Sotto i 165°C i panzerotti assorbono olio e risultano unti; sopra i 185°C bruciano fuori e rimangono crudi dentro.",
+      "Non sovraffollare la pentola: inserisci max 2-3 panzerotti alla volta per mantenere la temperatura stabile.",
+      "Usa una pentola dai bordi alti (tipo casseruola) con almeno 5-6 cm di olio: i panzerotti devono galleggiare e non toccare il fondo.",
+      "Dopo ogni infornata, lascia risalire l'olio a 175°C prima di friggere il gruppo successivo (attendere 60-90 secondi).",
+      "Il panzerotto è cotto quando è uniformemente dorato, gonfio e galleggia in superficie."
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Puntata",
+      "definition": "Prima lievitazione dell'impasto dopo la formatura iniziale, dal termine 'punta' della maturazione. Dura fino al raddoppio del volume."
+    },
+    {
+      "term": "Appretto",
+      "definition": "Seconda lievitazione dopo lo staglio e la formatura dei singoli pezzi. Attiva nuovamente i lieviti dopo il degassaggio dello staglio."
+    },
+    {
+      "term": "Staglio",
+      "definition": "Operazione di divisione dell'impasto in pezzetti del peso desiderato usando un tarocco o raschietto."
+    },
+    {
+      "term": "Pirlatura",
+      "definition": "Tecnica di arrotondamento dell'impasto a sfera: si portano i bordi verso il basso, ruotando il pezzo sul piano. Crea tensione superficiale e uniformità."
+    },
+    {
+      "term": "Incordatura",
+      "definition": "Momento in cui l'impasto sviluppa la rete glutinica: diventa liscio, elastico, si stacca dalle pareti e 'corda' intorno al gancio. Si verifica dopo 8-12 min di lavorazione."
+    },
+    {
+      "term": "Bassinage",
+      "definition": "Tecnica di aggiunta progressiva dell'acqua a filo durante l'impastamento, per aiutare l'assorbimento senza rovinare la rete glutinica."
+    },
+    {
+      "term": "Tarocco",
+      "definition": "Raschietto da banco in plastica o acciaio usato per dividere l'impasto (staglio), raccoglierlo dal piano e pulire la superficie di lavoro."
+    },
+    {
+      "term": "Semola Rimacinata",
+      "definition": "Farina di grano duro macinata due volte (rimacinata), più fine della semola classica. Dona croccantezza, colore dorato e sapore intenso tipici dei prodotti pugliesi."
+    },
+    {
+      "term": "Spolvero",
+      "definition": "Leggera spolverata di farina (o semola) sul piano di lavoro per evitare che l'impasto attacchi durante la stesura. Con la semola si ottiene una superficie più asciutta."
+    }
+  ],
+  "alert": "NON aggiungere il ripieno quando la mozzarella è ancora bagnata: è la causa principale dell'esplosione in frittura. La mozzarella deve essere scolata in frigorifero per almeno 60 minuti con sale. Allo stesso modo, non usare passata di pomodoro liquida: riducila o scegli una marca densa. Infine, non sigillare i panzerotti con le mani unte o bagnate: il bordo deve essere asciutto per tenere la chiusura.",
+  "proTips": [
+    "Il mix 50/50 di farina 00 e semola rimacinata è il segreto della croccantezza pugliese: la semola assorbe meno olio in frittura e crea quella crosta dorata e croccante che si rompe al morso, mentre la 00 garantisce elasticità per la stesura.",
+    "Per testare la temperatura dell'olio senza termometro, immergi il manico in legno di un cucchiaio: se si formano piccole bollicine regolari intorno, siamo intorno ai 170-175°C. Se bolliccia forte e rapidamente, l'olio è troppo caldo.",
+    "Prepara i panzerotti in due tempi: stendi, farcisci e chiudi man mano che l'olio è in temperatura, senza pre-formare tutti insieme. L'impasto steso tende a seccarsi e a perdere elasticità, compromettendo la chiusura del bordo."
+  ],
+  "storage": [
+    "I panzerotti fritti si consumano tassativamente appena fatti: sono ottimi nei 10-15 minuti dalla frittura, poi la crosta perde croccantezza. Non conservare panzerotti già fritti in frigo (diventano gommosi e unti).",
+    "Puoi congelare i panzerotti CRUDI (già formati e chiusi, non fritti): disponili su un vassoio foderato di carta forno senza che si tocchino, falli congelare per 2-3 ore, poi trasferiscili in sacchetti sottovuoto. Si conservano fino a 2 mesi.",
+    "Per friggere i panzerotti da congelati: immergili direttamente nell'olio a 170°C (5°C meno del normale) senza scongelarli. Allunga il tempo di frittura a 3-4 min per lato, controllando il colore. Non scongelare prima: il ripieno rilascerebbe umidità e romperebbe la chiusura."
+  ],
+  "imageKeywords": [
+    "panzerotti fritti pugliesi",
+    "italian fried panzerotti mozzarella tomato",
+    "deep fried pizza pockets italian street food",
+    "panzerotti fritti croccanti ripieni",
+    "apulian fried dough stuffed",
+    "panzerotti pugliesi gebratene teigtaschen",
+    "italian street food fried dough mozzarella"
+  ],
+  "tags": [
+    "panzerotti",
+    "puglia",
+    "fritto",
+    "street food",
+    "lievitato",
+    "semola",
+    "mozzarella",
+    "pomodoro",
+    "tradizione pugliese",
+    "frittura"
+  ],
+  "_generatedBy": "claude",
+  "_createdAt": "2026-10-14T13:43:27.947Z",
+  "image": "images/ricette/lievitati/panzerotti-pugliesi-fritti.webp",
+  "imageAttribution": "📷 Foto: Caricata manualmente",
+  "_originalImageUrl": "",
+  "sensoryProfile": {
+    "summary": "Un involucro dorato e croccante all'esterno cede a un interno soffice e profumato, dove la semola rimacinata conferisce una struttura tenace e leggermente rustica che si distingue nettamente da un impasto di sola farina 00. Il ripieno caldo e avvolgente sprigiona la sapidità della mozzarella fusa, l'acidità vivace del pomodoro condito all'origano e la nota affilata del pecorino, creando un equilibrio condimento-impasto tipicamente pugliese. La frittura in olio di arachidi a 175°C sigilla la crosta in pochi minuti, regalando una croccantezza esterna netta e una sofficezza interna ben sostenuta, con complessità aromatica marcata dal fritto, dalle erbe e dalla fermentazione.",
+    "axes": [
+      {
+        "label": "Sofficezza / Alveolatura",
+        "value": 6
+      },
+      {
+        "label": "Croccantezza Esterna",
+        "value": 9
+      },
+      {
+        "label": "Equilibrio Condimento-Impasto",
+        "value": 8
+      },
+      {
+        "label": "Dolcezza Percepita",
+        "value": 2
+      },
+      {
+        "label": "Complessità Aromatica",
+        "value": 8
+      }
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "totalRecipes": 86,
+  "totalRecipes": 88,
   "categories": [
     {
       "name": "Primi",
@@ -18,7 +18,7 @@
     },
     {
       "name": "Lievitati",
-      "count": 9,
+      "count": 11,
       "emoji": "🥐"
     },
     {
@@ -552,6 +552,46 @@
       "hasNutrition": true,
       "hasStorage": true,
       "_createdAt": "2026-04-28T12:06:00.806Z"
+    },
+    {
+      "title": "Panzerotti Pugliesi al Forno",
+      "slug": "panzerotti-pugliesi-al-forno",
+      "category": "Lievitati",
+      "categoryDir": "lievitati",
+      "emoji": "🥙",
+      "href": "ricette/lievitati/panzerotti-pugliesi-al-forno.html",
+      "image": "images/ricette/lievitati/panzerotti-pugliesi-al-forno.webp",
+      "description": "Panzerotti pugliesi al forno: impasto con farina 00 e semola rimacinata, ripieno classico pomodoro e mozzarella. Leggeri, dorati e fragranti.",
+      "hydration": "62%",
+      "time": "~2h + 20 min appretto",
+      "temp": "25-26°C",
+      "tool": "",
+      "tools": [],
+      "imageAttribution": "📷 Foto: Caricata manualmente",
+      "hasSensory": true,
+      "hasNutrition": false,
+      "hasStorage": true,
+      "_createdAt": "2026-10-14T13:43:42.184Z"
+    },
+    {
+      "title": "Panzerotti Pugliesi Fritti",
+      "slug": "panzerotti-pugliesi-fritti",
+      "category": "Lievitati",
+      "categoryDir": "lievitati",
+      "emoji": "🫓",
+      "href": "ricette/lievitati/panzerotti-pugliesi-fritti.html",
+      "image": "images/ricette/lievitati/panzerotti-pugliesi-fritti.webp",
+      "description": "Panzerotti pugliesi fritti con impasto misto 00 e semola, ripieni di pomodoro, mozzarella e formaggio. Croccanti fuori, filanti dentro.",
+      "hydration": "52%",
+      "time": "2h + 30 min appretto",
+      "temp": "25-27°C",
+      "tool": "",
+      "tools": [],
+      "imageAttribution": "📷 Foto: Caricata manualmente",
+      "hasSensory": true,
+      "hasNutrition": false,
+      "hasStorage": true,
+      "_createdAt": "2026-10-14T13:43:27.947Z"
     },
     {
       "title": "Pasta Brioche Artigianale",
